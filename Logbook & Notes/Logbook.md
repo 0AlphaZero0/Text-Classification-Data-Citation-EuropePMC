@@ -29,7 +29,8 @@ Meetings :
  
 Needs & requests :
  - Logbook needed.
- - End of July : 
+ 
+ End of July : 
   - Good draft of the internship report.
   - Presentation of the work done
 
