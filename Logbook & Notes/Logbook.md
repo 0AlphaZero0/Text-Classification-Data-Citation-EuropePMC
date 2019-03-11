@@ -62,7 +62,8 @@ Platform that allow text mining annotation from any provider to be highlighted o
  - Work on full articles (~900 000 articles)
  - Annotation stored on MangoDB
  - Resource Description(RDF) : graph model that describe in a formal way WEB ressources.
- - Annotation types :
+ 
+ Annotation types :
   - Named entities (genes, protein names, organisms, diseases, GO terms, chemicals, accession numbers)
   - Biological events (phosphorylation)
   - Relationships (Target-Disease)
