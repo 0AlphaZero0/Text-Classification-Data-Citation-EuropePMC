@@ -56,9 +56,10 @@ http://colah.github.io/posts/2014-07-NLP-RNNs-Representations/
  
 #### :diamond_shape_with_a_dot_inside: SciLite :
 
- - ELIXIR platform/service
 Make deeper links between literature and biological data sources thanks to text mining.
 Platform that allow text mining annotation from any provider to be highlighted on scientific papers.
+
+ - ELIXIR platform/service
  - Work on full articles (~900 000 articles)
  - Annotation stored on MangoDB
  - Resource Description(RDF) : graph model that describe in a formal way WEB ressources.
