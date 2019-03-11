@@ -32,7 +32,7 @@ ______________________________________________________________________
 <a name="Week1"></a>
 ### Week 1 - 01/03-10/03 :
 
-#### Deep Learning, NLP, Representation :
+#### :diamond_shape_with_a_dot_inside: Deep Learning, NLP, Representation :
 
 http://colah.github.io/posts/2014-07-NLP-RNNs-Representations/
 
@@ -54,7 +54,7 @@ http://colah.github.io/posts/2014-07-NLP-RNNs-Representations/
  - Reflect
  - EXTRACT
  
-#### SciLite :
+#### :diamond_shape_with_a_dot_inside: SciLite :
 
  - ELIXIR platform/service
 Make deeper links between literature and biological data sources thanks to text mining.
