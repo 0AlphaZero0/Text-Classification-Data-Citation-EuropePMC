@@ -1,6 +1,8 @@
+![center](https://github.com/0AlphaZero0/Sentiment-Analysis-EuropePMC/blob/master/Logbook%20%26%20Notes/EMBL.png)
 <h1 align="center">SACSP</h1>
 <p align="center">Sentiment Analysis on Citations in Scientific Papers in Europe Pub Med Central</p>
 
+![center](https://github.com/0AlphaZero0/Sentiment-Analysis-EuropePMC/blob/master/Logbook%20%26%20Notes/europepmc.png)
 ______________________________________________________________________
 
 ### Meetings
