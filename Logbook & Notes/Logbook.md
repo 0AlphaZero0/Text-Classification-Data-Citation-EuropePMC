@@ -97,11 +97,28 @@ Features : Accession ID; Deposition ID; Deposition Year; First Public Year; PMID
 
 *EPMC* :heavy_plus_sign: *NLM* (National Library of Medicine) :arrow_forward: .XML thanks to OCR
 
-Identification oof citation thanks to WhatizitANA pipeline
+Identification oof citation thanks to *WhatizitANA* pipeline
 
-Problems
+***Problems*** : 
+ - Footnotes
+ - *ENA* does not include RefSeq
+ - Sometimes the pipeline partially identifies accession numbers
+ - other errors from wrong assignation of ID like *GenBank* instead of *UniProt*
 
+#### :diamond_shape_with_a_dot_inside: Sentiment analysis of scientific citation
 
+***Problems known*** :
+ - Many citations in the same sentence
+ - Sentiment in citation are often hidden
+ - Citations are often neutral (description of a method) ==> Subjective / Objective
+ - Much variation between scientific text and other genres on lexical terms (lexicon, eg : "surprising movie" / "surprising results")
+ - Sentiment could be in citation sentence but also arround (like in the next 3 ones)
+ 
+--> Focused on identify the importance of a citation in a paper ==> 9% are really important
+
+*Supervised learning VS. Unsupervised learning* :
+Supervised learning is longer and harder because if there is no annotated dataset already existing, it should be create.
+BUT 
 
 
 
