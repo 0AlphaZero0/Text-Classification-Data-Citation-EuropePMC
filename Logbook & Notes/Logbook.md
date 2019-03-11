@@ -56,8 +56,9 @@ http://colah.github.io/posts/2014-07-NLP-RNNs-Representations/
  
 #### :diamond_shape_with_a_dot_inside: SciLite :
 
-Make deeper links between literature and biological data sources thanks to text mining.
 Platform that allow text mining annotation from any provider to be highlighted on scientific papers.
+Make deeper links between literature and biological data sources thanks to text mining.
+
 
  - ELIXIR platform/service
  - Work on full articles (~900 000 articles)
