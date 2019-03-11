@@ -38,9 +38,7 @@ ______________________________________________________________________
 <a name="Week1"></a>
 ### Week 1 - 01/03-10/03 :
 
-#### :diamond_shape_with_a_dot_inside: Deep Learning, NLP, Representation :
-
-http://colah.github.io/posts/2014-07-NLP-RNNs-Representations/
+#### :diamond_shape_with_a_dot_inside: [Deep Learning, NLP, Representation](http://colah.github.io/posts/2014-07-NLP-RNNs-Representations/) :
 
  - **Perceptron** : Supervised learning algorithm with binary classifiers
  - **t-SNE** algortithm : Proximity between 2 points ==> usefull with a lot of features, it's easier to see points that are really close        (:warning: more than 3 dimensions)
@@ -60,7 +58,7 @@ http://colah.github.io/posts/2014-07-NLP-RNNs-Representations/
  - Reflect
  - EXTRACT
  
-#### :diamond_shape_with_a_dot_inside: SciLite :
+#### :diamond_shape_with_a_dot_inside: [SciLite](https://github.com/0AlphaZero0/Sentiment-Analysis-EuropePMC/blob/master/Bibliography/SciLite%20a%20platform%20for%20displaying%20text-mined%20annotations_A.Venkatesan_et_al.pdf) :
 
 Platform that allow text mining annotation from any provider to be highlighted on scientific papers.
 Make deeper links between literature and biological data sources thanks to text mining.
@@ -85,7 +83,7 @@ Workflow :
  2) Sorting response to their position in text
  3) Display information
 
-#### :diamond_shape_with_a_dot_inside: [EuropePMC](http://europepmc.org/) (EPMC/Europe PubMed Central):
+#### :diamond_shape_with_a_dot_inside: [EuropePMC](http://europepmc.org/) (EPMC/Europe PubMed Central) [PDF](https://github.com/0AlphaZero0/Sentiment-Analysis-EuropePMC/blob/master/Bibliography/Database%20citation%20in%20supplementary%20data%20linked%20to_S.Kafkas_et_al.pdf):
 
 PMID = ID for non full text papers (Abstract only) / PMCID = ID for full text papers
  
@@ -95,7 +93,7 @@ perform with [STATA](https://www.stata.com/) (statistical tool)
 
 Features : Accession ID; Deposition ID; Deposition Year; First Public Year; PMID publication year; citation year; citation
 
-#### :diamond_shape_with_a_dot_inside: Database citation in full text biomedical papers :
+#### :diamond_shape_with_a_dot_inside: [Database citation in full text biomedical papers](https://github.com/0AlphaZero0/Sentiment-Analysis-EuropePMC/blob/master/Bibliography/Database%20Citation%20in%20Full%20Text%20Biomedical%20Articles_S.Kafkas_et_al.pdf) :
 
 *EPMC* :heavy_plus_sign: *NLM* (National Library of Medicine) :arrow_forward: .XML thanks to OCR
 
@@ -107,7 +105,7 @@ Identification oof citation thanks to *WhatizitANA* pipeline
  - Sometimes the pipeline partially identifies accession numbers
  - other errors from wrong assignation of ID like *GenBank* instead of *UniProt*
 
-#### :diamond_shape_with_a_dot_inside: Sentiment analysis of scientific citation
+#### :diamond_shape_with_a_dot_inside: [Sentiment analysis of scientific citation](https://github.com/0AlphaZero0/Sentiment-Analysis-EuropePMC/blob/master/Bibliography/Sentiment%20analysis%20of%20scientific%20citations_A.Athar_et_al.pdf) :
 
 ***Problems known*** :
  - Many citations in the same sentence
