@@ -14,6 +14,10 @@ ______________________________________________________________________
 
 ______________________________________________________________________
 
+### Index
+
+[Index](#index)
+
 <a name="11/03"></a>
 ### 11/03 - Defintions of planinng, needs and requests :
 
@@ -72,6 +76,36 @@ Make deeper links between literature and biological data sources thanks to text 
   - Text phrases (Gene RIF : "*Gene Referencing to a Function*"; Molecular Interaction)
 
 Output :
+![](https://github.com/0AlphaZero0/Sentiment-Analysis-EuropePMC/blob/master/Logbook%20%26%20Notes/SciLite.PNG)
 
+Workflow : 
+ 1) Retrieving all anotations for a specific PMCID from the anotation databaseusing API request
+ 2) Sorting response to their position in text
+ 3) Display information
 
+#### :diamond_shape_with_a_dot_inside: [EuropePMC](http://europepmc.org/) (EPMC/Europe PubMed Central):
+
+PMID = ID for non full text papers (Abstract only) / PMCID = ID for full text papers
  
+Pipeline EPMC's : text mining to extract accession references
+perform with [STATA](https://www.stata.com/) (statistical tool)
+![](https://github.com/0AlphaZero0/Sentiment-Analysis-EuropePMC/blob/master/Logbook%20%26%20Notes/EuropePMCschema1.PNG)
+
+Features : Accession ID; Deposition ID; Deposition Year; First Public Year; PMID publication year; citation year; citation
+
+#### :diamond_shape_with_a_dot_inside: Database citation in full text biomedical papers :
+
+*EPMC* :heavy_plus_sign: *NLM* (National Library of Medicine) :arrow_forward: .XML thanks to OCR
+
+Identification oof citation thanks to WhatizitANA pipeline
+
+Problems
+
+
+
+
+
+______________________________________________________________________
+
+<a name="index"></a>
+### Index :
