@@ -252,7 +252,7 @@ ______________________________________________________________________
 
 **RNN** : Recursive Neural Network
 
-**SureChEMBL** : ???
+**SureChEMBL** : Biology DataBank
 
 **Synset** : Each set in WordNet corresponds to a word sense, not a word string. Each set represents a unique concept and members of each set, each of which is a sense, are synonyms of each other. These sets are also called synsets. (It’s like a pack of word meaning the same thing.)
 
