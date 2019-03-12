@@ -50,6 +50,9 @@ ______________________________________________________________________
 
 #### :diamond_shape_with_a_dot_inside: [Deep Learning, NLP, Representation](http://colah.github.io/posts/2014-07-NLP-RNNs-Representations/) :
 
+
+***Problems*** : Why Deep Neural Network work so well? ==> Resume some questions that has been resolved by deep neurql networks
+
  - **Perceptron** : Supervised learning algorithm with binary classifiers
  - **t-SNE** algortithm : Proximity between 2 points ==> usefull with a lot of features, it's easier to see points that are really close        (:warning: more than 3 dimensions)
  - **NLP** : Neuro-linguistic programming
@@ -69,6 +72,8 @@ ______________________________________________________________________
  - EXTRACT
  
 #### :diamond_shape_with_a_dot_inside: [SciLite](https://github.com/0AlphaZero0/Sentiment-Analysis-EuropePMC/blob/master/Bibliography/SciLite%20a%20platform%20for%20displaying%20text-mined%20annotations_A.Venkatesan_et_al.pdf) :
+
+***Problems*** : 
 
 Platform that allow text mining annotation from any provider to be highlighted on scientific papers.
 Make deeper links between literature and biological data sources thanks to text mining.
