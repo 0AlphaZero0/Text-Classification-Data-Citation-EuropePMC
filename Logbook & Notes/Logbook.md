@@ -25,7 +25,7 @@ ______________________________________________________________________
 
 ### Index
 
-[Index](#index)
+[Index](#index01)
 
 ______________________________________________________________________
 
@@ -170,7 +170,7 @@ Citations with no snetiment are considered as OBJECTIVES.
 
 ______________________________________________________________________
 
-<a name="index"></a>
+<a name="index01"></a>
 ### Index :
 
 **ACL** : digital archive which contains conference and journal papers in NLP and CL
