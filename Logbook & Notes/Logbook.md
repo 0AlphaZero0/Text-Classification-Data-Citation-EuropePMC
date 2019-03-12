@@ -7,7 +7,7 @@
   </div>
 </div>
 &nbsp;  &nbsp;  &nbsp;  
-<h1 align="center">SACSP</h1>
+<h1 align="center">Loogbook & Notes</h1>
 <p align="center">Sentiment Analysis on Citations in Scientific Papers in Europe Pub Med Central</p>
 
 ______________________________________________________________________
