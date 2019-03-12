@@ -107,11 +107,11 @@ ______________________________________________________________________
  
 #### :diamond_shape_with_a_dot_inside: [SciLite](https://github.com/0AlphaZero0/Sentiment-Analysis-EuropePMC/blob/master/Bibliography/SciLite%20a%20platform%20for%20displaying%20text-mined%20annotations_A.Venkatesan_et_al.pdf) :
 
-- :interrobang: ***Problems*** : 
+- :interrobang: ***Problems*** : Need to link literature and underlying data.
 
-- :heavy_check_mark: ***Solutions*** : 
+- :heavy_check_mark: ***Solutions*** : Creation of SciLite, a platform that integrates text-minned annotations from different sourcesand overlays those outputs on research articles. 
 
-- :triangular_flag_on_post: ***Remaining Problems*** :
+- :triangular_flag_on_post: ***Remaining Problems*** : Sometimes it's not enough accurate, it affect the trust in the tool.
 
 Platform that allow text mining annotation from any provider to be highlighted on scientific papers.
 Make deeper links between literature and biological data sources thanks to text mining.
@@ -137,6 +137,12 @@ Workflow :
  3) Display information
 
 #### :diamond_shape_with_a_dot_inside: [EuropePMC](http://europepmc.org/) (EPMC/Europe PubMed Central) [PDF](https://github.com/0AlphaZero0/Sentiment-Analysis-EuropePMC/blob/master/Bibliography/Database%20citation%20in%20supplementary%20data%20linked%20to_S.Kafkas_et_al.pdf):
+
+- :interrobang: ***Problems*** : Are supplementary files necessary bring more informations to biomolecular databank?
+
+- :heavy_check_mark: ***Solutions*** : Use text mining in scientific papers significantly enrich publishers’ annotations and contribute to literature–database cross links (integration in EuropePMC) / WhatizitANA pipeline
+
+- :triangular_flag_on_post: ***Remaining Problems*** : Need solution for ENA because they doesn't use RefSeq.
 
 PMID = ID for non full text papers (Abstract only) / PMCID = ID for full text papers
  
