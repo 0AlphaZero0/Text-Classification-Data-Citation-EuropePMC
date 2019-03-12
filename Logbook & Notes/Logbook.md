@@ -182,6 +182,7 @@ Citations with no snetiment are considered as OBJECTIVES.
 <a name="Week2"></a>
 ### :date: Week 2 - 11/03-17/03 :
 
+Creation of the [GitHub](https://github.com/0AlphaZero0/Sentiment-Analysis-EuropePMC)
 
 
 
