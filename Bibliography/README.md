@@ -16,6 +16,7 @@ ______________________________________________________________________
 
 - [Database Citation in Full Text Biomedical Articles](#1) 
 - [Database citation in supplementary data linked to Europe PubMed Central full text biomedical articles](#2)
+- [Measuring the Evolution of a Scientific Field through Citation Frames](#5)
 - [Patterns of database citation in articles and patents indicate long-term scientific and industry value of biological data resources](#3)
 - [SciLite: a platform for displaying text-mined annotations as a means to link research articles with biological data [version 2; referees: 2 approved, 1 approved with reservations]](#4)
 
@@ -85,6 +86,22 @@ Citation : <pre><code>Venkatesan A, Kim JH, Talo F et al.
   (https://doi.org/10.12688/wellcomeopenres.10210.2)
 </code></pre>
 
+<a name="5"></a>
+- [Measuring the Evolution of a Scientific Field through Citation Frames](https://github.com/0AlphaZero0/Sentiment-Analysis-EuropePMC/blob/master/Bibliography/Measuring%20the%20Evolution%20of%20a%20Scientific%20Field%20through%20Citation%20Frames_D.Jurgens_et_al.pdf)
+
+Citation : <pre><code>@article{TACL1266,
+	author = {Jurgens, David  and Kumar, Srijan  and Hoover, Raine  and McFarland, Dan  and Jurafsky, Dan },
+	title = {Measuring the Evolution of a Scientific Field through Citation Frames},
+	journal = {Transactions of the Association for Computational Linguistics},
+	volume = {6},
+	year = {2018},
+	keywords = {},
+	abstract = {Citations have long been used to characterize the state of a scientific field and to identify influential works. However, writers use citations for different purposes, and this varied purpose influences uptake by future scholars.  Unfortunately, our understanding of how scholars use and frame citations has been limited to small-scale manual citation analysis of individual papers.  We perform the largest behavioral study of citations to date, analyzing how scientific works frame their contributions through different types of citations and how this framing affects the field as a whole. We introduce a new dataset of nearly 2,000 citations annotated for their function, and use it to develop a state-of-the-art classifier and label the papers of an entire field: Natural Language Processing.  We then show how differences in framing affect scientific uptake and reveal the evolution of the publication venues and the field as a whole. We demonstrate that authors are sensitive to discourse structure and publication venue when citing, and that how a paper frames its work through citations is predictive of the citation count it will receive. Finally, we use changes in citation framing to show that the field of NLP is undergoing a significant increase in consensus.},
+	issn = {2307-387X},
+	url = {https://transacl.org/ojs/index.php/tacl/article/view/1266},
+	pages = {391--406}
+}
+</code></pre>
 
 
 
