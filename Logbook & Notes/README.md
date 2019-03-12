@@ -136,23 +136,13 @@ Workflow :
  2) Sorting response to their position in text
  3) Display information
 
-#### :diamond_shape_with_a_dot_inside: [EuropePMC](http://europepmc.org/) (EPMC/Europe PubMed Central) [PDF](https://github.com/0AlphaZero0/Sentiment-Analysis-EuropePMC/blob/master/Bibliography/Database%20citation%20in%20supplementary%20data%20linked%20to_S.Kafkas_et_al.pdf):
+#### :diamond_shape_with_a_dot_inside: [Database citation in full text biomedical papers](https://github.com/0AlphaZero0/Sentiment-Analysis-EuropePMC/blob/master/Bibliography/Database%20Citation%20in%20Full%20Text%20Biomedical%20Articles_S.Kafkas_et_al.pdf) :
 
 - :interrobang: ***Problems*** : Are supplementary files necessary bring more informations to biomolecular databank?
 
 - :heavy_check_mark: ***Solutions*** : Use text mining in scientific papers significantly enrich publishers’ annotations and contribute to literature–database cross links (integration in EuropePMC) / WhatizitANA pipeline
 
-- :triangular_flag_on_post: ***Remaining Problems*** : Need solution for ENA because they doesn't use RefSeq.
-
-PMID = ID for non full text papers (Abstract only) / PMCID = ID for full text papers
- 
-Pipeline EPMC's : text mining to extract accession references
-perform with [STATA](https://www.stata.com/) (statistical tool)
-![](https://github.com/0AlphaZero0/Sentiment-Analysis-EuropePMC/blob/master/Logbook%20%26%20Notes/EuropePMCschema1.PNG)
-
-Features : Accession ID; Deposition ID; Deposition Year; First Public Year; PMID publication year; citation year; citation
-
-#### :diamond_shape_with_a_dot_inside: [Database citation in full text biomedical papers](https://github.com/0AlphaZero0/Sentiment-Analysis-EuropePMC/blob/master/Bibliography/Database%20Citation%20in%20Full%20Text%20Biomedical%20Articles_S.Kafkas_et_al.pdf) :
+- :triangular_flag_on_post: ***Remaining Problems*** : Need solution for ENA because they doesn't use RefSeq. 
 
 *EPMC* :heavy_plus_sign: *NLM* (National Library of Medicine) :arrow_forward: .XML thanks to OCR
 
@@ -164,14 +154,37 @@ Identification oof citation thanks to *WhatizitANA* pipeline
  - Sometimes the pipeline partially identifies accession numbers
  - other errors from wrong assignation of ID like *GenBank* instead of *UniProt*
 
+#### :diamond_shape_with_a_dot_inside: [EuropePMC](http://europepmc.org/) (EPMC/Europe PubMed Central) [PDF](https://github.com/0AlphaZero0/Sentiment-Analysis-EuropePMC/blob/master/Bibliography/Database%20citation%20in%20supplementary%20data%20linked%20to_S.Kafkas_et_al.pdf):
+
+- :interrobang: ***Problems*** : Linking scientific literature to databases(DB). How (text)txt mining bring more information to citations.
+
+- :heavy_check_mark: ***Solutions*** : Accession number identification by Whatizit through the Whatizit ANA pipeline.
+
+- :triangular_flag_on_post: ***Remaining Problems*** : More accurate to do it manualy BUT take a lot of time and there is also really good result for automatic way ==> it need some improvements.
+
+PMID = ID for non full text papers (Abstract only) / PMCID = ID for full text papers
+ 
+Pipeline EPMC's : text mining to extract accession references
+perform with [STATA](https://www.stata.com/) (statistical tool)
+![](https://github.com/0AlphaZero0/Sentiment-Analysis-EuropePMC/blob/master/Logbook%20%26%20Notes/EuropePMCschema1.PNG)
+
+Features : Accession ID; Deposition ID; Deposition Year; First Public Year; PMID publication year; citation year; citation
+
 #### :diamond_shape_with_a_dot_inside: [Sentiment analysis of scientific citation](https://github.com/0AlphaZero0/Sentiment-Analysis-EuropePMC/blob/master/Bibliography/Sentiment%20analysis%20of%20scientific%20citations_A.Athar_et_al.pdf) :
 
-***Problems known*** :
- - Many citations in the same sentence
- - Sentiment in citation are often hidden
- - Citations are often neutral (description of a method) ==> Subjective / Objective
- - Much variation between scientific text and other genres on lexical terms (lexicon, eg : "surprising movie" / "surprising results")
- - Sentiment could be in citation sentence but also arround (like in the next 3 ones)
+- :interrobang: ***Problems*** : 
+  * Many citations in the same sentence
+  * Sentiment in citation are often hidden
+  * Citations are often neutral (description of a method) ==> Subjective / Objective
+  * Much variation between scientific text and other genres on lexical terms (lexicon, eg : "surprising movie" / "surprising results")
+  * Sentiment could be in citation sentence but also arround (like in the next 3 ones)
+
+- :heavy_check_mark: ***Solutions*** : 
+  * To sentiment hidden problem + scientific terms : supervised learning on scientific sentences.
+  * Neutral citations are exclude
+  * Sentiment could be in citation sentence but also arround (like in the next 3 ones) : He used the context to improve his results
+
+- :triangular_flag_on_post: ***Remaining Problems*** : Anaphore aren't resolved(Lee et al.,2011), lexical chain (Barzilay et Elhadad,1997)should help, entity coherence(Barzilay et Lapata,2008)
  
 --> Focused on identify the importance of a citation in a paper ==> 9% are really important
 
@@ -234,6 +247,8 @@ ______________________________________________________________________
 **CL** : Computational linguistics
 
 **CRF** : Champ aléatoire conditionnel (classes de modèles stats utilisées pour des données séquentielles	 (langage)
+
+**DB** : Database/s
 
 **ENA** : European Nucleotide Archive
 
