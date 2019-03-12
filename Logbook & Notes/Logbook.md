@@ -63,7 +63,12 @@ ______________________________________________________________________
 #### :diamond_shape_with_a_dot_inside: [Deep Learning, NLP, Representation](http://colah.github.io/posts/2014-07-NLP-RNNs-Representations/) :
 
 
-***Problems*** : Why Deep Neural Network work so well? ==> Resume some questions that has been resolved by deep neurql networks
+:interrobang: ***Problems*** : Why Deep Neural Network work so well?
+
+:heavy_check_mark: ~~***Solutions***~~ : Resume some questions that has been resolved by deep neural networks (This is a post blog and not a scientific paper)
+
+:triangular_flag_on_post: ~~***Remaining Problems***~~ :
+
 
  - **Perceptron** : Supervised learning algorithm with binary classifiers
  - **t-SNE** algortithm : Proximity between 2 points ==> usefull with a lot of features, it's easier to see points that are really close        (:warning: more than 3 dimensions)
