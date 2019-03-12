@@ -62,19 +62,11 @@ ______________________________________________________________________
 
 #### :diamond_shape_with_a_dot_inside: [Deep Learning, NLP, Representation](http://colah.github.io/posts/2014-07-NLP-RNNs-Representations/) :
 
+- :interrobang: ***Problems*** : Why Deep Neural Network work so well?
 
-:interrobang: ***Problems*** : Why Deep Neural Network work so well?
+- :heavy_check_mark: ~~***Solutions***~~ : Resume some questions that has been resolved by deep neural networks (This is a post blog and not a scientific paper)
 
-:heavy_check_mark: ~~***Solutions***~~ : Resume some questions that has been resolved by deep neural networks (This is a post blog and not a scientific paper)
-
-:triangular_flag_on_post: ~~***Remaining Problems***~~ :
-
-
- - **Perceptron** : Supervised learning algorithm with binary classifiers
- - **t-SNE** algortithm : Proximity between 2 points ==> usefull with a lot of features, it's easier to see points that are really close        (:warning: more than 3 dimensions)
- - **NLP** : Neuro-linguistic programming
- - **N-grams** : Computationnal linguistics, sequence of *n-items* from a text or speech
- - **Recursive neural network / Models / Matrix Vector RNN** : ???
+- :triangular_flag_on_post: ~~***Remaining Problems***~~ :
  
 ***Softwares & libraries for Text Mining*** :
  - [Textpresso](https://textpresso.yeastgenome.org/textpresso/) --> biology concept
@@ -90,7 +82,11 @@ ______________________________________________________________________
  
 #### :diamond_shape_with_a_dot_inside: [SciLite](https://github.com/0AlphaZero0/Sentiment-Analysis-EuropePMC/blob/master/Bibliography/SciLite%20a%20platform%20for%20displaying%20text-mined%20annotations_A.Venkatesan_et_al.pdf) :
 
-***Problems*** : 
+- :interrobang: ***Problems*** : 
+
+- :heavy_check_mark: ***Solutions*** : 
+
+- :triangular_flag_on_post: ***Remaining Problems*** :
 
 Platform that allow text mining annotation from any provider to be highlighted on scientific papers.
 Make deeper links between literature and biological data sources thanks to text mining.
