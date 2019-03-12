@@ -12,25 +12,29 @@
 
 ______________________________________________________________________
 
-### Meetings
+### :closed_book: Meetings
 
 - [11/03 - Defintions of planinng, needs and requests](#11/03)
+- [12/03 - Questions & path set up](#12/03)
 
 ______________________________________________________________________
-### Notes
+### :green_book: Notes
 
 - [Week 1 - 01/03-10/03](#Week1)
+- [Week 2 - 11/03-17/03](#Week2)
 
 ______________________________________________________________________
 
-### Index
+### :bookmark_tabs: Index
 
 [Index](#index01)
 
 ______________________________________________________________________
 
+## :closed_book: Meetings
+
 <a name="11/03"></a>
-### 11/03 - Defintions of planinng, needs and requests :
+### :mega: 11/03 - Defintions of planinng, needs and requests :
 
 Meetings :
  - Every Tuesday at 11:00 with Xiao Yang.
@@ -43,10 +47,18 @@ Needs & requests :
   - Good draft of the internship report.
   - Presentation of the work done
 
+<a name="12/03"></a>
+### :mega: 12/03 - Questions & path set up :
+
+- Answer about questions on the background.
+- :warning: Need to set up a problematic!!
 
 ______________________________________________________________________
+
+## :green_book: Notes
+
 <a name="Week1"></a>
-### Week 1 - 01/03-10/03 :
+### :date: Week 1 - 01/03-10/03 :
 
 #### :diamond_shape_with_a_dot_inside: [Deep Learning, NLP, Representation](http://colah.github.io/posts/2014-07-NLP-RNNs-Representations/) :
 
@@ -167,8 +179,8 @@ Citations with no snetiment are considered as OBJECTIVES.
 
 ***Classification*** = **SVM with features : "1-3 grams + Dependency features + Window Based Negation"**
 
-
-
+<a name="Week2"></a>
+### :date: Week 2 - 11/03-17/03 :
 
 
 
@@ -176,7 +188,7 @@ Citations with no snetiment are considered as OBJECTIVES.
 ______________________________________________________________________
 
 <a name="index01"></a>
-### Index :
+## :bookmark_tabs: Index :
 
 **ACL** : digital archive which contains conference and journal papers in NLP and CL
 
