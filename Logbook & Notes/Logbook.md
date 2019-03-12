@@ -1,5 +1,5 @@
-<img align="center" width="30%" height="30%" src="https://github.com/0AlphaZero0/Sentiment-Analysis-EuropePMC/blob/master/Logbook%20%26%20Notes/EMBL.png"> | <h1 align="center">SACSP</h1>
-<p align="center">Sentiment Analysis on Citations in Scientific Papers in Europe Pub Med Central</p> | <img align="center" width="30%" height="30%" src="https://github.com/0AlphaZero0/Sentiment-Analysis-EuropePMC/blob/master/Logbook%20%26%20Notes/europepmc.png">  
+<img align="center" width="30%" height="30%" src="https://github.com/0AlphaZero0/Sentiment-Analysis-EuropePMC/blob/master/Logbook%20%26%20Notes/EMBL.png"> <h1 align="center">SACSP</h1> <img align="center" width="30%" height="30%" src="https://github.com/0AlphaZero0/Sentiment-Analysis-EuropePMC/blob/master/Logbook%20%26%20Notes/europepmc.png">  
+<p align="center">Sentiment Analysis on Citations in Scientific Papers in Europe Pub Med Central</p> 
 
 
 
