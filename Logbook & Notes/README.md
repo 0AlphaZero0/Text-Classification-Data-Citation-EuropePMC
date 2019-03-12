@@ -53,6 +53,31 @@ Needs & requests :
 - Answer about questions on the background.
 - :warning: Need to set up a problematic!!
 
+Frame the project at high level (can be changed later accordingly, no worries)
+
+What you want to do in the project? What the questions you want to answer in the end?
+
+Examples like:  
+What are the sentiments of citations in papers? (must have)  
+Do the sentiments vary in different sections?  
+Do the sentiments vary with times?  
+What are the important features to classify sentiments?  
+Which model is better for the classification in terms of accuracy and computation?  
+
+Initial data analysis  
+Before the classification, you need to know well about your data  
+Look at the data, extract some examples  
+
+Dataset  
+Check existing datasets, are they different to our citation task/data?  
+Can be use them in our task?  
+Build our own datasets if necessary  
+
+Classification  
+Are there any challenging problems? ML algorithms etc.  
+
+Results and analysis  
+
 ______________________________________________________________________
 
 ## :green_book: Notes
