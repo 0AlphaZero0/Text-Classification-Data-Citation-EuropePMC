@@ -12,8 +12,16 @@
 
 ______________________________________________________________________
 
+### Articles
+
 - [Database Citation in Full Text Biomedical Articles](#1) 
 - [Database citation in supplementary data linked to Europe PubMed Central full text biomedical articles](#2)
+- [Patterns of database citation in articles and patents indicate long-term scientific and industry value of biological data resources](#3)
+- [SciLite: a platform for displaying text-mined annotations as a means to link research articles with biological data [version 2; referees: 2 approved, 1 approved with reservations]](#4)
+
+### Thesis
+
+- [Sentiment analysis of scientific citations](#5)
 
 ______________________________________________________________________
 
@@ -59,4 +67,34 @@ url="https://doi.org/10.1186/2041-1480-6-1"
 } 
 </code></pre>
 
+<a name="3"></a>
+- [Patterns of database citation in articles and patents indicate long-term scientific and industry value of biological data resources](https://github.com/0AlphaZero0/Sentiment-Analysis-EuropePMC/blob/master/Bibliography/Patterns%20of%20database%20citation%20in%20articles%20and%20patents%20indicate_D.Bousfield_et_al.pdf)
+
+Citation : <pre><code>Bousfield D, McEntyre J, Velankar S et al.
+  Patterns of database citation in articles and patents indicate long-term scientific and industry value of biological data resources [version 1; referees: 3 approved].
+    F1000Research 2016, 5(ELIXIR):160
+    (https://doi.org/10.12688/f1000research.7911.1)
+</code></pre>
+
+<a name="4"></a>
+- [SciLite: a platform for displaying text-mined annotations as a means to link research articles with biological data [version 2; referees: 2 approved, 1 approved with reservations]](https://github.com/0AlphaZero0/Sentiment-Analysis-EuropePMC/blob/master/Bibliography/SciLite%20a%20platform%20for%20displaying%20text-mined%20annotations_A.Venkatesan_et_al.pdf)
+
+Citation : <pre><code>Venkatesan A, Kim JH, Talo F et al.
+  SciLite: a platform for displaying text-mined annotations as a means to link research articles with biological data [version 2; referees: 2 approved, 1 approved with reservations].
+  Wellcome Open Res 2017, 1:25
+  (https://doi.org/10.12688/wellcomeopenres.10210.2)
+</code></pre>
+
+
+
+
 ______________________________________________________________________
+
+
+### Thesis
+<a name="5"></a>
+- [Sentiment analysis of scientific citations](https://github.com/0AlphaZero0/Sentiment-Analysis-EuropePMC/blob/master/Bibliography/Sentiment%20analysis%20of%20scientific%20citations_A.Athar_et_al.pdf)
+
+Author : Awais Athar
+
+
