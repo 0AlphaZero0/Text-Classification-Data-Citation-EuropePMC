@@ -148,7 +148,7 @@ ______________________________________________________________________
 <a name="Week1"></a>
 ### :date: Week 1 - 01/03-10/03 :
 
-*Papers - Blogs - etc.* :
+*Papers & Blogs* :
 - [Deep Learning, NLP, Representation](#Deep1)
 - [SciLite](#SciLite1)
 - [Database citation in full text biomedical papers](#Database1)
@@ -312,10 +312,14 @@ Citations with no snetiment are considered as OBJECTIVES.
 <a name="Week2"></a>
 ### :date: Week 2 - 11/03-17/03 :
 
+*Papers & Blogs* :
+- [Measuring the Evolution of a Scientific Field through Citation Frames](#Measuring2)
+
 Creation of the [GitHub](https://github.com/0AlphaZero0/Sentiment-Analysis-EuropePMC)
 
 [Scikit-Learn](https://scikit-learn.org/stable/tutorial/text_analytics/working_with_text_data.html) work with text data
 
+<a name="Measuring2"></a>
 #### :diamond_shape_with_a_dot_inside: [Measuring the Evolution of a Scientific Field through Citation Frames](https://github.com/0AlphaZero0/Sentiment-Analysis-EuropePMC/blob/master/Bibliography/Measuring%20the%20Evolution%20of%20a%20Scientific%20Field%20through%20Citation%20Frames_D.Jurgens_et_al.pdf) :
 
 ***Measuring the Evolution of a Scientific Field through Citation Frames*** D.Jurgens et al.
