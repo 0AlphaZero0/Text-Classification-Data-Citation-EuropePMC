@@ -1,3 +1,4 @@
+<a name="top"></a>
 <div class="row">
   <div class="column">
     <img align="left" width="20%" height="20%" src="https://github.com/0AlphaZero0/Sentiment-Analysis-EuropePMC/blob/master/Logbook%20%26%20Notes/EMBL-EBI-logo.png">
@@ -89,6 +90,8 @@ Prediction : does it pass pre-screening if so does it pass peer review; if not i
 
 //
 
+[:top:Got to the top](#top)
+
 <a name="11/03"></a>
 ### :mega: 11/03 - Defintions of planinng, needs and requests :
 
@@ -102,6 +105,8 @@ Needs & requests :
  End of July : 
   - Good draft of the internship report.
   - Presentation of the work done
+
+[:top:Got to the top](#top)
 
 <a name="12/03"></a>
 ### :mega: 12/03 - Questions & path set up :
@@ -133,6 +138,8 @@ Classification
 Are there any challenging problems? ML algorithms etc.  
 
 Results and analysis  
+
+[:top:Got to the top](#top)
 
 ______________________________________________________________________
 
@@ -280,6 +287,8 @@ Citations with no snetiment are considered as OBJECTIVES.
 
 ***Classification*** = **SVM with features : "1-3 grams + Dependency features + Window Based Negation"**
 
+[:top:Got to the top](#top)
+
 <a name="Week2"></a>
 ### :date: Week 2 - 11/03-17/03 :
 
@@ -316,6 +325,8 @@ They use 6 categories to classify citations :
  - Extension (*Extends P's data, methods, etc.*)
  - Comparison OR Contrasts (*Express similarity/differences to P*)
  - Future (*P is a potential avenue for future work*)
+
+[:top:Got to the top](#top)
 
 ______________________________________________________________________
 
@@ -399,6 +410,8 @@ ______________________________________________________________________
 **WIPO** : World Intellectual Property Organisation
 
 **Word/SentiWordNet** : 2 lexicons, SentiWordNet is made for opinion mining
+
+[:top:Got to the top](#top)
 
 ______________________________________________________________________
 ![](https://github.com/0AlphaZero0/Sentiment-Analysis-EuropePMC/blob/master/Logbook%20%26%20Notes/PrecisionRecall.png)
