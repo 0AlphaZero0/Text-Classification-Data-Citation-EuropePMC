@@ -148,6 +148,14 @@ ______________________________________________________________________
 <a name="Week1"></a>
 ### :date: Week 1 - 01/03-10/03 :
 
+*Papers - Blogs - etc.* :
+- [Deep Learning, NLP, Representation](#Deep1)
+- [SciLite](#SciLite1)
+- [Database citation in full text biomedical papers](#Database1)
+- [EuropePMC](#EuropePMC1)
+- [Sentiment analysis of scientific citation](#Sentiment1)
+
+<a name="Deep1"></a>
 #### :diamond_shape_with_a_dot_inside: [Deep Learning, NLP, Representation](http://colah.github.io/posts/2014-07-NLP-RNNs-Representations/) :
 
 - :interrobang: ***Problems*** : Why Deep Neural Network work so well?
@@ -168,7 +176,10 @@ ______________________________________________________________________
  - Reflect
  - EXTRACT
  
+<a name="SciLite1"></a>
 #### :diamond_shape_with_a_dot_inside: [SciLite](https://github.com/0AlphaZero0/Sentiment-Analysis-EuropePMC/blob/master/Bibliography/SciLite%20a%20platform%20for%20displaying%20text-mined%20annotations_A.Venkatesan_et_al.pdf) :
+
+***SciLite: a platform for displaying text-mined annotations as a means to link research articles with biological data.*** A.Venkatesan et al.
 
 - :interrobang: ***Problems*** : Need to link literature and underlying data.
 
@@ -199,7 +210,10 @@ Workflow :
  2) Sorting response to their position in text
  3) Display information
 
+<a name="Database1"></a>
 #### :diamond_shape_with_a_dot_inside: [Database citation in full text biomedical papers](https://github.com/0AlphaZero0/Sentiment-Analysis-EuropePMC/blob/master/Bibliography/Database%20Citation%20in%20Full%20Text%20Biomedical%20Articles_S.Kafkas_et_al.pdf) :
+
+***Database Citation in Full Text Biomedical Articles*** S.Kafkas et al.
 
 - :interrobang: ***Problems*** : Are supplementary files necessary bring more informations to biomolecular databank?
 
@@ -217,7 +231,10 @@ Identification oof citation thanks to *WhatizitANA* pipeline
  - Sometimes the pipeline partially identifies accession numbers
  - other errors from wrong assignation of ID like *GenBank* instead of *UniProt*
 
+<a name="EuropePMC1"></a>
 #### :diamond_shape_with_a_dot_inside: [EuropePMC](http://europepmc.org/) (EPMC/Europe PubMed Central) [PDF](https://github.com/0AlphaZero0/Sentiment-Analysis-EuropePMC/blob/master/Bibliography/Database%20citation%20in%20supplementary%20data%20linked%20to_S.Kafkas_et_al.pdf):
+
+***Database citation in supplementary data linked to Europe PubMed Central full text biomedical articles*** S.Kafkas et al.
 
 - :interrobang: ***Problems*** : Linking scientific literature to databases(DB). How (text)txt mining bring more information to citations.
 
@@ -233,7 +250,10 @@ perform with [STATA](https://www.stata.com/) (statistical tool)
 
 Features : Accession ID; Deposition ID; Deposition Year; First Public Year; PMID publication year; citation year; citation
 
+<a name="Sentiment1"></a>
 #### :diamond_shape_with_a_dot_inside: [Sentiment analysis of scientific citation](https://github.com/0AlphaZero0/Sentiment-Analysis-EuropePMC/blob/master/Bibliography/Sentiment%20analysis%20of%20scientific%20citations_A.Athar_et_al.pdf) :
+
+***Sentiment analysis of scientific citation*** A.Athar
 
 - :interrobang: ***Problems*** : 
   * Many citations in the same sentence
@@ -297,6 +317,8 @@ Creation of the [GitHub](https://github.com/0AlphaZero0/Sentiment-Analysis-Europ
 [Scikit-Learn](https://scikit-learn.org/stable/tutorial/text_analytics/working_with_text_data.html) work with text data
 
 #### :diamond_shape_with_a_dot_inside: [Measuring the Evolution of a Scientific Field through Citation Frames](https://github.com/0AlphaZero0/Sentiment-Analysis-EuropePMC/blob/master/Bibliography/Measuring%20the%20Evolution%20of%20a%20Scientific%20Field%20through%20Citation%20Frames_D.Jurgens_et_al.pdf) :
+
+***Measuring the Evolution of a Scientific Field through Citation Frames*** D.Jurgens et al.
 
 - :interrobang: ***Problems*** : 
   * We know relatively little about how citation frames develop over time within a field and what impact they have on scientific uptake
