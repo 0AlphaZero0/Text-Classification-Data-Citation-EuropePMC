@@ -37,7 +37,19 @@ ______________________________________________________________________
 <a name="05/03"></a>
 ### :mega: 05/03 - CambMetrics :
 
-Machine Learning in publishing : *Colin Batchelor*
+1. **Sentiment Analysis** : *Daniel Encer*
+
+Do it on sicentific data was a big challenge, *:warning: they use someone from outside*, thus they don't really make it, so he can't explain me the all thing.
+
+***Problems encounter*** :
+- Many citations in the same sentence (determine which is the target OR source of the citation)
+- Hard to have a dataset (there is only few datasets)
+- If we build our own dataset it should be random sentence in scientific text to not focus on one field. And to annotate it manually we should use expert in NLP, and of course not only one because the perception of annotation can change according to a personn.
+
+[scite_](https://scite.ai/) : a platform that provide sentiment analysis on scientific papers.
+
+
+2. **Machine Learning in publishing** : *Colin Batchelor*
 - Unsupervised Learning :
   * Clustering
   * Recommendation system
@@ -54,19 +66,28 @@ Machine Learning in publishing : *Colin Batchelor*
   * Reject/Revise/Accept
   * Promote?
   
-Document Tiering : *Peter Corbett*
+3. **Document Tiering** : *Peter Corbett*
 
+- Levenstein Edit distance : distance that separate original sentence from a "modified" one : Kitten -> Sitten -> Sittin -> Sitting = distance = 3.
+- [spaCy](https://spacy.io/) : NLP toolkit for Python
+- Take raw sentences and produce Tokens, Lemmas, Part of speech tags and dependencies
+- MultiLayer Perceptron : with 1 hidden layer (12units) relu & adm
 
-*Daniel Encer* : Sentiment Analysis
+4. **Rejected Articles** : *Jeff White*
 
-Do it on sicentific data was a big challenge, they use someone from outside, thus they don't really make it, so he can't explain me the all thing.
+Know how articles can be rejected. ==> Analyse : Name Author Title
 
-***Problems encounter*** :
-- Many citations in the same sentence (determine which is the target OR source of the citation)
-- Hard to have a dataset (there is only few datasets)
-- If we build our own dataset it should be random sentence in scientific text to not focus on one field. And to annotate it manually we should use expert in NLP, and of course not only one because the perception of annotation can change according to a personn.
+5. **Tools for pre-screening** : *Peter Corbett*
 
-[scite_](https://scite.ai/) : a platform that provide sentiment analysis on scientific papers.
+Machine learning task : 
+- From title & abstract
+- Journal
+
+Prediction : does it pass pre-screening if so does it pass peer review; if not is it eventually accepted by another RSC journal ; how many times is it viewed in the second quarter ; how many times is it cited in its second year?
+
+6. **Is there a publishing gender bias at the RSC?** *Aileen Day*
+
+//
 
 <a name="11/03"></a>
 ### :mega: 11/03 - Defintions of planinng, needs and requests :
