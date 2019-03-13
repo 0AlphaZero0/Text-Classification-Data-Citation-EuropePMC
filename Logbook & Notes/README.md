@@ -37,14 +37,36 @@ ______________________________________________________________________
 <a name="05/03"></a>
 ### :mega: 05/03 - CambMetrics :
 
+Machine Learning in publishing : *Colin Batchelor*
+- Unsupervised Learning :
+  * Clustering
+  * Recommendation system
+  * Topic modelling
+  * Embeddings
+- Supervised Learning :
+  * Machine translation
+  * Facial recognition
+  * Speech recognition
+  * Speaker identification
+- Publishing is a labelling task :
+  * Keywords
+  * Assigning a journal
+  * Reject/Revise/Accept
+  * Promote?
+  
+Document Tiering : *Peter Corbett*
+
+
 *Daniel Encer* : Sentiment Analysis
 
 Do it on sicentific data was a big challenge, they use someone from outside, thus they don't really make it, so he can't explain me the all thing.
 
 ***Problems encounter*** :
-- Many citations in the same sentence
+- Many citations in the same sentence (determine which is the target OR source of the citation)
 - Hard to have a dataset (there is only few datasets)
 - If we build our own dataset it should be random sentence in scientific text to not focus on one field. And to annotate it manually we should use expert in NLP, and of course not only one because the perception of annotation can change according to a personn.
+
+[scite_](https://scite.ai/) : a platform that provide sentiment analysis on scientific papers.
 
 <a name="11/03"></a>
 ### :mega: 11/03 - Defintions of planinng, needs and requests :
