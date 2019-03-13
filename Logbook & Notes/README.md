@@ -14,6 +14,7 @@ ______________________________________________________________________
 
 ### :closed_book: Meetings
 
+- [05/03 - CambMetrics](#05/03)
 - [11/03 - Defintions of planinng, needs and requests](#11/03)
 - [12/03 - Questions & path set up](#12/03)
 
@@ -32,6 +33,18 @@ ______________________________________________________________________
 ______________________________________________________________________
 
 ## :closed_book: Meetings
+
+<a name="05/03"></a>
+### :mega: 05/03 - CambMetrics :
+
+*Daniel Encer* : Sentiment Analysis
+
+Do it on sicentific data was a big challenge, they use someone from outside, thus they don't really make it, so he can't explain me the all thing.
+
+***Problems encounter*** :
+- Many citations in the same sentence
+- Hard to have a dataset (there is only few datasets)
+- If we build our own dataset it should be random sentence in scientific text to not focus on one field. And to annotate it manually we should use expert in NLP, and of course not only one because the perception of annotation can change according to a personn.
 
 <a name="11/03"></a>
 ### :mega: 11/03 - Defintions of planinng, needs and requests :
