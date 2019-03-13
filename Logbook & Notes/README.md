@@ -285,6 +285,9 @@ Citations with no snetiment are considered as OBJECTIVES.
 
 Creation of the [GitHub](https://github.com/0AlphaZero0/Sentiment-Analysis-EuropePMC)
 
+[Scikit-Learn](https://scikit-learn.org/stable/tutorial/text_analytics/working_with_text_data.html) work with text data
+
+
 
 
 ______________________________________________________________________
