@@ -287,8 +287,35 @@ Creation of the [GitHub](https://github.com/0AlphaZero0/Sentiment-Analysis-Europ
 
 [Scikit-Learn](https://scikit-learn.org/stable/tutorial/text_analytics/working_with_text_data.html) work with text data
 
+#### :diamond_shape_with_a_dot_inside: [Measuring the Evolution of a Scientific Field through Citation Frames](https://github.com/0AlphaZero0/Sentiment-Analysis-EuropePMC/blob/master/Bibliography/Measuring%20the%20Evolution%20of%20a%20Scientific%20Field%20through%20Citation%20Frames_D.Jurgens_et_al.pdf) :
 
+- :interrobang: ***Problems*** : 
+  * We know relatively little about how citation frames develop over time within a field and what impact they have on scientific uptake
+  * There is a lack of dataset showing how citations function at the field scale
 
+- :heavy_check_mark: ***Solutions*** : 
+  * They perform the first field-scale study of citation framing by first de- veloping a state-of-the-art method for automatically classifying citation function and then applying this method to an entire field’s literature to quantify the effects and evolution of framing
+  * Creation of one of the largest annotated corpora of citations and use it to train a high-accuracy method for automat- ically labeling a corpus
+  
+- :triangular_flag_on_post: ***Remaining Problems*** : 
+  * Seems like they didn't use sentences before the citation and this can cause a wrong classification
+  (eg. *"BilderNetle is our new data set of German noun-to- ImageNet synset mappings. ImageNet is a large- scale and widely used image database, built on top of WordNet, which maps words into groups of im- ages, called synsets (Deng et al., 2009)."*)
+
+1. They introduce a new large-scale representative corpus of citation function and state-of-the-art methodology for classifying citations by function.
+
+2. They demonstrate that citations reflect the discourse structure of a paper but that this structure is significantly influenced by publication venue.
+
+3. They show that differences in a paper’s citation framing have a significant and meaningful impact on future scientific uptake as measured through future citations.
+
+4. By examining changes in the usage of citation functions, they show that the scholarly NLP community has evolved in how its authors frame their work, reflecting the maturation and growth of the field as a rapid discovery science.
+
+They use 6 categories to classify citations :
+ - Background (*P provides relevant information for this domain*)
+ - Motivation (*P illustrates need for data, goals, methods, etc.*)
+ - Uses (*Uses data, methods, etc. from P*)
+ - Extension (*Extends P's data, methods, etc.*)
+ - Comparison OR Contrasts (*Express similarity/differences to P*)
+ - Future (*P is a potential avenue for future work*)
 
 ______________________________________________________________________
 
