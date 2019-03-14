@@ -328,7 +328,7 @@ Idea of workflow :
 In fact there is a lack of data to this problem only *"Measuring the Evolution of a Scientific Field through Citation Frames D.Jurgens et al."* proposed a really good dataset () thanks to the previsous one (ACL Anthology Network Corpus).
 
 <a name="Measuring2"></a>
-#### :diamond_shape_with_a_dot_inside: [Measuring the Evolution of a Scientific Field through Citation Frames](https://github.com/0AlphaZero0/Sentiment-Analysis-EuropePMC/blob/master/Bibliography/Measuring%20the%20Evolution%20of%20a%20Scientific%20Field%20through%20Citation%20Frames_D.Jurgens_et_al.pdf) :
+#### :diamond_shape_with_a_dot_inside: [Measuring the Evolution of a Scientific Field through Citation Frames]() :
 
 ***Measuring the Evolution of a Scientific Field through Citation Frames*** D.Jurgens et al.
 
