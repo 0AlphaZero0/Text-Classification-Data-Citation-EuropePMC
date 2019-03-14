@@ -319,7 +319,15 @@ Creation of the [GitHub](https://github.com/0AlphaZero0/Sentiment-Analysis-Europ
 
 [Scikit-Learn](https://scikit-learn.org/stable/tutorial/text_analytics/working_with_text_data.html) work with text data
 
-Idea of workflow :
+**Idea of workflow** :
+
+So questions that I want to respond are :
+- *Is there an impact of the time or publication journals on the opinion of an article or a subject or an author, etc.?*
+- *What are the important features , which model is better for the classification in terms of accuracy and computation?*
+- *Problems known* : 
+ * As I know there is not much comparative studies to compare models and/or features
+ * There is in a lack of datasets and actually 
+
 
 ![alt text](https://github.com/0AlphaZero0/Sentiment-Analysis-EuropePMC/blob/master/Logbook%20%26%20Notes/WorkflowIdea.png)
 
@@ -391,6 +399,8 @@ ______________________________________________________________________
 **IBk** : Algorithm of machine learning ≈ K nearest algorithm
 
 **IPC** : International Patent Classification hierarchical system of language independent symbols for the	 classification of patents and utility models according to the different areas of technology to	 which they pertain (classification des DOCDB-ensemble de brevets- selon certains paramètres 	tel que leur domaines)
+
+**Lemma** : In psycholinguistics, a lemma (plural lemmas or lemmata) is an abstract conceptual form of a word that has been mentally selected for utterance in the early stages of speech production.[1] A lemma represents a specific meaning but does not have any specific sounds that are attached to it.
 
 **Lexicon** : The vocabulary uses by one person or one field (like scientific lexicon)
 
