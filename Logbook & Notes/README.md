@@ -324,9 +324,9 @@ Creation of the [GitHub](https://github.com/0AlphaZero0/Sentiment-Analysis-Europ
 So questions that I want to respond are :
 - *Is there an impact of the time or publication journals on the opinion of an article or a subject or an author, etc.?*
 - *What are the important features , which model is better for the classification in terms of accuracy and computation?*
-- *Problems known* : 
- * As I know there is not much comparative studies to compare models and/or features
- * There is in a lack of datasets and actually 
+- *Problems known* :
+  * As I know there is not much comparative studies to compare models and/or features
+  * There is in a lack of datasets and actually 
 
 
 ![alt text](https://github.com/0AlphaZero0/Sentiment-Analysis-EuropePMC/blob/master/Logbook%20%26%20Notes/WorkflowIdea.png)
