@@ -210,6 +210,8 @@ Workflow :
  2) Sorting response to their position in text
  3) Display information
 
+![](https://github.com/0AlphaZero0/Sentiment-Analysis-EuropePMC/blob/master/Logbook%20%26%20Notes/EPMC-SciLite.png)
+
 <a name="Database1"></a>
 #### :diamond_shape_with_a_dot_inside: [Database citation in full text biomedical papers](https://github.com/0AlphaZero0/Sentiment-Analysis-EuropePMC/blob/master/Bibliography/Database%20Citation%20in%20Full%20Text%20Biomedical%20Articles_S.Kafkas_et_al.pdf) :
 
