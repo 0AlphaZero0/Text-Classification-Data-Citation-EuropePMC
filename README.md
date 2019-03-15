@@ -15,10 +15,15 @@ ______________________________________________________________________
 
 ## Summary & Usefull Link
 
-- *Description*
+- *[Description](#Descrition)*
 
 - *[Planning](https://github.com/0AlphaZero0/Sentiment-Analysis-EuropePMC/projects)*
 
 - *[Logbook & Notes](https://github.com/0AlphaZero0/Sentiment-Analysis-EuropePMC/blob/master/Logbook%20%26%20Notes/README.md)*
 
 - *[Bibliography](https://github.com/0AlphaZero0/Sentiment-Analysis-EuropePMC/blob/master/Bibliography/README.md)*
+
+______________________________________________________________________
+
+<a name="Description"></a>
+### Description :
