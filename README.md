@@ -23,7 +23,7 @@ ______________________________________________________________________
 
 - *[Bibliography](https://github.com/0AlphaZero0/Sentiment-Analysis-EuropePMC/blob/master/Bibliography/README.md)*
 
-- [Acknowledgment](#Acknowledgment)*
+- *[Acknowledgment](#Acknowledgment)*
 
 ______________________________________________________________________
 
