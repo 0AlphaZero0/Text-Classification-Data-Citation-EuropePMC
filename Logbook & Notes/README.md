@@ -314,12 +314,18 @@ Citations with no snetiment are considered as OBJECTIVES.
 <a name="Week2"></a>
 ### :date: Week 2 - 11/03-17/03 :
 
-*Papers & Blogs* :
-- [Measuring the Evolution of a Scientific Field through Citation Frames](#Measuring2)
+- *Papers & Blogs* :
+  * [Measuring the Evolution of a Scientific Field through Citation Frames](#Measuring2)
 
-Creation of the [GitHub](https://github.com/0AlphaZero0/Sentiment-Analysis-EuropePMC)
+- *Done* :
+  * Creation of the [GitHub](https://github.com/0AlphaZero0/Sentiment-Analysis-EuropePMC)
 
-[Scikit-Learn](https://scikit-learn.org/stable/tutorial/text_analytics/working_with_text_data.html) work with text data
+- *Tricks* :
+  * [Scikit-Learn](https://scikit-learn.org/stable/tutorial/text_analytics/working_with_text_data.html) work with text data
+  * Maybe use letters to editor????
+
+- *:warning: Raised problems* :
+  * Retracted paper should be negatives
 
 **Idea of workflow** :
 
