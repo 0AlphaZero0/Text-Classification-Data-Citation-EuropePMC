@@ -345,7 +345,9 @@ In fact there is a lack of data to this problem only *"Measuring the Evolution o
 
 There is also the dataset : [Citation sentiment corpus](https://github.com/0AlphaZero0/Sentiment-Analysis-EuropePMC/blob/master/Datasets/Citation_sentiment_corpus.zip), this one look really good, indeed it use objective/positive/negative classes, but one problem is that citation's contexts are in html files. and aren't annotated directly.
 
+
 ***One solution could be to create my own dataset***
+
 
 <a name="Measuring2"></a>
 #### :diamond_shape_with_a_dot_inside: [Measuring the Evolution of a Scientific Field through Citation Frames](https://github.com/0AlphaZero0/Sentiment-Analysis-EuropePMC/blob/master/Bibliography/Measuring%20the%20Evolution%20of%20a%20Scientific%20Field%20through%20Citation%20Frames_D.Jurgens_et_al.pdf) :
