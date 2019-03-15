@@ -341,7 +341,11 @@ So questions that I want to respond are :
 
 *The idea is to take a paper and extract all citations of this one, to apply sentiment analysis on, then using the measured polarity we can, thanks to meta data, see if the opinion of this article varies over time or over publication venues. We can also move to the higher level of abstraction and not use only one article but some "linked articles". Like all articles for the same author or articles speaking of cancer Vs tuberculosis, etc. So we could see the "general" opinion to articles related to an author or a subject.*
 
-In fact there is a lack of data to this problem only *"Measuring the Evolution of a Scientific Field through Citation Frames D.Jurgens et al."* proposed a really good dataset () thanks to the previsous one (ACL Anthology Network Corpus).
+In fact there is a lack of data to this problem only *"Measuring the Evolution of a Scientific Field through Citation Frames D.Jurgens et al."* proposed a really good dataset [Teufel-json](https://github.com/0AlphaZero0/Sentiment-Analysis-EuropePMC/blob/master/Datasets/teufel-json.tar.gz) thanks to ACL Anthology Network Corpus. But there is some problems here, this dataset is quiet heavy due to information duplication. Also, this dataset isn't annotated with polarity it's only with 6 classes that I described after.
+
+There is also the dataset : [Citation sentiment corpus](https://github.com/0AlphaZero0/Sentiment-Analysis-EuropePMC/blob/master/Datasets/Citation_sentiment_corpus.zip), this one look really good, indeed it use objective/positive/negative classes, but one problem is that citation's contexts are in html files. and aren't annotated directly.
+
+***One solution could be to create my own dataset***
 
 <a name="Measuring2"></a>
 #### :diamond_shape_with_a_dot_inside: [Measuring the Evolution of a Scientific Field through Citation Frames](https://github.com/0AlphaZero0/Sentiment-Analysis-EuropePMC/blob/master/Bibliography/Measuring%20the%20Evolution%20of%20a%20Scientific%20Field%20through%20Citation%20Frames_D.Jurgens_et_al.pdf) :
