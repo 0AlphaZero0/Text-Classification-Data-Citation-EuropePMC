@@ -17,7 +17,7 @@ ______________________________________________________________________
 
 - *[Description](#Descrition)*
 
-- *[Planning](https://github.com/0AlphaZero0/Sentiment-Analysis-EuropePMC/projects)*
+- *[Planning](https://github.com/0AlphaZero0/Sentiment-Analysis-EuropePMC/projects/1)*
 
 - *[Logbook & Notes](https://github.com/0AlphaZero0/Sentiment-Analysis-EuropePMC/blob/master/Logbook%20%26%20Notes/README.md)*
 
