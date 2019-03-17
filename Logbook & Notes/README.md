@@ -106,7 +106,7 @@ Needs & requests :
   - Good draft of the internship report.
   - Presentation of the work done
 
-[:top:Got to the top](#top)
+[:top::top::top::top::top::top::top::top::top::top::top::top::top::top:Got to the top:top::top::top::top::top::top::top::top::top::top::top::top::top::top::top:](#top)
 
 <a name="12/03"></a>
 ### :mega: 12/03 - Questions & path set up :
@@ -139,7 +139,7 @@ Are there any challenging problems? ML algorithms etc.
 
 Results and analysis  
 
-[:top:Got to the top](#top)
+[:top::top::top::top::top::top::top::top::top::top::top::top::top::top:Got to the top:top::top::top::top::top::top::top::top::top::top::top::top::top::top::top:](#top)
 
 ______________________________________________________________________
 
@@ -309,7 +309,7 @@ Citations with no snetiment are considered as OBJECTIVES.
 
 ***Classification*** = **SVM with features : "1-3 grams + Dependency features + Window Based Negation"**
 
-[:top:Got to the top](#top)
+[:top::top::top::top::top::top::top::top::top::top::top::top::top::top:Got to the top:top::top::top::top::top::top::top::top::top::top::top::top::top::top::top:](#top)
 
 <a name="Week2"></a>
 ### :date: Week 2 - 11/03-17/03 :
@@ -382,7 +382,7 @@ They use 6 categories to classify citations :
  - Comparison OR Contrasts (*Express similarity/differences to P*)
  - Future (*P is a potential avenue for future work*)
 
-[:top:Got to the top](#top)
+[:top::top::top::top::top::top::top::top::top::top::top::top::top::top:Got to the top:top::top::top::top::top::top::top::top::top::top::top::top::top::top::top:](#top)
 
 ______________________________________________________________________
 
@@ -469,7 +469,7 @@ ______________________________________________________________________
 
 **Word/SentiWordNet** : 2 lexicons, SentiWordNet is made for opinion mining
 
-[:top:Got to the top](#top)
+[:top::top::top::top::top::top::top::top::top::top::top::top::top::top:Got to the top:top::top::top::top::top::top::top::top::top::top::top::top::top::top::top:](#top)
 
 ______________________________________________________________________
 ![](https://github.com/0AlphaZero0/Sentiment-Analysis-EuropePMC/blob/master/Logbook%20%26%20Notes/PrecisionRecall.png)
