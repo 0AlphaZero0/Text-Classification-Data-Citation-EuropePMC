@@ -434,6 +434,7 @@ A lexicon, word-hoard, wordbook, or word-stock is the vocabulary of a person, la
 In the fields of computational linguistics and probability, an n-gram is a contiguous sequence of n items from a given sample of text or speech. The items can be phonemes, syllables, letters, words or base pairs according to the application. The n-grams typically are collected from a text or speech corpus. When the items are words, n-grams may also be called shingles. The three-gram seem to be a really good one (see [A.Athar thesis](https://github.com/0AlphaZero0/Sentiment-Analysis-EuropePMC/blob/master/Bibliography/Sentiment%20analysis%20of%20scientific%20citations_A.Athar.pdf)) eg. ***San Francisco (is a 2-gram), The Three Musketeers (is a 3-gram), She stood up slowly (is a 4-gram)*** .
 
   6. **Word Embedding (word vectors)** :
+Word embedding is the collective name for a set of language modeling and feature learning techniques in natural language processing (NLP) where words or phrases from the vocabulary are mapped to vectors of real numbers. Conceptually it involves a mathematical embedding from a space with one dimension per word to a continuous vector space with a much lower dimension.
   
 <a name="NewFeatures3"></a>
 #### :diamond_shape_with_a_dot_inside: [New Features for Sentiment Analysis: Do Sentences Matter?](https://github.com/0AlphaZero0/Sentiment-Analysis-EuropePMC/blob/master/Bibliography/New%20Features%20for%20Sentiment%20Analysis_G.Gezici_et_al.pdf) :
