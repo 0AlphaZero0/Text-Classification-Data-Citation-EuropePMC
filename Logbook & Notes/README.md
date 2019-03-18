@@ -404,6 +404,7 @@ There is some datasets that already exists for sentiment analysis like :
 One of the solution is to ***create our own dataset***, in fact EPMC provides a lot of abstract and full-text biomedical papers and it could be really easy to extract them, thanks to requests with [RESTful API](http://europepmc.org/RestfulWebService). And another really good point of this method is that we obtain these files in XML format and it's acutally really helpfull to investigate for citations.
 
 So to create our own dataset it's important to know which features are necessary for sentiment analysis.
+It's important to separate subjective sentences from objectives one to avoid problems of data size and to avoid time computation for nothing. One of the best approach for now is the *dependency* one.
 
 <a name="NewFeatures"></a>
 #### :diamond_shape_with_a_dot_inside: [New Features for Sentiment Analysis: Do Sentences Matter?](https://github.com/0AlphaZero0/Sentiment-Analysis-EuropePMC/blob/master/Bibliography/New%20Features%20for%20Sentiment%20Analysis_G.Gezici_et_al.pdf) :
