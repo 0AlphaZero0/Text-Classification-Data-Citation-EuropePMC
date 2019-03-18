@@ -391,7 +391,8 @@ They use 6 categories to classify citations :
 ### :date: Week 3 - 18/03-24/03 :
 
 - *Papers & Blogs* :
-  * [New Features for Sentiment Analysis: Do Sentences Matter?](#NewFeatures)
+  * [New Features for Sentiment Analysis: Do Sentences Matter?](#NewFeatures3)
+  * [Sentiment Symposium Tutorial](http://sentiment.christopherpotts.net/index.html)
 
 There is some datasets that already exists for sentiment analysis like :
  * [***Sentiment140***](http://help.sentiment140.com/for-students/), this dataset is really popular because it contains 160,000 tweets collected via Twitter API (unfortunately emoticons are pre-removed, there is actually some research about sentiment analysis using emoticons and they provide a lot of good results), unfortunately this dataset can't be used here, because we're focusing on scientific paper and not on tweets.
@@ -410,13 +411,21 @@ It's important to separate subjective sentences from objectives one to avoid pro
   1. ***Stemming*** :
 In linguistic morphology and information retrieval, stemming is the process of reducing inflected words to their word stem, base or root form generally a written word form.
 The original goal of this approach in sentiment analysis is to remove the noise that produce a lot of word's different shapes.
-*Problems* : sometimes algorithm just take away the sentiment of the word eg. : captivation/captive became both "captiv" and also it could be costly in resources and performance accuracy.
+*Problems* : sometimes algorithm just take away the sentiment of the word eg. : ***captivation/captive became both "captiv"*** and also it could be costly in resources and performance accuracy.
 So it may not be a really good approach for sentiment analysis.
 
   2. **Tokenization** :
+Tokenization is the process of demarcating and possibly classifying sections of a string of input characters. The resulting tokens are then passed on to some other form of processing. The process can be considered a sub-task of parsing input ( ***"The sky is grey" become "the","sky","is","grey"*** ).
+This solution could be great if there is not as much data but if there is a lot of data it could be more complicated to see a really good improvement thanks to this approach (1500 samples seems to be the limitation between "necessary" and "unecessary").
 
+  3. **Part of speech tagging (POStag)** :
+In corpus linguistics, part-of-speech tagging (POS tagging or PoS tagging or POST), also called grammatical tagging or word-category disambiguation, is the process of marking up a word in a text (corpus) as corresponding to a particular part of speech, based on both its definition and its context—i.e., its relationship with adjacent and related words in a phrase, sentence, or paragraph. A simplified form of this is commonly taught to school-age children, in the identification of words as nouns, verbs, adjectives, adverbs, etc.
 
-<a name="NewFeatures"></a>
+<p align="center">
+  <img src="https://github.com/0AlphaZero0/Sentiment-Analysis-EuropePMC/blob/master/Logbook%20%26%20Notes/POStag.png">
+</p>
+
+<a name="NewFeatures3"></a>
 #### :diamond_shape_with_a_dot_inside: [New Features for Sentiment Analysis: Do Sentences Matter?](https://github.com/0AlphaZero0/Sentiment-Analysis-EuropePMC/blob/master/Bibliography/New%20Features%20for%20Sentiment%20Analysis_G.Gezici_et_al.pdf) :
 
 ***New Features for Sentiment Analysis: Do Sentences Matter?*** G.Gezici et al.
