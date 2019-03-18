@@ -17,7 +17,7 @@ ______________________________________________________________________
 - [Database Citation in Full Text Biomedical Articles](#1) 
 - [Database citation in supplementary data linked to Europe PubMed Central full text biomedical articles](#2)
 - [Measuring the Evolution of a Scientific Field through Citation Frames](#5)
-- [New Features for Sentiment Analysis](#7)
+- [New Features for Sentiment Analysis: Do Sentences Matter?](#7)
 - [Patterns of database citation in articles and patents indicate long-term scientific and industry value of biological data resources](#3)
 - [SciLite: a platform for displaying text-mined annotations as a means to link research articles with biological data [version 2; referees: 2 approved, 1 approved with reservations]](#4)
 
@@ -105,7 +105,7 @@ Citation : <pre><code>@article{TACL1266,
 </code></pre>
 
 <a name="7"></a>
-- [New Features for Sentiment Analysis](https://github.com/0AlphaZero0/Sentiment-Analysis-EuropePMC/blob/master/Bibliography/New%20Features%20for%20Sentiment%20Analysis_G.Gezici_et_al.pdf)
+- [New Features for Sentiment Analysis: Do Sentences Matter?](https://github.com/0AlphaZero0/Sentiment-Analysis-EuropePMC/blob/master/Bibliography/New%20Features%20for%20Sentiment%20Analysis_G.Gezici_et_al.pdf)
 
 Citation : <pre><code>@inproceedings{inproceedings,
 author = {Gezici, Gizem and Yanikoglu, Berrin and Tapucu, Dilek and Saygin, Yucel},
