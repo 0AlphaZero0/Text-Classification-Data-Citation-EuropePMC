@@ -391,6 +391,7 @@ They use 6 categories to classify citations :
 ### :date: Week 3 - 18/03-24/03 :
 
 - *Papers & Blogs* :
+  * [New Features for Sentiment Analysis: Do Sentences Matter?](#NewFeatures)
 
 There is some datasets that already exists for sentiment analysis like :
  * [***Sentiment140***](http://help.sentiment140.com/for-students/), this dataset is really popular because it contains 160,000 tweets collected via Twitter API (unfortunately emoticons are pre-removed, there is actually some research about sentiment analysis using emoticons and they provide a lot of good results), unfortunately this dataset can't be used here, because we're focusing on scientific paper and not on tweets.
@@ -404,7 +405,33 @@ One of the solution is to ***create our own dataset***, in fact EPMC provides a 
 
 So to create our own dataset it's important to know which features are necessary for sentiment analysis.
 
+<a name="NewFeatures"></a>
+#### :diamond_shape_with_a_dot_inside: [New Features for Sentiment Analysis: Do Sentences Matter?](https://github.com/0AlphaZero0/Sentiment-Analysis-EuropePMC/blob/master/Bibliography/New%20Features%20for%20Sentiment%20Analysis_G.Gezici_et_al.pdf) :
 
+***New Features for Sentiment Analysis: Do Sentences Matter?*** G.Gezici et al.
+
+- :interrobang: ***Problems*** : 
+  * Collecting a large training data is often a problem, because of the time a big part of the dataset is just subjective sentences.
+
+- :heavy_check_mark: ***Solutions*** : 
+  * Create 19 features to obtain only subjectives sentences related to the review. 
+  
+- :triangular_flag_on_post: ***Remaining Problems*** : 
+  * Not all set of features work well.
+
+Existing solutions instead of the one here :
+- Finding subjective sentences
+- Exploit the strucure in sentences
+- Polarity buit determine which one after
+- First review line
+
+19 features split in 4 categories :
+- Basic features
+- Features based on subjective sentence occurrence statistics
+- Delta-tf-idf weighting of word polarities
+- Sentence-level features
+
+They also use Punctuation but useless in scientific paper.
 
 
 [:top::top::top::top::top::top::top::top::top::top::top::top::top::top:Got to the top:top::top::top::top::top::top::top::top::top::top::top::top::top::top::top:](#top)
