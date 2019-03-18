@@ -17,12 +17,13 @@ ______________________________________________________________________
 - [Database Citation in Full Text Biomedical Articles](#1) 
 - [Database citation in supplementary data linked to Europe PubMed Central full text biomedical articles](#2)
 - [Measuring the Evolution of a Scientific Field through Citation Frames](#5)
+- [New Features for Sentiment Analysis](#7)
 - [Patterns of database citation in articles and patents indicate long-term scientific and industry value of biological data resources](#3)
 - [SciLite: a platform for displaying text-mined annotations as a means to link research articles with biological data [version 2; referees: 2 approved, 1 approved with reservations]](#4)
 
 ### Thesis
 
-- [Sentiment analysis of scientific citations](#5)
+- [Sentiment analysis of scientific citations](#6)
 
 ______________________________________________________________________
 
@@ -103,13 +104,24 @@ Citation : <pre><code>@article{TACL1266,
 }
 </code></pre>
 
+<a name="7"></a>
+- [New Features for Sentiment Analysis](https://github.com/0AlphaZero0/Sentiment-Analysis-EuropePMC/blob/master/Bibliography/New%20Features%20for%20Sentiment%20Analysis_G.Gezici_et_al.pdf)
 
+Citation : <pre><code>@inproceedings{inproceedings,
+author = {Gezici, Gizem and Yanikoglu, Berrin and Tapucu, Dilek and Saygin, Yucel},
+year = {2012},
+month = {09},
+pages = {},
+title = {New Features for Sentiment Analysis: Do Sentences Matter?},
+volume = {917},
+journal = {CEUR Workshop Proceedings}
+}</code></pre>
 
 ______________________________________________________________________
 
 
 ### Thesis
-<a name="5"></a>
+<a name="6"></a>
 - [Sentiment analysis of scientific citations](https://github.com/0AlphaZero0/Sentiment-Analysis-EuropePMC/blob/master/Bibliography/Sentiment%20analysis%20of%20scientific%20citations_A.Athar_et_al.pdf)
 
 Author : Awais Athar
