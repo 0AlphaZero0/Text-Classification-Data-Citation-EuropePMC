@@ -407,8 +407,13 @@ So to create our own dataset it's important to know which features are necessary
 It's important to separate subjective sentences from objectives one to avoid problems of data size and to avoid time computation for nothing. One of the best approach for now is the *dependency* one.
 
 - Approaches for sentiment analysis :
-  1. Stemming :
+  1. ***Stemming*** :
 In linguistic morphology and information retrieval, stemming is the process of reducing inflected words to their word stem, base or root form generally a written word form.
+The original goal of this approach in sentiment analysis is to remove the noise that produce a lot of word's different shapes.
+*Problems* : sometimes algorithm just take away the sentiment of the word eg. : captivation/captive became both "captiv" and also it could be costly in resources and performance accuracy.
+So it may not be a really good approach for sentiment analysis.
+
+  2. **Tokenization** :
 
 
 <a name="NewFeatures"></a>
