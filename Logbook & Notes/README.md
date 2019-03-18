@@ -24,6 +24,7 @@ ______________________________________________________________________
 
 - [Week 1 - 01/03-10/03](#Week1)
 - [Week 2 - 11/03-17/03](#Week2)
+- [Week 3 - 18/03-24/03](#Week3)
 
 ______________________________________________________________________
 
@@ -341,8 +342,10 @@ So questions that I want to respond are :
 
 *The idea is to take a paper and extract all citations of this one, to apply sentiment analysis on, then using the measured polarity we can, thanks to meta data, see if the opinion of this article varies over time or over publication venues. We can also move to the higher level of abstraction and not use only one article but some "linked articles". Like all articles for the same author or articles speaking of cancer Vs tuberculosis, etc. So we could see the "general" opinion to articles related to an author or a subject.*
 
+<a name="Teufel-json"></a>
 In fact there is a lack of data to this problem only *"Measuring the Evolution of a Scientific Field through Citation Frames D.Jurgens et al."* proposed a really good dataset [Teufel-json](https://github.com/0AlphaZero0/Sentiment-Analysis-EuropePMC/blob/master/Datasets/teufel-json.tar.gz) thanks to ACL Anthology Network Corpus. But there is some problems here, this dataset is quiet heavy due to information duplication. Also, this dataset isn't annotated with polarity it's only with 6 classes that I described after.
 
+<a name="CitationSentimentCorpus"></a>
 There is also the dataset : [Citation sentiment corpus](https://github.com/0AlphaZero0/Sentiment-Analysis-EuropePMC/blob/master/Datasets/Citation_sentiment_corpus.zip), this one look really good, indeed it use objective/positive/negative classes, but one problem is that citation's contexts are in html files. and aren't annotated directly.
 
 
@@ -381,6 +384,28 @@ They use 6 categories to classify citations :
  - Extension (*Extends P's data, methods, etc.*)
  - Comparison OR Contrasts (*Express similarity/differences to P*)
  - Future (*P is a potential avenue for future work*)
+
+[:top::top::top::top::top::top::top::top::top::top::top::top::top::top:Got to the top:top::top::top::top::top::top::top::top::top::top::top::top::top::top::top:](#top)
+
+<a name="Week3"></a>
+### :date: Week 3 - 18/03-24/03 :
+
+- *Papers & Blogs* :
+
+There is some datasets that already exists for sentiment analysis like :
+ * [***Sentiment140***](http://help.sentiment140.com/for-students/), this dataset is really popular because it contains 160,000 tweets collected via Twitter API (unfortunately emoticons are pre-removed, there is actually some research about sentiment analysis using emoticons and they provide a lot of good results), unfortunately this dataset can't be used here, because we're focusing on scientific paper and not on tweets.
+ * [***Stanford Sentiment Treebank***](https://nlp.stanford.edu/sentiment/code.html), this dataset like the precedent one is not focusing on scientific papers (entertainment review website) so we're not using it.
+ * [***Multidomain sentiment analysis dataset***](http://www.cs.jhu.edu/~mdredze/datasets/sentiment/), this dataset is a multi domain-one (Amazon reviews), but as I can read in many papers, it's actually quite hard to obtain good results with multi-domain, so we're focusing only in scientific papers.
+ * [***Paper Reviews Data Set***](https://archive.ics.uci.edu/ml/datasets/Paper+Reviews), this dataset could be great because it contains scientific papers reviews, but it's only reviews and only focusing on computing and informatic, the goal of this project is to apply sentiment analysis on biomedical scientific papers, so this one is not really adapted for the task.
+ * [***Awais Athar - Citation Sentiment Corpus***](http://cl.awaisathar.com/citation-sentiment-corpus/), this dataset that I've find in the thesis of Awais Athar, is quite good but as said [earlier](#CitationSentimentCorpus), it's maybe not the perfect one to use here.
+ * [***Teufel-json***](http://jurgens.people.si.umich.edu/citation-function/), like the one before I've discussed about it [before](Teufel-json) and it may not be the good one to use here.
+
+One of the solution is to ***create our own dataset***, in fact EPMC provides a lot of abstract and full-text biomedical papers and it could be really easy to extract them, thanks to requests with [RESTful API](http://europepmc.org/RestfulWebService). And another really good point of this method is that we obtain these files in XML format and it's acutally really helpfull to investigate for citations.
+
+So to create our own dataset it's important to know which features are necessary for sentiment analysis.
+
+
+
 
 [:top::top::top::top::top::top::top::top::top::top::top::top::top::top:Got to the top:top::top::top::top::top::top::top::top::top::top::top::top::top::top::top:](#top)
 
