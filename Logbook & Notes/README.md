@@ -34,6 +34,12 @@ ______________________________________________________________________
 
 ______________________________________________________________________
 
+### :bookmark: Attachments
+
+[Attachments](#attachments01)
+
+______________________________________________________________________
+
 ## :closed_book: Meetings
 
 <a name="05/03"></a>
@@ -419,11 +425,7 @@ Tokenization is the process of demarcating and possibly classifying sections of 
 This solution could be great if there is not as much data but if there is a lot of data it could be more complicated to see a really good improvement thanks to this approach (1500 samples seems to be the limitation between "necessary" and "unecessary").
 
   3. **Part of speech tagging (POStag)** :
-In corpus linguistics, part-of-speech tagging (POS tagging or PoS tagging or POST), also called grammatical tagging or word-category disambiguation, is the process of marking up a word in a text (corpus) as corresponding to a particular part of speech, based on both its definition and its context—i.e., its relationship with adjacent and related words in a phrase, sentence, or paragraph. A simplified form of this is commonly taught to school-age children, in the identification of words as nouns, verbs, adjectives, adverbs, etc.
-
-<p align="center">
-  <img src="https://github.com/0AlphaZero0/Sentiment-Analysis-EuropePMC/blob/master/Logbook%20%26%20Notes/POStag.png">
-</p>
+In corpus linguistics, part-of-speech tagging (POS tagging or PoS tagging or POST), also called grammatical tagging or word-category disambiguation, is the process of marking up a word in a text (corpus) as corresponding to a particular part of speech, based on both its definition and its context—i.e., its relationship with adjacent and related words in a phrase, sentence, or paragraph. A simplified form of this is commonly taught to school-age children, in the identification of words as nouns, verbs, adjectives, adverbs, etc. (see [POStag scheme](#POStag01))
 
   4. **Lexicons** :
 A lexicon, word-hoard, wordbook, or word-stock is the vocabulary of a person, language, or branch of knowledge (such as nautical or medical). In linguistics, a lexicon is a language's inventory of lexemes. There is two major lexicons that are [SentiWordNet](https://github.com/aesuli/sentiwordnet) and [WordNet](https://wordnet.princeton.edu/). The problem with these two is that these two lexicons are made for general sentiment analysis that is proved to not be efficient when we are interest in a specific field like science.
@@ -520,11 +522,11 @@ ______________________________________________________________________
 
 **PMCID** : ID for a full-txt article of Europe PMC
 
-**Précision** : positive predictive values  fraction of relevant instances among the retrieved instances fraction de vrai posisitf / (vrai positif + faux positif) le nombre d’identifications correctes sur toutes les identifications réalisées  voir figures ci-dessous
+**Precision** : positive predictive values  fraction of relevant instances among the retrieved instances fraction de vrai posisitf / (vrai positif + faux positif) le nombre d’identifications correctes sur toutes les identifications réalisées ([see below](#PrecisionRecall01))
 
 **RDF** : Resource Description Framework modèle de graphe destiné à décrire de façon formelle les ressources Web, fonctionne avec des ensembles de triplets (sujet : ressource à décrire, prédicats : type de propriété applicable à la ressource, objets : donnée ou ressource)
 
-**Recall** : the fraction of relevant instances that have been retrieved over the total amount of relevant instances  fraction de vrais positifs/(vrais positifs+faux negatifs) le nombre d’identification correct parmi l’ensemble des corrects  voir figure ci-dessous
+**Recall** : the fraction of relevant instances that have been retrieved over the total amount of relevant instances  fraction de vrais positifs/(vrais positifs+faux negatifs) le nombre d’identification correct parmi l’ensemble des corrects ([see below](#PrecisionRecall01))
 
 **Recursive neural network / Models / Matrix Vector RNN** : ???
 
@@ -551,6 +553,20 @@ ______________________________________________________________________
 
 [:top::top::top::top::top::top::top::top::top::top::top::top::top::top:Got to the top:top::top::top::top::top::top::top::top::top::top::top::top::top::top::top:](#top)
 
+
 ______________________________________________________________________
-![](https://github.com/0AlphaZero0/Sentiment-Analysis-EuropePMC/blob/master/Logbook%20%26%20Notes/PrecisionRecall.png)
+
+<a name="attachments01"></a>
+## :bookmark: Attachments :
+
+<a name="PrecisionRecall01"></a>
+<p align="center">
+  <img src="https://github.com/0AlphaZero0/Sentiment-Analysis-EuropePMC/blob/master/Logbook%20%26%20Notes/PrecisionRecall.png">
+</p>
 So to make a good analysis, it's necessary to have a high precision & recall
+
+<a name="POStag01"></a>
+<p align="center">
+  <img src="https://github.com/0AlphaZero0/Sentiment-Analysis-EuropePMC/blob/master/Logbook%20%26%20Notes/POStag.png">
+</p>
+
