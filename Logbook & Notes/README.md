@@ -572,9 +572,7 @@ ______________________________________________________________________
 </p>
 
 <p align="center">
-
-##### Precision & Recall
-
+Precision & Recall
 </p>
 
 So to make a good analysis, it's necessary to have a high precision & recall
@@ -585,9 +583,7 @@ So to make a good analysis, it's necessary to have a high precision & recall
 </p>
 
 <p align="center">
-  
-##### POS-tag
-
+POS-tag
 </p>
 
 <a name="dependencytrees3"></a>
@@ -596,9 +592,7 @@ So to make a good analysis, it's necessary to have a high precision & recall
 </p>
 
 <p align="center">
-  
-##### Dependency trees
-
+Dependency trees
 </p>
 
 These trees illustrate two possible ways to render the dependency and phrase structure relations (see below). This dependency tree is an "ordered" tree, i.e. it reflects actual word order. Many dependency trees abstract away from linear order and focus just on hierarchical order, which means they do not show actual word order. This constituency (= phrase structure) tree follows the conventions of bare phrase structure (BPS), whereby the words themselves are employed as the node labels.
