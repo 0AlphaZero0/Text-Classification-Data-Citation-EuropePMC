@@ -18,6 +18,7 @@ ______________________________________________________________________
 - [05/03 - CambMetrics](#05/03)
 - [11/03 - Defintions of planinng, needs and requests](#11/03)
 - [12/03 - Questions & path set up](#12/03)
+- [19/03 - Dataset conception](#19/03)
 
 ______________________________________________________________________
 ### :green_book: Notes
@@ -145,6 +146,19 @@ Classification
 Are there any challenging problems? ML algorithms etc.  
 
 Results and analysis  
+
+[:top::top::top::top::top::top::top::top::top::top::top::top::top::top:Got to the top:top::top::top::top::top::top::top::top::top::top::top::top::top::top::top:](#top)
+
+<a name="19/03"></a>
+### :mega: 19/03 -  Dataset conception :
+
+- Discussed subjects :
+  * Speak about features extraction
+  * Dataset conception
+
+- Needs :
+  * Mine for citation
+  * Need to discuss with Fransesco
 
 [:top::top::top::top::top::top::top::top::top::top::top::top::top::top:Got to the top:top::top::top::top::top::top::top::top::top::top::top::top::top::top::top:](#top)
 
