@@ -435,7 +435,7 @@ In the fields of computational linguistics and probability, an n-gram is a conti
 
   6. **Word Embedding (word vectors)** :
 Word embedding is the collective name for a set of language modeling and feature learning techniques in natural language processing (NLP) where words or phrases from the vocabulary are mapped to vectors of real numbers. Conceptually it involves a mathematical embedding from a space with one dimension per word to a continuous vector space with a much lower dimension.
-There is actually a problem with this approach (Agree/disagree are two words that are considered like close ones) but I've read that there is many solutions to that problem.
+There is actually a problem with this approach (Agree/disagree are two words that are considered like close ones) but I've read that there is many solutions to that problem. [***Word2Vec***](https://arxiv.org/abs/1301.3781) & [***Glove paper***](https://nlp.stanford.edu/pubs/glove.pdf) & [***Glove website***](https://www.youtube.com/redirect?event=video_description&v=5PL0TmQhItY&redir_token=BRkdmKDmeBCbACo0ewVKUaj5e6t8MTU1MzA4MDAzMkAxNTUyOTkzNjMy&q=https%3A%2F%2Fnlp.stanford.edu%2Fprojects%2Fglove%2F)
   
 <a name="NewFeatures3"></a>
 #### :diamond_shape_with_a_dot_inside: [New Features for Sentiment Analysis: Do Sentences Matter?](https://github.com/0AlphaZero0/Sentiment-Analysis-EuropePMC/blob/master/Bibliography/New%20Features%20for%20Sentiment%20Analysis_G.Gezici_et_al.pdf) :
