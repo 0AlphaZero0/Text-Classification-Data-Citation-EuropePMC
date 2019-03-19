@@ -436,6 +436,11 @@ In the fields of computational linguistics and probability, an n-gram is a conti
   6. **Word Embedding (word vectors)** :
 Word embedding is the collective name for a set of language modeling and feature learning techniques in natural language processing (NLP) where words or phrases from the vocabulary are mapped to vectors of real numbers. Conceptually it involves a mathematical embedding from a space with one dimension per word to a continuous vector space with a much lower dimension.
 There is actually a problem with this approach (Agree/disagree are two words that are considered like close ones) but I've read that there is many solutions to that problem. [***Word2Vec***](https://arxiv.org/abs/1301.3781) & [***Glove paper***](https://nlp.stanford.edu/pubs/glove.pdf) & [***Glove website***](https://www.youtube.com/redirect?event=video_description&v=5PL0TmQhItY&redir_token=BRkdmKDmeBCbACo0ewVKUaj5e6t8MTU1MzA4MDAzMkAxNTUyOTkzNjMy&q=https%3A%2F%2Fnlp.stanford.edu%2Fprojects%2Fglove%2F)
+
+  7. **Dependency based** :
+Dependency grammar (DG) is a class of modern grammatical theories that are all based on the dependency relation (as opposed to the relation of phrase structure) and that can be traced back primarily to the work of Lucien Tesnière. Dependency is the notion that linguistic units, e.g. words, are connected to each other by directed links. The (finite) verb is taken to be the structural center of clause structure. All other syntactic units (words) are either directly or indirectly connected to the verb in terms of the directed links, which are called dependencies. DGs are distinct from phrase structure grammars, since DGs lack phrasal nodes, although they acknowledge phrases. Structure is determined by the relation between a word (a head) and its dependents. Dependency structures are flatter than phrase structures in part because they lack a finite verb phrase constituent, and they are thus well suited for the analysis of languages with free word order, such as Czech, Slovak, and Warlpiri.
+See these [trees](#dependencytrees3)
+[Paper](https://www.semanticscholar.org/paper/Concept-Level-Sentiment-Analysis-with-Semantic-A-Agarwal-Poria/6698c5848bb91c8f702994a1ea43b73df8b0aea9?navId=paper-header)
   
 <a name="NewFeatures3"></a>
 #### :diamond_shape_with_a_dot_inside: [New Features for Sentiment Analysis: Do Sentences Matter?](https://github.com/0AlphaZero0/Sentiment-Analysis-EuropePMC/blob/master/Bibliography/New%20Features%20for%20Sentiment%20Analysis_G.Gezici_et_al.pdf) :
@@ -565,12 +570,20 @@ ______________________________________________________________________
 <p align="center">
   <img src="https://github.com/0AlphaZero0/Sentiment-Analysis-EuropePMC/blob/master/Logbook%20%26%20Notes/PrecisionRecall.png">
 </p>
+##### Precision & Recall
 So to make a good analysis, it's necessary to have a high precision & recall
 
 <a name="POStag01"></a>
 <p align="center">
   <img src="https://github.com/0AlphaZero0/Sentiment-Analysis-EuropePMC/blob/master/Logbook%20%26%20Notes/POStag.png">
 </p>
+##### POS-tag
 
+<a name="dependencytrees3"></a>
+<p align="center">
+  <img src="https://github.com/0AlphaZero0/Sentiment-Analysis-EuropePMC/blob/master/Logbook%20%26%20Notes/Wearetryingtounderstandthedifference.jpg">
+</p>
+##### Dependency trees
+These trees illustrate two possible ways to render the dependency and phrase structure relations (see below). This dependency tree is an "ordered" tree, i.e. it reflects actual word order. Many dependency trees abstract away from linear order and focus just on hierarchical order, which means they do not show actual word order. This constituency (= phrase structure) tree follows the conventions of bare phrase structure (BPS), whereby the words themselves are employed as the node labels.
 
 [:top::top::top::top::top::top::top::top::top::top::top::top::top::top:Got to the top:top::top::top::top::top::top::top::top::top::top::top::top::top::top::top:](#top)
