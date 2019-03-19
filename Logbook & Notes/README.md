@@ -571,7 +571,11 @@ ______________________________________________________________________
   <img src="https://github.com/0AlphaZero0/Sentiment-Analysis-EuropePMC/blob/master/Logbook%20%26%20Notes/PrecisionRecall.png">
 </p>
 
+<p align="center">
+
 ##### Precision & Recall
+
+</p>
 
 So to make a good analysis, it's necessary to have a high precision & recall
 
@@ -580,14 +584,22 @@ So to make a good analysis, it's necessary to have a high precision & recall
   <img src="https://github.com/0AlphaZero0/Sentiment-Analysis-EuropePMC/blob/master/Logbook%20%26%20Notes/POStag.png">
 </p>
 
+<p align="center">
+  
 ##### POS-tag
+
+</p>
 
 <a name="dependencytrees3"></a>
 <p align="center">
   <img src="https://github.com/0AlphaZero0/Sentiment-Analysis-EuropePMC/blob/master/Logbook%20%26%20Notes/Wearetryingtounderstandthedifference.jpg">
 </p>
 
+<p align="center">
+  
 ##### Dependency trees
+
+</p>
 
 These trees illustrate two possible ways to render the dependency and phrase structure relations (see below). This dependency tree is an "ordered" tree, i.e. it reflects actual word order. Many dependency trees abstract away from linear order and focus just on hierarchical order, which means they do not show actual word order. This constituency (= phrase structure) tree follows the conventions of bare phrase structure (BPS), whereby the words themselves are employed as the node labels.
 
