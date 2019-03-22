@@ -14,6 +14,7 @@ ______________________________________________________________________
 
 ### Articles
 
+- [AUTOLEX: An Automatic Lexicon Builder for Minority Languages Using an Open Corpus](#8)
 - [Database Citation in Full Text Biomedical Articles](#1) 
 - [Database citation in supplementary data linked to Europe PubMed Central full text biomedical articles](#2)
 - [Measuring the Evolution of a Scientific Field through Citation Frames](#5)
@@ -28,6 +29,17 @@ ______________________________________________________________________
 ______________________________________________________________________
 
 ### Articles
+
+<a name="8"></a>
+- [AUTOLEX: An Automatic Lexicon Builder for Minority Languages Using an Open Corpus](hhttps://github.com/0AlphaZero0/Sentiment-Analysis-EuropePMC/blob/master/Bibliography/AUTOLEX%20An%20Automatic%20Lexicon%20Builder%20for%20Minority%20Languages_E.L.C.Buhay_et_al%20.pdf)
+<pre><code>  @article{article,
+  author = {C Liz, Evan and , Buhay and P Marie, Joy and , Evardone and B Nocon, Hansel and Dimalen, Davis Muhajereen and Dimalen, D and Edita, Rachel and Roxas, O},
+  year = {2010},
+  month = {01},
+  pages = {},
+  title = {AUTOLEX: An Automatic Lexicon Builder for Minority Languages Using an Open Corpus}
+}
+</code></pre>
 
 <a name="1"></a>
 - [Database Citation in Full Text Biomedical Articles](https://github.com/0AlphaZero0/Sentiment-Analysis-EuropePMC/blob/master/Bibliography/Database%20Citation%20in%20Full%20Text%20Biomedical%20Articles_S.Kafkas_et_al.pdf)
