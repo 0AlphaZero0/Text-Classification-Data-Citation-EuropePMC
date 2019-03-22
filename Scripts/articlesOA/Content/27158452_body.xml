@@ -1,0 +1,900 @@
+<sec sec-type="intro"><title>Introduction</title><p>Platforms such as microarrays and, more recently, next generation sequencing have been leveraged to generate molecular profiles at the scale of entire systems. The global perspective gained using such approaches is potentially transformative. Transcriptome profiling enabled for instance the characterization of molecular perturbations that occur in the context of a wide range disease processes
+<sup><xref rid="ref-1" ref-type="bibr">1</xref>&#x02013;
+<xref rid="ref-10" ref-type="bibr">10</xref></sup>. This in turn has provided opportunities for the discovery of biomarkers and for the development of novel therapeutic modalities
+<sup><xref rid="ref-3" ref-type="bibr">3</xref>,
+<xref rid="ref-11" ref-type="bibr">11</xref>&#x02013;
+<xref rid="ref-13" ref-type="bibr">13</xref></sup>. More recently such systems-scale profiling of the blood transcriptome has also been used to monitor response to vaccines or therapeutic drugs
+<sup><xref rid="ref-14" ref-type="bibr">14</xref>&#x02013;
+<xref rid="ref-19" ref-type="bibr">19</xref></sup>. The democratization of these approaches has led to proliferation of data in public repositories: over 1.7 million individual transcriptome profiles from more than 65,000 studies have been deposited to date in the
+<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/geo/">NCBI Gene Expression Omnibus</ext-link> (GEO), a public repository of transcriptome profiles.</p><p>Taken together this vast body of &#x0201c;collective data&#x0201d; holds the promise of accelerating the pace of biomedical discovery by creating countless opportunities for identifying and filling critical knowledge gaps. Building tools that provide biomedical researchers with the ability to seamlessly interact with collections of datasets along with rich contextual information is essential in promoting insight and enabling knowledge discovery. To address this need we have developed an interactive data browsing and visualization web application, the Gene Expression Browser (GXB).</p><p>GXB was described in a recent publication and is available as open source software on GitHub
+<sup><xref rid="ref-20" ref-type="bibr">20</xref></sup>. This tool constitutes a simple interface for the browsing and interactive visualization of large volumes of heterogeneous data. Users can easily customize data plots by adding multiple layers of information, modifying the order of samples, and generating links that capture these settings, which can be inserted in email communications or in publications. Accessing the tool via these links also provides access to rich contextual information that is essential for data interpretation. This includes access to gene information and relevant literature, study design information, detailed sample information as well as ancillary data
+<sup><xref rid="ref-20" ref-type="bibr">20</xref></sup>.</p><p>In recent years, a large number of transcriptional studies have been conducted aiming at the characterization and functional classification of monocytes in health and disease. Monocytes are a population of immune cells found in the blood, bone marrow, and spleen. They constitute ~10% of the total circulating blood leukocytes in humans. They can remain in the blood circulation for up to 1&#x02013;2 days, after which time, if they have not been recruited to a tissue, they die and are removed. They are considered the systemic reservoir of myeloid precursors for renewal of tissue macrophages and dendritic cells. Monocytes play a key role during immune response as professional phagocytes
+<sup><xref rid="ref-21" ref-type="bibr">21</xref>,
+<xref rid="ref-22" ref-type="bibr">22</xref></sup>, and producers of immune mediators
+<sup><xref rid="ref-23" ref-type="bibr">23</xref>,
+<xref rid="ref-24" ref-type="bibr">24</xref></sup>. Indeed, reports show that monocytes are recruited at the site of infections as innate effectors of the inflammatory response to microbes, killing pathogens via phagocytosis, production of reactive oxygen intermediate (ROIs)
+<sup><xref rid="ref-25" ref-type="bibr">25</xref></sup>, reactive nitrogen intermediate (RNIs)
+<sup><xref rid="ref-26" ref-type="bibr">26</xref>,
+<xref rid="ref-27" ref-type="bibr">27</xref></sup>, myeloperoxidase (MPO)
+<sup><xref rid="ref-28" ref-type="bibr">28</xref>,
+<xref rid="ref-29" ref-type="bibr">29</xref></sup>, and producing inflammatory cytokines
+<sup><xref rid="ref-30" ref-type="bibr">30</xref></sup> that contribute to further amplifying the antimicrobial response
+<sup><xref rid="ref-31" ref-type="bibr">31</xref></sup>.</p><p>Human monocytes are derived from hematopoietic stem cells in the bone marrow and are released into peripheral blood circulation upon maturation. They are divided into three major subsets based on the expression of the cell surface markers CD14 and CD16. The most prevalent subset in the blood circulation, accounting for 90% of all monocytes, are the classical monocytes that express high levels of CD14 but low levels of CD16 (CD14++CD16-). The remaining 10% is divided into two subsets: intermediate monocytes with high expression of CD14 and CD16 (CD14++CD16+ or CD14+CD16+) and non-classical monocytes that express low levels of CD14 but high levels of CD16 (CD14dimCD16++ or CD14-CD16++)
+<sup><xref rid="ref-32" ref-type="bibr">32</xref>&#x02013;
+<xref rid="ref-34" ref-type="bibr">34</xref></sup>. The factors that govern the migration of monocytes and roles that each subset plays during disease processes are not well understood. 1) In autoimmune diseases: Non-classical monocytes are regarded as crucial effectors in the pathogenesis of rheumatoid arthritis, ankylosing spondylitis
+<sup><xref rid="ref-35" ref-type="bibr">35</xref></sup>, systemic lupus erythematosus (SLE)
+<sup><xref rid="ref-36" ref-type="bibr">36</xref></sup> and multiple sclerosis
+<sup><xref rid="ref-37" ref-type="bibr">37</xref></sup>. This monocyte subset carries a distinct inflammatory signature in patients with SLE
+<sup><xref rid="ref-36" ref-type="bibr">36</xref></sup>. Classical monocytes on the other hand have been shown to dominate the inflamed mucosa in Crohn&#x02019;s disease
+<sup><xref rid="ref-38" ref-type="bibr">38</xref></sup>. Skewing of monocytes towards the intermediate subset has been observed in patients with autoimmune uveitis and linked to administration of glucocorticoid therapy
+<sup><xref rid="ref-39" ref-type="bibr">39</xref></sup>. 2) In cardiovascular diseases: circulating monocytes play a pivotal role by releasing cocktails of cytokines, factor and proteases that are involved in vascular growth
+<sup><xref rid="ref-40" ref-type="bibr">40</xref></sup>. Monocyte subsets show functional and phenotypic changes in cardiovascular diseases. The accumulation of classical monocytes is for instance a hallmark of progression of atherosclerosis
+<sup><xref rid="ref-41" ref-type="bibr">41</xref>&#x02013;
+<xref rid="ref-43" ref-type="bibr">43</xref></sup>. An association between intermediate monocytes and cardiovascular events has also been documented with this monocyte subset being proportionally elevated following myocardial infarction or atrial fibrillation
+<sup><xref rid="ref-44" ref-type="bibr">44</xref>,
+<xref rid="ref-45" ref-type="bibr">45</xref></sup> or in at risk subjects
+<sup><xref rid="ref-46" ref-type="bibr">46</xref></sup>. 3) In cancer: Intermediate monocytes are viewed as potential diagnostic indicators for colorectal cancer
+<sup><xref rid="ref-47" ref-type="bibr">47</xref></sup>. Another study has shown that elevated abundance of intermediate monocytes is associated with survival of adult or childhood acute lymphoblastic leukemia
+<sup><xref rid="ref-48" ref-type="bibr">48</xref></sup>. The changes of gene expression profiles in monocytes reveal high specificity for the tissue type and cancer histotype, and are induced in response to soluble factors released by the cancer cells in the primary or metastatic site
+<sup><xref rid="ref-49" ref-type="bibr">49</xref></sup>. Moreover, monocytes, comprising the monocyte-myeloid-derived suppressor cells population, from patients with metastatic breast cancer resemble the reprogrammed immunosuppressive monocytes in patients with severe infections, both by their surface and functional phenotype but also by their gene expression profile
+<sup><xref rid="ref-50" ref-type="bibr">50</xref></sup>. This signature of immunosuppression could therefore constitute a good biomarker for assessing disease progression. 4) In infections: monocytes are also key players in the immediate immune response to infectious agents as well as the subsequent development of the adaptive immune response
+<sup><xref rid="ref-51" ref-type="bibr">51</xref></sup>. Given the importance of classical and intermediate monocytes in pathogenesis of infectious and other inflammatory disorders, delineation of their functional and phenotypic characteristics has been studied extensively. The response mounted by classical monocytes has emerged as being critical for the control of a wide range of infectious diseases, including infections caused by bacteria
+<sup><xref rid="ref-52" ref-type="bibr">52</xref>&#x02013;
+<xref rid="ref-57" ref-type="bibr">57</xref></sup>, parasites
+<sup><xref rid="ref-58" ref-type="bibr">58</xref></sup> and fungi
+<sup><xref rid="ref-59" ref-type="bibr">59</xref></sup>. In contrast, intermediate monocytes have been associated with pathologic immune responses against bacteria
+<sup><xref rid="ref-60" ref-type="bibr">60</xref>,
+<xref rid="ref-61" ref-type="bibr">61</xref></sup> and parasites
+<sup><xref rid="ref-62" ref-type="bibr">62</xref></sup>. In the context of HIV infection; CD14 expression is reduced on classical monocytes in chronically HIV-1 infected adults on anti-retroviral therapy
+<sup><xref rid="ref-63" ref-type="bibr">63</xref>,
+<xref rid="ref-64" ref-type="bibr">64</xref></sup>. Moreover, loss of CCR2 expressing non-classical monocytes is associated with cognitive impairment in antiretroviral therapy-na&#x000ef;ve infected subjects
+<sup><xref rid="ref-65" ref-type="bibr">65</xref></sup>. Altogether these findings indicate that monocytes are more than circulating precursors and have different effector functions in response to various infections and during inflammation. Clearly furthering our understanding of the role of monocyte subsets in health and disease will require many more studies, also we hope that the dataset compendium that we are making available to the research community via this publication can help support these endeavors.</p><p>In this data note we are making available via GXB a curated compendium of 93 public datasets relevant to human monocyte immunobiology, representing a total of 4,516 transcriptome profiles.</p></sec><sec sec-type="materials | methods"><title>Materials and methods</title><sec><title>Identification of monocyte datasets</title><p>Potentially relevant datasets deposited in GEO were identified using an advanced query based on the Bioconductor package GEOmetadb and the SQLite database that captures detailed information on the GEO data structure;
+<ext-link ext-link-type="uri" xlink:href="https://www.bioconductor.org/packages/release/bioc/html/GEOmetadb.html">https://www.bioconductor.org/packages/release/bioc/html/GEOmetadb.html</ext-link>
+<sup><xref rid="ref-66" ref-type="bibr">66</xref></sup>. The search query was designed to retrieve entries where the title and description contained the word Monocyte OR Monocytes, were generated from human samples, using Illumina or Affymetrix commercial platforms. The query result is appended with rich metadata from GEOmetadb that allows for manual filtering of the retrieved collection.</p><p>The relevance of each entry returned by this query was assessed individually. This process involved reading through the descriptions and examining the list of available samples and their annotations. Sometimes it was also necessary to review the original published report in which the design of the study and generation of the dataset is described in more detail. Using the search query, the results also returned a number of datasets that did not include profiles of monocytes but instead of &#x0201c;monocyte-derived dendritic cells&#x0201d; or &#x0201c;monocyte-derived macrophages&#x0201d;. During our manual screen these were excluded as were studies employing monocytic cell lines. Only studies including primary human monocyte profiles were retained. The datasets cover a broad range of studies investigating human monocyte immunobiology in the context of diseases and through comparison with diverse cell populations and study types as illustrated by a graphical representation of relative occurrences of terms in the descriptions of the studies loaded into our tool (
+<xref ref-type="fig" rid="f1">Figure 1</xref>). A wide range of cell types and diseases are represented. Ultimately, the collection was comprised of 93 curated datasets. It includes datasets generated from studies profiling primary human CD14+ cells isolated from patients with autoimmune diseases (7), bacterial, virus and parasite infections (7), cancer (4), cardiovascular diseases (4), kidney diseases (4), as well as monocytes isolated from healthy subjects (58) (
+<xref ref-type="fig" rid="f2">Figure 2</xref>). The 58 datasets in which monocytes were isolated from healthy subjects were classified based on whether profiling was conducted
+<italic>ex vivo</italic> or following
+<italic>in vitro</italic> experiments. In total 38 datasets were identified in which primary human CD14+ cells were stimulated or infected in
+<italic>in vitro</italic> experiments (
+<xref ref-type="fig" rid="f2">Figure 2</xref>). Among the many noteworthy datasets, there are 8 datasets investigating differences between monocytes subsets; classical (CD14++CD16-), intermediate (CD14+CD16+) and non-classical monocytes (CD14-CD16++)
+<sup><xref rid="ref-32" ref-type="bibr">32</xref>&#x02013;
+<xref rid="ref-34" ref-type="bibr">34</xref></sup> [GXB:
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/Lv">GSE16836</ext-link>,
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/Lq">GSE18565</ext-link>,
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/Lr">GSE25913</ext-link>,
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/Ls">GSE34515</ext-link>,
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/M7">GSE35457</ext-link>,
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/geneBrowser/show/4000076">GSE51997</ext-link>,
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/Lt">GSE60601</ext-link>,
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/Lu">GSE66936</ext-link>]. Another dataset from Banchereau and colleagues investigated responses of monocyte and dendritic cells to 13 different vaccines
+<italic>in vitro</italic>
+<sup><xref rid="ref-67" ref-type="bibr">67</xref></sup> [GXB:
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/MF">GSE44721</ext-link>]. The datasets that comprise our collection are listed in
+<xref ref-type="table" rid="T1">Table 1</xref> and can be browsed interactively in
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/geneBrowser/list">GXB</ext-link>.</p><fig fig-type="figure" id="f1" orientation="portrait" position="float"><label>Figure 1. </label><caption><title>Thematic composition of the dataset collection.</title><p>Word frequencies extracted from text descriptions of the studies loaded into the GXB tool are depicted as a word cloud. The size of the words is proportional to their frequency.</p></caption><graphic xlink:href="f1000research-5-9108-g0000"/></fig><fig fig-type="figure" id="f2" orientation="portrait" position="float"><label>Figure 2. </label><caption><title>Break down of the dataset collection by category.</title><p>The pie chart on the left panel indicates dataset frequencies by disease status. The chart on the right panel indicates the type of studies carried out for the 58 datasets consisting of monocyte obtained exclusively from healthy donors.</p></caption><graphic xlink:href="f1000research-5-9108-g0001"/></fig><table-wrap id="T1" orientation="portrait" position="anchor"><label>Table 1. </label><caption><title>List of datasets constituting the collection.</title></caption><table frame="hsides" rules="groups" content-type="article-table"><thead><tr><th align="center" rowspan="1" colspan="1">Title</th><th align="center" rowspan="1" colspan="1">Platforms</th><th align="center" rowspan="1" colspan="1">Diseases</th><th align="center" rowspan="1" colspan="1">Number
+<break/>of
+<break/>samples</th><th align="center" rowspan="1" colspan="1">Experiments</th><th align="center" rowspan="1" colspan="1">GEO ID</th><th align="center" rowspan="1" colspan="1">Ref</th></tr></thead><tbody><tr><td align="left" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/Mq">Interaction of bone marrow stroma and monocytes: bone marrow stromal</ext-link>
+<break/>
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/Mq">cell lines cultured with monocytes</ext-link>
+</td><td align="center" rowspan="1" colspan="1">Affymetrix</td><td align="center" rowspan="1" colspan="1">Healthy</td><td align="center" rowspan="1" colspan="1">8</td><td align="center" rowspan="1" colspan="1">
+<italic>In vitro</italic>
+</td><td align="center" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE10595">GSE10595</ext-link>
+</td><td align="center" rowspan="1" colspan="1">
+<xref rid="ref-68" ref-type="bibr">68</xref>
+</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/Mr">Monocyte gene expression profiling in familial combined hyperlipidemia and</ext-link>
+<break/>
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/Mr">its modification by atorvastatin treatment</ext-link>
+</td><td align="center" rowspan="1" colspan="1">Affymetrix</td><td align="center" rowspan="1" colspan="1">Familial combined
+<break/>hyperlipidemia</td><td align="center" rowspan="1" colspan="1">9</td><td align="center" rowspan="1" colspan="1">
+<italic>In vitro</italic>
+</td><td align="center" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE11393">GSE11393</ext-link>
+</td><td align="center" rowspan="1" colspan="1">
+<xref rid="ref-69" ref-type="bibr">69</xref>
+</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/Ms">Performance comparison of Affymetrix and Illumina microarray technologies</ext-link>
+</td><td align="center" rowspan="1" colspan="1">Affymetrix</td><td align="center" rowspan="1" colspan="1">Acute coronary syndrome</td><td align="center" rowspan="1" colspan="1">10</td><td align="center" rowspan="1" colspan="1">
+<italic>Ex vivo</italic>
+</td><td align="center" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE11430">GSE11430</ext-link>
+</td><td align="center" rowspan="1" colspan="1">
+<xref rid="ref-70" ref-type="bibr">70</xref>
+</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/Mt">Gene expression profiling in pediatric meningococcal sepsis reveals</ext-link>
+<break/>
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/Mt">dynamic changes in NK-cell and cytotoxic molecules</ext-link>
+</td><td align="center" rowspan="1" colspan="1">Affymetrix</td><td align="center" rowspan="1" colspan="1">Meningococcal sepsis</td><td align="center" rowspan="1" colspan="1">41</td><td align="center" rowspan="1" colspan="1">
+<italic>Ex vivo</italic>
+</td><td align="center" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE11755">GSE11755</ext-link>
+</td><td align="center" rowspan="1" colspan="1">N/A</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/Mu">Effect of interferon-gamma on macrophage differentiation and response to</ext-link>
+<break/>
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/Mu">Toll-like receptor ligands</ext-link>
+</td><td align="center" rowspan="1" colspan="1">Affymetrix</td><td align="center" rowspan="1" colspan="1">Healthy</td><td align="center" rowspan="1" colspan="1">10</td><td align="center" rowspan="1" colspan="1">
+<italic>In vitro</italic>
+</td><td align="center" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE11864">GSE11864</ext-link>
+</td><td align="center" rowspan="1" colspan="1">
+<xref rid="ref-71" ref-type="bibr">71</xref>
+</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/Mw">Human monocyte and dendritic Cell Subtype Gene Arrays</ext-link>
+</td><td align="center" rowspan="1" colspan="1">Affymetrix</td><td align="center" rowspan="1" colspan="1">Healthy</td><td align="center" rowspan="1" colspan="1">8</td><td align="center" rowspan="1" colspan="1">
+<italic>Ex vivo</italic>
+</td><td align="center" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE11943">GSE11943</ext-link>
+</td><td align="center" rowspan="1" colspan="1">
+<xref rid="ref-72" ref-type="bibr">72</xref>
+</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/Mx">Microarray analysis of human monocytes infected with
+<italic>Francisella tularensis</italic></ext-link>
+</td><td align="center" rowspan="1" colspan="1">Affymetrix</td><td align="center" rowspan="1" colspan="1">Healthy</td><td align="center" rowspan="1" colspan="1">14</td><td align="center" rowspan="1" colspan="1">
+<italic>In vitro</italic>
+</td><td align="center" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE12108">GSE12108</ext-link>
+</td><td align="center" rowspan="1" colspan="1">
+<xref rid="ref-73" ref-type="bibr">73</xref>
+</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/My">Human blood monocyte profile in Ventilator-Associated Pneumonia patients</ext-link>
+</td><td align="center" rowspan="1" colspan="1">Affymetrix</td><td align="center" rowspan="1" colspan="1">Pneumonia</td><td align="center" rowspan="1" colspan="1">60</td><td align="center" rowspan="1" colspan="1">
+<italic>Ex vivo</italic>
+</td><td align="center" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE12838">GSE12838</ext-link>
+</td><td align="center" rowspan="1" colspan="1">N/A</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/Mz">Quercetin supplementation and CD14+ monocyte gene expression</ext-link>
+</td><td align="center" rowspan="1" colspan="1">Affymetrix</td><td align="center" rowspan="1" colspan="1">Healthy</td><td align="center" rowspan="1" colspan="1">6</td><td align="center" rowspan="1" colspan="1">
+<italic>Ex vivo</italic>
+</td><td align="center" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE13899">GSE13899</ext-link>
+</td><td align="center" rowspan="1" colspan="1">
+<xref rid="ref-74" ref-type="bibr">74</xref>
+</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/N0">Effects of PMN-Ectosomes on human macrophages</ext-link>
+</td><td align="center" rowspan="1" colspan="1">Affymetrix</td><td align="center" rowspan="1" colspan="1">Healthy</td><td align="center" rowspan="1" colspan="1">16</td><td align="center" rowspan="1" colspan="1">
+<italic>In vitro</italic>
+</td><td align="center" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE14419">GSE14419</ext-link>
+</td><td align="center" rowspan="1" colspan="1">N/A</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/N1">Homogeneous monocytes and macrophages from hES cells following</ext-link>
+<break/>
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/N1">coculture-free differentiation in M-CSF and IL-3</ext-link>
+</td><td align="center" rowspan="1" colspan="1">Affymetrix</td><td align="center" rowspan="1" colspan="1">Healthy</td><td align="center" rowspan="1" colspan="1">9</td><td align="center" rowspan="1" colspan="1">
+<italic>Ex vivo</italic>
+</td><td align="center" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE15791">GSE15791</ext-link>
+</td><td align="center" rowspan="1" colspan="1">
+<xref rid="ref-75" ref-type="bibr">75</xref>
+</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/N2">Expression data from human macrophages</ext-link>
+</td><td align="center" rowspan="1" colspan="1">Affymetrix</td><td align="center" rowspan="1" colspan="1">Healthy</td><td align="center" rowspan="1" colspan="1">38</td><td align="center" rowspan="1" colspan="1">
+<italic>In vitro</italic>
+</td><td align="center" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE16385">GSE16385</ext-link>
+</td><td align="center" rowspan="1" colspan="1">
+<xref rid="ref-76" ref-type="bibr">76</xref>
+</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/N3">Transcriptional profiling of CD16+ and CD16- peripheral blood monocytes</ext-link>
+<break/>
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/N3">from healthy individuals</ext-link>
+</td><td align="center" rowspan="1" colspan="1">Affymetrix</td><td align="center" rowspan="1" colspan="1">Healthy</td><td align="center" rowspan="1" colspan="1">8</td><td align="center" rowspan="1" colspan="1">
+<italic>Ex vivo</italic>
+</td><td align="center" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE16836">GSE16836</ext-link>
+</td><td align="center" rowspan="1" colspan="1">
+<xref rid="ref-32" ref-type="bibr">32</xref>
+</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/N4">COPD-Specific Gene Expression Signatures of Alveolar Macrophages</ext-link>
+<break/>
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/N4">as well as Peripheral Blood Monocytes Overlap and Correlate with Lung</ext-link>
+<break/>
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/N4">Function</ext-link>
+</td><td align="center" rowspan="1" colspan="1">Affymetrix</td><td align="center" rowspan="1" colspan="1">Chronic Obstructive
+<break/>Pulmonary Disease</td><td align="center" rowspan="1" colspan="1">12</td><td align="center" rowspan="1" colspan="1">
+<italic>Ex vivo</italic>
+</td><td align="center" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE16972">GSE16972</ext-link>
+</td><td align="center" rowspan="1" colspan="1">
+<xref rid="ref-77" ref-type="bibr">77</xref>
+</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/N5">Loss-of-function mutations in REP-1 affect intracellular vesicle transport in</ext-link>
+<break/>
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/N5">fibroblasts and monocytes of CHM patients</ext-link>
+</td><td align="center" rowspan="1" colspan="1">Affymetrix</td><td align="center" rowspan="1" colspan="1">Choroideremia</td><td align="center" rowspan="1" colspan="1">15</td><td align="center" rowspan="1" colspan="1">
+<italic>Ex vivo</italic>
+</td><td align="center" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE17549">GSE17549</ext-link>
+</td><td align="center" rowspan="1" colspan="1">
+<xref rid="ref-78" ref-type="bibr">78</xref>
+</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/N6">Effect of two weeks erythropoietin treatment on monocyte transcriptomes of</ext-link>
+<break/>
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/N6">cardiorenal patients</ext-link>
+</td><td align="center" rowspan="1" colspan="1">Illumina</td><td align="center" rowspan="1" colspan="1">Cardiorenal syndrome</td><td align="center" rowspan="1" colspan="1">48</td><td align="center" rowspan="1" colspan="1">
+<italic>Ex vivo</italic>
+</td><td align="center" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE17582">GSE17582</ext-link>
+</td><td align="center" rowspan="1" colspan="1">N/A</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/Lq">Comparison of gene expression profiles between human monocyte subsets</ext-link>
+</td><td align="center" rowspan="1" colspan="1">Affymetrix</td><td align="center" rowspan="1" colspan="1">Healthy</td><td align="center" rowspan="1" colspan="1">6</td><td align="center" rowspan="1" colspan="1">
+<italic>Ex vivo</italic>
+</td><td align="center" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE18565">GSE18565</ext-link>
+</td><td align="center" rowspan="1" colspan="1">
+<xref rid="ref-79" ref-type="bibr">79</xref>
+</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/N7">Subpopulations of CD163 positive macrophages are classically activated in</ext-link>
+<break/>
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/N7">psoriasis</ext-link>
+</td><td align="center" rowspan="1" colspan="1">Illumina </td><td align="center" rowspan="1" colspan="1">Psoriasis</td><td align="center" rowspan="1" colspan="1">58</td><td align="center" rowspan="1" colspan="1">
+<italic>Ex vivo</italic>
+</td><td align="center" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE18686">GSE18686</ext-link>
+</td><td align="center" rowspan="1" colspan="1">
+<xref rid="ref-80" ref-type="bibr">80</xref>
+</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/N8">Mycobacterium tuberculosis Chaperonin 60.1 has Bipolar Effects on Human</ext-link>
+<break/>
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/N8">peripheral blood-derived Monocytes</ext-link>
+</td><td align="center" rowspan="1" colspan="1">Affymetrix</td><td align="center" rowspan="1" colspan="1">Healthy</td><td align="center" rowspan="1" colspan="1">21</td><td align="center" rowspan="1" colspan="1">
+<italic>In vitro</italic>
+</td><td align="center" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE18794">GSE18794</ext-link>
+</td><td align="center" rowspan="1" colspan="1">N/A</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/N9">Blood Transcriptional Profiles of Active TB (Separated cell)</ext-link>
+</td><td align="center" rowspan="1" colspan="1">Illumina</td><td align="center" rowspan="1" colspan="1">Tuberculosis</td><td align="center" rowspan="1" colspan="1">44</td><td align="center" rowspan="1" colspan="1">
+<italic>Ex vivo</italic>
+</td><td align="center" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE19443">GSE19443</ext-link>
+</td><td align="center" rowspan="1" colspan="1">
+<xref rid="ref-11" ref-type="bibr">11</xref>
+</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/NA">Filaria induced monocyte dysfunction and its reversal following treatment</ext-link>
+</td><td align="center" rowspan="1" colspan="1">Affymetrix</td><td align="center" rowspan="1" colspan="1">Filariasis</td><td align="center" rowspan="1" colspan="1">14</td><td align="center" rowspan="1" colspan="1">
+<italic>Ex vivo</italic>
+</td><td align="center" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE2135">GSE2135</ext-link>
+</td><td align="center" rowspan="1" colspan="1">
+<xref rid="ref-81" ref-type="bibr">81</xref>
+</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/NB">Ubiquinol-induced gene expression signatures are translated into reduced</ext-link>
+<break/>
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/NB">erythropoiesis and LDL cholesterol levels in humans</ext-link>
+</td><td align="center" rowspan="1" colspan="1">Affymetrix</td><td align="center" rowspan="1" colspan="1">Healthy</td><td align="center" rowspan="1" colspan="1">6</td><td align="center" rowspan="1" colspan="1">
+<italic>Ex vivo</italic>
+</td><td align="center" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE21351">GSE21351</ext-link>
+</td><td align="center" rowspan="1" colspan="1">
+<xref rid="ref-82" ref-type="bibr">82</xref>
+</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/NC">Monocyte vs Macrophage Study</ext-link>
+</td><td align="center" rowspan="1" colspan="1">Affymetrix</td><td align="center" rowspan="1" colspan="1">Healthy</td><td align="center" rowspan="1" colspan="1">6</td><td align="center" rowspan="1" colspan="1">
+<italic>In vitro</italic>
+</td><td align="center" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE22373">GSE22373</ext-link>
+</td><td align="center" rowspan="1" colspan="1">
+<xref rid="ref-83" ref-type="bibr">83</xref>
+</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/ND">Monocyte gene expression patterns distinguish subjects with and without</ext-link>
+<break/>
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/ND">atherosclerosis</ext-link>
+</td><td align="center" rowspan="1" colspan="1">Illumina</td><td align="center" rowspan="1" colspan="1">Carotid atherosclerosis</td><td align="center" rowspan="1" colspan="1">95</td><td align="center" rowspan="1" colspan="1">
+<italic>Ex vivo</italic>
+</td><td align="center" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE23746">GSE23746</ext-link>
+</td><td align="center" rowspan="1" colspan="1">N/A</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/NE">Deconvoluting Early Post-Transplant Immunity Using Purified Cell Subsets</ext-link>
+<break/>
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/NE">Reveals Functional Networks Not Evident by Whole Blood Analysis</ext-link>
+</td><td align="center" rowspan="1" colspan="1">Affymetrix</td><td align="center" rowspan="1" colspan="1">Kidney Transplantation</td><td align="center" rowspan="1" colspan="1">179</td><td align="center" rowspan="1" colspan="1">
+<italic>Ex vivo</italic>
+</td><td align="center" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE24223">GSE24223</ext-link>
+</td><td align="center" rowspan="1" colspan="1">
+<xref rid="ref-84" ref-type="bibr">84</xref>
+</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/NG">Cooperative and redundant signaling of leukotriene B4 and leukotriene D4</ext-link>
+<break/>
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/NG">in human monocytes</ext-link>
+</td><td align="center" rowspan="1" colspan="1">Affymetrix</td><td align="center" rowspan="1" colspan="1">Healthy</td><td align="center" rowspan="1" colspan="1">10</td><td align="center" rowspan="1" colspan="1">
+<italic>In vitro</italic>
+</td><td align="center" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE24869">GSE24869</ext-link>
+</td><td align="center" rowspan="1" colspan="1">
+<xref rid="ref-85" ref-type="bibr">85</xref>
+</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/Lr">Gene expression profiling of the classical (CD14++CD16-), intermediate</ext-link>
+<break/>
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/Lr">(CD14++CD16+) and nonclassical (CD14+CD16+) human monocyte</ext-link>
+<break/>
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/Lr">subsets</ext-link>
+</td><td align="center" rowspan="1" colspan="1">Illumina</td><td align="center" rowspan="1" colspan="1">Healthy</td><td align="center" rowspan="1" colspan="1">24</td><td align="center" rowspan="1" colspan="1">
+<italic>Ex vivo</italic>
+</td><td align="center" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE25913">GSE25913</ext-link>
+</td><td align="center" rowspan="1" colspan="1">
+<xref rid="ref-34" ref-type="bibr">34</xref>
+</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/NH">Direct Cell Conversion of Human Fibroblasts to Monocytic phagocytes by</ext-link>
+<break/>
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/NH">Forced Expression of Monocytic Regulatory Network Elements</ext-link>
+</td><td align="center" rowspan="1" colspan="1">Illumina </td><td align="center" rowspan="1" colspan="1">Dermatomyositis</td><td align="center" rowspan="1" colspan="1">15</td><td align="center" rowspan="1" colspan="1">
+<italic>Ex vivo</italic>
+</td><td align="center" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE27304">GSE27304</ext-link>
+</td><td align="center" rowspan="1" colspan="1">N/A</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/NI">cMyb and vMyb in human monocytes</ext-link>
+</td><td align="center" rowspan="1" colspan="1">Affymetrix</td><td align="center" rowspan="1" colspan="1">Healthy</td><td align="center" rowspan="1" colspan="1">6</td><td align="center" rowspan="1" colspan="1">
+<italic>In vitro</italic>
+</td><td align="center" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE2816">GSE2816</ext-link>
+</td><td align="center" rowspan="1" colspan="1">
+<xref rid="ref-86" ref-type="bibr">86</xref>
+</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/NJ">Temporal transcriptional changes in human monocytes following acute</ext-link>
+<break/>
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/NJ">myocardial infarction: The GerMIFs monocyte expression study</ext-link>
+</td><td align="center" rowspan="1" colspan="1">Illumina</td><td align="center" rowspan="1" colspan="1">Acute myocardial infarction</td><td align="center" rowspan="1" colspan="1">76</td><td align="center" rowspan="1" colspan="1">
+<italic>Ex vivo</italic>
+</td><td align="center" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE28454">GSE28454</ext-link>
+</td><td align="center" rowspan="1" colspan="1">N/A</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/NK">mRNA expression profiling of human immune cell subset (Roche)</ext-link>
+</td><td align="center" rowspan="1" colspan="1">Affymetrix</td><td align="center" rowspan="1" colspan="1">Healthy</td><td align="center" rowspan="1" colspan="1">47</td><td align="center" rowspan="1" colspan="1">
+<italic>Ex vivo</italic>
+</td><td align="center" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE28490">GSE28490</ext-link>
+</td><td align="center" rowspan="1" colspan="1">
+<xref rid="ref-87" ref-type="bibr">87</xref>
+</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/NL">mRNA expression profiling of human immune cell subsets (HUG)</ext-link>
+</td><td align="center" rowspan="1" colspan="1">Affymetrix</td><td align="center" rowspan="1" colspan="1">Healthy</td><td align="center" rowspan="1" colspan="1">33</td><td align="center" rowspan="1" colspan="1">
+<italic>Ex vivo</italic>
+</td><td align="center" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE28491">GSE28491</ext-link>
+</td><td align="center" rowspan="1" colspan="1">
+<xref rid="ref-87" ref-type="bibr">87</xref>
+</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/Lw">Changes in gene expression profiles in patients with 5q- syndrome in</ext-link>
+<break/>
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/Lw">CD14+ monocytes caused by lenalidomide treatment</ext-link>
+</td><td align="center" rowspan="1" colspan="1">Illumina</td><td align="center" rowspan="1" colspan="1">5q- syndrome</td><td align="center" rowspan="1" colspan="1">17</td><td align="center" rowspan="1" colspan="1">
+<italic>Ex vivo</italic>
+</td><td align="center" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE31460">GSE31460</ext-link>
+</td><td align="center" rowspan="1" colspan="1">N/A</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/Lx">Genome-wide analysis of lupus immune complex stimulation of purified</ext-link>
+<break/>
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/Lx">CD14+ monocytes and how this response is regulated by C1q</ext-link>
+</td><td align="center" rowspan="1" colspan="1">Illumina</td><td align="center" rowspan="1" colspan="1">Healthy</td><td align="center" rowspan="1" colspan="1">8</td><td align="center" rowspan="1" colspan="1">
+<italic>In vitro</italic>
+</td><td align="center" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE32278">GSE32278</ext-link>
+</td><td align="center" rowspan="1" colspan="1">
+<xref rid="ref-88" ref-type="bibr">88</xref>
+</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/Ly">Transcriptome analysis of circulating monocytes in obese patients before</ext-link>
+<break/>
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/Ly">and three months after bariatric surgery</ext-link>
+</td><td align="center" rowspan="1" colspan="1">Illumina</td><td align="center" rowspan="1" colspan="1">Obesity</td><td align="center" rowspan="1" colspan="1">48</td><td align="center" rowspan="1" colspan="1">
+<italic>Ex vivo</italic>
+</td><td align="center" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE32575">GSE32575</ext-link>
+</td><td align="center" rowspan="1" colspan="1">
+<xref rid="ref-89" ref-type="bibr">89</xref>
+</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/Lz">CD4 on human monocytes</ext-link>
+</td><td align="center" rowspan="1" colspan="1">Affymetrix</td><td align="center" rowspan="1" colspan="1">Healthy</td><td align="center" rowspan="1" colspan="1">6</td><td align="center" rowspan="1" colspan="1">
+<italic>In vitro</italic>
+</td><td align="center" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE32939">GSE32939</ext-link>
+</td><td align="center" rowspan="1" colspan="1">
+<xref rid="ref-90" ref-type="bibr">90</xref>
+</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/M0">Peripheral Blood Monocyte Gene Expression in Recent-Onset Type 1</ext-link>
+<break/>
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/M0">Diabetes</ext-link>
+</td><td align="center" rowspan="1" colspan="1">Illumina</td><td align="center" rowspan="1" colspan="1">Type 1 Diabetes</td><td align="center" rowspan="1" colspan="1">22</td><td align="center" rowspan="1" colspan="1">
+<italic>Ex vivo</italic>
+</td><td align="center" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE33440">GSE33440</ext-link>
+</td><td align="center" rowspan="1" colspan="1">
+<xref rid="ref-91" ref-type="bibr">91</xref>
+</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/M1">Traffic-related Particulate Matter Upregulates Allergic Responses by a</ext-link>
+<break/>
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/M1">Notch-pathway Dependent Mechanism</ext-link>
+</td><td align="center" rowspan="1" colspan="1">Affymetrix</td><td align="center" rowspan="1" colspan="1">Healthy</td><td align="center" rowspan="1" colspan="1">16</td><td align="center" rowspan="1" colspan="1">
+<italic>In vitro</italic>
+</td><td align="center" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE34025">GSE34025</ext-link>
+</td><td align="center" rowspan="1" colspan="1">N/A</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/M2">Human monocyte activation with NOD2L vs. TLR2/1L</ext-link>
+</td><td align="center" rowspan="1" colspan="1">Affymetrix</td><td align="center" rowspan="1" colspan="1">Healthy</td><td align="center" rowspan="1" colspan="1">45</td><td align="center" rowspan="1" colspan="1">
+<italic>In vitro</italic>
+</td><td align="center" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE34156">GSE34156</ext-link>
+</td><td align="center" rowspan="1" colspan="1">
+<xref rid="ref-92" ref-type="bibr">92</xref>
+</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/M3">Bacillus anthracis' lethal toxin induces broad transcriptional responses in</ext-link>
+<break/>
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/M3">human peripheral monocyte</ext-link>
+</td><td align="center" rowspan="1" colspan="1">Affymetrix</td><td align="center" rowspan="1" colspan="1">Healthy</td><td align="center" rowspan="1" colspan="1">8</td><td align="center" rowspan="1" colspan="1">
+<italic>In vitro</italic>
+</td><td align="center" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE34407">GSE34407</ext-link>
+</td><td align="center" rowspan="1" colspan="1">
+<xref rid="ref-93" ref-type="bibr">93</xref>
+</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/M4">Gene expression profiles of human blood classical monocytes</ext-link>
+<break/>
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/M4">(CD14++CD16-), CD16 positive monocytes (CD14+16++ and</ext-link>
+<break/>
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/M4">CD14++CD16+), and CD1c+ CD19- dendritic cells</ext-link>
+</td><td align="center" rowspan="1" colspan="1">Affymetrix</td><td align="center" rowspan="1" colspan="1">Healthy</td><td align="center" rowspan="1" colspan="1">9</td><td align="center" rowspan="1" colspan="1">
+<italic>Ex vivo</italic>
+</td><td align="center" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE34515">GSE34515</ext-link>
+</td><td align="center" rowspan="1" colspan="1">N/A</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/M5">Genome-wide analysis of monocytes and T cells' response to interferon</ext-link>
+<break/>
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/M5">beta</ext-link>
+</td><td align="center" rowspan="1" colspan="1">Illumina</td><td align="center" rowspan="1" colspan="1">Healthy</td><td align="center" rowspan="1" colspan="1">12</td><td align="center" rowspan="1" colspan="1">
+<italic>In vitro</italic>
+</td><td align="center" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE34627">GSE34627</ext-link>
+</td><td align="center" rowspan="1" colspan="1">
+<xref rid="ref-94" ref-type="bibr">94</xref>
+</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/M6">Highly pathogenic influenza virus inhibit Inflammatory Responses in</ext-link>
+<break/>
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/M6">Monocytes via Activation of the Rar-Related Orphan Receptor Alpha</ext-link>
+<break/>
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/M6">(RORalpa)</ext-link>
+</td><td align="center" rowspan="1" colspan="1">Affymetrix</td><td align="center" rowspan="1" colspan="1">Healthy</td><td align="center" rowspan="1" colspan="1">12</td><td align="center" rowspan="1" colspan="1">
+<italic>In vitro</italic>
+</td><td align="center" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE35283">GSE35283</ext-link>
+</td><td align="center" rowspan="1" colspan="1">N/A</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/M7">Transcriptome profiles of human monocyte and dendritic cell subsets</ext-link>
+</td><td align="center" rowspan="1" colspan="1">Illumina</td><td align="center" rowspan="1" colspan="1">Healthy</td><td align="center" rowspan="1" colspan="1">49</td><td align="center" rowspan="1" colspan="1">
+<italic>Ex vivo</italic>
+</td><td align="center" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE35457">GSE35457</ext-link>
+</td><td align="center" rowspan="1" colspan="1">
+<xref rid="ref-95" ref-type="bibr">95</xref>
+</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/M8">Influenza virus A infected monocytes</ext-link>
+</td><td align="center" rowspan="1" colspan="1">Illumina</td><td align="center" rowspan="1" colspan="1">Healthy</td><td align="center" rowspan="1" colspan="1">6</td><td align="center" rowspan="1" colspan="1">
+<italic>In vitro</italic>
+</td><td align="center" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE35473">GSE35473</ext-link>
+</td><td align="center" rowspan="1" colspan="1">
+<xref rid="ref-96" ref-type="bibr">96</xref>
+</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/M9">PGE2-induced OSM expression</ext-link>
+</td><td align="center" rowspan="1" colspan="1">Affymetrix</td><td align="center" rowspan="1" colspan="1">Chronic wound</td><td align="center" rowspan="1" colspan="1">6</td><td align="center" rowspan="1" colspan="1">
+<italic>Ex vivo</italic>
+</td><td align="center" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE36995">GSE36995</ext-link>
+</td><td align="center" rowspan="1" colspan="1">
+<xref rid="ref-97" ref-type="bibr">97</xref>
+</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/MA">Inflammatory Expression Profiles in Monocyte to Macrophage Differentiation</ext-link>
+<break/>
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/MA">amongst Patients with Systemic Lupus Erythematosus and Healthy Controls</ext-link>
+<break/>
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/MA">with and without an Atherosclerosis Phenotype</ext-link>
+</td><td align="center" rowspan="1" colspan="1">Illumina</td><td align="center" rowspan="1" colspan="1">Systemic lupus
+<break/>erythematosus</td><td align="center" rowspan="1" colspan="1">72</td><td align="center" rowspan="1" colspan="1">
+<italic>Ex vivo</italic>
+</td><td align="center" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE37356">GSE37356</ext-link>
+</td><td align="center" rowspan="1" colspan="1">N/A</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/MB">New insights into key genes and pathways involved in the pathogenesis of</ext-link>
+<break/>
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/MB">HLA-B27-associated acute anterior uveitis</ext-link>
+</td><td align="center" rowspan="1" colspan="1">Affymetrix</td><td align="center" rowspan="1" colspan="1">Acute anterior uveitis</td><td align="center" rowspan="1" colspan="1">6</td><td align="center" rowspan="1" colspan="1">
+<italic>In vitro</italic>
+</td><td align="center" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE37588">GSE37588</ext-link>
+</td><td align="center" rowspan="1" colspan="1">N/A</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/NM">Analysis of blood myelomonocytic cells from RCC patients</ext-link>
+</td><td align="center" rowspan="1" colspan="1">Illumina</td><td align="center" rowspan="1" colspan="1">Renal cell carcinoma</td><td align="center" rowspan="1" colspan="1">8</td><td align="center" rowspan="1" colspan="1">
+<italic>Ex vivo</italic>
+</td><td align="center" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE38424">GSE38424</ext-link>
+</td><td align="center" rowspan="1" colspan="1">
+<xref rid="ref-98" ref-type="bibr">98</xref>
+</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/MC">Nanotoxicogenomic study of ZnO and TiO2 responses</ext-link>
+</td><td align="center" rowspan="1" colspan="1">Illumina </td><td align="center" rowspan="1" colspan="1">Healthy</td><td align="center" rowspan="1" colspan="1">90</td><td align="center" rowspan="1" colspan="1">
+<italic>In vitro</italic>
+</td><td align="center" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE39316">GSE39316</ext-link>
+</td><td align="center" rowspan="1" colspan="1">N/A</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/MD">Macrophage Microvesicles Induce Macrophage Differentiation and miR-223</ext-link>
+<break/>
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/MD">Transfer</ext-link>
+</td><td align="center" rowspan="1" colspan="1">Affymetrix</td><td align="center" rowspan="1" colspan="1">Healthy</td><td align="center" rowspan="1" colspan="1">24</td><td align="center" rowspan="1" colspan="1">
+<italic>In vitro</italic>
+</td><td align="center" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE41889">GSE41889</ext-link>
+</td><td align="center" rowspan="1" colspan="1">
+<xref rid="ref-99" ref-type="bibr">99</xref>
+</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/geneBrowser/show/4000026">TREM-1 is a novel therapeutic target in Psoriasis</ext-link>
+</td><td align="center" rowspan="1" colspan="1">Affymetrix</td><td align="center" rowspan="1" colspan="1">Psoriasis</td><td align="center" rowspan="1" colspan="1">15</td><td align="center" rowspan="1" colspan="1">
+<italic>In vitro</italic>
+</td><td align="center" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE42305">GSE42305</ext-link>
+</td><td align="center" rowspan="1" colspan="1">
+<xref rid="ref-100" ref-type="bibr">100</xref>
+</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/geneBrowser/show/4000044">Comparison study between Uremic patient with Healthy control</ext-link>
+</td><td align="center" rowspan="1" colspan="1">Affymetrix</td><td align="center" rowspan="1" colspan="1">Chronic kidney disease</td><td align="center" rowspan="1" colspan="1">6</td><td align="center" rowspan="1" colspan="1">
+<italic>Ex vivo</italic>
+</td><td align="center" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE43484">GSE43484</ext-link>
+</td><td align="center" rowspan="1" colspan="1">N/A</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/ME">Microarray analysis of IL-10 stimulated adherent peripheral blood</ext-link>
+<break/>
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/ME">mononuclear cells</ext-link>
+</td><td align="center" rowspan="1" colspan="1">Affymetrix</td><td align="center" rowspan="1" colspan="1">Healthy</td><td align="center" rowspan="1" colspan="1">8</td><td align="center" rowspan="1" colspan="1">
+<italic>In vitro</italic>
+</td><td align="center" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE43700">GSE43700</ext-link>
+</td><td align="center" rowspan="1" colspan="1">
+<xref rid="ref-101" ref-type="bibr">101</xref>
+</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/MF">Monocytes and Dendritic cells stimulated by 13 human vaccines and LPS</ext-link>
+</td><td align="center" rowspan="1" colspan="1">Illumina</td><td align="center" rowspan="1" colspan="1">Vaccination</td><td align="center" rowspan="1" colspan="1">128</td><td align="center" rowspan="1" colspan="1">
+<italic>In vitro</italic>
+</td><td align="center" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE44721">GSE44721</ext-link>
+</td><td align="center" rowspan="1" colspan="1">
+<xref rid="ref-67" ref-type="bibr">67</xref>
+</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/MG">Gene expression profile of human monocytes stimulated with all-trans</ext-link>
+<break/>
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/MG">retinoic acid (ATRA) or 1,25a-dihydroxyvitamin D3 (1,25D3)</ext-link>
+</td><td align="center" rowspan="1" colspan="1">Affymetrix</td><td align="center" rowspan="1" colspan="1">Healthy</td><td align="center" rowspan="1" colspan="1">12</td><td align="center" rowspan="1" colspan="1">
+<italic>In vitro</italic>
+</td><td align="center" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE46268">GSE46268</ext-link>
+</td><td align="center" rowspan="1" colspan="1">
+<xref rid="ref-102" ref-type="bibr">102</xref>
+</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/MI">Transcriptome analysis of blood monocytes from sepsis patients</ext-link>
+</td><td align="center" rowspan="1" colspan="1">Illumina</td><td align="center" rowspan="1" colspan="1">Sepsis</td><td align="center" rowspan="1" colspan="1">44</td><td align="center" rowspan="1" colspan="1">
+<italic>Ex vivo</italic>
+</td><td align="center" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE46955">GSE46955</ext-link>
+</td><td align="center" rowspan="1" colspan="1">
+<xref rid="ref-103" ref-type="bibr">103</xref>
+</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/MH">Tumor-educated circulating monocytes are powerful specific biomarkers for</ext-link>
+<break/>
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/MH">diagnosis of colorectal cancer</ext-link>
+</td><td align="center" rowspan="1" colspan="1">Illumina</td><td align="center" rowspan="1" colspan="1">Colorectal Cancer</td><td align="center" rowspan="1" colspan="1">93</td><td align="center" rowspan="1" colspan="1">
+<italic>Ex vivo</italic>
+</td><td align="center" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE47756">GSE47756</ext-link>
+</td><td align="center" rowspan="1" colspan="1">
+<xref rid="ref-49" ref-type="bibr">49</xref>
+</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/MJ">Similarities and differences between macrophage polarized gene profiles</ext-link>
+</td><td align="center" rowspan="1" colspan="1">Illumina </td><td align="center" rowspan="1" colspan="1">Healthy</td><td align="center" rowspan="1" colspan="1">12</td><td align="center" rowspan="1" colspan="1">
+<italic>In vitro</italic>
+</td><td align="center" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE49240">GSE49240</ext-link>
+</td><td align="center" rowspan="1" colspan="1">
+<xref rid="ref-104" ref-type="bibr">104</xref>
+</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/MK">The effect of cell subset isolation method on gene expression in leukocytes.</ext-link>
+</td><td align="center" rowspan="1" colspan="1">Illumina</td><td align="center" rowspan="1" colspan="1">Healthy</td><td align="center" rowspan="1" colspan="1">50</td><td align="center" rowspan="1" colspan="1">
+<italic>Ex vivo</italic>
+</td><td align="center" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE50008">GSE50008</ext-link>
+</td><td align="center" rowspan="1" colspan="1">N/A</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/ML">Transcriptome analysis of HIV-infected peripheral blood monocytes</ext-link>
+</td><td align="center" rowspan="1" colspan="1">Illumina</td><td align="center" rowspan="1" colspan="1">HIV</td><td align="center" rowspan="1" colspan="1">86</td><td align="center" rowspan="1" colspan="1">
+<italic>Ex vivo</italic>
+</td><td align="center" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE50011">GSE50011</ext-link>
+</td><td align="center" rowspan="1" colspan="1">
+<xref rid="ref-105" ref-type="bibr">105</xref>
+</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/MM">Gene expression profiles in T-lymphocytes and Monocytes of participants of</ext-link>
+<break/>
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/MM">the Tour de France 2005</ext-link>
+</td><td align="center" rowspan="1" colspan="1">Affymetrix</td><td align="center" rowspan="1" colspan="1">Healthy</td><td align="center" rowspan="1" colspan="1">66</td><td align="center" rowspan="1" colspan="1">
+<italic>Ex vivo</italic>
+</td><td align="center" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE5105">GSE5105</ext-link>
+</td><td align="center" rowspan="1" colspan="1">N/A</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/MN">Effects of exercise on gene expression level in human monocytes</ext-link>
+</td><td align="center" rowspan="1" colspan="1">Affymetrix</td><td align="center" rowspan="1" colspan="1">Healthy</td><td align="center" rowspan="1" colspan="1">24</td><td align="center" rowspan="1" colspan="1">
+<italic>Ex vivo</italic>
+</td><td align="center" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE51835">GSE51835</ext-link>
+</td><td align="center" rowspan="1" colspan="1">
+<xref rid="ref-106" ref-type="bibr">106</xref>
+</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/MO">T helper lymphocyte- and monocyte-specific type I interferon (IFN)</ext-link>
+<break/>
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/MO">signatures in autoimmunity and viral infection.</ext-link>
+</td><td align="center" rowspan="1" colspan="1">Affymetrix</td><td align="center" rowspan="1" colspan="1">Autoimmune diseases</td><td align="center" rowspan="1" colspan="1">36</td><td align="center" rowspan="1" colspan="1">
+<italic>Ex vivo</italic>
+</td><td align="center" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE51997">GSE51997</ext-link>
+</td><td align="center" rowspan="1" colspan="1">
+<xref rid="ref-107" ref-type="bibr">107</xref>
+</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/MP">Longitudinal comparison of monocytes from an HIV viremic vs avirmeic</ext-link>
+<break/>
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/MP">state</ext-link>
+</td><td align="center" rowspan="1" colspan="1">Affymetrix</td><td align="center" rowspan="1" colspan="1">HIV</td><td align="center" rowspan="1" colspan="1">16</td><td align="center" rowspan="1" colspan="1">
+<italic>Ex vivo</italic>
+</td><td align="center" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE5220">GSE5220</ext-link>
+</td><td align="center" rowspan="1" colspan="1">
+<xref rid="ref-108" ref-type="bibr">108</xref>
+</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/MQ">Expression data from monocytes and monocyte derived macrophages</ext-link>
+</td><td align="center" rowspan="1" colspan="1">Affymetrix</td><td align="center" rowspan="1" colspan="1">Healthy</td><td align="center" rowspan="1" colspan="1">12</td><td align="center" rowspan="1" colspan="1">
+<italic>In vitro</italic>
+</td><td align="center" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE52647">GSE52647</ext-link>
+</td><td align="center" rowspan="1" colspan="1">N/A</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/MR">Transcriptome analysis of primary monocytes from HIV+ patients with</ext-link>
+<break/>
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/MR">differential responses to therapy</ext-link>
+</td><td align="center" rowspan="1" colspan="1">Illumina</td><td align="center" rowspan="1" colspan="1">HIV</td><td align="center" rowspan="1" colspan="1">14</td><td align="center" rowspan="1" colspan="1">
+<italic>Ex vivo</italic>
+</td><td align="center" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE52900">GSE52900</ext-link>
+</td><td align="center" rowspan="1" colspan="1">
+<xref rid="ref-109" ref-type="bibr">109</xref>
+</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/MS">Human blood monocyte response to IL-17A in culture</ext-link>
+</td><td align="center" rowspan="1" colspan="1">Affymetrix</td><td align="center" rowspan="1" colspan="1">Healthy</td><td align="center" rowspan="1" colspan="1">6</td><td align="center" rowspan="1" colspan="1">
+<italic>In vitro</italic>
+</td><td align="center" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE54884">GSE54884</ext-link>
+</td><td align="center" rowspan="1" colspan="1">N/A</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/MT">Divergent genome wide transcriptional profiles from immune cell subsets</ext-link>
+<break/>
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/MT">isolated from SLE patients with different ancestral backgrounds</ext-link>
+</td><td align="center" rowspan="1" colspan="1">Illumina</td><td align="center" rowspan="1" colspan="1">Systemic lupus
+<break/>erythematosus</td><td align="center" rowspan="1" colspan="1">208</td><td align="center" rowspan="1" colspan="1">
+<italic>Ex vivo</italic>
+</td><td align="center" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE55447">GSE55447</ext-link>
+</td><td align="center" rowspan="1" colspan="1">
+<xref rid="ref-110" ref-type="bibr">110</xref>
+</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/MU">Cell Specific Expression &#x00026; Pathway Analyses Reveal Novel Alterations in</ext-link>
+<break/>
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/MU">Trauma-Related Human T-Cell &#x00026; Monocyte Pathways</ext-link>
+</td><td align="center" rowspan="1" colspan="1">Affymetrix</td><td align="center" rowspan="1" colspan="1">Trauma patients</td><td align="center" rowspan="1" colspan="1">42</td><td align="center" rowspan="1" colspan="1">
+<italic>Ex vivo</italic>
+</td><td align="center" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE5580">GSE5580</ext-link>
+</td><td align="center" rowspan="1" colspan="1">
+<xref rid="ref-111" ref-type="bibr">111</xref>
+</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/MV">Immune Variation Project (ImmVar) [CD14]</ext-link>
+</td><td align="center" rowspan="1" colspan="1">Affymetrix</td><td align="center" rowspan="1" colspan="1">Healthy</td><td align="center" rowspan="1" colspan="1">485</td><td align="center" rowspan="1" colspan="1">
+<italic>Ex vivo</italic>
+</td><td align="center" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE56034">GSE56034</ext-link>
+</td><td align="center" rowspan="1" colspan="1">N/A</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/MW">Transcriptomics of human monocytes</ext-link>
+</td><td align="center" rowspan="1" colspan="1">Illumina</td><td align="center" rowspan="1" colspan="1">Healthy</td><td align="center" rowspan="1" colspan="1">1202</td><td align="center" rowspan="1" colspan="1">
+<italic>Ex vivo</italic>
+</td><td align="center" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE56045">GSE56045</ext-link>
+</td><td align="center" rowspan="1" colspan="1">
+<xref rid="ref-112" ref-type="bibr">112</xref>
+</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/MX">Effect of vitamin D treatment on human monocyte</ext-link>
+</td><td align="center" rowspan="1" colspan="1">Affymetrix</td><td align="center" rowspan="1" colspan="1">Healthy</td><td align="center" rowspan="1" colspan="1">16</td><td align="center" rowspan="1" colspan="1">
+<italic>In vitro</italic>
+</td><td align="center" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE56490">GSE56490</ext-link>
+</td><td align="center" rowspan="1" colspan="1">NA</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/MY">Monocytes of patients with familial hypercholesterolemia show alterations in</ext-link>
+<break/>
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/MY">cholesterol metabolism</ext-link>
+</td><td align="center" rowspan="1" colspan="1">Affymetrix</td><td align="center" rowspan="1" colspan="1">Hypercholesterolemia</td><td align="center" rowspan="1" colspan="1">23</td><td align="center" rowspan="1" colspan="1">
+<italic>Ex vivo</italic>
+</td><td align="center" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE6054">GSE6054</ext-link>
+</td><td align="center" rowspan="1" colspan="1">
+<xref rid="ref-113" ref-type="bibr">113</xref>
+</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/Lt">Gene expression data from CD14++ CD16- classical monocytes from</ext-link>
+<break/>
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/Lt">healthy volunteers and patients with pancreatic ductal adenocarcinoma</ext-link>
+</td><td align="center" rowspan="1" colspan="1">Affymetrix</td><td align="center" rowspan="1" colspan="1">Pancreatic ductal
+<break/>adenocarcinoma</td><td align="center" rowspan="1" colspan="1">12</td><td align="center" rowspan="1" colspan="1">
+<italic>Ex vivo</italic>
+</td><td align="center" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE60601">GSE60601</ext-link>
+</td><td align="center" rowspan="1" colspan="1">N/A</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/MZ">Activation of the JAK/STAT pathway in Behcet's Disease</ext-link>
+</td><td align="center" rowspan="1" colspan="1">Affymetrix</td><td align="center" rowspan="1" colspan="1">Behcet&#x02019;s Disease</td><td align="center" rowspan="1" colspan="1">29</td><td align="center" rowspan="1" colspan="1">
+<italic>Ex vivo</italic>
+</td><td align="center" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE61399">GSE61399</ext-link>
+</td><td align="center" rowspan="1" colspan="1">N/A</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/Ma">Alarmins MRP8 and MRP14 induce stress-tolerance in phagocytes under</ext-link>
+<break/>
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/Ma">sterile inflammatory conditions</ext-link>
+</td><td align="center" rowspan="1" colspan="1">Illumina</td><td align="center" rowspan="1" colspan="1">Sterile Inflammation</td><td align="center" rowspan="1" colspan="1">12</td><td align="center" rowspan="1" colspan="1">
+<italic>In vitro</italic>
+</td><td align="center" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE61477">GSE61477</ext-link>
+</td><td align="center" rowspan="1" colspan="1">N/A</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/Mb">GM-CSF induced gene-regulation in human monocytes</ext-link>
+</td><td align="center" rowspan="1" colspan="1">Affymetrix</td><td align="center" rowspan="1" colspan="1">Healthy</td><td align="center" rowspan="1" colspan="1">6</td><td align="center" rowspan="1" colspan="1">
+<italic>In vitro</italic>
+</td><td align="center" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE63662">GSE63662</ext-link>
+</td><td align="center" rowspan="1" colspan="1">
+<xref rid="ref-114" ref-type="bibr">114</xref>
+</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/Mc">Treatment of human monocytes with TLR7 or TLR8 agonists</ext-link>
+</td><td align="center" rowspan="1" colspan="1">Affymetrix</td><td align="center" rowspan="1" colspan="1">Healthy</td><td align="center" rowspan="1" colspan="1">9</td><td align="center" rowspan="1" colspan="1">
+<italic>In vitro</italic>
+</td><td align="center" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE64480">GSE64480</ext-link>
+</td><td align="center" rowspan="1" colspan="1">
+<xref rid="ref-115" ref-type="bibr">115</xref>
+</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/Md">Restricted Dendritic Cell and Monocyte Progenitors in Human Cord Blood</ext-link>
+<break/>
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/Md">and Bone Marrow</ext-link>
+</td><td align="center" rowspan="1" colspan="1">Illumina</td><td align="center" rowspan="1" colspan="1">Healthy</td><td align="center" rowspan="1" colspan="1">36</td><td align="center" rowspan="1" colspan="1">
+<italic>Ex vivo</italic>
+</td><td align="center" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE65128">GSE65128</ext-link>
+</td><td align="center" rowspan="1" colspan="1">
+<xref rid="ref-116" ref-type="bibr">116</xref>
+</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/Me">Interleukin-1- and Type I Interferon-Dependent Enhanced Immunogenicity</ext-link>
+<break/>
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/Me">of an NYVAC-HIV-1 Env-Gag-Pol-Nef Vaccine Vector with Dual Deletions of</ext-link>
+<break/>
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/Me">Type I and Type II Interferon-Binding Proteins</ext-link>
+</td><td align="center" rowspan="1" colspan="1">Illumina </td><td align="center" rowspan="1" colspan="1">Vaccination</td><td align="center" rowspan="1" colspan="1">20</td><td align="center" rowspan="1" colspan="1">
+<italic>In vitro</italic>
+</td><td align="center" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE65412">GSE65412</ext-link>
+</td><td align="center" rowspan="1" colspan="1">NA</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/Mf">Comparative analysis of monocytes from healthy donors, patients with</ext-link>
+<break/>
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/Mf">metastatic breast cancer, sepsis or tuberculosis.</ext-link>
+</td><td align="center" rowspan="1" colspan="1">Illumina</td><td align="center" rowspan="1" colspan="1">Breast cancer and Bacterial
+<break/>infection</td><td align="center" rowspan="1" colspan="1">13</td><td align="center" rowspan="1" colspan="1">
+<italic>Ex vivo</italic>
+</td><td align="center" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE65517">GSE65517</ext-link>
+</td><td align="center" rowspan="1" colspan="1">
+<xref rid="ref-50" ref-type="bibr">50</xref>
+</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/Lu">Expression data from intermediate monocytes from healthy donors and</ext-link>
+<break/>
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/Lu">autoimmune uveitis patients</ext-link>
+</td><td align="center" rowspan="1" colspan="1">Affymetrix</td><td align="center" rowspan="1" colspan="1">Autoimmune uveitis</td><td align="center" rowspan="1" colspan="1">21</td><td align="center" rowspan="1" colspan="1">
+<italic>Ex vivo</italic>
+</td><td align="center" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE66936">GSE66936</ext-link>
+</td><td align="center" rowspan="1" colspan="1">
+<xref rid="ref-39" ref-type="bibr">39</xref>
+</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/Mg">Induction of Dendritic Cell-like Phenotype in Macrophages during Foam Cell</ext-link>
+<break/>
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/Mg">Formation</ext-link>
+</td><td align="center" rowspan="1" colspan="1">Affymetrix</td><td align="center" rowspan="1" colspan="1">Healthy</td><td align="center" rowspan="1" colspan="1">22</td><td align="center" rowspan="1" colspan="1">
+<italic>In vitro</italic>
+</td><td align="center" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE7138">GSE7138</ext-link>
+</td><td align="center" rowspan="1" colspan="1">
+<xref rid="ref-117" ref-type="bibr">117</xref>
+</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/Mh">Genome Wide Gene Expression Study of Circulating Monocytes in human</ext-link>
+<break/>
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/Mh">with extremely high vs. low bone mass</ext-link>
+</td><td align="center" rowspan="1" colspan="1">Affymetrix</td><td align="center" rowspan="1" colspan="1">Healthy</td><td align="center" rowspan="1" colspan="1">26</td><td align="center" rowspan="1" colspan="1">
+<italic>Ex vivo</italic>
+</td><td align="center" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE7158">GSE7158</ext-link>
+</td><td align="center" rowspan="1" colspan="1">N/A</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/Mi">Genomic profiles for human peripheral blood T cells, B cells, natural killer</ext-link>
+<break/>
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/Mi">cells, monocytes, and polymorphonuclear cells: comparisons to ischemic</ext-link>
+<break/>
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/Mi">stroke, migraine, and Tourette syndrome</ext-link>
+</td><td align="center" rowspan="1" colspan="1">Affymetrix</td><td align="center" rowspan="1" colspan="1">Healthy</td><td align="center" rowspan="1" colspan="1">18</td><td align="center" rowspan="1" colspan="1">
+<italic>Ex vivo</italic>
+</td><td align="center" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE72642">GSE72642</ext-link>
+</td><td align="center" rowspan="1" colspan="1">
+<xref rid="ref-118" ref-type="bibr">118</xref>
+</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/Mj">Expression data from monocytes of individuals with different collateral flow</ext-link>
+<break/>
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/Mj">index CFI</ext-link>
+</td><td align="center" rowspan="1" colspan="1">Affymetrix</td><td align="center" rowspan="1" colspan="1">Coronary artery disease</td><td align="center" rowspan="1" colspan="1">160</td><td align="center" rowspan="1" colspan="1">
+<italic>Ex vivo</italic>
+</td><td align="center" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE7638">GSE7638</ext-link>
+</td><td align="center" rowspan="1" colspan="1">
+<xref rid="ref-39" ref-type="bibr">39</xref>
+</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/Mk">Leukotriene D4 induces gene expression in human monocytes through</ext-link>
+<break/>
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/Mk">cysteinyl leukotriene type I receptor</ext-link>
+</td><td align="center" rowspan="1" colspan="1">Affymetrix</td><td align="center" rowspan="1" colspan="1">Healthy</td><td align="center" rowspan="1" colspan="1">8</td><td align="center" rowspan="1" colspan="1">
+<italic>In vitro</italic>
+</td><td align="center" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE7807">GSE7807</ext-link>
+</td><td align="center" rowspan="1" colspan="1">
+<xref rid="ref-119" ref-type="bibr">119</xref>
+</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/Ml">Gene expression profile during monocytes to macrophage differentiation</ext-link>
+</td><td align="center" rowspan="1" colspan="1">Affymetrix</td><td align="center" rowspan="1" colspan="1">Healthy</td><td align="center" rowspan="1" colspan="1">9</td><td align="center" rowspan="1" colspan="1">
+<italic>In vitro</italic>
+</td><td align="center" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE8286">GSE8286</ext-link>
+</td><td align="center" rowspan="1" colspan="1">N/A</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/Mm">Toll-like receptor triggering of a vitamin D-mediated human antimicrobial</ext-link>
+<break/>
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/Mm">response</ext-link>
+</td><td align="center" rowspan="1" colspan="1">Affymetrix</td><td align="center" rowspan="1" colspan="1">Healthy</td><td align="center" rowspan="1" colspan="1">50</td><td align="center" rowspan="1" colspan="1">
+<italic>In vitro</italic>
+</td><td align="center" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE8921">GSE8921</ext-link>
+</td><td align="center" rowspan="1" colspan="1">
+<xref rid="ref-120" ref-type="bibr">120</xref>
+</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/Mn">TRAIL Is a Novel Antiviral Protein against Dengue Virus</ext-link>
+</td><td align="center" rowspan="1" colspan="1">Affymetrix</td><td align="center" rowspan="1" colspan="1">Dengue</td><td align="center" rowspan="1" colspan="1">10</td><td align="center" rowspan="1" colspan="1">
+<italic>In vitro</italic>
+</td><td align="center" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE9378">GSE9378</ext-link>
+</td><td align="center" rowspan="1" colspan="1">NA</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/Mo">Gene Expression-Based High Throughput Screening: APL Treatment with</ext-link>
+<break/>
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/Mo">Candidate Compounds</ext-link>
+</td><td align="center" rowspan="1" colspan="1">Affymetrix</td><td align="center" rowspan="1" colspan="1">Leukemia</td><td align="center" rowspan="1" colspan="1">24</td><td align="center" rowspan="1" colspan="1">
+<italic>Ex vivo</italic>
+</td><td align="center" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE976">GSE976</ext-link>
+</td><td align="center" rowspan="1" colspan="1">
+<xref rid="ref-121" ref-type="bibr">121</xref>
+</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/miniURL/view/Mp">Innate immune responses to TREM-1 activation</ext-link>
+</td><td align="center" rowspan="1" colspan="1">Affymetrix</td><td align="center" rowspan="1" colspan="1">Healthy</td><td align="center" rowspan="1" colspan="1">11</td><td align="center" rowspan="1" colspan="1">
+<italic>In vitro</italic>
+</td><td align="center" rowspan="1" colspan="1">
+<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE9988">GSE9988</ext-link>
+</td><td align="center" rowspan="1" colspan="1">
+<xref rid="ref-122" ref-type="bibr">122</xref>
+</td></tr></tbody></table></table-wrap></sec><sec><title>Dataset upload and annotation on GXB</title><p>Once a final selection was made each dataset was downloaded from GEO in the SOFT file format. It was in turn uploaded on an instance of the Gene Expression Browser (GXB) hosted on the Amazon Web Services cloud. Available sample and study information were also uploaded. Samples were grouped according to possible interpretations of study results and ranking based on the different group comparisons that were computed (e.g. comparing monocyte isolated from case vs controls in studies where profiling was performed
+<italic>ex-vivo</italic>; or stimulated vs medium control in
+<italic>in vitro</italic> experiments).</p></sec><sec><title>Short Gene Expression Brower tutorial</title><p>The GXB software has been described in detail in a recent publication
+<sup><xref rid="ref-20" ref-type="bibr">20</xref></sup>. This custom software interface provides users with a means to easily navigate and filter the dataset collection available at
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/landing.gsp">http://monocyte.gxbsidra.org/dm3/landing.gsp</ext-link>. A web tutorial is also available online:
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/tutorials.gsp#gxbtut">http://monocyte.gxbsidra.org/dm3/tutorials.gsp#gxbtut</ext-link>. Briefly, datasets of interest can be quickly identified either by filtering using criteria from pre-defined lists on the left or by entering a query term in the search box at the top of the dataset navigation page. Clicking on one of the studies listed in the dataset navigation page opens a viewer designed to provide interactive browsing and graphic representations of large-scale data in an interpretable format. This interface is designed to present ranked gene lists and display expression results graphically in a context-rich environment. Selecting a gene from the rank ordered list on the left of the data-viewing interface will display its expression values graphically in the screen&#x02019;s central panel. Directly above the graphical display drop down menus give users the ability: a) To change how the gene list is ranked; this allows the user to change the method used to rank the genes, or to include only genes that are selected for specific biological interest; b) To change sample grouping (Group Set button), in some datasets a user can switch between groups based on cell type to groups based on disease type, for example; c) To sort individual samples within a group based on associated categorical or continuous variables (e.g. gender or age); d) To toggle between the bar chart view and a box plot view, with expression values represented as a single point for each sample. Samples are split into the same groups whether displayed as a bar chart or box plot; e) To provide a color legend for the sample groups; f) To select categorical information that is to be overlaid at the bottom of the graph. For example, the user can display gender or treatment status in this manner; g) To provide a color legend for the categorical information overlaid at the bottom of the graph; and h) To download the graph as a png image or csv file for performing a separate analysis. Measurements have no intrinsic utility in absence of contextual information. It is this contextual information that makes the results of a study or experiment interpretable. It is therefore important to capture, integrate and display information that will give users the ability to interpret data and gain new insights from it. We have organized this information under different tabs directly above the graphical display. The tabs can be hidden to make more room for displaying the data plots, or revealed by clicking on the blue &#x0201c;show info panel&#x0201d; button on the top right corner of the display. Information about the gene selected from the list on the left side of the display is available under the &#x0201c;Gene&#x0201d; tab. Information about the study is available under the &#x0201c;Study&#x0201d; tab. Information available about individual samples is provided under the &#x0201c;Sample&#x0201d; tab. Rolling the mouse cursor over a bar chart's element while displaying the &#x0201c;Sample&#x0201d; tab lists any clinical, demographic, or laboratory information available for the selected sample. Finally, the &#x0201c;Downloads&#x0201d; tab allows advanced users to retrieve the original dataset for analysis outside this tool. It also provides all available sample annotation data for use alongside the expression data in third party analysis software. Other functionalities are provided under the &#x0201c;Tools&#x0201d; drop-down menu located in the top right corner of the user interface. Some of the notable functionalities available through this menu include: a) Annotations, which provides access to all the ancillary information about the study, samples and dataset organized across different tabs; b) Cross-project view, which provides the ability for a given gene to browse through all available studies; c) Copy link, which generates a mini-URL encapsulating information about the display settings in use and that can be saved and shared with others (clicking on the envelope icon on the toolbar inserts the url in an email message via the local email client); and d) Chart options, which gives user the option to customize chart labels.</p></sec><sec><title>Dataset validation</title><p>Quality control checks were performed with the examination of profiles of relevant biological indicators. Known leukocyte markers were used, such as CD14, which is expressed by monocytes and macrophages; as well as markers that would indicate significant contamination of the sample by other leukocyte populations: such as CD3, a T-cells marker; CD19, a B-cell marker; CD56, an NK cell marker (
+<xref ref-type="fig" rid="f3">Figure 3</xref>; The expression of the CD14 marker across all studies can be checked using the cross project functionality of GXB:
+<ext-link ext-link-type="uri" xlink:href="http://monocyte.gxbsidra.org/dm3/geneBrowser/crossProject?probeID=201743_at&#x00026;geneSymbol=CD14&#x00026;geneID=929">http://monocyte.gxbsidra.org/dm3/geneBrowser/crossProject?probeID=201743_at&#x00026;geneSymbol=CD14&#x00026;geneID=929</ext-link>). We have systematically verified that expression of the genes encoding those surface markers was consistent with grouping labels provided by depositors. In addition, expression of the XIST transcripts, in which expression is gender-specific, was also examined to determine its concordance with demographic information provided with the GEO submission (expression of XIST should be high in females and low in males).</p><fig fig-type="figure" id="f3" orientation="portrait" position="float"><label>Figure 3. </label><caption><title>Illustrative example showing the abundance levels of CD14 transcripts across samples in a given study.</title><p>The expression of this gene is indicative of the purity of primary human monocyte preparation; this marker is expected to be high in monocyte preparations and low in other leukocyte populations. In this view of the GXB expression of CD14 can be visualized across projects listed on the left.</p></caption><graphic xlink:href="f1000research-5-9108-g0002"/></fig></sec></sec><sec><title>Data availability</title><p>The data referenced by this article are under copyright with the following copyright statement: Copyright: &#x000a9; 2016 Rinchai D et al.</p><p>Data associated with the article are available under the terms of the Creative Commons Zero "No rights reserved" data waiver (CC0 1.0 Public domain dedication).
+<ext-link ext-link-type="uri" xlink:href="http://creativecommons.org/publicdomain/zero/1.0/"/>
+</p><p>All datasets included in our curated collection are also available publically via the NCBI GEO website:
+<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/geo/">http://www.ncbi.nlm.nih.gov/geo/</ext-link>; and are referenced throughout the manuscript by their GEO accession numbers (e.g.
+<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE25913">GSE25913</ext-link>). Signal files and sample description files can also be downloaded from the GXB tool under the &#x0201c;downloads&#x0201d; tab.</p></sec>
