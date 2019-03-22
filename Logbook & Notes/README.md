@@ -413,6 +413,7 @@ They use 6 categories to classify citations :
 - *Papers & Blogs* :
   * [New Features for Sentiment Analysis: Do Sentences Matter?](#NewFeatures3)
   * [Sentiment Symposium Tutorial](http://sentiment.christopherpotts.net/index.html)
+  * [AUTOLEX: An Automatic Lexicon Builder for Minority Languages Using an Open Corpus](#AUTOLEX3)
 
 There is some datasets that already exists for sentiment analysis like :
  * [***Sentiment140***](http://help.sentiment140.com/for-students/), this dataset is really popular because it contains 160,000 tweets collected via Twitter API (unfortunately emoticons are pre-removed, there is actually some research about sentiment analysis using emoticons and they provide a lot of good results), unfortunately this dataset can't be used here, because we're focusing on scientific paper and not on tweets.
@@ -492,6 +493,19 @@ Existing solutions instead of the one here :
 
 They also use Punctuation but useless in scientific paper.
 
+<a name="AUTOLEX3"></a>
+#### :diamond_shape_with_a_dot_inside: [AUTOLEX: An Automatic Lexicon Builder for Minority Languages Using an Open Corpus](https://github.com/0AlphaZero0/Sentiment-Analysis-EuropePMC/blob/master/Bibliography/AUTOLEX%20An%20Automatic%20Lexicon%20Builder%20for%20Minority%20Languages_E.L.C.Buhay_et_al%20.pdf) :
+
+***AUTOLEX: An Automatic Lexicon Builder for Minority Languages Using an Open Corpus*** E.L.C.Buhay_et_al.
+
+- :interrobang: ***Problems*** : 
+  * It's actually hard to obtain a lexicon in Philippine natural language and there it's indeed tedious to create a lexicon manually.
+
+- :heavy_check_mark: ***Solutions*** : 
+  * They create AUTOLEX based on other lexicon builder to other language, like arabic.
+  
+- :triangular_flag_on_post: ***Remaining Problems*** : 
+  * There is a remaining problem in all languages, it's the  domain specific problem. When a speech spoke about a specific domain, a same sentence could result in a different meaning for another domain.
 
 [:top::top::top::top::top::top::top::top::top::top::top::top::top::top:Got to the top:top::top::top::top::top::top::top::top::top::top::top::top::top::top::top:](#top)
 
