@@ -506,6 +506,8 @@ They also use Punctuation but useless in scientific paper.
   
 - :triangular_flag_on_post: ***Remaining Problems*** : 
   * There is a remaining problem in all languages, it's the  domain specific problem. When a speech spoke about a specific domain, a same sentence could result in a different meaning for another domain.
+  
+This article show how to build a lexicon automaticaly so it could be a solution, to do the sentiment analysis.
 
 [:top::top::top::top::top::top::top::top::top::top::top::top::top::top:Got to the top:top::top::top::top::top::top::top::top::top::top::top::top::top::top::top:](#top)
 
