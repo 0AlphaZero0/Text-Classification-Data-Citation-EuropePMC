@@ -3,6 +3,7 @@
 # THOUVENIN Arthur
 ########################
 import codecs # Allows to load a file containing UTF-8 characters
+import lxml # Allows to manipulate xml file easily
 #import numpy as np # Allows to manipulate the necessary table for sklearn
 import os # Allows to modify some things on the os
 import random # Allows to use random variables
