@@ -19,6 +19,7 @@ ______________________________________________________________________
 - [11/03 - Defintions of planinng, needs and requests](#11/03)
 - [12/03 - Questions & path set up](#12/03)
 - [19/03 - Dataset conception](#19/03)
+- [25/03 - XML Talks / Data creation](#25/03)
 
 ______________________________________________________________________
 ### :green_book: Notes
@@ -26,7 +27,7 @@ ______________________________________________________________________
 - [Week 1 - 01/03-10/03](#Week1)
 - [Week 2 - 11/03-17/03](#Week2)
 - [Week 3 - 18/03-24/03](#Week3)
-
+- [Week 4 - 25/03-31/03](#Week4)
 ______________________________________________________________________
 
 ### :bookmark_tabs: Index
@@ -150,7 +151,7 @@ Results and analysis
 [:top::top::top::top::top::top::top::top::top::top::top::top::top::top:Got to the top:top::top::top::top::top::top::top::top::top::top::top::top::top::top::top:](#top)
 
 <a name="19/03"></a>
-### :mega: 19/03 -  Dataset conception :
+### :mega: 19/03 - Dataset conception :
 
 - Discussed subjects :
   * Speak about features extraction
@@ -159,6 +160,19 @@ Results and analysis
 - Needs :
   * Mine for citation
   * Need to discuss with Fransesco
+
+[:top::top::top::top::top::top::top::top::top::top::top::top::top::top:Got to the top:top::top::top::top::top::top::top::top::top::top::top::top::top::top::top:](#top)
+
+<a name="25/03"></a>
+### :mega: 25/03 - XML Talks / Data creation :
+
+- Discussed subjects :
+  * XML knowledge (structure, etc..)
+  * dataset citations / reference citations
+
+- Needs :
+  * Look at lXML & W3sch XML
+  * Split sentences using designed tool
 
 [:top::top::top::top::top::top::top::top::top::top::top::top::top::top:Got to the top:top::top::top::top::top::top::top::top::top::top::top::top::top::top::top:](#top)
 
@@ -508,6 +522,15 @@ They also use Punctuation but useless in scientific paper.
   * There is a remaining problem in all languages, it's the  domain specific problem. When a speech spoke about a specific domain, a same sentence could result in a different meaning for another domain.
   
 This article show how to build a lexicon automaticaly so it could be a solution, to do the sentiment analysis.
+
+[:top::top::top::top::top::top::top::top::top::top::top::top::top::top:Got to the top:top::top::top::top::top::top::top::top::top::top::top::top::top::top::top:](#top)
+
+<a name="Week4"></a>
+### :date: Week 4 - 25/03-31/03 :
+
+- *Papers & Blogs* :
+  *.
+
 
 [:top::top::top::top::top::top::top::top::top::top::top::top::top::top:Got to the top:top::top::top::top::top::top::top::top::top::top::top::top::top::top::top:](#top)
 
