@@ -530,7 +530,23 @@ This article show how to build a lexicon automaticaly so it could be a solution,
 
 - *Papers & Blogs* :
   *  Data Citation Synthesis Group: Joint Declaration of Data Citation Principles. Martone M. (ed.) San Diego CA: FORCE11; 2014 https://doi.org/10.25490/a97f-egyk
+  *  [Achieving human and machine accessibility of cited data in scholarly publications](#Achieving4)
 
+<a name="Achieving4"></a>
+#### :diamond_shape_with_a_dot_inside: [Achieving human and machine accessibility of cited data in scholarly publications](https://github.com/0AlphaZero0/Sentiment-Analysis-EuropePMC/blob/master/Bibliography/Achieving%20human%20and%20machine%20accessibility%20of%20cited%20data%20in%20scholarly%20publications_J.Starr_et_al%20.pdf) :
+
+***Achieving human and machine accessibility of cited data in scholarly publications*** J.Starr et al.
+
+- :interrobang: ***Problems*** : 
+  * 
+
+- :heavy_check_mark: ***Solutions*** : 
+  * 
+  
+- :triangular_flag_on_post: ***Remaining Problems*** : 
+  * 
+
+Moving to a cross-discipline standard for acknowledging the data allows researchers to justify continued funding for their data collection efforts (Uhlir, 2012; CODATA-ICSTI Task Group , 2013)
 
 [:top::top::top::top::top::top::top::top::top::top::top::top::top::top:Got to the top:top::top::top::top::top::top::top::top::top::top::top::top::top::top::top:](#top)
 
