@@ -529,7 +529,7 @@ This article show how to build a lexicon automaticaly so it could be a solution,
 ### :date: Week 4 - 25/03-31/03 :
 
 - *Papers & Blogs* :
-  *.
+  *  Data Citation Synthesis Group: Joint Declaration of Data Citation Principles. Martone M. (ed.) San Diego CA: FORCE11; 2014 https://doi.org/10.25490/a97f-egyk
 
 
 [:top::top::top::top::top::top::top::top::top::top::top::top::top::top:Got to the top:top::top::top::top::top::top::top::top::top::top::top::top::top::top::top:](#top)
