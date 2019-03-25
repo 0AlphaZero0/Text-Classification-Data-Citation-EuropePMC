@@ -538,13 +538,13 @@ This article show how to build a lexicon automaticaly so it could be a solution,
 ***Achieving human and machine accessibility of cited data in scholarly publications*** J.Starr et al.
 
 - :interrobang: ***Problems*** : 
-  * 
+  * This paper show the problem that there is a need of a standard to cite data
 
 - :heavy_check_mark: ***Solutions*** : 
-  * 
+  * So it make a summary on what exist and the pros and cons
   
 - :triangular_flag_on_post: ***Remaining Problems*** : 
-  * 
+  * There is still data that ot follow standard of today but most of these are realtively old.
 
 Moving to a cross-discipline standard for acknowledging the data allows researchers to justify continued funding for their data collection efforts (Uhlir, 2012; CODATA-ICSTI Task Group , 2013)
 
