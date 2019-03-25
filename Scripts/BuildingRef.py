@@ -3,7 +3,7 @@
 # THOUVENIN Arthur
 ########################
 import codecs # Allows to load a file containing UTF-8 characters
-import lxml # Allows to manipulate xml file easily
+from lxml import etree # Allows to manipulate xml file easily
 #import numpy as np # Allows to manipulate the necessary table for sklearn
 import os # Allows to modify some things on the os
 import random # Allows to use random variables
@@ -13,6 +13,7 @@ import re # Allows to make regex requests
 # import sys # Allow to modify files on the OS
 # import time # Allows to make a pause to not overcharge the server
 # import webbrowser # Allow to use url to open a webbrowser
+import xml # Allows to manipulate xml files
 
 #################################    Main     ###################################################
 length=(len(os.listdir("./articlesOA/Content"))-1)/2
