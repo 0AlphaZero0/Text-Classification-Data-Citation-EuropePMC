@@ -38,5 +38,4 @@ for file in os.listdir("./articlesOA"):
         fileFullText=codecs.open("./articlesOA/"+(str(file).split("-")[0])+"-fulltxt.xml","r",encoding="utf-8")
         fileFullText=fileFullText.read()
         for accessionNb in accessionNames:
-            #maybe need to use the sentence splitter before
-            pass
+            
