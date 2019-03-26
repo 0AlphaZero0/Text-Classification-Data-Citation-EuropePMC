@@ -39,3 +39,4 @@ for file in os.listdir("./articlesOA"):
         fileFullText=fileFullText.read()
         for accessionNb in accessionNames:
             #maybe need to use the sentence splitter before
+            pass
