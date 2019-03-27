@@ -22,6 +22,6 @@ patchXml.pop(0)
 for xmlFile in patchXml:
     xmlFile="<!DOCTYPE"+xmlFile
     pmcid=re.search(r'pmcid\">([0-9]+)',xmlFile).group(1)
-    pmcidFile=codecs.open("./XML/PMC"+pmcid+".xml","w",encoding="utf-8")
+    pmcidFile=codecs.open("./XML-sentencized/PMC"+pmcid+".xml","w",encoding="utf-8")
     pmcidFile.write(xmlFile)
     pmcidFile.close()
