@@ -1,0 +1,892 @@
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD v1.1d2 20140930//EN" "JATS-archivearticle1.dtd"> 
+<article xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML" open-status="O" article-type="research-article"><?properties open_access?><?DTDIdentifier.IdentifierValue -//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD v1.1 20151215//EN?><?DTDIdentifier.IdentifierType public?><?SourceDTD.DTDName JATS-archivearticle1.dtd?><?SourceDTD.Version 1.1?><?ConverterInfo.XSLTName jp2nlmx2.xsl?><?ConverterInfo.Version 1?><front><journal-meta><journal-id journal-id-type="nlm-ta">ISRN Bioinform</journal-id><journal-id journal-id-type="iso-abbrev">ISRN Bioinform</journal-id><journal-id journal-id-type="publisher-id">ISRN.BIOINFORMATICS</journal-id><journal-title-group><journal-title>ISRN Bioinformatics</journal-title></journal-title-group><issn pub-type="ppub">2090-7338</issn><issn pub-type="epub">2090-7346</issn><publisher><publisher-name>Hindawi Publishing Corporation</publisher-name></publisher></journal-meta><article-meta><article-id pub-id-type="pmcid">4393062</article-id><article-id pub-id-type="doi">10.1155/2013/640518</article-id><article-categories><subj-group subj-group-type="heading"><subject>Research Article</subject></subj-group></article-categories><title-group><article-title><SecTag type="TITLE"><text><SENT sid="29706" pm="."><plain>Discovery of YopE Inhibitors by Pharmacophore-Based Virtual Screening and Docking </plain></SENT>
+</text></SecTag></article-title></title-group><contrib-group><contrib contrib-type="author"><name><surname>Ozbuyukkaya</surname><given-names>Gizem</given-names></name><xref ref-type="aff" rid="I1"/></contrib><contrib contrib-type="author"><name><surname>Ozkirimli Olmez</surname><given-names>Elif</given-names></name><xref ref-type="aff" rid="I1"/></contrib><contrib contrib-type="author"><name><surname>Ulgen</surname><given-names>Kutlu O.</given-names></name><xref ref-type="aff" rid="I1"/><xref ref-type="corresp" rid="cor1">
+<sup>*</sup>
+</xref></contrib></contrib-group><aff id="I1">Department of Chemical Engineering, Boğaziçi University, 34342 Istanbul, Turkey</aff><author-notes><corresp id="cor1">*Kutlu O. Ulgen: <email>ulgenk@boun.edu.tr</email></corresp><fn fn-type="other"><p><text><SENT sid="29707" pm="."><plain>Academic Editors: Z. </plain></SENT>
+<SENT sid="29708" pm="."><plain>Gáspári, D. </plain></SENT>
+<SENT sid="29709" pm="."><plain>Labudde, and D. </plain></SENT>
+<SENT sid="29710" pm="."><plain>A. </plain></SENT>
+<SENT sid="29711" pm="."><plain>McClellan </plain></SENT>
+</text></p></fn></author-notes><pub-date pub-type="collection"><year>2013</year></pub-date><pub-date pub-type="epub"><day>21</day><month>10</month><year>2013</year></pub-date><volume>2013</volume><elocation-id>640518</elocation-id><history><date date-type="received"><day>12</day><month>6</month><year>2013</year></date><date date-type="accepted"><day>28</day><month>8</month><year>2013</year></date></history><permissions><copyright-statement>Copyright © 2013 Gizem Ozbuyukkaya et al.</copyright-statement><copyright-year>2013</copyright-year><license xlink:href="https://creativecommons.org/licenses/by/3.0/"><license-p>This is an open access article distributed under the Creative Commons Attribution License, which permits unrestricted use, distribution, and reproduction in any medium, provided the original work is properly cited.</license-p></license></permissions><abstract><p><SecTag type="ABS"><text><SENT sid="29712" pm="."><plain>Gram-negative bacteria <italic>Yersinia</italic> secrete virulence factors that invade eukaryotic cells via type III secretion system. </plain></SENT>
+<SENT sid="29713" pm="."><plain>One particular virulence member, <italic>Yersinia</italic> outer protein E (YopE), targets Rho family of small GTPases by mimicking regulator GAP protein activity, and its secretion mainly induces cytoskeletal disruption and depolymerization of actin stress fibers within the host cell. </plain></SENT>
+<SENT sid="29714" pm="."><plain>In this work, potent drug-like inhibitors of YopE are investigated with virtual screening approaches. </plain></SENT>
+<SENT sid="29715" pm="."><plain>More than 500,000 unique small molecules from ZINC database were screened with a five-point pharmacophore, comprising three hydrogen acceptors, one hydrogen donor, and one ring, and derived from different salicylidene acylhydrazides. </plain></SENT>
+<SENT sid="29716" pm="."><plain>Binding modes and features of these molecules were investigated with a multistep molecular docking approach using Glide software. </plain></SENT>
+<SENT sid="29717" pm="."><plain>Virtual screening hits were further analyzed based on their docking score, chemical similarity, pharmacokinetic properties, and the key Arg144 interaction along with other active site residue interactions with the receptor. </plain></SENT>
+<SENT sid="29718" pm="."><plain>As a final outcome, a diverse set of ligands with inhibitory potential were proposed. </plain></SENT>
+</text></SecTag></p></abstract></article-meta></front><body><SecTag type="INTRO"><sec id="sec1"><title><text><SENT sid="29719" pm="."><plain>1. </plain></SENT>
+<SENT sid="29720" pm="."><plain>Introduction </plain></SENT>
+</text></title><p><text><SENT sid="29721" pm="."><plain>The Rho family of small (20–40 kDa) GTPases, which are monomeric G-proteins, belong to the Ras superfamily of GTPases containing more than 150 proteins [<xref rid="B1" ref-type="bibr">1</xref>]. </plain></SENT>
+<SENT sid="29722" pm="."><plain>The Ras superfamily has been classified into 5 subfamilies based on their sequence similarity which are Ras, Rho, Rab, Ran, and Arf [<xref rid="B1" ref-type="bibr">1</xref>, <xref rid="B2" ref-type="bibr">2</xref>]. </plain></SENT>
+<SENT sid="29723" pm="."><plain>The Rho family of GTPases are cell membrane-associated GTP-binding proteins that actively participate in cell signaling networks, which regulate actin organization, cell cycle progression and gene expression [<xref rid="B3" ref-type="bibr">3</xref>, <xref rid="B4" ref-type="bibr">4</xref>]. </plain></SENT>
+<SENT sid="29724" pm="."><plain>Up to date, 20 members of Rho GTPases have been found in four main subclasses, namely, Rho, Rnd, Rac, and Cdc42 [<xref rid="B2" ref-type="bibr">2</xref>, <xref rid="B5" ref-type="bibr">5</xref>]. </plain></SENT>
+<SENT sid="29725" pm="."><plain>Rho GTPases are the most fundamental regulators of the actin cytoskeleton, along with other crucial properties in the cell, such as cell adhesion, gene transcription and cell proliferation, cell motility, vesicular trafficking, phagocytosis, and cytokinesis [<xref rid="B2" ref-type="bibr">2</xref>, <xref rid="B4" ref-type="bibr">4</xref>–<xref rid="B11" ref-type="bibr">9</xref>]. </plain></SENT>
+</text></p><p><text><SENT sid="29726" pm="."><plain>Similar to other G-proteins and GTPases, Rho family proteins can serve as molecular switches, by binding to either GDP or GTP. </plain></SENT>
+<SENT sid="29727" pm="."><plain>GTPases are active and are capable of transmitting cell signals to downstream proteins when they are bound to GTP and inactive when they are bound to GDP [<xref rid="B12" ref-type="bibr">10</xref>, <xref rid="B13" ref-type="bibr">11</xref>]. </plain></SENT>
+<SENT sid="29728" pm="."><plain>Since nucleotide association and dissociation are normally slow, some regulators within the cell catalyze the process of cycling between GDP- and GTP-bound states of Rho GTPases [<xref rid="B14" ref-type="bibr">12</xref>, <xref rid="B15" ref-type="bibr">13</xref>]. </plain></SENT>
+<SENT sid="29729" pm="."><plain>These regulators are guanine nucleotide exchange factors (GEFs), GTPase-activating proteins (GAPs), and guanine nucleotide dissociation inhibitors (GDIs) [<xref rid="B16" ref-type="bibr">14</xref>]. </plain></SENT>
+<SENT sid="29730" pm="."><plain>GEFs stimulate the substitution of GDP for GTP to activate Rho GTPases, whereas GAPs inactivate Rho GTPases by stimulating the substitution of GTP for GDP. </plain></SENT>
+<SENT sid="29731" pm="."><plain>GDIs avoid the dissociation of GDP from GTPases and retain them in their nonsignaling state [<xref rid="B17" ref-type="bibr">15</xref>, <xref rid="B18" ref-type="bibr">16</xref>]. </plain></SENT>
+<SENT sid="29732" pm="."><plain>Nucleotide exchange occurs due to the conformational changes in Switch I and Switch II regions of GTPases, upon their contact with GEFs/GAPs [<xref rid="B5" ref-type="bibr">5</xref>, <xref rid="B13" ref-type="bibr">11</xref>]. </plain></SENT>
+</text></p><p><text><SENT sid="29733" pm="."><plain>Owing to the important role of Rho GTPases in cell signaling events and several cellular functions, they are favored by many bacterial pathogens as targets to deliver cytotoxins [<xref rid="B19" ref-type="bibr">18</xref>]. </plain></SENT>
+<SENT sid="29734" pm="."><plain>Bacterial effector proteins invade host cells via a specialized secretion system and regulate Rho GTPases by mimicking either GEF or GAP activity [<xref rid="B12" ref-type="bibr">10</xref>, <xref rid="B20" ref-type="bibr">19</xref>]. </plain></SENT>
+<SENT sid="29735" pm="."><plain>Examples of such bacteria are <italic>Burkholderia</italic>, <italic>Chlamydia</italic>, <italic>Salmonella</italic>, <italic>Shigella,</italic> and <italic>Yersinia</italic> [<xref rid="B19" ref-type="bibr">18</xref>]. </plain></SENT>
+<SENT sid="29736" pm="."><plain>These bacteria use type III secretion system to inject their effector proteins directly into the host cell via a needle complex extending from the bacterial membrane and cytosol [<xref rid="B21" ref-type="bibr">20</xref>]. </plain></SENT>
+<SENT sid="29737" pm="."><plain>Bacterial proteins disorganize the actin cytoskeleton by depolymerization of actin stress fibers of the host cell. </plain></SENT>
+<SENT sid="29738" pm="."><plain>By rearranging actin dynamics, they disrupt cell shape and motility, phagocytosis, and cell division. </plain></SENT>
+<SENT sid="29739" pm="."><plain>Additionally, bacterial effector proteins can manipulate GTPase signaling mechanism and can transmit signals to downstream effector proteins [<xref rid="B22" ref-type="bibr">21</xref>, <xref rid="B23" ref-type="bibr">22</xref>]. </plain></SENT>
+<SENT sid="29740" pm="."><plain>As a result, bacterial effector proteins can lead to many diseases, including infection and cancer [<xref rid="B24" ref-type="bibr">23</xref>]. </plain></SENT>
+<SENT sid="29741" pm="."><plain>YopE also has been reported to weaken the immune system of the host cell by affecting cytokine production and cause bubonic plague [<xref rid="B25" ref-type="bibr">24</xref>]. </plain></SENT>
+</text></p><p><text><SENT sid="29742" pm="."><plain>In this work, the bacterial protein toxin <italic>Yersinia</italic> outer protein E (YopE), which has been found to exert GAP activity towards RhoA, Rac1, and Cdc42 of GTPases in vitro, is investigated. </plain></SENT>
+<SENT sid="29743" pm="."><plain>[<xref rid="B26" ref-type="bibr">25</xref>–<xref rid="B28" ref-type="bibr">27</xref>]. </plain></SENT>
+<SENT sid="29744" pm="."><plain>YopE has been reported to disrupt actin cytoskeleton, prevent phagocytosis, and weaken host cell's immune system by affecting cytokine production [<xref rid="B29" ref-type="bibr">28</xref>–<xref rid="B32" ref-type="bibr">31</xref>]. </plain></SENT>
+<SENT sid="29745" pm="."><plain>YopE, shown in <xref ref-type="fig" rid="fig1">Figure 1</xref>, is a monomeric protein of 219 amino acids, with a four antiparallel <italic>α</italic>-helix bundle, four small helices, and two <italic>β</italic>-strands [<xref rid="B25" ref-type="bibr">24</xref>]. </plain></SENT>
+<SENT sid="29746" pm="."><plain>C-terminal domain of YopE between residues 90–219 is essential for its virulence since it comprises the bacterial GTPase activating protein (GAP) domain. </plain></SENT>
+<SENT sid="29747" pm="."><plain>Similar to other GAP proteins, YopE has an arginine residue (Arg144) that is reported to be essential for GAP activity [<xref rid="B1" ref-type="bibr">1</xref>]. </plain></SENT>
+<SENT sid="29748" pm="."><plain>In addition to Arg144, residues 182–184 are reported to be conserved among other bacterial GAP proteins, which are ExoS of <italic>Pseudomonas aeruginosa</italic> and SptP of <italic>Salmonella </italic>spp. </plain></SENT>
+<SENT sid="29749" pm="."><plain>(22% sequence identity with ExoS<sub>GAP</sub> and 29% sequence identity with SptP<sub>GAP</sub>) [<xref rid="B25" ref-type="bibr">24</xref>]. </plain></SENT>
+<SENT sid="29750" pm="."><plain>YopE interactions with G-proteins are investigated and important YopE residues that govern its activity are reported by several studies [<xref rid="B1" ref-type="bibr">1</xref>, <xref rid="B3" ref-type="bibr">3</xref>, <xref rid="B34" ref-type="bibr">32</xref>]. </plain></SENT>
+<SENT sid="29751" pm="."><plain>Residues Ile106, Leu109, Thr138, Gly139, Ser140, and Gln149 are observed to interact with Switch II region of the GTPases. </plain></SENT>
+<SENT sid="29752" pm="."><plain>The key residue Arg144 along with Thr183, Ile184, and Gly185 is reported to contact the nucleotide and both of the switch regions. </plain></SENT>
+<SENT sid="29753" pm="."><plain>Residues Thr148, Gln151, Gln155, Pro177, Ser179, and Gln180 are found to interact with nucleotide and Switch I region of Rho GTPases [<xref rid="B25" ref-type="bibr">24</xref>]. </plain></SENT>
+</text></p><p><text><SENT sid="29754" pm="."><plain>Up to date, no cocrystallized or experimentally discovered ligands of YopE have been reported. </plain></SENT>
+<SENT sid="29755" pm="."><plain>However, inhibition of type III secretion system has been investigated by several studies [<xref rid="B35" ref-type="bibr">33</xref>–<xref rid="B39" ref-type="bibr">37</xref>], and 23 compounds that belong to a class of acylated hydrazones of different salicylaldehydes that prevent YopE secretion in vitro have been identified [<xref rid="B40" ref-type="bibr">38</xref>]. </plain></SENT>
+<SENT sid="29756" pm="."><plain>Salicylidene acylhydrazides, which have been denoted as a class of antivirulence compounds, were also reported to obstruct type III secretion of other Gram-negative bacteria other than <italic>Yersinia</italic> [<xref rid="B41" ref-type="bibr">39</xref>]. </plain></SENT>
+<SENT sid="29757" pm="."><plain>Although there were a number of mechanisms postulated, the inhibition mechanism and the target proteins of these salicylidene acylhydrazides were the focus of several studies [<xref rid="B40" ref-type="bibr">38</xref>, <xref rid="B42" ref-type="bibr">40</xref>, <xref rid="B43" ref-type="bibr">41</xref>]. </plain></SENT>
+<SENT sid="29758" pm="."><plain>Recently, <italic>Yersinia pseudotuberculosis</italic> proteins Tpx and WrbA, which take role in YopE secretion,were recognized as targets of these compounds, [<xref rid="B41" ref-type="bibr">39</xref>]. </plain></SENT>
+<SENT sid="29759" pm="."><plain>Nevertheless, other potential targets of salicylidene acylhydrazides remain unknown, whose identification is essential for the investigation and design of new therapeutic molecules against bacterial secretion mechanism. </plain></SENT>
+</text></p><p><text><SENT sid="29760" pm="."><plain>Here, we represent a hybrid virtual screening approach to identify molecules with inhibition potential against YopE, using computational drug discovery tools. </plain></SENT>
+<SENT sid="29761" pm="."><plain>Pharmacophore building was carried out via Phase, based on the three-dimensional structures of 23 salicylidene acylhydrazides [<xref rid="B40" ref-type="bibr">38</xref>]. </plain></SENT>
+<SENT sid="29762" pm="."><plain>Small molecules selected from ZINC database were screened and filtered with the pharmacophore model. </plain></SENT>
+<SENT sid="29763" pm="."><plain>Multistep docking of filtered molecules was carried out with Glide, taking ligand flexibility into account. </plain></SENT>
+<SENT sid="29764" pm="."><plain>Virtual screening hits were clustered and further evaluated for their interactions with the target and pharmacokinetic properties. </plain></SENT>
+<SENT sid="29765" pm="."><plain>A set of commercially available molecules with possible inhibitory activity toward YopE was reported. </plain></SENT>
+</text></p></sec></SecTag><SecTag type="METHODS"><sec id="sec2"><title><text><SENT sid="29766" pm="."><plain>2. </plain></SENT>
+<SENT sid="29767" pm="."><plain>Methods </plain></SENT>
+</text></title><p><text><SENT sid="29768" pm="."><plain>All virtual screening applications were performed using Schrödinger Suite 2011 (LLC, New York, NY, USA) on Linux platform using HP xw6600 Workstation. </plain></SENT>
+<SENT sid="29769" pm="."><plain>The following Schrödinger modules were used: Protein Preparation Wizard [<xref rid="B44b" ref-type="bibr">42</xref>–<xref rid="B44d" ref-type="bibr">44</xref>], LigPrep [<xref rid="B45" ref-type="bibr">45</xref>], ConfGen [<xref rid="B46" ref-type="bibr">46</xref>], Phase [<xref rid="B47" ref-type="bibr">47</xref>], SiteMap [<xref rid="B48" ref-type="bibr">48</xref>], QikProp [<xref rid="B49" ref-type="bibr">49</xref>], and Glide [<xref rid="B50" ref-type="bibr">50</xref>–<xref rid="B52" ref-type="bibr">52</xref>]. </plain></SENT>
+<SENT sid="29770" pm="."><plain>All modules were accessed via Maestro graphical interface [<xref rid="B53" ref-type="bibr">53</xref>]. </plain></SENT>
+</text></p><sec id="sec2.1"><title><text><SENT sid="29771" pm="."><plain>2.1. </plain></SENT>
+<SENT sid="29772" pm="."><plain>Database Generation </plain></SENT>
+</text></title><p><text><SENT sid="29773" pm="."><plain>The 3D structures of the small molecules from the big vendors of ZINC database (see Table S1 in Supplementary Material available online at <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1155/2013/640518">http://dx.doi.org/10.1155/2013/640518</ext-link>) were prepared via LigPrep and ConfGen scripts and merged using Phase Database Generation module. </plain></SENT>
+<SENT sid="29774" pm="."><plain>The parameters used in the preparation step are the following: (a) possible ionization and tautomer states were generated at pH 7.0 ± 2.0; (b) chiralities were obtained from the 3D geometry of the structures; (c) for each compound, maximum 4 low energy isomers, 1 ring conformation, and 10 conformations per rotatable bond were generated; (d) 50 steps of energy minimization were carried out for the conformers with the truncated Newton (TCNG) method using the OPLS_2005 force field and a distance dependent dielectric constant of 4; (e) conformers with high-energy ionization/tautomer states were automatically removed and the number of conformers was limited to 100 per compound, which is the default value for conformer generation in Phase Database Generation module; (f) a built-in QikProp script predicted the ADME and druglikeness properties of the molecules; (g) molecules that violated Lipinski's rule (molecular weight &lt;500, hydrogen bond donor &lt;5, hydrogen bond acceptor &lt;10, and partition coefficient &lt;5) or had reactive functional groups were removed. </plain></SENT>
+<SENT sid="29775" pm="."><plain>Database preparation yielded a total of 25.8 million conformations from the initial 500000 molecules. </plain></SENT>
+</text></p></sec><sec id="sec2.2"><title><text><SENT sid="29776" pm="."><plain>2.2. </plain></SENT>
+<SENT sid="29777" pm="."><plain>Receptor Protein Preparation </plain></SENT>
+</text></title><p><text><SENT sid="29778" pm="."><plain>Docking studies were conducted on the target protein YopE. </plain></SENT>
+<SENT sid="29779" pm="."><plain>Coordinates of YopE (PDB id: 1hy5, [<xref rid="B25" ref-type="bibr">24</xref>]) were obtained from RCSB Protein Data Bank [<xref rid="B55" ref-type="bibr">54</xref>]. </plain></SENT>
+<SENT sid="29780" pm="."><plain>The biological assembly is known to be a monomer, and therefore, one YopE chain from the crystal dimer structure was prepared and refined using the Protein Preparation Wizard. </plain></SENT>
+<SENT sid="29781" pm="."><plain>Charges and bond orders were assigned, hydrogens were added to the heavy atoms, selenomethionines were converted to methionines, and all waters were deleted. </plain></SENT>
+<SENT sid="29782" pm="."><plain>Reorientation of certain hydroxyl and thiol groups, amide groups of asparagines, glutamines and imidazole ring of histidines, protonation states of histidines, aspartic acids, and glutamic acids was optimized at neutral pH. </plain></SENT>
+<SENT sid="29783" pm="."><plain>Using force field OPLS_2005, minimization was carried out setting maximum heavy atom RMSD to 0.30 Å. </plain></SENT>
+</text></p></sec><sec id="sec2.3"><title><text><SENT sid="29784" pm="."><plain>2.3. </plain></SENT>
+<SENT sid="29785" pm="."><plain>Receptor Grid Generation </plain></SENT>
+</text></title><p><text><SENT sid="29786" pm="."><plain>After preparation, receptor grids were generated with Glide by specifying the binding site with a 3D cubic box. </plain></SENT>
+<SENT sid="29787" pm="."><plain>SiteMap was used to estimate the location of the active site by searching regions near the protein surface, generating hydrophobic and hydrophilic contour maps of the protein, and calculating energy potentials. </plain></SENT>
+<SENT sid="29788" pm="."><plain>Enclosing box of 14 Å side lengths was placed by centering the critical Arg144 residue, depending on the SiteMap prediction (Figure S1). </plain></SENT>
+<SENT sid="29789" pm="."><plain>Based upon the fact that the binding site is not shallow, the nonpolar atoms were slightly scaled back, by choosing the van der Waals radius scaling factor of 0.75 for nonpolar parts, so that nonnative ligands would dock to the receptor better. </plain></SENT>
+<SENT sid="29790" pm="."><plain>Rotation of all receptor hydroxyl and thiol groups within the grid was allowed. </plain></SENT>
+</text></p></sec><sec id="sec2.4"><title><text><SENT sid="29791" pm="."><plain>2.4. </plain></SENT>
+<SENT sid="29792" pm="."><plain>Ligand-Based Pharmacophore Generation </plain></SENT>
+</text></title><p><text><SENT sid="29793" pm="."><plain>Pharmacophore model was developed using the 23 experimentally determined inhibitors of YopE secretion (<xref ref-type="table" rid="tab1">Table 1</xref>) via Phase module. </plain></SENT>
+<SENT sid="29794" pm="."><plain>The small molecules from the literature were drawn in Maestro workspace, and these 2D structures were converted to all-atom 3D structures using embedded LigPrep script. </plain></SENT>
+<SENT sid="29795" pm="."><plain>Up to 32 stereoisomers were generated per ligand by determining chiralities from 3D structures, and all possible ionization states of ligands were generated at target pH of 7. </plain></SENT>
+<SENT sid="29796" pm="."><plain>After converting to 3D, conformation search was carried out to generate conformers and search for low energy structures using OPLS_2005 force field and other default parameters with ConfGen script. </plain></SENT>
+<SENT sid="29797" pm="."><plain>Maximum number of conformers per rotatable bond and number of conformers per structure were kept at 100 and 1000, respectively. </plain></SENT>
+<SENT sid="29798" pm="."><plain>Each compound, along with its different states and conformers, was represented by a set of points in space. </plain></SENT>
+<SENT sid="29799" pm="."><plain>When these set of points were aligned, some of them were found to coincide with each other, which indicates a structural feature or pharmacophore site. </plain></SENT>
+<SENT sid="29800" pm="."><plain>Six built-in sets of pharmacophore features were searched: hydrogen bond acceptor (A), hydrogen bond donor (D), hydrophobic group (H), negatively charged group (N), positively charged group (P), and aromatic ring (R). </plain></SENT>
+<SENT sid="29801" pm="."><plain>A common set of pharmacophore features that are observed consistently in inhibitors with similar spatial arrangements were identified and grouped. </plain></SENT>
+<SENT sid="29802" pm="."><plain>Then, all groups were individually investigated and tree-based partitioning technique was applied. </plain></SENT>
+<SENT sid="29803" pm="."><plain>If the grouped pharmacophore points do not coincide with at least one arbitrary pharmacophore site of each compound, they were eliminated. </plain></SENT>
+<SENT sid="29804" pm="."><plain>The remaining pharmacophore groups, which then are called pharmacophore hypotheses, were scored according to their alignment to the input molecules. </plain></SENT>
+<SENT sid="29805" pm="."><plain>Overall quality of each hypothesis was measured from its survival score, and AAADR.21 was selected. </plain></SENT>
+<SENT sid="29806" pm="."><plain>The database was filtered based on its 3D similarity to the selected pharmacophore hypothesis, such that the minimum fitness value was 1.4. </plain></SENT>
+</text></p></sec><sec id="sec2.5"><title><text><SENT sid="29807" pm="."><plain>2.5. </plain></SENT>
+<SENT sid="29808" pm="."><plain>Glide Docking </plain></SENT>
+</text></title><p><text><SENT sid="29809" pm="."><plain>Molecules obtained by filtering were used for multistep receptor docking workflow. </plain></SENT>
+<SENT sid="29810" pm="."><plain>Glide standard precision (SP) docking was performed with these molecules, and hits above 4 kcal/mol based on docking score were redocked to YopE in XP mode, keeping all docking parameters as default. </plain></SENT>
+<SENT sid="29811" pm="."><plain>No bonding constraints were given during docking calculations. </plain></SENT>
+<SENT sid="29812" pm="."><plain>Using Monte Carlo random search algorithm, ligand poses were generated for each input molecule, and binding affinity of these molecules to YopE was predicted in terms of Glide docking score. </plain></SENT>
+<SENT sid="29813" pm="."><plain>Potential energies of the docked molecules were also predicted with empirical E-model scoring function. </plain></SENT>
+<SENT sid="29814" pm="."><plain>Postdocking minimization was performed with OPLS_2005 force field, and one pose per ligand was saved. </plain></SENT>
+<SENT sid="29815" pm="."><plain>Strain energies of bound and free forms of ligands were calculated, and hits with more than 4 kcal/mol energy difference between the two forms received a penalty equal to the quarter of their strain energy difference, which is added to the docking score. </plain></SENT>
+</text></p></sec></sec></SecTag><SecTag type="RESULTS,DISCUSS"><sec id="sec3"><title><text><SENT sid="29816" pm="."><plain>3. </plain></SENT>
+<SENT sid="29817" pm="."><plain>Results and Discussion </plain></SENT>
+</text></title><p><text><SENT sid="29818" pm="."><plain>Investigation of novel inhibitors targeting the bacterial YopE was performed with the help of computational drug design tools. </plain></SENT>
+<SENT sid="29819" pm="."><plain>Database generation, pharmacophore modeling and screening, and molecular docking and scoring were carried out to propose a set of biochemically active molecules with inhibition potential against YopE. </plain></SENT>
+</text></p><sec id="sec3.1"><title><text><SENT sid="29820" pm="."><plain>3.1. </plain></SENT>
+<SENT sid="29821" pm="."><plain>Pharmacophore Development </plain></SENT>
+</text></title><p><text><SENT sid="29822" pm="."><plain>23 chemically synthesized compounds belonging to a class of acylated hydrazones of salicylidene acylhydrazides that inhibit YopE secretion in vitro were utilized (Table S2) for pharmacophore development. </plain></SENT>
+<SENT sid="29823" pm="."><plain>The ability of these salicylidene acylhydrazides to inhibit YopE and to make important interactions upon direct contact, similar to Tpx and WrbA, was sought. </plain></SENT>
+<SENT sid="29824" pm="."><plain>For this purpose, prior to pharmacophore development, extra precision Glide docking was carried out with these 23 compounds, where docking scores were observed to be between −2.0 and −5.9 kcal/mol (data not shown). </plain></SENT>
+<SENT sid="29825" pm="."><plain>The binding orientations of these compounds were found to be in close proximity to the critical arginine residue, occupying the cleft between Arg144 and a bulge formed by residues Thr183-Gly185. </plain></SENT>
+<SENT sid="29826" pm="."><plain>The most common interactions between YopE and 23 inhibitors were observed in residues Arg144, Gln151, and Thr183. </plain></SENT>
+<SENT sid="29827" pm="."><plain>The compounds also interacted with other important residues reported upon GTPase contact, some of which are Thr138, Gly139, Thr148, Ser179, Gln180, Gly182, Ile184, and Gly185. </plain></SENT>
+<SENT sid="29828" pm="."><plain>The binding modes and numerous interactions between YopE and the salicylidene acylhydrazides supported the choice of using these compounds for pharmacophore development. </plain></SENT>
+<SENT sid="29829" pm="."><plain>Six out of 23 compounds that have the critical Arg144 interaction and docking scores above −4 kcal/mol were selected (<xref ref-type="table" rid="tab1">Table 1</xref>). </plain></SENT>
+<SENT sid="29830" pm="."><plain>It was visually observed that, below this score, the likelihood of encountering favorable interactions diminishes. </plain></SENT>
+<SENT sid="29831" pm="."><plain>Interaction with the Arg144 of YopE was regarded as necessary since this residue was shown to interact with both of the switch regions of G-proteins [<xref rid="B25" ref-type="bibr">24</xref>], and its importance in catalytic activity was reported by mutation analyses [<xref rid="B28" ref-type="bibr">27</xref>, <xref rid="B57" ref-type="bibr">55</xref>]. </plain></SENT>
+<SENT sid="29832" pm="."><plain>It was observed that Arg144 made hydrogen bonds either with the formic hydrazide group (NNC=O) or the hydroxybenzene groups of the compounds. </plain></SENT>
+</text></p><p><text><SENT sid="29833" pm="."><plain>The pharmacophore model was developed based on the structures of the six selected compounds using Phase. </plain></SENT>
+<SENT sid="29834" pm="."><plain>After hypotheses were constructed, they were scored and ranked according to their coordination to the ligands, which can be seen in <xref ref-type="table" rid="tab2">Table 2</xref>. </plain></SENT>
+<SENT sid="29835" pm="."><plain>A total of 20 variant hypotheses were generated upon pharmacophore development process. </plain></SENT>
+</text></p><p><text><SENT sid="29836" pm="."><plain>The quality of each hypothesis was measured by its survival score, which is a weighted combination of site, vector, volume, and selectivity scores. </plain></SENT>
+<SENT sid="29837" pm="."><plain>Site score indicates root mean squared deviation of compounds from the hypothesis site positions, whereas vector score is the average cosine of the angles formed by corresponding pairs of site features in the aligned structures and volume score measures how a compound overlays with pharmacophore sites based on van der Waals spheres. </plain></SENT>
+<SENT sid="29838" pm="."><plain>Site, volume, and vector scores range between 0 and 1, and high values indicate better alignment of ligands on hypothesis. </plain></SENT>
+<SENT sid="29839" pm="."><plain>Selectivity is an empirical prediction defined on log scale, which calculates the fraction of molecules that could match the hypothesis, whether it is an active or inactive ligand. </plain></SENT>
+<SENT sid="29840" pm="."><plain>For example, a selectivity value of 2 means that 1 molecule out of 100 (log 10<sup>2</sup>) arbitrary ligand molecules would match the hypothesis, regardless of their activity value. </plain></SENT>
+<SENT sid="29841" pm="."><plain>Therefore, higher selectivity is favored, since it implies uniqueness to the ligand set. </plain></SENT>
+<SENT sid="29842" pm="."><plain>However, site, vector and, volume scores are underlined in the literature due to their geometric significance [<xref rid="B58" ref-type="bibr">56</xref>]. </plain></SENT>
+<SENT sid="29843" pm="."><plain>Overall, five-point hypothesis AAADR.21, with three hydrogen acceptors, one hydrogen donor, and one ring group, gave the best three-dimensional alignment to the selected six compounds in terms of site, volume, selectivity, and total survival scores. </plain></SENT>
+<SENT sid="29844" pm="."><plain>AAADR.21 site points matched with compound 15 are represented in <xref ref-type="fig" rid="fig2">Figure 2</xref> along with pharmacophore site-site distances. </plain></SENT>
+<SENT sid="29845" pm="."><plain>Two hydrogen acceptors and one hydrogen donor were observed to coincide with the atoms of Arg144 interacting formic hydrazide group, whereas the other acceptor was aligned with the hydroxyl group of the benzene ring. </plain></SENT>
+<SENT sid="29846" pm="."><plain>Site distances were also found to be reasonable. </plain></SENT>
+<SENT sid="29847" pm="."><plain>Site angle measurements are given in Table S3. </plain></SENT>
+<SENT sid="29848" pm="."><plain>Pharmacophore model was used to search 3D database (small molecule database generated from ZINC) to identify the molecules that satisfy the hypothesis. </plain></SENT>
+<SENT sid="29849" pm="."><plain>Pharmacophore prefiltering with AAADR hypothesis reduced initial 2.5 million conformers to 18230 hits. </plain></SENT>
+</text></p></sec><sec id="sec3.2"><title><text><SENT sid="29850" pm="."><plain>3.2. </plain></SENT>
+<SENT sid="29851" pm="."><plain>Molecular Docking and Hit Selection </plain></SENT>
+</text></title><p><text><SENT sid="29852" pm="."><plain>The molecules obtained by filtering with hypothesis AAADR.21 were docked to the receptor YopE with Glide software to predict binding affinity of molecules to the target and to investigate their ligand-protein interactions. </plain></SENT>
+<SENT sid="29853" pm="."><plain>The binding orientation and features of each database molecule relative to the receptor protein were determined and scored with internal scoring function GlideScore. </plain></SENT>
+<SENT sid="29854" pm="."><plain>Glide standard precision (SP) docking was first conducted with 18230 hits using the 3D structure of YopE prepared for docking calculations, as described in the receptor protein preparation and receptor grid generation sections. </plain></SENT>
+<SENT sid="29855" pm="."><plain>Top 30% hits of Glide SP in terms of docking score, which comprises 5604 molecules, were redocked to YopE in Glide extra precision (XP) mode with the identical internal docking parameters. </plain></SENT>
+<SENT sid="29856" pm="."><plain>Docking scores varied between −7.2 and −0.5 kcal/mol in Glide XP mode. </plain></SENT>
+<SENT sid="29857" pm="."><plain>A pose filter was carried out and virtual screening hits that interact with the critical Arg144 residue were determined. </plain></SENT>
+<SENT sid="29858" pm="."><plain>This filter yielded 2605 hits out of the initial 5604. </plain></SENT>
+<SENT sid="29859" pm="."><plain>The number of remaining hits was further reduced to 185 by filtering with a docking score threshold of −4 kcal/mol. </plain></SENT>
+<SENT sid="29860" pm="."><plain>Structures of the remaining molecules were analyzed and clustered by their 2D structural similarities via ChemMine Web Tool [<xref rid="B59" ref-type="bibr">57</xref>]. </plain></SENT>
+<SENT sid="29861" pm="."><plain>Hierarchy of clusters based on pairwise compound similarity was defined using the Tanimoto similarity coefficient and structural descriptors such as atom pairs. </plain></SENT>
+<SENT sid="29862" pm="."><plain>The hierarchical similarity tree output is provided in Figure S2. </plain></SENT>
+<SENT sid="29863" pm="."><plain>The hits were clustered using the Tanimoto coefficient threshold as 0.50. </plain></SENT>
+<SENT sid="29864" pm="."><plain>Based on this similarity criterion, the majority of the hits formed individual cluster or only small groups of two or three members. </plain></SENT>
+<SENT sid="29865" pm="."><plain>Only three more populated groups, with 8, 26, and 11 members, were formed according to the ChemMine similarity clustering. </plain></SENT>
+<SENT sid="29866" pm="."><plain>Database titles and docking scores of each member of these large clusters are tabulated in Table S4. </plain></SENT>
+<SENT sid="29867" pm="."><plain>Three top scoring members of aforementioned clusters were chosen for visual inspection and detailed analysis. </plain></SENT>
+<SENT sid="29868" pm="."><plain>The 2D structures and docking results of the hits are given in Tables <xref ref-type="table" rid="tab3">3</xref> and <xref ref-type="table" rid="tab4">4</xref>. </plain></SENT>
+<SENT sid="29869" pm="."><plain>The docking scores of the selected hits were found to be higher than the initial six compounds that were used in pharmacophore development. </plain></SENT>
+<SENT sid="29870" pm="."><plain>Three molecules from each cluster were analyzed based on the docking score as well as additional criteria, such as absorption, distribution, metabolism and excretion (ADME) considerations, druglikeness of ligands, and strain energy differences of ligands. </plain></SENT>
+</text></p><p><text><SENT sid="29871" pm="."><plain>Molecules were sorted according to their docking scores in <xref ref-type="table" rid="tab4">Table 4</xref>. </plain></SENT>
+<SENT sid="29872" pm="."><plain>Detailed docking score components of each molecule are also listed in Table S5. </plain></SENT>
+<SENT sid="29873" pm="."><plain>Docking calculations were performed keeping the protein structure rigid and ligands flexible. </plain></SENT>
+<SENT sid="29874" pm="."><plain>Therefore, ligands were allowed to be strained during docking, in order to fit the ligands to the protein binding site. </plain></SENT>
+<SENT sid="29875" pm="."><plain>However, too much strain may indicate false positives, and therefore, the strain in the molecules were determined. </plain></SENT>
+<SENT sid="29876" pm="."><plain>To this end, energies of free and docked conformations of hits were calculated and strain penalties were determined as a postdocking analysis, as described in Glide docking section. </plain></SENT>
+<SENT sid="29877" pm="."><plain>Another scoring function represented in <xref ref-type="table" rid="tab4">Table 4</xref>, namely, E-model, also includes penalty terms for internal strain energy of the generated poses. </plain></SENT>
+<SENT sid="29878" pm="."><plain>Only ZINC01703513, ZINC19800113, and ZINC05297691 received a small strain penalty, which was considered as insignificant. </plain></SENT>
+</text></p><p><text><SENT sid="29879" pm="."><plain>Pharmacokinetic properties, druglikeness as well as other significant descriptors, such as molecular weight, H-bond donors, H-bond acceptors, solvent accessible surface area, log HERG (blockage of K+ channels), log S (aqueous solubility), log P (octanol/water), and human oral absorption, for the selected hits were determined by QikProp (<xref ref-type="table" rid="tab5">Table 5</xref>). </plain></SENT>
+<SENT sid="29880" pm="."><plain>Druglikeness, as predicted by the Lipinski rule, was investigated along with the predicted ADME and molecular properties. </plain></SENT>
+<SENT sid="29881" pm="."><plain>According to this rule, in order for a compound to be drug-like and orally active, it should have a molecular weight less than 500 Da, hydrogen bond donor equal to or less than five, hydrogen bond acceptor equal to or less than 10, and partition coefficient (QP log Po/w) less than five. </plain></SENT>
+<SENT sid="29882" pm="."><plain>Molecular weight, donor and acceptor atom numbers of the selected molecules were within the allowed values. </plain></SENT>
+<SENT sid="29883" pm="."><plain>QP log Po/w (or Log P) gives an estimate of compound's lipophilicity. </plain></SENT>
+<SENT sid="29884" pm="."><plain>Up to a certain limit, compounds with higher lipophilicity have higher ability to permeate across biological membranes, which is necessary for a drug candidate. </plain></SENT>
+<SENT sid="29885" pm="."><plain>In this study, all nine hits had acceptable values for the analyzed properties and exhibited drug-like characteristics based on the rule of 5. </plain></SENT>
+<SENT sid="29886" pm="."><plain>The complete list of predicted physiochemical descriptors and ADME properties is given in Table S6. </plain></SENT>
+</text></p></sec><sec id="sec3.3"><title><text><SENT sid="29887" pm="."><plain>3.3. </plain></SENT>
+<SENT sid="29888" pm="."><plain>Binding Mode Analysis and Visual Inspection of the Selected Hits </plain></SENT>
+</text></title><p><text><SENT sid="29889" pm="."><plain>Superposition of the proposed molecules YopE showed that their binding orientations are similar (<xref ref-type="fig" rid="fig3">Figure 3</xref>). </plain></SENT>
+<SENT sid="29890" pm="."><plain>The interactions of the nine selected hits (L1–L9, <xref ref-type="table" rid="tab4">Table 4</xref>) were analyzed to verify that the ligands made contacts with previously identified important residues of YopE. </plain></SENT>
+<SENT sid="29891" pm="."><plain>All of the selected hits were found to reside in the cavity surrounded by the critical Arg144 residue and other residues that are known to react with the switch regions of the G-proteins. </plain></SENT>
+<SENT sid="29892" pm="."><plain>The 2D representation of the selected hits and their receptor hydrogen bond and hydrophobic interactions is shown in <xref ref-type="fig" rid="fig4">Figure 4</xref>. </plain></SENT>
+<SENT sid="29893" pm="."><plain>The ligand-protein interaction diagrams were generated in LIGPLOT [<xref rid="B60" ref-type="bibr">58</xref>] by supplying the receptor-ligand complexes to PDBsum [<xref rid="B61" ref-type="bibr">59</xref>] in pdb format. </plain></SENT>
+<SENT sid="29894" pm="."><plain>Hydrogen bond interactions and their atomic distances (in Å) are shown in dashed lines, whereas hydrophobic contacts are shown in red crescents. </plain></SENT>
+<SENT sid="29895" pm="."><plain>All proposed molecules favoring the hydrogen bond with critical Arg144 residue, which is known to be essential for GAP function of YopE. </plain></SENT>
+<SENT sid="29896" pm="."><plain>L1, which has the highest docking score, had multiple hydrogen bond interactions with YopE residues that interact with the switch regions in addition to Arg144. </plain></SENT>
+<SENT sid="29897" pm="."><plain>These residues are Thr148, Gln151, Ser179, Gly182 and Thr183. </plain></SENT>
+<SENT sid="29898" pm="."><plain>Gln151 and Ser179 are known to bond with both nucleotide and Switch I region of Rho GTPases, whereas Thr183 interacts with the two switch regions. </plain></SENT>
+<SENT sid="29899" pm="."><plain>Similar interactions were also observed in the majority of hits, which can be seen in <xref ref-type="fig" rid="fig4">Figure 4</xref>. </plain></SENT>
+<SENT sid="29900" pm="."><plain>Fewer interactions were made with Ala137, Gly139, Gln180, and Ile184 of YopE. </plain></SENT>
+<SENT sid="29901" pm="."><plain>Gly139 and Gln180 are also among the reported Switch I interacting residues, and Ile184, similar to Thr183, has the ability to make contacts with both of the switch regions. </plain></SENT>
+<SENT sid="29902" pm="."><plain>Multiple hydrophobic contacts were also observed in each ligand-protein complex, with Ile147 and Gly182 being the most significant. </plain></SENT>
+<SENT sid="29903" pm="."><plain>Overall, the numbers of bonded interactions and hydrophobic contacts were observed to be high, suggesting a strong binding between the proposed hits and the target protein. </plain></SENT>
+<SENT sid="29904" pm="."><plain>In addition, the binding orientation of the hits was observed to occlude the cleft comprising Arg144 and other switch-interacting residues, and hence, presence of these compounds could possibly block the interaction between YopE and GTPases. </plain></SENT>
+</text></p><p><text><SENT sid="29905" pm="."><plain>The hits were visually inspected and their similarity to the salicylidene acylhydrazides used in pharmacophore development was determined. </plain></SENT>
+<SENT sid="29906" pm="."><plain>The nine selected hits satisfied all of the pharmacophore sites with a 2 Å tolerance, suggesting that the pharmacophore building and docking results converged. </plain></SENT>
+<SENT sid="29907" pm="."><plain>The superposition of the selected hits on the pharmacophore hypothesis AAADR.21 is given in Figure S3. </plain></SENT>
+<SENT sid="29908" pm="."><plain>The hits from the third cluster (<xref ref-type="table" rid="tab4">Table 4</xref>) were found to overlay very well with the pharmacophore sites. </plain></SENT>
+<SENT sid="29909" pm="."><plain>These hits also showed close structural resemblance to each other as well as to the initial six salicylidene acylhydrazides. </plain></SENT>
+<SENT sid="29910" pm="."><plain>Members of the third cluster, L7, L8, and L9, include a 5-hydroxypyrazole ring in their structure. </plain></SENT>
+<SENT sid="29911" pm="."><plain>Similar to salicylidene acylhydrazides, they also have two ring conformations on the sides connected to a formic hydrazide group (NNC=O). </plain></SENT>
+<SENT sid="29912" pm="."><plain>The ligand interaction maps reveal that the formic hydrazide substructure has multiple contacts with the YopE binding site residues (Figures <xref ref-type="fig" rid="fig4">4(g)</xref>, <xref ref-type="fig" rid="fig4">4(h)</xref>, and <xref ref-type="fig" rid="fig4">4(i)</xref>). </plain></SENT>
+<SENT sid="29913" pm="."><plain>The first two clusters, on the other hand, do not share a notable structural similarity with salicylidene acylhydrazides although they align with pharmacophore site points to a certain extent. </plain></SENT>
+<SENT sid="29914" pm="."><plain>The first cluster, which includes L1, L2, and L3, has a common erythritol (R-butane-1,2,3,4-tetraol) substructure (Figures <xref ref-type="fig" rid="fig4">4(a)</xref>, <xref ref-type="fig" rid="fig4">4(b)</xref>, and <xref ref-type="fig" rid="fig4">4(c)</xref>), whereas hits from the second cluster, L4, L5, and L6, have tetrahydrofuran-2,3,4-triol ring in their structure (Figures <xref ref-type="fig" rid="fig4">4(d)</xref>, <xref ref-type="fig" rid="fig4">4(e)</xref>, and <xref ref-type="fig" rid="fig4">4(f)</xref>). </plain></SENT>
+<SENT sid="29915" pm="."><plain>Both of these substructures also account for the vast majority of interactions between YopE and ligands. </plain></SENT>
+<SENT sid="29916" pm="."><plain>Hence, the scaffolds that have been observed within each cluster may lead to the indication of potent functional groups upon YopE binding. </plain></SENT>
+</text></p></sec><sec id="sec3.4"><title><text><SENT sid="29917" pm="."><plain>3.4. </plain></SENT>
+<SENT sid="29918" pm="."><plain>Selectivity </plain></SENT>
+</text></title><p><text><SENT sid="29919" pm="."><plain>The <italic>P. aeruginosa</italic> cytotoxins ExoS<sub>GAP</sub> [<xref rid="B15" ref-type="bibr">13</xref>, <xref rid="B62" ref-type="bibr">60</xref>] and <italic>S. enterica </italic>SptP<sub>GAP </sub> [<xref rid="B63" ref-type="bibr">61</xref>] are the homolog GAP proteins of YopE with 22% and 29% amino acid sequence identity, respectively. </plain></SENT>
+<SENT sid="29920" pm="."><plain>Although their sequence identity is remarkably low, their structure alignment on the backbone shows considerable resemblance. </plain></SENT>
+<SENT sid="29921" pm="."><plain>After superposition based on the YopE C<sub><italic>α</italic></sub> coordinates, the root mean square deviations between the C<sub><italic>α</italic></sub> coordinates of YopE with ExoS<sub>GAP</sub> and with SptP<sub>GAP</sub> are 1.26 Å and 1.36 Å, respectively [<xref rid="B25" ref-type="bibr">24</xref>]. </plain></SENT>
+<SENT sid="29922" pm="."><plain>The key arginine finger of YopE (Arg144) was also conserved in these GAP proteins, as Arg146<sub>ExoSGAP</sub> and Arg209<sub>SptPGAP</sub>. </plain></SENT>
+<SENT sid="29923" pm="."><plain>Binding selectivity of selected hits to ExoS<sub>GAP</sub> and SptP<sub>GAP</sub> was investigated. </plain></SENT>
+<SENT sid="29924" pm="."><plain>Their 3D structures were taken from the Protein Data Bank (Pdb ID: 1g4u for SptP<sub>GAP</sub> and Pdb id: 1he1 for ExoS<sub>GAP</sub>) prepared in Maestro workspace, and their binding site grids were generated for all-atom docking calculations, as described in receptor protein preparation and receptor grid generation sections. </plain></SENT>
+<SENT sid="29925" pm="."><plain>By centering the key arginine residues and keeping the previous docking parameters identical, Glide XP docking was performed on ExoS<sub>GAP</sub> and SptP<sub>GAP</sub>. </plain></SENT>
+<SENT sid="29926" pm="."><plain>The results reveal that the selected nine hits have higher average ligand strain and lower binding affinity toward ExoS<sub>GAP</sub> and SptP<sub>GAP</sub> in terms of docking scores (<xref ref-type="table" rid="tab6">Table 6</xref>). </plain></SENT>
+<SENT sid="29927" pm="."><plain>Furthermore, only L2 and L7 interacted with Arg146 of ExoS<sub>GAP</sub> and only L5 interacted with Arg209 of SptP<sub>GAP</sub>. </plain></SENT>
+<SENT sid="29928" pm="."><plain>The absence of the critical arginine interaction as well as the low scores suggests that the proposed molecules may not bind the homologous proteins and that they are selective toward YopE<sub>GAP</sub>. </plain></SENT>
+</text></p></sec></sec></SecTag><SecTag type="CONCL"><sec id="sec4"><title><text><SENT sid="29929" pm="."><plain>4. </plain></SENT>
+<SENT sid="29930" pm="."><plain>Conclusions </plain></SENT>
+</text></title><p><text><SENT sid="29931" pm="."><plain>In this work, the aim was to discover small molecules with inhibition potential against YopE, which is a bacterial cytotoxin that inhibits small Rho GTPases by mimicking their regulator proteins within the host cell. </plain></SENT>
+<SENT sid="29932" pm="."><plain>Proper functioning of GTPases is crucial for the regulation of signaling events within the cell, and therefore, drug design against GTPase inhibitors, such as YopE, is an important area of research. </plain></SENT>
+<SENT sid="29933" pm="."><plain>Here, we used virtual screening to investigate potent drug-like inhibitors of YopE. </plain></SENT>
+<SENT sid="29934" pm="."><plain>23 small compounds, which were previously shown to inhibit the YopE secretion mechanism, were utilized to develop a pharmacophore hypothesis. </plain></SENT>
+<SENT sid="29935" pm="."><plain>500,000 unique small drug-like molecules selected from the ZINC database were filtered based on 3D similarity to the hypothesis AAADR. </plain></SENT>
+<SENT sid="29936" pm="."><plain>Binding orientations and features of these molecules were investigated with multistep molecular docking approach using Glide software, allowing ligand flexibility. </plain></SENT>
+</text></p><p><text><SENT sid="29937" pm="."><plain>Virtual screening hits that exhibit a certain binding affinity to YopE in terms of docking score (−4 kcal/mol) were clustered based on their structural similarity using a Tanimoto coefficient threshold of 0.5. </plain></SENT>
+<SENT sid="29938" pm="."><plain>The three top scoring representative members from the most populated clusters were pooled and further analyzed. </plain></SENT>
+<SENT sid="29939" pm="."><plain>One cluster was found to be structurally similar to the salicylidene acylhydrazides, which can inhibit the bacterial activity of type III secretion systems. </plain></SENT>
+<SENT sid="29940" pm="."><plain>The cluster with erythritol substructure is analogous to THI (2-acetyl-4-tetrahydroxybutylimidazole). </plain></SENT>
+<SENT sid="29941" pm="."><plain>THI acts as an immunosuppressant inhibitor of Sphingosine-1-phosphate lyase (S1PL), whose reduced activity is targeted for autoimmune disorder treatment [<xref rid="B64" ref-type="bibr">62</xref>]. </plain></SENT>
+<SENT sid="29942" pm="."><plain>The other cluster, having tetrahydrofuran-2,3,4-triol ring as a common substructure, shares similarity to Nelarabine, a drug used in the treatment of T-cell lymphoblastic leukemia [<xref rid="B65" ref-type="bibr">63</xref>]. </plain></SENT>
+<SENT sid="29943" pm="."><plain>Druglikeness of the clusters was also predicted, and molecular descriptors and pharmacokinetic and ADME properties of the nine hits were found to be in accordance with known chemically and biologically active compounds. </plain></SENT>
+</text></p><p><text><SENT sid="29944" pm="."><plain>The aim of this virtual screening study was to find potent YopE inhibitors that would hinder the interaction between their GAP domain and GTPases. </plain></SENT>
+<SENT sid="29945" pm="."><plain>The binding site was selected such that the inhibitors would occlude the vicinity of the Arg144 residues that contact the switch regions of GTPases. </plain></SENT>
+<SENT sid="29946" pm="."><plain>Indeed, the molecules made contacts with the critical arginine finger as well as the other residues that were reported to interact with both Switch I and Switch II regions. </plain></SENT>
+<SENT sid="29947" pm="."><plain>The binding modes of the hits showed that the molecules occupied the cleft formed in the vicinity of Arg144 of YopE. </plain></SENT>
+<SENT sid="29948" pm="."><plain>Selectivity against YopE was verified by docking the nine hits to the known YopE homologs, namely, ExoS<sub>GAP</sub> and SptP<sub>GAP</sub>. </plain></SENT>
+<SENT sid="29949" pm="."><plain>Docking results showed that these hits have lower binding affinity toward the homologous proteins, and the critical arginine bonding was not observed in the majority of hits. </plain></SENT>
+<SENT sid="29950" pm="."><plain>The proposed set of ligands has shown a promising inhibitory potential toward YopE <italic>in silico</italic> and hence, can be used for further scientific studies, and the results can be extended to experimental validation. </plain></SENT>
+</text></p></sec></SecTag><SecTag type="SUPPL"><sec sec-type="supplementary-material" id="supplementary-material-sec"><title><text><SENT sid="29951" pm="."><plain>Supplementary Material </plain></SENT>
+</text></title><supplementary-material content-type="local-data" id="f1"><caption><p><text><SENT sid="29952" pm="."><plain>The list of vendors used in small molecule database (Table S1), 2D structures of small compounds found in literature (Table S2), pharmacophore site measurements (Table S3), detailed docking results (Table S4 and Table S5), detailed ADME and pharmacokinetic property estimates (Table S6), SiteMap and ChemMine outputs (Figure S1 and Figure S2) and pharmacophore-hit superimpositions (Figure S3) are provided. </plain></SENT>
+</text></p></caption><media xlink:href="640518.f1.docx" mimetype="application" mime-subtype="vnd.openxmlformats-officedocument.wordprocessingml.document" orientation="portrait" id="d35e638" position="anchor"/></supplementary-material></sec></SecTag></body><back><SecTag type="ACK_FUND"><ack><title>Acknowledgment</title><p><text4fund><text><SENT sid="29953" pm="."><plain>This work is financially supported by the Scientific and Technological Research Council of Turkey (TÜBİTAK) through project 111M444. </plain></SENT>
+</text></text4fund></p></ack></SecTag><SecTag type="ABBR"><glossary><title>Abbreviations</title><def-list><def-item><term>ADME:</term><def><p> Absorption, distribution, metabolism, and excretion</p></def></def-item><def-item><term>YopE:</term><def><p>
+<italic>Yersinia</italic> outer protein E</p></def></def-item><def-item><term>SP:</term><def><p> Standard precision</p></def></def-item><def-item><term>XP:</term><def><p> Extra precision.</p></def></def-item></def-list></glossary></SecTag><SecTag type="COMP_INT"><sec sec-type="conflict"><title>Conflict of Interests</title><p>The authors report no conflict of interests.</p></sec></SecTag><SecTag type="REF"><ref-list><ref id="B1"><text><SENT sid="29954" pm="."><plain><label>1</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Wennerberg</surname><given-names>K.</given-names></name><name><surname>Rossman</surname><given-names>K. </plain></SENT>
+<SENT sid="29955" pm="."><plain>L.</given-names></name><name><surname>Der</surname><given-names>C. </plain></SENT>
+<SENT sid="29956" pm="."><plain>J.</given-names></name></person-group><article-title>The Ras superfamily at a glance</article-title><source><italic>Journal of Cell Science</italic></source><year>2005</year><volume>118</volume><issue>part 5</issue><fpage>843</fpage><lpage>846</lpage><pub-id pub-id-type="other">2-s2.0-16844387479</pub-id><pub-id pub-id-type="doi">10.1242/jcs.01660</pub-id><pub-id pub-id-type="pmid">15731001</pub-id></element-citation> </plain></SENT>
+</text></ref><ref id="B2"><text><SENT sid="29957" pm="."><plain><label>2</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>van Aelst</surname><given-names>L.</given-names></name><name><surname>D'Souza-Schorey</surname><given-names>C.</given-names></name></person-group><article-title>Rho GTPases and signaling networks</article-title><source><italic>Genes and Development</italic></source><year>1997</year><volume>11</volume><issue>18</issue><fpage>2295</fpage><lpage>2322</lpage><pub-id pub-id-type="other">2-s2.0-0030968580</pub-id><pub-id pub-id-type="pmid">9308960</pub-id></element-citation> </plain></SENT>
+</text></ref><ref id="B3"><text><SENT sid="29958" pm="."><plain><label>3</label><element-citation publication-type="book"><person-group person-group-type="author"><name><surname>Brändén</surname><given-names>C. </plain></SENT>
+<SENT sid="29959" pm="."><plain>I.</given-names></name><name><surname>Tooze</surname><given-names>J.</given-names></name></person-group><source><italic>Introduction to Protein Structure</italic></source><year>1999</year><edition>2nd</edition><publisher-loc>New York, NY, USA</publisher-loc><publisher-name>Garland Publications</publisher-name></element-citation> </plain></SENT>
+</text></ref><ref id="B4"><text><SENT sid="29960" pm="."><plain><label>4</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Etienne-Manneville</surname><given-names>S.</given-names></name><name><surname>Hall</surname><given-names>A.</given-names></name></person-group><article-title>Rho GTPases in cell biology</article-title><source><italic>Nature</italic></source><year>2002</year><volume>420</volume><issue>6916</issue><fpage>629</fpage><lpage>635</lpage><pub-id pub-id-type="other">2-s2.0-0037069690</pub-id><pub-id pub-id-type="doi">10.1038/nature01148</pub-id><pub-id pub-id-type="pmid">12478284</pub-id></element-citation> </plain></SENT>
+</text></ref><ref id="B5"><text><SENT sid="29961" pm="."><plain><label>5</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Rossman</surname><given-names>K. </plain></SENT>
+<SENT sid="29962" pm="."><plain>L.</given-names></name><name><surname>Der</surname><given-names>C. </plain></SENT>
+<SENT sid="29963" pm="."><plain>J.</given-names></name><name><surname>Sondek</surname><given-names>J.</given-names></name></person-group><article-title>GEF means go: turning on Rho GTPases with guanine nucleotide-exchange factors</article-title><source><italic>Nature Reviews Molecular Cell Biology</italic></source><year>2005</year><volume>6</volume><issue>2</issue><fpage>167</fpage><lpage>180</lpage><pub-id pub-id-type="other">2-s2.0-13444252631</pub-id><pub-id pub-id-type="doi">10.1038/nrm1587</pub-id><pub-id pub-id-type="pmid">15688002</pub-id></element-citation> </plain></SENT>
+</text></ref><ref id="B6"><text><SENT sid="29964" pm="."><plain><label>6</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Raftopoulou</surname><given-names>M.</given-names></name><name><surname>Hall</surname><given-names>A.</given-names></name></person-group><article-title>Cell migration: Rho GTPases lead the way</article-title><source><italic>Developmental Biology</italic></source><year>2004</year><volume>265</volume><issue>1</issue><fpage>23</fpage><lpage>32</lpage><pub-id pub-id-type="other">2-s2.0-0345731237</pub-id><pub-id pub-id-type="doi">10.1016/j.ydbio.2003.06.003</pub-id><pub-id pub-id-type="pmid">14697350</pub-id></element-citation> </plain></SENT>
+</text></ref><ref id="B9"><text><SENT sid="29965" pm="."><plain><label>7</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Chimini</surname><given-names>G.</given-names></name><name><surname>Chavrier</surname><given-names>P.</given-names></name></person-group><article-title>Function of Rho family proteins in actin dynamics during phagocytosis and engulfment</article-title><source><italic>Nature Cell Biology</italic></source><year>2000</year><volume>2</volume><issue>10</issue><fpage>E191</fpage><lpage>E196</lpage><pub-id pub-id-type="other">2-s2.0-0034306013</pub-id><pub-id pub-id-type="doi">10.1038/35036454</pub-id><pub-id pub-id-type="pmid">11025683</pub-id></element-citation> </plain></SENT>
+</text></ref><ref id="B10"><text><SENT sid="29966" pm="."><plain><label>8</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Kjøller</surname><given-names>L.</given-names></name><name><surname>Hall</surname><given-names>A.</given-names></name></person-group><article-title>Signaling to Rho GTPases</article-title><source><italic>Experimental Cell Research</italic></source><year>1999</year><volume>253</volume><issue>1</issue><fpage>166</fpage><lpage>179</lpage><pub-id pub-id-type="other">2-s2.0-0033604638</pub-id><pub-id pub-id-type="doi">10.1006/excr.1999.4674</pub-id><pub-id pub-id-type="pmid">10579921</pub-id></element-citation> </plain></SENT>
+</text></ref><ref id="B11"><text><SENT sid="29967" pm="."><plain><label>9</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Sah</surname><given-names>V. </plain></SENT>
+<SENT sid="29968" pm="."><plain>P.</given-names></name><name><surname>Seasholtz</surname><given-names>T. </plain></SENT>
+<SENT sid="29969" pm="."><plain>M.</given-names></name><name><surname>Sagi</surname><given-names>S. </plain></SENT>
+<SENT sid="29970" pm="."><plain>A.</given-names></name><name><surname>Brown</surname><given-names>J. </plain></SENT>
+<SENT sid="29971" pm="."><plain>H.</given-names></name></person-group><article-title>The role of Rho in G protein-coupled receptor signal transduction</article-title><source><italic>Annual Review of Pharmacology and Toxicology</italic></source><year>2000</year><volume>40</volume><fpage>459</fpage><lpage>489</lpage></element-citation> </plain></SENT>
+</text></ref><ref id="B12"><text><SENT sid="29972" pm="."><plain><label>10</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Ellenbroek</surname><given-names>S. </plain></SENT>
+<SENT sid="29973" pm="."><plain>I. </plain></SENT>
+<SENT sid="29974" pm="."><plain>J.</given-names></name><name><surname>Collard</surname><given-names>J. </plain></SENT>
+<SENT sid="29975" pm="."><plain>G.</given-names></name></person-group><article-title>Rho GTPases: functions and association with cancer</article-title><source><italic>Clinical and Experimental Metastasis</italic></source><year>2007</year><volume>24</volume><issue>8</issue><fpage>657</fpage><lpage>672</lpage><pub-id pub-id-type="other">2-s2.0-36348966706</pub-id><pub-id pub-id-type="doi">10.1007/s10585-007-9119-1</pub-id><pub-id pub-id-type="pmid">18000759</pub-id></element-citation> </plain></SENT>
+</text></ref><ref id="B13"><text><SENT sid="29976" pm="."><plain><label>11</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Schmidt</surname><given-names>A.</given-names></name><name><surname>Hall</surname><given-names>A.</given-names></name></person-group><article-title>Guanine nucleotide exchange factors for Rho GTPases: turning on the switch</article-title><source><italic>Genes and Development</italic></source><year>2002</year><volume>16</volume><issue>13</issue><fpage>1587</fpage><lpage>1609</lpage><pub-id pub-id-type="other">2-s2.0-0036644975</pub-id><pub-id pub-id-type="doi">10.1101/gad.1003302</pub-id><pub-id pub-id-type="pmid">12101119</pub-id></element-citation> </plain></SENT>
+</text></ref><ref id="B14"><text><SENT sid="29977" pm="."><plain><label>12</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Scheffzek</surname><given-names>K.</given-names></name><name><surname>Ahmadian</surname><given-names>M. </plain></SENT>
+<SENT sid="29978" pm="."><plain>R.</given-names></name><name><surname>Wittinghofer</surname><given-names>A.</given-names></name></person-group><article-title>GTPase-activating proteins: helping hands to complement an active site</article-title><source><italic>Trends in Biochemical Sciences</italic></source><year>1998</year><volume>23</volume><issue>7</issue><fpage>257</fpage><lpage>262</lpage><pub-id pub-id-type="other">2-s2.0-0032127912</pub-id><pub-id pub-id-type="doi">10.1016/S0968-0004(98)01224-9</pub-id><pub-id pub-id-type="pmid">9697416</pub-id></element-citation> </plain></SENT>
+</text></ref><ref id="B15"><text><SENT sid="29979" pm="."><plain><label>13</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Würtele</surname><given-names>M.</given-names></name><name><surname>Wolf</surname><given-names>E.</given-names></name><name><surname>Pederson</surname><given-names>K. </plain></SENT>
+<SENT sid="29980" pm="."><plain>J.</given-names></name><etal/></person-group><article-title>How the <italic>Pseudomonas aeruginosa</italic> ExoS toxin downregulates Rac</article-title><source><italic>Nature Structural Biology</italic></source><year>2001</year><volume>8</volume><issue>1</issue><fpage>23</fpage><lpage>26</lpage><pub-id pub-id-type="other">2-s2.0-0035171524</pub-id><pub-id pub-id-type="doi">10.1038/83007</pub-id><pub-id pub-id-type="pmid">11135665</pub-id></element-citation> </plain></SENT>
+</text></ref><ref id="B16"><text><SENT sid="29981" pm="."><plain><label>14</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Bishop</surname><given-names>A. </plain></SENT>
+<SENT sid="29982" pm="."><plain>L.</given-names></name><name><surname>Hall</surname><given-names>A.</given-names></name></person-group><article-title>Rho GTPases and their effector proteins</article-title><source><italic>Biochemical Journal</italic></source><year>2000</year><volume>348</volume><issue>part 2</issue><fpage>241</fpage><lpage>255</lpage><pub-id pub-id-type="other">2-s2.0-0034213327</pub-id><pub-id pub-id-type="doi">10.1042/0264-6021:3480241</pub-id><pub-id pub-id-type="pmid">10816416</pub-id></element-citation> </plain></SENT>
+</text></ref><ref id="B17"><text><SENT sid="29983" pm="."><plain><label>15</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Ridley</surname><given-names>A.</given-names></name></person-group><article-title>GTPase switch: Ras then Rho and Rac</article-title><source><italic>Nature Cell Biology</italic></source><year>2013</year><volume>15</volume><issue>4</issue><fpage>p. </plain></SENT>
+<SENT sid="29984" pm="."><plain>337</fpage></element-citation> </plain></SENT>
+</text></ref><ref id="B18"><text><SENT sid="29985" pm="."><plain><label>16</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Cherfils</surname><given-names>J.</given-names></name><name><surname>Zeghouf</surname><given-names>M.</given-names></name></person-group><article-title>Chronicles of the GTPase switch</article-title><source><italic>Nature Chemical Biology</italic></source><year>2011</year><volume>7</volume><issue>8</issue><fpage>493</fpage><lpage>495</lpage><pub-id pub-id-type="other">2-s2.0-79960512963</pub-id><pub-id pub-id-type="doi">10.1038/nchembio.608</pub-id><pub-id pub-id-type="pmid">21769091</pub-id></element-citation> </plain></SENT>
+</text></ref><ref id="B66"><text><SENT sid="29986" pm="."><plain><label>17</label><element-citation publication-type="book"><source><italic>The PyMOL Molecular Graphics System, Version 1. </plain></SENT>
+<SENT sid="29987" pm="."><plain>5. </plain></SENT>
+<SENT sid="29988" pm="."><plain>0. </plain></SENT>
+<SENT sid="29989" pm="."><plain>4</italic></source><publisher-loc>New York, NY, USA</publisher-loc><publisher-name>Schrödinger</publisher-name></element-citation> </plain></SENT>
+</text></ref><ref id="B19"><text><SENT sid="29990" pm="."><plain><label>18</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Finlay</surname><given-names>B. </plain></SENT>
+<SENT sid="29991" pm="."><plain>B.</given-names></name></person-group><article-title>Bacterial virulence strategies that utilize Rho GTPases</article-title><source><italic>Current Topics in Microbiology and Immunology</italic></source><year>2005</year><volume>291</volume><fpage>1</fpage><lpage>10</lpage><pub-id pub-id-type="other">2-s2.0-18744377691</pub-id><pub-id pub-id-type="pmid">15981456</pub-id></element-citation> </plain></SENT>
+</text></ref><ref id="B20"><text><SENT sid="29992" pm="."><plain><label>19</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Boettner</surname><given-names>B.</given-names></name><name><surname>van Aelst</surname><given-names>L.</given-names></name></person-group><article-title>The role of Rho GTPases in disease development</article-title><source><italic>Gene</italic></source><year>2002</year><volume>286</volume><issue>2</issue><fpage>155</fpage><lpage>174</lpage><pub-id pub-id-type="other">2-s2.0-0037139607</pub-id><pub-id pub-id-type="doi">10.1016/S0378-1119(02)00426-2</pub-id><pub-id pub-id-type="pmid">11943472</pub-id></element-citation> </plain></SENT>
+</text></ref><ref id="B21"><text><SENT sid="29993" pm="."><plain><label>20</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Galán</surname><given-names>J. </plain></SENT>
+<SENT sid="29994" pm="."><plain>E.</given-names></name><name><surname>Collmer</surname><given-names>A.</given-names></name></person-group><article-title>Type III secretion machines: bacterial devices for protein delivery into host cells</article-title><source><italic>Science</italic></source><year>1999</year><volume>284</volume><issue>5418</issue><fpage>1322</fpage><lpage>1328</lpage><pub-id pub-id-type="other">2-s2.0-0033591446</pub-id><pub-id pub-id-type="doi">10.1126/science.284.5418.1322</pub-id><pub-id pub-id-type="pmid">10334981</pub-id></element-citation> </plain></SENT>
+</text></ref><ref id="B22"><text><SENT sid="29995" pm="."><plain><label>21</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Wang</surname><given-names>Y.</given-names></name><name><surname>Zhang</surname><given-names>L.</given-names></name><name><surname>Picking</surname><given-names>W. </plain></SENT>
+<SENT sid="29996" pm="."><plain>L.</given-names></name><name><surname>Picking</surname><given-names>W. </plain></SENT>
+<SENT sid="29997" pm="."><plain>D.</given-names></name><name><surname>de Guzman</surname><given-names>R. </plain></SENT>
+<SENT sid="29998" pm="."><plain>N.</given-names></name></person-group><article-title>Structural dissection of the extracellular moieties of the type III secretion apparatus</article-title><source><italic>Molecular BioSystems</italic></source><year>2008</year><volume>4</volume><issue>12</issue><fpage>1176</fpage><lpage>1180</lpage><pub-id pub-id-type="other">2-s2.0-56349128294</pub-id><pub-id pub-id-type="doi">10.1039/b808271p</pub-id><pub-id pub-id-type="pmid">19396380</pub-id></element-citation> </plain></SENT>
+</text></ref><ref id="B23"><text><SENT sid="29999" pm="."><plain><label>22</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Toksoz</surname><given-names>D.</given-names></name><name><surname>Merdek</surname><given-names>K. </plain></SENT>
+<SENT sid="30000" pm="."><plain>D.</given-names></name></person-group><article-title>The Rho small GTPase: functions in health and disease</article-title><source><italic>Histology and Histopathology</italic></source><year>2002</year><volume>17</volume><issue>3</issue><fpage>915</fpage><lpage>927</lpage><pub-id pub-id-type="other">2-s2.0-0036066997</pub-id><pub-id pub-id-type="pmid">12168803</pub-id></element-citation> </plain></SENT>
+</text></ref><ref id="B24"><text><SENT sid="30001" pm="."><plain><label>23</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Sahai</surname><given-names>E.</given-names></name><name><surname>Marshall</surname><given-names>C. </plain></SENT>
+<SENT sid="30002" pm="."><plain>J.</given-names></name></person-group><article-title>RHO—GTPases and cancer</article-title><source><italic>Nature Reviews Cancer</italic></source><year>2002</year><volume>2</volume><issue>2</issue><fpage>133</fpage><lpage>142</lpage><pub-id pub-id-type="other">2-s2.0-0036488510</pub-id><pub-id pub-id-type="pmid">12635176</pub-id></element-citation> </plain></SENT>
+</text></ref><ref id="B25"><text><SENT sid="30003" pm="."><plain><label>24</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Evdokimov</surname><given-names>A. </plain></SENT>
+<SENT sid="30004" pm="."><plain>G.</given-names></name><name><surname>Tropea</surname><given-names>J. </plain></SENT>
+<SENT sid="30005" pm="."><plain>E.</given-names></name><name><surname>Routzahn</surname><given-names>K. </plain></SENT>
+<SENT sid="30006" pm="."><plain>M.</given-names></name><name><surname>Waugh</surname><given-names>D. </plain></SENT>
+<SENT sid="30007" pm="."><plain>S.</given-names></name></person-group><article-title>Crystal structure of the <italic>Yersinia pestis</italic> GTpase activator YopE</article-title><source><italic>Protein Science</italic></source><year>2002</year><volume>11</volume><issue>2</issue><fpage>401</fpage><lpage>408</lpage><pub-id pub-id-type="other">2-s2.0-0036149447</pub-id><pub-id pub-id-type="doi">10.1110/ps.34102</pub-id><pub-id pub-id-type="pmid">11790850</pub-id></element-citation> </plain></SENT>
+</text></ref><ref id="B26"><text><SENT sid="30008" pm="."><plain><label>25</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Andor</surname><given-names>A.</given-names></name><name><surname>Trülzsch</surname><given-names>K.</given-names></name><name><surname>Essler</surname><given-names>M.</given-names></name><etal/></person-group><article-title>YopE of <italic>Yersinia</italic>, a GAP for Rho GTPases, selectively modulates Rac-dependent actin structures in endothelial cells</article-title><source><italic>Cellular Microbiology</italic></source><year>2001</year><volume>3</volume><issue>5</issue><fpage>301</fpage><lpage>310</lpage><pub-id pub-id-type="other">2-s2.0-0035035193</pub-id><pub-id pub-id-type="doi">10.1046/j.1462-5822.2001.00114.x</pub-id><pub-id pub-id-type="pmid">11298653</pub-id></element-citation> </plain></SENT>
+</text></ref><ref id="B27"><text><SENT sid="30009" pm="."><plain><label>26</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Black</surname><given-names>D. </plain></SENT>
+<SENT sid="30010" pm="."><plain>S.</given-names></name><name><surname>Bliska</surname><given-names>J. </plain></SENT>
+<SENT sid="30011" pm="."><plain>B.</given-names></name></person-group><article-title>The RhoGAP activity of the <italic>Yersinia pseudotuberculosis</italic> cytotoxin YopE is required for antiphagocytic function and virulence</article-title><source><italic>Molecular Microbiology</italic></source><year>2000</year><volume>37</volume><issue>3</issue><fpage>515</fpage><lpage>527</lpage><pub-id pub-id-type="other">2-s2.0-0033861270</pub-id><pub-id pub-id-type="doi">10.1046/j.1365-2958.2000.02021.x</pub-id><pub-id pub-id-type="pmid">10931345</pub-id></element-citation> </plain></SENT>
+</text></ref><ref id="B28"><text><SENT sid="30012" pm="."><plain><label>27</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>von Pawel-Rammingen</surname><given-names>U.</given-names></name><name><surname>Telepnev</surname><given-names>M. </plain></SENT>
+<SENT sid="30013" pm="."><plain>V.</given-names></name><name><surname>Schmidt</surname><given-names>G.</given-names></name><name><surname>Aktories</surname><given-names>K.</given-names></name><name><surname>Wolf-Watz</surname><given-names>H.</given-names></name><name><surname>Rosqvist</surname><given-names>R.</given-names></name></person-group><article-title>GAP activity of the <italic>Yersinia</italic> YopE cytotoxin specifically targets the Rho pathway: a mechanism for disruption of actin microfilament structure</article-title><source><italic>Molecular Microbiology</italic></source><year>2000</year><volume>36</volume><issue>3</issue><fpage>737</fpage><lpage>748</lpage><pub-id pub-id-type="other">2-s2.0-0034097414</pub-id><pub-id pub-id-type="doi">10.1046/j.1365-2958.2000.01898.x</pub-id><pub-id pub-id-type="pmid">10844661</pub-id></element-citation> </plain></SENT>
+</text></ref><ref id="B29"><text><SENT sid="30014" pm="."><plain><label>28</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Fallman</surname><given-names>M.</given-names></name><name><surname>Andersson</surname><given-names>K.</given-names></name><name><surname>Hakansson</surname><given-names>S.</given-names></name><name><surname>Magnusson</surname><given-names>K.-E.</given-names></name><name><surname>Stendahl</surname><given-names>O.</given-names></name><name><surname>Wolf-Watz</surname><given-names>H.</given-names></name></person-group><article-title> <italic>Yersinia pseudotuberculosis</italic> inhibits Fc receptor-mediated phagocytosis in J774 cells</article-title><source><italic>Infection and Immunity</italic></source><year>1995</year><volume>63</volume><issue>8</issue><fpage>3117</fpage><lpage>3124</lpage><pub-id pub-id-type="other">2-s2.0-0029103374</pub-id><pub-id pub-id-type="pmid">7622239</pub-id></element-citation> </plain></SENT>
+</text></ref><ref id="B30"><text><SENT sid="30015" pm="."><plain><label>29</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Grosdent</surname><given-names>N.</given-names></name><name><surname>Maridonneau-Parini</surname><given-names>I.</given-names></name><name><surname>Sory</surname><given-names>M.</given-names></name><name><surname>Cornelis</surname><given-names>G. </plain></SENT>
+<SENT sid="30016" pm="."><plain>R.</given-names></name></person-group><article-title>Role of Yops and adhesins in resistance of <italic>Yersinia enterocolitica</italic> to phagocytosis</article-title><source><italic>Infection and Immunity</italic></source><year>2002</year><volume>70</volume><issue>8</issue><fpage>4165</fpage><lpage>4176</lpage><pub-id pub-id-type="other">2-s2.0-0036078539</pub-id><pub-id pub-id-type="doi">10.1128/IAI.70.8.4165-4176.2002</pub-id><pub-id pub-id-type="pmid">12117925</pub-id></element-citation> </plain></SENT>
+</text></ref><ref id="B31"><text><SENT sid="30017" pm="."><plain><label>30</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Ruckdeschel</surname><given-names>K.</given-names></name><name><surname>Roggenkamp</surname><given-names>A.</given-names></name><name><surname>Schubert</surname><given-names>S.</given-names></name><name><surname>Heesemann</surname><given-names>J.</given-names></name></person-group><article-title>Differential contribution of <italic>Yersinia enterocolitica</italic> virulence factors to evasion of microbicidal action of neutrophils</article-title><source><italic>Infection and Immunity</italic></source><year>1996</year><volume>64</volume><issue>3</issue><fpage>724</fpage><lpage>733</lpage><pub-id pub-id-type="other">2-s2.0-0030041090</pub-id><pub-id pub-id-type="pmid">8641773</pub-id></element-citation> </plain></SENT>
+</text></ref><ref id="B32"><text><SENT sid="30018" pm="."><plain><label>31</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Schotte</surname><given-names>P.</given-names></name><name><surname>Denecker</surname><given-names>G.</given-names></name><name><surname>van Den Broeke</surname><given-names>A.</given-names></name><name><surname>Vandenabeele</surname><given-names>P.</given-names></name><name><surname>Cornelis</surname><given-names>G. </plain></SENT>
+<SENT sid="30019" pm="."><plain>R.</given-names></name><name><surname>Beyaert</surname><given-names>R.</given-names></name></person-group><article-title>Targeting Rac1 by the <italic>Yersinia</italic> effector protein YopE inhibits caspase-1-mediated maturation and release of interleukin-1<italic>β</italic> </article-title><source><italic>The Journal of Biological Chemistry</italic></source><year>2004</year><volume>279</volume><issue>24</issue><fpage>25134</fpage><lpage>25142</lpage><pub-id pub-id-type="other">2-s2.0-2942537824</pub-id><pub-id pub-id-type="doi">10.1074/jbc.M401245200</pub-id><pub-id pub-id-type="pmid">15060067</pub-id></element-citation> </plain></SENT>
+</text></ref><ref id="B34"><text><SENT sid="30020" pm="."><plain><label>32</label><element-citation publication-type="book"><person-group person-group-type="author"><name><surname>Alberts</surname><given-names>B.</given-names></name></person-group><source><italic>Molecular Biology of the Cell</italic></source><year>2002</year><edition>4th</edition><publisher-loc>New York, NY, USA</publisher-loc><publisher-name>Garland Science</publisher-name></element-citation> </plain></SENT>
+</text></ref><ref id="B35"><text><SENT sid="30021" pm="."><plain><label>33</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Kauppi</surname><given-names>A. </plain></SENT>
+<SENT sid="30022" pm="."><plain>M.</given-names></name><name><surname>Nordfelth</surname><given-names>R.</given-names></name><name><surname>Hägglund</surname><given-names>U.</given-names></name><name><surname>Wolf-Watz</surname><given-names>H.</given-names></name><name><surname>Elofsson</surname><given-names>M.</given-names></name></person-group><article-title>Salicylanilides are potent inhibitors of type III secretion in <italic>Yersinia</italic> </article-title><source><italic>Advances in Experimental Medicine and Biology</italic></source><year>2003</year><volume>529</volume><fpage>97</fpage><lpage>100</lpage><pub-id pub-id-type="other">2-s2.0-0038130714</pub-id><pub-id pub-id-type="pmid">12756735</pub-id></element-citation> </plain></SENT>
+</text></ref><ref id="B36"><text><SENT sid="30023" pm="."><plain><label>34</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Kauppi</surname><given-names>A. </plain></SENT>
+<SENT sid="30024" pm="."><plain>M.</given-names></name><name><surname>Nordfelth</surname><given-names>R.</given-names></name><name><surname>Uvell</surname><given-names>H.</given-names></name><name><surname>Wolf-Watz</surname><given-names>H.</given-names></name><name><surname>Elofsson</surname><given-names>M.</given-names></name></person-group><article-title>Targeting bacterial virulence: inhibitors of type III secretion in <italic>Yersinia</italic> </article-title><source><italic>Chemistry and Biology</italic></source><year>2003</year><volume>10</volume><issue>3</issue><fpage>241</fpage><lpage>249</lpage><pub-id pub-id-type="other">2-s2.0-0037350267</pub-id><pub-id pub-id-type="doi">10.1016/S1074-5521(03)00046-2</pub-id><pub-id pub-id-type="pmid">12670538</pub-id></element-citation> </plain></SENT>
+</text></ref><ref id="B37"><text><SENT sid="30025" pm="."><plain><label>35</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Muschiol</surname><given-names>S.</given-names></name><name><surname>Normark</surname><given-names>S.</given-names></name><name><surname>Henriques-Normark</surname><given-names>B.</given-names></name><name><surname>Subtil</surname><given-names>A.</given-names></name></person-group><article-title>Small molecule inhibitors of the <italic>Yersinia</italic> type III secretion system impair the development of Chlamydia after entry into host cells</article-title><source><italic>BMC Microbiology</italic></source><year>2009</year><volume>9, article 75</volume><pub-id pub-id-type="other">2-s2.0-65549090158</pub-id><pub-id pub-id-type="doi">10.1186/1471-2180-9-75</pub-id></element-citation> </plain></SENT>
+</text></ref><ref id="B38"><text><SENT sid="30026" pm="."><plain><label>36</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Garrity-Ryan</surname><given-names>L. </plain></SENT>
+<SENT sid="30027" pm="."><plain>K.</given-names></name><name><surname>Kim</surname><given-names>O. </plain></SENT>
+<SENT sid="30028" pm="."><plain>K.</given-names></name><name><surname>Balada-Llasat</surname><given-names>J.</given-names></name><etal/></person-group><article-title>Small molecule inhibitors of LcrF, a <italic>Yersinia pseudotuberculosis</italic> transcription factor, attenuate virulence and limit infection in a murine pneumonia model</article-title><source><italic>Infection and Immunity</italic></source><year>2010</year><volume>78</volume><issue>11</issue><fpage>4683</fpage><lpage>4690</lpage><pub-id pub-id-type="other">2-s2.0-78049444219</pub-id><pub-id pub-id-type="doi">10.1128/IAI.01305-09</pub-id><pub-id pub-id-type="pmid">20823209</pub-id></element-citation> </plain></SENT>
+</text></ref><ref id="B39"><text><SENT sid="30029" pm="."><plain><label>37</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Hudson</surname><given-names>D. </plain></SENT>
+<SENT sid="30030" pm="."><plain>L.</given-names></name><name><surname>Layton</surname><given-names>A. </plain></SENT>
+<SENT sid="30031" pm="."><plain>N.</given-names></name><name><surname>Field</surname><given-names>T. </plain></SENT>
+<SENT sid="30032" pm="."><plain>R.</given-names></name><etal/></person-group><article-title>Inhibition of type III secretion in <italic>Salmonella enterica</italic> serovar typhimurium by small-molecule inhibitors</article-title><source><italic>Antimicrobial Agents and Chemotherapy</italic></source><year>2007</year><volume>51</volume><issue>7</issue><fpage>2631</fpage><lpage>2635</lpage><pub-id pub-id-type="other">2-s2.0-34447273555</pub-id><pub-id pub-id-type="doi">10.1128/AAC.01492-06</pub-id><pub-id pub-id-type="pmid">17502403</pub-id></element-citation> </plain></SENT>
+</text></ref><ref id="B40"><text><SENT sid="30033" pm="."><plain><label>38</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Nordfelth</surname><given-names>R.</given-names></name><name><surname>Kauppi</surname><given-names>A. </plain></SENT>
+<SENT sid="30034" pm="."><plain>M.</given-names></name><name><surname>Norberg</surname><given-names>H. </plain></SENT>
+<SENT sid="30035" pm="."><plain>A.</given-names></name><name><surname>Wolf-Watz</surname><given-names>H.</given-names></name><name><surname>Elofsson</surname><given-names>M.</given-names></name></person-group><article-title>Small-molecule inhibitors specifically targeting type III secretion</article-title><source><italic>Infection and Immunity</italic></source><year>2005</year><volume>73</volume><issue>5</issue><fpage>3104</fpage><lpage>3114</lpage><pub-id pub-id-type="other">2-s2.0-17644371042</pub-id><pub-id pub-id-type="doi">10.1128/IAI.73.5.3104-3114.2005</pub-id><pub-id pub-id-type="pmid">15845518</pub-id></element-citation> </plain></SENT>
+</text></ref><ref id="B41"><text><SENT sid="30036" pm="."><plain><label>39</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Wang</surname><given-names>D.</given-names></name><name><surname>Zetterström</surname><given-names>C. </plain></SENT>
+<SENT sid="30037" pm="."><plain>E.</given-names></name><name><surname>Gabrielsen</surname><given-names>M.</given-names></name><etal/></person-group><article-title>Identification of bacterial target proteins for the salicylidene acylhydrazide class of virulence-blocking compounds</article-title><source><italic>The Journal of Biological Chemistry</italic></source><year>2011</year><volume>286</volume><issue>34</issue><fpage>29922</fpage><lpage>29931</lpage><pub-id pub-id-type="other">2-s2.0-80051935421</pub-id><pub-id pub-id-type="doi">10.1074/jbc.M111.233858</pub-id><pub-id pub-id-type="pmid">21724850</pub-id></element-citation> </plain></SENT>
+</text></ref><ref id="B42"><text><SENT sid="30038" pm="."><plain><label>40</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Veenendaal</surname><given-names>A. </plain></SENT>
+<SENT sid="30039" pm="."><plain>K. </plain></SENT>
+<SENT sid="30040" pm="."><plain>J.</given-names></name><name><surname>Sundin</surname><given-names>C.</given-names></name><name><surname>Blocker</surname><given-names>A. </plain></SENT>
+<SENT sid="30041" pm="."><plain>J.</given-names></name></person-group><article-title>Small-molecule type III secretion system inhibitors block assembly of the <italic>Shigella</italic> type III secreton</article-title><source><italic>Journal of Bacteriology</italic></source><year>2009</year><volume>191</volume><issue>2</issue><fpage>563</fpage><lpage>570</lpage><pub-id pub-id-type="other">2-s2.0-58649103547</pub-id><pub-id pub-id-type="doi">10.1128/JB.01004-08</pub-id><pub-id pub-id-type="pmid">18996990</pub-id></element-citation> </plain></SENT>
+</text></ref><ref id="B43"><text><SENT sid="30042" pm="."><plain><label>41</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Tree</surname><given-names>J. </plain></SENT>
+<SENT sid="30043" pm="."><plain>J.</given-names></name><name><surname>Wang</surname><given-names>D.</given-names></name><name><surname>McInally</surname><given-names>C.</given-names></name><etal/></person-group><article-title>Characterization of the effects of salicylidene acylhydrazide compounds on type III secretion in <italic>Escherichia coli</italic> O157:H7</article-title><source><italic>Infection and Immunity</italic></source><year>2009</year><volume>77</volume><issue>10</issue><fpage>4209</fpage><lpage>4220</lpage><pub-id pub-id-type="other">2-s2.0-70349420964</pub-id><pub-id pub-id-type="doi">10.1128/IAI.00562-09</pub-id><pub-id pub-id-type="pmid">19635828</pub-id></element-citation> </plain></SENT>
+</text></ref><ref id="B44b"><text><SENT sid="30044" pm="."><plain><label>42</label><element-citation publication-type="book"><source><italic>Epik Version 2. </plain></SENT>
+<SENT sid="30045" pm="."><plain>2</italic></source><year>2011</year><publisher-loc>New York, NY, USA</publisher-loc><publisher-name>Schrödinger</publisher-name></element-citation> </plain></SENT>
+</text></ref><ref id="B44c"><text><SENT sid="30046" pm="."><plain><label>43</label><element-citation publication-type="book"><source><italic>Impact version 5. </plain></SENT>
+<SENT sid="30047" pm="."><plain>7</italic></source><year>2011</year><publisher-loc>New York, NY, USA</publisher-loc><publisher-name>Schrödinger</publisher-name></element-citation> </plain></SENT>
+</text></ref><ref id="B44d"><text><SENT sid="30048" pm="."><plain><label>44</label><element-citation publication-type="book"><source><italic>Prime version 2. </plain></SENT>
+<SENT sid="30049" pm="."><plain>3</italic></source><year>2011</year><publisher-loc>New York, NY, USA</publisher-loc><publisher-name>Schrödinger</publisher-name></element-citation> </plain></SENT>
+</text></ref><ref id="B45"><text><SENT sid="30050" pm="."><plain><label>45</label><element-citation publication-type="book"><source><italic>LigPrep, Version 2. </plain></SENT>
+<SENT sid="30051" pm="."><plain>5</italic></source><year>2011</year><publisher-loc>New York, NY, USA</publisher-loc><publisher-name>Schrödinger</publisher-name></element-citation> </plain></SENT>
+</text></ref><ref id="B46"><text><SENT sid="30052" pm="."><plain><label>46</label><element-citation publication-type="book"><source><italic>ConfGen, Version 2. </plain></SENT>
+<SENT sid="30053" pm="."><plain>3</italic></source><year>2011</year><publisher-loc>New York, NY, USA</publisher-loc><publisher-name>Schrödinger</publisher-name></element-citation> </plain></SENT>
+</text></ref><ref id="B47"><text><SENT sid="30054" pm="."><plain><label>47</label><element-citation publication-type="book"><source><italic>Phase, Version 3. </plain></SENT>
+<SENT sid="30055" pm="."><plain>3</italic></source><year>2011</year><publisher-loc>New York, NY, USA</publisher-loc><publisher-name>Schrödinger</publisher-name></element-citation> </plain></SENT>
+</text></ref><ref id="B48"><text><SENT sid="30056" pm="."><plain><label>48</label><element-citation publication-type="book"><source><italic>SiteMap, Version 2. </plain></SENT>
+<SENT sid="30057" pm="."><plain>5</italic></source><year>2011</year><publisher-loc>New York, NY, USA</publisher-loc><publisher-name>Schrödinger</publisher-name></element-citation> </plain></SENT>
+</text></ref><ref id="B49"><text><SENT sid="30058" pm="."><plain><label>49</label><element-citation publication-type="book"><source><italic>QikProp, Version 3. </plain></SENT>
+<SENT sid="30059" pm="."><plain>4</italic></source><year>2011</year><publisher-loc>New York, NY, USA</publisher-loc><publisher-name>Schrödinger</publisher-name></element-citation> </plain></SENT>
+</text></ref><ref id="B50"><text><SENT sid="30060" pm="."><plain><label>50</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Halgren</surname><given-names>T. </plain></SENT>
+<SENT sid="30061" pm="."><plain>A.</given-names></name><name><surname>Murphy</surname><given-names>R. </plain></SENT>
+<SENT sid="30062" pm="."><plain>B.</given-names></name><name><surname>Friesner</surname><given-names>R. </plain></SENT>
+<SENT sid="30063" pm="."><plain>A.</given-names></name><etal/></person-group><article-title>Glide: a new approach for rapid, accurate docking and scoring. </plain></SENT>
+<SENT sid="30064" pm="."><plain>2. </plain></SENT>
+<SENT sid="30065" pm="."><plain>Enrichment factors in database screening</article-title><source><italic>Journal of Medicinal Chemistry</italic></source><year>2004</year><volume>47</volume><issue>7</issue><fpage>1750</fpage><lpage>1759</lpage><pub-id pub-id-type="other">2-s2.0-1642310340</pub-id><pub-id pub-id-type="doi">10.1021/jm030644s</pub-id><pub-id pub-id-type="pmid">15027866</pub-id></element-citation> </plain></SENT>
+</text></ref><ref id="B51"><text><SENT sid="30066" pm="."><plain><label>51</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Friesner</surname><given-names>R. </plain></SENT>
+<SENT sid="30067" pm="."><plain>A.</given-names></name><name><surname>Banks</surname><given-names>J. </plain></SENT>
+<SENT sid="30068" pm="."><plain>L.</given-names></name><name><surname>Murphy</surname><given-names>R. </plain></SENT>
+<SENT sid="30069" pm="."><plain>B.</given-names></name><etal/></person-group><article-title>Glide: a new approach for rapid, accurate docking and scoring. </plain></SENT>
+<SENT sid="30070" pm="."><plain>1. </plain></SENT>
+<SENT sid="30071" pm="."><plain>Method and assessment of docking accuracy</article-title><source><italic>Journal of Medicinal Chemistry</italic></source><year>2004</year><volume>47</volume><issue>7</issue><fpage>1739</fpage><lpage>1749</lpage><pub-id pub-id-type="other">2-s2.0-12144289984</pub-id><pub-id pub-id-type="doi">10.1021/jm0306430</pub-id><pub-id pub-id-type="pmid">15027865</pub-id></element-citation> </plain></SENT>
+</text></ref><ref id="B52"><text><SENT sid="30072" pm="."><plain><label>52</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Friesner</surname><given-names>R. </plain></SENT>
+<SENT sid="30073" pm="."><plain>A.</given-names></name><name><surname>Murphy</surname><given-names>R. </plain></SENT>
+<SENT sid="30074" pm="."><plain>B.</given-names></name><name><surname>Repasky</surname><given-names>M. </plain></SENT>
+<SENT sid="30075" pm="."><plain>P.</given-names></name><etal/></person-group><article-title>Extra precision glide: docking and scoring incorporating a model of hydrophobic enclosure for protein-ligand complexes</article-title><source><italic>Journal of Medicinal Chemistry</italic></source><year>2006</year><volume>49</volume><issue>21</issue><fpage>6177</fpage><lpage>6196</lpage><pub-id pub-id-type="other">2-s2.0-33750124980</pub-id><pub-id pub-id-type="doi">10.1021/jm051256o</pub-id><pub-id pub-id-type="pmid">17034125</pub-id></element-citation> </plain></SENT>
+</text></ref><ref id="B53"><text><SENT sid="30076" pm="."><plain><label>53</label><element-citation publication-type="book"><source><italic>Maestro, Version 9. </plain></SENT>
+<SENT sid="30077" pm="."><plain>2</italic></source><year>2011</year><publisher-loc>New York, NY, USA</publisher-loc><publisher-name>Schrödinger</publisher-name></element-citation> </plain></SENT>
+</text></ref><ref id="B55"><text><SENT sid="30078" pm="."><plain><label>54</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Bernstein</surname><given-names>F. </plain></SENT>
+<SENT sid="30079" pm="."><plain>C.</given-names></name><name><surname>Koetzle</surname><given-names>T. </plain></SENT>
+<SENT sid="30080" pm="."><plain>F.</given-names></name><name><surname>Williams</surname><given-names>G. </plain></SENT>
+<SENT sid="30081" pm="."><plain>J. </plain></SENT>
+<SENT sid="30082" pm="."><plain>B.</given-names></name></person-group><article-title>The protein data bank. </plain></SENT>
+<SENT sid="30083" pm="."><plain>A computer based archival file for macromolecular structures</article-title><source><italic>European Journal of Biochemistry</italic></source><year>1977</year><volume>80</volume><issue>2</issue><fpage>319</fpage><lpage>324</lpage><pub-id pub-id-type="other">2-s2.0-0017751668</pub-id><pub-id pub-id-type="pmid">923582</pub-id></element-citation> </plain></SENT>
+</text></ref><ref id="B57"><text><SENT sid="30084" pm="."><plain><label>55</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Ahmadian</surname><given-names>M. </plain></SENT>
+<SENT sid="30085" pm="."><plain>R.</given-names></name><name><surname>Stege</surname><given-names>P.</given-names></name><name><surname>Scheffzek</surname><given-names>K.</given-names></name><name><surname>Wittinghofer</surname><given-names>A.</given-names></name></person-group><article-title>Confirmation of the arginine-finger hypothesis for the GAP-stimulated GTP-hydrolysis reaction of Ras</article-title><source><italic>Nature Structural Biology</italic></source><year>1997</year><volume>4</volume><issue>9</issue><fpage>686</fpage><lpage>689</lpage><pub-id pub-id-type="other">2-s2.0-0031231083</pub-id><pub-id pub-id-type="pmid">9302992</pub-id></element-citation> </plain></SENT>
+</text></ref><ref id="B58"><text><SENT sid="30086" pm="."><plain><label>56</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Dixon</surname><given-names>S. </plain></SENT>
+<SENT sid="30087" pm="."><plain>L.</given-names></name><name><surname>Smondyrev</surname><given-names>A. </plain></SENT>
+<SENT sid="30088" pm="."><plain>M.</given-names></name><name><surname>Knoll</surname><given-names>E. </plain></SENT>
+<SENT sid="30089" pm="."><plain>H.</given-names></name><name><surname>Rao</surname><given-names>S. </plain></SENT>
+<SENT sid="30090" pm="."><plain>N.</given-names></name><name><surname>Shaw</surname><given-names>D. </plain></SENT>
+<SENT sid="30091" pm="."><plain>E.</given-names></name><name><surname>Friesner</surname><given-names>R. </plain></SENT>
+<SENT sid="30092" pm="."><plain>A.</given-names></name></person-group><article-title>PHASE: a new engine for pharmacophore perception, 3D QSAR model development, and 3D database screening: 1. </plain></SENT>
+<SENT sid="30093" pm="."><plain>Methodology and preliminary results</article-title><source><italic>Journal of Computer-Aided Molecular Design</italic></source><year>2006</year><volume>20</volume><issue>10-11</issue><fpage>647</fpage><lpage>671</lpage><pub-id pub-id-type="other">2-s2.0-33845868822</pub-id><pub-id pub-id-type="doi">10.1007/s10822-006-9087-6</pub-id><pub-id pub-id-type="pmid">17124629</pub-id></element-citation> </plain></SENT>
+</text></ref><ref id="B59"><text><SENT sid="30094" pm="."><plain><label>57</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Backman</surname><given-names>T. </plain></SENT>
+<SENT sid="30095" pm="."><plain>W. </plain></SENT>
+<SENT sid="30096" pm="."><plain>H.</given-names></name><name><surname>Cao</surname><given-names>Y.</given-names></name><name><surname>Girke</surname><given-names>T.</given-names></name></person-group><article-title>ChemMine tools: an online service for analyzing and clustering small molecules</article-title><source><italic>Nucleic Acids Research</italic></source><year>2011</year><volume>39</volume><issue>2</issue><fpage>W486</fpage><lpage>W491</lpage><pub-id pub-id-type="other">2-s2.0-79959975084</pub-id><pub-id pub-id-type="doi">10.1093/nar/gkr320</pub-id><pub-id pub-id-type="pmid">21576229</pub-id></element-citation> </plain></SENT>
+</text></ref><ref id="B60"><text><SENT sid="30097" pm="."><plain><label>58</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Wallace</surname><given-names>A. </plain></SENT>
+<SENT sid="30098" pm="."><plain>C.</given-names></name><name><surname>Laskowski</surname><given-names>R. </plain></SENT>
+<SENT sid="30099" pm="."><plain>A.</given-names></name><name><surname>Thornton</surname><given-names>J. </plain></SENT>
+<SENT sid="30100" pm="."><plain>M.</given-names></name></person-group><article-title>LIGPLOT: a program to generate schematic diagrams of protein-ligand interactions</article-title><source><italic>Protein Engineering</italic></source><year>1995</year><volume>8</volume><issue>2</issue><fpage>127</fpage><lpage>134</lpage><pub-id pub-id-type="other">2-s2.0-0028922586</pub-id><pub-id pub-id-type="pmid">7630882</pub-id></element-citation> </plain></SENT>
+</text></ref><ref id="B61"><text><SENT sid="30101" pm="."><plain><label>59</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Laskowski</surname><given-names>R. </plain></SENT>
+<SENT sid="30102" pm="."><plain>A.</given-names></name><name><surname>Hutchinson</surname><given-names>E. </plain></SENT>
+<SENT sid="30103" pm="."><plain>G.</given-names></name><name><surname>Michie</surname><given-names>A. </plain></SENT>
+<SENT sid="30104" pm="."><plain>D.</given-names></name><name><surname>Wallace</surname><given-names>A. </plain></SENT>
+<SENT sid="30105" pm="."><plain>C.</given-names></name><name><surname>Jones</surname><given-names>M. </plain></SENT>
+<SENT sid="30106" pm="."><plain>L.</given-names></name><name><surname>Thornton</surname><given-names>J. </plain></SENT>
+<SENT sid="30107" pm="."><plain>M.</given-names></name></person-group><article-title>PDBsum: a web-based database of summaries and analyses of all PDB structures</article-title><source><italic>Trends in Biochemical Sciences</italic></source><year>1997</year><volume>22</volume><issue>12</issue><fpage>488</fpage><lpage>490</lpage><pub-id pub-id-type="other">2-s2.0-0030659457</pub-id><pub-id pub-id-type="doi">10.1016/S0968-0004(97)01140-7</pub-id><pub-id pub-id-type="pmid">9433130</pub-id></element-citation> </plain></SENT>
+</text></ref><ref id="B62"><text><SENT sid="30108" pm="."><plain><label>60</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Würtele</surname><given-names>M.</given-names></name><name><surname>Renault</surname><given-names>L.</given-names></name><name><surname>Barbieri</surname><given-names>J. </plain></SENT>
+<SENT sid="30109" pm="."><plain>T.</given-names></name><name><surname>Wittinghofer</surname><given-names>A.</given-names></name><name><surname>Wolf</surname><given-names>E.</given-names></name></person-group><article-title>Structure of the ExoS GTPase activating domain</article-title><source><italic>FEBS Letters</italic></source><year>2001</year><volume>491</volume><issue>1-2</issue><fpage>26</fpage><lpage>29</lpage><pub-id pub-id-type="other">2-s2.0-0035936895</pub-id><pub-id pub-id-type="doi">10.1016/S0014-5793(01)02105-6</pub-id><pub-id pub-id-type="pmid">11226412</pub-id></element-citation> </plain></SENT>
+</text></ref><ref id="B63"><text><SENT sid="30110" pm="."><plain><label>61</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Stebbins</surname><given-names>C. </plain></SENT>
+<SENT sid="30111" pm="."><plain>E.</given-names></name><name><surname>Galán</surname><given-names>J. </plain></SENT>
+<SENT sid="30112" pm="."><plain>E.</given-names></name></person-group><article-title>Modulation of host signaling by a bacterial mimic: structure of the <italic>Salmonella</italic> effector SptP bound to Rac1</article-title><source><italic>Molecular Cell</italic></source><year>2000</year><volume>6</volume><issue>6</issue><fpage>1449</fpage><lpage>1460</lpage><pub-id pub-id-type="other">2-s2.0-0034502457</pub-id><pub-id pub-id-type="doi">10.1016/S1097-2765(00)00141-6</pub-id><pub-id pub-id-type="pmid">11163217</pub-id></element-citation> </plain></SENT>
+</text></ref><ref id="B64"><text><SENT sid="30113" pm="."><plain><label>62</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Yu</surname><given-names>X. </plain></SENT>
+<SENT sid="30114" pm="."><plain>Q.</given-names></name><name><surname>Kramer</surname><given-names>J.</given-names></name><name><surname>Moran</surname><given-names>L.</given-names></name><etal/></person-group><article-title>Pharmacokinetic/pharmacodynamic modelling of 2-acetyl-4(5)-tetrahydroxybutyl imidazole-induced peripheral lymphocyte sequestration through increasing lymphoid sphingosine 1-phosphate</article-title><source><italic>Xenobiotica</italic></source><year>2010</year><volume>40</volume><issue>5</issue><fpage>350</fpage><lpage>356</lpage><pub-id pub-id-type="other">2-s2.0-77950814703</pub-id><pub-id pub-id-type="doi">10.3109/00498251003611376</pub-id><pub-id pub-id-type="pmid">20175664</pub-id></element-citation> </plain></SENT>
+</text></ref><ref id="B65"><text><SENT sid="30115" pm="."><plain><label>63</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Cohen</surname><given-names>M. </plain></SENT>
+<SENT sid="30116" pm="."><plain>H.</given-names></name><name><surname>Johnson</surname><given-names>J. </plain></SENT>
+<SENT sid="30117" pm="."><plain>R.</given-names></name><name><surname>Justice</surname><given-names>R.</given-names></name><name><surname>Pazdur</surname><given-names>R.</given-names></name></person-group><article-title>FDA drug approval summary: nelarabine (Arranon) for the treatment of T-cell lymphoblastic leukemia/lymphoma</article-title><source><italic>Oncologist</italic></source><year>2008</year><volume>13</volume><issue>6</issue><fpage>709</fpage><lpage>714</lpage><pub-id pub-id-type="other">2-s2.0-46149095502</pub-id><pub-id pub-id-type="doi">10.1634/theoncologist.2006-0017</pub-id><pub-id pub-id-type="pmid">18586926</pub-id></element-citation> </plain></SENT>
+</text></ref></ref-list></SecTag></back><floats-group><SecTag type="FIG"><fig id="fig1" orientation="portrait" position="float"><label>Figure 1</label><caption><p><text><SENT sid="30118" pm="."><plain>(a) Cartoon representation of YopE generated by Pymol [<xref rid="B66" ref-type="bibr">17</xref>]. </plain></SENT>
+<SENT sid="30119" pm="."><plain>(b) YopE residues are shown in stick, and the residues involved in G-protein interactions are labeled and colored. </plain></SENT>
+<SENT sid="30120" pm="."><plain>Switch I and Switch II interacting residues are indicated with green and blue, respectively, whereas red residues interact with both regions. </plain></SENT>
+</text></p></caption><graphic xlink:href="ISRN.BIOINFORMATICS2013-640518.001"/></fig></SecTag><SecTag type="FIG"><fig id="fig2" orientation="portrait" position="float"><label>Figure 2</label><caption><p><text><SENT sid="30121" pm="."><plain>AAADR.21 site points and site-site distances on compound 15. </plain></SENT>
+</text></p></caption><graphic xlink:href="ISRN.BIOINFORMATICS2013-640518.002"/></fig></SecTag><SecTag type="FIG"><fig id="fig3" orientation="portrait" position="float"><label>Figure 3</label><caption><p><text><SENT sid="30122" pm="."><plain>Superimposition of the selected hits on the YopE binding site. </plain></SENT>
+<SENT sid="30123" pm="."><plain>YopE is represented as surface, and ligands are shown as sticks. </plain></SENT>
+<SENT sid="30124" pm="."><plain>Arg144 residue is indicated with red, Gly182, Thr183, and Ile184 are in green, and Thr148 and Gln151 are in light brown. </plain></SENT>
+</text></p></caption><graphic xlink:href="ISRN.BIOINFORMATICS2013-640518.003"/></fig></SecTag><SecTag type="FIG"><fig id="fig4" orientation="portrait" position="float"><label>Figure 4</label><caption><p><text><SENT sid="30125" pm="."><plain>Ligand-protein interaction diagrams of the selected hits generated by LIGPLOT [<xref rid="B60" ref-type="bibr">58</xref>]. </plain></SENT>
+</text></p></caption><graphic xlink:href="ISRN.BIOINFORMATICS2013-640518.004"/></fig></SecTag><SecTag type="TABLE"><table-wrap id="tab1" orientation="portrait" position="float"><label>Table 1</label><caption><p><text><SENT sid="30126" pm="."><plain>2D structures of experimentally determined inhibitors utilized for pharmacophore development [<xref rid="B40" ref-type="bibr">38</xref>]. </plain></SENT>
+</text></p></caption><table frame="hsides" rules="groups"><tbody><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="30127" pm="."><plain><inline-graphic xlink:href="ISRN.BIOINFORMATICS2013-640518.tab1.i001.jpg"/> </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30128" pm="."><plain><inline-graphic xlink:href="ISRN.BIOINFORMATICS2013-640518.tab1.i002.jpg"/> </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30129" pm="."><plain><inline-graphic xlink:href="ISRN.BIOINFORMATICS2013-640518.tab1.i003.jpg"/> </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="30130" pm="."><plain><inline-graphic xlink:href="ISRN.BIOINFORMATICS2013-640518.tab1.i004.jpg"/> </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30131" pm="."><plain><inline-graphic xlink:href="ISRN.BIOINFORMATICS2013-640518.tab1.i005.jpg"/> </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30132" pm="."><plain><inline-graphic xlink:href="ISRN.BIOINFORMATICS2013-640518.tab1.i006.jpg"/> </plain></SENT>
+</text></td></tr></tbody></table></table-wrap></SecTag><SecTag type="TABLE"><table-wrap id="tab2" orientation="portrait" position="float"><label>Table 2</label><caption><p><text><SENT sid="30133" pm="."><plain>Scores of pharmacophore hypotheses generated in Phase. </plain></SENT>
+</text></p></caption><table frame="hsides" rules="groups"><thead><tr><th align="left" rowspan="1" colspan="1"><text><SENT sid="30134" pm="."><plain>ID </plain></SENT>
+</text></th><th align="center" rowspan="1" colspan="1"><text><SENT sid="30135" pm="."><plain>Survival </plain></SENT>
+</text></th><th align="center" rowspan="1" colspan="1"><text><SENT sid="30136" pm="."><plain>Site </plain></SENT>
+</text></th><th align="center" rowspan="1" colspan="1"><text><SENT sid="30137" pm="."><plain>Vector </plain></SENT>
+</text></th><th align="center" rowspan="1" colspan="1"><text><SENT sid="30138" pm="."><plain>Volume </plain></SENT>
+</text></th><th align="center" rowspan="1" colspan="1"><text><SENT sid="30139" pm="."><plain>Selectivity </plain></SENT>
+</text></th><th align="center" rowspan="1" colspan="1"><text><SENT sid="30140" pm="."><plain>Number of Matches </plain></SENT>
+</text></th></tr></thead><tbody><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="30141" pm="."><plain>AAADR.21 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30142" pm="."><plain>3.858 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30143" pm="."><plain>0.99 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30144" pm="."><plain>1.000 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30145" pm="."><plain>0.865 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30146" pm="."><plain>1.147 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30147" pm="."><plain>6 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="30148" pm="."><plain>AAARR.87 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30149" pm="."><plain>3.759 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30150" pm="."><plain>0.95 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30151" pm="."><plain>0.953 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30152" pm="."><plain>0.859 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30153" pm="."><plain>1.467 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30154" pm="."><plain>5 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="30155" pm="."><plain>AADRR.98 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30156" pm="."><plain>3.749 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30157" pm="."><plain>0.94 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30158" pm="."><plain>0.955 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30159" pm="."><plain>0.855 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30160" pm="."><plain>1.551 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30161" pm="."><plain>5 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="30162" pm="."><plain>AAARR.81 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30163" pm="."><plain>3.738 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30164" pm="."><plain>0.92 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30165" pm="."><plain>0.949 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30166" pm="."><plain>0.864 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30167" pm="."><plain>1.456 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30168" pm="."><plain>5 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="30169" pm="."><plain>ADDRR.61 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30170" pm="."><plain>3.726 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30171" pm="."><plain>0.91 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30172" pm="."><plain>0.950 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30173" pm="."><plain>0.865 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30174" pm="."><plain>1.643 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30175" pm="."><plain>5 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="30176" pm="."><plain>AADDR.43 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30177" pm="."><plain>3.723 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30178" pm="."><plain>0.90 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30179" pm="."><plain>0.974 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30180" pm="."><plain>0.846 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30181" pm="."><plain>1.200 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30182" pm="."><plain>5 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="30183" pm="."><plain>AADRR.23 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30184" pm="."><plain>3.719 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30185" pm="."><plain>0.91 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30186" pm="."><plain>0.948 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30187" pm="."><plain>0.858 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30188" pm="."><plain>1.457 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30189" pm="."><plain>5 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="30190" pm="."><plain>AAARR.4 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30191" pm="."><plain>3.708 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30192" pm="."><plain>0.91 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30193" pm="."><plain>0.946 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30194" pm="."><plain>0.856 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30195" pm="."><plain>1.422 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30196" pm="."><plain>5 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="30197" pm="."><plain>AADRR.46 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30198" pm="."><plain>3.707 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30199" pm="."><plain>0.94 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30200" pm="."><plain>0.926 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30201" pm="."><plain>0.838 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30202" pm="."><plain>1.488 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30203" pm="."><plain>5 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="30204" pm="."><plain>AADDR.10 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30205" pm="."><plain>3.704 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30206" pm="."><plain>0.94 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30207" pm="."><plain>0.926 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30208" pm="."><plain>0.835 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30209" pm="."><plain>1.231 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30210" pm="."><plain>5 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="30211" pm="."><plain>AADRR.127 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30212" pm="."><plain>3.437 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30213" pm="."><plain>0.72 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30214" pm="."><plain>0.892 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30215" pm="."><plain>0.821 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30216" pm="."><plain>1.591 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30217" pm="."><plain>5 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="30218" pm="."><plain>ADDRR.67 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30219" pm="."><plain>3.416 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30220" pm="."><plain>0.74 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30221" pm="."><plain>0.888 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30222" pm="."><plain>0.791 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30223" pm="."><plain>1.624 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30224" pm="."><plain>5 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="30225" pm="."><plain>AADDR.56 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30226" pm="."><plain>3.405 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30227" pm="."><plain>0.72 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30228" pm="."><plain>0.891 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30229" pm="."><plain>0.792 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30230" pm="."><plain>1.304 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30231" pm="."><plain>6 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="30232" pm="."><plain>ADDRR.72 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30233" pm="."><plain>3.398 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30234" pm="."><plain>0.72 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30235" pm="."><plain>0.867 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30236" pm="."><plain>0.812 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30237" pm="."><plain>1.604 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30238" pm="."><plain>5 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="30239" pm="."><plain>AADDR.58 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30240" pm="."><plain>3.396 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30241" pm="."><plain>0.73 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30242" pm="."><plain>0.865 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30243" pm="."><plain>0.803 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30244" pm="."><plain>1.329 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30245" pm="."><plain>5 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="30246" pm="."><plain>AAAAR.5 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30247" pm="."><plain>3.072 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30248" pm="."><plain>0.50 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30249" pm="."><plain>0.858 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30250" pm="."><plain>0.709 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30251" pm="."><plain>1.320 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30252" pm="."><plain>5 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="30253" pm="."><plain>ADDRR.9 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30254" pm="."><plain>2.997 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30255" pm="."><plain>0.56 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30256" pm="."><plain>0.791 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30257" pm="."><plain>0.645 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30258" pm="."><plain>1.601 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30259" pm="."><plain>5 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="30260" pm="."><plain>AADRR.19 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30261" pm="."><plain>2.904 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30262" pm="."><plain>0.58 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30263" pm="."><plain>0.680 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30264" pm="."><plain>0.643 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30265" pm="."><plain>1.401 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30266" pm="."><plain>5 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="30267" pm="."><plain>AADDR.11 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30268" pm="."><plain>2.593 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30269" pm="."><plain>0.35 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30270" pm="."><plain>0.705 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30271" pm="."><plain>0.537 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30272" pm="."><plain>1.282 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30273" pm="."><plain>5 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="30274" pm="."><plain>AAADR.2 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30275" pm="."><plain>2.155 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30276" pm="."><plain>0.14 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30277" pm="."><plain>0.617 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30278" pm="."><plain>0.398 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30279" pm="."><plain>1.138 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30280" pm="."><plain>6 </plain></SENT>
+</text></td></tr></tbody></table></table-wrap></SecTag><SecTag type="TABLE"><table-wrap id="tab3" orientation="portrait" position="float"><label>Table 3</label><caption><p><text><SENT sid="30281" pm="."><plain>2D structures of selected hits with docking scores in kcal/mol. </plain></SENT>
+</text></p></caption><table frame="hsides" rules="groups"><thead><tr><th align="left" rowspan="1" colspan="1"><text><SENT sid="30282" pm="."><plain>Cluster 1 </plain></SENT>
+</text></th><th align="center" rowspan="1" colspan="1"><text><SENT sid="30283" pm="."><plain>Cluster 2 </plain></SENT>
+</text></th><th align="center" rowspan="1" colspan="1"><text><SENT sid="30284" pm="."><plain>Cluster 3 </plain></SENT>
+</text></th></tr></thead><tbody><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="30285" pm="."><plain><inline-graphic xlink:href="ISRN.BIOINFORMATICS2013-640518.tab3.i001.jpg"/> </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30286" pm="."><plain><inline-graphic xlink:href="ISRN.BIOINFORMATICS2013-640518.tab3.i002.jpg"/> </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30287" pm="."><plain><inline-graphic xlink:href="ISRN.BIOINFORMATICS2013-640518.tab3.i003.jpg"/> </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="30288" pm="."><plain><inline-graphic xlink:href="ISRN.BIOINFORMATICS2013-640518.tab3.i004.jpg"/> </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30289" pm="."><plain><inline-graphic xlink:href="ISRN.BIOINFORMATICS2013-640518.tab3.i005.jpg"/> </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30290" pm="."><plain><inline-graphic xlink:href="ISRN.BIOINFORMATICS2013-640518.tab3.i006.jpg"/> </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="30291" pm="."><plain><inline-graphic xlink:href="ISRN.BIOINFORMATICS2013-640518.tab3.i007.jpg"/> </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30292" pm="."><plain><inline-graphic xlink:href="ISRN.BIOINFORMATICS2013-640518.tab3.i008.jpg"/> </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30293" pm="."><plain><inline-graphic xlink:href="ISRN.BIOINFORMATICS2013-640518.tab3.i009.jpg"/> </plain></SENT>
+</text></td></tr></tbody></table></table-wrap></SecTag><SecTag type="TABLE"><table-wrap id="tab4" orientation="portrait" position="float"><label>Table 4</label><caption><p><text><SENT sid="30294" pm="."><plain>Docking results of selected hits in kcal/mol. </plain></SENT>
+</text></p></caption><table frame="hsides" rules="groups"><thead><tr><th align="left" rowspan="1" colspan="1"><text><SENT sid="30295" pm="."><plain>Cluster </plain></SENT>
+</text></th><th align="center" rowspan="1" colspan="1"><text><SENT sid="30296" pm="."><plain>Name </plain></SENT>
+</text></th><th align="center" rowspan="1" colspan="1"><text><SENT sid="30297" pm="."><plain>Title </plain></SENT>
+</text></th><th align="center" rowspan="1" colspan="1"><text><SENT sid="30298" pm="."><plain>Initial Ranking </plain></SENT>
+</text></th><th align="center" rowspan="1" colspan="1"><text><SENT sid="30299" pm="."><plain>Docking score </plain></SENT>
+</text></th><th align="center" rowspan="1" colspan="1"><text><SENT sid="30300" pm="."><plain>Bound energy </plain></SENT>
+</text></th><th align="center" rowspan="1" colspan="1"><text><SENT sid="30301" pm="."><plain>Free energy </plain></SENT>
+</text></th><th align="center" rowspan="1" colspan="1"><text><SENT sid="30302" pm="."><plain>Strain energy </plain></SENT>
+</text></th><th align="center" rowspan="1" colspan="1"><text><SENT sid="30303" pm="."><plain>Strain penalty </plain></SENT>
+</text></th><th align="center" rowspan="1" colspan="1"><text><SENT sid="30304" pm="."><plain>Glide Emodel </plain></SENT>
+</text></th></tr></thead><tbody><tr><td align="left" rowspan="3" colspan="1"><text><SENT sid="30305" pm="."><plain>1 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30306" pm="."><plain>L1 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30307" pm="."><plain>ZINC16525119 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30308" pm="."><plain>1 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30309" pm="."><plain>−7.24 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30310" pm="."><plain>23.77 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30311" pm="."><plain>22.08 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30312" pm="."><plain>1.68 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30313" pm="."><plain>0.00 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30314" pm="."><plain>−30.99 </plain></SENT>
+</text></td></tr><tr><td align="center" rowspan="1" colspan="1"><text><SENT sid="30315" pm="."><plain>L2 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30316" pm="."><plain>ZINC04982797 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30317" pm="."><plain>2 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30318" pm="."><plain>−7.06 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30319" pm="."><plain>22.14 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30320" pm="."><plain>19.71 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30321" pm="."><plain>2.43 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30322" pm="."><plain>0.00 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30323" pm="."><plain>−39.41 </plain></SENT>
+</text></td></tr><tr><td align="center" rowspan="1" colspan="1"><text><SENT sid="30324" pm="."><plain>L3 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30325" pm="."><plain>ZINC01663005 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30326" pm="."><plain>3 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30327" pm="."><plain>−6.84 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30328" pm="."><plain>34.19 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30329" pm="."><plain>30.26 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30330" pm="."><plain>3.94 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30331" pm="."><plain>0.00 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30332" pm="."><plain>−23.80 </plain></SENT>
+</text></td></tr><tr><td align="left" colspan="10" rowspan="1"><text><SENT sid="30333" pm="."><plain><hr/> </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="3" colspan="1"><text><SENT sid="30334" pm="."><plain>2 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30335" pm="."><plain>L4 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30336" pm="."><plain>ZINC17020779 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30337" pm="."><plain>6 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30338" pm="."><plain>−6.35 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30339" pm="."><plain>36.65 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30340" pm="."><plain>32.87 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30341" pm="."><plain>3.78 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30342" pm="."><plain>0.00 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30343" pm="."><plain>−32.71 </plain></SENT>
+</text></td></tr><tr><td align="center" rowspan="1" colspan="1"><text><SENT sid="30344" pm="."><plain>L5 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30345" pm="."><plain>ZINC17021043 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30346" pm="."><plain>7 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30347" pm="."><plain>−6.22 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30348" pm="."><plain>42.00 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30349" pm="."><plain>39.56 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30350" pm="."><plain>2.44 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30351" pm="."><plain>0.00 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30352" pm="."><plain>−27.33 </plain></SENT>
+</text></td></tr><tr><td align="center" rowspan="1" colspan="1"><text><SENT sid="30353" pm="."><plain>L6 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30354" pm="."><plain>ZINC01703513 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30355" pm="."><plain>8 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30356" pm="."><plain>−6.21 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30357" pm="."><plain>36.70 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30358" pm="."><plain>31.25 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30359" pm="."><plain>5.45 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30360" pm="."><plain>0.36 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30361" pm="."><plain>−32.82 </plain></SENT>
+</text></td></tr><tr><td align="left" colspan="10" rowspan="1"><text><SENT sid="30362" pm="."><plain><hr/> </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="3" colspan="1"><text><SENT sid="30363" pm="."><plain>3 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30364" pm="."><plain>L7 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30365" pm="."><plain>ZINC01205271 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30366" pm="."><plain>18 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30367" pm="."><plain>−5.76 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30368" pm="."><plain>22.82 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30369" pm="."><plain>21.50 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30370" pm="."><plain>1.32 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30371" pm="."><plain>0.00 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30372" pm="."><plain>−38.36 </plain></SENT>
+</text></td></tr><tr><td align="center" rowspan="1" colspan="1"><text><SENT sid="30373" pm="."><plain>L8 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30374" pm="."><plain>ZINC19800113 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30375" pm="."><plain>24 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30376" pm="."><plain>−5.55 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30377" pm="."><plain>35.08 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30378" pm="."><plain>30.08 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30379" pm="."><plain>5.01 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30380" pm="."><plain>0.25 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30381" pm="."><plain>−40.66 </plain></SENT>
+</text></td></tr><tr><td align="center" rowspan="1" colspan="1"><text><SENT sid="30382" pm="."><plain>L9 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30383" pm="."><plain>ZINC05297691 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30384" pm="."><plain>26 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30385" pm="."><plain>−5.45 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30386" pm="."><plain>22.84 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30387" pm="."><plain>17.43 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30388" pm="."><plain>5.41 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30389" pm="."><plain>0.35 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30390" pm="."><plain>−32.16 </plain></SENT>
+</text></td></tr></tbody></table></table-wrap></SecTag><SecTag type="TABLE"><table-wrap id="tab5" orientation="portrait" position="float"><label>Table 5</label><caption><p><text><SENT sid="30391" pm="."><plain>ADME and druglikeness properties of the selected ligands by QikProp. </plain></SENT>
+</text></p></caption><table frame="hsides" rules="groups"><thead><tr><th align="left" rowspan="1" colspan="1"><text><SENT sid="30392" pm="."><plain>Name </plain></SENT>
+</text></th><th align="center" rowspan="1" colspan="1"><text><SENT sid="30393" pm="."><plain>Title<sup>a</sup> </plain></SENT>
+</text></th><th align="center" rowspan="1" colspan="1"><text><SENT sid="30394" pm="."><plain>MW<sup>b</sup> </plain></SENT>
+</text></th><th align="center" rowspan="1" colspan="1"><text><SENT sid="30395" pm="."><plain>HB donor<sup>c</sup> </plain></SENT>
+</text></th><th align="center" rowspan="1" colspan="1"><text><SENT sid="30396" pm="."><plain>HB acceptor<sup>d</sup> </plain></SENT>
+</text></th><th align="center" rowspan="1" colspan="1"><text><SENT sid="30397" pm="."><plain>SASA<sup>e</sup> </plain></SENT>
+</text></th><th align="center" rowspan="1" colspan="1"><text><SENT sid="30398" pm="."><plain>QP log HERG<sup>f</sup> </plain></SENT>
+</text></th><th align="center" rowspan="1" colspan="1"><text><SENT sid="30399" pm="."><plain>QP log S<sup>g</sup> </plain></SENT>
+</text></th><th align="center" rowspan="1" colspan="1"><text><SENT sid="30400" pm="."><plain>QP log Po/w<sup>h</sup> </plain></SENT>
+</text></th><th align="center" rowspan="1" colspan="1"><text><SENT sid="30401" pm="."><plain>% Human Oral Absorption<sup>i</sup> </plain></SENT>
+</text></th></tr></thead><tbody><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="30402" pm="."><plain>L1 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30403" pm="."><plain>ZINC16525119 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30404" pm="."><plain>238.2 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30405" pm="."><plain>5 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30406" pm="."><plain>8.3 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30407" pm="."><plain>470.8 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30408" pm="."><plain>−4.616 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30409" pm="."><plain>−1.49 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30410" pm="."><plain>−0.866 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30411" pm="."><plain>60.0 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="30412" pm="."><plain>L2 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30413" pm="."><plain>ZINC04982797 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30414" pm="."><plain>344.2 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30415" pm="."><plain>4 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30416" pm="."><plain>8.8 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30417" pm="."><plain>546.7 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30418" pm="."><plain>−5.136 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30419" pm="."><plain>−2.62 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30420" pm="."><plain>0.414 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30421" pm="."><plain>68.4 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="30422" pm="."><plain>L3 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30423" pm="."><plain>ZINC01663005 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30424" pm="."><plain>251.2 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30425" pm="."><plain>4 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30426" pm="."><plain>9.8 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30427" pm="."><plain>481.9 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30428" pm="."><plain>−4.626 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30429" pm="."><plain>−1.40 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30430" pm="."><plain>−1.023 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30431" pm="."><plain>56.1 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="30432" pm="."><plain>L4 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30433" pm="."><plain>ZINC17020779 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30434" pm="."><plain>311.3 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30435" pm="."><plain>3 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30436" pm="."><plain>8.8 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30437" pm="."><plain>573.6 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30438" pm="."><plain>−4.383 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30439" pm="."><plain>−2.79 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30440" pm="."><plain>0.626 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30441" pm="."><plain>72.0 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="30442" pm="."><plain>L5 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30443" pm="."><plain>ZINC17021043 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30444" pm="."><plain>296.3 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30445" pm="."><plain>3 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30446" pm="."><plain>8.3 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30447" pm="."><plain>499.1 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30448" pm="."><plain>−4.110 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30449" pm="."><plain>−2.30 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30450" pm="."><plain>0.641 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30451" pm="."><plain>78.5 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="30452" pm="."><plain>L6 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30453" pm="."><plain>ZINC01703513 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30454" pm="."><plain>283.3 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30455" pm="."><plain>3 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30456" pm="."><plain>8.8 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30457" pm="."><plain>502.5 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30458" pm="."><plain>−4.257 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30459" pm="."><plain>−1.82 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30460" pm="."><plain>0.055 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30461" pm="."><plain>67.8 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="30462" pm="."><plain>L7 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30463" pm="."><plain>ZINC01205271 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30464" pm="."><plain>362.4 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30465" pm="."><plain>3 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30466" pm="."><plain>5.8 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30467" pm="."><plain>704.1 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30468" pm="."><plain>−5.648 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30469" pm="."><plain>−5.13 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30470" pm="."><plain>2.892 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30471" pm="."><plain>84.9 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="30472" pm="."><plain>L8 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30473" pm="."><plain>ZINC19800113 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30474" pm="."><plain>362.4 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30475" pm="."><plain>3 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30476" pm="."><plain>5.8 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30477" pm="."><plain>680.7 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30478" pm="."><plain>−5.401 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30479" pm="."><plain>−4.74 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30480" pm="."><plain>2.797 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30481" pm="."><plain>84.2 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="30482" pm="."><plain>L9 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30483" pm="."><plain>ZINC05297691 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30484" pm="."><plain>332.4 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30485" pm="."><plain>3 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30486" pm="."><plain>5.0 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30487" pm="."><plain>655.8 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30488" pm="."><plain>−5.619 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30489" pm="."><plain>−4.68 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30490" pm="."><plain>2.725 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30491" pm="."><plain>83.9 </plain></SENT>
+</text></td></tr></tbody></table><table-wrap-foot><fn><p>
+<sup>a</sup>ZINC IDs.</p></fn><fn><p>
+<sup>
+b</sup>Molecular weight (acceptable range: &lt;500).</p></fn><fn><p>
+<sup>
+c</sup>Hydrogen bond donor (acceptable range: ≤5).</p></fn><fn><p>
+<sup>
+d</sup>Hydrogen bond acceptor (acceptable range: ≤10).</p></fn><fn><p>
+<sup>
+e</sup>Total Solvent Accessible Surface Area in Å<sup>2</sup> using a probe with a 1.4 Å radius (acceptable range: 300–1000).</p></fn><fn><p>
+<sup>
+f</sup>Predicted IC50 value for blockage of HERG K+ channels (concern: below −5).</p></fn><fn><p>
+<sup>
+g</sup>Predicted aqueous solubility, S in mol/dm<sup>−3</sup> (acceptable range: −6.5–0.5).</p></fn><fn><p>
+<sup>
+h</sup>Predicted octanol/water partition coefficient (acceptable range: −2–6.5).</p></fn><fn><p>
+<sup>
+i</sup>Predicted human oral absorption on 0 to 100% scale (&lt;25% is poor and &gt;80% is high).</p></fn></table-wrap-foot></table-wrap></SecTag><SecTag type="TABLE"><table-wrap id="tab6" orientation="portrait" position="float"><label>Table 6</label><caption><p><text><SENT sid="30492" pm="."><plain>Glide XP results of selected hits docked to ExoS<sub>GAP</sub> and SptP<sub>GAP</sub>. </plain></SENT>
+<SENT sid="30493" pm="."><plain>All values are shown in kcal/mol. </plain></SENT>
+</text></p></caption><table frame="hsides" rules="groups"><thead><tr><th align="left" rowspan="2" colspan="1"><text><SENT sid="30494" pm="."><plain>Name </plain></SENT>
+</text></th><th align="center" rowspan="2" colspan="1"><text><SENT sid="30495" pm="."><plain>Title </plain></SENT>
+</text></th><th align="center" colspan="3" rowspan="1"><text><SENT sid="30496" pm="."><plain>ExoS<sub>GAP</sub> </plain></SENT>
+</text></th><th align="center" colspan="3" rowspan="1"><text><SENT sid="30497" pm="."><plain>SptP<sub>GAP</sub> </plain></SENT>
+</text></th></tr><tr><th align="center" rowspan="1" colspan="1"><text><SENT sid="30498" pm="."><plain>Docking score </plain></SENT>
+</text></th><th align="center" rowspan="1" colspan="1"><text><SENT sid="30499" pm="."><plain>Strain penalty </plain></SENT>
+</text></th><th align="center" rowspan="1" colspan="1"><text><SENT sid="30500" pm="."><plain>Arg146 bonding </plain></SENT>
+</text></th><th align="center" rowspan="1" colspan="1"><text><SENT sid="30501" pm="."><plain>Docking score </plain></SENT>
+</text></th><th align="center" rowspan="1" colspan="1"><text><SENT sid="30502" pm="."><plain>Strain penalty </plain></SENT>
+</text></th><th align="center" rowspan="1" colspan="1"><text><SENT sid="30503" pm="."><plain>Arg209 bonding </plain></SENT>
+</text></th></tr></thead><tbody><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="30504" pm="."><plain>L1 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30505" pm="."><plain>ZINC16525119 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30506" pm="."><plain>−5.09 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30507" pm="."><plain>0.00 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30508" pm="."><plain>− </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30509" pm="."><plain>−4.25 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30510" pm="."><plain>0.00 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30511" pm="."><plain>− </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="30512" pm="."><plain>L2 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30513" pm="."><plain>ZINC04982797 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30514" pm="."><plain>−6.11 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30515" pm="."><plain>0.32 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30516" pm="."><plain>+ </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30517" pm="."><plain>−5.30 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30518" pm="."><plain>0.00 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30519" pm="."><plain>− </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="30520" pm="."><plain>L3 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30521" pm="."><plain>ZINC01663005 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30522" pm="."><plain>−6.23 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30523" pm="."><plain>0.00 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30524" pm="."><plain>− </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30525" pm="."><plain>−4.95 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30526" pm="."><plain>0.00 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30527" pm="."><plain>− </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="30528" pm="."><plain>L4 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30529" pm="."><plain>ZINC17020779 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30530" pm="."><plain>−3.28 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30531" pm="."><plain>0.00 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30532" pm="."><plain>− </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30533" pm="."><plain>−4.59 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30534" pm="."><plain>0.00 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30535" pm="."><plain>− </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="30536" pm="."><plain>L5 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30537" pm="."><plain>ZINC17021043 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30538" pm="."><plain>−2.87 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30539" pm="."><plain>3.00 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30540" pm="."><plain>− </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30541" pm="."><plain>−4.41 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30542" pm="."><plain>0.00 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30543" pm="."><plain>+ </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="30544" pm="."><plain>L6 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30545" pm="."><plain>ZINC01703513 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30546" pm="."><plain>−3.30 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30547" pm="."><plain>0.00 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30548" pm="."><plain>− </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30549" pm="."><plain>−5.63 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30550" pm="."><plain>0.00 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30551" pm="."><plain>− </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="30552" pm="."><plain>L7 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30553" pm="."><plain>ZINC01205271 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30554" pm="."><plain>−3.11 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30555" pm="."><plain>0.00 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30556" pm="."><plain>+ </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30557" pm="."><plain>−3.27 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30558" pm="."><plain>0.00 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30559" pm="."><plain>− </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="30560" pm="."><plain>L8 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30561" pm="."><plain>ZINC19800113 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30562" pm="."><plain>−4.33 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30563" pm="."><plain>2.48 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30564" pm="."><plain>− </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30565" pm="."><plain>−4.66 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30566" pm="."><plain>1.86 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30567" pm="."><plain>− </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="30568" pm="."><plain>L9 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30569" pm="."><plain>ZINC05297691 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30570" pm="."><plain>−4.48 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30571" pm="."><plain>2.85 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30572" pm="."><plain>− </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30573" pm="."><plain>−4.21 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30574" pm="."><plain>0.38 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="30575" pm="."><plain>− </plain></SENT>
+</text></td></tr></tbody></table></table-wrap></SecTag></floats-group></article>

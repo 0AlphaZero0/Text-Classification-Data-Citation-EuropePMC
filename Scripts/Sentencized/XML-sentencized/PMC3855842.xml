@@ -1,0 +1,1020 @@
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD v1.1 20151215//EN" "JATS-archivearticle1.dtd"> 
+<article xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML" open-status="O" article-type="research-article"><?properties open_access?><?DTDIdentifier.IdentifierValue -//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD v1.1 20151215//EN?><?DTDIdentifier.IdentifierType public?><?SourceDTD.DTDName JATS-archivearticle1.dtd?><?SourceDTD.Version 1.1?><?ConverterInfo.XSLTName jp2nlmx2.xsl?><?ConverterInfo.Version 1?><front><journal-meta><journal-id journal-id-type="nlm-ta">PLoS One</journal-id><journal-id journal-id-type="iso-abbrev">PLoS ONE</journal-id><journal-id journal-id-type="publisher-id">plos</journal-id><journal-id journal-id-type="pmc">plosone</journal-id><journal-title-group><journal-title>PLoS ONE</journal-title></journal-title-group><issn pub-type="epub">1932-6203</issn><publisher><publisher-name>Public Library of Science</publisher-name><publisher-loc>San Francisco, USA</publisher-loc></publisher></journal-meta><article-meta><article-id pub-id-type="pmcid">3855842</article-id><article-id pub-id-type="pmid">24324765</article-id><article-id pub-id-type="publisher-id">PONE-D-13-27212</article-id><article-id pub-id-type="doi">10.1371/journal.pone.0082210</article-id><article-categories><subj-group subj-group-type="heading"><subject>Research Article</subject></subj-group></article-categories><title-group><article-title><SecTag type="TITLE"><text><SENT sid="18348" pm="."><plain>INDIGO – INtegrated Data Warehouse of MIcrobial GenOmes with Examples from the Red Sea Extremophiles </plain></SENT>
+</text></SecTag></article-title><alt-title alt-title-type="running-head">Integrated Data Warehouse of Microbial Genomes</alt-title></title-group><contrib-group><contrib contrib-type="author"><name><surname>Alam</surname><given-names>Intikhab</given-names></name><xref ref-type="aff" rid="aff1">
+<sup>1</sup>
+</xref><xref ref-type="corresp" rid="cor1">
+<sup>*</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Antunes</surname><given-names>André</given-names></name><xref ref-type="aff" rid="aff2">
+<sup>2</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Kamau</surname><given-names>Allan Anthony</given-names></name><xref ref-type="aff" rid="aff1">
+<sup>1</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Ba alawi</surname><given-names>Wail</given-names></name><xref ref-type="aff" rid="aff1">
+<sup>1</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Kalkatawi</surname><given-names>Manal</given-names></name><xref ref-type="aff" rid="aff1">
+<sup>1</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Stingl</surname><given-names>Ulrich</given-names></name><xref ref-type="aff" rid="aff3">
+<sup>3</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Bajic</surname><given-names>Vladimir B.</given-names></name><xref ref-type="aff" rid="aff1">
+<sup>1</sup>
+</xref><xref ref-type="corresp" rid="cor1">
+<sup>*</sup>
+</xref></contrib></contrib-group><aff id="aff1">
+<label>1</label>
+<addr-line>Computational Bioscience Research Center (CBRC), King Abdullah University of Science and Technology (KAUST), Thuwal, Kingdom of Saudi Arabia</addr-line>
+</aff><aff id="aff2">
+<label>2</label>
+<addr-line>IBB-Institute for Biotechnology and Bioengineering, Centre of Biological Engineering, Micoteca da Universidade do Minho, University of Minho, Braga, Portugal</addr-line>
+</aff><aff id="aff3">
+<label>3</label>
+<addr-line>Red Sea Research Center, King Abdullah University of Science and Technology (KAUST), Thuwal, Kingdom of Saudi Arabia</addr-line>
+</aff><contrib-group><contrib contrib-type="editor"><name><surname>Hernandez-Lemus</surname><given-names>Enrique</given-names></name><role>Editor</role><xref ref-type="aff" rid="edit1"/></contrib></contrib-group><aff id="edit1">
+<addr-line>National Institute of Genomic Medicine, Mexico</addr-line>
+</aff><author-notes><corresp id="cor1">* E-mail: <email>intikhab.alam@kaust.edu.sa</email> (IA); <email>vladimir.bajic@kaust.edu.sa</email> (VBB)</corresp><fn fn-type="COI-statement"><p><text><SENT sid="18349" pm="."><plain><bold>Competing Interests: </bold>Co-author Vladimir B. </plain></SENT>
+<SENT sid="18350" pm="."><plain>Bajic is PLOS ONE Editorial Board members. </plain></SENT>
+<SENT sid="18351" pm="."><plain>This does not alter the authors' adherence to all the PLOS ONE policies on sharing data and materials. </plain></SENT>
+</text></p></fn><fn fn-type="con"><p><text><SENT sid="18352" pm="."><plain>Conceived and designed the experiments: IA VBB. </plain></SENT>
+<SENT sid="18353" pm="."><plain>Performed the experiments: IA WBa MK. </plain></SENT>
+<SENT sid="18354" pm="."><plain>Analyzed the data: IA AA US VBB. </plain></SENT>
+<SENT sid="18355" pm="."><plain>Contributed reagents/materials/analysis tools: IA. </plain></SENT>
+<SENT sid="18356" pm="."><plain>Wrote the manuscript: IA AA US VBB. </plain></SENT>
+<SENT sid="18357" pm="."><plain>Developed INDIGO system: IA. </plain></SENT>
+<SENT sid="18358" pm="."><plain>Developed web implementation: IA AAK. </plain></SENT>
+</text></p></fn></author-notes><pub-date pub-type="collection"><year>2013</year></pub-date><pub-date pub-type="epub"><day>6</day><month>12</month><year>2013</year></pub-date><volume>8</volume><issue>12</issue><elocation-id>e82210</elocation-id><history><date date-type="received"><day>2</day><month>7</month><year>2013</year></date><date date-type="accepted"><day>22</day><month>10</month><year>2013</year></date></history><permissions><copyright-statement>© 2013 Alam et al</copyright-statement><copyright-year>2013</copyright-year><copyright-holder>Alam et al</copyright-holder><license xlink:href="http://creativecommons.org/licenses/by/4.0/"><license-p>This is an open-access article distributed under the terms of the Creative Commons Attribution License, which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are properly credited.</license-p></license></permissions><abstract><sec sec-type="headed"><title><text><SENT sid="18359" pm="."><plain>Background </plain></SENT>
+</text></title><p><SecTag type="ABS"><text><SENT sid="18360" pm="."><plain>The next generation sequencing technologies substantially increased the throughput of microbial genome sequencing. </plain></SENT>
+<SENT sid="18361" pm="."><plain>To functionally annotate newly sequenced microbial genomes, a variety of experimental and computational methods are used. </plain></SENT>
+<SENT sid="18362" pm="."><plain>Integration of information from different sources is a powerful approach to enhance such annotation. </plain></SENT>
+<SENT sid="18363" pm="."><plain>Functional analysis of microbial genomes, necessary for downstream experiments, crucially depends on this annotation but it is hampered by the current lack of suitable information integration and exploration systems for microbial genomes. </plain></SENT>
+</text></SecTag></p></sec><sec sec-type="headed"><title><text><SENT sid="18364" pm="."><plain>Results </plain></SENT>
+</text></title><p><SecTag type="ABS"><text><SENT sid="18365" pm="."><plain>We developed a data warehouse system (INDIGO) that enables the integration of annotations for exploration and analysis of newly sequenced microbial genomes. </plain></SENT>
+<SENT sid="18366" pm="."><plain>INDIGO offers an opportunity to construct complex queries and combine annotations from multiple sources starting from genomic sequence to protein domain, gene ontology and pathway levels. </plain></SENT>
+<SENT sid="18367" pm="."><plain>This data warehouse is aimed at being populated with information from genomes of pure cultures and uncultured single cells of Red Sea bacteria and Archaea. </plain></SENT>
+<SENT sid="18368" pm="."><plain>Currently, INDIGO contains information from <italic>Salinisphaera shabanensis</italic>, <italic>Haloplasma contractile</italic>, and <italic>Halorhabdus tiamatea</italic> - extremophiles isolated from deep-sea anoxic brine lakes of the Red Sea. </plain></SENT>
+<SENT sid="18369" pm="."><plain>We provide examples of utilizing the system to gain new insights into specific aspects on the unique lifestyle and adaptations of these organisms to extreme environments. </plain></SENT>
+</text></SecTag></p></sec><sec sec-type="headed"><title><text><SENT sid="18370" pm="."><plain>Conclusions </plain></SENT>
+</text></title><p><SecTag type="ABS"><text><SENT sid="18371" pm="."><plain>We developed a data warehouse system, INDIGO, which enables comprehensive integration of information from various resources to be used for annotation, exploration and analysis of microbial genomes. </plain></SENT>
+<SENT sid="18372" pm="."><plain>It will be regularly updated and extended with new genomes. </plain></SENT>
+<SENT sid="18373" pm="."><plain>It is aimed to serve as a resource dedicated to the Red Sea microbes. </plain></SENT>
+<SENT sid="18374" pm="."><plain>In addition, through INDIGO, we provide our Automatic Annotation of Microbial Genomes (AAMG) pipeline. </plain></SENT>
+<SENT sid="18375" pm="."><plain>The INDIGO web server is freely available at <ext-link ext-link-type="uri" xlink:href="http://www.cbrc.kaust.edu.sa/indigo"><underline>http://www.cbrc.kaust.edu.sa/indigo</underline></ext-link>. </plain></SENT>
+</text></SecTag></p></sec></abstract><funding-group><funding-statement>IA and AAK were supported from the KAUST CBRC Base Fund of VBB. WBa and VBB were supported from the KAUST Base Funds of VBB. US was supported by the KAUST Base Fund of US. This study was partly supported by the Saudi Economic and Development Company (SEDCO) Research Excellence award to US and VBB. The funders had no role in study design, data collection and analysis, decision to publish, or preparation of the manuscript.</funding-statement></funding-group></article-meta></front><body><SecTag type="INTRO"><sec sec-type="introduction" id="s1"><title><text><SENT sid="18376" pm="."><plain>Introduction </plain></SENT>
+</text></title><p><text><SENT sid="18377" pm="."><plain>The Next Generation Sequencing (NGS) technologies substantially increased the throughput of genome sequencing [<xref rid="B1" ref-type="bibr">1</xref>-<xref rid="B3" ref-type="bibr">3</xref>]. </plain></SENT>
+<SENT sid="18378" pm="."><plain>Annotation of newly sequenced genomes requires a variety of experimental and computational methods [<xref rid="B4" ref-type="bibr">4</xref>,<xref rid="B5" ref-type="bibr">5</xref>], as well as integration of diverse biological information from multiple sources. </plain></SENT>
+<SENT sid="18379" pm="."><plain>Annotations stemming from information integration can be potentially used as a powerful approach in functional genomics that facilitates downstream experiments [<xref rid="B6" ref-type="bibr">6</xref>,<xref rid="B7" ref-type="bibr">7</xref>]. </plain></SENT>
+<SENT sid="18380" pm="."><plain>Data warehouses based on integrated information [<xref rid="B8" ref-type="bibr">8</xref>,<xref rid="B9" ref-type="bibr">9</xref>] are particularly useful as they open the possibility to explore content based on queries from diverse annotation attributes (e.g. genes, proteins, families, protein domains, ontologies, pathways). </plain></SENT>
+<SENT sid="18381" pm="."><plain>InterMine [<xref rid="B10" ref-type="bibr">10</xref>] is one of the frameworks that allows construction of such data warehouses. </plain></SENT>
+<SENT sid="18382" pm="."><plain>It has previously been applied to developing data warehouses of model genomes resulting in resources such as FlyMine, modMine, RatMine, YeastMine, etc. </plain></SENT>
+<SENT sid="18383" pm="."><plain>For more details on InterMine features and comparison to similar systems, see reference [<xref rid="B10" ref-type="bibr">10</xref>] and its supplementary materials. </plain></SENT>
+</text></p><p><text><SENT sid="18384" pm="."><plain>Here, we introduce INDIGO (<underline>In</underline>tegrated <underline>D</underline>ata Warehouse of M<underline>i</underline>crobial <underline>G</underline>en<underline>o</underline>mes), a data warehouse for microbial genomes we developed, which allows integration of annotations for exploration and analysis of microbial genomes. </plain></SENT>
+<SENT sid="18385" pm="."><plain>Currently, INDIGO contains information from three species: two bacterial species, <italic>Salinisphaera shabanensis</italic> [<xref rid="B11" ref-type="bibr">11</xref>] and <italic>Haloplasma contractile</italic> [<xref rid="B12" ref-type="bibr">12</xref>], and one archaeal species, <italic>Halorhabdus tiamatea</italic> [<xref rid="B13" ref-type="bibr">13</xref>], all isolated from deep-sea anoxic brine lakes of the Red Sea. </plain></SENT>
+<SENT sid="18386" pm="."><plain>INDIGO will be regularly updated and expanded by addition of new microbial genomes from Red Sea species. </plain></SENT>
+</text></p><p><text><SENT sid="18387" pm="."><plain>Our contributions in this study can be summarized as follows: </plain></SENT>
+</text></p><list list-type="bullet"><list-item><p><text><SENT sid="18388" pm="."><plain>Introduction of our Automatic Annotation of Microbial Genomes (AAMG). </plain></SENT>
+</text></p></list-item><list-item><p><text><SENT sid="18389" pm="."><plain>Automation of data warehouse development in a high throughput manner that minimizes the intermediate steps for processing of annotation results. </plain></SENT>
+</text></p></list-item><list-item><p><text><SENT sid="18390" pm="."><plain>Provision to public annotations of microbial genomes being sequenced at KAUST from studies of the Red Sea environment. </plain></SENT>
+<SENT sid="18391" pm="."><plain>The number of genomes will gradually increase. </plain></SENT>
+</text></p></list-item></list><sec id="s1.1"><title><text><SENT sid="18392" pm="."><plain>INDIGO data warehouse </plain></SENT>
+</text></title><p><text><SENT sid="18393" pm="."><plain>Generally, newly sequenced microbial genomes are submitted to archival databases such as GenBank [<xref rid="B14" ref-type="bibr">14</xref>] or EMBL [<xref rid="B15" ref-type="bibr">15</xref>] and later they become part of curated resources such as NCBI’s RefSeq database [<xref rid="B16" ref-type="bibr">16</xref>,<xref rid="B17" ref-type="bibr">17</xref>]. </plain></SENT>
+<SENT sid="18394" pm="."><plain>In order to help research on microbial genomes, a number of microbial data warehouses have been developed. </plain></SENT>
+<SENT sid="18395" pm="."><plain>A few examples are Integrated Microbial Genomes (IMG) [<xref rid="B18" ref-type="bibr">18</xref>], MicrobesOnline [<xref rid="B19" ref-type="bibr">19</xref>] Ensemble Genomes (<ext-link ext-link-type="uri" xlink:href="http://www.ensemblgenomes.org">www.ensemblgenomes.org</ext-link>) and MicroScope [<xref rid="B20" ref-type="bibr">20</xref>]. </plain></SENT>
+<SENT sid="18396" pm="."><plain>These publicly available data warehouses that contain microbial genomes information allow data browsing and comparison of genomes based on different sequence and functional features. </plain></SENT>
+<SENT sid="18397" pm="."><plain>On the other hand, these data warehouses are quite limited in capacity of query building and customized feature/attribute/entity list generation for more specific interrogation of information they contain. </plain></SENT>
+</text></p><p><text><SENT sid="18398" pm="."><plain>We developed INDIGO, a data warehouse for microbial genomes using the InterMine framework Smith et al. [<xref rid="B10" ref-type="bibr">10</xref>] that allows extensive query building, customized feature/attribute/entity list creation and enrichment analysis for Gene Ontology (GO) concepts, protein domains and various pathways. </plain></SENT>
+<SENT sid="18399" pm="."><plain>In order to populate INDIGO with information from a newly sequenced genome, one needs a draft or complete genome assembly and functionally annotated the assembled genome. </plain></SENT>
+<SENT sid="18400" pm="."><plain>The INDIGO deployment requires the following five functions, namely, 1/ definition of a genomic data model of entities to be stored, 2/ data validation and population of the Postgres database, 3/ data integration, 4/ data post-processing, and 5/ web-application development. </plain></SENT>
+<SENT sid="18401" pm="."><plain>These five functions are synchronized through a project xml file that stores the location of different datasets, type of data sources and standard InterMine post-processing steps. </plain></SENT>
+</text></p></sec></sec></SecTag><SecTag type="RESULTS,DISCUSS"><sec id="s2"><title><text><SENT sid="18402" pm="."><plain>Results and Discussion </plain></SENT>
+</text></title><sec id="s2.1"><title><text><SENT sid="18403" pm="."><plain>Genome assembly </plain></SENT>
+</text></title><p><text><SENT sid="18404" pm="."><plain>In our case, we reassembled previously reported [<xref rid="B11" ref-type="bibr">11</xref>-<xref rid="B13" ref-type="bibr">13</xref>], three genomes based on the NGS-generated data available from Roche and Illumina sequencers and using Roche 454 Newbler assembler (<ext-link ext-link-type="uri" xlink:href="http://www.ensemblgenomes.org">www.454.com</ext-link>) with scaffolding option turned on in addition to using SOAPdenovo [<xref rid="B21" ref-type="bibr">21</xref>] and Velvet [<xref rid="B22" ref-type="bibr">22</xref>]. </plain></SENT>
+<SENT sid="18405" pm="."><plain>Furthermore, we use CISA [<xref rid="B23" ref-type="bibr">23</xref>] to obtain consensus assemblies. </plain></SENT>
+<SENT sid="18406" pm="."><plain>We improved the resulting scaffolds using SSPACE [<xref rid="B24" ref-type="bibr">24</xref>], GapFiller [<xref rid="B25" ref-type="bibr">25</xref>] and GapCloser [<xref rid="B21" ref-type="bibr">21</xref>]. </plain></SENT>
+<SENT sid="18407" pm="."><plain>Applying this procedure significantly improved the assemblies by reducing the number of contigs, improved N50 parameter of all three genomes. </plain></SENT>
+<SENT sid="18408" pm="."><plain>Consequently, the redundancy in the contigs observed previously using minimus [<xref rid="B26" ref-type="bibr">26</xref>] is now resolved. </plain></SENT>
+<SENT sid="18409" pm="."><plain>These re-assembled contigs and associated annotations are deposited to NCBI with accession numbers <underline>AFNU00000000</underline>, <underline>AFNV00000000</underline> and <underline>AFNT00000000</underline> for HLPCO, SSPSH and HLRTI strains, respectively. </plain></SENT>
+</text></p></sec><sec id="s2.2"><title><text><SENT sid="18410" pm="."><plain>Genome annotation </plain></SENT>
+</text></title><p><text><SENT sid="18411" pm="."><plain>In our study, we performed genome annotation through a series of steps described in a workflow depicted in <xref ref-type="fig" rid="pone-0082210-g001">Figure 1</xref>. </plain></SENT>
+<SENT sid="18412" pm="."><plain>First, genomic sequences are passed through fastaclean (Exonerate package) [<xref rid="B27" ref-type="bibr">27</xref>]. </plain></SENT>
+<SENT sid="18413" pm="."><plain>Before the prediction of coding regions, the genome is masked for RNA using RNAmmer [<xref rid="B28" ref-type="bibr">28</xref>]and tRNAscanSE [<xref rid="B29" ref-type="bibr">29</xref>]. </plain></SENT>
+<SENT sid="18414" pm="."><plain>Predicted 16S rRNA genes are searched for in the NCBI prokaryotic 16S rRNA gene database to retrieve related taxonomic information that is later used in selecting the best BLAST hits. </plain></SENT>
+<SENT sid="18415" pm="."><plain>Open Reading Frame (ORF) prediction is performed using Prodigal [<xref rid="B30" ref-type="bibr">30</xref>], GeneMark [<xref rid="B31" ref-type="bibr">31</xref>] and MetageneAnnotator [<xref rid="B32" ref-type="bibr">32</xref>]. </plain></SENT>
+<SENT sid="18416" pm="."><plain>A series of BLAST [<xref rid="B33" ref-type="bibr">33</xref>,<xref rid="B34" ref-type="bibr">34</xref>] searches are then performed against the GenBank non-redundant (nr) [<xref rid="B14" ref-type="bibr">14</xref>], UniProt [<xref rid="B35" ref-type="bibr">35</xref>] and Kyoto Encyclopedia of Genes and Genomes (KEGG, [<xref rid="B36" ref-type="bibr">36</xref>]) databases including Reverse Position Specific (RPS) [<xref rid="B37" ref-type="bibr">37</xref>] searches against Conserved Domain Databases (especially COG and Prokaryotic Protein Clusters (PRK)). </plain></SENT>
+<SENT sid="18417" pm="."><plain>KEGG ortholog IDs are used to map relevant pathways and to display their presence on KEGG pathway maps. </plain></SENT>
+<SENT sid="18418" pm="."><plain>Interproscan analysis is carried out for GO terms and protein signature domains [<xref rid="B38" ref-type="bibr">38</xref>,<xref rid="B39" ref-type="bibr">39</xref>]. </plain></SENT>
+<SENT sid="18419" pm="."><plain>A check for annotation results is carried out using NCBI’s tbl2asn and errors are manually corrected. </plain></SENT>
+<SENT sid="18420" pm="."><plain>To verify origin of each contig/genomic sequence, a global scan of BLAST results of all genes is carried out and Globally Best Taxonomies (GBT) are assigned based on species from high to low ranked top hits. </plain></SENT>
+<SENT sid="18421" pm="."><plain>Ties are broken based on the higher to lower total length of alignment reported in BLAST results by each of the top scoring species. </plain></SENT>
+</text></p><SecTag type="FIG"><fig id="pone-0082210-g001" orientation="portrait" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0082210.g001</object-id><label>Figure 1</label><caption><title><text><SENT sid="18422" pm="."><plain>Workflow of annotation process and data warehousing. </plain></SENT>
+</text></title><p><text><SENT sid="18423" pm="."><plain>Here, the section marked (A) shows steps in the annotation process. </plain></SENT>
+<SENT sid="18424" pm="."><plain>Section (B) shows a PERL based conversion of annotations into an XML schema - validated using the class attributes and data types defined in the genomic model, and finally, section (C) shows the process of data warehouse development steps. </plain></SENT>
+</text></p></caption><graphic xlink:href="pone.0082210.g001"/></fig></SecTag></sec><sec id="s2.3"><title><text><SENT sid="18425" pm="."><plain>Benchmarking </plain></SENT>
+</text></title><p><text><SENT sid="18426" pm="."><plain>Recently, Triplet et al. [<xref rid="B40" ref-type="bibr">40</xref>] thoroughly compared and benchmarked four data warehousing systems namely BioMart [<xref rid="B41" ref-type="bibr">41</xref>], BioXRT (mentioned in [<xref rid="B40" ref-type="bibr">40</xref>]), InterMine [<xref rid="B10" ref-type="bibr">10</xref>] and Pathway Tools [<xref rid="B42" ref-type="bibr">42</xref>] in a number of aspects covering accuracy, their computational requirements and development efforts. </plain></SENT>
+<SENT sid="18427" pm="."><plain>In that study, InterMine and Pathway Tools superseded other systems. </plain></SENT>
+<SENT sid="18428" pm="."><plain>InterMine obtained the highest score, where five different aspects of data retrieval for genomics research were considered, such as aggregation, algebra, graph, data integration and sequence handling. </plain></SENT>
+<SENT sid="18429" pm="."><plain>We developed INDIGO system using the InterMine framework, but we extended it by the following features not available in InterMine. </plain></SENT>
+</text></p><list list-type="simple"><list-item><label>1</label><p><text><SENT sid="18430" pm="."><plain>Development of an automatic high throughput data warehousing pipeline to process customized annotation and their validation from newly sequenced microbial genomes. </plain></SENT>
+<SENT sid="18431" pm="."><plain>As an example, we annotated and processed annotations from three extremophile genomes from Red Sea and added to INDIGO for public data mining. </plain></SENT>
+</text></p></list-item><list-item><label>2</label><p><text><SENT sid="18432" pm="."><plain>Addition of Genome Browser functionality. </plain></SENT>
+</text></p></list-item><list-item><label>3</label><p><text><SENT sid="18433" pm="."><plain>Addition of BLAST interface to allow comparison of external user specified sequence data to INDIGO dataset and integration of BLAST results to either explore hit genes annotations in the INDIGO data warehouse or the auxiliary genome browser. </plain></SENT>
+</text></p></list-item><list-item><label>4</label><p><text><SENT sid="18434" pm="."><plain>We made available special hyperlinks for KEGG assigned INDIGO pathway gene sets to be shown on publication quality pathway diagrams at KEGG website. </plain></SENT>
+</text></p></list-item><list-item><label>5</label><p><text><SENT sid="18435" pm="."><plain>and more importantly, we made available Automatic Annotation of Microbial Genomes (AAMG) pipeline for public use through the INDIGO server. </plain></SENT>
+</text></p></list-item></list><p><text><SENT sid="18436" pm="."><plain>We compared INDIGO system to InterMine and few other microbial genome data warehouses such as Integrated Microbial Genomes (IMG) [<xref rid="B18" ref-type="bibr">18</xref>], MicrobesOnline [<xref rid="B19" ref-type="bibr">19</xref>] and MicroScope [<xref rid="B20" ref-type="bibr">20</xref>]. <xref rid="pone-0082210-t001" ref-type="table">Table 1</xref> shows the list of features compared as being present or not in a data warehouse. </plain></SENT>
+<SENT sid="18437" pm="."><plain>InterMine is also included in the comparison to show what are the differences between its basic framework and our INDIGO system. </plain></SENT>
+<SENT sid="18438" pm="."><plain>This comparison clearly shows the advantages of the INDIGO system complementing InterMine and providing more control to the user in integrating annotation information that is lacking in other microbial data warehouses. </plain></SENT>
+<SENT sid="18439" pm="."><plain>MicroScope microbial genome annotations data warehouse differs from INDIGO by providing a scope for manual annotation for each and every gene individually. </plain></SENT>
+<SENT sid="18440" pm="."><plain>However, it thus requires a lot of expert manpower to deal with increasing amount newly sequenced microbial genome data. </plain></SENT>
+<SENT sid="18441" pm="."><plain>MicroScope also has a number of similar features to INDIGO, but InterMine-based INDIGO system takes lead in providing several automated and powerful routes for user-defined data integration, particularly keyword, query builder or BLAST based user-controlled gene lists making, which lead to statistically robust GO, pathway or protein domain enrichment analyses. </plain></SENT>
+</text></p><SecTag type="TABLE"><table-wrap id="pone-0082210-t001" orientation="portrait" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0082210.t001</object-id><label>Table 1</label><caption><title><text><SENT sid="18442" pm="."><plain>A comparison of features from different microbial data warehouses. </plain></SENT>
+</text></title></caption><table frame="hsides" rules="groups" cellpadding="2"><colgroup span="1"><col span="1"/><col span="1"/><col span="1"/><col span="1"/><col span="1"/><col span="1"/></colgroup><thead><tr><th rowspan="1" colspan="1"/><th rowspan="1" colspan="1"><text><SENT sid="18443" pm="."><plain>INDIGO </plain></SENT>
+</text></th><th rowspan="1" colspan="1"><text><SENT sid="18444" pm="."><plain>InterMine </plain></SENT>
+</text></th><th rowspan="1" colspan="1"><text><SENT sid="18445" pm="."><plain>Integrated Microbial Genomes </plain></SENT>
+</text></th><th rowspan="1" colspan="1"><text><SENT sid="18446" pm="."><plain>Microbes Online </plain></SENT>
+</text></th><th rowspan="1" colspan="1"><text><SENT sid="18447" pm="."><plain>MicroScope </plain></SENT>
+</text></th></tr></thead><tbody><tr><td rowspan="1" colspan="1"><text><SENT sid="18448" pm="."><plain><bold>Basic Data</bold> </plain></SENT>
+</text></td><td rowspan="1" colspan="1"/><td rowspan="1" colspan="1"/><td rowspan="1" colspan="1"/><td rowspan="1" colspan="1"/><td rowspan="1" colspan="1"/></tr><tr><td rowspan="1" colspan="1"><text><SENT sid="18449" pm="."><plain>Chromosome/Contigs </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18450" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18451" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18452" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18453" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18454" pm="."><plain>Yes </plain></SENT>
+</text></td></tr><tr><td rowspan="1" colspan="1"><text><SENT sid="18455" pm="."><plain>Genes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18456" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18457" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18458" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18459" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18460" pm="."><plain>Yes </plain></SENT>
+</text></td></tr><tr><td rowspan="1" colspan="1"><text><SENT sid="18461" pm="."><plain>Proteins </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18462" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18463" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18464" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18465" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18466" pm="."><plain>Yes </plain></SENT>
+</text></td></tr><tr><td rowspan="1" colspan="1"><text><SENT sid="18467" pm="."><plain>Expression data </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18468" pm="."><plain>No </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18469" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18470" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18471" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18472" pm="."><plain>Yes </plain></SENT>
+</text></td></tr><tr><td rowspan="1" colspan="1"><text><SENT sid="18473" pm="."><plain><bold>Functional genomics</bold> </plain></SENT>
+</text></td><td rowspan="1" colspan="1"/><td rowspan="1" colspan="1"/><td rowspan="1" colspan="1"/><td rowspan="1" colspan="1"/><td rowspan="1" colspan="1"/></tr><tr><td rowspan="1" colspan="1"><text><SENT sid="18474" pm="."><plain>Gene Ontology </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18475" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18476" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18477" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18478" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18479" pm="."><plain>Yes </plain></SENT>
+</text></td></tr><tr><td rowspan="1" colspan="1"><text><SENT sid="18480" pm="."><plain>KEGG Pathways </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18481" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18482" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18483" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18484" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18485" pm="."><plain>Yes </plain></SENT>
+</text></td></tr><tr><td rowspan="1" colspan="1"><text><SENT sid="18486" pm="."><plain>Interpro Domains </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18487" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18488" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18489" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18490" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18491" pm="."><plain>Yes </plain></SENT>
+</text></td></tr><tr><td rowspan="1" colspan="1"><text><SENT sid="18492" pm="."><plain>Cross references </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18493" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18494" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18495" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18496" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18497" pm="."><plain>Yes </plain></SENT>
+</text></td></tr><tr><td rowspan="1" colspan="1"><text><SENT sid="18498" pm="."><plain><bold>Data Integration and Functional analysis</bold> </plain></SENT>
+</text></td><td rowspan="1" colspan="1"/><td rowspan="1" colspan="1"/><td rowspan="1" colspan="1"/><td rowspan="1" colspan="1"/><td rowspan="1" colspan="1"/></tr><tr><td rowspan="1" colspan="1"><text><SENT sid="18499" pm="."><plain>Showing assigned KEGG pathway diagrams </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18500" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18501" pm="."><plain>No </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18502" pm="."><plain>No </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18503" pm="."><plain>No </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18504" pm="."><plain>No </plain></SENT>
+</text></td></tr><tr><td rowspan="1" colspan="1"><text><SENT sid="18505" pm="."><plain>Individual Feature (Gene/Protein/Pathway) list generation </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18506" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18507" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18508" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18509" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18510" pm="."><plain>Yes </plain></SENT>
+</text></td></tr><tr><td rowspan="1" colspan="1"><text><SENT sid="18511" pm="."><plain>Multiple Feature (Gene/Protein/Pathway) list generation </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18512" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18513" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18514" pm="."><plain>No </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18515" pm="."><plain>Yes, limited </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18516" pm="."><plain>Yes </plain></SENT>
+</text></td></tr><tr><td rowspan="1" colspan="1"><text><SENT sid="18517" pm="."><plain>Keyword search </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18518" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18519" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18520" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18521" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18522" pm="."><plain>Yes </plain></SENT>
+</text></td></tr><tr><td rowspan="1" colspan="1"><text><SENT sid="18523" pm="."><plain>Keyword search against all attributes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18524" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18525" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18526" pm="."><plain>No </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18527" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18528" pm="."><plain>No </plain></SENT>
+</text></td></tr><tr><td rowspan="1" colspan="1"><text><SENT sid="18529" pm="."><plain>Filter keyword search results based on categories </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18530" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18531" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18532" pm="."><plain>No </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18533" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18534" pm="."><plain>Yes </plain></SENT>
+</text></td></tr><tr><td rowspan="1" colspan="1"><text><SENT sid="18535" pm="."><plain>Keyword search for feature list generation </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18536" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18537" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18538" pm="."><plain>No </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18539" pm="."><plain>No </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18540" pm="."><plain>Yes </plain></SENT>
+</text></td></tr><tr><td rowspan="1" colspan="1"><text><SENT sid="18541" pm="."><plain>BLAST search to feature list generation </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18542" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18543" pm="."><plain>No </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18544" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18545" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18546" pm="."><plain>Yes </plain></SENT>
+</text></td></tr><tr><td rowspan="1" colspan="1"><text><SENT sid="18547" pm="."><plain>Query builder to user selected all/multiple feature list generation </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18548" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18549" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18550" pm="."><plain>No </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18551" pm="."><plain>No </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18552" pm="."><plain>Yes </plain></SENT>
+</text></td></tr><tr><td rowspan="1" colspan="1"><text><SENT sid="18553" pm="."><plain>Save / share queries </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18554" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18555" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18556" pm="."><plain>No </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18557" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18558" pm="."><plain>Yes </plain></SENT>
+</text></td></tr><tr><td rowspan="1" colspan="1"><text><SENT sid="18559" pm="."><plain>Feature list analysis; GO enrichment </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18560" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18561" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18562" pm="."><plain>No </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18563" pm="."><plain>No </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18564" pm="."><plain>No </plain></SENT>
+</text></td></tr><tr><td rowspan="1" colspan="1"><text><SENT sid="18565" pm="."><plain>Feature list analysis; Pathway enrichment </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18566" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18567" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18568" pm="."><plain>No </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18569" pm="."><plain>No </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18570" pm="."><plain>No </plain></SENT>
+</text></td></tr><tr><td rowspan="1" colspan="1"><text><SENT sid="18571" pm="."><plain>Feature list analysis; Protein enrichment </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18572" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18573" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18574" pm="."><plain>No </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18575" pm="."><plain>No </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18576" pm="."><plain>No </plain></SENT>
+</text></td></tr><tr><td rowspan="1" colspan="1"><text><SENT sid="18577" pm="."><plain>Adding additional attribute to generated lists </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18578" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18579" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18580" pm="."><plain>No </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18581" pm="."><plain>No </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18582" pm="."><plain>No </plain></SENT>
+</text></td></tr><tr><td rowspan="1" colspan="1"><text><SENT sid="18583" pm="."><plain>List summary functions </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18584" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18585" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18586" pm="."><plain>No </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18587" pm="."><plain>No </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18588" pm="."><plain>No </plain></SENT>
+</text></td></tr><tr><td rowspan="1" colspan="1"><text><SENT sid="18589" pm="."><plain>List filtering functions </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18590" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18591" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18592" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18593" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18594" pm="."><plain>Limited </plain></SENT>
+</text></td></tr><tr><td rowspan="1" colspan="1"><text><SENT sid="18595" pm="."><plain>List export </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18596" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18597" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18598" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18599" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18600" pm="."><plain>Yes </plain></SENT>
+</text></td></tr><tr><td rowspan="1" colspan="1"><text><SENT sid="18601" pm="."><plain>Save / share lists </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18602" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18603" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18604" pm="."><plain>No </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18605" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18606" pm="."><plain>Yes </plain></SENT>
+</text></td></tr><tr><td rowspan="1" colspan="1"><text><SENT sid="18607" pm="."><plain>Genome Browser </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18608" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18609" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18610" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18611" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18612" pm="."><plain>Yes </plain></SENT>
+</text></td></tr><tr><td rowspan="1" colspan="1"><text><SENT sid="18613" pm="."><plain><bold>Comparative Genomics</bold> </plain></SENT>
+</text></td><td rowspan="1" colspan="1"/><td rowspan="1" colspan="1"/><td rowspan="1" colspan="1"/><td rowspan="1" colspan="1"/><td rowspan="1" colspan="1"/></tr><tr><td rowspan="1" colspan="1"><text><SENT sid="18614" pm="."><plain>Compare different genomic features e.g.via keyword search </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18615" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18616" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18617" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18618" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18619" pm="."><plain>Yes </plain></SENT>
+</text></td></tr><tr><td rowspan="1" colspan="1"><text><SENT sid="18620" pm="."><plain>Compare sequences via BLAST </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18621" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18622" pm="."><plain>No </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18623" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18624" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18625" pm="."><plain>Yes </plain></SENT>
+</text></td></tr><tr><td rowspan="1" colspan="1"><text><SENT sid="18626" pm="."><plain>Compare genomes based on other tools </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18627" pm="."><plain>No </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18628" pm="."><plain>No </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18629" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18630" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18631" pm="."><plain>Yes </plain></SENT>
+</text></td></tr><tr><td rowspan="1" colspan="1"><text><SENT sid="18632" pm="."><plain><bold>Data access</bold> </plain></SENT>
+</text></td><td rowspan="1" colspan="1"/><td rowspan="1" colspan="1"/><td rowspan="1" colspan="1"/><td rowspan="1" colspan="1"/><td rowspan="1" colspan="1"/></tr><tr><td rowspan="1" colspan="1"><text><SENT sid="18633" pm="."><plain>Web server based data access </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18634" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18635" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18636" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18637" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18638" pm="."><plain>Yes </plain></SENT>
+</text></td></tr><tr><td rowspan="1" colspan="1"><text><SENT sid="18639" pm="."><plain>Remote access via API (PERL, JAVA, RUBY, PYTHON) </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18640" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18641" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18642" pm="."><plain>No </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18643" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18644" pm="."><plain>No </plain></SENT>
+</text></td></tr><tr><td rowspan="1" colspan="1"><text><SENT sid="18645" pm="."><plain>Bulk Download </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18646" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18647" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18648" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18649" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18650" pm="."><plain>Yes </plain></SENT>
+</text></td></tr><tr><td rowspan="1" colspan="1"><text><SENT sid="18651" pm="."><plain>User selected single feature list based download </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18652" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18653" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18654" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18655" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18656" pm="."><plain>Yes </plain></SENT>
+</text></td></tr><tr><td rowspan="1" colspan="1"><text><SENT sid="18657" pm="."><plain>User integrated feature list based download </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18658" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18659" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18660" pm="."><plain>No </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18661" pm="."><plain>No </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18662" pm="."><plain>Yes, limited. </plain></SENT>
+</text></td></tr><tr><td rowspan="1" colspan="1"><text><SENT sid="18663" pm="."><plain><bold>Genome Annotation</bold> </plain></SENT>
+</text></td><td rowspan="1" colspan="1"/><td rowspan="1" colspan="1"/><td rowspan="1" colspan="1"/><td rowspan="1" colspan="1"/><td rowspan="1" colspan="1"/></tr><tr><td rowspan="1" colspan="1"><text><SENT sid="18664" pm="."><plain>Public microbial genome annotation </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18665" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18666" pm="."><plain>No </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18667" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18668" pm="."><plain>Limited, uses rast and takes six months </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18669" pm="."><plain>Annotation_editor (manual) </plain></SENT>
+</text></td></tr><tr><td rowspan="1" colspan="1"><text><SENT sid="18670" pm="."><plain>User genome annotation job history </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18671" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18672" pm="."><plain>No </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18673" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18674" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18675" pm="."><plain>Manual </plain></SENT>
+</text></td></tr><tr><td rowspan="1" colspan="1"><text><SENT sid="18676" pm="."><plain><bold>Genome Annotation features</bold> </plain></SENT>
+</text></td><td rowspan="1" colspan="1"/><td rowspan="1" colspan="1"/><td rowspan="1" colspan="1"/><td rowspan="1" colspan="1"/><td rowspan="1" colspan="1"/></tr><tr><td rowspan="1" colspan="1"><text><SENT sid="18677" pm="."><plain>operon finding </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18678" pm="."><plain>No </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18679" pm="."><plain>No </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18680" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18681" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18682" pm="."><plain>Yes </plain></SENT>
+</text></td></tr><tr><td rowspan="1" colspan="1"><text><SENT sid="18683" pm="."><plain>promoter/terminator finding </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18684" pm="."><plain>No </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18685" pm="."><plain>No </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18686" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18687" pm="."><plain>No </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18688" pm="."><plain>Yes </plain></SENT>
+</text></td></tr><tr><td rowspan="1" colspan="1"><text><SENT sid="18689" pm="."><plain>RNA detection (rRNA/tRNA) </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18690" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18691" pm="."><plain>No </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18692" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18693" pm="."><plain>No </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18694" pm="."><plain>Yes </plain></SENT>
+</text></td></tr><tr><td rowspan="1" colspan="1"><text><SENT sid="18695" pm="."><plain>Protein gene prediction (multiple methods) </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18696" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18697" pm="."><plain>No </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18698" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18699" pm="."><plain>No </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18700" pm="."><plain>Yes </plain></SENT>
+</text></td></tr><tr><td rowspan="1" colspan="1"><text><SENT sid="18701" pm="."><plain>RNA vs. Protein overlap resolution </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18702" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18703" pm="."><plain>No </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18704" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18705" pm="."><plain>No </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18706" pm="."><plain>Yes </plain></SENT>
+</text></td></tr><tr><td rowspan="1" colspan="1"><text><SENT sid="18707" pm="."><plain>HPC BLAST for Proteins to UniProt </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18708" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18709" pm="."><plain>No </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18710" pm="."><plain>No </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18711" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18712" pm="."><plain>Yes </plain></SENT>
+</text></td></tr><tr><td rowspan="1" colspan="1"><text><SENT sid="18713" pm="."><plain>HPC BLAST for Proteins to NCBI NR </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18714" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18715" pm="."><plain>No </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18716" pm="."><plain>No </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18717" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18718" pm="."><plain>No </plain></SENT>
+</text></td></tr><tr><td rowspan="1" colspan="1"><text><SENT sid="18719" pm="."><plain>HPC BLAST for Proteins to NCBI COG </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18720" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18721" pm="."><plain>No </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18722" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18723" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18724" pm="."><plain>Yes </plain></SENT>
+</text></td></tr><tr><td rowspan="1" colspan="1"><text><SENT sid="18725" pm="."><plain>HPC BLAST for Proteins to NCBI CDD </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18726" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18727" pm="."><plain>No </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18728" pm="."><plain>No </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18729" pm="."><plain>No </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18730" pm="."><plain>No </plain></SENT>
+</text></td></tr><tr><td rowspan="1" colspan="1"><text><SENT sid="18731" pm="."><plain>HPC BLAST for Proteins to KEGG </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18732" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18733" pm="."><plain>No </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18734" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18735" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18736" pm="."><plain>Yes </plain></SENT>
+</text></td></tr><tr><td rowspan="1" colspan="1"><text><SENT sid="18737" pm="."><plain>HPC Interproscan domain finding for Proteins </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18738" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18739" pm="."><plain>No </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18740" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18741" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18742" pm="."><plain>Yes </plain></SENT>
+</text></td></tr><tr><td rowspan="1" colspan="1"><text><SENT sid="18743" pm="."><plain>Global Best Taxonomy (GBT) distribution analysis </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18744" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18745" pm="."><plain>No </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18746" pm="."><plain>No </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18747" pm="."><plain>No </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18748" pm="."><plain>No </plain></SENT>
+</text></td></tr><tr><td rowspan="1" colspan="1"><text><SENT sid="18749" pm="."><plain>Annotation data integration to GFF format </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18750" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18751" pm="."><plain>No </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18752" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18753" pm="."><plain>No </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18754" pm="."><plain>No </plain></SENT>
+</text></td></tr><tr><td rowspan="1" colspan="1"><text><SENT sid="18755" pm="."><plain>Annotation data integration to GenBank format </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18756" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18757" pm="."><plain>No </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18758" pm="."><plain>No </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18759" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18760" pm="."><plain>Yes </plain></SENT>
+</text></td></tr><tr><td rowspan="1" colspan="1"><text><SENT sid="18761" pm="."><plain>Annotation data integration to TBL format </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18762" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18763" pm="."><plain>No </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18764" pm="."><plain>No </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18765" pm="."><plain>No </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18766" pm="."><plain>Yes </plain></SENT>
+</text></td></tr><tr><td rowspan="1" colspan="1"><text><SENT sid="18767" pm="."><plain>Annotation data checking using tbl2asn </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18768" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18769" pm="."><plain>No </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18770" pm="."><plain>No </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18771" pm="."><plain>No </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18772" pm="."><plain>No </plain></SENT>
+</text></td></tr><tr><td rowspan="1" colspan="1"><text><SENT sid="18773" pm="."><plain>Annotation data process to NCBI sqn submission format </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18774" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18775" pm="."><plain>No </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18776" pm="."><plain>No </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18777" pm="."><plain>No </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18778" pm="."><plain>No </plain></SENT>
+</text></td></tr><tr><td rowspan="1" colspan="1"><text><SENT sid="18779" pm="."><plain>Annotation data packing into validated xml for data warehouse </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18780" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18781" pm="."><plain>No </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18782" pm="."><plain>No </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18783" pm="."><plain>No </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18784" pm="."><plain>No </plain></SENT>
+</text></td></tr><tr><td rowspan="1" colspan="1"><text><SENT sid="18785" pm="."><plain>Hierarchical classification of COG annotations and visualization </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18786" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18787" pm="."><plain>No </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18788" pm="."><plain>No </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18789" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18790" pm="."><plain>No </plain></SENT>
+</text></td></tr><tr><td rowspan="1" colspan="1"><text><SENT sid="18791" pm="."><plain>Hierarchical classification of GO annotations and visualization </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18792" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18793" pm="."><plain>No </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18794" pm="."><plain>No </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18795" pm="."><plain>No </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18796" pm="."><plain>No </plain></SENT>
+</text></td></tr><tr><td rowspan="1" colspan="1"><text><SENT sid="18797" pm="."><plain>Hierarchical classification of GBT annotations and visualization </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18798" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18799" pm="."><plain>No </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18800" pm="."><plain>No </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18801" pm="."><plain>No </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18802" pm="."><plain>No </plain></SENT>
+</text></td></tr><tr><td rowspan="1" colspan="1"><text><SENT sid="18803" pm="."><plain>Hierarchical classification of InterPro domains annotations and visualization </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18804" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18805" pm="."><plain>No </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18806" pm="."><plain>No </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18807" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18808" pm="."><plain>Yes </plain></SENT>
+</text></td></tr><tr><td rowspan="1" colspan="1"><text><SENT sid="18809" pm="."><plain>Hierarchical classification of ALL annotations and visualization </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18810" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18811" pm="."><plain>No </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18812" pm="."><plain>No </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18813" pm="."><plain>No </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18814" pm="."><plain>No </plain></SENT>
+</text></td></tr><tr><td rowspan="1" colspan="1"><text><SENT sid="18815" pm="."><plain>Immediate access to all data files and visualizations </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18816" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18817" pm="."><plain>No </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18818" pm="."><plain>No, sso accounts </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18819" pm="."><plain>Yes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18820" pm="."><plain>Yes </plain></SENT>
+</text></td></tr></tbody></table></table-wrap></SecTag></sec><sec id="s2.4"><title><text><SENT sid="18821" pm="."><plain>Benchmarking genomic annotations </plain></SENT>
+</text></title><p><text><SENT sid="18822" pm="."><plain>To assess the quality and volume of annotations produced using our AAMG pipeline, we compare AAMG annotation results based on three publicly available datasets. </plain></SENT>
+<SENT sid="18823" pm="."><plain>Two of these datasets, namely <italic>Escherichia coli</italic> (<italic>E. coli</italic>) K12 strain and <italic>E. coli</italic> TY2482 strain, were recently considered in benchmarking two different annotation pipelines [<xref rid="B43" ref-type="bibr">43</xref>]. </plain></SENT>
+<SENT sid="18824" pm="."><plain>The third dataset is a very small genome, <italic>Candidatus</italic> Carsonella <italic>ruddii</italic> DC[<xref rid="B44" ref-type="bibr">44</xref>]. </plain></SENT>
+</text></p><p><text><SENT sid="18825" pm="."><plain>Recent outbreak of <italic>E. coli</italic> in Germany triggered the sequencing of <italic>E. coli</italic> O104 [<xref rid="B45" ref-type="bibr">45</xref>], the cause of enterohemorrhagic diarrhea. </plain></SENT>
+<SENT sid="18826" pm="."><plain>Sequencing was carried out in BGI (the strain TY2482) and multiple groups annotated this sequence. </plain></SENT>
+<SENT sid="18827" pm="."><plain>The annotation produced by AAMG pipeline for <italic>E. coli</italic> TY2482 is compared with annotations available from BG7 [<xref rid="B43" ref-type="bibr">43</xref>]. </plain></SENT>
+<SENT sid="18828" pm="."><plain>BG7 pipeline compared the annotations considering an annotations set available from Broad Institute website, <ext-link ext-link-type="uri" xlink:href="http://www.broadinstitute.org/annotation/genome/ecoli_o104_h4/assets/ecoli_ty_2482_bgi.gbk"><underline>http://www.broadinstitute.org/annotation/genome/Ecoli_O104_H4/assets/Ecoli_TY_2482_BGI.gbk</underline></ext-link>. </plain></SENT>
+<SENT sid="18829" pm="."><plain>Results depicted in <xref ref-type="fig" rid="pone-0082210-g002">Figure 2</xref>, show that we achieve comparable performance in gene calls. </plain></SENT>
+<SENT sid="18830" pm="."><plain>Furthermore, considering the annotation in assigning gene product names, our annotation shows a significant increase in non-hypothetical products as compared to Broad Institute annotation and BG7. </plain></SENT>
+</text></p><SecTag type="FIG"><fig id="pone-0082210-g002" orientation="portrait" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0082210.g002</object-id><label>Figure 2</label><caption><title><text><SENT sid="18831" pm="."><plain>Annotation comparison for <italic>E. coli</italic> O104 (TY2482) among AAMG pipeline, BG7 and reference annotation set from Broad Institute. </plain></SENT>
+</text></title><p><text><SENT sid="18832" pm="."><plain>Regarding the CDS annotation AAMG ranks second (with only 2 CDS region less annotated than BG7), while in annotation of orphan (hypothetical) CDS products (the less the better) and in annotation of functional (non-hypothetical) CDS products (the more the better) AAMG performs the best. </plain></SENT>
+</text></p></caption><graphic xlink:href="pone.0082210.g002"/></fig></SecTag><p><text><SENT sid="18833" pm="."><plain>BG7 compared its <italic>E. coli</italic> O104 (TY2482) annotation results to RAST-based annotations considering Broad Institute annotation as a gold standard. </plain></SENT>
+<SENT sid="18834" pm="."><plain>It was reported for <italic>E. coli</italic> TY2482 assembly version 4 [<xref rid="B43" ref-type="bibr">43</xref>] that BG7 predicted 5210 CDS genes, 163 false negatives and 271 false positives, while the number of genes obtained with RAST was 5446 with 116 false negatives and 321 false positives. </plain></SENT>
+<SENT sid="18835" pm="."><plain>We report AAMG-based annotation of <italic>E. coli</italic> TY2482 (see Supplementary materials) showing about the same number of genes predicted as BG7, but with higher numbers of functional (non-hypothetical) products and smaller number of orphan (hypothetical) genes when compared to the Broad Institute reference annotations. </plain></SENT>
+</text></p><p><text><SENT sid="18836" pm="."><plain>In addition to <italic>E. coli</italic> O104 (TY2482), we also compared our results in comparison to existing annotations in NCBI for E. coli K12 and another much smaller genome, <italic>Candidatus</italic> Carsonella <italic>ruddii</italic> DC. </plain></SENT>
+<SENT sid="18837" pm="."><plain>Results show that our annotation pipeline is able to minimize hypothetical genes names through scanning multiple full protein and domain databases. </plain></SENT>
+<SENT sid="18838" pm="."><plain>Our gene calls are also very close to the existing annotations. <xref rid="pone-0082210-t002" ref-type="table">Table 2</xref> shows this annotation comparison. </plain></SENT>
+</text></p><SecTag type="TABLE"><table-wrap id="pone-0082210-t002" orientation="portrait" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0082210.t002</object-id><label>Table 2</label><caption><title><text><SENT sid="18839" pm="."><plain>Results of AAMG Annotations compared with NCBI or BROAD institute sets. </plain></SENT>
+</text></title></caption><table frame="hsides" rules="groups"><colgroup span="1"><col span="1"/><col span="1"/><col span="1"/><col span="1"/><col span="1"/><col span="1"/><col span="1"/></colgroup><thead><tr><th rowspan="1" colspan="1"/><th colspan="2" rowspan="1"><text><SENT sid="18840" pm="."><plain><italic>E. coli</italic> K12 W3110<hr/> </plain></SENT>
+</text></th><th colspan="2" rowspan="1"><text><SENT sid="18841" pm="."><plain><italic>E. coli</italic> TY2482<hr/> </plain></SENT>
+</text></th><th colspan="2" rowspan="1"><text><SENT sid="18842" pm="."><plain><italic>C. ruddii</italic> DC<hr/> </plain></SENT>
+</text></th></tr><tr><th rowspan="1" colspan="1"><text><SENT sid="18843" pm="."><plain>Gene calls </plain></SENT>
+</text></th><th rowspan="1" colspan="1"><text><SENT sid="18844" pm="."><plain>AAMG </plain></SENT>
+</text></th><th rowspan="1" colspan="1"><text><SENT sid="18845" pm="."><plain>NCBI </plain></SENT>
+</text></th><th rowspan="1" colspan="1"><text><SENT sid="18846" pm="."><plain>AAMG </plain></SENT>
+</text></th><th rowspan="1" colspan="1"><text><SENT sid="18847" pm="."><plain>BROAD </plain></SENT>
+</text></th><th rowspan="1" colspan="1"><text><SENT sid="18848" pm="."><plain>AAMG </plain></SENT>
+</text></th><th rowspan="1" colspan="1"><text><SENT sid="18849" pm="."><plain>NCBI </plain></SENT>
+</text></th></tr></thead><tbody><tr><td rowspan="1" colspan="1"><text><SENT sid="18850" pm="."><plain>CDS </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18851" pm="."><plain>4340 </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18852" pm="."><plain>4337 </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18853" pm="."><plain>5208 </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18854" pm="."><plain>5164 </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18855" pm="."><plain>190 </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18856" pm="."><plain>207 </plain></SENT>
+</text></td></tr><tr><td rowspan="1" colspan="1"><text><SENT sid="18857" pm="."><plain>rRNA </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18858" pm="."><plain>22 </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18859" pm="."><plain>22 </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18860" pm="."><plain>22 </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18861" pm="."><plain>22 </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18862" pm="."><plain>3 </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18863" pm="."><plain>3 </plain></SENT>
+</text></td></tr><tr><td rowspan="1" colspan="1"><text><SENT sid="18864" pm="."><plain>tRNA </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18865" pm="."><plain>82 </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18866" pm="."><plain>86 </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18867" pm="."><plain>97 </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18868" pm="."><plain>97 </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18869" pm="."><plain>27 </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18870" pm="."><plain>28 </plain></SENT>
+</text></td></tr><tr><td rowspan="1" colspan="1"><text><SENT sid="18871" pm="."><plain>Total </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18872" pm="."><plain>4444 </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18873" pm="."><plain>4445 </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18874" pm="."><plain>5327 </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18875" pm="."><plain>5288 </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18876" pm="."><plain>220 </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18877" pm="."><plain>238 </plain></SENT>
+</text></td></tr><tr><td rowspan="1" colspan="1"><text><SENT sid="18878" pm="."><plain>False Negatives </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18879" pm="."><plain>235 </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18880" pm="."><plain>236 </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18881" pm="."><plain>50 </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18882" pm="."><plain>11 </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18883" pm="."><plain>4 </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18884" pm="."><plain>22 </plain></SENT>
+</text></td></tr><tr><td rowspan="1" colspan="1"><text><SENT sid="18885" pm="."><plain>Functional genes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18886" pm="."><plain>3866 </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18887" pm="."><plain>3730 </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18888" pm="."><plain>4591 </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18889" pm="."><plain>3502 </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18890" pm="."><plain>182 </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18891" pm="."><plain>191 </plain></SENT>
+</text></td></tr><tr><td rowspan="1" colspan="1"><text><SENT sid="18892" pm="."><plain>Orphan genes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18893" pm="."><plain>578 </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18894" pm="."><plain>715 </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18895" pm="."><plain>736 </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18896" pm="."><plain>1786 </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18897" pm="."><plain>38 </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18898" pm="."><plain>47 </plain></SENT>
+</text></td></tr><tr><td rowspan="1" colspan="1"><text><SENT sid="18899" pm="."><plain><bold>Gene calls</bold> </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18900" pm="."><plain><bold>Genes by AAMG</bold> </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18901" pm="."><plain><bold>% of NCBI genes</bold> </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18902" pm="."><plain><bold>Genes by AAMG</bold> </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18903" pm="."><plain><bold>% of BROAD genes</bold> </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18904" pm="."><plain><bold>Genes by AAMG</bold> </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18905" pm="."><plain><bold>% of NCBI genes</bold> </plain></SENT>
+</text></td></tr><tr><td rowspan="1" colspan="1"><text><SENT sid="18906" pm="."><plain>Detected<xref ref-type="table-fn" rid="ngtab2.1">*</xref> identical </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18907" pm="."><plain>3876 </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18908" pm="."><plain>87.20 </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18909" pm="."><plain>5172 </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18910" pm="."><plain>97.81% </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18911" pm="."><plain>205 </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18912" pm="."><plain>86.13 </plain></SENT>
+</text></td></tr><tr><td rowspan="1" colspan="1"><text><SENT sid="18913" pm="."><plain>Detected similar<xref ref-type="table-fn" rid="ngtab2.2">**</xref> </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18914" pm="."><plain>333 </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18915" pm="."><plain>7.49 </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18916" pm="."><plain>105 </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18917" pm="."><plain>1.99% </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18918" pm="."><plain>11 </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18919" pm="."><plain>4.62 </plain></SENT>
+</text></td></tr><tr><td rowspan="1" colspan="1"><text><SENT sid="18920" pm="."><plain>Not Detected </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18921" pm="."><plain>236 </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18922" pm="."><plain>5.31 </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18923" pm="."><plain>11 </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18924" pm="."><plain>0.21% </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18925" pm="."><plain>22 </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18926" pm="."><plain>9.24 </plain></SENT>
+</text></td></tr><tr><td rowspan="1" colspan="1"><text><SENT sid="18927" pm="."><plain>Total </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18928" pm="."><plain>4445 </plain></SENT>
+</text></td><td rowspan="1" colspan="1"/><td rowspan="1" colspan="1"><text><SENT sid="18929" pm="."><plain>5288 </plain></SENT>
+</text></td><td rowspan="1" colspan="1"/><td rowspan="1" colspan="1"><text><SENT sid="18930" pm="."><plain>238 </plain></SENT>
+</text></td><td rowspan="1" colspan="1"/></tr></tbody></table><table-wrap-foot><fn id="ngtab2.1"><p><text><SENT sid="18931" pm="."><plain><sup>*</sup> Genes are identical when both start and stop positions are exactly the same. </plain></SENT>
+</text></p></fn><fn id="ngtab2.2"><p><text><SENT sid="18932" pm="."><plain><sup>**</sup> Genes are similar if start or stop positions are in the same region with an offset up to 50 bases. </plain></SENT>
+</text></p></fn></table-wrap-foot></table-wrap></SecTag><p><text><SENT sid="18933" pm="."><plain>Our annotations for these three genomes are available as a material at <ext-link ext-link-type="uri" xlink:href="http://www.cbrc.kaust.edu"><underline>http://www.cbrc.kaust.edu</underline></ext-link> <underline>.sa/indigo</underline>_<underline>data</underline>/. </plain></SENT>
+<SENT sid="18934" pm="."><plain>Data files and results are visualized using interactive graphs based on modified Krona package [<xref rid="B46" ref-type="bibr">46</xref>]. </plain></SENT>
+</text></p></sec></sec></SecTag><SecTag type="METHODS"><sec id="s3"><title><text><SENT sid="18935" pm="."><plain>Methods and Analysis </plain></SENT>
+</text></title><sec id="s3.1"><title><text><SENT sid="18936" pm="."><plain>Genomic data model </plain></SENT>
+</text></title><p><text><SENT sid="18937" pm="."><plain>InterMine provides a core genomic data model defined with several genome entities, their attributes, syntax and relationships. </plain></SENT>
+<SENT sid="18938" pm="."><plain>We extend this core genomic model to fit our needs so as to cater to all types of annotations we receive from our annotation process. </plain></SENT>
+<SENT sid="18939" pm="."><plain>This includes data types and relationships between entities to be stored, such as attributes for organism, contigs, genes, CDS, protein domains, pathways and cross references. </plain></SENT>
+<SENT sid="18940" pm="."><plain>An example of genomic data model is provided in the materials at the website. </plain></SENT>
+</text></p></sec><sec id="s3.2"><title><text><SENT sid="18941" pm="."><plain>Data validation and population of the Postgres database </plain></SENT>
+</text></title><p><text><SENT sid="18942" pm="."><plain>InterMine provides a built-in setup for complex data integration, post-processing and web-application development. </plain></SENT>
+<SENT sid="18943" pm="."><plain>Data integration is heavily dependent on genomic model defined with data types and relationships between entities to be stored. </plain></SENT>
+<SENT sid="18944" pm="."><plain>Once a genomic model is defined, one can perform a check for the annotation that is to be loaded into the database. </plain></SENT>
+<SENT sid="18945" pm="."><plain>Our system first validates the annotation in reference to the defined genomic model using InterMine’s Model and Document Perl Modules. </plain></SENT>
+<SENT sid="18946" pm="."><plain>It then prepares an xml schema filled with data that is ready to be loaded to the backend Postgres database. </plain></SENT>
+<SENT sid="18947" pm="."><plain>InterMine loads data into the database using pre-defined ‘sources’ for different types of data packed in different formats. </plain></SENT>
+<SENT sid="18948" pm="."><plain>For example, to load genes data packed in the gff format, a Java-based data converter is available, but it assumes specific tags and fields. </plain></SENT>
+<SENT sid="18949" pm="."><plain>For customized data loading we developed prokaryotic-annots-xml, available as Supplementary material here, which allows loading of our validated annotations packed in xml format. </plain></SENT>
+<SENT sid="18950" pm="."><plain>InterMine’s build-db setup reads the generated annotation using prokaryotic-annots-xml source and loads the data by defining and populating different annotation tables automatically. </plain></SENT>
+</text></p></sec><sec id="s3.3"><title><text><SENT sid="18951" pm="."><plain>Data integration, post-processing and web-application development </plain></SENT>
+</text></title><p><text><SENT sid="18952" pm="."><plain>Data integration in the InterMine’s framework is a crucial step. </plain></SENT>
+<SENT sid="18953" pm="."><plain>It integrates data from sources provided in the project xml file and performs multiple checks (e.g. the absence of empty fields, the absence of duplicate data being stored, etc.). </plain></SENT>
+<SENT sid="18954" pm="."><plain>We only provide database identifiers in the annotation xml, for example, for GO or Interpro protein domains (IprD), and InterMine system integrates corresponding detailed annotations from complete GO or IprD source files defined in the project xml. </plain></SENT>
+</text></p><p><text><SENT sid="18955" pm="."><plain>There are several built-in post-processing steps available in the InterMine framework such as create-search-index, transfer-sequences, etc., that allow for quick indexing of the data. </plain></SENT>
+<SENT sid="18956" pm="."><plain>For INDIGO, in order to have all the functionality available, we run all post-processing steps. <xref rid="pone-0082210-t003" ref-type="table">Table 3</xref> shows different stages in our data warehouse development along with the processing time using InterMine framework. </plain></SENT>
+</text></p><SecTag type="TABLE"><table-wrap id="pone-0082210-t003" orientation="portrait" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0082210.t003</object-id><label>Table 3</label><caption><title><text><SENT sid="18957" pm="."><plain>Data warehouse development stages using InterMine. </plain></SENT>
+</text></title></caption><table frame="hsides" rules="groups"><colgroup span="1"><col span="1"/><col span="1"/><col span="1"/></colgroup><thead><tr><th rowspan="1" colspan="1"><text><SENT sid="18958" pm="."><plain><bold>INDIGO Steps</bold> </plain></SENT>
+</text></th><th rowspan="1" colspan="1"><text><SENT sid="18959" pm="."><plain><bold>Action</bold> </plain></SENT>
+</text></th><th rowspan="1" colspan="1"><text><SENT sid="18960" pm="."><plain><bold>Time (seconds)</bold> </plain></SENT>
+</text></th></tr></thead><tbody><tr><td rowspan="1" colspan="1"><text><SENT sid="18961" pm="."><plain>build database tables </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18962" pm="."><plain>build-db </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18963" pm="."><plain>2 </plain></SENT>
+</text></td></tr><tr><td rowspan="1" colspan="1"><text><SENT sid="18964" pm="."><plain>data integration </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18965" pm="."><plain>prokredsea-HLPCO-largexml </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18966" pm="."><plain>59 </plain></SENT>
+</text></td></tr><tr><td rowspan="1" colspan="1"><text><SENT sid="18967" pm="."><plain>data integration </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18968" pm="."><plain>prokredsea-HLRTI-largexml </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18969" pm="."><plain>61 </plain></SENT>
+</text></td></tr><tr><td rowspan="1" colspan="1"><text><SENT sid="18970" pm="."><plain>data integration </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18971" pm="."><plain>prokredsea-SSPSH-largexml </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18972" pm="."><plain>68 </plain></SENT>
+</text></td></tr><tr><td rowspan="1" colspan="1"><text><SENT sid="18973" pm="."><plain>data integration </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18974" pm="."><plain>Sequence ontology </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18975" pm="."><plain>56 </plain></SENT>
+</text></td></tr><tr><td rowspan="1" colspan="1"><text><SENT sid="18976" pm="."><plain>data integration </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18977" pm="."><plain>interpro </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18978" pm="."><plain>164 </plain></SENT>
+</text></td></tr><tr><td rowspan="1" colspan="1"><text><SENT sid="18979" pm="."><plain>data integration </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18980" pm="."><plain>Gene ontology </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18981" pm="."><plain>1043 </plain></SENT>
+</text></td></tr><tr><td rowspan="1" colspan="1"><text><SENT sid="18982" pm="."><plain>post-processing </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18983" pm="."><plain>create-references </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18984" pm="."><plain>28 </plain></SENT>
+</text></td></tr><tr><td rowspan="1" colspan="1"><text><SENT sid="18985" pm="."><plain>post-processing </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18986" pm="."><plain>make-spanning-locations </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18987" pm="."><plain>21 </plain></SENT>
+</text></td></tr><tr><td rowspan="1" colspan="1"><text><SENT sid="18988" pm="."><plain>post-processing </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18989" pm="."><plain>create-chromosome-locations-and-lengths </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18990" pm="."><plain>40 </plain></SENT>
+</text></td></tr><tr><td rowspan="1" colspan="1"><text><SENT sid="18991" pm="."><plain>post-processing </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18992" pm="."><plain>transfer-sequences </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18993" pm="."><plain>89 </plain></SENT>
+</text></td></tr><tr><td rowspan="1" colspan="1"><text><SENT sid="18994" pm="."><plain>post-processing </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18995" pm="."><plain>create-bioseg-location-index </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18996" pm="."><plain>15 </plain></SENT>
+</text></td></tr><tr><td rowspan="1" colspan="1"><text><SENT sid="18997" pm="."><plain>post-processing </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18998" pm="."><plain>create-attribute-indexes </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="18999" pm="."><plain>38 </plain></SENT>
+</text></td></tr><tr><td rowspan="1" colspan="1"><text><SENT sid="19000" pm="."><plain>post-processing </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="19001" pm="."><plain>summarise-objectstore </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="19002" pm="."><plain>31 </plain></SENT>
+</text></td></tr><tr><td rowspan="1" colspan="1"><text><SENT sid="19003" pm="."><plain>post-processing </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="19004" pm="."><plain>create-autocomplete-index </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="19005" pm="."><plain>20 </plain></SENT>
+</text></td></tr><tr><td rowspan="1" colspan="1"><text><SENT sid="19006" pm="."><plain>post-processing </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="19007" pm="."><plain>create-search-index </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="19008" pm="."><plain>59 </plain></SENT>
+</text></td></tr><tr><td rowspan="1" colspan="1"><text><SENT sid="19009" pm="."><plain>total time taken </plain></SENT>
+</text></td><td rowspan="1" colspan="1"/><td rowspan="1" colspan="1"><text><SENT sid="19010" pm="."><plain>1794 </plain></SENT>
+</text></td></tr></tbody></table></table-wrap></SecTag><p><text><SENT sid="19011" pm="."><plain>Web-application templates are available in the InterMine framework and we customized them to fit our requirements. </plain></SENT>
+<SENT sid="19012" pm="."><plain>For example, report pages for genome features such as genes, proteins, domains, and pathways are customized according to the data available including hyperlinks to external databases. </plain></SENT>
+<SENT sid="19013" pm="."><plain>One of the interesting external links allows for displaying KEGG pathway diagrams showing presence of the KEGG Ortholog ids to which the explored genome is mapped. </plain></SENT>
+<SENT sid="19014" pm="."><plain>Such a display shows which elements of the reference pathways are present or missing from the genome being examined. </plain></SENT>
+<SENT sid="19015" pm="."><plain>InterMine allows packaging of the web-application as a Web Application Archive or WAR-file that is then deployed on the Tomcat Apache server (<ext-link ext-link-type="uri" xlink:href="http://tomcat.apache.org"><underline>http://tomcat.apache.org</underline></ext-link>). </plain></SENT>
+</text></p></sec><sec id="s3.4"><title><text><SENT sid="19016" pm="."><plain>INDIGO Web Interface Organization </plain></SENT>
+</text></title><p><text><SENT sid="19017" pm="."><plain>INDIGO is equipped with a number of features that allow for the exploration and analysis of the deposited information. </plain></SENT>
+<SENT sid="19018" pm="."><plain>INDIGO front-end is organized into different main pages accessible through tabs, namely ‘Home’, ‘Templates’, ‘Lists’, ‘QueryBuilder’, ‘Regions’, ‘Data’, ‘API’, ‘BLAST’ and ‘MyMine’, where each tab provides access to the data in different ways. </plain></SENT>
+</text></p><p><text><SENT sid="19019" pm="."><plain>The INDIGO ‘Home’ page presents options for quick keyword search, analysis of a list of genes/proteins and the use of predefined templates to perform queries. </plain></SENT>
+<SENT sid="19020" pm="."><plain>The ‘Template’ tab shows all predefined templates to perform queries such as Organism-&gt;Protein which help to obtain all proteins in a genome. </plain></SENT>
+<SENT sid="19021" pm="."><plain>The ‘Lists’ tab provides access of all feature types; for example, selecting a feature type such as gene, protein, protein domain, etc. and providing a list of identifiers, makes a list of items with default attributes that can be saved or further analyzed. </plain></SENT>
+<SENT sid="19022" pm="."><plain>The ‘QueryBuilder’ tab provides the most exhaustive functionality for building queries in INDIGO and it provides more control to include (show option) or limit (constrain option) for different feature types and their attributes. ‘Regions’ tab provides access to all features present in a given genomic coordinate range. ‘Data’ tab provides general information about the genomic data sets included in the data warehouse, e.g. genome assembly statistics, counts and links to contigs, ORF sequences, archaeal/bacterial genome completeness statistics based on counts of archaeal/bacterial core COGs [<xref rid="B47" ref-type="bibr">47</xref>], minpath-based [<xref rid="B32" ref-type="bibr">32</xref>] KEGG pathway association statistics, etc. </plain></SENT>
+<SENT sid="19023" pm="."><plain>API provides details on how to access data warehouse using PERL, Python, Ruby and Java programming languages. </plain></SENT>
+<SENT sid="19024" pm="."><plain>The ‘BLAST’ tab allows users to carry out Basic Local Alignment Search Tool (BLAST) based similarity search for a DNA or protein sequence of interest with genes in INDIGO. </plain></SENT>
+<SENT sid="19025" pm="."><plain>The result of BLAST search is shown as a list where users can save and select an individual or all hits for further GO, Pathways or protein domain enrichment analysis. </plain></SENT>
+<SENT sid="19026" pm="."><plain>Finally, ‘MyMine’ shows an interface to Automatic Annotation of Microbial Genomes (AAMG) pipeline, user-specific lists and queries performed and saved by a user once the user creates an account on the system. </plain></SENT>
+<SENT sid="19027" pm="."><plain>Individual report pages for genomic features provide details and hyperlinks for several related attributes including JBrowse [<xref rid="B48" ref-type="bibr">48</xref>] visualization. </plain></SENT>
+</text></p></sec><sec id="s3.5"><title><text><SENT sid="19028" pm="."><plain>Use of INDIGO and its features </plain></SENT>
+</text></title><p><text><SENT sid="19029" pm="."><plain>When analyzing a new genome, majority of questions can be summarized in ‘What’, ‘Where’ and ‘How’ context. </plain></SENT>
+<SENT sid="19030" pm="."><plain>For example, to see whether a gene, protein, protein domain, GO term or a pathway of interest can be found in INDIGO, a search mechanism can help. </plain></SENT>
+<SENT sid="19031" pm="."><plain>For ‘Where’ context questions, the ‘Region’ search option in INDIGO can list all the genomic features in a given range of genomic coordinates. </plain></SENT>
+<SENT sid="19032" pm="."><plain>For complex questions of the type e.g. ‘What is a list of genes involved in pathway X and what are their protein domains and associated GO terms’ more control on what is being searched is needed and here it is provided through Query Builder. </plain></SENT>
+<SENT sid="19033" pm="."><plain>More details on features of INDIGO, such as a quick and easy keyword search, query builder search, analysis of genomic feature (such as gene, protein, protein domains) lists, genomic region search, and enrichment analysis for GO, protein domains and pathways, are shown in few examples in what follows. </plain></SENT>
+</text></p></sec><sec id="s3.6"><title><text><SENT sid="19034" pm="."><plain>Keyword and Query Builder Search </plain></SENT>
+</text></title><p><text><SENT sid="19035" pm="."><plain>In the INDIGO system, a keyword search, as well as a more extensive query builder search option, are provided. </plain></SENT>
+<SENT sid="19036" pm="."><plain>The keyword search option provides a very simple interface to the underlying annotation data. </plain></SENT>
+<SENT sid="19037" pm="."><plain>It is very fast since all the keywords in the database are indexed. </plain></SENT>
+<SENT sid="19038" pm="."><plain>Query builder, however, provides more control over annotation classes and attributes to be searched, constrained or viewed. </plain></SENT>
+<SENT sid="19039" pm="."><plain>It is possible to combine several queries through constraint logic. <xref ref-type="fig" rid="pone-0082210-g003">Figure 3</xref> shows an example of Query-Builder interface to INDIGO. </plain></SENT>
+</text></p><SecTag type="FIG"><fig id="pone-0082210-g003" orientation="portrait" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0082210.g003</object-id><label>Figure 3</label><caption><title><text><SENT sid="19040" pm="."><plain>A) Keyword and B) Query builder search interface to INDIGO. </plain></SENT>
+</text></title><p><text><SENT sid="19041" pm="."><plain>The keyword search interface shows an example of the search for “benzoate degradation”. </plain></SENT>
+<SENT sid="19042" pm="."><plain>Results are categorized on the left side of the resulting page, showing the number of hits found for genes, domains, pathways, etc. </plain></SENT>
+<SENT sid="19043" pm="."><plain>These results are further categorized into hits per genome for different organisms. </plain></SENT>
+<SENT sid="19044" pm="."><plain>Clicking on any of these categories shows filtered results. </plain></SENT>
+<SENT sid="19045" pm="."><plain>The query builder interface has an option to include or constrains an annotation class attribute, e.g. pathway name is constrained for “benzoate degradation”, while the organism attribute ‘short name’ is constrained to “SSPSH”. </plain></SENT>
+<SENT sid="19046" pm="."><plain>The annotation feature class attributes to be included in the result list here are gene db identifier, symbol, organism’s short name and pathway name. </plain></SENT>
+<SENT sid="19047" pm="."><plain>User can select any of the available annotation class attributes making it possible to integrate annotation from several different sources. </plain></SENT>
+<SENT sid="19048" pm="."><plain>Results of constrained query builder search are shown as a list. </plain></SENT>
+<SENT sid="19049" pm="."><plain>There are summary and filter options on the list page that allow a user to further analyze these results. </plain></SENT>
+</text></p></caption><graphic xlink:href="pone.0082210.g003"/></fig></SecTag></sec><sec id="s3.7"><title><text><SENT sid="19050" pm="."><plain>Region Search </plain></SENT>
+</text></title><p><text><SENT sid="19051" pm="."><plain>In order to find out characteristics of a particular genomic region, one can use region search. </plain></SENT>
+<SENT sid="19052" pm="."><plain>When coordinates for the specific genomic region are provided, the region search allows for selection of additional upstream and downstream regions, as well as features like gene or intergenic region, etc. </plain></SENT>
+<SENT sid="19053" pm="."><plain>(<xref ref-type="fig" rid="pone-0082210-g004">Figure 4</xref>). </plain></SENT>
+<SENT sid="19054" pm="."><plain>Results can be exported in several different formats. </plain></SENT>
+<SENT sid="19055" pm="."><plain>We integrated JBrowser [<xref rid="B48" ref-type="bibr">48</xref>] based visualization of our genomic features in the region search results page. </plain></SENT>
+<SENT sid="19056" pm="."><plain>In the genome browser users can look up gene names or particular coordinates of genomes to view underlying features. </plain></SENT>
+<SENT sid="19057" pm="."><plain>Available tracks are DNA, gene and InterPro domains. </plain></SENT>
+</text></p><SecTag type="FIG"><fig id="pone-0082210-g004" orientation="portrait" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0082210.g004</object-id><label>Figure 4</label><caption><title><text><SENT sid="19058" pm="."><plain>Region search interface. </plain></SENT>
+</text></title><p><text><SENT sid="19059" pm="."><plain>This figure shows features (genes) for a region using coordinates (Contig3:198625-229704) from organism <italic>Haloplasma</italic> <italic>contractile</italic> (HLPCO). </plain></SENT>
+<SENT sid="19060" pm="."><plain>This region shows the cell Division and Cell Wall (DCW) biosynthesis gene cluster. </plain></SENT>
+<SENT sid="19061" pm="."><plain>An integrated genome browser view available via Region search results page, shows here the arrangement of genes in this region of the contig from HLPCO . </plain></SENT>
+<SENT sid="19062" pm="."><plain>The table below this section shows genome region, data export options, basic details of the feature (genes), type of features and their location on the genome. </plain></SENT>
+<SENT sid="19063" pm="."><plain>The create list by feature link saves this gene list in the data warehouse for further analysis. </plain></SENT>
+<SENT sid="19064" pm="."><plain>This list stays permanently if the user is logged in. </plain></SENT>
+</text></p></caption><graphic xlink:href="pone.0082210.g004"/></fig></SecTag></sec><sec id="s3.8"><title><text><SENT sid="19065" pm="."><plain>Analysis of Lists </plain></SENT>
+</text></title><p><text><SENT sid="19066" pm="."><plain>INDIGO makes use of different types of lists. </plain></SENT>
+<SENT sid="19067" pm="."><plain>For example, a list could be the list of genes/proteins, or protein domains, etc. </plain></SENT>
+<SENT sid="19068" pm="."><plain>Results from keyword search or query builder, can be saved as a list. </plain></SENT>
+<SENT sid="19069" pm="."><plain>A click on the saved list link automatically shows GO, protein domain and pathway enrichment, as shown in an example in <xref ref-type="fig" rid="pone-0082210-g005">Figure 5</xref>. </plain></SENT>
+</text></p><SecTag type="FIG"><fig id="pone-0082210-g005" orientation="portrait" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0082210.g005</object-id><label>Figure 5</label><caption><title><text><SENT sid="19070" pm="."><plain>A) Gene Ontology, B) Protein Domain and C) Pathway enrichment analysis. </plain></SENT>
+</text></title><p><text><SENT sid="19071" pm="."><plain>The figure shows a snapshot obtained in case when a term “cell cycle” was searched through the keyword search option and resulting genes were saved in a list that shows enrichment of GO, protein domain and pathways in comparison to the rest of the data in INDIGO. </plain></SENT>
+<SENT sid="19072" pm="."><plain>The number of hits shown for reach category can be saved as lists for further analysis. </plain></SENT>
+</text></p></caption><graphic xlink:href="pone.0082210.g005"/></fig></SecTag><p><text><SENT sid="19073" pm="."><plain>The user is also able to save all enriched genes, make sub-lists, view individual gene report pages, or export results. </plain></SENT>
+<SENT sid="19074" pm="."><plain>Enrichment analysis provided for a list includes p-values based on hypergeometric distribution with several multiple testing correction options (for further details on the enrichment process, see <ext-link ext-link-type="uri" xlink:href="https://intermine.readthedocs.org/en/1.1/embedding/list-widgets/enrichment-widgets/"><underline>https://intermine.readthedocs.org/en/1.1/embedding/list-widgets/enrichment-widgets/</underline></ext-link>). </plain></SENT>
+</text></p></sec><sec id="s3.9"><title><text><SENT sid="19075" pm="."><plain>Current content of INDIGO </plain></SENT>
+</text></title><p><text><SENT sid="19076" pm="."><plain>The King Abdullah University of Science and Technology (KAUST) has in its focus areas the biodiversity and microorganisms of the Red Sea. </plain></SENT>
+<SENT sid="19077" pm="."><plain>INDIGO is populated with information from three extremophiles from the Red Sea, whose genomes have been previously reported by our team [<xref rid="B11" ref-type="bibr">11</xref>-<xref rid="B13" ref-type="bibr">13</xref>]. </plain></SENT>
+<SENT sid="19078" pm="."><plain>The details are provided in what follows. </plain></SENT>
+</text></p></sec><sec id="s3.10"><title><text><SENT sid="19079" pm="."><plain>Red Sea environment </plain></SENT>
+</text></title><p><text><SENT sid="19080" pm="."><plain>The Red Sea is one of the warmest, most saline and most nutrient-poor oceanic water bodies in the world [<xref rid="B49" ref-type="bibr">49</xref>,<xref rid="B50" ref-type="bibr">50</xref>]. </plain></SENT>
+<SENT sid="19081" pm="."><plain>It also hosts several deep-sea anoxic brine lakes, which are considered some of the most remote and extreme environments on Earth [<xref rid="B51" ref-type="bibr">51</xref>]. </plain></SENT>
+<SENT sid="19082" pm="."><plain>The brines markedly differ from overlying seawater and are unique due to the combination of multiple extremes namely high salinity (7-fold increase), high temperature (up to 70°C), high concentration of heavy metals (1,000- to 10,000-fold increase in concentration), high hydrostatic pressure and anoxic conditions. </plain></SENT>
+<SENT sid="19083" pm="."><plain>Despite this combination of multiple environmental extremes, they have been shown to harbor a very high biodiversity, with identification of several new phylogenetic lineages and isolation of several new extremophiles [<xref rid="B51" ref-type="bibr">51</xref>]. </plain></SENT>
+</text></p></sec><sec id="s3.11"><title><text><SENT sid="19084" pm="."><plain>Three Red Sea extremophiles in INDIGO </plain></SENT>
+</text></title><p><text><SENT sid="19085" pm="."><plain>Three extremophilic microbes, previously isolated from the deep-sea anoxic brine lakes, were selected as part of a genome-sequencing project due to their phylogenetic position, peculiar features and unique biotope. </plain></SENT>
+<SENT sid="19086" pm="."><plain>Analysis of their draft genomes provides us with a first glimpse on some of their unusual characteristics and the ways they cope with living in such a harsh environment [<xref rid="B11" ref-type="bibr">11</xref>-<xref rid="B13" ref-type="bibr">13</xref>]. </plain></SENT>
+</text></p></sec><sec id="s3.12"><title><text><SENT sid="19087" pm="."><plain><italic>Salinisphaera shabanensis</italic> </plain></SENT>
+</text></title><p><text><SENT sid="19088" pm="."><plain><italic>Salinisphaera shabanensis</italic> was isolated from the brine-seawater interface of Shaban Deep [<xref rid="B52" ref-type="bibr">52</xref>]. </plain></SENT>
+<SENT sid="19089" pm="."><plain>It represented a new order within the <italic>Gammaproteobacteria</italic>, and displayed a remarkable physiological versatility. </plain></SENT>
+<SENT sid="19090" pm="."><plain>Indeed, <italic>Salinisphaera shabanensis</italic> had quite broad growth ranges for oxygen, temperature, NaCl, pressure, and, to a smaller degree, pH [<xref rid="B52" ref-type="bibr">52</xref>]. </plain></SENT>
+</text></p></sec><sec id="s3.13"><title><text><SENT sid="19091" pm="."><plain><italic>Haloplasma contractile</italic> </plain></SENT>
+</text></title><p><text><SENT sid="19092" pm="."><plain><italic>Haloplasma contractile</italic> was isolated from the brine-sediment interface of Shaban Deep. </plain></SENT>
+<SENT sid="19093" pm="."><plain>Phylogenetically it represented a novel lineage within the Bacteria with branching position between the Firmicutes and Tenericutes (Mollicutes), with no close relatives [<xref rid="B53" ref-type="bibr">53</xref>]. </plain></SENT>
+<SENT sid="19094" pm="."><plain>The most striking feature of <italic>Haloplasma</italic> is its unusual morphology and unique cellular contractility cycle. </plain></SENT>
+</text></p></sec><sec id="s3.14"><title><text><SENT sid="19095" pm="."><plain><italic>Halorhabdus timatea</italic> </plain></SENT>
+</text></title><p><text><SENT sid="19096" pm="."><plain><italic>Halorhabdus tiamatea</italic> was isolated from the brine-sediment interface of the Shaban Deep [<xref rid="B54" ref-type="bibr">54</xref>] using fluorescence <italic>in situ</italic> hybridization coupled with the “optical tweezers” technique [<xref rid="B55" ref-type="bibr">55</xref>,<xref rid="B56" ref-type="bibr">56</xref>]. </plain></SENT>
+<SENT sid="19097" pm="."><plain>It was described as a new species and is currently still the only member of the Archaea to have been described from a deep-sea anoxic brine. </plain></SENT>
+</text></p></sec><sec id="s3.15"><title><text><SENT sid="19098" pm="."><plain>Features of the three Red Sea extremophiles from INDIGO </plain></SENT>
+</text></title><p><text><SENT sid="19099" pm="."><plain>In <xref rid="pone-0082210-t004" ref-type="table">Table 4</xref> we present summary of the basic genomic features associated with the re-assembly of three microorganisms included in INDIGO. </plain></SENT>
+</text></p><SecTag type="TABLE"><table-wrap id="pone-0082210-t004" orientation="portrait" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0082210.t004</object-id><label>Table 4</label><caption><title><text><SENT sid="19100" pm="."><plain>Basic annotated features of the three Red Sea extremophiles in INDIGO. </plain></SENT>
+</text></title></caption><table frame="hsides" rules="groups"><colgroup span="1"><col span="1"/><col span="1"/><col span="1"/><col span="1"/><col span="1"/><col span="1"/></colgroup><thead><tr><th rowspan="1" colspan="1"><text><SENT sid="19101" pm="."><plain><bold>Organism</bold> </plain></SENT>
+</text></th><th rowspan="1" colspan="1"><text><SENT sid="19102" pm="."><plain><bold>Contigs</bold> </plain></SENT>
+</text></th><th rowspan="1" colspan="1"><text><SENT sid="19103" pm="."><plain><bold>N50</bold> </plain></SENT>
+</text></th><th rowspan="1" colspan="1"><text><SENT sid="19104" pm="."><plain><bold>ORFs</bold> </plain></SENT>
+</text></th><th rowspan="1" colspan="1"><text><SENT sid="19105" pm="."><plain><bold>rRNAs</bold> </plain></SENT>
+</text></th><th rowspan="1" colspan="1"><text><SENT sid="19106" pm="."><plain><bold>tRNAs</bold> </plain></SENT>
+</text></th></tr></thead><tbody><tr><td rowspan="1" colspan="1"><text><SENT sid="19107" pm="."><plain><italic>Haloplasma contractile</italic> </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="19108" pm="."><plain>34 </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="19109" pm="."><plain>347868 </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="19110" pm="."><plain>3036 </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="19111" pm="."><plain>4 </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="19112" pm="."><plain>27 </plain></SENT>
+</text></td></tr><tr><td rowspan="1" colspan="1"><text><SENT sid="19113" pm="."><plain><italic>Halorhabdus tiamatea</italic> </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="19114" pm="."><plain>72 </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="19115" pm="."><plain>58136 </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="19116" pm="."><plain>3287 </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="19117" pm="."><plain>3 </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="19118" pm="."><plain>40 </plain></SENT>
+</text></td></tr><tr><td rowspan="1" colspan="1"><text><SENT sid="19119" pm="."><plain><italic>Salinisphaera shabanens</italic> </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="19120" pm="."><plain>41 </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="19121" pm="."><plain>129079 </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="19122" pm="."><plain>3530 </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="19123" pm="."><plain>3 </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="19124" pm="."><plain>46 </plain></SENT>
+</text></td></tr></tbody></table></table-wrap></SecTag><p><text><SENT sid="19125" pm="."><plain>INDIGO provides easy and quick access to genomic annotations of microbial species at the levels of chromosomes, genes, and proteins, as well as to the associated GO and pathways. </plain></SENT>
+<SENT sid="19126" pm="."><plain>The top 10 pathways based on the number of genes assigned to each of these extremophiles as found by INDIGO are shown in <xref rid="pone-0082210-t005" ref-type="table">Table 5</xref>. </plain></SENT>
+</text></p><SecTag type="TABLE"><table-wrap id="pone-0082210-t005" orientation="portrait" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0082210.t005</object-id><label>Table 5</label><caption><title><text><SENT sid="19127" pm="."><plain>Top 10 pathways from each of the three extremophiles. </plain></SENT>
+</text></title></caption><table frame="hsides" rules="groups"><colgroup span="1"><col span="1"/><col span="1"/><col span="1"/><col span="1"/><col span="1"/><col span="1"/></colgroup><thead><tr><th rowspan="1" colspan="1"><text><SENT sid="19128" pm="."><plain><bold><italic>Haloplasma contractile</italic></bold> </plain></SENT>
+</text></th><th rowspan="1" colspan="1"><text><SENT sid="19129" pm="."><plain>Genes </plain></SENT>
+</text></th><th rowspan="1" colspan="1"><text><SENT sid="19130" pm="."><plain><bold><italic>Salinisphaera shabanens</italic></bold> </plain></SENT>
+</text></th><th rowspan="1" colspan="1"><text><SENT sid="19131" pm="."><plain>Genes </plain></SENT>
+</text></th><th rowspan="1" colspan="1"><text><SENT sid="19132" pm="."><plain><bold><italic>Salinisphaera shabanens</italic></bold> </plain></SENT>
+</text></th><th rowspan="1" colspan="1"><text><SENT sid="19133" pm="."><plain>Genes </plain></SENT>
+</text></th></tr></thead><tbody><tr><td rowspan="1" colspan="1"><text><SENT sid="19134" pm="."><plain>ABC transporters </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="19135" pm="."><plain>115 </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="19136" pm="."><plain>Two-component system </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="19137" pm="."><plain>182 </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="19138" pm="."><plain>ABC transporters </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="19139" pm="."><plain>88 </plain></SENT>
+</text></td></tr><tr><td rowspan="1" colspan="1"><text><SENT sid="19140" pm="."><plain>Purine metabolism </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="19141" pm="."><plain>69 </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="19142" pm="."><plain>ABC transporters </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="19143" pm="."><plain>131 </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="19144" pm="."><plain>Purine metabolism </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="19145" pm="."><plain>74 </plain></SENT>
+</text></td></tr><tr><td rowspan="1" colspan="1"><text><SENT sid="19146" pm="."><plain>Two-component system </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="19147" pm="."><plain>67 </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="19148" pm="."><plain>Purine metabolism </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="19149" pm="."><plain>96 </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="19150" pm="."><plain>Ribosome </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="19151" pm="."><plain>64 </plain></SENT>
+</text></td></tr><tr><td rowspan="1" colspan="1"><text><SENT sid="19152" pm="."><plain>Pyrimidine metabolism </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="19153" pm="."><plain>56 </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="19154" pm="."><plain>Methane metabolism </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="19155" pm="."><plain>78 </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="19156" pm="."><plain>Pyrimidine metabolism </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="19157" pm="."><plain>60 </plain></SENT>
+</text></td></tr><tr><td rowspan="1" colspan="1"><text><SENT sid="19158" pm="."><plain>Ribosome </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="19159" pm="."><plain>56 </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="19160" pm="."><plain>Oxidative phosphorylation </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="19161" pm="."><plain>75 </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="19162" pm="."><plain>Oxidative phosphorylation </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="19163" pm="."><plain>55 </plain></SENT>
+</text></td></tr><tr><td rowspan="1" colspan="1"><text><SENT sid="19164" pm="."><plain>Tyrosine metabolism </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="19165" pm="."><plain>52 </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="19166" pm="."><plain>Butanoate metabolism </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="19167" pm="."><plain>73 </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="19168" pm="."><plain>Amino sugar and nucleotide sugar metabolism </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="19169" pm="."><plain>53 </plain></SENT>
+</text></td></tr><tr><td rowspan="1" colspan="1"><text><SENT sid="19170" pm="."><plain>Amino sugar and nucleotide sugar metabolism </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="19171" pm="."><plain>50 </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="19172" pm="."><plain>Benzoate degradation </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="19173" pm="."><plain>71 </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="19174" pm="."><plain>Two-component system </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="19175" pm="."><plain>50 </plain></SENT>
+</text></td></tr><tr><td rowspan="1" colspan="1"><text><SENT sid="19176" pm="."><plain>Starch and sucrose metabolism </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="19177" pm="."><plain>49 </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="19178" pm="."><plain>Fatty acid metabolism </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="19179" pm="."><plain>70 </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="19180" pm="."><plain>Methane metabolism </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="19181" pm="."><plain>46 </plain></SENT>
+</text></td></tr><tr><td rowspan="1" colspan="1"><text><SENT sid="19182" pm="."><plain>Methane metabolism </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="19183" pm="."><plain>46 </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="19184" pm="."><plain>Arginine and proline metabolism </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="19185" pm="."><plain>63 </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="19186" pm="."><plain>Starch and sucrose metabolism </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="19187" pm="."><plain>40 </plain></SENT>
+</text></td></tr><tr><td rowspan="1" colspan="1"><text><SENT sid="19188" pm="."><plain>Histidine metabolism </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="19189" pm="."><plain>40 </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="19190" pm="."><plain>Pyruvate metabolism </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="19191" pm="."><plain>60 </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="19192" pm="."><plain>Cysteine and methionine metabolism </plain></SENT>
+</text></td><td rowspan="1" colspan="1"><text><SENT sid="19193" pm="."><plain>39 </plain></SENT>
+</text></td></tr></tbody></table></table-wrap></SecTag></sec><sec id="s3.16"><title><text><SENT sid="19194" pm="."><plain>Examples of exploration of Red Sea Extremophiles via INDIGO </plain></SENT>
+</text></title><sec id="s3.16.1"><title><text><SENT sid="19195" pm="."><plain>Region search: Analysis of the <italic>dcw</italic> gene cluster in <italic>Haloplasma contractile</italic> </plain></SENT>
+</text></title><p><text><SENT sid="19196" pm="."><plain>The most remarkable features of <italic>Haloplasma contractile</italic> include its unusual morphology and contraction cycle and these provided clear targets for genomic-based exploration. </plain></SENT>
+<SENT sid="19197" pm="."><plain>While some aspects of the genetic control of cellular morphology remain unclear, the <italic>dcw</italic> gene cluster seems to play a central role. </plain></SENT>
+<SENT sid="19198" pm="."><plain>Gene context is particularly relevant, as morphology is impacted by presence or absence of specific genes, together with relative position and distance within this gene cluster [<xref rid="B57" ref-type="bibr">57</xref>,<xref rid="B58" ref-type="bibr">58</xref>]. Using the region search of INDIGO we were able to locate the <italic>murD</italic> - one of the central genes of the <italic>dcw</italic> gene cluster. </plain></SENT>
+<SENT sid="19199" pm="."><plain>Furthermore, we analyzed the genomic context of <italic>murD</italic> (upstream and downstream regions) and successfully demonstrated multiple gene insertions and disruption of the <italic>murD-ftsW-murG</italic> gene order, see <xref ref-type="fig" rid="pone-0082210-g004">Figure 4</xref>. </plain></SENT>
+<SENT sid="19200" pm="."><plain>Such a disruption would justify the atypical morphology of <italic>H. contractile</italic> as they have been previously implicated in all non-rod morphologies currently known [<xref rid="B58" ref-type="bibr">58</xref>,<xref rid="B59" ref-type="bibr">59</xref>]. </plain></SENT>
+</text></p></sec><sec id="s3.16.2"><title><text><SENT sid="19201" pm="."><plain>Pathway search: Benzoate degradation in <italic>Salinisphaera shabanensis</italic> </plain></SENT>
+</text></title><p><text><SENT sid="19202" pm="."><plain>Aromatic compounds are abundant, widely distributed and known to constitute some of the most prevalent and persistent pollutants in the environment [<xref rid="B60" ref-type="bibr">60</xref>]. </plain></SENT>
+<SENT sid="19203" pm="."><plain>Some microbes have evolved complex machinery and metabolic pathways for their degradation [<xref rid="B61" ref-type="bibr">61</xref>] with benzoate being widely used as a model compound for studying their catabolism. </plain></SENT>
+</text></p><p><text><SENT sid="19204" pm="."><plain>Based on previous detection of a variety of complex hydrocarbons in Shaban Deep [<xref rid="B62" ref-type="bibr">62</xref>], we looked into genomic-based evidences for possible aromatic compound catabolic capability.  The use of the query builder search (<xref ref-type="fig" rid="pone-0082210-g003">Figure 3</xref>) in INDIGO and its mapping onto KEGG pathway (<xref ref-type="fig" rid="pone-0082210-g006">Figure 6</xref>) led us to promising results, with the identification of an almost complete branch of the benzoate degradation pathway in <italic>Salinisphaera shabanensis</italic>. </plain></SENT>
+<SENT sid="19205" pm="."><plain>Such valuable information obtained through the simple use of INDIGO will aid in search for target missing genes and/or design downstream laboratorial experiments to confirm the functionality of this pathway, and explore possible future applications. </plain></SENT>
+</text></p><SecTag type="FIG"><fig id="pone-0082210-g006" orientation="portrait" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0082210.g006</object-id><label>Figure 6</label><caption><title><text><SENT sid="19206" pm="."><plain>Benzoate degradation in <italic>Salinisphaera</italic> <italic>shabanensis</italic>. </plain></SENT>
+</text></title><p><text><SENT sid="19207" pm="."><plain>The genes from <italic>Salinisphaera</italic> <italic>shabanesis</italic> associated with Benzoate degradation pathway by INDIGO are shown in Red. </plain></SENT>
+<SENT sid="19208" pm="."><plain>INDIGO developed a functionality, available for all pathways present in INDIGO, that generates a specific URL to automatically display KEGG Orthologs from INDIGO on to pathway diagrams at KEGG webserver. </plain></SENT>
+</text></p></caption><graphic xlink:href="pone.0082210.g006"/></fig></SecTag></sec></sec></sec></SecTag><SecTag type="CONCL"><sec sec-type="conclusions" id="s4"><title><text><SENT sid="19209" pm="."><plain>Conclusion </plain></SENT>
+</text></title><p><text><SENT sid="19210" pm="."><plain>The new data warehouse system, INDIGO, enables users to combine information from different sources of annotation for further specific or general analysis. </plain></SENT>
+<SENT sid="19211" pm="."><plain>This data warehouse of Red Sea microorganisms currently contains information about three genomes (two bacterial and one archaeal). </plain></SENT>
+<SENT sid="19212" pm="."><plain>Considering the unique biodiversity present in the Red Sea, KAUST has undertaken a large sequencing effort starting from metagenomes to cultured and uncultured single cell amplified genomes. </plain></SENT>
+<SENT sid="19213" pm="."><plain>The plethora of sequencing data produced requires a high throughput assembly, annotation and data warehousing pipelines. </plain></SENT>
+<SENT sid="19214" pm="."><plain>This work shows the basic framework through which these pipelines can be used in a high throughput manner to properly warehouse the increasing amount of data for targeted studies. </plain></SENT>
+<SENT sid="19215" pm="."><plain>Additional genomes will include both, genomes of pelagic bacteria and archaea, as well as more extremophiles from the brine pools of the Red Sea. </plain></SENT>
+</text></p></sec></SecTag></body><back><SecTag type="ACK_FUND"><ack><p><text4fund><text><SENT sid="19216" pm="."><plain>Authors thank Julie Sullivan, Alex Kalderimis and intermine.org team for their help in understanding the Intermine system. </plain></SENT>
+<SENT sid="19217" pm="."><plain>Authors are also thankful to David Kamanda Ngugi and Mamoon Rashid from the Red Sea Center at KAUST for their help in testing the INDIGO system and to Arturo Magaña Mora for designing the INDIGO logo. </plain></SENT>
+</text></text4fund></p></ack></SecTag><SecTag type="REF"><ref-list><title>References</title><ref id="B1"><text><SENT sid="19218" pm="."><plain><label>1</label><mixed-citation publication-type="journal"> <name><surname>MacLean</surname><given-names>D</given-names></name>, <name><surname>Jones</surname><given-names>JD</given-names></name>, <name><surname>Studholme</surname><given-names>DJ</given-names></name> (<year>2009</year>) <article-title>Application of 'next-generation' sequencing technologies to microbial genetics</article-title>. <source>Nat Rev Microbiol</source> <volume>7</volume>: <fpage>287</fpage>-<lpage>296</lpage>. </plain></SENT>
+<SENT sid="19219" pm="."><plain>PubMed: <ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/pubmed/19287448">19287448</ext-link>.<pub-id pub-id-type="pmid">19287448</pub-id></mixed-citation> </plain></SENT>
+</text></ref><ref id="B2"><text><SENT sid="19220" pm="."><plain><label>2</label><mixed-citation publication-type="journal"> <name><surname>Pop</surname><given-names>M</given-names></name>, <name><surname>Salzberg</surname><given-names>SL</given-names></name> (<year>2008</year>) <article-title>Bioinformatics challenges of new sequencing technology</article-title>. <source>Trends Genet</source> <volume>24</volume>: <fpage>142</fpage>-<lpage>149</lpage>. doi:<pub-id pub-id-type="doi">10.1016/j.tig.2007.12.006</pub-id>. </plain></SENT>
+<SENT sid="19221" pm="."><plain>PubMed: <ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/pubmed/18262676">18262676</ext-link>.<pub-id pub-id-type="pmid">18262676</pub-id></mixed-citation> </plain></SENT>
+</text></ref><ref id="B3"><text><SENT sid="19222" pm="."><plain><label>3</label><mixed-citation publication-type="journal"> <name><surname>Médigue</surname><given-names>C</given-names></name>, <name><surname>Moszer</surname><given-names>I</given-names></name> (<year>2007</year>) <article-title>Annotation, comparison and databases for hundreds of bacterial genomes</article-title>. <source>Res Microbiol</source> <volume>158</volume>: <fpage>724</fpage>-<lpage>736</lpage>. doi:<pub-id pub-id-type="doi">10.1016/j.resmic.2007.09.009</pub-id>. </plain></SENT>
+<SENT sid="19223" pm="."><plain>PubMed: <ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/pubmed/18031997">18031997</ext-link>.<pub-id pub-id-type="pmid">18031997</pub-id></mixed-citation> </plain></SENT>
+</text></ref><ref id="B4"><text><SENT sid="19224" pm="."><plain><label>4</label><mixed-citation publication-type="journal"> <name><surname>Richardson</surname><given-names>EJ</given-names></name>, <name><surname>Watson</surname><given-names>M</given-names></name> (<year>2013</year>) <article-title>The automatic annotation of bacterial genomes</article-title>. <source>Brief Bioinform</source> <volume>14</volume>: <fpage>1</fpage>-<lpage>12</lpage>. doi:<pub-id pub-id-type="doi">10.1093/bib/bbs007</pub-id>. </plain></SENT>
+<SENT sid="19225" pm="."><plain>PubMed: <ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/pubmed/22408191">22408191</ext-link>.<pub-id pub-id-type="pmid">22408191</pub-id></mixed-citation> </plain></SENT>
+</text></ref><ref id="B5"><text><SENT sid="19226" pm="."><plain><label>5</label><mixed-citation publication-type="journal"> <name><surname>Wang</surname><given-names>Z</given-names></name>, <name><surname>Gerstein</surname><given-names>M</given-names></name>, <name><surname>Snyder</surname><given-names>M</given-names></name> (<year>2009</year>) <article-title>RNA-Seq: a revolutionary tool for transcriptomics</article-title>. <source>Nat Rev Genet</source> <volume>10</volume>: <fpage>57</fpage>-<lpage>63</lpage>. doi:<pub-id pub-id-type="doi">10.1038/nrg2484</pub-id>. </plain></SENT>
+<SENT sid="19227" pm="."><plain>PubMed: <ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/pubmed/19015660">19015660</ext-link>.<pub-id pub-id-type="pmid">19015660</pub-id></mixed-citation> </plain></SENT>
+</text></ref><ref id="B6"><text><SENT sid="19228" pm="."><plain><label>6</label><mixed-citation publication-type="journal"> <name><surname>Garcia Castro</surname><given-names>A</given-names></name>, <name><surname>Chen</surname><given-names>YP</given-names></name>, <name><surname>Ragan</surname><given-names>MA</given-names></name> (<year>2005</year>) <article-title>Information integration in molecular bioscience</article-title>. <source>Appl Bioinformatics</source> <volume>4</volume>: <fpage>157</fpage>-<lpage>173</lpage>. doi:<pub-id pub-id-type="doi">10.2165/00822942-200504030-00001</pub-id>. </plain></SENT>
+<SENT sid="19229" pm="."><plain>PubMed: <ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/pubmed/16231958">16231958</ext-link>.<pub-id pub-id-type="pmid">16231958</pub-id></mixed-citation> </plain></SENT>
+</text></ref><ref id="B7"><text><SENT sid="19230" pm="."><plain><label>7</label><mixed-citation publication-type="journal"> <name><surname>Stein</surname><given-names>LD</given-names></name> (<year>2003</year>) <article-title>Integrating biological databases</article-title>. <source>Nat Rev Genet</source> <volume>4</volume>: <fpage>337</fpage>-<lpage>345</lpage>. doi:<pub-id pub-id-type="doi">10.1038/ni909</pub-id>. </plain></SENT>
+<SENT sid="19231" pm="."><plain>PubMed: <ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/pubmed/12728276">12728276</ext-link>.<pub-id pub-id-type="pmid">12728276</pub-id></mixed-citation> </plain></SENT>
+</text></ref><ref id="B8"><text><SENT sid="19232" pm="."><plain><label>8</label><mixed-citation publication-type="book"> <name><surname>Triplet</surname><given-names>T</given-names></name>, <name><surname>Butler</surname><given-names>G</given-names></name> (<year>2011</year>) <article-title>Systems biology warehousing: challenges and strategies toward effective data integration</article-title>.  <comment>Proc. 3rd International Conference on Advances in Databases, Knowledge, and Data Applications, St. </plain></SENT>
+<SENT sid="19233" pm="."><plain>Maarten.</comment> <publisher-name>IARIA</publisher-name> pp <fpage>34</fpage>-<lpage>40</lpage>. </mixed-citation> </plain></SENT>
+</text></ref><ref id="B9"><text><SENT sid="19234" pm="."><plain><label>9</label><mixed-citation publication-type="journal"> <name><surname>O’Malley</surname><given-names>MA</given-names></name>, <name><surname>Soyer</surname><given-names>OS</given-names></name> (<year>2012</year>) <article-title>The roles of integration in molecular systems biology</article-title>. <source>Studies in History and Philosophy of Science Part C: Studies in History and Philosophy of Biological and Biomedical Sciences</source> <volume>43</volume>: <fpage>58</fpage>-<lpage>68</lpage>. doi:<pub-id pub-id-type="doi">10.1016/j.shpsc.2011.10.006</pub-id>.</mixed-citation> </plain></SENT>
+</text></ref><ref id="B10"><text><SENT sid="19235" pm="."><plain><label>10</label><mixed-citation publication-type="journal"> <name><surname>Smith</surname><given-names>RN</given-names></name>, <name><surname>Aleksic</surname><given-names>J</given-names></name>, <name><surname>Butano</surname><given-names>D</given-names></name>, <name><surname>Carr</surname><given-names>A</given-names></name>, <name><surname>Contrino</surname><given-names>S</given-names></name> <etal>et al.</etal> (<year>2012</year>) <article-title>InterMine: a flexible data warehouse system for the integration and analysis of heterogeneous biological data</article-title>. <source>Bioinformatics</source> <volume>28</volume>: <fpage>3163</fpage>-<lpage>3165</lpage>. doi:<pub-id pub-id-type="doi">10.1093/bioinformatics/bts577</pub-id>. </plain></SENT>
+<SENT sid="19236" pm="."><plain>PubMed: <ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/pubmed/23023984">23023984</ext-link>.<pub-id pub-id-type="pmid">23023984</pub-id></mixed-citation> </plain></SENT>
+</text></ref><ref id="B11"><text><SENT sid="19237" pm="."><plain><label>11</label><mixed-citation publication-type="journal"> <name><surname>Antunes</surname><given-names>A</given-names></name>, <name><surname>Alam</surname><given-names>I</given-names></name>, <name><surname>Bajic</surname><given-names>VB</given-names></name>, <name><surname>Stingl</surname><given-names>U</given-names></name> (<year>2011</year>) <article-title>Genome sequence of Salinisphaera shabanensis, a gammaproteobacterium from the harsh, variable environment of the brine-seawater interface of the Shaban Deep in the Red Sea</article-title>. <source>J Bacteriol</source> <volume>193</volume>: <fpage>4555</fpage>-<lpage>4556</lpage>. doi:<pub-id pub-id-type="doi">10.1128/JB.05459-11</pub-id>. </plain></SENT>
+<SENT sid="19238" pm="."><plain>PubMed: <ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/pubmed/21705588">21705588</ext-link>.<pub-id pub-id-type="pmid">21705588</pub-id></mixed-citation> </plain></SENT>
+</text></ref><ref id="B12"><text><SENT sid="19239" pm="."><plain><label>12</label><mixed-citation publication-type="journal"> <name><surname>Antunes</surname><given-names>A</given-names></name>, <name><surname>Alam</surname><given-names>I</given-names></name>, <name><surname>El Dorry</surname><given-names>H</given-names></name>, <name><surname>Siam</surname><given-names>R</given-names></name>, <name><surname>Robertson</surname><given-names>A</given-names></name> <etal>et al.</etal> (<year>2011</year>) <article-title>Genome sequence of Haloplasma contractile, an unusual contractile bacterium from a deep-sea anoxic brine lake</article-title>. <source>J Bacteriol</source> <volume>193</volume>: <fpage>4551</fpage>-<lpage>4552</lpage>.<pub-id pub-id-type="pmid">21705599</pub-id></mixed-citation> </plain></SENT>
+</text></ref><ref id="B13"><text><SENT sid="19240" pm="."><plain><label>13</label><mixed-citation publication-type="journal"> <name><surname>Antunes</surname><given-names>A</given-names></name>, <name><surname>Alam</surname><given-names>I</given-names></name>, <name><surname>Bajic</surname><given-names>VB</given-names></name>, <name><surname>Stingl</surname><given-names>U</given-names></name> (<year>2011</year>) <article-title>Genome sequence of Halorhabdus tiamatea, the first archaeon isolated from a deep-sea anoxic brine lake</article-title>. <source>J Bacteriol</source> <volume>193</volume>: <fpage>4553</fpage>-<lpage>4554</lpage>. doi:<pub-id pub-id-type="doi">10.1128/JB.05462-11</pub-id>. </plain></SENT>
+<SENT sid="19241" pm="."><plain>PubMed: <ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/pubmed/21705593">21705593</ext-link>.<pub-id pub-id-type="pmid">21705593</pub-id></mixed-citation> </plain></SENT>
+</text></ref><ref id="B14"><text><SENT sid="19242" pm="."><plain><label>14</label><mixed-citation publication-type="journal"> <name><surname>Benson</surname><given-names>DA</given-names></name>, <name><surname>Cavanaugh</surname><given-names>M</given-names></name>, <name><surname>Clark</surname><given-names>K</given-names></name>, <name><surname>Karsch-Mizrachi</surname><given-names>I</given-names></name>, <name><surname>Lipman</surname><given-names>DJ</given-names></name> <etal>et al.</etal> (<year>2013</year>) <article-title>GenBank</article-title>. <source>Nucleic Acids Res</source> <volume>41</volume>: <fpage>D36</fpage>-<lpage>D42</lpage>. doi:<pub-id pub-id-type="doi">10.1093/nar/gks1035</pub-id>. </plain></SENT>
+<SENT sid="19243" pm="."><plain>PubMed: <ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/pubmed/23193287">23193287</ext-link>.<pub-id pub-id-type="pmid">23193287</pub-id></mixed-citation> </plain></SENT>
+</text></ref><ref id="B15"><text><SENT sid="19244" pm="."><plain><label>15</label><mixed-citation publication-type="journal"> <name><surname>Kodama</surname><given-names>Y</given-names></name>, <name><surname>Shumway</surname><given-names>M</given-names></name>, <name><surname>Leinonen</surname><given-names>R</given-names></name> (<year>2012</year>) <article-title>The Sequence Read Archive: explosive growth of sequencing data</article-title>. <source>Nucleic Acids Res</source> <volume>40</volume>: <fpage>D54</fpage>-<lpage>D56</lpage>. doi:<pub-id pub-id-type="doi">10.1093/nar/gkr1263</pub-id>. </plain></SENT>
+<SENT sid="19245" pm="."><plain>PubMed: <ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/pubmed/22009675">22009675</ext-link>.<pub-id pub-id-type="pmid">22009675</pub-id></mixed-citation> </plain></SENT>
+</text></ref><ref id="B16"><text><SENT sid="19246" pm="."><plain><label>16</label><mixed-citation publication-type="journal"> <name><surname>Pruitt</surname><given-names>KD</given-names></name>, <name><surname>Tatusova</surname><given-names>T</given-names></name>, <name><surname>Brown</surname><given-names>GR</given-names></name>, <name><surname>Maglott</surname><given-names>DR</given-names></name> (<year>2012</year>) <article-title>NCBI Reference Sequences (RefSeq): current status, new features and genome annotation policy</article-title>. <source>Nucleic Acids Res</source> <volume>40</volume>: <fpage>D130</fpage>-<lpage>D135</lpage>. doi:<pub-id pub-id-type="doi">10.1093/nar/gks463</pub-id>. </plain></SENT>
+<SENT sid="19247" pm="."><plain>PubMed: <ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/pubmed/22121212">22121212</ext-link>.<pub-id pub-id-type="pmid">22121212</pub-id></mixed-citation> </plain></SENT>
+</text></ref><ref id="B17"><text><SENT sid="19248" pm="."><plain><label>17</label><mixed-citation publication-type="journal"> <name><surname>Markowitz</surname><given-names>VM</given-names></name> (<year>2007</year>) <article-title>Microbial genome data resources</article-title>. <source>Curr Opin Biotechnol</source> <volume>18</volume>: <fpage>267</fpage>-<lpage>272</lpage>. doi:<pub-id pub-id-type="doi">10.1016/j.copbio.2007.04.005</pub-id>. </plain></SENT>
+<SENT sid="19249" pm="."><plain>PubMed: <ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/pubmed/17467973">17467973</ext-link>.<pub-id pub-id-type="pmid">17467973</pub-id></mixed-citation> </plain></SENT>
+</text></ref><ref id="B18"><text><SENT sid="19250" pm="."><plain><label>18</label><mixed-citation publication-type="journal"> <name><surname>Markowitz</surname><given-names>VM</given-names></name>, <name><surname>Chen</surname><given-names>IMA</given-names></name>, <name><surname>Palaniappan</surname><given-names>K</given-names></name>, <name><surname>Chu</surname><given-names>K</given-names></name>, <name><surname>Szeto</surname><given-names>E</given-names></name> <etal>et al.</etal> (<year>2012</year>) <article-title>IMG: the integrated microbial genomes database and comparative analysis system</article-title>. <source>Nucleic Acids Res</source> <volume>40</volume>: <fpage>D115</fpage>-<lpage>D122</lpage>. doi:<pub-id pub-id-type="doi">10.1093/nar/gks596</pub-id>. </plain></SENT>
+<SENT sid="19251" pm="."><plain>PubMed: <ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/pubmed/22194640">22194640</ext-link>.<pub-id pub-id-type="pmid">22194640</pub-id></mixed-citation> </plain></SENT>
+</text></ref><ref id="B19"><text><SENT sid="19252" pm="."><plain><label>19</label><mixed-citation publication-type="journal"> <name><surname>Dehal</surname><given-names>PS</given-names></name>, <name><surname>Joachimiak</surname><given-names>MP</given-names></name>, <name><surname>Price</surname><given-names>MN</given-names></name>, <name><surname>Bates</surname><given-names>JT</given-names></name>, <name><surname>Baumohl</surname><given-names>JK</given-names></name> <etal>et al.</etal> (<year>2010</year>) <article-title>MicrobesOnline: an integrated portal for comparative and functional genomics</article-title>. <source>Nucleic Acids Res</source>, <volume>38</volume>: <fpage>D396</fpage>–<lpage>400</lpage>. </plain></SENT>
+<SENT sid="19253" pm="."><plain>PubMed: <ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/pubmed/19906701">19906701</ext-link>.<pub-id pub-id-type="pmid">19906701</pub-id></mixed-citation> </plain></SENT>
+</text></ref><ref id="B20"><text><SENT sid="19254" pm="."><plain><label>20</label><mixed-citation publication-type="journal"> <name><surname>Vallenet</surname><given-names>D</given-names></name>, <name><surname>Belda</surname><given-names>E</given-names></name>, <name><surname>Calteau</surname><given-names>A</given-names></name>, <name><surname>Cruveiller</surname><given-names>S</given-names></name>, <name><surname>Engelen</surname><given-names>S</given-names></name> <etal>et al.</etal> (<year>2013</year>) <article-title>MicroScope—an integrated microbial resource for the curation and comparative analysis of genomic and metabolic data</article-title>. <source>Nucleic Acids Res</source> <volume>41</volume>: <fpage>D636</fpage>-<lpage>D647</lpage>. doi:<pub-id pub-id-type="doi">10.1093/nar/gks1194</pub-id>. </plain></SENT>
+<SENT sid="19255" pm="."><plain>PubMed: <ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/pubmed/23193269">23193269</ext-link>.<pub-id pub-id-type="pmid">23193269</pub-id></mixed-citation> </plain></SENT>
+</text></ref><ref id="B21"><text><SENT sid="19256" pm="."><plain><label>21</label><mixed-citation publication-type="journal"> <name><surname>Luo</surname><given-names>R</given-names></name>, <name><surname>Liu</surname><given-names>B</given-names></name>, <name><surname>Xie</surname><given-names>Y</given-names></name>, <name><surname>Li</surname><given-names>Z</given-names></name>, <name><surname>Huang</surname><given-names>W</given-names></name> <etal>et al.</etal> (<year>2012</year>) <article-title>SOAPdenovo2: an empirically improved memory-efficient short-read de novo assembler</article-title>. <source>GigaScience</source> <volume>1</volume>: <fpage>1</fpage>-<lpage>6</lpage>. doi:<pub-id pub-id-type="doi">10.1186/2047-217X-1-1</pub-id>. </plain></SENT>
+<SENT sid="19257" pm="."><plain>PubMed: <ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/pubmed/23587310">23587310</ext-link>.<pub-id pub-id-type="pmid">23587310</pub-id></mixed-citation> </plain></SENT>
+</text></ref><ref id="B22"><text><SENT sid="19258" pm="."><plain><label>22</label><mixed-citation publication-type="journal"> <name><surname>Zerbino</surname><given-names>DR</given-names></name>, <name><surname>Birney</surname><given-names>E</given-names></name> (<year>2008</year>) <article-title>Velvet: Algorithms for de novo short read assembly using de Bruijn graphs</article-title>. <source>Genome Res</source> <volume>18</volume>: <fpage>821</fpage>-<lpage>829</lpage>. doi:<pub-id pub-id-type="doi">10.1101/gr.074492.107</pub-id>. </plain></SENT>
+<SENT sid="19259" pm="."><plain>PubMed: <ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/pubmed/18349386">18349386</ext-link>.<pub-id pub-id-type="pmid">18349386</pub-id></mixed-citation> </plain></SENT>
+</text></ref><ref id="B23"><text><SENT sid="19260" pm="."><plain><label>23</label><mixed-citation publication-type="journal"> <name><surname>Lin</surname><given-names>S-H</given-names></name>, <name><surname>Liao</surname><given-names>Y-C</given-names></name> (<year>2013</year>) <article-title>CISA: Contig Integrator for Sequence Assembly of Bacterial Genomes</article-title>. <source>PLOS ONE</source> <volume>8</volume>: <fpage>e60843</fpage>. doi:<pub-id pub-id-type="doi">10.1371/journal.pone.0060843</pub-id>. </plain></SENT>
+<SENT sid="19261" pm="."><plain>PubMed: <ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/pubmed/23556006">23556006</ext-link>.<pub-id pub-id-type="pmid">23556006</pub-id></mixed-citation> </plain></SENT>
+</text></ref><ref id="B24"><text><SENT sid="19262" pm="."><plain><label>24</label><mixed-citation publication-type="journal"> <name><surname>Boetzer</surname><given-names>M</given-names></name>, <name><surname>Henkel</surname><given-names>CV</given-names></name>, <name><surname>Jansen</surname><given-names>HJ</given-names></name>, <name><surname>Butler</surname><given-names>D</given-names></name>, <name><surname>Pirovano</surname><given-names>W</given-names></name> (<year>2011</year>) <article-title>Scaffolding pre-assembled contigs using SSPACE</article-title>. <source>Bioinformatics</source> <volume>27</volume>: <fpage>578</fpage>-<lpage>579</lpage>. doi:<pub-id pub-id-type="doi">10.1093/bioinformatics/btq683</pub-id>. </plain></SENT>
+<SENT sid="19263" pm="."><plain>PubMed: <ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/pubmed/21149342">21149342</ext-link>.<pub-id pub-id-type="pmid">21149342</pub-id></mixed-citation> </plain></SENT>
+</text></ref><ref id="B25"><text><SENT sid="19264" pm="."><plain><label>25</label><mixed-citation publication-type="journal"> <name><surname>Boetzer</surname><given-names>M</given-names></name>, <name><surname>Pirovano</surname><given-names>W</given-names></name> (<year>2012</year>) <article-title>Toward almost closed genomes with GapFiller</article-title>. <source>Genome Biol</source> <volume>13</volume>: <fpage>R56</fpage>. doi:<pub-id pub-id-type="doi">10.1186/gb-2012-13-6-r56</pub-id>. </plain></SENT>
+<SENT sid="19265" pm="."><plain>PubMed: <ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/pubmed/22731987">22731987</ext-link>.<pub-id pub-id-type="pmid">22731987</pub-id></mixed-citation> </plain></SENT>
+</text></ref><ref id="B26"><text><SENT sid="19266" pm="."><plain><label>26</label><mixed-citation publication-type="journal"> <name><surname>Sommer</surname><given-names>DD</given-names></name>, <name><surname>Delcher</surname><given-names>AL</given-names></name>, <name><surname>Salzberg</surname><given-names>SL</given-names></name>, <name><surname>Pop</surname><given-names>M</given-names></name> (<year>2007</year>) <article-title>Minimus: a fast, lightweight genome assembler</article-title>. <source>BMC Bioinformatics</source> <volume>8</volume>: <fpage>64</fpage>. doi:<pub-id pub-id-type="doi">10.1186/1471-2105-8-64</pub-id>. </plain></SENT>
+<SENT sid="19267" pm="."><plain>PubMed: <ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/pubmed/17324286">17324286</ext-link>.<pub-id pub-id-type="pmid">17324286</pub-id></mixed-citation> </plain></SENT>
+</text></ref><ref id="B27"><text><SENT sid="19268" pm="."><plain><label>27</label><mixed-citation publication-type="journal"> <name><surname>Slater</surname><given-names>GS</given-names></name>, <name><surname>Birney</surname><given-names>E</given-names></name> (<year>2005</year>) <article-title>Automated generation of heuristics for biological sequence comparison</article-title>. <source>BMC Bioinformatics</source> <volume>6</volume>: <fpage>31</fpage>. doi:<pub-id pub-id-type="doi">10.1186/1471-2105-6-31</pub-id>. </plain></SENT>
+<SENT sid="19269" pm="."><plain>PubMed: <ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/pubmed/15713233">15713233</ext-link>.<pub-id pub-id-type="pmid">15713233</pub-id></mixed-citation> </plain></SENT>
+</text></ref><ref id="B28"><text><SENT sid="19270" pm="."><plain><label>28</label><mixed-citation publication-type="journal"> <name><surname>Lagesen</surname><given-names>K</given-names></name>, <name><surname>Hallin</surname><given-names>P</given-names></name>, <name><surname>Rødland</surname><given-names>EA</given-names></name>, <name><surname>Staerfeldt</surname><given-names>HH</given-names></name>, <name><surname>Rognes</surname><given-names>T</given-names></name> <etal>et al.</etal> (<year>2007</year>) <article-title>RNAmmer: consistent and rapid annotation of ribosomal RNA genes</article-title>. <source>Nucleic Acids Res</source> <volume>35</volume>: <fpage>3100</fpage>-<lpage>3108</lpage>. doi:<pub-id pub-id-type="doi">10.1093/nar/gkm160</pub-id>. </plain></SENT>
+<SENT sid="19271" pm="."><plain>PubMed: <ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/pubmed/17452365">17452365</ext-link>.<pub-id pub-id-type="pmid">17452365</pub-id></mixed-citation> </plain></SENT>
+</text></ref><ref id="B29"><text><SENT sid="19272" pm="."><plain><label>29</label><mixed-citation publication-type="journal"> <name><surname>Schattner</surname><given-names>P</given-names></name>, <name><surname>Brooks</surname><given-names>AN</given-names></name>, <name><surname>Lowe</surname><given-names>TM</given-names></name> (<year>2005</year>) <article-title>The tRNAscan-SE, snoscan and snoGPS web servers for the detection of tRNAs and snoRNAs</article-title>. <source>Nucleic Acids Res</source> <volume>33</volume>: <fpage>W686</fpage>-<lpage>W689</lpage>. doi:<pub-id pub-id-type="doi">10.1093/nar/gki366</pub-id>. </plain></SENT>
+<SENT sid="19273" pm="."><plain>PubMed: <ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/pubmed/15980563">15980563</ext-link>.<pub-id pub-id-type="pmid">15980563</pub-id></mixed-citation> </plain></SENT>
+</text></ref><ref id="B30"><text><SENT sid="19274" pm="."><plain><label>30</label><mixed-citation publication-type="journal"> <name><surname>Hyatt</surname><given-names>D</given-names></name>, <name><surname>Chen</surname><given-names>GL</given-names></name>, <name><surname>Locascio</surname><given-names>PF</given-names></name>, <name><surname>Land</surname><given-names>ML</given-names></name>, <name><surname>Larimer</surname><given-names>FW</given-names></name> <etal>et al.</etal> (<year>2010</year>) <article-title>Prodigal: prokaryotic gene recognition and translation initiation site identification</article-title>. <source>BMC Bioinformatics</source> <volume>11</volume>: <fpage>119</fpage>. doi:<pub-id pub-id-type="doi">10.1186/1471-2105-11-119</pub-id>. </plain></SENT>
+<SENT sid="19275" pm="."><plain>PubMed: <ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/pubmed/20211023">20211023</ext-link>.<pub-id pub-id-type="pmid">20211023</pub-id></mixed-citation> </plain></SENT>
+</text></ref><ref id="B31"><text><SENT sid="19276" pm="."><plain><label>31</label><mixed-citation publication-type="journal"> <name><surname>Besemer</surname><given-names>J</given-names></name>, <name><surname>Lomsadze</surname><given-names>A</given-names></name>, <name><surname>Borodovsky</surname><given-names>M</given-names></name> (<year>2001</year>) <article-title>GeneMarkS: a self-training method for prediction of gene starts in microbial genomes. </plain></SENT>
+<SENT sid="19277" pm="."><plain>Implications for finding sequence motifs in regulatory regions</article-title>. <source>Nucleic Acids Res</source> <volume>29</volume>: <fpage>2607</fpage>-<lpage>2618</lpage>. doi:<pub-id pub-id-type="doi">10.1093/nar/29.12.2607</pub-id>. </plain></SENT>
+<SENT sid="19278" pm="."><plain>PubMed: <ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/pubmed/11410670">11410670</ext-link>.<pub-id pub-id-type="pmid">11410670</pub-id></mixed-citation> </plain></SENT>
+</text></ref><ref id="B32"><text><SENT sid="19279" pm="."><plain><label>32</label><mixed-citation publication-type="journal"> <name><surname>Noguchi</surname><given-names>H</given-names></name>, <name><surname>Taniguchi</surname><given-names>T</given-names></name>, <name><surname>Itoh</surname><given-names>T</given-names></name> (<year>2008</year>) <article-title>MetaGeneAnnotator: detecting species-specific patterns of ribosomal binding site for precise gene prediction in anonymous prokaryotic and phage genomes</article-title>. <source>DNA Res</source> <volume>15</volume>: <fpage>387</fpage>-<lpage>396</lpage>. doi:<pub-id pub-id-type="doi">10.1093/dnares/dsn027</pub-id>. </plain></SENT>
+<SENT sid="19280" pm="."><plain>PubMed: <ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/pubmed/18940874">18940874</ext-link>.<pub-id pub-id-type="pmid">18940874</pub-id></mixed-citation> </plain></SENT>
+</text></ref><ref id="B33"><text><SENT sid="19281" pm="."><plain><label>33</label><mixed-citation publication-type="journal"> <name><surname>Altschul</surname><given-names>SF</given-names></name>, <name><surname>Gish</surname><given-names>W</given-names></name>, <name><surname>Miller</surname><given-names>W</given-names></name>, <name><surname>Myers</surname><given-names>EW</given-names></name>, <name><surname>Lipman</surname><given-names>DJ</given-names></name> (<year>1990</year>) <article-title>Basic local alignment search tool</article-title>. <source>J Mol Biol</source> <volume>215</volume>: <fpage>403</fpage>-<lpage>410</lpage>. doi:<pub-id pub-id-type="doi">10.1016/S0022-2836(05)80360-2</pub-id>. </plain></SENT>
+<SENT sid="19282" pm="."><plain>PubMed: <ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/pubmed/2231712">2231712</ext-link>.<pub-id pub-id-type="pmid">2231712</pub-id></mixed-citation> </plain></SENT>
+</text></ref><ref id="B34"><text><SENT sid="19283" pm="."><plain><label>34</label><mixed-citation publication-type="journal"> <name><surname>Altschul</surname><given-names>SF</given-names></name>, <name><surname>Madden</surname><given-names>TL</given-names></name>, <name><surname>Schäffer</surname><given-names>AA</given-names></name>, <name><surname>Zhang</surname><given-names>J</given-names></name>, <name><surname>Zhang</surname><given-names>Z</given-names></name> <etal>et al.</etal> (<year>1997</year>) <article-title>Gapped BLAST and PSI-BLAST: a new generation of protein database search programs</article-title>. <source>Nucleic Acids Res</source> <volume>25</volume>: <fpage>3389</fpage>-<lpage>3402</lpage>. doi:<pub-id pub-id-type="doi">10.1093/nar/25.17.3389</pub-id>. </plain></SENT>
+<SENT sid="19284" pm="."><plain>PubMed: <ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/pubmed/9254694">9254694</ext-link>.<pub-id pub-id-type="pmid">9254694</pub-id></mixed-citation> </plain></SENT>
+</text></ref><ref id="B35"><text><SENT sid="19285" pm="."><plain><label>35</label><mixed-citation publication-type="journal"> <collab>Consortium TU</collab> (<year>2012</year>) <article-title>Reorganizing the protein space at the Universal Protein Resource (UniProt)</article-title>. <source>Nucleic Acids Res</source> <volume>40</volume>: <fpage>D71</fpage>-<lpage>D75</lpage>. doi:<pub-id pub-id-type="doi">10.1093/nar/gkr981</pub-id>. </plain></SENT>
+<SENT sid="19286" pm="."><plain>PubMed: <ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/pubmed/22102590">22102590</ext-link>.<pub-id pub-id-type="pmid">22102590</pub-id></mixed-citation> </plain></SENT>
+</text></ref><ref id="B36"><text><SENT sid="19287" pm="."><plain><label>36</label><mixed-citation publication-type="journal"> <name><surname>Kanehisa</surname><given-names>M</given-names></name>, <name><surname>Goto</surname><given-names>S</given-names></name>, <name><surname>Sato</surname><given-names>Y</given-names></name>, <name><surname>Furumichi</surname><given-names>M</given-names></name>, <name><surname>Tanabe</surname><given-names>M</given-names></name> (<year>2012</year>) <article-title>KEGG for integration and interpretation of large-scale molecular data sets</article-title>. <source>Nucleic Acids Res</source> <volume>40</volume>: <fpage>D109</fpage>-<lpage>D114</lpage>. doi:<pub-id pub-id-type="doi">10.1093/nar/gkr988</pub-id>. </plain></SENT>
+<SENT sid="19288" pm="."><plain>PubMed: <ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/pubmed/22080510">22080510</ext-link>.<pub-id pub-id-type="pmid">22080510</pub-id></mixed-citation> </plain></SENT>
+</text></ref><ref id="B37"><text><SENT sid="19289" pm="."><plain><label>37</label><mixed-citation publication-type="journal"> <name><surname>Marchler-Bauer</surname><given-names>A</given-names></name>, <name><surname>Zheng</surname><given-names>C</given-names></name>, <name><surname>Chitsaz</surname><given-names>F</given-names></name>, <name><surname>Derbyshire</surname><given-names>MK</given-names></name>, <name><surname>Geer</surname><given-names>LY</given-names></name> <etal>et al.</etal> (<year>2013</year>) <article-title>CDD: conserved domains and protein three-dimensional structure</article-title>. <source>Nucleic Acids Res</source> <volume>41</volume>: <fpage>D348</fpage>-<lpage>D352</lpage>. doi:<pub-id pub-id-type="doi">10.1093/nar/gks1243</pub-id>. </plain></SENT>
+<SENT sid="19290" pm="."><plain>PubMed: <ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/pubmed/23197659">23197659</ext-link>.<pub-id pub-id-type="pmid">23197659</pub-id></mixed-citation> </plain></SENT>
+</text></ref><ref id="B38"><text><SENT sid="19291" pm="."><plain><label>38</label><mixed-citation publication-type="journal"> <name><surname>Hunter</surname><given-names>S</given-names></name>, <name><surname>Apweiler</surname><given-names>R</given-names></name>, <name><surname>Attwood</surname><given-names>TK</given-names></name>, <name><surname>Bairoch</surname><given-names>A</given-names></name>, <name><surname>Bateman</surname><given-names>A</given-names></name> <etal>et al.</etal> (<year>2009</year>) <article-title>InterPro: the integrative protein signature database</article-title>. <source>Nucleic Acids Res</source> <volume>37</volume>: <fpage>D211</fpage>-<lpage>D215</lpage>. doi:<pub-id pub-id-type="doi">10.1093/nar/gkn785</pub-id>. </plain></SENT>
+<SENT sid="19292" pm="."><plain>PubMed: <ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/pubmed/18940856">18940856</ext-link>.<pub-id pub-id-type="pmid">18940856</pub-id></mixed-citation> </plain></SENT>
+</text></ref><ref id="B39"><text><SENT sid="19293" pm="."><plain><label>39</label><mixed-citation publication-type="journal"> <name><surname>Hunter</surname><given-names>S</given-names></name>, <name><surname>Jones</surname><given-names>P</given-names></name>, <name><surname>Mitchell</surname><given-names>A</given-names></name>, <name><surname>Apweiler</surname><given-names>R</given-names></name>, <name><surname>Attwood</surname><given-names>TK</given-names></name> <etal>et al.</etal> (<year>2012</year>) <article-title>InterPro in 2011: new developments in the family and domain prediction database</article-title>. <source>Nucleic Acids Res</source> <volume>40</volume>: <fpage>D306</fpage>-<lpage>D312</lpage>. doi:<pub-id pub-id-type="doi">10.1093/nar/gkr948</pub-id>. </plain></SENT>
+<SENT sid="19294" pm="."><plain>PubMed: <ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/pubmed/22096229">22096229</ext-link>.<pub-id pub-id-type="pmid">22096229</pub-id></mixed-citation> </plain></SENT>
+</text></ref><ref id="B40"><text><SENT sid="19295" pm="."><plain><label>40</label><mixed-citation publication-type="journal"> <name><surname>Triplet</surname><given-names>T</given-names></name>, <name><surname>Butler</surname><given-names>G</given-names></name> (<year>2013</year>) <article-title>A review of genomic data warehousing systems</article-title>. <source>Brief Bioinform</source>: <comment>([MedlinePgn:])</comment> PubMed: <ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/pubmed/23673292">23673292</ext-link>.</mixed-citation> </plain></SENT>
+</text></ref><ref id="B41"><text><SENT sid="19296" pm="."><plain><label>41</label><mixed-citation publication-type="book"> <name><surname>Zhang</surname><given-names>J</given-names></name>, <name><surname>Haider</surname><given-names>S</given-names></name>, <name><surname>Baran</surname><given-names>J</given-names></name>, <name><surname>Cros</surname><given-names>A</given-names></name>, <name><surname>Guberman</surname><given-names>JM</given-names></name> <etal>et al.</etal> (<year>2011</year>) <article-title>BioMart: a data federation framework for large collaborative projects. </plain></SENT>
+<SENT sid="19297" pm="."><plain>Database (Oxford)</article-title>. <comment>p.</comment> <fpage>bar038</fpage> <publisher-name>PubMed</publisher-name> <comment>: 21930506</comment> </mixed-citation> </plain></SENT>
+</text></ref><ref id="B42"><text><SENT sid="19298" pm="."><plain><label>42</label><mixed-citation publication-type="journal"> <name><surname>Karp</surname><given-names>PD</given-names></name>, <name><surname>Paley</surname><given-names>SM</given-names></name>, <name><surname>Krummenacker</surname><given-names>M</given-names></name>, <name><surname>Latendresse</surname><given-names>M</given-names></name>, <name><surname>Dale</surname><given-names>JM</given-names></name> <etal>et al.</etal> (<year>2010</year>) <article-title>Pathway Tools version 13.0: integrated software for pathway/genome informatics and systems biology</article-title>. <source>Brief Bioinform</source> <volume>11</volume>: <fpage>40</fpage>-<lpage>79</lpage>. doi:<pub-id pub-id-type="doi">10.1093/bib/bbp043</pub-id>. </plain></SENT>
+<SENT sid="19299" pm="."><plain>PubMed: <ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/pubmed/19955237">19955237</ext-link>.<pub-id pub-id-type="pmid">19955237</pub-id></mixed-citation> </plain></SENT>
+</text></ref><ref id="B43"><text><SENT sid="19300" pm="."><plain><label>43</label><mixed-citation publication-type="journal"> <name><surname>Pareja-Tobes</surname><given-names>P</given-names></name>, <name><surname>Manrique</surname><given-names>M</given-names></name>, <name><surname>Pareja-Tobes</surname><given-names>E</given-names></name>, <name><surname>Pareja</surname><given-names>E</given-names></name>, <name><surname>Tobes</surname><given-names>R</given-names></name> (<year>2012</year>) <article-title>BG7: a new approach for bacterial genome annotation designed for next generation sequencing data</article-title>. <source>PLOS ONE</source> <volume>7</volume>: <fpage>e49239</fpage>. doi:<pub-id pub-id-type="doi">10.1371/journal.pone.0049239</pub-id>. </plain></SENT>
+<SENT sid="19301" pm="."><plain>PubMed: <ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/pubmed/23185310">23185310</ext-link>.<pub-id pub-id-type="pmid">23185310</pub-id></mixed-citation> </plain></SENT>
+</text></ref><ref id="B44"><text><SENT sid="19302" pm="."><plain><label>44</label><mixed-citation publication-type="journal"> <name><surname>Nakabachi</surname><given-names>A</given-names></name>, <name><surname>Ueoka</surname><given-names>R</given-names></name>, <name><surname>Oshima</surname><given-names>K</given-names></name>, <name><surname>Teta</surname><given-names>R</given-names></name>, <name><surname>Mangoni</surname><given-names>A</given-names></name> <etal>et al.</etal> (<year>2013</year>) <article-title>Defensive bacteriome symbiont with a drastically reduced genome</article-title>. <source>Curr Biol</source> <volume>23</volume>: <fpage>1478</fpage>-<lpage>1484</lpage>. doi:<pub-id pub-id-type="doi">10.1016/j.cub.2013.06.027</pub-id>. </plain></SENT>
+<SENT sid="19303" pm="."><plain>PubMed: <ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/pubmed/23850282">23850282</ext-link>.<pub-id pub-id-type="pmid">23850282</pub-id></mixed-citation> </plain></SENT>
+</text></ref><ref id="B45"><text><SENT sid="19304" pm="."><plain><label>45</label><mixed-citation publication-type="journal"> <name><surname>Rohde</surname><given-names>H</given-names></name>, <name><surname>Qin</surname><given-names>J</given-names></name>, <name><surname>Cui</surname><given-names>Y</given-names></name>, <name><surname>Li</surname><given-names>D</given-names></name>, <name><surname>Loman</surname><given-names>NJ</given-names></name>, <etal>et al.</etal> (<year>2011</year>) <article-title>Open-source genomic analysis of Shiga-toxin–producing E. coli O104: H4</article-title>. <source>New England Journal of Medicine</source> <volume>365</volume>: <fpage>718</fpage>-<lpage>724</lpage>.<pub-id pub-id-type="pmid">21793736</pub-id></mixed-citation> </plain></SENT>
+</text></ref><ref id="B46"><text><SENT sid="19305" pm="."><plain><label>46</label><mixed-citation publication-type="journal"> <name><surname>Ondov</surname><given-names>BD</given-names></name>, <name><surname>Bergman</surname><given-names>NH</given-names></name>, <name><surname>Phillippy</surname><given-names>AM</given-names></name> (<year>2011</year>) <article-title>Interactive metagenomic visualization in a Web browser</article-title>. <source>BMC Bioinformatics</source> <volume>12</volume>: <fpage>385</fpage>. doi:<pub-id pub-id-type="doi">10.1186/1471-2105-12-385</pub-id>. </plain></SENT>
+<SENT sid="19306" pm="."><plain>PubMed: <ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/pubmed/21961884">21961884</ext-link>.<pub-id pub-id-type="pmid">21961884</pub-id></mixed-citation> </plain></SENT>
+</text></ref><ref id="B47"><text><SENT sid="19307" pm="."><plain><label>47</label><mixed-citation publication-type="journal"> <name><surname>Nelson</surname><given-names>KE</given-names></name>, <name><surname>Weinstock</surname><given-names>GM</given-names></name>, <name><surname>Highlander</surname><given-names>SK</given-names></name>, <name><surname>Worley</surname><given-names>KC</given-names></name>, <name><surname>Creasy</surname><given-names>HH</given-names></name> <etal>et al.</etal> (<year>2010</year>) <article-title>A catalog of reference genomes from the human microbiome</article-title>. <source>Science</source> <volume>328</volume>: <fpage>994</fpage>-<lpage>999</lpage>. doi:<pub-id pub-id-type="doi">10.1126/science.1183605</pub-id>. </plain></SENT>
+<SENT sid="19308" pm="."><plain>PubMed: <ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/pubmed/20489017">20489017</ext-link>.<pub-id pub-id-type="pmid">20489017</pub-id></mixed-citation> </plain></SENT>
+</text></ref><ref id="B48"><text><SENT sid="19309" pm="."><plain><label>48</label><mixed-citation publication-type="journal"> <name><surname>Skinner</surname><given-names>ME</given-names></name>, <name><surname>Uzilov</surname><given-names>AV</given-names></name>, <name><surname>Stein</surname><given-names>LD</given-names></name>, <name><surname>Mungall</surname><given-names>CJ</given-names></name>, <name><surname>Holmes</surname><given-names>IH</given-names></name> (<year>2009</year>) <article-title>JBrowse: a next-generation genome browser</article-title>. <source>Genome Res</source> <volume>19</volume>: <fpage>1630</fpage>-<lpage>1638</lpage>. doi:<pub-id pub-id-type="doi">10.1101/gr.094607.109</pub-id>. </plain></SENT>
+<SENT sid="19310" pm="."><plain>PubMed: <ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/pubmed/19570905">19570905</ext-link>.<pub-id pub-id-type="pmid">19570905</pub-id></mixed-citation> </plain></SENT>
+</text></ref><ref id="B49"><text><SENT sid="19311" pm="."><plain><label>49</label><mixed-citation publication-type="journal"> <name><surname>Ngugi</surname><given-names>DK</given-names></name>, <name><surname>Antunes</surname><given-names>A</given-names></name>, <name><surname>Brune</surname><given-names>A</given-names></name>, <name><surname>Stingl</surname><given-names>U</given-names></name> (<year>2012</year>) <article-title>Biogeography of pelagic bacterioplankton across an antagonistic temperature–salinity gradient in the Red Sea</article-title>. <source>Mol Ecol</source> <volume>21</volume>: <fpage>388</fpage>-<lpage>405</lpage>. doi:<pub-id pub-id-type="doi">10.1111/j.1365-294X.2011.05378.x</pub-id>. </plain></SENT>
+<SENT sid="19312" pm="."><plain>PubMed: <ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/pubmed/22133021">22133021</ext-link>.<pub-id pub-id-type="pmid">22133021</pub-id></mixed-citation> </plain></SENT>
+</text></ref><ref id="B50"><text><SENT sid="19313" pm="."><plain><label>50</label><mixed-citation publication-type="journal"> <name><surname>Tragou</surname><given-names>E</given-names></name>, <name><surname>Garrett</surname><given-names>C</given-names></name> (<year>1997</year>) <article-title>The shallow thermohaline circulation of the Red Sea</article-title>. <source>Deep Sea Research Part I, Oceanographic Research Papers</source> <volume>44</volume>: <fpage>1355</fpage>-<lpage>1376</lpage>. doi:<pub-id pub-id-type="doi">10.1016/S0967-0637(97)00026-5</pub-id>.</mixed-citation> </plain></SENT>
+</text></ref><ref id="B51"><text><SENT sid="19314" pm="."><plain><label>51</label><mixed-citation publication-type="journal"> <name><surname>Antunes</surname><given-names>A</given-names></name>, <name><surname>Ngugi</surname><given-names>DK</given-names></name>, <name><surname>Stingl</surname><given-names>U</given-names></name> (<year>2011</year>) <article-title>Microbiology of the Red Sea (and other) deep-sea anoxic brine lakes</article-title>. <source>Environ Microbiol Rep</source> <volume>3</volume>: <fpage>416</fpage>-<lpage>433</lpage>. doi:<pub-id pub-id-type="doi">10.1111/j.1758-2229.2011.00264.x</pub-id>. </plain></SENT>
+<SENT sid="19315" pm="."><plain>PubMed: <ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/pubmed/23761304">23761304</ext-link>.<pub-id pub-id-type="pmid">23761304</pub-id></mixed-citation> </plain></SENT>
+</text></ref><ref id="B52"><text><SENT sid="19316" pm="."><plain><label>52</label><mixed-citation publication-type="journal"> <name><surname>Antunes</surname><given-names>A</given-names></name>, <name><surname>Eder</surname><given-names>W</given-names></name>, <name><surname>Fareleira</surname><given-names>P</given-names></name>, <name><surname>Santos</surname><given-names>H</given-names></name>, <name><surname>Huber</surname><given-names>R</given-names></name> (<year>2003</year>) <article-title>Salinisphaera shabanensis gen. nov., sp. nov., a novel, moderately halophilic bacterium from the brine–seawater interface of the Shaban Deep, Red Sea</article-title>. <source>Extremophiles</source> <volume>7</volume>: <fpage>29</fpage>-<lpage>34</lpage>. </plain></SENT>
+<SENT sid="19317" pm="."><plain>PubMed: <ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/pubmed/12579377">12579377</ext-link>.<pub-id pub-id-type="pmid">12579377</pub-id></mixed-citation> </plain></SENT>
+</text></ref><ref id="B53"><text><SENT sid="19318" pm="."><plain><label>53</label><mixed-citation publication-type="journal"> <name><surname>Antunes</surname><given-names>A</given-names></name>, <name><surname>Rainey</surname><given-names>FA</given-names></name>, <name><surname>Wanner</surname><given-names>G</given-names></name>, <name><surname>Taborda</surname><given-names>M</given-names></name>, <name><surname>Pätzold</surname><given-names>J</given-names></name> <etal>et al.</etal> (<year>2008</year>) <article-title>A new lineage of halophilic, wall-less, contractile bacteria from a brine-filled deep of the Red Sea</article-title>. <source>J Bacteriol</source> <volume>190</volume>: <fpage>3580</fpage>-<lpage>3587</lpage>. doi:<pub-id pub-id-type="doi">10.1128/JB.01860-07</pub-id>. </plain></SENT>
+<SENT sid="19319" pm="."><plain>PubMed: <ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/pubmed/18326567">18326567</ext-link>.<pub-id pub-id-type="pmid">18326567</pub-id></mixed-citation> </plain></SENT>
+</text></ref><ref id="B54"><text><SENT sid="19320" pm="."><plain><label>54</label><mixed-citation publication-type="journal"> <name><surname>Antunes</surname><given-names>A</given-names></name>, <name><surname>Taborda</surname><given-names>M</given-names></name>, <name><surname>Huber</surname><given-names>R</given-names></name>, <name><surname>Moissl</surname><given-names>C</given-names></name>, <name><surname>Nobre</surname><given-names>MF</given-names></name> <etal>et al.</etal> (<year>2008</year>) <article-title>Halorhabdus tiamatea sp. nov., a non-pigmented, extremely halophilic archaeon from a deep-sea, hypersaline anoxic basin of the Red Sea, and emended description of the genus Halorhabdus</article-title>. <source>Int J Syst Evol Microbiol</source> <volume>58</volume>: <fpage>215</fpage>-<lpage>220</lpage>. doi:<pub-id pub-id-type="doi">10.1099/ijs.0.65316-0</pub-id>. </plain></SENT>
+<SENT sid="19321" pm="."><plain>PubMed: <ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/pubmed/18175711">18175711</ext-link>.<pub-id pub-id-type="pmid">18175711</pub-id></mixed-citation> </plain></SENT>
+</text></ref><ref id="B55"><text><SENT sid="19322" pm="."><plain><label>55</label><mixed-citation publication-type="journal"> <name><surname>Huber</surname><given-names>R</given-names></name>, <name><surname>Burggraf</surname><given-names>S</given-names></name>, <name><surname>Mayer</surname><given-names>T</given-names></name>, <name><surname>Barns</surname><given-names>SM</given-names></name>, <name><surname>Rossnagel</surname><given-names>P</given-names></name> <etal>et al.</etal> (<year>1995</year>) <article-title>Isolation of a hyperthermophilic archaeum predicted by in situ RNA analysis</article-title>. <source>Nature</source> <volume>376</volume>: <fpage>57</fpage>-<lpage>58</lpage>. doi:<pub-id pub-id-type="doi">10.1038/376057a0</pub-id>. </plain></SENT>
+<SENT sid="19323" pm="."><plain>PubMed: <ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/pubmed/7541115">7541115</ext-link>.<pub-id pub-id-type="pmid">7541115</pub-id></mixed-citation> </plain></SENT>
+</text></ref><ref id="B56"><text><SENT sid="19324" pm="."><plain><label>56</label><mixed-citation publication-type="journal"> <name><surname>Huber</surname><given-names>R</given-names></name>, <name><surname>Huber</surname><given-names>H</given-names></name>, <name><surname>Stetter</surname><given-names>KO</given-names></name> (<year>2000</year>) <article-title>Towards the ecology of hyperthermophiles: biotopes, new isolation strategies and novel metabolic properties</article-title>. <source>FEMS Microbiol Rev</source> <volume>24</volume>: <fpage>615</fpage>-<lpage>623</lpage>. doi:<pub-id pub-id-type="doi">10.1111/j.1574-6976.2000.tb00562.x</pub-id>. </plain></SENT>
+<SENT sid="19325" pm="."><plain>PubMed: <ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/pubmed/11077154">11077154</ext-link>.<pub-id pub-id-type="pmid">11077154</pub-id></mixed-citation> </plain></SENT>
+</text></ref><ref id="B57"><text><SENT sid="19326" pm="."><plain><label>57</label><mixed-citation publication-type="journal"> <name><surname>Mingorance</surname><given-names>J</given-names></name>, <name><surname>Tamames</surname><given-names>J</given-names></name>, <name><surname>Vicente</surname><given-names>M</given-names></name> (<year>2004</year>) <article-title>Genomic channeling in bacterial cell division</article-title>. <source>J Mol Recognit</source> <volume>17</volume>: <fpage>481</fpage>-<lpage>487</lpage>. doi:<pub-id pub-id-type="doi">10.1002/jmr.718</pub-id>. </plain></SENT>
+<SENT sid="19327" pm="."><plain>PubMed: <ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/pubmed/15362108">15362108</ext-link>.<pub-id pub-id-type="pmid">15362108</pub-id></mixed-citation> </plain></SENT>
+</text></ref><ref id="B58"><text><SENT sid="19328" pm="."><plain><label>58</label><mixed-citation publication-type="journal"> <name><surname>Tamames</surname><given-names>J</given-names></name>, <name><surname>González-Moreno</surname><given-names>M</given-names></name>, <name><surname>Mingorance</surname><given-names>J</given-names></name>, <name><surname>Valencia</surname><given-names>A</given-names></name>, <name><surname>Vicente</surname><given-names>M</given-names></name> (<year>2001</year>) <article-title>Bringing gene order into bacterial shape</article-title>. <source>Trends in Genetics</source> <volume>17</volume>: <fpage>124</fpage>-<lpage>126</lpage>. doi:<pub-id pub-id-type="doi">10.1016/S0168-9525(00)02212-5</pub-id>. </plain></SENT>
+<SENT sid="19329" pm="."><plain>PubMed: <ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/pubmed/11226588">11226588</ext-link>.<pub-id pub-id-type="pmid">11226588</pub-id></mixed-citation> </plain></SENT>
+</text></ref><ref id="B59"><text><SENT sid="19330" pm="."><plain><label>59</label><mixed-citation publication-type="journal"> <name><surname>Siefert</surname><given-names>JL</given-names></name>, <name><surname>Fox</surname><given-names>GE</given-names></name> (<year>1998</year>) <article-title>Phylogenetic mapping of bacterial morphology</article-title>. <source>Microbiology-UK</source> <volume>144</volume>: <fpage>2803</fpage>-<lpage>2808</lpage>. doi:<pub-id pub-id-type="doi">10.1099/00221287-144-10-2803</pub-id>. </plain></SENT>
+<SENT sid="19331" pm="."><plain>PubMed: <ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/pubmed/9802021">9802021</ext-link>.</mixed-citation> </plain></SENT>
+</text></ref><ref id="B60"><text><SENT sid="19332" pm="."><plain><label>60</label><mixed-citation publication-type="journal"> <name><surname>Carmona</surname><given-names>M</given-names></name>, <name><surname>Zamarro</surname><given-names>MT</given-names></name>, <name><surname>Blázquez</surname><given-names>B</given-names></name>, <name><surname>Durante-Rodríguez</surname><given-names>G</given-names></name>, <name><surname>Juárez</surname><given-names>JF</given-names></name> <etal>et al.</etal> (<year>2009</year>) <article-title>Anaerobic catabolism of aromatic compounds: a genetic and genomic view</article-title>. <source>Microbiol Mol Biol Rev</source> <volume>73</volume>: <fpage>71</fpage>-<lpage>133</lpage>. doi:<pub-id pub-id-type="doi">10.1128/MMBR.00021-08</pub-id>. </plain></SENT>
+<SENT sid="19333" pm="."><plain>PubMed: <ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/pubmed/19258534">19258534</ext-link>.<pub-id pub-id-type="pmid">19258534</pub-id></mixed-citation> </plain></SENT>
+</text></ref><ref id="B61"><text><SENT sid="19334" pm="."><plain><label>61</label><mixed-citation publication-type="journal"> <name><surname>Valderrama</surname><given-names>JA</given-names></name>, <name><surname>Durante-Rodríguez</surname><given-names>G</given-names></name>, <name><surname>Blázquez</surname><given-names>B</given-names></name>, <name><surname>García</surname><given-names>JL</given-names></name>, <name><surname>Carmona</surname><given-names>M</given-names></name> <etal>et al.</etal> (<year>2012</year>) <article-title>Bacterial Degradation of Benzoate CROSS-REGULATION BETWEEN AEROBIC AND ANAEROBIC PATHWAYS</article-title>. <source>J Biol Chem</source> <volume>287</volume>: <fpage>10494</fpage>-<lpage>10508</lpage>. doi:<pub-id pub-id-type="doi">10.1074/jbc.M111.309005</pub-id>. </plain></SENT>
+<SENT sid="19335" pm="."><plain>PubMed: <ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/pubmed/22303008">22303008</ext-link>.<pub-id pub-id-type="pmid">22303008</pub-id></mixed-citation> </plain></SENT>
+</text></ref><ref id="B62"><text><SENT sid="19336" pm="."><plain><label>62</label><mixed-citation publication-type="journal"> <name><surname>Michaelis</surname><given-names>W</given-names></name>, <name><surname>Jenisch</surname><given-names>A</given-names></name>, <name><surname>Richnow</surname><given-names>HH</given-names></name> (<year>1990</year>) <article-title>Hydrothermal Petroleum Generation in Red-Sea Sediments from the Kebrit and Shaban Deeps</article-title>. <source>Applied Geochemistry</source> <volume>5</volume>: <fpage>103</fpage>-<lpage>114</lpage>. doi:<pub-id pub-id-type="doi">10.1016/0883-2927(90)90041-3</pub-id>.</mixed-citation> </plain></SENT>
+</text></ref></ref-list></SecTag></back></article>

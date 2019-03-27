@@ -1,0 +1,753 @@
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD v1.1 20151215//EN" "JATS-archivearticle1.dtd"> 
+<article xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML" open-status="O" article-type="research-article"><?properties open_access?><?DTDIdentifier.IdentifierValue -//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD v1.1 20151215//EN?><?DTDIdentifier.IdentifierType public?><?SourceDTD.DTDName JATS-archivearticle1.dtd?><?SourceDTD.Version 1.1?><?ConverterInfo.XSLTName jp2nlmx2.xsl?><?ConverterInfo.Version 1?><front><journal-meta><journal-id journal-id-type="nlm-ta">PLoS One</journal-id><journal-id journal-id-type="iso-abbrev">PLoS ONE</journal-id><journal-id journal-id-type="publisher-id">plos</journal-id><journal-id journal-id-type="pmc">plosone</journal-id><journal-title-group><journal-title>PLoS ONE</journal-title></journal-title-group><issn pub-type="epub">1932-6203</issn><publisher><publisher-name>Public Library of Science</publisher-name><publisher-loc>San Francisco, USA</publisher-loc></publisher></journal-meta><article-meta><article-id pub-id-type="pmcid">3813579</article-id><article-id pub-id-type="pmid">24205078</article-id><article-id pub-id-type="publisher-id">PONE-D-13-21313</article-id><article-id pub-id-type="doi">10.1371/journal.pone.0078038</article-id><article-categories><subj-group subj-group-type="heading"><subject>Research Article</subject></subj-group></article-categories><title-group><article-title><SecTag type="TITLE"><text><SENT sid="17084" pm="."><plain>A One-Degree-of-Freedom Test for Supra-Multiplicativity of SNP Effects </plain></SENT>
+</text></SecTag></article-title><alt-title alt-title-type="running-head">A One D.F. Test for Supra-Multiplicativity</alt-title></title-group><contrib-group><contrib contrib-type="author" equal-contrib="yes"><name><surname>Herold</surname><given-names>Christine</given-names></name><xref ref-type="aff" rid="aff1">
+<sup>1</sup>
+</xref><xref ref-type="aff" rid="aff2">
+<sup>2</sup>
+</xref></contrib><contrib contrib-type="author" equal-contrib="yes"><name><surname>Ramirez</surname><given-names>Alfredo</given-names></name><xref ref-type="aff" rid="aff4">
+<sup>4</sup>
+</xref><xref ref-type="aff" rid="aff5">
+<sup>5</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Drichel</surname><given-names>Dmitriy</given-names></name><xref ref-type="aff" rid="aff1">
+<sup>1</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Lacour</surname><given-names>André</given-names></name><xref ref-type="aff" rid="aff1">
+<sup>1</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Vaitsiakhovich</surname><given-names>Tatsiana</given-names></name><xref ref-type="aff" rid="aff3">
+<sup>3</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Nöthen</surname><given-names>Markus M.</given-names></name><xref ref-type="aff" rid="aff5">
+<sup>5</sup>
+</xref><xref ref-type="aff" rid="aff6">
+<sup>6</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Jessen</surname><given-names>Frank</given-names></name><xref ref-type="aff" rid="aff4">
+<sup>4</sup>
+</xref><xref ref-type="aff" rid="aff1">
+<sup>1</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Maier</surname><given-names>Wolfgang</given-names></name><xref ref-type="aff" rid="aff4">
+<sup>4</sup>
+</xref><xref ref-type="aff" rid="aff1">
+<sup>1</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Becker</surname><given-names>Tim</given-names></name><xref ref-type="aff" rid="aff1">
+<sup>1</sup>
+</xref><xref ref-type="aff" rid="aff3">
+<sup>3</sup>
+</xref><xref ref-type="corresp" rid="cor1">
+<sup>*</sup>
+</xref></contrib></contrib-group><aff id="aff1">
+<label>1</label>
+<addr-line>German Center for Neurodegenerative Diseases (DZNE), Bonn, Germany</addr-line>
+</aff><aff id="aff2">
+<label>2</label>
+<addr-line>Department of Biostatistics, Harvard School of Public Health, Boston, Massachusetts, United States of America</addr-line>
+</aff><aff id="aff3">
+<label>3</label>
+<addr-line>Institute for Medical Biometry, Informatics and Epidemiology, University of Bonn, Bonn, Germany</addr-line>
+</aff><aff id="aff4">
+<label>4</label>
+<addr-line>Department of Psychiatry and Psychotherapy, University of Bonn, Bonn, Germany</addr-line>
+</aff><aff id="aff5">
+<label>5</label>
+<addr-line>Institute of Human Genetics, University of Bonn, Bonn, Germany</addr-line>
+</aff><aff id="aff6">
+<label>6</label>
+<addr-line>Department of Genomics, Life and Brain Center, University of Bonn, Bonn, Germany</addr-line>
+</aff><contrib-group><contrib contrib-type="editor"><name><surname>Scuteri</surname><given-names>Angelo</given-names></name><role>Editor</role><xref ref-type="aff" rid="edit1"/></contrib></contrib-group><aff id="edit1">
+<addr-line>INRCA, Italy</addr-line>
+</aff><author-notes><corresp id="cor1">* E-mail: <email>Tim.Becker@dzne.de</email></corresp><fn fn-type="COI-statement"><p><text><SENT sid="17085" pm="."><plain><bold>Competing Interests: </bold>The authors have declared that no competing interests exist. </plain></SENT>
+</text></p></fn><fn fn-type="con"><p><text><SENT sid="17086" pm="."><plain>Conceived and designed the experiments: TB CH AR FJ MMN WM. </plain></SENT>
+<SENT sid="17087" pm="."><plain>Performed the experiments: TB CH AR. </plain></SENT>
+<SENT sid="17088" pm="."><plain>Analyzed the data: CH. </plain></SENT>
+<SENT sid="17089" pm="."><plain>Contributed reagents/materials/analysis tools: TV DD AL AR MMN FJ WM. </plain></SENT>
+<SENT sid="17090" pm="."><plain>Wrote the paper: CH AR TB. </plain></SENT>
+</text></p></fn></author-notes><pub-date pub-type="collection"><year>2013</year></pub-date><pub-date pub-type="epub"><day>30</day><month>10</month><year>2013</year></pub-date><volume>8</volume><issue>10</issue><elocation-id>e78038</elocation-id><history><date date-type="received"><day>23</day><month>5</month><year>2013</year></date><date date-type="accepted"><day>9</day><month>9</month><year>2013</year></date></history><permissions><copyright-statement>© 2013 Herold et al</copyright-statement><copyright-year>2013</copyright-year><copyright-holder>Herold et al</copyright-holder><license xlink:href="http://creativecommons.org/licenses/by/4.0/"><license-p>This is an open-access article distributed under the terms of the Creative Commons Attribution License, which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are properly credited.</license-p></license></permissions><abstract><p><SecTag type="ABS"><text><SENT sid="17091" pm="."><plain>Deviation from multiplicativity of genetic risk factors is biologically plausible and might explain why Genome-wide association studies (GWAS) so far could unravel only a portion of disease heritability. </plain></SENT>
+<SENT sid="17092" pm="."><plain>Still, evidence for SNP-SNP epistasis has rarely been reported, suggesting that 2-SNP models are overly simplistic. </plain></SENT>
+<SENT sid="17093" pm="."><plain>In this context, it was recently proposed that the genetic architecture of complex diseases could follow limiting pathway models. </plain></SENT>
+<SENT sid="17094" pm="."><plain>These models are defined by a critical risk allele load and imply multiple high-dimensional interactions. </plain></SENT>
+<SENT sid="17095" pm="."><plain>Here, we present a computationally efficient one-degree-of-freedom “supra-multiplicativity-test” (SMT) for SNP sets of size 2 to 500 that is designed to detect risk alleles whose joint effect is fortified when they occur together in the same individual. </plain></SENT>
+<SENT sid="17096" pm="."><plain>Via a simulation study we show that the SMT is powerful in the presence of threshold models, even when only about 30–45% of the model SNPs are available. </plain></SENT>
+<SENT sid="17097" pm="."><plain>In addition, we demonstrate that the SMT outperforms standard interaction analysis under recessive models involving just a few SNPs. </plain></SENT>
+<SENT sid="17098" pm="."><plain>We apply our test to 10 consensus Alzheimer’s disease (AD) susceptibility SNPs that were previously identified by GWAS and obtain evidence for supra-multiplicativity (<inline-formula><inline-graphic xlink:href="pone.0078038.e001.jpg"/></inline-formula>) that is not attributable to either two-way or three-way interaction. </plain></SENT>
+</text></SecTag></p></abstract><funding-group><funding-statement>TV was supported by the Deutsche Forschungsgemeinschaft grant BE 3828/3-2. The funders had no role in study design, data collection and analysis, decision to publish, or preparation of the manuscript.</funding-statement></funding-group><counts><page-count count="10"/></counts></article-meta></front><body><SecTag type="INTRO"><sec id="s1"><title><text><SENT sid="17099" pm="."><plain>Introduction </plain></SENT>
+</text></title><p><text><SENT sid="17100" pm="."><plain>Despite of thousands of confirmed disease susceptibility variants <xref rid="pone.0078038-Hindorffi1" ref-type="bibr">[1]</xref>, the findings from Genome-wide association studies (GWAS) so far explain only a portion of the heritability of complex diseases <xref rid="pone.0078038-Maher1" ref-type="bibr">[2]</xref>. </plain></SENT>
+<SENT sid="17101" pm="."><plain>Multi-SNP approaches like interaction and pathway analysis were proposed <xref rid="pone.0078038-Mechanic1" ref-type="bibr">[3]</xref> to detect the still unexplained portion of genetic disease risk. </plain></SENT>
+<SENT sid="17102" pm="."><plain>While Genome-wide interaction analysis has become computationally feasible <xref rid="pone.0078038-Wan1" ref-type="bibr">[4]</xref>, <xref rid="pone.0078038-Herold1" ref-type="bibr">[5]</xref>, by now only few, if any, replicable interactions have been found. </plain></SENT>
+<SENT sid="17103" pm="."><plain>In order to explain the phenomenon of missing evidence for interaction, Zuk et al. <xref rid="pone.0078038-Zuk1" ref-type="bibr">[6]</xref> suggested that common diseases may follow so-called limiting pathway liability models (LPLMs). </plain></SENT>
+<SENT sid="17104" pm="."><plain>A LPLM is defined by multiple risk factors which imply a risk threshold. </plain></SENT>
+<SENT sid="17105" pm="."><plain>Individuals with a risk allele load above the threshold have a strongly increased disease risk, while a baseline risk applies below the threshold. </plain></SENT>
+<SENT sid="17106" pm="."><plain>LPLMs can be viewed as a special case of the larger class of liability models <xref rid="pone.0078038-Falconer1" ref-type="bibr">[7]</xref>, <xref rid="pone.0078038-Li1" ref-type="bibr">[8]</xref> which allow that the risk contribution of the involved factors may vary. </plain></SENT>
+<SENT sid="17107" pm="."><plain>In addition, the LPLMs focus on a single pathway that is under polygenic influence. </plain></SENT>
+<SENT sid="17108" pm="."><plain>In contrast to that, Li et al. <xref rid="pone.0078038-Li1" ref-type="bibr">[8]</xref> describe two sources of liability to depression, namely genetic liability for stress sensitivity mediating depression, and genetic liability for depression in general. </plain></SENT>
+<SENT sid="17109" pm="."><plain>Both sources are shown to be under polygenic control. </plain></SENT>
+<SENT sid="17110" pm="."><plain>A key feature of these models and the simpler LPLMs is that they imply epistasis that goes beyond two-way interaction. </plain></SENT>
+<SENT sid="17111" pm="."><plain>Further important classes of more complex high-dimensional models have been discussed in <xref rid="pone.0078038-Wray1" ref-type="bibr">[9]</xref>. </plain></SENT>
+</text></p><p><text><SENT sid="17112" pm="."><plain>Although pointed out previously <xref rid="pone.0078038-Phillips1" ref-type="bibr">[10]</xref>, it is worthwhile to recall that diverging definitions and interpretation of the terms “interaction” or “epistasis” in the literature often lead to confusion. </plain></SENT>
+<SENT sid="17113" pm="."><plain>The topic is intrinsically difficult, since the statistical definition of interaction is scale-dependent <xref rid="pone.0078038-Thompson1" ref-type="bibr">[11]</xref>. </plain></SENT>
+<SENT sid="17114" pm="."><plain>In this paper, as in the majority of statistical publications on the topic, we interpret interaction as deviation from multiplicative relative risks, which corresponds to deviation from additivity on the logarithmic scale used in logistic regression models. </plain></SENT>
+<SENT sid="17115" pm="."><plain>This definition is the appropriate definition for rare diseases <xref rid="pone.0078038-Clayton1" ref-type="bibr">[12]</xref> and will also prove to be appropriate in the settings we are going to investigate. </plain></SENT>
+</text></p><p><text><SENT sid="17116" pm="."><plain>The risk allele threshold models proposed by Zuk et al. <xref rid="pone.0078038-Zuk1" ref-type="bibr">[6]</xref> lead to marginal effects that are comparable with effect sizes observed in GWAS studies and imply both low and high-dimensional interactions. </plain></SENT>
+<SENT sid="17117" pm="."><plain>However, pairwise interaction, although present, is typically so small that it would be detectable only with sample of several hundreds of thousands of individuals. </plain></SENT>
+<SENT sid="17118" pm="."><plain>In this sense, LPLMs would be consistent with the expected importance of genetic interaction <xref rid="pone.0078038-Phillips1" ref-type="bibr">[10]</xref>, <xref rid="pone.0078038-Carlborg1" ref-type="bibr">[13]</xref>, <xref rid="pone.0078038-Cordell1" ref-type="bibr">[14]</xref> on the hand and lacking statistical evidence for its presence on the other hand. </plain></SENT>
+</text></p><p><text><SENT sid="17119" pm="."><plain>The search for deviation from multiplicativity in all medium-sized SNP sub sets of a GWAS panel is clearly unfeasible and not a realistic strategy in the coming years. </plain></SENT>
+<SENT sid="17120" pm="."><plain>However, it is an important research question how to decide whether a <italic>given</italic> set of SNPs displays “supra-multiplicativity” of allelic risks. </plain></SENT>
+<SENT sid="17121" pm="."><plain>In this paper, we present a powerful one degree of freedom (d.f.) regression test for deviation from multiplicativity which simultaneously addresses interactions of all orders and which is particularly powerful in the presence of threshold models. </plain></SENT>
+</text></p></sec></SecTag><SecTag type="RESULTS"><sec id="s2"><title><text><SENT sid="17122" pm="."><plain>Results </plain></SENT>
+</text></title><sec id="s2a"><title><text><SENT sid="17123" pm="."><plain>Empirical Levels </plain></SENT>
+</text></title><p><text><SENT sid="17124" pm="."><plain><xref ref-type="table" rid="pone-0078038-t001">Table 1</xref> shows results from the simulations under the model with marginal effects, but no interaction effects of any kind. </plain></SENT>
+<SENT sid="17125" pm="."><plain>Under all scenarios, the empirical levels are slightly lower than the nominal level. </plain></SENT>
+<SENT sid="17126" pm="."><plain>This phenomenon is caused by the application of a Bonferroni-correction to not completely independent test statistics. </plain></SENT>
+<SENT sid="17127" pm="."><plain>The conservativeness is significant for <inline-formula><inline-graphic xlink:href="pone.0078038.e002.jpg"/></inline-formula> and all SNP sizes, as well as for <inline-formula><inline-graphic xlink:href="pone.0078038.e003.jpg"/></inline-formula> and for SNP sets with less than 30 SNPs. </plain></SENT>
+<SENT sid="17128" pm="."><plain>However, the observed conservativeness is rather small in size. </plain></SENT>
+<SENT sid="17129" pm="."><plain>The strongest difference we observe is an empirical level of 0.042 at <inline-formula><inline-graphic xlink:href="pone.0078038.e004.jpg"/></inline-formula> for 40 SNPs. </plain></SENT>
+<SENT sid="17130" pm="."><plain>Therefore, we conclude that the application of the Bonferroni-correction is sufficient for practical purposes. </plain></SENT>
+<SENT sid="17131" pm="."><plain>The results of the power will support this claim. </plain></SENT>
+</text></p><SecTag type="TABLE"><table-wrap id="pone-0078038-t001" orientation="portrait" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0078038.t001</object-id><label>Table 1</label><caption><title><text><SENT sid="17132" pm="."><plain>Empirical <inline-formula><inline-graphic xlink:href="pone.0078038.e005.jpg"/></inline-formula>-levels for supra-multiplicativity test (SMT)<xref ref-type="table-fn" rid="nt101">a</xref>. </plain></SENT>
+</text></title></caption><alternatives><graphic id="pone-0078038-t001-1" xlink:href="pone.0078038.t001"/><table frame="hsides" rules="groups"><colgroup span="1"><col align="left" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/></colgroup><thead><tr><td align="left" rowspan="1" colspan="1"/><td colspan="5" align="left" rowspan="1"><text><SENT sid="17133" pm="."><plain>Number of SNPs </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="17134" pm="."><plain><inline-formula><inline-graphic xlink:href="pone.0078038.e006.jpg"/></inline-formula> <xref ref-type="table-fn" rid="nt102">b</xref> </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17135" pm="."><plain>10 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17136" pm="."><plain>20 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17137" pm="."><plain>30 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17138" pm="."><plain>40 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17139" pm="."><plain>50 </plain></SENT>
+</text></td></tr></thead><tbody><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="17140" pm="."><plain>0.05 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17141" pm="."><plain>0.044<xref ref-type="table-fn" rid="nt103">*</xref> </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17142" pm="."><plain>0.045<xref ref-type="table-fn" rid="nt103">*</xref> </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17143" pm="."><plain>0.046<xref ref-type="table-fn" rid="nt103">*</xref> </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17144" pm="."><plain>0.042<xref ref-type="table-fn" rid="nt103">*</xref> </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17145" pm="."><plain>0.045<xref ref-type="table-fn" rid="nt103">*</xref> </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="17146" pm="."><plain>0.005 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17147" pm="."><plain>0.0043<xref ref-type="table-fn" rid="nt103">*</xref> </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17148" pm="."><plain>0.0043<xref ref-type="table-fn" rid="nt103">*</xref> </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17149" pm="."><plain>0.0045<xref ref-type="table-fn" rid="nt103">*</xref> </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17150" pm="."><plain>0.0047 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17151" pm="."><plain>0.0049 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="17152" pm="."><plain>0.0005 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17153" pm="."><plain>0.00048 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17154" pm="."><plain>0.00043 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17155" pm="."><plain>0.00043 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17156" pm="."><plain>0.00046 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17157" pm="."><plain>0.00045 </plain></SENT>
+</text></td></tr></tbody></table></alternatives><table-wrap-foot><fn id="nt101"><label>a</label><p><text><SENT sid="17158" pm="."><plain>Under a model with multiplicative SNP effects, without interaction effects. </plain></SENT>
+</text></p></fn><fn id="nt102"><label>b</label><p><text><SENT sid="17159" pm="."><plain>Nominal significance level. </plain></SENT>
+</text></p></fn><fn id="nt103"><label>*</label><p><text><SENT sid="17160" pm="."><plain>indicates significant deviation from the nominal level. </plain></SENT>
+</text></p></fn></table-wrap-foot></table-wrap></SecTag><p><text><SENT sid="17161" pm="."><plain>In <xref ref-type="table" rid="pone-0078038-t002">table 2</xref>, “nominal levels” or, depending on the perspective, power levels for the non-multiplicative models <inline-formula><inline-graphic xlink:href="pone.0078038.e007.jpg"/></inline-formula> and <inline-formula><inline-graphic xlink:href="pone.0078038.e008.jpg"/></inline-formula> are shown. </plain></SENT>
+<SENT sid="17162" pm="."><plain>Model <inline-formula><inline-graphic xlink:href="pone.0078038.e009.jpg"/></inline-formula> involves non-zero dominance effects and model <inline-formula><inline-graphic xlink:href="pone.0078038.e010.jpg"/></inline-formula> has several pairwise interactions. </plain></SENT>
+<SENT sid="17163" pm="."><plain>In other words, classic logistic regression test for dominance deviation or two-way interaction would be the method of choice. </plain></SENT>
+<SENT sid="17164" pm="."><plain>Under both models, the SMT shows a measurable excess of the nominal level, i.e., already 1-way interactions ( = dominance effects) and two-way interactions produce small signals. </plain></SENT>
+<SENT sid="17165" pm="."><plain>The level of excess of the nominal level is very small, in particular under scenario <inline-formula><inline-graphic xlink:href="pone.0078038.e011.jpg"/></inline-formula>. </plain></SENT>
+<SENT sid="17166" pm="."><plain>Under scenario <inline-formula><inline-graphic xlink:href="pone.0078038.e012.jpg"/></inline-formula> the excess is slightly more substantial, at a nominal <inline-formula><inline-graphic xlink:href="pone.0078038.e013.jpg"/></inline-formula> of 0.005 the empirical level is 0.021. </plain></SENT>
+<SENT sid="17167" pm="."><plain>The SMT will typically be applied to detect higher-order interactions in which case adjustment for a priori known or data-derived dominance or interactions terms is warranted. </plain></SENT>
+<SENT sid="17168" pm="."><plain>When such terms are added as additional covariate parameters, the excess of the nominal level disappears (<xref ref-type="table" rid="pone-0078038-t002">table 2</xref>). </plain></SENT>
+<SENT sid="17169" pm="."><plain>In other words, adjustment for significant interaction terms is possible and should be applied in order to investigate which terms drive the significance of a successful SMT application. </plain></SENT>
+</text></p><SecTag type="TABLE"><table-wrap id="pone-0078038-t002" orientation="portrait" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0078038.t002</object-id><label>Table 2</label><caption><title><text><SENT sid="17170" pm="."><plain>Empirical <inline-formula><inline-graphic xlink:href="pone.0078038.e014.jpg"/></inline-formula>-levels for SMT<xref ref-type="table-fn" rid="nt104">a</xref>. </plain></SENT>
+</text></title></caption><alternatives><graphic id="pone-0078038-t002-2" xlink:href="pone.0078038.t002"/><table frame="hsides" rules="groups"><colgroup span="1"><col align="left" span="1"/><col align="center" span="1"/><col align="center" span="1"/></colgroup><thead><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="17171" pm="."><plain><inline-formula><inline-graphic xlink:href="pone.0078038.e015.jpg"/></inline-formula> <xref ref-type="table-fn" rid="nt105">b</xref> </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17172" pm="."><plain>Model<inline-formula><inline-graphic xlink:href="pone.0078038.e016.jpg"/></inline-formula> </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17173" pm="."><plain>Model<inline-formula><inline-graphic xlink:href="pone.0078038.e017.jpg"/></inline-formula> </plain></SENT>
+</text></td></tr></thead><tbody><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="17174" pm="."><plain>0.05 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17175" pm="."><plain>0.048/0.0047 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17176" pm="."><plain>0.123<xref ref-type="table-fn" rid="nt106">*</xref>/0.047 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="17177" pm="."><plain>0.005 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17178" pm="."><plain>0.008<xref ref-type="table-fn" rid="nt106">*</xref>/0.004 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17179" pm="."><plain>0.021<xref ref-type="table-fn" rid="nt106">*</xref>/0.0045 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="17180" pm="."><plain>0.0005 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17181" pm="."><plain>0.001/0.0003 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17182" pm="."><plain>0.006<xref ref-type="table-fn" rid="nt106">*</xref>/0.0004 </plain></SENT>
+</text></td></tr></tbody></table></alternatives><table-wrap-foot><fn id="nt104"><label>a</label><p><text><SENT sid="17183" pm="."><plain>Under models with SNP dominance (model <inline-formula><inline-graphic xlink:href="pone.0078038.e018.jpg"/></inline-formula>) or pairwise interaction effects (model <inline-formula><inline-graphic xlink:href="pone.0078038.e019.jpg"/></inline-formula>), with/without dominance and interaction covariates. </plain></SENT>
+</text></p></fn><fn id="nt105"><label>b</label><p><text><SENT sid="17184" pm="."><plain>Nominal significance level. </plain></SENT>
+</text></p></fn><fn id="nt106"><label>*</label><p><text><SENT sid="17185" pm="."><plain>indicates significant deviation from the nominal level. </plain></SENT>
+</text></p></fn></table-wrap-foot></table-wrap></SecTag></sec><sec id="s2b"><title><text><SENT sid="17186" pm="."><plain>Power of Single-marker Analysis and Conventional Interaction Analysis </plain></SENT>
+</text></title><p><text><SENT sid="17187" pm="."><plain><xref ref-type="table" rid="pone-0078038-t003">Table 3</xref> and <xref ref-type="table" rid="pone-0078038-t004">table 4</xref> show the power of conventional one-SNP-at-a-time and pairwise interaction analysis in the presence of different LPLMs. </plain></SENT>
+<SENT sid="17188" pm="."><plain>Let us first consider the penetrance value <inline-formula><inline-graphic xlink:href="pone.0078038.e020.jpg"/></inline-formula>. </plain></SENT>
+<SENT sid="17189" pm="."><plain>Such a penetrance might be considered to be unusually high, but leads to allele relative risks no larger than 1.4. </plain></SENT>
+<SENT sid="17190" pm="."><plain>Consistently, power for single-marker analysis in <xref ref-type="table" rid="pone-0078038-t003">table 3</xref> is on a level that is reasonable given a sample size of 3000 cases and 3000 controls. </plain></SENT>
+<SENT sid="17191" pm="."><plain>With 50 SNPs, there is 62% power to detect at least one SNP at the Genome-wide level of <inline-formula><inline-graphic xlink:href="pone.0078038.e021.jpg"/></inline-formula>. </plain></SENT>
+<SENT sid="17192" pm="."><plain>Power increases with decreasing size of the SNP set. </plain></SENT>
+<SENT sid="17193" pm="."><plain>This is not too surprising, since in our set-up we kept the portion of individuals above the liability threshold constant. </plain></SENT>
+<SENT sid="17194" pm="."><plain>As a consequence, the marginal effects become larger when fewer SNPs are part of the model. </plain></SENT>
+<SENT sid="17195" pm="."><plain>With <inline-formula><inline-graphic xlink:href="pone.0078038.e022.jpg"/></inline-formula>, power of single-marker analysis is low for more than 30 SNPs and at <inline-formula><inline-graphic xlink:href="pone.0078038.e023.jpg"/></inline-formula>, only under the 10-SNP model some power is left. </plain></SENT>
+<SENT sid="17196" pm="."><plain>However, it has to be emphasized that much higher penetrances <inline-formula><inline-graphic xlink:href="pone.0078038.e024.jpg"/></inline-formula> have been suggested <xref rid="pone.0078038-Zuk1" ref-type="bibr">[6]</xref> and that we included the lower <inline-formula><inline-graphic xlink:href="pone.0078038.e025.jpg"/></inline-formula> values for the purpose of completeness. </plain></SENT>
+</text></p><SecTag type="TABLE"><table-wrap id="pone-0078038-t003" orientation="portrait" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0078038.t003</object-id><label>Table 3</label><caption><title><text><SENT sid="17197" pm="."><plain>Power values<xref ref-type="table-fn" rid="nt107">a</xref> for single-marker analysis. </plain></SENT>
+</text></title></caption><alternatives><graphic id="pone-0078038-t003-3" xlink:href="pone.0078038.t003"/><table frame="hsides" rules="groups"><colgroup span="1"><col align="left" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/></colgroup><thead><tr><td align="left" rowspan="1" colspan="1"/><td colspan="5" align="left" rowspan="1"><text><SENT sid="17198" pm="."><plain>Number of SNPs </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="17199" pm="."><plain><inline-formula><inline-graphic xlink:href="pone.0078038.e026.jpg"/></inline-formula> <xref ref-type="table-fn" rid="nt108">b</xref> </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17200" pm="."><plain>10 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17201" pm="."><plain>20 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17202" pm="."><plain>30 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17203" pm="."><plain>40 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17204" pm="."><plain>50 </plain></SENT>
+</text></td></tr></thead><tbody><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="17205" pm="."><plain>0.1 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17206" pm="."><plain>0.03 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17207" pm="."><plain>0.00 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17208" pm="."><plain>0.00 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17209" pm="."><plain>0.00 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17210" pm="."><plain>0.00 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="17211" pm="."><plain>0.3 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17212" pm="."><plain>0.79 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17213" pm="."><plain>0.00 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17214" pm="."><plain>0.00 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17215" pm="."><plain>0.00 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17216" pm="."><plain>0.00 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="17217" pm="."><plain>0.5 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17218" pm="."><plain>0.99 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17219" pm="."><plain>0.52 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17220" pm="."><plain>0.24 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17221" pm="."><plain>0.25 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17222" pm="."><plain>0.09 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="17223" pm="."><plain>0.7 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17224" pm="."><plain>0.99 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17225" pm="."><plain>0.99 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17226" pm="."><plain>0.91 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17227" pm="."><plain>0.89 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17228" pm="."><plain>0.62 </plain></SENT>
+</text></td></tr></tbody></table></alternatives><table-wrap-foot><fn id="nt107"><label>a</label><p><text><SENT sid="17229" pm="."><plain>Power to detect at least one SNP at <inline-formula><inline-graphic xlink:href="pone.0078038.e027.jpg"/></inline-formula>. </plain></SENT>
+</text></p></fn><fn id="nt108"><label>b</label><p><text><SENT sid="17230" pm="."><plain>Penetrance for individuals above the allele load threshold. </plain></SENT>
+</text></p></fn></table-wrap-foot></table-wrap></SecTag><SecTag type="TABLE"><table-wrap id="pone-0078038-t004" orientation="portrait" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0078038.t004</object-id><label>Table 4</label><caption><title><text><SENT sid="17231" pm="."><plain>Power values<xref ref-type="table-fn" rid="nt109">a</xref> for pairwise interaction. </plain></SENT>
+</text></title></caption><alternatives><graphic id="pone-0078038-t004-4" xlink:href="pone.0078038.t004"/><table frame="hsides" rules="groups"><colgroup span="1"><col align="left" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/></colgroup><thead><tr><td align="left" rowspan="1" colspan="1"/><td colspan="5" align="left" rowspan="1"><text><SENT sid="17232" pm="."><plain>Number of SNPs </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="17233" pm="."><plain><inline-formula><inline-graphic xlink:href="pone.0078038.e028.jpg"/></inline-formula> <xref ref-type="table-fn" rid="nt110">b</xref> </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17234" pm="."><plain>10 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17235" pm="."><plain>20 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17236" pm="."><plain>30 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17237" pm="."><plain>40 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17238" pm="."><plain>50 </plain></SENT>
+</text></td></tr></thead><tbody><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="17239" pm="."><plain>0.1 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17240" pm="."><plain>0.21 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17241" pm="."><plain>0.00 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17242" pm="."><plain>0.00 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17243" pm="."><plain>0.00 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17244" pm="."><plain>0.00 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="17245" pm="."><plain>0.3 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17246" pm="."><plain>0.70 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17247" pm="."><plain>0.02 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17248" pm="."><plain>0.00 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17249" pm="."><plain>0.00 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17250" pm="."><plain>0.00 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="17251" pm="."><plain>0.5 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17252" pm="."><plain>0.99 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17253" pm="."><plain>0.11 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17254" pm="."><plain>0.00 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17255" pm="."><plain>0.00 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17256" pm="."><plain>0.00 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="17257" pm="."><plain>0.7 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17258" pm="."><plain>1.00 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17259" pm="."><plain>0.28 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17260" pm="."><plain>0.01 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17261" pm="."><plain>0.00 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17262" pm="."><plain>0.00 </plain></SENT>
+</text></td></tr></tbody></table></alternatives><table-wrap-foot><fn id="nt109"><label>a</label><p><text><SENT sid="17263" pm="."><plain>Power to detect at least one pairwise interaction (with 1 d.f. </plain></SENT>
+<SENT sid="17264" pm="."><plain>test) at <inline-formula><inline-graphic xlink:href="pone.0078038.e029.jpg"/></inline-formula>, where <inline-formula><inline-graphic xlink:href="pone.0078038.e030.jpg"/></inline-formula> is the number of pairwise tests for <inline-formula><inline-graphic xlink:href="pone.0078038.e031.jpg"/></inline-formula> SNPs. </plain></SENT>
+<SENT sid="17265" pm="."><plain>Power at the Genome-wide significance level for interaction (<inline-formula><inline-graphic xlink:href="pone.0078038.e032.jpg"/></inline-formula>) was always 0. </plain></SENT>
+</text></p></fn><fn id="nt110"><label>b</label><p><text><SENT sid="17266" pm="."><plain>Penetrance for individuals above the allele load threshold. </plain></SENT>
+</text></p></fn></table-wrap-foot></table-wrap></SecTag><p><text><SENT sid="17267" pm="."><plain>Power for pairwise interaction is typically absent (<xref ref-type="table" rid="pone-0078038-t004">table 4</xref>), with the exception of the 10 SNP model and to some extent the 20 SNP model for <inline-formula><inline-graphic xlink:href="pone.0078038.e033.jpg"/></inline-formula>. </plain></SENT>
+<SENT sid="17268" pm="."><plain>Even under the 10-SNP model interaction can be detected only at a significance level of <inline-formula><inline-graphic xlink:href="pone.0078038.e034.jpg"/></inline-formula>, i.e., under the assumption that the 10 SNPs of the model are known a priori and that only these SNPs are tested for interaction. </plain></SENT>
+<SENT sid="17269" pm="."><plain>In a Genome-wide search it is impossible to detect any of the interactions at the experiment-wide significance level of <inline-formula><inline-graphic xlink:href="pone.0078038.e035.jpg"/></inline-formula>. </plain></SENT>
+<SENT sid="17270" pm="."><plain>In summary, our LPLMs are consistent with the models proposed by Zuk et al. <xref rid="pone.0078038-Zuk1" ref-type="bibr">[6]</xref> and also consistent with the results of the last years of GWAS analysis: the LPLMs imply some detectable marginal effects, but pairwise interaction effects are not identifiable with the given sample size. </plain></SENT>
+</text></p></sec><sec id="s2c"><title><text><SENT sid="17271" pm="."><plain>Power of SMT </plain></SENT>
+</text></title><p><text><SENT sid="17272" pm="."><plain><xref ref-type="fig" rid="pone-0078038-g001">Figures 1</xref>, <xref ref-type="fig" rid="pone-0078038-g002">2</xref>, <xref ref-type="fig" rid="pone-0078038-g003">3</xref>, and <xref ref-type="fig" rid="pone-0078038-g004">4</xref> show power levels of the SMT in the presence of LPLMs which follow the specifications by Zuk et al. <xref rid="pone.0078038-Zuk1" ref-type="bibr">[6]</xref>. </plain></SENT>
+<SENT sid="17273" pm="."><plain>We start with the description of the power curve for <inline-formula><inline-graphic xlink:href="pone.0078038.e036.jpg"/></inline-formula> (<xref ref-type="fig" rid="pone-0078038-g001">figure 1</xref>). </plain></SENT>
+<SENT sid="17274" pm="."><plain>As expected, power increases with the percentage of model SNPs that can be included. </plain></SENT>
+<SENT sid="17275" pm="."><plain>In order to reach a power of 80%, only about 35% of the risk SNPs have to be known. </plain></SENT>
+<SENT sid="17276" pm="."><plain>Here, the required portion is smaller for the models with more SNPs, but the effects on the power curves depends only moderately on the number of SNPs in the model. </plain></SENT>
+<SENT sid="17277" pm="."><plain>The figure also shows, that below a portion of 20% of known SNPs there is typically no power to detect an involvement in a liability model. </plain></SENT>
+</text></p><SecTag type="FIG"><fig id="pone-0078038-g001" orientation="portrait" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0078038.g001</object-id><label>Figure 1</label><caption><title><text><SENT sid="17278" pm="."><plain>Power of SMT at <inline-formula><inline-graphic xlink:href="pone.0078038.e037.jpg"/></inline-formula> for <inline-formula><inline-graphic xlink:href="pone.0078038.e038.jpg"/></inline-formula>. </plain></SENT>
+</text></title><p><text><SENT sid="17279" pm="."><plain>The <inline-formula><inline-graphic xlink:href="pone.0078038.e039.jpg"/></inline-formula>-axis represents the available percentage of SNPs of the complete model, the <inline-formula><inline-graphic xlink:href="pone.0078038.e040.jpg"/></inline-formula>-axis power levels. </plain></SENT>
+</text></p></caption><graphic xlink:href="pone.0078038.g001"/></fig></SecTag><SecTag type="FIG"><fig id="pone-0078038-g002" orientation="portrait" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0078038.g002</object-id><label>Figure 2</label><caption><title><text><SENT sid="17280" pm="."><plain>Power of SMT at <inline-formula><inline-graphic xlink:href="pone.0078038.e041.jpg"/></inline-formula> for <inline-formula><inline-graphic xlink:href="pone.0078038.e042.jpg"/></inline-formula>. </plain></SENT>
+</text></title><p><text><SENT sid="17281" pm="."><plain>The <inline-formula><inline-graphic xlink:href="pone.0078038.e043.jpg"/></inline-formula>-axis represents the available percentage of SNPs of the complete model, the <inline-formula><inline-graphic xlink:href="pone.0078038.e044.jpg"/></inline-formula>-axis power levels. </plain></SENT>
+</text></p></caption><graphic xlink:href="pone.0078038.g002"/></fig></SecTag><SecTag type="FIG"><fig id="pone-0078038-g003" orientation="portrait" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0078038.g003</object-id><label>Figure 3</label><caption><title><text><SENT sid="17282" pm="."><plain>Power of SMT at <inline-formula><inline-graphic xlink:href="pone.0078038.e045.jpg"/></inline-formula> for <inline-formula><inline-graphic xlink:href="pone.0078038.e046.jpg"/></inline-formula>. </plain></SENT>
+</text></title><p><text><SENT sid="17283" pm="."><plain>The <inline-formula><inline-graphic xlink:href="pone.0078038.e047.jpg"/></inline-formula>-axis represents the available percentage of SNPs of the complete model, the <inline-formula><inline-graphic xlink:href="pone.0078038.e048.jpg"/></inline-formula>-axis power levels. </plain></SENT>
+</text></p></caption><graphic xlink:href="pone.0078038.g003"/></fig></SecTag><SecTag type="FIG"><fig id="pone-0078038-g004" orientation="portrait" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0078038.g004</object-id><label>Figure 4</label><caption><title><text><SENT sid="17284" pm="."><plain>Power of SMT at <inline-formula><inline-graphic xlink:href="pone.0078038.e049.jpg"/></inline-formula> for <inline-formula><inline-graphic xlink:href="pone.0078038.e050.jpg"/></inline-formula>. </plain></SENT>
+</text></title><p><text><SENT sid="17285" pm="."><plain>The <inline-formula><inline-graphic xlink:href="pone.0078038.e051.jpg"/></inline-formula>-axis represents the available percentage of SNPs of the complete model, the <inline-formula><inline-graphic xlink:href="pone.0078038.e052.jpg"/></inline-formula>-axis power levels. </plain></SENT>
+</text></p></caption><graphic xlink:href="pone.0078038.g004"/></fig></SecTag><p><text><SENT sid="17286" pm="."><plain>When <inline-formula><inline-graphic xlink:href="pone.0078038.e053.jpg"/></inline-formula> is reduced to 0.5 (<xref ref-type="fig" rid="pone-0078038-g002">figure 2</xref>), the portion of required SNPs increases as expected. </plain></SENT>
+<SENT sid="17287" pm="."><plain>However, a power level of 80% can still be reached also when only about 35% to 55% of the involved SNPs are known. </plain></SENT>
+<SENT sid="17288" pm="."><plain>In addition, all models have 100% power when more than 60% of the SNPs are included. </plain></SENT>
+</text></p><p><text><SENT sid="17289" pm="."><plain>When <inline-formula><inline-graphic xlink:href="pone.0078038.e054.jpg"/></inline-formula> is lowered to 0.3 (<xref ref-type="fig" rid="pone-0078038-g003">figure 3</xref>), power drops markedly. </plain></SENT>
+<SENT sid="17290" pm="."><plain>As mentioned before, <inline-formula><inline-graphic xlink:href="pone.0078038.e055.jpg"/></inline-formula> is a rather small penetrance value for a liability threshold model. </plain></SENT>
+<SENT sid="17291" pm="."><plain>We included this model for completeness and in order to show limits of our approach. </plain></SENT>
+<SENT sid="17292" pm="."><plain>For 80% power, now between 60% to 95% of the SNPs have to be known a priori. </plain></SENT>
+<SENT sid="17293" pm="."><plain>It seems unlikely that such a high portion of disease SNPs is known in advance, at least at the current state of research. </plain></SENT>
+<SENT sid="17294" pm="."><plain>For higher values of <inline-formula><inline-graphic xlink:href="pone.0078038.e056.jpg"/></inline-formula>, say <inline-formula><inline-graphic xlink:href="pone.0078038.e057.jpg"/></inline-formula>, is more reasonable to assume that the required portion of SNPs is known a priori. </plain></SENT>
+<SENT sid="17295" pm="."><plain>Finally, at <inline-formula><inline-graphic xlink:href="pone.0078038.e058.jpg"/></inline-formula> (<xref ref-type="fig" rid="pone-0078038-g004">figure 4</xref>), power vanishes completely, except for the 10-SNP model. </plain></SENT>
+<SENT sid="17296" pm="."><plain>This penetrance value, however, is so small that also single-marker analysis has no power, cf. <xref ref-type="table" rid="pone-0078038-t003">table 3</xref>. </plain></SENT>
+<SENT sid="17297" pm="."><plain>In other words, hardly any method will allow to to detect association with the sample size investigated here. </plain></SENT>
+</text></p><p><text><SENT sid="17298" pm="."><plain>In <xref ref-type="fig" rid="pone-0078038-g005">figure 5</xref> the impact of incomplete tagging of the true causal variants (<inline-formula><inline-graphic xlink:href="pone.0078038.e059.jpg"/></inline-formula> for all SNPs) is exemplified for the 30-SNP LPLM (<inline-formula><inline-graphic xlink:href="pone.0078038.e060.jpg"/></inline-formula>). </plain></SENT>
+<SENT sid="17299" pm="."><plain>The critical allele load risk threshold under this model is <inline-formula><inline-graphic xlink:href="pone.0078038.e061.jpg"/></inline-formula>. </plain></SENT>
+<SENT sid="17300" pm="."><plain>Under perfect tagging (blue curve, <inline-formula><inline-graphic xlink:href="pone.0078038.e062.jpg"/></inline-formula>), the regression estimates (<inline-formula><inline-graphic xlink:href="pone.0078038.e063.jpg"/></inline-formula>) for “supra-multiplicativity” grow along with the allele load <inline-formula><inline-graphic xlink:href="pone.0078038.e064.jpg"/></inline-formula> and rise to a sharp maximum at <inline-formula><inline-graphic xlink:href="pone.0078038.e065.jpg"/></inline-formula> that coincides with the simulated parameter. </plain></SENT>
+<SENT sid="17301" pm="."><plain>Under imperfect tagging (red curve), the regression estimates <inline-formula><inline-graphic xlink:href="pone.0078038.e066.jpg"/></inline-formula> have a smaller range, which reflects the overall reduced power to detect supra-multiplicativity, c.f. also the power curve under incomplete tagging in <xref ref-type="fig" rid="pone-0078038-g006">figure 6</xref>. </plain></SENT>
+<SENT sid="17302" pm="."><plain>On the other hand, the curve displays a similar behavior as before, it rises along with <inline-formula><inline-graphic xlink:href="pone.0078038.e067.jpg"/></inline-formula> to a maximum, now at <inline-formula><inline-graphic xlink:href="pone.0078038.e068.jpg"/></inline-formula>. </plain></SENT>
+<SENT sid="17303" pm="."><plain>In other words, the true maximum is missed, but the peak occurs very close to the simulated parameter. </plain></SENT>
+<SENT sid="17304" pm="."><plain>We concluded that the SMT works well also when the true causal SNPs are only captured by variants in LD. </plain></SENT>
+</text></p><SecTag type="FIG"><fig id="pone-0078038-g005" orientation="portrait" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0078038.g005</object-id><label>Figure 5</label><caption><title><text><SENT sid="17305" pm="."><plain>Comparison of <inline-formula><inline-graphic xlink:href="pone.0078038.e069.jpg"/></inline-formula>-estimates between <inline-formula><inline-graphic xlink:href="pone.0078038.e070.jpg"/></inline-formula> and <inline-formula><inline-graphic xlink:href="pone.0078038.e071.jpg"/></inline-formula> tagging of causal variants under LPLM defined by 30 SNPs, <inline-formula><inline-graphic xlink:href="pone.0078038.e072.jpg"/></inline-formula>. </plain></SENT>
+</text></title><p><text><SENT sid="17306" pm="."><plain>The <inline-formula><inline-graphic xlink:href="pone.0078038.e073.jpg"/></inline-formula>-axis represents the allele threshold, the <inline-formula><inline-graphic xlink:href="pone.0078038.e074.jpg"/></inline-formula>-axis the supra-multiplicativity effect estimate. </plain></SENT>
+<SENT sid="17307" pm="."><plain>The circles indicate the “true” risk allele threshold. </plain></SENT>
+</text></p></caption><graphic xlink:href="pone.0078038.g005"/></fig></SecTag><SecTag type="FIG"><fig id="pone-0078038-g006" orientation="portrait" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0078038.g006</object-id><label>Figure 6</label><caption><title><text><SENT sid="17308" pm="."><plain>Power of SMT test at <inline-formula><inline-graphic xlink:href="pone.0078038.e075.jpg"/></inline-formula> for <inline-formula><inline-graphic xlink:href="pone.0078038.e076.jpg"/></inline-formula>. </plain></SENT>
+</text></title><p><text><SENT sid="17309" pm="."><plain>Comparison of fixed threshold and modified threshold model. </plain></SENT>
+<SENT sid="17310" pm="."><plain>The <inline-formula><inline-graphic xlink:href="pone.0078038.e077.jpg"/></inline-formula>-axis represents the available percentage of SNPs of the complete model, the <inline-formula><inline-graphic xlink:href="pone.0078038.e078.jpg"/></inline-formula>-axis power levels. </plain></SENT>
+</text></p></caption><graphic xlink:href="pone.0078038.g006"/></fig></SecTag><p><text><SENT sid="17311" pm="."><plain><xref ref-type="fig" rid="pone-0078038-g006">Figure 6</xref> contrasts the power of the SMT under the 30-SNP LPLM (blue curve) to the modified LPLM, which allows variation of individual SNP risks (red curve). </plain></SENT>
+<SENT sid="17312" pm="."><plain>A slightly higher portion of known SNPs is now required to reach a given power level. </plain></SENT>
+<SENT sid="17313" pm="."><plain>The number of required SNPs increases by two on average. </plain></SENT>
+<SENT sid="17314" pm="."><plain>The SNP effects that result under the modified model are quite high (relative risks up to 2). </plain></SENT>
+<SENT sid="17315" pm="."><plain>As a consequence, a higher portion of the variance is now explained by marginal effects and the portion of variance explained by the supra-multiplicativity is reduced. </plain></SENT>
+<SENT sid="17316" pm="."><plain>In view of the fact that modified LPLM implies strong marginal effects, we conclude that the SMT is rather robust against deviations from equal SNP contributions. </plain></SENT>
+</text></p><p><text><SENT sid="17317" pm="."><plain><xref ref-type="table" rid="pone-0078038-t005">Table 5</xref> shows the performance of the SMT in the presence of 3-SNP recessive models, i.e., models in which the high-risk genotype is defined by homozygosity for the risk allele at each of three SNPs. </plain></SENT>
+<SENT sid="17318" pm="."><plain>The statistical interaction method of choice would be the analysis of either all two-way interactions or the analysis of three-way interaction. </plain></SENT>
+<SENT sid="17319" pm="."><plain>In the standard logistic regression setting, a 1-d.f. test for three-way interaction can be constructed by testing the allelic interaction parameter <inline-formula><inline-graphic xlink:href="pone.0078038.e079.jpg"/></inline-formula>. </plain></SENT>
+<SENT sid="17320" pm="."><plain>When dominance variance terms shall be considered, as well, eight different three-way interaction terms can be formulated and simultaneously tested. </plain></SENT>
+<SENT sid="17321" pm="."><plain>Pairwise interaction in each of three SNP pairs <inline-formula><inline-graphic xlink:href="pone.0078038.e080.jpg"/></inline-formula> can be assessed either with a 1-d.f. allelic test for interaction (investigation of <inline-formula><inline-graphic xlink:href="pone.0078038.e081.jpg"/></inline-formula>) or a 4-d.f. genotypic test for interaction. </plain></SENT>
+</text></p><SecTag type="TABLE"><table-wrap id="pone-0078038-t005" orientation="portrait" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0078038.t005</object-id><label>Table 5</label><caption><title><text><SENT sid="17322" pm="."><plain>Power values<xref ref-type="table-fn" rid="nt111">a</xref> of SMT under 3-SNP-recessive models. </plain></SENT>
+</text></title></caption><alternatives><graphic id="pone-0078038-t005-5" xlink:href="pone.0078038.t005"/><table frame="hsides" rules="groups"><colgroup span="1"><col align="left" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/></colgroup><thead><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="17323" pm="."><plain>Model<xref ref-type="table-fn" rid="nt111">a</xref> </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17324" pm="."><plain><inline-formula><inline-graphic xlink:href="pone.0078038.e082.jpg"/></inline-formula> <xref ref-type="table-fn" rid="nt112">b</xref> </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17325" pm="."><plain>SMT<xref ref-type="table-fn" rid="nt113">c</xref> </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17326" pm="."><plain>Single-Marker<xref ref-type="table-fn" rid="nt114">d</xref> </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17327" pm="."><plain>2-SNP-1df<xref ref-type="table-fn" rid="nt115">e</xref> </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17328" pm="."><plain>2-SNP-4df<xref ref-type="table-fn" rid="nt116">f</xref> </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17329" pm="."><plain>3-SNP-1df<xref ref-type="table-fn" rid="nt117">g</xref> </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17330" pm="."><plain>3-SNP-8df<xref ref-type="table-fn" rid="nt118">h</xref> </plain></SENT>
+</text></td></tr></thead><tbody><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="17331" pm="."><plain>REZ-A </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17332" pm="."><plain>5×10<sup>−2</sup> </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17333" pm="."><plain>1.00 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17334" pm="."><plain>1.00 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17335" pm="."><plain>1.00 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17336" pm="."><plain>0.99 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17337" pm="."><plain>0.71 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17338" pm="."><plain>0.72 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="17339" pm="."><plain>5×10<sup>−4</sup> </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17340" pm="."><plain>0.92 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17341" pm="."><plain>0.63 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17342" pm="."><plain>1.00 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17343" pm="."><plain>0.71 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17344" pm="."><plain>0.20 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17345" pm="."><plain>0.20 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="17346" pm="."><plain>5×10<sup>−8</sup> </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17347" pm="."><plain>0.86 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17348" pm="."><plain>0.08 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17349" pm="."><plain>0.54 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17350" pm="."><plain>0.07 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17351" pm="."><plain>0.00 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17352" pm="."><plain>0.00 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="17353" pm="."><plain>REZ-B </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17354" pm="."><plain>5×10<sup>−2</sup> </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17355" pm="."><plain>0.69 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17356" pm="."><plain>0.47 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17357" pm="."><plain>1.00 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17358" pm="."><plain>0.86 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17359" pm="."><plain>0.85 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17360" pm="."><plain>0.80 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="17361" pm="."><plain>5×10<sup>−4</sup> </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17362" pm="."><plain>0.67 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17363" pm="."><plain>0.02 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17364" pm="."><plain>0.81 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17365" pm="."><plain>0.21 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17366" pm="."><plain>0.36 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17367" pm="."><plain>0.20 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="17368" pm="."><plain>5×10<sup>−8</sup> </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17369" pm="."><plain>0.62 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17370" pm="."><plain>0.00 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17371" pm="."><plain>0.10 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17372" pm="."><plain>0.00 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17373" pm="."><plain>0.00 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17374" pm="."><plain>0.00 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="17375" pm="."><plain>REZ-C </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17376" pm="."><plain>5×10<sup>−2</sup> </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17377" pm="."><plain>0.88 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17378" pm="."><plain>0.85 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17379" pm="."><plain>0.95 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17380" pm="."><plain>0.88 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17381" pm="."><plain>0.79 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17382" pm="."><plain>0.84 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="17383" pm="."><plain>5×10<sup>−4</sup> </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17384" pm="."><plain>0.85 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17385" pm="."><plain>0.19 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17386" pm="."><plain>0.49 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17387" pm="."><plain>0.25 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17388" pm="."><plain>0.31 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17389" pm="."><plain>0.38 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="17390" pm="."><plain>5×10<sup>−8</sup> </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17391" pm="."><plain>0.80 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17392" pm="."><plain>0.01 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17393" pm="."><plain>0.01 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17394" pm="."><plain>0.01 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17395" pm="."><plain>0.00 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17396" pm="."><plain>0.02 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="17397" pm="."><plain>REZ-D </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17398" pm="."><plain>5×10<sup>−2</sup> </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17399" pm="."><plain>1.00 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17400" pm="."><plain>0.99 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17401" pm="."><plain>0.86 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17402" pm="."><plain>0.86 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17403" pm="."><plain>0.53 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17404" pm="."><plain>0.43 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="17405" pm="."><plain>5×10<sup>−4</sup> </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17406" pm="."><plain>0.98 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17407" pm="."><plain>0.56 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17408" pm="."><plain>0.19 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17409" pm="."><plain>0.20 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17410" pm="."><plain>0.11 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17411" pm="."><plain>0.02 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="17412" pm="."><plain>5×10<sup>−8</sup> </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17413" pm="."><plain>0.43 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17414" pm="."><plain>0.02 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17415" pm="."><plain>0.01 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17416" pm="."><plain>0.02 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17417" pm="."><plain>0.00 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17418" pm="."><plain>0.00 </plain></SENT>
+</text></td></tr></tbody></table></alternatives><table-wrap-foot><fn id="nt111"><label>a</label><p><text><SENT sid="17419" pm="."><plain>Different completely recessive 3-SNP models, with varying risk allele frequencies. </plain></SENT>
+<SENT sid="17420" pm="."><plain>REZ-A: 0.2,0.5,0.8; REZ-B: 0.2,0.3,0.4; REZ-C: 0.4,0.5,0.6; REZ-D: 0.6,0.7,0.8. </plain></SENT>
+<SENT sid="17421" pm="."><plain>Baseline penetrance was set to 0.03 and pentrances for 3-times recessive genotype were set to 0.2 (REZ-A), 0.7 (REZ-B), 0.1 (REZ-C), and 0.05 (REZ-D), respectively. </plain></SENT>
+</text></p></fn><fn id="nt112"><label>b</label><p><text><SENT sid="17422" pm="."><plain>Significance level. </plain></SENT>
+</text></p></fn><fn id="nt113"><label>c</label><p><text><SENT sid="17423" pm="."><plain>Power of supra-mulitplicativity test. </plain></SENT>
+</text></p></fn><fn id="nt114"><label>d</label><p><text><SENT sid="17424" pm="."><plain>Power of single-marker analysis, as computed from the most significant SNP, without correction for multiple testing. </plain></SENT>
+</text></p></fn><fn id="nt115"><label>e</label><p><text><SENT sid="17425" pm="."><plain>Power of 2-SNP logistic regression interaction test with 1 d.f. </plain></SENT>
+<SENT sid="17426" pm="."><plain>(allelic test), as obtained from the most significant SNP pair, without correction for multiple testing. </plain></SENT>
+</text></p></fn><fn id="nt116"><label>f</label><p><text><SENT sid="17427" pm="."><plain>Power of 2-SNP logistic regression interaction test with 4 d.f. </plain></SENT>
+<SENT sid="17428" pm="."><plain>(genotypic test), as obtained from the most significant SNP pair, without correction for multiple testing. </plain></SENT>
+</text></p></fn><fn id="nt117"><label>g</label><p><text><SENT sid="17429" pm="."><plain>Power of 3-SNP logistic regression interaction test with 1 d.f. </plain></SENT>
+<SENT sid="17430" pm="."><plain>(allelic test). </plain></SENT>
+</text></p></fn><fn id="nt118"><label>h</label><p><text><SENT sid="17431" pm="."><plain>Power of 3-SNP logistic regression interaction test with 8 d.f. </plain></SENT>
+<SENT sid="17432" pm="."><plain>(genotypic test). </plain></SENT>
+</text></p></fn></table-wrap-foot></table-wrap></SecTag><p><text><SENT sid="17433" pm="."><plain>At low significance levels, particularly at <inline-formula><inline-graphic xlink:href="pone.0078038.e083.jpg"/></inline-formula>, the 2-SNP 1-d.f. interaction tests outperforms the SMT, which is partially caused by the fact that power values for the pairwise tests are not corrected for the multiple testing of three pairs. </plain></SENT>
+<SENT sid="17434" pm="."><plain>At <inline-formula><inline-graphic xlink:href="pone.0078038.e084.jpg"/></inline-formula>, the SMT outperforms single-marker analysis and all standard interaction tests, under all four recessive models investigated. </plain></SENT>
+<SENT sid="17435" pm="."><plain>Under model REZ-C, for instance, power levels are below 0.02 for all standard tests while the SMT has remarkable power of 80%. </plain></SENT>
+<SENT sid="17436" pm="."><plain>This result might be surprising at first glance, but can be explained by the architecture of the SMT. </plain></SENT>
+<SENT sid="17437" pm="."><plain>The completely recessive model implies single-SNP dominance variation, two-way and three-way interactions. </plain></SENT>
+<SENT sid="17438" pm="."><plain>The interaction terms often will not reach significance, either because the effect is too small, but also because of the high number of degrees of freedom. </plain></SENT>
+<SENT sid="17439" pm="."><plain>The SMT, however, combines the evidence for two- and three-way interaction in a single test statistic that follows a <inline-formula><inline-graphic xlink:href="pone.0078038.e085.jpg"/></inline-formula>-distribution with just one degree of freedom. </plain></SENT>
+<SENT sid="17440" pm="."><plain>In addition, the SMT takes into account that the effect directions of risk alleles are not altered, a fact that is not addressed when two-way and three-way interaction terms are combined in a standard regression test. </plain></SENT>
+<SENT sid="17441" pm="."><plain>Thus, the SMT can also be a powerful alternative when the goal is “just” interaction analysis of SNP sets of small size. </plain></SENT>
+</text></p></sec><sec id="s2d"><title><text><SENT sid="17442" pm="."><plain>Data Analysis </plain></SENT>
+</text></title><p><text><SENT sid="17443" pm="."><plain>We applied the SMT to known Alzheimer’s disease (AD) susceptibility loci. </plain></SENT>
+<SENT sid="17444" pm="."><plain>According to the GWAS catalogue <xref rid="pone.0078038-Hindorffi1" ref-type="bibr">[1]</xref>, there are currently 10 confirmed consensus AD genes <xref rid="pone.0078038-Harold1" ref-type="bibr">[15]</xref>–<xref rid="pone.0078038-Naj1" ref-type="bibr">[19]</xref>. </plain></SENT>
+<SENT sid="17445" pm="."><plain>These genes, together with the SNP showing strongest evidence for association, are APOE (rs429358), ABCA7 (rs3764650), CR1 (rs3818361), PICALM (rs3851179), CLU (rs11136000), BIN1 (rs744373), EPHA1 (rs11767557), CD2AP (rs9349407), CD33 (rs3865444) and MS4A (rs610932). </plain></SENT>
+<SENT sid="17446" pm="."><plain>We obtained genotypes for these SNPs from a previously unpublished late-onset Alzheimer’s disease (AD) Genome-wide case-control study, genotyped on the Illumina Omni1M micro-array. </plain></SENT>
+<SENT sid="17447" pm="."><plain>AD patients were recruited within the German Dementia Competence Network, DCN (<ext-link ext-link-type="uri" xlink:href="http://www.kompetenznetz-demenzen.de">http://www.kompetenznetz-demenzen.de</ext-link>) and at the interdisciplinary memory clinic of the Department of Psychiatry and Department of Neurology at the University Hospital in Bonn, Germany. </plain></SENT>
+<SENT sid="17448" pm="."><plain>Diagnosis of AD dementia was established according to NINCDA-ADRDA criteria <xref rid="pone.0078038-McKhann1" ref-type="bibr">[20]</xref>. </plain></SENT>
+<SENT sid="17449" pm="."><plain>All patients gave written informed consent for participation in the entire study protocol. </plain></SENT>
+<SENT sid="17450" pm="."><plain>After application of standard quality control procedures, 850,612 genotypes of 649 cases and 1,096 selected controls were available. </plain></SENT>
+<SENT sid="17451" pm="."><plain>We used the software IMPUTE2 <xref rid="pone.0078038-Howie1" ref-type="bibr">[21]</xref> to impute into the February 2012 release of the 1,000 genomes project <xref rid="pone.0078038-Genomes1" ref-type="bibr">[22]</xref> and extracted the 10 AD SNPs for analysis. </plain></SENT>
+</text></p><p><text><SENT sid="17452" pm="."><plain>As expected, our data shows overwhelming evidence for association of APOE with AD (<inline-formula><inline-graphic xlink:href="pone.0078038.e086.jpg"/></inline-formula>, <xref ref-type="table" rid="pone-0078038-t006">table 6</xref>). </plain></SENT>
+<SENT sid="17453" pm="."><plain>For the remaining SNPs, the level of significance that is reached with single-marker analysis is only moderate. </plain></SENT>
+<SENT sid="17454" pm="."><plain>However, for 8 out of 10 SNPs the risk allele is consistent with the risk allele reported in the GWAS catalogue, which suggests that the effects of the known SNPs are reflected in our data, but not significant because of a lack of power. </plain></SENT>
+<SENT sid="17455" pm="."><plain>Of note, for two SNPs, rs744373 (<inline-formula><inline-graphic xlink:href="pone.0078038.e087.jpg"/></inline-formula>) and rs3865444 (<inline-formula><inline-graphic xlink:href="pone.0078038.e088.jpg"/></inline-formula>), the effect direction is not in concordance with the GWAS catalogue. </plain></SENT>
+<SENT sid="17456" pm="."><plain>When the SMT is applied to a priori known SNPs, it is essential to count the number of risk alleles according to risk allele specification of the outside source and not according to the risk allele assignment that would follow from the data itself. </plain></SENT>
+<SENT sid="17457" pm="."><plain>Indeed, it cannot be expected that all susceptibility variants have the “correct” allele direction in a sample that is smaller than the samples from which the AD consensus SNPs were derived. </plain></SENT>
+<SENT sid="17458" pm="."><plain>Therefore, we computed the individual risk allele loads according to the GWAS consensus risk alleles. </plain></SENT>
+</text></p><SecTag type="TABLE"><table-wrap id="pone-0078038-t006" orientation="portrait" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0078038.t006</object-id><label>Table 6</label><caption><title><text><SENT sid="17459" pm="."><plain>Single-marker analysis of GWAS Alzheimer’s disease susceptibility SNPs in independent data. </plain></SENT>
+</text></title></caption><alternatives><graphic id="pone-0078038-t006-6" xlink:href="pone.0078038.t006"/><table frame="hsides" rules="groups"><colgroup span="1"><col align="left" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/></colgroup><thead><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="17460" pm="."><plain>Chr </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17461" pm="."><plain>SNP </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17462" pm="."><plain>Position </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17463" pm="."><plain>Gene </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17464" pm="."><plain>Minor </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17465" pm="."><plain>Major </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17466" pm="."><plain><italic>p</italic>-value </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17467" pm="."><plain>Odds Ratio </plain></SENT>
+</text></td></tr></thead><tbody><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="17468" pm="."><plain>1 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17469" pm="."><plain>rs3818361 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17470" pm="."><plain>207784968 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17471" pm="."><plain>CR1 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17472" pm="."><plain>A </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17473" pm="."><plain>G </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17474" pm="."><plain>4.28×10<sup>−4</sup> </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17475" pm="."><plain>1.07 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="17476" pm="."><plain>2 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17477" pm="."><plain>rs744373 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17478" pm="."><plain>127894615 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17479" pm="."><plain>BIN1 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17480" pm="."><plain>G </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17481" pm="."><plain>A </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17482" pm="."><plain>9.63×10<sup>−1</sup> </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17483" pm="."><plain>1.00 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="17484" pm="."><plain>6 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17485" pm="."><plain>rs9349407 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17486" pm="."><plain>47453378 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17487" pm="."><plain>CD2AP </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17488" pm="."><plain>C </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17489" pm="."><plain>G </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17490" pm="."><plain>6.80×10<sup>−2</sup> </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17491" pm="."><plain>1.15 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="17492" pm="."><plain>7 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17493" pm="."><plain>rs11767557 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17494" pm="."><plain>143109139 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17495" pm="."><plain>EPHA1 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17496" pm="."><plain>C </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17497" pm="."><plain>T </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17498" pm="."><plain>7.73×10<sup>−2</sup> </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17499" pm="."><plain>0.89 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="17500" pm="."><plain>8 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17501" pm="."><plain>rs11136000 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17502" pm="."><plain>27464519 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17503" pm="."><plain>CLU </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17504" pm="."><plain>T </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17505" pm="."><plain>C </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17506" pm="."><plain>8.63×10<sup>−2</sup> </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17507" pm="."><plain>0.88 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="17508" pm="."><plain>11 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17509" pm="."><plain>rs610932 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17510" pm="."><plain>59939307 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17511" pm="."><plain>MS4A </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17512" pm="."><plain>T </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17513" pm="."><plain>G </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17514" pm="."><plain>7.97×10<sup>−1</sup> </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17515" pm="."><plain>0.98 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="17516" pm="."><plain>11 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17517" pm="."><plain>rs3851179 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17518" pm="."><plain>85868640 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17519" pm="."><plain>PICALM </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17520" pm="."><plain>T </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17521" pm="."><plain>C </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17522" pm="."><plain>3.85×10<sup>−2</sup> </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17523" pm="."><plain>0.86 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="17524" pm="."><plain>19 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17525" pm="."><plain>rs3764650 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17526" pm="."><plain>1046520 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17527" pm="."><plain>ABCA7 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17528" pm="."><plain>G </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17529" pm="."><plain>T </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17530" pm="."><plain>3.81×10<sup>−1</sup> </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17531" pm="."><plain>1.11 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="17532" pm="."><plain>19 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17533" pm="."><plain>rs429358 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17534" pm="."><plain>45411941 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17535" pm="."><plain>APOE </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17536" pm="."><plain>C </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17537" pm="."><plain>T </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17538" pm="."><plain>1.57×10<sup>−48</sup> </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17539" pm="."><plain>3.58 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="17540" pm="."><plain>19 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17541" pm="."><plain>rs3865444 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17542" pm="."><plain>51727962 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17543" pm="."><plain>CD33 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17544" pm="."><plain>A </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17545" pm="."><plain>C </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17546" pm="."><plain>5.22×10<sup>−1</sup> </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17547" pm="."><plain>1.05 </plain></SENT>
+</text></td></tr></tbody></table></alternatives></table-wrap></SecTag><p><text><SENT sid="17548" pm="."><plain>Prior to application of the SMT, we screened the data for SNP-dominance effects, and two- and three-way interactions. </plain></SENT>
+<SENT sid="17549" pm="."><plain>None of the dominance or pairwise interaction terms was nominally significant. </plain></SENT>
+<SENT sid="17550" pm="."><plain>Analysis of three-way interaction of 120 SNP triples was not significant after adjustment for multiple testing (<inline-formula><inline-graphic xlink:href="pone.0078038.e089.jpg"/></inline-formula>). </plain></SENT>
+</text></p><p><text><SENT sid="17551" pm="."><plain><xref ref-type="table" rid="pone-0078038-t007">Table 7</xref> shows the results of the supra-mulitplicativity analysis. </plain></SENT>
+<SENT sid="17552" pm="."><plain>The allele thresholds 6,7 and 12 yield nominally significant p-values, <inline-formula><inline-graphic xlink:href="pone.0078038.e090.jpg"/></inline-formula>, <inline-formula><inline-graphic xlink:href="pone.0078038.e091.jpg"/></inline-formula> and <inline-formula><inline-graphic xlink:href="pone.0078038.e092.jpg"/></inline-formula>, respectively. </plain></SENT>
+<SENT sid="17553" pm="."><plain>While the lower thresholds have effect estimates below zero (<inline-formula><inline-graphic xlink:href="pone.0078038.e093.jpg"/></inline-formula>, <inline-formula><inline-graphic xlink:href="pone.0078038.e094.jpg"/></inline-formula>), the higher threshold have an effect estimate above zero (<inline-formula><inline-graphic xlink:href="pone.0078038.e095.jpg"/></inline-formula>). </plain></SENT>
+<SENT sid="17554" pm="."><plain>In other words, for thresholds <inline-formula><inline-graphic xlink:href="pone.0078038.e096.jpg"/></inline-formula> disease risk is lower than what would be expected under complete multiplicativity, while for <inline-formula><inline-graphic xlink:href="pone.0078038.e097.jpg"/></inline-formula> disease risk is “supra-multiplicative”. </plain></SENT>
+<SENT sid="17555" pm="."><plain>Thus, the effect directions are consistent with the notion of a threshold model, disease risk increases over-proportionally with higher risk allele loads. </plain></SENT>
+<SENT sid="17556" pm="."><plain>However, a sharply defined threshold, as observable with simulated data (<xref ref-type="fig" rid="pone-0078038-g005">figure 5</xref>), is not detectable. </plain></SENT>
+<SENT sid="17557" pm="."><plain>Instead, the effect estimates <inline-formula><inline-graphic xlink:href="pone.0078038.e098.jpg"/></inline-formula> grow gradually with increasing threshold <inline-formula><inline-graphic xlink:href="pone.0078038.e099.jpg"/></inline-formula> (<xref ref-type="fig" rid="pone-0078038-g007">figure 7</xref>). </plain></SENT>
+<SENT sid="17558" pm="."><plain>For illustrative purposes, <xref ref-type="table" rid="pone-0078038-t006">table 6</xref> also contains odds ratios computed from a two-by-two contingency table with case-control status and the number of individuals with a risk allele load below/above the threshold as attributes. </plain></SENT>
+<SENT sid="17559" pm="."><plain>These odds ratios also grow gradually with increasing allele threshold. </plain></SENT>
+</text></p><SecTag type="FIG"><fig id="pone-0078038-g007" orientation="portrait" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0078038.g007</object-id><label>Figure 7</label><caption><title><text><SENT sid="17560" pm="."><plain>Curve of <inline-formula><inline-graphic xlink:href="pone.0078038.e100.jpg"/></inline-formula>-estimates for Alzheimer’s disease real data (10 susceptibility SNPs). </plain></SENT>
+</text></title><p><text><SENT sid="17561" pm="."><plain>The <inline-formula><inline-graphic xlink:href="pone.0078038.e101.jpg"/></inline-formula>-axis represents the allele threshold, the <inline-formula><inline-graphic xlink:href="pone.0078038.e102.jpg"/></inline-formula>-axis the supra-multiplicativity effect estimate. </plain></SENT>
+</text></p></caption><graphic xlink:href="pone.0078038.g007"/></fig></SecTag><SecTag type="TABLE"><table-wrap id="pone-0078038-t007" orientation="portrait" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0078038.t007</object-id><label>Table 7</label><caption><title><text><SENT sid="17562" pm="."><plain>Application of SMT to Alzheimer’s disease susceptibility SNPs. </plain></SENT>
+</text></title></caption><alternatives><graphic id="pone-0078038-t007-7" xlink:href="pone.0078038.t007"/><table frame="hsides" rules="groups"><colgroup span="1"><col align="left" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/></colgroup><thead><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="17563" pm="."><plain>Alleleload<xref ref-type="table-fn" rid="nt119">a</xref> </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17564" pm="."><plain><italic>p</italic>-value<xref ref-type="table-fn" rid="nt120">b</xref> </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17565" pm="."><plain><italic>π</italic> <xref ref-type="table-fn" rid="nt121">c</xref> </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17566" pm="."><plain><italic>se</italic> <xref ref-type="table-fn" rid="nt122">d</xref> </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17567" pm="."><plain>OR<xref ref-type="table-fn" rid="nt123">e</xref> </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17568" pm="."><plain>seOR<xref ref-type="table-fn" rid="nt124">f</xref> </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17569" pm="."><plain>Freq_Cases<xref ref-type="table-fn" rid="nt125">g</xref> </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17570" pm="."><plain>Freq_Control<xref ref-type="table-fn" rid="nt126">h</xref> </plain></SENT>
+</text></td></tr></thead><tbody><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="17571" pm="."><plain>6 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17572" pm="."><plain>2.23×10<sup>−2</sup> </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17573" pm="."><plain>−0.971 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17574" pm="."><plain>0.370 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17575" pm="."><plain>0.852 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17576" pm="."><plain>0.737 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17577" pm="."><plain>0.981 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17578" pm="."><plain>0.983 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="17579" pm="."><plain>7 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17580" pm="."><plain>6059×10<sup>−3</sup> </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17581" pm="."><plain>−0.736 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17582" pm="."><plain>0.239 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17583" pm="."><plain>1.205 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17584" pm="."><plain>0.433 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17585" pm="."><plain>0.948 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17586" pm="."><plain>0.938 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="17587" pm="."><plain>8 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17588" pm="."><plain>9.16×10<sup>−4</sup> </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17589" pm="."><plain>−0.700 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17590" pm="."><plain>0.189 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17591" pm="."><plain>1.270 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17592" pm="."><plain>0.294 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17593" pm="."><plain>0.879 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17594" pm="."><plain>0.851 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="17595" pm="."><plain>9 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17596" pm="."><plain>5348×10<sup>−1</sup> </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17597" pm="."><plain>−0.114 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17598" pm="."><plain>0.171 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17599" pm="."><plain>1.636 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17600" pm="."><plain>0.232 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17601" pm="."><plain>0.787 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17602" pm="."><plain>0.693 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="17603" pm="."><plain>10 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17604" pm="."><plain>3.20×10<sup>−1</sup> </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17605" pm="."><plain>0.185 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17606" pm="."><plain>0.167 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17607" pm="."><plain>1.818 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17608" pm="."><plain>0.203 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17609" pm="."><plain>0.643 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17610" pm="."><plain>0.498 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="17611" pm="."><plain>11 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17612" pm="."><plain>1.34×10<sup>−a</sup> </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17613" pm="."><plain>0.274 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17614" pm="."><plain>0.165 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17615" pm="."><plain>2.046 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17616" pm="."><plain>0.205 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17617" pm="."><plain>0.457 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17618" pm="."><plain>0.292 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="17619" pm="."><plain>12 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17620" pm="."><plain>2.72×10<sup>−2</sup> </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17621" pm="."><plain>0.417 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17622" pm="."><plain>0.170 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17623" pm="."><plain>2.315 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17624" pm="."><plain>0.244 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17625" pm="."><plain>0.279 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17626" pm="."><plain>0.144 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="17627" pm="."><plain>13 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17628" pm="."><plain>1.51×10<sup>−1</sup> </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17629" pm="."><plain>0.333 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17630" pm="."><plain>0.209 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17631" pm="."><plain>2.549 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17632" pm="."><plain>0.353 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17633" pm="."><plain>0.128 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17634" pm="."><plain>0.054 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="17635" pm="."><plain>14 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17636" pm="."><plain>3.09×10<sup>−</sup> </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17637" pm="."><plain>0.357 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17638" pm="."><plain>0.318 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17639" pm="."><plain>3.025 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17640" pm="."><plain>0.593 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17641" pm="."><plain>0.048 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="17642" pm="."><plain>0.017 </plain></SENT>
+</text></td></tr></tbody></table></alternatives><table-wrap-foot><fn id="nt119"><label>a</label><p><text><SENT sid="17643" pm="."><plain>Risk allele threshold <inline-formula><inline-graphic xlink:href="pone.0078038.e103.jpg"/></inline-formula> under investigation. </plain></SENT>
+</text></p></fn><fn id="nt120"><label>b</label><p><text><SENT sid="17644" pm="."><plain>Uncorrected p-value for given threshold. </plain></SENT>
+</text></p></fn><fn id="nt121"><label>c</label><p><text><SENT sid="17645" pm="."><plain>Effect estimate <inline-formula><inline-graphic xlink:href="pone.0078038.e104.jpg"/></inline-formula> for indicator variable <inline-formula><inline-graphic xlink:href="pone.0078038.e105.jpg"/></inline-formula> at threshold <inline-formula><inline-graphic xlink:href="pone.0078038.e106.jpg"/></inline-formula>. </plain></SENT>
+</text></p></fn><fn id="nt122"><label>d</label><p><text><SENT sid="17646" pm="."><plain>Corresponding standard error. </plain></SENT>
+</text></p></fn><fn id="nt123"><label>e</label><p><text><SENT sid="17647" pm="."><plain>Odds ratio as computed from two-by-two case-control table with number of cases/control with a risk allele load above and below the threshold. </plain></SENT>
+</text></p></fn><fn id="nt124"><label>f</label><p><text><SENT sid="17648" pm="."><plain>Corresponding standard error. </plain></SENT>
+</text></p></fn><fn id="nt125"><label>g</label><p><text><SENT sid="17649" pm="."><plain>Frequency of cases above the allele load threshold. </plain></SENT>
+</text></p></fn><fn id="nt126"><label>h</label><p><text><SENT sid="17650" pm="."><plain>Frequency of controls above the allele load threshold. </plain></SENT>
+</text></p></fn></table-wrap-foot></table-wrap></SecTag><p><text><SENT sid="17651" pm="."><plain>In summary, we see an over-proportional increase in disease risk, along with growing risk allele load. </plain></SENT>
+<SENT sid="17652" pm="."><plain>Since the supra-multiplicativity is not attributable to lower order interactions terms, we can state that the deviation from multiplicativity would have gone undetected without the SMT. </plain></SENT>
+</text></p></sec></sec></SecTag><SecTag type="DISCUSS"><sec id="s3"><title><text><SENT sid="17653" pm="."><plain>Discussion </plain></SENT>
+</text></title><p><text><SENT sid="17654" pm="."><plain>We presented the SMT as a test for deviation from multiplicativity. </plain></SENT>
+<SENT sid="17655" pm="."><plain>It can be applied to sets of a size of up to <inline-formula><inline-graphic xlink:href="pone.0078038.e107.jpg"/></inline-formula> SNPs and allows joint investigation of all <inline-formula><inline-graphic xlink:href="pone.0078038.e108.jpg"/></inline-formula>-way interactions, <inline-formula><inline-graphic xlink:href="pone.0078038.e109.jpg"/></inline-formula>, by a single parameter. </plain></SENT>
+<SENT sid="17656" pm="."><plain>With <inline-formula><inline-graphic xlink:href="pone.0078038.e110.jpg"/></inline-formula> SNPs, there are <inline-formula><inline-graphic xlink:href="pone.0078038.e111.jpg"/></inline-formula> allelic interaction terms <inline-formula><inline-graphic xlink:href="pone.0078038.e112.jpg"/></inline-formula> that theoretically could be analyzed in a regression framework. </plain></SENT>
+<SENT sid="17657" pm="."><plain>With growing <inline-formula><inline-graphic xlink:href="pone.0078038.e113.jpg"/></inline-formula>, such systematic investigation quickly reaches the limit of computability. </plain></SENT>
+<SENT sid="17658" pm="."><plain>The SMT, however, can simultaneously assess interactions of different orders. </plain></SENT>
+<SENT sid="17659" pm="."><plain>In addition, the formulation as a one parameter test improves power via the reduction of degrees of freedom and by reduction of the multiple testing burden. </plain></SENT>
+<SENT sid="17660" pm="."><plain>The test is powerful under two assumptions: First, effect <italic>sizes</italic> of SNP alleles have to depend on the combination of genotypes at other disease SNPs, but, effect <italic>directions</italic> must not depend on the genotypes at other model SNPs. </plain></SENT>
+<SENT sid="17661" pm="."><plain>Indeed, the indicator parameter counts the number of risk alleles of an individual. </plain></SENT>
+<SENT sid="17662" pm="."><plain>As a consequence, the SMT will lose power when effect directions can be reverted. </plain></SENT>
+<SENT sid="17663" pm="."><plain>Second, a substantial part of the SNPs under investigation must deviate from multiplicativity. </plain></SENT>
+<SENT sid="17664" pm="."><plain>This assumption might be considered to be a strong one, but is, on the other hand, fulfilled by biologically plausible models which at the same time are easily specified. </plain></SENT>
+<SENT sid="17665" pm="."><plain>In particular, limiting pathway liability models (LPLMs) lead to strong supra-multiplicativity which can be detected by the SMT, as shown in our simulation study. </plain></SENT>
+<SENT sid="17666" pm="."><plain>Moreover, the SMT remained powerful when we altered the LPLMs such that marginal SNP effects were allowed to vary substantially. </plain></SENT>
+<SENT sid="17667" pm="."><plain>In addition, we exemplified the usefulness of the SMT for small SNP sets by showing that it is much more powerful than standard interaction tests under 3-SNP-recessive models. </plain></SENT>
+</text></p><p><text><SENT sid="17668" pm="."><plain>Zuk et al. <xref rid="pone.0078038-Zuk1" ref-type="bibr">[6]</xref> have proposed LPLMs as a possible explanation for missing evidence for epistasis in GWAS studies. </plain></SENT>
+<SENT sid="17669" pm="."><plain>With the SMT it is now possible to systematically screen GWAS susceptibility SNPs for their involvement in a LPLM. </plain></SENT>
+<SENT sid="17670" pm="."><plain>More generally, our approach can be used as a tool to screen pre-defined SNP sets for supra-multiplicativity. </plain></SENT>
+<SENT sid="17671" pm="."><plain>Thereby, it has the potential to assess the presence of simultaneous effects of known SNPs and to contribute to the judgement of their joint relevance. </plain></SENT>
+<SENT sid="17672" pm="."><plain>In this context, previously confirmed, particular <inline-formula><inline-graphic xlink:href="pone.0078038.e114.jpg"/></inline-formula>-way interactions can be used as model covariates, in order to detect supra-multiplicativity on top of such interactions. </plain></SENT>
+</text></p><p><text><SENT sid="17673" pm="."><plain>Our analysis of known Alzheimer’s disease (AD) susceptibility SNPs in previously unpublished data revealed supra-multiplicativity (<inline-formula><inline-graphic xlink:href="pone.0078038.e115.jpg"/></inline-formula>) that was neither attributable to SNP dominance, nor to pairwise or three-way interaction effects. </plain></SENT>
+<SENT sid="17674" pm="."><plain>A sharp risk allele threshold as it would be characteristic of LPLMs was not identifiable. </plain></SENT>
+<SENT sid="17675" pm="."><plain>Instead, deviation from multiplicativity developed gradually with increasing allele load, and, therefore, was not detectable with standard interaction analysis. </plain></SENT>
+</text></p><p><text><SENT sid="17676" pm="."><plain>Confirmed supra-multiplicativity of risk factors is of potential relevance in various fields. </plain></SENT>
+<SENT sid="17677" pm="."><plain>In the presence of supra-multiplicativity, prediction of disease risk can be improved when the joint distribution of risk factors is fully modeled in contrast to prediction based on multiplication of risk factors. </plain></SENT>
+<SENT sid="17678" pm="."><plain>For application in clinical practice, it is important that all risk factors as such, as well as their amount of supra-multiplicativity, are confirmed by independent studies. </plain></SENT>
+<SENT sid="17679" pm="."><plain>In addition, independent studies would have to specifically investigate whether prediction can be improved over prediction based on the domineering APOE locus. </plain></SENT>
+</text></p><p><text><SENT sid="17680" pm="."><plain>Supra-multiplicativity is perhaps even more important for treatment invention and drug development than it is for risk prediction. </plain></SENT>
+<SENT sid="17681" pm="."><plain>Supra-multiplicative risk factors imply over-proportionally strong disease risk when they occur together. </plain></SENT>
+<SENT sid="17682" pm="."><plain>Conversely, this means that disease risk can be substantially reduced when the effects on phenotype of only a portion of the risk factors can be blocked. </plain></SENT>
+<SENT sid="17683" pm="."><plain>Under a risk threshold model, for instance, disease risk can be reduced to a base-line level when the number of still effective risk factors can be reduced so far that the number of still active risk factors is below the risk threshold. </plain></SENT>
+<SENT sid="17684" pm="."><plain>In particular, this means that for a complex disease it might not be necessary to have an antidote for all risk factors, it might be sufficient to inactivate just some of these. </plain></SENT>
+<SENT sid="17685" pm="."><plain>Stringent statistical evidence for strong supra-multiplicativity of the risk factors of the disease under investigation, however, is an essential prerequisite for such a perspective. </plain></SENT>
+</text></p></sec></SecTag><SecTag type="METHODS"><sec sec-type="methods" id="s4"><title><text><SENT sid="17686" pm="."><plain>Methods </plain></SENT>
+</text></title><p><text><SENT sid="17687" pm="."><plain>Our work got its stimulus from the manuscript of Zuk et al. <xref rid="pone.0078038-Zuk1" ref-type="bibr">[6]</xref> who suggested limiting pathway liability models (LPLMs) as an explanation for the missing evidence for interaction in GWAS studies. </plain></SENT>
+<SENT sid="17688" pm="."><plain>An LPLM can be defined as follows: Consider a set of <inline-formula><inline-graphic xlink:href="pone.0078038.e116.jpg"/></inline-formula> SNPs, and specify for each SNP its risk allele. </plain></SENT>
+<SENT sid="17689" pm="."><plain>Let <inline-formula><inline-graphic xlink:href="pone.0078038.e117.jpg"/></inline-formula>, <inline-formula><inline-graphic xlink:href="pone.0078038.e118.jpg"/></inline-formula> be the number of risk alleles of an individual. </plain></SENT>
+<SENT sid="17690" pm="."><plain>Let <inline-formula><inline-graphic xlink:href="pone.0078038.e119.jpg"/></inline-formula>, <inline-formula><inline-graphic xlink:href="pone.0078038.e120.jpg"/></inline-formula> be a liability threshold. </plain></SENT>
+<SENT sid="17691" pm="."><plain>For individuals with <inline-formula><inline-graphic xlink:href="pone.0078038.e121.jpg"/></inline-formula>, the risk to be a case is set to be equal to a baseline penetrance <inline-formula><inline-graphic xlink:href="pone.0078038.e122.jpg"/></inline-formula>, while for individuals with <inline-formula><inline-graphic xlink:href="pone.0078038.e123.jpg"/></inline-formula> risk alleles, an increased penetrance <inline-formula><inline-graphic xlink:href="pone.0078038.e124.jpg"/></inline-formula> applies. </plain></SENT>
+<SENT sid="17692" pm="."><plain>It is typically assumed that <inline-formula><inline-graphic xlink:href="pone.0078038.e125.jpg"/></inline-formula> and that <inline-formula><inline-graphic xlink:href="pone.0078038.e126.jpg"/></inline-formula>. </plain></SENT>
+<SENT sid="17693" pm="."><plain>By design, such a model leads to marginal SNP effects and also to <inline-formula><inline-graphic xlink:href="pone.0078038.e127.jpg"/></inline-formula>-way interaction effects for all <inline-formula><inline-graphic xlink:href="pone.0078038.e128.jpg"/></inline-formula>. </plain></SENT>
+<SENT sid="17694" pm="."><plain>Indeed, the effect of the risk allele of SNP <inline-formula><inline-graphic xlink:href="pone.0078038.e129.jpg"/></inline-formula>, <inline-formula><inline-graphic xlink:href="pone.0078038.e130.jpg"/></inline-formula>, depends on the number of risk alleles present at SNPs 1 to <inline-formula><inline-graphic xlink:href="pone.0078038.e131.jpg"/></inline-formula>. </plain></SENT>
+<SENT sid="17695" pm="."><plain>Since the interaction effects are distributed over all orders, particular single interaction terms are rather small. </plain></SENT>
+<SENT sid="17696" pm="."><plain>As a consequence, search for, for instance, pairwise interaction is not the method of choice in the presence of a LPLM. </plain></SENT>
+<SENT sid="17697" pm="."><plain>Motivated by this, we construct a one degree of freedom (d.f.) test for deviation from multiplicativity for a set of <inline-formula><inline-graphic xlink:href="pone.0078038.e132.jpg"/></inline-formula> SNPs that simultaneously addresses all <inline-formula><inline-graphic xlink:href="pone.0078038.e133.jpg"/></inline-formula>-way interaction effects, <inline-formula><inline-graphic xlink:href="pone.0078038.e134.jpg"/></inline-formula>. </plain></SENT>
+<SENT sid="17698" pm="."><plain>An implementation can be found in our software package INTERSNP <xref rid="pone.0078038-Herold2" ref-type="bibr">[23]</xref> (<ext-link ext-link-type="uri" xlink:href="http://intersnp.meb.uni-bonn.de">http://intersnp.meb.uni-bonn.de</ext-link>). </plain></SENT>
+</text></p><p><text><SENT sid="17699" pm="."><plain>We consider a set of <inline-formula><inline-graphic xlink:href="pone.0078038.e135.jpg"/></inline-formula> SNPs with corresponding parameters <inline-formula><inline-graphic xlink:href="pone.0078038.e136.jpg"/></inline-formula>, <inline-formula><inline-graphic xlink:href="pone.0078038.e137.jpg"/></inline-formula>, which follow the allele coding used in the logistic regression framework described elsewhere <xref rid="pone.0078038-Cordell2" ref-type="bibr">[24]</xref>. </plain></SENT>
+<SENT sid="17700" pm="."><plain>We introduce a series of indicator parameters <inline-formula><inline-graphic xlink:href="pone.0078038.e138.jpg"/></inline-formula>, <inline-formula><inline-graphic xlink:href="pone.0078038.e139.jpg"/></inline-formula>, where <inline-formula><inline-graphic xlink:href="pone.0078038.e140.jpg"/></inline-formula> is a liability threshold that shall be investigated. </plain></SENT>
+<SENT sid="17701" pm="."><plain>In case an individual has <inline-formula><inline-graphic xlink:href="pone.0078038.e141.jpg"/></inline-formula> risk alleles, we set <inline-formula><inline-graphic xlink:href="pone.0078038.e142.jpg"/></inline-formula>, otherwise we set <inline-formula><inline-graphic xlink:href="pone.0078038.e143.jpg"/></inline-formula>. </plain></SENT>
+<SENT sid="17702" pm="."><plain>Next, we test the liability threshold <inline-formula><inline-graphic xlink:href="pone.0078038.e144.jpg"/></inline-formula> by comparing<disp-formula id="pone.0078038.e145"><graphic xlink:href="pone.0078038.e145.jpg" position="anchor" orientation="portrait"/></disp-formula>against </plain></SENT>
+</text></p><p><text><SENT sid="17703" pm="."><plain><disp-formula id="pone.0078038.e146"><graphic xlink:href="pone.0078038.e146.jpg" position="anchor" orientation="portrait"/></disp-formula> </plain></SENT>
+</text></p><p><text><SENT sid="17704" pm="."><plain>In other words, we use the marginal effects of the SNPs as covariates and investigate if the disease risk increases sharply when <inline-formula><inline-graphic xlink:href="pone.0078038.e147.jpg"/></inline-formula> risk alleles are present. </plain></SENT>
+<SENT sid="17705" pm="."><plain>Since the optimal cut-off is not known in advance, all values of <inline-formula><inline-graphic xlink:href="pone.0078038.e148.jpg"/></inline-formula> have to be tested. </plain></SENT>
+<SENT sid="17706" pm="."><plain>We compute the final p-value <inline-formula><inline-graphic xlink:href="pone.0078038.e149.jpg"/></inline-formula> as <inline-formula><inline-graphic xlink:href="pone.0078038.e150.jpg"/></inline-formula> where <inline-formula><inline-graphic xlink:href="pone.0078038.e151.jpg"/></inline-formula> is the number of cut-offs <inline-formula><inline-graphic xlink:href="pone.0078038.e152.jpg"/></inline-formula> for which there are individuals both above and below the threshold. </plain></SENT>
+<SENT sid="17707" pm="."><plain>The method will be conservative since the tests are not independent for different values of <inline-formula><inline-graphic xlink:href="pone.0078038.e153.jpg"/></inline-formula>. </plain></SENT>
+<SENT sid="17708" pm="."><plain>In the results section, we will show that the Bonferroni-correction is, nevertheless, more than acceptable for practical purposes. </plain></SENT>
+<SENT sid="17709" pm="."><plain>We note that the suggested test allows the inclusion of further covariate parameters. </plain></SENT>
+<SENT sid="17710" pm="."><plain>Adaption to quantitative traits is also straightforward. </plain></SENT>
+</text></p><p><text><SENT sid="17711" pm="."><plain>By design, the proposed test can detects various types of deviation from multiplicativity. </plain></SENT>
+<SENT sid="17712" pm="."><plain>Therefore, we call it a supra-multiplicativity test (SMT). </plain></SENT>
+<SENT sid="17713" pm="."><plain>The SMT is constructed to optimize power in the presence of LPLMs. </plain></SENT>
+<SENT sid="17714" pm="."><plain>More generally, one can expect the SMT to be powerful when a substantial portion of the sub sets of the SNP set under investigation deviate from multiplicativity. </plain></SENT>
+<SENT sid="17715" pm="."><plain>In addition, effect directions should not be reverted in combination with other risk alleles since the test is build up on risk allele counts per individual. </plain></SENT>
+</text></p><sec id="s4a"><title><text><SENT sid="17716" pm="."><plain>Simulation Set-up </plain></SENT>
+</text></title><sec id="s4a1"><title><text><SENT sid="17717" pm="."><plain>Null models </plain></SENT>
+</text></title><p><text><SENT sid="17718" pm="."><plain>Let <inline-formula><inline-graphic xlink:href="pone.0078038.e154.jpg"/></inline-formula> be the number of risk alleles, <inline-formula><inline-graphic xlink:href="pone.0078038.e155.jpg"/></inline-formula>, at a given SNP and let <inline-formula><inline-graphic xlink:href="pone.0078038.e156.jpg"/></inline-formula> be the respective penetrance. </plain></SENT>
+<SENT sid="17719" pm="."><plain>To investigate the proposed test under the null hypothesis “no deviation from multiplicativity”, we simulated case-control data for <inline-formula><inline-graphic xlink:href="pone.0078038.e157.jpg"/></inline-formula>, <inline-formula><inline-graphic xlink:href="pone.0078038.e158.jpg"/></inline-formula> disease SNPs under a completely multiplicative model. </plain></SENT>
+<SENT sid="17720" pm="."><plain>We considered 1,000 permutation replicates for each choice of <italic>n</italic>, and, for each replicate, randomly selected allele frequencies from a uniform distribution and randomly assigned relative risk values <inline-formula><inline-graphic xlink:href="pone.0078038.e159.jpg"/></inline-formula> from 1.2 to 1.5. </plain></SENT>
+<SENT sid="17721" pm="."><plain>In order to investigate to SMT in the presence of covariates, we considered “semi-null” models, i.e., models with deviation from multiplicativity that was attributable either to single SNP dominance effects or to two-way interaction. </plain></SENT>
+<SENT sid="17722" pm="."><plain>We simulated 30 SNPs. </plain></SENT>
+<SENT sid="17723" pm="."><plain>In model <inline-formula><inline-graphic xlink:href="pone.0078038.e160.jpg"/></inline-formula>, 15 SNPs were simulated under a model of recessive type, the relative risk for homozygote carriers was set to <inline-formula><inline-graphic xlink:href="pone.0078038.e161.jpg"/></inline-formula>. </plain></SENT>
+<SENT sid="17724" pm="."><plain>In model <inline-formula><inline-graphic xlink:href="pone.0078038.e162.jpg"/></inline-formula>, 7 SNP pairs were simulated under a double-recessive model, i.e., the relative risk was set to be <inline-formula><inline-graphic xlink:href="pone.0078038.e163.jpg"/></inline-formula> for the two-locus genotype with 4 risk alleles. </plain></SENT>
+<SENT sid="17725" pm="."><plain>All other effects were combined multiplicatively. </plain></SENT>
+</text></p></sec><sec id="s4a2"><title><text><SENT sid="17726" pm="."><plain>LPLMs </plain></SENT>
+</text></title><p><text><SENT sid="17727" pm="."><plain>In order to assess power of the SMT, we investigated limiting pathway liability models (LPLMs) as suggested by Zuk et al. <xref rid="pone.0078038-Zuk1" ref-type="bibr">[6]</xref>. </plain></SENT>
+<SENT sid="17728" pm="."><plain>Let <inline-formula><inline-graphic xlink:href="pone.0078038.e164.jpg"/></inline-formula> be the number of model SNPs and let <inline-formula><inline-graphic xlink:href="pone.0078038.e165.jpg"/></inline-formula> be a respective allele load threshold. </plain></SENT>
+<SENT sid="17729" pm="."><plain>In our set-up, <inline-formula><inline-graphic xlink:href="pone.0078038.e166.jpg"/></inline-formula> ranged from 10 to 50 in step sizes of 10 and the threshold <inline-formula><inline-graphic xlink:href="pone.0078038.e167.jpg"/></inline-formula> was chosen such that about 1.5% of the general population had an allele load equal to or above the threshold <inline-formula><inline-graphic xlink:href="pone.0078038.e168.jpg"/></inline-formula>. </plain></SENT>
+<SENT sid="17730" pm="."><plain>For individuals below <inline-formula><inline-graphic xlink:href="pone.0078038.e169.jpg"/></inline-formula>, a baseline penetrance value of 0.03 was assumed. </plain></SENT>
+<SENT sid="17731" pm="."><plain>For individuals above the threshold, we assumed a strongly increased penetrance <inline-formula><inline-graphic xlink:href="pone.0078038.e170.jpg"/></inline-formula>, where <inline-formula><inline-graphic xlink:href="pone.0078038.e171.jpg"/></inline-formula> was chosen from <inline-formula><inline-graphic xlink:href="pone.0078038.e172.jpg"/></inline-formula>. </plain></SENT>
+<SENT sid="17732" pm="."><plain>For each parameter constellation <inline-formula><inline-graphic xlink:href="pone.0078038.e173.jpg"/></inline-formula>, we simulated 1,000 data sets with 3,000 cases and 3,000 controls and estimated empirical power at the level <inline-formula><inline-graphic xlink:href="pone.0078038.e174.jpg"/></inline-formula> as the portion of simulated data sets significant at <inline-formula><inline-graphic xlink:href="pone.0078038.e175.jpg"/></inline-formula>. </plain></SENT>
+<SENT sid="17733" pm="."><plain>We decided to present power at the level <inline-formula><inline-graphic xlink:href="pone.0078038.e176.jpg"/></inline-formula>, since an exhaustive search over all subsets of a given set of SNPs quickly leads to a high number of tests. </plain></SENT>
+<SENT sid="17734" pm="."><plain>In addition, analysis of <inline-formula><inline-graphic xlink:href="pone.0078038.e177.jpg"/></inline-formula> is a number of tests that can be analyzed within a reasonable time frame with our implementation. </plain></SENT>
+<SENT sid="17735" pm="."><plain>In practice, a less stringent <inline-formula><inline-graphic xlink:href="pone.0078038.e178.jpg"/></inline-formula> might be considered sufficient, depending on the number of models that are actually tested, cf. also the section “Data analysis”. </plain></SENT>
+<SENT sid="17736" pm="."><plain>Power of the liability was not only analyzed for the entire SNP set, but also for marker subsets of all possible sizes, in order to mimic the situation that not all SNPs belonging to a threshold model will be available or known. </plain></SENT>
+<SENT sid="17737" pm="."><plain>For a set of <inline-formula><inline-graphic xlink:href="pone.0078038.e179.jpg"/></inline-formula> SNPs, the number of subsets of size <inline-formula><inline-graphic xlink:href="pone.0078038.e180.jpg"/></inline-formula> can be enormously high. </plain></SENT>
+<SENT sid="17738" pm="."><plain>Therefore, we could not analyze all subsets, but investigated the “first” <inline-formula><inline-graphic xlink:href="pone.0078038.e181.jpg"/></inline-formula> SNPs, in the arbitrary order implied by the set-up, to assess power for subsets of size <inline-formula><inline-graphic xlink:href="pone.0078038.e182.jpg"/></inline-formula>. </plain></SENT>
+<SENT sid="17739" pm="."><plain>This procedure has also the advantage of improved comparability when moving from subset size <inline-formula><inline-graphic xlink:href="pone.0078038.e183.jpg"/></inline-formula> to subset size <inline-formula><inline-graphic xlink:href="pone.0078038.e184.jpg"/></inline-formula>. </plain></SENT>
+</text></p><p><text><SENT sid="17740" pm="."><plain>We also investigated the potential impact of incomplete SNP coverage on the power of the SMT. </plain></SENT>
+<SENT sid="17741" pm="."><plain>To this purpose, we assumed that the true causal SNPs of the 30-SNP LPLM (<inline-formula><inline-graphic xlink:href="pone.0078038.e185.jpg"/></inline-formula>) are not available, but only tagged by proxy SNPs with an <inline-formula><inline-graphic xlink:href="pone.0078038.e186.jpg"/></inline-formula> of 0.80. </plain></SENT>
+<SENT sid="17742" pm="."><plain>After genotype imputation, such approximation of causal SNPs by SNPs in linkage disequilibrium is realistic. </plain></SENT>
+</text></p></sec><sec id="s4a3"><title><text><SENT sid="17743" pm="."><plain>Modified threshold models </plain></SENT>
+</text></title><p><text><SENT sid="17744" pm="."><plain>The LPLMs suggested in <xref rid="pone.0078038-Zuk1" ref-type="bibr">[6]</xref> might be considered to be to simplistic. </plain></SENT>
+<SENT sid="17745" pm="."><plain>In particular, differences in the contribution of individual SNPs should be allowed in multi-SNP models <xref rid="pone.0078038-Wray1" ref-type="bibr">[9]</xref>. </plain></SENT>
+<SENT sid="17746" pm="."><plain>Therefore, we modified the 30-SNP LPLM (<inline-formula><inline-graphic xlink:href="pone.0078038.e187.jpg"/></inline-formula>) from above as follows. </plain></SENT>
+<SENT sid="17747" pm="."><plain>We maintained the load threshold from before, but varied the weighting of the risk allele contributions from different SNPs. </plain></SENT>
+<SENT sid="17748" pm="."><plain>For one third of the SNPs, the risk allele counts were weighted with a factor of 0.5, for another third of the SNPs, the risk allele counts were weighted with a factor of 1, and the remaining SNPs were weighted with a factor of 2. </plain></SENT>
+</text></p></sec><sec id="s4a4"><title><text><SENT sid="17749" pm="."><plain>Recessive models </plain></SENT>
+</text></title><p><text><SENT sid="17750" pm="."><plain>We investigated “completely recessive” models defined by three SNPs. </plain></SENT>
+<SENT sid="17751" pm="."><plain>A baseline penetrance of 0.03 was assumed. </plain></SENT>
+<SENT sid="17752" pm="."><plain>Only individuals which were homozygous for the risk allele at all three SNPs were assigned an increased penetrance. </plain></SENT>
+<SENT sid="17753" pm="."><plain>We simulated data under different scenarios, defined by varying population allele frequencies and risk genotype penetrance values. </plain></SENT>
+<SENT sid="17754" pm="."><plain>In detail, we simulated the model REZ-A with allele frequencies of the three SNPs of 0.2, 0.5 and 0.8, respectively, and a penetrance of 0.20 for the high risk 3-SNP-genotype. </plain></SENT>
+<SENT sid="17755" pm="."><plain>Model REZ-B was defined by allele frequencies 0.2, 0.3 and 0.4 and a high risk genotype penetrance of 0.70, model REZ-C was defined by allele frequencies 0.4, 0.5 and 0.6 and a high risk genotype penetrance of 0.10, and, model REZ-D was defined by allele frequencies 0.6, 0.7 and 0.8 and a high risk genotype penetrance of 0.05. </plain></SENT>
+<SENT sid="17756" pm="."><plain>The resulting allelic relative risks ranged from 1.05 to 1.19 under model REZ-A, from 1.03 to 1.06 under REZ-B, from 1.05 to 1.08 under REZ-C, and, from 1.10 to 1.13 under REZ-D. </plain></SENT>
+</text></p></sec></sec></sec></SecTag></body><back><SecTag type="REF"><ref-list><title>References</title><ref id="pone.0078038-Hindorffi1"><text><SENT sid="17757" pm="."><plain><label>1</label><mixed-citation publication-type="other">Hindorffi L, MacArthur J, Morales J, Junkins H, Hall P, <etal>et al</etal>. </plain></SENT>
+<SENT sid="17758" pm="."><plain>(2012) A catalog of published genome-wide association studies. </plain></SENT>
+<SENT sid="17759" pm="."><plain>URL <ext-link ext-link-type="uri" xlink:href="http://www.genome.gov/gwastudies">www.genome.gov/gwastudies</ext-link>.</mixed-citation> </plain></SENT>
+</text></ref><ref id="pone.0078038-Maher1"><text><SENT sid="17760" pm="."><plain><label>2</label><mixed-citation publication-type="journal"> <name><surname>Maher</surname><given-names>B</given-names></name> (<year>2008</year>) <article-title>Personal genomes: The case of the missing heritability</article-title>. <source>Nature</source> <volume>456(7218)</volume>: <fpage>18</fpage>–<lpage>21</lpage>.<pub-id pub-id-type="pmid">18987709</pub-id></mixed-citation> </plain></SENT>
+</text></ref><ref id="pone.0078038-Mechanic1"><text><SENT sid="17761" pm="."><plain><label>3</label><mixed-citation publication-type="journal"> <name><surname>Mechanic</surname><given-names>L</given-names></name>, <name><surname>Chen</surname><given-names>H</given-names></name>, <name><surname>Amos</surname><given-names>C</given-names></name>, <name><surname>Chatterje</surname><given-names>N</given-names></name>, <name><surname>Cox</surname><given-names>N</given-names></name>, <etal>et al</etal> (<year>2012</year>) <article-title>Next generation analytic tools for large scale genetic epidemiology studies of complex diseases</article-title>. <source>Genet Epidemiol</source> <volume>36</volume>: <fpage>22</fpage>–<lpage>35</lpage>.<pub-id pub-id-type="pmid">22147673</pub-id></mixed-citation> </plain></SENT>
+</text></ref><ref id="pone.0078038-Wan1"><text><SENT sid="17762" pm="."><plain><label>4</label><mixed-citation publication-type="journal"> <name><surname>Wan</surname><given-names>X</given-names></name>, <name><surname>Yang</surname><given-names>C</given-names></name>, <name><surname>Yang</surname><given-names>Q</given-names></name>, <name><surname>Xue</surname><given-names>H</given-names></name>, <name><surname>Fan</surname><given-names>X</given-names></name>, <etal>et al</etal> (<year>2010</year>) <article-title>Boost: A fast approach to detecting gene-gene interactions in genome-wide case-control studies</article-title>. <source>Am J Hum Genet</source> <volume>87</volume>: <fpage>325</fpage>–<lpage>40</lpage>.<pub-id pub-id-type="pmid">20817139</pub-id></mixed-citation> </plain></SENT>
+</text></ref><ref id="pone.0078038-Herold1"><text><SENT sid="17763" pm="."><plain><label>5</label><mixed-citation publication-type="journal"> <name><surname>Herold</surname><given-names>C</given-names></name>, <name><surname>Mattheisen</surname><given-names>M</given-names></name>, <name><surname>Lacour</surname><given-names>A</given-names></name>, <name><surname>Vaitsiakhovich</surname><given-names>T</given-names></name>, <name><surname>Angisch</surname><given-names>M</given-names></name>, <etal>et al</etal> (<year>2012</year>) <article-title>Integrated genomewide pathway association analysis with intersnp</article-title>. <source>Hum Hered</source> <volume>73</volume>: <fpage>63</fpage>–<lpage>72</lpage>.<pub-id pub-id-type="pmid">22399020</pub-id></mixed-citation> </plain></SENT>
+</text></ref><ref id="pone.0078038-Zuk1"><text><SENT sid="17764" pm="."><plain><label>6</label><mixed-citation publication-type="journal"> <name><surname>Zuk</surname><given-names>O</given-names></name>, <name><surname>Hechter</surname><given-names>E</given-names></name>, <name><surname>Sunyaev</surname><given-names>S</given-names></name>, <name><surname>Lander</surname><given-names>E</given-names></name> (<year>2012</year>) <article-title>The mystery of missing heritability: Genetic interactions create phantom heritability</article-title>. <source>Proc Natl Acad Sci USA</source> <volume>109</volume>: <fpage>1193</fpage>–<lpage>1198</lpage>.<pub-id pub-id-type="pmid">22223662</pub-id></mixed-citation> </plain></SENT>
+</text></ref><ref id="pone.0078038-Falconer1"><text><SENT sid="17765" pm="."><plain><label>7</label><mixed-citation publication-type="journal"> <name><surname>Falconer</surname><given-names>D</given-names></name> (<year>1967</year>) <article-title>The inheritance of liability to diseases with variable age of onset, with particular reference to diabetes mellitus</article-title>. <source>Ann Hum Genet</source> <volume>31</volume>: <fpage>1</fpage>–<lpage>20</lpage>.<pub-id pub-id-type="pmid">6056557</pub-id></mixed-citation> </plain></SENT>
+</text></ref><ref id="pone.0078038-Li1"><text><SENT sid="17766" pm="."><plain><label>8</label><mixed-citation publication-type="journal"> <name><surname>Li</surname><given-names>X</given-names></name>, <name><surname>McGue</surname><given-names>M</given-names></name>, <name><surname>Gottesman</surname><given-names>I</given-names></name> (<year>2012</year>) <article-title>Two sources of genetic liability to depression: interpreting the relationship between stress sensitivity and depression under a multifactorial polygenic model</article-title>. <source>Behav Genet</source> <volume>42</volume>: <fpage>268</fpage>–<lpage>77</lpage>.<pub-id pub-id-type="pmid">21948214</pub-id></mixed-citation> </plain></SENT>
+</text></ref><ref id="pone.0078038-Wray1"><text><SENT sid="17767" pm="."><plain><label>9</label><mixed-citation publication-type="journal"> <name><surname>Wray</surname><given-names>NR</given-names></name>, <name><surname>Goddard</surname><given-names>ME</given-names></name> (<year>2010</year>) <article-title>Multi-locus models of genetic risk of disease</article-title>. <source>Genome Medicine</source> <volume>2</volume>: <fpage>10</fpage>.<pub-id pub-id-type="pmid">20181060</pub-id></mixed-citation> </plain></SENT>
+</text></ref><ref id="pone.0078038-Phillips1"><text><SENT sid="17768" pm="."><plain><label>10</label><mixed-citation publication-type="journal"> <name><surname>Phillips</surname><given-names>P</given-names></name> (<year>1998</year>) <article-title>The language of gene interaction</article-title>. <source>Genetics</source> <volume>149</volume>: <fpage>1167</fpage>–<lpage>1171</lpage>.<pub-id pub-id-type="pmid">9649511</pub-id></mixed-citation> </plain></SENT>
+</text></ref><ref id="pone.0078038-Thompson1"><text><SENT sid="17769" pm="."><plain><label>11</label><mixed-citation publication-type="journal"> <name><surname>Thompson</surname><given-names>W</given-names></name> (<year>1991</year>) <article-title>Effect modification and the limits of biological inference from epidemiologic data</article-title>. <source>J Clin Epidemiol</source> <volume>44</volume>: <fpage>221</fpage>–<lpage>232</lpage>.<pub-id pub-id-type="pmid">1999681</pub-id></mixed-citation> </plain></SENT>
+</text></ref><ref id="pone.0078038-Clayton1"><text><SENT sid="17770" pm="."><plain><label>12</label><mixed-citation publication-type="journal"> <name><surname>Clayton</surname><given-names>D</given-names></name> (<year>2012</year>) <article-title>Link functions in multi-locus genetic models: Implications for testing, prediction, and interpretation</article-title>. <source>Genet Epidemiol</source> <volume>36</volume>: <fpage>409</fpage>–<lpage>418</lpage>.<pub-id pub-id-type="pmid">22508388</pub-id></mixed-citation> </plain></SENT>
+</text></ref><ref id="pone.0078038-Carlborg1"><text><SENT sid="17771" pm="."><plain><label>13</label><mixed-citation publication-type="journal"> <name><surname>Carlborg</surname><given-names>O</given-names></name>, <name><surname>Haley</surname><given-names>C</given-names></name> (<year>2004</year>) <article-title>Epistasis: Too often neglected in complex trait studies?</article-title> <source>Nat Rev Genet</source> <volume>5</volume>: <fpage>618</fpage>–<lpage>625</lpage>.<pub-id pub-id-type="pmid">15266344</pub-id></mixed-citation> </plain></SENT>
+</text></ref><ref id="pone.0078038-Cordell1"><text><SENT sid="17772" pm="."><plain><label>14</label><mixed-citation publication-type="journal"> <name><surname>Cordell</surname><given-names>H</given-names></name> (<year>2009</year>) <article-title>Detecting gene-gene interactions that underlie human diseases</article-title>. <source>Nat Rev Genet</source> <volume>10</volume>: <fpage>392</fpage>–<lpage>404</lpage>.<pub-id pub-id-type="pmid">19434077</pub-id></mixed-citation> </plain></SENT>
+</text></ref><ref id="pone.0078038-Harold1"><text><SENT sid="17773" pm="."><plain><label>15</label><mixed-citation publication-type="journal"> <name><surname>Harold</surname><given-names>D</given-names></name>, <name><surname>Abraham</surname><given-names>R</given-names></name>, <name><surname>Hollingworth</surname><given-names>P</given-names></name>, <name><surname>Sims</surname><given-names>R</given-names></name>, <name><surname>Gerrish</surname><given-names>A</given-names></name>, <etal>et al</etal> (<year>2009</year>) <article-title>Genome-wide association study identifies variants at clu and picalm associated with alzheimer’s disease</article-title>. <source>Nat Genet</source> <volume>41</volume>: <fpage>1088</fpage>–<lpage>1093</lpage>.<pub-id pub-id-type="pmid">19734902</pub-id></mixed-citation> </plain></SENT>
+</text></ref><ref id="pone.0078038-Lambert1"><text><SENT sid="17774" pm="."><plain><label>16</label><mixed-citation publication-type="journal"> <name><surname>Lambert</surname><given-names>J</given-names></name>, <name><surname>Heath</surname><given-names>S</given-names></name>, <name><surname>Even</surname><given-names>G</given-names></name>, <name><surname>Campion</surname><given-names>D</given-names></name>, <name><surname>Sleegers</surname><given-names>K</given-names></name>, <etal>et al</etal> (<year>2009</year>) <article-title>Genome-wide association study identifies variants at clu and cr1 associated with alzheimer’s disease</article-title>. <source>Nat Genet</source> <volume>41</volume>: <fpage>1094</fpage>–<lpage>1099</lpage>.<pub-id pub-id-type="pmid">19734903</pub-id></mixed-citation> </plain></SENT>
+</text></ref><ref id="pone.0078038-Seshadri1"><text><SENT sid="17775" pm="."><plain><label>17</label><mixed-citation publication-type="journal"> <name><surname>Seshadri</surname><given-names>S</given-names></name>, <name><surname>Fitzpatrick</surname><given-names>A</given-names></name>, <name><surname>Ikram</surname><given-names>M</given-names></name>, <name><surname>DeStefano</surname><given-names>A</given-names></name>, <name><surname>Gudnason</surname><given-names>V</given-names></name>, <etal>et al</etal> (<year>2010</year>) <article-title>Genome-wide analysis of genetic loci associated with alzheimer disease</article-title>. <source>JAMA</source> <volume>303</volume>: <fpage>1832</fpage>–<lpage>1840</lpage>.<pub-id pub-id-type="pmid">20460622</pub-id></mixed-citation> </plain></SENT>
+</text></ref><ref id="pone.0078038-Hollingworth1"><text><SENT sid="17776" pm="."><plain><label>18</label><mixed-citation publication-type="journal"> <name><surname>Hollingworth</surname><given-names>P</given-names></name>, <name><surname>Harold</surname><given-names>D</given-names></name>, <name><surname>Sims</surname><given-names>R</given-names></name>, <name><surname>Gerrish</surname><given-names>A</given-names></name>, <name><surname>Lambert</surname><given-names>J</given-names></name>, <etal>et al</etal> (<year>2011</year>) <article-title>Common variants at abca7, ms4a6a/ms4a4e, epha1, cd33 and cd2ap are associated with alzheimer’s disease</article-title>. <source>Nat Genet</source> <volume>43</volume>: <fpage>429</fpage>–<lpage>435</lpage>.<pub-id pub-id-type="pmid">21460840</pub-id></mixed-citation> </plain></SENT>
+</text></ref><ref id="pone.0078038-Naj1"><text><SENT sid="17777" pm="."><plain><label>19</label><mixed-citation publication-type="journal"> <name><surname>Naj</surname><given-names>A</given-names></name>, <name><surname>Jun</surname><given-names>G</given-names></name>, <name><surname>Beecham</surname><given-names>G</given-names></name>, <name><surname>Wang</surname><given-names>L</given-names></name>, <name><surname>Vardarajan</surname><given-names>B</given-names></name>, <etal>et al</etal> (<year>2011</year>) <article-title>Common variants at ms4a4/ms4a6e, cd2ap, cd33 and epha1 are associated with late-onset alzheimer’s disease</article-title>. <source>Nat Genet</source> <volume>43</volume>: <fpage>436</fpage>–<lpage>441</lpage>.<pub-id pub-id-type="pmid">21460841</pub-id></mixed-citation> </plain></SENT>
+</text></ref><ref id="pone.0078038-McKhann1"><text><SENT sid="17778" pm="."><plain><label>20</label><mixed-citation publication-type="journal"> <name><surname>McKhann</surname><given-names>G</given-names></name>, <name><surname>Drachman</surname><given-names>D</given-names></name>, <name><surname>Folstein</surname><given-names>M</given-names></name>, <name><surname>Katzman</surname><given-names>R</given-names></name>, <name><surname>Price</surname><given-names>D</given-names></name>, <etal>et al</etal> (<year>1984</year>) <article-title>Clinical diagnosis of alzheimer’s disease: report of the nincds-adrda work group under the auspices of department of health and human services task force on alzheimer’s disease</article-title>. <source>Neurology</source> <volume>34</volume>: <fpage>939</fpage>–<lpage>944</lpage>.<pub-id pub-id-type="pmid">6610841</pub-id></mixed-citation> </plain></SENT>
+</text></ref><ref id="pone.0078038-Howie1"><text><SENT sid="17779" pm="."><plain><label>21</label><mixed-citation publication-type="journal"> <name><surname>Howie</surname><given-names>B</given-names></name>, <name><surname>Donnelly</surname><given-names>P</given-names></name>, <name><surname>Marchini</surname><given-names>J</given-names></name> (<year>2009</year>) <article-title>A flexible and accurate genotype imputation method for the next generation of genome-wide association studies</article-title>. <source>PLoS Genetics</source> <volume>5</volume>: <fpage>e1000529</fpage>.<pub-id pub-id-type="pmid">19543373</pub-id></mixed-citation> </plain></SENT>
+</text></ref><ref id="pone.0078038-Genomes1"><text><SENT sid="17780" pm="."><plain><label>22</label><mixed-citation publication-type="journal"> <collab>Genomes Project Consortium, Abecasis GR, Altshuler D, Auton A, Brooks LD, et al</collab> (<year>2010</year>) <article-title>A map of human genome variation from population-scale sequencing</article-title>. <source>Nature</source> <volume>467</volume>: <fpage>1061</fpage>–<lpage>1073</lpage>.<pub-id pub-id-type="pmid">20981092</pub-id></mixed-citation> </plain></SENT>
+</text></ref><ref id="pone.0078038-Herold2"><text><SENT sid="17781" pm="."><plain><label>23</label><mixed-citation publication-type="journal"> <name><surname>Herold</surname><given-names>C</given-names></name>, <name><surname>Steffens</surname><given-names>M</given-names></name>, <name><surname>Brockschmidt</surname><given-names>F</given-names></name>, <name><surname>Baur</surname><given-names>M</given-names></name>, <name><surname>Becker</surname><given-names>T</given-names></name> (<year>2009</year>) <article-title>Intersnp: Genome-wide interaction analysis guided by a priori information</article-title>. <source>Bioinformatics</source> <volume>25</volume>: <fpage>3275</fpage>–<lpage>3281</lpage>.<pub-id pub-id-type="pmid">19837719</pub-id></mixed-citation> </plain></SENT>
+</text></ref><ref id="pone.0078038-Cordell2"><text><SENT sid="17782" pm="."><plain><label>24</label><mixed-citation publication-type="journal"> <name><surname>Cordell</surname><given-names>H</given-names></name>, <name><surname>Clayton</surname><given-names>D</given-names></name> (<year>2002</year>) <article-title>A unified stepwise regression procedure for evaluating the relative effects of poly-morphisms within a gene using case/control or family data: application to hla in type 1 diabetes</article-title>. <source>Am J Hum Genet</source> <volume>70</volume>: <fpage>124</fpage>–<lpage>141</lpage>.<pub-id pub-id-type="pmid">11719900</pub-id></mixed-citation> </plain></SENT>
+</text></ref></ref-list></SecTag></back></article>
