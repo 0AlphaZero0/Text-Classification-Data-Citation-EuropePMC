@@ -1,0 +1,846 @@
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD v1.1 20151215//EN" "JATS-archivearticle1.dtd"> 
+<article xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML" open-status="O" article-type="research-article"><?properties open_access?><?DTDIdentifier.IdentifierValue -//NLM//DTD JATS (Z39.96) Journal Publishing DTD v1.1 20151215//EN?><?DTDIdentifier.IdentifierType public?><?SourceDTD.DTDName JATS-journalpublishing1.dtd?><?SourceDTD.Version 1.1?><?ConverterInfo.XSLTName jp2nlmx2.xsl?><?ConverterInfo.Version 1?><front><journal-meta><journal-id journal-id-type="nlm-ta">Molecules</journal-id><journal-id journal-id-type="iso-abbrev">Molecules</journal-id><journal-id journal-id-type="publisher-id">molecules</journal-id><journal-title-group><journal-title>Molecules : A Journal of Synthetic Chemistry and Natural Product Chemistry</journal-title></journal-title-group><issn pub-type="epub">1420-3049</issn><publisher><publisher-name>MDPI</publisher-name></publisher></journal-meta><article-meta><article-id pub-id-type="pmcid">6102569</article-id><article-id pub-id-type="doi">10.3390/molecules23051038</article-id><article-id pub-id-type="publisher-id">molecules-23-01038</article-id><article-categories><subj-group subj-group-type="heading"><subject>Article</subject></subj-group></article-categories><title-group><article-title><SecTag type="TITLE"><text><SENT sid="80044" pm="?"><plain>Is It Reliable to Take the Molecular Docking Top Scoring Position as the Best Solution without Considering Available Structural Data? </plain></SENT>
+</text></SecTag></article-title></title-group><contrib-group><contrib contrib-type="author"><contrib-id contrib-id-type="orcid" authenticated="true">https://orcid.org/0000-0003-0002-1189</contrib-id><name><surname>Ramírez</surname><given-names>David</given-names></name><xref ref-type="aff" rid="af1-molecules-23-01038">1</xref></contrib><contrib contrib-type="author"><contrib-id contrib-id-type="orcid" authenticated="true">https://orcid.org/0000-0003-0182-1444</contrib-id><name><surname>Caballero</surname><given-names>Julio</given-names></name><xref ref-type="aff" rid="af2-molecules-23-01038">2</xref><xref rid="c1-molecules-23-01038" ref-type="corresp">*</xref></contrib></contrib-group><aff id="af1-molecules-23-01038"><label>1</label>Instituto de Ciencias Biomédicas, Universidad Autónoma de Chile, 5 Poniente No. 1670, 3460000 Talca, Chile; <email>david.ramirez@uautonoma.cl</email></aff><aff id="af2-molecules-23-01038"><label>2</label>Centro de Bioinformática y Simulación Molecular (CBSM), Universidad de Talca. 1 Poniente No. 1141, 3460000 Talca, Chile</aff><author-notes><corresp id="c1-molecules-23-01038"><label>*</label>Correspondence: <email>jcaballero@utalca.cl</email>; Tel.: +56-712-418-850</corresp></author-notes><pub-date pub-type="epub"><day>28</day><month>4</month><year>2018</year></pub-date><pub-date pub-type="collection"><month>5</month><year>2018</year></pub-date><volume>23</volume><issue>5</issue><elocation-id>1038</elocation-id><history><date date-type="received"><day>11</day><month>3</month><year>2018</year></date><date date-type="accepted"><day>26</day><month>4</month><year>2018</year></date></history><permissions><copyright-statement>© 2018 by the authors.</copyright-statement><copyright-year>2018</copyright-year><license license-type="open-access"><license-p>Licensee MDPI, Basel, Switzerland. This article is an open access article distributed under the terms and conditions of the Creative Commons Attribution (CC BY) license (<ext-link ext-link-type="uri" xlink:href="http://creativecommons.org/licenses/by/4.0/">http://creativecommons.org/licenses/by/4.0/</ext-link>).</license-p></license></permissions><abstract><p><SecTag type="ABS"><text><SENT sid="80045" pm="."><plain>Molecular docking is the most frequently used computational method for studying the interactions between organic molecules and biological macromolecules. </plain></SENT>
+<SENT sid="80046" pm="."><plain>In this context, docking allows predicting the preferred pose of a ligand inside a receptor binding site. </plain></SENT>
+<SENT sid="80047" pm="."><plain>However, the selection of the “best” solution is not a trivial task, despite the widely accepted selection criterion that the best pose corresponds to the best energy score. </plain></SENT>
+<SENT sid="80048" pm="."><plain>Here, several rigid-target docking methods were evaluated on the same dataset with respect to their ability to reproduce crystallographic binding orientations, to test if the best energy score is a reliable criterion for selecting the best solution. </plain></SENT>
+<SENT sid="80049" pm="."><plain>For this, two experiments were performed: (A) to reconstruct the ligand-receptor complex by performing docking of the ligand in its own crystal structure receptor (defined as self-docking), and (B) to reconstruct the ligand-receptor complex by performing docking of the ligand in a crystal structure receptor that contains other ligand (defined as cross-docking). </plain></SENT>
+<SENT sid="80050" pm="."><plain>Root-mean square deviation (RMSD) was used to evaluate how different the obtained docking orientation is from the corresponding co-crystallized pose of the same ligand molecule. </plain></SENT>
+<SENT sid="80051" pm="."><plain>We found that docking score function is capable of predicting crystallographic binding orientations, but the best ranked solution according to the docking energy is not always the pose that reproduces the experimental binding orientation. </plain></SENT>
+<SENT sid="80052" pm="."><plain>This happened when self-docking was achieved, but it was critical in cross-docking. </plain></SENT>
+<SENT sid="80053" pm="."><plain>Taking into account that docking is typically used with predictive purposes, during cross-docking experiments, our results indicate that the best energy score is not a reliable criterion to select the best solution in common docking applications. </plain></SENT>
+<SENT sid="80054" pm="."><plain>It is strongly recommended to choose the best docking solution according to the scoring function along with additional structural criteria described for analogue ligands to assure the selection of a correct docking solution. </plain></SENT>
+</text></SecTag></p></abstract><SecTag type="KEYWORD"><kwd-group><kwd>rigid molecular docking</kwd><kwd>cross-docking</kwd><kwd>Glide</kwd><kwd>AutoDock</kwd><kwd>scoring energy</kwd><kwd>RMSD</kwd></kwd-group></SecTag></article-meta></front><body><SecTag type="INTRO"><sec id="sec1-molecules-23-01038"><title><text><SENT sid="80055" pm="."><plain>1. </plain></SENT>
+<SENT sid="80056" pm="."><plain>Introduction </plain></SENT>
+</text></title><p><text><SENT sid="80057" pm="."><plain>Molecular docking is a computational method that predicts the binding orientations of the ligands into a receptor-binding site; in this sense, it is a popular method in medicinal chemistry research [1]. </plain></SENT>
+<SENT sid="80058" pm="."><plain>It has become essential for developing different rational drug design protocols including structural-based virtual screening for identifying novel candidates and the understanding of the most important chemical elements that guide ligand-protein interactions in relevant biological targets [2]. </plain></SENT>
+<SENT sid="80059" pm="."><plain>The principal issues of docking are the accurate predictions of binding orientations and affinities [3]. </plain></SENT>
+<SENT sid="80060" pm="."><plain>For this, docking algorithms explore different ligand poses corresponding to different conformations and orientations within the receptor binding site, and they detect the “best docking solution” among these orientations by using a scoring function which evaluates binding energies [4]. </plain></SENT>
+<SENT sid="80061" pm="."><plain>There are many reports which have assessed and compared different docking protocols using different docking programs [5,6,7]. </plain></SENT>
+<SENT sid="80062" pm="."><plain>It is accepted in literature that docking methods can identify right solutions, since they reproduce X-ray crystallographic structures [8,9,10,11,12,13,14], however, the best solution is not always detected as the best ranked scored energy. </plain></SENT>
+</text></p><p><text><SENT sid="80063" pm="."><plain>In general, docking predicts the preferred binding orientation of a ligand into a receptor [15,16,17]. </plain></SENT>
+<SENT sid="80064" pm="."><plain>The simpler case is when the docking of ligand is performed inside its own crystal structure, because the binding site have the optimal size to receive the ligand; we will refer to this process as a ‘self-docking’. </plain></SENT>
+<SENT sid="80065" pm="."><plain>On the other hand, docking is named ‘cross-docking’ when ligands are docked into receptor structure that is bound to a different ligand in the crystal structure. </plain></SENT>
+<SENT sid="80066" pm="."><plain>The last practice is more common, since docking is more relevant when it is used as a tool for investigating novel ligands. </plain></SENT>
+<SENT sid="80067" pm="."><plain>Previous reports comparing different docking protocols are commonly focused to self-docking tests; although it may highlight the work of Sutherland et al. [6], where cross-docking accuracy was assessed. </plain></SENT>
+</text></p><p><text><SENT sid="80068" pm="."><plain>In a recent paper, we warned scientists about the use of docking predicted binding energies to compare the activities of pairs of molecules [15]. </plain></SENT>
+<SENT sid="80069" pm="."><plain>The present work is oriented to prevent about the selection of the best scoring energy as the best solution of a more common docking experiment: rigid-target docking. </plain></SENT>
+<SENT sid="80070" pm="."><plain>With this in mind, we used self-docking (to dock ligands into their own crystallographic structure) and cross-docking (to dock ligands in crystallographic structures that are bound to other ligands) to evaluate the ability of docking methods to reproduce crystallographic binding orientations at the top first scoring position. </plain></SENT>
+<SENT sid="80071" pm="."><plain>Two different docking software packages, Glide [18,19,20] and AutoDock [21], were employed for the tests. </plain></SENT>
+</text></p></sec></SecTag><SecTag type="RESULTS"><sec id="sec2-molecules-23-01038"><title><text><SENT sid="80072" pm="."><plain>2. </plain></SENT>
+<SENT sid="80073" pm="."><plain>Results </plain></SENT>
+</text></title><sec id="sec2dot1-molecules-23-01038"><title><text><SENT sid="80074" pm="."><plain>2.1. </plain></SENT>
+<SENT sid="80075" pm="."><plain>Self-Docking </plain></SENT>
+</text></title><p><text><SENT sid="80076" pm="."><plain>It is common in medicinal chemistry literature to use rigid-target docking methods to explore the binding positions of novel synthesized ligands inside a known target. </plain></SENT>
+<SENT sid="80077" pm="."><plain>In order to carry out these tasks, an X-ray crystallographic structure of the target, which is often in presence of a previously reported ligand, is needed. </plain></SENT>
+<SENT sid="80078" pm="."><plain>When several crystallographic structures are present, one of them is selected. </plain></SENT>
+<SENT sid="80079" pm="."><plain>The next task is to demonstrate that the selected protein structure is reliable to accomplish docking experiments. </plain></SENT>
+<SENT sid="80080" pm="."><plain>A common test to justify the selection is to try to reproduce the orientation of the ligand that is inside the selected crystallographic structure: self-docking according to our definition in the Materials and Methods section. </plain></SENT>
+</text></p><p><text><SENT sid="80081" pm="."><plain>In our experiment, each ligand from Table 1 was self-docked inside its own binding site. </plain></SENT>
+<SENT sid="80082" pm="."><plain>The top 10 poses (according to the scoring function energies) were selected to further structural analysis by calculating the root mean square deviation (RMSD) of each pose against its conformation in the crystal structure. </plain></SENT>
+<SENT sid="80083" pm="."><plain>We used three different RMSD classifications for docking solutions: (a) good solution when RMSD ≤ 2.0 Å [8,22], (b) acceptable solutions when RMSD is between 2.0 and 3.0 Å, and (c) bad solutions when RMSD ≥ 3.0 Å. </plain></SENT>
+<SENT sid="80084" pm="."><plain>For one ligand-protein pair, when a pose is classified as a good solution, this means that the scoring function reproduced the crystallographic binding orientation. </plain></SENT>
+<SENT sid="80085" pm="."><plain>To verify that RMSD classifications were adequate, compounds a1, g2 and b3 (Table 1) were docked in their respective targets (MAO-B, thrombin and B-RAF, respectively). </plain></SENT>
+<SENT sid="80086" pm="."><plain>Selected docking solutions are represented in Figure 1 (three of the ten poses are displayed) including good, acceptable and bad solutions according to above mentioned RMSD criteria. </plain></SENT>
+<SENT sid="80087" pm="."><plain>It is clear that an RMSD &lt; 2.0 Å corresponds to good docking solutions. </plain></SENT>
+<SENT sid="80088" pm="."><plain>On the other hand, docking solutions with RMSD between 2.0 and 3.0 Å deviate from the position of the reference, but they keep the desired orientation. </plain></SENT>
+<SENT sid="80089" pm="."><plain>Finally, docking solutions with RMSD &gt; 3.0 Å are completely wrong. </plain></SENT>
+</text></p><p><text><SENT sid="80090" pm="."><plain>The self-docking experiments were performed for the 30 different ligands from Table 1 into their own binding sites. </plain></SENT>
+<SENT sid="80091" pm="."><plain>Each docking was performed in triplicate to have a most representative exploration of the docking solutions. </plain></SENT>
+<SENT sid="80092" pm="."><plain>For each protein-ligand complex, the ten better obtained poses according to scoring functions (in Glide HTVS, Glide SP, Glide XP, and AutoDock methods) were analyzed by using the RMSD with respect to the reference complex. </plain></SENT>
+<SENT sid="80093" pm="."><plain>The best solution s2 was defined for each complex (and for each docking method) as the docking solution with RMSD &lt; 2.0 Å at the best scoring position. </plain></SENT>
+<SENT sid="80094" pm="."><plain>At the same time, the best solution s3 was defined for each complex (and for each docking method) as the docking solution with RMSD &lt; 3.0 Å at the best scoring position. s2 only accounts for good solutions, while s3 accounts for good or acceptable solutions. </plain></SENT>
+<SENT sid="80095" pm="."><plain>For each s2 and s3 values, the specific scoring position between 1 and 10 was annotated to construct a plot of the percentage of recurrence of the best solution at each scoring position for the targets MAO-B, thrombin and B-RAF; Figure 2 shows these plots for the used docking methods. </plain></SENT>
+<SENT sid="80096" pm="."><plain>For a protein-ligand complex, when none of the scoring positions contain a solution that complies with s2 or s3, then it is annotated as a bad solution (BS), which indicates that there are no good poses for this case. </plain></SENT>
+</text></p><p><text><SENT sid="80097" pm="."><plain>Self-docking results in Figure 2 allow the analysis of the recurrence of the best solution in the top first scoring position for different targets by using different docking methods. </plain></SENT>
+<SENT sid="80098" pm="."><plain>At first, it is clear that none of the docking methods obtained the best solution (under s2 or s3 criteria) at top first scoring position for all the ligands in interaction with the three targets under study. </plain></SENT>
+<SENT sid="80099" pm="."><plain>This means that it is not completely reliable to select the top first scoring solution in the simplest docking experiment: the self-docking. </plain></SENT>
+</text></p><p><text><SENT sid="80100" pm="."><plain>If a rigorous criterion is selected, where the best solution s2 is defined, the best solution in the top 1st scoring position have different recurrences according to the target and selected docking method. </plain></SENT>
+<SENT sid="80101" pm="."><plain>With regard to this, it is possible to extract some conclusions from the bottom part of the Figure 2:(a)The recurrence of the top first scoring position was higher for B-RAF inhibitors by using all the docking methods.(b)The recurrence of the top first scoring position was higher when the docking methods Glide SP and XP were used.(c)In the self-docking study, Autodock was the worst method to get the best solution at the top first scoring position. </plain></SENT>
+</text></p><p><text><SENT sid="80102" pm="."><plain>If the less rigorous criterion is selected, where the best solution s3 is defined (Figure 2 top), there are no big changes in the analysis; except for the ability of AutoDock for detecting the best solutions at the top first scoring position for B-RAF inhibitors. </plain></SENT>
+<SENT sid="80103" pm="."><plain>This means that AutoDock yielded acceptable solutions for this specific target. </plain></SENT>
+</text></p><p><text><SENT sid="80104" pm="."><plain>Other important point is the recurrence of BSs when self-docking is performed. </plain></SENT>
+<SENT sid="80105" pm="."><plain>When the best solution s2 is defined (Figure 2 bottom), there are many BSs for different combinations of docking method with a specific target. </plain></SENT>
+<SENT sid="80106" pm="."><plain>For instance, there were many BSs when Glide XP was applied to study MAO-B inhibitors. </plain></SENT>
+<SENT sid="80107" pm="."><plain>This means that there were many MAO-B X-ray crystallographic structures that give no good solutions when the simplest self-docking was applied. </plain></SENT>
+<SENT sid="80108" pm="."><plain>It should be recalled that s2 excludes acceptable solutions; therefore, when the best solution s3 is defined for self-docking (Figure 2 top), there are less BSs. </plain></SENT>
+</text></p><p><text><SENT sid="80109" pm="."><plain>Several lessons are provided from the self-docking experiment. </plain></SENT>
+<SENT sid="80110" pm="."><plain>The reliability on the top first scoring position as the best solution depends on the target under study and the docking method. </plain></SENT>
+<SENT sid="80111" pm="."><plain>In our study, B-RAF seems to be the more adequate target for self-docking; meanwhile, MAO-B seems to have difficulties during self-docking. </plain></SENT>
+<SENT sid="80112" pm="."><plain>On the other hand, Glide SP and XP seem to be the most adequate methods for self-docking. </plain></SENT>
+<SENT sid="80113" pm="."><plain>Noteworthy, it is no gain when the more precise XP version is used; in fact, SP is better for MAO-B and B-RAF inhibitors. </plain></SENT>
+</text></p><p><text><SENT sid="80114" pm="."><plain>When the best solution is not found at the top first scoring position, it is possible to find it at the second, third or other position, but, in several cases, there are no good solutions. </plain></SENT>
+<SENT sid="80115" pm="."><plain>It is not clear why several crystallographic structures fail during self-docking, and the consequences of that for a cross-docking experiment. </plain></SENT>
+<SENT sid="80116" pm="."><plain>However, it sounds logical and prudent not to take a structure for performing cross-docking if we know in advance that it failed when self-docking was done. </plain></SENT>
+</text></p></sec><sec id="sec2dot2-molecules-23-01038"><title><text><SENT sid="80117" pm="."><plain>2.2. </plain></SENT>
+<SENT sid="80118" pm="."><plain>Cross-Docking </plain></SENT>
+</text></title><p><text><SENT sid="80119" pm="."><plain>The most common practice in docking experiments is the inclusion of novel ligands inside a binding site occupied by a previous reported molecule: cross-docking according to our definition in Materials and Methods section. </plain></SENT>
+<SENT sid="80120" pm="."><plain>To test if cross-docking deteriorates the recurrence of the best solution in the top first scoring position for different targets by using different docking methods, we used the three compounds that yielded the best solutions in the self-docking experiments applied to each target for performing additional cross-docking experiments. </plain></SENT>
+<SENT sid="80121" pm="."><plain>The selected compounds were b1, h1, j1 (MAO-B inhibitors), b2, g2, h2 (thrombin inhibitors), b3, f3, and g3 (B-RAF inhibitors). </plain></SENT>
+<SENT sid="80122" pm="."><plain>They were cross-docked against the remaining nine receptor crystal structures, and the obtained poses were compared with the conformation and orientation of the compound in the original crystal structure by means of RMSD measures. </plain></SENT>
+</text></p><p><text><SENT sid="80123" pm="."><plain>Each cross-docking was performed in triplicate to have a most representative exploration of the docking solutions. </plain></SENT>
+<SENT sid="80124" pm="."><plain>For each protein-ligand complex, the ten better obtained poses according to scoring functions (in Glide HTVS, Glide SP, Glide XP and AutoDock methods) were analyzed by using the RMSD with respect to the reference complex. </plain></SENT>
+<SENT sid="80125" pm="."><plain>The best solutions s2 were defined for each complex (and for each docking method) as in previous self-docking. </plain></SENT>
+</text></p><p><text><SENT sid="80126" pm="."><plain>Figure 3 shows the ability of the docking methods to find a good solution in cross-docking experiments inside the binding sites of the crystallographic structures of the studied targets. </plain></SENT>
+<SENT sid="80127" pm="."><plain>Dark gray squares represent self-docking, light gray squares represent instances with at least one good solution, and black squares represent instances with only BSs. </plain></SENT>
+<SENT sid="80128" pm="."><plain>The analysis reflects some interesting points: (a)There are compounds that are well oriented in most of the crystal structures, but there are others that are conflictive. </plain></SENT>
+<SENT sid="80129" pm="."><plain>For instance, compound h2 had good orientations in almost all the crystallographic structures of thrombin, but b2 and g2 cross-docking experiments failed in most of the instances.(b)The selection of the docking method was crucial in some cases; for instance, h1 had good orientations in almost all the crystallographic structures of MAO-B when AutoDock was used, but almost all cross-docking experiments for this compound failed when Glide HTVS, SP and XP were used. (c)B-RAF was a conflictive target for cross-docking. </plain></SENT>
+<SENT sid="80130" pm="."><plain>All its inhibitors were bad oriented in almost all crystallographic structures by using all docking methods. </plain></SENT>
+<SENT sid="80131" pm="."><plain>Particularly, compound b3 failed in all the instances. </plain></SENT>
+</text></p><p><text><SENT sid="80132" pm="."><plain>The recurrence of the best solution at the first scoring position was also analyzed for cross-docking experiments. </plain></SENT>
+<SENT sid="80133" pm="."><plain>For this, the specific scoring positions between 1 and 10 (considering s2 and s3 criteria) were annotated to construct a plot of the percentage of recurrence of the best solution at each scoring position for the targets MAO-B, thrombin, and B-RAF; Figure 4 shows these plots for the used docking methods. </plain></SENT>
+<SENT sid="80134" pm="."><plain>BSs were also annotated for the cases that have no good poses. </plain></SENT>
+</text></p><p><text><SENT sid="80135" pm="."><plain>Once again, it is clear that none of the docking methods obtained the best solution during cross-docking experiments (under s2 or s3 criteria) at top first scoring position for all the ligands in interaction with the three targets under study. </plain></SENT>
+<SENT sid="80136" pm="."><plain>This means that it is not completely reliable to select the top first scoring solution when cross-docking is achieved without an additional analysis. </plain></SENT>
+<SENT sid="80137" pm="."><plain>If a rigorous criterion is selected, when the best solution s2 is defined, the best solution at the top 1st scoring position have different recurrences according to the compound, target and selected docking method. </plain></SENT>
+<SENT sid="80138" pm="."><plain>With regard to this, it is possible to conclude from the bottom part of the Figure 4 that the recurrence of the top first scoring position was higher for a few combinations of compound and docking method. </plain></SENT>
+<SENT sid="80139" pm="."><plain>For instance, the MAO-B inhibitors b1 and j1 had around 65% and 80% of recurrences of the top first scoring position when Glide HTVS and AutoDock are used, respectively. </plain></SENT>
+<SENT sid="80140" pm="."><plain>On the other hand, the thrombin inhibitors g2 and h2 had around 50% of recurrences of the top first scoring position when Glide XP and Glide HTVS are used, respectively. </plain></SENT>
+<SENT sid="80141" pm="."><plain>The remaining cases had small recurrences of the top first scoring position. </plain></SENT>
+<SENT sid="80142" pm="."><plain>In general, it is possible to see that cross-docking was characterized by a poor recurrence of the top first scoring position and many BSs. </plain></SENT>
+<SENT sid="80143" pm="."><plain>It suggests that it is not reliable to select the top first scoring position as the best solution when cross-docking is performed. </plain></SENT>
+</text></p><p><text><SENT sid="80144" pm="."><plain>If the less rigorous criterion is selected, where the best solution s3 is defined (Figure 4 top), there are subtle changes in the analysis. </plain></SENT>
+<SENT sid="80145" pm="."><plain>More combinations of compound and docking method yielded the best solution at the top first scoring position; however, it is necessary to remember that this improvement is due to the addition of acceptable cases with no optimal orientation in many cases. </plain></SENT>
+</text></p><p><text><SENT sid="80146" pm="."><plain>Another important point is the recurrence of BSs when cross-docking is performed. </plain></SENT>
+<SENT sid="80147" pm="."><plain>When the best solution s2 is defined (Figure 4 bottom), there are many BSs for different combinations of compounds with docking methods. </plain></SENT>
+<SENT sid="80148" pm="."><plain>For instance, there were many BSs when all the docking methods were applied to study the three B-RAF inhibitors. </plain></SENT>
+<SENT sid="80149" pm="."><plain>This suggests that a special care should be taken when cross-docking is performed for novel B-RAF inhibitors. </plain></SENT>
+<SENT sid="80150" pm="."><plain>On the other hand, the number of BSs is low for the thrombin inhibitor h2 by using all the docking methods. </plain></SENT>
+<SENT sid="80151" pm="."><plain>This suggests that there are compounds more likely to be well oriented inside different conformations of the binding site. </plain></SENT>
+<SENT sid="80152" pm="."><plain>The inclusion of acceptable solutions (s3 criterion) reduces the number of BSs (Figure 4 top), at the expense of lower quality of the orientations. </plain></SENT>
+</text></p><p><text><SENT sid="80153" pm="."><plain>Several lessons are provided from the cross-docking experiment. </plain></SENT>
+<SENT sid="80154" pm="."><plain>We observed for self-docking that the reliability on the top first scoring position as the best solution depends on the target under study and the docking method, but further experiments show that it is not possible to rely on the top first scoring when cross-docking is done. </plain></SENT>
+<SENT sid="80155" pm="."><plain>Previously, we observed that B-RAF seemed to be the more adequate target for self-docking; but further experiments show that B-RAF is the less adequate target when cross-docking was done. </plain></SENT>
+<SENT sid="80156" pm="."><plain>MAO-B had difficulties during self-docking, but it was the target with a better performance during cross-docking. </plain></SENT>
+</text></p><p><text><SENT sid="80157" pm="."><plain>The main reason of the success rate reduction for cross-docking method is that, even though the structures correspond to the same protein (MAO-B, thrombin or B-RAF in our work), the global shape of the binding site varies for different crystal structures of the same protein due to different orientations of the side chains of several residues. </plain></SENT>
+<SENT sid="80158" pm="."><plain>To observe the principal differences between different structures of the same protein, the crystallographic MAO-B, thrombin and B-RAF structures were aligned, and the RMSD values for comparison between residues were calculated to study how different are the binding sites (results are represented in the Electronic Supplementary Material, Figures S1–S3). </plain></SENT>
+<SENT sid="80159" pm="."><plain>In general, RMSD values were below 0.5 Å for MAO-B and thrombin structures, and were above 1.0 or 1.5 Å for B-RAF in most of the structural alignments. </plain></SENT>
+</text></p><p><text><SENT sid="80160" pm="."><plain>We selected the residues that displayed different conformations among the studied crystallographic structures due to the presence of different ligands and compared their RMSD values. </plain></SENT>
+<SENT sid="80161" pm="."><plain>In MAO-B crystal structures, the residues with higher RMSD values were F103, I199 and Y326 (Supplementary Material, Figures S1B–D); however, values below 2 Å were observed for I199 and Y326 because a small displacement of side chains of these residues in the structure with PDB code 1S2Y. </plain></SENT>
+<SENT sid="80162" pm="."><plain>Additionally, values below 3 Å were observed for F103 because higher displacements of its side chain in the structures with PDB codes 1S2Y and 4A79. </plain></SENT>
+<SENT sid="80163" pm="."><plain>These observations explain the bad performance of the ligand h1 and the protein structure with PDB code 1S2Y during the rigid cross-docking. </plain></SENT>
+</text></p><p><text><SENT sid="80164" pm="."><plain>In thrombin crystal structures, the residues with higher RMSD values were W86 and E232 (Supplementary Material, Figures S2B–D); however, values below 1.5 Å were observed for W86 because a small displacement of its side chain in the structure with PDB code 4LXB. </plain></SENT>
+<SENT sid="80165" pm="."><plain>Additionally, values below 3 Å were observed for E232 because higher displacements of its side chain in the structures with PDB codes 3SV2, 1AHT, and 4UDW. </plain></SENT>
+<SENT sid="80166" pm="."><plain>These observations explain the bad performance of the protein structure with PDB code 1AHT during the cross-docking of ligands b2 and g2. </plain></SENT>
+<SENT sid="80167" pm="."><plain>Despite the displacement of the side chain of E232 in the structure with code 1AHT, the ligand in this structure (h2) had good performance when it is cross-docked in other structures, indicating that displacements do not always negatively affect cross-docking. </plain></SENT>
+</text></p><p><text><SENT sid="80168" pm="."><plain>Finally, in B-RAF crystal structures we found the largest numbers of residues with high RMSD values: I463, K483, E501, L505, and F583 (Supplementary Material, Figures S3B–D). </plain></SENT>
+<SENT sid="80169" pm="."><plain>Values below 2.5 Å were observed for K483 and L505 due to displacements of their side chains when the crystallographic structures were compared. </plain></SENT>
+<SENT sid="80170" pm="."><plain>High RMSD values were also observed for I463 because its longer displacement in the structures with PDB codes 3D4Q and 3PRF. </plain></SENT>
+<SENT sid="80171" pm="."><plain>This residue is located at the glycine-rich loop of B-RAF, which present backbone conformational changes for adapting to ATP or inhibitor binding [14,46]. </plain></SENT>
+<SENT sid="80172" pm="."><plain>The largest displacements in B-RAF were observed for E501 (backbone and side-chain) and F583 (side-chain) with RMSD values above 4 Å for their side chains when comparing different crystallographic structures. </plain></SENT>
+<SENT sid="80173" pm="."><plain>E501 is the conserved glutamate at the αC-helix; this helix has a high mobility involved in controlling the dynamic equilibrium between active and inactive functional forms of protein kinases. </plain></SENT>
+<SENT sid="80174" pm="."><plain>F583 is part of the hydrophobic wall of the ATP binding site which adapts side chain orientation to different inhibitors. </plain></SENT>
+<SENT sid="80175" pm="."><plain>These observations reveal that B-RAF binding site changes more than the ones for MAO-B and thrombin; this explains the bad results of B-RAF in cross-docking. </plain></SENT>
+</text></p><p><text><SENT sid="80176" pm="."><plain>Additional information was obtained when various characteristics of the protein binding sites and ligands were analyzed for each MAO-B, thrombin, and B-RAF PDB structures. </plain></SENT>
+<SENT sid="80177" pm="."><plain>Protein binding site volumes (BSV), volume depth (VD) values, and averaged VDs were obtained for the protein binding sites by using the software POCASA [47]. </plain></SENT>
+<SENT sid="80178" pm="."><plain>VD is the volume depth value, which is determined by summing the depth of all pocket points, where the depth of every pocket point is defined as the shortest distance from pocket point to probe surface. </plain></SENT>
+<SENT sid="80179" pm="."><plain>Average VD is the average of the depth of every pocket points. </plain></SENT>
+<SENT sid="80180" pm="."><plain>Binding site volumes were calculated considering a probe radius of the probe sphere of 1 Å, single point flag of 12, protein depth flag of 18, and grid size of 1 Å [47]. </plain></SENT>
+<SENT sid="80181" pm="."><plain>Number of rotatable bonds and molecular weights of the inhibitors inside each target were calculated by using Molinspiration web (http://www.molinspiration.com/cgi-bin/properties). </plain></SENT>
+<SENT sid="80182" pm="."><plain>The calculated characteristics for protein binding sites and ligands are reported in Table 2. </plain></SENT>
+</text></p><p><text><SENT sid="80183" pm="."><plain>MAO-B has a small binding site (low BSV) in a deeper zone of the protein (high VD and averaged VD). </plain></SENT>
+<SENT sid="80184" pm="."><plain>There are big differences in BSVs among different PBD structures (BSDs are 97 and 289 Å3 for PDB structures 4A79 and 1OJ9, respectively), which could lead to difficulties in cross-docking experiments. </plain></SENT>
+<SENT sid="80185" pm="."><plain>However, analysis of the Figure 3 does not give evidence that the differences in MAO-B BSVs caused the failures in cross-docking. </plain></SENT>
+<SENT sid="80186" pm="."><plain>Major problems were found for compound h1 (from PDB 1S2Y), which has the lower molecular weight and only two rotatable bonds. </plain></SENT>
+<SENT sid="80187" pm="."><plain>Compounds b1 and j1 had major problems in the PDB structure where h1 is bound: 1S2Y. </plain></SENT>
+<SENT sid="80188" pm="."><plain>While b1 and j1 are bigger ligands with more rotatable bonds, they have good solutions in other MAO-B structures with smaller BSVs (for instance, in PDB 2VZ2). </plain></SENT>
+<SENT sid="80189" pm="."><plain>Therefore, we consider that the problem in cross-docking for the studied MAO-B inhibitors is mainly due to orientations of the residue side chains in the binding site (as we observed previously in Figure S1 of the Supplementary Material), instead of BSVs or ligand characteristics. </plain></SENT>
+</text></p><p><text><SENT sid="80190" pm="."><plain>Thrombin has a bigger binding site (BSV above 280 Å3 in most of PDB structures) at the surface of the protein (low VD and averaged VD). </plain></SENT>
+<SENT sid="80191" pm="."><plain>BSVs are similar, being between 280 and 370 Å3 in the majority of the PDB structures, with the only exception of the PDB structure 4UDW. </plain></SENT>
+<SENT sid="80192" pm="."><plain>Thrombin inhibitors have many rotatable bonds, with the exception of compound h2. </plain></SENT>
+<SENT sid="80193" pm="."><plain>It is just this compound the best one in cross-docking experiments, while compounds b2 and g2 (with 10 and six rotatable bonds respectively) fail in most of cross-docking experiments. </plain></SENT>
+<SENT sid="80194" pm="."><plain>Therefore, we consider that the problem in cross-docking for the studied thrombin inhibitors is mainly due to the number of rotatable bonds of the ligands, instead of different BSVs or different orientations of the residue side chains in the thrombin binding site. </plain></SENT>
+</text></p><p><text><SENT sid="80195" pm="."><plain>B-RAF has three size ranges for the binding site. </plain></SENT>
+<SENT sid="80196" pm="."><plain>The smaller range has BSVs between 180 and 220 Å3 (PDB structures 5CSW, 4YHT, 3D4Q, 2FB8, and 3PRF), the intermediate range has BSVs between 310 and 360 Å3 (PDB structures 4XV9, 4E26, and 3C4C), and the bigger range has BSVs around 440 Å3 (PDB structures 5CSX and 4KSP). </plain></SENT>
+<SENT sid="80197" pm="."><plain>VD and averaged VD values indicate that B-RAF binding site is not too deep from the surface. </plain></SENT>
+<SENT sid="80198" pm="."><plain>The big differences in BSVs among different PBD structures could explain the observed difficulties in B-RAF cross-docking experiments. </plain></SENT>
+<SENT sid="80199" pm="."><plain>B-RAF inhibitor b3 has many rotatable bonds and was bound to one of the biggest binding sites (PDB: 5CSX, BSV = 438 Å3). </plain></SENT>
+<SENT sid="80200" pm="."><plain>It had no solutions when it was cross-docked in the other binding sites with lower or similar BSVs. </plain></SENT>
+<SENT sid="80201" pm="."><plain>Compounds f3 and g3 have less rotatable bonds and were bound to smaller size binding sites. </plain></SENT>
+<SENT sid="80202" pm="."><plain>In general, they also fail in most of the cross-docking experiments, but they have solutions mainly when cross-docking was done inside other PDB structures in the same BSV range, such as 4YHT, 3D4Q, 2FB8, and 3PRF. </plain></SENT>
+<SENT sid="80203" pm="."><plain>This analysis suggests that the number of rotatable bonds and the different BSVs are the key effects that lead to problems in B-RAF cross-docking experiments. </plain></SENT>
+<SENT sid="80204" pm="."><plain>At the same time, different orientations of the residue side chains in the binding site (as we observed previously in Figure S3 of the Supplementary Material) cause the differences in B-RAF BSVs. </plain></SENT>
+</text></p></sec></sec></SecTag><SecTag type="DISCUSS,CONCL"><sec id="sec3-molecules-23-01038"><title><text><SENT sid="80205" pm="."><plain>3. </plain></SENT>
+<SENT sid="80206" pm="."><plain>Discussion and Recommendations </plain></SENT>
+</text></title><p><text><SENT sid="80207" pm="."><plain>Here, we must point out that cross-docking is the most common practice in docking. </plain></SENT>
+<SENT sid="80208" pm="."><plain>According to our definition (in the Materials and Methods section), when a crystallographic structure is used to perform docking of a novel ligand (a different one to what is found in the original structure), we have a cross-docking experiment, but the most serious problem is that the novel ligands typically have no reference structure to help in the selection of the best solution. </plain></SENT>
+<SENT sid="80209" pm="."><plain>Therefore, if top first scoring position cannot be relied upon to select the best docking solution, other criteria should be taken into account. </plain></SENT>
+</text></p><p><text><SENT sid="80210" pm="."><plain>In the work of Sutherland et al. assessing cross-docking accuracy [6], the authors found that using the protein structure from the complex that contains the bound ligand most similar to the docked ligand increased docking accuracy for all methods (defined as “similarity selection”). </plain></SENT>
+<SENT sid="80211" pm="."><plain>Another interesting point authors found is that there is no relationship between resolution and cross-docking accuracy. </plain></SENT>
+<SENT sid="80212" pm="."><plain>Therefore, the common practice of choosing structures for docking based on their resolution appears to be unfounded. </plain></SENT>
+<SENT sid="80213" pm="."><plain>It is well known that the predictive power of a docking method depends on several factors connected with the docking program used as well as on the studied system; no general rules of thumb exist. </plain></SENT>
+<SENT sid="80214" pm="."><plain>Verkhivker et al. [48] distinguished docking hard failures when the crystallographic pose cannot be sampled and soft failures when the crystallographic pose can be sampled but is not the top scoring one. </plain></SENT>
+<SENT sid="80215" pm="."><plain>They considered that soft failures in self-docking are mainly due to limits in the scoring functions and scoring schemes. </plain></SENT>
+</text></p><p><text><SENT sid="80216" pm="."><plain>According to our experience, an option is the use of previous literature and crystallographic information to define constraints to the solution. </plain></SENT>
+<SENT sid="80217" pm="."><plain>These constraints, stated as Essential Chemical Interactions Described for Analogue Ligands (ECIDALs) [49], contain the chemical interactions that seem to be essential after a comprehensive inspection of the crystallographic data available in PDB, considering the target under study or other proteins from the same family. </plain></SENT>
+<SENT sid="80218" pm="."><plain>Under this strategy, the best solution of a cross-docking must be selected by considering the most negative scoring energy which complies with ECIDALs. </plain></SENT>
+</text></p><p><text><SENT sid="80219" pm="."><plain>It is important to discuss about the rigidity of the binding site in the receptor during cross-docking. </plain></SENT>
+<SENT sid="80220" pm="."><plain>The standard cross-docking practice considers that ligands are docked into a rigid receptor, although this assumption could lead to misleading results. </plain></SENT>
+<SENT sid="80221" pm="."><plain>However, it is known that many proteins undergo side-chain as well as backbone movements, upon ligand binding. </plain></SENT>
+<SENT sid="80222" pm="."><plain>The possibility to consider these movements is the application of flexibility to residues in the binding site of the protein during docking. </plain></SENT>
+<SENT sid="80223" pm="."><plain>This methodology is referred to as induced fit docking and allows the receptor to alter the shape of the active site and BSV due to conformational changes induced by the bound ligand [50]. </plain></SENT>
+<SENT sid="80224" pm="."><plain>A more realistic description of the complex can be obtained by using this method, but the movement of the residues lead to a very computationally expensive process; therefore, a more reasonable strategy is the selection of a few flexible residues; but after this selection, the consideration of the ECIDALs is also needed to select the best solution. </plain></SENT>
+</text></p></sec></SecTag><SecTag type="METHODS"><sec id="sec4-molecules-23-01038"><title><text><SENT sid="80225" pm="."><plain>4. </plain></SENT>
+<SENT sid="80226" pm="."><plain>Materials and Methods </plain></SENT>
+</text></title><sec id="sec4dot1-molecules-23-01038"><title><text><SENT sid="80227" pm="."><plain>4.1. </plain></SENT>
+<SENT sid="80228" pm="."><plain>Self-Docking and Cross-Docking </plain></SENT>
+</text></title><p><text><SENT sid="80229" pm="."><plain>Let us check definitions of self-docking and cross-docking in this work. </plain></SENT>
+<SENT sid="80230" pm="."><plain>For a unique target protein A, we selected the crystallographic structure of a protein-ligand complex Aαα deposited in Protein Data Bank (PDB), where Aα represents the receptor with the optimal conformation to bound the ligand α in its active site. </plain></SENT>
+<SENT sid="80231" pm="."><plain>Meanwhile, α is the ligand contained in this crystallographic structure. </plain></SENT>
+<SENT sid="80232" pm="."><plain>The self-docking is the process of docking α inside Aα (Equation (1)). </plain></SENT>
+<SENT sid="80233" pm="."><plain>This process should be simpler since Aα binding site have a contoured shaping for perfect fit of α and the residues in the binding site are present in conformations that allow establishing all the chemical interactions without needing large scale movements of their side chains: (1)Aα(Receptor)+ α(Ligand)=Aαα(Complex) </plain></SENT>
+</text></p><p><text><SENT sid="80234" pm="."><plain>When docking methodology is employed to dock the ligand α into the receptor Aα we assume this practice as self-docking. </plain></SENT>
+<SENT sid="80235" pm="."><plain>For the same target protein, we can select other crystallographic structure Aββ deposited in PDB, where Aβ represents the same receptor with the optimal conformation to bound the ligand β in its active site. </plain></SENT>
+<SENT sid="80236" pm="."><plain>Self-docking can be applied to dock the ligand β into the receptor Aβ. </plain></SENT>
+<SENT sid="80237" pm="."><plain>However, when the ligand β is docked into a different crystallographic structure of the same receptor (for instance Aα) we assume this practice as cross-docking. </plain></SENT>
+<SENT sid="80238" pm="."><plain>The last process is represented in Equation (2):(2)Aα(Receptor)+ β(Ligand)=Aαβ(Complex) </plain></SENT>
+</text></p><p><text><SENT sid="80239" pm="."><plain>In this process, it is important to consider that Aα binding site does not necessarily have a contoured shaping for perfect fit of β since the residues in its binding site are present in conformations that maybe need large scale movements of their side chains for establishing the optimal chemical interactions. </plain></SENT>
+<SENT sid="80240" pm="."><plain>It is necessary to highlight that the last process, cross-docking, is the habitual goal in docking experiments, where a ligand have to be docked in a protein which is complexed with a molecule different from the one used for the docking. </plain></SENT>
+</text></p></sec><sec id="sec4dot2-molecules-23-01038"><title><text><SENT sid="80241" pm="."><plain>4.2. </plain></SENT>
+<SENT sid="80242" pm="."><plain>Protein Targets under Study </plain></SENT>
+</text></title><p><text><SENT sid="80243" pm="."><plain>Three different target proteins were selected: monoamine oxidase B (MAO-B), thrombin and B-RAF protein kinase. </plain></SENT>
+<SENT sid="80244" pm="."><plain>These proteins are co-crystallized with several inhibitors. </plain></SENT>
+<SENT sid="80245" pm="."><plain>Ten different protein-inhibitor crystallographic structures were downloaded from the PDB repository for each target protein under study (PDB codes are in Table 1). </plain></SENT>
+<SENT sid="80246" pm="."><plain>MAO-B is an isoform of monoamine oxidase that is involved in dopamine metabolism [51]. </plain></SENT>
+<SENT sid="80247" pm="."><plain>MAO-B inhibitors prevent the breakdown of dopamine in the brain, thereby increasing dopamine levels. </plain></SENT>
+<SENT sid="80248" pm="."><plain>They are in clinical use for the treatment of Parkinson’s disease, and have also been investigated for potential neuroprotective benefits [52,53]. </plain></SENT>
+<SENT sid="80249" pm="."><plain>Thrombin is a serine protease with a central role in thrombosis and haemostasis, which makes it an attractive target for antithrombotic therapy [54]. </plain></SENT>
+<SENT sid="80250" pm="."><plain>Thrombin inhibitors are designed for anticoagulation therapy, where they have more predictable anticoagulant effects compared with traditional anticoagulants, such as heparins, because of their lack of binding to other plasma proteins [55], anti-platelet effects [56], and no heparin-induced thrombocytopenia effects [57]. </plain></SENT>
+<SENT sid="80251" pm="."><plain>B-RAF protein kinase is one of the Raf protein kinases, which has been identified as the primary MEK activator in the Ras-Raf-MEK-ERK signaling pathway [58]. </plain></SENT>
+<SENT sid="80252" pm="."><plain>It is one of the most frequently mutated genes in human cancers [59]; therefore, therapeutic inhibition of oncogenic B-Raf kinase activity is considered a promising strategy to treat cancer [60]. </plain></SENT>
+<SENT sid="80253" pm="."><plain>All targets were processed with the Protein Preparation Wizard in the Schrödinger Suite (Maestro 9.0, 2007; Schrödinger, LLC: New York, NY, USA). </plain></SENT>
+<SENT sid="80254" pm="."><plain>Hydrogen atoms were added followed by the adjustment of bond orders. </plain></SENT>
+<SENT sid="80255" pm="."><plain>The protonation and tautomeric states for protonable residues were adjusted to match pH = 7.4. </plain></SENT>
+<SENT sid="80256" pm="."><plain>Missing residues and loop segments near the active site were added by using Prime (Prime 2.1, 2009; Schrödinger, LLC). </plain></SENT>
+<SENT sid="80257" pm="."><plain>Water molecules were deleted. </plain></SENT>
+<SENT sid="80258" pm="."><plain>Proteins were finally subjected to geometry optimization by using OPLS_2005 force field [61]. </plain></SENT>
+</text></p></sec><sec id="sec4dot3-molecules-23-01038"><title><text><SENT sid="80259" pm="."><plain>4.3. </plain></SENT>
+<SENT sid="80260" pm="."><plain>Docking Experiments </plain></SENT>
+</text></title><p><text><SENT sid="80261" pm="."><plain>Two experiments were applied for each target:(a)Self-docking of each ligand inside its own protein structural conformation.(b)Cross-docking of three selected ligands inside the remaining nine protein structures. </plain></SENT>
+</text></p><p><text><SENT sid="80262" pm="."><plain>All the studied ligands in this work were prepared using LigPrep with the force field OPLS_2005 [61]. </plain></SENT>
+<SENT sid="80263" pm="."><plain>Docking tests were performed using the softwares Glide and Autodock. </plain></SENT>
+<SENT sid="80264" pm="."><plain>Glide offers a complete solution for ligand–receptor docking and is widely used for drug discovery [62,63], virtual screening [64,65], structure-activity relationship analysis [9,66], etc. </plain></SENT>
+<SENT sid="80265" pm="."><plain>Grid boxes for self-docking and cross-docking experiments were centered in the ligand position coming from the crystal structures. </plain></SENT>
+<SENT sid="80266" pm="."><plain>The grid boxes’ dimensions were (20 × 20 × 20) Å3 in order to include the whole binding site for the three targets under study. </plain></SENT>
+<SENT sid="80267" pm="."><plain>High-throughput virtual screening (HTVS), standard precision (SP), and extra precision (XP) Glide modes were proved. </plain></SENT>
+<SENT sid="80268" pm="."><plain>Default docking parameters were used. </plain></SENT>
+<SENT sid="80269" pm="."><plain>Glide docking uses hierarchical filters to find the best ligand binding locations in the defined receptor grid space. </plain></SENT>
+<SENT sid="80270" pm="."><plain>The filters include positional, conformational, and orientational sampling of the ligand and subsequent energy evaluation of the interactions between the ligand and the protein [18,19,20]. </plain></SENT>
+<SENT sid="80271" pm="."><plain>Ligand minimization in the receptor field is carried out using the OPLS-AA force field [67] with a distance-dependent dielectric of 2.0. </plain></SENT>
+<SENT sid="80272" pm="."><plain>Afterward, the lowest energy poses are subjected to a Monte Carlo (MC) procedure that samples the nearby torsional minima. </plain></SENT>
+<SENT sid="80273" pm="."><plain>The best poses for a given ligand are determined by the GlideScore score [68], including terms for buried polar groups and steric clashes. </plain></SENT>
+</text></p><p><text><SENT sid="80274" pm="."><plain>Autodock parameters were defined in a similar way as in Glide, with grid boxes dimensions of 20 × 20 × 20 Å3. </plain></SENT>
+<SENT sid="80275" pm="."><plain>AutoDock uses a semi-empirical free energy force field to predict binding energies or ligands to macromolecular targets and Lamarckian genetic algorithm (GA) to search for docking solutions [69]. </plain></SENT>
+<SENT sid="80276" pm="."><plain>The force field is based on a comprehensive thermodynamic model that allows incorporation of intramolecular energies into the predicted free energy of binding [70]. </plain></SENT>
+<SENT sid="80277" pm="."><plain>Each ligand was located in the grid box for each docking run and torsional degrees of freedom were defined. </plain></SENT>
+<SENT sid="80278" pm="."><plain>The GA was applied with an initial population of 100 randomly placed individuals, a maximum number of 1 × 106 energy evaluations, a maximum number of 3 × 104 generations, a mutation rate of 0.02, a crossover rate of 0.80, and an elitism value of 2. </plain></SENT>
+</text></p><p><text><SENT sid="80279" pm="."><plain>Each self-docking or cross-docking experiment between a target protein (MAO-B, thrombin or B-RAF) and a ligand was repeated three times, accounting for replicated instances. </plain></SENT>
+<SENT sid="80280" pm="."><plain>The effectiveness of the docking experiment (self-docking or cross-docking) in reproducing the crystallographic binding orientation of a ligand α was determined by comparing the docked pose with the orientation of the ligand in its native crystallographic structure Aα. </plain></SENT>
+<SENT sid="80281" pm="."><plain>In the case of MAO-B, the cofactor FAD was present in the binding site during docking experiments. </plain></SENT>
+<SENT sid="80282" pm="."><plain>The RMSD was employed as the term for performing such comparison, where ligand atoms were matched one to one and symmetrical atoms were considered equivalent. </plain></SENT>
+<SENT sid="80283" pm="."><plain>For comparing cross-docking poses, receptor structures were superimposed using Cα of binding site amino acids, by considering that amino acids that surround 10 Å the ligand in its native crystallographic structure form the binding site. </plain></SENT>
+</text></p></sec></sec></SecTag><SecTag type="CONCL"><sec id="sec5-molecules-23-01038"><title><text><SENT sid="80284" pm="."><plain>5. </plain></SENT>
+<SENT sid="80285" pm="."><plain>Conclusions </plain></SENT>
+</text></title><p><text><SENT sid="80286" pm="."><plain>We presented experiments using self and cross-docking methodologies applied to three biological targets (MAO-B, thrombin and B-RAF) to analyze the recurrence of the best solution at the top first scoring position. </plain></SENT>
+<SENT sid="80287" pm="."><plain>We used ten crystal structures for each target protein and the softwares Glide (HTVS, SP and XP) and AutoDock. </plain></SENT>
+<SENT sid="80288" pm="."><plain>In general, the docking methods proved to efficiently reproduce crystallographic binding orientations when self-docking was performed. </plain></SENT>
+<SENT sid="80289" pm="."><plain>However, we found that right predictions of the binding orientations at the top first scoring position depend on the target under study, the ligand, and the software. </plain></SENT>
+</text></p><p><text><SENT sid="80290" pm="."><plain>To approach our experiment to the real docking practice, since users usually dock ligands into receptor crystal structures fitted to a different ligand, we performed cross-docking by exploring three of the studied ligands inside the remaining crystallographic structures. </plain></SENT>
+<SENT sid="80291" pm="."><plain>Results suggest that each studying system is independent and must be carefully treated for cross-docking simulations. </plain></SENT>
+<SENT sid="80292" pm="."><plain>We found that the success rates in reproducing the known bound conformation of the ligand at the top first scoring position was significantly lower in cross-docking than in self-docking because the binding site of each receptor is fitted to its own ligand. </plain></SENT>
+</text></p><p><text><SENT sid="80293" pm="."><plain>Information in this manuscript orient researchers to successfully employ docking methodology for selecting the best orientation of ligands into a receptor target. </plain></SENT>
+<SENT sid="80294" pm="."><plain>Docking methods give an estimation of a scoring function to select the best solution; however, it is not recommendable to give the best score (the lower energy value) as the final solution without further analysis. </plain></SENT>
+<SENT sid="80295" pm="."><plain>Previous literature has suggested that using the protein structure from the complex that contains the bound ligand most similar to the docked ligand (“similarity selection”) increases cross-docking accuracy. </plain></SENT>
+<SENT sid="80296" pm="."><plain>On the other hand, many authors have proposed the selection of a small set of representative docking poses forming clusters to get a reliable solution. </plain></SENT>
+<SENT sid="80297" pm="."><plain>In our experience, the use of the literature and structural information contained in PDB helps to define the ECIDALs of the target. </plain></SENT>
+<SENT sid="80298" pm="."><plain>In that regard, the selection of the best scoring solution that complies with the defined ECIDALs is a rational approach to get a reliable solution. </plain></SENT>
+</text></p></sec></SecTag></body><back><SecTag type="ACK_FUND"><ack><title>Acknowledgments</title><p><text4fund><text><SENT sid="80299" pm="."><plain>Authors would like to express their sincere gratitude to Claudia Daza Botero for assistance with the English correction of manuscript. </plain></SENT>
+</text></text4fund></p></ack></SecTag><fn-group><fn><p><text><SENT sid="80300" pm="."><plain>Sample Availability: Samples of the compounds are not available from the authors. </plain></SENT>
+</text></p></fn></fn-group><SecTag type="APPENDIX"><app-group><app id="app1-molecules-23-01038"><title>Supplementary Materials</title><p>The following are available online. Figure S1. RMSD values (in Å) of different MAO-B crystallographic structures (A), and of their residues F103 (B), I199 (C) and Y326 (D). Conformations of residues are represented to the right. Figure S2. RMSD values (in Å) of different thrombin crystallographic structures (A), and of their residues W86 (B) and E232 (D). Conformations of residues are represented to the right. Figure S3. RMSD values (in Å) of different B-RAF crystallographic structures (A), and of their residues I463 (B), K483 (C), E501 (D), L505 (E) and F583 (F). Conformations of residues are represented to the right.</p><supplementary-material content-type="local-data" id="molecules-23-01038-s001"><media xlink:href="molecules-23-01038-s001.pdf"><caption><p><text><SENT sid="80301" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media></supplementary-material></app></app-group></SecTag><notes><title>Author Contributions</title><p>Julio Caballero conceived and designed the experiments; David Ramírez performed the experiments; Julio Caballero and David Ramírez analyzed the data; Julio Caballero contributed reagents/materials/analysis tools; Julio Caballero and David Ramírez wrote the paper.</p></notes><notes><title>Funding</title><p>Julio Caballero acknowledges funds of FONDECYT Regular No. 1170718.</p></notes><notes notes-type="COI-statement"><title>Conflicts of Interest</title><p>The authors declare no conflict of interest.</p></notes><SecTag type="REF"><ref-list><title>References</title><ref id="B1-molecules-23-01038"><text><SENT sid="80302" pm="."><plain>1.YurievE.RamslandP.A.Latest developments in molecular docking: 2010–2011 in reviewJ. </plain></SENT>
+<SENT sid="80303" pm="."><plain>Mol. </plain></SENT>
+<SENT sid="80304" pm="."><plain>Recognit.20132621523910.1002/jmr.2266<?supplied-pmid 23526775?>23526775 </plain></SENT>
+</text></ref><ref id="B2-molecules-23-01038"><text><SENT sid="80305" pm="."><plain>2.KellenbergerE.RodrigoJ.MullerP.RognanD.Comparative evaluation of eight docking tools for docking and virtual screening accuracyProteins20045722524210.1002/prot.20149<?supplied-pmid 15340911?>15340911 </plain></SENT>
+</text></ref><ref id="B3-molecules-23-01038"><text><SENT sid="80306" pm="."><plain>3.ElokelyK.M.DoerksenR.J.Docking challenge: Protein sampling and molecular docking performanceJ. </plain></SENT>
+<SENT sid="80307" pm="."><plain>Chem. </plain></SENT>
+<SENT sid="80308" pm="."><plain>Inf. </plain></SENT>
+<SENT sid="80309" pm="."><plain>Model.2013531934194510.1021/ci400040d<?supplied-pmid 23530568?>23530568 </plain></SENT>
+</text></ref><ref id="B4-molecules-23-01038"><text><SENT sid="80310" pm="."><plain>4.KitchenD.B.DecornezH.FurrJ.R.BajorathJ.Docking and scoring in virtual screening for drug discovery: Methods and applicationsNat. </plain></SENT>
+<SENT sid="80311" pm="."><plain>Rev. </plain></SENT>
+<SENT sid="80312" pm="."><plain>Drug Discov.2004393594910.1038/nrd1549<?supplied-pmid 15520816?>15520816 </plain></SENT>
+</text></ref><ref id="B5-molecules-23-01038"><text><SENT sid="80313" pm="."><plain>5.EricksonJ.A.JalaieM.RobertsonD.H.LewisR.A.ViethM.Lessons in molecular recognition: The effects of ligand and protein flexibility on molecular docking accuracyJ. </plain></SENT>
+<SENT sid="80314" pm="."><plain>Med. </plain></SENT>
+<SENT sid="80315" pm="."><plain>Chem.200447455510.1021/jm030209y<?supplied-pmid 14695819?>14695819 </plain></SENT>
+</text></ref><ref id="B6-molecules-23-01038"><text><SENT sid="80316" pm="."><plain>6.SutherlandJ.J.NandigamR.K.EricksonJ.A.ViethM.Lessons in molecular recognition. </plain></SENT>
+<SENT sid="80317" pm="."><plain>2. </plain></SENT>
+<SENT sid="80318" pm="."><plain>Assessing and improving cross-docking accuracyJ. </plain></SENT>
+<SENT sid="80319" pm="."><plain>Chem. </plain></SENT>
+<SENT sid="80320" pm="."><plain>Inf. </plain></SENT>
+<SENT sid="80321" pm="."><plain>Model.2007472293230210.1021/ci700253h<?supplied-pmid 17956084?>17956084 </plain></SENT>
+</text></ref><ref id="B7-molecules-23-01038"><text><SENT sid="80322" pm="."><plain>7.BallanteF.MarshallG.R.An Automated Strategy for Binding-Pose Selection and Docking Assessment in Structure-Based Drug DesignJ. </plain></SENT>
+<SENT sid="80323" pm="."><plain>Chem. </plain></SENT>
+<SENT sid="80324" pm="."><plain>Inf. </plain></SENT>
+<SENT sid="80325" pm="."><plain>Model.201656547210.1021/acs.jcim.5b00603<?supplied-pmid 26682916?>26682916 </plain></SENT>
+</text></ref><ref id="B8-molecules-23-01038"><text><SENT sid="80326" pm="."><plain>8.Mena-UleciaK.TiznadoW.CaballeroJ.Study of the Differential Activity of Thrombin Inhibitors Using Docking, QSAR, Molecular Dynamics, and MM-GBSAPLoS ONE201510e014277410.1371/journal.pone.0142774<?supplied-pmid 26599107?>26599107 </plain></SENT>
+</text></ref><ref id="B9-molecules-23-01038"><text><SENT sid="80327" pm="."><plain>9.Quesada-RomeroL.Mena-UleciaK.TiznadoW.CaballeroJ.Insights into the interactions between maleimide derivates and GSK3β combining molecular docking and QSARPLoS ONE20149e10221210.1371/journal.pone.0102212<?supplied-pmid 25010341?>25010341 </plain></SENT>
+</text></ref><ref id="B10-molecules-23-01038"><text><SENT sid="80328" pm="."><plain>10.CaballeroJ.ZilocchiS.TiznadoW.CollinaS.Docking and quantitative structure–activity relationship studies for imidazo[1,2−a]pyrazines as inhibitors of checkpoint kinase-1Med. </plain></SENT>
+<SENT sid="80329" pm="."><plain>Chem. </plain></SENT>
+<SENT sid="80330" pm="."><plain>Res.2012211912192010.1007/s00044-011-9714-1 </plain></SENT>
+</text></ref><ref id="B11-molecules-23-01038"><text><SENT sid="80331" pm="."><plain>11.CaballeroJ.Vergara-JaqueA.FernándezM.CollD.Docking and quantitative structure–activity relationship studies for sulfonyl hydrazides as inhibitors of cytosolic human branched-chain amino acid aminotransferaseMol. </plain></SENT>
+<SENT sid="80332" pm="."><plain>Divers.20091349350010.1007/s11030-009-9140-1<?supplied-pmid 19350404?>19350404 </plain></SENT>
+</text></ref><ref id="B12-molecules-23-01038"><text><SENT sid="80333" pm="."><plain>12.CaballeroJ.QuilianoM.Alzate-MoralesJ.H.ZimicM.DeharoE.Docking and quantitative structure–activity relationship studies for 3-fluoro-4-(pyrrolo[2,1-f][1,2,4]triazin-4-yloxy)aniline, 3-fluoro-4-(1H-pyrrolo[2,3-b]pyridin-4-yloxy)aniline, and 4-(4-amino-2-fluorophenoxy)-2-pyridinylamine derivatives as c-Met kinase inhibitorsJ. </plain></SENT>
+<SENT sid="80334" pm="."><plain>Comput. </plain></SENT>
+<SENT sid="80335" pm="."><plain>Aided Mol. </plain></SENT>
+<SENT sid="80336" pm="."><plain>Des.20112534936910.1007/s10822-011-9425-1<?supplied-pmid 21487786?>21487786 </plain></SENT>
+</text></ref><ref id="B13-molecules-23-01038"><text><SENT sid="80337" pm="."><plain>13.Alzate-MoralesJ.H.CaballeroJ.Vergara-JaqueA.González-NiloF.D.Insights into the structural basis of N2 and O6 substituted guanine derivatives as cyclin-dependent kinase 2 (CDK2) inhibitors: Prediction of the binding modes and potency of the inhibitors by docking and ONIOM calculationsJ. </plain></SENT>
+<SENT sid="80338" pm="."><plain>Chem. </plain></SENT>
+<SENT sid="80339" pm="."><plain>Inf. </plain></SENT>
+<SENT sid="80340" pm="."><plain>Model.20094988689910.1021/ci8004034<?supplied-pmid 19323453?>19323453 </plain></SENT>
+</text></ref><ref id="B14-molecules-23-01038"><text><SENT sid="80341" pm="."><plain>14.Alzate-MoralesJ.H.Vergara-JaqueA.CaballeroJ.Computational Study on the Interaction of N1 Substituted Pyrazole Derivatives with B-Raf Kinase: An Unusual Water Wire Hydrogen-Bond Network and Novel Interactions at the Entrance of the Active SiteJ. </plain></SENT>
+<SENT sid="80342" pm="."><plain>Chem. </plain></SENT>
+<SENT sid="80343" pm="."><plain>Inf. </plain></SENT>
+<SENT sid="80344" pm="."><plain>Model.2010501101111210.1021/ci100049h<?supplied-pmid 20524689?>20524689 </plain></SENT>
+</text></ref><ref id="B15-molecules-23-01038"><text><SENT sid="80345" pm="."><plain>15.RamírezD.CaballeroJ.Is It Reliable to Use Common Molecular Docking Methods for Comparing the Binding Affinities of Enantiomer Pairs for Their Protein Target?Int. </plain></SENT>
+<SENT sid="80346" pm="."><plain>J. </plain></SENT>
+<SENT sid="80347" pm="."><plain>Mol. </plain></SENT>
+<SENT sid="80348" pm="."><plain>Sci.20161752510.3390/ijms17040525<?supplied-pmid 27104528?>27104528 </plain></SENT>
+</text></ref><ref id="B16-molecules-23-01038"><text><SENT sid="80349" pm="."><plain>16.KroemerR.T.Structure-based drug design: Docking and scoringCurr. </plain></SENT>
+<SENT sid="80350" pm="."><plain>Prot. </plain></SENT>
+<SENT sid="80351" pm="."><plain>Peptide Sci.2007831232810.2174/138920307781369382 </plain></SENT>
+</text></ref><ref id="B17-molecules-23-01038"><text><SENT sid="80352" pm="."><plain>17.MengX.-Y.ZhangH.-X.MezeiM.CuiM.Molecular docking: A powerful approach for structure-based drug discoveryCurr. </plain></SENT>
+<SENT sid="80353" pm="."><plain>Comput. </plain></SENT>
+<SENT sid="80354" pm="."><plain>Aided Drug Des.2011714610.2174/157340911795677602<?supplied-pmid 21534921?>21534921 </plain></SENT>
+</text></ref><ref id="B18-molecules-23-01038"><text><SENT sid="80355" pm="."><plain>18.FriesnerR.A.BanksJ.L.MurphyR.B.HalgrenT.A.KlicicJ.J.MainzD.T.RepaskyM.P.KnollE.H.ShelleyM.PerryJ.K.Glide: A new approach for rapid, accurate docking and scoring. </plain></SENT>
+<SENT sid="80356" pm="."><plain>1. </plain></SENT>
+<SENT sid="80357" pm="."><plain>Method and assessment of docking accuracyJ. </plain></SENT>
+<SENT sid="80358" pm="."><plain>Med. </plain></SENT>
+<SENT sid="80359" pm="."><plain>Chem.2004471739174910.1021/jm0306430<?supplied-pmid 15027865?>15027865 </plain></SENT>
+</text></ref><ref id="B19-molecules-23-01038"><text><SENT sid="80360" pm="."><plain>19.HalgrenT.A.MurphyR.B.FriesnerR.A.BeardH.S.FryeL.L.PollardW.T.BanksJ.L.Glide: A new approach for rapid, accurate docking and scoring. </plain></SENT>
+<SENT sid="80361" pm="."><plain>2. </plain></SENT>
+<SENT sid="80362" pm="."><plain>Enrichment factors in database screeningJ. </plain></SENT>
+<SENT sid="80363" pm="."><plain>Med. </plain></SENT>
+<SENT sid="80364" pm="."><plain>Chem.2004471750175910.1021/jm030644s<?supplied-pmid 15027866?>15027866 </plain></SENT>
+</text></ref><ref id="B20-molecules-23-01038"><text><SENT sid="80365" pm="."><plain>20.FriesnerR.A.MurphyR.B.RepaskyM.P.FryeL.L.GreenwoodJ.R.HalgrenT.A.SanschagrinP.C.MainzD.T.Extra precision glide: Docking and scoring incorporating a model of hydrophobic enclosure for protein-ligand complexesJ. </plain></SENT>
+<SENT sid="80366" pm="."><plain>Med. </plain></SENT>
+<SENT sid="80367" pm="."><plain>Chem.2006496177619610.1021/jm051256o<?supplied-pmid 17034125?>17034125 </plain></SENT>
+</text></ref><ref id="B21-molecules-23-01038"><text><SENT sid="80368" pm="."><plain>21.GoodsellD.S.MorrisG.M.OlsonA.J.Automated docking of flexible ligands: Applications of AutoDockJ. </plain></SENT>
+<SENT sid="80369" pm="."><plain>Mol. </plain></SENT>
+<SENT sid="80370" pm="."><plain>Recognit.199691510.1002/(SICI)1099-1352(199601)9:1&lt;1::AID-JMR241&gt;3.0.CO;2-68723313 </plain></SENT>
+</text></ref><ref id="B22-molecules-23-01038"><text><SENT sid="80371" pm="."><plain>22.GohlkeH.HendlichM.KlebeG.Knowledge-based scoring function to predict protein-ligand interactionsJ. </plain></SENT>
+<SENT sid="80372" pm="."><plain>Mol. </plain></SENT>
+<SENT sid="80373" pm="."><plain>Biol.200029533735610.1006/jmbi.1999.3371<?supplied-pmid 10623530?>10623530 </plain></SENT>
+</text></ref><ref id="B23-molecules-23-01038"><text><SENT sid="80374" pm="."><plain>23.BindaC.HubálekF.LiM.HerzigY.SterlingJ.EdmondsonD.E.MatteviA.Crystal structures of monoamine oxidase B in complex with four inhibitors of the N-propargylaminoindan classJ. </plain></SENT>
+<SENT sid="80375" pm="."><plain>Med. </plain></SENT>
+<SENT sid="80376" pm="."><plain>Chem.2004471767177410.1021/jm031087c<?supplied-pmid 15027868?>15027868 </plain></SENT>
+</text></ref><ref id="B24-molecules-23-01038"><text><SENT sid="80377" pm="."><plain>24.BindaC.WangJ.PisaniL.CacciaC.CarottiA.SalvatiP.EdmondsonD.E.MatteviA.Structures of Human Monoamine Oxidase B Complexes with Selective Noncovalent Inhibitors: Safinamide and Coumarin AnalogsJ. </plain></SENT>
+<SENT sid="80378" pm="."><plain>Med. </plain></SENT>
+<SENT sid="80379" pm="."><plain>Chem.2007505848585210.1021/jm070677y<?supplied-pmid 17915852?>17915852 </plain></SENT>
+</text></ref><ref id="B25-molecules-23-01038"><text><SENT sid="80380" pm="."><plain>25.BindaC.LiM.HubalekF.RestelliN.EdmondsonD.E.MatteviA.Insights into the Mode of Inhibition of Human Mitochondrial Monoamine Oxidase B from High-Resolution Crystal StructuresProc. </plain></SENT>
+<SENT sid="80381" pm="."><plain>Natl. </plain></SENT>
+<SENT sid="80382" pm="."><plain>Acad. </plain></SENT>
+<SENT sid="80383" pm="."><plain>Sci. </plain></SENT>
+<SENT sid="80384" pm="."><plain>USA20031009750975510.1073/pnas.1633804100<?supplied-pmid 12913124?>12913124 </plain></SENT>
+</text></ref><ref id="B26-molecules-23-01038"><text><SENT sid="80385" pm="."><plain>26.BindaC.HubalekF.LiM.HerzigY.SterlingJ.EdmondsonD.E.MatteviA.Binding of Rasagiline-Related Inhibitors to Human Monoamine Oxidases: A Kinetic and Crystallographic AnalysisJ. </plain></SENT>
+<SENT sid="80386" pm="."><plain>Med. </plain></SENT>
+<SENT sid="80387" pm="."><plain>Chem.2005488148815410.1021/jm0506266<?supplied-pmid 16366596?>16366596 </plain></SENT>
+</text></ref><ref id="B27-molecules-23-01038"><text><SENT sid="80388" pm="."><plain>27.MilczekE.M.BoniventoD.BindaC.MatteviA.McdonaldI.A.EdmondsonD.E.Structural and Mechanistic Studies of Mofegiline Inhibition of Human Recombinant Monoamine Oxidase BJ. </plain></SENT>
+<SENT sid="80389" pm="."><plain>Med. </plain></SENT>
+<SENT sid="80390" pm="."><plain>Chem.2008518019802610.1021/jm8011867<?supplied-pmid 19053775?>19053775 </plain></SENT>
+</text></ref><ref id="B28-molecules-23-01038"><text><SENT sid="80391" pm="."><plain>28.BindaC.AldecoM.GeldenhuysW.J.TortoriciM.MatteviA.EdmondsonD.E.Molecular Insights into Human Monoamine Oxidase B Inhibition by the Glitazone Anti-Diabetes DrugsACS Med. </plain></SENT>
+<SENT sid="80392" pm="."><plain>Chem. </plain></SENT>
+<SENT sid="80393" pm="."><plain>Lett.20123394210.1021/ml200196p<?supplied-pmid 22282722?>22282722 </plain></SENT>
+</text></ref><ref id="B29-molecules-23-01038"><text><SENT sid="80394" pm="."><plain>29.De ColibusL.LiM.BindaC.LustigA.EdmondsonD.E.MatteviA.Three-Dimensional Structure of Human Monoamine Oxidase a (Mao A): Relation to the Structures of Rat Mao a and Human Mao BProc. </plain></SENT>
+<SENT sid="80395" pm="."><plain>Natl. </plain></SENT>
+<SENT sid="80396" pm="."><plain>Acad. </plain></SENT>
+<SENT sid="80397" pm="."><plain>Sci. </plain></SENT>
+<SENT sid="80398" pm="."><plain>USA2005102128641286910.1073/pnas.0505975102<?supplied-pmid 16129825?>16129825 </plain></SENT>
+</text></ref><ref id="B30-molecules-23-01038"><text><SENT sid="80399" pm="."><plain>30.LuT.MarkotanT.CoppoF.TomczukB.CryslerC.EisennagelS.SpurlinoJ.GremmingerL.SollR.M.GiardinoE.C.Oxyguanidines. </plain></SENT>
+<SENT sid="80400" pm="."><plain>Part 2: Discovery of a novel orally active thrombin inhibitor through structure-based drug design and parallel synthesisBioorg. </plain></SENT>
+<SENT sid="80401" pm="."><plain>Med. </plain></SENT>
+<SENT sid="80402" pm="."><plain>Chem. </plain></SENT>
+<SENT sid="80403" pm="."><plain>Lett.2004143727373110.1016/j.bmcl.2004.05.002<?supplied-pmid 15203151?>15203151 </plain></SENT>
+</text></ref><ref id="B31-molecules-23-01038"><text><SENT sid="80404" pm="."><plain>31.RuehmannE.BetzM.HeineA.KlebeG.Fragments Can Bind Either More Enthalpy or Entropy-Driven: Crystal Structures and Residual Hydration Pattern Suggest WhyJ. </plain></SENT>
+<SENT sid="80405" pm="."><plain>Med. </plain></SENT>
+<SENT sid="80406" pm="."><plain>Chem.2015586960697110.1021/acs.jmedchem.5b00812<?supplied-pmid 26270568?>26270568 </plain></SENT>
+</text></ref><ref id="B32-molecules-23-01038"><text><SENT sid="80407" pm="."><plain>32.LeeL.KreutterK.D.PanW.CryslerC.SpurlinoJ.PlayerM.P.TomczukB.LuT.2-(2-Chloro-6-fluorophenyl)acetamides as Potent Thrombin InhibitorsBioorg. </plain></SENT>
+<SENT sid="80408" pm="."><plain>Med. </plain></SENT>
+<SENT sid="80409" pm="."><plain>Chem. </plain></SENT>
+<SENT sid="80410" pm="."><plain>Lett.2007176266626910.1016/j.bmcl.2007.09.013<?supplied-pmid 17889527?>17889527 </plain></SENT>
+</text></ref><ref id="B33-molecules-23-01038"><text><SENT sid="80411" pm="."><plain>33.BielaA.KhayatM.TanH.KongJ.HeineA.HangauerD.KlebeG.Impact of ligand and protein desolvation on ligand binding to the S1 pocket of thrombinJ. </plain></SENT>
+<SENT sid="80412" pm="."><plain>Mol. </plain></SENT>
+<SENT sid="80413" pm="."><plain>Biol.201241835036610.1016/j.jmb.2012.01.054<?supplied-pmid 22366545?>22366545 </plain></SENT>
+</text></ref><ref id="B34-molecules-23-01038"><text><SENT sid="80414" pm="."><plain>34.ChenZ.LiY.MulichakA.M.LewisS.D.ShaferJ.A.Crystal structure of human alpha-thrombin complexed with hirugen and p-amidinophenylpyruvate at 1.6 A resolutionArch. </plain></SENT>
+<SENT sid="80415" pm="."><plain>Biochem. </plain></SENT>
+<SENT sid="80416" pm="."><plain>Biophys.199532219820310.1006/abbi.1995.1452<?supplied-pmid 7574675?>7574675 </plain></SENT>
+</text></ref><ref id="B35-molecules-23-01038"><text><SENT sid="80417" pm="."><plain>35.MeneyrolJ.FollmannM.LassalleG.WehnerV.BarreG.RousseauxT.AltenburgerJ.M.PetitF.BocskeiZ.SchreuderH.5-Chlorothiophene-2-carboxylic acid [(S)-2-[2-methyl-3-(2-oxopyrrolidin-1-yl)benzenesulfonylamino]-3-(4-methylpiperazin-1-yl)-3-oxopropyl]amide (SAR107375), a selective and potent orally active dual thrombin and factor Xa inhibitorJ. </plain></SENT>
+<SENT sid="80418" pm="."><plain>Med. </plain></SENT>
+<SENT sid="80419" pm="."><plain>Chem.2013569441945610.1021/jm4005835<?supplied-pmid 24175584?>24175584 </plain></SENT>
+</text></ref><ref id="B36-molecules-23-01038"><text><SENT sid="80420" pm="."><plain>36.BielaA.SielaffF.TerwestenF.HeineA.SteinmetzerT.KlebeG.Ligand binding stepwise disrupts water network in thrombin: Enthalpic and entropic changes reveal classical hydrophobic effectJ. </plain></SENT>
+<SENT sid="80421" pm="."><plain>Med. </plain></SENT>
+<SENT sid="80422" pm="."><plain>Chem.2012556094611010.1021/jm300337q<?supplied-pmid 22612268?>22612268 </plain></SENT>
+</text></ref><ref id="B37-molecules-23-01038"><text><SENT sid="80423" pm="."><plain>37.ZhangC.SpevakW.ZhangY.BurtonE.A.MaY.HabetsG.ZhangJ.LinJ.EwingT.MatusowB.RAF inhibitors that evade paradoxical MAPK pathway activationNature201552658358610.1038/nature14982<?supplied-pmid 26466569?>26466569 </plain></SENT>
+</text></ref><ref id="B38-molecules-23-01038"><text><SENT sid="80424" pm="."><plain>38.WaizeneggerI.C.BaumA.SteurerS.StadtmullerH.BaderG.SchaafO.Garin-ChesaP.SchlattlA.SchweiferN.HaslingerC.A Novel RAF Kinase Inhibitor with DFG-Out-Binding Mode: High Efficacy in BRAF-Mutant Tumor Xenograft Models in the Absence of Normal Tissue HyperproliferationMol. </plain></SENT>
+<SENT sid="80425" pm="."><plain>Cancer Ther.20161535436510.1158/1535-7163.MCT-15-0617<?supplied-pmid 26916115?>26916115 </plain></SENT>
+</text></ref><ref id="B39-molecules-23-01038"><text><SENT sid="80426" pm="."><plain>39.QinJ.XieP.VentocillaC.ZhouG.VulturA.ChenQ.LiuQ.HerlynM.WinklerJ.MarmorsteinR.Identification of a Novel Family of BRAF(V600E) InhibitorsJ. </plain></SENT>
+<SENT sid="80427" pm="."><plain>Med. </plain></SENT>
+<SENT sid="80428" pm="."><plain>Chem.2012555220523010.1021/jm3004416<?supplied-pmid 22537109?>22537109 </plain></SENT>
+</text></ref><ref id="B40-molecules-23-01038"><text><SENT sid="80429" pm="."><plain>40.TsaiJ.LeeJ.T.WangW.ZhangJ.ChoH.MamoS.BremerR.GilletteS.KongJ.HaassN.K.Discovery of a selective inhibitor of oncogenic B-Raf kinase with potent antimelanoma activityProc. </plain></SENT>
+<SENT sid="80430" pm="."><plain>Natl. </plain></SENT>
+<SENT sid="80431" pm="."><plain>Acad. </plain></SENT>
+<SENT sid="80432" pm="."><plain>Sci. </plain></SENT>
+<SENT sid="80433" pm="."><plain>USA20081053041304610.1073/pnas.0711741105<?supplied-pmid 18287029?>18287029 </plain></SENT>
+</text></ref><ref id="B41-molecules-23-01038"><text><SENT sid="80434" pm="."><plain>41.LawhornB.G.PhilpJ.GravesA.P.ShewchukL.HoltD.A.GattoG.J.KallanderL.S.GSK114: A selective inhibitor for elucidating the biological role of TNNI3KBioorg. </plain></SENT>
+<SENT sid="80435" pm="."><plain>Med. </plain></SENT>
+<SENT sid="80436" pm="."><plain>Chem. </plain></SENT>
+<SENT sid="80437" pm="."><plain>Lett.2016263355335810.1016/j.bmcl.2016.05.033<?supplied-pmid 27246618?>27246618 </plain></SENT>
+</text></ref><ref id="B42-molecules-23-01038"><text><SENT sid="80438" pm="."><plain>42.HansenJ.D.GrinaJ.NewhouseB.WelchM.TopalovG.LittmanN.CallejoM.GloorS.MartinsonM.LairdE.Potent and selective pyrazole-based inhibitors of B-Raf kinaseBioorg. </plain></SENT>
+<SENT sid="80439" pm="."><plain>Med. </plain></SENT>
+<SENT sid="80440" pm="."><plain>Chem. </plain></SENT>
+<SENT sid="80441" pm="."><plain>Lett.2008184692469510.1016/j.bmcl.2008.07.002<?supplied-pmid 18676143?>18676143 </plain></SENT>
+</text></ref><ref id="B43-molecules-23-01038"><text><SENT sid="80442" pm="."><plain>43.KingA.J.PatrickD.R.BatorskyR.S.HoM.L.DoH.T.ZhangS.Y.KumarR.RusnakD.WTakleA.K.WilsonD.M.Demonstration of a genetic therapeutic index for tumors expressing oncogenic BRAF by the kinase inhibitor SB-590885Cancer Res.200666111001110510.1158/0008-5472.CAN-06-2554<?supplied-pmid 17145850?>17145850 </plain></SENT>
+</text></ref><ref id="B44-molecules-23-01038"><text><SENT sid="80443" pm="."><plain>44.RenL.WenglowskyS.MiknisG.RastB.BuckmelterA.J.ElyR.J.SchlachterS.LairdE.R.RandolphN.CallejoM.Non-oxime inhibitors of B-Raf(V600E) kinaseBioorg. </plain></SENT>
+<SENT sid="80444" pm="."><plain>Med. </plain></SENT>
+<SENT sid="80445" pm="."><plain>Chem. </plain></SENT>
+<SENT sid="80446" pm="."><plain>Lett.2011211243124710.1016/j.bmcl.2010.12.061<?supplied-pmid 21251822?>21251822 </plain></SENT>
+</text></ref><ref id="B45-molecules-23-01038"><text><SENT sid="80447" pm="."><plain>45.OkaniwaM.HiroseM.AritaT.YabukiM.NakamuraA.TakagiT.KawamotoT.UchiyamaN.SumitaA.TsutsumiS.Discovery of a Selective Kinase Inhibitor (TAK-632) Targeting Pan-RAF Inhibition: Design, Synthesis, and Biological Evaluation of C-7-Substituted 1,3-Benzothiazole DerivativesJ. </plain></SENT>
+<SENT sid="80448" pm="."><plain>Med. </plain></SENT>
+<SENT sid="80449" pm="."><plain>Chem.2013566478649410.1021/jm400778d<?supplied-pmid 23906342?>23906342 </plain></SENT>
+</text></ref><ref id="B46-molecules-23-01038"><text><SENT sid="80450" pm="."><plain>46.CaballeroJ.Alzate-MoralesJ.H.Vergara-JaqueA.Investigation of the differences in activity between hydroxycycloalkyl N1 substituted pyrazole derivatives as inhibitors of B-Raf kinase by using docking, molecular dynamics, QM/MM, and fragment-based de novo design: Study of binding mode of diastereomer compoundsJ. </plain></SENT>
+<SENT sid="80451" pm="."><plain>Chem. </plain></SENT>
+<SENT sid="80452" pm="."><plain>Inf. </plain></SENT>
+<SENT sid="80453" pm="."><plain>Model.2011512920293110.1021/ci200306w<?supplied-pmid 22011048?>22011048 </plain></SENT>
+</text></ref><ref id="B47-molecules-23-01038"><text><SENT sid="80454" pm="."><plain>47.YuJ.ZhouY.TanakaI.YaoM.Roll: A new algorithm for the detection of protein pockets and cavities with a rolling probe sphereBioinformatics201026465210.1093/bioinformatics/btp599<?supplied-pmid 19846440?>19846440 </plain></SENT>
+</text></ref><ref id="B48-molecules-23-01038"><text><SENT sid="80455" pm="."><plain>48.VerkhivkerG.M.BouzidaD.GehlhaarD.K.RejtoP.A.ArthursS.ColsonA.B.FreerS.T.LarsonV.LutyB.A.MarroneT.Deciphering common failures in molecular docking of ligand-protein complexesJ. </plain></SENT>
+<SENT sid="80456" pm="."><plain>Comput. </plain></SENT>
+<SENT sid="80457" pm="."><plain>Aided Mol. </plain></SENT>
+<SENT sid="80458" pm="."><plain>Des.20001473175110.1023/A:1008158231558<?supplied-pmid 11131967?>11131967 </plain></SENT>
+</text></ref><ref id="B49-molecules-23-01038"><text><SENT sid="80459" pm="."><plain>49.Muñoz-GutierrezC.Adasme-CarreñoF.FuentesE.PalomoI.CaballeroJ.Computational study of the binding orientation and affinity of PPARγ agonists: Inclusion of ligand-induced fit by cross-dockingRSC Adv.20166647566476810.1039/C6RA12084A </plain></SENT>
+</text></ref><ref id="B50-molecules-23-01038"><text><SENT sid="80460" pm="."><plain>50.BarrecaM.L.IraciN.De LucaL.ChimirriA.Induced-fit docking approach provides insight into the binding mode and mechanism of action of HIV-1 integrase inhibitorsChemMedChem200941446145610.1002/cmdc.200900166<?supplied-pmid 19544345?>19544345 </plain></SENT>
+</text></ref><ref id="B51-molecules-23-01038"><text><SENT sid="80461" pm="."><plain>51.KaludercicN.CarpiA.MenabòR.Di LisaF.PaolocciN.Monoamine oxidases (MAO) in the pathogenesis of heart failure and ischemia/reperfusion injuryBiochim. </plain></SENT>
+<SENT sid="80462" pm="."><plain>Biophys. </plain></SENT>
+<SENT sid="80463" pm="."><plain>Acta201118131323133210.1016/j.bbamcr.2010.09.010<?supplied-pmid 20869994?>20869994 </plain></SENT>
+</text></ref><ref id="B52-molecules-23-01038"><text><SENT sid="80464" pm="."><plain>52.RiedererP.LauxG.MAO-inhibitors in Parkinson’s DiseaseExp. </plain></SENT>
+<SENT sid="80465" pm="."><plain>Neurobiol.20112011710.5607/en.2011.20.1.1<?supplied-pmid 22110357?>22110357 </plain></SENT>
+</text></ref><ref id="B53-molecules-23-01038"><text><SENT sid="80466" pm="."><plain>53.SzökőÉ.TábiT.RiedererP.VécseiL.MagyarK.Pharmacological aspects of the neuroprotective effects of irreversible MAO-B inhibitors, selegiline and rasagiline, in Parkinson’s diseaseJ. </plain></SENT>
+<SENT sid="80467" pm="."><plain>Neural Transm. </plain></SENT>
+<SENT sid="80468" pm="."><plain>(Vienna)201810.1007/s00702-018-1853-9<?supplied-pmid 29417334?>29417334 </plain></SENT>
+</text></ref><ref id="B54-molecules-23-01038"><text><SENT sid="80469" pm="."><plain>54.TanakaK.A.KeyN.S.LevyJ.H.Blood coagulation: Hemostasis and thrombin regulationAnesth. </plain></SENT>
+<SENT sid="80470" pm="."><plain>Analg.20091081433144610.1213/ane.0b013e31819bcc9c<?supplied-pmid 19372317?>19372317 </plain></SENT>
+</text></ref><ref id="B55-molecules-23-01038"><text><SENT sid="80471" pm="."><plain>55.StringerK.A.LindenfeldJ.Hirudins: Antithrombin anticoagulantsAnn. </plain></SENT>
+<SENT sid="80472" pm="."><plain>Pharmacother.1992261535154010.1177/106002809202601211<?supplied-pmid 1482812?>1482812 </plain></SENT>
+</text></ref><ref id="B56-molecules-23-01038"><text><SENT sid="80473" pm="."><plain>56.XiaoZ.ThérouxP.Platelet activation with unfractionated heparin at therapeutic concentrations and comparisons with a low-molecular-weight heparin and with a direct thrombin inhibitorCirculation19989725125610.1161/01.CIR.97.3.251<?supplied-pmid 9462526?>9462526 </plain></SENT>
+</text></ref><ref id="B57-molecules-23-01038"><text><SENT sid="80474" pm="."><plain>57.AlbanS.Pharmacological strategies for inhibition of thrombin activityCurr. </plain></SENT>
+<SENT sid="80475" pm="."><plain>Pharm. </plain></SENT>
+<SENT sid="80476" pm="."><plain>Des.2008141152117510.2174/138161208784246135<?supplied-pmid 18473863?>18473863 </plain></SENT>
+</text></ref><ref id="B58-molecules-23-01038"><text><SENT sid="80477" pm="."><plain>58.MercerK.E.PritchardC.A.Raf proteins and cancer: B-Raf is identified as a mutational targetBiochim. </plain></SENT>
+<SENT sid="80478" pm="."><plain>Biophys. </plain></SENT>
+<SENT sid="80479" pm="."><plain>Acta20031653254010.1016/S0304-419X(03)00016-712781369 </plain></SENT>
+</text></ref><ref id="B59-molecules-23-01038"><text><SENT sid="80480" pm="."><plain>59.GarnettM.J.MaraisR.Guilty as charged: B-RAF is a human oncogeneCancer Cell2004631331910.1016/j.ccr.2004.09.022<?supplied-pmid 15488754?>15488754 </plain></SENT>
+</text></ref><ref id="B60-molecules-23-01038"><text><SENT sid="80481" pm="."><plain>60.LiN.BattD.WarmuthM.B-Raf kinase inhibitors for cancer treatmentCurr. </plain></SENT>
+<SENT sid="80482" pm="."><plain>Opin. </plain></SENT>
+<SENT sid="80483" pm="."><plain>Investig. </plain></SENT>
+<SENT sid="80484" pm="."><plain>Drugs20078452456<?supplied-pmid 17621874?>17621874 </plain></SENT>
+</text></ref><ref id="B61-molecules-23-01038"><text><SENT sid="80485" pm="."><plain>61.JorgensenW.L.MaxwellD.S.Tirado-RivesJ.Development and testing of the OPLS all-atom force field on conformational energetics and properties of organic liquidsJ. </plain></SENT>
+<SENT sid="80486" pm="."><plain>Am. </plain></SENT>
+<SENT sid="80487" pm="."><plain>Chem. </plain></SENT>
+<SENT sid="80488" pm="."><plain>Soc.1996118112251123610.1021/ja9621760 </plain></SENT>
+</text></ref><ref id="B62-molecules-23-01038"><text><SENT sid="80489" pm="."><plain>62.CaporuscioF.RastelliG.ImbrianoC.Del RioA.Structure-based design of potent aromatase inhibitors by high-throughput dockingJ. </plain></SENT>
+<SENT sid="80490" pm="."><plain>Med. </plain></SENT>
+<SENT sid="80491" pm="."><plain>Chem.2011544006401710.1021/jm2000689<?supplied-pmid 21604760?>21604760 </plain></SENT>
+</text></ref><ref id="B63-molecules-23-01038"><text><SENT sid="80492" pm="."><plain>63.Abdul-HayS.O.LaneA.L.CaulfieldT.R.ClaussinC.BertrandJ.MassonA.ChoudhryS.FauqA.H.MaharviG.M.LeissringM.A.Optimization of peptide hydroxamate inhibitors of insulin-degrading enzyme reveals marked substrate-selectivityJ. </plain></SENT>
+<SENT sid="80493" pm="."><plain>Med. </plain></SENT>
+<SENT sid="80494" pm="."><plain>Chem.2013562246225510.1021/jm301280p<?supplied-pmid 23437776?>23437776 </plain></SENT>
+</text></ref><ref id="B64-molecules-23-01038"><text><SENT sid="80495" pm="."><plain>64.OsguthorpeD.J.ShermanW.HaglerA.T.Generation of receptor structural ensembles for virtual screening using binding site shape analysis and clusteringChem. </plain></SENT>
+<SENT sid="80496" pm="."><plain>Biol. </plain></SENT>
+<SENT sid="80497" pm="."><plain>Drug Des.20128018219310.1111/j.1747-0285.2012.01396.x<?supplied-pmid 22515569?>22515569 </plain></SENT>
+</text></ref><ref id="B65-molecules-23-01038"><text><SENT sid="80498" pm="."><plain>65.AmaningK.LowinskiM.ValleeF.SteierV.MarcireauC.UgoliniA.DelormeC.FoucaltF.McCortG.DerimayN.The use of virtual screening and differential scanning fluorimetry for the rapid identification of fragments active against MEK1Bioorg. </plain></SENT>
+<SENT sid="80499" pm="."><plain>Med. </plain></SENT>
+<SENT sid="80500" pm="."><plain>Chem. </plain></SENT>
+<SENT sid="80501" pm="."><plain>Lett.2013233620362610.1016/j.bmcl.2013.04.003<?supplied-pmid 23648182?>23648182 </plain></SENT>
+</text></ref><ref id="B66-molecules-23-01038"><text><SENT sid="80502" pm="."><plain>66.RamírezD.Computational methods applied to rational drug designOpen Med. </plain></SENT>
+<SENT sid="80503" pm="."><plain>Chem. </plain></SENT>
+<SENT sid="80504" pm="."><plain>J.20161072010.2174/1874104501610010007<?supplied-pmid 27708723?>27708723 </plain></SENT>
+</text></ref><ref id="B67-molecules-23-01038"><text><SENT sid="80505" pm="."><plain>67.KaminskiG.A.FriesnerR.A.Tirado-RivesJ.JorgensenW.L.Evaluation and reparametrization of the OPLS-AA force field for proteins via comparison with accurate quantum chemical calculations on peptidesJ. </plain></SENT>
+<SENT sid="80506" pm="."><plain>Phys. </plain></SENT>
+<SENT sid="80507" pm="."><plain>Chem. </plain></SENT>
+<SENT sid="80508" pm="."><plain>B20011056474648710.1021/jp003919d </plain></SENT>
+</text></ref><ref id="B68-molecules-23-01038"><text><SENT sid="80509" pm="."><plain>68.EldridgeM.D.MurrayC.W.AutonT.R.PaoliniG.V.MeeR.P.Empirical scoring functions: I. </plain></SENT>
+<SENT sid="80510" pm="."><plain>The development of a fast empirical scoring function to estimate the binding affinity of ligands in receptor complexesJ. </plain></SENT>
+<SENT sid="80511" pm="."><plain>Comput. </plain></SENT>
+<SENT sid="80512" pm="."><plain>Aided Mol. </plain></SENT>
+<SENT sid="80513" pm="."><plain>Des.19971142544510.1023/A:1007996124545<?supplied-pmid 9385547?>9385547 </plain></SENT>
+</text></ref><ref id="B69-molecules-23-01038"><text><SENT sid="80514" pm="."><plain>69.HueyR.MorrisG.M.OlsonA.J.GoodsellD.S.A semiempirical free energy force field with charge-based desolvationJ. </plain></SENT>
+<SENT sid="80515" pm="."><plain>Comput. </plain></SENT>
+<SENT sid="80516" pm="."><plain>Chem.2007281145115210.1002/jcc.20634<?supplied-pmid 17274016?>17274016 </plain></SENT>
+</text></ref><ref id="B70-molecules-23-01038"><text><SENT sid="80517" pm="."><plain>70.MorrisG.M.HueyR.LindstromW.SannerM.F.BelewR.K.GoodsellD.S.OlsonA.J.AutoDock4 and AutoDockTools4: Automated docking with selective receptor flexibilityJ. </plain></SENT>
+<SENT sid="80518" pm="."><plain>Comput. </plain></SENT>
+<SENT sid="80519" pm="."><plain>Chem.2009302785279110.1002/jcc.21256<?supplied-pmid 19399780?>19399780 </plain></SENT>
+</text></ref></ref-list></SecTag></back><floats-group><SecTag type="FIG"><fig id="molecules-23-01038-f001" orientation="portrait" position="float"><label>Figure 1</label><caption><p><text><SENT sid="80520" pm="."><plain>Examples of RMSD for docked ligands (gray) with respect to reference ligand at the crystal structures (green) for illustrating good (RMSD ≤ 2.0 Å), acceptable (RMSD &gt; 2.0 Å and &lt;3.0 Å) and bad (RMSD ≥ 3.0 Å) solutions in each target protein. a1: 5-hydroxy-N-propargyl-1(R)-aminoindan; g2: d-phenylalanyl-N-(pyridin-4-ylmethyl)-l-prolinamide; b3: N-(3-{5-[(1-ethylpiperidin-4-yl)(methyl)-amino]-3-(pyrimidin-5-yl)-1H-pyrrolo[3,2-b]pyridin-1-yl}-2,4-difluorophenyl)propane-1-sulfonamide. </plain></SENT>
+</text></p></caption><graphic xlink:href="molecules-23-01038-g001"/></fig></SecTag><SecTag type="FIG"><fig id="molecules-23-01038-f002" orientation="portrait" position="float"><label>Figure 2</label><caption><p><text><SENT sid="80521" pm="."><plain>Self-docking percentages of recurrence of the best solution at each scoring position for the targets MAO-B, thrombin, and B-RAF considering s2 (bottom) and s3 (top) criteria. </plain></SENT>
+<SENT sid="80522" pm="."><plain>Glide HTVS (blue), Glide SP (red), Glide XP (orange) and AutoDock (green) were used as docking methods. </plain></SENT>
+<SENT sid="80523" pm="."><plain>Docking experiments were performed in triplicate. </plain></SENT>
+</text></p></caption><graphic xlink:href="molecules-23-01038-g002"/></fig></SecTag><SecTag type="FIG"><fig id="molecules-23-01038-f003" orientation="portrait" position="float"><label>Figure 3</label><caption><p><text><SENT sid="80524" pm="."><plain>Matrix of good and bad solutions obtained by cross-docking ligands b1, h1, j1 into MAO-B; b2, g2, h2 into thrombin; and b3, f3, g3 into B-RAF binding sites. </plain></SENT>
+<SENT sid="80525" pm="."><plain>Good solutions are defined considering RMSD under threshold of 2.0 Å (s2 criterion). </plain></SENT>
+<SENT sid="80526" pm="."><plain>Light gray squares represent instances with at least one good solution was found, and black squares represent instances with only BSs. </plain></SENT>
+<SENT sid="80527" pm="."><plain>Dark gray squares represent self-docking, with numbers inside indicating the ranked poses. </plain></SENT>
+</text></p></caption><graphic xlink:href="molecules-23-01038-g003"/></fig></SecTag><SecTag type="FIG"><fig id="molecules-23-01038-f004" orientation="portrait" position="float"><label>Figure 4</label><caption><p><text><SENT sid="80528" pm="."><plain>Cross-docking percentages of recurrence of the best solution at each scoring position for the targets MAO-B, thrombin and B-RAF considering s2 (bottom) and s3 (top) criteria. </plain></SENT>
+<SENT sid="80529" pm="."><plain>Glide HTVS (blue), Glide SP (red), Glide XP (orange) and AutoDock (green) were used as docking methods. </plain></SENT>
+<SENT sid="80530" pm="."><plain>Docking experiments were performed in triplicate. </plain></SENT>
+</text></p></caption><graphic xlink:href="molecules-23-01038-g004"/></fig></SecTag><SecTag type="TABLE"><table-wrap id="molecules-23-01038-t001" orientation="portrait" position="float"><object-id pub-id-type="pii">molecules-23-01038-t001_Table 1</object-id><label>Table 1</label><caption><p><text><SENT sid="80531" pm="."><plain>Crystal structures selected for self-docking and cross-docking experiments. </plain></SENT>
+</text></p></caption><table frame="hsides" rules="groups"><thead><tr><th align="center" valign="middle" style="border-top:solid thin;border-bottom:solid thin" rowspan="1" colspan="1"><text></text></th><th align="center" valign="middle" style="border-top:solid thin;border-bottom:solid thin" rowspan="1" colspan="1"><text></text></th><th align="center" valign="middle" style="border-top:solid thin;border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80532" pm="."><plain>MAO-B </plain></SENT>
+</text></th><th align="center" valign="middle" style="border-top:solid thin;border-bottom:solid thin" rowspan="1" colspan="1"><text></text></th></tr><tr><th align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80533" pm="."><plain>PDB ID </plain></SENT>
+</text></th><th align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80534" pm="."><plain>Resolution (Å) </plain></SENT>
+</text></th><th align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80535" pm="."><plain>Ligand </plain></SENT>
+</text></th><th align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80536" pm="."><plain>Reference </plain></SENT>
+</text></th></tr></thead><tbody><tr><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80537" pm="."><plain>1S3E </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80538" pm="."><plain>1.60 </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80539" pm="."><plain>a1: 5-hydroxy-N-propargyl-1(R)-aminoindan </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80540" pm="."><plain>[23] </plain></SENT>
+</text></td></tr><tr><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80541" pm="."><plain>2V5Z </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80542" pm="."><plain>1.60 </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80543" pm="."><plain>b1: Safinamide </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80544" pm="."><plain>[24] </plain></SENT>
+</text></td></tr><tr><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80545" pm="."><plain>1S3B </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80546" pm="."><plain>1.65 </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80547" pm="."><plain>c1:N-methyl-N-propargyl-1(R)-aminoindan </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80548" pm="."><plain>[23] </plain></SENT>
+</text></td></tr><tr><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80549" pm="."><plain>1OJC </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80550" pm="."><plain>2.40 </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80551" pm="."><plain>d1: 4-chloro-N-(2-hydrixyethyl)benzamide </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80552" pm="."><plain>[25] </plain></SENT>
+</text></td></tr><tr><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80553" pm="."><plain>2C65 </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80554" pm="."><plain>1.70 </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80555" pm="."><plain>e1: (1R)-4-({[ethyl(methyl)amino]carbonyl}oxy)-N-methyl-N-[(1E)-prop-2-en-1-ylidene]undan-1-aminium </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80556" pm="."><plain>[26] </plain></SENT>
+</text></td></tr><tr><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80557" pm="."><plain>2VZ2 </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80558" pm="."><plain>2.30 </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80559" pm="."><plain>f1: (1Z)-4-(4-fluorophenyl)-2-methylidenebutan-1-imine </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80560" pm="."><plain>[27] </plain></SENT>
+</text></td></tr><tr><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80561" pm="."><plain>4A79 </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80562" pm="."><plain>1.89 </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80563" pm="."><plain>g1: Pioglitazone </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80564" pm="."><plain>[28] </plain></SENT>
+</text></td></tr><tr><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80565" pm="."><plain>1S2Y </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80566" pm="."><plain>2.12 </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80567" pm="."><plain>h1: N-propargyl-1(S)-aminoindan </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80568" pm="."><plain>[23] </plain></SENT>
+</text></td></tr><tr><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80569" pm="."><plain>2BYB </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80570" pm="."><plain>2.20 </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80571" pm="."><plain>i1:N-methyl-N-[(1R)-1-methyl-2-phenylethyl]prop-2-en-1-amine </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80572" pm="."><plain>[29] </plain></SENT>
+</text></td></tr><tr><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80573" pm="."><plain>1OJ9 </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80574" pm="."><plain>2.30 </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80575" pm="."><plain>j1: 1,4-duphenyl-2-butene </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80576" pm="."><plain>[25] </plain></SENT>
+</text></td></tr><tr><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text></text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text></text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80577" pm="."><plain>Thrombin </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text></text></td></tr><tr><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80578" pm="."><plain>PDB ID </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80579" pm="."><plain>Resolution (Å) </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80580" pm="."><plain>Ligand </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80581" pm="."><plain>Reference </plain></SENT>
+</text></td></tr><tr><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80582" pm="."><plain>1T4U </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80583" pm="."><plain>2.00 </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80584" pm="."><plain>a2: 2-methanesulfonyl-benzenesulfonic acid 3-methyl-5-((1-amidinoaminooxymethyl-cyclopropyl)methyloxy)-phenylester </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80585" pm="."><plain>[30] </plain></SENT>
+</text></td></tr><tr><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80586" pm="."><plain>1T4V </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80587" pm="."><plain>2.00 </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80588" pm="."><plain>b2: N-allyl-5-amidinoaminooxy-propyloxy-3-chloro-N-cyclopentylbenzamide </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80589" pm="."><plain>[30] </plain></SENT>
+</text></td></tr><tr><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80590" pm="."><plain>3C27 </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80591" pm="."><plain>2.18 </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80592" pm="."><plain>c2:N-[2-(carbamimidamidooxy)ethyl]-2-{6-cyano-3-[(2,2-difluoro-2-pyridin-2-ylethyl)amino]-2-fluorophenyl}acetamide </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text></text></td></tr><tr><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80593" pm="."><plain>4UDW </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80594" pm="."><plain>1.16 </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80595" pm="."><plain>d2:d-phenylalanyl-N-(2,5-dichlorobenzyl)-l-prolinamide </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80596" pm="."><plain>[31] </plain></SENT>
+</text></td></tr><tr><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80597" pm="."><plain>2R2M </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80598" pm="."><plain>2.10 </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80599" pm="."><plain>e2:N-[2-({[amino(imino)methyl]amino}oxy)ethyl]-2-{6-chloro-3-[(2,2-difluoro-2-phenylethyl)amino]-2-fluorophenyl}acetamide </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80600" pm="."><plain>[32] </plain></SENT>
+</text></td></tr><tr><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80601" pm="."><plain>3LDX </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80602" pm="."><plain>2.25 </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80603" pm="."><plain>f2: RWJ-671818 </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text></text></td></tr><tr><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80604" pm="."><plain>3SV2 </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80605" pm="."><plain>1.30 </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80606" pm="."><plain>g2: d-phenylalanyl-N-(pyridin-4-ylmethyl)-l-prolinamide </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80607" pm="."><plain>[33] </plain></SENT>
+</text></td></tr><tr><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80608" pm="."><plain>1AHT </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80609" pm="."><plain>1.60 </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80610" pm="."><plain>h2: (2S)-3-(4-carbamimidoylphenyl)-2-hydroxypropanoic acid </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80611" pm="."><plain>[34] </plain></SENT>
+</text></td></tr><tr><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80612" pm="."><plain>4LXB </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80613" pm="."><plain>1.61 </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80614" pm="."><plain>i2: 5-chloro-thiophene-2-carboxylic acid [(S)-2-[2-difluoromethoxy-3-(2-oxo-piperidin-1-yl)-benzenesulfonylamino]-3-((S)-3-dimethylamino-pyrrolidin-1-yl)-3-oxo-propyl]-amide </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80615" pm="."><plain>[35] </plain></SENT>
+</text></td></tr><tr><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80616" pm="."><plain>3RM2 </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80617" pm="."><plain>1.23 </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80618" pm="."><plain>j2:N-(benzylsulfonyl)-3-cyclohexyl-d-alanyl-N-(4-carbamimidoylbenzyl)-l-prolinamide </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80619" pm="."><plain>[36] </plain></SENT>
+</text></td></tr><tr><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text></text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text></text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80620" pm="."><plain>B-RAF protein kinase </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text></text></td></tr><tr><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80621" pm="."><plain>PDB ID </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80622" pm="."><plain>Resolution (Å) </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80623" pm="."><plain>Ligand </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80624" pm="."><plain>Reference </plain></SENT>
+</text></td></tr><tr><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80625" pm="."><plain>4XV9 </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80626" pm="."><plain>2.00 </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80627" pm="."><plain>a3:N-{3-[(5-chloro-1H-pyrrolo[2,3-b]pyridin-3-yl)carbonyl]-2,4-difluorophenyl}-4-(trifluoromethyl)benzenesulfonamide </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80628" pm="."><plain>[37] </plain></SENT>
+</text></td></tr><tr><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80629" pm="."><plain>5CSX </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80630" pm="."><plain>2.51 </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80631" pm="."><plain>b3: N-(3-{5-[(1-ethylpiperidin-4-yl)(methyl)amino]-3-(pyrimidin-5-yl)-1H-pyrrolo[3,2-b]pyridin-1-yl}-2,4-difluorophenyl)propane-1-sulfonamide </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80632" pm="."><plain>[38] </plain></SENT>
+</text></td></tr><tr><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80633" pm="."><plain>4E26 </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80634" pm="."><plain>2.55 </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80635" pm="."><plain>c3: 5-chloro-7-[(R)-furan-2-yl(pyridin-2-ylamino)methyl]quinolin-8-ol </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80636" pm="."><plain>[39] </plain></SENT>
+</text></td></tr><tr><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80637" pm="."><plain>3C4C </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80638" pm="."><plain>2.57 </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80639" pm="."><plain>d3:N-{3-[(5-chloro-1H-pyrrolo[2,3-b]pyridin-3-yl)carbonyl]-2,4-difluorophenyl}propane-1-sulfonamide </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80640" pm="."><plain>[40] </plain></SENT>
+</text></td></tr><tr><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80641" pm="."><plain>5CSW </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80642" pm="."><plain>2.66 </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80643" pm="."><plain>e3: Dabrafenib </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80644" pm="."><plain>[38] </plain></SENT>
+</text></td></tr><tr><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80645" pm="."><plain>4YHT </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80646" pm="."><plain>3.05 </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80647" pm="."><plain>f3: 3-[(5-chloro-7H-pyrrolo[2,3-d]pyrimidin-4-yl)amino]-N-methyl-4-(morpholin-4-yl)benzenesulfonamide </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80648" pm="."><plain>[41] </plain></SENT>
+</text></td></tr><tr><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80649" pm="."><plain>3D4Q </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80650" pm="."><plain>2.80 </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80651" pm="."><plain>g3: (1E)-5-(1-piperidin-4-yl-3-pyridin-4-yl-1H-pyrazol-4-yl)-2,3-dihydro-1H-inden-1-one oxime </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80652" pm="."><plain>[42] </plain></SENT>
+</text></td></tr><tr><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80653" pm="."><plain>2FB8 </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80654" pm="."><plain>2.90 </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80655" pm="."><plain>h3: (1Z)-5-(2-{4-[2-(dimethylamino)ethoxy]phenyl}-5-pyridin-4-yl-1H-imidazol-4-yl)indan-1-one oxime </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80656" pm="."><plain>[43] </plain></SENT>
+</text></td></tr><tr><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80657" pm="."><plain>3PRF </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80658" pm="."><plain>2.90 </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80659" pm="."><plain>i3: 2-chloro-5-{[2-(pyrimidin-2-yl)furo[2,3-c]pyridin-3-yl]amino}phenol </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80660" pm="."><plain>[44] </plain></SENT>
+</text></td></tr><tr><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80661" pm="."><plain>4KSP </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80662" pm="."><plain>2.93 </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80663" pm="."><plain>j3:N-{7-cyano-6-[4-fluoro-3-({[3-(trifluoromethyl)phenyl]acetyl}amino)phenoxy]-1,3-benzothiazol-2-yl}cyclopropanecarboxamide </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80664" pm="."><plain>[45] </plain></SENT>
+</text></td></tr></tbody></table><table-wrap-foot><fn><p>Note: Ligands used in cross-docking experiments are in bold letter.</p></fn></table-wrap-foot></table-wrap></SecTag><SecTag type="TABLE"><table-wrap id="molecules-23-01038-t002" orientation="portrait" position="float"><object-id pub-id-type="pii">molecules-23-01038-t002_Table 2</object-id><label>Table 2</label><caption><p><text><SENT sid="80665" pm="."><plain>Characteristics of the protein binding sites and ligands for each PDB structure under study. </plain></SENT>
+</text></p></caption><table frame="hsides" rules="groups"><thead><tr><th align="center" valign="middle" style="border-top:solid thin;border-bottom:solid thin" rowspan="1" colspan="1"><text></text></th><th align="center" valign="middle" style="border-top:solid thin;border-bottom:solid thin" rowspan="1" colspan="1"><text></text></th><th align="center" valign="middle" style="border-top:solid thin;border-bottom:solid thin" rowspan="1" colspan="1"><text></text></th><th align="center" valign="middle" style="border-top:solid thin;border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80666" pm="."><plain>Protein Binding Site </plain></SENT>
+</text></th><th align="center" valign="middle" style="border-top:solid thin;border-bottom:solid thin" rowspan="1" colspan="1"><text></text></th><th align="center" valign="middle" style="border-top:solid thin;border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80667" pm="."><plain>Ligand </plain></SENT>
+</text></th><th align="center" valign="middle" style="border-top:solid thin;border-bottom:solid thin" rowspan="1" colspan="1"><text></text></th></tr><tr><th align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80668" pm="."><plain>PDB </plain></SENT>
+</text></th><th align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80669" pm="."><plain>Ligand </plain></SENT>
+</text></th><th align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80670" pm="."><plain>BSV (Å3) a </plain></SENT>
+</text></th><th align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80671" pm="."><plain>VD Value b </plain></SENT>
+</text></th><th align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80672" pm="."><plain>Averaged VD c </plain></SENT>
+</text></th><th align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80673" pm="."><plain>Number of Rotatable Angles </plain></SENT>
+</text></th><th align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80674" pm="."><plain>MW (g/mol) </plain></SENT>
+</text></th></tr></thead><tbody><tr><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80675" pm="."><plain>MAO-B </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text></text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text></text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text></text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text></text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text></text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text></text></td></tr><tr><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80676" pm="."><plain>1S3E </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80677" pm="."><plain>a1 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80678" pm="."><plain>221 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80679" pm="."><plain>2485 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80680" pm="."><plain>11.2474 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80681" pm="."><plain>2 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80682" pm="."><plain>187.2 </plain></SENT>
+</text></td></tr><tr><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80683" pm="."><plain>2V5Z </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80684" pm="."><plain>b1 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80685" pm="."><plain>237 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80686" pm="."><plain>3162 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80687" pm="."><plain>13.3418 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80688" pm="."><plain>6 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80689" pm="."><plain>300.3 </plain></SENT>
+</text></td></tr><tr><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80690" pm="."><plain>1S3B </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80691" pm="."><plain>c1 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80692" pm="."><plain>110 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80693" pm="."><plain>1417 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80694" pm="."><plain>12.8848 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80695" pm="."><plain>2 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80696" pm="."><plain>201.2 </plain></SENT>
+</text></td></tr><tr><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80697" pm="."><plain>1OJC </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80698" pm="."><plain>d1 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80699" pm="."><plain>270 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80700" pm="."><plain>2900 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80701" pm="."><plain>10.7420 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80702" pm="."><plain>3 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80703" pm="."><plain>199.6 </plain></SENT>
+</text></td></tr><tr><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80704" pm="."><plain>2C65 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80705" pm="."><plain>e1 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80706" pm="."><plain>276 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80707" pm="."><plain>2974 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80708" pm="."><plain>10.7754 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80709" pm="."><plain>5 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80710" pm="."><plain>287.3 </plain></SENT>
+</text></td></tr><tr><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80711" pm="."><plain>2VZ2 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80712" pm="."><plain>f1 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80713" pm="."><plain>116 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80714" pm="."><plain>1555 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80715" pm="."><plain>13.4080 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80716" pm="."><plain>4 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80717" pm="."><plain>177.2 </plain></SENT>
+</text></td></tr><tr><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80718" pm="."><plain>4A79 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80719" pm="."><plain>g1 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80720" pm="."><plain>97 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80721" pm="."><plain>1274 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80722" pm="."><plain>13.1409 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80723" pm="."><plain>7 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80724" pm="."><plain>356.4 </plain></SENT>
+</text></td></tr><tr><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80725" pm="."><plain>1S2Y </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80726" pm="."><plain>h1 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80727" pm="."><plain>132 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80728" pm="."><plain>1677 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80729" pm="."><plain>12.7071 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80730" pm="."><plain>2 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80731" pm="."><plain>171.2 </plain></SENT>
+</text></td></tr><tr><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80732" pm="."><plain>2BYB </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80733" pm="."><plain>i1 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80734" pm="."><plain>286 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80735" pm="."><plain>3097 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80736" pm="."><plain>10.8298 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80737" pm="."><plain>5 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80738" pm="."><plain>189.3 </plain></SENT>
+</text></td></tr><tr><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80739" pm="."><plain>1OJ9 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80740" pm="."><plain>j1 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80741" pm="."><plain>289 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80742" pm="."><plain>3285 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80743" pm="."><plain>11.3691 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80744" pm="."><plain>4 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80745" pm="."><plain>208.3 </plain></SENT>
+</text></td></tr><tr><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80746" pm="."><plain>Thrombin </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text></text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text></text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text></text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text></text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text></text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text></text></td></tr><tr><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80747" pm="."><plain>1T4U </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80748" pm="."><plain>a2 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80749" pm="."><plain>286 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80750" pm="."><plain>670 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80751" pm="."><plain>2.34499 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80752" pm="."><plain>10 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80753" pm="."><plain>483.5 </plain></SENT>
+</text></td></tr><tr><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80754" pm="."><plain>1T4V </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80755" pm="."><plain>b2 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80756" pm="."><plain>388 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80757" pm="."><plain>1054 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80758" pm="."><plain>2.71649 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80759" pm="."><plain>10 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80760" pm="."><plain>394.9 </plain></SENT>
+</text></td></tr><tr><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80761" pm="."><plain>3C27 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80762" pm="."><plain>c2 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80763" pm="."><plain>366 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80764" pm="."><plain>937 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80765" pm="."><plain>2.56011 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80766" pm="."><plain>10 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80767" pm="."><plain>435.4 </plain></SENT>
+</text></td></tr><tr><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80768" pm="."><plain>4UDW </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80769" pm="."><plain>d2 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80770" pm="."><plain>172 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80771" pm="."><plain>486 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80772" pm="."><plain>2.82946 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80773" pm="."><plain>6 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80774" pm="."><plain>420.3 </plain></SENT>
+</text></td></tr><tr><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80775" pm="."><plain>2R2M </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80776" pm="."><plain>e2 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80777" pm="."><plain>333 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80778" pm="."><plain>796 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80779" pm="."><plain>2.39239 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80780" pm="."><plain>10 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80781" pm="."><plain>443.8 </plain></SENT>
+</text></td></tr><tr><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80782" pm="."><plain>3LDX </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80783" pm="."><plain>f2 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80784" pm="."><plain>336 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80785" pm="."><plain>805 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80786" pm="."><plain>2.39583 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80787" pm="."><plain>10 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80788" pm="."><plain>423.4 </plain></SENT>
+</text></td></tr><tr><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80789" pm="."><plain>3SV2 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80790" pm="."><plain>g2 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80791" pm="."><plain>297 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80792" pm="."><plain>835 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80793" pm="."><plain>2.81145 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80794" pm="."><plain>6 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80795" pm="."><plain>352.4 </plain></SENT>
+</text></td></tr><tr><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80796" pm="."><plain>1AHT </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80797" pm="."><plain>h2 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80798" pm="."><plain>321 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80799" pm="."><plain>852 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80800" pm="."><plain>2.65628 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80801" pm="."><plain>4 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80802" pm="."><plain>208.2 </plain></SENT>
+</text></td></tr><tr><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80803" pm="."><plain>4LXB </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80804" pm="."><plain>i2 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80805" pm="."><plain>334 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80806" pm="."><plain>790 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80807" pm="."><plain>2.36727 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80808" pm="."><plain>11 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80809" pm="."><plain>648.1 </plain></SENT>
+</text></td></tr><tr><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80810" pm="."><plain>3RM2 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80811" pm="."><plain>j2 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80812" pm="."><plain>308 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80813" pm="."><plain>724 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80814" pm="."><plain>2.35281 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80815" pm="."><plain>11 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80816" pm="."><plain>553.7 </plain></SENT>
+</text></td></tr><tr><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80817" pm="."><plain>B-RAF </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text></text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text></text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text></text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text></text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text></text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text></text></td></tr><tr><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80818" pm="."><plain>4XV9 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80819" pm="."><plain>a3 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80820" pm="."><plain>359 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80821" pm="."><plain>1432 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80822" pm="."><plain>3.98886 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80823" pm="."><plain>6 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80824" pm="."><plain>515.8 </plain></SENT>
+</text></td></tr><tr><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80825" pm="."><plain>5CSX </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80826" pm="."><plain>b3 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80827" pm="."><plain>438 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80828" pm="."><plain>2834 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80829" pm="."><plain>6.47108 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80830" pm="."><plain>9 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80831" pm="."><plain>569.6 </plain></SENT>
+</text></td></tr><tr><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80832" pm="."><plain>4E26 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80833" pm="."><plain>c3 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80834" pm="."><plain>316 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80835" pm="."><plain>1030 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80836" pm="."><plain>3.26160 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80837" pm="."><plain>4 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80838" pm="."><plain>351.7 </plain></SENT>
+</text></td></tr><tr><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80839" pm="."><plain>3C4C </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80840" pm="."><plain>d3 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80841" pm="."><plain>311 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80842" pm="."><plain>925 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80843" pm="."><plain>2.97428 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80844" pm="."><plain>6 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80845" pm="."><plain>413.8 </plain></SENT>
+</text></td></tr><tr><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80846" pm="."><plain>5CSW </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80847" pm="."><plain>e3 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80848" pm="."><plain>180 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80849" pm="."><plain>909 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80850" pm="."><plain>5.05000 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80851" pm="."><plain>6 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80852" pm="."><plain>519.5 </plain></SENT>
+</text></td></tr><tr><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80853" pm="."><plain>4YHT </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80854" pm="."><plain>f3 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80855" pm="."><plain>185 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80856" pm="."><plain>662 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80857" pm="."><plain>3.58198 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80858" pm="."><plain>5 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80859" pm="."><plain>422.9 </plain></SENT>
+</text></td></tr><tr><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80860" pm="."><plain>3D4Q </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80861" pm="."><plain>g3 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80862" pm="."><plain>216 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80863" pm="."><plain>815 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80864" pm="."><plain>3.77623 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80865" pm="."><plain>3 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80866" pm="."><plain>377.4 </plain></SENT>
+</text></td></tr><tr><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80867" pm="."><plain>2FB8 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80868" pm="."><plain>h3 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80869" pm="."><plain>202 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80870" pm="."><plain>708 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80871" pm="."><plain>3.50495 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80872" pm="."><plain>8 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80873" pm="."><plain>453.5 </plain></SENT>
+</text></td></tr><tr><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80874" pm="."><plain>3PRF </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80875" pm="."><plain>i3 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80876" pm="."><plain>211 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80877" pm="."><plain>687 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80878" pm="."><plain>3.25750 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80879" pm="."><plain>2 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="80880" pm="."><plain>338.7 </plain></SENT>
+</text></td></tr><tr><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80881" pm="."><plain>4KSP </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80882" pm="."><plain>j3 </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80883" pm="."><plain>444 </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80884" pm="."><plain>1415 </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80885" pm="."><plain>3.18769 </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80886" pm="."><plain>9 </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="80887" pm="."><plain>556.5 </plain></SENT>
+</text></td></tr></tbody></table><table-wrap-foot><fn><p><sup>a</sup> BSV is the binding site volumen. <sup>b</sup> VD is the volume depth value, which is determined by summing the depth of all pocket points; the depth of every pocket point is defined as the shortest distance from pocket point to probe surface. <sup>c</sup> Averaged VD is the average of the depth of every pocket points. More information in reference [<xref rid="B47-molecules-23-01038" ref-type="bibr">47</xref>].</p></fn></table-wrap-foot></table-wrap></SecTag></floats-group></article>

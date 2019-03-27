@@ -28,11 +28,22 @@ for file in os.listdir("./articlesOA"):
         names=xmlAccessionNb.findall(".//name")
         for name in names:
             accessionNames.append(name.text)
-        fileSentencized=codecs.open("./Sentencized/XML-sentencized/"+(str(file).split("-")[0])+".xml","r",encoding="utf-8")
+        fileSentencized=codecs.open("./Sentencized/XML-cured/"+(str(file).split("-")[0])+".xml","r",encoding="utf-8")
         fileSentencized=fileSentencized.read()
+        os.system('clear')
         print (str(file).split("-")[0]+".xml")
         """
         fileSentencized=fileSentencized.split(re.search(r'.+REF.+',fileSentencized).group())[0]+"</text></p></fn></fn-group></back></article>"
         """
         fileSentencized=etree.fromstring(fileSentencized)
-        sentences=fileSentencized.findall(".//SENT")
+        sentences=fileSentencized.findall(".//plain")
+        sentencesIndex=0
+        while sentencesIndex<len(sentences):
+            for accessionNb in accessionNames:
+                print (type(sentences[sentencesIndex].text),sentencesIndex)
+                if accessionNb in sentences[sentencesIndex].text:
+                    print (accessionNames)
+                    print (accessionNb)
+                    print (sentences[sentencesIndex+2])
+                    print (sentences[sentencesIndex-1].text+" "+sentences[sentencesIndex].text+" "+sentences[sentencesIndex+1].text+" "+sentences[sentencesIndex+2].text)
+            sentencesIndex+=1
