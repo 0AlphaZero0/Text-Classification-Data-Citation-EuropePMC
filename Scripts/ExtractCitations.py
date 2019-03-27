@@ -25,17 +25,11 @@ for file in os.listdir("./articlesOA"):
         fileAccessionNb=codecs.open("./articlesOA/"+str(file),"r",encoding="utf-8")
         fileAccessionNb=fileAccessionNb.read()
         xmlAccessionNb=etree.fromstring(fileAccessionNb)
-        for item in xmlAccessionNb:
-            for annotations in item:
-                if annotations.tag=="annotations":
-                    for annotation in annotations:
-                        for tags in annotation:
-                            if tags.tag=="tags":
-                                for tag in tags:
-                                    for name in tag:
-                                        if name.tag=="name":
-                                            accessionNames.append(name.text)
-        fileFullText=codecs.open("./articlesOA/"+(str(file).split("-")[0])+"-fulltxt.xml","r",encoding="utf-8")
-        fileFullText=fileFullText.read()
-        for accessionNb in accessionNames:
-            
+        names=xmlAccessionNb.findall(".//name")
+        for name in names:
+            accessionNames.append(name.text)
+        fileSentencized=codecs.open("./Sentencized/XML-sentencized/"+(str(file).split("-")[0])+".xml","r",encoding="utf-8")
+        fileSentencized=fileSentencized.read()
+        print (str(file).split("-")[0]+".xml")
+        fileSentencized=etree.fromstring(fileSentencized)
+        sentences=fileSentencized.findall(".//SENT")
