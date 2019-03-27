@@ -8,7 +8,7 @@
 </div>
 &nbsp;  &nbsp;  &nbsp;  
 <h1 align="center">Bibliography</h1>
-<p align="center">Sentiment Analysis on Citations in Scientific Papers in Europe Pub Med Central</p>
+<p align="center">Sentiment Analysis on Data Citations in Scientific Papers in Europe Pub Med Central</p>
 
 ______________________________________________________________________
 
