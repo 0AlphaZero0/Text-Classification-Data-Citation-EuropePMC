@@ -18,7 +18,13 @@ import xml # Allows to manipulate xml files
 #################################    Main     ###################################################
 length=(len(os.listdir("./articlesOA"))-1)/2
 
-
+resultFile=codecs.open("resultCitations.csv","w",encoding="utf-8")
+resultFile.write("PMCID")
+resultFile.write("\t")
+resultFile.write("AccessionNb")
+resultFile.write("\t")
+resultFile.write("Citation")
+resultFile.write("\n")
 for file in os.listdir("./articlesOA"):
     if file.endswith("-AccessionNb.xml"):
         accessionNames=[]
@@ -33,8 +39,8 @@ for file in os.listdir("./articlesOA"):
         fileSentencized=codecs.open("./Sentencized/XML-cured/"+(str(file).split("-")[0])+".xml","r",encoding="utf-8")
         fileSentencizedTmp=fileSentencized.read()
         fileSentencized.close()
-        os.system('clear')
-        print (str(file).split("-")[0]+".xml")
+        #os.system('clear')
+        #print (str(file).split("-")[0]+".xml")
         fileSentencizedTmp=etree.fromstring(fileSentencizedTmp)
         sentences=fileSentencizedTmp.findall(".//SENT")
         sentencesIndex=0
@@ -48,10 +54,16 @@ for file in os.listdir("./articlesOA"):
                         tmpafter=tmpafter+''.join(sentences[sentencesIndex+1].itertext())
                     if sentencesIndex+2<len(sentences):
                         tmpafter=tmpafter+''.join(sentences[sentencesIndex+2].itertext())
-                    print ("\n",accessionNb,"|",sentencesIndex)
+                    #print ("\n",accessionNb,"|",sentencesIndex)
                     resultString=''.join(tmp.itertext())
-                    resultFinal=tmpafter+resultString+tmpafter
-                    print (resultFinal)
+                    resultFinalString=tmpafter+resultString+tmpafter
+                    resultFile.write(str(file).split("-")[0])
+                    resultFile.write("\t")
+                    resultFile.write(accessionNb)
+                    resultFile.write("\t")
+                    resultFile.write(resultFinalString)
+                    resultFile.write("\n")
+                    #print (resultFinalString)
                 # print ("ERROR")
                 # print (file)
                 # print (accessionNames)
@@ -60,3 +72,5 @@ for file in os.listdir("./articlesOA"):
                 # print (sentences[sentencesIndex].get("sid"))
                 # print (type(sentences[sentencesIndex].text),"sentences")
             sentencesIndex+=1
+resultFile.close()
+print("DONE")
