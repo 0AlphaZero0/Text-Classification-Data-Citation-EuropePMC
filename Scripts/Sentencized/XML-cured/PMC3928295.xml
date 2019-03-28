@@ -170,8 +170,7 @@
 <SENT sid="21960" pm="."><plain>Increasing the basis set on the MP2 part of the system to cc-pVDZ and cc-pVTZ increased the time to 1967 s and 18845 s, respectively (see Table 2). </plain></SENT>
 <SENT sid="21961" pm="."><plain>The large increase in calculation time from cc-pVDZ to cc-pVTZ was found to be due to sub-optimal load balancing in GDDI during the MP2 part of the calculation. </plain></SENT>
 <SENT sid="21962" pm="."><plain>Subsequently, one optimization using the cc-pVTZ was carried out, in which the calculation of the MP2 fragment energy and gradient was distributed across all 10 nodes. </plain></SENT>
-<SENT sid="21963" pm="."><plain>This reduced the average gradient step time from 18845 s to 10911 s. </plain></SENT>
-<SENT sid="21964" pm="."><plain>In other words, the slower calculation used 10 GDDI groups in the second (MP2) layer, whereas the faster one had 1 group, during the monomer step. </plain></SENT>
+<SENT sid="21963" pm="."><plain>This reduced the average gradient step time from 18845 s to 10911 s. In other words, the slower calculation used 10 GDDI groups in the second (MP2) layer, whereas the faster one had 1 group, during the monomer step. </plain></SENT>
 <SENT sid="21965" pm="."><plain>The latter run is more efficient because the MP2 fragment was calculated by all 10 nodes, whereas in the former only by 1 node. </plain></SENT>
 </text></p><SecTag type="TABLE"><table-wrap id="pone-0088800-t002" orientation="portrait" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0088800.t002</object-id><label>Table 2</label><caption><title><text><SENT sid="21966" pm="."><plain>Timings for the average geometry optimization step for Chorismate Mutase using using different methods. </plain></SENT>
 </text></title></caption><alternatives><graphic id="pone-0088800-t002-2" xlink:href="pone.0088800.t002"/><table frame="hsides" rules="groups"><colgroup span="1"><col align="left" span="1"/><col align="center" span="1"/></colgroup><thead><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="21967" pm="."><plain>Method </plain></SENT>
@@ -205,8 +204,7 @@
 </text></title><supplementary-material content-type="local-data" id="pone.0088800.s001"><label>File S1</label><caption><p><text><SENT sid="21995" pm="."><plain>GAMESS input files to calculate the reaction path at the EFMO-RHF/6-31G(d):MP2/cc-pVDZ level of theory. </plain></SENT>
 </text></p><p><text><SENT sid="21996" pm="."><plain>(BZ2) </plain></SENT>
 </text></p></caption><media xlink:href="pone.0088800.s001.bz2"><caption><p><text><SENT sid="21997" pm="."><plain>Click here for additional data file. </plain></SENT>
-</text></p></caption></media></supplementary-material></sec></SecTag></body><back><SecTag type="REF"><ref-list><title>References</title><ref id="pone.0088800-Otto1"><text><SENT sid="21998" pm="."><plain>1 OttoP, LadikJ (1975) Investigation of the interaction between molecules at medium distances: I. </plain></SENT>
-<SENT sid="21999" pm="."><plain>SCF LCAO MO supermolecule, perturbational and mutually consistent calculations for two interacting HF and CH2O molecules. Chem Phys 8: 192–200. </plain></SENT>
+</text></p></caption></media></supplementary-material></sec></SecTag></body><back><SecTag type="REF"><ref-list><title>References</title><ref id="pone.0088800-Otto1"><text><SENT sid="21998" pm="."><plain>1 OttoP, LadikJ (1975) Investigation of the interaction between molecules at medium distances: I. SCF LCAO MO supermolecule, perturbational and mutually consistent calculations for two interacting HF and CH2O molecules. Chem Phys 8: 192–200. </plain></SENT>
 </text></ref><ref id="pone.0088800-Gao1"><text><SENT sid="22000" pm="?"><plain>2 GaoJ (1997) Toward a Molecular Orbital Derived Empirical Potential for Liquid Simulations. J? </plain></SENT>
 <SENT sid="22001" pm="?"><plain>Phys Chem? </plain></SENT>
 <SENT sid="22002" pm="."><plain>B 101: 657–663. </plain></SENT>

@@ -20,22 +20,28 @@ for file in os.listdir("./"):
         oldFile=codecs.open(file,"r",encoding="utf-8")
         tmpFile=oldFile.read()
         oldFile.close()
-        matchesEtAl=re.findall(r'\set\sal\.\s(</plain></SENT>\n<[^>]+>[^>]+>)',tmpFile)
-        matchesSurname=re.findall(r'\s[a-zA-Z]\.\s(</plain></SENT>\n<[^>]+>[^>]+>)',tmpFile)
-        matchesCa=re.findall(r'\sca\.\s(</plain></SENT>\n<[^>]+>[^>]+>)',tmpFile)
-        matchesApprox=re.findall(r'\sapprox\.\s(</plain></SENT>\n<[^>]+>[^>]+>)',tmpFile)
+        matchesEtAl=re.findall(r'\set\sal\.\s(</plain></SENT>\n<[^>]+pm=\"\.\"><plain>)',tmpFile)
+        matchesSurname=re.findall(r'\s[^h\d%;]\.\s(</plain></SENT>\n<[^>]+pm=\"\.\"><plain>)',tmpFile)
+        matchesCa=re.findall(r'\sca\.\s(</plain></SENT>\n<[^>]+pm=\"\.\"><plain>)',tmpFile)
+        matchesApprox=re.findall(r'\sapprox\.\s(</plain></SENT>\n<[^>]+pm=\"\.\"><plain>)',tmpFile)
+        matchesRef=re.findall(r'\(ref\.\s(</plain></SENT>\n<[^>]+pm=\"\.\"><plain>)',tmpFile)
         for match in matchesEtAl:
-            print ("match1")
+            #print ("match1")
             tmpFile=tmpFile.replace(match,'')
         for match in matchesSurname:
-            print ("match2")
+            #print ("match2")
             tmpFile=tmpFile.replace(match,'')
         for match in matchesCa:
-            print ("match3")
+            #print ("match3")
             tmpFile=tmpFile.replace(match,'')
         for match in matchesApprox:
-            print ("match4")
+            #print ("match4")
+            tmpFile=tmpFile.replace(match,'')
+        for match in matchesRef:
+            #print ("match5")
             tmpFile=tmpFile.replace(match,'')
         newFile=codecs.open(file,"w",encoding="utf-8")
         newFile.write(tmpFile)
         newFile.close()
+    else:
+        print (file)

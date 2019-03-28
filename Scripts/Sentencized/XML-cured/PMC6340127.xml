@@ -37,8 +37,7 @@
 <SENT sid="88374" pm="."><plain>In lossless compression all of the information is completely restored after decompression. </plain></SENT>
 <SENT sid="88375" pm="."><plain>While in the lossy technique, we loss some of the data and do not recover the complete original data after decompression. </plain></SENT>
 </text></p><p><text><SENT sid="88376" pm="."><plain>The proposed research is a lossless compression algorithm which builds an Extended Binary Tree for DNA sequences by assigning binary codes (0 and 1) to each base to compress both repetitive and non-repetitive DNA sequences. </plain></SENT>
-<SENT sid="88377" pm="."><plain>The algorithm is implemented using R. </plain></SENT>
-<SENT sid="88378" pm="."><plain>This paper is organized in 6 sections. </plain></SENT>
+<SENT sid="88377" pm="."><plain>The algorithm is implemented using R. This paper is organized in 6 sections. </plain></SENT>
 <SENT sid="88379" pm="."><plain>Section 2 presents the background and previous work related to the research, Section 3 describes the proposed methodology and working principle, Section 4 presents the results, Section 5 discusses and analyzes the results, and last but not least Section 6 includes conclusion and future work. </plain></SENT>
 </text></p></sec></SecTag><SecTag type="INTRO"><sec id="j_jib-2017-0057_s_002"><label>2</label><title><text><SENT sid="88380" pm="."><plain>Related Work </plain></SENT>
 </text></title><p><text><SENT sid="88381" pm="."><plain>Due to not using special structures of biological sequences, the standard compression techniques cannot compress the biological sequences well. </plain></SENT>
@@ -88,8 +87,7 @@
 </text></title><p><text><SENT sid="88425" pm="."><plain>The proposed algorithm works on two phases. </plain></SENT>
 <SENT sid="88426" pm="."><plain>In the first phase it uses Huffman code to generate an extended binary tree based on the frequencies of the bases. </plain></SENT>
 <SENT sid="88427" pm="."><plain>In the second phase, each base is replaced by its corresponding binary bits generated from the tree. </plain></SENT>
-<SENT sid="88428" pm="."><plain>Compression and decompression of the DNA sequences are performed using R. </plain></SENT>
-<SENT sid="88429" pm="."><plain>Several steps are performed in this manner as described in the subsections through 3.1 to 3.6. </plain></SENT>
+<SENT sid="88428" pm="."><plain>Compression and decompression of the DNA sequences are performed using R. Several steps are performed in this manner as described in the subsections through 3.1 to 3.6. </plain></SENT>
 <SENT sid="88430" pm="."><plain>A flowchart showing the proposed methodology including compression and decompression method is noticed in Figure 1. </plain></SENT>
 </text></p><SecTag type="FIG"><fig id="j_jib-2017-0057_fig_001" fig-type="figure" orientation="portrait" position="float"><label>Figure 1:</label><caption><p><text><SENT sid="88431" pm="."><plain>Flowchart of proposed methodology. </plain></SENT>
 </text></p></caption><graphic xlink:href="jib-15-20170057-g001"/></fig></SecTag><sec id="j_jib-2017-0057_s_003_s_001"><label>3.1</label><title><text><SENT sid="88432" pm="."><plain>DNA Sequence Download </plain></SENT>
@@ -198,13 +196,11 @@
 </text></p><p><text><SENT sid="88535" pm="."><plain>\documentclass[10pt]{article} \usepackage{wasysym} \usepackage[substack]{amsmath} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage[mathscr]{eucal} \usepackage{mathrsfs} \usepackage{pmc} \usepackage[Euler]{upgreek} \pagestyle{empty} \oddsidemargin -1.0in \begin{document} $$\eqalign{ {\text{Compression ratio}} &amp; = 1286/1000{\text{ bits}}/{\text{base}} \cr &amp; = {\text{1}}{\text{.286 bits/base}} \cr}$$ \end{document} Compression ratio=1286/1000 bits/base=1.286 bits/base </plain></SENT>
 </text></p></statement><SecTag type="FIG"><fig id="j_jib-2017-0057_fig_005" fig-type="figure" orientation="portrait" position="float"><label>Figure 5:</label><caption><p><text><SENT sid="88536" pm="."><plain>Generated tree for Example 3. </plain></SENT>
 </text></p></caption><graphic xlink:href="jib-15-20170057-g005"/></fig></SecTag></sec></sec></SecTag><SecTag type="RESULTS"><sec id="j_jib-2017-0057_s_004"><label>4</label><title><text><SENT sid="88537" pm="."><plain>Result </plain></SENT>
-</text></title><p><text><SENT sid="88538" pm="."><plain>The proposed DNA compression algorithm is a modified version of the original ‘HuffBit Compress Algorithm’ and is developed using R. </plain></SENT>
-<SENT sid="88539" pm="."><plain>The algorithm is designed to achieve the best case compression ratio always, compared to the ‘HuffBit Compress Algorithm’. </plain></SENT>
+</text></title><p><text><SENT sid="88538" pm="."><plain>The proposed DNA compression algorithm is a modified version of the original ‘HuffBit Compress Algorithm’ and is developed using R. The algorithm is designed to achieve the best case compression ratio always, compared to the ‘HuffBit Compress Algorithm’. </plain></SENT>
 <SENT sid="88540" pm="."><plain>Several subsections are used here to describe the result of the proposed algorithm through 4.1 to 4.3. </plain></SENT>
 </text></p><sec id="j_jib-2017-0057_s_004_s_001"><label>4.1</label><title><text><SENT sid="88541" pm="."><plain>Downloaded DNA Sequence </plain></SENT>
 </text></title><p><text><SENT sid="88542" pm="."><plain>DNA sequence is a sequence with only four bases (a, c, g, t) of large numbers. </plain></SENT>
-<SENT sid="88543" pm="."><plain>For this analysis ‘DENGUE’ DNA sequence is downloaded and saved in FASTA-format using R. </plain></SENT>
-<SENT sid="88544" pm="."><plain>The downloaded DNA sequence containing 10735 bases is then read in R for pre-processing and further analysis. </plain></SENT>
+<SENT sid="88543" pm="."><plain>For this analysis ‘DENGUE’ DNA sequence is downloaded and saved in FASTA-format using R. The downloaded DNA sequence containing 10735 bases is then read in R for pre-processing and further analysis. </plain></SENT>
 <SENT sid="88545" pm="."><plain>The top 630 bases of the sequence are displayed in Figure 6. </plain></SENT>
 </text></p><SecTag type="FIG"><fig id="j_jib-2017-0057_fig_006" fig-type="figure" orientation="portrait" position="float"><label>Figure 6:</label><caption><p><text><SENT sid="88546" pm="."><plain>Top 630 bases of DENGUE DNA sequence using R. </plain></SENT>
 </text></p></caption><graphic xlink:href="jib-15-20170057-g006"/></fig></SecTag></sec><sec id="j_jib-2017-0057_s_004_s_002"><label>4.2</label><title><text><SENT sid="88547" pm="."><plain>Pre-processing and Compression Method </plain></SENT>
@@ -438,8 +434,7 @@
 <SENT sid="88775" pm="."><plain>If the sequence is compressed using Modified HuffBit Compress algorithm, it will be easier to compress large bytes of DNA sequences with better compression ratio. </plain></SENT>
 <SENT sid="88776" pm="."><plain>An advantage of the proposed algorithm is, it works well for large sequences. </plain></SENT>
 <SENT sid="88777" pm="."><plain>So, it can be helpful to save storage problem greatly. </plain></SENT>
-<SENT sid="88778" pm="."><plain>Moreover, it uses less time, memory and easy to implement using R. </plain></SENT>
-<SENT sid="88779" pm="."><plain>This research also creates a new dimension of using R in DNA compression which is the main potentiality of the research work. </plain></SENT>
+<SENT sid="88778" pm="."><plain>Moreover, it uses less time, memory and easy to implement using R. This research also creates a new dimension of using R in DNA compression which is the main potentiality of the research work. </plain></SENT>
 <SENT sid="88780" pm="."><plain>The future work of the research is to overcome the limitations of the proposed algorithm and to come with a better outcome. </plain></SENT>
 </text></p></sec></SecTag></body><back><SecTag type="ACK_FUND"><ack id="j_jib-2017-0057_ack_001"><title>Acknowledgments</title><p><text4fund><text><SENT sid="88781" pm="."><plain>The authors are grateful to the participants who contributed to this research. </plain></SENT>
 <SENT sid="88782" pm="."><plain>No financial support is provided from any organization during the research project. </plain></SENT>

@@ -23,27 +23,40 @@ for file in os.listdir("./articlesOA"):
     if file.endswith("-AccessionNb.xml"):
         accessionNames=[]
         fileAccessionNb=codecs.open("./articlesOA/"+str(file),"r",encoding="utf-8")
-        fileAccessionNb=fileAccessionNb.read()
-        xmlAccessionNb=etree.fromstring(fileAccessionNb)
+        fileAccessTmp=fileAccessionNb.read()
+        fileAccessionNb.close()
+        xmlAccessionNb=etree.fromstring(fileAccessTmp)
         names=xmlAccessionNb.findall(".//name")
         for name in names:
-            accessionNames.append(name.text)
+            if name not in accessionNames:
+                accessionNames.append(name.text)
         fileSentencized=codecs.open("./Sentencized/XML-cured/"+(str(file).split("-")[0])+".xml","r",encoding="utf-8")
-        fileSentencized=fileSentencized.read()
+        fileSentencizedTmp=fileSentencized.read()
+        fileSentencized.close()
         os.system('clear')
         print (str(file).split("-")[0]+".xml")
-        """
-        fileSentencized=fileSentencized.split(re.search(r'.+REF.+',fileSentencized).group())[0]+"</text></p></fn></fn-group></back></article>"
-        """
-        fileSentencized=etree.fromstring(fileSentencized)
-        sentences=fileSentencized.findall(".//plain")
+        fileSentencizedTmp=etree.fromstring(fileSentencizedTmp)
+        sentences=fileSentencizedTmp.findall(".//SENT")
         sentencesIndex=0
         while sentencesIndex<len(sentences):
             for accessionNb in accessionNames:
-                print (type(sentences[sentencesIndex].text),sentencesIndex)
-                if accessionNb in sentences[sentencesIndex].text:
-                    print (accessionNames)
-                    print (accessionNb)
-                    print (sentences[sentencesIndex+2])
-                    print (sentences[sentencesIndex-1].text+" "+sentences[sentencesIndex].text+" "+sentences[sentencesIndex+1].text+" "+sentences[sentencesIndex+2].text)
+                tmp=sentences[sentencesIndex]
+                tmpbefore=sentences[sentencesIndex-1]
+                if accessionNb in ''.join(tmp.itertext()):
+                    tmpafter=''
+                    if sentencesIndex+1<len(sentences):
+                        tmpafter=tmpafter+''.join(sentences[sentencesIndex+1].itertext())
+                    if sentencesIndex+2<len(sentences):
+                        tmpafter=tmpafter+''.join(sentences[sentencesIndex+2].itertext())
+                    print ("\n",accessionNb,"|",sentencesIndex)
+                    resultString=''.join(tmp.itertext())
+                    resultFinal=tmpafter+resultString+tmpafter
+                    print (resultFinal)
+                # print ("ERROR")
+                # print (file)
+                # print (accessionNames)
+                # print (accessionNb)
+                # print (sentencesIndex)
+                # print (sentences[sentencesIndex].get("sid"))
+                # print (type(sentences[sentencesIndex].text),"sentences")
             sentencesIndex+=1
