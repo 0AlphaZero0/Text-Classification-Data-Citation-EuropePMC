@@ -1,0 +1,41 @@
+#!/usr/bin/env python
+#-*- coding: utf-8 -*-
+# THOUVENIN Arthur
+########################
+import codecs # Allows to load a file containing UTF-8 characters
+#import numpy as np # Allows to manipulate the necessary table for sklearn
+import os # Allows to modify some things on the os
+import random # Allows to use random variables
+import re # Allows to make regex requests
+import requests # Allows to make http requests
+# import shutil #allows file copy
+# import sys # Allow to modify files on the OS
+import time # Allows to make a pause to not overcharge the server
+# import webbrowser # Allow to use url to open a webbrowser
+
+#################################    Main     ###################################################
+
+for file in os.listdir("./"):
+    if file.endswith(".xml"):
+        oldFile=codecs.open(file,"r",encoding="utf-8")
+        tmpFile=oldFile.read()
+        oldFile.close()
+        matchesEtAl=re.findall(r'et\sal\.\s(</plain></SENT>\n<[^>]+>[^>]+>)',tmpFile)
+        matchesSurname=re.findall(r'[a-zA-Z]\.\s(</plain></SENT>\n<[^>]+>[^>]+>)',tmpFile)
+        matchesCa=re.findall(r'ca\.\s(</plain></SENT>\n<[^>]+>[^>]+>)',tmpFile)
+        matchesApprox=re.findall(r'approx\.\s(</plain></SENT>\n<[^>]+>[^>]+>)',tmpFile)
+        for match in matchesEtAl:
+            print ("match1")
+            tmpFile=tmpFile.replace(match,'')
+        for match in matchesSurname:
+            print ("match2")
+            tmpFile=tmpFile.replace(match,'')
+        for match in matchesCa:
+            print ("match3")
+            tmpFile=tmpFile.replace(match,'')
+        for match in matchesApprox:
+            print ("match4")
+            tmpFile=tmpFile.replace(match,'')
+        newFile=codecs.open(file,"w",encoding="utf-8")
+        newFile.write(tmpFile)
+        newFile.close()
