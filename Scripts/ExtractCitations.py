@@ -18,12 +18,16 @@ import xml # Allows to manipulate xml files
 #################################    Main     ###################################################
 length=(len(os.listdir("./articlesOA"))-1)/2
 
-resultFile=codecs.open("resultCitations.csv","w",encoding="utf-8")
+resultFile=codecs.open("resultCitations.txt","w",encoding="utf-8")
 resultFile.write("PMCID")
 resultFile.write("\t")
 resultFile.write("AccessionNb")
 resultFile.write("\t")
+resultFile.write("Pre-citation")
+resultFile.write("\t")
 resultFile.write("Citation")
+resultFile.write("\t")
+resultFile.write("Post-citation")
 resultFile.write("\n")
 for file in os.listdir("./articlesOA"):
     if file.endswith("-AccessionNb.xml"):
@@ -47,7 +51,7 @@ for file in os.listdir("./articlesOA"):
         while sentencesIndex<len(sentences):
             for accessionNb in accessionNames:
                 tmp=sentences[sentencesIndex]
-                tmpbefore=sentences[sentencesIndex-1]
+                tmpbefore=''.join(sentences[sentencesIndex-1].itertext())
                 if accessionNb in ''.join(tmp.itertext()):
                     tmpafter=''
                     if sentencesIndex+1<len(sentences):
@@ -56,12 +60,15 @@ for file in os.listdir("./articlesOA"):
                         tmpafter=tmpafter+''.join(sentences[sentencesIndex+2].itertext())
                     #print ("\n",accessionNb,"|",sentencesIndex)
                     resultString=''.join(tmp.itertext())
-                    resultFinalString=tmpafter+resultString+tmpafter
                     resultFile.write(str(file).split("-")[0])
-                    resultFile.write("\t")
+                    resultFile.write("|")
                     resultFile.write(accessionNb)
-                    resultFile.write("\t")
-                    resultFile.write(resultFinalString)
+                    resultFile.write("|")
+                    resultFile.write(tmpbefore)
+                    resultFile.write("|")
+                    resultFile.write(resultString)
+                    resultFile.write("|")
+                    resultFile.write(tmpafter)
                     resultFile.write("\n")
                     #print (resultFinalString)
                 # print ("ERROR")
