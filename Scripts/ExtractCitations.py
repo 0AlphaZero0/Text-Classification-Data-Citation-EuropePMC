@@ -3,9 +3,12 @@
 # THOUVENIN Arthur
 ########################
 import codecs # Allows to load a file containing UTF-8 characters
+from difflib import SequenceMatcher # Allows to give string similarity
 from lxml import etree # Allows to manipulate xml file easily
 import os # Allows to modify some things on the os
+import re # Allows to make regex requests
 import xml # Allows to manipulate xml files
+
 
 
 
@@ -16,6 +19,8 @@ resultFile=codecs.open("resultCitations.csv","w",encoding="utf-8")
 resultFile.write("PMCID")
 resultFile.write("\t")
 resultFile.write("AccessionNb")
+resultFile.write("\t")
+resultFile.write("Section")
 resultFile.write("\t")
 resultFile.write("Pre-citation")
 resultFile.write("\t")
@@ -30,33 +35,63 @@ for file in os.listdir("./articlesOA"):
         fileAccessTmp=fileAccessionNb.read()
         fileAccessionNb.close()
         xmlAccessionNb=etree.fromstring(fileAccessTmp)
+        ### Extract Accession number
         names=xmlAccessionNb.findall(".//name")
         for name in names:
             if name.text not in accessionNames:
                 accessionNames.append(name.text)
+        ### Extract Section type
+        prefixes=xmlAccessionNb.findall(".//prefix")
+        postfixes=xmlAccessionNb.findall(".//postfix")
+        sections=xmlAccessionNb.findall(".//section")
+        preCitPosts=[]
+        index=0
+        while index<len(names):
+            preCitPosts.append([''.join(prefixes[index].itertext())+''.join(names[index].itertext())+''.join(postfixes[index].itertext()),''.join(sections[index].itertext())])
+            index+=1
         fileSentencized=codecs.open("./Sentencized/XML-cured/"+(str(file).split("-")[0])+".xml","r",encoding="utf-8")
         fileSentencizedTmp=fileSentencized.read()
         fileSentencized.close()
-        #os.system('clear')
-        #print (str(file).split("-")[0]+".xml")
         fileSentencizedTmp=etree.fromstring(fileSentencizedTmp)
         sentences=fileSentencizedTmp.findall(".//SENT")
         sentencesIndex=0
         while sentencesIndex<len(sentences):
             for accessionNb in accessionNames:
+                section=''
                 tmp=sentences[sentencesIndex]
                 tmpbefore=''.join(sentences[sentencesIndex-1].itertext())
                 if accessionNb in ''.join(tmp.itertext()):
                     tmpafter=''
+                    for preCitPost in preCitPosts:
+                        if preCitPost[0] in ''.join(tmp.itertext()):
+                            section=preCitPost[1]
+                            if "(" in section:
+                                section=section.split(" (")[0]
+                        else:
+                            tmpStrRatio=''.join(tmp.itertext())
+                            indexMatch=tmpStrRatio.find(accessionNb)
+                            beginning=indexMatch-20
+                            if beginning <0:
+                                beginning=0
+                            ending=indexMatch+len(accessionNb)+20
+                            if ending>len(tmpStrRatio)-1:
+                                ending=len(tmpStrRatio)
+                            tmpStrRatio=tmpStrRatio[beginning:ending]
+                            strRatio=SequenceMatcher(None,tmpStrRatio,preCitPost[0])
+                            if strRatio.ratio()>0.50:
+                                section=preCitPost[1]
+                            if "(" in section:
+                                section=section.split(" (")[0]
                     if sentencesIndex+1<len(sentences):
                         tmpafter=tmpafter+''.join(sentences[sentencesIndex+1].itertext())
                         if sentencesIndex+2<len(sentences):
                             tmpafter=tmpafter+''.join(sentences[sentencesIndex+2].itertext())
-                    #print ("\n",accessionNb,"|",sentencesIndex)
                     resultString=''.join(tmp.itertext())
                     resultFile.write(str(file).split("-")[0])
                     resultFile.write("\t")
                     resultFile.write(accessionNb)
+                    resultFile.write("\t")
+                    resultFile.write(section)
                     resultFile.write("\t")
                     resultFile.write(tmpbefore)
                     resultFile.write("\t")
@@ -64,14 +99,6 @@ for file in os.listdir("./articlesOA"):
                     resultFile.write("\t")
                     resultFile.write(tmpafter)
                     resultFile.write("\n")
-                    #print (resultFinalString)
-                # print ("ERROR")
-                # print (file)
-                # print (accessionNames)
-                # print (accessionNb)
-                # print (sentencesIndex)
-                # print (sentences[sentencesIndex].get("sid"))
-                # print (type(sentences[sentencesIndex].text),"sentences")
             sentencesIndex+=1
 resultFile.close()
 print("DONE")

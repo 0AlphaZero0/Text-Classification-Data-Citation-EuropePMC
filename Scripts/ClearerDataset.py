@@ -19,6 +19,7 @@ import xml # Allows to manipulate xml files
 
 pmcid=[]
 accessionNb=[]
+section=[]
 citationBefore=[]
 citation=[]
 citationAfter=[]
@@ -26,14 +27,17 @@ citationAfter=[]
 csvfile=codecs.open("resultCitations.csv","r",encoding="utf-8")
 for line in csvfile.readlines():
     line=line.split("\t")
-    if line[3] not in citation:
+    if line[2]=="":
+        pass
+    elif line[4] not in citation:
         pmcid.append(line[0])
         accessionNb.append(line[1])
-        citationBefore.append(line[2])
-        citation.append(line[3])
-        citationAfter.append(line[4][:-2])
+        section.append(line[2])
+        citationBefore.append(line[3])
+        citation.append(line[4])
+        citationAfter.append(line[5][:-2])
     else:
-        indexCitation=citation.index(line[3])
+        indexCitation=citation.index(line[4])
         accessionNb[indexCitation]=accessionNb[indexCitation]+","+line[1]
 dataset=codecs.open("dataset1.csv","w",encoding="utf-8")
 indexDataset=0
@@ -42,6 +46,8 @@ while indexDataset < len(citation):
     dataset.write(pmcid[indexDataset])
     dataset.write("\t")
     dataset.write(accessionNb[indexDataset])
+    dataset.write("\t")
+    dataset.write(section[indexDataset])
     dataset.write("\t")
     dataset.write(citationBefore[indexDataset])
     dataset.write("\t")
