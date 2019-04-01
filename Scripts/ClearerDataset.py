@@ -23,9 +23,9 @@ citationBefore=[]
 citation=[]
 citationAfter=[]
 
-csvfile=codecs.open("resultCitations.txt","r",encoding="utf-8")
+csvfile=codecs.open("resultCitations.csv","r",encoding="utf-8")
 for line in csvfile.readlines():
-    line=line.split("|")
+    line=line.split("\t")
     if line[3] not in citation:
         pmcid.append(line[0])
         accessionNb.append(line[1])

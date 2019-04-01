@@ -18,7 +18,7 @@ import xml # Allows to manipulate xml files
 #################################    Main     ###################################################
 length=(len(os.listdir("./articlesOA"))-1)/2
 
-resultFile=codecs.open("resultCitations.txt","w",encoding="utf-8")
+resultFile=codecs.open("resultCitations.csv","w",encoding="utf-8")
 resultFile.write("PMCID")
 resultFile.write("\t")
 resultFile.write("AccessionNb")
@@ -38,7 +38,7 @@ for file in os.listdir("./articlesOA"):
         xmlAccessionNb=etree.fromstring(fileAccessTmp)
         names=xmlAccessionNb.findall(".//name")
         for name in names:
-            if name not in accessionNames:
+            if name.text not in accessionNames:
                 accessionNames.append(name.text)
         fileSentencized=codecs.open("./Sentencized/XML-cured/"+(str(file).split("-")[0])+".xml","r",encoding="utf-8")
         fileSentencizedTmp=fileSentencized.read()
@@ -56,18 +56,18 @@ for file in os.listdir("./articlesOA"):
                     tmpafter=''
                     if sentencesIndex+1<len(sentences):
                         tmpafter=tmpafter+''.join(sentences[sentencesIndex+1].itertext())
-                    if sentencesIndex+2<len(sentences):
-                        tmpafter=tmpafter+''.join(sentences[sentencesIndex+2].itertext())
+                        if sentencesIndex+2<len(sentences):
+                            tmpafter=tmpafter+''.join(sentences[sentencesIndex+2].itertext())
                     #print ("\n",accessionNb,"|",sentencesIndex)
                     resultString=''.join(tmp.itertext())
                     resultFile.write(str(file).split("-")[0])
-                    resultFile.write("|")
+                    resultFile.write("\t")
                     resultFile.write(accessionNb)
-                    resultFile.write("|")
+                    resultFile.write("\t")
                     resultFile.write(tmpbefore)
-                    resultFile.write("|")
+                    resultFile.write("\t")
                     resultFile.write(resultString)
-                    resultFile.write("|")
+                    resultFile.write("\t")
                     resultFile.write(tmpafter)
                     resultFile.write("\n")
                     #print (resultFinalString)
