@@ -22,6 +22,8 @@ resultFile.write("AccessionNb")
 resultFile.write("\t")
 resultFile.write("Section")
 resultFile.write("\t")
+resultFile.write("SubType")
+resultFile.write("\t")
 resultFile.write("Pre-citation")
 resultFile.write("\t")
 resultFile.write("Citation")
@@ -44,10 +46,11 @@ for file in os.listdir("./articlesOA"):
         prefixes=xmlAccessionNb.findall(".//prefix")
         postfixes=xmlAccessionNb.findall(".//postfix")
         sections=xmlAccessionNb.findall(".//section")
+        subtypes=xmlAccessionNb.findall(".//subType")
         preCitPosts=[]
         index=0
         while index<len(names):
-            preCitPosts.append([''.join(prefixes[index].itertext())+''.join(names[index].itertext())+''.join(postfixes[index].itertext()),''.join(sections[index].itertext())])
+            preCitPosts.append([''.join(prefixes[index].itertext())+''.join(names[index].itertext())+''.join(postfixes[index].itertext()),''.join(sections[index].itertext()),''.join(subtypes[index].itertext())])
             index+=1
         fileSentencized=codecs.open("./Sentencized/XML-cured/"+(str(file).split("-")[0])+".xml","r",encoding="utf-8")
         fileSentencizedTmp=fileSentencized.read()
@@ -62,12 +65,13 @@ for file in os.listdir("./articlesOA"):
                 tmpbefore=''.join(sentences[sentencesIndex-1].itertext())
                 if accessionNb in ''.join(tmp.itertext()):
                     tmpafter=''
-                    for preCitPost in preCitPosts:
+                    for preCitPost in preCitPosts:# this loop is made to extract section type & subtype
                         if preCitPost[0] in ''.join(tmp.itertext()):
                             section=preCitPost[1]
                             if "(" in section:
                                 section=section.split(" (")[0]
-                        else:
+                                subtype=subtypes[2]
+                        else:# this is not really accurate maybe should I check later the ratio
                             tmpStrRatio=''.join(tmp.itertext())
                             indexMatch=tmpStrRatio.find(accessionNb)
                             beginning=indexMatch-20
@@ -78,10 +82,11 @@ for file in os.listdir("./articlesOA"):
                                 ending=len(tmpStrRatio)
                             tmpStrRatio=tmpStrRatio[beginning:ending]
                             strRatio=SequenceMatcher(None,tmpStrRatio,preCitPost[0])
-                            if strRatio.ratio()>0.50:
+                            if strRatio.ratio()>0.50: #50% of similarity through those string.
                                 section=preCitPost[1]
-                            if "(" in section:
-                                section=section.split(" (")[0]
+                                if "(" in section:
+                                    section=section.split(" (")[0]
+                                    subtype=subtypes[2]
                     if sentencesIndex+1<len(sentences):
                         tmpafter=tmpafter+''.join(sentences[sentencesIndex+1].itertext())
                         if sentencesIndex+2<len(sentences):
@@ -92,6 +97,8 @@ for file in os.listdir("./articlesOA"):
                     resultFile.write(accessionNb)
                     resultFile.write("\t")
                     resultFile.write(section)
+                    resultFile.write("\t")
+                    resultFile.write(subtype)
                     resultFile.write("\t")
                     resultFile.write(tmpbefore)
                     resultFile.write("\t")
