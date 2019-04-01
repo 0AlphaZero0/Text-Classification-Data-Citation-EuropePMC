@@ -24,10 +24,13 @@ ______________________________________________________________________
 ______________________________________________________________________
 ### :green_book: Notes
 
-- [Week 1 - 01/03-10/03](#Week1)
-- [Week 2 - 11/03-17/03](#Week2)
-- [Week 3 - 18/03-24/03](#Week3)
-- [Week 4 - 25/03-31/03](#Week4)
+- [Month 1 - 01/03-31/03](#Month1)
+  * [Week 1 - 01/03-10/03](#Week1)
+  * [Week 2 - 11/03-17/03](#Week2)
+  * [Week 3 - 18/03-24/03](#Week3)
+  * [Week 4 - 25/03-31/03](#Week4)
+- [Month 2 - 01/04-30/04](#Month2)
+  * [Week 5 - 01/04-07/04](#Week5)
 ______________________________________________________________________
 
 ### :bookmark_tabs: Index
@@ -180,6 +183,7 @@ ______________________________________________________________________
 
 ## :green_book: Notes
 
+<a name="Month1"></a>
 <a name="Week1"></a>
 ### :date: Week 1 - 01/03-10/03 :
 
@@ -528,6 +532,8 @@ This article show how to build a lexicon automaticaly so it could be a solution,
 <a name="Week4"></a>
 ### :date: Week 4 - 25/03-31/03 :
 
+During this week I've start to create a pipeline that can extract data citations from EPMC. It should be completed at the beginning of the next week. ([Week 5](#Week5))
+
 - *Papers & Blogs* :
   *  Data Citation Synthesis Group: Joint Declaration of Data Citation Principles. Martone M. (ed.) San Diego CA: FORCE11; 2014 https://doi.org/10.25490/a97f-egyk
   *  [Achieving human and machine accessibility of cited data in scholarly publications](#Achieving4)
@@ -547,6 +553,16 @@ This article show how to build a lexicon automaticaly so it could be a solution,
   * There is still data that ot follow standard of today but most of these are realtively old.
 
 Moving to a cross-discipline standard for acknowledging the data allows researchers to justify continued funding for their data collection efforts (Uhlir, 2012; CODATA-ICSTI Task Group , 2013)
+
+[:top::top::top::top::top::top::top::top::top::top::top::top::top::top:Got to the top:top::top::top::top::top::top::top::top::top::top::top::top::top::top::top:](#top)
+
+<a name="Week5"></a>
+### :date: Week 5 - 01/04-07/04 :
+
+
+
+- *Papers & Blogs* :
+
 
 [:top::top::top::top::top::top::top::top::top::top::top::top::top::top:Got to the top:top::top::top::top::top::top::top::top::top::top::top::top::top::top::top:](#top)
 
