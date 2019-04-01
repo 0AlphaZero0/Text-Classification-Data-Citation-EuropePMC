@@ -15,7 +15,7 @@ import time # Allows to make a pause to not overcharge the server
 # import webbrowser # Allow to use url to open a webbrowser
 import xml # Allows to manipulate xml files
 
-#################################    Main     ###################################################
+###################################################    Main     ###################################################
 
 pmcid=[]
 accessionNb=[]
@@ -31,7 +31,7 @@ for line in csvfile.readlines():
         accessionNb.append(line[1])
         citationBefore.append(line[2])
         citation.append(line[3])
-        citationAfter.append(line[4])
+        citationAfter.append(line[4][:-2])
     else:
         indexCitation=citation.index(line[3])
         accessionNb[indexCitation]=accessionNb[indexCitation]+","+line[1]
