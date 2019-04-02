@@ -104,26 +104,7 @@
 <SENT sid="38155" pm="."><plain>In this reanalysis, we instead focus on the aggregate distribution of p-values to estimate the proportion of true null hypotheses (Storey’s procedure π^0 estimate). </plain></SENT>
 <SENT sid="38156" pm="."><plain>We estimate that 56% of the effect-SNPs show evidence of ASH. </plain></SENT>
 <SENT sid="38157" pm="."><plain>While this conservative estimate can be considered a lower bound, it is still much higher than the estimates for DHS-SNPs (2.1%) and footprint-SNPs (3.1%), indicating that most SNPs in DHS regions and even in the putative binding sites do not affect binding. </plain></SENT>
-</text></p><SecTag type="TABLE"><table-wrap id="pgen.1005875.t001" orientation="portrait" position="float"><object-id pub-id-type="doi">10.1371/journal.pgen.1005875.t001</object-id><label>Table 1</label><caption><title><text><SENT sid="38158" pm="."><plain>Summary of allele-specific hypersensitivity SNPs. </plain></SENT>
-</text></title><p><text><SENT sid="38159" pm="."><plain>Each row represents a category that is a subset of the category in the previous row. </plain></SENT>
-<SENT sid="38160" pm="."><plain>Each column reports the number of heterozygous SNPs, SNPs displaying significant ASH (20% FDR), and the estimated proportion of non-null hypotheses using Storey’s q-value approach. </plain></SENT>
-<SENT sid="38161" pm="."><plain>In parentheses are reported the numbers for SNPs that are not present in any of the subsequent subsets and are the basis for our partitioned q-value approach to detect ASH-hSNPs. </plain></SENT>
-</text></p></caption><alternatives><graphic id="pgen.1005875.t001g" xlink:href="pgen.1005875.t001"/><table frame="box" rules="all" border="0"><colgroup span="1"><col align="left" valign="middle" span="1"/><col align="left" valign="middle" span="1"/><col align="left" valign="middle" span="1"/><col align="left" valign="middle" span="1"/></colgroup><thead><tr><th align="left" rowspan="1" colspan="1"/><th align="left" rowspan="1" colspan="1"><text><SENT sid="38162" pm="."><plain># hSNPs </plain></SENT>
-</text></th><th align="left" rowspan="1" colspan="1"><text><SENT sid="38163" pm="."><plain># ASH-hSNPs (20% FDR) </plain></SENT>
-</text></th><th align="left" rowspan="1" colspan="1"><text><SENT sid="38164" pm="."><plain>1-π^0 </plain></SENT>
-</text></th></tr></thead><tbody><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="38165" pm="."><plain>All DHS-hSNPs </plain></SENT>
-</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="38166" pm="."><plain>204,757 (179,137) </plain></SENT>
-</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="38167" pm="."><plain>0 (0) </plain></SENT>
-</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="38168" pm="."><plain>2.1 (1.7)% </plain></SENT>
-</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="38169" pm="."><plain>Footprint-hSNPs </plain></SENT>
-</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="38170" pm="."><plain>55,044 (42,098) </plain></SENT>
-</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="38171" pm="."><plain>0 (0) </plain></SENT>
-</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="38172" pm="."><plain>3.1 (0.3)% </plain></SENT>
-</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="38173" pm="."><plain>Effect-hSNPs </plain></SENT>
-</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="38174" pm="."><plain>26,773 (26,773) </plain></SENT>
-</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="38175" pm="."><plain>3,217 (3,217) </plain></SENT>
-</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="38176" pm="."><plain>56.5 (56.5)% </plain></SENT>
-</text></td></tr></tbody></table></alternatives></table-wrap></SecTag><p><text><SENT sid="38177" pm="."><plain>In addition to the DNase-seq ASH validation, we compared our annotations to the results of QTL analyses targeting DNase-seq sensitivity sites (dsQTLs, [23]), and CTCF binding sites from ChIP-seq [24]. </plain></SENT>
+</text></p><SecTag type="TABLE"></SecTag><p><text><SENT sid="38177" pm="."><plain>In addition to the DNase-seq ASH validation, we compared our annotations to the results of QTL analyses targeting DNase-seq sensitivity sites (dsQTLs, [23]), and CTCF binding sites from ChIP-seq [24]. </plain></SENT>
 <SENT sid="38178" pm="."><plain>For dsQTLs, using the same PROC analysis (see Fig 2B) as in [18] demonstrates that effect-SNPs have a good performance compared to SNPs identified using a SVM approach or CATO [17]. </plain></SENT>
 <SENT sid="38179" pm="."><plain>Note that we have not repeated the PROC analysis for the methods studied by [18], but we used directly the results provided by them, as PROC analysis could be sensitive to a redefinition of the underlying true labels of the set used to evaluate performance (see discussion in Section 7 in S1 Text). </plain></SENT>
 <SENT sid="38180" pm="."><plain>If we constrain the gk-SVM model to those predictions that overlap with our CENTIPEDE footprints, the precision (at 10% recall) improves to 80%. </plain></SENT>

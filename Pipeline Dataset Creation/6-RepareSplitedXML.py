@@ -27,6 +27,7 @@ for file in os.listdir("./"):
         matchesCa=re.findall(r'\sca\.\s(</plain></SENT>\n<[^>]+pm=\"\.\"><plain>)',tmpFile)
         matchesApprox=re.findall(r'\sapprox\.\s(</plain></SENT>\n<[^>]+pm=\"\.\"><plain>)',tmpFile)
         matchesRef=re.findall(r'\(ref\.\s(</plain></SENT>\n<[^>]+pm=\"\.\"><plain>)',tmpFile)
+        matchesTable=re.findall(r'(<table-wrap[\s\S]+</table-wrap>)',tmpFile)
         for match in matchesEtAl:
             tmpFile=tmpFile.replace(match,'')
         for match in matchesSurname:
@@ -36,6 +37,8 @@ for file in os.listdir("./"):
         for match in matchesApprox:
             tmpFile=tmpFile.replace(match,'')
         for match in matchesRef:
+            tmpFile=tmpFile.replace(match,'')
+        for match in matchesTable:
             tmpFile=tmpFile.replace(match,'')
         newFile=codecs.open(file,"w",encoding="utf-8")
         newFile.write(tmpFile)
