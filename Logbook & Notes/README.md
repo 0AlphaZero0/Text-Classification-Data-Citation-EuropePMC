@@ -20,6 +20,7 @@ ______________________________________________________________________
 - [12/03 - Questions & path set up](#12/03)
 - [19/03 - Dataset conception](#19/03)
 - [25/03 - XML Talks / Data creation](#25/03)
+- [02/04 - Summary of March](#02/04)
 
 ______________________________________________________________________
 ### :green_book: Notes
@@ -176,6 +177,20 @@ Results and analysis
 - Needs :
   * Look at lXML & W3sch XML
   * Split sentences using designed tool
+
+[:top::top::top::top::top::top::top::top::top::top::top::top::top::top:Got to the top:top::top::top::top::top::top::top::top::top::top::top::top::top::top::top:](#top)
+
+<a name="02/04"></a>
+### :mega: 02/04 - Summary of March :
+
+- Subject : 
+  * need to focus on data citations to avoid the problem of data OR compare scientific citations with data citations, is there any differences between categories.
+  * try to "create" some new categories
+ - Explore existing scientific citations sentiment analysis:
+   * [\_SCite](https://scite.ai/)
+   * [CiTO, the Citation Typing Ontology](https://sparontologies.github.io/cito/current/cito.html)
+   * [OpenCitations](http://opencitations.net/)
+
 
 [:top::top::top::top::top::top::top::top::top::top::top::top::top::top:Got to the top:top::top::top::top::top::top::top::top::top::top::top::top::top::top::top:](#top)
 
