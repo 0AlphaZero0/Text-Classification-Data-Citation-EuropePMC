@@ -4,15 +4,9 @@
 #01/04/2019
 ########################
 import codecs # Allows to load a file containing UTF-8 characters
-#import numpy as np # Allows to manipulate the necessary table for sklearn
 import os # Allows to modify some things on the os
 import random # Allows to use random variables
-import re # Allows to make regex requests
 import requests # Allows to make http requests
-# import shutil #allows file copy
-# import sys # Allow to modify files on the OS
-import time # Allows to make a pause to not overcharge the server
-# import webbrowser # Allow to use url to open a webbrowser
 
 """
 This script take place in a pipeline that extract citation of data in scientific papers, thanks to EuropePMC, RESTful API and Annotation API.

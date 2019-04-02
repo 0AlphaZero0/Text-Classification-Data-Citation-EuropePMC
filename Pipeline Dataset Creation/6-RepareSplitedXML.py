@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 #-*- coding: utf-8 -*-
-# THOUVENIN Arthur
+# THOUVENIN Arthur athouvenin@outlook.fr
+# 01/04/2019
 ########################
 import codecs # Allows to load a file containing UTF-8 characters
 import os # Allows to modify some things on the os
@@ -16,7 +17,7 @@ So here thanks to regular expression it will fix some mistakes made by the split
 
 ###################################################    Main     ###################################################
 
-for file in os.listdir("./articleOA"):
+for file in os.listdir("./"):
     if file.endswith("-sentencized.xml"):
         oldFile=codecs.open(file,"r",encoding="utf-8")
         tmpFile=oldFile.read()
@@ -27,22 +28,15 @@ for file in os.listdir("./articleOA"):
         matchesApprox=re.findall(r'\sapprox\.\s(</plain></SENT>\n<[^>]+pm=\"\.\"><plain>)',tmpFile)
         matchesRef=re.findall(r'\(ref\.\s(</plain></SENT>\n<[^>]+pm=\"\.\"><plain>)',tmpFile)
         for match in matchesEtAl:
-            #print ("match1")
             tmpFile=tmpFile.replace(match,'')
         for match in matchesSurname:
-            #print ("match2")
             tmpFile=tmpFile.replace(match,'')
         for match in matchesCa:
-            #print ("match3")
             tmpFile=tmpFile.replace(match,'')
         for match in matchesApprox:
-            #print ("match4")
             tmpFile=tmpFile.replace(match,'')
         for match in matchesRef:
-            #print ("match5")
             tmpFile=tmpFile.replace(match,'')
         newFile=codecs.open(file,"w",encoding="utf-8")
         newFile.write(tmpFile)
         newFile.close()
-    else:
-        print (file)

@@ -1,12 +1,12 @@
 #!/usr/bin/env python
 #-*- coding: utf-8 -*-
-# THOUVENIN Arthur
+# THOUVENIN Arthur athouvenin@outlook.fr
+# 01/04/2019
 ########################
 import codecs # Allows to load a file containing UTF-8 characters
 import os # Allows to modify some things on the os
 import random # Allows to use random variables
 import requests # Allows to make http requests
-
 
 """
 This script take place in a pipeline that extract citation of data in scientific papers, thanks to EuropePMC, RESTful API and Annotation API.

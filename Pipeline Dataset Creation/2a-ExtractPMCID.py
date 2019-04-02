@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 #-*- coding: utf-8 -*-
-# THOUVENIN Arthur
+# THOUVENIN Arthur athouvenin@outlook.fr
+# 01/04/2019
 ########################
 import codecs # Allows to load a file containing UTF-8 characters
 import os # Allows to modify some things on the os

@@ -9,7 +9,18 @@ import os # Allows to modify some things on the os
 import re # Allows to make regex requests
 import xml # Allows to manipulate xml files
 
+"""
+This script take place in a pipeline that extract citation of data in scientific papers, thanks to EuropePMC, RESTful API and Annotation API.
 
+This script will extract citations from XML sentencized files that are located in the articleOA directory. Then it will save those citations in a "pre-dataset" called resultCitations.csv.
+It 's organized like this :
+-------------------------------------------------------------------------------------------
+PMCID     AccesionNb     Section     SubType     Pre-Citation     Citation     PostCitation
+___________________________________________________________________________________________
+Indeed the context of citation is really important so there is a need to extract those.
+In the fist time the script will load a file that end like "-AccessionNb.xml" it contain the Accession numbers of a specific paper (they are find thanks to the lxml etree module : .findall(".//name")).
+Then the script will load the corresponding sentencized XML file. If the accession number is in the sentence then the previous sentence and the two after are saved in the file.
+"""
 
 
 ###################################################    Main     ###################################################

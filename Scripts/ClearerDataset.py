@@ -1,19 +1,21 @@
 #!/usr/bin/env python
 #-*- coding: utf-8 -*-
 # THOUVENIN Arthur
+# 01/04/2019
 ########################
 import codecs # Allows to load a file containing UTF-8 characters
-#import numpy as np # Allows to manipulate the necessary table for sklearn
-from lxml import etree # Allows to manipulate xml file easily
 import os # Allows to modify some things on the os
-import random # Allows to use random variables
 import re # Allows to make regex requests
-import requests # Allows to make http requests
-# import shutil #allows file copy
-# import sys # Allow to modify files on the OS
-import time # Allows to make a pause to not overcharge the server
-# import webbrowser # Allow to use url to open a webbrowser
-import xml # Allows to manipulate xml files
+
+
+"""
+This script take place in a pipeline that extract citation of data in scientific papers, thanks to EuropePMC, RESTful API and Annotation API.
+
+This script will thanks to the file resultCitations.csv create a dataset of citations, most of the time there is multiple data citation in the same citation so there is a lot of repetition.
+An d of course we don't like to had 10 times the same sentence so the script will pack together accession numbers that have the same citation sentence.
+
+
+"""
 
 ###################################################    Main     ###################################################
 

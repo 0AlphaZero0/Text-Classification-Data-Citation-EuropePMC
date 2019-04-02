@@ -1,9 +1,12 @@
 #!/usr/bin/env python
 #-*- coding: utf-8 -*-
-# THOUVENIN Arthur
+# THOUVENIN Arthur athouvenin@outlook.fr
+# 01/04/2019
 ########################
 import codecs # Allows to load a file containing UTF-8 characters
 import os # Allows to modify some things on the os
+import re # Allows to make regex requests
+
 
 """
 This script take place in a pipeline that extract citation of data in scientific papers, thanks to EuropePMC, RESTful API and Annotation API.
@@ -18,6 +21,8 @@ An d of course we don't like to had 10 times the same sentence so the script wil
 
 pmcid=[]
 accessionNb=[]
+section=[]
+subtype=[]
 citationBefore=[]
 citation=[]
 citationAfter=[]
@@ -25,22 +30,30 @@ citationAfter=[]
 csvfile=codecs.open("resultCitations.csv","r",encoding="utf-8")
 for line in csvfile.readlines():
     line=line.split("\t")
-    if line[3] not in citation:
+    if line[2]=="":
+        pass
+    elif line[5] not in citation:
         pmcid.append(line[0])
         accessionNb.append(line[1])
-        citationBefore.append(line[2])
-        citation.append(line[3])
-        citationAfter.append(line[4][:-2])
+        section.append(line[2])
+        subtype.append(line[3])
+        citationBefore.append(line[4])
+        citation.append(line[5])
+        citationAfter.append(line[6][:-2])
     else:
-        indexCitation=citation.index(line[3])
+        indexCitation=citation.index(line[5])
         accessionNb[indexCitation]=accessionNb[indexCitation]+","+line[1]
-dataset=codecs.open("dataset1.csv","w",encoding="utf-8")
+dataset=codecs.open("./articlesOA/dataset1.csv","w",encoding="utf-8")
 indexDataset=0
 csvfile.close()
 while indexDataset < len(citation):
     dataset.write(pmcid[indexDataset])
     dataset.write("\t")
     dataset.write(accessionNb[indexDataset])
+    dataset.write("\t")
+    dataset.write(section[indexDataset])
+    dataset.write("\t")
+    dataset.write(subtype[indexDataset])
     dataset.write("\t")
     dataset.write(citationBefore[indexDataset])
     dataset.write("\t")
