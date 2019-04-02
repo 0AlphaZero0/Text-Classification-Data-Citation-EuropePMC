@@ -1,3 +1,18 @@
+<a name="top"></a>
+<div class="row">
+  <div class="column">
+    <img align="left" width="20%" height="20%" src="https://github.com/0AlphaZero0/Sentiment-Analysis-EuropePMC/blob/master/Logbook%20%26%20Notes/EMBL-EBI-logo.png">
+  </div>
+  <div class="column">
+    <img align="right" width="20%" height="20%" src="https://github.com/0AlphaZero0/Sentiment-Analysis-EuropePMC/blob/master/Logbook%20%26%20Notes/europepmc.png">
+  </div>
+</div>
+&nbsp;  &nbsp;  &nbsp;  
+<h1 align="center">Sentiment Analysis on Data Citations in Scientific Papers</h1>
+<p align="center">Sentiment Analysis on Data Citations in Scientific Papers in Europe Pub Med Central</p>
+
+______________________________________________________________________
+
 First the pipeline will execute the ExtractOArticles.py then ExtractPMCID.py then a pmcidlist is given to a sentencizer that will split full txt XML and result a patch.xml file. Then the ExtractSentencizedXML.py and the result of it is given to a tool that I've called RepareXML that correct the structure of the XML file. This tool return XML files corrected but sometimes there still mistakes that has been made by the splitter so the RepareSplitedXML.py will run, followed by ExtractCitations.py and at the end ClearerDataset.py.
 
 Workflow :
