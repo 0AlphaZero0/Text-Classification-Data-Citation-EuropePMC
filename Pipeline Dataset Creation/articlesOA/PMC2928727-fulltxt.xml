@@ -1,0 +1,778 @@
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD v1.1 20151215//EN" "JATS-archivearticle1.dtd"> 
+<article xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML" article-type="research-article"><?properties open_access?><?DTDIdentifier.IdentifierValue -//NLM//DTD Journal Publishing DTD v2.3 20031101//EN?><?DTDIdentifier.IdentifierType public?><?SourceDTD.DTDName journalpublishing.dtd?><?SourceDTD.Version 2.3?><?ConverterInfo.XSLTName jp2nlmx2.xsl?><?ConverterInfo.Version 1?><front><journal-meta><journal-id journal-id-type="nlm-ta">PLoS One</journal-id><journal-id journal-id-type="iso-abbrev">PLoS ONE</journal-id><journal-id journal-id-type="publisher-id">plos</journal-id><journal-id journal-id-type="pmc">plosone</journal-id><journal-title-group><journal-title>PLoS ONE</journal-title></journal-title-group><issn pub-type="epub">1932-6203</issn><publisher><publisher-name>Public Library of Science</publisher-name><publisher-loc>San Francisco, USA</publisher-loc></publisher></journal-meta><article-meta><article-id pub-id-type="pmcid">2928727</article-id><article-id pub-id-type="pmid">20865039</article-id><article-id pub-id-type="publisher-id">10-PONE-RA-18118R1</article-id><article-id pub-id-type="doi">10.1371/journal.pone.0012253</article-id><article-categories><subj-group subj-group-type="heading"><subject>Research Article</subject></subj-group><subj-group subj-group-type="Discipline"><subject>Computational Biology/Comparative Sequence Analysis</subject><subject>Computational Biology/Genomics</subject><subject>Genetics and Genomics/Bioinformatics</subject><subject>Genetics and Genomics/Comparative Genomics</subject><subject>Genetics and Genomics/Genome Projects</subject><subject>Microbiology/Microbial Evolution and Genomics</subject></subj-group></article-categories><title-group><article-title>Genomic Characterization of <italic>Campylobacter jejuni</italic> Strain M1</article-title><alt-title alt-title-type="running-head">The Genome of <italic>C. jejuni</italic> M1</alt-title></title-group><contrib-group><contrib contrib-type="author"><name><surname>Friis</surname><given-names>Carsten</given-names></name><xref ref-type="aff" rid="aff1">
+<sup>1</sup>
+</xref><xref ref-type="corresp" rid="cor1">
+<sup>&#x0002a;</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Wassenaar</surname><given-names>Trudy M.</given-names></name><xref ref-type="aff" rid="aff1">
+<sup>1</sup>
+</xref><xref ref-type="aff" rid="aff2">
+<sup>2</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Javed</surname><given-names>Muhammad A.</given-names></name><xref ref-type="aff" rid="aff3">
+<sup>3</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Snipen</surname><given-names>Lars</given-names></name><xref ref-type="aff" rid="aff1">
+<sup>1</sup>
+</xref><xref ref-type="aff" rid="aff4">
+<sup>4</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Lagesen</surname><given-names>Karin</given-names></name><xref ref-type="aff" rid="aff1">
+<sup>1</sup>
+</xref><xref ref-type="aff" rid="aff5">
+<sup>5</sup>
+</xref><xref ref-type="aff" rid="aff6">
+<sup>6</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Hallin</surname><given-names>Peter F.</given-names></name><xref ref-type="aff" rid="aff1">
+<sup>1</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Newell</surname><given-names>Diane G.</given-names></name><xref ref-type="aff" rid="aff7">
+<sup>7</sup>
+</xref><xref ref-type="aff" rid="aff8">
+<sup>8</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Toszeghy</surname><given-names>Monique</given-names></name><xref ref-type="aff" rid="aff7">
+<sup>7</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Ridley</surname><given-names>Anne</given-names></name><xref ref-type="aff" rid="aff7">
+<sup>7</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Manning</surname><given-names>Georgina</given-names></name><xref ref-type="aff" rid="aff3">
+<sup>3</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Ussery</surname><given-names>David W.</given-names></name><xref ref-type="aff" rid="aff1">
+<sup>1</sup>
+</xref></contrib></contrib-group><aff id="aff1">
+<label>1</label>
+<addr-line>Department of Systems Biology, The Technical University of Denmark, Lyngby, Denmark</addr-line>
+</aff><aff id="aff2">
+<label>2</label>
+<addr-line>Molecular Microbiology and Genomics Consultants, Zotzenheim, Germany</addr-line>
+</aff><aff id="aff3">
+<label>3</label>
+<addr-line>School of Science and Technology, Nottingham Trent University, Nottingham, United Kingdom</addr-line>
+</aff><aff id="aff4">
+<label>4</label>
+<addr-line>Department of Chemistry, Biotechnology and Food Sciences, Norwegian University of Life Sciences, &#x000c5;s, Norway</addr-line>
+</aff><aff id="aff5">
+<label>5</label>
+<addr-line>Institute of Medical Microbiology, Oslo University Hospital, Oslo, Norway</addr-line>
+</aff><aff id="aff6">
+<label>6</label>
+<addr-line>Department of Informatics, University of Oslo, Oslo, Norway</addr-line>
+</aff><aff id="aff7">
+<label>7</label>
+<addr-line>Veterinary Laboratories Agencies, Addlestone, United Kingdom</addr-line>
+</aff><aff id="aff8">
+<label>8</label>
+<addr-line>Food-borne Zoonoses Consultancy, Andover, United Kingdom</addr-line>
+</aff><contrib-group><contrib contrib-type="editor"><name><surname>Friedberg</surname><given-names>Iddo</given-names></name><role>Editor</role><xref ref-type="aff" rid="edit1"/></contrib></contrib-group><aff id="edit1">Miami University, United States of America</aff><author-notes><corresp id="cor1">&#x0002a; E-mail: <email>carsten@cbs.dtu.dk</email></corresp><fn fn-type="con"><p>Conceived and designed the experiments: CF TMW DGN DWU. Performed the experiments: CF MAJ MT AR GM. Analyzed the data: CF TMW LS KL PFH. Contributed reagents/materials/analysis tools: MT AR GM. Wrote the paper: CF TMW DGN DWU. The primary author of the paper and the primary person responsible for driving the computational work from start to finish: CF. The primary behind all computational aspects of the work, including the genome annotation of M1: CF. Has been instrumental in maintaining the link between the computational work and the experimental work: TMW. Lent her experience to all aspects of the project and has contributed significantly at all stages writing and proof reading of the manuscript: TMW. Helped with the analysis of genome sequence of M1, designed and synthesized primers to fill the gaps between contigs of the M1 genome: MAJ. Did the amplicons generation and sequencing followed by the analysis: MAJ. Helped with the preparation of the manuscript: MAJ. Did the computations related to the pan-genome tree and the estimates of the population core- and pan-genome sizes, and contributed to the corresponding parts of the manuscript: LS. Developed a phylogenetic tree for these genomes based on predicted 16S rRNA sequences: KL. Contributed text to the paper and participated in the final proof reading of the article: KL. Offered assistance in adopting his previously established atlas methods into this project: PFH. Contributed particularly to the supplementary section by setting up the interactive figures included there: PFH. Participated in the proof reading of the manuscript: PFH. Managed the research team throughout the period of the strains isolation, identification and characterization providing expertise and leadership to recognize the importance of this strain for future research: DGN. Instigated the idea of sequencing the strain and collaborated with DWU and TMW to get this done: DGN. Contributed significantly to the drafting of the manuscript by providing expert knowledge, intellectual content and experience: DGN. Was solely responsible for acquiring the M1 - she is the person who was infected: MT. Recovered the strains from herself and the appropriate chickens: MT. Purified, stored and initially characterized the strains: MT. Was responsible for the molecular characterization of the human and chickens strains including the molecular typing - demonstrating that they were identical: AR GM. Prepared, quality controlled and provided the strain DNA for sequencing: AR. Contributed to the drafting and approval of the final manuscript: MT AR. Was involved in the research carried out on M1 since its first isolation at the VLA; was specifically responsible for the molecular typing of this strain by MLST as well as overseeing the invasion and toxin studies: GM. The closing of the gaps was funded by research money that was awarded to her at NTU and she oversaw that work: GM. Contributed to previous drafts of the paper and the final proof reading of the article: GM. Conceptualized much of the work, especially the computational aspects: DWU. Managed the bioinformatic research team and has provided considerable feedback and ideas: DWU. Contributed text and assisted in proof reading of the manuscript: DWU.<table-wrap id="pone-0012253-t002" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0012253.t002</object-id><label>Table 2</label><caption><title>
+<italic>Campylobacter</italic> Genomes included in this study.</title></caption><alternatives><graphic id="pone-0012253-t002-2" xlink:href="pone.0012253.t002"/><table frame="hsides" rules="groups"><colgroup span="1"><col align="left" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/></colgroup><thead><tr><td align="left" rowspan="1" colspan="1">Species Name</td><td align="left" rowspan="1" colspan="1">Project ID</td><td align="left" rowspan="1" colspan="1">Contigs</td><td align="left" rowspan="1" colspan="1">Accession</td><td align="left" rowspan="1" colspan="1">Reference</td></tr></thead><tbody><tr><td align="left" rowspan="1" colspan="1">
+<italic>C. jejuni</italic> M1</td><td align="left" rowspan="1" colspan="1">38041</td><td align="left" rowspan="1" colspan="1">1</td><td align="left" rowspan="1" colspan="1">CP001900</td><td align="left" rowspan="1" colspan="1">This Study</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<italic>C. jejuni</italic> 260.94</td><td align="left" rowspan="1" colspan="1">16229</td><td align="left" rowspan="1" colspan="1">10<xref ref-type="table-fn" rid="nt103">&#x0002a;</xref>
+</td><td align="left" rowspan="1" colspan="1">AANK01000000</td><td align="left" rowspan="1" colspan="1">-</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<italic>C. jejuni</italic> 81116</td><td align="left" rowspan="1" colspan="1">17953</td><td align="left" rowspan="1" colspan="1">1</td><td align="left" rowspan="1" colspan="1">CP000814.1</td><td align="left" rowspan="1" colspan="1">
+<xref rid="pone.0012253-Pearson1" ref-type="bibr">[16]</xref>
+</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<italic>C. jejuni</italic> 81-176A</td><td align="left" rowspan="1" colspan="1">16135</td><td align="left" rowspan="1" colspan="1">3</td><td align="left" rowspan="1" colspan="1">CP000538.1, CP000549.1, CP000550.1</td><td align="left" rowspan="1" colspan="1">
+<xref rid="pone.0012253-Russell1" ref-type="bibr">[48]</xref>
+</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<italic>C. jejuni</italic> 81-176B</td><td align="left" rowspan="1" colspan="1">17341</td><td align="left" rowspan="1" colspan="1">1</td><td align="left" rowspan="1" colspan="1">NZ_AASL00000000</td><td align="left" rowspan="1" colspan="1">
+<xref rid="pone.0012253-Hofreuter1" ref-type="bibr">[46]</xref>
+</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<italic>C. jejuni</italic> 84&#x02013;25</td><td align="left" rowspan="1" colspan="1">16367</td><td align="left" rowspan="1" colspan="1">5<xref ref-type="table-fn" rid="nt103">&#x0002a;</xref>
+</td><td align="left" rowspan="1" colspan="1">AANT02000000</td><td align="left" rowspan="1" colspan="1">-</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<italic>C. jejuni</italic> CF93-6</td><td align="left" rowspan="1" colspan="1">16265</td><td align="left" rowspan="1" colspan="1">14<xref ref-type="table-fn" rid="nt103">&#x0002a;</xref>
+</td><td align="left" rowspan="1" colspan="1">AANJ01000001</td><td align="left" rowspan="1" colspan="1">
+<xref rid="pone.0012253-Koga1" ref-type="bibr">[77]</xref>
+</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<italic>C. jejuni</italic> CG8421</td><td align="left" rowspan="1" colspan="1">21037</td><td align="left" rowspan="1" colspan="1">20<xref ref-type="table-fn" rid="nt103">&#x0002a;</xref>
+</td><td align="left" rowspan="1" colspan="1">ABGQ01000000</td><td align="left" rowspan="1" colspan="1">
+<xref rid="pone.0012253-Poly2" ref-type="bibr">[78]</xref>
+</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<italic>C. jejuni</italic> CG8486</td><td align="left" rowspan="1" colspan="1">17055</td><td align="left" rowspan="1" colspan="1">19<xref ref-type="table-fn" rid="nt103">&#x0002a;</xref>
+</td><td align="left" rowspan="1" colspan="1">AASY01000000</td><td align="left" rowspan="1" colspan="1">
+<xref rid="pone.0012253-Poly1" ref-type="bibr">[18]</xref>
+</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<italic>C. jejuni doylei</italic> 269.97</td><td align="left" rowspan="1" colspan="1">17163</td><td align="left" rowspan="1" colspan="1">1</td><td align="left" rowspan="1" colspan="1">CP000768.1</td><td align="left" rowspan="1" colspan="1">-</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<italic>C. jejuni</italic> HB93-13</td><td align="left" rowspan="1" colspan="1">16267</td><td align="left" rowspan="1" colspan="1">35<xref ref-type="table-fn" rid="nt103">&#x0002a;</xref>
+</td><td align="left" rowspan="1" colspan="1">AANQ0100000</td><td align="left" rowspan="1" colspan="1">-</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<italic>C. jejuni</italic> NCTC 11168</td><td align="left" rowspan="1" colspan="1">8</td><td align="left" rowspan="1" colspan="1">1</td><td align="left" rowspan="1" colspan="1">AL111168.1</td><td align="left" rowspan="1" colspan="1">
+<xref rid="pone.0012253-Parkhill1" ref-type="bibr">[13]</xref>
+</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<italic>C. jejuni</italic> RM1221</td><td align="left" rowspan="1" colspan="1">303</td><td align="left" rowspan="1" colspan="1">1</td><td align="left" rowspan="1" colspan="1">CP000025.1</td><td align="left" rowspan="1" colspan="1">
+<xref rid="pone.0012253-Fouts1" ref-type="bibr">[19]</xref>
+</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<italic>C. coli</italic> RM2228</td><td align="left" rowspan="1" colspan="1">12516</td><td align="left" rowspan="1" colspan="1">38<xref ref-type="table-fn" rid="nt103">&#x0002a;</xref>
+</td><td align="left" rowspan="1" colspan="1">AAFL01000000</td><td align="left" rowspan="1" colspan="1">
+<xref rid="pone.0012253-Fouts1" ref-type="bibr">[19]</xref>
+</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<italic>C. concisus</italic> 13826</td><td align="left" rowspan="1" colspan="1">17159</td><td align="left" rowspan="1" colspan="1">3</td><td align="left" rowspan="1" colspan="1">CP000792.1, CP000793.1, CP000794.1</td><td align="left" rowspan="1" colspan="1">-</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<italic>C. curvus</italic> 525.92</td><td align="left" rowspan="1" colspan="1">17161</td><td align="left" rowspan="1" colspan="1">1</td><td align="left" rowspan="1" colspan="1">CP000767.1</td><td align="left" rowspan="1" colspan="1">-</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<italic>C. fetus</italic> 82&#x02013;40</td><td align="left" rowspan="1" colspan="1">16293</td><td align="left" rowspan="1" colspan="1">1</td><td align="left" rowspan="1" colspan="1">CP000487.1</td><td align="left" rowspan="1" colspan="1">-</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<italic>C. hominis</italic> ATCC BAA-381</td><td align="left" rowspan="1" colspan="1">20083</td><td align="left" rowspan="1" colspan="1">2</td><td align="left" rowspan="1" colspan="1">CP000775.1, CP000776.1</td><td align="left" rowspan="1" colspan="1">-</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<italic>C. lari</italic> RM2100</td><td align="left" rowspan="1" colspan="1">12517</td><td align="left" rowspan="1" colspan="1">2</td><td align="left" rowspan="1" colspan="1">CP000932.1, CP000933.1</td><td align="left" rowspan="1" colspan="1">
+<xref rid="pone.0012253-Miller3" ref-type="bibr">[79]</xref>
+</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<italic>C. rectus</italic> RM3267</td><td align="left" rowspan="1" colspan="1">31017</td><td align="left" rowspan="1" colspan="1">89<xref ref-type="table-fn" rid="nt103">&#x0002a;</xref>
+</td><td align="left" rowspan="1" colspan="1">ACFU01000000</td><td align="left" rowspan="1" colspan="1">-</td></tr><tr><td align="left" rowspan="1" colspan="1">
+<italic>C. upsaliensis</italic> RM3195</td><td align="left" rowspan="1" colspan="1">12518</td><td align="left" rowspan="1" colspan="1">20<xref ref-type="table-fn" rid="nt103">&#x0002a;</xref>
+</td><td align="left" rowspan="1" colspan="1">AAFJ01000000</td><td align="left" rowspan="1" colspan="1">
+<xref rid="pone.0012253-Fouts1" ref-type="bibr">[19]</xref>
+</td></tr></tbody></table></alternatives><table-wrap-foot><fn id="nt102"><label/><p>If the genome project listed any plasmids, these were included in the number of contigs and their accession numbers are included.</p></fn><fn id="nt103"><label/><p>&#x0002a;For genomes represented by multiple contigs the published sequence may still be incomplete.</p></fn></table-wrap-foot></table-wrap>
+</p></fn></author-notes><pub-date pub-type="collection"><year>2010</year></pub-date><pub-date pub-type="epub"><day>26</day><month>8</month><year>2010</year></pub-date><volume>5</volume><issue>8</issue><elocation-id>e12253</elocation-id><history><date date-type="received"><day>20</day><month>4</month><year>2010</year></date><date date-type="accepted"><day>22</day><month>7</month><year>2010</year></date></history><permissions><copyright-statement>Friis et al.</copyright-statement><copyright-year>2010</copyright-year><license xlink:href="http://creativecommons.org/licenses/by/4.0/"><license-p>This is an open-access article distributed under the terms of the Creative Commons Attribution License, which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are properly credited.</license-p></license></permissions><abstract><p>
+<italic>Campylobacter jejuni</italic> strain M1 (laboratory designation 99/308) is a rarely documented case of direct transmission of <italic>C. jejuni</italic> from chicken to a person, resulting in enteritis. We have sequenced the genome of <italic>C. jejuni</italic> strain M1, and compared this to 12 other <italic>C. jejuni</italic> sequenced genomes currently publicly available. Compared to these, M1 is closest to strain 81116. Based on the 13 genome sequences, we have identified the <italic>C. jejuni pan</italic>-genome, as well as the core genome, the auxiliary genes, and genes unique between strains M1 and 81116. The pan-genome contains 2,427 gene families, whilst the core genome comprised 1,295 gene families, or about two-thirds of the gene content of the average of the sequenced <italic>C. jejuni</italic> genomes. Various comparison and visualization tools were applied to the 13 <italic>C. jejuni</italic> genome sequences, including a species pan- and core genome plot, a BLAST Matrix and a BLAST Atlas. Trees based on 16S rRNA sequences and on the total gene families in each genome are presented. The findings are discussed in the background of the proven virulence potential of M1.</p></abstract><counts><page-count count="12"/></counts></article-meta></front><body><sec id="s1"><title>Introduction</title><p>
+<italic>Campylobacter jejuni</italic> is the most common cause of known bacterial enteritis in Europe and in the US, and the second-most cause (following <italic>Salmonella</italic> infections) in many other countries <xref rid="pone.0012253-Nauta1" ref-type="bibr">[1]</xref>, <xref rid="pone.0012253-Wagenaar1" ref-type="bibr">[2]</xref>. Campylobacteriosis is often food-transmitted, and frequently attributed to the consumption and handling of poultry meat <xref rid="pone.0012253-Wingstrand1" ref-type="bibr">[3]</xref>. Chickens are commonly asymptomatically colonized with <italic>C. jejuni</italic>, and, depending on the season and country, 20&#x00025; to 100&#x00025; of flocks can be found positive at slaughter <xref rid="pone.0012253-JacobsReitsma1" ref-type="bibr">[4]</xref>. Contamination of carcasses occurs during processing, so that up to 80&#x00025; of retail poultry meat is positive for <italic>Campylobacter</italic> in countries like the UK <xref rid="pone.0012253-Little1" ref-type="bibr">[5]</xref>, <xref rid="pone.0012253-Jorgensen1" ref-type="bibr">[6]</xref>.</p><p>There is considerable circumstantial evidence from epidemiological studies, like case control investigations, that poultry is a major attributable source of human infection with <italic>C. jejuni</italic>. Molecular epidemiological investigations also provide supporting evidence in that the <italic>Campylobacter</italic> populations in the human and chicken hosts substantially overlap <xref rid="pone.0012253-Wassenaar1" ref-type="bibr">[7]</xref>, <xref rid="pone.0012253-Sheppard1" ref-type="bibr">[8]</xref>, <xref rid="pone.0012253-Miller1" ref-type="bibr">[9]</xref>. However, there is a wide diversity of <italic>C. jejuni</italic> strains in poultry flocks. These strains vary in both ability to survive the environmental stresses during processing and in putative virulence properties, such as invasiveness and toxin expression <xref rid="pone.0012253-Wassenaar2" ref-type="bibr">[10]</xref>, <xref rid="pone.0012253-Carrillo1" ref-type="bibr">[11]</xref>. Given this diversity it seems likely that many of these strains may be non-pathogenic <italic>i.e.</italic> not cause disease in humans. Either they lack virulence factors, do not colonize humans, or are not persistent during slaughter, processing and storage. Unfortunately, the virulence pathway or pathways by which <italic>C. jejuni</italic> causes disease are still enigmatic, not least because of the lack of a reliable animal model of disease <xref rid="pone.0012253-Newell1" ref-type="bibr">[12]</xref>.</p><p>The first complete genome sequence of a <italic>C. jejuni</italic> strain was published in 2001 for <italic>C. jejuni</italic> strain 11168 <xref rid="pone.0012253-Parkhill1" ref-type="bibr">[13]</xref>. This laboratory-adapted strain was originally isolated from a case of campylobacteriosis in 1977. This strain displays a number of aberrant phenotypic characteristics, such as poor motility, an atypical straight body morphology, and poor colonization in chickens. In contrast a minimally-subcultured variant of the original clinical isolate displayed normal characteristics <xref rid="pone.0012253-Gaynor1" ref-type="bibr">[14]</xref>. The virulence potential in humans of the sequenced variant is unknown, but other strains with impaired motility have been shown to have reduced virulence in a human volunteer study <xref rid="pone.0012253-Black1" ref-type="bibr">[15]</xref>. Genome sequences of other <italic>C. jejuni</italic> strains have since become publicly available, but for none of these sequenced organisms direct evidence exists of virulence in humans, or of transmissability from chicken to humans. For example, the sequenced <italic>C. jejuni</italic> strain 81116 <xref rid="pone.0012253-Pearson1" ref-type="bibr">[16]</xref> was originally isolated from a human case during a outbreak of campylobacteriosis in a school <xref rid="pone.0012253-Palmer1" ref-type="bibr">[17]</xref>. This outbreak was hypothesized to be due to the fecal contamination of drinking water by wild birds, but this was unconfirmed. Strain CG8486 is a recent clinical isolate, but has no stated epidemiological association with poultry <xref rid="pone.0012253-Poly1" ref-type="bibr">[18]</xref>. In contrast, strain RM1221 was isolated from chicken <xref rid="pone.0012253-Fouts1" ref-type="bibr">[19]</xref>, but its virulence potential in humans remains untested.</p><p>Following a research visit to a poultry abattoir, one surveillance team member developed campylobacteriosis. The strains isolated from the patient and from the poultry flock sampled at the abattoir were identical by serotyping, <italic>fla</italic> typing, pulsed-field gel electrophoresis, amplified fragment polymorphism and multilocus sequence typing (MLST), thus providing evidence of the direct transmission of pathogenic <italic>Campylobacter</italic> from a poultry source to a human.</p><p>The complete genome sequence of this strain, laboratory number 99/308, but designated here by its common name of M1, was determined in anticipation that its gene content would contain both colonization factors for chicken and virulence factors for human disease. With rapid advances in sequencing technologies and the subsequent explosion in the amount of available sequence data, it is now possible to describe microbial genomes not only as individual entities, but also to analyze their collective pan- and core genomes <xref rid="pone.0012253-Medini1" ref-type="bibr">[20]</xref>. A core genome was first defined by Lan and Reeves (2000) <xref rid="pone.0012253-Lan1" ref-type="bibr">[21]</xref> as comprising those genes present in almost all individuals of a species. The pan-genome was introduced by Tettelin and coworkers <xref rid="pone.0012253-Medini2" ref-type="bibr">[22]</xref> as comprising any gene observed in the species. For defining the core and pan-genome, genes are considered members of a gene family when they share significant homology, using specified criteria. In this work we describe the comparison of the complete genome of <italic>C. jejuni</italic> M1 with other complete <italic>C. jejuni</italic> genome sequences.</p></sec><sec id="s2"><title>Results and Discussion</title><sec id="s2a"><title>Sampling of <italic>C. jejuni</italic> M1 and confirmation of chicken-to-human transmission</title><p>
+<italic>C. jejuni</italic> M1 (laboratory designation 99/308) was isolated from the diarrheic stools of one research team member 9 days after visiting a poultry processing plant. <italic>C. jejuni</italic> isolate M1 was found to be identical by all typing methods to isolates from samples from the processing plant derived from one flock (flock 1) but not from a second subsequent flock (flock 2) processed over the surveillance period. <xref ref-type="fig" rid="pone-0012253-g001">Figure 1</xref> shows the AFLP patterns obtained. The strain persisted in the abattoir environment sufficiently to subsequently contaminate the crates and carcasses of the second flock processed (flock 2), indicating strong environmental survival properties.</p><fig id="pone-0012253-g001" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0012253.g001</object-id><label>Figure 1</label><caption><title>AFLP on strains isolated from abattoir.</title><p>Isolates were from flock 1 (designated F1) and flock 2 (F2) and a selection of caecal isolates and crate swabs is shown. Two AFLP banding patterns were recognized of which the lower one is identical to that of the human isolate M1.</p></caption><graphic xlink:href="pone.0012253.g001"/></fig></sec><sec id="s2b"><title>Genome sequence and characterization of <italic>C. jejuni</italic> M1</title><p>The human isolate <italic>C. jejuni</italic> M1, and epidemiologically related poultry strains are motile, S-shaped organisms with MLST Sequence Type (ST) 137, fla-type 2,5 <xref rid="pone.0012253-Ayling1" ref-type="bibr">[23]</xref>, and serotype HS21. Additional characterization showed the strain to be without detectable plasmids. Further the M1 strain displays a low invasiveness to INT407 and CaCO2 cell lines <xref rid="pone.0012253-1" ref-type="bibr">[24]</xref> and to express low CDT activity as measured by <italic>in vitro</italic> assays (data not shown).</p><p>The genome sequence of strain M1 obtained from paired end reads, consisted of 18 contigs that were oriented using in-house perl scripts, and then assembled into a complete genome using directed PCR. To ensure the genome sequence corresponded with the human isolate, an <italic>in silico</italic> MLST was performed indicating Sequence Type 137 in accordance with the results obtained <italic>in vitro</italic>. An <italic>in silico flaA</italic> RFLP was also performed as a further confirmation (data not shown).</p><p>Gene finding predicted 1,624 protein encoding genes. Prediction of gene function, performed as described in the <xref ref-type="sec" rid="s3">Methods</xref>, provided inferred functionality for 1,229 of these protein-coding genes. Non-translated genes coding rRNA or tRNA were also predicted. In addition to the expected three rRNA operons, strain M1 possesses 44 tRNA genes.</p></sec><sec id="s2c"><title>Genes relating to invasiveness and colonization of chickens</title><p>A number of <italic>Campylobacter</italic> genes have been previously described as being related to chicken colonization and/or mediating adherence and invasion of human cells <italic>in vitro</italic>, on the basis of site-directed mutagenesis causing substantial loss of colonization or invasion potential. Most of these genes were present in strain M1. For example, <italic>cadF,</italic> which encodes the <italic><underline>C</underline>ampylobacter</italic>
+<underline>ad</underline>hesion to <underline>f</underline>ibronectin protein and is important in chicken colonization <xref rid="pone.0012253-Konkel1" ref-type="bibr">[25]</xref>, <xref rid="pone.0012253-Monteville1" ref-type="bibr">[26]</xref>, <xref rid="pone.0012253-Ziprin1" ref-type="bibr">[27]</xref>, <italic>jlpA</italic>
+<xref rid="pone.0012253-Jin1" ref-type="bibr">[28]</xref> and <italic>peb1A</italic>, which encodes a 27-kDa putative adhesin <xref rid="pone.0012253-Kervella1" ref-type="bibr">[29]</xref> were identified as CJM1_1423, CJM1_0958 and CJM1_0885, respectively. In addition <italic>porA</italic>, which encodes the <italic>C. jejuni</italic> 43-kDa major outer membrane protein (MOMP), which is a porin and a potential adhesin <xref rid="pone.0012253-Moser1" ref-type="bibr">[30]</xref>, was identified as CJM1_1240. A putative adhesin Cj1279c, recently designated as <underline>f</underline>ibronectin-<underline>l</underline>ike <underline>p</underline>rotein <italic>A</italic> coded by <italic>flpA,</italic> which has been shown as being required for efficient cell adherence and chicken colonization <xref rid="pone.0012253-Flanagan1" ref-type="bibr">[31]</xref>, was identified as CJM1_1260. Strain M1 also contains <italic>ciaB</italic>, a <italic>Campylobacter</italic> invasion antigen (CJM1_0879), the presence of which is reported to be associated with severity of campylobacteriosis in piglets <xref rid="pone.0012253-RaphaelBH1" ref-type="bibr">[32]</xref>. Another putative <italic>Campylobacter</italic> invasion-associated gene <xref rid="pone.0012253-Christensen1" ref-type="bibr">[33]</xref>, tentatively named <italic>ciaC</italic> but otherwise known as Cj1242, is identical to CJM1_1224.</p><p>Not all <italic>C. jejuni</italic> genes previously described as related to invasiveness were found in the genome of strain M1. Completely absent is <italic>capA</italic>, an autotransporter protein reported to be associated with both adherence to human epithelial cells and the colonization of chickens <xref rid="pone.0012253-Ashgar1" ref-type="bibr">[34]</xref>. However, <italic>capA</italic> is known to be absent in many <italic>C. jejuni</italic> isolates <xref rid="pone.0012253-Flanagan1" ref-type="bibr">[31]</xref>. The relationship between the absence of this gene and the phenotype of strain M1 is at yet unknown. A Genome Atlas of the strain M1 chromosome is shown in <xref ref-type="fig" rid="pone-0012253-g002">Figure 2</xref>. This Genome Atlas illustrates various features of the genome in eight circles <xref rid="pone.0012253-Jensen1" ref-type="bibr">[35]</xref>, <xref rid="pone.0012253-Pedersen1" ref-type="bibr">[36]</xref>. Based on the change in GC skew and on the presence of the <italic>dnaA</italic> gene, the first nucleotide of the sequence was positioned at the top of the circle as the likely origin of DNA replication. The fifth circle illustrates the annotated genes and reveals a slight preference for genes being located on the leading strand compared with the lagging strand. Around 1,050&#x02013;1,100 kb there is a strong signal in the stacking energy lane, which suggests this region will readily melt, corresponding with the high local AT region mentioned previously. The functional annotation for this region inferred from Pfam indicates that genes in this area are involved in glycosylation and are responsible for biosynthesis of the lipooligosaccharide (LOS) structures of <italic>C. jejuni</italic>. The presence of readily melting DNA correlates with a higher AT content compared to the genome average and suggests that this region may be less thermodynamically stable and likely subject to an increased mutation rate <xref rid="pone.0012253-Sinden1" ref-type="bibr">[37]</xref>. The three rRNA operon loci are located in regions characterized by direct global repeats where the DNA is highly flexible, as shown from the green signal in the position preference lane, with an absence of protein coding genes. The flexible DNA in this region facilitates the binding of the RNA polymerase and a high expression level for these genes.</p><fig id="pone-0012253-g002" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0012253.g002</object-id><label>Figure 2</label><caption><title>Genome Atlas of <italic>C. jejuni</italic> M1.</title><p>The Atlas shows various nucleotide and structural properties as well as the genes of the M1 genome in relation to chromosomal position. The intrinsic curvature, stacking energy and position preference (a measure of helix flexibility, where green color denotes flexible sequences) are calculated from simple weight matrix models previously published <xref rid="pone.0012253-Jensen1" ref-type="bibr">[35]</xref>, while global direct and inverted repeats are derived from BLASTN alignments <xref rid="pone.0012253-Altschul1" ref-type="bibr">[65]</xref>. The second inner-most circle displays the GC-skew, visible as the bias of G's towards the replication leading strand. Genes discussed in the text are marked on the atlas. A zoomable version is available online in the supplementary section.</p></caption><graphic xlink:href="pone.0012253.g002"/></fig></sec><sec id="s2d"><title>Core and Pan-genome Analysis</title><p>Campylobacters have a relatively small genome, which has implication for the sizes of the pan- and core genomes. With only roughly 25&#x02013;33&#x00025; as many genes as <italic>E. coli</italic> strains, such small genomes would be expected to contain more essential (and hence &#x02018;core&#x02019;) genes and relatively fewer dispensable or auxiliary genes <xref rid="pone.0012253-Raskin1" ref-type="bibr">[38]</xref>.</p><p>An estimate was made of the pan- and core genomes of <italic>C. jejuni</italic> based on the 13 complete or nearly complete genomes (including M1) of <italic>C. jejuni</italic> publically available at the time of writing. The core genome of the genus <italic>Campylobacter</italic> could be estimated tentatively using 8 additional genomes of other <italic>Campylobacter</italic> species, although more data would allow for higher accuracy. The core genomes for each of the <italic>non-jejuni</italic> species could not be assessed, however, as only single genome sequences for each species were available.</p><p>The number of conserved gene families in the core and pan-genomes of the genus <italic>Campylobacter,</italic> identified by consecutive addition of species, starting with the <italic>C. jejuni</italic> genome containing the most genes (<italic>C. jejuni</italic> RM1221) and then subsequently adding the remaining <italic>C. jejuni</italic> genomes one by one, is shown (<xref ref-type="fig" rid="pone-0012253-g003">Figure 3</xref>). The resulting numbers of newly added gene families were plotted as bars, whereas the lines connect the sum of all recognized gene families (the pan-genome) and the combined conserved gene families (the core genome).</p><fig id="pone-0012253-g003" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0012253.g003</object-id><label>Figure 3</label><caption><title>Pan-genome plots of <italic>Campylobacter</italic>.</title><p>The columns give the number of new gene families introduced with the addition of each new genome to the consideration. The curves shows the evolution of the pan genome as an accumulated sum of gene families (blue line) and the core genome (red line), as described in the <xref ref-type="sec" rid="s3">Methods</xref>. The lower-bound estimates of the sizes of <italic>the C. jejuni</italic> core and pan-genomes are indicated by the dotted lines.</p></caption><graphic xlink:href="pone.0012253.g003"/></fig><p>With the addition of each genome, the size of the pan-genome increases, whilst the core genome decreases at a slower rate. In total 2,427 gene families were identified in the pan-genome whilst the core genome comprised 1,295 gene families. Note that in <xref ref-type="fig" rid="pone-0012253-g003">
+<bold>Figure 3</bold>
+</xref>, the genome of strain M1 reduced the estimated core genome of <italic>C. jejuni</italic> by 6 gene families, but contributed 16 new gene families to the pan-genome. Based on the 13 <italic>C. jejuni</italic> genomes available, and using a method previously described <xref rid="pone.0012253-Chao1" ref-type="bibr">[39]</xref> for extrapolating the boundaries of core and pan-genomes, we estimate the total species core genome to stabilize no lower than 608 gene families. A similar Chao-lower-bound estimate of the pan-genome size is 3,047 gene families which represents the minimum number of gene families one would expect to see with infinite data available <xref rid="pone.0012253-Snipen1" ref-type="bibr">[40]</xref>. These numbers were inferred using a strict regimen requiring core genes to be present in all 13 genomes and should be considered the extreme lower boundaries for the core and pan-genomes. Two recent studies reported an estimate number of 647 or 847 for the core genome of the complete genus <italic>Campylobacter</italic> using different approaches <xref rid="pone.0012253-Snipen1" ref-type="bibr">[40]</xref>, <xref rid="pone.0012253-Lefebure1" ref-type="bibr">[41]</xref>. A similar estimate for the genus using the method applied here would not be justified with the amount of data available.</p><p>The pan-genome of all 13 <italic>C. jejuni</italic> genomes analyzed is roughly twice that of their core genomes, and only about 1.5 times the average size of these 13 <italic>C. jejuni</italic> genomes. Consequently only about one third of any of these genomes will comprise auxiliary genes (<italic>i.e.</italic> genes not belonging to the conserved core genome) and these must then account for strain-to-strain phenotypic variation that is due to gene content (as opposed to variations due to gene expression or the minor sequence variations possible while remaining inside the same gene family). Such genes may be functionally dispensable and redundant to some degree. However, it is not known if all such genes would be non-essential as a given &#x02018;essential&#x02019; functionality could theoretically be provided by different auxiliary genes in alternative genetic backgrounds.</p><p>Functional categories for the core and auxiliary genomes for <italic>C. jejuni</italic> M1 were inferred through alignments of translated sequences against UniProtKB and the results were summarized in <xref ref-type="fig" rid="pone-0012253-g004">
+<bold>Figure 4</bold>
+</xref>. For the core genes a greater focus can be seen on intracellular activities exemplified directly by the higher fraction of the core genome being associated with categories like &#x0201c;Location: Intracellular&#x0201d;, &#x0201c;Metabolic and other Cellular Processes&#x0201d; and &#x0201c;Transcription/Translation/DNA Replication&#x0201d;. The Auxiliary genes were generally harder to assign to a category, but show a higher degree of involvement in transporting molecules in or out of the cell. Even so, a large fraction of the auxiliary genes are still connected with fundamental cellular and metabolic processes.</p><fig id="pone-0012253-g004" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0012253.g004</object-id><label>Figure 4</label><caption><title>Gene Ontology terms associated with core and auxiliary genes.</title><p>The figure shows the percentage of the total core and auxiliary genomes for strain M1 which could be associated with a given role based on Gene Ontology terms. The Gene Ontology terms used to connect each protein to a functional category is given in parenthesis below each category. The total fraction of each set which could not be assigned is also presented.</p></caption><graphic xlink:href="pone.0012253.g004"/></fig><p>An alternative comparison of all genomes was undertaken, based on a matrix of an all-against-all BLAST analysis (<xref ref-type="fig" rid="pone-0012253-g005">
+<bold>Figure 5</bold>
+</xref>). This provides an overview of how similar any genome is to any other genome, in terms of the number of conserved gene families. On the basis of this analysis the genome displaying the highest degree of similarity to strain M1 is that of strain 81116. As expected, the least degree of similarity of any single genome to all of the other genomes analyzed here is reported for <italic>C. jejuni doylei</italic> 269.97.</p><fig id="pone-0012253-g005" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0012253.g005</object-id><label>Figure 5</label><caption><title>Blast Matrix of <italic>C. jejuni.</italic>
+</title><p>The figure presents the absolute number of gene families preserved between any two species along with the total number of families between them. The relative percentage between these numbers is also given and is used as a basis for the color intensity. The orange squares deserve special mention since these are based on alignments of the organism against itself, and thus show the internal homology within each organism's proteome. The highest homology was found between genomes M1 and 81116, highlighted by a box.</p></caption><graphic xlink:href="pone.0012253.g005"/></fig></sec><sec id="s2e"><title>Clustering of <italic>Campylobacter</italic> proteomes</title><p>A pan-genome hierarchical clustering tree based on the gene family content, along with a phylogenetic tree based on 16S rRNA similarity was generated (<xref ref-type="fig" rid="pone-0012253-g006">
+<bold>Figure 6</bold>
+</xref>). The pan-genome tree is an alternative presentation of the data previously shown in <xref ref-type="fig" rid="pone-0012253-g003">
+<bold>Figure 3</bold>
+</xref> and <xref ref-type="fig" rid="pone-0012253-g005">
+<bold>Figure 5</bold>
+</xref>, but emphasizes inter-species relationships. As expected, genomes reporting a high similarity score in the BLAST matrix cluster on the pan-genome tree, which provides deeper resolution among the <italic>C. jejuni</italic> genomes than the 16S rRNA tree. The close relationship of the single <italic>C. coli</italic> genome with all the <italic>C. jejuni</italic> strains is apparent, while the <italic>C. jejuni</italic> subspecies <italic>doylei</italic> strain is an outlier to the other sequenced <italic>C. jejuni</italic>, corroborating its dissimilarity to the other genomes in the BLAST Matrix of <xref ref-type="fig" rid="pone-0012253-g005">Figure 5</xref>. In fact, while the 16S rRNA profile places the <italic>doylei</italic> subspecies within the <italic>C. jejuni</italic> clade, the pan-genome tree reveals its gene content to be closest to that of <italic>C. upsaliensis</italic>. While the gene content alone is no evidence of evolutionary or taxonomical relationship, it does suggest that <italic>C. jejuni doylei</italic> may display some functional characteristics normally only associated with <italic>C. upsaliensis</italic> and not other <italic>C. jejuni</italic>. Indeed, <italic>C. jejuni doylei</italic> is typically not encountered in food or animals, but only in humans, where it appears more apt at causing bacteremia <xref rid="pone.0012253-Parker1" ref-type="bibr">[42]</xref>, suggesting a different ecology.</p><fig id="pone-0012253-g006" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0012253.g006</object-id><label>Figure 6</label><caption><title>16S rRNA and Pan-genomic tree of the <italic>Campylobacter</italic> genus.</title><p>The left dendrogram displays the distance between the genomes based on the sequence of the 16S rRNA gene. The right dendrogram is based on presence or absence of the gene families in the pan-genome. The relative manhattan distance indicates the proportion of the pan-genome where genomes differ in present/absent status. Bootstrap values are given as percentages to indicate the stability of the branching.</p></caption><graphic xlink:href="pone.0012253.g006"/></fig><p>The high degree of whole-genome similarity between strains M1 and 81116 is confirmed by the relative Manhattan distance being less than 0.05, <italic>i.e.</italic> these strains differ in less than 5&#x00025; of the pan-genome (ignoring all ORFans, see <xref ref-type="sec" rid="s3">Methods</xref>).</p></sec><sec id="s2f"><title>Comparison of 81116 and M1</title><p>
+<italic>C. jejuni</italic> strain 81116 is the closest related sequenced strain to M1. It is known to be serotype HS6, ST-283 (which differs in 3 of 7 alleles with strain M1). Although strain 81116 has the same AFLP profile as strain M1 (data not shown), its DNA is indigestible by <italic>Sma</italic>I so it is untypable by PFGE using this enzyme <xref rid="pone.0012253-Manning1" ref-type="bibr">[43]</xref>. Strain 81116 is one of a group of strains that were isolated over time and distance with identical genotypes <xref rid="pone.0012253-Manning1" ref-type="bibr">[43]</xref> and consequently share phenotypic characteristics. A closer comparison of M1 with strain 81116 was undertaken.</p><p>The frequency of genes sharing decreasing percentages of identity between these two genomes was determined (<xref ref-type="table" rid="pone-0012253-t001">
+<bold>Table 1</bold>
+</xref>). These data illustrate the differences that can occur, on a complete genome scale, between isolates that have an identical AFLP genotype and <italic>flaA</italic> type. The divergence in gene content between these strains is considerable, even at the protein level. Such observations would obviously be overlooked when isolates were only characterized by genotyping, and this could lead to the erroneous interpretation that isolates with identical genotypes are completely identical.</p><table-wrap id="pone-0012253-t001" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0012253.t001</object-id><label>Table 1</label><caption><title>Genes identified in a comparison between strains 81116 and M1 as unique relative to the comparator.</title></caption><alternatives><graphic id="pone-0012253-t001-1" xlink:href="pone.0012253.t001"/><table frame="hsides" rules="groups"><colgroup span="1"><col align="left" span="1"/><col align="center" span="1"/><col align="center" span="1"/></colgroup><thead><tr><td align="left" rowspan="1" colspan="1"/><td colspan="2" align="left" rowspan="1">Number of Proteins</td></tr><tr><td align="left" rowspan="1" colspan="1">BLASTP &#x00025;-identity</td><td align="left" rowspan="1" colspan="1">M1 proteome (1624 proteins) vs. 81116 proteome</td><td align="left" rowspan="1" colspan="1">81116 proteome (1623 proteins) vs. M1 proteome</td></tr></thead><tbody><tr><td align="left" rowspan="1" colspan="1">100&#x00025;</td><td align="left" rowspan="1" colspan="1">1166</td><td align="left" rowspan="1" colspan="1">1194</td></tr><tr><td align="left" rowspan="1" colspan="1">&#x02265;90&#x00025;</td><td align="left" rowspan="1" colspan="1">392</td><td align="left" rowspan="1" colspan="1">322</td></tr><tr><td align="left" rowspan="1" colspan="1">&#x02265;80&#x00025;</td><td align="left" rowspan="1" colspan="1">23</td><td align="left" rowspan="1" colspan="1">19</td></tr><tr><td align="left" rowspan="1" colspan="1">&#x02265;70&#x00025;</td><td align="left" rowspan="1" colspan="1">7</td><td align="left" rowspan="1" colspan="1">13</td></tr><tr><td align="left" rowspan="1" colspan="1">&#x02265;60&#x00025;</td><td align="left" rowspan="1" colspan="1">6</td><td align="left" rowspan="1" colspan="1">8</td></tr><tr><td align="left" rowspan="1" colspan="1">&#x02265;50&#x00025;</td><td align="left" rowspan="1" colspan="1">2</td><td align="left" rowspan="1" colspan="1">11</td></tr><tr><td align="left" rowspan="1" colspan="1">&#x02265;40&#x00025;</td><td align="left" rowspan="1" colspan="1">0</td><td align="left" rowspan="1" colspan="1">4</td></tr><tr><td align="left" rowspan="1" colspan="1">&#x02265;30&#x00025;</td><td align="left" rowspan="1" colspan="1">4</td><td align="left" rowspan="1" colspan="1">5</td></tr><tr><td align="left" rowspan="1" colspan="1">&#x02265;20&#x00025;</td><td align="left" rowspan="1" colspan="1">5</td><td align="left" rowspan="1" colspan="1">11</td></tr><tr><td align="left" rowspan="1" colspan="1">&#x0003c;20&#x00025;</td><td align="left" rowspan="1" colspan="1">19</td><td align="left" rowspan="1" colspan="1">36</td></tr><tr><td align="left" rowspan="1" colspan="1"/><td colspan="2" align="left" rowspan="1">Proteins with &#x0003c;20&#x00025; identity in the other genome</td></tr><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1">
+<italic>CJM1_0032, CJM1_0040</italic>, <italic>CJM1_0041</italic>, <italic>CJM1_0055, CJM1_0056, CJM1_0057, CJM1_0138, CJM1_0278</italic>, <italic>CJM1_0414, CJM1_0728, CJM1_0745</italic>, CJM1_1118, <italic>CJM1_1119,</italic> CJM1_1120, CJM1_1372, CJM1_1373, <italic>CJM1_1375</italic>, CJM1_1381, CJM1_1382</td><td align="left" rowspan="1" colspan="1">
+<italic>C8J_0035, C8J_0036, C8J_0063, C8J_0132, </italic>
+<bold><italic>C8J_0133</italic></bold>
+<italic>, C8J_0154, C8J_0265, C8J_0266, C8J_0267, C8J_0272, </italic>
+<bold><italic>C8J_0273, C8J_0274</italic></bold>
+<italic>, </italic>
+<bold><italic>C8J_0275,</italic></bold>
+<italic> C8J_0321, C8J_0529, C8J_0651, C8J_0776, C8J_0852, C8J_0918, C8J_1080, C8J_1081, C8J_1083, C8J_1329, C8J_1330, C8J_0131, C8J_1332, C8J_1334, C8J_1335, C8J_1337, C8J_1338,</italic>
+<italic>C8J_1340, C8J_1341, C8J_1342, C8J_1456, C8J_1458, </italic>
+<bold><italic>C8J_1459</italic></bold>
+</td></tr></tbody></table></alternatives><table-wrap-foot><fn id="nt101"><label/><p>&#x0002a;Gene names given in bold refer to the sequences having matches to verified proteins in UniProtKB/Swiss-Prot, while italics indicate a match to the NCBI nr database.</p></fn></table-wrap-foot></table-wrap><p>In the comparison of the genomes of strains 81116 and M1, a number of genes were recognized as being unique to either one or the other strain (<xref ref-type="table" rid="pone-0012253-t001">
+<bold>Table 1</bold>
+</xref>). The comparison was performed first with a tBLASTX alignment of the genes of <italic>C. jejuni</italic> M1 against the full genome of 81116 and then <italic>vice-versa</italic>. Similarity was relaxed to require 50&#x00025; identity over only 20&#x00025; of the length of the query sequence (<italic>i.e.</italic> &#x0003c;10&#x00025; identity over the entire sequence), so that only genes that are truly missing (as opposed to divergent genes) in either of the two strains were detected. There were 36 genes unique to strain 81116 and 19 unique to strain M1. One of the genes present in strain 81116, but not in strain M1, was C8J_0133, which has similarity to a DNA methylase in <italic>Lactococcus lactis</italic> subsp. <italic>cremoris</italic> (P34877). The absence of this gene might explain the resistance to <italic>Sma</italic>I digestion observed strain 81116 but not in strain M1.</p></sec><sec id="s2g"><title>Blast Atlas of <italic>C. jejuni</italic> strain M1</title><p>A final visualization tool of genome comparison applied to the <italic>C. jejuni</italic> genomes was the Blast Atlas <xref rid="pone.0012253-Hallin1" ref-type="bibr">[44]</xref> (<xref ref-type="fig" rid="pone-0012253-g007">
+<bold>Figure 7</bold>
+</xref>) (a &#x0201c;zoomable&#x0201d; version of this is available online <xref rid="pone.0012253-Friis1" ref-type="bibr">[45]</xref>). This analysis used the Genome Atlas of M1 as a reference point, around which all BLAST hits detected in the other <italic>C. jejuni</italic> genomes were plotted, followed by the other available genomes of the <italic>Campylobacter</italic> genus. The atlas illustrates how well conserved most regions of strain M1 are within the other <italic>C. jejuni</italic> species, and even to a large extent within the <italic>Campylobacter</italic> genus, with the exception of a few loci. As this analysis is based on BLASTP, RNA genes show up as &#x02018;gaps&#x02019; although they are in fact conserved in all genomes.</p><fig id="pone-0012253-g007" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0012253.g007</object-id><label>Figure 7</label><caption><title>Blast Atlas of <italic>C. jejuni M1</italic>.</title><p>The proteome of the M1 strain was aligned against the proteomes of 20 other <italic>Campylobacter</italic> genomes using BLASTP and the results are displayed as colored circles with increasing color intensity signifying increased similarity. Only BLAST results of proteins are shown. The three rRNA islands are marked as well as the lipooligosaccharide (LOS) and extracellular polysaccharide biosynthesis (PBS) clusters.</p></caption><graphic xlink:href="pone.0012253.g007"/></fig><p>Despite the degree of conservation, several highly variable regions are also visible, such as the gene cluster located in the region from 1,335 kb to 1,360 kb. This region encodes several genes which are hypothetical, but also many capsular polysaccharide biosynthesis genes. The LOS locus of <italic>C. jejuni</italic> also displays high degrees of variability between strains, as previously reported <xref rid="pone.0012253-Parkhill1" ref-type="bibr">[13]</xref>.</p><p>At the position from 52,774 to 51,104 bp the gene CJM1_0038 is located. This gene encodes a gamma-glutamyltranspeptidase, which has been shown to enhance the ability of <italic>C. jejuni</italic> to colonize the avian intestine <xref rid="pone.0012253-Hofreuter1" ref-type="bibr">[46]</xref>, <xref rid="pone.0012253-Barnes1" ref-type="bibr">[47]</xref>. This gene is far from ubiquitous in <italic>C. jejuni</italic> but is found (other than in M1) in strains 81116, HB93-13, 81-176 and <italic>C. jejuni</italic> subsp <italic>doylei</italic> 269.97. Although all these strains were isolated from cases of campylobacteriosis <xref rid="pone.0012253-Pearson1" ref-type="bibr">[16]</xref>, <xref rid="pone.0012253-Russell1" ref-type="bibr">[48]</xref>, other clinical strains, such as NCTC 11168, do not possess this gene.</p><p>Another region of interest, from 1,455 kb to 1,465 kb, encodes two Type I restriction modification genes <italic>hsdR</italic> and <italic>hsdS</italic> (CJM1_1490 and CJM1_1493) and the associated DNA methylase, <italic>hsdM,</italic> (CJM1_1494). This restriction/modification (R/M) region has been shown to be involved in a <italic>hsd</italic> type I restriction&#x02013;modification system of <italic>C. jejuni</italic> but is not present in <italic>C. jejuni</italic> strain NCTC 11168 <xref rid="pone.0012253-Miller2" ref-type="bibr">[49]</xref>. The region appears conserved in only a few <italic>C. jejuni</italic> strains in addition to M1, namely in strains 81116, CG8421, and GC8486, as well as in <italic>C. coli</italic> RM2228. While <italic>hsdR</italic> and <italic>hsdM</italic> were found conserved in strain HB93-13 the <italic>hsdS</italic> gene was not. The presence of this R/M region would suggest implications for the methylation pattern and susceptibility of these genomes towards the HsdR restriction enzyme.</p><p>Finally, the R/M region in strain M1 also contains two slightly overlapping genes, <italic>rloA</italic> and <italic>rloB</italic> (CJM1_1491 and CJM1_1492) with no inferred function, but which are also conserved in strains 81116 and CG8421. A subsequent examination of these genomes revealed that the location of the <italic>rlo</italic> genes inside the R/M island is conserved in strains CG8486 and 81116 (data not shown).</p><p>In conclusion, strain M1, a rarely reported <italic>C. jejuni</italic> isolate from colonized poultry with direct evidence of its ability to infect and cause diarrhea in a human, provides a unique opportunity to investigate the genomic basis of colonization in poultry and pathogenicity in humans. The complete elucidation of the genome sequence of strain M1 not only provides the scientific community with a valuable strain to use in <italic>in vitro</italic> and <italic>in vivo</italic> models of colonization and virulence, but also allows <italic>in silico</italic> approaches such as microarray analysis to be applied.</p></sec></sec><sec sec-type="materials|methods" id="s3"><title>Materials and Methods</title><sec id="s3a"><title>Ethics Statement</title><p>The study was approved by the VLA Ethical Review Committee on the 25th of March 2010. The patient has provided written informed consent for the collection of samples and subsequent analysis.</p></sec><sec id="s3b"><title>Isolation and characterization of <italic>C. jejuni</italic> strain M1</title><p>A research team of four individuals visited a poultry processing plant to investigate the sites and diversity of <italic>Campylobacter</italic> contamination. Three days after this visit, one member of the research team became ill with watery diarrhoea, fever and severe abdominal cramps. The diarrhoea terminated after about six days. Six days after the onset of symptoms a faecal sample was cultured as described below and <italic>C. jejuni</italic> was isolated. Four separate colonies from the faecal sample were recovered and stored.</p><p>The team sampled two flocks (flocks 1 and 2) at the abattoir. The flocks were reared on different farms, and sequentially processed through the processing plant. Caeca were removed from the poultry carcasses during evisceration, and the contents sampled aseptically. Swab samples were also collected from various sites in the abattoir and from up to five poultry carcasses <xref rid="pone.0012253-Simonsen1" ref-type="bibr">[50]</xref> as they progressed through the processing plant. The methods of chicken sampling and culture have been previously described <xref rid="pone.0012253-Newell2" ref-type="bibr">[51]</xref>. Briefly all samples were directly plated onto blood agar containing selective antibiotics <xref rid="pone.0012253-Skirrow1" ref-type="bibr">[52]</xref> with actidione (100 ug/ml) and cefoperazone (30 mg/ml), incubated microaerobically at 37&#x000b0;C for 2 days, with or without pre-enrichment in Exeter medium <xref rid="pone.0012253-Humphrey1" ref-type="bibr">[53]</xref>. Identification was based on microaerobic growth at 42&#x000b0;C, hippurate and indoxylacetate hydrolysis and catalase and oxidase activities. A single colony from each sample was stored in glycerol broth (10&#x00025; v/v glycerol in 1&#x00025; w/v proteose peptone) at &#x02212;80&#x000b0;C for subsequent typing.</p><p>All isolates were <italic>fla</italic>-typed according to the technique of Ayling et al. <xref rid="pone.0012253-Ayling1" ref-type="bibr">[23]</xref> using the restriction enzymes <italic>Dde</italic>I and <italic>Hinf</italic>I. Representatives of the human and chicken isolates were also serotyped <xref rid="pone.0012253-Frost1" ref-type="bibr">[54]</xref> and molecular typed by pulsed-field gel electrophoresis (PFGE) using the enzymes <italic>Sma</italic>I and <italic>Kpn</italic>I <xref rid="pone.0012253-Gibson1" ref-type="bibr">[55]</xref>, amplified fragment length polymorphism (AFLP) <xref rid="pone.0012253-Duim1" ref-type="bibr">[56]</xref> and multilocus sequence typing (MLST) <xref rid="pone.0012253-Dingle1" ref-type="bibr">[57]</xref>.</p><p>Phenotypic characterization of strain M1 (Laboratory designation 99/308) was performed to determine <italic>in vitro</italic> invasiveness of INT407 cells and CaCO2 cells and to detect the expression of cytolethal distending toxin (CDT) as previously described <xref rid="pone.0012253-Fearnley1" ref-type="bibr">[58]</xref>, <xref rid="pone.0012253-Abuoun1" ref-type="bibr">[59]</xref>.</p></sec><sec id="s3c"><title>Genome sequencing and annotation of strain M1</title><p>The genome of strain M1 was sequenced by Agencourt Bioscience, Beverly MA, USA using a 454 GS FLEX instrument and assembled using the ARACHNE system of Batzoglou <italic>et al</italic>
+<xref rid="pone.0012253-Batzoglou1" ref-type="bibr">[60]</xref>. This resulted in 18 contigs ranging in size from 108 bp to 950,427 bp, altogether totaling 1,611,563 bp. Gaps were closed by direct sequencing of PCR amplifications using primers flanking the gapped regions. The gene annotation (as described below) for strain M1 was visualized on a Genome Atlas as previously published <xref rid="pone.0012253-Jensen1" ref-type="bibr">[35]</xref>, <xref rid="pone.0012253-Pedersen1" ref-type="bibr">[36]</xref>. A zoomable version of the Atlas is available online <xref rid="pone.0012253-Friis1" ref-type="bibr">[45]</xref>. The complete annotated sequence has been submitted to NCBI/GenBank under the accession number CP001900 (Genome Project ID 38041).</p></sec><sec id="s3d"><title>Identification of protein coding genes and inference of gene function</title><p>Gene finding was carried out using the EasyGene v1.2b gene finder using the pre-calculated model for <italic>C. jejuni</italic> (CJ02) <xref rid="pone.0012253-Nielsen1" ref-type="bibr">[61]</xref>, <xref rid="pone.0012253-Larsen1" ref-type="bibr">[62]</xref>, which resulted in 1624 inferred protein coding genes. The quality of the gene finding is difficult to gauge, but was found to be acceptable in an assessment performed according to Skovgaard <italic>et al.</italic>
+<xref rid="pone.0012253-Skovgaard1" ref-type="bibr">[63]</xref> (See supplementary section <xref rid="pone.0012253-Friis1" ref-type="bibr">[45]</xref>). Even so, in their second publication, the authors of EasyGene note that the gene finder has a small tendency to disfavor non-ATG start codons, particularly if an in-frame ATG is nearby <xref rid="pone.0012253-Nielsen1" ref-type="bibr">[61]</xref>. Thus, to verify the correct prediction of CDS start codons, all inferred genes were aligned against the NCBI non-redundant database (nr database) using BLASTX <xref rid="pone.0012253-Pruitt1" ref-type="bibr">[64]</xref>, <xref rid="pone.0012253-Altschul1" ref-type="bibr">[65]</xref>, which identified 233 entries as having no perfect match in the database. For each of these 233 entries, the highest scoring sequence in the nr database was extracted and aligned back against the entire strain M1 genome using TBLASTN. If this resulted in a perfect hit to the sequence of the originally predicted gene in strain M1 covering the entire sequence in the nr database without any in-frame stop codons, the strain M1 annotations were updated. In this case a new transcription start position was assigned to the M1 gene matching that of the sequence from the nr database, provided that the new start codon was a valid. As a result of this, 85 start codons were changed, many of which resulted in non-standard, but valid start codons of GTG or TTG. A table of all affected genes is available in the supplemental section <xref rid="pone.0012253-Friis1" ref-type="bibr">[45]</xref>.</p><p>Functional information was inferred through prediction of gene function. This entailed the comparison of translated sequences to the validated part of UniProt (Swiss-prot) <xref rid="pone.0012253-Bairoch1" ref-type="bibr">[66]</xref>, and to the annotated genes of the previously sequenced Campylobacter genomes in GenBank (<xref ref-type="table" rid="pone-0012253-t002">
+<bold>Table 2</bold>
+</xref>) <xref rid="pone.0012253-Benson1" ref-type="bibr">[67]</xref>. For BLASTX alignment a similarity criterion was used of &#x02265;50&#x00025; identity of the amino acids over &#x02265;50&#x00025; of the length of the longest sequence. Hits to Uniprot were preferred over those to the NCBI database, however, the curated Swiss-prot part of Uniprot was preferred over all others. In total, similarity to Swiss-prot provided inference of annotation for 527 protein coding genes, while a further 1060 could be characterized from the rest of Uniprot (UniProt/TrEMBL) and 8 from NCBI nr. Of these 1595 genes, 495 were annotated as &#x0201c;putative&#x0201d;, &#x0201c;uncharacterized&#x0201d; or &#x0201c;hypothetical&#x0201d;.</p><p>Supplemental functional annotation was inferred through the alignment of translated sequences against active sites in Pfam using the HMM-based tool provided by Pfam <xref rid="pone.0012253-Finn1" ref-type="bibr">[68]</xref>. Default settings were used and the built-in Pfam TC trusted threshold cutoffs were relied upon. In case of overlapping results, only the best match was used.</p></sec><sec id="s3e"><title>Identification of non-protein encoding RNAs</title><p>Ribosomal genes coding rRNA were predicted using RNAmmer <xref rid="pone.0012253-Lagesen1" ref-type="bibr">[69]</xref>, while tRNA genes were predicted using tRNAscan <xref rid="pone.0012253-Schattner1" ref-type="bibr">[70]</xref>. Both programs were used at the default settings.</p></sec><sec id="s3f"><title>Identification of gene conservation and definition of gene families</title><p>The <italic>Campylobacter</italic> genomes used for comparative studies, as listed in <xref ref-type="table" rid="pone-0012253-t002">
+<bold>Table 2</bold>
+</xref>, were obtained from NCBI <xref rid="pone.0012253-Benson1" ref-type="bibr">[67]</xref>.</p><p>The set of gene families for this collection of <italic>Campylobacter</italic> genomes were found by BLASTing all proteins in each genome against all proteins in the query genome. A hit was considered significant if the alignment covered at least 50&#x00025; of both sequences, and contained at least 50&#x00025; identities <xref rid="pone.0012253-Binnewies1" ref-type="bibr">[71]</xref>. This included aligning proteins within each proteome, and while self-hits were ignored, hits to other homologous genes within the same genome were recorded. A pair of genes having significant hits was considered as belonging to the same gene family. Two gene families were merged into one if any one gene in a given family would meet the similarity criterion in an alignment against any member of another gene family <xref rid="pone.0012253-Binnewies1" ref-type="bibr">[71]</xref>, <xref rid="pone.0012253-Ussery1" ref-type="bibr">[72]</xref>.</p></sec><sec id="s3g"><title>BLAST matrix</title><p>The results of the gene conservation analysis were visualized as a triangle-shaped matrix providing the amount of conserved gene families between any two proteomes, both as an absolute number and as the fraction of the total number of gene families shared. In addition to the comparisons across proteomes, the matrix also shows the results from aligning proteins within each proteomes against each other.</p></sec><sec id="s3h"><title>16S rRNA tree for the <italic>Campylobacter</italic> genus</title><p>RNAmmer was used to find the sequences for the 16S rRNA phylogenetic tree. The sequences had to be between 1400 and 1700 nucleotides and have an RNAmmer score above 1700 to be chosen. In case several sequences from one organism satisfied these criteria, one sequence was arbitrarily chosen. Alignment was done using PRANK <xref rid="pone.0012253-Loytynoja1" ref-type="bibr">[73]</xref>, <xref rid="pone.0012253-Loytynoja2" ref-type="bibr">[74]</xref>, and the program MEGA4 was used to construct a phylogenetic tree <xref rid="pone.0012253-Tamura1" ref-type="bibr">[75]</xref>. Within MEGA4, the tree was created using the Neighbor-Joining method with the uniform rate Jukes&#x02013;Cantor distance measure and the complete-delete option. A thousand re-samplings were done to find the bootstrap values.</p></sec><sec id="s3i"><title>Pan-genome tree for the <italic>Campylobacter</italic> genus</title><p>The pan-genome tree is another method for visualization of the differences between proteomes in a pan-genome context. It is a hierarchical clustering of genomes based on a weighted Manhattan distance computed from a pan-matrix. A pan-matrix is a matrix of 1s and 0s where each row corresponds to a gene family, as described above, and each column to a genome. Cell <italic>(i,j)</italic> in the matrix is 1 if gene family <italic>i</italic> is present in genome <italic>j</italic>, or 0 if it is absent. The distance between two genomes is the proportion of gene families where their present/absent status differs. Shorter distances represent genomes with many gene families in common, and larger distances reflect genomes with fewer gene families in common. Genes only occurring in a single genome were given a weight of &#x0201c;0&#x0201d; &#x02013; that is, they did not provide any difference in the computed distance in the matrix. These &#x02018;ORFans&#x02019; are frequently annotated as &#x02018;hypothetical protein&#x02019; and may in cases be falsely predicted genes. By discarding these genes the tree obtained is more robust against gene-prediction errors, at the cost of possibly losing some information. Bootstrap values (percentages) were computed for each inner node by re-sampling the rows of the pan-matrix.</p></sec><sec id="s3j"><title>Core- and pan-genome analysis</title><p>Conservation data across various genomes were also visualized by an accumulative plot showing the changes to the number of gene families in the core and pan-genomes as more sequential genomes were added to the dataset <xref rid="pone.0012253-Tettelin1" ref-type="bibr">[76]</xref>. The number of novel gene families for each added genome is also depicted. Any novel gene family encountered is automatically added to the pan-genome unless it is found to be conserved in the previously considered genomes. Because the quality of genome annotation is not consistent, and because <xref ref-type="table" rid="pone-0012253-t002">
+<bold>Table 2</bold>
+</xref> includes genomes which have not been completely sequenced, we have relaxed the definition of the core genome as follows; we added any gene family of the n<sup>th</sup> analyzed genome to the core genome if by analyzing n&#x0002b;1 genomes this gene family was present in at least n genomes. This approach provided tolerance while preserving intuitiveness in plotting. Otherwise, the reduction in the core genome caused by, for example, the addition of <italic>C. concisus</italic> 13826 would be drawn for the genome to its right (<italic>C. fetus</italic>). For the same reason the core genome curve does not extend to the rightmost genome since no n&#x0002b;1 genome exists.</p><p>GO categories were inferred for the core and auxiliary genes in strain M1 through the alignment of translated sequences against Uniprot meeting the similarity criterion of at least 50&#x00025; identity covering at least 50&#x00025; of both sequences. GO terms were inferred from all alignments meeting the criterion to minimize problems with incomplete annotations in the database. For each go term assigned to a given protein, all parent terms were considered as well. GO assignments were then grouped together into functional category based on similarity and overlap.</p></sec><sec id="s3k"><title>BLAST atlas</title><p>A Blast Atlas was produced using a previously described approach <xref rid="pone.0012253-Hallin1" ref-type="bibr">[44]</xref>. The atlas displays results of the BLASTP comparisons of the products of the predicted genes of <italic>C. jejuni</italic> M1 with the annotated proteomes of the other campylobacters from <xref ref-type="table" rid="pone-0012253-t002">
+<bold>Table 2</bold>
+</xref>. A zoomable version is available online <xref rid="pone.0012253-Friis1" ref-type="bibr">[45]</xref>.</p></sec></sec></body><back><fn-group><fn fn-type="COI-statement"><p><bold>Competing Interests: </bold>The authors have no conflicts or competing interests, but to clarify the involvment of the companies of Professor Newell and Dr. Wassenaar they here present statements from both parties declaring their interests. These statements can be provided with signatures if requested. Until 2008 Dr Diane G Newell was employed by the Veterinary Laboratories Agency (VLA). Following her retirement from the VLA she became the sole owner of Foodborne Zoonoses Consultancy, which provides advice to UK and EC governmental bodies. In her capacity as an employee of the VLA she initiated, participated in, supervised and managed the research associated with the isolation and characterization of strain M1 and the delivery of the DNA for the genomic analysis. Subsequently, Dr Newell, of Foodborne Zoonoses Consultancy, was contracted by the VLA to provide the time and expertise to collaborate in the interpretation of the genomic data and publication of the results of this research. There are no conflicts of, or competing, interests associated with this employment. All PLoS ONE policies regarding the sharing of results or data will be complied with. Since 2000, Dr. Trudy M. Wassenaar is founder and owner of Molecular Microbiology and Genomics Consultants (MMGC), which provides advice to academic, governmental and commercial research groups working on bacterial molecular biology or genomics. Through this company, Dr. Wassenaar provided insights and expertise in the analysis and interpretation of the M1 genome. The time invested in this work was paid in part by The Technical University of Denmark and in part by MMGC but no other financial input was rendered. There is no commercial interest of MMGC to any of the findings disclosed in the manuscript. There are no conflicts of, or competing, interests associated with MMGC. All PLoS ONE policies regarding the sharing of results or data will be complied with.</p></fn><fn fn-type="financial-disclosure"><p><bold>Funding: </bold>Danish Center for Scientific Computing (DCSC) <ext-link ext-link-type="uri" xlink:href="http://www.dcsc.dk/">http://www.dcsc.dk/</ext-link>; Danish Natural Science Research Council (FNU grant 26-06-0349) <ext-link ext-link-type="uri" xlink:href="http://en.fi.dk/councils-commissions/the-danish-council-for-independent-research">http://en.fi.dk/councils-commissions/the-danish-council-for-independent-research</ext-link>; Defra, Great Britain, funded the work leading to the isolation and characterization of <italic>C. jejuni</italic> 99/308 <ext-link ext-link-type="uri" xlink:href="http://www.defra.gov.uk/">http://www.defra.gov.uk/</ext-link>. Dr. Wassenaar's salary was co-financed between The Technical University of Denmark and by Molecular Microbiology and Genomics Consultants MMGC (<ext-link ext-link-type="uri" xlink:href="http://www.mmgc.eu/">http://www.mmgc.eu/</ext-link>). The funders had no role in study design, data collection and analysis, decision to publish, or preparation of the manuscript.</p></fn></fn-group><ref-list><title>References</title><ref id="pone.0012253-Nauta1"><label>1</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Nauta</surname><given-names>M</given-names></name><name><surname>Hill</surname><given-names>A</given-names></name><name><surname>Rosenquist</surname><given-names>H</given-names></name><name><surname>Brynestad</surname><given-names>S</given-names></name><name><surname>Fetsch</surname><given-names>A</given-names></name><etal/></person-group>
+<year>2009</year>
+<article-title>A comparison of risk assessments on <italic>Campylobacter</italic> in broiler meat.</article-title>
+<source>Int J Food Microbiol</source>
+<volume>129</volume>
+<fpage>107</fpage>
+<lpage>123</lpage>
+<pub-id pub-id-type="pmid">19136176</pub-id></element-citation></ref><ref id="pone.0012253-Wagenaar1"><label>2</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Wagenaar</surname><given-names>JA</given-names></name><name><surname>Mevius</surname><given-names>DJ</given-names></name><name><surname>Havelaar</surname><given-names>AH</given-names></name></person-group>
+<year>2006</year>
+<article-title>
+<italic>Campylobacter</italic> in primary animal production and control strategies to reduce the burden of human campylobacteriosis.</article-title>
+<source>Rev Sci Tech</source>
+<volume>25</volume>
+<fpage>581</fpage>
+<lpage>594</lpage>
+<pub-id pub-id-type="pmid">17094699</pub-id></element-citation></ref><ref id="pone.0012253-Wingstrand1"><label>3</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Wingstrand</surname><given-names>A</given-names></name><name><surname>Neimann</surname><given-names>J</given-names></name><name><surname>Engberg</surname><given-names>J</given-names></name><name><surname>Nielsen</surname><given-names>EM</given-names></name><name><surname>Gerner-Smidt</surname><given-names>P</given-names></name><etal/></person-group>
+<year>2006</year>
+<article-title>Fresh chicken as main risk factor for campylobacteriosis, Denmark.</article-title>
+<source>Emerg Infect Dis</source>
+<volume>12</volume>
+<fpage>280</fpage>
+<lpage>285</lpage>
+<pub-id pub-id-type="pmid">16494755</pub-id></element-citation></ref><ref id="pone.0012253-JacobsReitsma1"><label>4</label><element-citation publication-type="book">
+<person-group person-group-type="author"><name><surname>Jacobs-Reitsma</surname><given-names>W</given-names></name></person-group>
+<year>2000</year>
+<article-title>
+<italic>Campylobacter</italic> in the food supply.</article-title>
+<person-group person-group-type="editor"><name><surname>Nachamkin</surname><given-names>I</given-names></name><name><surname>Blaser</surname><given-names>MJ</given-names></name></person-group>
+<source><italic>Campylobacter</italic>. 2nd ed</source>
+<publisher-loc>Washington, D.C</publisher-loc>
+<publisher-name>American Society for Microbhioology</publisher-name>
+<fpage>467</fpage>
+<lpage>481</lpage>
+</element-citation></ref><ref id="pone.0012253-Little1"><label>5</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Little</surname><given-names>CL</given-names></name><name><surname>Richardson</surname><given-names>JF</given-names></name><name><surname>Owen</surname><given-names>RJ</given-names></name><name><surname>de Pinna</surname><given-names>E</given-names></name><name><surname>Threlfall</surname><given-names>EJ</given-names></name></person-group>
+<year>2008</year>
+<article-title>Prevalence, characterisation and antimicrobial resistance of <italic>Campylobacter</italic> and <italic>Salmonella</italic> in raw poultrymeat in the UK, 2003-2005.</article-title>
+<source>Int J Environ Health Res</source>
+<volume>18</volume>
+<fpage>403</fpage>
+<lpage>414</lpage>
+<pub-id pub-id-type="pmid">19031145</pub-id></element-citation></ref><ref id="pone.0012253-Jorgensen1"><label>6</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Jorgensen</surname><given-names>F</given-names></name><name><surname>Bailey</surname><given-names>R</given-names></name><name><surname>Williams</surname><given-names>S</given-names></name><name><surname>Henderson</surname><given-names>P</given-names></name><name><surname>Wareing</surname><given-names>DR</given-names></name><etal/></person-group>
+<year>2002</year>
+<article-title>Prevalence and numbers of <italic>Salmonella</italic> and <italic>Campylobacter</italic> spp. on raw, whole chickens in relation to sampling methods.</article-title>
+<source>Int J Food Microbiol</source>
+<volume>76</volume>
+<fpage>151</fpage>
+<lpage>164</lpage>
+<pub-id pub-id-type="pmid">12038572</pub-id></element-citation></ref><ref id="pone.0012253-Wassenaar1"><label>7</label><element-citation publication-type="other">
+<person-group person-group-type="author"><name><surname>Wassenaar</surname><given-names>TM</given-names></name><name><surname>Fernandez-Astorga</surname><given-names>A</given-names></name><name><surname>Alonso</surname><given-names>R</given-names></name><name><surname>Marteinsson</surname><given-names>VT</given-names></name><name><surname>Magnusson</surname><given-names>SH</given-names></name><etal/></person-group>
+<year>2009</year>
+<article-title>Comparison of <italic>Campylobacter</italic> fla-SVR genotypes isolated from humans and poultry in three European regions.</article-title>
+<source>Lett Appl Microbiol</source>
+</element-citation></ref><ref id="pone.0012253-Sheppard1"><label>8</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Sheppard</surname><given-names>SK</given-names></name><name><surname>Dallas</surname><given-names>JF</given-names></name><name><surname>MacRae</surname><given-names>M</given-names></name><name><surname>McCarthy</surname><given-names>ND</given-names></name><name><surname>Sproston</surname><given-names>EL</given-names></name><etal/></person-group>
+<year>2009</year>
+<article-title>
+<italic>Campylobacter</italic> genotypes from food animals, environmental sources and clinical disease in Scotland 2005/6.</article-title>
+<source>Int J Food Microbiol</source>
+<volume>134</volume>
+<fpage>96</fpage>
+<lpage>103</lpage>
+<pub-id pub-id-type="pmid">19269051</pub-id></element-citation></ref><ref id="pone.0012253-Miller1"><label>9</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Miller</surname><given-names>WG</given-names></name><name><surname>Englen</surname><given-names>MD</given-names></name><name><surname>Kathariou</surname><given-names>S</given-names></name><name><surname>Wesley</surname><given-names>IV</given-names></name><name><surname>Wang</surname><given-names>G</given-names></name><etal/></person-group>
+<year>2006</year>
+<article-title>Identification of host-associated alleles by multilocus sequence typing of <italic>Campylobacter coli</italic> strains from food animals.</article-title>
+<source>Microbiology</source>
+<volume>152</volume>
+<fpage>245</fpage>
+<lpage>255</lpage>
+<pub-id pub-id-type="pmid">16385134</pub-id></element-citation></ref><ref id="pone.0012253-Wassenaar2"><label>10</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Wassenaar</surname><given-names>TM</given-names></name></person-group>
+<year>1997</year>
+<article-title>Toxin production by Campylobacter spp.</article-title>
+<source>Clin Microbiol Rev</source>
+<volume>10</volume>
+<fpage>466</fpage>
+<lpage>476</lpage>
+<pub-id pub-id-type="pmid">9227862</pub-id></element-citation></ref><ref id="pone.0012253-Carrillo1"><label>11</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Carrillo</surname><given-names>CD</given-names></name><name><surname>Taboada</surname><given-names>E</given-names></name><name><surname>Nash</surname><given-names>JH</given-names></name><name><surname>Lanthier</surname><given-names>P</given-names></name><name><surname>Kelly</surname><given-names>J</given-names></name><etal/></person-group>
+<year>2004</year>
+<article-title>Genome-wide expression analyses of Campylobacter jejuni NCTC11168 reveals coordinate regulation of motility and virulence by flhA.</article-title>
+<source>J Biol Chem</source>
+<volume>279</volume>
+<fpage>20327</fpage>
+<lpage>20338</lpage>
+<pub-id pub-id-type="pmid">14985343</pub-id></element-citation></ref><ref id="pone.0012253-Newell1"><label>12</label><element-citation publication-type="other">
+<person-group person-group-type="author"><name><surname>Newell</surname><given-names>DG</given-names></name></person-group>
+<year>2001</year>
+<article-title>Animal models of <italic>Campylobacter jejuni</italic> colonization and disease and the lessons to be learned from similar <italic>Helicobacter pylori</italic> models.</article-title>
+<source>Symp Ser Soc Appl Microbiol</source>
+<fpage>57S</fpage>
+<lpage>67S</lpage>
+</element-citation></ref><ref id="pone.0012253-Parkhill1"><label>13</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Parkhill</surname><given-names>J</given-names></name><name><surname>Wren</surname><given-names>BW</given-names></name><name><surname>Mungall</surname><given-names>K</given-names></name><name><surname>Ketley</surname><given-names>JM</given-names></name><name><surname>Churcher</surname><given-names>C</given-names></name><etal/></person-group>
+<year>2000</year>
+<article-title>The genome sequence of the food-borne pathogen <italic>Campylobacter jejuni</italic> reveals hypervariable sequences.</article-title>
+<source>Nature</source>
+<volume>403</volume>
+<fpage>665</fpage>
+<lpage>668</lpage>
+<pub-id pub-id-type="pmid">10688204</pub-id></element-citation></ref><ref id="pone.0012253-Gaynor1"><label>14</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Gaynor</surname><given-names>EC</given-names></name><name><surname>Cawthraw</surname><given-names>S</given-names></name><name><surname>Manning</surname><given-names>G</given-names></name><name><surname>MacKichan</surname><given-names>JK</given-names></name><name><surname>Falkow</surname><given-names>S</given-names></name><etal/></person-group>
+<year>2004</year>
+<article-title>The genome-sequenced variant of <italic>Campylobacter jejuni</italic> NCTC 11168 and the original clonal clinical isolate differ markedly in colonization, gene expression, and virulence-associated phenotypes.</article-title>
+<source>J Bacteriol</source>
+<volume>186</volume>
+<fpage>503</fpage>
+<lpage>517</lpage>
+<pub-id pub-id-type="pmid">14702320</pub-id></element-citation></ref><ref id="pone.0012253-Black1"><label>15</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Black</surname><given-names>RE</given-names></name><name><surname>Levine</surname><given-names>MM</given-names></name><name><surname>Clements</surname><given-names>ML</given-names></name><name><surname>Hughes</surname><given-names>TP</given-names></name><name><surname>Blaser</surname><given-names>MJ</given-names></name></person-group>
+<year>1988</year>
+<article-title>Experimental <italic>Campylobacter jejuni</italic> infection in humans.</article-title>
+<source>J Infect Dis</source>
+<volume>157</volume>
+<fpage>472</fpage>
+<lpage>479</lpage>
+<pub-id pub-id-type="pmid">3343522</pub-id></element-citation></ref><ref id="pone.0012253-Pearson1"><label>16</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Pearson</surname><given-names>BM</given-names></name><name><surname>Gaskin</surname><given-names>DJ</given-names></name><name><surname>Segers</surname><given-names>RP</given-names></name><name><surname>Wells</surname><given-names>JM</given-names></name><name><surname>Nuijten</surname><given-names>PJ</given-names></name><etal/></person-group>
+<year>2007</year>
+<article-title>The complete genome sequence of <italic>Campylobacter jejuni</italic> strain 81116 (NCTC11828).</article-title>
+<source>J Bacteriol</source>
+<volume>189</volume>
+<fpage>8402</fpage>
+<lpage>8403</lpage>
+<pub-id pub-id-type="pmid">17873037</pub-id></element-citation></ref><ref id="pone.0012253-Palmer1"><label>17</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Palmer</surname><given-names>SR</given-names></name><name><surname>Gully</surname><given-names>PR</given-names></name><name><surname>White</surname><given-names>JM</given-names></name><name><surname>Pearson</surname><given-names>AD</given-names></name><name><surname>Suckling</surname><given-names>WG</given-names></name><etal/></person-group>
+<year>1983</year>
+<article-title>Water-borne outbreak of campylobacter gastroenteritis.</article-title>
+<source>Lancet</source>
+<volume>1</volume>
+<fpage>287</fpage>
+<lpage>290</lpage>
+<pub-id pub-id-type="pmid">6130305</pub-id></element-citation></ref><ref id="pone.0012253-Poly1"><label>18</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Poly</surname><given-names>F</given-names></name><name><surname>Read</surname><given-names>T</given-names></name><name><surname>Tribble</surname><given-names>DR</given-names></name><name><surname>Baqar</surname><given-names>S</given-names></name><name><surname>Lorenzo</surname><given-names>M</given-names></name><etal/></person-group>
+<year>2007</year>
+<article-title>Genome sequence of a clinical isolate of <italic>Campylobacter jejuni</italic> from Thailand.</article-title>
+<source>Infect Immun</source>
+<volume>75</volume>
+<fpage>3425</fpage>
+<lpage>3433</lpage>
+<pub-id pub-id-type="pmid">17438034</pub-id></element-citation></ref><ref id="pone.0012253-Fouts1"><label>19</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Fouts</surname><given-names>DE</given-names></name><name><surname>Mongodin</surname><given-names>EF</given-names></name><name><surname>Mandrell</surname><given-names>RE</given-names></name><name><surname>Miller</surname><given-names>WG</given-names></name><name><surname>Rasko</surname><given-names>DA</given-names></name><etal/></person-group>
+<year>2005</year>
+<article-title>Major structural differences and novel potential virulence mechanisms from the genomes of multiple <italic>campylobacter</italic> species.</article-title>
+<source>PLoS Biol</source>
+<volume>3</volume>
+<fpage>e15</fpage>
+<pub-id pub-id-type="pmid">15660156</pub-id></element-citation></ref><ref id="pone.0012253-Medini1"><label>20</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Medini</surname><given-names>D</given-names></name><name><surname>Serruto</surname><given-names>D</given-names></name><name><surname>Parkhill</surname><given-names>J</given-names></name><name><surname>Relman</surname><given-names>DA</given-names></name><name><surname>Donati</surname><given-names>C</given-names></name><etal/></person-group>
+<year>2008</year>
+<article-title>Microbiology in the post-genomic era.</article-title>
+<source>Nat Rev Microbiol</source>
+<volume>6</volume>
+<fpage>419</fpage>
+<lpage>430</lpage>
+<pub-id pub-id-type="pmid">18475305</pub-id></element-citation></ref><ref id="pone.0012253-Lan1"><label>21</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Lan</surname><given-names>R</given-names></name><name><surname>Reeves</surname><given-names>PR</given-names></name></person-group>
+<year>2000</year>
+<article-title>Intraspecies variation in bacterial genomes: the need for a species genome concept.</article-title>
+<source>Trends Microbiol</source>
+<volume>8</volume>
+<fpage>396</fpage>
+<lpage>401</lpage>
+<pub-id pub-id-type="pmid">10989306</pub-id></element-citation></ref><ref id="pone.0012253-Medini2"><label>22</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Medini</surname><given-names>D</given-names></name><name><surname>Donati</surname><given-names>C</given-names></name><name><surname>Tettelin</surname><given-names>H</given-names></name><name><surname>Masignani</surname><given-names>V</given-names></name><name><surname>Rappuoli</surname><given-names>R</given-names></name></person-group>
+<year>2005</year>
+<article-title>The microbial pan-genome.</article-title>
+<source>Curr Opin Genet Dev</source>
+<volume>15</volume>
+<fpage>589</fpage>
+<lpage>594</lpage>
+<pub-id pub-id-type="pmid">16185861</pub-id></element-citation></ref><ref id="pone.0012253-Ayling1"><label>23</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Ayling</surname><given-names>RD</given-names></name><name><surname>Woodward</surname><given-names>MJ</given-names></name><name><surname>Evans</surname><given-names>S</given-names></name><name><surname>Newell</surname><given-names>DG</given-names></name></person-group>
+<year>1996</year>
+<article-title>Restriction fragment length polymorphism of polymerase chain reaction products applied to the differentiation of poultry campylobacters for epidemiological investigations.</article-title>
+<source>Res Vet Sci</source>
+<volume>60</volume>
+<fpage>168</fpage>
+<lpage>172</lpage>
+<pub-id pub-id-type="pmid">8685540</pub-id></element-citation></ref><ref id="pone.0012253-1"><label>24</label><element-citation publication-type="book">
+<article-title>Cell lines were obtained from the European Cell Culture Collection, Health Protection Agency.</article-title>
+<source>Porton Down</source>
+<publisher-loc>Salisbury, UK</publisher-loc>
+</element-citation></ref><ref id="pone.0012253-Konkel1"><label>25</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Konkel</surname><given-names>ME</given-names></name><name><surname>Garvis</surname><given-names>SG</given-names></name><name><surname>Tipton</surname><given-names>SL</given-names></name><name><surname>Anderson</surname><given-names>DE</given-names><suffix>Jr</suffix></name><name><surname>Cieplak</surname><given-names>W</given-names><suffix>Jr</suffix></name></person-group>
+<year>1997</year>
+<article-title>Identification and molecular cloning of a gene encoding a fibronectin-binding protein (CadF) from <italic>Campylobacter jejuni</italic>.</article-title>
+<source>Mol Microbiol</source>
+<volume>24</volume>
+<fpage>953</fpage>
+<lpage>963</lpage>
+<pub-id pub-id-type="pmid">9220003</pub-id></element-citation></ref><ref id="pone.0012253-Monteville1"><label>26</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Monteville</surname><given-names>MR</given-names></name><name><surname>Yoon</surname><given-names>JE</given-names></name><name><surname>Konkel</surname><given-names>ME</given-names></name></person-group>
+<year>2003</year>
+<article-title>Maximal adherence and invasion of INT 407 cells by <italic>Campylobacter jejuni</italic> requires the CadF outer-membrane protein and microfilament reorganization.</article-title>
+<source>Microbiology</source>
+<volume>149</volume>
+<fpage>153</fpage>
+<lpage>165</lpage>
+<pub-id pub-id-type="pmid">12576589</pub-id></element-citation></ref><ref id="pone.0012253-Ziprin1"><label>27</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Ziprin</surname><given-names>RL</given-names></name><name><surname>Young</surname><given-names>CR</given-names></name><name><surname>Stanker</surname><given-names>LH</given-names></name><name><surname>Hume</surname><given-names>ME</given-names></name><name><surname>Konkel</surname><given-names>ME</given-names></name></person-group>
+<year>1999</year>
+<article-title>The absence of cecal colonization of chicks by a mutant of <italic>Campylobacter jejuni</italic> not expressing bacterial fibronectin-binding protein.</article-title>
+<source>Avian Dis</source>
+<volume>43</volume>
+<fpage>586</fpage>
+<lpage>589</lpage>
+<pub-id pub-id-type="pmid">10494431</pub-id></element-citation></ref><ref id="pone.0012253-Jin1"><label>28</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Jin</surname><given-names>S</given-names></name><name><surname>Joe</surname><given-names>A</given-names></name><name><surname>Lynett</surname><given-names>J</given-names></name><name><surname>Hani</surname><given-names>EK</given-names></name><name><surname>Sherman</surname><given-names>P</given-names></name><etal/></person-group>
+<year>2001</year>
+<article-title>JlpA, a novel surface-exposed lipoprotein specific to <italic>Campylobacter jejuni</italic>, mediates adherence to host epithelial cells.</article-title>
+<source>Mol Microbiol</source>
+<volume>39</volume>
+<fpage>1225</fpage>
+<lpage>1236</lpage>
+<pub-id pub-id-type="pmid">11251839</pub-id></element-citation></ref><ref id="pone.0012253-Kervella1"><label>29</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Kervella</surname><given-names>M</given-names></name><name><surname>Pages</surname><given-names>JM</given-names></name><name><surname>Pei</surname><given-names>Z</given-names></name><name><surname>Grollier</surname><given-names>G</given-names></name><name><surname>Blaser</surname><given-names>MJ</given-names></name><etal/></person-group>
+<year>1993</year>
+<article-title>Isolation and characterization of two <italic>Campylobacter</italic> glycine-extracted proteins that bind to HeLa cell membranes.</article-title>
+<source>Infect Immun</source>
+<volume>61</volume>
+<fpage>3440</fpage>
+<lpage>3448</lpage>
+<pub-id pub-id-type="pmid">8335374</pub-id></element-citation></ref><ref id="pone.0012253-Moser1"><label>30</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Moser</surname><given-names>I</given-names></name><name><surname>Schroeder</surname><given-names>W</given-names></name><name><surname>Salnikow</surname><given-names>J</given-names></name></person-group>
+<year>1997</year>
+<article-title>
+<italic>Campylobacter jejuni</italic> major outer membrane protein and a 59-kDa protein are involved in binding to fibronectin and INT 407 cell membranes.</article-title>
+<source>FEMS Microbiol Lett</source>
+<volume>157</volume>
+<fpage>233</fpage>
+<lpage>238</lpage>
+<pub-id pub-id-type="pmid">9435102</pub-id></element-citation></ref><ref id="pone.0012253-Flanagan1"><label>31</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Flanagan</surname><given-names>RC</given-names></name><name><surname>Neal-McKinney</surname><given-names>JM</given-names></name><name><surname>Dhillon</surname><given-names>AS</given-names></name><name><surname>Miller</surname><given-names>WG</given-names></name><name><surname>Konkel</surname><given-names>ME</given-names></name></person-group>
+<year>2009</year>
+<article-title>Examination of <italic>Campylobacter jejuni</italic> putative adhesins leads to the identification of a new protein, designated FlpA, required for chicken colonization.</article-title>
+<source>Infect Immun</source>
+<volume>77</volume>
+<fpage>2399</fpage>
+<lpage>2407</lpage>
+<pub-id pub-id-type="pmid">19349427</pub-id></element-citation></ref><ref id="pone.0012253-RaphaelBH1"><label>32</label><element-citation publication-type="book">
+<person-group person-group-type="author"><name><surname>Raphael BH</surname><given-names>MM</given-names></name><name><surname>Klena</surname><given-names>JD</given-names></name><name><surname>Joens</surname><given-names>LA</given-names></name><name><surname>Konkel</surname><given-names>M</given-names></name></person-group>
+<year>2005</year>
+<article-title>Interactions of <italic>Campylobacter jejuni</italic> with non-professional phagocytic cells.</article-title>
+<person-group person-group-type="editor"><name><surname>Ketley JM</surname><given-names>KM</given-names></name></person-group>
+<source>Campylobacter: Molecular and Cellular Biology</source>
+<publisher-loc>Norfolk NR</publisher-loc>
+<publisher-name>Horizon Bioscience</publisher-name>
+<fpage>397</fpage>
+<lpage>413</lpage>
+</element-citation></ref><ref id="pone.0012253-Christensen1"><label>33</label><element-citation publication-type="other">
+<person-group person-group-type="author"><name><surname>Christensen</surname><given-names>JE</given-names></name><name><surname>Pacheco</surname><given-names>SA</given-names></name><name><surname>Konkel</surname><given-names>ME</given-names></name></person-group>
+<year>2009</year>
+<article-title>Identification of a <italic>Campylobacter jejuni</italic> secreted protein required for maximal invasion of host cells.</article-title>
+<source>Mol Microbiol</source>
+</element-citation></ref><ref id="pone.0012253-Ashgar1"><label>34</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Ashgar</surname><given-names>SS</given-names></name><name><surname>Oldfield</surname><given-names>NJ</given-names></name><name><surname>Wooldridge</surname><given-names>KG</given-names></name><name><surname>Jones</surname><given-names>MA</given-names></name><name><surname>Irving</surname><given-names>GJ</given-names></name><etal/></person-group>
+<year>2007</year>
+<article-title>CapA, an autotransporter protein of <italic>Campylobacter jejuni</italic>, mediates association with human epithelial cells and colonization of the chicken gut.</article-title>
+<source>J Bacteriol</source>
+<volume>189</volume>
+<fpage>1856</fpage>
+<lpage>1865</lpage>
+<pub-id pub-id-type="pmid">17172331</pub-id></element-citation></ref><ref id="pone.0012253-Jensen1"><label>35</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Jensen</surname><given-names>LJ</given-names></name><name><surname>Friis</surname><given-names>C</given-names></name><name><surname>Ussery</surname><given-names>DW</given-names></name></person-group>
+<year>1999</year>
+<article-title>Three views of microbial genomes.</article-title>
+<source>Res Microbiol</source>
+<volume>150</volume>
+<fpage>773</fpage>
+<lpage>777</lpage>
+<pub-id pub-id-type="pmid">10673014</pub-id></element-citation></ref><ref id="pone.0012253-Pedersen1"><label>36</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Pedersen</surname><given-names>AG</given-names></name><name><surname>Jensen</surname><given-names>LJ</given-names></name><name><surname>Brunak</surname><given-names>S</given-names></name><name><surname>Staerfeldt</surname><given-names>HH</given-names></name><name><surname>Ussery</surname><given-names>DW</given-names></name></person-group>
+<year>2000</year>
+<article-title>A DNA structural atlas for <italic>Escherichia coli</italic>.</article-title>
+<source>J Mol Biol</source>
+<volume>299</volume>
+<fpage>907</fpage>
+<lpage>930</lpage>
+<pub-id pub-id-type="pmid">10843847</pub-id></element-citation></ref><ref id="pone.0012253-Sinden1"><label>37</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Sinden</surname><given-names>RR</given-names></name><name><surname>Hashem</surname><given-names>VI</given-names></name><name><surname>Rosche</surname><given-names>WA</given-names></name></person-group>
+<year>1999</year>
+<article-title>DNA-directed mutations. Leading and lagging strand specificity.</article-title>
+<source>Ann N Y Acad Sci</source>
+<volume>870</volume>
+<fpage>173</fpage>
+<lpage>189</lpage>
+<pub-id pub-id-type="pmid">10415482</pub-id></element-citation></ref><ref id="pone.0012253-Raskin1"><label>38</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Raskin</surname><given-names>DM</given-names></name><name><surname>Seshadri</surname><given-names>R</given-names></name><name><surname>Pukatzki</surname><given-names>SU</given-names></name><name><surname>Mekalanos</surname><given-names>JJ</given-names></name></person-group>
+<year>2006</year>
+<article-title>Bacterial genomics and pathogen evolution.</article-title>
+<source>Cell</source>
+<volume>124</volume>
+<fpage>703</fpage>
+<lpage>714</lpage>
+<pub-id pub-id-type="pmid">16497582</pub-id></element-citation></ref><ref id="pone.0012253-Chao1"><label>39</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Chao</surname><given-names>A</given-names></name></person-group>
+<year>1987</year>
+<article-title>Estimating the population size for capture-recapture data with unequal catchability.</article-title>
+<source>Biometrics</source>
+<volume>43</volume>
+<fpage>783</fpage>
+<lpage>791</lpage>
+<pub-id pub-id-type="pmid">3427163</pub-id></element-citation></ref><ref id="pone.0012253-Snipen1"><label>40</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Snipen</surname><given-names>L</given-names></name><name><surname>Almoy</surname><given-names>T</given-names></name><name><surname>Ussery</surname><given-names>DW</given-names></name></person-group>
+<year>2009</year>
+<article-title>Microbial comparative pan-genomics using binomial mixture models.</article-title>
+<source>BMC Genomics</source>
+<volume>10</volume>
+<fpage>385</fpage>
+<pub-id pub-id-type="pmid">19691844</pub-id></element-citation></ref><ref id="pone.0012253-Lefebure1"><label>41</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Lefebure</surname><given-names>T</given-names></name><name><surname>Stanhope</surname><given-names>MJ</given-names></name></person-group>
+<year>2009</year>
+<article-title>Pervasive, genome-wide positive selection leading to functional divergence in the bacterial genus <italic>Campylobacter</italic>.</article-title>
+<source>Genome Res</source>
+<volume>19</volume>
+<fpage>1224</fpage>
+<lpage>1232</lpage>
+<pub-id pub-id-type="pmid">19304960</pub-id></element-citation></ref><ref id="pone.0012253-Parker1"><label>42</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Parker</surname><given-names>CT</given-names></name><name><surname>Miller</surname><given-names>WG</given-names></name><name><surname>Horn</surname><given-names>ST</given-names></name><name><surname>Lastovica</surname><given-names>AJ</given-names></name></person-group>
+<year>2007</year>
+<article-title>Common genomic features of Campylobacter jejuni subsp. doylei strains distinguish them from C. jejuni subsp. jejuni.</article-title>
+<source>BMC Microbiol</source>
+<volume>7</volume>
+<fpage>50</fpage>
+<pub-id pub-id-type="pmid">17535437</pub-id></element-citation></ref><ref id="pone.0012253-Manning1"><label>43</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Manning</surname><given-names>G</given-names></name><name><surname>Duim</surname><given-names>B</given-names></name><name><surname>Wassenaar</surname><given-names>T</given-names></name><name><surname>Wagenaar</surname><given-names>JA</given-names></name><name><surname>Ridley</surname><given-names>A</given-names></name><etal/></person-group>
+<year>2001</year>
+<article-title>Evidence for a genetically stable strain of <italic>Campylobacter jejuni</italic>.</article-title>
+<source>Appl Environ Microbiol</source>
+<volume>67</volume>
+<fpage>1185</fpage>
+<lpage>1189</lpage>
+<pub-id pub-id-type="pmid">11229909</pub-id></element-citation></ref><ref id="pone.0012253-Hallin1"><label>44</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Hallin</surname><given-names>PF</given-names></name><name><surname>Binnewies</surname><given-names>TT</given-names></name><name><surname>Ussery</surname><given-names>DW</given-names></name></person-group>
+<year>2008</year>
+<article-title>The genome BLASTatlas-a GeneWiz extension for visualization of whole-genome homology.</article-title>
+<source>Mol Biosyst</source>
+<volume>4</volume>
+<fpage>363</fpage>
+<lpage>371</lpage>
+<pub-id pub-id-type="pmid">18414733</pub-id></element-citation></ref><ref id="pone.0012253-Friis1"><label>45</label><element-citation publication-type="other">
+<person-group person-group-type="author"><name><surname>Friis</surname><given-names>C</given-names></name><name><surname>Wassenaar</surname><given-names>T</given-names></name><name><surname>Javed</surname><given-names>MA</given-names></name><name><surname>Snipen</surname><given-names>L</given-names></name><name><surname>Lagersen</surname><given-names>K</given-names></name><etal/></person-group>
+<year>2009</year>
+<article-title>Supplementary Section for &#x0201c;Genomic Characterization of <italic>Campylobacter jejun</italic>i strain M1&#x0201d;.</article-title>
+<comment>Available from: <ext-link ext-link-type="uri" xlink:href="http://www.cbs.dtu.dk/services/GenomeAtlas/Campy_M1/">http://www.cbs.dtu.dk/services/GenomeAtlas/Campy_M1/</ext-link></comment>
+</element-citation></ref><ref id="pone.0012253-Hofreuter1"><label>46</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Hofreuter</surname><given-names>D</given-names></name><name><surname>Novik</surname><given-names>V</given-names></name><name><surname>Galan</surname><given-names>JE</given-names></name></person-group>
+<year>2008</year>
+<article-title>Metabolic diversity in <italic>Campylobacter jejuni</italic> enhances specific tissue colonization.</article-title>
+<source>Cell Host Microbe</source>
+<volume>4</volume>
+<fpage>425</fpage>
+<lpage>433</lpage>
+<pub-id pub-id-type="pmid">18996343</pub-id></element-citation></ref><ref id="pone.0012253-Barnes1"><label>47</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Barnes</surname><given-names>IH</given-names></name><name><surname>Bagnall</surname><given-names>MC</given-names></name><name><surname>Browning</surname><given-names>DD</given-names></name><name><surname>Thompson</surname><given-names>SA</given-names></name><name><surname>Manning</surname><given-names>G</given-names></name><etal/></person-group>
+<year>2007</year>
+<article-title>Gamma-glutamyl transpeptidase has a role in the persistent colonization of the avian gut by Campylobacter jejuni.</article-title>
+<source>Microb Pathog</source>
+<volume>43</volume>
+<fpage>198</fpage>
+<lpage>207</lpage>
+<pub-id pub-id-type="pmid">17600669</pub-id></element-citation></ref><ref id="pone.0012253-Russell1"><label>48</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Russell</surname><given-names>RG</given-names></name><name><surname>Blaser</surname><given-names>MJ</given-names></name><name><surname>Sarmiento</surname><given-names>JI</given-names></name><name><surname>Fox</surname><given-names>J</given-names></name></person-group>
+<year>1989</year>
+<article-title>Experimental <italic>Campylobacter jejuni</italic> infection in Macaca nemestrina.</article-title>
+<source>Infect Immun</source>
+<volume>57</volume>
+<fpage>1438</fpage>
+<lpage>1444</lpage>
+<pub-id pub-id-type="pmid">2707853</pub-id></element-citation></ref><ref id="pone.0012253-Miller2"><label>49</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Miller</surname><given-names>WG</given-names></name><name><surname>Pearson</surname><given-names>BM</given-names></name><name><surname>Wells</surname><given-names>JM</given-names></name><name><surname>Parker</surname><given-names>CT</given-names></name><name><surname>Kapitonov</surname><given-names>VV</given-names></name><etal/></person-group>
+<year>2005</year>
+<article-title>Diversity within the <italic>Campylobacter jejuni</italic> type I restriction-modification loci.</article-title>
+<source>Microbiology</source>
+<volume>151</volume>
+<fpage>337</fpage>
+<lpage>351</lpage>
+<pub-id pub-id-type="pmid">15699185</pub-id></element-citation></ref><ref id="pone.0012253-Simonsen1"><label>50</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Simonsen</surname><given-names>B</given-names></name></person-group>
+<year>1971</year>
+<article-title>Methods for determining the microbial counts of ready-to-cook chicken.</article-title>
+<source>World's Poultry Science:</source>
+<fpage>27</fpage>
+<lpage>368</lpage>
+</element-citation></ref><ref id="pone.0012253-Newell2"><label>51</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Newell</surname><given-names>DG</given-names></name><name><surname>Shreeve</surname><given-names>JE</given-names></name><name><surname>Toszeghy</surname><given-names>M</given-names></name><name><surname>Domingue</surname><given-names>G</given-names></name><name><surname>Bull</surname><given-names>S</given-names></name><etal/></person-group>
+<year>2001</year>
+<article-title>Changes in the carriage of Campylobacter strains by poultry carcasses during processing in abattoirs.</article-title>
+<source>Appl Environ Microbiol</source>
+<volume>67</volume>
+<fpage>2636</fpage>
+<lpage>2640</lpage>
+<pub-id pub-id-type="pmid">11375174</pub-id></element-citation></ref><ref id="pone.0012253-Skirrow1"><label>52</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Skirrow</surname><given-names>MB</given-names></name></person-group>
+<year>1977</year>
+<article-title>Campylobacter enteritis: a &#x0201c;new&#x0201d; disease.</article-title>
+<source>Br Med J</source>
+<volume>2</volume>
+<fpage>9</fpage>
+<lpage>11</lpage>
+<pub-id pub-id-type="pmid">871765</pub-id></element-citation></ref><ref id="pone.0012253-Humphrey1"><label>53</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Humphrey</surname><given-names>T</given-names></name><name><surname>Mason</surname><given-names>M</given-names></name><name><surname>Martin</surname><given-names>K</given-names></name></person-group>
+<year>1995</year>
+<article-title>The isolation of Campylobacter jejuni from contaminated surfaces and its survival in diluents.</article-title>
+<source>Int J Food Microbiol</source>
+<volume>26</volume>
+<fpage>295</fpage>
+<lpage>303</lpage>
+<pub-id pub-id-type="pmid">7488525</pub-id></element-citation></ref><ref id="pone.0012253-Frost1"><label>54</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Frost</surname><given-names>JA</given-names></name><name><surname>Oza</surname><given-names>AN</given-names></name><name><surname>Thwaites</surname><given-names>RT</given-names></name><name><surname>Rowe</surname><given-names>B</given-names></name></person-group>
+<year>1998</year>
+<article-title>Serotyping scheme for Campylobacter jejuni and Campylobacter coli based on direct agglutination of heat-stable antigens.</article-title>
+<source>J Clin Microbiol</source>
+<volume>36</volume>
+<fpage>335</fpage>
+<lpage>339</lpage>
+<pub-id pub-id-type="pmid">9466737</pub-id></element-citation></ref><ref id="pone.0012253-Gibson1"><label>55</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Gibson</surname><given-names>J</given-names></name><name><surname>Lorenz</surname><given-names>E</given-names></name><name><surname>Owen</surname><given-names>RJ</given-names></name></person-group>
+<year>1997</year>
+<article-title>Lineages within Campylobacter jejuni defined by numerical analysis of pulsed-field gel electrophoretic DNA profiles.</article-title>
+<source>J Med Microbiol</source>
+<volume>46</volume>
+<fpage>157</fpage>
+<lpage>163</lpage>
+<pub-id pub-id-type="pmid">9060876</pub-id></element-citation></ref><ref id="pone.0012253-Duim1"><label>56</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Duim</surname><given-names>B</given-names></name><name><surname>Wassenaar</surname><given-names>TM</given-names></name><name><surname>Rigter</surname><given-names>A</given-names></name><name><surname>Wagenaar</surname><given-names>J</given-names></name></person-group>
+<year>1999</year>
+<article-title>High-resolution genotyping of <italic>Campylobacter</italic> strains isolated from poultry and humans with amplified fragment length polymorphism fingerprinting.</article-title>
+<source>Appl Environ Microbiol</source>
+<volume>65</volume>
+<fpage>2369</fpage>
+<lpage>2375</lpage>
+<pub-id pub-id-type="pmid">10347015</pub-id></element-citation></ref><ref id="pone.0012253-Dingle1"><label>57</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Dingle</surname><given-names>KE</given-names></name><name><surname>Colles</surname><given-names>FM</given-names></name><name><surname>Falush</surname><given-names>D</given-names></name><name><surname>Maiden</surname><given-names>MC</given-names></name></person-group>
+<year>2005</year>
+<article-title>Sequence typing and comparison of population biology of Campylobacter coli and Campylobacter jejuni.</article-title>
+<source>J Clin Microbiol</source>
+<volume>43</volume>
+<fpage>340</fpage>
+<lpage>347</lpage>
+<pub-id pub-id-type="pmid">15634992</pub-id></element-citation></ref><ref id="pone.0012253-Fearnley1"><label>58</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Fearnley</surname><given-names>C</given-names></name><name><surname>Manning</surname><given-names>G</given-names></name><name><surname>Bagnall</surname><given-names>M</given-names></name><name><surname>Javed</surname><given-names>MA</given-names></name><name><surname>Wassenaar</surname><given-names>TM</given-names></name><etal/></person-group>
+<year>2008</year>
+<article-title>Identification of hyperinvasive Campylobacter jejuni strains isolated from poultry and human clinical sources.</article-title>
+<source>J Med Microbiol</source>
+<volume>57</volume>
+<fpage>570</fpage>
+<lpage>580</lpage>
+<pub-id pub-id-type="pmid">18436589</pub-id></element-citation></ref><ref id="pone.0012253-Abuoun1"><label>59</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Abuoun</surname><given-names>M</given-names></name><name><surname>Manning</surname><given-names>G</given-names></name><name><surname>Cawthraw</surname><given-names>SA</given-names></name><name><surname>Ridley</surname><given-names>A</given-names></name><name><surname>Ahmed</surname><given-names>IH</given-names></name><etal/></person-group>
+<year>2005</year>
+<article-title>Cytolethal distending toxin (CDT)-negative Campylobacter jejuni strains and anti-CDT neutralizing antibodies are induced during human infection but not during colonization in chickens.</article-title>
+<source>Infect Immun</source>
+<volume>73</volume>
+<fpage>3053</fpage>
+<lpage>3062</lpage>
+<pub-id pub-id-type="pmid">15845513</pub-id></element-citation></ref><ref id="pone.0012253-Batzoglou1"><label>60</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Batzoglou</surname><given-names>S</given-names></name><name><surname>Jaffe</surname><given-names>DB</given-names></name><name><surname>Stanley</surname><given-names>K</given-names></name><name><surname>Butler</surname><given-names>J</given-names></name><name><surname>Gnerre</surname><given-names>S</given-names></name><etal/></person-group>
+<year>2002</year>
+<article-title>ARACHNE: a whole-genome shotgun assembler.</article-title>
+<source>Genome Res</source>
+<volume>12</volume>
+<fpage>177</fpage>
+<lpage>189</lpage>
+<pub-id pub-id-type="pmid">11779843</pub-id></element-citation></ref><ref id="pone.0012253-Nielsen1"><label>61</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Nielsen</surname><given-names>P</given-names></name><name><surname>Krogh</surname><given-names>A</given-names></name></person-group>
+<year>2005</year>
+<article-title>Large-scale prokaryotic gene prediction and comparison to genome annotation.</article-title>
+<source>Bioinformatics</source>
+<volume>21</volume>
+<fpage>4322</fpage>
+<lpage>4329</lpage>
+<pub-id pub-id-type="pmid">16249266</pub-id></element-citation></ref><ref id="pone.0012253-Larsen1"><label>62</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Larsen</surname><given-names>TS</given-names></name><name><surname>Krogh</surname><given-names>A</given-names></name></person-group>
+<year>2003</year>
+<article-title>EasyGene&#x02014;a prokaryotic gene finder that ranks ORFs by statistical significance.</article-title>
+<source>BMC Bioinformatics</source>
+<volume>4</volume>
+<fpage>21</fpage>
+<pub-id pub-id-type="pmid">12783628</pub-id></element-citation></ref><ref id="pone.0012253-Skovgaard1"><label>63</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Skovgaard</surname><given-names>M</given-names></name><name><surname>Jensen</surname><given-names>LJ</given-names></name><name><surname>Brunak</surname><given-names>S</given-names></name><name><surname>Ussery</surname><given-names>D</given-names></name><name><surname>Krogh</surname><given-names>A</given-names></name></person-group>
+<year>2001</year>
+<article-title>On the total number of genes and their length distribution in complete microbial genomes.</article-title>
+<source>Trends Genet</source>
+<volume>17</volume>
+<fpage>425</fpage>
+<lpage>428</lpage>
+<pub-id pub-id-type="pmid">11485798</pub-id></element-citation></ref><ref id="pone.0012253-Pruitt1"><label>64</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Pruitt</surname><given-names>KD</given-names></name><name><surname>Tatusova</surname><given-names>T</given-names></name><name><surname>Klimke</surname><given-names>W</given-names></name><name><surname>Maglott</surname><given-names>DR</given-names></name></person-group>
+<year>2009</year>
+<article-title>NCBI Reference Sequences: current status, policy and new initiatives.</article-title>
+<source>Nucleic Acids Res</source>
+<volume>37</volume>
+<fpage>D32</fpage>
+<lpage>36</lpage>
+<pub-id pub-id-type="pmid">18927115</pub-id></element-citation></ref><ref id="pone.0012253-Altschul1"><label>65</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Altschul</surname><given-names>SF</given-names></name><name><surname>Madden</surname><given-names>TL</given-names></name><name><surname>Schaffer</surname><given-names>AA</given-names></name><name><surname>Zhang</surname><given-names>J</given-names></name><name><surname>Zhang</surname><given-names>Z</given-names></name><etal/></person-group>
+<year>1997</year>
+<article-title>Gapped BLAST and PSI-BLAST: a new generation of protein database search programs.</article-title>
+<source>Nucleic Acids Res</source>
+<volume>25</volume>
+<fpage>3389</fpage>
+<lpage>3402</lpage>
+<pub-id pub-id-type="pmid">9254694</pub-id></element-citation></ref><ref id="pone.0012253-Bairoch1"><label>66</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Bairoch</surname><given-names>A</given-names></name><name><surname>Apweiler</surname><given-names>R</given-names></name><name><surname>Wu</surname><given-names>CH</given-names></name><name><surname>Barker</surname><given-names>WC</given-names></name><name><surname>Boeckmann</surname><given-names>B</given-names></name><etal/></person-group>
+<year>2005</year>
+<article-title>The Universal Protein Resource (UniProt).</article-title>
+<source>Nucleic Acids Res</source>
+<volume>33</volume>
+<fpage>D154</fpage>
+<lpage>159</lpage>
+<pub-id pub-id-type="pmid">15608167</pub-id></element-citation></ref><ref id="pone.0012253-Benson1"><label>67</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Benson</surname><given-names>DA</given-names></name><name><surname>Karsch-Mizrachi</surname><given-names>I</given-names></name><name><surname>Lipman</surname><given-names>DJ</given-names></name><name><surname>Ostell</surname><given-names>J</given-names></name><name><surname>Wheeler</surname><given-names>DL</given-names></name></person-group>
+<year>2008</year>
+<article-title>GenBank.</article-title>
+<source>Nucleic Acids Res</source>
+<volume>36</volume>
+<fpage>D25</fpage>
+<lpage>30</lpage>
+<pub-id pub-id-type="pmid">18073190</pub-id></element-citation></ref><ref id="pone.0012253-Finn1"><label>68</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Finn</surname><given-names>RD</given-names></name><name><surname>Tate</surname><given-names>J</given-names></name><name><surname>Mistry</surname><given-names>J</given-names></name><name><surname>Coggill</surname><given-names>PC</given-names></name><name><surname>Sammut</surname><given-names>SJ</given-names></name><etal/></person-group>
+<year>2008</year>
+<article-title>The Pfam protein families database.</article-title>
+<source>Nucleic Acids Res</source>
+<volume>36</volume>
+<fpage>D281</fpage>
+<lpage>288</lpage>
+<pub-id pub-id-type="pmid">18039703</pub-id></element-citation></ref><ref id="pone.0012253-Lagesen1"><label>69</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Lagesen</surname><given-names>K</given-names></name><name><surname>Hallin</surname><given-names>P</given-names></name><name><surname>Rodland</surname><given-names>EA</given-names></name><name><surname>Staerfeldt</surname><given-names>HH</given-names></name><name><surname>Rognes</surname><given-names>T</given-names></name><etal/></person-group>
+<year>2007</year>
+<article-title>RNAmmer: consistent and rapid annotation of ribosomal RNA genes.</article-title>
+<source>Nucleic Acids Res</source>
+<volume>35</volume>
+<fpage>3100</fpage>
+<lpage>3108</lpage>
+<pub-id pub-id-type="pmid">17452365</pub-id></element-citation></ref><ref id="pone.0012253-Schattner1"><label>70</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Schattner</surname><given-names>P</given-names></name><name><surname>Brooks</surname><given-names>AN</given-names></name><name><surname>Lowe</surname><given-names>TM</given-names></name></person-group>
+<year>2005</year>
+<article-title>The tRNAscan-SE, snoscan and snoGPS web servers for the detection of tRNAs and snoRNAs.</article-title>
+<source>Nucleic Acids Res</source>
+<volume>33</volume>
+<fpage>W686</fpage>
+<lpage>689</lpage>
+<pub-id pub-id-type="pmid">15980563</pub-id></element-citation></ref><ref id="pone.0012253-Binnewies1"><label>71</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Binnewies</surname><given-names>TT</given-names></name><name><surname>Hallin</surname><given-names>PF</given-names></name><name><surname>Staerfeldt</surname><given-names>HH</given-names></name><name><surname>Ussery</surname><given-names>DW</given-names></name></person-group>
+<year>2005</year>
+<article-title>Genome Update: proteome comparisons.</article-title>
+<source>Microbiology</source>
+<volume>151</volume>
+<fpage>1</fpage>
+<lpage>4</lpage>
+<pub-id pub-id-type="pmid">15632419</pub-id></element-citation></ref><ref id="pone.0012253-Ussery1"><label>72</label><element-citation publication-type="book">
+<person-group person-group-type="author"><name><surname>Ussery</surname><given-names>DW</given-names></name><name><surname>Wassenaar</surname><given-names>TM</given-names></name><name><surname>Borini</surname><given-names>S</given-names></name></person-group>
+<year>2009</year>
+<article-title>Computing for Comparative Microbial Genomics: Bioinformatics for Microbiologists:</article-title>
+<publisher-name>Springer</publisher-name>
+</element-citation></ref><ref id="pone.0012253-Loytynoja1"><label>73</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Loytynoja</surname><given-names>A</given-names></name><name><surname>Goldman</surname><given-names>N</given-names></name></person-group>
+<year>2005</year>
+<article-title>An algorithm for progressive multiple alignment of sequences with insertions.</article-title>
+<source>Proc Natl Acad Sci U S A</source>
+<volume>102</volume>
+<fpage>10557</fpage>
+<lpage>10562</lpage>
+<pub-id pub-id-type="pmid">16000407</pub-id></element-citation></ref><ref id="pone.0012253-Loytynoja2"><label>74</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Loytynoja</surname><given-names>A</given-names></name><name><surname>Goldman</surname><given-names>N</given-names></name></person-group>
+<year>2008</year>
+<article-title>Phylogeny-aware gap placement prevents errors in sequence alignment and evolutionary analysis.</article-title>
+<source>Science</source>
+<volume>320</volume>
+<fpage>1632</fpage>
+<lpage>1635</lpage>
+<pub-id pub-id-type="pmid">18566285</pub-id></element-citation></ref><ref id="pone.0012253-Tamura1"><label>75</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Tamura</surname><given-names>K</given-names></name><name><surname>Dudley</surname><given-names>J</given-names></name><name><surname>Nei</surname><given-names>M</given-names></name><name><surname>Kumar</surname><given-names>S</given-names></name></person-group>
+<year>2007</year>
+<article-title>MEGA4: Molecular Evolutionary Genetics Analysis (MEGA) software version 4.0.</article-title>
+<source>Mol Biol Evol</source>
+<volume>24</volume>
+<fpage>1596</fpage>
+<lpage>1599</lpage>
+<pub-id pub-id-type="pmid">17488738</pub-id></element-citation></ref><ref id="pone.0012253-Tettelin1"><label>76</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Tettelin</surname><given-names>H</given-names></name><name><surname>Masignani</surname><given-names>V</given-names></name><name><surname>Cieslewicz</surname><given-names>MJ</given-names></name><name><surname>Donati</surname><given-names>C</given-names></name><name><surname>Medini</surname><given-names>D</given-names></name><etal/></person-group>
+<year>2005</year>
+<article-title>Genome analysis of multiple pathogenic isolates of <italic>Streptococcus agalactiae</italic>: implications for the microbial &#x0201c;pan-genome&#x0201d;.</article-title>
+<source>Proc Natl Acad Sci U S A</source>
+<volume>102</volume>
+<fpage>13950</fpage>
+<lpage>13955</lpage>
+<pub-id pub-id-type="pmid">16172379</pub-id></element-citation></ref><ref id="pone.0012253-Koga1"><label>77</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Koga</surname><given-names>M</given-names></name><name><surname>Gilbert</surname><given-names>M</given-names></name><name><surname>Li</surname><given-names>J</given-names></name><name><surname>Koike</surname><given-names>S</given-names></name><name><surname>Takahashi</surname><given-names>M</given-names></name><etal/></person-group>
+<year>2005</year>
+<article-title>Antecedent infections in Fisher syndrome: a common pathogenesis of molecular mimicry.</article-title>
+<source>Neurology</source>
+<volume>64</volume>
+<fpage>1605</fpage>
+<lpage>1611</lpage>
+<pub-id pub-id-type="pmid">15883324</pub-id></element-citation></ref><ref id="pone.0012253-Poly2"><label>78</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Poly</surname><given-names>F</given-names></name><name><surname>Read</surname><given-names>TD</given-names></name><name><surname>Chen</surname><given-names>YH</given-names></name><name><surname>Monteiro</surname><given-names>MA</given-names></name><name><surname>Serichantalergs</surname><given-names>O</given-names></name><etal/></person-group>
+<year>2008</year>
+<article-title>Characterization of two <italic>Campylobacter jejuni</italic> strains for use in volunteer experimental-infection studies.</article-title>
+<source>Infect Immun</source>
+<volume>76</volume>
+<fpage>5655</fpage>
+<lpage>5667</lpage>
+<pub-id pub-id-type="pmid">18809665</pub-id></element-citation></ref><ref id="pone.0012253-Miller3"><label>79</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Miller</surname><given-names>WG</given-names></name><name><surname>Wang</surname><given-names>G</given-names></name><name><surname>Binnewies</surname><given-names>TT</given-names></name><name><surname>Parker</surname><given-names>CT</given-names></name></person-group>
+<year>2008</year>
+<article-title>The complete genome sequence and analysis of the human pathogen <italic>Campylobacter lari</italic>.</article-title>
+<source>Foodborne Pathog Dis</source>
+<volume>5</volume>
+<fpage>371</fpage>
+<lpage>386</lpage>
+<pub-id pub-id-type="pmid">18713059</pub-id></element-citation></ref></ref-list></back></article>
