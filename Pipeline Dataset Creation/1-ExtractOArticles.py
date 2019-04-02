@@ -26,7 +26,7 @@ In the terminal it display some information like the advancement of the extracti
 
 nbArticlesScan,nonOA=0,0
 
-while len(os.listdir("./articlesOA"))<401:
+while len(os.listdir("./articlesOA"))<399:
     pmcid=str(random.randint(0,9))+str(random.randint(0,9))+str(random.randint(0,9))+str(random.randint(0,9))+str(random.randint(0,9))+str(random.randint(0,9))+str(random.randint(0,9))
     rAccessionNb=requests.get("https://www.ebi.ac.uk/europepmc/annotations_api/annotationsByArticleIds?articleIds=PMC%3A"+pmcid+"&type=Accession%20Numbers&format=XML")
     if "<name>" in rAccessionNb.text:
