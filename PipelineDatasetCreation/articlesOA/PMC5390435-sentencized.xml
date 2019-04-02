@@ -123,11 +123,9 @@
 <SENT sid="120" pm="."><plain>To be sure that the selection did not bias the results, data set C was formed 100 times. </plain></SENT>
 </text></p><p><text><SENT sid="121" pm="."><plain>Furthermore, classifier algorithms were trained and validated using a ten-fold cross validation method. </plain></SENT>
 <SENT sid="122" pm="."><plain>That is, we formed sample C i (i=1,…,100) from the data sets A and B, and split it into 10 equal-sized parts P ik (P ik∈C i and k=1,…10). </plain></SENT>
-<SENT sid="123" pm="."><plain>The classification accuracy value, a c c ik, was calculated by Eq. 1 for the part P ik of the data set C i when the parameters of the classifier were trained with the other K-1 parts of the data set C i. </plain></SENT>
-<SENT sid="124" pm="."><plain>The process was repeated for k=1,2,…10. </plain></SENT>
+<SENT sid="123" pm="."><plain>The classification accuracy value, a c c ik, was calculated by Eq. 1 for the part P ik of the data set C i when the parameters of the classifier were trained with the other K-1 parts of the data set C i. The process was repeated for k=1,2,…10. </plain></SENT>
 <SENT sid="125" pm="."><plain>The overall classification accuracy, CA, for the subset X sub,n of size n (n=1,…15) was calculated as 2\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document} $$ CA_{\textbf{X}_{sub,n}}=\frac{1}{100*K} \sum_{i=1}^{100} \sum_{K=1}^{10} acc_{ik} $$ \end{document}CAXsub,n=1100∗K∑i=1100∑K=110accik </plain></SENT>
-</text></p><p><text><SENT sid="126" pm="."><plain>SFS calculated the best variable subsets for all balanced data sets C i. </plain></SENT>
-<SENT sid="127" pm="."><plain>That is, we have 100 variable subsets of size of 1–15 variables. </plain></SENT>
+</text></p><p><text><SENT sid="126" pm="."><plain>SFS calculated the best variable subsets for all balanced data sets C i. That is, we have 100 variable subsets of size of 1–15 variables. </plain></SENT>
 <SENT sid="128" pm="."><plain>The (average) importance of each variable was measured by a rank metric: 3\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document} $$ R(j)=\frac{1}{100} \sum_{i=1}^{100} \#F-r(i,j) $$ \end{document}R(j)=1100∑i=1100#F−r(i,j) </plain></SENT>
 </text></p><p><text><SENT sid="129" pm="."><plain>where r(i,j) is the rank of variable j based on sample C i and # F is the size of the largest subset that was formed by SFS [25–27]. </plain></SENT>
 <SENT sid="130" pm="."><plain>In this study # F=15. </plain></SENT>
@@ -165,8 +163,7 @@
 <SENT sid="162" pm="."><plain>According to the definition, the optimal subset size for LR method is 9 variables. </plain></SENT>
 <SENT sid="163" pm="."><plain>That is, the performance achieved by the subset size of 9 variables did not differ statistically from the subset of 15 variables, when the classifier is LR </plain></SENT>
 </text></p><p><text><SENT sid="164" pm="."><plain>Table 2 sorts the variables according to ranking score, R, described by Eq. 3, for the classifiers of LR and GNB. </plain></SENT>
-<SENT sid="165" pm="."><plain>Large R(j) value means that the variable j was selected regularly in small variable subsets for different balanced data sets C. </plain></SENT>
-<SENT sid="166" pm="."><plain>That is, the NHA classification ability of the variable j is high. </plain></SENT>
+<SENT sid="165" pm="."><plain>Large R(j) value means that the variable j was selected regularly in small variable subsets for different balanced data sets C. That is, the NHA classification ability of the variable j is high. </plain></SENT>
 <SENT sid="167" pm="."><plain>According to the results, the most important variables were the diagnoses of G30-G32 and F00-F03 and the RAI metrics of IADL (Activities of Daily Living), MAPLE (Method for Assigning Priority Levels) and CPS (Cognitive Performance Scale). </plain></SENT>
 <SENT sid="168" pm="."><plain>In addition, variables related to the numbes of periods of care were important variables for predicting NHA with the both classifiers. </plain></SENT>
 <SENT sid="169" pm="."><plain>It should be noted, that the RAI variables (IADL, MAPLE and CPS) are not simple measurements or observations, but instead scoring systems developed by researcher and practitioners (e.g., MAPLE [34], CPS [35] and IADL [36]). </plain></SENT>
@@ -293,18 +290,14 @@
 </text></ref><ref id="CR25"><text><SENT sid="290" pm="."><plain>25XinLZhuMStochastic stepwise ensembles for variable selectionJ Comput Graph Stat20122122759410.1080/10618600.2012.679223 </plain></SENT>
 </text></ref><ref id="CR26"><text><SENT sid="291" pm="."><plain>26ChengLZhuMPossJWHirdesJPGlennyCStoleePOpinion versus practice regarding the use of rehabilitation services in home care: an investigation using machine learning algorithmsBMC Med Inform Decis Mak201515111110.1186/s12911-015-0203-125889846 </plain></SENT>
 </text></ref><ref id="CR27"><text><SENT sid="292" pm="."><plain>27LiuNKohZXGohJLinZHaalandBTingBPOngMEHPrediction of adverse cardiac events in emergency department patients with chest pain using machine learning for variable selectionBMC Med Inform Decis Mak20141417510.1186/1472-6947-14-75<?supplied-pmid 25150702?>25150702 </plain></SENT>
-</text></ref><ref id="CR28"><text><SENT sid="293" pm="."><plain>28Raschka S. </plain></SENT>
-<SENT sid="294" pm="."><plain>Mlxtend. </plain></SENT>
+</text></ref><ref id="CR28"><text><SENT sid="293" pm="."><plain>28Raschka S. Mlxtend. </plain></SENT>
 <SENT sid="295" pm="."><plain>2016. doi:<ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.5281/zenodo.49235">10.5281/zenodo.49235</ext-link>. <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.5281/zenodo.49235">http://dx.doi.org/10.5281/zenodo.49235</ext-link>. </plain></SENT>
 <SENT sid="296" pm="."><plain>Accessed 8 Feb 2016. </plain></SENT>
 </text></ref><ref id="CR29"><text><SENT sid="297" pm="."><plain>29Jones E, Oliphant T, Peterson P, et al.SciPy: Open source scientific tools for Python. </plain></SENT>
 <SENT sid="298" pm="."><plain>2001. <ext-link ext-link-type="uri" xlink:href="http://www.scipy.org/">http://www.scipy.org/</ext-link>. </plain></SENT>
 <SENT sid="299" pm="."><plain>Accessed 15 Aug 2016. </plain></SENT>
-</text></ref><ref id="CR30"><text><SENT sid="300" pm="."><plain>30McKinney W. </plain></SENT>
-<SENT sid="301" pm="."><plain>Data structures for statistical computing in python. </plain></SENT>
-<SENT sid="302" pm="."><plain>In: Proceedings of the 9th Python in Science Conference, SciPy.org. van der Walt, S., Millman, J. </plain></SENT>
-<SENT sid="303" pm="."><plain>(eds.).2010. p. </plain></SENT>
-<SENT sid="304" pm="."><plain>51–56. <ext-link ext-link-type="uri" xlink:href="http://conference.scipy.org/proceedings/">http://conference.scipy.org/proceedings/</ext-link>. </plain></SENT>
+</text></ref><ref id="CR30"><text><SENT sid="300" pm="."><plain>30McKinney W. Data structures for statistical computing in python. </plain></SENT>
+<SENT sid="302" pm="."><plain>In: Proceedings of the 9th Python in Science Conference, SciPy.org. van der Walt, S., Millman, J. (eds.).2010. p. 51–56. <ext-link ext-link-type="uri" xlink:href="http://conference.scipy.org/proceedings/">http://conference.scipy.org/proceedings/</ext-link>. </plain></SENT>
 </text></ref><ref id="CR31"><text><SENT sid="305" pm="."><plain>31WilcoxRBasic Statistics: Understanding Conventional Methods and Modern Insights2009New YorkOxford University Press </plain></SENT>
 </text></ref><ref id="CR32"><text><SENT sid="306" pm="."><plain>32RoelenCABültmannUvan RhenenWvan der KlinkJJTwiskJWHeymansMWExternal validation of two prediction models identifying employees at risk of high sickness absence: cohort study with 1-year follow-upBMC Public Health20131311810.1186/1471-2458-13-10523280303 </plain></SENT>
 </text></ref><ref id="CR33"><text><SENT sid="307" pm="."><plain>33FanJUpadhyeSWorsterAUnderstanding receiver operating characteristic (roc) curvesCan J Emerg Med2006811920 </plain></SENT>

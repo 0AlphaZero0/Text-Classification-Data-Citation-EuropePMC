@@ -44,6 +44,7 @@ resultFile.write("Post-citation")
 resultFile.write("\n")
 for file in os.listdir("./articlesOA"):
     if file.endswith("-AccessionNb.xml"):
+        print (file)
         accessionNames=[]
         fileAccessionNb=codecs.open("./articlesOA/"+str(file),"r",encoding="utf-8")
         fileAccessTmp=fileAccessionNb.read()
@@ -82,7 +83,7 @@ for file in os.listdir("./articlesOA"):
                             section=preCitPost[1]
                             if "(" in section:
                                 section=section.split(" (")[0]
-                                subtype=subtypes[2]
+                                subtype=preCitPost[2]
                         else:# this is not really accurate maybe should I check later the ratio
                             tmpStrRatio=''.join(tmp.itertext())
                             indexMatch=tmpStrRatio.find(accessionNb)
@@ -98,7 +99,7 @@ for file in os.listdir("./articlesOA"):
                                 section=preCitPost[1]
                                 if "(" in section:
                                     section=section.split(" (")[0]
-                                    subtype=subtypes[2]
+                                    subtype=preCitPost[2]
                     if sentencesIndex+1<len(sentences):
                         tmpafter=tmpafter+''.join(sentences[sentencesIndex+1].itertext())
                         if sentencesIndex+2<len(sentences):

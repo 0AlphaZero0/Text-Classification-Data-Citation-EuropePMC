@@ -19,7 +19,7 @@ So here thanks to regular expression it will fix some mistakes made by the split
 
 for file in os.listdir("./articlesOA"):
     if file.endswith("-sentencized.xml"):
-        oldFile=codecs.open(file,"r",encoding="utf-8")
+        oldFile=codecs.open("./articlesOA/"+str(file),"r",encoding="utf-8")
         tmpFile=oldFile.read()
         oldFile.close()
         matchesEtAl=re.findall(r'\set\sal\.\s(</plain></SENT>\n<[^>]+pm=\"\.\"><plain>)',tmpFile)
@@ -40,6 +40,6 @@ for file in os.listdir("./articlesOA"):
             tmpFile=tmpFile.replace(match,'')
         for match in matchesTable:
             tmpFile=tmpFile.replace(match,'')
-        newFile=codecs.open(file,"w",encoding="utf-8")
+        newFile=codecs.open("./articlesOA/"+str(file),"w",encoding="utf-8")
         newFile.write(tmpFile)
         newFile.close()
