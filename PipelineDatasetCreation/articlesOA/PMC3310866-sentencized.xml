@@ -1,0 +1,914 @@
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD v1.1 20151215//EN" "JATS-archivearticle1.dtd"> 
+<article xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML" article-type="research-article"><?properties open_access?><?DTDIdentifier.IdentifierValue -//NLM//DTD Journal Publishing DTD v2.3 20031101//EN?><?DTDIdentifier.IdentifierType public?><?SourceDTD.DTDName journalpublishing.dtd?><?SourceDTD.Version 2.3?><?ConverterInfo.XSLTName jp2nlmx2.xsl?><?ConverterInfo.Version 1?><front><journal-meta><journal-id journal-id-type="nlm-ta">PLoS One</journal-id><journal-id journal-id-type="iso-abbrev">PLoS ONE</journal-id><journal-id journal-id-type="publisher-id">plos</journal-id><journal-id journal-id-type="pmc">plosone</journal-id><journal-title-group><journal-title>PLoS ONE</journal-title></journal-title-group><issn pub-type="epub">1932-6203</issn><publisher><publisher-name>Public Library of Science</publisher-name><publisher-loc>San Francisco, USA</publisher-loc></publisher></journal-meta><article-meta><article-id pub-id-type="pmcid">3310866</article-id><article-id pub-id-type="pmid">22457753</article-id><article-id pub-id-type="publisher-id">PONE-D-11-14795</article-id><article-id pub-id-type="doi">10.1371/journal.pone.0033340</article-id><article-categories><subj-group subj-group-type="heading"><subject>Research Article</subject></subj-group><subj-group subj-group-type="Discipline-v2"><subject>Biology</subject><subj-group><subject>Biochemistry</subject><subj-group><subject>Proteins</subject></subj-group></subj-group><subj-group><subject>Proteomics</subject></subj-group></subj-group><subj-group subj-group-type="Discipline-v2"><subject>Computer Science</subject><subj-group><subject>Computer Applications</subject></subj-group><subj-group><subject>Computer Modeling</subject></subj-group></subj-group><subj-group subj-group-type="Discipline-v2"><subject>Medicine</subject><subj-group><subject>Anatomy and Physiology</subject><subj-group><subject>Immune Physiology</subject></subj-group></subj-group></subj-group></article-categories><title-group><article-title><SecTag type="TITLE"><text><SENT sid="0" pm="."><plain>Rationalization and Design of the Complementarity Determining Region Sequences in an Antibody-Antigen Recognition Interface </plain></SENT>
+</text></SecTag></article-title><alt-title alt-title-type="running-head">Rationalization and Design of Antibody CDRs</alt-title></title-group><contrib-group><contrib contrib-type="author" equal-contrib="yes"><name><surname>Yu</surname><given-names>Chung-Ming</given-names></name><xref ref-type="aff" rid="aff1">
+<sup>1</sup>
+</xref></contrib><contrib contrib-type="author" equal-contrib="yes"><name><surname>Peng</surname><given-names>Hung-Pin</given-names></name><xref ref-type="aff" rid="aff1">
+<sup>1</sup>
+</xref><xref ref-type="aff" rid="aff2">
+<sup>2</sup>
+</xref><xref ref-type="aff" rid="aff9">
+<sup>9</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Chen</surname><given-names>Ing-Chien</given-names></name><xref ref-type="aff" rid="aff1">
+<sup>1</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Lee</surname><given-names>Yu-Ching</given-names></name><xref ref-type="aff" rid="aff1">
+<sup>1</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Chen</surname><given-names>Jun-Bo</given-names></name><xref ref-type="aff" rid="aff1">
+<sup>1</sup>
+</xref><xref ref-type="aff" rid="aff3">
+<sup>3</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Tsai</surname><given-names>Keng-Chang</given-names></name><xref ref-type="aff" rid="aff1">
+<sup>1</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Chen</surname><given-names>Ching-Tai</given-names></name><xref ref-type="aff" rid="aff1">
+<sup>1</sup>
+</xref><xref ref-type="aff" rid="aff4">
+<sup>4</sup>
+</xref><xref ref-type="aff" rid="aff5">
+<sup>5</sup>
+</xref><xref ref-type="aff" rid="aff9">
+<sup>9</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Chang</surname><given-names>Jeng-Yih</given-names></name><xref ref-type="aff" rid="aff1">
+<sup>1</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Yang</surname><given-names>Ei-Wen</given-names></name><xref ref-type="aff" rid="aff1">
+<sup>1</sup>
+</xref><xref ref-type="aff" rid="aff5">
+<sup>5</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Hsu</surname><given-names>Po-Chiang</given-names></name><xref ref-type="aff" rid="aff1">
+<sup>1</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Jian</surname><given-names>Jhih-Wei</given-names></name><xref ref-type="aff" rid="aff1">
+<sup>1</sup>
+</xref><xref ref-type="aff" rid="aff2">
+<sup>2</sup>
+</xref><xref ref-type="aff" rid="aff9">
+<sup>9</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Hsu</surname><given-names>Hung-Ju</given-names></name><xref ref-type="aff" rid="aff1">
+<sup>1</sup>
+</xref><xref ref-type="aff" rid="aff6">
+<sup>6</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Chang</surname><given-names>Hung-Ju</given-names></name><xref ref-type="aff" rid="aff1">
+<sup>1</sup>
+</xref><xref ref-type="aff" rid="aff7">
+<sup>7</sup>
+</xref><xref ref-type="aff" rid="aff10">
+<sup>10</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Hsu</surname><given-names>Wen-Lian</given-names></name><xref ref-type="aff" rid="aff5">
+<sup>5</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Huang</surname><given-names>Kai-Fa</given-names></name><xref ref-type="aff" rid="aff8">
+<sup>8</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Ma</surname><given-names>Alex Che</given-names></name><xref ref-type="aff" rid="aff1">
+<sup>1</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Yang</surname><given-names>An-Suei</given-names></name><xref ref-type="aff" rid="aff1">
+<sup>1</sup>
+</xref><xref ref-type="corresp" rid="cor1">
+<sup>*</sup>
+</xref></contrib></contrib-group><aff id="aff1">
+<label>1</label>
+<addr-line>Genomics Research Center, Academia Sinica, Taipei, Taiwan</addr-line>
+</aff><aff id="aff2">
+<label>2</label>
+<addr-line>Institute of Biomedical Informatics, National Yang-Ming University, Taipei, Taiwan</addr-line>
+</aff><aff id="aff3">
+<label>3</label>
+<addr-line>Department of Computer Science, National Tsing-Hua University, Hsinchu, Taiwan</addr-line>
+</aff><aff id="aff4">
+<label>4</label>
+<addr-line>Institute of Bioinformatics and Systems Biology, National Chiao-Tung University, Hsinchu, Taiwan</addr-line>
+</aff><aff id="aff5">
+<label>5</label>
+<addr-line>Institute of Information Sciences, Academia Sinica, Taipei, Taiwan</addr-line>
+</aff><aff id="aff6">
+<label>6</label>
+<addr-line>Graduate Institute of Life Sciences, National Defense University, Taipei, Taiwan</addr-line>
+</aff><aff id="aff7">
+<label>7</label>
+<addr-line>Institute of Biochemical Science, National Taiwan University, Taipei, Taiwan</addr-line>
+</aff><aff id="aff8">
+<label>8</label>
+<addr-line>Institute of Biological Chemistry, Academia Sinica, Taipei, Taiwan</addr-line>
+</aff><aff id="aff9">
+<label>9</label>
+<addr-line>Bioinformatics Program, Taiwan International Graduate Program, Institute of Information Science, Academia Sinica, Taipei, Taiwan</addr-line>
+</aff><aff id="aff10">
+<label>10</label>
+<addr-line>Chemical Biology and Molecular Biophysics Program, Taiwan International Graduate Program, Institute of Biological Chemistry, Academia Sinica, Taipei, Taiwan</addr-line>
+</aff><contrib-group><contrib contrib-type="editor"><name><surname>Buckle</surname><given-names>Ashley M.</given-names></name><role>Editor</role><xref ref-type="aff" rid="edit1"/></contrib></contrib-group><aff id="edit1">Monash University, Australia</aff><author-notes><corresp id="cor1">* E-mail: <email>yangas@gate.sinica.edu.tw</email></corresp><fn fn-type="con"><p><text><SENT sid="1" pm="."><plain>Conceived and designed the experiments: ASY CMY HPP. </plain></SENT>
+<SENT sid="2" pm="."><plain>Performed the experiments: CMY ICC YCL HJH HJC. </plain></SENT>
+<SENT sid="3" pm="."><plain>Analyzed the data: CMY HPP. </plain></SENT>
+<SENT sid="4" pm="."><plain>Contributed reagents/materials/analysis tools: KFH ACM. </plain></SENT>
+<SENT sid="5" pm="."><plain>Wrote the paper: CMY HPP ASY. </plain></SENT>
+<SENT sid="6" pm="."><plain>Designed and coded the software used in analysis:HPP JBC KCT CTC JYC EWY PCH JWJ WLH. </plain></SENT>
+</text></p></fn></author-notes><pub-date pub-type="collection"><year>2012</year></pub-date><pub-date pub-type="epub"><day>22</day><month>3</month><year>2012</year></pub-date><volume>7</volume><issue>3</issue><elocation-id>e33340</elocation-id><history><date date-type="received"><day>2</day><month>8</month><year>2011</year></date><date date-type="accepted"><day>14</day><month>2</month><year>2012</year></date></history><permissions><copyright-statement>Yu et al.</copyright-statement><copyright-year>2012</copyright-year><license xlink:href="http://creativecommons.org/licenses/by/4.0/"><license-p>This is an open-access article distributed under the terms of the Creative Commons Attribution License, which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are properly credited.</license-p></license></permissions><abstract><p><SecTag type="ABS"><text><SENT sid="7" pm="."><plain>Protein-protein interactions are critical determinants in biological systems. </plain></SENT>
+<SENT sid="8" pm="."><plain>Engineered proteins binding to specific areas on protein surfaces could lead to therapeutics or diagnostics for treating diseases in humans. </plain></SENT>
+<SENT sid="9" pm="."><plain>But designing epitope-specific protein-protein interactions with computational atomistic interaction free energy remains a difficult challenge. </plain></SENT>
+<SENT sid="10" pm="."><plain>Here we show that, with the antibody-VEGF (vascular endothelial growth factor) interaction as a model system, the experimentally observed amino acid preferences in the antibody-antigen interface can be rationalized with 3-dimensional distributions of interacting atoms derived from the database of protein structures. </plain></SENT>
+<SENT sid="11" pm="."><plain>Machine learning models established on the rationalization can be generalized to design amino acid preferences in antibody-antigen interfaces, for which the experimental validations are tractable with current high throughput synthetic antibody display technologies. </plain></SENT>
+<SENT sid="12" pm="."><plain>Leave-one-out cross validation on the benchmark system yielded the accuracy, precision, recall (sensitivity) and specificity of the overall binary predictions to be 0.69, 0.45, 0.63, and 0.71 respectively, and the overall Matthews correlation coefficient of the 20 amino acid types in the 24 interface CDR positions was 0.312. </plain></SENT>
+<SENT sid="13" pm="."><plain>The structure-based computational antibody design methodology was further tested with other antibodies binding to VEGF. </plain></SENT>
+<SENT sid="14" pm="."><plain>The results indicate that the methodology could provide alternatives to the current antibody technologies based on animal immune systems in engineering therapeutic and diagnostic antibodies against predetermined antigen epitopes. </plain></SENT>
+</text></SecTag></p></abstract><counts><page-count count="15"/></counts></article-meta></front><body><SecTag type="INTRO"><sec id="s1"><title><text><SENT sid="15" pm="."><plain>Introduction </plain></SENT>
+</text></title><p><text><SENT sid="16" pm="."><plain>Antibody has become the most prominent class of protein therapeutics and diagnostics [1], [2]. </plain></SENT>
+<SENT sid="17" pm="."><plain>However, the underlying protein recognition principles have yet to be understood to the level, whereby an antibody-antigen recognition interface can be designed de novo. </plain></SENT>
+<SENT sid="18" pm="."><plain>Although powerful high throughput recombinant protein library techniques capable of exploring more than one billion sequence variants in a single experiment have been providing platforms for protein-protein interaction engineering [3], [4], [5], the experimental capabilities are nevertheless infinitesimal in comparison with the vast combinatorial sequence space in a typical protein-protein interaction interface. </plain></SENT>
+<SENT sid="19" pm="."><plain>Hence, current antibody discoveries are largely limited by the uncontrollable animal immune systems [6]. </plain></SENT>
+</text></p><p><text><SENT sid="20" pm="."><plain>Computational capabilities on antibody design have been demonstrated to explore sequence space than is possible experimentally, but the focus has been largely limited on affinity maturation of existing antibody-antigen interactions. </plain></SENT>
+<SENT sid="21" pm="."><plain>It has been shown that, with iterative computational design procedure focusing on single mutations, affinity of two antibodies has been improved by one to two orders of magnitude [7]. </plain></SENT>
+<SENT sid="22" pm="."><plain>Computational antibody-antigen complex models have also been used in combination with phage display mutagenesis on a few selected CDR residues to improve antibody binding affinity by two orders of magnitude [8]. </plain></SENT>
+<SENT sid="23" pm="."><plain>High-affinity antibodies can also be further improved by one order of magnitude with structure-based computational design [9]. </plain></SENT>
+<SENT sid="24" pm="."><plain>De novo paratope design on antibodies against any targeted epitope of an antigen has been developed with computational modeling of CDR structures against the selected epitope [10], but the experimental verification of the computational capability has yet to be demonstrated. </plain></SENT>
+</text></p><p><text><SENT sid="25" pm="."><plain>Successful de novo computational designs on protein-protein interactions has been established, indicating that the current computational methodologies on protein structural energetics are able to identify feasible designs among vast possibilities [11] (see also reviews [12], [13] and references therein). </plain></SENT>
+<SENT sid="26" pm="."><plain>Nevertheless, the accuracy of current energetic functions [7], [12], [13], [14], [15], [16], [17] has been a formidable barrier [18]. </plain></SENT>
+<SENT sid="27" pm="."><plain>In particular, calculating interaction energetics involving water molecules in protein complex formation has been difficult [12], [16], [17], [18], [19], [20], [21], [22], [23], [24], [25]. </plain></SENT>
+<SENT sid="28" pm="."><plain>As a consequence, the capability of ranking a series of tentative sequences near the optimal designs for protein-protein interface remains a difficult challenge [11]. </plain></SENT>
+</text></p><p><text><SENT sid="29" pm="."><plain>Experimental platforms based on phage display of synthetic antibody libraries provide rich information on antibody-antigen interactions [5]. </plain></SENT>
+<SENT sid="30" pm="."><plain>In this work, the aim is to use the data generated from phage-displayed antibody libraries to develop and calibrate computational tools for rational design of antibodies. </plain></SENT>
+<SENT sid="31" pm="."><plain>To this end, we first exhaustively identified the interface CDR (complementarity determining region) sequence preferences in an antibody-VEGF (vascular endothelial growth factor) interaction system with experiments based on phage-displayed recombinant antibody libraries, and then used a structural informatics-based system to rationalize the CDR sequence preferences at atomic resolution with computational molecular modeling. </plain></SENT>
+<SENT sid="32" pm="."><plain>The rationalization led to insights for a machine learning methodology, aiming at designing interface CDR sequences against designated epitopes on antigens of known structure. </plain></SENT>
+<SENT sid="33" pm="."><plain>The results suggest that computational antibody design could effectively empower the high throughput recombinant protein library-based technologies. </plain></SENT>
+</text></p></sec></SecTag><SecTag type="RESULTS,DISCUSS"><sec id="s2"><title><text><SENT sid="34" pm="."><plain>Results and Discussion </plain></SENT>
+</text></title><sec id="s2a"><title><text><SENT sid="35" pm="."><plain>Experimental antibody-VEGF interface sequences </plain></SENT>
+</text></title><p><text><SENT sid="36" pm="."><plain>The experimental amino acid preferences of antibody CDRs binding to VEGF were elucidated with VEGF-binding scFv/sc-dsFv variants derived from the G6 Fab-VEGF complex [26] as a model system. </plain></SENT>
+<SENT sid="37" pm="."><plain>Nine synthetic scFv (single chain variable fragment [4]) or sc-dsFv (single chain disulfide stabilized variable fragment [27]) libraries were constructed with a recombinant phage display system to systematically randomize 5 consecutive residues on each of the 6 CDRs on the variable domains [27]; more than 500 variants for which the scFv/sc-dsFv expressed on bacterial phage surfaces are able to bind to VEGF with high affinity were systematically discovered with high throughput phage display selection and screening [27], [28]. </plain></SENT>
+<SENT sid="38" pm="."><plain>The amino acid preferences of the 30 CDR interface residues in the scFv variants binding to VEGF are shown in Figure 1(a); the VEGF-binding data and the sequence details of the selected variants are shown in Table S1. Figure 1(b) and Table S2 show the VEGF-binding sequence patterns in sc-dsFv variants obtained with the corresponding sc-dsFv libraries. </plain></SENT>
+<SENT sid="39" pm="."><plain>As shown in Figure 1(c), the amino acid preferences are position-dependent; a cluster of interface positions forms the core interface region, where amino acid type conservation for antigen binding is much more stringent than the peripheral interface. </plain></SENT>
+</text></p><SecTag type="FIG"><fig id="pone-0033340-g001" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0033340.g001</object-id><label>Figure 1</label><caption><title><text><SENT sid="40" pm="."><plain>CDR sequence profiles and distribution of the amino acid preference stringency in the scFv-VEGF binding. </plain></SENT>
+</text></title><p><text><SENT sid="41" pm="."><plain>(a) The data were derived from the screening of the five scFv libraries (L3H3, H2H3, L2H3, L1H3, and H1, see also Table S1). </plain></SENT>
+<SENT sid="42" pm="."><plain>The computation of the LOGO plots is based on the formulation by Gorodkin et al [53] with modifications for amino acid background probabilities in phage display libraries and for pseudo counts as shown in Equation (2) of Text S1. </plain></SENT>
+<SENT sid="43" pm="."><plain>(b) The data were derived from the screening of the four sc-dsFv libraries (L3H3-S5, H2H3-S5, L2H3-S5 and L1H3-S5, Table S2). </plain></SENT>
+<SENT sid="44" pm="."><plain>(c) The interface structure of the antibody-VEGF is depicted based on the G6-Fab-VEGF complex structure (2FJG), where the 30 CDR interface residues are shown in stick model and the VEGF homodimer structure (V and W chains) shown in sphere model. </plain></SENT>
+<SENT sid="45" pm="."><plain>The distribution of the color-coded CDR residues shows the position-dependence of the amino acid preferences towards VEGF-binding. </plain></SENT>
+<SENT sid="46" pm="."><plain>The core interface region (boxed in red square) contains residues with high stringency in amino acid type requirement comparing with the residues in the peripheral interface region. </plain></SENT>
+<SENT sid="47" pm="."><plain>The CDR residues are color-coded based on the information content (Ij, as shown in the y-axis of the panel (a), is defined in Equation (2) of the Text S1). </plain></SENT>
+<SENT sid="48" pm="."><plain>The color code for the background VEGF molecule is described in Figure 3(a). </plain></SENT>
+</text></p></caption><graphic xlink:href="pone.0033340.g001"/></fig></SecTag><p><text><SENT sid="49" pm="."><plain>Since the phage display systems in Figure 1 are based on the scFv and the sc-dsFv scaffolds, it is important to verify that both the scFv and the sc-dsFv structures are similar to the variable domain structure in G6-Fab even in the absence of the two Fab constant domains in the scFv or the sc-dsFv structures. </plain></SENT>
+<SENT sid="50" pm="."><plain>High-resolution sc-dsFv structure with the sequence identical to the parent G6-Fab variable domains (except for the two interface cysteines in the sc-dsFv shown in Figure 2) has been elucidated with x-ray crystallography as shown in Figure 2 (PDB code 3AUV); the refinement data are shown in Table S3. </plain></SENT>
+<SENT sid="51" pm="."><plain>The corresponding scFv structure has not been attainable experimentally due to high aggregation tendency of the scFv in crystallization conditions. </plain></SENT>
+<SENT sid="52" pm="."><plain>The comparison of the antibody variable domains in the uncomplexed and the VEGF-complexed G6-Fab structure (obtained from 2FJF and 2FJG, respectively, in PDB) with the sc-dsFv structure shown in Figure 2 suggests that the variable domain structures in the G6-Fab and in the sc-dsFv are largely identical to the atomic details. </plain></SENT>
+<SENT sid="53" pm="."><plain>The structural differences of the engineered interface disulfide bond unique to the sc-dsFv structure are also highlighted in Figure 2. </plain></SENT>
+<SENT sid="54" pm="."><plain>Although the G6-derived scFv structure has not been determined with experimental method, the consistency of the sc-dsFv structure with the G6-Fab structure as shown in Figure 2 and the consistency of the sequence patterns for the scFv and sc-dsFv variants binding to VEGF (comparison of Figures 1(a) and 1(b)) indicate that the scFv-VEGF interactions can be modeled based on the G6 Fab-VEGF complex structure as well. </plain></SENT>
+</text></p><SecTag type="FIG"><fig id="pone-0033340-g002" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0033340.g002</object-id><label>Figure 2</label><caption><title><text><SENT sid="55" pm="."><plain>The crystallographic structure of the sc-dsFv derived from G6-Fab. </plain></SENT>
+</text></title><p><text><SENT sid="56" pm="."><plain>The sc-dsFv structure (colored in green, PDB code 3AUV) is superimposed with the variable domains of VEGF-complexed G6-Fab (2FJG in PDB code, colored in grey) and unbound G6-Fab (2FGF in PDB code, colored in magenta). </plain></SENT>
+<SENT sid="57" pm="."><plain>The interface disulfide bond in the sc-dsFv is marked with the arrow. </plain></SENT>
+<SENT sid="58" pm="."><plain>The RMSDs between the sc-dsFv and the variable domains derived from 2FJF and 2FJG are 0.629 Å and 0.942 Å, respectively. </plain></SENT>
+<SENT sid="59" pm="."><plain>The model of the interface disulfide bond in the sc-dsFv is shown with the superimposition of the Fo-Fc simulated annealing omit density map (colored in cyan) at the 5.0σ level. </plain></SENT>
+<SENT sid="60" pm="."><plain>The omit density map was calculated without the residues of the interface cysteins. </plain></SENT>
+<SENT sid="61" pm="."><plain>The refinement data for the sc-dsFv structure determination are shown in Table S3. </plain></SENT>
+</text></p></caption><graphic xlink:href="pone.0033340.g002"/></fig></SecTag><p><text><SENT sid="62" pm="."><plain>The scFv/sc-dsFv libraries were designed with an internal control in each of the libraries to ensure that the amino acid preferences derived from the VEGF-binding variants are relevant to the complex structure, even when some of the CDR residues in the antibody fragment variants are different from the template G6-Fab sequence. </plain></SENT>
+<SENT sid="63" pm="."><plain>As shown in Figure 1, each of the scFv/sc-dsFv libraries (except for the H1 library) was constructed with two separate random sequence regions simultaneously: one of the randomized regions contains 5 consecutive degenerate codons (NNK) in one of the four CDRs – CDR1L, CDR2L, CDR3L, and CDR2H; the other randomized region always contains 5 consecutive variable positions (also diversified with the NNK degenerate codon) in CDR3H. </plain></SENT>
+<SENT sid="64" pm="."><plain>This design is based on the prior knowledge that the binding of the G6-derived scFv/sc-dsFv with VEGF is primarily anchored with the residues in CDR1H and CDR3H [27], [28]. </plain></SENT>
+<SENT sid="65" pm="."><plain>With the residues in CDR1H remain constant as in G6-Fab in all the variants of the libraries (except for H1 library where the CDR3H residues remain constant as in G6-Fab), VEGF-binding sequence patterns emerged for the CDR3H variable region served as an indication to verify if the antibody-VEGF complex structure remains relevant for the selected variants in binding to the VEGF. </plain></SENT>
+<SENT sid="66" pm="."><plain>As shown in Figures 1(a) and 1(b), the sequence patterns of the CDR3H region for the variants binding to VEGF are all in good agreement in the conservation of the anchoring residues in CDR3H (F101, F102, and L103), suggesting that the sequence variations in the CDRs for the scFv/sc-dsFv variants binding to VEGF did not variegate substantially the binding mode of the antibody variable domains to VEGF, mostly due to the anchoring of the scFv/sc-dsFv variants onto the VEGF binding site with the conserved anchoring residues in the CDR3H and CDR1H. </plain></SENT>
+<SENT sid="67" pm="."><plain>Moreover, competition test of the phage-displayed scFv binding to VEGF with soluble non-fusion G6-derived scFv indicated that 34 out of the 37 selected phage displayed scFvs from the L2H3 library (Table S1) showed clear competition by the soluble scFv (up to 4 µM) on VEGF-binding, assuring that the scFv variants shown in Figure 1 bind to VEGF at mostly the same binding site as in the G6-Fab-VEGF complex. </plain></SENT>
+<SENT sid="68" pm="."><plain>Taken together, the amino acid sequence preferences (LOGOs in Figure 1) for all the CDR positions in consideration are consistently relevant to the model antibody-antigen complex structure. </plain></SENT>
+</text></p></sec><sec id="s2b"><title><text><SENT sid="69" pm="."><plain>Rationalization of the interface CDR sequence preferences </plain></SENT>
+</text></title><p><text><SENT sid="70" pm="."><plain>The amino acid preferences of the scFv interface CDRs binding to VEGF, as shown in Figure 1(a), are quantitatively represented by Wji (shown in Table 1), which is the log-odd-ratio of the probability of amino acid type i at CDR position j over the background probability of the amino acid type in the phage display system (Equation (5) in Methods). </plain></SENT>
+<SENT sid="71" pm="."><plain>The working hypothesis is that Wji is linearly correlated with one or a combination of the following three statistically derived log-odd-ratio terms: Xji, Yji, and Zji (Equations (1)∼(4) in Methods), where Xji is the upper bound of the atomistic contact term for amino acid i at position j; Yji reflects the maximal desolvation energy penalty due to the amino acid i at position j in forming the protein-protein complex; Zji is the structural propensity for amino acid i in position j of the antibody CDR. </plain></SENT>
+<SENT sid="72" pm="."><plain>One first-order approximation embedded in the working hypothesis is that the amino acid preferences (Wji) of position j is intrinsically dependent on the local antibody-antigen structural environment around the position j; higher order cooperative interactions due to the neighboring CDR residues are intractable in this approach. </plain></SENT>
+<SENT sid="73" pm="."><plain>Following this approximation, the Xji and Yji terms were calculated with the antibody structural models where the interface CDR position j was enumerated with all rotamers of amino acid type i while all other positions were reduced to alanine, as described in Equations (1)∼(4) in Methods, so as to mimic realistic antibody design situations where CDR sequences are not known. </plain></SENT>
+<SENT sid="74" pm="."><plain>The numerical results of Wji, Xji, Yji, and Zji are shown in Table S4. </plain></SENT>
+</text></p><SecTag type="TABLE"><table-wrap id="pone-0033340-t001" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0033340.t001</object-id><label>Table 1</label><caption><title><text><SENT sid="75" pm="."><plain>Comparison of the predicted and the experimental amino acid preferences at each of the CDR interface positions. </plain></SENT>
+</text></title></caption><alternatives><graphic id="pone-0033340-t001-1" xlink:href="pone.0033340.t001"/><table frame="hsides" rules="groups"><colgroup span="1"><col align="left" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/></colgroup><thead><tr><td colspan="2" align="left" rowspan="1"><text><SENT sid="76" pm="."><plain>28-L </plain></SENT>
+</text></td><td colspan="2" align="left" rowspan="1"><text><SENT sid="77" pm="."><plain>29-L </plain></SENT>
+</text></td><td colspan="2" align="left" rowspan="1"><text><SENT sid="78" pm="."><plain>30-L </plain></SENT>
+</text></td><td colspan="2" align="left" rowspan="1"><text><SENT sid="79" pm="."><plain>31-L </plain></SENT>
+</text></td><td colspan="2" align="left" rowspan="1"><text><SENT sid="80" pm="."><plain>32-L </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="81" pm="."><plain>Wji </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="82" pm="."><plain>pWji-ti </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="83" pm="."><plain>Wji </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="84" pm="."><plain>pWji-ti </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="85" pm="."><plain>Wji </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="86" pm="."><plain>pWji-ti </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="87" pm="."><plain>Wji </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="88" pm="."><plain>pWji-ti </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="89" pm="."><plain>Wji </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="90" pm="."><plain>pWji-ti </plain></SENT>
+</text></td></tr></thead><tbody><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="91" pm="."><plain>P3.9 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="92" pm="."><plain>S .61 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="93" pm="."><plain>P4.2 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="94" pm="."><plain>D .42 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="95" pm="."><plain>G3.4 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="96" pm="."><plain>S .65 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="97" pm="."><plain>G4.3 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="98" pm="."><plain>R .85 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="99" pm="."><plain>R4.2 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="100" pm="."><plain>F .43 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="101" pm="."><plain>A2.8 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="102" pm="."><plain>N .56 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="103" pm="."><plain>G2.4 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="104" pm="."><plain>A .28 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="105" pm="."><plain>F2.1 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="106" pm="."><plain>A .57 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="107" pm="."><plain>P3.7 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="108" pm="."><plain>S .68 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="109" pm="."><plain>A2.4 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="110" pm="."><plain>Y .42 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="111" pm="."><plain>S1.4 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="112" pm="."><plain>P .47 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="113" pm="."><plain>M2.1 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="114" pm="."><plain>N .18 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="115" pm="."><plain>S1.7 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="116" pm="."><plain>N .36 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="117" pm="."><plain>N1.0 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="118" pm="."><plain>A .57 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="119" pm="."><plain>Y1.1 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="120" pm="."><plain>H .37 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="121" pm="."><plain>E1.0 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="122" pm="."><plain>F .40 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="123" pm="."><plain>H1.0 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="124" pm="."><plain>T .13 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="125" pm="."><plain>A1.5 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="126" pm="."><plain>H .31 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="127" pm="."><plain>T0.2 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="128" pm="."><plain>H .49 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="129" pm="."><plain>W1.0 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="130" pm="."><plain>N .36 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="131" pm="."><plain>M1.0 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="132" pm="."><plain>A .19 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="133" pm="."><plain>I1.0 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="134" pm="."><plain>R .10 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="135" pm="."><plain>P1.5 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="136" pm="."><plain>P .23 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="137" pm="."><plain>G .30 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="138" pm="."><plain>G0.9 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="139" pm="."><plain>G .25 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="140" pm="."><plain>T0.9 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="141" pm="."><plain>H .17 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="142" pm="."><plain>T0.9 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="143" pm="."><plain>L .08 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="144" pm="."><plain>L .18 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="145" pm="."><plain>N .20 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="146" pm="."><plain>T0.2 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="147" pm="."><plain>T .14 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="148" pm="."><plain>V0.2 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="149" pm="."><plain>E .07 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="150" pm="."><plain>L0.5 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="151" pm="."><plain>H .07 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="152" pm="."><plain>Y .07 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="153" pm="."><plain>Y .07 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="154" pm="."><plain>R .06 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="155" pm="."><plain>M .00 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="156" pm="."><plain>A0.2 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="157" pm="."><plain>I .05 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="158" pm="."><plain>G .02 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="159" pm="."><plain>A .00 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="160" pm="."><plain>P .04 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="161" pm="."><plain>R .01 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/></tr></tbody></table><table frame="hsides" rules="groups"><colgroup span="1"><col align="left" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/></colgroup><thead><tr><td colspan="2" align="left" rowspan="1"><text><SENT sid="162" pm="."><plain>50-L </plain></SENT>
+</text></td><td colspan="2" align="left" rowspan="1"><text><SENT sid="163" pm="."><plain>51-L </plain></SENT>
+</text></td><td colspan="2" align="left" rowspan="1"><text><SENT sid="164" pm="."><plain>52-L </plain></SENT>
+</text></td><td colspan="2" align="left" rowspan="1"><text><SENT sid="165" pm="."><plain>53-L </plain></SENT>
+</text></td><td colspan="2" align="left" rowspan="1"><text><SENT sid="166" pm="."><plain>54-L </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="167" pm="."><plain>Wji </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="168" pm="."><plain>pWji-ti </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="169" pm="."><plain>Wji </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="170" pm="."><plain>pWji-ti </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="171" pm="."><plain>Wji </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="172" pm="."><plain>pWji-ti </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="173" pm="."><plain>Wji </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="174" pm="."><plain>pWji-ti </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="175" pm="."><plain>Wji </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="176" pm="."><plain>pWji-ti </plain></SENT>
+</text></td></tr></thead><tbody><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="177" pm="."><plain>E2.5 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="178" pm="."><plain>Y .43 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="179" pm="."><plain>A3.6 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="180" pm="."><plain>N/A </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="181" pm="."><plain>N2.5 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="182" pm="."><plain>N/A </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="183" pm="."><plain>H4.4 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="184" pm="."><plain>R .59 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="185" pm="."><plain>H3.3 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="186" pm="."><plain>N/A </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="187" pm="."><plain>G2.0 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="188" pm="."><plain>G .37 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="189" pm="."><plain>S2.8 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="190" pm="."><plain>W2.5 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="191" pm="."><plain>Y4.0 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="192" pm="."><plain>N .56 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="193" pm="."><plain>N2.5 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="194" pm="."><plain>R1.8 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="195" pm="."><plain>S .37 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="196" pm="."><plain>K1.4 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="197" pm="."><plain>L1.8 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="198" pm="."><plain>F3.9 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="199" pm="."><plain>G .38 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="200" pm="."><plain>L1.8 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="201" pm="."><plain>S0.9 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="202" pm="."><plain>R .33 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="203" pm="."><plain>M1.4 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="204" pm="."><plain>S1.8 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="205" pm="."><plain>M2.5 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="206" pm="."><plain>S .34 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="207" pm="."><plain>I1.4 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="208" pm="."><plain>Q0.6 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="209" pm="."><plain>H .30 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="210" pm="."><plain>G1.4 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="211" pm="."><plain>H1.4 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="212" pm="."><plain>I1.4 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="213" pm="."><plain>A .33 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="214" pm="."><plain>S1.4 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="215" pm="."><plain>T0.6 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="216" pm="."><plain>N .26 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="217" pm="."><plain>T1.4 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="218" pm="."><plain>K1.4 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="219" pm="."><plain>W1.4 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="220" pm="."><plain>H .21 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="221" pm="."><plain>P1.4 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="222" pm="."><plain>L0.4 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="223" pm="."><plain>A .21 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="224" pm="."><plain>R0.4 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="225" pm="."><plain>D .17 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="226" pm="."><plain>R0.9 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/></tr><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="227" pm="."><plain>L .01 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="228" pm="."><plain>P .08 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="229" pm="."><plain>A0.6 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/></tr><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="230" pm="."><plain>F .06E .04Y .03 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/></tr></tbody></table><table frame="hsides" rules="groups"><colgroup span="1"><col align="left" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/></colgroup><thead><tr><td colspan="2" align="left" rowspan="1"><text><SENT sid="231" pm="."><plain>92-L </plain></SENT>
+</text></td><td colspan="2" align="left" rowspan="1"><text><SENT sid="232" pm="."><plain>93-L </plain></SENT>
+</text></td><td colspan="2" align="left" rowspan="1"><text><SENT sid="233" pm="."><plain>94-L </plain></SENT>
+</text></td><td colspan="2" align="left" rowspan="1"><text><SENT sid="234" pm="."><plain>95-L </plain></SENT>
+</text></td><td colspan="2" align="left" rowspan="1"><text><SENT sid="235" pm="."><plain>96-L </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="236" pm="."><plain>Wji </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="237" pm="."><plain>pWji-ti </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="238" pm="."><plain>Wji </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="239" pm="."><plain>pWji-ti </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="240" pm="."><plain>Wji </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="241" pm="."><plain>pWji-ti </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="242" pm="."><plain>Wji </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="243" pm="."><plain>pWji-ti </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="244" pm="."><plain>Wji </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="245" pm="."><plain>pWji-ti </plain></SENT>
+</text></td></tr></thead><tbody><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="246" pm="."><plain>F4.3 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="247" pm="."><plain>A .93 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="248" pm="."><plain>K4.9 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="249" pm="."><plain>S .65 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="250" pm="."><plain>P2.9 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="251" pm="."><plain>R .68 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="252" pm="."><plain>P3.2 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="253" pm="."><plain>N/A </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="254" pm="."><plain>H5.7 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="255" pm="."><plain>N/A </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="256" pm="."><plain>Y3.6 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="257" pm="."><plain>S .60 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="258" pm="."><plain>N3.9 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="259" pm="."><plain>H .58 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="260" pm="."><plain>R1.6 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="261" pm="."><plain>L .66 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="262" pm="."><plain>K1.6 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="263" pm="."><plain>Y2.4 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="264" pm="."><plain>H3.0 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="265" pm="."><plain>P .38 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="266" pm="."><plain>M3.5 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="267" pm="."><plain>G .45 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="268" pm="."><plain>A1.5 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="269" pm="."><plain>Y .36 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="270" pm="."><plain>N1.6 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="271" pm="."><plain>F2.4 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="272" pm="."><plain>N3.0 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="273" pm="."><plain>N .35 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="274" pm="."><plain>I3.0 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="275" pm="."><plain>A .29 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="276" pm="."><plain>G1.1 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="277" pm="."><plain>N .30 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="278" pm="."><plain>S1.6 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="279" pm="."><plain>P2.0 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="280" pm="."><plain>I2.4 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="281" pm="."><plain>H .25 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="282" pm="."><plain>R1.6 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="283" pm="."><plain>N .27 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="284" pm="."><plain>H0.5 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="285" pm="."><plain>H .29 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="286" pm="."><plain>T1.5 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="287" pm="."><plain>M1.6 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="288" pm="."><plain>S2.1 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="289" pm="."><plain>F .19 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="290" pm="."><plain>T1.1 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="291" pm="."><plain>R .24 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="292" pm="."><plain>I0.5 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="293" pm="."><plain>G .25 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="294" pm="."><plain>A1.1 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="295" pm="."><plain>N0.5 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="296" pm="."><plain>L1.2 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="297" pm="."><plain>Y .13 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="298" pm="."><plain>S0.9 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="299" pm="."><plain>P .05 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="300" pm="."><plain>T0.5 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="301" pm="."><plain>A .18 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="302" pm="."><plain>F0.5 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="303" pm="."><plain>E0.5 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/></tr><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="304" pm="."><plain>S0.01 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="305" pm="."><plain>S .17 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="306" pm="."><plain>A0.5 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/></tr></tbody></table><table frame="hsides" rules="groups"><colgroup span="1"><col align="left" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/></colgroup><thead><tr><td colspan="2" align="left" rowspan="1"><text><SENT sid="307" pm="."><plain>29-H </plain></SENT>
+</text></td><td colspan="2" align="left" rowspan="1"><text><SENT sid="308" pm="."><plain>30-H </plain></SENT>
+</text></td><td colspan="2" align="left" rowspan="1"><text><SENT sid="309" pm="."><plain>31-H </plain></SENT>
+</text></td><td colspan="2" align="left" rowspan="1"><text><SENT sid="310" pm="."><plain>32-H </plain></SENT>
+</text></td><td colspan="2" align="left" rowspan="1"><text><SENT sid="311" pm="."><plain>33-H </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="312" pm="."><plain>Wji </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="313" pm="."><plain>pWji-ti </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="314" pm="."><plain>Wji </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="315" pm="."><plain>pWji-ti </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="316" pm="."><plain>Wji </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="317" pm="."><plain>pWji-ti </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="318" pm="."><plain>Wji </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="319" pm="."><plain>pWji-ti </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="320" pm="."><plain>Wji </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="321" pm="."><plain>pWji-ti </plain></SENT>
+</text></td></tr></thead><tbody><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="322" pm="."><plain>I4.9 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="323" pm="."><plain>N/A </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="324" pm="."><plain>D5.2 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="325" pm="."><plain>S .56 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="326" pm="."><plain>D8.0 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="327" pm="."><plain>S .41 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="328" pm="."><plain>Y8.3 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="329" pm="."><plain>Y .52 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="330" pm="."><plain>W9.1 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="331" pm="."><plain>Y .45 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="332" pm="."><plain>L4.2 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="333" pm="."><plain>E4.9 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="334" pm="."><plain>P .24 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="335" pm="."><plain>N5.5 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="336" pm="."><plain>P .13 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="337" pm="."><plain>F6.9 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="338" pm="."><plain>F .44 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="339" pm="."><plain>F4.1 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="340" pm="."><plain>G .44 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="341" pm="."><plain>M3.0 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="342" pm="."><plain>N3.0 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="343" pm="."><plain>D .22 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="344" pm="."><plain>E3.0 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="345" pm="."><plain>N .01 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="346" pm="."><plain>H .41 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="347" pm="."><plain>H .32 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="348" pm="."><plain>V2.9 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="349" pm="."><plain>S1.8 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="350" pm="."><plain>A .19 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="351" pm="."><plain>H2.2 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="352" pm="."><plain>P .28 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="353" pm="."><plain>N .26 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="354" pm="."><plain>F2.2 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="355" pm="."><plain>Y1.2 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="356" pm="."><plain>H .18 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="357" pm="."><plain>N .27 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="358" pm="."><plain>A .19 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="359" pm="."><plain>R0.03 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="360" pm="."><plain>N .14 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="361" pm="."><plain>A .23 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="362" pm="."><plain>R .19 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="363" pm="."><plain>R .02 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="364" pm="."><plain>S .17 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="365" pm="."><plain>E .01 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/></tr></tbody></table><table frame="hsides" rules="groups"><colgroup span="1"><col align="left" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/></colgroup><thead><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="366" pm="."><plain>53-H </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="367" pm="."><plain>54-H </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="368" pm="."><plain>55-H </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="369" pm="."><plain>56-H </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="370" pm="."><plain>57-H </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="371" pm="."><plain>Wji </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="372" pm="."><plain>pWji-ti </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="373" pm="."><plain>Wji </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="374" pm="."><plain>pWji-ti </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="375" pm="."><plain>Wji </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="376" pm="."><plain>pWji-ti </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="377" pm="."><plain>Wji </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="378" pm="."><plain>pWji-ti </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="379" pm="."><plain>Wji </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="380" pm="."><plain>pWji-ti </plain></SENT>
+</text></td></tr></thead><tbody><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="381" pm="."><plain>K2.2 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="382" pm="."><plain>D .51 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="383" pm="."><plain>P5.5 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="384" pm="."><plain>P .60 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="385" pm="."><plain>P3.1 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="386" pm="."><plain>P .42 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="387" pm="."><plain>P5.5 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="388" pm="."><plain>G .59 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="389" pm="."><plain>P4.3 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="390" pm="."><plain>Y .63 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="391" pm="."><plain>L2.0 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="392" pm="."><plain>Y .38 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="393" pm="."><plain>N2.2 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="394" pm="."><plain>E .51 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="395" pm="."><plain>D2.2 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="396" pm="."><plain>E .36 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="397" pm="."><plain>D2.7 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="398" pm="."><plain>P .14 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="399" pm="."><plain>A1.9 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="400" pm="."><plain>F .60 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="401" pm="."><plain>N1.6 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="402" pm="."><plain>P .28 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="403" pm="."><plain>T1.9 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="404" pm="."><plain>A .26 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="405" pm="."><plain>N2.2 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="406" pm="."><plain>A .28 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="407" pm="."><plain>I1.6 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="408" pm="."><plain>H .14 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="409" pm="."><plain>S1.1 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="410" pm="."><plain>M .47 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="411" pm="."><plain>G1.6 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="412" pm="."><plain>H .27 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="413" pm="."><plain>N .17 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="414" pm="."><plain>G2.2 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="415" pm="."><plain>D .20 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="416" pm="."><plain>V0.3 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="417" pm="."><plain>N .13 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="418" pm="."><plain>F0.9 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="419" pm="."><plain>N .40 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="420" pm="."><plain>P1.2 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="421" pm="."><plain>E .16 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="422" pm="."><plain>H .11 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="423" pm="."><plain>H1.6 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="424" pm="."><plain>G .08 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="425" pm="."><plain>S0.2 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="426" pm="."><plain>D0.9 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="427" pm="."><plain>R .28 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="428" pm="."><plain>T0.3 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="429" pm="."><plain>N .04 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="430" pm="."><plain>D .06 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="431" pm="."><plain>I1.6 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="432" pm="."><plain>N .01 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="433" pm="."><plain>H0.9 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="434" pm="."><plain>H .23 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="435" pm="."><plain>S .02 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="436" pm="."><plain>F0.9 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="437" pm="."><plain>E0.9 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="438" pm="."><plain>Q .18 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="439" pm="."><plain>M0.9 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="440" pm="."><plain>P .11 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="441" pm="."><plain>A .11L .04 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="442" pm="."><plain>S .01 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="443" pm="."><plain>D .00 </plain></SENT>
+</text></td></tr></tbody></table><table frame="hsides" rules="groups"><colgroup span="1"><col align="left" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/></colgroup><thead><tr><td colspan="2" align="left" rowspan="1"><text><SENT sid="444" pm="."><plain>101-H </plain></SENT>
+</text></td><td colspan="2" align="left" rowspan="1"><text><SENT sid="445" pm="."><plain>102-H </plain></SENT>
+</text></td><td colspan="2" align="left" rowspan="1"><text><SENT sid="446" pm="."><plain>103-H </plain></SENT>
+</text></td><td colspan="2" align="left" rowspan="1"><text><SENT sid="447" pm="."><plain>104-H </plain></SENT>
+</text></td><td colspan="2" align="left" rowspan="1"><text><SENT sid="448" pm="."><plain>105-H </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="449" pm="."><plain>Wji </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="450" pm="."><plain>pWji-ti </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="451" pm="."><plain>Wji </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="452" pm="."><plain>pWji-ti </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="453" pm="."><plain>Wji </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="454" pm="."><plain>pWji-ti </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="455" pm="."><plain>Wji </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="456" pm="."><plain>pWji-ti </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="457" pm="."><plain>Wji </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="458" pm="."><plain>pWji-ti </plain></SENT>
+</text></td></tr></thead><tbody><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="459" pm="."><plain>F7.3 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="460" pm="."><plain>P .59 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="461" pm="."><plain>F7.5 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="462" pm="."><plain>L .50 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="463" pm="."><plain>L5.8 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="464" pm="."><plain>R .47 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="465" pm="."><plain>N4.3 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="466" pm="."><plain>A .42 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="467" pm="."><plain>G5.8 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="468" pm="."><plain>G .42 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="469" pm="."><plain>W5.4 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="470" pm="."><plain>F .48 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="471" pm="."><plain>Y6.8 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="472" pm="."><plain>G .43 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="473" pm="."><plain>A0.5 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="474" pm="."><plain>G .34 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="475" pm="."><plain>G2.0 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="476" pm="."><plain>H .33 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="477" pm="."><plain>N1.6 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="478" pm="."><plain>A .38 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="479" pm="."><plain>H3.9 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="480" pm="."><plain>Y .35 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="481" pm="."><plain>M0.5 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="482" pm="."><plain>D .32 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="483" pm="."><plain>Y .31 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="484" pm="."><plain>Q2.0 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="485" pm="."><plain>P .30 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="486" pm="."><plain>S0.9 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="487" pm="."><plain>R .36 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="488" pm="."><plain>M1.6 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="489" pm="."><plain>N .32 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="490" pm="."><plain>P .29 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="491" pm="."><plain>N .29 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="492" pm="."><plain>F1.6 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="493" pm="."><plain>G .29 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="494" pm="."><plain>Y0.6 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="495" pm="."><plain>Y .24 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="496" pm="."><plain>E .31 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="497" pm="."><plain>N .22 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="498" pm="."><plain>P .26 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="499" pm="."><plain>H1.6 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="500" pm="."><plain>Y .27 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="501" pm="."><plain>H0.5 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="502" pm="."><plain>N .20 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="503" pm="."><plain>D .30 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="504" pm="."><plain>H .20 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="505" pm="."><plain>H .25 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="506" pm="."><plain>R1.6 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="507" pm="."><plain>N .19 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="508" pm="."><plain>H .16 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="509" pm="."><plain>L .20 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="510" pm="."><plain>F .17 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="511" pm="."><plain>A .16 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="512" pm="."><plain>S0.9 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="513" pm="."><plain>F .19 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="514" pm="."><plain>L .10 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="515" pm="."><plain>H .12 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="516" pm="."><plain>E .03 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="517" pm="."><plain>L .04 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="518" pm="."><plain>Y0.6 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="519" pm="."><plain>R .16 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="520" pm="."><plain>S .05 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="521" pm="."><plain>A .06M .02 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="522" pm="."><plain>D0.5 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="523" pm="."><plain>S .10L .05 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/></tr></tbody></table></alternatives><table-wrap-foot><fn id="nt101"><label/><p><text><SENT sid="524" pm="."><plain>At each position, the left-hand column shows the amino acid type and the corresponding Wji. </plain></SENT>
+<SENT sid="525" pm="."><plain>All the predicted positive amino acid types (δpWji = 1) and the activation values for sequence preference (pWji) are shown in the right-hand column. </plain></SENT>
+<SENT sid="526" pm="."><plain>The amino acid types shown in bold are the common amino acid types (true positives) shown in both the left-hand and the right-hand columns. </plain></SENT>
+</text></p></fn></table-wrap-foot></table-wrap></SecTag><p><text><SENT sid="527" pm="."><plain>The working hypothesis was tested by calculating the Pearson correlation coefficients (cc) between Wji and Xji, Yji, Zji respectively for all amino acid type i in each of the position j. </plain></SENT>
+<SENT sid="528" pm="."><plain>The results are shown in Table S4 and are summarized in Figure 3. </plain></SENT>
+<SENT sid="529" pm="."><plain>In Figure 3(a), the 30 interface CDR amino acids are shown color-coded based on the Wji-Xji correlation coefficient. </plain></SENT>
+<SENT sid="530" pm="."><plain>The background VEGF interface in Figure 3(a) is also color-coded according to the statistic strength reflecting the average atomistic contact terms calculated for each of the VEGF interface atoms with model scFv structures constructed based on the antigen-binding CDR sequences listed in Table S1 (detailed method described in Text S1). </plain></SENT>
+<SENT sid="531" pm="."><plain>The experimental amino acid preferences Wji are significantly and positively correlated with the atomistic contact term Xji in the core interface positions: Y32-H in CDR1H (cc = 0.51), W33-H in CDR1H (cc = 0.67), F101-H in CDR3H (cc = 0.40), F102-H in CDR3H (cc = 0.30), A32-L in CDR1L (cc = 0.42), F53-L in CDR2L (cc = 0.54), Y92-L in CDR3L (cc = 0.34). </plain></SENT>
+<SENT sid="532" pm="."><plain>These positions are consistent with the positions in the core interface region as shown in Figure 1(c) and are located at or near the VEGF interface sub-area colored in red (Figures 1(c) and 3(a)); the color code indicates that this VEGF area is consistently used to make energetically favorable contacts to the binding scFv variants. </plain></SENT>
+<SENT sid="533" pm="."><plain>The energetics governing interactions in this core interface region is closely related to the energetics governing the stability of the interior of protein structures, for which the statistics are used for Xji calculations. </plain></SENT>
+<SENT sid="534" pm="."><plain>The ranking capabilities of Xji on the amino acid-protein contact energetics for residues in the core interface are largely comparable to the consensus of 24 publicly available scoring functions devised for computational drug design (Tables S5(a) and S5(b)). </plain></SENT>
+<SENT sid="535" pm="."><plain>This comparison also highlights the diverse ranking results among these 24 scoring functions. </plain></SENT>
+</text></p><SecTag type="FIG"><fig id="pone-0033340-g003" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0033340.g003</object-id><label>Figure 3</label><caption><title><text><SENT sid="536" pm="."><plain>Structure-dependent determinants for the amino acid preferences Wji. </plain></SENT>
+</text></title><p><text><SENT sid="537" pm="."><plain>(a) The interface structure of the antibody-VEGF depicted in this panel is attained from the G6-Fab-VEGF complex structure (2FJG). </plain></SENT>
+<SENT sid="538" pm="."><plain>The 30 CDR interface residues are shown in stick model, and the VEGF homodimer structure (V and W chains) is shown in sphere model, where some of the residues are labeled according to the numbering in 2FJG. </plain></SENT>
+<SENT sid="539" pm="."><plain>The CDR interface residues are color-coded based on the Wji-Xji correlation coefficients, for which data for the correlation computation are listed in Table S4. </plain></SENT>
+<SENT sid="540" pm="."><plain>As shown by the bar for color-codes at the bottom of the panel, the residue positions with positive correlation are shown in red and negative correlation are shown in blue. </plain></SENT>
+<SENT sid="541" pm="."><plain>CDR positions that are too distant to make any contact with VEGF are colored in yellow. </plain></SENT>
+<SENT sid="542" pm="."><plain>The VEGF atoms in the interface are colored with increasing redness to highlight the atoms interacting with the antibody variants (method described in Text S1) through increasingly stronger interactions embedded in the Xji terms, which are derived from the atomistic contact statistics in protein interiors. </plain></SENT>
+<SENT sid="543" pm="."><plain>(b) The 30 CDR interface residues are color-coded in terms of the ratio of the solvent accessible surface area (SASA) change upon the antibody-VEGF complex formation over the solvent assessable surface area in the absence of the VEGF. </plain></SENT>
+<SENT sid="544" pm="."><plain>(c) The CDR interface residues are color-coded according the Wji-Zji correlation coefficients. </plain></SENT>
+<SENT sid="545" pm="."><plain>(d) The CDR interface residues are color-coded according the Wji-Yji correlation coefficients. </plain></SENT>
+<SENT sid="546" pm="."><plain>CDR positions that are too distant to render the Yji term becoming independent of the amino acid type i are colored in yellow. </plain></SENT>
+<SENT sid="547" pm="."><plain>The VEGF atoms are color-coded according to the hydration pattern as shown in Figure 4(a). </plain></SENT>
+<SENT sid="548" pm="."><plain>(e) The CDR interface residues are color-coded according the correlation coefficient of Wji versus (pWji- ti) (confidence level of predicted amino acid preference for amino acid i at position j). </plain></SENT>
+<SENT sid="549" pm="."><plain>The background VEGF atoms are color-coded as in Figure 4(a). </plain></SENT>
+</text></p></caption><graphic xlink:href="pone.0033340.g003"/></fig></SecTag><p><text><SENT sid="550" pm="."><plain>The sub-area color-coded red on VEGF interface in Figure 3(a) is in good agreement with the ‘hot spots’ on VEGF (F17-W, M18-W, Y21-W, Y25-W, Q89-V [26]). </plain></SENT>
+<SENT sid="551" pm="."><plain>Hot spots [29], [30], [31] are frequently buried in the interior of the interface. </plain></SENT>
+<SENT sid="552" pm="."><plain>As shown in Figure 3(b), 5 (Y32-H, W33-H, F101-H, F102-H, and Y92-L) core interface CDR positions are buried in the interface with more than 39% SASA change. </plain></SENT>
+<SENT sid="553" pm="."><plain>In addition, 4 (Y32-H, W33-H, F101-H, and F102-H) out of these 5 buried interface positions are also highly conserved in the sequence patterns (Figure 1). </plain></SENT>
+<SENT sid="554" pm="."><plain>Theses conserved interface residues resemble key residues involving in core structures of tightly packed protein interiors. </plain></SENT>
+</text></p><p><text><SENT sid="555" pm="."><plain>Amino acid preferences in the peripheral interface positions are less pronounced but are not indifferent (Figure 1 and Table 1); the sequence preferences of these positions cannot be explained with the structural propensities measured by Zji or by the atomistic contact term Xji. Figure 3(c) shows the interface residue structures color-coded based on the Wji-Zji correlation coefficients. </plain></SENT>
+<SENT sid="556" pm="."><plain>The amino acid preferences in all the 30 interface positions are correlated with the local structural propensities to various extents, but the correlations do not distinguish the core interface region from the peripheral region in the CDR interface. </plain></SENT>
+</text></p><p><text><SENT sid="557" pm="."><plain>Amino acid preferences in the peripheral regions are mostly governed by hydration-mediated interactions, as measured by the Yji term. </plain></SENT>
+<SENT sid="558" pm="."><plain>The residues with the most prominent Wji-Yji correlation are D28-L in CDR1L (cc = 0.40), S30-L in CDR1L (cc = 0.27), S30-H in CDR1H (cc = 0.42), P53-H in CDR2H (cc = 0.31), A54-H in CDR2H (cc = 0.47). </plain></SENT>
+<SENT sid="559" pm="."><plain>All these residues are in the peripheral interface regions. </plain></SENT>
+<SENT sid="560" pm="."><plain>As shown in Figure 3(d), the interface CDR residue structures color-coded based on the Wji-Yji correlation coefficients are essentially a mirror image to the color-codes shown in Figure 3(a) for the Wji-Xji correlation. </plain></SENT>
+<SENT sid="561" pm="."><plain>This indicates that minimizing the desolvation penalties, in contrast to optimizing the contact energy as in the core interface region, is the major determinant for the amino acid preferences in the peripheral interface CDR positions. </plain></SENT>
+</text></p><p><text><SENT sid="562" pm="."><plain>Figure 4 shows the hydration patterns on VEGF and the antibody CDRs. </plain></SENT>
+<SENT sid="563" pm="."><plain>The core interface regions on the VEGF and the corresponding part of the antibody CDRs are much less hydrated than the other surface regions, suggesting that the core interface region in an epitope-paratope pair can be identified with the hydration pattern predictions as shown in Figure 4. </plain></SENT>
+<SENT sid="564" pm="."><plain>Together, the results shown in Figures 3∼4 suggest that the core interface region, composed of only a few less solvated hot-spot residues on the antigen surface, is recognized by a few contact-driven residues on the CDRs of the antibody, forming the core of the antibody-antigen recognition interface without substantial energetic penalty due to the dehydration of the core interface. </plain></SENT>
+<SENT sid="565" pm="."><plain>The energetics for this core interface assembly resembles that governing the stability of the interior of protein structures. </plain></SENT>
+<SENT sid="566" pm="."><plain>The CDR positions surrounding the core interface prefer small hydrophilic sidechains over the possibility of forming specific inter-protein van der Waals interactions and hydrophobic contacts. </plain></SENT>
+<SENT sid="567" pm="."><plain>Hydration-mediated interactions indirectly linking the hydrophilic groups in both sides of the protein interface surrounding the core interface region provide non-specific but weak adhesive driving force for the interface, explaining the non-specific preferences for small and hydrophilic amino acid sidechains in these positions. </plain></SENT>
+<SENT sid="568" pm="."><plain>Bulky hydrophobic sidechains that abolish this weak interaction and introduce larger dehydration penalties are less preferable in the peripheral interface region. </plain></SENT>
+</text></p><SecTag type="FIG"><fig id="pone-0033340-g004" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0033340.g004</object-id><label>Figure 4</label><caption><title><text><SENT sid="569" pm="."><plain>Hydration patterns on the surface of VEGF and the antibody. </plain></SENT>
+</text></title><p><text><SENT sid="570" pm="."><plain>(a) Hydration patterns of VEGF are shown as the water oxygen atom PDM contours in cyan on the protein surface and as the color-coded atom surfaces. </plain></SENT>
+<SENT sid="571" pm="."><plain>The water PDMs are shown as 0.0019 contours in this panel. </plain></SENT>
+<SENT sid="572" pm="."><plain>The atom surfaces are color-coded according to the hydration pattern near the atom (Equation (3) in Text S1). </plain></SENT>
+<SENT sid="573" pm="."><plain>(b) The hydration pattern for the G6-Fab (2FJG) is shown. </plain></SENT>
+</text></p></caption><graphic xlink:href="pone.0033340.g004"/></fig></SecTag><p><text><SENT sid="574" pm="."><plain>Although protein-protein core interfaces anchored by hot spots [29], [30], [31] and the hydration-mediated interactions in the peripheral protein-protein interface regions [18], [21], [22], [23], [24] have been well-established qualitatively, the results shown in Figure 1 nevertheless provide rich information on the amino acid preferences for the positions in each of the interface regions. </plain></SENT>
+<SENT sid="575" pm="."><plain>More importantly, the new information led to insights at atomic resolution for quantitative evaluations of the amino acid preferences in the interface positions (Figure 3). </plain></SENT>
+<SENT sid="576" pm="."><plain>Computational algorithms based on these quantitative insights should be useful in designing antibody CDR sequences targeting at a designated epitope of known structure (see below). </plain></SENT>
+</text></p></sec><sec id="s2c"><title><text><SENT sid="577" pm="."><plain>Machine learning models for computational antibody desig </plain></SENT>
+</text></title><p><text><SENT sid="578" pm="."><plain>The results above suggest that the Xji, Yji, Zji terms should be useful in predicting the amino acid preferences in the CDR interface. </plain></SENT>
+<SENT sid="579" pm="."><plain>We chose the minimal logistic regression model with weighted sum of the Xji Yji and Zji terms as input (Equation (4) in Methods) to predict the amino acid preferences at each of the interface CDR positions contacting the antigen (24 positions, not including the 6 non-contact positions as colored in yellow in Figure 3(a) and (d)). </plain></SENT>
+<SENT sid="580" pm="."><plain>The rationale is that the Xji, Yji, Zji terms should carry enough information to evaluate as to what extent an amino acid type i is suitable for an interface environment surrounding the position j. </plain></SENT>
+<SENT sid="581" pm="."><plain>The machine learning was carried out by training one logistic regression model for each of the 20 amino acid types at each of the 24 CDR positions; the amino acid preferences at each of the interface positions were predicted with the 20 logistic regression models trained with information from all other 23 positions and the binary predictions (δpWji in Equation (4)) were assessed with the positives and negatives determined experimentally for the position (leave-one-out cross-validation so that the training set does not include the test case). </plain></SENT>
+<SENT sid="582" pm="."><plain>The weights of the trained models and the prediction results are shown in Table S4. </plain></SENT>
+</text></p><p><text><SENT sid="583" pm="."><plain>The logistic regression model was chosen because of the simplicity of the weighted linear combination of the Xji Yji and Zji terms as input. </plain></SENT>
+<SENT sid="584" pm="."><plain>The linear combination requires only small number of parameters (each model requires only 5 variable parameters; see Equation (4) in Methods). </plain></SENT>
+<SENT sid="585" pm="."><plain>In contrast, in more sophisticate machine learning models, such as artificial neural network or support vector machines, each model would frequently require tens to hundreds of weight parameters. </plain></SENT>
+<SENT sid="586" pm="."><plain>These machine learning models are not suitable for the application in this work because the number of available data points is relatively too small for the machine learning models. </plain></SENT>
+<SENT sid="587" pm="."><plain>The regression algorithm using 23 data points to optimize 5 variable parameters is chosen so as to avoid over-fitting of the machine learning models. </plain></SENT>
+</text></p><p><text><SENT sid="588" pm="."><plain>The effectiveness of the amino acid preference prediction by the logistic regression models is summarized in Table 1. </plain></SENT>
+<SENT sid="589" pm="."><plain>In practice, positive Wji (observed count for amino acid i at position j is greater than the anticipated frequency of amino acid i encoded in the degenerate codon NNK) for amino acid type i is considered as positive (δWji = 1) in position j, and the predicted positive amino acid types (δpWji = 1) have the output activation value (pWji) from the logistic regression models greater than the threshold ti (Equation (4)). </plain></SENT>
+<SENT sid="590" pm="."><plain>The overall Matthews correlation coefficient (MCC, Equation (10)) for the amino acid preference binary predictions (leave-one-out cross validation) of the 20 amino acid types in the 24 interface CDR positions is 0.312, calculated with the experimental and prediction data shown in Table 1. </plain></SENT>
+<SENT sid="591" pm="."><plain>The MCC for random predictions would be zero and perfect predictions would yield MCC of one. </plain></SENT>
+<SENT sid="592" pm="."><plain>On average, each interface position has 5.7±2.0 positive amino acid types; 7.7±2.0 amino acid types are predicted positive on average at each position and 3.5±1.9 amino acid types are true positive on average at each position – the accuracy, precision, recall (sensitivity) and specificity (Equations (6)∼(9) in Methods) of the overall binary predictions are 0.69, 0.45, 0.63, and 0.71 respectively. </plain></SENT>
+<SENT sid="593" pm="."><plain>In comparison, a random prediction of 5.7 residues for each of the 24 positions would yield 0.59, 0.29, 0.29, and 0.72 for the same set of prediction effectiveness measurements. </plain></SENT>
+</text></p><p><text><SENT sid="594" pm="."><plain>The prediction accuracies (Wji−(pWji−ti) correlation coefficients) shown in Figure 3(e) are inversely correlated (cc = −0.40) with the SASA change shown in Figure 3(b) and are positively correlated (cc = 0.25) with Wji-Yji correlation coefficient (Figure 3(d)). </plain></SENT>
+<SENT sid="595" pm="."><plain>This suggests that, in general, the yjiYji term in Equation (4) gives more weight in determining pWji and thus the sequence preference predictions are more accurate for the peripheral interface positions. </plain></SENT>
+</text></p><p><text><SENT sid="596" pm="."><plain>The machine learning models above enabled a formal statistical extrapolation with accuracy to an extent, providing suggestions on optimal CDR sequences capable of binding to a designated epitope based on rules learned from a limited set of data. </plain></SENT>
+<SENT sid="597" pm="."><plain>The phage display data have provided invaluable but nevertheless incomplete picture on the possible combinations of CDR residues in recognizing the epitope on the antigen. </plain></SENT>
+<SENT sid="598" pm="."><plain>Even the limited sequence space of the CDR variants selected for binding to the same epitope on VEGF could not be completely explored with only several hundreds of selected and confirmed binders as shown in Figure 1; many of the amino acid combinations that have not been observed from the limited sampling remain uncertain. </plain></SENT>
+<SENT sid="599" pm="."><plain>The logistic regression models above have enabled a better use of the limited dataset in predicting optimal CDR sequences unseen previously in an antibody-antigen interface. </plain></SENT>
+</text></p></sec><sec id="s2d"><title><text><SENT sid="600" pm="."><plain>Further tests of the prediction of optimal CDR residues in other antibody-antigen interfaces </plain></SENT>
+</text></title><p><text><SENT sid="601" pm="."><plain>The capabilities of the machine learning models were further tested with other antibody-VEGF complex interfaces, where the anti-VEGF antibody sequences are different with different corresponding epitope on the antigen. </plain></SENT>
+<SENT sid="602" pm="."><plain>Two of these complex interfaces (1BJ1 [32] and 2FJH [26]) have been optimized for high affinity, while the other three anti-VEGF antibodies (2QR0 [33], 1TZH and 1TZI [34]) were selected from phage display libraries with only limited amino acid variations (Y, S, D, A) in selected CDR residues. </plain></SENT>
+<SENT sid="603" pm="."><plain>Since the corresponding phage display variant profiles as shown in Figure 1 are not available from the associated studies, similar analyses shown in Figure 3 could not be carried out. </plain></SENT>
+<SENT sid="604" pm="."><plain>Alternatively, we predicted the ranking of the 20 natural amino acid types in each of the CDR positions defined in the respective antibody-antigen complex structures and highlight the rank of the CDR amino acids in the crystal structures based on the ranking predicted with the trained logistic regression models (Figure 5). </plain></SENT>
+<SENT sid="605" pm="."><plain>It is not known from experimental data as to if there exist other more optimal amino acid types in comparison with the corresponding amino acid type in the structure, but nevertheless, we assume that amino acids in the structures with better ranks are predicted more accurately. Figure 5 depicts the summary of the predictions, and the details of the prediction results are shown in Table S9. </plain></SENT>
+</text></p><SecTag type="FIG"><fig id="pone-0033340-g005" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0033340.g005</object-id><label>Figure 5</label><caption><title><text><SENT sid="606" pm="."><plain>Predicted ranking of the CDR amino acids in the antibody-VEGF complex interfaces. </plain></SENT>
+</text></title><p><text><SENT sid="607" pm="."><plain>Panel (a) to (e) shows the complex structure for 1BJ1, 2FJH, 2QR0, 1TZH, and 1TZI respectively. </plain></SENT>
+<SENT sid="608" pm="."><plain>In each of the panels, the atoms of the antigen VEGF are shown in spheres; the VEGF atoms colored in magenta are core interface atoms and the VEGF atoms colored in cyan are rim interface atoms. </plain></SENT>
+<SENT sid="609" pm="."><plain>The core-rim assignment follows the definition previously published [54]. </plain></SENT>
+<SENT sid="610" pm="."><plain>The CDR atoms in the core interface are shown in thick stick model and the CDR atoms in the rim interface are shown in thin stick model. </plain></SENT>
+<SENT sid="611" pm="."><plain>The ranking of the CDR amino acids in the structures are color-coded according to the color bar shown at the bottom of the figure: Better ranking is shown with increasing depth in red; worse ranking is shown with increasing depth in blue. </plain></SENT>
+<SENT sid="612" pm="."><plain>The CDR residues colored in yellow are not in contact with the antigen. </plain></SENT>
+</text></p></caption><graphic xlink:href="pone.0033340.g005"/></fig></SecTag><p><text><SENT sid="613" pm="."><plain>As shown in Figures 5(a) and 5(b) for complex 1BJ1 and 2FJH respectively, the Tyr residues in the core interface were predicted with high accuracy, while the core Trp residues were predicted incorrectly. </plain></SENT>
+<SENT sid="614" pm="."><plain>It is of interest to compare the results with those of the three antibody-antigen interfaces where the antibodies are members of minimalist antibody libraries with limited amino acid variations (Y, S, D, A) in the CDR residues (Figures 5(c), 5(d), 5(e) for complex 2QR0, 1TZH, 1TZI respectively). </plain></SENT>
+<SENT sid="615" pm="."><plain>Among the residues in these core interfaces, only one Tyr residue was poorly predicted in the complex 1TZH. </plain></SENT>
+<SENT sid="616" pm="."><plain>It is evident that the minimalist antibody library designs have not only substantially reduced the complexity space of the CDR regions, the computational antibody design herein can be better applied to a system with less complex combinatorial selections. </plain></SENT>
+</text></p><p><text><SENT sid="617" pm="."><plain>Overall, the sequence preferences in the peripheral regions of the antibody-antigen interfaces were better predicted than the core regions. Figure 6 summarizes the distribution of the predicted ranking of the amino acids in the complex structures. </plain></SENT>
+<SENT sid="618" pm="."><plain>The amino acids in the peripheral interface regions are generally predicted with better ranking (distribution in red in Figure 6) in comparison with the predictions for the amino acids in the core interface regions (distribution in blue in Figure 6). </plain></SENT>
+<SENT sid="619" pm="."><plain>Both distributions of predicted ranking are better than random distribution shown as the flat dashed line in the figure. </plain></SENT>
+<SENT sid="620" pm="."><plain>These are in agreement with the benchmark results shown above in Figure 3. </plain></SENT>
+</text></p><SecTag type="FIG"><fig id="pone-0033340-g006" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0033340.g006</object-id><label>Figure 6</label><caption><title><text><SENT sid="621" pm="."><plain>Distributions of the predicted ranking of the CDR amino acids in the antibody-VEGF complex interfaces. </plain></SENT>
+</text></title><p><text><SENT sid="622" pm="."><plain>The x-axis shows the predicted ranking of the CDR amino acids in the five antibody-VEGF complex interfaces as shown in Figure 5. </plain></SENT>
+<SENT sid="623" pm="."><plain>Detailed prediction results are shown in Table S9. </plain></SENT>
+<SENT sid="624" pm="."><plain>The y-axis shows the percentage of the CDR amino acids predicted with the ranking shown in x-axis. </plain></SENT>
+<SENT sid="625" pm="."><plain>The red line shows the distribution for the amino acids in the core interface, while the blue line shows the distribution for the amino acids in the rim interface. </plain></SENT>
+<SENT sid="626" pm="."><plain>These two distributions are compared with random distribution shown as the flat dash line in the figure. </plain></SENT>
+</text></p></caption><graphic xlink:href="pone.0033340.g006"/></fig></SecTag></sec><sec id="s2e"><title><text><SENT sid="627" pm="."><plain>Computational recombinant antibody library design </plain></SENT>
+</text></title><p><text><SENT sid="628" pm="."><plain>The prediction algorithm can be used to design antibodies against epitopes of known structure. </plain></SENT>
+<SENT sid="629" pm="."><plain>The peripheral interface sequence preferences can be predicted to an extent with the trained machine learning models above. </plain></SENT>
+<SENT sid="630" pm="."><plain>The sequence preference predictions for these regions are more accurate and these positions are more tolerant in amino acid preference prediction errors (Figure 1 and 3). </plain></SENT>
+<SENT sid="631" pm="."><plain>The core interface CDR sequences can be better predicted with the Xji term alone (Figure 3(a)). </plain></SENT>
+<SENT sid="632" pm="."><plain>However, these CDR core interface designs need to be validated with focused experiments because of the high stringency of sequence preferences in this area. </plain></SENT>
+<SENT sid="633" pm="."><plain>To this end, the core interface CDR residues would be encoded with degenerate codons biased towards aromatic and hydrophobic amino acid types so as to form protein interior-like interactions with the hot-spot residues on the antigen. </plain></SENT>
+<SENT sid="634" pm="."><plain>As such, the designed synthetic DNA libraries are confined to the experimental limit of about one billion variants for phage display because the number of the core interface residues encoded by degenerate codons would be likely less than 10. </plain></SENT>
+</text></p><p><text><SENT sid="635" pm="."><plain>The results above suggest a methodology for computational design of synthetic antibody libraries for high-throughput antibody discovery platforms. </plain></SENT>
+<SENT sid="636" pm="."><plain>First, the antibody binding site (epitope) on the antigen containing hot-spot residues with sparse hydration patterns (methodology as shown in Figure 4 and Text S1) is defined. </plain></SENT>
+<SENT sid="637" pm="."><plain>Models of the antibody-antigen complex structures with only mainchain structure for the CDR interface residues targeting the selected epitopes are constructed with computational molecular modeling and docking of the antibody and antigen structures. </plain></SENT>
+<SENT sid="638" pm="."><plain>The CDR interface residues on the antibody near the antigen hot-spot residues are the core interface residues; the rest of the CDR residues are peripheral interface residues. </plain></SENT>
+<SENT sid="639" pm="."><plain>The amino acid types and rotameric conformations are enumerated at each of the CDR positions to predict the amino acid preferences for the peripheral and the core CDR positions with the machine learning models. </plain></SENT>
+<SENT sid="640" pm="."><plain>Antibody libraries designed based on the model complex structures, the peripheral sequence preferences, and the core interface residue libraries can then be selected and screened with the standard high throughput phage display platform, which has been used in attaining results shown in Figure 1. </plain></SENT>
+<SENT sid="641" pm="."><plain>The antibody library design methodology will further mature with extended experimental verification, for which the experimental platforms have been well-established [5]. </plain></SENT>
+<SENT sid="642" pm="."><plain>The structure-based in silico design of recombinant antibody libraries will provide alternatives to the current animal-based antibody technologies to facilitate the discoveries of antibody therapeutics and diagnostics and to enrich the basic understanding of protein-protein interactions in general. </plain></SENT>
+</text></p></sec></sec></SecTag><SecTag type="METHODS"><sec sec-type="materials|methods" id="s3"><title><text><SENT sid="643" pm="."><plain>Materials and Methods </plain></SENT>
+</text></title><sec id="s3a"><title><text><SENT sid="644" pm="."><plain>Phage display of VEGF-binding scFv and sc-dsFv </plain></SENT>
+</text></title><p><text><SENT sid="645" pm="."><plain>The methods for preparing anti-VEGF template scFv, scFv phagemid, sc-dsFv phagemids, anti-VEGF scFv/sc-dsFv phages and for scFv/sc-dsFv panning, single colony and ELISA analysis, and interdomain disulfide bond formation analysis have been described previously [27], [28]. </plain></SENT>
+</text></p></sec><sec id="s3b"><title><text><SENT sid="646" pm="."><plain>Expression and purification of sc-dsFv </plain></SENT>
+</text></title><p><text><SENT sid="647" pm="."><plain>The expression and purification of the sc-dsFv followed the method described previously with minor modifications [35]. </plain></SENT>
+<SENT sid="648" pm="."><plain>In brief, the sc-dsFv coding region was subcloned into pET-32 expression vector encoding thioredoxin as a fusion protein N-terminal to the sc-dsFv. </plain></SENT>
+<SENT sid="649" pm="."><plain>The fusion protein contains a hexa-His tag followed by a TEV protease cutting site between the thioredoxin and the sc-dsFv, which is followed by an Avitag oligopeptide (GLNDIFEAQKIEWHE, Avidity Inc., USA) appending to the C-terminus of the sc-dsFv for in vivo biotynylation. </plain></SENT>
+<SENT sid="650" pm="."><plain>The sc-dsFv gene derived from phage panning was subcloned into the expression vector via the SfiI and NotI cutting sites encompassing the sc-dsFv coding region. E. coli Rosetta-gami B (DE3) strain culture transformed with scFv/sc-dsFv expression vector was grown in 2× YT medium (Tryptone 16 g/L, Yeast extract 10 g/L, NaCl 5 g/L) with ampicillin (200 µg/L), tetracycline (12.5 µg/L) and chloramphenicol (37.5 µg/L) at 30°C until OD600 reached 1.0, and was then incubated at 20°C for another 2 hr before adding 0.2 mM IPTG. </plain></SENT>
+<SENT sid="651" pm="."><plain>After overnight protein expression and centrifugation, the cell pellets were resuspended in lysis buffer (Tris-HCl, 50 mM, pH 8.0, 150 mM NaCl, 30 mM imidazole) and the suspended cells were then broken by Microfluidizer (Microfluidics, MA). </plain></SENT>
+<SENT sid="652" pm="."><plain>The recombinant thioredoxin-sc-dsFv fusion protein was purified by nickel chelation chromatography with IMAC prepacked column (GE Healthcare Life Sciences) charged by 0.1 M NiSO4 solution. </plain></SENT>
+<SENT sid="653" pm="."><plain>The fractions containing the fusion protein were collected and dialyzed by Tris-HCl, 50 mM, pH 7.5 (the theoretical pI of sc-dsFv was 5.82) overnight at 4°C or desalted by HiPrep 26/10 desalting column (GE Healthcare Life Sciences) with the same buffer. </plain></SENT>
+<SENT sid="654" pm="."><plain>The protein solution was then introduced to ion-exchanged chromatography (prepacked Q column, GE Life Healthcare Sciences). </plain></SENT>
+<SENT sid="655" pm="."><plain>The fractions containing the thioredoxin-sc-dsFv fusion protein were collected and treated with His6-tagged TEV protease (A280 ratio 50∶1) at 30°C for at least 5 hr but not longer than 8 hr. </plain></SENT>
+<SENT sid="656" pm="."><plain>The TEV-cleaved fragment containing His6-tagged thioredoxin and the His6-tagged TEV protease were removed by nickel chelation chromatography. </plain></SENT>
+<SENT sid="657" pm="."><plain>The fractions containing sc-dsFv were further purified with a Superdex75 size-exclusion column (GE Healthcare Life Sciences) in SEC buffer (Tris-HCl, 50 mM, pH 7.5, 400 mM NaCl, 10% glycerol). </plain></SENT>
+<SENT sid="658" pm="."><plain>The soluble sc-dsFv protein was prepared with 95% purity. </plain></SENT>
+<SENT sid="659" pm="."><plain>The purified sc-dsFv was stored at 4°C for a least one week without affinity loss. </plain></SENT>
+</text></p></sec><sec id="s3c"><title><text><SENT sid="660" pm="."><plain>Crystallization of sc-dsFv </plain></SENT>
+</text></title><p><text><SENT sid="661" pm="."><plain>The sc-dsFv solution was concentrated to 10 mg/ml without precipitation. </plain></SENT>
+<SENT sid="662" pm="."><plain>Crystallization screening after PCT test (Hampton Research) for the sc-dsFv was carried out with the protein in 6 mg/ml concentration. </plain></SENT>
+<SENT sid="663" pm="."><plain>The crystallization screening of sc-dsFv was carried out in Mosquito® (TTP LabTech Ltd., United Kingdom) with screening kits from Hampton Research (Laguna Niguel, CA) and Molecular Dimension (Apopka, FL). </plain></SENT>
+<SENT sid="664" pm="."><plain>The purified sc-dsFv in SEC buffer was mixed with an equal volume of the reservoir solution (100 mM Tris–HCl, 100 mM MgCl2 and 20% PEG4000, pH 8.0) and then crystallized at 20°C by the hanging-drop vapor-diffusion method. </plain></SENT>
+<SENT sid="665" pm="."><plain>The crystals appeared after one day incubation at 20°C, and reached 0.2 mm×0.1 mm×0.1 mm in dimension in one week. </plain></SENT>
+<SENT sid="666" pm="."><plain>A 2.4-Å X-ray diffraction data set was collected at the beamline 13C1 of the National Synchrotron Radiation Research Center (Hsinchu, Taiwan). </plain></SENT>
+<SENT sid="667" pm="."><plain>Before the crystal was mounted on the X-ray machine, the crystal was soaked briefly in reservoir solutions containing 20% (v/v) glycerol as a cryoprotectant. </plain></SENT>
+<SENT sid="668" pm="."><plain>All diffraction data were indexed, integrated, and scaled with HKL2000 package [36]. </plain></SENT>
+</text></p></sec><sec id="s3d"><title><text><SENT sid="669" pm="."><plain>Structure determination and refinement </plain></SENT>
+</text></title><p><text><SENT sid="670" pm="."><plain>The crystal structure of sc-dsFv was solved by the molecular replacement method The refinement procedure used one pair of the variable fragment structure derived from the published Fab structure (2FJF in PDB code [26]) as the search model and using the software molrep [37] in CCP4 package [38]. </plain></SENT>
+<SENT sid="671" pm="."><plain>Only one clear solution was found and the R-work and R-free values of the initial 30 rounds of Refmac5 refinement [39] were 0.2581 and 0.3003, respectively. </plain></SENT>
+<SENT sid="672" pm="."><plain>The resolved structures contained six sc-dsFv molecules in one asymmetric unit. </plain></SENT>
+<SENT sid="673" pm="."><plain>The residues that were different between sc-dsFv and variable fragments derived from 2FJF were replaced automatically by MrBUMP module (Automated Model generation and Molecular Replacement) in the CCP4 package. </plain></SENT>
+<SENT sid="674" pm="."><plain>The manual structural adjustment and well-ordered water molecule placement were carried out with Coot software [40]. </plain></SENT>
+<SENT sid="675" pm="."><plain>Iterative cycles of computational refinements were performed by phenix-refine [41] with TLS options turned on. </plain></SENT>
+<SENT sid="676" pm="."><plain>The TLS groups were determined by the TLSMD server [42]. </plain></SENT>
+<SENT sid="677" pm="."><plain>The progress of the refinements was monitored by both of the R-work and R-free values. </plain></SENT>
+<SENT sid="678" pm="."><plain>The stereochemical quality of the refined structures was checked by PROCHECK [43] within Structural Analysis and Verification Server (NIH MBI Laboratory for Structural Genomics and Proteomics, UCLA). </plain></SENT>
+<SENT sid="679" pm="."><plain>The RMSD between each sc-dsFv molecule in asymmetry unit, among the whole molecules or CDRs between sc-dsFv and variable fragments derived from 2FJF or 2FJG [26] were calculated by PyMOL (The PyMOL Molecular Graphics System, DeLano Scientific, San Carlos, CA, USA. <ext-link ext-link-type="uri" xlink:href="http://www.pymol.org">http://www.pymol.org</ext-link>). </plain></SENT>
+<SENT sid="680" pm="."><plain>The sc-dsFv structure coordinates and refinement data have been submitted to PDB under the code 3AUV. </plain></SENT>
+</text></p></sec><sec id="s3e"><title><text><SENT sid="681" pm="."><plain>Computation of Wji, Xji, Yji, Zji and pWji </plain></SENT>
+</text></title><p><text><SENT sid="682" pm="."><plain>The model antibody structures were identical to the template structure (derived from 2FJG in PDB) except that the 30 interface CDR residues were all replaced with alanine to mimic realistic situations where CDR sequences were not known. </plain></SENT>
+<SENT sid="683" pm="."><plain>To build the sidechain of the residue at position j, the amino acid type i adopting a rotameric structure k from the penultimate rotamer library [44] was locally optimized with the “Clear Geometry” function in Discovery Studio (version 2.5, Accelrys) while the rest of the antibody-antigen complex remained fixed. </plain></SENT>
+<SENT sid="684" pm="."><plain>The sidechain conformations clashing with the rest of the protein complex structure were removed from further consideration. </plain></SENT>
+</text></p><p><text><SENT sid="685" pm="."><plain>For each of the model structures, the atomistic contact component Xji of the scoring system was calculated with the probability density maps (PDMs) describing the distribution of amino acid atoms on the surface of the antigen based on atomistic contact statistics observed in protein interiors. </plain></SENT>
+<SENT sid="686" pm="."><plain>The PDMs were constructed following the basic idea first developed by Laskowski et al [45] with substantial modifications to largely eliminate the distortion of the predicted PDMs due to distributions of the amino acid sidechain and mainchain dihedral angles (examples of atomistic density distributions can be viewed via internet – <ext-link ext-link-type="uri" xlink:href="http://ismblab.genomics.sinica.edu.tw/">http://ismblab.genomics.sinica.edu.tw/</ext-link>&gt; Introduction). </plain></SENT>
+<SENT sid="687" pm="."><plain>Briefly, the amino acid conformations in proteins were classified according the conformation clusters (Table S6); the PDMs for the protein atom types (Table S7) were constructed in an amino acid conformation-dependent manner, while non-interacting atom pairs were eliminated from the PDMs based on a statistic pairwise atomistic interaction preference filter (Table S8). </plain></SENT>
+<SENT sid="688" pm="."><plain>The detailed method for calculating the PDMs is described in full in Text S1. Figure S1 depicts the flow chart of the computational procedure for PDMs. </plain></SENT>
+<SENT sid="689" pm="."><plain>The computational tools are available from the ISMBLab (In Silico Molecular Biology Laboratory) web server: <ext-link ext-link-type="uri" xlink:href="http://ismblab.genomics.sinica.edu.tw/">http://ismblab.genomics.sinica.edu.tw/</ext-link>. </plain></SENT>
+</text></p><p><text><SENT sid="690" pm="."><plain>The atomistic contact term Xji(rotamerk) for amino acid i adopting rotameric conformation k at position j in the CDR of the antibody was calculated based on a model antibody-VEGF complex structure described above. </plain></SENT>
+<SENT sid="691" pm="."><plain>Equation (1) shows the calculation of Xji(rotamerk):(1)where amino acid i has n atoms. AVE(PDMm) is the averaged PDM value corresponding to atom m on the surface of the antigen. </plain></SENT>
+<SENT sid="692" pm="."><plain>This value was calculated by summing the PDM values corresponding to the atom m at the grids enclosed in the van der Waals volume of the atom m and the sum was then divided by the number of grid points enclosed in the atom to yield AVE(PDMm). pref in Equation (1) is the reference probability for an atom at a reference point far apart from the antigen surface. </plain></SENT>
+<SENT sid="693" pm="."><plain>The reference probability must be smaller than the minimal PDM value (∼10−10 in this work) but cannot equal to zero, so as to avoid singularity in calculating Xji(rotamerk) when AVE(PDMm) equals to zero. </plain></SENT>
+<SENT sid="694" pm="."><plain>No experimental data can be used to derive the reference probability, but we found that when pref is smaller than 10−10, the relative ranking of the Xji(rotamerk) term is independent to the selection of the reference probability. </plain></SENT>
+<SENT sid="695" pm="."><plain>Even when the value of the pref is set between 10−8 and 10−10, the correlation of the Xji term with the experimental amino acid preference Wji does not change. </plain></SENT>
+<SENT sid="696" pm="."><plain>Thus pref = 10−10 has been empirically determined in this work; the correlating the Xji term with the experimental amino acid preference Wji, as shown in Table S4, is insensitive to the selection of the pref value. </plain></SENT>
+</text></p><p><text><SENT sid="697" pm="."><plain>The hydration-mediated term Yji(rotamerk) for amino acid i adopting rotamer conformation k at position j in the antibody is calculated based on the model antibody-antigen complex structure with the following equation:(2) </plain></SENT>
+</text></p><p><text><SENT sid="698" pm="."><plain>where l″ is the grid index for the grid points inside the antigen molecular volume and PDMo(Ab)l″ is the water oxygen PDM value at grid point l″; m″ is the grid index for the grid points inside the antibody molecular volume and PDMo(Ag)m″ is the water oxygen PDM value at grid point m″; l′ is the grid index for the grid points within the overlapping volume between PDMo(Ab) and PDMo(Ag). </plain></SENT>
+<SENT sid="699" pm="."><plain>The PDMo(Ab) is the water oxygen PDM on the antibody surface in the absence of the antigen. </plain></SENT>
+<SENT sid="700" pm="."><plain>The PDMo(Ab) was calculated for the amino acid i only. </plain></SENT>
+<SENT sid="701" pm="."><plain>The PDMo(Ag) is the water oxygen PDM on the antigen surface in the absence of the binding antibody. </plain></SENT>
+<SENT sid="702" pm="."><plain>Following the same rationale as in Equation (1), the reference probability pref is set at 10−10. </plain></SENT>
+<SENT sid="703" pm="."><plain>Again, the value of pref does not affect the ranking order of Yji calculated for each amino acid type and rotamer conformation. </plain></SENT>
+<SENT sid="704" pm="."><plain>The first two negative terms (the terms involving l″ and m″) in the right-hand-side of the equation is the desolvation terms for removing water from the binding site of the antibody and the antigen respectively; the positive terms (the terms involving l′) correspond to the water-mediated interactions – the first positive term accounts for the interactions between the waters on the surface of the antibody and the atoms on the surface of the antigen, and the second positive terms accounts for the interactions between the waters on the surface of the antigen and the atoms on the surface of the antibody. </plain></SENT>
+<SENT sid="705" pm="."><plain>The first two negative desolvation terms are against binding of the antibody and antigen, while the two positive water-mediated interactions terms are favorable for the antibody-antigen interactions (hydration pattern prediction request to <ext-link ext-link-type="uri" xlink:href="http://ismblab.genomics.sinica.edu.tw/">http://ismblab.genomics.sinica.edu.tw/</ext-link>&gt; predict &gt; protein hydration pattern). </plain></SENT>
+</text></p><p><text><SENT sid="706" pm="."><plain>The calculation of the structural propensity Zji for amino acid i in position j has been described in details in a previous paper [46]. </plain></SENT>
+<SENT sid="707" pm="."><plain>Briefly, local structures in PDB similar to the CDR structures flanking with two stem β-structures in the unbound antibody structure (2FJF) were collected with PrISM using the threshold of PSD&lt;0.1[47]; these local structures were multiple-aligned based on structural similarity with PrISM [46], [47], [48], [49], [50]. Zji was calculated with the structure-based multiple sequence alignments as the following [46]:(3)where Cji is the number of the amino acid i that appears in the position j of the multiple sequence alignment; pi is the background probability for amino acid i in proteins; M is the number of rows in the sequence profile; the term (B+M-Σk = 1,20Cjk) is the Bayesian prediction pseudo-count, where B = M0.5 is adequate in the calculation. </plain></SENT>
+</text></p><p><text><SENT sid="708" pm="."><plain>Predicted amino acid preference in binary form δpWji for amino acid type i at position j was determined by the logistic regression model:(4)δpWji = 1 when pWji≥ti; otherwise δpWji = 0, where The Xji in Equation (4) is the upper bound of the atomistic contact term for amino acid i at position j; Xji for each of the rotamer model structures 1∼k (here, k is the total number of rotamers for amino acid type i) for amino acid i at position j was calculated (Equation (1)) and the largest Xji in this set of Xji(rotamer1∼k) was used in Equation (4). </plain></SENT>
+<SENT sid="709" pm="."><plain>This term corresponds to the most favourable contribution from amino acid i at position j to the protein-protein complex formation. Yji(rotamer1∼k) for each of the rotamer model structures 1∼k of amino acid i at position j was calculated (Equation (2)) and the smallest Yji in this set of Yji(rotamer1∼k) was used in Equation (4). </plain></SENT>
+<SENT sid="710" pm="."><plain>This Yji reflects the maximal desolvation energy penalty due to the amino acid i at position j in forming the protein-protein complex; the rotamer conformation with the maximal desolvation energy penalty is the most favourable conformation in the hydration environment before forming the antibody-antigen complex. </plain></SENT>
+</text></p><p><text><SENT sid="711" pm="."><plain>At each position j, one logistic regression model was trained for each of the 20 amino acid types. </plain></SENT>
+<SENT sid="712" pm="."><plain>The weights (xji,yji,zji,aji) in Equation (4) for predicting the preference of amino acid type i at position j were optimized with a logistic regression algorithm in MATLAB to minimize the difference between pWki in Equation (4) with Wki from Equation (5) (see below), where k represents all the positions except for the position j. The optimized weights (xji,yji,zji,aji) were then applied to Equation (4) to predict pWji for amino acid type i at position j (i.e., leave-one-out cross validation approach to mimic the prediction situation). </plain></SENT>
+<SENT sid="713" pm="."><plain>The leave-one-out training process was carried out through all the 24 positions in this work. </plain></SENT>
+<SENT sid="714" pm="."><plain>The thresholds ti for the 20 amino acid types were optimized in the training process to maximize the Matthews correlation coefficient (MCC, Equation (10)) for the leave-one-out cross validation predictions. </plain></SENT>
+</text></p><p><text><SENT sid="715" pm="."><plain>The experimental amino acid preferences Wji, as shown in Table 1 and in Table S4 are expressed in half-bit units calculated with the Bayesian prediction pseudo-count method [46], [51]:(5) δWji = 1 when Wji≥0; otherwise δWji = 0, where Wji is the preference for amino acid i at position j in the CDR of the antibody; Cji is the count for amino acid i at position j; M is the count of VEGF-binding CDR sequences containing position j; pi is the background probability for amino acid i encoded in the NNK degenerate codon [51]; the square root of M in the equation is the pseudo count to prevent singularity when Cij equals to zero. </plain></SENT>
+<SENT sid="716" pm="."><plain>In practice, positive Wji (observed count for amino acid i at position j is greater than the anticipated frequency of amino acid i encoded in the degenerate codon NNK) for amino acid type i is considered as positive in position j (δWji = 1 when Wji≥0). </plain></SENT>
+</text></p><p><text><SENT sid="717" pm="."><plain>The predictions were assessed by comparing the positives (δWji = 1, see Equation(5)) and negatives (δWji = 0, see Equation(5)) with the predicted positives (δpWji = 1, see Equation (4) and the predicted negatives (δpWji = 0, see Equation(4)). </plain></SENT>
+<SENT sid="718" pm="."><plain>The predicted positives are composed of true positives (TP) and false positives (FP), while the predicted negatives are composed of true negatives (TN) and false negatives (FN). </plain></SENT>
+<SENT sid="719" pm="."><plain>The accuracy, specificity, recall (sensitivity), precision and Matthews correlation coefficient (MCC) [52] of the binary predicted results are expressed as below:(6) (7) (8) (9) (10) </plain></SENT>
+</text></p></sec></sec></SecTag><SecTag type="SUPPL"><sec sec-type="supplementary-material" id="s4"><title><text><SENT sid="720" pm="."><plain>Supporting Information </plain></SENT>
+</text></title><supplementary-material content-type="local-data" id="pone.0033340.s001"><label>Figure S1</label><caption><p><text><SENT sid="721" pm="."><plain>Flow chart depicting the procedure in constructing probability density maps (PDMs) for non-covalent atomistic interactions on protein surfaces. </plain></SENT>
+</text></p><p><text><SENT sid="722" pm="."><plain>(DOC) </plain></SENT>
+</text></p></caption><media xlink:href="pone.0033340.s001.doc"><caption><p><text><SENT sid="723" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="pone.0033340.s002"><label>Table S1</label><caption><p><text><SENT sid="724" pm="."><plain>Sequence information and VEGF-binding and expression data for the scFv variants shown in   Figure 1  . </plain></SENT>
+</text></p><p><text><SENT sid="725" pm="."><plain>(DOC) </plain></SENT>
+</text></p></caption><media xlink:href="pone.0033340.s002.doc"><caption><p><text><SENT sid="726" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="pone.0033340.s003"><label>Table S2</label><caption><p><text><SENT sid="727" pm="."><plain>Sequence information and VEGF-binding and expression data for the sc-dsFv variants shown in   Figure 1  . </plain></SENT>
+</text></p><p><text><SENT sid="728" pm="."><plain>(DOC) </plain></SENT>
+</text></p></caption><media xlink:href="pone.0033340.s003.doc"><caption><p><text><SENT sid="729" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="pone.0033340.s004"><label>Table S3</label><caption><p><text><SENT sid="730" pm="."><plain>Data collection and refinement statistics for the sc-dsFv x-ray crystallography. </plain></SENT>
+</text></p><p><text><SENT sid="731" pm="."><plain>(DOC) </plain></SENT>
+</text></p></caption><media xlink:href="pone.0033340.s004.doc"><caption><p><text><SENT sid="732" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="pone.0033340.s005"><label>Table S4</label><caption><p><text><SENT sid="733" pm="."><plain>Leave-one-out cross validation predictions for the amino acid preferences at each of the 30 CDR interface residues. </plain></SENT>
+</text></p><p><text><SENT sid="734" pm="."><plain>(DOC) </plain></SENT>
+</text></p></caption><media xlink:href="pone.0033340.s005.doc"><caption><p><text><SENT sid="735" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="pone.0033340.s006"><label>Table S5</label><caption><p><text><SENT sid="736" pm="."><plain>Ranking antibody CDR single site amino acid binding to VEGF with public domain scoring functions. Table S5b, the top-ranked amino acid types and rotamers with various scoring systems. </plain></SENT>
+</text></p><p><text><SENT sid="737" pm="."><plain>(DOC) </plain></SENT>
+</text></p></caption><media xlink:href="pone.0033340.s006.doc"><caption><p><text><SENT sid="738" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="pone.0033340.s007"><label>Table S6</label><caption><p><text><SENT sid="739" pm="."><plain>Amino acid conformation classifications. </plain></SENT>
+</text></p><p><text><SENT sid="740" pm="."><plain>(DOC) </plain></SENT>
+</text></p></caption><media xlink:href="pone.0033340.s007.doc"><caption><p><text><SENT sid="741" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="pone.0033340.s008"><label>Table S7</label><caption><p><text><SENT sid="742" pm="."><plain>Atom types in protein structures. </plain></SENT>
+</text></p><p><text><SENT sid="743" pm="."><plain>(DOC) </plain></SENT>
+</text></p></caption><media xlink:href="pone.0033340.s008.doc"><caption><p><text><SENT sid="744" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="pone.0033340.s009"><label>Table S8</label><caption><p><text><SENT sid="745" pm="."><plain>Statistic pairwise atomistic interaction preferences. </plain></SENT>
+</text></p><p><text><SENT sid="746" pm="."><plain>(DOC) </plain></SENT>
+</text></p></caption><media xlink:href="pone.0033340.s009.doc"><caption><p><text><SENT sid="747" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="pone.0033340.s010"><label>Table S9</label><caption><p><text><SENT sid="748" pm="."><plain>The predicted ranking of the 20 natural amino acid types at each of the CDR amino acid positions in the 5 antibody-VEGF complex structures. </plain></SENT>
+</text></p><p><text><SENT sid="749" pm="."><plain>(DOC) </plain></SENT>
+</text></p></caption><media xlink:href="pone.0033340.s010.doc"><caption><p><text><SENT sid="750" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="pone.0033340.s011"><label>Text S1</label><caption><p><text><SENT sid="751" pm="."><plain>Supplemental Methods. </plain></SENT>
+</text></p><p><text><SENT sid="752" pm="."><plain>(DOC) </plain></SENT>
+</text></p></caption><media xlink:href="pone.0033340.s011.doc"><caption><p><text><SENT sid="753" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media></supplementary-material></sec></SecTag></body><back><SecTag type="ACK_FUND"><ack><p><text4fund><text><SENT sid="754" pm="."><plain>We thank Dr. Hao-Ching Wang for x-ray diffraction data collection; Dr. Cheng-Chung Lee for assisting x-ray data processing; Ms. </plain></SENT>
+<SENT sid="755" pm="."><plain>Meng-Chuan Chang for robotic crystallization screening; National Center for High-Performance Computing for facilities and computing time; Sequencing Core Facility of the Scientific Instrument Center at Academia Sinica for DNA sequencing. </plain></SENT>
+<SENT sid="756" pm="."><plain>ASY would like to thank Prof. </plain></SENT>
+<SENT sid="757" pm="."><plain>Barry Honig for commenting on the manuscript. </plain></SENT>
+</text></text4fund></p></ack></SecTag><fn-group><fn fn-type="COI-statement"><p><text><SENT sid="758" pm="."><plain>Competing Interests: The authors have declared that no competing interests exist. </plain></SENT>
+</text></p></fn><SecTag type="ACK_FUND"><fn fn-type="financial-disclosure"><p><text4fund><text><SENT sid="759" pm="."><plain>Funding: This work was supported by National Health Research Institutes [NHRI-EX98-9802EI to A-S. </plain></SENT>
+<SENT sid="760" pm="."><plain>Y.], National Science Council [NSC 99-2311-B-001-014-MY3 to ASY], Genomics Research Center at Academia Sinica [AS-100-TP2-B01 to ASY], and NRPB program, NSC. </plain></SENT>
+<SENT sid="761" pm="."><plain>[NSC 100-2325-B-001-009; 100IDP006-3 to ASY] The funders had no role in study design, data collection and analysis, decision to publish, or preparation of the manuscript. </plain></SENT>
+</text></text4fund></p></fn></SecTag></fn-group><SecTag type="REF"><ref-list><title>References</title><ref id="pone.0033340-Beck1"><text><SENT sid="762" pm="."><plain>1 BeckAWurchTBaillyCCorvaiaN 2010 Strategies and challenges for the next generation of therapeutic antibodies. Nat Rev Immunol 10 345 352 20414207 </plain></SENT>
+</text></ref><ref id="pone.0033340-Nelson1"><text><SENT sid="763" pm="."><plain>2 NelsonALReichertJM 2009 Development trends for therapeutic antibody fragments. Nat Biotechnol 27 331 337 19352366 </plain></SENT>
+</text></ref><ref id="pone.0033340-Fellouse1"><text><SENT sid="764" pm="."><plain>3 FellouseFAEsakiKBirtalanSRaptisDCancasciVJ 2007 High-throughput generation of synthetic antibodies from highly functional minimalist phage-displayed libraries. J Mol Biol 373 924 940 17825836 </plain></SENT>
+</text></ref><ref id="pone.0033340-Accardi1"><text><SENT sid="765" pm="."><plain>4 AccardiLDi BonitoP 2010 Antibodies in single-chain format against tumour-associated antigens: present and future applications. Curr Med Chem 17 1730 1755 20345346 </plain></SENT>
+</text></ref><ref id="pone.0033340-Ponsel1"><text><SENT sid="766" pm="."><plain>5 PonselDNeugebauerJLadetzki-BaehsKTissotK 2011 High affinity, developability and functional size: the holy grail of combinatorial antibody library generation. Molecules 16 3675 3700 21540796 </plain></SENT>
+</text></ref><ref id="pone.0033340-Michnick1"><text><SENT sid="767" pm="."><plain>6 MichnickSWSidhuSS 2008 Submitting antibodies to binding arbitration. Nat Chem Biol 4 326 329 18488004 </plain></SENT>
+</text></ref><ref id="pone.0033340-Lippow1"><text><SENT sid="768" pm="."><plain>7 LippowSMWittrupKDTidorB 2007 Computational design of antibody-affinity improvement beyond in vivo maturation. Nat Biotechnol 25 1171 1176 17891135 </plain></SENT>
+</text></ref><ref id="pone.0033340-Barderas1"><text><SENT sid="769" pm="."><plain>8 BarderasRDesmetJTimmermanPMeloenRCasalJI 2008 Affinity maturation of antibodies assisted by in silico modeling. Proc Natl Acad Sci U S A 105 9029 9034 18574150 </plain></SENT>
+</text></ref><ref id="pone.0033340-Clark1"><text><SENT sid="770" pm="."><plain>9 ClarkLABoriack-SjodinPAEldredgeJFitchCFriedmanB 2006 Affinity enhancement of an in vivo matured therapeutic antibody using structure-based computational design. Protein Sci 15 949 960 16597831 </plain></SENT>
+</text></ref><ref id="pone.0033340-Pantazes1"><text><SENT sid="771" pm="."><plain>10 PantazesRJMaranasCD 2010 OptCDR: a general computational method for the design of antibody complementarity determining regions for targeted epitope binding. Protein Engineering Design and Selection 23 849 858  </plain></SENT>
+</text></ref><ref id="pone.0033340-Fleishman1"><text><SENT sid="772" pm="."><plain>11 FleishmanSJWhiteheadTAEkiertDCDreyfusCCornJE 2011 Computational design of proteins targeting the conserved stem region of influenza hemagglutinin. Science 332 816 821 21566186 </plain></SENT>
+</text></ref><ref id="pone.0033340-Mandell1"><text><SENT sid="773" pm="."><plain>12 MandellDJKortemmeT 2009 Computer-aided design of functional protein interactions. Nat Chem Biol 5 797 807 19841629 </plain></SENT>
+</text></ref><ref id="pone.0033340-Karanicolas1"><text><SENT sid="774" pm="."><plain>13 KaranicolasJKuhlmanB 2009 Computational design of affinity and specificity at protein-protein interfaces. Curr Opin Struct Biol 19 458 463 19646858 </plain></SENT>
+</text></ref><ref id="pone.0033340-Grigoryan1"><text><SENT sid="775" pm="."><plain>14 GrigoryanGReinkeAWKeatingAE 2009 Design of protein-interaction specificity gives selective bZIP-binding peptides. Nature 458 859 864 19370028 </plain></SENT>
+</text></ref><ref id="pone.0033340-Boas1"><text><SENT sid="776" pm="."><plain>15 BoasFEHarburyPB 2007 Potential energy functions for protein design. Curr Opin Struct Biol 17 199 204 17387014 </plain></SENT>
+</text></ref><ref id="pone.0033340-Vizcarra1"><text><SENT sid="777" pm="."><plain>16 VizcarraCLMayoSL 2005 Electrostatics in computational protein design. Curr Opin Chem Biol 9 622 626 16257567 </plain></SENT>
+</text></ref><ref id="pone.0033340-SchuelerFurman1"><text><SENT sid="778" pm="."><plain>17 Schueler-FurmanOWangCBradleyPMisuraKBakerD 2005 Progress in modeling of protein structures and interactions. Science 310 638 642 16254179 </plain></SENT>
+</text></ref><ref id="pone.0033340-Russ1"><text><SENT sid="779" pm="."><plain>18 RussWPRanganathanR 2002 Knowledge-based potential functions in protein design. Curr Opin Struct Biol 12 447 452 12163066 </plain></SENT>
+</text></ref><ref id="pone.0033340-Clark2"><text><SENT sid="780" pm="."><plain>19 ClarkLAvan VlijmenHW 2008 A knowledge-based forcefield for protein-protein interface design. Proteins 70 1540 1550 17910054 </plain></SENT>
+</text></ref><ref id="pone.0033340-Raschke1"><text><SENT sid="781" pm="."><plain>20 RaschkeTM 2006 Water structure and interactions with protein surfaces. Curr Opin Struct Biol 16 152 159 16546375 </plain></SENT>
+</text></ref><ref id="pone.0033340-Joachimiak1"><text><SENT sid="782" pm="."><plain>21 JoachimiakLAKortemmeTStoddardBLBakerD 2006 Computational design of a new hydrogen bond network and at least a 300-fold specificity switch at a protein-protein interface. J Mol Biol 361 195 208 16831445 </plain></SENT>
+</text></ref><ref id="pone.0033340-Rodier1"><text><SENT sid="783" pm="."><plain>22 RodierFBahadurRPChakrabartiPJaninJ 2005 Hydration of protein-protein interfaces. Proteins 60 36 45 15856483 </plain></SENT>
+</text></ref><ref id="pone.0033340-Jiang1"><text><SENT sid="784" pm="."><plain>23 JiangLKuhlmanBKortemmeTBakerD 2005 A “solvated rotamer” approach to modeling water-mediated hydrogen bonds at protein-protein interfaces. Proteins 58 893 904 15651050 </plain></SENT>
+</text></ref><ref id="pone.0033340-Papoian1"><text><SENT sid="785" pm="."><plain>24 PapoianGAUlanderJWolynesPG 2003 Role of water mediated interactions in protein-protein recognition landscapes. J Am Chem Soc 125 9170 9178 15369374 </plain></SENT>
+</text></ref><ref id="pone.0033340-Shifman1"><text><SENT sid="786" pm="."><plain>25 ShifmanJMMayoSL 2003 Exploring the origins of binding specificity through the computational redesign of calmodulin. Proc Natl Acad Sci U S A 100 13274 13279 14597710 </plain></SENT>
+</text></ref><ref id="pone.0033340-Fuh1"><text><SENT sid="787" pm="."><plain>26 FuhGWuPLiangWCUltschMLeeCV 2006 Structure-function studies of two synthetic anti-vascular endothelial growth factor Fabs and comparison with the Avastin Fab. J Biol Chem 281 6625 6631 16373345 </plain></SENT>
+</text></ref><ref id="pone.0033340-Huang1"><text><SENT sid="788" pm="."><plain>27 HuangYJChenICYuCMLeeYCHsuHJ 2010 Engineering anti-vascular endothelial growth factor single chain disulfide-stabilized antibody variable fragments (sc-dsFv) with phage-displayed sc-dsFv libraries. J Biol Chem 285 7880 7891 20068035 </plain></SENT>
+</text></ref><ref id="pone.0033340-Chen1"><text><SENT sid="789" pm="."><plain>28 ChenICYuCMLeeYCHuangYJHsuHJ 2010 Signal sequence as a determinant in expressing disulfide-stabilized single chain antibody variable fragments (sc-dsFv) against human VEGF. Mol Biosyst 6 1307 1315 20424732 </plain></SENT>
+</text></ref><ref id="pone.0033340-Moreira1"><text><SENT sid="790" pm="."><plain>29 MoreiraISFernandesPARamosMJ 2007 Hot spots–a review of the protein-protein interface determinant amino-acid residues. Proteins 68 803 812 17546660 </plain></SENT>
+</text></ref><ref id="pone.0033340-Bogan1"><text><SENT sid="791" pm="."><plain>30 BoganAAThornKS 1998 Anatomy of hot spots in protein interfaces. J Mol Biol 280 1 9 9653027 </plain></SENT>
+</text></ref><ref id="pone.0033340-Clackson1"><text><SENT sid="792" pm="."><plain>31 ClacksonTWellsJA 1995 A hot spot of binding energy in a hormone-receptor interface. Science 267 383 386 7529940 </plain></SENT>
+</text></ref><ref id="pone.0033340-Muller1"><text><SENT sid="793" pm="."><plain>32 MullerYAChenYChristingerHWLiBCunninghamBC 1998 VEGF and the Fab fragment of a humanized neutralizing antibody: crystal structure of the complex at 2.4 å resolution and mutational analysis of the interface. Structure 6 1153 1167 9753694 </plain></SENT>
+</text></ref><ref id="pone.0033340-Fellouse2"><text><SENT sid="794" pm="."><plain>33 FellouseFAEsakiKBirtalanSRaptisDCancasciVJ 2007 High-throughput Generation of Synthetic Antibodies from Highly Functional Minimalist Phage-displayed Libraries. Journal of Molecular Biology 373 924 940 17825836 </plain></SENT>
+</text></ref><ref id="pone.0033340-Fellouse3"><text><SENT sid="795" pm="."><plain>34 FellouseFAWiesmannCSidhuSS 2004 Synthetic antibodies from a four-amino-acid code: A dominant role for tyrosine in antigen recognition. Proceedings of the National Academy of Sciences of the United States of America 101 12467 12472 15306681 </plain></SENT>
+</text></ref><ref id="pone.0033340-Sheikholvaezin1"><text><SENT sid="796" pm="."><plain>35 SheikholvaezinAErikssonDRiklundKStigbrandT 2006 Construction and purification of a covalently linked divalent tandem single-chain Fv antibody against placental alkaline phosphatase. Hybridoma (Larchmt) 25 255 263 17044780 </plain></SENT>
+</text></ref><ref id="pone.0033340-Otwinowski1"><text><SENT sid="797" pm="."><plain>36 OtwinowskiZMinorW 1997 Processing of X-ray Diffraction Data Collected in Oscillation Mode. CarterCWJSweetRM Macromolecular Crystallography, part A New Tork Academic Press 307 326  </plain></SENT>
+</text></ref><ref id="pone.0033340-Vagin1"><text><SENT sid="798" pm="."><plain>37 VaginATeplyakovA 2010 Molecular replacement with MOLREP. Acta Crystallogr D Biol Crystallogr 66 22 25 20057045 </plain></SENT>
+</text></ref><ref id="pone.0033340-CollaborativeComputationalProjectNumber41"><text><SENT sid="799" pm="."><plain>38 Collaborative_Computational_Project_Number_4 1994 The CCP4 suite: programs for protein crystallography. Acta Crystallogr D Biol Crystallogr 50 760 763 15299374 </plain></SENT>
+</text></ref><ref id="pone.0033340-Murshudov1"><text><SENT sid="800" pm="."><plain>39 MurshudovGNVaginAADodsonEJ 1997 Refinement of macromolecular structures by the maximum-likelihood method. Acta Crystallogr D Biol Crystallogr 53 240 255 15299926 </plain></SENT>
+</text></ref><ref id="pone.0033340-Emsley1"><text><SENT sid="801" pm="."><plain>40 EmsleyPCowtanK 2004 Coot: model-building tools for molecular graphics. Acta Crystallogr D Biol Crystallogr 60 2126 2132 15572765 </plain></SENT>
+</text></ref><ref id="pone.0033340-Adams1"><text><SENT sid="802" pm="."><plain>41 AdamsPDMustyakimovMAfoninePVLanganP 2009 Generalized X-ray and neutron crystallographic analysis: more accurate and complete structures for biological macromolecules. Acta Crystallogr D Biol Crystallogr 65 567 573 19465771 </plain></SENT>
+</text></ref><ref id="pone.0033340-Painter1"><text><SENT sid="803" pm="."><plain>42 PainterJMerrittEA 2006 Optimal description of a protein structure in terms of multiple groups undergoing TLS motion. Acta Crystallogr D Biol Crystallogr 62 439 450 16552146 </plain></SENT>
+</text></ref><ref id="pone.0033340-Laskowski1"><text><SENT sid="804" pm="."><plain>43 LaskowskiRAMossDSThorntonJM 1993 Main-chain bond lengths and bond angles in protein structures. J Mol Biol 231 1049 1067 8515464 </plain></SENT>
+</text></ref><ref id="pone.0033340-Lovell1"><text><SENT sid="805" pm="."><plain>44 LovellSCWordJMRichardsonJSRichardsonDC 2000 The penultimate rotamer library. Proteins: Structure, Function, and Bioinformatics 40 389 408  </plain></SENT>
+</text></ref><ref id="pone.0033340-Laskowski2"><text><SENT sid="806" pm="."><plain>45 LaskowskiRAThorntonJMHumbletCSinghJ 1996 X-SITE: use of empirically derived atomic packing preferences to identify favourable interaction regions in the binding sites of proteins. J Mol Biol 259 175 201 8648645 </plain></SENT>
+</text></ref><ref id="pone.0033340-Yang1"><text><SENT sid="807" pm="."><plain>46 YangA-SWangL-y 2003 Local structure prediction with local structure-based sequence profiles. Bioinformatics 19 1267 1274 12835271 </plain></SENT>
+</text></ref><ref id="pone.0033340-Yang2"><text><SENT sid="808" pm="."><plain>47 YangA-SHonigB 2000 An integrated approach to the analysis and modeling of protein sequences and structures. </plain></SENT>
+<SENT sid="809" pm="."><plain>I. </plain></SENT>
+<SENT sid="810" pm="."><plain>Protein structural alignment and a quantitative measure for protein structural distance. Journal of Molecular Biology 301 665 678 10966776 </plain></SENT>
+</text></ref><ref id="pone.0033340-Yang3"><text><SENT sid="811" pm="."><plain>48 YangA-SHonigB 2000 An integrated approach to the analysis and modeling of protein sequences and structures. </plain></SENT>
+<SENT sid="812" pm="."><plain>II. </plain></SENT>
+<SENT sid="813" pm="."><plain>On the relationship between sequence and structural similarity for proteins that are not obviously related in sequence. Journal of Molecular Biology 301 679 689 10966777 </plain></SENT>
+</text></ref><ref id="pone.0033340-Yang4"><text><SENT sid="814" pm="."><plain>49 YangA-SHonigB 2000 An integrated approach to the analysis and modeling of protein sequences and structures. </plain></SENT>
+<SENT sid="815" pm="."><plain>III. </plain></SENT>
+<SENT sid="816" pm="."><plain>A comparative study of sequence conservation in protein structural families using multiple structural alignments. Journal of Molecular Biology 301 691 711 10966778 </plain></SENT>
+</text></ref><ref id="pone.0033340-Yang5"><text><SENT sid="817" pm="."><plain>50 YangA-SWangL-y 2002 Local structure-based sequence profile database for local and global protein structure predictions. Bioinformatics 18 1650 1657 12490450 </plain></SENT>
+</text></ref><ref id="pone.0033340-Hsu1"><text><SENT sid="818" pm="."><plain>51 HsuH-JChangH-JPengH-PHuangS-SLinM-Y 2006 Assessing Computational Amino Acid 2-Turn Propensities with a Phage-Displayed Combinatorial Library and Directed Evolution. Structure (London, England: 1993) 14 1499 1510  </plain></SENT>
+</text></ref><ref id="pone.0033340-Baldi1"><text><SENT sid="819" pm="."><plain>52 BaldiPBrunakSChauvinYAndersenCANielsenH 2000 Assessing the accuracy of prediction algorithms for classification: an overview. Bioinformatics 16 412 424 10871264 </plain></SENT>
+</text></ref><ref id="pone.0033340-Gorodkin1"><text><SENT sid="820" pm="."><plain>53 GorodkinJHeyerLJBrunakSStormoGD 1997 Displaying the information contents of structural RNA alignments: the structure logos. Comput Appl Biosci 13 583 586 9475985 </plain></SENT>
+</text></ref><ref id="pone.0033340-Levy1"><text><SENT sid="821" pm="."><plain>54 LevyED 2010 A simple definition of structural regions in proteins and its use in analyzing interface evolution. J Mol Biol 403 660 670 20868694 </plain></SENT>
+</text></ref></ref-list></SecTag></back></article>

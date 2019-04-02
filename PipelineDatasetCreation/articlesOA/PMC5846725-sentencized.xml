@@ -1,0 +1,824 @@
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD v1.1 20151215//EN" "JATS-archivearticle1.dtd"> 
+<article xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML" article-type="research-article"><?properties open_access?><?DTDIdentifier.IdentifierValue -//NLM//DTD JATS (Z39.96) Journal Publishing DTD v1.1d3 20150301//EN?><?DTDIdentifier.IdentifierType public?><?SourceDTD.DTDName JATS-journalpublishing1.dtd?><?SourceDTD.Version 39.96?><?ConverterInfo.XSLTName jp2nlmx2.xsl?><?ConverterInfo.Version 1?><front><journal-meta><journal-id journal-id-type="nlm-ta">PLoS One</journal-id><journal-id journal-id-type="iso-abbrev">PLoS ONE</journal-id><journal-id journal-id-type="publisher-id">plos</journal-id><journal-id journal-id-type="pmc">plosone</journal-id><journal-title-group><journal-title>PLoS ONE</journal-title></journal-title-group><issn pub-type="epub">1932-6203</issn><publisher><publisher-name>Public Library of Science</publisher-name><publisher-loc>San Francisco, CA USA</publisher-loc></publisher></journal-meta><article-meta><article-id pub-id-type="pmcid">5846725</article-id><article-id pub-id-type="doi">10.1371/journal.pone.0193076</article-id><article-id pub-id-type="publisher-id">PONE-D-17-05696</article-id><article-categories><subj-group subj-group-type="heading"><subject>Research Article</subject></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Biology and Life Sciences</subject><subj-group><subject>Genetics</subject><subj-group><subject>Gene Expression</subject></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Biology and Life Sciences</subject><subj-group><subject>Biochemistry</subject><subj-group><subject>Enzymology</subject><subj-group><subject>Enzymes</subject><subj-group><subject>Helicases</subject></subj-group></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Biology and Life Sciences</subject><subj-group><subject>Biochemistry</subject><subj-group><subject>Proteins</subject><subj-group><subject>Enzymes</subject><subj-group><subject>Helicases</subject></subj-group></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Biology and life sciences</subject><subj-group><subject>Biochemistry</subject><subj-group><subject>Nucleic acids</subject><subj-group><subject>RNA</subject><subj-group><subject>Non-coding RNA</subject><subj-group><subject>Ribosomal RNA</subject></subj-group></subj-group></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Biology and life sciences</subject><subj-group><subject>Biochemistry</subject><subj-group><subject>Ribosomes</subject><subj-group><subject>Ribosomal RNA</subject></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Biology and life sciences</subject><subj-group><subject>Cell biology</subject><subj-group><subject>Cellular structures and organelles</subject><subj-group><subject>Ribosomes</subject><subj-group><subject>Ribosomal RNA</subject></subj-group></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Biology and Life Sciences</subject><subj-group><subject>Agriculture</subject><subj-group><subject>Pests</subject><subj-group><subject>Insect Pests</subject><subj-group><subject>Locusts</subject></subj-group></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Biology and Life Sciences</subject><subj-group><subject>Organisms</subject><subj-group><subject>Eukaryota</subject><subj-group><subject>Animals</subject><subj-group><subject>Invertebrates</subject><subj-group><subject>Arthropoda</subject><subj-group><subject>Insects</subject><subj-group><subject>Locusts</subject></subj-group></subj-group></subj-group></subj-group></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Engineering and Technology</subject><subj-group><subject>Manufacturing Processes</subject><subj-group><subject>Heat Treatment</subject></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Physical Sciences</subject><subj-group><subject>Physics</subject><subj-group><subject>Classical Mechanics</subject><subj-group><subject>Mechanical Stress</subject><subj-group><subject>Thermal Stresses</subject></subj-group></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Biology and Life Sciences</subject><subj-group><subject>Plant Science</subject><subj-group><subject>Plant Anatomy</subject><subj-group><subject>Flowers</subject></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Biology and Life Sciences</subject><subj-group><subject>Molecular Biology</subject><subj-group><subject>Molecular Biology Techniques</subject><subj-group><subject>Artificial Gene Amplification and Extension</subject><subj-group><subject>Polymerase Chain Reaction</subject></subj-group></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Research and Analysis Methods</subject><subj-group><subject>Molecular Biology Techniques</subject><subj-group><subject>Artificial Gene Amplification and Extension</subject><subj-group><subject>Polymerase Chain Reaction</subject></subj-group></subj-group></subj-group></subj-group></article-categories><title-group><article-title><SecTag type="TITLE"><text><SENT sid="0" pm="."><plain>Selection and validation of reference genes for quantitative gene expression analyses in black locust (Robinia pseudoacacia L.) using real-time quantitative PCR </plain></SENT>
+</text></SecTag></article-title><alt-title alt-title-type="running-head">Selection of reference genes in black locust</alt-title></title-group><contrib-group><contrib contrib-type="author" equal-contrib="yes"><name><surname>Wang</surname><given-names>Jinxing</given-names></name><role content-type="http://credit.casrai.org/">Conceptualization</role><role content-type="http://credit.casrai.org/">Methodology</role><xref ref-type="aff" rid="aff001"><sup>1</sup></xref></contrib><contrib contrib-type="author" equal-contrib="yes"><name><surname>Abbas</surname><given-names>Manzar</given-names></name><role content-type="http://credit.casrai.org/">Data curation</role><role content-type="http://credit.casrai.org/">Validation</role><role content-type="http://credit.casrai.org/">Writing – original draft</role><xref ref-type="aff" rid="aff001"><sup>1</sup></xref></contrib><contrib contrib-type="author"><name><surname>Wen</surname><given-names>Yanzhong</given-names></name><role content-type="http://credit.casrai.org/">Formal analysis</role><xref ref-type="aff" rid="aff002"><sup>2</sup></xref></contrib><contrib contrib-type="author"><name><surname>Niu</surname><given-names>Dongsheng</given-names></name><role content-type="http://credit.casrai.org/">Formal analysis</role><xref ref-type="aff" rid="aff003"><sup>3</sup></xref></contrib><contrib contrib-type="author"><name><surname>Wang</surname><given-names>Ling</given-names></name><role content-type="http://credit.casrai.org/">Formal analysis</role><xref ref-type="aff" rid="aff003"><sup>3</sup></xref></contrib><contrib contrib-type="author"><name><surname>Sun</surname><given-names>Yuhan</given-names></name><role content-type="http://credit.casrai.org/">Formal analysis</role><xref ref-type="aff" rid="aff001"><sup>1</sup></xref></contrib><contrib contrib-type="author"><name><surname>Li</surname><given-names>Yun</given-names></name><role content-type="http://credit.casrai.org/">Conceptualization</role><role content-type="http://credit.casrai.org/">Funding acquisition</role><role content-type="http://credit.casrai.org/">Supervision</role><xref ref-type="aff" rid="aff001"><sup>1</sup></xref><xref ref-type="corresp" rid="cor001">*</xref></contrib></contrib-group><aff id="aff001"><label>1</label>
+<addr-line>Beijing Advanced Innovation Center for Tree Breeding by Molecular Design, National Engineering Laboratory for Tree Breeding, College of Biological Sciences and Technology, Beijing Forestry University, Beijing, People's Republic of China</addr-line></aff><aff id="aff002"><label>2</label>
+<addr-line>Propagation and Breeding Farm for Improved Forest Trees of Jixian County, Shanxi Province, Linfen, People's Republic of China</addr-line></aff><aff id="aff003"><label>3</label>
+<addr-line>Badaling Forestry Farm of Beijing, Beijing, People's Republic of China</addr-line></aff><contrib-group><contrib contrib-type="editor"><name><surname>Hull</surname><given-names>J Joe</given-names></name><role>Editor</role><xref ref-type="aff" rid="edit1"/></contrib></contrib-group><aff id="edit1"><addr-line>USDA Agricultural Research Service, UNITED STATES</addr-line></aff><author-notes><fn fn-type="COI-statement" id="coi001"><p><text><SENT sid="1" pm="."><plain>Competing Interests: The authors have declared that no competing interests exist. </plain></SENT>
+</text></p></fn><corresp id="cor001">* E-mail: <email>yunli@bjfu.edu.cn</email></corresp></author-notes><pub-date pub-type="epub"><day>12</day><month>3</month><year>2018</year></pub-date><pub-date pub-type="collection"><year>2018</year></pub-date><volume>13</volume><issue>3</issue><elocation-id>e0193076</elocation-id><history><date date-type="received"><day>25</day><month>2</month><year>2017</year></date><date date-type="accepted"><day>4</day><month>2</month><year>2018</year></date></history><permissions><copyright-statement>© 2018 Wang et al</copyright-statement><copyright-year>2018</copyright-year><copyright-holder>Wang et al</copyright-holder><license xlink:href="http://creativecommons.org/licenses/by/4.0/"><license-p>This is an open access article distributed under the terms of the <ext-link ext-link-type="uri" xlink:href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution License</ext-link>, which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited.</license-p></license></permissions><self-uri content-type="pdf" xlink:href="pone.0193076.pdf"/><abstract><p><SecTag type="ABS"><text><SENT sid="2" pm="."><plain>Black locust (Robinia pseudoacacia L.) is an easy to raise, fast growing, medium-sized deciduous tree species highly tolerant to harsh eco-conditions, i.e., drought and harsh winters, and it is widely adaptable to sandy, loamy, and marshy soils. </plain></SENT>
+<SENT sid="3" pm="."><plain>The basis for this adaptability remains to be investigated at the transcriptomic level using real-time quantitative PCR (qPCR). </plain></SENT>
+<SENT sid="4" pm="."><plain>Selection of a reliable gene for the normalization of qPCR data is important for obtaining accurate results in gene expression. </plain></SENT>
+<SENT sid="5" pm="."><plain>The goal of this study was to identify an appropriate reference gene from 12 candidate genes for gene expression analysis in black locust exposed to various stressors such as abscisic acid (ABA), NaCl, polyethylene glycol (PEG) and varying temperatures. </plain></SENT>
+<SENT sid="6" pm="."><plain>In GeNorm and NormFinder analyses, ACT (actin) and GAPDH (glyceraldehyde-3-phosphate dehydrogenase) gene expression were the most stable in all conditions except heat stress, but in BestKeeper analysis, GAPDH and helicase gene expression were the most stable under NaCl and heat stress. </plain></SENT>
+<SENT sid="7" pm="."><plain>In contrast, ACT and GAPDH were highest under abscisic acid (ABA), GAPDH and βTUB (beta tubulin) under cold stress, and helicase and EF1α (elongation factor 1 alpha) under PEG stress. </plain></SENT>
+<SENT sid="8" pm="."><plain>We found that the most stable reference gene combination for all conditions was ACT and GAPDH. </plain></SENT>
+<SENT sid="9" pm="."><plain>Additionally, the expression pattern of NAC2 (a transcription factor) and BGL2 in different tissues and under different stress conditions was analyzed relative to ACT and GAPDH and UBQ (ubiquitin) the least stably expressed gene. NAC2 and BGL2 both had highest expression in flowers and pods under ABA stress at 48h. </plain></SENT>
+<SENT sid="10" pm="."><plain>This study provides useful reference genes for future gene expression studies in black locust. </plain></SENT>
+</text></SecTag></p></abstract><funding-group><award-group id="award001"><funding-source><institution>The Fundamental Research Fund for the Central Universities</institution></funding-source><award-id>2015ZCQ-SW-03</award-id><principal-award-recipient><name><surname>Wang</surname><given-names>Jinxing</given-names></name></principal-award-recipient></award-group><award-group id="award002"><funding-source><institution>the project of National Natural Science Foundation of China</institution></funding-source><award-id>No.31400562</award-id><principal-award-recipient><name><surname>Wang</surname><given-names>Jinxing</given-names></name></principal-award-recipient></award-group><award-group id="award003"><funding-source><institution>the State Forestry Administration of Science and Technology Development Center project</institution></funding-source><award-id>XPC-2015-3</award-id><principal-award-recipient><name><surname>Wang</surname><given-names>Jinxing</given-names></name></principal-award-recipient></award-group><award-group id="award004"><funding-source><institution>the State Forestry Administration of science and technology promotion project</institution></funding-source><award-id>No. [2015]-53</award-id><principal-award-recipient><name><surname>Wang</surname><given-names>Jinxing</given-names></name></principal-award-recipient></award-group><funding-statement>The authors appreciate financial support from the Fundamental Research Funds for the Central Universities (2015ZCQ-SW-03), the project of National Nature Science Foundation of China (31400562, 31570677) State Forestry Administration of Science and Technology Development Center project (XPC-2015-3) and the State Forestry Administration of science and technology promotion project (No. [2015]-53).</funding-statement></funding-group><counts><fig-count count="6"/><table-count count="5"/><page-count count="17"/></counts><custom-meta-group><custom-meta id="data-availability"><meta-name>Data Availability</meta-name><meta-value>All relevant data are within the paper, tables and graphs file and its Supporting Information files.</meta-value></custom-meta></custom-meta-group></article-meta><notes><title>Data Availability</title><p>All relevant data are within the paper, tables and graphs file and its Supporting Information files.</p></notes></front><body><SecTag type="INTRO"><sec sec-type="intro" id="sec001"><title><text><SENT sid="11" pm="."><plain>Introduction </plain></SENT>
+</text></title><p><text><SENT sid="12" pm="."><plain>Black locust (Robinia pseudoacacia L.) is a monoclinous leguminous tree belonging to the Faboideae subfamily. </plain></SENT>
+<SENT sid="13" pm="."><plain>It is widely cultivated in the southeastern United States, temperate Europe, and Asia [1] and is of ecological and economic value [2,3]. </plain></SENT>
+<SENT sid="14" pm="."><plain>It is also used as forage, wood fiber, feed stock, lumber, fuel and in beekeeping [3,4,5]. </plain></SENT>
+<SENT sid="15" pm="."><plain>Black locust was first introduced to China in 1877‒1878, and currently is extensively cultivated in many parts of the country [6]. </plain></SENT>
+<SENT sid="16" pm="."><plain>In addition, black locust flowers can be used by honeybees to produce honey and royal jelly [5]. </plain></SENT>
+<SENT sid="17" pm="."><plain>In the semi-arid Loess Plateau of China, it is also extensively being used for reforestation [7]. </plain></SENT>
+<SENT sid="18" pm="."><plain>Consequently, black locust is an ecologically and economically valuable species. </plain></SENT>
+</text></p><p><text><SENT sid="19" pm="."><plain>Many biological techniques have been used to confirm the expression levels of genes, such as RNase protection assays (RPAs), Northern blotting, real-time quantitative PCR (qPCR), gene chips (DNA microarray), fluorescent in situ hybridization (FISH), serial analysis of gene expression (SAGE), tilling arrays, RNA sequencing, reporter genes, digital droplet PCR (ddPCR) and semi-quantitative PCR (semi-PCR). </plain></SENT>
+<SENT sid="20" pm="."><plain>RNA sequencing and qPCR are considered the best methods due to their high throughput nature [8,9]. </plain></SENT>
+<SENT sid="21" pm="."><plain>Northern blotting was the first RNA-based technique to allow measurement of differential gene expression. </plain></SENT>
+<SENT sid="22" pm="."><plain>Northern blotting is time consuming and laborious, and most importantly, accurate quantification of expression levels is poor using this method. </plain></SENT>
+<SENT sid="23" pm="."><plain>Another important gene expression technique is DNA microarray hybridization, which uses either cDNA or oligonucleotides. </plain></SENT>
+<SENT sid="24" pm="."><plain>Microarray analysis has the ability to screen a large number of target genes, even under multiple stimuli [10]. </plain></SENT>
+<SENT sid="25" pm="."><plain>Microarrays utilize plates spotted with DNA sequences representing each target gene. </plain></SENT>
+<SENT sid="26" pm="."><plain>In this process, template cDNA from control and fluorophore-labeled samples are hybridized to the glass plate. </plain></SENT>
+<SENT sid="27" pm="."><plain>The difference between fluorescent signal intensities represents differential gene expression; however, poor or weak signals generation can complicate gene expression analysis of low expression genes. </plain></SENT>
+<SENT sid="28" pm="."><plain>Reporter genes such as lacZ, cat, luciferase, GUS, GFP and rfp can also be considered but they are time consuming and laborious, because they require genetic manipulation and successful transformation events. </plain></SENT>
+</text></p><p><text><SENT sid="29" pm="."><plain>The leading gene expression techniques for achieving authentic and reproducible results are RNA sequencing and qPCR [11]. </plain></SENT>
+<SENT sid="30" pm="."><plain>They provides better results compared with other RNA quantification techniques because of its accurate quantification and high sensitivity [8,11,12]. </plain></SENT>
+<SENT sid="31" pm="."><plain>As a result, the interpretation of differential gene expression patterns can lead to a better understanding of biological processes. </plain></SENT>
+<SENT sid="32" pm="."><plain>Consequently, given the accuracy, high sensitivity, and reproducibility qPCR has become the standard method for in-depth studies of gene expression, alternative splicing events, validation of microarray data, and medical diagnostics [13–21]. </plain></SENT>
+<SENT sid="33" pm="."><plain>Different non-specific factors present challenges for normalization of gene expression including differences in the nature and quantity of RNA, some of which can be controlled by establishing candidate reference genes [22,23]. </plain></SENT>
+</text></p><p><text><SENT sid="34" pm="."><plain>In the past few years, ubiquitin (UBQ), elongation factor 1 alpha (EF1α) [24], and glyceraldehyde-3-phosphate dehydrogenase (GAPDH) [25], have been used frequently as internal controls for qPCR studies. </plain></SENT>
+<SENT sid="35" pm="."><plain>Many studies revealed that these genes exhibit non-uniform and non-stable expression, highlighting the demand for better universal internal control genes [26,27]. </plain></SENT>
+<SENT sid="36" pm="."><plain>With this goal in mind, a number of qPCR control genes have been reported in diverse plant species including tobacco [28], Arabidopsis [29,30], berry [31], poplar [32–34],eucalyptus [35,36], and teak [37]. </plain></SENT>
+<SENT sid="37" pm="."><plain>To determine which reference gene is best for transcript normalization in a given subset of biological samples, statistical algorithms such as RefFinder, NormqPCR, RefGenes, OLIVER, geNorm, BestKeeper, and NormFinder have been developed (<ext-link ext-link-type="uri" xlink:href="https://omictools.com/reference-genes-category">https://omictools.com/reference-genes-category</ext-link>) [38,39]. </plain></SENT>
+</text></p><p><text><SENT sid="38" pm="."><plain>We used statistical and graphical methods to compare the expression stability of 12 candidate reference genes (Table 1) across a large set of organs i.e., root, stem, leaf, flower, pod and stress treatments (ABA, NaCl, PEG and variable temperature conditions). </plain></SENT>
+<SENT sid="39" pm="."><plain>The expression stability of these genes was subsequently evaluated using geNorm [40], BestKeeper [38], and NormFinder [41]. </plain></SENT>
+<SENT sid="40" pm="."><plain>Furthermore, the expression patterns of the target genes were investigated using the selected reference genes along with transcription factor NAC2 which is involved in protecting plants against abiotic stresses, flowering, senescence [41,42] and BGL2, which is also involved in flowering. </plain></SENT>
+<SENT sid="41" pm="."><plain>This study provides the most extensive analysis of potential reference genes that can be applied to future gene expression studies in black locust. </plain></SENT>
+</text></p><SecTag type="TABLE"><table-wrap id="pone.0193076.t001" orientation="portrait" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0193076.t001</object-id><label>Table 1</label><caption><title><text><SENT sid="42" pm="."><plain>Descriptions of the 12 candidate reference genes and two selected genes for validation of results. </plain></SENT>
+</text></title></caption><alternatives><graphic id="pone.0193076.t001g" xlink:href="pone.0193076.t001"/><table frame="hsides" rules="groups"><colgroup span="1"><col align="left" valign="middle" span="1"/><col align="left" valign="middle" span="1"/><col align="left" valign="middle" span="1"/><col align="left" valign="middle" span="1"/><col align="left" valign="middle" span="1"/></colgroup><thead><tr><th align="justify" rowspan="1" colspan="1"><text><SENT sid="43" pm="."><plain>Symbol </plain></SENT>
+</text></th><th align="justify" rowspan="1" colspan="1"><text><SENT sid="44" pm="."><plain>Gene Name </plain></SENT>
+</text></th><th align="center" rowspan="1" colspan="1"><text><SENT sid="45" pm="."><plain>GeneBank Accession Number </plain></SENT>
+</text></th><th align="center" rowspan="1" colspan="1"><text><SENT sid="46" pm="."><plain>Arabidopsis homolog locus </plain></SENT>
+</text></th><th align="left" rowspan="1" colspan="1"><text><SENT sid="47" pm="."><plain>Function </plain></SENT>
+</text></th></tr></thead><tbody><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="48" pm="."><plain>SAMDC </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="49" pm="."><plain>S-adenosylmethionine decarboxylase </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="50" pm="."><plain>KJ587744 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="51" pm="."><plain>AT3G02470 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="52" pm="."><plain>Involved in polyamine biosynthesis. </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="53" pm="."><plain>18S rRNA </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="54" pm="."><plain>18S ribosomal RNA </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="55" pm="."><plain>KJ587743 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="56" pm="."><plain>AT2G47990 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="57" pm="."><plain>Constituent of the small ribosomal subunit. </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="58" pm="."><plain>ACT </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="59" pm="."><plain>Actin </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="60" pm="."><plain>KJ587742 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="61" pm="."><plain>AT1G01750 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="62" pm="."><plain>Cytoskeletal structural protein. </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="63" pm="."><plain>EF1α </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="64" pm="."><plain>Elongation factor 1 alpha </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="65" pm="."><plain>KJ587747 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="66" pm="."><plain>AT1G30230 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="67" pm="."><plain>Protein synthesis. </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="68" pm="."><plain>GAPDH </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="69" pm="."><plain>Glyceraldehyde-3-phosphate dehydrogenase </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="70" pm="."><plain>KJ587745 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="71" pm="."><plain>AT1G13440 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="72" pm="."><plain>Oxidoreductase in glycolysis and gluconeogenesis. </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="73" pm="."><plain>Helicase </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="74" pm="."><plain>Helicase </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="75" pm="."><plain>KJ587746 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="76" pm="."><plain>AT2G30800 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="77" pm="."><plain>RNA processing. </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="78" pm="."><plain>UBQ </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="79" pm="."><plain>Ubiquitin </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="80" pm="."><plain>MG515604 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="81" pm="."><plain>AT1G04860 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="82" pm="."><plain>Protein binding and modification. </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="83" pm="."><plain>βTUB </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="84" pm="."><plain>Beta tubulin </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="85" pm="."><plain>MG515605 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="86" pm="."><plain>AT1G04820 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="87" pm="."><plain>Major constituent of microtubules. </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="88" pm="."><plain>CYP </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="89" pm="."><plain>Cyclophilin </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="90" pm="."><plain>MG515606 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="91" pm="."><plain>AT4G34870 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="92" pm="."><plain>Protein folding. </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="93" pm="."><plain>SAND </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="94" pm="."><plain>Sand family protein </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="95" pm="."><plain>MG515607 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="96" pm="."><plain>AT2G28390 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="97" pm="."><plain>Plants organs development and protein transport. </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="98" pm="."><plain>CAC </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="99" pm="."><plain>Clathrin adaptor complex </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="100" pm="."><plain>MG515608 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="101" pm="."><plain>AT5G46630 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="102" pm="."><plain>Endocytosis, intracellular protein transport. </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="103" pm="."><plain>PP2A </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="104" pm="."><plain>Phosphatase 2A </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="105" pm="."><plain>MG515609 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="106" pm="."><plain>AT1G69960 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="107" pm="."><plain>Regulation of auxin polar transport. </plain></SENT>
+</text></td></tr><tr><td align="left" colspan="5" rowspan="1"><text><SENT sid="108" pm="."><plain>Target Genes </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="109" pm="."><plain>NAC </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="110" pm="."><plain>NAC domain containing protein 2 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="111" pm="."><plain>MG515610 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="112" pm="."><plain>AT3G15510 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="113" pm="."><plain>Flowering, development and stress response. </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="114" pm="."><plain>BGL </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="115" pm="."><plain>beta-1,3-glucanase 2 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="116" pm="."><plain>MG515611 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="117" pm="."><plain>AT3G57260 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="118" pm="."><plain>Involved in flowering. </plain></SENT>
+</text></td></tr></tbody></table></alternatives><table-wrap-foot><fn id="t001fn001"><p><text><SENT sid="119" pm="."><plain>Database source: NCBI Reference Sequence database Genebank batch upload accession number is PRJNA260115 (<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/">http://www.ncbi.nlm.nih.gov</ext-link>). </plain></SENT>
+</text></p></fn></table-wrap-foot></table-wrap></SecTag></sec></SecTag><SecTag type="METHODS"><sec sec-type="materials|methods" id="sec002"><title><text><SENT sid="120" pm="."><plain>Materials and methods </plain></SENT>
+</text></title><sec id="sec003"><title><text><SENT sid="121" pm="."><plain>Plant materials and treatments </plain></SENT>
+</text></title><p><text><SENT sid="122" pm="."><plain>From June to September 2016, we collected roots, leaves, flowers, pods and stems from 5 year old black locust grown in the Mijiabao Forest Farm, Yanqing District of Beijing, PR of China. </plain></SENT>
+<SENT sid="123" pm="."><plain>Note, no specific permission or grant was required from authorities to collect samples for research purpose as this forest is open for research purposes. </plain></SENT>
+<SENT sid="124" pm="."><plain>Seeds were grown in pots filled with soil mixture consisting of silt, perlite and Floraguard Substrat® (3:1:5) and when the seedlings were two months old, they were pulled carefully and dipped in NaCl (200 mM), PEG-6000 (10%), or ABA (150 μM) for 12, 24 and 48h [43]. </plain></SENT>
+<SENT sid="125" pm="."><plain>For the cold and heat treatments, plants were exposed to 4°C or 40°C by placing whole plants in chambers under a 14-h light/10-h dark photoperiod for 0, 12, 24, and 48 h. </plain></SENT>
+<SENT sid="126" pm="."><plain>A total of 21 samples in triplicate were collected from different organs (roots, leaves, pods, and stems) at varying time points (0, 12, 24, and 48 h) and then immediately chilled in liquid nitrogen and stored at −80°C. </plain></SENT>
+</text></p></sec><sec id="sec004"><title><text><SENT sid="127" pm="."><plain>Total RNA extraction quality control and cDNA synthesis </plain></SENT>
+</text></title><p><text><SENT sid="128" pm="."><plain>For total RNA extraction, 2g samples from each tissue were collected, and immediately chilled in liquid nitrogen and grounded in a pre-chilled, autoclaved pestle and mortar. </plain></SENT>
+<SENT sid="129" pm="."><plain>The RNeasy® Plant Mini Kit (Qiagen, Hilden, Germany) was used for extraction of RNA from all samples. </plain></SENT>
+<SENT sid="130" pm="."><plain>Total RNA was treated with RNase free DNase I (Promega, USA) to remove any contaminating DNA. </plain></SENT>
+<SENT sid="131" pm="."><plain>The optical density (OD) of total RNA was determined on a Nanodrop ND-1000 spectrophotometer (Thermo Scientific, Waltham, MA, USA) at an absorbance ratio of 260/280 nm, with RNA samples ranging 1.9 to 2.2. </plain></SENT>
+<SENT sid="132" pm="."><plain>For further analyses, an OD of 2.0 at an absorbance ratio of 260/230 nm was used [44]. </plain></SENT>
+<SENT sid="133" pm="."><plain>RNA integrity was validated by separation of the RNA on a 1.5% (w/v) agarose gel containing ethidium bromide, followed by visualization under UV light in a gel documentation system. </plain></SENT>
+<SENT sid="134" pm="."><plain>RNA samples with an OD of 1.5‒2.0 and clear bands representing 28S/18S rRNA without smearing on the agarose gel were used for cDNA synthesis. </plain></SENT>
+<SENT sid="135" pm="."><plain>The first cDNA strand was synthesized from 1000 ng total RNA in a volume of 20 μl using the PrimeScript™ RT reagent Kit with gDNA eraser (Perfect Real Time), (Clontech, Shiga, Japan), according to the manufacturer’s protocol. </plain></SENT>
+<SENT sid="136" pm="."><plain>In the first step, genomic DNA (gDNA) was removed and the integrity of the RNA was verified by running samples on 1.2% agarose gel according to the protocol. </plain></SENT>
+<SENT sid="137" pm="."><plain>In the second step, we used oligo-dT primers to perform reverse transcription. </plain></SENT>
+<SENT sid="138" pm="."><plain>The quantity of cDNA was measured on a ND-1000 Nanodrop spectrophotometer at 260/280nm absorbance and quality was examined by electrophoresis using a 1.2% agarose gel. </plain></SENT>
+<SENT sid="139" pm="."><plain>Newly synthesized cDNA was diluted 10-fold prior to determination of its quality and quantity and stored at -20°C until use for the qPCR study. </plain></SENT>
+</text></p></sec><sec id="sec005"><title><text><SENT sid="140" pm="."><plain>Primer design </plain></SENT>
+</text></title><p><text><SENT sid="141" pm="."><plain>Twelve reference genes were selected for primer design: SAMDC, 18SrRNA, ACT, EF1α, GAPDH, Helicase, UBQ, βTUB, CYP, SAND, CAC, and PP2A (Table 1). </plain></SENT>
+<SENT sid="142" pm="."><plain>Black locust gene sequences were obtained by transcriptome sequencing in our laboratory. </plain></SENT>
+<SENT sid="143" pm="."><plain>A total of 12 pairs of primers for candidate reference genes, along with two primer pairs for validation of results were designed from CDS sequences (with a maximum amplicon length of 293 bp, optimal Tm of 50‒60°C, GC percentage of 20‒80%, primer length 18‒23bp) using the bioinformatics tool Primer Premier 5.0 (Table 2). </plain></SENT>
+</text></p><SecTag type="TABLE"><table-wrap id="pone.0193076.t002" orientation="portrait" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0193076.t002</object-id><label>Table 2</label><caption><title><text><SENT sid="144" pm="."><plain>Primers, amplicon sizes, and qPCR efficiency for the candidate internal control and results validation genes. </plain></SENT>
+</text></title></caption><alternatives><graphic id="pone.0193076.t002g" xlink:href="pone.0193076.t002"/><table frame="hsides" rules="groups"><colgroup span="1"><col align="left" valign="middle" span="1"/><col align="left" valign="middle" span="1"/><col align="left" valign="middle" span="1"/><col align="left" valign="middle" span="1"/><col align="left" valign="middle" span="1"/><col align="left" valign="middle" span="1"/><col align="left" valign="middle" span="1"/></colgroup><thead><tr><th align="justify" rowspan="1" colspan="1"><text><SENT sid="145" pm="."><plain>Symbol </plain></SENT>
+</text></th><th align="justify" rowspan="1" colspan="1"><text><SENT sid="146" pm="."><plain>Forward Primer </plain></SENT>
+</text></th><th align="justify" rowspan="1" colspan="1"><text><SENT sid="147" pm="."><plain>Reverse Primer </plain></SENT>
+</text></th><th align="justify" rowspan="1" colspan="1"><text><SENT sid="148" pm="."><plain>Amplicon Length (bp) </plain></SENT>
+</text></th><th align="justify" colspan="2" rowspan="1"><text><SENT sid="149" pm="."><plain>Tm (°C) </plain></SENT>
+</text></th><th align="justify" rowspan="1" colspan="1"><text><SENT sid="150" pm="."><plain>qPCR Efficiency </plain></SENT>
+</text></th></tr></thead><tbody><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="151" pm="."><plain>ACT </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="152" pm="."><plain>5′TTGCCTTGGATTATGAACA3′ </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="153" pm="."><plain>5′ GATGGCTGGAACAGAACTT3′ </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="154" pm="."><plain>139 </plain></SENT>
+</text></td><td align="left" colspan="2" rowspan="1"><text><SENT sid="155" pm="."><plain>84.1 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="156" pm="."><plain>100.2% </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="157" pm="."><plain>GAPDH </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="158" pm="."><plain>5′TCAACAATGCCAAACCTG3′ </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="159" pm="."><plain>5′GTGTCAACGAGCACGAAT3′ </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="160" pm="."><plain>115 </plain></SENT>
+</text></td><td align="left" colspan="2" rowspan="1"><text><SENT sid="161" pm="."><plain>90.7 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="162" pm="."><plain>101.6% </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="163" pm="."><plain>18SrRNA </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="164" pm="."><plain>5′ATAAACGATGCCGACCAG3′ </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="165" pm="."><plain>5′G CCTTGCGACCATACTCCC3′ </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="166" pm="."><plain>105 </plain></SENT>
+</text></td><td align="left" colspan="2" rowspan="1"><text><SENT sid="167" pm="."><plain>80.5 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="168" pm="."><plain>99.3% </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="169" pm="."><plain>EF1α </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="170" pm="."><plain>5′CTGCCAACTTCACATCCC3′ </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="171" pm="."><plain>5′CTTTACCGAACGCCTATC3′ </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="172" pm="."><plain>146 </plain></SENT>
+</text></td><td align="left" colspan="2" rowspan="1"><text><SENT sid="173" pm="."><plain>85 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="174" pm="."><plain>98.5% </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="175" pm="."><plain>SAMDC </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="176" pm="."><plain>5′CAGCAGAGGCAGAGTAGAC3′ </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="177" pm="."><plain>5′ATTGAAGTTGGCGGAGGG3′ </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="178" pm="."><plain>221 </plain></SENT>
+</text></td><td align="left" colspan="2" rowspan="1"><text><SENT sid="179" pm="."><plain>82.9 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="180" pm="."><plain>97.6% </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="181" pm="."><plain>Helicase </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="182" pm="."><plain>5′CTGACAAGATGCGAAGCC3′ </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="183" pm="."><plain>5′TCAATACCACGAGCCAAA3′ </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="184" pm="."><plain>145 </plain></SENT>
+</text></td><td align="left" colspan="2" rowspan="1"><text><SENT sid="185" pm="."><plain>83.6 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="186" pm="."><plain>102.1% </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="187" pm="."><plain>UBQ </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="188" pm="."><plain>5′ACCAACAGCGTCTCATCT3′ </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="189" pm="."><plain>5′GTTATAGTCAGCCAAAGTGC3′ </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="190" pm="."><plain>293 </plain></SENT>
+</text></td><td align="left" colspan="2" rowspan="1"><text><SENT sid="191" pm="."><plain>90.1 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="192" pm="."><plain>100.7% </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="193" pm="."><plain>bTUB </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="194" pm="."><plain>5′GAGGAATACCCAGACAGA3′ </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="195" pm="."><plain>5′TTTCGGAGGTCAGAGTT3′ </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="196" pm="."><plain>287 </plain></SENT>
+</text></td><td align="left" colspan="2" rowspan="1"><text><SENT sid="197" pm="."><plain>85.7 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="198" pm="."><plain>98.4% </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="199" pm="."><plain>CYP </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="200" pm="."><plain>5′TCTGTGGTGGCTCTGAAT3′ </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="201" pm="."><plain>5′ACAAGACTCCCACTCTATGA3′ </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="202" pm="."><plain>185 </plain></SENT>
+</text></td><td align="left" colspan="2" rowspan="1"><text><SENT sid="203" pm="."><plain>83.5 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="204" pm="."><plain>101.1% </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="205" pm="."><plain>SAND </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="206" pm="."><plain>5′CCGATCCAACTCCACTT3′ </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="207" pm="."><plain>5′CCAGATCCGTGAACGAC3′ </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="208" pm="."><plain>95 </plain></SENT>
+</text></td><td align="left" colspan="2" rowspan="1"><text><SENT sid="209" pm="."><plain>87.8 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="210" pm="."><plain>100.8% </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="211" pm="."><plain>CAC </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="212" pm="."><plain>5′AATCCGCTGACTCGTAAC3′ </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="213" pm="."><plain>5′ TCTCCGACGAAAGGCTAC3′ </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="214" pm="."><plain>168 </plain></SENT>
+</text></td><td align="left" colspan="2" rowspan="1"><text><SENT sid="215" pm="."><plain>88.1 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="216" pm="."><plain>97.5% </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="217" pm="."><plain>PP2A </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="218" pm="."><plain>5′AGACTCGGGCAGTAAACC3′ </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="219" pm="."><plain>5′TCCCACCTCTGGAGACAC3′ </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="220" pm="."><plain>168 </plain></SENT>
+</text></td><td align="left" colspan="2" rowspan="1"><text><SENT sid="221" pm="."><plain>85.4 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="222" pm="."><plain>98.1% </plain></SENT>
+</text></td></tr><tr><td align="left" colspan="7" rowspan="1"><text><SENT sid="223" pm="."><plain>Target Gene </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="224" pm="."><plain>NAC2 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="225" pm="."><plain>5′TCAAATAAAGGAAAGAG3′ </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="226" pm="."><plain>5′GGTAGTGAACAACGAGT3′ </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="227" pm="."><plain>181 </plain></SENT>
+</text></td><td align="left" colspan="2" rowspan="1"><text><SENT sid="228" pm="."><plain>84.3 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="229" pm="."><plain>98.1% </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="230" pm="."><plain>BGL2 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="231" pm="."><plain>5′CATCTCCATTTCCACAC3′ </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="232" pm="."><plain>5′ACAGCAACATCACCATT3′ </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="233" pm="."><plain>157 </plain></SENT>
+</text></td><td align="left" colspan="2" rowspan="1"><text><SENT sid="234" pm="."><plain>83.1 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="235" pm="."><plain>101.7% </plain></SENT>
+</text></td></tr></tbody></table></alternatives><table-wrap-foot><fn id="t002fn001"><p><text><SENT sid="236" pm="."><plain>Database source: NCBI Reference Sequence database Genebank batch upload accession number is PRJNA260115 (<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/">http://www.ncbi.nlm.nih.gov</ext-link>). </plain></SENT>
+</text></p></fn></table-wrap-foot></table-wrap></SecTag></sec><sec id="sec006"><title><text><SENT sid="237" pm="."><plain>qPCR analysis </plain></SENT>
+</text></title><p><text><SENT sid="238" pm="."><plain>Initially all primers were tested by qPCR using Premix Ex Taq™ (TaKara) on an ABI 7500 (Applied Biosystems®) real-time PCR system. </plain></SENT>
+<SENT sid="239" pm="."><plain>The total volume of the reaction mixture was 20 μl containing 10 μl 2X SYBR Premix Ex Taq™, 1 μl of the template cDNA reaction mixture, 0.5 μl of each primer (100 μM), 0.5 μl ROX Reference DyeII, and 7.5 μl double distilled H2O (ddH2O). </plain></SENT>
+<SENT sid="240" pm="."><plain>The PCR protocol was as follows: pre-denaturation at 95°C for 30 s, denaturation at 95°C for 3 s, annealing and amplification at 58°C for 30 s, 33 cycles in total, and a 55‒95°C melt curve analysis. </plain></SENT>
+<SENT sid="241" pm="."><plain>All reactions were performed in triplicate. </plain></SENT>
+<SENT sid="242" pm="."><plain>The threshold cycles (Cq) were automatically calculated for each reaction, these values were then used to determine the mean Cq for each data set. </plain></SENT>
+</text></p></sec><sec id="sec007"><title><text><SENT sid="243" pm="."><plain>Statistical analysis </plain></SENT>
+</text></title><p><text><SENT sid="244" pm="."><plain>For adequate reference gene selection, three Microsoft Excel-based software programs, GeNorm (version 3.5) (<ext-link ext-link-type="uri" xlink:href="http://medgen.ugent.be/*jvdesomp/genorm/">http://medgen.ugent.be/*jvdesomp/genorm/</ext-link>), BestKeeper (version 1), and NormFinder (version 0.935), were used to analyze the stability of gene expression. </plain></SENT>
+<SENT sid="245" pm="."><plain>The designer’s instructions and guidelines were followed for all three programs. </plain></SENT>
+<SENT sid="246" pm="."><plain>To apply GeNorm and NormFinder for stable gene expression calculations, Cq values were transformed based on the data input format. </plain></SENT>
+<SENT sid="247" pm="."><plain>The lowest Cq value, representing the highest expression level was used as control and given a value of 1. </plain></SENT>
+<SENT sid="248" pm="."><plain>For GeNorm and NormFinder analyses, raw data were required to be transformed in standard input format, while for BestKeeper analysis, the only original Cq values were used. </plain></SENT>
+<SENT sid="249" pm="."><plain>Standard curves were generated in Microsoft Excel the Cq values plotted against the logarithmic quantities of the known amounts of cDNA dilutions: 1, 1/5, 1/25, 1/125, 1/625, and 1/3125 using cDNA adjusted to 200 ng/μl as a start material. </plain></SENT>
+<SENT sid="250" pm="."><plain>To determine the correlation coefficients (r2 values), only Cq values less than 40 were considered. </plain></SENT>
+<SENT sid="251" pm="."><plain>To determine amplification efficiencies (E) only Cq values less than 40 were used in the following formula E = [5-(1/slope)-1]×100%. </plain></SENT>
+<SENT sid="252" pm="."><plain>The efficiencies obtained in all qPCR assays were between 95% and 105%. </plain></SENT>
+<SENT sid="253" pm="."><plain>To calculate the relative expression level of each gene, the 2-△Cq method was applied [45]. </plain></SENT>
+<SENT sid="254" pm="."><plain>While, △Cq was determined by subtracting the minimum Cq value from candidate reference genes Cq (△Cq = candidate reference gene Cq value–minimum Cq value). </plain></SENT>
+<SENT sid="255" pm="."><plain>These data was further analyzed by GeNorm and BestKeeper software tools. </plain></SENT>
+</text></p><p><text><SENT sid="256" pm="."><plain>Analysis of variance using SPSS (<ext-link ext-link-type="uri" xlink:href="http://xiazai.zol.com.cn/detail/44/437842.shtml">http://xiazai.zol.com.cn/detail/44/437842.shtml</ext-link>) was performed to compare the data at a significance level of P&lt;0.05. </plain></SENT>
+<SENT sid="257" pm="."><plain>To calculate the expression stability values and to identify the most stably expressed reference genes, the Excel-based algorithm BestKeeper was inevitable [28]. </plain></SENT>
+<SENT sid="258" pm="."><plain>For this, the standard deviation (SD), correlation coefficient (r) and coefficient of variance (CV) were estimated. </plain></SENT>
+<SENT sid="259" pm="."><plain>A gene with a SD value &gt;1 was treated as unstable. </plain></SENT>
+<SENT sid="260" pm="."><plain>To identify the highest stably expressed genes, a BestKeeper Index based on the geometric means of the Cq values was calculated. </plain></SENT>
+</text></p></sec></sec></SecTag><SecTag type="RESULTS"><sec sec-type="results" id="sec008"><title><text><SENT sid="261" pm="."><plain>Results </plain></SENT>
+</text></title><sec id="sec009"><title><text><SENT sid="262" pm="."><plain>Expression profiles of the reference genes </plain></SENT>
+</text></title><p><text><SENT sid="263" pm="."><plain>Of the 12 candidate reference genes, 9 (ACT, GAPDH, βTUB, UBQ, EF1a, helicase, PP2A, 18s rRNA, and SAMDC) are traditional control genes, while 3 (SAND, CAC, and CYP) are novel candidates (Table 1). </plain></SENT>
+<SENT sid="264" pm="."><plain>The Cq values, representing the cycle at which significant PCR product was amplified, were calculated for each gene (Table 2). </plain></SENT>
+<SENT sid="265" pm="."><plain>Generally, the Cq value was obtained in the mid-exponential phase of amplification (Fig 1). </plain></SENT>
+<SENT sid="266" pm="."><plain>The Cq values of all 12 potential reference genes varied widely from 13 to 34 cycles. </plain></SENT>
+<SENT sid="267" pm="."><plain>The highest expressed gene in all tissues was 18SrRNA, with a Cq value &lt; 25. </plain></SENT>
+</text></p><SecTag type="FIG"><fig id="pone.0193076.g001" orientation="portrait" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0193076.g001</object-id><label>Fig 1</label><caption><title><text><SENT sid="268" pm="."><plain>Distribution of the average Cq values of all 12 reference genes evaluated in black locust samples: 18SrRNA, ACT, CAC, CYP, EF1a, GAPDH, Helicase, PP2A, SAMDC, SAND, βTUB, and UBQ. </plain></SENT>
+</text></title><p><text><SENT sid="269" pm="."><plain>The linear line shows median, dots for extremes, boxes for 25%-75% Cq value and whiskers for 5%-95% respectively. </plain></SENT>
+</text></p></caption><graphic xlink:href="pone.0193076.g001"/></fig></SecTag></sec><sec id="sec010"><title><text><SENT sid="270" pm="."><plain>geNorm analysis </plain></SENT>
+</text></title><p><text><SENT sid="271" pm="."><plain>To analyze and rank the reference genes in terms of expression stability, geNorm was used. </plain></SENT>
+<SENT sid="272" pm="."><plain>Cq values were obtained for all samples and transformed into relative quantities using the △ Cq method. </plain></SENT>
+<SENT sid="273" pm="."><plain>The stability value M was calculated for the average pairwise expression ratio. </plain></SENT>
+<SENT sid="274" pm="."><plain>A gene with a low M value is considered stable, while a gene with a high M value is considered unstable (Fig 2). </plain></SENT>
+<SENT sid="275" pm="."><plain>To identify potential reference genes, geNorm recommends selecting genes with an M value &lt; 1.5. </plain></SENT>
+<SENT sid="276" pm="."><plain>In combined analyses, helicase and ACT had the lowest M values (0.037) and thus the highest expression stability, followed by GAPDH and PP2A, whereas 18s rRNA and UBQ were less stable. </plain></SENT>
+<SENT sid="277" pm="."><plain>When untreated tissues such as root, stem, leaf, flower and pods were analyzed, ACT and EF1a were most stably expressed, with a minimum M value of 0.01, followed by SAND and helicase, while SAMDC and TUB were least stable. </plain></SENT>
+<SENT sid="278" pm="."><plain>Under ABA stress, ACT and GAPDH were most stable, TUB and EF1a moderately stable, and CAC and SAND the least stable. </plain></SENT>
+<SENT sid="279" pm="."><plain>Under NaCl stress, ACT, helicase, and GAPDH were most stable, TUB and EF1a less stable, and UBQ and CYP the least stable. ACT, GAPDH, and PP2A were highly stable, helicase and EF1a were moderately stable, and 18s rRNA and UBQ the least stable under PEG treatment. </plain></SENT>
+<SENT sid="280" pm="."><plain>Under heat stress (40°C), SAMDC, SAND, and GAPDH were relatively stable, ACT and PP2A less stable, and CYP and TUB were the least stable. </plain></SENT>
+<SENT sid="281" pm="."><plain>Under cold stress (4°C), ACT, PP2A, and GAPDH were highly stable, TUB and EF1a were less stable, and 18s rRNA and SAND were the least stable. </plain></SENT>
+<SENT sid="282" pm="."><plain>In conclusion, the most stable reference genes in all samples according to the geNorm analysis were ACT and GAPDH. </plain></SENT>
+</text></p><SecTag type="FIG"><fig id="pone.0193076.g002" orientation="portrait" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0193076.g002</object-id><label>Fig 2</label><caption><title><text><SENT sid="283" pm="."><plain>Average expression stability values (M) of 12 candidate reference genes under different conditions and tissues calculated by geNorm. </plain></SENT>
+</text></title></caption><graphic xlink:href="pone.0193076.g002"/></fig></SecTag><p><text><SENT sid="284" pm="."><plain>To minimize interpretation of qPCR expression analyses and to increase overall robustness of the analyses, the use of two internal reference genes is highly recommended [38]. </plain></SENT>
+<SENT sid="285" pm="."><plain>To calculate the number of internal control genes needed, the following formula Vn/n+1&lt;0.15 (n = 1,2,3…..) was developed [39]. </plain></SENT>
+<SENT sid="286" pm="."><plain>According to the aforementioned formula, if V&lt;0.15, then no inclusion of ≥n+1 reference genes should be considered. </plain></SENT>
+<SENT sid="287" pm="."><plain>The data depicted in Fig 3 indicates that expanding the reference gene set beyond two control genes will not significantly impact the outcome. </plain></SENT>
+<SENT sid="288" pm="."><plain>Surprisingly, NaCl treatment (D) had the greatest variation among all samples. </plain></SENT>
+</text></p><SecTag type="FIG"><fig id="pone.0193076.g003" orientation="portrait" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0193076.g003</object-id><label>Fig 3</label><caption><title><text><SENT sid="289" pm="."><plain>Estimation of the required number of reference genes for normalization by pairwise variation (V) using geNorm. </plain></SENT>
+</text></title></caption><graphic xlink:href="pone.0193076.g003"/></fig></SecTag></sec><sec id="sec011"><title><text><SENT sid="290" pm="."><plain>NormFinder analysis </plain></SENT>
+</text></title><p><text><SENT sid="291" pm="."><plain>NormFinder is another Microsoft Excel-based Visual Basic application that assigns stability values to single candidate reference genes. </plain></SENT>
+<SENT sid="292" pm="."><plain>The NormFinder algorithm uses a model-based approach (M value) for estimation of gene expression variation among candidate genes. </plain></SENT>
+<SENT sid="293" pm="."><plain>NormFinder takes into account intra- and intergroup variation for normalization factor calculations and prevents misinterpretations caused by artificial selection of co-regulated genes. </plain></SENT>
+</text></p><p><text><SENT sid="294" pm="."><plain>We used NormFinder to analyze the gene expression profiles of all genes evaluated (Table 3). </plain></SENT>
+<SENT sid="295" pm="."><plain>Although the ranking order of the genes differed somewhat from the geNorm findings, no significant differences were observed. ACT, GAPDH, and helicase were stable candidate reference genes, with M values of 0.16, 0.17, and 0.17, respectively. </plain></SENT>
+<SENT sid="296" pm="."><plain>In plants treated with chemicals ABA, PEG, and NaCl and different temperature conditions (cold and hot), the remaining nine genes (SAMDC, 18s rRNA, EF1α, UBQ, βTUB, CYP, SAND, CAC, and PP2A) exhibited large fluctuations in their expression profiles. </plain></SENT>
+<SENT sid="297" pm="."><plain>Those genes that exhibited moderate gene expression in NormFinder exhibited slightly different expression stabilities relative to geNorm. </plain></SENT>
+<SENT sid="298" pm="."><plain>The overall ranking of the candidate reference genes by NormFinder was ACT &gt; GAPDH &gt; helicase &gt; EF1a &gt; PP2A &gt; SAMDC &gt; βTUB &gt; CYP&gt; CAC &gt; SAND &gt;UBQ &gt; 18s rRNA. </plain></SENT>
+<SENT sid="299" pm="."><plain>The NormFinder results were extremely stable and consistent compared with the geNorm results. </plain></SENT>
+</text></p><SecTag type="TABLE"><table-wrap id="pone.0193076.t003" orientation="portrait" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0193076.t003</object-id><label>Table 3</label><caption><title><text><SENT sid="300" pm="."><plain>Average expression stability values of the 12 reference genes in different organs, calculated by NormFinder. </plain></SENT>
+</text></title></caption><alternatives><graphic id="pone.0193076.t003g" xlink:href="pone.0193076.t003"/><table frame="hsides" rules="groups"><colgroup span="1"><col align="left" valign="middle" span="1"/><col align="left" valign="middle" span="1"/><col align="left" valign="middle" span="1"/><col align="left" valign="middle" span="1"/><col align="left" valign="middle" span="1"/><col align="left" valign="middle" span="1"/><col align="left" valign="middle" span="1"/><col align="left" valign="middle" span="1"/></colgroup><thead><tr><th align="left" rowspan="1" colspan="1"><text><SENT sid="301" pm="."><plain>Rank </plain></SENT>
+</text></th><th align="left" rowspan="1" colspan="1"><text><SENT sid="302" pm="."><plain>Total(A) </plain></SENT>
+</text></th><th align="left" rowspan="1" colspan="1"><text><SENT sid="303" pm="."><plain>Tissues(B) </plain></SENT>
+</text></th><th align="left" rowspan="1" colspan="1"><text><SENT sid="304" pm="."><plain>ABA(C) </plain></SENT>
+</text></th><th align="left" rowspan="1" colspan="1"><text><SENT sid="305" pm="."><plain>PEG(D) </plain></SENT>
+</text></th><th align="left" rowspan="1" colspan="1"><text><SENT sid="306" pm="."><plain>NaCl(E) </plain></SENT>
+</text></th><th align="left" rowspan="1" colspan="1"><text><SENT sid="307" pm="."><plain>Heat(F) </plain></SENT>
+</text></th><th align="left" rowspan="1" colspan="1"><text><SENT sid="308" pm="."><plain>Cold(G) </plain></SENT>
+</text></th></tr></thead><tbody><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="309" pm="."><plain>1 M value </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="310" pm="."><plain>ACT </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="311" pm="."><plain>PP2A </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="312" pm="."><plain>Helicase </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="313" pm="."><plain>PP2A </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="314" pm="."><plain>ACT </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="315" pm="."><plain>GAPDH </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="316" pm="."><plain>Helicase </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="317" pm="."><plain>0.16 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="318" pm="."><plain>0.09 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="319" pm="."><plain>0.03 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="320" pm="."><plain>0.07 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="321" pm="."><plain>0.13 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="322" pm="."><plain>0.07 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="323" pm="."><plain>0.07 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="324" pm="."><plain>2 M value </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="325" pm="."><plain>GAPDH </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="326" pm="."><plain>ACT </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="327" pm="."><plain>TUB </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="328" pm="."><plain>CYP </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="329" pm="."><plain>GAPDH </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="330" pm="."><plain>SAMDC </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="331" pm="."><plain>PP2A </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="332" pm="."><plain>0.17 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="333" pm="."><plain>0.11 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="334" pm="."><plain>0.06 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="335" pm="."><plain>0.10 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="336" pm="."><plain>0.14 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="337" pm="."><plain>0.13 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="338" pm="."><plain>0.07 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="339" pm="."><plain>3 M value </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="340" pm="."><plain>Helicase </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="341" pm="."><plain>EF1a </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="342" pm="."><plain>PP2A </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="343" pm="."><plain>Helicase </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="344" pm="."><plain>Helicase </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="345" pm="."><plain>Helicase </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="346" pm="."><plain>ACT </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="347" pm="."><plain>0.17 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="348" pm="."><plain>0.15 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="349" pm="."><plain>0.12 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="350" pm="."><plain>0.14 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="351" pm="."><plain>0.17 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="352" pm="."><plain>0.14 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="353" pm="."><plain>0.09 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="354" pm="."><plain>4 M value </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="355" pm="."><plain>EF1a </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="356" pm="."><plain>CAC </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="357" pm="."><plain>SAMDC </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="358" pm="."><plain>ACT </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="359" pm="."><plain>SAMDC </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="360" pm="."><plain>ACT </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="361" pm="."><plain>GAPDH </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="362" pm="."><plain>0.30 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="363" pm="."><plain>0.20 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="364" pm="."><plain>0.18 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="365" pm="."><plain>0.19 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="366" pm="."><plain>0.47 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="367" pm="."><plain>0.19 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="368" pm="."><plain>0.13 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="369" pm="."><plain>5 M value </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="370" pm="."><plain>PP2A </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="371" pm="."><plain>GAPDH </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="372" pm="."><plain>ACT </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="373" pm="."><plain>GAPDH </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="374" pm="."><plain>EF1a </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="375" pm="."><plain>SAND </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="376" pm="."><plain>TUB </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="377" pm="."><plain>0.37 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="378" pm="."><plain>0.27 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="379" pm="."><plain>0.19 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="380" pm="."><plain>0.22 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="381" pm="."><plain>0.48 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="382" pm="."><plain>0.21 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="383" pm="."><plain>0.28 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="384" pm="."><plain>6 M value </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="385" pm="."><plain>SAMDC </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="386" pm="."><plain>Helicase </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="387" pm="."><plain>GAPDH </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="388" pm="."><plain>SAMDC </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="389" pm="."><plain>TUB </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="390" pm="."><plain>PP2A </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="391" pm="."><plain>EF1a </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="392" pm="."><plain>0.47 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="393" pm="."><plain>0.29 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="394" pm="."><plain>0.20 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="395" pm="."><plain>0.26 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="396" pm="."><plain>0.58 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="397" pm="."><plain>0.26 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="398" pm="."><plain>0.34 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="399" pm="."><plain>7 M value </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="400" pm="."><plain>TUB </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="401" pm="."><plain>UBQ </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="402" pm="."><plain>CYP </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="403" pm="."><plain>EF1a </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="404" pm="."><plain>18s rRNA </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="405" pm="."><plain>EF1a </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="406" pm="."><plain>CYP </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="407" pm="."><plain>0.59 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="408" pm="."><plain>0.30 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="409" pm="."><plain>0.38 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="410" pm="."><plain>0.27 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="411" pm="."><plain>0.75 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="412" pm="."><plain>0.27 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="413" pm="."><plain>0.49 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="414" pm="."><plain>8M value </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="415" pm="."><plain>CYP </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="416" pm="."><plain>SAND </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="417" pm="."><plain>EF1a </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="418" pm="."><plain>SAND </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="419" pm="."><plain>CAC </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="420" pm="."><plain>18s rRNA </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="421" pm="."><plain>SAMDC </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="422" pm="."><plain>0.61 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="423" pm="."><plain>0.33 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="424" pm="."><plain>0.42 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="425" pm="."><plain>0.31 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="426" pm="."><plain>0.78 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="427" pm="."><plain>0.32 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="428" pm="."><plain>0.54 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="429" pm="."><plain>9 M value </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="430" pm="."><plain>CAC </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="431" pm="."><plain>CYP </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="432" pm="."><plain>18s rRNA </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="433" pm="."><plain>TUB </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="434" pm="."><plain>PP2A </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="435" pm="."><plain>TUB </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="436" pm="."><plain>CAC </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="437" pm="."><plain>0.70 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="438" pm="."><plain>0.34 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="439" pm="."><plain>0.55 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="440" pm="."><plain>0.34 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="441" pm="."><plain>0.81 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="442" pm="."><plain>0.34 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="443" pm="."><plain>0.83 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="444" pm="."><plain>10 M value </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="445" pm="."><plain>SAND </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="446" pm="."><plain>18s rRNA </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="447" pm="."><plain>SAND </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="448" pm="."><plain>CAC </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="449" pm="."><plain>CYP </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="450" pm="."><plain>UBQ </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="451" pm="."><plain>SAND </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="452" pm="."><plain>0.73 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="453" pm="."><plain>0.49 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="454" pm="."><plain>0.71 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="455" pm="."><plain>0.37 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="456" pm="."><plain>0.98 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="457" pm="."><plain>0.34 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="458" pm="."><plain>0.99 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="459" pm="."><plain>11 M value </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="460" pm="."><plain>UBQ </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="461" pm="."><plain>TUB </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="462" pm="."><plain>UBQ </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="463" pm="."><plain>UBQ </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="464" pm="."><plain>SAND </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="465" pm="."><plain>CAC </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="466" pm="."><plain>UBQ </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="467" pm="."><plain>0.77 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="468" pm="."><plain>0.57 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="469" pm="."><plain>0.83 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="470" pm="."><plain>0.49 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="471" pm="."><plain>1.02 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="472" pm="."><plain>0.39 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="473" pm="."><plain>1.09 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="474" pm="."><plain>12 M value </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="475" pm="."><plain>18s rRNA </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="476" pm="."><plain>SAMDC </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="477" pm="."><plain>CAC </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="478" pm="."><plain>18s rRNA </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="479" pm="."><plain>UBQ </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="480" pm="."><plain>CYP </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="481" pm="."><plain>18s rRNA </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="482" pm="."><plain>0.91 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="483" pm="."><plain>0.76 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="484" pm="."><plain>0.85 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="485" pm="."><plain>0.65 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="486" pm="."><plain>1.15 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="487" pm="."><plain>0.69 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="488" pm="."><plain>1.23 </plain></SENT>
+</text></td></tr></tbody></table></alternatives><table-wrap-foot><fn id="t003fn001"><p><text><SENT sid="489" pm="."><plain>Note: The expression stability values of the 12 reference genes and their rankings, as calculated by NormFinder, in total (A), different tissues (B), under abscisic acid treatment (C), under PEG treatment (D), under NaCl treatment (E), under heat treatment (F), and under cold treatment (G). </plain></SENT>
+<SENT sid="490" pm="."><plain>A lower average M value indicates more stable expression. </plain></SENT>
+</text></p></fn></table-wrap-foot></table-wrap></SecTag></sec><sec id="sec012"><title><text><SENT sid="491" pm="."><plain>BestKeeper analysis </plain></SENT>
+</text></title><p><text><SENT sid="492" pm="."><plain>BestKeeper is another Microsoft Excel-based tool for stability analysis of candidate reference genes. </plain></SENT>
+<SENT sid="493" pm="."><plain>With BestKeeper, the original average Cq values are used instead of transformed values. </plain></SENT>
+<SENT sid="494" pm="."><plain>This algorithm compares the gene expression stability of all candidate reference genes overall. </plain></SENT>
+<SENT sid="495" pm="."><plain>According to the BestKeeper analysis, ACT and GAPDH were highly stable, whereas CAC and SAND were the least stable under abscisic acid treatment. Helicase and EF1-α were the most stable, while SAMDC and CAC were the least stable in PEG-treated tissues. </plain></SENT>
+<SENT sid="496" pm="."><plain>In NaCl-treated samples, the most stable genes were GAPDH and helicase, and the least stable were PP2A and SAND. GAPDH and helicase had high expression stabilities while CYP and TUB had the lowest expression stability under heat treatment. GAPDH and βTUB were the most stable, while CAC and SAND genes were the least stable under cold stress. ACT and GAPDH were highly stable in all tissues under all conditions (Table 4). </plain></SENT>
+</text></p><SecTag type="TABLE"><table-wrap id="pone.0193076.t004" orientation="portrait" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0193076.t004</object-id><label>Table 4</label><caption><title><text><SENT sid="497" pm="."><plain>Ranking of 10 reference genes in order of their expression stability, as calculated by BestKeeper. </plain></SENT>
+</text></title></caption><alternatives><graphic id="pone.0193076.t004g" xlink:href="pone.0193076.t004"/><table frame="hsides" rules="groups"><colgroup span="1"><col align="left" valign="middle" span="1"/><col align="left" valign="middle" span="1"/><col align="left" valign="middle" span="1"/><col align="left" valign="middle" span="1"/><col align="left" valign="middle" span="1"/><col align="left" valign="middle" span="1"/><col align="left" valign="middle" span="1"/><col align="left" valign="middle" span="1"/></colgroup><thead><tr><th align="justify" rowspan="1" colspan="1"><text><SENT sid="498" pm="."><plain>Gene </plain></SENT>
+</text></th><th align="justify" rowspan="1" colspan="1"><text><SENT sid="499" pm="."><plain>Total(A) </plain></SENT>
+</text></th><th align="justify" rowspan="1" colspan="1"><text><SENT sid="500" pm="."><plain>Tissue(B) </plain></SENT>
+</text></th><th align="justify" rowspan="1" colspan="1"><text><SENT sid="501" pm="."><plain>ABA(C) </plain></SENT>
+</text></th><th align="justify" rowspan="1" colspan="1"><text><SENT sid="502" pm="."><plain>PEG(D) </plain></SENT>
+</text></th><th align="justify" rowspan="1" colspan="1"><text><SENT sid="503" pm="."><plain>NaCl(E) </plain></SENT>
+</text></th><th align="justify" rowspan="1" colspan="1"><text><SENT sid="504" pm="."><plain>Heat(F) </plain></SENT>
+</text></th><th align="justify" rowspan="1" colspan="1"><text><SENT sid="505" pm="."><plain>Cold(G) </plain></SENT>
+</text></th></tr></thead><tbody><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="506" pm="."><plain>ACT </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="507" pm="."><plain>0.988 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="508" pm="."><plain>0.974 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="509" pm="."><plain>0.998 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="510" pm="."><plain>0.933 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="511" pm="."><plain>0.990 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="512" pm="."><plain>0.986 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="513" pm="."><plain>0.992 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="514" pm="."><plain>CAC </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="515" pm="."><plain>0.866 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="516" pm="."><plain>0.937 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="517" pm="."><plain>0.242 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="518" pm="."><plain>0.719 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="519" pm="."><plain>0.886 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="520" pm="."><plain>0.881 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="521" pm="."><plain>0.973 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="522" pm="."><plain>CYP </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="523" pm="."><plain>0.901 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="524" pm="."><plain>0.871 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="525" pm="."><plain>0.888 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="526" pm="."><plain>0.952 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="527" pm="."><plain>0.966 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="528" pm="."><plain>0.232 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="529" pm="."><plain>0.998 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="530" pm="."><plain>EF1a </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="531" pm="."><plain>0.983 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="532" pm="."><plain>0.964 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="533" pm="."><plain>0.971 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="534" pm="."><plain>0.981 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="535" pm="."><plain>0.990 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="536" pm="."><plain>0.911 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="537" pm="."><plain>0.988 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="538" pm="."><plain>GAPDH </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="539" pm="."><plain>0.987 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="540" pm="."><plain>0.945 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="541" pm="."><plain>0.997 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="542" pm="."><plain>0.890 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="543" pm="."><plain>0.992 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="544" pm="."><plain>1 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="545" pm="."><plain>1.00 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="546" pm="."><plain>helicase </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="547" pm="."><plain>0.983 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="548" pm="."><plain>0.895 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="549" pm="."><plain>0.980 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="550" pm="."><plain>0.974 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="551" pm="."><plain>0.998 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="552" pm="."><plain>0.998 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="553" pm="."><plain>0.998 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="554" pm="."><plain>PP2A </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="555" pm="."><plain>0.948 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="556" pm="."><plain>0.961 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="557" pm="."><plain>0.978 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="558" pm="."><plain>0.945 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="559" pm="."><plain>0.805 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="560" pm="."><plain>0.985 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="561" pm="."><plain>0.999 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="562" pm="."><plain>SAMDC </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="563" pm="."><plain>0.951 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="564" pm="."><plain>0.880 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="565" pm="."><plain>0.975 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="566" pm="."><plain>0.791 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="567" pm="."><plain>0.970 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="568" pm="."><plain>0.983 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="569" pm="."><plain>0.985 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="570" pm="."><plain>SAND </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="571" pm="."><plain>0.855 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="572" pm="."><plain>0.823 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="573" pm="."><plain>0.229 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="574" pm="."><plain>0.667 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="575" pm="."><plain>0.848 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="576" pm="."><plain>0.957 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="577" pm="."><plain>0.935 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="578" pm="."><plain>TUB </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="579" pm="."><plain>0.952 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="580" pm="."><plain>0.878 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="581" pm="."><plain>0.961 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="582" pm="."><plain>0.972 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="583" pm="."><plain>0.923 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="584" pm="."><plain>0.804 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="585" pm="."><plain>0.999 </plain></SENT>
+</text></td></tr></tbody></table></alternatives><table-wrap-foot><fn id="t004fn001"><p><text><SENT sid="586" pm="."><plain>Note: The expression stability values of 10 reference genes and their ranking, as calculated by BestKeeper, in total (A), in different tissues (B), under abscisic acid treatment (C), under PEG treatment (D), under NaCl treatment (E), under heat treatment (F), and under cold treatment (G). </plain></SENT>
+</text></p></fn></table-wrap-foot></table-wrap></SecTag></sec><sec id="sec013"><title><text><SENT sid="587" pm="."><plain>Reference genes validation </plain></SENT>
+</text></title><p><text><SENT sid="588" pm="."><plain>To confirm expression stability of significantly normalized reference genes, it is crucial to calculate the relative expression levels of selected normalized genes. </plain></SENT>
+<SENT sid="589" pm="."><plain>For this purpose, the expression level of the top two reference genes identified in this study, ACT and GAPDH, were compared along with the expression level of NAC2 (4A-F) and BGL2 (5A-F). </plain></SENT>
+<SENT sid="590" pm="."><plain>Highest expression of NAC2 was observed on ABA treatment at 48 h (Fig 4B), while decreased expression levels were observed in response to cold treatment at 12 h (Fig 4A). </plain></SENT>
+<SENT sid="591" pm="."><plain>In the case of BGL2, highest expression was observed following NaCl treatment at 48 h (Fig 5C), while decreased expression level was observed following PEG treatment at 48 h (Fig 5E). </plain></SENT>
+</text></p><SecTag type="FIG"><fig id="pone.0193076.g004" orientation="portrait" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0193076.g004</object-id><label>Fig 4</label><caption><p><text><SENT sid="592" pm="."><plain>Validation of NAC2 expression was assessed using individual reference genes (ACT, GAPDH or UBQ) under diverse abiotic conditions, (A) 4°C for 0, 12, 24 and 48h, (B) 40°C for 0, 12, 24 and 48h, (C) NaCl (200 mM), (D) ABA (150 mM), (E) PEG (100%), (F) Tissues (Root, Stem, Leaf, Flower and Pod). </plain></SENT>
+</text></p></caption><graphic xlink:href="pone.0193076.g004"/></fig></SecTag><SecTag type="FIG"><fig id="pone.0193076.g005" orientation="portrait" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0193076.g005</object-id><label>Fig 5</label><caption><p><text><SENT sid="593" pm="."><plain>Validation of BGL2 expression was assessed using individual reference genes (ACT, GAPDH or UBQ) under diverse abiotic conditions, (A) 4°C for 0, 12, 24 and 48h, (B) 40°C for 0, 12, 24 and 48h, (C) NaCl (200 mM), (D) ABA (150 mM), (E) PEG (100%), (F) Tissues (Root, Stem, Leaf, Flower and Pod). </plain></SENT>
+</text></p></caption><graphic xlink:href="pone.0193076.g005"/></fig></SecTag><p><text><SENT sid="594" pm="."><plain>There were no significant differences in the expression patterns of NAC2 and BGL2 using either ACT or GAPDH as the internal control (P&lt;0.05), which shows that ACT and GAPDH were suitable reference genes. </plain></SENT>
+<SENT sid="595" pm="."><plain>In contrast, use of the least stable candidate reference gene (UBQ) with both target genes resulted in expression profiles that were unstable in all stress conditions and tissues (Figs 4 and 5). </plain></SENT>
+<SENT sid="596" pm="."><plain>Expression profile of NAC2 gene was significant when evaluated at P&lt;0.05 (Fig 6). </plain></SENT>
+</text></p><SecTag type="FIG"><fig id="pone.0193076.g006" orientation="portrait" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0193076.g006</object-id><label>Fig 6</label><caption><title><text><SENT sid="597" pm="."><plain>Expression profile of NAC2 gene in different tissues and in response to different stressors in Robinia pseudoacacia as investigated by qPCR with ACT and GAPDH used as dual reference genes. </plain></SENT>
+</text></title></caption><graphic xlink:href="pone.0193076.g006"/></fig></SecTag></sec></sec></SecTag><SecTag type="DISCUSS"><sec sec-type="conclusions" id="sec014"><title><text><SENT sid="598" pm="."><plain>Discussion </plain></SENT>
+</text></title><p><text><SENT sid="599" pm="."><plain>Drought, salinity, heat, cold and other abiotic stress conditions have significant effect on black locust and other forest fauna. </plain></SENT>
+<SENT sid="600" pm="."><plain>To improve resistance against these stress conditions and enhance plant productivity, it’s imperative to explore genes responsive to these stimuli. </plain></SENT>
+<SENT sid="601" pm="."><plain>RNA sequencing and qPCR have been considered reliable techniques for the analysis of gene expression patterns. </plain></SENT>
+<SENT sid="602" pm="."><plain>To obtain accurate results by qPCR, the PCR conditions and selection of genes used as internal controls must be optimized. </plain></SENT>
+<SENT sid="603" pm="."><plain>The selection of an appropriate reference gene is a crucial prerequisite for gene expression analysis [46]. </plain></SENT>
+<SENT sid="604" pm="."><plain>Internal control genes must retain expression stability, while the gene of interest exhibits varied in expression under the experimental condition. </plain></SENT>
+</text></p><p><text><SENT sid="605" pm="."><plain>Although UBQ showed highly stable expression in the model plant Arabidopsis [29,30], its expression varied across different developmental stages of rice and soybean [47,48]. </plain></SENT>
+<SENT sid="606" pm="."><plain>The ribosomal RNA subunits 18S and 28S are commonly used internal control genes. </plain></SENT>
+<SENT sid="607" pm="."><plain>While both genes are considered reference genes with extremely stable gene expression in all tissues of all organisms, their stability is controversial. </plain></SENT>
+<SENT sid="608" pm="."><plain>We used mRNA for the RNA quantification studies, as mRNA free from other RNA residues gives satisfactory results. </plain></SENT>
+<SENT sid="609" pm="."><plain>On the other hand, entire RNA contains variable amounts of 5S, 18S and 28S ribosomal RNA (rRNA) that may cause significant variations in results [38]. </plain></SENT>
+<SENT sid="610" pm="."><plain>The most serious drawback of using these genes is their abundance compared with target transcripts. </plain></SENT>
+<SENT sid="611" pm="."><plain>Because rRNA is not polyadenylated, these genes are not applicable when the template consists of cDNA reverse-transcribed from total RNA using oligo-dT primers. </plain></SENT>
+<SENT sid="612" pm="."><plain>It is difficult to subtract the rRNA expression value from that of the gene of interest for accurate analysis of qPCR data. </plain></SENT>
+<SENT sid="613" pm="."><plain>In short, for these reasons, 18S and 28S rRNA genes fail to replace other reference genes. </plain></SENT>
+<SENT sid="614" pm="."><plain>There are no universal endogenous control genes available for gene expression profiling among all organisms. </plain></SENT>
+<SENT sid="615" pm="."><plain>Thus, it is imperative to identify suitable reference genes as internal controls for accurate quantification of gene expression. </plain></SENT>
+</text></p><p><text><SENT sid="616" pm="."><plain>In this study, we selected and evaluated 12 genes from different functional classes and gene families as candidate reference genes i.e., SAMDC, 18s rRNA, EF1α, UBQ, βTUB, CYP, SAND, CAC, PP2A and helicase for black locust gene expression studies among different tissues and abiotic stress treatments. </plain></SENT>
+<SENT sid="617" pm="."><plain>Because these genes already have been used for gene expression profiling of other organisms, we also considered these genes as candidate references. </plain></SENT>
+<SENT sid="618" pm="."><plain>For example, ACT has been used for qPCR studies in Platycladus orientalis [43], TUB in Salix matsudana [49], UBQ in longan tree [24], and EF1β and GAPDH in Vernicia fordii [50]. </plain></SENT>
+<SENT sid="619" pm="."><plain>We selected these genes from RNA sequencing data (PRJNA260115) and used qPCR together with statistical and graphical techniques (geNorm, BestKeeper and NormFinder) to determine the most stable internal control gene for qPCR studies. </plain></SENT>
+</text></p><p><text><SENT sid="620" pm="."><plain>On the basis of three algorithms analysis results, we found ACT and GAPDH with most stable gene expression among whole plants, as well as different tissues under both stress and normal conditions (Table 5). </plain></SENT>
+<SENT sid="621" pm="."><plain>Actin (ACT) is a cytoskeleton structural protein involved in cell signaling while glyceradehde-3-phosphate dehydrogenase (GAPDH) plays pivotal role in energy yielding step during carbohydrates metabolism and involved in DNA repair [51,52]. </plain></SENT>
+<SENT sid="622" pm="."><plain>These results suggest that our discovery is perfectly in agreement with previous studies, such as ACT has been ranked as best internal control for gene expression studies in Platycladus orientalis, Vernicia fordii and Pinus massoniana [43,50,53], whereas it’s expression stability is unstable in Glycine max [10]. </plain></SENT>
+<SENT sid="623" pm="."><plain>Similarly, GAPDH retained perfectly stable expression in Vernicia fordii and Camellia sinensis [50,54] in different tissues and under various abiotic stress conditions, whereas it’s expression was compromised in Platycladus orientalis [43]. </plain></SENT>
+<SENT sid="624" pm="."><plain>In order to meager errors, it is highly recommended to use more than one appropriate internal control genes in qPCR studies [38]. </plain></SENT>
+<SENT sid="625" pm="."><plain>In this study we wittily identified two most stable internal control genes such as helicase and EF1α under PEG stress, GAPDH and βTUB under cold, GAPDH and helicase under NaCl and heat while ACT and GAPDH under all conditions except heat. </plain></SENT>
+</text></p><SecTag type="TABLE"><table-wrap id="pone.0193076.t005" orientation="portrait" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0193076.t005</object-id><label>Table 5</label><caption><title><text><SENT sid="626" pm="."><plain>Ranking of the candidate reference genes according to their stability values using geNorm, NormFinder, and BestKeeper. </plain></SENT>
+</text></title></caption><alternatives><graphic id="pone.0193076.t005g" xlink:href="pone.0193076.t005"/><table frame="hsides" rules="groups"><colgroup span="1"><col align="left" valign="middle" span="1"/><col align="left" valign="middle" span="1"/><col align="left" valign="middle" span="1"/><col align="left" valign="middle" span="1"/><col align="left" valign="middle" span="1"/><col align="left" valign="middle" span="1"/><col align="left" valign="middle" span="1"/></colgroup><thead><tr><th align="center" rowspan="2" colspan="1"><text><SENT sid="627" pm="."><plain>Gene Name </plain></SENT>
+</text></th><th align="center" colspan="2" rowspan="1"><text><SENT sid="628" pm="."><plain>geNorm </plain></SENT>
+</text></th><th align="center" colspan="2" rowspan="1"><text><SENT sid="629" pm="."><plain>NormFinder </plain></SENT>
+</text></th><th align="justify" colspan="2" rowspan="1"><text><SENT sid="630" pm="."><plain>BestKeeper* </plain></SENT>
+</text></th></tr><tr><th align="center" rowspan="1" colspan="1"><text><SENT sid="631" pm="."><plain>Stability Value </plain></SENT>
+</text></th><th align="center" rowspan="1" colspan="1"><text><SENT sid="632" pm="."><plain>Ranking Order </plain></SENT>
+</text></th><th align="center" rowspan="1" colspan="1"><text><SENT sid="633" pm="."><plain>Stability Value </plain></SENT>
+</text></th><th align="center" rowspan="1" colspan="1"><text><SENT sid="634" pm="."><plain>Ranking Order </plain></SENT>
+</text></th><th align="center" rowspan="1" colspan="1"><text><SENT sid="635" pm="."><plain>Stability Value </plain></SENT>
+</text></th><th align="center" rowspan="1" colspan="1"><text><SENT sid="636" pm="."><plain>Ranking Order </plain></SENT>
+</text></th></tr></thead><tbody><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="637" pm="."><plain>ACT </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="638" pm="."><plain>0.011 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="639" pm="."><plain>1 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="640" pm="."><plain>0.016 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="641" pm="."><plain>1 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="642" pm="."><plain>0.988 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="643" pm="."><plain>1 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="644" pm="."><plain>GADPH </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="645" pm="."><plain>0.013 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="646" pm="."><plain>2 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="647" pm="."><plain>0.017 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="648" pm="."><plain>2 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="649" pm="."><plain>0.987 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="650" pm="."><plain>5 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="651" pm="."><plain>PP2A </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="652" pm="."><plain>0.019 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="653" pm="."><plain>3 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="654" pm="."><plain>0.037 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="655" pm="."><plain>5 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="656" pm="."><plain>0.948 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="657" pm="."><plain>7 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="658" pm="."><plain>TUB </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="659" pm="."><plain>0.025 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="660" pm="."><plain>4 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="661" pm="."><plain>0.059 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="662" pm="."><plain>7 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="663" pm="."><plain>0.952 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="664" pm="."><plain>10 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="665" pm="."><plain>EF1α </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="666" pm="."><plain>0.030 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="667" pm="."><plain>5 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="668" pm="."><plain>0.030 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="669" pm="."><plain>4 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="670" pm="."><plain>0.983 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="671" pm="."><plain>4 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="672" pm="."><plain>CYP </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="673" pm="."><plain>0.034 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="674" pm="."><plain>6 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="675" pm="."><plain>0.061 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="676" pm="."><plain>8 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="677" pm="."><plain>0.901 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="678" pm="."><plain>3 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="679" pm="."><plain>Helicase </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="680" pm="."><plain>0.039 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="681" pm="."><plain>7 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="682" pm="."><plain>0.017 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="683" pm="."><plain>3 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="684" pm="."><plain>0.983 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="685" pm="."><plain>6 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="686" pm="."><plain>SAMDC </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="687" pm="."><plain>0.044 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="688" pm="."><plain>8 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="689" pm="."><plain>0.047 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="690" pm="."><plain>6 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="691" pm="."><plain>0.951 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="692" pm="."><plain>8 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="693" pm="."><plain>18SrRNA </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="694" pm="."><plain>0.056 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="695" pm="."><plain>9 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="696" pm="."><plain>0.091 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="697" pm="."><plain>12 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="698" pm="."><plain>—- </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="699" pm="."><plain>- </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="700" pm="."><plain>UBQ </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="701" pm="."><plain>0.065 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="702" pm="."><plain>10 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="703" pm="."><plain>0.077 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="704" pm="."><plain>11 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="705" pm="."><plain>—- </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="706" pm="."><plain>- </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="707" pm="."><plain>SAND </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="708" pm="."><plain>0.076 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="709" pm="."><plain>11 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="710" pm="."><plain>0.073 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="711" pm="."><plain>10 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="712" pm="."><plain>0.855 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="713" pm="."><plain>9 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="714" pm="."><plain>CAC </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="715" pm="."><plain>0.084 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="716" pm="."><plain>12 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="717" pm="."><plain>0.070 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="718" pm="."><plain>9 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="719" pm="."><plain>0.866 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="720" pm="."><plain>2 </plain></SENT>
+</text></td></tr></tbody></table></alternatives><table-wrap-foot><fn id="t005fn001"><p><text><SENT sid="721" pm="."><plain>Note </plain></SENT>
+</text></p></fn><fn id="t005fn002"><p><text><SENT sid="722" pm="."><plain>*In the BestKeeper analysis, the 18s rRNA and UBQ genes were rank-ordered according to their CV [% Cq] and SD [6 Cq]. </plain></SENT>
+</text></p></fn></table-wrap-foot></table-wrap></SecTag><p><text><SENT sid="723" pm="."><plain>Considering the importance we selected two genes, NAC2 and BGL2 as target genes for validation because both of these target genes are involved in flowering and abiotic stress responses. </plain></SENT>
+<SENT sid="724" pm="."><plain>Target genes expression was very accurately measured when two selected reference genes ACT and GAPDH were tested along with targets. </plain></SENT>
+<SENT sid="725" pm="."><plain>But, the expression of target genes was extremely unstable when its expression was calculated as compared with the least stable candidate reference gene UBQ (Figs 4 and 5). </plain></SENT>
+<SENT sid="726" pm="."><plain>Our findings deliberately support previous discoveries that in order to normalization usage of two highly stable internal reference genes has significant importance. </plain></SENT>
+<SENT sid="727" pm="."><plain>Moreover, two internal control gens are perfectly enough to analyze gene expression as has been done earlier in case of Salix matsudana [49] and Platycladus orientalis [43]. </plain></SENT>
+<SENT sid="728" pm="."><plain>Therefore, ACT and GAPDH are the most stably expressed reference genes and are highly recommended in single or both as endogenous controls for gene expression studies under both normal and stress conditions. </plain></SENT>
+<SENT sid="729" pm="."><plain>This study has important implications in obtaining more accurate results from expression analyses of black locust. </plain></SENT>
+</text></p><p><text><SENT sid="730" pm="."><plain>In conclusion, out of the 12 black locust genes evaluated, the two most reliable internal reference genes were ACT and GAPDH. </plain></SENT>
+<SENT sid="731" pm="."><plain>All other candidate genes were not deemed suitable internal controls for black locust, because they exhibit high expression diversity. </plain></SENT>
+<SENT sid="732" pm="."><plain>To obtain the most reliable results in gene expression studies of black locust, ACT and GAPDH are recommended as internal controls for qPCR analysis. </plain></SENT>
+</text></p></sec></SecTag><SecTag type="SUPPL"><sec sec-type="supplementary-material" id="sec015"><title><text><SENT sid="733" pm="."><plain>Supporting information </plain></SENT>
+</text></title><supplementary-material content-type="local-data" id="pone.0193076.s001"><label>S1 Fig</label><caption><title><text><SENT sid="734" pm="."><plain>Relative expression levels of the NAC2 in plants treated with Cold, ABA, NaCl, Heat, and PEG stresses. </plain></SENT>
+</text></title><p><text><SENT sid="735" pm="."><plain>(TIF) </plain></SENT>
+</text></p></caption><media xlink:href="pone.0193076.s001.tif"><caption><p><text><SENT sid="736" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="pone.0193076.s002"><label>S2 Fig</label><caption><title><text><SENT sid="737" pm="."><plain>Relative expression levels of the NAC2 in different tissues. </plain></SENT>
+</text></title><p><text><SENT sid="738" pm="."><plain>(TIF) </plain></SENT>
+</text></p></caption><media xlink:href="pone.0193076.s002.tif"><caption><p><text><SENT sid="739" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="pone.0193076.s003"><label>S3 Fig</label><caption><title><text><SENT sid="740" pm="."><plain>Relative expression levels of the BGL2 in plants treated with cold, ABA, NaCl, Heat, and PEG stresses. </plain></SENT>
+</text></title><p><text><SENT sid="741" pm="."><plain>(TIF) </plain></SENT>
+</text></p></caption><media xlink:href="pone.0193076.s003.tif"><caption><p><text><SENT sid="742" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="pone.0193076.s004"><label>S4 Fig</label><caption><title><text><SENT sid="743" pm="."><plain>Relative expression levels of the BGL2 in different tissues. </plain></SENT>
+</text></title><p><text><SENT sid="744" pm="."><plain>(TIF) </plain></SENT>
+</text></p></caption><media xlink:href="pone.0193076.s004.tif"><caption><p><text><SENT sid="745" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="pone.0193076.s005"><label>S1 File</label><caption><title><text><SENT sid="746" pm="."><plain>Selection of NAC2 for validation of results. </plain></SENT>
+</text></title><p><text><SENT sid="747" pm="."><plain>(DOCX) </plain></SENT>
+</text></p></caption><media xlink:href="pone.0193076.s005.docx"><caption><p><text><SENT sid="748" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="pone.0193076.s006"><label>S2 File</label><caption><title><text><SENT sid="749" pm="."><plain>Selection of BGL2 for the validation of results. </plain></SENT>
+</text></title><p><text><SENT sid="750" pm="."><plain>(DOCX) </plain></SENT>
+</text></p></caption><media xlink:href="pone.0193076.s006.docx"><caption><p><text><SENT sid="751" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="pone.0193076.s007"><label>S3 File</label><caption><title><text><SENT sid="752" pm="."><plain>Validation of results by using NAC2 gene. </plain></SENT>
+</text></title><p><text><SENT sid="753" pm="."><plain>(DOCX) </plain></SENT>
+</text></p></caption><media xlink:href="pone.0193076.s007.docx"><caption><p><text><SENT sid="754" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="pone.0193076.s008"><label>S4 File</label><caption><title><text><SENT sid="755" pm="."><plain>Validation of results by using BGL2 gene. </plain></SENT>
+</text></title><p><text><SENT sid="756" pm="."><plain>(DOCX) </plain></SENT>
+</text></p></caption><media xlink:href="pone.0193076.s008.docx"><caption><p><text><SENT sid="757" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media></supplementary-material></sec></SecTag></body><back><SecTag type="ACK_FUND"><ack><p><text4fund><text><SENT sid="758" pm="."><plain>Wang JX and Abbas M contributed equally in this article, Yun Li is corresponding author. </plain></SENT>
+<SENT sid="759" pm="."><plain>Substantially, we are very grateful to Prof. </plain></SENT>
+<SENT sid="760" pm="."><plain>Dr. Yun Li for his advice and suggestions during whole research and proofreading of manuscript and also providing us lab facilities to conduct this research. </plain></SENT>
+<SENT sid="761" pm="."><plain>We are also grateful to kind administration of Beijing Forestry University who provided us such an equipped and well organized platform to do research. </plain></SENT>
+<SENT sid="762" pm="."><plain>We are tremendously thankful to kind administration of Mijiabao Forest Farm for granting permission and resources for sampling. </plain></SENT>
+<SENT sid="763" pm="."><plain>We are also grateful to Textcheck Editing for improvement of our manuscript scientific language. </plain></SENT>
+</text></text4fund></p></ack></SecTag><SecTag type="REF"><ref-list><title>References</title><ref id="pone.0193076.ref001"><text><SENT sid="764" pm="."><plain>1WangJX, SunP, YuanCQ, DaiL, ZhangY, WuB, LongC, SunYH, LiY, (2015). Transcriptional profiles of emasculated flowers of black locust (Robinia pseudoacacia) determined using the cDNA-AFLP technique. Genetics and Molecular Research; 14(4): 15822–38. doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.4238/2015.December.1.34">10.4238/2015.December.1.34</ext-link> <?supplied-pmid 26634550?>26634550 </plain></SENT>
+</text></ref><ref id="pone.0193076.ref002"><text><SENT sid="765" pm="."><plain>2KeelerHL, (1900). Our native trees and how to identify them: a popular study of their habits and their peculiarities, Kent State University Press. </plain></SENT>
+</text></ref><ref id="pone.0193076.ref003"><text><SENT sid="766" pm="."><plain>3YuanCQ, LiYF, WangL, ZhaoKQ, et al (2013). Evidence for inbreeding depression in the tree Robinia pseudoacacia L. </plain></SENT>
+<SENT sid="767" pm="."><plain>(Fabaceae). Genetics &amp; Molecular Research; 12(4): 6249–56.24338420 </plain></SENT>
+</text></ref><ref id="pone.0193076.ref004"><text><SENT sid="768" pm="."><plain>4BarrettRP, MebrahtuT and HanoverJW, (1990). Black locust: A multi-purpose tree species for temperate climates In: Advances in new crops (JanickJ and SimonJE, eds.). Timber Press, Portland. </plain></SENT>
+</text></ref><ref id="pone.0193076.ref005"><text><SENT sid="769" pm="."><plain>5SunP, YuanC, DaiL, XiY, et al (2013). Phytohormone and assimilate profiles in emasculated flowers of the black locust (Robinia pseudoacaia) during development. Acta Biologica Hungarica; 64: 364–376. doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1556/ABiol.64.2013.3.9">10.1556/ABiol.64.2013.3.9</ext-link> <?supplied-pmid 24013897?>24013897 </plain></SENT>
+</text></ref><ref id="pone.0193076.ref006"><text><SENT sid="770" pm="."><plain>6WangJX, LuC, YuanCQ, CuiBB, QiuQD, SunP, HuRY, WuDC, SunYH, LiY, (2015). Characterization of ESTs from black locust for gene discovery and marker development. Genetic and Molecular Research;14:12684–12691. </plain></SENT>
+</text></ref><ref id="pone.0193076.ref007"><text><SENT sid="771" pm="."><plain>7WangYL, LiuGB, KumeT, OtsukiK, YamanakaN, DuS, (2010). Estimating water use of a black locust plantation by the thermal dissipation probe method in the semiarid region of Loess Plateau, China. Journal of Forest Research; 15:241–251. </plain></SENT>
+</text></ref><ref id="pone.0193076.ref008"><text><SENT sid="772" pm="."><plain>8BustinS, (2002). Quantification of mRNA using real-time reverse transcription PCR (RT-PCR): trends and problems. Journal of Molecular Endocrinology; 29, 23–39. <?supplied-pmid 12200227?>12200227 </plain></SENT>
+</text></ref><ref id="pone.0193076.ref009"><text><SENT sid="773" pm="."><plain>9GachonC, MingamA, CharrierB, (2004). Real-time PCR: what relevance to plant studies? Journal of Experimental Botany; 55: 1445–1454. doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1093/jxb/erh181">10.1093/jxb/erh181</ext-link> <?supplied-pmid 15208338?>15208338 </plain></SENT>
+</text></ref><ref id="pone.0193076.ref010"><text><SENT sid="774" pm="."><plain>10LeDT, AldrichDL, ValliyodanB, WatanabeY, HaCV, NishiyamaR, GuttikondaSK, QuachTN, Gutierrez-GonzalezJJ, TranLS, NguyenHT, (2012). Evaluation of candidate reference genes for normalization of quantitative RT-PCR in soybean tissues under various abiotic stress conditions. PLoS ONE; 7:e46487 doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1371/journal.pone.0046487">10.1371/journal.pone.0046487</ext-link> <?supplied-pmid 23029532?>23029532 </plain></SENT>
+</text></ref><ref id="pone.0193076.ref011"><text><SENT sid="775" pm="."><plain>11BustinS, (2000). Absolute quantification of mRNA using real time reverse transcription polymerase chain reaction assays. Journal of Molecular Endocrinology; 25, 169–193. <?supplied-pmid 11013345?>11013345 </plain></SENT>
+</text></ref><ref id="pone.0193076.ref012"><text><SENT sid="776" pm="."><plain>12WangML, MedranoJF, (2005). Real-time PCR for mRNA quantitation. Biotechniques; 39(1): 75–85. <?supplied-pmid 16060372?>16060372 </plain></SENT>
+</text></ref><ref id="pone.0193076.ref013"><text><SENT sid="777" pm="."><plain>13KangJJ, WatsonRM, FisherME, HiguchiR, GelfandDH, HollandMJ, (2000). Transcript quantitation in total yeast cellular RNA using kinetic PCR. Nucleic Acids Research; 28:e2 <?supplied-pmid 10606670?>10606670 </plain></SENT>
+</text></ref><ref id="pone.0193076.ref014"><text><SENT sid="778" pm="."><plain>14GoncalvesS, CairneyJ, MarocoJ, OliveiraMM, MiguelC, (2005). Evaluation of control transcripts in real-time RT-PCR expression analysis during maritime pine embryogenesis. Planta; 222:556–563. doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1007/s00425-005-1562-0">10.1007/s00425-005-1562-0</ext-link> <?supplied-pmid 16034587?>16034587 </plain></SENT>
+</text></ref><ref id="pone.0193076.ref015"><text><SENT sid="779" pm="."><plain>15MackayIM, ArdenKE, NitscheA, (2002). Real-time PCR in virology. Nucleic Acids Research; 30: 1292–1305. <?supplied-pmid 11884626?>11884626 </plain></SENT>
+</text></ref><ref id="pone.0193076.ref016"><text><SENT sid="780" pm="."><plain>16CottrellSE, DistlerJ, GoodmanNS, MooneySH, KluthA, OlekA, SchwopeI, TetznerR, ZiebarthH, BerlinK, (2004). A real time PCR assay for DNA-methylation using methylation-specific blockers. Nucleic Acids Research; 32:e10 doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1093/nar/gnh008">10.1093/nar/gnh008</ext-link> <?supplied-pmid 14722226?>14722226 </plain></SENT>
+</text></ref><ref id="pone.0193076.ref017"><text><SENT sid="781" pm="."><plain>17JohnsonMP, HauptLM, GriffithsLR, (2004). Locked nucleic acid (LNA) single nucleotide polymorphism (SNP) genotype analysis and validation using real-time PCR. Nucleic Acids Research; 32:e55 doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1093/nar/gnh046">10.1093/nar/gnh046</ext-link> <?supplied-pmid 15047860?>15047860 </plain></SENT>
+</text></ref><ref id="pone.0193076.ref018"><text><SENT sid="782" pm="."><plain>18CharrierB, ChampionA, HenryY, KreisM, (2002). Expression profiling of the whole Arabidopsis shaggy-like kinase multigene family by real-time reverse transcriptase-polymerase chain reaction. Plant Physiology; 130(2):577–90. doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1104/pp.009175">10.1104/pp.009175</ext-link> <?supplied-pmid 12376626?>12376626 </plain></SENT>
+</text></ref><ref id="pone.0193076.ref019"><text><SENT sid="783" pm="."><plain>19VeistinenE, LiippoJ, LassilaO, (2002). Quantification of human Aiolos splice variants by real-time PCR. Journal of Immunological Methods. 271(1):113–23.12445735 </plain></SENT>
+</text></ref><ref id="pone.0193076.ref020"><text><SENT sid="784" pm="."><plain>20ChuaquiRF, BonnerRF, BestCJ, GillespieJW, FlaigMJ, HewittSM, et al (2002). Post-analysis follow-up and validation of microarray experiments. Nature Genetics; 32:509–14. doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1038/ng1034">10.1038/ng1034</ext-link> <?supplied-pmid 12454646?>12454646 </plain></SENT>
+</text></ref><ref id="pone.0193076.ref021"><text><SENT sid="785" pm="."><plain>21GiuliettiA, OverberghL, ValckxD, DecallonneB, BouillonR, MathieuC. An overview of real-time quantitative PCR: applications to quantify cytokine gene expression. Methods; 2001;25(4):386–401. doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1006/meth.2001.1261">10.1006/meth.2001.1261</ext-link> <?supplied-pmid 11846608?>11846608 </plain></SENT>
+</text></ref><ref id="pone.0193076.ref022"><text><SENT sid="786" pm="."><plain>22DundasJ, LingM, (2012). Reference genes for measuring mRNA expression. Theory in Biosciences; 131: 215–223. doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1007/s12064-012-0152-5">10.1007/s12064-012-0152-5</ext-link> <?supplied-pmid 22588998?>22588998 </plain></SENT>
+</text></ref><ref id="pone.0193076.ref023"><text><SENT sid="787" pm="."><plain>23PfafflMW, (2001). A new mathematical model for relative quantification in real-time RT-PCR. Nucleic Acids Research; 29: e45 PMID: .<?supplied-pmid 11328886?>11328886 </plain></SENT>
+</text></ref><ref id="pone.0193076.ref024"><text><SENT sid="788" pm="."><plain>24LinYL, LaiZX, (2010). Reference gene selection for qPCR analysis during somatic embryogenesis in longan tree. Plant Science; 178(4):359–65. </plain></SENT>
+</text></ref><ref id="pone.0193076.ref025"><text><SENT sid="789" pm="."><plain>25WallSJ, EdwardsDR, (2002). Quantitative reverse transcription-polymerase chain reaction (RT-PCR): a comparison of primer-dropping, competitive, and real-time RT-PCRs. Analytical Biochemistry; 300(2):269–73. doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1006/abio.2001.5458">10.1006/abio.2001.5458</ext-link> <?supplied-pmid 11779121?>11779121 </plain></SENT>
+</text></ref><ref id="pone.0193076.ref026"><text><SENT sid="790" pm="."><plain>26ImaiT, UbiBE, SaitoT, MoriguchiT, (2014). Evaluation of reference genes for accurate normalization of gene expression for real time-quantitative PCR in Pyrus pyrifolia using different tissue samples and seasonal conditions. PLoS ONE; 9(1):e86492 doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1371/journal.pone.0086492">10.1371/journal.pone.0086492</ext-link> <?supplied-pmid 24466117?>24466117 </plain></SENT>
+</text></ref><ref id="pone.0193076.ref027"><text><SENT sid="791" pm="."><plain>27ThellinO, ZorziW, LakayeB, BormanDB, CoumansB, HennenG, GrisarT, IgoutA, HeinenE, (1999). Housekeeping genes as internal standards: use and limits. Journal of Biotechnology; 75:291–295. <?supplied-pmid 10617337?>10617337 </plain></SENT>
+</text></ref><ref id="pone.0193076.ref028"><text><SENT sid="792" pm="."><plain>28VolkovRA, PanchukII, SchofflF, (2003). Heat-stress-dependency and developmental modulation of gene expression: the potential of house-keeping genes as internal standards in mRNA expression profiling using real-time RT-PCR. Journal of Experimental Botany; 54:2343–2349. doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1093/jxb/erg244">10.1093/jxb/erg244</ext-link> <?supplied-pmid 14504302?>14504302 </plain></SENT>
+</text></ref><ref id="pone.0193076.ref029"><text><SENT sid="793" pm="."><plain>29CzechowskiT, StittM, AltmannT, UdvardiMK, ScheibleWR, (2005). Genome-wide identification and testing of superior reference genes for transcript normalization in Arabidopsis. Plant Physiology; 139:5–17. doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1104/pp.105.063743">10.1104/pp.105.063743</ext-link> <?supplied-pmid 16166256?>16166256 </plain></SENT>
+</text></ref><ref id="pone.0193076.ref030"><text><SENT sid="794" pm="."><plain>30RemansT, SmeetsK, OpdenakkerK, MathijsenD, VangronsveldJ, CuypersA, (2008). Normalization of real-time RT-PCR gene expression measurements in Arabidopsis thaliana exposed to increased metal concentrations. Planta; 227:1343–1349. doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1007/s00425-008-0706-4">10.1007/s00425-008-0706-4</ext-link> <?supplied-pmid 18273637?>18273637 </plain></SENT>
+</text></ref><ref id="pone.0193076.ref031"><text><SENT sid="795" pm="."><plain>31ReidKE, OlssonN, SchlosserJ, PengF, LundST, (2006). An optimized grapevine RNA isolation procedure and statistical determination of reference genes for real-time RT-PCR during berry development. BMC Plant Biology; 6:27 doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1186/1471-2229-6-27">10.1186/1471-2229-6-27</ext-link> <?supplied-pmid 17105665?>17105665 </plain></SENT>
+</text></ref><ref id="pone.0193076.ref032"><text><SENT sid="796" pm="."><plain>32BrunnerAM, YakovlevIA, StraussSH, (2004). Validating internal controls for quantitative plant gene expression studies. BMC Plant Biology; 4:14 doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1186/1471-2229-4-14">10.1186/1471-2229-4-14</ext-link> <?supplied-pmid 15317655?>15317655 </plain></SENT>
+</text></ref><ref id="pone.0193076.ref033"><text><SENT sid="797" pm="."><plain>33WangHL, LiL, TangS, YuanC, TianQ, SuY, et al (2015). Evaluation of appropriate reference genes for reverse transcription-quantitative PCR studies in different tissues of a desert poplar via comparison of different algorithms. International Journal of Molecular Sciences; 16(9):20468–91. doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.3390/ijms160920468">10.3390/ijms160920468</ext-link> <?supplied-pmid 26343648?>26343648 </plain></SENT>
+</text></ref><ref id="pone.0193076.ref034"><text><SENT sid="798" pm="."><plain>34WangY, ChenY, DingL, ZhangJ, WeiJ, WangH, (2016). Validation of reference genes for gene expression by quantitative Real-Time RT-PCR in stem segments spanning primary to secondary growth in Populus tomentosa. PLoS ONE; 11(6):e0157370 doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1371/journal.pone.0157370">10.1371/journal.pone.0157370</ext-link> <?supplied-pmid 27300480?>27300480 </plain></SENT>
+</text></ref><ref id="pone.0193076.ref035"><text><SENT sid="799" pm="."><plain>35MouraJCMS, AraújoP, dos Santos BritoM, SouzaUR, VianaJOF, MazzaferaP, (2012). Validation of reference genes from Eucalyptus spp. under different stress conditions. BMC Research Notes. 5(1):634.23148685 </plain></SENT>
+</text></ref><ref id="pone.0193076.ref036"><text><SENT sid="800" pm="."><plain>36Cassan-WangH, SolerM, YuH, CamargoELO, CarochaV, LadouceN, et al (2012). Reference genes for high-throughput quantitative reverse transcription–PCR analysis of gene expression in organs and tissues of Eucalyptus grown in various environmental conditions. Plant and Cell Physiology; 53(12):2101–16. doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1093/pcp/pcs152">10.1093/pcp/pcs152</ext-link> <?supplied-pmid 23161857?>23161857 </plain></SENT>
+</text></ref><ref id="pone.0193076.ref037"><text><SENT sid="801" pm="."><plain>37GaleanoE, VasconcelosTS, RamiroDA, De MartinVdF, CarrerH, (2014). Identification and validation of quantitative real-time reverse transcription PCR reference genes for gene expression analysis in teak (Tectona grandis Lf). BMC Research Notes. 7(1):464.25048176 </plain></SENT>
+</text></ref><ref id="pone.0193076.ref038"><text><SENT sid="802" pm="."><plain>38PfafflMW, TichopadA, PrgometC, NeuviansTP, (2004). Determination of stable housekeeping genes, differentially regulated target genes and sample integrity: bestkeeper—excel-based tool using pair-wise correlations. Biotechnology Letters; 26:509–515. <?supplied-pmid 15127793?>15127793 </plain></SENT>
+</text></ref><ref id="pone.0193076.ref039"><text><SENT sid="803" pm="."><plain>39VandesompeleJ, PreterDK, PattynF, PoppeB, RoyVN, PaepeDA, SpelemanF, (2002). Accurate normalization of real-time quantitative RT-PCR data by geometric averaging of multiple internal control genes. Genome Biology; 3:H34. </plain></SENT>
+</text></ref><ref id="pone.0193076.ref040"><text><SENT sid="804" pm="."><plain>40AndersenCL, JensenJL, OrntoftTF, (2004). Normalization of real-time quantitative reverse transcription-PCR data: a model based variance estimation approach to identify genes suited for normalization, applied to bladder and colon cancer data sets. Cancer Research; 64, 5245–5250. doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1158/0008-5472.CAN-04-0496">10.1158/0008-5472.CAN-04-0496</ext-link> <?supplied-pmid 15289330?>15289330 </plain></SENT>
+</text></ref><ref id="pone.0193076.ref041"><text><SENT sid="805" pm="."><plain>41GuoY, GanS, (2006). AtNAP, a NAC family transcription factor, has an important role in leaf senescence. The Plant Journal; 46(4):601–12. doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1111/j.1365-313X.2006.02723.x">10.1111/j.1365-313X.2006.02723.x</ext-link> <?supplied-pmid 16640597?>16640597 </plain></SENT>
+</text></ref><ref id="pone.0193076.ref042"><text><SENT sid="806" pm="."><plain>42UauyC, DistelfeldA, FahimaT, BlechlA, DubcovskyJA, (2006). NAC gene regulating senescence improves grain protein, zinc, and iron content in wheat. Science. 314(5803):1298–301. doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1126/science.1133649">10.1126/science.1133649</ext-link> <?supplied-pmid 17124321?>17124321 </plain></SENT>
+</text></ref><ref id="pone.0193076.ref043"><text><SENT sid="807" pm="."><plain>43ChangE, ShiS, LiuJ, ChengT, XueL, YangX, et al (2012). Selection of reference genes for quantitative gene expression studies in Platycladus orientalis (Cupressaceae) using real-time PCR. PLoS ONE; 2012;7(3):e33278 doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1371/journal.pone.0033278">10.1371/journal.pone.0033278</ext-link> <?supplied-pmid 22479379?>22479379 </plain></SENT>
+</text></ref><ref id="pone.0193076.ref044"><text><SENT sid="808" pm="."><plain>44CastroP, RomanB, RubioJ, JoseVD, (2012). Selection of reference genes for expression studies in Cicer arietinum L. analysis of cyp81E3 gene expression against Ascochyta rabiei. Molecular Breeding; 29(1) 261–74.1. </plain></SENT>
+</text></ref><ref id="pone.0193076.ref045"><text><SENT sid="809" pm="."><plain>45WongML, MedranoJF, (2005). Real-time PCR for mRNA quantitation. Biotechniques; 39(1):75 <?supplied-pmid 16060372?>16060372 </plain></SENT>
+</text></ref><ref id="pone.0193076.ref046"><text><SENT sid="810" pm="."><plain>46RadonicA, ThulkeS, MackayIM, LandtO, SiegertW, NitscheA, (2004). Guideline to reference gene selection for quantitative real-time PCR. Biochemical and Biophysical Research Communication; 313:856–862. </plain></SENT>
+</text></ref><ref id="pone.0193076.ref047"><text><SENT sid="811" pm="."><plain>47JianM, NijhawanA, TyagiAK, KhuranaJP, (2006). Validation of housekeeping genes as internal control for studying gene expression in Rice by quantitative real-time PCR. Biochemical and Biophysical Research Communication; 345,66–651. </plain></SENT>
+</text></ref><ref id="pone.0193076.ref048"><text><SENT sid="812" pm="."><plain>48JianB, LiuB, BiY, HouW, WuC, HanT, (2008). Validation of internal control for gene expression study in soybean by quantitative real-time PCR. BMC Molecular Biology; 9:59 doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1186/1471-2199-9-59">10.1186/1471-2199-9-59</ext-link> <?supplied-pmid 18573215?>18573215 </plain></SENT>
+</text></ref><ref id="pone.0193076.ref049"><text><SENT sid="813" pm="."><plain>49ZhangY, HanX, ChenS, ZhengL, HeX, LiuM, et al (2017). Selection of suitable reference genes for quantitative real-time PCR gene expression analysis in Salix matsudana under different abiotic stresses. Scientific Reports; 7:40290 doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1038/srep40290">10.1038/srep40290</ext-link> <?supplied-pmid 28120870?>28120870 </plain></SENT>
+</text></ref><ref id="pone.0193076.ref050"><text><SENT sid="814" pm="."><plain>50HanX, LuM, ChenY, ZhanZ, CuiQ, WangY, (2012). Selection of reliable reference genes for gene expression studies using Real-Time PCR in Tung tree during seed development. PLoS ONE; 7(8):e43084 doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1371/journal.pone.0043084">10.1371/journal.pone.0043084</ext-link> <?supplied-pmid 22912794?>22912794 </plain></SENT>
+</text></ref><ref id="pone.0193076.ref051"><text><SENT sid="815" pm="."><plain>51DrobakBK, FranklintongVE, StaigerCJ, (2004). The role of the actin cytoskeleton in plant cell signaling. New Phytologist;163(1):13–30. </plain></SENT>
+</text></ref><ref id="pone.0193076.ref052"><text><SENT sid="816" pm="."><plain>52KosovaAA, KhodyrevaSN, LavrikOI, (2017). Role of Glyceraldehyde-3-Phosphate Dehydrogenase (GAPDH) in DNA Repair. Biochemistry; 82(6):643–54. doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1134/S0006297917060013">10.1134/S0006297917060013</ext-link> <?supplied-pmid 28601074?>28601074 </plain></SENT>
+</text></ref><ref id="pone.0193076.ref053"><text><SENT sid="817" pm="."><plain>53ChenH, YangZ, HuY, TanJ, JiaJ, XuH, et al (2016). Reference genes selection for quantitative gene expression studies in Pinus massoniana L. Trees; 30(3):685–96. </plain></SENT>
+</text></ref><ref id="pone.0193076.ref054"><text><SENT sid="818" pm="."><plain>54SunM, WangY, YangD, WeiC, GaoL, XiaT, et al (2010). Reference Genes for Real-time Fluorescence Quantitative PCR in Camellia sinensis. Chinese Bulletin of Botany; 579–87. </plain></SENT>
+</text></ref></ref-list></SecTag></back></article>

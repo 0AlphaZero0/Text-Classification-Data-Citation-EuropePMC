@@ -17,7 +17,7 @@ So here thanks to regular expression it will fix some mistakes made by the split
 
 ###################################################    Main     ###################################################
 
-for file in os.listdir("./"):
+for file in os.listdir("./articlesOA"):
     if file.endswith("-sentencized.xml"):
         oldFile=codecs.open(file,"r",encoding="utf-8")
         tmpFile=oldFile.read()

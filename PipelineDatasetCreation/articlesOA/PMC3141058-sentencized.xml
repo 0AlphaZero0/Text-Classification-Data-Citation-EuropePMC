@@ -1,0 +1,830 @@
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD v1.1 20151215//EN" "JATS-archivearticle1.dtd"> 
+<article xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML" article-type="research-article"><?properties open_access?><?DTDIdentifier.IdentifierValue -//NLM//DTD Journal Publishing DTD v2.3 20031101//EN?><?DTDIdentifier.IdentifierType public?><?SourceDTD.DTDName journalpublishing.dtd?><?SourceDTD.Version 2.3?><?ConverterInfo.XSLTName jp2nlmx2.xsl?><?ConverterInfo.Version 1?><front><journal-meta><journal-id journal-id-type="nlm-ta">PLoS One</journal-id><journal-id journal-id-type="iso-abbrev">PLoS ONE</journal-id><journal-id journal-id-type="publisher-id">plos</journal-id><journal-id journal-id-type="pmc">plosone</journal-id><journal-title-group><journal-title>PLoS ONE</journal-title></journal-title-group><issn pub-type="epub">1932-6203</issn><publisher><publisher-name>Public Library of Science</publisher-name><publisher-loc>San Francisco, USA</publisher-loc></publisher></journal-meta><article-meta><article-id pub-id-type="pmcid">3141058</article-id><article-id pub-id-type="pmid">21811625</article-id><article-id pub-id-type="publisher-id">PONE-D-11-04925</article-id><article-id pub-id-type="doi">10.1371/journal.pone.0022508</article-id><article-categories><subj-group subj-group-type="heading"><subject>Research Article</subject></subj-group><subj-group subj-group-type="Discipline-v2"><subject>Biology</subject><subj-group><subject>Computational Biology</subject><subj-group><subject>Microarrays</subject><subject>Systems Biology</subject></subj-group></subj-group><subj-group><subject>Genetics</subject><subj-group><subject>Epigenetics</subject><subj-group><subject>RNA interference</subject></subj-group></subj-group><subj-group><subject>Gene expression</subject><subj-group><subject>RNA interference</subject></subj-group></subj-group></subj-group><subj-group><subject>Molecular cell biology</subject><subj-group><subject>Gene expression</subject><subj-group><subject>RNA interference</subject></subj-group></subj-group></subj-group><subj-group><subject>Systems Biology</subject></subj-group></subj-group><subj-group subj-group-type="Discipline-v2"><subject>Medicine</subject><subj-group><subject>Oncology</subject><subj-group><subject>Basic Cancer Research</subject><subj-group><subject>Tumor Physiology</subject></subj-group></subj-group><subj-group><subject>Cancers and Neoplasms</subject><subj-group><subject>Gynecological Tumors</subject><subj-group><subject>Ovarian Cancer</subject></subj-group></subj-group></subj-group></subj-group></subj-group></article-categories><title-group><article-title><SecTag type="TITLE"><text><SENT sid="0" pm="."><plain>Evidence for the Complexity of MicroRNA-Mediated Regulation in Ovarian Cancer: A Systems Approach </plain></SENT>
+</text></SecTag></article-title><alt-title alt-title-type="running-head">Complexity of miRNA Regulation: A Systems Approach</alt-title></title-group><contrib-group><contrib contrib-type="author"><name><surname>Shahab</surname><given-names>Shubin W.</given-names></name><xref ref-type="aff" rid="aff1">
+<sup>1</sup>
+</xref><xref ref-type="aff" rid="aff2">
+<sup>2</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Matyunina</surname><given-names>Lilya V.</given-names></name><xref ref-type="aff" rid="aff1">
+<sup>1</sup>
+</xref><xref ref-type="aff" rid="aff2">
+<sup>2</sup>
+</xref><xref ref-type="aff" rid="aff3">
+<sup>3</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Mezencev</surname><given-names>Roman</given-names></name><xref ref-type="aff" rid="aff1">
+<sup>1</sup>
+</xref><xref ref-type="aff" rid="aff2">
+<sup>2</sup>
+</xref><xref ref-type="aff" rid="aff3">
+<sup>3</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Walker</surname><given-names>L. DeEtte</given-names></name><xref ref-type="aff" rid="aff1">
+<sup>1</sup>
+</xref><xref ref-type="aff" rid="aff2">
+<sup>2</sup>
+</xref><xref ref-type="aff" rid="aff3">
+<sup>3</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Bowen</surname><given-names>Nathan J.</given-names></name><xref ref-type="aff" rid="aff3">
+<sup>3</sup>
+</xref><xref ref-type="aff" rid="aff4">
+<sup>4</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Benigno</surname><given-names>Benedict B.</given-names></name><xref ref-type="aff" rid="aff3">
+<sup>3</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>McDonald</surname><given-names>John F.</given-names></name><xref ref-type="aff" rid="aff1">
+<sup>1</sup>
+</xref><xref ref-type="aff" rid="aff2">
+<sup>2</sup>
+</xref><xref ref-type="aff" rid="aff3">
+<sup>3</sup>
+</xref><xref ref-type="corresp" rid="cor1">
+<sup>*</sup>
+</xref></contrib></contrib-group><aff id="aff1">
+<label>1</label>
+<addr-line>School of Biology, Georgia Institute of Technology, Atlanta, Georgia, United States of America</addr-line>
+</aff><aff id="aff2">
+<label>2</label>
+<addr-line>Parker H. Petit Institute for Bioengineering and Bioscience, Georgia Institute of Technology, Atlanta, Georgia, United States of America</addr-line>
+</aff><aff id="aff3">
+<label>3</label>
+<addr-line>Ovarian Cancer Institute, Atlanta, Georgia, United States of America</addr-line>
+</aff><aff id="aff4">
+<label>4</label>
+<addr-line>Department of Biological Sciences, Clark Atlanta University, Atlanta, Georgia, United States of America</addr-line>
+</aff><contrib-group><contrib contrib-type="editor"><name><surname>Campbell</surname><given-names>Moray</given-names></name><role>Editor</role><xref ref-type="aff" rid="edit1"/></contrib></contrib-group><aff id="edit1">Roswell Park Cancer Institute, United States of America</aff><author-notes><corresp id="cor1">* E-mail: <email>john.mcdonald@biology.gatech.edu</email></corresp><fn fn-type="con"><p><text><SENT sid="1" pm="."><plain>Conceived and designed the experiments: JFM SWS. </plain></SENT>
+<SENT sid="2" pm="."><plain>Performed the experiments: SWS LDW LVM. </plain></SENT>
+<SENT sid="3" pm="."><plain>Analyzed the data: SWS NJB RM. </plain></SENT>
+<SENT sid="4" pm="."><plain>Contributed reagents/materials/analysis tools: BBB. </plain></SENT>
+<SENT sid="5" pm="."><plain>Wrote the paper: JFM SWS. </plain></SENT>
+</text></p></fn></author-notes><pub-date pub-type="collection"><year>2011</year></pub-date><pub-date pub-type="epub"><day>21</day><month>7</month><year>2011</year></pub-date><volume>6</volume><issue>7</issue><elocation-id>e22508</elocation-id><history><date date-type="received"><day>10</day><month>3</month><year>2011</year></date><date date-type="accepted"><day>27</day><month>6</month><year>2011</year></date></history><permissions><copyright-statement>Shahab et al.</copyright-statement><copyright-year>2011</copyright-year><license xlink:href="http://creativecommons.org/licenses/by/4.0/"><license-p>This is an open-access article distributed under the terms of the Creative Commons Attribution License, which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are properly credited.</license-p></license></permissions><abstract><p><SecTag type="ABS"><text><SENT sid="6" pm="."><plain>MicroRNAs (miRNAs) are short (∼22 nucleotides) regulatory RNAs that can modulate gene expression and are aberrantly expressed in many diseases including cancer. </plain></SENT>
+<SENT sid="7" pm="."><plain>Previous studies have shown that miRNAs inhibit the translation and facilitate the degradation of their targeted messenger RNAs (mRNAs) making them attractive candidates for use in cancer therapy. </plain></SENT>
+<SENT sid="8" pm="."><plain>However, the potential clinical utility of miRNAs in cancer therapy rests heavily upon our ability to understand and accurately predict the consequences of fluctuations in levels of miRNAs within the context of complex tumor cells. </plain></SENT>
+<SENT sid="9" pm="."><plain>To evaluate the predictive power of current models, levels of miRNAs and their targeted mRNAs were measured in laser captured micro-dissected (LCM) ovarian cancer epithelial cells (CEPI) and compared with levels present in ovarian surface epithelial cells (OSE). </plain></SENT>
+<SENT sid="10" pm="."><plain>We found that the predicted inverse correlation between changes in levels of miRNAs and levels of their mRNA targets held for only ∼11% of predicted target mRNAs. </plain></SENT>
+<SENT sid="11" pm="."><plain>We demonstrate that this low inverse correlation between changes in levels of miRNAs and their target mRNAs in vivo is not merely an artifact of inaccurate miRNA target predictions but the likely consequence of indirect cellular processes that modulate the regulatory effects of miRNAs in vivo. Our findings underscore the complexities of miRNA-mediated regulation in vivo and the necessity of understanding the basis of these complexities in cancer cells before the therapeutic potential of miRNAs can be fully realized. </plain></SENT>
+</text></SecTag></p></abstract><counts><page-count count="12"/></counts></article-meta></front><body><SecTag type="INTRO"><sec id="s1"><title><text><SENT sid="12" pm="."><plain>Introduction </plain></SENT>
+</text></title><p><text><SENT sid="13" pm="."><plain>MicroRNAs (miRNAs) are members of an abundant class of small (∼22 nts) regulatory RNAs believed to play significant roles in a variety of biological processes and diseases in both plants and animals [1]. </plain></SENT>
+<SENT sid="14" pm="."><plain>Of recent interest, is the possible contribution of aberrantly expressed miRNAs to cancer initiation and development [2], [3]. </plain></SENT>
+<SENT sid="15" pm="."><plain>Numerous in vitro studies have demonstrated that miRNAs are capable of inhibiting the translation and/or facilitating the degradation [4], [5], [6], [7] of their targeted mRNAs making them attractive candidates for potential use in cancer therapy [8], [9]. </plain></SENT>
+<SENT sid="16" pm="."><plain>However, the potential clinical utility of miRNAs in cancer therapy rests heavily upon our ability to understand and accurately predict the consequences of fluctuations in levels of miRNAs within the context of tumor cells in vivo. </plain></SENT>
+<SENT sid="17" pm="."><plain>The general expectation that changes in levels of miRNAs will be inversely correlated (IC) with changes in levels of their mRNA targets [10], [11], [12], [13], [14] has yet to be conclusively tested within the context of tumor cells in vivo. For example, previous independent estimates of relative miRNA levels in ovarian cancers vs. controls often have been inconsistent, possibly due to differences in sample type (e.g., bulk tissue samples vs. micro-dissected cells, etc.), biological variability among different cancer sub-types and individual patient samples (e.g., [15], [16], [17], [18], [19], [20]) or due to inaccuracies in the prediction of the mRNA targets [21], [22]. </plain></SENT>
+</text></p><p><text><SENT sid="18" pm="."><plain>In an effort to reduce variation that may obscure biologically significant trends, we have conducted microarray (Affymetrix) analyses of miRNAs and mRNAs from the same ovarian cancer epithelial (CEPI) cells isolated from patient samples by laser capture micro-dissection (LCM). </plain></SENT>
+<SENT sid="19" pm="."><plain>We monitored differences in levels of miRNA expression between CEPI and ovarian surface epithelial (OSE) cells (collected from ovaries of normal patients) with expression levels of their putative mRNA targets as determined by various prediction algorithms and by experimental validation. </plain></SENT>
+<SENT sid="20" pm="."><plain>While ovarian cancers may arise from either the fimbrial epithelium of the oviduct or OSE, it has recently been shown that both classes of cells are part of a transitional epithelium of common origin and thus either may serve as a precursor to CEPI [23]. </plain></SENT>
+<SENT sid="21" pm="."><plain>Since OSE can be harvested from the surface of ovaries with minimal contamination, they were selected as appropriate controls in our study. </plain></SENT>
+</text></p><p><text><SENT sid="22" pm="."><plain>We found that only ∼11% of mRNA targets displaying significant (p&lt;0.005) changes in levels of expression in CEPI relative to normal were IC with changes in levels of their regulating miRNAs (p&lt;0.01). </plain></SENT>
+<SENT sid="23" pm="."><plain>The levels of the majority (∼79%) of target mRNAs were unchanged in CEPI while the rest (∼10%) of the mRNA targets displayed changes in levels positively correlated (PC) with their respective regulating miRNAs. </plain></SENT>
+<SENT sid="24" pm="."><plain>We conclude that the low predictability of miRNA regulatory effects in CEPI isolated from patient samples is attributable to the complexity of miRNA function in vivo. </plain></SENT>
+</text></p></sec></SecTag><SecTag type="RESULTS"><sec id="s2"><title><text><SENT sid="25" pm="."><plain>Results </plain></SENT>
+</text></title><sec id="s2a"><title><text><SENT sid="26" pm="."><plain>The majority of miRNAs differentially expressed in CEPI relative to OSE are up-regulated </plain></SENT>
+</text></title><p><text><SENT sid="27" pm="."><plain>Unsupervised hierarchical clustering of the expression profiles of miRNAs detected on the miRChip (Asuragen Inc, Austin, TX) was performed on three CEPI and three OSE patient samples (Figure 1; see Table 1 for clinical information regarding samples). </plain></SENT>
+<SENT sid="28" pm="."><plain>The miRChip contains a total of 13,349 probes including 467 annotated human miRNAs (Sanger miRBase V9.2 [24], [25], [26]), 455 miRNAs annotated in various other species and 12,894 (exploratory) probes of predicted, but as yet not validated/annotated miRNAs. </plain></SENT>
+<SENT sid="29" pm="."><plain>Using a threshold of 2-fold or greater change, 42 miRNA probes were found to be differentially expressed (p&lt;0.01) between our cancer and control samples. </plain></SENT>
+<SENT sid="30" pm="."><plain>Of these, 33 were up-regulated and 9 down-regulated in the CEPI relative to OSE, including 12 previously annotated human miRNAs (9 up-regulated and 3 down-regulated). </plain></SENT>
+<SENT sid="31" pm="."><plain>A heat map of the 42 differentially expressed miRNA probes is presented in Figure 2a (the miRNA sequences of these 42 probes, log2 difference between CEPI and OSE, and p-values from t-test are provided in Table S1). </plain></SENT>
+<SENT sid="32" pm="."><plain>To independently test the validity of the differential miRNA expression patterns determined by microarray, we conducted measurements of miRNA levels using quantitative (real-time) polymerase chain reaction (qPCR). </plain></SENT>
+<SENT sid="33" pm="."><plain>Five (miR-141, miR-429, miR-205, miR-383 and miR-320) of the 12 previously annotated human miRNAs shown to be differentially expressed by microarray were selected for qPCR analysis in three cancer and three control samples. </plain></SENT>
+<SENT sid="34" pm="."><plain>The qPCR results confirmed the differences detected in the microarray study (Figure 2b). </plain></SENT>
+</text></p><SecTag type="FIG"><fig id="pone-0022508-g001" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0022508.g001</object-id><label>Figure 1</label><caption><title><text><SENT sid="35" pm="."><plain>Unsupervised hierarchical clustering of CEPI and OSE samples based on probesets expressed on the Ambion miRChip. </plain></SENT>
+</text></title><p><text><SENT sid="36" pm="."><plain>An unsupervised hierarchical clustering of the CEPI and OSE samples was carried out using all detected probesets on the Ambion miRChip array, regardless of differential expression. </plain></SENT>
+<SENT sid="37" pm="."><plain>Probesets with standard deviation &lt;0.5 across all samples were removed prior to clustering. </plain></SENT>
+<SENT sid="38" pm="."><plain>The clustering shows that the CEPI and OSE samples cluster into separate groups, which suggests the variance between the groups is greater than that within the groups. </plain></SENT>
+</text></p></caption><graphic xlink:href="pone.0022508.g001"/></fig></SecTag><SecTag type="FIG"><fig id="pone-0022508-g002" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0022508.g002</object-id><label>Figure 2</label><caption><title><text><SENT sid="39" pm="."><plain>Differentially expressed miRNAs in CEPI cells from ovarian cancer patients relative to OSE. </plain></SENT>
+</text></title><p><text><SENT sid="40" pm="."><plain>(A) Hierarchical clustering of normal and cancer patient samples based on differentially expressed miRNAs between CEPI cells and OSE cells (p&lt;0.01, ≥2fold change). </plain></SENT>
+<SENT sid="41" pm="."><plain>The dendogram on the left shows that the probes cluster into two groups corresponding to the up-regulated and down-regulated miRNAs differentially expressed between normal and cancer. </plain></SENT>
+<SENT sid="42" pm="."><plain>IDs of selected probes are given on the right (including the annotated human miRNAs, see Table S1 for a complete list). </plain></SENT>
+<SENT sid="43" pm="."><plain>Key: hsa-miR-x: annotated human miRNAs; hsa-asg/cand-x: predicted candidate human miRNAs; ppy-: Pongo pygmaeus miRNA; cel-: C. elegans miRNA. </plain></SENT>
+<SENT sid="44" pm="."><plain>(B) Confirmation of expression patterns for selected miRNAs by qPCR. </plain></SENT>
+<SENT sid="45" pm="."><plain>The relative expression of each miRNA in logarithmic units in cells from 3 cancer patients is shown compared to cells from 3 normal ovaries after normalization to RNU6B (ΔΔCt method). </plain></SENT>
+<SENT sid="46" pm="."><plain>These were found to be statistically significant by Relative Expression Software Tool (REST®) by a randomization method. </plain></SENT>
+<SENT sid="47" pm="."><plain>Randomization was performed 5000 times. </plain></SENT>
+<SENT sid="48" pm="."><plain>Consistent with the microarray results, miR-141, miR-205 and miR-429 were confirmed to be significantly up-regulated in cancer, while miR-320 and miR-383 were found to be significantly down-regulated. </plain></SENT>
+<SENT sid="49" pm="."><plain>Error bars represent standard error of the mean. </plain></SENT>
+</text></p></caption><graphic xlink:href="pone.0022508.g002"/></fig></SecTag><SecTag type="TABLE"><table-wrap id="pone-0022508-t001" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0022508.t001</object-id><label>Table 1</label><caption><title><text><SENT sid="50" pm="."><plain>Clinical information of patient samples used in this study. </plain></SENT>
+</text></title></caption><alternatives><graphic id="pone-0022508-t001-1" xlink:href="pone.0022508.t001"/><table frame="hsides" rules="groups"><colgroup span="1"><col align="left" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/></colgroup><thead><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="51" pm="."><plain>Patient ID </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="52" pm="."><plain>Ovarian Histopathology </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="53" pm="."><plain>Stage/Grade </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="54" pm="."><plain>Age at Surgery (years) </plain></SENT>
+</text></td></tr></thead><tbody><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="55" pm="."><plain>551a,b,c </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="56" pm="."><plain>papillary serous carcinoma </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="57" pm="."><plain>IIIc/IV/3 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="58" pm="."><plain>59 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="59" pm="."><plain>588a,b,c </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="60" pm="."><plain>papillary serous carcinoma </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="61" pm="."><plain>IIIc/2-3 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="62" pm="."><plain>71 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="63" pm="."><plain>489a,b </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="64" pm="."><plain>papillary serous carcinoma </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="65" pm="."><plain>IV/3 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="66" pm="."><plain>48 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="67" pm="."><plain>620c </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="68" pm="."><plain>papillary serous carcinoma </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="69" pm="."><plain>III/IV/3 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="70" pm="."><plain>62 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="71" pm="."><plain>434a </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="72" pm="."><plain>within normal limits </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="73" pm="."><plain>N/A </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="74" pm="."><plain>41 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="75" pm="."><plain>440a </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="76" pm="."><plain>within normal limits </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="77" pm="."><plain>N/A </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="78" pm="."><plain>50 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="79" pm="."><plain>475a </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="80" pm="."><plain>within normal limits </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="81" pm="."><plain>N/A </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="82" pm="."><plain>63 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="83" pm="."><plain>470a </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="84" pm="."><plain>Ov-within normal limits; hx of endometrial ca. </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="85" pm="."><plain>Ov-N/AEndo-1b/1 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="86" pm="."><plain>44 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="87" pm="."><plain>437a </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="88" pm="."><plain>Ov-within normal limits; hx of cervical ca. </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="89" pm="."><plain>Ov-N/ACerv-1b/3 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="90" pm="."><plain>54 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="91" pm="."><plain>482b </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="92" pm="."><plain>within normal limits </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="93" pm="."><plain>N/A </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="94" pm="."><plain>44 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="95" pm="."><plain>665b </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="96" pm="."><plain>within normal limits </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="97" pm="."><plain>N/A </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="98" pm="."><plain>84 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="99" pm="."><plain>783b,c </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="100" pm="."><plain>within normal limits </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="101" pm="."><plain>N/A </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="102" pm="."><plain>52 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="103" pm="."><plain>838c </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="104" pm="."><plain>within normal limits </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="105" pm="."><plain>N/A </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="106" pm="."><plain>51 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="107" pm="."><plain>846c </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="108" pm="."><plain>within normal limits </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="109" pm="."><plain>N/A </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="110" pm="."><plain>51 </plain></SENT>
+</text></td></tr></tbody></table></alternatives><table-wrap-foot><fn id="nt101"><label>a</label><p><text><SENT sid="111" pm="."><plain>mRNA microarray; </plain></SENT>
+</text></p></fn><fn id="nt102"><label>b</label><p><text><SENT sid="112" pm="."><plain>microRNA microarray; </plain></SENT>
+</text></p></fn><fn id="nt103"><label>c</label><p><text><SENT sid="113" pm="."><plain>real-time PCR. </plain></SENT>
+</text></p></fn><fn id="nt104"><label/><p><text><SENT sid="114" pm="."><plain>Clinical information relevant to this study for each patient is shown. </plain></SENT>
+<SENT sid="115" pm="."><plain>In addition, a legend is given to identify which patient was used for each microarray and qPCR experiment. </plain></SENT>
+<SENT sid="116" pm="."><plain>Abbreviations used- Cerv: Cervix; Endo: Endometrium; Ov: Ovary; ca.: Carcinoma; hx: History. </plain></SENT>
+</text></p></fn></table-wrap-foot></table-wrap></SecTag><p><text><SENT sid="117" pm="."><plain>In contrast to some earlier studies [15], [16], [18], [19], [20], our results indicate that the majority of miRNAs displaying significant differences in levels of expression between CEPI and OSE are up-regulated in ovarian cancer. </plain></SENT>
+<SENT sid="118" pm="."><plain>The basis of this discrepancy is unknown but may be due to differences in sample type (e.g., bulk tissue samples vs. micro-dissected cells, etc.) and/or biological variability among individual patient samples. </plain></SENT>
+<SENT sid="119" pm="."><plain>Our finding that the majority of miRNAs are up-regulated in ovarian cancer is consistent with the fact that miRNA targets are significantly enriched (hypergeometric distribution, p&lt;0.05) among mRNAs down-regulated in our cancer samples, while up-regulated genes have relatively few miRNA targets (Figure S1; heat maps showing hierarchical clustering of the samples using all probesets is presented in Figure S2 and using only differentially expressed mRNAs in Figure S3; a list of all differentially expressed mRNAs is presented in Table S2). </plain></SENT>
+<SENT sid="120" pm="."><plain>A possible biological explanation of why miRNAs are up-regulated in CEPI may lie in the fact that in contrast to other cancers [27], [28], the transition from OSE to CEPI is postulated to involve changes from a less differentiated to a more differentiated state [29], [30], [31]. </plain></SENT>
+</text></p><p><text><SENT sid="121" pm="."><plain>Among the 12 previously annotated miRNAs displaying a significant change in levels in the CEPI samples, miR-205, miR-141, and miR-429 are all significantly up-regulated consistent with previous studies linking these miRNAs with the maintenance of cells in the differentiated epithelial state [32]. </plain></SENT>
+<SENT sid="122" pm="."><plain>Of the miRNAs that are down-regulated in CEPI relative to OSE, miR-320 and miR-383 are located in regions associated with frequent DNA copy number losses in ovarian cancer [19]. </plain></SENT>
+<SENT sid="123" pm="."><plain>miR-320 previously has been identified as an inhibitor of lung carcinoma proliferation [33]. </plain></SENT>
+<SENT sid="124" pm="."><plain>Its down-regulation in CEPI suggests that it may act as a tumor suppressor in ovarian cancers as well. </plain></SENT>
+</text></p></sec><sec id="s2b"><title><text><SENT sid="125" pm="."><plain>Only ∼11% of the predicted mRNA targets of miRNAs differentially expressed between the CEPI and OSE display the expected inverse pattern of change in gene expression </plain></SENT>
+</text></title><p><text><SENT sid="126" pm="."><plain>Previous studies have established that human miRNAs repress gene expression by pairing with complementary sequences located within the 3′ untranslated regions (3′ UTR) of targeted mRNAs resulting in translational repression and mRNA degradation [6], [7]. </plain></SENT>
+<SENT sid="127" pm="."><plain>Based on these findings, changes in the expression levels of miRNAs are generally predicted to be inversely correlated with changes in the expression levels of their targeted mRNAs [10], [11], [12], [13], [14]. </plain></SENT>
+<SENT sid="128" pm="."><plain>To test this hypothesis in the context of cells isolated from patient samples, we compared changes in the levels of the previously annotated human miRNAs with levels of their predicted target mRNAs in our CEPI samples relative to the OSE controls. </plain></SENT>
+<SENT sid="129" pm="."><plain>The putative mRNA targets of these previously annotated human miRNAs were initially identified using the miRanda algorithm [34], [35], [36]. </plain></SENT>
+<SENT sid="130" pm="."><plain>The results indicate that only ∼11% of the changes in mRNA expression between CEPI and OSE were inversely correlated (IC) with the observed changes in miRNA levels (Tables 2 &amp; S3). </plain></SENT>
+<SENT sid="131" pm="."><plain>Earlier studies of levels of miRNAs and their targeted mRNAs in a series of cell lines reported similar findings [13], [37], [38]. </plain></SENT>
+<SENT sid="132" pm="."><plain>The expression of the majority (No Change, NC: ∼79%) of the predicted mRNA targets was not significantly different (p&gt;0.005 and/or fold change &lt;2) between the CEPI and OSE samples, while ∼10% of the targeted mRNAs displayed changes positively correlated (PC) with their putatively regulating miRNAs. </plain></SENT>
+</text></p><SecTag type="TABLE"><table-wrap id="pone-0022508-t002" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0022508.t002</object-id><label>Table 2</label><caption><title><text><SENT sid="133" pm="."><plain>Summary values of IC, PC and NC targets in CEPI vs. OSE using miRanda. </plain></SENT>
+</text></title></caption><alternatives><graphic id="pone-0022508-t002-2" xlink:href="pone.0022508.t002"/><table frame="hsides" rules="groups"><colgroup span="1"><col align="left" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/></colgroup><thead><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="134" pm="."><plain>miRNA </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="135" pm="."><plain>Total Targets (miRanda) </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="136" pm="."><plain>Inversely Correlated Targets (%) </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="137" pm="."><plain>No Change (%) </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="138" pm="."><plain>Positively Correlated Targets (%) </plain></SENT>
+</text></td></tr></thead><tbody><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="139" pm="."><plain>miR-7 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="140" pm="."><plain>2363 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="141" pm="."><plain>10.62 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="142" pm="."><plain>79.94 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="143" pm="."><plain>9.44 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="144" pm="."><plain>miR-18a </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="145" pm="."><plain>1738 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="146" pm="."><plain>11.10 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="147" pm="."><plain>79.86 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="148" pm="."><plain>9.03 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="149" pm="."><plain>miR-18b </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="150" pm="."><plain>1710 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="151" pm="."><plain>11.40 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="152" pm="."><plain>79.24 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="153" pm="."><plain>9.36 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="154" pm="."><plain>miR-126 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="155" pm="."><plain>84 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="156" pm="."><plain>14.29 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="157" pm="."><plain>75.00 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="158" pm="."><plain>10.71 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="159" pm="."><plain>miR-128 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="160" pm="."><plain>2691 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="161" pm="."><plain>11.82 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="162" pm="."><plain>79.23 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="163" pm="."><plain>8.96 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="164" pm="."><plain>miR-141 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="165" pm="."><plain>3074 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="166" pm="."><plain>13.53 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="167" pm="."><plain>77.91 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="168" pm="."><plain>8.56 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="169" pm="."><plain>miR-205 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="170" pm="."><plain>2268 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="171" pm="."><plain>13.49 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="172" pm="."><plain>78.31 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="173" pm="."><plain>8.20 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="174" pm="."><plain>miR-429 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="175" pm="."><plain>3316 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="176" pm="."><plain>13.48 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="177" pm="."><plain>78.62 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="178" pm="."><plain>7.90 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="179" pm="."><plain>miR-93* </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="180" pm="."><plain>2252.00 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="181" pm="."><plain>13.14 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="182" pm="."><plain>77.00 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="183" pm="."><plain>9.86 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="184" pm="."><plain>Average (for up-regulated miRNAs) </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="185" pm="."><plain>2166.22 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="186" pm="."><plain>12.54 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="187" pm="."><plain>78.34 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="188" pm="."><plain>9.11 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="189" pm="."><plain>miR-383 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="190" pm="."><plain>2118 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="191" pm="."><plain>9.02 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="192" pm="."><plain>78.80 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="193" pm="."><plain>12.18 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="194" pm="."><plain>miR-320a </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="195" pm="."><plain>3073 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="196" pm="."><plain>8.30 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="197" pm="."><plain>79.08 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="198" pm="."><plain>12.63 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="199" pm="."><plain>miR-193a-5p </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="200" pm="."><plain>1216 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="201" pm="."><plain>12.01 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="202" pm="."><plain>78.45 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="203" pm="."><plain>9.54 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="204" pm="."><plain>Average (for down-regulated miRNAs) </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="205" pm="."><plain>2135.67 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="206" pm="."><plain>9.77 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="207" pm="."><plain>78.78 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="208" pm="."><plain>11.45 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="209" pm="."><plain>Average (for Up and Down) </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="210" pm="."><plain>2150.94 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="211" pm="."><plain>11.16 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="212" pm="."><plain>78.56 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="213" pm="."><plain>10.28 </plain></SENT>
+</text></td></tr></tbody></table></alternatives><table-wrap-foot><fn id="nt105"><label/><p><text><SENT sid="214" pm="."><plain>miRNA targets that were differentially expressed between CEPI and OSE based on t-test p&lt;0.005 and fold change of at least 2 were classified as being IC or PC with their regulating miRNAs (while target genes that do not meet the above criteria are classified as NC). </plain></SENT>
+<SENT sid="215" pm="."><plain>Total number of targets from miRanda algorithm present after removing probe sets with “Absent” calls in all samples is shown along with fraction of IC, PC and NC targets for each miRNA. </plain></SENT>
+<SENT sid="216" pm="."><plain>On average, 78.6% of the target mRNAs are “No Change”, or do not change significantly with miRNAs, 11.2% are “inversely correlated” and 10.3% are “positively correlated” with miRNAs. </plain></SENT>
+</text></p></fn></table-wrap-foot></table-wrap></SecTag><p><text><SENT sid="217" pm="."><plain>To determine if the unexpectedly low percentage of IC changes may be a computational artifact of our use of the miRanda algorithm to predict targeted mRNAs, we repeated the analysis independently using the PicTar (<ext-link ext-link-type="uri" xlink:href="http://www.pictar.org">www.pictar.org</ext-link>) and TargetScan (<ext-link ext-link-type="uri" xlink:href="http://www.targetscan.org">www.targetscan.org</ext-link>) miRNA target prediction algorithms. </plain></SENT>
+<SENT sid="218" pm="."><plain>In both instances, the results were consistent with our original finding that only a minority of the changes in mRNA expression between CEPI and OSE are inversely correlated (IC) with the observed changes in miRNA levels (PicTar: IC 9.4%, PC 10.1%, NC 80.5%; TargetScan: IC 10.4%, PC 10.3%, NC 79.3%; see Tables 3, S4 &amp; S5). </plain></SENT>
+<SENT sid="219" pm="."><plain>To increase the stringency of target predictions, we reanalyzed the data using only miRNA targets that were commonly predicted by all three algorithms (intersection). </plain></SENT>
+<SENT sid="220" pm="."><plain>We found that by overlapping the three independent prediction algorithms, each miRNA had fewer predicted targets, yet using these commonly predicted targets, only ∼7% of the mRNA changes between CEPI and OSE were found to be inversely correlated (IC) with the observed changes in miRNA levels (Table 4). </plain></SENT>
+<SENT sid="221" pm="."><plain>We also analyzed our data using intersections of predictions from two algorithms at a time (miRanda+TargetScan, miRanda+PicTar, and PicTar+TargetScan), and again we found that changes in levels of only 6–9% of the predicted mRNA targets were inversely correlated with changes in miRNA levels (Tables S6, S7 and S8). </plain></SENT>
+</text></p><SecTag type="TABLE"><table-wrap id="pone-0022508-t003" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0022508.t003</object-id><label>Table 3</label><caption><title><text><SENT sid="222" pm="."><plain>Summary of average IC, PC and NC fractions based on miRanda, PicTar and TargetScan predicted targets. </plain></SENT>
+</text></title></caption><alternatives><graphic id="pone-0022508-t003-3" xlink:href="pone.0022508.t003"/><table frame="hsides" rules="groups"><colgroup span="1"><col align="left" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/></colgroup><thead><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="223" pm="."><plain>Inversely Correlated Targets (%) </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="224" pm="."><plain>No Change (%) </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="225" pm="."><plain>Positively Correlated Targets (%) </plain></SENT>
+</text></td></tr></thead><tbody><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="226" pm="."><plain>miRanda </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="227" pm="."><plain>11.16 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="228" pm="."><plain>78.56 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="229" pm="."><plain>10.28 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="230" pm="."><plain>TargetScan (TS) </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="231" pm="."><plain>10.37 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="232" pm="."><plain>79.34 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="233" pm="."><plain>10.29 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="234" pm="."><plain>PicTar (PT) </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="235" pm="."><plain>9.41 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="236" pm="."><plain>80.48 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="237" pm="."><plain>10.11 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="238" pm="."><plain>Average of different algorithms </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="239" pm="."><plain>10.31 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="240" pm="."><plain>79.46 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="241" pm="."><plain>10.23 </plain></SENT>
+</text></td></tr></tbody></table></alternatives><table-wrap-foot><fn id="nt106"><label/><p><text><SENT sid="242" pm="."><plain>Average fraction of IC, NC and PC targets in CEPI vs. OSE calculated for all 12 annotated miRNAs using miRanda, TargetScan (TS) or PicTar (PT) (See Tables 2, S4 and S5 for details). </plain></SENT>
+<SENT sid="243" pm="."><plain>The average IC, NC and PC fractions of the mean values calculated from these 3 different algorithms are also shown. </plain></SENT>
+</text></p></fn></table-wrap-foot></table-wrap></SecTag><SecTag type="TABLE"><table-wrap id="pone-0022508-t004" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0022508.t004</object-id><label>Table 4</label><caption><title><text><SENT sid="244" pm="."><plain>Summary values of IC, PC and NC targets in CEPI vs. OSE using overlap of miRanda, TargetScan and PicTar target predictions. </plain></SENT>
+</text></title></caption><alternatives><graphic id="pone-0022508-t004-4" xlink:href="pone.0022508.t004"/><table frame="hsides" rules="groups"><colgroup span="1"><col align="left" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/></colgroup><thead><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="245" pm="."><plain>miRNA </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="246" pm="."><plain>Total Targets (M_TS_PT) </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="247" pm="."><plain>Inversely Correlated Targets (%) </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="248" pm="."><plain>No Change (%) </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="249" pm="."><plain>Positively Correlated Targets (%) </plain></SENT>
+</text></td></tr></thead><tbody><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="250" pm="."><plain>miR-7 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="251" pm="."><plain>105 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="252" pm="."><plain>10.48 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="253" pm="."><plain>84.76 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="254" pm="."><plain>4.76 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="255" pm="."><plain>miR-18a </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="256" pm="."><plain>59 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="257" pm="."><plain>13.56 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="258" pm="."><plain>83.05 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="259" pm="."><plain>3.39 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="260" pm="."><plain>miR-18b </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="261" pm="."><plain>59 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="262" pm="."><plain>13.56 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="263" pm="."><plain>83.05 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="264" pm="."><plain>3.39 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="265" pm="."><plain>miR-126 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="266" pm="."><plain>2 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="267" pm="."><plain>0.00 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="268" pm="."><plain>100.00 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="269" pm="."><plain>0.00 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="270" pm="."><plain>miR-128 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="271" pm="."><plain>237 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="272" pm="."><plain>11.81 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="273" pm="."><plain>79.75 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="274" pm="."><plain>8.44 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="275" pm="."><plain>miR-141 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="276" pm="."><plain>177 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="277" pm="."><plain>15.82 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="278" pm="."><plain>74.58 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="279" pm="."><plain>9.60 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="280" pm="."><plain>miR-205 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="281" pm="."><plain>73 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="282" pm="."><plain>21.92 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="283" pm="."><plain>67.12 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="284" pm="."><plain>10.96 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="285" pm="."><plain>Average (for up-regulated miRNAs) </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="286" pm="."><plain>101.71 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="287" pm="."><plain>12.45 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="288" pm="."><plain>81.76 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="289" pm="."><plain>5.79 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="290" pm="."><plain>miR-383 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="291" pm="."><plain>15 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="292" pm="."><plain>0.00 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="293" pm="."><plain>80.00 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="294" pm="."><plain>20.00 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="295" pm="."><plain>miR-320a </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="296" pm="."><plain>112 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="297" pm="."><plain>3.57 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="298" pm="."><plain>84.82 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="299" pm="."><plain>11.61 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="300" pm="."><plain>miR-193a-5p </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="301" pm="."><plain>2 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="302" pm="."><plain>0.00 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="303" pm="."><plain>50.00 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="304" pm="."><plain>50.00 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="305" pm="."><plain>Average (for down-regulated miRNAs) </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="306" pm="."><plain>43.00 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="307" pm="."><plain>1.19 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="308" pm="."><plain>71.61 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="309" pm="."><plain>27.20 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="310" pm="."><plain>Average (for Up and Down) </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="311" pm="."><plain>72.36 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="312" pm="."><plain>6.82 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="313" pm="."><plain>76.68 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="314" pm="."><plain>16.50 </plain></SENT>
+</text></td></tr></tbody></table></alternatives><table-wrap-foot><fn id="nt107"><label/><p><text><SENT sid="315" pm="."><plain>miRNA targets that were differentially expressed between CEPI and OSE based on t-test p&lt;0.005 and fold change of at least 2 were classified as being IC or PC with their regulating miRNAs (while target genes that do not meet the above criteria are classified as NC). </plain></SENT>
+<SENT sid="316" pm="."><plain>Total number of targets from the intersection (M_TS_PT) of miRanda (M), TargetScan (TS) and PicTar (PT) predictions present after removing probe sets with “Absent” calls in all samples is shown along with fraction of IC, PC and NC targets for each miRNA. </plain></SENT>
+<SENT sid="317" pm="."><plain>On average, 76.7% of the target mRNAs are “No Change”, or do not change significantly with miRNAs, 6.8% are “inversely correlated” and 16.5% are “positively correlated” with miRNAs. </plain></SENT>
+</text></p></fn></table-wrap-foot></table-wrap></SecTag><p><text><SENT sid="318" pm="."><plain>Experimental validation is currently considered the most stringent method to validate miRNA targets [39], [40]. </plain></SENT>
+<SENT sid="319" pm="."><plain>Thus, to further test the possibility that the low inverse correlation between changes in miRNA levels and target mRNAs observed in the tissue samples was merely a reflection of the limited accuracy of target prediction algorithms, we conducted a series of transfection experiments using two miRNAs that were significantly up-regulated in CEPI (miR-7 and miR-128) to identify experimentally validated targets of these miRNAs in CEPI. </plain></SENT>
+</text></p><p><text><SENT sid="320" pm="."><plain>A series of independent transfection experiments was carried out with miR-7, miR-128 and a matched set of negative control miRNAs in a well-established ovarian cancer cell line (HEY) [41]. </plain></SENT>
+<SENT sid="321" pm="."><plain>To determine the effectiveness of our transfections (positive controls), we monitored expression levels of two previously confirmed mRNA targets of miR-7 (epidermal growth factor receptor, EGFR [42] and miR-128 (B lymphoma Mo-MLV insertion region 1 homolog, BMI1 [43]) regulation. </plain></SENT>
+<SENT sid="322" pm="."><plain>The results confirm the effectiveness of both transfections (Figure S4). </plain></SENT>
+<SENT sid="323" pm="."><plain>RNA was collected from cells after transfection and the relative levels of mRNAs present were determined by Affymetrix microarray analyses (HG-U133 Plus 2.0; Tables S9 and S10). </plain></SENT>
+</text></p><p><text><SENT sid="324" pm="."><plain>Consistent with the results from CEPI tissue samples, only a minority of predicted mRNA targets were found to be significantly reduced (IC) after miR-7 or miR-128 transfection (Table 5). </plain></SENT>
+<SENT sid="325" pm="."><plain>The predicted mRNA targets that were significantly down-regulated in these transfection experiments were taken as “experimentally validated” mRNA targets of miR-7 and miR-128 respectively. </plain></SENT>
+<SENT sid="326" pm="."><plain>Using only these targets, we reanalyzed the microarray data from the tissue samples and found that only ∼8% (range 0–18%) of the “experimentally validated” mRNA targets displayed changes in expression IC with changes in miR-7 and miR-128 expression in CEPI (Table 6). </plain></SENT>
+<SENT sid="327" pm="."><plain>Collectively our results indicate that the low inverse correlation between changes in levels in miRNAs and their target mRNAs in vivo is not merely an artifact of inaccurate target predictions but rather a reflection of the complexity of miRNA function in cancer cells. </plain></SENT>
+</text></p><SecTag type="TABLE"><table-wrap id="pone-0022508-t005" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0022508.t005</object-id><label>Table 5</label><caption><title><text><SENT sid="328" pm="."><plain>Summary values of IC, PC and NC targets in transfection experiments using miRanda, TargetScan and PicTar target predictions. </plain></SENT>
+</text></title></caption><alternatives><graphic id="pone-0022508-t005-5" xlink:href="pone.0022508.t005"/><table frame="hsides" rules="groups"><colgroup span="1"><col align="left" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/></colgroup><thead><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="329" pm="."><plain>miRNA_prediction algorithm </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="330" pm="."><plain>Total Targets </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="331" pm="."><plain>Inversely Correlated Targets (%) </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="332" pm="."><plain>No Change (%) </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="333" pm="."><plain>Positively Correlated Targets (%) </plain></SENT>
+</text></td></tr></thead><tbody><tr><td align="left" rowspan="1" colspan="1"/><td colspan="4" align="left" rowspan="1"><text><SENT sid="334" pm="."><plain>miR-7 transfection </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="335" pm="."><plain>miR-7_M </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="336" pm="."><plain>2432 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="337" pm="."><plain>7.98 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="338" pm="."><plain>91.24 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="339" pm="."><plain>0.78 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="340" pm="."><plain>miR-7_TS </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="341" pm="."><plain>259 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="342" pm="."><plain>23.55 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="343" pm="."><plain>75.29 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="344" pm="."><plain>1.16 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="345" pm="."><plain>miR-7_PT </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="346" pm="."><plain>238 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="347" pm="."><plain>16.39 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="348" pm="."><plain>83.19 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="349" pm="."><plain>0.42 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="350" pm="."><plain>miR-7_M_TS </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="351" pm="."><plain>234 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="352" pm="."><plain>20.51 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="353" pm="."><plain>78.63 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="354" pm="."><plain>0.85 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="355" pm="."><plain>miR-7_PT_TS </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="356" pm="."><plain>118 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="357" pm="."><plain>22.88 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="358" pm="."><plain>77.12 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="359" pm="."><plain>0 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="360" pm="."><plain>miR-7_M_PT </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="361" pm="."><plain>159 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="362" pm="."><plain>20.75 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="363" pm="."><plain>79.24 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="364" pm="."><plain>0 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="365" pm="."><plain>miR-7_M_TS_PT </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="366" pm="."><plain>99 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="367" pm="."><plain>23.23 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="368" pm="."><plain>76.77 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="369" pm="."><plain>0 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"/><td colspan="4" align="left" rowspan="1"><text><SENT sid="370" pm="."><plain>miR-128 transfection </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="371" pm="."><plain>miR-128_M </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="372" pm="."><plain>2744 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="373" pm="."><plain>9.55 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="374" pm="."><plain>79.15 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="375" pm="."><plain>11.30 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="376" pm="."><plain>miR-128_TS </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="377" pm="."><plain>654 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="378" pm="."><plain>16.36 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="379" pm="."><plain>73.85 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="380" pm="."><plain>9.79 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="381" pm="."><plain>miR-128_PT </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="382" pm="."><plain>441 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="383" pm="."><plain>15.19 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="384" pm="."><plain>74.60 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="385" pm="."><plain>10.20 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="386" pm="."><plain>miR-128_M_TS </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="387" pm="."><plain>449 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="388" pm="."><plain>20.04 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="389" pm="."><plain>72.83 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="390" pm="."><plain>7.13 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="391" pm="."><plain>miR-128_TS_PT </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="392" pm="."><plain>301 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="393" pm="."><plain>16.94 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="394" pm="."><plain>73.75 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="395" pm="."><plain>9.30 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="396" pm="."><plain>miR-128_M_PT </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="397" pm="."><plain>306 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="398" pm="."><plain>17.32 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="399" pm="."><plain>74.18 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="400" pm="."><plain>8.50 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="401" pm="."><plain>miR-128_TS_M_PT </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="402" pm="."><plain>221 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="403" pm="."><plain>19.91 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="404" pm="."><plain>73.30 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="405" pm="."><plain>6.79 </plain></SENT>
+</text></td></tr></tbody></table></alternatives><table-wrap-foot><fn id="nt108"><label/><p><text><SENT sid="406" pm="."><plain>miRNA targets that were differentially expressed between miR-7 or miR-128 transfected cells compared to negative control miRNA transfected cells, based on fold change of at least 1.4 and false discovery rate threshold of 5% were classified as being IC or PC with their regulating miRNAs (while target genes that do not meet the above criteria are classified as NC). </plain></SENT>
+<SENT sid="407" pm="."><plain>Total number of targets from miRanda (M), TargetScan (TS) and PicTar (PT) or their intersections (two at time and all three) present after removing probe sets with “Absent” calls in all samples is shown along with fraction of IC, PC and NC targets for each miRNA. </plain></SENT>
+</text></p></fn></table-wrap-foot></table-wrap></SecTag><SecTag type="TABLE"><table-wrap id="pone-0022508-t006" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0022508.t006</object-id><label>Table 6</label><caption><title><text><SENT sid="408" pm="."><plain>Summary values of IC, PC and NC mRNAs in CEPI vs. OSE for miR-7 and miR-128 using “experimentally validated” targets only. </plain></SENT>
+</text></title></caption><alternatives><graphic id="pone-0022508-t006-6" xlink:href="pone.0022508.t006"/><table frame="hsides" rules="groups"><colgroup span="1"><col align="left" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/></colgroup><thead><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="409" pm="."><plain>miRNA_prediction algorithm </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="410" pm="."><plain>Total Targets </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="411" pm="."><plain>Inversely Correlated Targets (%) </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="412" pm="."><plain>No Change (%) </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="413" pm="."><plain>Positively Correlated Targets (%) </plain></SENT>
+</text></td></tr></thead><tbody><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="414" pm="."><plain>miR-7_M </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="415" pm="."><plain>180 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="416" pm="."><plain>12.22 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="417" pm="."><plain>80.56 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="418" pm="."><plain>7.22 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="419" pm="."><plain>miR-7_TS </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="420" pm="."><plain>60 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="421" pm="."><plain>6.67 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="422" pm="."><plain>88.33 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="423" pm="."><plain>5 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="424" pm="."><plain>miR-7_PT </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="425" pm="."><plain>37 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="426" pm="."><plain>0 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="427" pm="."><plain>91.89 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="428" pm="."><plain>8.11 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="429" pm="."><plain>miR-7_M_TS </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="430" pm="."><plain>47 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="431" pm="."><plain>6.38 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="432" pm="."><plain>87.23 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="433" pm="."><plain>6.38 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="434" pm="."><plain>miR-7_PT_TS </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="435" pm="."><plain>27 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="436" pm="."><plain>0 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="437" pm="."><plain>96.30 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="438" pm="."><plain>3.70 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="439" pm="."><plain>miR-7_PT_M </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="440" pm="."><plain>33 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="441" pm="."><plain>0 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="442" pm="."><plain>90.91 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="443" pm="."><plain>9.09 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="444" pm="."><plain>miR-7_M_TS_PT </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="445" pm="."><plain>23 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="446" pm="."><plain>0 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="447" pm="."><plain>95.65 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="448" pm="."><plain>4.35 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="449" pm="."><plain>Average for miR-7 (all methods) </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="450" pm="."><plain>58.14 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="451" pm="."><plain>3.61 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="452" pm="."><plain>90.12 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="453" pm="."><plain>6.26 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="454" pm="."><plain>miR-128_M </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="455" pm="."><plain>252 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="456" pm="."><plain>11.90 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="457" pm="."><plain>74.60 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="458" pm="."><plain>13.49 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="459" pm="."><plain>miR-128_TS </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="460" pm="."><plain>103 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="461" pm="."><plain>10.68 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="462" pm="."><plain>75.73 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="463" pm="."><plain>13.59 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="464" pm="."><plain>miR128_PT </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="465" pm="."><plain>63 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="466" pm="."><plain>17.46 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="467" pm="."><plain>69.84 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="468" pm="."><plain>12.70 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="469" pm="."><plain>miR-128_M_TS </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="470" pm="."><plain>87 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="471" pm="."><plain>12.64 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="472" pm="."><plain>72.41 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="473" pm="."><plain>14.94 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="474" pm="."><plain>miR-128_PT_TS </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="475" pm="."><plain>49 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="476" pm="."><plain>16.33 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="477" pm="."><plain>69.39 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="478" pm="."><plain>14.29 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="479" pm="."><plain>miR-128_M_PT </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="480" pm="."><plain>52 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="481" pm="."><plain>11.54 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="482" pm="."><plain>75 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="483" pm="."><plain>13.46 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="484" pm="."><plain>miR-128_M_PT_TS </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="485" pm="."><plain>43 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="486" pm="."><plain>11.63 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="487" pm="."><plain>72.09 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="488" pm="."><plain>16.28 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="489" pm="."><plain>Average for miR-128 (all methods) </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="490" pm="."><plain>92.71 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="491" pm="."><plain>13.17 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="492" pm="."><plain>72.73 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="493" pm="."><plain>14.11 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="494" pm="."><plain>Average (overall) </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="495" pm="."><plain>75.43 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="496" pm="."><plain>8.39 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="497" pm="."><plain>81.42 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="498" pm="."><plain>10.19 </plain></SENT>
+</text></td></tr></tbody></table></alternatives><table-wrap-foot><fn id="nt109"><label/><p><text><SENT sid="499" pm="."><plain>Targets that were predicted by miRanda (M), TargetScan (TS), PicTar (PT) or any combination of the 3 programs and were down-regulated (FDR&lt;5%, fold change≥−|1.4|) in miR-7 transfection or in miR-128 transfection were assumed to be experimentally validated targets. </plain></SENT>
+<SENT sid="500" pm="."><plain>The direction of change of these same targets in CEPI vs. OSE were then used to calculate IC, NC and PC fractions using a p-value&lt;0.005 and a fold change of at least 2 in the tissue microarray data. </plain></SENT>
+</text></p></fn></table-wrap-foot></table-wrap></SecTag></sec></sec></SecTag><SecTag type="DISCUSS"><sec id="s3"><title><text><SENT sid="501" pm="."><plain>Discussion </plain></SENT>
+</text></title><p><text><SENT sid="502" pm="."><plain>It is well known that genes and their mRNA products are subject to a vast array of regulatory controls. </plain></SENT>
+<SENT sid="503" pm="."><plain>The relative contribution of malfunctions in these controls to the onset and progression of diseases, such as cancer, can be varied and complex [44]. </plain></SENT>
+<SENT sid="504" pm="."><plain>miRNAs and other small non-coding RNAs recently have been shown to be important regulators of gene expression, and disruption of miRNA expression has been implicated in many diseases including cancer [3], [45], [46], [47], [48]. </plain></SENT>
+<SENT sid="505" pm="."><plain>While it is well established that miRNAs can serve as useful biomarkers for the diagnosis and staging of a variety of human cancers (e.g., [2], [49], [50]), the manner and extent to which miRNAs contribute to the processes underlying cancer is only beginning to be understood [2], [45]. </plain></SENT>
+<SENT sid="506" pm="."><plain>For example, the regulatory function of miRNAs was initially believed to operate exclusively at the translational level [51], [52], but more recent findings have demonstrated that these small regulating RNAs also play a role in the modulation of mRNA stability and that these two modes of control may be inter-related [7], [53]. </plain></SENT>
+<SENT sid="507" pm="."><plain>We still do not rule out the possibility that regulation of some target genes may occur at the translational level without significant changes in mRNA level, and therefore may have been ignored in our analyses. </plain></SENT>
+</text></p><p><text><SENT sid="508" pm="."><plain>Extensive in vitro and in vivo studies previously have demonstrated that human miRNAs can repress gene expression by pairing with sequences located within the 3′ untranslated regions of targeted messenger RNAs (mRNAs) resulting in translational repression and subsequent mRNA degradation [1], [6], [7]. </plain></SENT>
+<SENT sid="509" pm="."><plain>Thus far, there are few examples of miRNAs increasing the transcription or translation of target genes [54], [55], resulting in positive correlations between miRNAs and target mRNAs. </plain></SENT>
+<SENT sid="510" pm="."><plain>Therefore, a generally held expectation is that changes in the expression levels of mRNAs will be inversely correlated with changes in the levels of their targeting miRNAs [56]. </plain></SENT>
+<SENT sid="511" pm="."><plain>However, the fact that individual miRNAs may target multiple mRNAs and that individual mRNAs may be targeted by multiple miRNAs creates the potential for a complex network of interactions in cancer cells replete with a variety of positive and negative feedback loops [57], [58]. </plain></SENT>
+<SENT sid="512" pm="."><plain>In addition, the fact that miRNAs are well known to target mRNAs encoding a variety of cellular transcription factors and other regulatory proteins increases the likelihood that the direct regulatory effects of miRNAs may be modulated by indirect or “down-stream” effects within the context of cancer cells. </plain></SENT>
+<SENT sid="513" pm="."><plain>This is not to say that the mechanisms demonstrated to underlie miRNA regulation in vitro are inoperative in vivo, but rather that the functional consequences of these mechanisms may be masked and/or modulated by the regulatory complexities that characterize cancer cells. </plain></SENT>
+<SENT sid="514" pm="."><plain>The extent to which these complexities may mitigate our ability to accurately predict the molecular consequence of changes in levels of miRNAs within the context of cancer cells has relevance to the potential use of miRNAs in cancer therapy. </plain></SENT>
+</text></p><p><text><SENT sid="515" pm="."><plain>The purpose of our study was to evaluate the extent to which the molecular consequences of changes in miRNA levels in cancer cells isolated from patient tissues can be predicted from current models of miRNA function. </plain></SENT>
+<SENT sid="516" pm="."><plain>The fact that prior efforts to obtain expression profiles of miRNAs and their mRNA targets were typically carried out on samples obtained from different patients and/or from mixed (bulk) tissues have contributed to inconsistent findings (e.g., [15], [16], [17], [18], [19], [20]). </plain></SENT>
+<SENT sid="517" pm="."><plain>In an effort to reduce experimental variation, we assayed changes in levels of miRNAs and their targeted mRNAs in ovarian cancer cells isolated from the same patients by LCM. </plain></SENT>
+<SENT sid="518" pm="."><plain>Our results indicate that only ∼11% of the changes in levels of mRNAs are IC with changes in levels of their regulating miRNAs in the same ovarian cancer (CEPI) cells. </plain></SENT>
+<SENT sid="519" pm="."><plain>To eliminate the possibility that our results are merely an artifact of incorrectly identified mRNA targets of miRNA regulation, we repeated our analyses using targets predicted by a variety of prediction algorithms, as well as, targets experimentally validated in a series of transfection experiments conducted in a well-documented ovarian cancer cell line (HEY). </plain></SENT>
+<SENT sid="520" pm="."><plain>Our results consistently support the conclusion that the expected IC between changes in miRNA levels and levels of their target mRNAs occurs relatively infrequently in ovarian cancer cells isolated from patient samples and that this low inverse correlation is not merely an artifact of inaccurate miRNA target predictions. </plain></SENT>
+<SENT sid="521" pm="."><plain>Rather, our results indicate that the low inverse correlation between changes in miRNA levels and levels of their target mRNAs is the likely consequence of indirect cellular processes that modulate or mask the regulatory effects of miRNAs in vivo. </plain></SENT>
+<SENT sid="522" pm="."><plain>Our findings underscore the complexities of miRNA-mediated regulation in vivo and the need for better understanding the basis of these complexities in cancer cells before the therapeutic potential of miRNAs can be fully realized. </plain></SENT>
+</text></p></sec></SecTag><SecTag type="METHODS"><sec sec-type="materials|methods" id="s4"><title><text><SENT sid="523" pm="."><plain>Materials and Methods </plain></SENT>
+</text></title><sec id="s4a"><title><text><SENT sid="524" pm="."><plain>Tissue samples </plain></SENT>
+</text></title><p><text><SENT sid="525" pm="."><plain>Ovarian tumor samples were collected at Northside Hospital (Atlanta, GA) during surgery and snap frozen in liquid nitrogen within 1 minute of removal from patients. </plain></SENT>
+<SENT sid="526" pm="."><plain>All ovarian tumor samples used in this study were from patients diagnosed with serous papillary epithelial ovarian carcinoma. </plain></SENT>
+<SENT sid="527" pm="."><plain>Brushings of normal ovarian surface epithelial cells (OSE) were preserved immediately in RNAlater (Ambion, Austin, TX). </plain></SENT>
+<SENT sid="528" pm="."><plain>Patient consent and approval from the Institutional Review Boards of Georgia Institute of Technology and Northside Hospital were obtained. </plain></SENT>
+<SENT sid="529" pm="."><plain>The written consent and our protocol (#H09227) were approved by the IRB. </plain></SENT>
+<SENT sid="530" pm="."><plain>Detailed clinical information for each patient used in this study is provided in Table 1. </plain></SENT>
+</text></p></sec><sec id="s4b"><title><text><SENT sid="531" pm="."><plain>Laser capture micro-dissection (LCM) </plain></SENT>
+</text></title><p><text><SENT sid="532" pm="."><plain>Fresh frozen tissues from tumors were cut into seven-micron sections, applied to non-charged slides, then fixed in 75% ethanol for 30 seconds, stained and dehydrated using the HistoGene LCM Frozen Section Staining Kit (Arcturus, Mountain View, CA). </plain></SENT>
+<SENT sid="533" pm="."><plain>LCM was performed with an AutoPix Automated Laser Capture Microdissection System using the CapSure Macro Caps (Arcturus). </plain></SENT>
+<SENT sid="534" pm="."><plain>Approximately 10,000 cells were captured on each of 5–6 caps per sample. </plain></SENT>
+<SENT sid="535" pm="."><plain>miRNA was extracted from captured cells using the mirVana miRNA Isolation Kit (Ambion). </plain></SENT>
+<SENT sid="536" pm="."><plain>mRNA was isolated from cells from the same patients using the PicoPure RNA Isolation Kit (Arcturus). </plain></SENT>
+</text></p></sec><sec id="s4c"><title><text><SENT sid="537" pm="."><plain>RNA extraction from ovarian surface epithelial cells </plain></SENT>
+</text></title><p><text><SENT sid="538" pm="."><plain>For miRNA qPCR and microarray, normal ovarian surface epithelial cells were spun down and resuspended in lysis buffer from the mirVana miRNA Isolation Kit (for small RNA enrichment), following the manufacturer's recommended protocol (Ambion). </plain></SENT>
+<SENT sid="539" pm="."><plain>cDNA for qPCR was synthesized from RNA (10ng) using the TaqMan miRNA Reverse Transcription Kit (Applied Biosystems, Foster City, CA). </plain></SENT>
+</text></p><p><text><SENT sid="540" pm="."><plain>For mRNA qPCR and microarray total RNA extraction from OSE was carried out using the PicoPure RNA Isolation Kit, following the manufacturer's recommended protocol (Arcturus). </plain></SENT>
+<SENT sid="541" pm="."><plain>Due to limited number of cells collected from surface epithelial brushings, OSE RNA was extracted from 5 patients with non-malignant ovaries for mRNA microarray and from two different sets of three patients with non-malignant ovaries for miRNA (one set for miRNA microarray, another for qPCR) (See Table 1 for more details on patient information). </plain></SENT>
+</text></p></sec><sec id="s4d"><title><text><SENT sid="542" pm="."><plain>Quantitative (real-time) PCR </plain></SENT>
+</text></title><p><text><SENT sid="543" pm="."><plain>Total RNA (10ng) extracted from LCM captured ovarian tumor cells and normal OSE cells was converted to amplified cDNA for qPCR. </plain></SENT>
+<SENT sid="544" pm="."><plain>TaqMan miRNA Assays (Applied Biosystems) were conducted following manufacturer's protocol for hsa-miR-141, hsa-miR-429, hsa-miR-205, hsa-miR-320, hsa-miR-383 and for RNU6B endogenous control using the StepOnePlus Real-Time PCR machine (Applied Biosystems). </plain></SENT>
+<SENT sid="545" pm="."><plain>The primer specificities for these miRNAs have been previously demonstrated [58]–[63] and RNU6B is a previously established control for human ovarian tissue (<ext-link ext-link-type="uri" xlink:href="http://www.ambion.com/techlib/tn/151/3.html">http://www.ambion.com/techlib/tn/151/3.html</ext-link>; <ext-link ext-link-type="uri" xlink:href="http://www3.appliedbiosystems.com/cms/groups/mcb_marketing/documents/generaldocuments/cms_044972.pdf">http://www3.appliedbiosystems.com/cms/groups/mcb_marketing/documents/generaldocuments/cms_044972.pdf</ext-link>). </plain></SENT>
+<SENT sid="546" pm="."><plain>Statistical significance was determined using the Relative Expression Software Tool (REST; [59]). </plain></SENT>
+</text></p><p><text><SENT sid="547" pm="."><plain>For mRNA qPCR, total RNA (1–5 µg) extracted from cells was converted to cDNA using the Superscript III First Strand synthesis system (Invitrogen). </plain></SENT>
+<SENT sid="548" pm="."><plain>cDNA was then purified using the QIAGEN PCR purification kit (QIAGEN) following manufacturer's instructions. </plain></SENT>
+<SENT sid="549" pm="."><plain>qPCR experiments were carried out for the EGFR, BMI1 and GAPDH genes using iQ SYBR Green Supermix (Bio-Rad, Hercules, CA). </plain></SENT>
+<SENT sid="550" pm="."><plain>The sequence specific primers used for SYBR green assays are as follows: EGFR-forward: GGAGAACTGCCAGAAACTGACC, EGFR-reverse: GCCTGCAGCACACTGGTTG, GAPDH-forward: GGTCTCCTCTGACTTCAACA, GAPDH-reverse: AGCCAAATTCGTTGTCATAC, BMI1-forward: ACTTCATTGATGCCACAACC, BMI1-reverse: CAGAAGGATGAGCTGCATAA. </plain></SENT>
+<SENT sid="551" pm="."><plain>The EGFR primers were as designed by [60] and GAPDH primers were as designed by [61]. </plain></SENT>
+<SENT sid="552" pm="."><plain>BMI1 primers were obtained from the qPCR primer database RTPrimerDB [62]. </plain></SENT>
+<SENT sid="553" pm="."><plain>The GAPDH primer efficiencies were calculated to be ∼1. </plain></SENT>
+<SENT sid="554" pm="."><plain>The specificity of the other primers can be obtained from the relevant publications/database. </plain></SENT>
+<SENT sid="555" pm="."><plain>All qPCR reactions (for mRNA and miRNA) were optimized with non-template controls and -RT (minus reverse transcriptase) controls prior to experiment. </plain></SENT>
+<SENT sid="556" pm="."><plain>GAPDH was chosen as endogenous control as it displayed minimal change between cells transfected with miR-NC and miR-7/128 in microarray. </plain></SENT>
+</text></p><p><text><SENT sid="557" pm="."><plain>All qPCR reactions were carried out with at least 2 biological replicates and for each biological replicate at least 3 technical replicates. </plain></SENT>
+</text></p></sec><sec id="s4e"><title><text><SENT sid="558" pm="."><plain>Cell culture and Cell Transfections </plain></SENT>
+</text></title><p><text><SENT sid="559" pm="."><plain>HEY cells were provided by Gordon B. </plain></SENT>
+<SENT sid="560" pm="."><plain>Mills, Department of Systems Biology, the University of Texas, M. </plain></SENT>
+<SENT sid="561" pm="."><plain>D. </plain></SENT>
+<SENT sid="562" pm="."><plain>Anderson Cancer Center. </plain></SENT>
+<SENT sid="563" pm="."><plain>The cells were cultured in RPMI 1640 (Mediatech, Manassas, VA) supplemented with 10% v/v heat-inactivated fetal calf serum (Invitrogen, Carlsbad, CA), 2 mM L-glutamine (Mediatech), 10 mM HEPES buffer (Mediatech), penicillin (100 U/ml), and streptomycin (100 µg/mL). </plain></SENT>
+<SENT sid="564" pm="."><plain>Approximately 12h before transfection, these cells (duplicates or triplicates per transfection, 1.5×105 per well) were seeded on six-well plates in growth medium and allowed to adhere overnight at 37°C in a 5% CO2 atmosphere. </plain></SENT>
+<SENT sid="565" pm="."><plain>The following day after washing the wells with PBS and replacing the growth medium with Opti-MEM (Invitrogen), cells were transfected with the miRNA [hsa-miR-7 miRIDIAN mimic, miRIDIAN miRNA mimic negative control #1 (miR-NC, a C. elegans miRNA, cel-miR-67, with confirmed minimal sequence identity in humans), or hsa-miR-128 miRIDIAN mimic (Thermo Fisher Scientific, Lafayette, CO)] using Lipofectamine 2000 transfection agent (Invitrogen) according to the manufacturer's instructions at a final concentration of 25 nM. </plain></SENT>
+<SENT sid="566" pm="."><plain>Cells were incubated for four hours in this reduced serum environment to optimize transfection, washed with PBS, and then incubated at 37°C and 5% CO2 for 44 h (total 48 h) after adding fresh growth medium to the wells. </plain></SENT>
+<SENT sid="567" pm="."><plain>Transfection efficiency was estimated from the relative knock-down of previously validated targets (EGFR for miR-7 and BMI-1 for miR-128 [42], [43]), based on recommendations by the siRNA/miRNA reagent manufacturer (Thermo Fisher Scientific). </plain></SENT>
+<SENT sid="568" pm="."><plain>Cell culture experiments were carried out using at least two-three independent biological replicates. </plain></SENT>
+</text></p></sec><sec id="s4f"><title><text><SENT sid="569" pm="."><plain>Microarray </plain></SENT>
+</text></title><sec id="s4f1"><title><text><SENT sid="570" pm="."><plain>Tissue mRNA microarray </plain></SENT>
+</text></title><p><text><SENT sid="571" pm="."><plain>Biotin labeled cRNA was synthesized, hybridized to Affymetrix HG-U133 Plus 2.0 oligonucleotide arrays and analyzed with a GeneChip Scanner 3000 (Affymetrix, Santa Clara, CA). </plain></SENT>
+</text></p></sec><sec id="s4f2"><title><text><SENT sid="572" pm="."><plain>HEY cell RNA isolation and mRNA microarray </plain></SENT>
+</text></title><p><text><SENT sid="573" pm="."><plain>Total RNA was isolated using the RNeasy Mini RNA isolation kit (QIAGEN, Valencia, CA) according to the manufacturer's instructions. </plain></SENT>
+<SENT sid="574" pm="."><plain>The integrity of the RNA was verified using an Agilent 2100 Bioanalyzer (1.8–2.0; Agilent Technologies, Palo Alto, CA). </plain></SENT>
+<SENT sid="575" pm="."><plain>mRNAs were converted to double stranded (ds)-cDNA and amplified using Applause 3′-Amp System (NuGen, San Carlos, CA). </plain></SENT>
+<SENT sid="576" pm="."><plain>This cDNA was then biotin labeled and fragmented by using Encode Biotin Module (NuGen). </plain></SENT>
+<SENT sid="577" pm="."><plain>The labeled cDNA was hybridized to Affymetrix HG-U133 Plus 2.0 oligonucleotide arrays and analyzed with a GeneChip Scanner 3000 (Affymetrix). </plain></SENT>
+</text></p></sec></sec><sec id="s4g"><title><text><SENT sid="578" pm="."><plain>Microarray data analysis </plain></SENT>
+</text></title><sec id="s4g1"><title><text><SENT sid="579" pm="."><plain>Tissue miRNA microarray data analysis </plain></SENT>
+</text></title><p><text><SENT sid="580" pm="."><plain>Samples for our miRNA profiling study were processed by Asuragen Services (Austin, TX), according to the company's standard operating procedures. </plain></SENT>
+<SENT sid="581" pm="."><plain>A custom-manufactured Affymetrix GeneChip® from Ambion was designed to miRNA probes derived from the Sanger miRBase and published reports [24], [25], [26], [63], [64], [65]. </plain></SENT>
+<SENT sid="582" pm="."><plain>Background signal was estimated from antigenomic probe sequences provided by Affymetrix and derived from a larger set of controls used on the Affymetrix human exon array. </plain></SENT>
+<SENT sid="583" pm="."><plain>Spike-in external reference controls were based on non-miRNA control probes that lack homology to the human genome. </plain></SENT>
+<SENT sid="584" pm="."><plain>Arrays within a specific analysis experiment were normalized according to the variance stabilization method described in [66]. </plain></SENT>
+<SENT sid="585" pm="."><plain>A Wilcoxon rank-sum test was used to determine detection calls of the miRNA probe signal compared to the distribution of signals from GC-content matched anti-genomic probes. </plain></SENT>
+</text></p><p><text><SENT sid="586" pm="."><plain>A two-sample t-test, with assumption of equal variance, was applied for statistical hypothesis testing. </plain></SENT>
+<SENT sid="587" pm="."><plain>This test defined which probes are considered to be significantly differentially expressed based on a p-value of 0.01 and log2 difference ≥1. </plain></SENT>
+<SENT sid="588" pm="."><plain>The signal intensities from these differentially expressed probes were z-score normalized prior to hierarchical clustering. </plain></SENT>
+</text></p><p><text><SENT sid="589" pm="."><plain>Unsupervised hierarchical clustering of the samples was performed using Spotfire Decisionsite for Microarray Analysis (DSMA) based on Z-score transformed signal values of all probesets except those with standard deviation &lt;0.5. </plain></SENT>
+<SENT sid="590" pm="."><plain>A “complete linkage” clustering method was employed with “correlation” ‘similarity measure’. </plain></SENT>
+<SENT sid="591" pm="."><plain>Empty values were replaced with the constant 0. </plain></SENT>
+</text></p></sec><sec id="s4g2"><title><text><SENT sid="592" pm="."><plain>Tissue mRNA microarray data analysis </plain></SENT>
+</text></title><p><text><SENT sid="593" pm="."><plain>CEL files generated by the Affymetrix Gene Chip Operating System (GCOS) were converted to expression level values using the MAS 5.0 package implemented using the Affymetrix Expression Console software. </plain></SENT>
+<SENT sid="594" pm="."><plain>The log2 transformed expression values were then normalized across samples by Z-score calculations using DSMA. </plain></SENT>
+<SENT sid="595" pm="."><plain>Probe sets with “Absent” call in all groups were removed from further statistical analysis. </plain></SENT>
+<SENT sid="596" pm="."><plain>Probe set intensities were filtered with DSMA using a modulation threshold of 1.0 to include only those probe sets with at least a log2 expression value of ≥1.0 or fold change ≥2. </plain></SENT>
+<SENT sid="597" pm="."><plain>Differentially expressed probe sets were identified using the t-test function of the Profile ANOVA Tool of DSMA (p&lt;0.005). </plain></SENT>
+<SENT sid="598" pm="."><plain>Annotations for probe sets were obtained from the NetAffx website (<ext-link ext-link-type="uri" xlink:href="http://www.affymetrix.com/analysis/index.affx">http://www.affymetrix.com/analysis/index.affx</ext-link>). </plain></SENT>
+</text></p><p><text><SENT sid="599" pm="."><plain>Unsupervised hierarchical clustering of the samples was performed using DSMA based on Z-score transformed signal values of all probesets except those with standard deviation &lt;0.5 and “Absent” call across all samples. </plain></SENT>
+<SENT sid="600" pm="."><plain>A “complete linkage” clustering method was employed with “correlation” ‘similarity measure’. </plain></SENT>
+<SENT sid="601" pm="."><plain>Empty values were replaced with the constant 0. </plain></SENT>
+</text></p></sec><sec id="s4g3"><title><text><SENT sid="602" pm="."><plain>HEY cell mRNA microarray data analysis </plain></SENT>
+</text></title><p><text><SENT sid="603" pm="."><plain>Raw data in the form of CEL files were produced by Affymetrix GeneChip Operating System (GCOS) software. </plain></SENT>
+<SENT sid="604" pm="."><plain>Raw data from mRNA microarray were analyzed using the Expression Console software (Affymetrix) and R (<ext-link ext-link-type="uri" xlink:href="http://www.r-project.org">www.r-project.org</ext-link>). </plain></SENT>
+<SENT sid="605" pm="."><plain>Normalization was performed using MAS 5.0, PLIER (Expression Console) and GCRMA (R) algorithms. </plain></SENT>
+<SENT sid="606" pm="."><plain>The log2 transformed expression values from MAS5.0 were then analyzed for Affymetrix “Present/Absent” calls using DSMA. </plain></SENT>
+<SENT sid="607" pm="."><plain>Probe sets with “Absent” call in all groups were removed from statistical analysis. </plain></SENT>
+<SENT sid="608" pm="."><plain>Average probe set intensities for each group was calculated based on the log2 transformed values from PLIER and then filtered with DSMA using a modulation threshold of 0.5 to include only those probe sets with at least a fold change ≥1.4 [log2 difference ≥0.5]. </plain></SENT>
+<SENT sid="609" pm="."><plain>The false discovery rate (FDR) for each probe set was calculated from the log2 transformed values after GCRMA normalization using the SAM algorithm [67]. </plain></SENT>
+<SENT sid="610" pm="."><plain>Finally, differentially expressed probe sets were identified using a threshold 5% FDR correction, a fold change ≥1.4 and at least “Present/Marginal” call in one sample. </plain></SENT>
+<SENT sid="611" pm="."><plain>These 3 different filtering approaches were used based on recommendations from recent publication by Mieczkowski et al. [68] and the combination of all three was used to achieve the most stringent filtering. </plain></SENT>
+</text></p><p><text><SENT sid="612" pm="."><plain>All microarray data from this study are MIAME compliant and have been submitted to GEO under the accession no. GSE23392. </plain></SENT>
+</text></p></sec></sec><sec id="s4h"><title><text><SENT sid="613" pm="."><plain>miRNA target download </plain></SENT>
+</text></title><p><text><SENT sid="614" pm="."><plain>The miRNA targets prediction file based on miRanda was downloaded from <ext-link ext-link-type="uri" xlink:href="http://www.microrna.org">www.microrna.org</ext-link> (August 2010 release) [34], [35], [36]. </plain></SENT>
+<SENT sid="615" pm="."><plain>Information about the prediction algorithm, parameter settings and raw data source is available on the above link. </plain></SENT>
+<SENT sid="616" pm="."><plain>Only predicted targets with “good” mirSVR score were used. “Good” mirSVR score refers to miRNA targets with &lt;−0.1 score, and “non-good” mirSVR score refers to targets with &gt;−0.1 score obtained from the support vector regression algorithm mirSVR, available with target predictions in the above link. </plain></SENT>
+<SENT sid="617" pm="."><plain>The miRNA targets prediction file based on TargetScan (release 5.1) was downloaded from <ext-link ext-link-type="uri" xlink:href="http://www.targetscan.org">www.targetscan.org</ext-link> [69], [70], [71]. </plain></SENT>
+<SENT sid="618" pm="."><plain>Targets based on PicTar [72], [73], [74], [75] prediction were also bulk downloaded from the UCSC database. </plain></SENT>
+<SENT sid="619" pm="."><plain>miRNAs for which PicTar predictions were not present in the bulk data file, were manually curated from the tables available on the PicTar web interface (<ext-link ext-link-type="uri" xlink:href="http://www.pictar.org">www.pictar.org</ext-link>). </plain></SENT>
+</text></p></sec><sec id="s4i"><title><text><SENT sid="620" pm="."><plain>Predicted target sites analysis </plain></SENT>
+</text></title><p><text><SENT sid="621" pm="."><plain>Target sites for 12 differentially expressed miRNAs were selected from the downloaded target prediction files or from the web interface (PicTar). </plain></SENT>
+<SENT sid="622" pm="."><plain>Of those, target sites with Affymetrix “Absent” call in every sample were excluded from further analysis. </plain></SENT>
+<SENT sid="623" pm="."><plain>Each target mRNA was classified as IC, NC or PC depending on the direction of its change in level of expression between OSE and CEPI and that of each targeting miRNA. </plain></SENT>
+</text></p><p><text><SENT sid="624" pm="."><plain>Predicted targets of the miRNAs miR-7 and miR-128 identified by miRanda, TargetScan, PicTar and all combinations of the 3 programs were used to calculated IC, NC, and PC fraction of targets in HEY cells transfected by each miRNA (miR-7 or miR-128) based on significance at a fold change threshold of 1.4 and maximum FDR of 5%. </plain></SENT>
+<SENT sid="625" pm="."><plain>Predicted targets that were down-regulated in the transfection experiments were assumed to be “experimentally validated” and the expression patterns of these experimentally validated targets were subsequently used in comparisons between the CEPI and OSE samples (as described above) to identify IC, PC and NC fractions based on significance at a fold change threshold of 2 and t-test p-value &lt;0.005. </plain></SENT>
+</text></p></sec></sec></SecTag><SecTag type="SUPPL"><sec sec-type="supplementary-material" id="s5"><title><text><SENT sid="626" pm="."><plain>Supporting Information </plain></SENT>
+</text></title><supplementary-material content-type="local-data" id="pone.0022508.s001"><label>Figure S1</label><caption><p><text><SENT sid="627" pm="."><plain>Overlap between differentially expressed genes in ovarian cancer and miRNA target genes. Genomica was used to calculate significant (false discovery rate corrected q&lt;0.05) gene set overlaps between genes differentially expressed in the ovarian cancer data set and gene sets containing targets of individual miRNAs. </plain></SENT>
+<SENT sid="628" pm="."><plain>This is analogous to a “GO” (gene ontology) enrichment analysis (the miRNA identities are the “ontologies” in this case). </plain></SENT>
+<SENT sid="629" pm="."><plain>The coloring represents the percentage (%) of genes within the cancer data set that overlap with the individual miRNA target gene set listed on the right. </plain></SENT>
+<SENT sid="630" pm="."><plain>The miRNAs listed here include differentially expressed miRNAs found in our microarray experiment as well as additional miRNAs predicted using Genomica. </plain></SENT>
+</text></p><p><text><SENT sid="631" pm="."><plain>(TIF) </plain></SENT>
+</text></p></caption><media xlink:href="pone.0022508.s001.tif"><caption><p><text><SENT sid="632" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="pone.0022508.s002"><label>Figure S2</label><caption><p><text><SENT sid="633" pm="."><plain>Unsupervised hierarchical clustering of CEPI and OSE samples based on probesets expressed on the HG-U133 Plus 2.0 array. An unsupervised hierarchical clustering of the 5 CEPI and 3 OSE samples was carried out using all detected probesets on the HG-U133 Plus 2.0 array, regardless of differential expression. </plain></SENT>
+<SENT sid="634" pm="."><plain>Probesets with standard deviation &lt;0.5 and “Absent” calls across all samples were removed prior to clustering. </plain></SENT>
+<SENT sid="635" pm="."><plain>The clustering shows that the CEPI and OSE samples cluster into separate groups, which suggests the variance between the groups is greater than that within the groups. </plain></SENT>
+</text></p><p><text><SENT sid="636" pm="."><plain>(TIF) </plain></SENT>
+</text></p></caption><media xlink:href="pone.0022508.s002.tif"><caption><p><text><SENT sid="637" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="pone.0022508.s003"><label>Figure S3</label><caption><p><text><SENT sid="638" pm="."><plain>Differentially expressed mRNAs between CEPI and OSE. Hierarchical clustering of differentially expressed genes between CEPI samples and OSE samples. </plain></SENT>
+<SENT sid="639" pm="."><plain>The ∼3650 probesets correspond to ∼2700 unique gene symbols and were selected based on p-value &lt;0.005, fold change ≥2, and Affymetrix “Present/Marginal” call in at least one sample. </plain></SENT>
+<SENT sid="640" pm="."><plain>The dendogram on the left clusters the up-regulated genes and down-regulated genes into two groups and the number of genes in each of these classes are approximately equal. </plain></SENT>
+<SENT sid="641" pm="."><plain>Gene symbols corresponding to representative differentially expressed probesets are shown on the right (See Table S2 for listing of all differentially expressed probesets). </plain></SENT>
+</text></p><p><text><SENT sid="642" pm="."><plain>(TIF) </plain></SENT>
+</text></p></caption><media xlink:href="pone.0022508.s003.tif"><caption><p><text><SENT sid="643" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="pone.0022508.s004"><label>Figure S4</label><caption><p><text><SENT sid="644" pm="."><plain>Confirmation of successful miR-7 and miR-128 transfection into HEY cells. Successful transfection of miR-7 and miR-128 in HEY cells (positive control) was confirmed by measuring levels of two previously demonstrated targets of these miRNAs, EGFR and BMI1, by qPCR following transfection of either miR-NC or miR7/miR-128 into HEY cells. </plain></SENT>
+<SENT sid="645" pm="."><plain>The results demonstrate that both BMI1 and EGFR were down-regulated by ∼60% relative to miR-NC (*** p&lt;0.005) after transfection with miR-128 and miR-7 respectively. </plain></SENT>
+</text></p><p><text><SENT sid="646" pm="."><plain>(TIF) </plain></SENT>
+</text></p></caption><media xlink:href="pone.0022508.s004.tif"><caption><p><text><SENT sid="647" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="pone.0022508.s005"><label>Table S1</label><caption><p><text><SENT sid="648" pm="."><plain>Differentially expressed miRNA probesets detected by microarray. Forty-two differentially expressed miRNA probesets in 3 CEPI and 3 OSE samples as analyzed by microarray (Ambion miRChip V1). </plain></SENT>
+<SENT sid="649" pm="."><plain>These probesets were selected based on a p-value &lt;0.01, log2 difference ≥1, and Affymetrix “Present/Marginal” call in at least 1 sample. </plain></SENT>
+<SENT sid="650" pm="."><plain>The mature miRNA names and the sequences corresponding to each probeset, the average log expression values from the OSE and CEPI samples, as well as, the log2 difference and t-test p-value calculated from these are given. </plain></SENT>
+<SENT sid="651" pm="."><plain>Probesets that do not refer to miRNAs currently annotated in Sanger miRBase are listed as “exploratory”. </plain></SENT>
+<SENT sid="652" pm="."><plain>Sequences of these exploratory miRNAs are based on computational predictions from previous studies. </plain></SENT>
+</text></p><p><text><SENT sid="653" pm="."><plain>(XLS) </plain></SENT>
+</text></p></caption><media xlink:href="pone.0022508.s005.xls"><caption><p><text><SENT sid="654" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="pone.0022508.s006"><label>Table S2</label><caption><p><text><SENT sid="655" pm="."><plain>Differentially expressed mRNA probes in CEPI compared to OSE. Differentially expressed mRNA probesets between 3 CEPI samples and OSE from 5 normal samples as analyzed by microarray (Affymetrix HG-U133 Plus 2.0). </plain></SENT>
+<SENT sid="656" pm="."><plain>These probesets were selected based on a p-value &lt;0.005, fold change ≥2, and Affymetrix “Present/Marginal” call in at least one sample. </plain></SENT>
+<SENT sid="657" pm="."><plain>The gene symbols corresponding to each probeset ID, the average log expression values from the OSE and CEPI samples as well as the log2 difference and t-test p-value calculated from these are given. </plain></SENT>
+</text></p><p><text><SENT sid="658" pm="."><plain>(XLS) </plain></SENT>
+</text></p></caption><media xlink:href="pone.0022508.s006.xls"><caption><p><text><SENT sid="659" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="pone.0022508.s007"><label>Table S3</label><caption><p><text><SENT sid="660" pm="."><plain>IC, PC and NC targets of miRNAs in tissue samples. Target predictions from miRanda (M), TargetScan (TS) and PicTar (PT) programs were downloaded (see methods for details) for each of the 12 annotated miRNAs. </plain></SENT>
+<SENT sid="661" pm="."><plain>miRNA targets that were differentially expressed between CEPI and OSE based on t-test p&lt;0.005 and fold change of at least 2 were classified as being IC or PC with their regulating miRNAs (while target genes that do not meet the above criteria are classified as NC). </plain></SENT>
+<SENT sid="662" pm="."><plain>The IC targets are shown in green, PC targets are shown in red, and blue represents NC targets. </plain></SENT>
+<SENT sid="663" pm="."><plain>Targets with “Absent” calls in all samples have been removed. </plain></SENT>
+<SENT sid="664" pm="."><plain>For miR-93*, TargetScan custom (TScustom) (<ext-link ext-link-type="uri" xlink:href="http://www.targetscan.org/vert_50/seedmatch.html">http://www.targetscan.org/vert_50/seedmatch.html</ext-link>) was used to generate TargetScan predictions. </plain></SENT>
+<SENT sid="665" pm="."><plain>For hsa-miR-429 and hsa-miR-93* there were no PicTar predictions and thus targets of these miRNAs were excluded for analysis when calculating intersections. </plain></SENT>
+</text></p><p><text><SENT sid="666" pm="."><plain>(XLS) </plain></SENT>
+</text></p></caption><media xlink:href="pone.0022508.s007.xls"><caption><p><text><SENT sid="667" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="pone.0022508.s008"><label>Table S4</label><caption><p><text><SENT sid="668" pm="."><plain>Summary values of IC, PC and NC targets using TargetScan. miRNA targets that were differentially expressed between CEPI and OSE based on t-test p&lt;0.005 and fold change of at least 2 were classified as being IC or PC with their regulating miRNAs (while target genes that do not meet the above criteria are classified as NC). </plain></SENT>
+<SENT sid="669" pm="."><plain>Total number of targets from TargetScan algorithm present after removing probesets with “Absent” calls in all samples is shown along with fraction of IC, PC and NC targets for each of the 12 annotated miRNAs. </plain></SENT>
+<SENT sid="670" pm="."><plain>On average, 79.3% of the target mRNAs are NC, 10.4% are inversely correlated and 10.3% are positively correlated with miRNAs. </plain></SENT>
+</text></p><p><text><SENT sid="671" pm="."><plain>(XLS) </plain></SENT>
+</text></p></caption><media xlink:href="pone.0022508.s008.xls"><caption><p><text><SENT sid="672" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="pone.0022508.s009"><label>Table S5</label><caption><p><text><SENT sid="673" pm="."><plain>Summary values of IC, PC and NC targets using PicTar. miRNA targets that were differentially expressed between CEPI and OSE based on t-test p&lt;0.005 and fold change of at least 2 were classified as being IC or PC with their regulating miRNAs (while target genes that do not meet the above criteria are classified as NC). </plain></SENT>
+<SENT sid="674" pm="."><plain>Total number of targets from PicTar algorithm present after removing probesets with “Absent” calls in all samples is shown along with fraction of IC, PC and NC targets for each of the 12 annotated miRNAs. </plain></SENT>
+<SENT sid="675" pm="."><plain>On average, 80.5% of the target mRNAs are in the NC group, 9.4% are in the IC group and 10.1% are in the PC group. </plain></SENT>
+</text></p><p><text><SENT sid="676" pm="."><plain>(XLS) </plain></SENT>
+</text></p></caption><media xlink:href="pone.0022508.s009.xls"><caption><p><text><SENT sid="677" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="pone.0022508.s010"><label>Table S6</label><caption><p><text><SENT sid="678" pm="."><plain>Summary values of IC, PC and NC targets using overlap of miRanda and TargetScan predictions. miRNA targets that were differentially expressed between CEPI and OSE based on t-test p&lt;0.005 and fold change of at least 2 were classified as being IC or PC with their regulating miRNAs (while target genes that do not meet the above criteria are classified as NC). </plain></SENT>
+<SENT sid="679" pm="."><plain>Total number of targets from the overlap of miRanda (M) and TargetScan (TS) algorithms present after removing probesets with “Absent” calls in all samples is shown along with fraction of IC, PC and NC targets for each of the 12 annotated miRNAs. </plain></SENT>
+<SENT sid="680" pm="."><plain>On average, 79.2% of the target mRNAs are in the NC group, 9% are in the IC group and 11.8% are in the PC group. </plain></SENT>
+</text></p><p><text><SENT sid="681" pm="."><plain>(XLS) </plain></SENT>
+</text></p></caption><media xlink:href="pone.0022508.s010.xls"><caption><p><text><SENT sid="682" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="pone.0022508.s011"><label>Table S7</label><caption><p><text><SENT sid="683" pm="."><plain>Summary values of IC, PC and NC targets using overlap of miRanda and PicTar predictions. miRNA targets that were differentially expressed between CEPI and OSE based on t-test p&lt;0.005 and fold change of at least 2 were classified as being IC or PC with their regulating miRNAs (while target genes that do not meet the above criteria are classified as NC). </plain></SENT>
+<SENT sid="684" pm="."><plain>Total number of targets from the overlap of miRanda (M) and PicTar (PT) algorithms present after removing probesets with “Absent” calls in all samples is shown along with fraction of IC, PC and NC targets for each of the 12 annotated miRNAs. </plain></SENT>
+<SENT sid="685" pm="."><plain>On average, 78.3% of the target mRNAs are in the NC group, 8.6% are in the IC group and 13.1% are in the PC group. </plain></SENT>
+</text></p><p><text><SENT sid="686" pm="."><plain>(XLS) </plain></SENT>
+</text></p></caption><media xlink:href="pone.0022508.s011.xls"><caption><p><text><SENT sid="687" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="pone.0022508.s012"><label>Table S8</label><caption><p><text><SENT sid="688" pm="."><plain>Summary values of IC, PC and NC targets using overlap of TargetScan and PicTar predictions. miRNA targets that were differentially expressed between CEPI and OSE based on t-test p&lt;0.005 and fold change of at least 2 were classified as being IC or PC with their regulating miRNAs (while target genes that do not meet the above criteria are classified as NC). </plain></SENT>
+<SENT sid="689" pm="."><plain>Total number of targets from the overlap of TargetScan (TS) and PicTar (PT) algorithms present after removing probesets with “Absent” calls in all samples is shown along with fraction of IC, PC and NC targets for each of the 12 annotated miRNAs. </plain></SENT>
+<SENT sid="690" pm="."><plain>On average, 76.8% of the target mRNAs are in the NC group, 6.4% are in the IC group and 16.7% are in the PC group. </plain></SENT>
+</text></p><p><text><SENT sid="691" pm="."><plain>(XLS) </plain></SENT>
+</text></p></caption><media xlink:href="pone.0022508.s012.xls"><caption><p><text><SENT sid="692" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="pone.0022508.s013"><label>Table S9</label><caption><p><text><SENT sid="693" pm="."><plain>Differentially expressed genes between miR-7 transfected and negative control transfected HEY cells. Differentially expressed genes (fold change ≥1.4, 5% FDR) in miR-7 transfected cells compared to miR-NC transfected cells. ‘Probeset ID’ refers to Affymetrix HG-U133 Plus 2.0 probeset identifier. ‘Gene Symbol’ shows the official gene symbol for the corresponding Probeset ID. ‘log difference (miR7-miR-NC)’ refers to the difference between average log2 signal values of miR-7 transfected group and the miR-NC transfected group. ‘q-value (%)’ shows the false discovery rate calculated using the SAM algorithm. </plain></SENT>
+<SENT sid="694" pm="."><plain>Targets of miR-7 predicted by miRanda (M), TargetScan (TS), and PicTar (PT) programs are also shown. </plain></SENT>
+</text></p><p><text><SENT sid="695" pm="."><plain>(XLS) </plain></SENT>
+</text></p></caption><media xlink:href="pone.0022508.s013.xls"><caption><p><text><SENT sid="696" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="pone.0022508.s014"><label>Table S10</label><caption><p><text><SENT sid="697" pm="."><plain>Differentially expressed genes between miR-128 transfected and negative control transfected HEY cells. Differentially expressed genes (fold change ≥1.4, 5% FDR) in miR-128 transfected cells compared to miR-NC transfected cells. ‘Probeset ID’ refers to Affymetrix HG-U133 Plus 2.0 probeset identifier. ‘Gene Symbol’ shows the official gene symbol for the corresponding Probeset ID. ‘log difference (miR128-miR-NC)’ refers to the difference between average log2 signal values of miR-128 transfected group and the miR-NC transfected group. ‘q-value (%)’ shows the false discovery rate calculated using the SAM algorithm. </plain></SENT>
+<SENT sid="698" pm="."><plain>Predicted targets from miRanda (M), TargetScan (TS), and PicTar (PT) are also shown. </plain></SENT>
+</text></p><p><text><SENT sid="699" pm="."><plain>(XLS) </plain></SENT>
+</text></p></caption><media xlink:href="pone.0022508.s014.xls"><caption><p><text><SENT sid="700" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media></supplementary-material></sec></SecTag></body><back><fn-group><fn fn-type="COI-statement"><p><text><SENT sid="701" pm="."><plain>Competing Interests: The authors have declared that no competing interests exist. </plain></SENT>
+</text></p></fn><SecTag type="ACK_FUND"><fn fn-type="financial-disclosure"><p><text4fund><text><SENT sid="702" pm="."><plain>Funding: This work was supported by The Ovarian Cancer Institute, The Ovarian Cycle Foundation, The Robinson Family Foundation, The Deborah Nash Willingham Endowment Fund, The Waterfall Foundation and OBNET Women's Healthcare. </plain></SENT>
+<SENT sid="703" pm="."><plain>The funders had no role in study design, data collection and analysis, decision to publish, or preparation of the manuscript. </plain></SENT>
+</text></text4fund></p></fn></SecTag></fn-group><SecTag type="REF"><ref-list><title>References</title><ref id="pone.0022508-Bartel1"><text><SENT sid="704" pm="."><plain>1 BartelDP 2004 MicroRNAs: genomics, biogenesis, mechanism, and function. Cell 116 281 297 14744438 </plain></SENT>
+</text></ref><ref id="pone.0022508-Calin1"><text><SENT sid="705" pm="."><plain>2 CalinGACroceCM 2006 MicroRNA signatures in human cancers. Nat Rev Cancer 6 857 866 17060945 </plain></SENT>
+</text></ref><ref id="pone.0022508-EsquelaKerscher1"><text><SENT sid="706" pm="."><plain>3 Esquela-KerscherASlackFJ 2006 Oncomirs - microRNAs with a role in cancer. Nat Rev Cancer 6 259 269 16557279 </plain></SENT>
+</text></ref><ref id="pone.0022508-Bartel2"><text><SENT sid="707" pm="."><plain>4 BartelDP 2009 MicroRNAs: target recognition and regulatory functions. Cell 136 215 233 19167326 </plain></SENT>
+</text></ref><ref id="pone.0022508-Pillai1"><text><SENT sid="708" pm="."><plain>5 PillaiRSBhattacharyyaSNFilipowiczW 2007 Repression of protein synthesis by miRNAs: how many mechanisms? Trends Cell Biol 17 118 126 17197185 </plain></SENT>
+</text></ref><ref id="pone.0022508-Tang1"><text><SENT sid="709" pm="."><plain>6 TangGTangXMenduVJiaXChenQJ 2008 The art of microRNA: various strategies leading to gene silencing via an ancient pathway. Biochim Biophys Acta 1779 655 662 18620087 </plain></SENT>
+</text></ref><ref id="pone.0022508-ValenciaSanchez1"><text><SENT sid="710" pm="."><plain>7 Valencia-SanchezMALiuJHannonGJParkerR 2006 Control of translation and mRNA degradation by miRNAs and siRNAs. Genes Dev 20 515 524 16510870 </plain></SENT>
+</text></ref><ref id="pone.0022508-Hammond1"><text><SENT sid="711" pm="."><plain>8 HammondSM 2006 MicroRNA therapeutics: a new niche for antisense nucleic acids. Trends Mol Med 12 99 101 16473043 </plain></SENT>
+</text></ref><ref id="pone.0022508-Tong1"><text><SENT sid="712" pm="."><plain>9 TongAWNemunaitisJ 2008 Modulation of miRNA activity in human cancer: a new paradigm for cancer gene therapy? Cancer Gene Ther 15 341 355 18369380 </plain></SENT>
+</text></ref><ref id="pone.0022508-Nam1"><text><SENT sid="713" pm="."><plain>10 NamSLiMChoiKBalchCKimS 2009 MicroRNA and mRNA integrated analysis (MMIA): a web tool for examining biological functions of microRNA expression. Nucleic Acids Res 37 W356 362 19420067 </plain></SENT>
+</text></ref><ref id="pone.0022508-Ruike1"><text><SENT sid="714" pm="."><plain>11 RuikeYIchimuraATsuchiyaSShimizuKKunimotoR 2008 Global correlation analysis for micro-RNA and mRNA expression profiles in human cell lines. J Hum Genet 53 515 523 18465083 </plain></SENT>
+</text></ref><ref id="pone.0022508-Sood1"><text><SENT sid="715" pm="."><plain>12 SoodPKrekAZavolanMMacinoGRajewskyN 2006 Cell-type-specific signatures of microRNAs on target mRNA expression. Proc Natl Acad Sci U S A 103 2746 2751 16477010 </plain></SENT>
+</text></ref><ref id="pone.0022508-Wang1"><text><SENT sid="716" pm="."><plain>13 WangYPLiKB 2009 Correlation of expression profiles between microRNAs and mRNA targets using NCI-60 data. BMC Genomics 10 218 19435500 </plain></SENT>
+</text></ref><ref id="pone.0022508-Xin1"><text><SENT sid="717" pm="."><plain>14 XinFLiMBalchCThomsonMFanM 2009 Computational analysis of microRNA profiles and their target genes suggests significant involvement in breast cancer antiestrogen resistance. Bioinformatics 25 430 434 19091772 </plain></SENT>
+</text></ref><ref id="pone.0022508-Dahiya1"><text><SENT sid="718" pm="."><plain>15 DahiyaNSherman-BaustCAWangTLDavidsonBShih IeM 2008 MicroRNA expression and identification of putative miRNA targets in ovarian cancer. PLoS ONE 3 e2436 18560586 </plain></SENT>
+</text></ref><ref id="pone.0022508-Iorio1"><text><SENT sid="719" pm="."><plain>16 IorioMVVisoneRDi LevaGDonatiVPetroccaF 2007 MicroRNA signatures in human ovarian cancer. Cancer Res 67 8699 8707 17875710 </plain></SENT>
+</text></ref><ref id="pone.0022508-Wyman1"><text><SENT sid="720" pm="."><plain>17 WymanSKParkinRKMitchellPSFritzBRO'BriantK 2009 Repertoire of microRNAs in epithelial ovarian cancer as determined by next generation sequencing of small RNA cDNA libraries. PLoS ONE 4 e5311 19390579 </plain></SENT>
+</text></ref><ref id="pone.0022508-Yang1"><text><SENT sid="721" pm="."><plain>18 YangHKongWHeLZhaoJJO'DonnellJD 2008 MicroRNA expression profiling in human ovarian cancer: miR-214 induces cell survival and cisplatin resistance by targeting PTEN. Cancer Res 68 425 433 18199536 </plain></SENT>
+</text></ref><ref id="pone.0022508-Zhang1"><text><SENT sid="722" pm="."><plain>19 ZhangLHuangJYangNGreshockJMegrawMS 2006 microRNAs exhibit high frequency genomic alterations in human cancer. Proc Natl Acad Sci U S A 103 9136 9141 16754881 </plain></SENT>
+</text></ref><ref id="pone.0022508-Nam2"><text><SENT sid="723" pm="."><plain>20 NamEJYoonHKimSWKimHKimYT 2008 MicroRNA expression profiles in serous ovarian carcinoma. Clin Cancer Res 14 2690 2695 18451233 </plain></SENT>
+</text></ref><ref id="pone.0022508-Min1"><text><SENT sid="724" pm="?"><plain>21 MinHYoonS 2010 Got target? </plain></SENT>
+<SENT sid="725" pm="."><plain>Computational methods for microRNA target prediction and their extension. Exp Mol Med 42 233 244 20177143 </plain></SENT>
+</text></ref><ref id="pone.0022508-Saito1"><text><SENT sid="726" pm="."><plain>22 SaitoTSaetromP 2010 MicroRNAs–targeting and target prediction. N Biotechnol 27 243 249 20219708 </plain></SENT>
+</text></ref><ref id="pone.0022508-Auersperg1"><text><SENT sid="727" pm="."><plain>23 AuerspergN 2011 The origin of ovarian carcinomas: a unifying hypothesis. Int J Gynecol Pathol 30 12 21 21131839 </plain></SENT>
+</text></ref><ref id="pone.0022508-GriffithsJones1"><text><SENT sid="728" pm="."><plain>24 Griffiths-JonesS 2004 The microRNA Registry. Nucleic Acids Res 32 D109 111 14681370 </plain></SENT>
+</text></ref><ref id="pone.0022508-GriffithsJones2"><text><SENT sid="729" pm="."><plain>25 Griffiths-JonesSGrocockRJvan DongenSBatemanAEnrightAJ 2006 miRBase: microRNA sequences, targets and gene nomenclature. Nucleic Acids Res 34 D140 144 16381832 </plain></SENT>
+</text></ref><ref id="pone.0022508-GriffithsJones3"><text><SENT sid="730" pm="."><plain>26 Griffiths-JonesSSainiHKvan DongenSEnrightAJ 2008 miRBase: tools for microRNA genomics. Nucleic Acids Res 36 D154 158 17991681 </plain></SENT>
+</text></ref><ref id="pone.0022508-daCosta1"><text><SENT sid="731" pm="."><plain>27 da CostaLF 2001 Return of de-differentiation: why cancer is a developmental disease. Curr Opin Oncol 13 58 62 11148688 </plain></SENT>
+</text></ref><ref id="pone.0022508-DiazCano1"><text><SENT sid="732" pm="."><plain>28 Diaz-CanoSJ 2008 General morphological and biological features of neoplasms: integration of molecular findings. Histopathology 53 1 19  </plain></SENT>
+</text></ref><ref id="pone.0022508-Auersperg2"><text><SENT sid="733" pm="."><plain>29 AuerspergNWongASChoiKCKangSKLeungPC 2001 Ovarian surface epithelium: biology, endocrinology, and pathology. Endocr Rev 22 255 288 11294827 </plain></SENT>
+</text></ref><ref id="pone.0022508-Scully1"><text><SENT sid="734" pm="."><plain>30 ScullyREClementPBYoungRH 2004 Ovarian Surface Epithelial-Stromal Tumors; Mills SE, editor. Philadelphia, PA Lippincott Williams &amp; Wilkins 2543 2578  </plain></SENT>
+</text></ref><ref id="pone.0022508-Naora1"><text><SENT sid="735" pm="."><plain>31 NaoraH 2007 The heterogeneity of epithelial ovarian cancers: reconciling old and new paradigms. Expert Rev Mol Med 9 1 12  </plain></SENT>
+</text></ref><ref id="pone.0022508-Gregory1"><text><SENT sid="736" pm="."><plain>32 GregoryPABertAGPatersonELBarrySCTsykinA 2008 The miR-200 family and miR-205 regulate epithelial to mesenchymal transition by targeting ZEB1 and SIP1. Nat Cell Biol 10 593 601 18376396 </plain></SENT>
+</text></ref><ref id="pone.0022508-Schaar1"><text><SENT sid="737" pm="."><plain>33 SchaarDGMedinaDJMooreDFStrairRKTingY 2009 miR-320 targets transferrin receptor 1 (CD71) and inhibits cell proliferation. Exp Hematol 37 245 255 19135902 </plain></SENT>
+</text></ref><ref id="pone.0022508-Betel1"><text><SENT sid="738" pm="."><plain>34 BetelDWilsonMGabowAMarksDSSanderC 2008 The microRNA.org resource: targets and expression. Nucleic Acids Res 36 D149 153 18158296 </plain></SENT>
+</text></ref><ref id="pone.0022508-Enright1"><text><SENT sid="739" pm="."><plain>35 EnrightAJJohnBGaulUTuschlTSanderC 2003 MicroRNA targets in Drosophila. Genome Biol 5 R1 14709173 </plain></SENT>
+</text></ref><ref id="pone.0022508-John1"><text><SENT sid="740" pm="."><plain>36 JohnBEnrightAJAravinATuschlTSanderC 2004 Human MicroRNA targets. PLoS Biol 2 e363 15502875 </plain></SENT>
+</text></ref><ref id="pone.0022508-Blower1"><text><SENT sid="741" pm="."><plain>37 BlowerPEVerducciJSLinSZhouJChungJH 2007 MicroRNA expression profiles for the NCI-60 cancer cell panel. Mol Cancer Ther 6 1483 1491 17483436 </plain></SENT>
+</text></ref><ref id="pone.0022508-Guimbellot1"><text><SENT sid="742" pm="."><plain>38 GuimbellotJSEricksonSWMehtaTWenHPageGP 2009 Correlation of microRNA levels during hypoxia with predicted target mRNAs through genome-wide microarray analysis. BMC Med Genomics 2 15 19320992 </plain></SENT>
+</text></ref><ref id="pone.0022508-Kuhn1"><text><SENT sid="743" pm="."><plain>39 KuhnDEMartinMMFeldmanDSTerryAVJrNuovoGJ 2008 Experimental validation of miRNA targets. Methods 44 47 54 18158132 </plain></SENT>
+</text></ref><ref id="pone.0022508-Thomas1"><text><SENT sid="744" pm="."><plain>40 ThomasMLiebermanJLalA 2010 Desperately seeking microRNA targets. Nat Struct Mol Biol 17 1169 1174 20924405 </plain></SENT>
+</text></ref><ref id="pone.0022508-Buick1"><text><SENT sid="745" pm="."><plain>41 BuickRNPullanoRTrentJM 1985 Comparative properties of five human ovarian adenocarcinoma cell lines. Cancer Res 45 3668 3676 4016745 </plain></SENT>
+</text></ref><ref id="pone.0022508-Webster1"><text><SENT sid="746" pm="."><plain>42 WebsterRJGilesKMPriceKJZhangPMMattickJS 2009 Regulation of epidermal growth factor receptor signaling in human cancer cells by microRNA-7. J Biol Chem 284 5731 5741 19073608 </plain></SENT>
+</text></ref><ref id="pone.0022508-Godlewski1"><text><SENT sid="747" pm="."><plain>43 GodlewskiJNowickiMOBroniszAWilliamsSOtsukiA 2008 Targeting of the Bmi-1 oncogene/stem cell renewal factor by microRNA-128 inhibits glioma proliferation and self-renewal. Cancer Res 68 9125 9130 19010882 </plain></SENT>
+</text></ref><ref id="pone.0022508-Pardee1"><text><SENT sid="748" pm="."><plain>44 PardeeAB 2006 Regulatory molecular biology. Cell Cycle 5 846 852 16552190 </plain></SENT>
+</text></ref><ref id="pone.0022508-Lee1"><text><SENT sid="749" pm="."><plain>45 LeeYSDuttaA 2009 MicroRNAs in cancer. Annu Rev Pathol 4 199 227 18817506 </plain></SENT>
+</text></ref><ref id="pone.0022508-Ventura1"><text><SENT sid="750" pm="."><plain>46 VenturaAJacksT 2009 MicroRNAs and cancer: short RNAs go a long way. Cell 136 586 591 19239879 </plain></SENT>
+</text></ref><ref id="pone.0022508-Visone1"><text><SENT sid="751" pm="."><plain>47 VisoneRCroceCM 2009 MiRNAs and cancer. Am J Pathol 174 1131 1138 19264914 </plain></SENT>
+</text></ref><ref id="pone.0022508-Wiemer1"><text><SENT sid="752" pm="."><plain>48 WiemerEA 2007 The role of microRNAs in cancer: no small matter. Eur J Cancer 43 1529 1544 17531469 </plain></SENT>
+</text></ref><ref id="pone.0022508-Bartels1"><text><SENT sid="753" pm="."><plain>49 BartelsCLTsongalisGJ 2009 MicroRNAs: novel biomarkers for human cancer. Clin Chem 55 623 631 19246618 </plain></SENT>
+</text></ref><ref id="pone.0022508-Lu1"><text><SENT sid="754" pm="."><plain>50 LuJGetzGMiskaEAAlvarez-SaavedraELambJ 2005 MicroRNA expression profiles classify human cancers. Nature 435 834 838 15944708 </plain></SENT>
+</text></ref><ref id="pone.0022508-Lee2"><text><SENT sid="755" pm="."><plain>51 LeeRCFeinbaumRLAmbrosV 1993 The C. elegans heterochronic gene lin-4 encodes small RNAs with antisense complementarity to lin-14. Cell 75 843 854 8252621 </plain></SENT>
+</text></ref><ref id="pone.0022508-Wightman1"><text><SENT sid="756" pm="."><plain>52 WightmanBHaIRuvkunG 1993 Posttranscriptional regulation of the heterochronic gene lin-14 by lin-4 mediates temporal pattern formation in C. elegans. Cell 75 855 862 8252622 </plain></SENT>
+</text></ref><ref id="pone.0022508-Djuranovic1"><text><SENT sid="757" pm="."><plain>53 DjuranovicSNahviAGreenR 2011 A parsimonious model for gene regulation by miRNAs. Science 331 550 553 21292970 </plain></SENT>
+</text></ref><ref id="pone.0022508-Place1"><text><SENT sid="758" pm="."><plain>54 PlaceRFLiLCPookotDNoonanEJDahiyaR 2008 MicroRNA-373 induces expression of genes with complementary promoter sequences. Proc Natl Acad Sci U S A 105 1608 1613 18227514 </plain></SENT>
+</text></ref><ref id="pone.0022508-Vasudevan1"><text><SENT sid="759" pm="."><plain>55 VasudevanSTongYSteitzJA 2007 Switching from repression to activation: microRNAs can up-regulate translation. Science 318 1931 1934 18048652 </plain></SENT>
+</text></ref><ref id="pone.0022508-Ritchie1"><text><SENT sid="760" pm="."><plain>56 RitchieWRajasekharMFlamantSRaskoJE 2009 Conserved expression patterns predict microRNA targets. PLoS Comput Biol 5 e1000513 19779543 </plain></SENT>
+</text></ref><ref id="pone.0022508-Aguda1"><text><SENT sid="761" pm="."><plain>57 AgudaBDKimYPiper-HunterMGFriedmanAMarshCB 2008 MicroRNA regulation of a cancer network: consequences of the feedback loops involving miR-17-92, E2F, and Myc. Proc Natl Acad Sci U S A 105 19678 19683 19066217 </plain></SENT>
+</text></ref><ref id="pone.0022508-Volinia1"><text><SENT sid="762" pm="."><plain>58 VoliniaSGalassoMCostineanSTagliaviniLGamberoniG 2010 Reprogramming of miRNA networks in cancer and leukemia. Genome Res 20 589 599 20439436 </plain></SENT>
+</text></ref><ref id="pone.0022508-Pfaffl1"><text><SENT sid="763" pm="."><plain>59 PfafflMWHorganGWDempfleL 2002 Relative expression software tool (REST) for group-wise comparison and statistical analysis of relative expression results in real-time PCR. Nucleic Acids Res 30 e36 11972351 </plain></SENT>
+</text></ref><ref id="pone.0022508-Micallef1"><text><SENT sid="764" pm="."><plain>60 MicallefJTacconeMMukherjeeJCroulSBusbyJ 2009 Epidermal growth factor receptor variant III-induced glioma invasion is mediated through myristoylated alanine-rich protein kinase C substrate overexpression. Cancer Res 69 7548 7556 19773446 </plain></SENT>
+</text></ref><ref id="pone.0022508-Koppelstaetter1"><text><SENT sid="765" pm="."><plain>61 KoppelstaetterCJenningsPHocheggerKPercoPIschiaR 2005 Effect of tissue fixatives on telomere length determination by quantitative PCR. Mech Ageing Dev 126 1331 1333 16182339 </plain></SENT>
+</text></ref><ref id="pone.0022508-Pattyn1"><text><SENT sid="766" pm="."><plain>62 PattynFSpelemanFDe PaepeAVandesompeleJ 2003 RTPrimerDB: the real-time PCR primer and probe database. Nucleic Acids Res 31 122 123 12519963 </plain></SENT>
+</text></ref><ref id="pone.0022508-Bentwich1"><text><SENT sid="767" pm="."><plain>63 BentwichIAvnielAKarovYAharonovRGiladS 2005 Identification of hundreds of conserved and nonconserved human microRNAs. Nat Genet 37 766 770 15965474 </plain></SENT>
+</text></ref><ref id="pone.0022508-Berezikov1"><text><SENT sid="768" pm="."><plain>64 BerezikovEGuryevVvan de BeltJWienholdsEPlasterkRH 2005 Phylogenetic shadowing and computational identification of human microRNA genes. Cell 120 21 24 15652478 </plain></SENT>
+</text></ref><ref id="pone.0022508-Xie1"><text><SENT sid="769" pm="."><plain>65 XieXLuJKulbokasEJGolubTRMoothaV 2005 Systematic discovery of regulatory motifs in human promoters and 3′ UTRs by comparison of several mammals. Nature 434 338 345 15735639 </plain></SENT>
+</text></ref><ref id="pone.0022508-Huber1"><text><SENT sid="770" pm="."><plain>66 HuberWvon HeydebreckASultmannHPoustkaAVingronM 2002 Variance stabilization applied to microarray data calibration and to the quantification of differential expression. Bioinformatics 18 Suppl 1 S96 104 12169536 </plain></SENT>
+</text></ref><ref id="pone.0022508-Tusher1"><text><SENT sid="771" pm="."><plain>67 TusherVGTibshiraniRChuG 2001 Significance analysis of microarrays applied to the ionizing radiation response. Proc Natl Acad Sci U S A 98 5116 5121 11309499 </plain></SENT>
+</text></ref><ref id="pone.0022508-Mieczkowski1"><text><SENT sid="772" pm="."><plain>68 MieczkowskiJTyburczyMEDabrowskiMPokarowskiP 2010 Probe set filtering increases correlation between Affymetrix GeneChip and qRT-PCR expression measurements. BMC Bioinformatics 11 104 20181266 </plain></SENT>
+</text></ref><ref id="pone.0022508-Friedman1"><text><SENT sid="773" pm="."><plain>69 FriedmanRCFarhKKBurgeCBBartelDP 2009 Most mammalian mRNAs are conserved targets of microRNAs. Genome Res 19 92 105 18955434 </plain></SENT>
+</text></ref><ref id="pone.0022508-Grimson1"><text><SENT sid="774" pm="."><plain>70 GrimsonAFarhKKJohnstonWKGarrett-EngelePLimLP 2007 MicroRNA targeting specificity in mammals: determinants beyond seed pairing. Mol Cell 27 91 105 17612493 </plain></SENT>
+</text></ref><ref id="pone.0022508-Lewis1"><text><SENT sid="775" pm="."><plain>71 LewisBPBurgeCBBartelDP 2005 Conserved seed pairing, often flanked by adenosines, indicates that thousands of human genes are microRNA targets. Cell 120 15 20 15652477 </plain></SENT>
+</text></ref><ref id="pone.0022508-Chen1"><text><SENT sid="776" pm="."><plain>72 ChenKRajewskyN 2006 Natural selection on human microRNA binding sites inferred from SNP data. Nat Genet 38 1452 1456 17072316 </plain></SENT>
+</text></ref><ref id="pone.0022508-Grun1"><text><SENT sid="777" pm="."><plain>73 GrunDWangYLLangenbergerDGunsalusKCRajewskyN 2005 microRNA target predictions across seven Drosophila species and comparison to mammalian targets. PLoS Comput Biol 1 e13 16103902 </plain></SENT>
+</text></ref><ref id="pone.0022508-Krek1"><text><SENT sid="778" pm="."><plain>74 KrekAGrunDPoyMNWolfRRosenbergL 2005 Combinatorial microRNA target predictions. Nat Genet 37 495 500 15806104 </plain></SENT>
+</text></ref><ref id="pone.0022508-Lall1"><text><SENT sid="779" pm="."><plain>75 LallSGrunDKrekAChenKWangYL 2006 A genome-wide map of conserved microRNA targets in C. elegans. Curr Biol 16 460 471 16458514 </plain></SENT>
+</text></ref></ref-list></SecTag></back></article>

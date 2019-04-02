@@ -1,0 +1,1020 @@
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD v1.1 20151215//EN" "JATS-archivearticle1.dtd"> 
+<article xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML" article-type="research-article"><?properties open_access?><?DTDIdentifier.IdentifierValue -//NLM//DTD JATS (Z39.96) Journal Publishing DTD v1.0 20120330//EN?><?DTDIdentifier.IdentifierType public?><?SourceDTD.DTDName JATS-journalpublishing1.dtd?><?SourceDTD.Version 1.0?><?ConverterInfo.XSLTName jp2nlmx2.xsl?><?ConverterInfo.Version 2?><front><journal-meta><journal-id journal-id-type="nlm-ta">Toxicol Res</journal-id><journal-id journal-id-type="iso-abbrev">Toxicol Res</journal-id><journal-id journal-id-type="publisher-id">Toxicological Research</journal-id><journal-title-group><journal-title>Toxicological Research</journal-title></journal-title-group><issn pub-type="ppub">1976-8257</issn><issn pub-type="epub">2234-2753</issn><publisher><publisher-name>Korean Society of Toxicology</publisher-name></publisher></journal-meta><article-meta><article-id pub-id-type="pmcid">5080858</article-id><article-id pub-id-type="doi">10.5487/TR.2016.32.4.289</article-id><article-id pub-id-type="publisher-id">tr-32-289</article-id><article-categories><subj-group subj-group-type="heading"><subject>Original Article</subject></subj-group></article-categories><title-group><article-title><SecTag type="TITLE"><text><SENT sid="0" pm="."><plain>Prediction of Non-Genotoxic Carcinogenicity Based on Genetic Profiles of Short Term Exposure Assays </plain></SENT>
+</text></SecTag></article-title></title-group><contrib-group><contrib contrib-type="author"><name><surname>Pérez</surname><given-names>Luis Orlando</given-names></name><xref ref-type="aff" rid="af1-tr-32-289">1</xref><xref ref-type="corresp" rid="c1-tr-32-289"/></contrib><contrib contrib-type="author"><name><surname>González-José</surname><given-names>Rolando</given-names></name><xref ref-type="aff" rid="af1-tr-32-289">1</xref></contrib><contrib contrib-type="author"><name><surname>García</surname><given-names>Pilar Peral</given-names></name><xref ref-type="aff" rid="af2-tr-32-289">2</xref></contrib></contrib-group><aff id="af1-tr-32-289"><label>1</label>Instituto Patagónico de Ciencias Sociales y Humanas (IPCSH), Centro Nacional Patagónico (CENPAT), Boulevard Brown 2915, Puerto Madryn, PC 9120, Provincia de Chubut, 
+<country>Argentina</country></aff><aff id="af2-tr-32-289"><label>2</label>Instituto de Genética Veterinaria “Fernando Noel Dulout”-CONICET, Facultad de Ciencias Veterinarias, Universidad Nacional de La Plata, Calle 60 y 118 S/N, PC 1900, La Plata, Provincia de Buenos Aires, 
+<country>Argentina</country></aff><author-notes><corresp id="c1-tr-32-289">Correspondence to: Pérez Luis Orlando, Instituto Patagónico de Ciencias Sociales y Humanas (IPCSH), Centro Nacional Patagónico (CENPAT), Boulevard Brown 2915, Puerto Madryn, PC 9120, Provincia de Chubut, Argentina, E-mail: <email>orlandoperez@cenpat-conicet.gob.ar</email></corresp></author-notes><pub-date pub-type="ppub"><month>10</month><year>2016</year></pub-date><pub-date pub-type="epub"><day>30</day><month>10</month><year>2016</year></pub-date><volume>32</volume><issue>4</issue><fpage>289</fpage><lpage>300</lpage><history><date date-type="received"><day>21</day><month>3</month><year>2016</year></date><date date-type="accepted"><day>22</day><month>6</month><year>2016</year></date></history><permissions><copyright-statement>Copyright © 2016 The Korean Society Of Toxicology</copyright-statement><copyright-year>2016</copyright-year><license license-type="open-access" xlink:href="http://creativecommons.org/licenses/by-nc/3.0/"><license-p>This is an Open-Access article distributed under the terms of the Creative Commons Attribution Non-Commercial License (<ext-link ext-link-type="uri" xlink:href="http://creativecommons.org/licenses/by-nc/3.0/">http://creativecommons.org/licenses/by-nc/3.0/</ext-link>) which permits unrestricted non-commercial use, distribution, and reproduction in any medium, provided the original work is properly cited.</license-p></license></permissions><abstract><p><SecTag type="ABS"><text><SENT sid="1" pm="."><plain>Non-genotoxic carcinogens are substances that induce tumorigenesis by non-mutagenic mechanisms and long term rodent bioassays are required to identify them. </plain></SENT>
+<SENT sid="2" pm="."><plain>Recent studies have shown that transcription profiling can be applied to develop early identifiers for long term phenotypes. </plain></SENT>
+<SENT sid="3" pm="."><plain>In this study, we used rat liver expression profiles from the NTP (National Toxicology Program, Research Triangle Park, USA) DrugMatrix Database to construct a gene classifier that can distinguish between non-genotoxic carcinogens and other chemicals. </plain></SENT>
+<SENT sid="4" pm="."><plain>The model was based on short term exposure assays (3 days) and the training was limited to oxidative stressors, peroxisome proliferators and hormone modulators. </plain></SENT>
+<SENT sid="5" pm="."><plain>Validation of the predictor was performed on independent toxicogenomic data (TG-GATEs, Toxicogenomics Project-Genomics Assisted Toxicity Evaluation System, Osaka, Japan). </plain></SENT>
+<SENT sid="6" pm="."><plain>To build our model we performed Random Forests together with a recursive elimination algorithm (VarSelRF). </plain></SENT>
+<SENT sid="7" pm="."><plain>Gene set enrichment analysis was employed for functional interpretation. </plain></SENT>
+<SENT sid="8" pm="."><plain>A total of 770 microarrays comprising 96 different compounds were analyzed and a predictor of 54 genes was built. </plain></SENT>
+<SENT sid="9" pm="."><plain>Prediction accuracy was 0.85 in the training set, 0.87 in the test set and increased with increasing concentration in the validation set: 0.6 at low dose, 0.7 at medium doses and 0.81 at high doses. </plain></SENT>
+<SENT sid="10" pm="."><plain>Pathway analysis revealed gene prominence of cellular respiration, energy production and lipoprotein metabolism. </plain></SENT>
+<SENT sid="11" pm="."><plain>The biggest target of toxicogenomics is accurately predict the toxicity of unknown drugs. </plain></SENT>
+<SENT sid="12" pm="."><plain>In this analysis, we presented a classifier that can predict non-genotoxic carcinogenicity by using short term exposure assays. </plain></SENT>
+<SENT sid="13" pm="."><plain>In this approach, dose level is critical when evaluating chemicals at early time points. </plain></SENT>
+</text></SecTag></p></abstract><SecTag type="KEYWORD"><kwd-group><kwd>Toxicogenomics</kwd><kwd>Non-genotoxic carcinogen</kwd><kwd>Random forest</kwd></kwd-group></SecTag></article-meta></front><body><SecTag type="INTRO"><sec sec-type="intro"><title><text><SENT sid="14" pm="."><plain>INTRODUCTION </plain></SENT>
+</text></title><p><text><SENT sid="15" pm="."><plain>Carcinogens are a large group of substances, organic and inorganic, that are directly involved in causing cancer. </plain></SENT>
+<SENT sid="16" pm="."><plain>According to their mode of action they can be categorized as either genotoxic (GTX) or not genotoxic (NGTX). </plain></SENT>
+<SENT sid="17" pm="."><plain>The former induces specific mutations or chromosome aberrations through direct interaction with DNA, usually by formation of covalent bonds (1). </plain></SENT>
+<SENT sid="18" pm="."><plain>Such alterations are detected by a battery of tests (Ames test, chromosomal aberration, micronucleus assays) that measures the integrity and the structure of the DNA. </plain></SENT>
+<SENT sid="19" pm="."><plain>Non-genotoxic drugs, on the other hand, represents chemicals capable of producing tumorigenesis by some secondary mechanism not directly related to DNA damage (2). </plain></SENT>
+<SENT sid="20" pm="."><plain>Their activities are so diverse, that it is easier to define the properties they lack rather than the properties they possess. </plain></SENT>
+<SENT sid="21" pm="."><plain>In general they are chemicals that do not induce DNA repair, and are negative in in vivo and in vitro tests for mutagenicity. </plain></SENT>
+</text></p><p><text><SENT sid="22" pm="."><plain>Non-genotoxic carcinogens have a wide variety of mechanisms of cancer induction including receptor mediated endocrine modulation, non-receptor mediated endocrine modulation, regenerative proliferation, oxidative stress, xenobiotic receptor activation, peroxisome proliferation, induction of inflammatory response and/or gap junction intercellular inhibition (3). </plain></SENT>
+<SENT sid="23" pm="."><plain>Free radical production (particularly ROS) is a common sub-mechanism enhanced by several non-genotoxic carcinogens. </plain></SENT>
+<SENT sid="24" pm="."><plain>Basically, cellular damage is promoted when the balance between pro and anti-oxidants is disturbed and the oxidants are not properly neutralized. </plain></SENT>
+</text></p><p><text><SENT sid="25" pm="."><plain>The diverse mechanisms of action, the tissue specificity and the lack of genotoxicity make non-genotoxic identification a challenging task. </plain></SENT>
+<SENT sid="26" pm="."><plain>Rodent bioassays are considered the best available method for detecting such carcinogens. </plain></SENT>
+<SENT sid="27" pm="."><plain>Risk assessment is done combining data from bioassays, epidemiological data, toxico-kinetic and disposition studies (3). </plain></SENT>
+<SENT sid="28" pm="."><plain>The rationale behind this approach is that many of the drugs known to be carcinogens to humans are also carcinogens to animals. </plain></SENT>
+<SENT sid="29" pm="."><plain>Classical studies in rats involve exposures for periods that range from 13 to 14 weeks. </plain></SENT>
+<SENT sid="30" pm="."><plain>However, a proportion of chemicals are detected at the end of a 2 year period, making the animal chronic exposure assay elaborate and costly intensive. </plain></SENT>
+</text></p><p><text><SENT sid="31" pm="."><plain>A rapid and sensitive method for detecting hepatocarcinogenicity in drug screening is a long sought target. </plain></SENT>
+<SENT sid="32" pm="."><plain>Control of gene transcription is the main regulatory mechanism of biological systems. </plain></SENT>
+<SENT sid="33" pm="."><plain>Gene expression precedes protein synthesis, cell proliferation and ultimately pathological modifications. </plain></SENT>
+<SENT sid="34" pm="."><plain>Therefore, it should be the most sensitive point to detect early changes (4). </plain></SENT>
+<SENT sid="35" pm="."><plain>The aim of this analysis was to build a model that distinguishes non-genotoxic liver carcinogens by using expression profiles from short term exposure chemical treatments in rodents. </plain></SENT>
+<SENT sid="36" pm="."><plain>Experimental data were obtained from the toxicogenomic database DrugMatrix™, The National Toxicology Program (U.S. </plain></SENT>
+<SENT sid="37" pm="."><plain>Department of Health and Human Services) and The Toxicogenomics Project Genomics Assisted Toxicity Evaluation system (TG-GATEs) (5,6). </plain></SENT>
+</text></p></sec></SecTag><SecTag type="METHODS"><sec sec-type="materials|methods"><title><text><SENT sid="38" pm="."><plain>MATERIALS AND METHODS </plain></SENT>
+</text></title><sec><title><text><SENT sid="39" pm="."><plain>Experimental design and compounds </plain></SENT>
+</text></title><p><text><SENT sid="40" pm="."><plain>To evaluate molecular profiles, public available data from the National Toxicological Program (NTP) was selected (GEO Accesion number GSE57822). </plain></SENT>
+<SENT sid="41" pm="."><plain>This entity performs pre-chronic and two year studies in laboratory animals in order to assess specific needs in toxicology, yielding the largest molecular toxicology reference. </plain></SENT>
+<SENT sid="42" pm="."><plain>Briefly, arrays corresponding to 77 chemicals and their respective controls were downloaded from DrugMatrix (Table 1). </plain></SENT>
+<SENT sid="43" pm="."><plain>Total data points were 363: three repeats per treatment involved 231 arrays and every treatment had 4 controls, in total 132 control arrays in 22 control groups. </plain></SENT>
+<SENT sid="44" pm="."><plain>The Carcinogenic Potency Database was used as a first option to label the chemicals (7). </plain></SENT>
+<SENT sid="45" pm="."><plain>Each array was obtained from test-compound treated and vehicle control-treated male rats after 72 hr of exposure with daily dosing (Sprangle-Drawley, 6~8 weeks old). </plain></SENT>
+<SENT sid="46" pm="."><plain>Liver tissues (medial lobe) from three rats per chemical was collected and submitted to array processing. </plain></SENT>
+<SENT sid="47" pm="."><plain>More data on the original experiments can be found in (8). </plain></SENT>
+<SENT sid="48" pm="."><plain>Concentrations selected for each compound are summarized in Table 2. </plain></SENT>
+</text></p><p><text><SENT sid="49" pm="."><plain>The validation set was extracted from The Toxicogenomics Project Genomics Assisted Toxicity Evaluation system (TG-GATEs) (ExpressArray E-MTAB-800), a large-scale database of transcriptomics and pathology data useful for predicting the toxicity of new chemical entities (6). </plain></SENT>
+<SENT sid="50" pm="."><plain>We downloaded data from rats exposed daily for 4 days at three doses (low, middle and high). </plain></SENT>
+<SENT sid="51" pm="."><plain>Four hundred and seven arrays corresponding to 34 chemicals and their corresponding controls were obtained. Table 1 shows selected drugs and Table 3 their dose levels. </plain></SENT>
+</text></p></sec><sec><title><text><SENT sid="52" pm="."><plain>Data pre-processing </plain></SENT>
+</text></title><p><text><SENT sid="53" pm="."><plain>Complete “.CEL” files were downloaded from the National Toxicological Program, Department of Health and Human Services (USA) and the National Bioscience Database Centre (National Bioscience Database Center, Tokyo, Japan). </plain></SENT>
+<SENT sid="54" pm="."><plain>Files belonged to the Affymetrix Rat Genome 230 2.0 GeneChip Array (Affymetrix, Santa Clara, CA, USA). </plain></SENT>
+<SENT sid="55" pm="."><plain>Preprocessing adjustments were performed with Expression Console (Affymetrix). </plain></SENT>
+<SENT sid="56" pm="."><plain>Additional information and raw data from the public repositories can be found at <ext-link ext-link-type="uri" xlink:href="https://ntp.niehs.nih.gov/drugmatrix/index.html">https://ntp.niehs.nih.gov/drugmatrix/index.html</ext-link> and <ext-link ext-link-type="uri" xlink:href="http://dbarchive.biosciencedbc.jp/en/open-tggates/download.html/">http://dbarchive.biosciencedbc.jp/en/open-tggates/download.html/</ext-link>. </plain></SENT>
+</text></p><p><text><SENT sid="57" pm="."><plain>Each array (CEL file) was preprocessed and background corrected, normalized and summarized using RMA (Robust Multiarray Average) using Expression Console (Affymetrix) and Bioconductor packages of the R software (Fred Hutchinson Cancer Research Center, Seattle, USA) (9). </plain></SENT>
+<SENT sid="58" pm="."><plain>For probe filtering, unspecific selection was carried out according to the interquartile range (IQR) (cut off value according to the IQR density plot). </plain></SENT>
+</text></p><p><text><SENT sid="59" pm="."><plain>Genes that had more than 1.5 fold increase/decrease relative to controls were chosen for further analysis. </plain></SENT>
+<SENT sid="60" pm="."><plain>Additionally, each drug treatment was compared with its respective control using t test statistic. </plain></SENT>
+<SENT sid="61" pm="."><plain>Results were further corrected for multi-testing using the Benjamini &amp; Yekutieli (2001) procedure for (conservative) control of the false discovery rate (FDR), with 0.05 as the significance level (10). </plain></SENT>
+<SENT sid="62" pm="."><plain>Features that met both criteria (t-test and 1.5 fold change) were combined in a single list of differentially expressed genes that resulted in 3778 probes that underwent classification analysis. </plain></SENT>
+</text></p></sec><sec><title><text><SENT sid="63" pm="."><plain>Class discrimination </plain></SENT>
+</text></title><sec><title><text><SENT sid="64" pm="."><plain>Feature selection by random forest </plain></SENT>
+</text></title><p><text><SENT sid="65" pm="."><plain>In order to discriminate NGTX from other drugs (GTX and non-carcinogens) we divided the DrugMatrix data in a training set, a test set, and an unclassified set. </plain></SENT>
+<SENT sid="66" pm="."><plain>Data from (three) replicates per treatment were treated individually, i.e. not combined. </plain></SENT>
+<SENT sid="67" pm="."><plain>The training set consisted of 18 compounds where half of them were classical non-genotoxic carcinogens: oxidative stressors, peroxisome proliferators and hormone modulators. </plain></SENT>
+<SENT sid="68" pm="."><plain>The test set consisted of 33 compounds, 4 NGTXC and 29 genotoxins or non-hepatocarcinogens. </plain></SENT>
+<SENT sid="69" pm="."><plain>A third group was built with DrugMatrix data: those with no conclusive data about non-genotoxic hepatocarcinogenicity (n = 26). </plain></SENT>
+<SENT sid="70" pm="."><plain>The resulting groups are described in Table 1. </plain></SENT>
+</text></p><p><text><SENT sid="71" pm="."><plain>We used Random Forest (RF) for classification. </plain></SENT>
+<SENT sid="72" pm="."><plain>Its performance is comparable to other machine learning methods and combined with variable selection aggressively reduces the set of genes (11). </plain></SENT>
+<SENT sid="73" pm="."><plain>In this approach, training and test sets are constructed internally and randomly, by iteratively partition of the dataset. </plain></SENT>
+<SENT sid="74" pm="."><plain>Many decision trees are constructed (in this case 10,000 per RF). </plain></SENT>
+<SENT sid="75" pm="."><plain>For the kth tree, a random vector θk is created, independent of the other generated vectors but with the same distribution, and a tree is grown casting a unit vote for the most popular class at input × (12). </plain></SENT>
+</text></p><p><text><SENT sid="76" pm="."><plain>Random Forest parameters were set to: ntree = 10,000; nodesize = 1; mtry = square root of number of genes. </plain></SENT>
+<SENT sid="77" pm="."><plain>Once obtained the forest, the construction of the classifier was performed by a feature reduction algorithm, the backwards variable elimination (VarSel package), where the less important features are successively eliminated and out of the bag (OOB) error is continuously analyzed. </plain></SENT>
+<SENT sid="78" pm="."><plain>The process fits random forests iteratively in the training set, at each step discarding the less important variables of previous models, but keeping the OOB error until it drops substantially (fraction dropped = 0.1). </plain></SENT>
+<SENT sid="79" pm="."><plain>To evaluate stability of results and the prediction error rate, bootstrap (.632+ rule) was run through all the procedure (11,13). </plain></SENT>
+<SENT sid="80" pm="."><plain>The reported error corresponded to samples not used to fit the random forest or perform feature reduction. </plain></SENT>
+</text></p></sec><sec><title><text><SENT sid="81" pm="."><plain>Pathway and gene analysis </plain></SENT>
+</text></title><p><text><SENT sid="82" pm="."><plain>Functional annotation based on Gene Ontology was tested while accounting for the topology of the GO graph. </plain></SENT>
+<SENT sid="83" pm="."><plain>The methodology applied Fisher’s exact test, which is based on gene counts. </plain></SENT>
+<SENT sid="84" pm="."><plain>Each GO category was tested independently, searching for over-represented terms within the group of differentially expressed genes (14). </plain></SENT>
+</text></p></sec></sec></sec></SecTag><SecTag type="RESULTS"><sec sec-type="results"><title><text><SENT sid="85" pm="."><plain>RESULTS </plain></SENT>
+</text></title><sec><title><text><SENT sid="86" pm="."><plain>Pre-processing </plain></SENT>
+</text></title><p><text><SENT sid="87" pm="."><plain>After normalization and log transforming the data, unspecific filtering was applied to the 31099 probes, leaving 10091 features. </plain></SENT>
+<SENT sid="88" pm="."><plain>Differential expressed genes were identified for each treatment when compared with the set of corresponding controls by t-test and fold change. </plain></SENT>
+<SENT sid="89" pm="."><plain>A unique DEG list from all treatments consisting of 3778 probes was built. </plain></SENT>
+<SENT sid="90" pm="."><plain>The filtered DrugMatrix set was used for Principal Component Analysis (PCA). Fig. 1 shows a two-dimensional plot of the data. </plain></SENT>
+<SENT sid="91" pm="."><plain>Each color represents a single compound defined by the rainbow pallet. </plain></SENT>
+<SENT sid="92" pm="."><plain>Variance was relatively low for the first four components: PCA1 (12%), PCA2 (9%), PCA3 (8%), PCA4 (4%). </plain></SENT>
+<SENT sid="93" pm="."><plain>Overall, there was no significant clustering among NGTX and other compounds, suggesting that further filtering steps were required to make a successful discrimination. </plain></SENT>
+</text></p></sec><sec><title><text><SENT sid="94" pm="."><plain>Feature selection by random forest </plain></SENT>
+</text></title><p><text><SENT sid="95" pm="."><plain>Random Forests analysis combined with a feature selecting algorithm was used to build the predictor. </plain></SENT>
+<SENT sid="96" pm="."><plain>In the training set, the out of the bag error (OOB) for the initial random forest was 0.09 (81.5% sensitivity, 100% specificity). </plain></SENT>
+<SENT sid="97" pm="."><plain>Fifty four variables were selected by variable selection without dropping the OOB error substantially (Table 4). Fig. 2 shows a Principal Component Analysis (PCA) constructed with the selected genes as variables. </plain></SENT>
+<SENT sid="98" pm="."><plain>Each compound was averaged among replicates. </plain></SENT>
+<SENT sid="99" pm="."><plain>The proportions of variance for the first three components were: PC1 39%, PC2 12% and PC3 9%. </plain></SENT>
+<SENT sid="100" pm="."><plain>As can be seen on the plot, NGTX carcinogens were clustered at the right of the PC1 axis, with the exception of Carbon Tetrachloride. Fig. 3 represents the mean expression difference for each one of the predictor genes. </plain></SENT>
+</text></p><p><text><SENT sid="101" pm="."><plain>In order to assess an honest prediction of the error rate from the training data we performed bootstrapping (0.632) in which the random forest constructed for a certain number of variables was subsampled and compared. </plain></SENT>
+<SENT sid="102" pm="."><plain>The prediction error rate among the bootstrap samples was 0.15 (Supplemental Fig. 1). </plain></SENT>
+<SENT sid="103" pm="."><plain>Thirty genes were consistently selected (stability) in all the sub-samples (above 20%), with CYP1A2 being selected in 65%, Prodh in 32% and Itgb3 in 30%. </plain></SENT>
+</text></p></sec><sec><title><text><SENT sid="104" pm="."><plain>Prediction in the test set </plain></SENT>
+</text></title><p><text><SENT sid="105" pm="."><plain>The expression profiles of the test sample group were run through the obtained random forest. </plain></SENT>
+<SENT sid="106" pm="."><plain>Overall, prediction error was lower than expected, 0.13. </plain></SENT>
+<SENT sid="107" pm="."><plain>Sensitivity was 97% and specificity 81%. </plain></SENT>
+<SENT sid="108" pm="."><plain>Three agents were misclassified as NGTX carcinogens: Clotrimazole, Stavudine and Dexamethasone. </plain></SENT>
+<SENT sid="109" pm="."><plain>We found that six drugs had similar profiles to our predictor in the unclassified group: Aminoglutethimide, Crotamiton, Finasteride, Modafinil, Rosiglitazone and Simvastatin. Table 2 shows the results of the random forest in the DrugMatrix set. </plain></SENT>
+</text></p></sec><sec><title><text><SENT sid="110" pm="."><plain>Validation set </plain></SENT>
+</text></title><p><text><SENT sid="111" pm="."><plain>The performance of the classifier was tested in an independent dataset. </plain></SENT>
+<SENT sid="112" pm="."><plain>We applied the random forest model to assess treated rat livers for 4 days and 34 drugs from the TG-GATE database. </plain></SENT>
+<SENT sid="113" pm="."><plain>In contrast to DrugMatrix, three different doses were available at this time point (low, middle and high). </plain></SENT>
+<SENT sid="114" pm="."><plain>Prediction error varied significantly among dose levels. </plain></SENT>
+<SENT sid="115" pm="."><plain>While all concentration levels yielded specificities of 100% (no false positives), sensitivity increased from 10% at low doses and 38% at medium doses, to 61% at high doses. </plain></SENT>
+<SENT sid="116" pm="."><plain>Sensitivity could be increased at expense of specificity. </plain></SENT>
+<SENT sid="117" pm="."><plain>Areas under the curve (AUC) for the ROC curve (Receiver Operating Characteristic) were 0.73 for low doses, 0.83 for middle doses and 0.87 for high doses. </plain></SENT>
+<SENT sid="118" pm="."><plain>The results of the classification model applied to the validation set are described in Table 3. </plain></SENT>
+</text></p></sec><sec><title><text><SENT sid="119" pm="."><plain>Pathway analysis </plain></SENT>
+</text></title><p><text><SENT sid="120" pm="."><plain>In order to evaluate the biological pathways involved in the expression of the 54 highest scoring genes, we performed functional analysis of the GO terms that were significantly represented. </plain></SENT>
+<SENT sid="121" pm="."><plain>Differential expressed genes were used as background list. </plain></SENT>
+<SENT sid="122" pm="."><plain>We have found that significant genes were scattered among diverse GO Biological Process, most of them related to mitochondrial respiration, energy production and lipoprotein metabolism. </plain></SENT>
+<SENT sid="123" pm="."><plain>Detoxification was located later in the list. </plain></SENT>
+<SENT sid="124" pm="."><plain>Molecular functions included several terms of signal transducing and receptor activities. Table 5 shows the top eight GO annotations according to Fisher’s exact test for BP (Biological Processes) and MF (Molecular Functions). </plain></SENT>
+<SENT sid="125" pm="."><plain>There is a representation of how these terms are distributed over the GO graph in Supplemental Fig. 2. </plain></SENT>
+</text></p></sec></sec></SecTag><SecTag type="DISCUSS"><sec sec-type="discussion"><title><text><SENT sid="126" pm="."><plain>DISCUSSION </plain></SENT>
+</text></title><p><text><SENT sid="127" pm="."><plain>Toxicogenomics is defined as the application of genomics technologies to study the adverse effects of pharmaceutical and environmental chemicals, with the hope of improving risk assessment and hazard screening (5). </plain></SENT>
+<SENT sid="128" pm="."><plain>In this paradigm, public databases are essential tools for multiple actions, such as comparing profiles, discovering patterns or integrating networks. </plain></SENT>
+<SENT sid="129" pm="."><plain>The largest databases available to date are the Japan Project Database (TG-GATE) and DrugMatrix (National Toxicological Program, NTP, USA) (5,6). </plain></SENT>
+<SENT sid="130" pm="."><plain>Their diversity and standardized protocol make them the current reference. </plain></SENT>
+<SENT sid="131" pm="."><plain>In recent years other databases were made available (CBES, CTD, etc.) and the challenge has been extended to data mining (15). </plain></SENT>
+</text></p><p><text><SENT sid="132" pm="."><plain>The mechanisms of non-genotoxic carcinogenicity are well described, although not well understood. </plain></SENT>
+<SENT sid="133" pm="."><plain>It is assumed that most non-genotoxic carcinogens induce neoplasm and exhibit threshold tumor dose-responses. </plain></SENT>
+<SENT sid="134" pm="."><plain>Classically, NGTX are regarded as tumor promoters but mechanisms such as regenerative hyperplasia, cytotoxicity or induction of oxidative damage are also key events for tumor initiation (16). </plain></SENT>
+<SENT sid="135" pm="."><plain>There is still uncertainty whether NGTX are capable of initiate tumor events by themselves or whether they need coincidental factors. </plain></SENT>
+<SENT sid="136" pm="."><plain>In this study, we focused our efforts to rodent hepatocarcinogens, a common target of safety assessment in drug development. </plain></SENT>
+</text></p><p><text><SENT sid="137" pm="."><plain>One of the most, if not the most, important step in class prediction is the correct assignment of the training set. </plain></SENT>
+<SENT sid="138" pm="."><plain>New experimental data may change the status of a substance to another category limiting applicability of the predictor. </plain></SENT>
+<SENT sid="139" pm="."><plain>Generalization of data is also critical, and in agreement with previous studies, false positives are often difficult to avoid (or “unavoidable”). </plain></SENT>
+<SENT sid="140" pm="."><plain>In order to evaluate a complex process like carcinogenesis, we have selected compounds with three modes of action to train our model: oxidative stressors, peroxisome proliferators and hormone modulators. </plain></SENT>
+<SENT sid="141" pm="."><plain>Our hypothesis was that in some point, similarities among gene profiles would allow discrimination between non-genotoxic carcinogens and other class of chemicals. </plain></SENT>
+</text></p><p><text><SENT sid="142" pm="."><plain>We chose Random Forest as our machine learning method because is a robust classification algorithm. </plain></SENT>
+<SENT sid="143" pm="."><plain>Feature reduction was performed by recursive variable elimination while maintaining class error (11). </plain></SENT>
+<SENT sid="144" pm="."><plain>We report a predictor of 54 variables, a number that may be reduced to 24 without losing much prediction accuracy. </plain></SENT>
+<SENT sid="145" pm="."><plain>After training the model, we applied our classifier to the DrugMatrix test set, which resulted in a relatively low total error. </plain></SENT>
+<SENT sid="146" pm="."><plain>Only three false positives were detected and no false negatives among the OOB samples. </plain></SENT>
+<SENT sid="147" pm="."><plain>The small sample size could explain why the prediction error of the test set was lower than the estimation of the training set (0.13). </plain></SENT>
+<SENT sid="148" pm="."><plain>It is interesting that prediction accuracy increased with increasing doses in the validation set. </plain></SENT>
+<SENT sid="149" pm="."><plain>This behavior could be explained by the fact that DrugMatrix doses for 3 day treatments were higher than TG-GATE in almost all compounds, frequently several times higher than the therapeutic dose. </plain></SENT>
+</text></p><p><text><SENT sid="150" pm="."><plain>One of the false positives detected was clotrimazole (CTL), an imidazole antimitotic. </plain></SENT>
+<SENT sid="151" pm="."><plain>It is an inhibitor of p450, blocker of intracellular Ca++ stores and activator of the xenobiotic response (17). </plain></SENT>
+<SENT sid="152" pm="."><plain>It has important correlation with our predictor, particularly in the induction of ZDHHC2 (Palmitoyltransferase ZDHHC2), a protein responsible for membrane binding and protein localization (receptors). </plain></SENT>
+<SENT sid="153" pm="."><plain>Imidazole agents modulate p450 response by different gene subfamilies and display different actions (18). </plain></SENT>
+<SENT sid="154" pm="."><plain>The other two miss-classified drugs were Dexamethasone (DXM) and Stavudine (d4T). </plain></SENT>
+<SENT sid="155" pm="."><plain>When compared to our predictor, we found proximity in genes related to stress and inflammation (Cyp1a2, IL1A, COL4A3BP, SDC2, PTTG1, C5ar1, CFH, Cfi). </plain></SENT>
+</text></p><p><text><SENT sid="156" pm="."><plain>In line with previous studies, a mechanistic approach is a promising strategy for prediction as well as for pathway or functional category analysis. </plain></SENT>
+<SENT sid="157" pm="."><plain>In this study, the most significant biological processes comprised those related to cellular respiration, energy derivation by oxidation of organic compounds and generation of precursor metabolites. </plain></SENT>
+<SENT sid="158" pm="."><plain>This observation is in agreement with the known action of nongenotoxins and the role oxidative stress in carcinogenesis (3,19). </plain></SENT>
+<SENT sid="159" pm="."><plain>Additionally, the presence of genes related to lipid metabolism is typical of profiles delivered by peroxisome proliferators. </plain></SENT>
+<SENT sid="160" pm="."><plain>Others genes involved complement cascade, inflammation response, and some of them were related to cellular attachment. </plain></SENT>
+</text></p><p><text><SENT sid="161" pm="."><plain>Our signature included synthetic sex steroids (cyperone acetate, 17-methyltestosterone, diethylstilbestrol and ethinylestradiol). </plain></SENT>
+<SENT sid="162" pm="."><plain>Several of them were shown to produce liver tumors in rats when given at therapeutic doses (20). </plain></SENT>
+<SENT sid="163" pm="."><plain>Initially, the non-genotoxic effects of steroids were thought to be triggered by downstream genes of specific receptors, although increasing data suggest that they possess genotoxic action as well. </plain></SENT>
+<SENT sid="164" pm="."><plain>We decided to keep them as NGTX carcinogens because the effect was complementary. </plain></SENT>
+<SENT sid="165" pm="."><plain>Increased CYP activities and alterations in sterol metabolism are frequently associated with hepatomegaly in a non-genotoxic manner (3). </plain></SENT>
+</text></p><p><text><SENT sid="166" pm="."><plain>A steroid responsive gene, Interleukin-1a (IL-1a), is a high scoring gene in our signature. </plain></SENT>
+<SENT sid="167" pm="."><plain>It is a critical cytokine whose expression is related with various aspects of human reproduction and expressed in a number of solid tumors. </plain></SENT>
+<SENT sid="168" pm="."><plain>IL-1a serves as attractant by lymphocytes that keep the inflammation state that precedes malignancy. </plain></SENT>
+<SENT sid="169" pm="."><plain>Sex steroid receptors downregulate and confine IL-1a expression, but its deregulation is a key inducer of proteolytic enzymes that degrade the extracellular matrix and remodel tissue (21). </plain></SENT>
+</text></p><p><text><SENT sid="170" pm="."><plain>Several studies have provided gene predictors for nongentoxic hepato-carcinogens (22–28). </plain></SENT>
+<SENT sid="171" pm="."><plain>Most of the methodologies used were based on support vector machines (SVM) coupled with a feature reduction algorithm. </plain></SENT>
+<SENT sid="172" pm="."><plain>Published gene classifiers ranged from 9 to more than 100 probes and prediction accuracies were roughly equivalent. </plain></SENT>
+<SENT sid="173" pm="."><plain>In general, data from rats under longer exposures provided higher accuracies. </plain></SENT>
+<SENT sid="174" pm="."><plain>The composition of predictors differed among studies in length and diversity and only few genes overlapped. </plain></SENT>
+<SENT sid="175" pm="."><plain>The reason for such heterogeneity is given by the differences in experimental designs. </plain></SENT>
+<SENT sid="176" pm="."><plain>However, all these factors make biological interpretability more complex. </plain></SENT>
+</text></p><p><text><SENT sid="177" pm="."><plain>A recent study developed by Gusenleitner et al. (2014) scanned most of the NTP database and built a classifier that englobed liver carcinogenesis (combining both genotoxic and non-genotoxic carcinogens) (29). </plain></SENT>
+<SENT sid="178" pm="."><plain>They validated their model with TG-GATE liver data and estimated liver carcinogenesis with an AUC of 0.78 (56.8% sensitivity and 82.91% specificity). </plain></SENT>
+<SENT sid="179" pm="."><plain>It is interesting that our signature, although confined to a non-genotoxic subgroup of short term exposure, had in common CYP1a2 and ZDHHC2 as high scoring genes. </plain></SENT>
+<SENT sid="180" pm="."><plain>Also, the presence of members of the superfamily of solute carrier proteins (SCL genes) in both signatures indicates the importance that membrane transporters have for drugs that “hitch-hike” one or another to enter the cells (30). </plain></SENT>
+<SENT sid="181" pm="."><plain>On the other hand, the inclusion of genotoxic compounds to predict global carcinogenesis resulted in a signature with several cell cycle control genes, essential to the regulation of growth and apoptosis during mutagenic stress. </plain></SENT>
+</text></p><p><text><SENT sid="182" pm="."><plain>Toxicogenomics is a promising field with the hope of aid both the earlier elimination of toxic compounds in the drug pipeline and the discovery of new toxicity mechanisms. </plain></SENT>
+<SENT sid="183" pm="."><plain>The biggest target is accurately predict the toxicity of unknown drugs. </plain></SENT>
+<SENT sid="184" pm="."><plain>In this analysis, we presented a classifier that can predict non-genotoxic carcinogenicity by using short term exposure treatments from the NTP database. </plain></SENT>
+<SENT sid="185" pm="."><plain>Although we are aware that the classifier does not have the prediction accuracy of signatures of long term exposure, early screening is an advantage that would allow prioritizing compounds for further testing. </plain></SENT>
+</text></p></sec></SecTag><SecTag type="SUPPL"><sec sec-type="supplementary-material"><title><text><SENT sid="186" pm="."><plain>Supplementary Information </plain></SENT>
+</text></title><supplementary-material content-type="local-data" id="s1-tr-32-289"><media xlink:href="tr-32-289-suppl.pdf" mimetype="application" mime-subtype="pdf" orientation="portrait" id="d36e416" position="anchor"/></supplementary-material></sec></SecTag></body><back><SecTag type="ACK_FUND"><ack><title>ACKNOWLEDGMENTS</title><p><text4fund><text><SENT sid="187" pm="."><plain>We would like to thank to M.Sc. </plain></SENT>
+<SENT sid="188" pm="."><plain>Patricia Dell’Arciprete (National Patagonic Center-CONICET) for help in data processing. </plain></SENT>
+</text></text4fund></p></ack></SecTag><SecTag type="ABBR"><glossary><title>List of Abbreviations</title><def-list><def-item><term id="G1">GTX</term><def><p>Genotoxic</p></def></def-item><def-item><term id="G2">NGTX</term><def><p>Non-genotoxic</p></def></def-item><def-item><term id="G3">NTP</term><def><p>National Toxicology Program</p></def></def-item><def-item><term id="G4">TG-GATE</term><def><p>The Toxicogenomics Project Genomics Assisted Toxicity Evaluation system</p></def></def-item></def-list></glossary></SecTag><SecTag type="REF"><ref-list><title>REFERENCES</title><ref id="b1-tr-32-289"><text><SENT sid="189" pm="."><plain>1McGovernTJacobson-KramD2006Regulation of genotoxic and carcinogenic impurities in drug substances and productsTrAC, Trends Anal Chem2579079510.1016/j.trac.2006.06.004 </plain></SENT>
+</text></ref><ref id="b2-tr-32-289"><text><SENT sid="190" pm="."><plain>2HayashiY1992Overview of genotoxic carcinogens and non-genotoxic carcinogensExp Toxicol Pathol4446547110.1016/S0940-2993(11)80159-4<?supplied-pmid 1493365?>1493365 </plain></SENT>
+</text></ref><ref id="b3-tr-32-289"><text><SENT sid="191" pm="."><plain>3HernándezLGvan SteegHLuijtenMvan BenthemJ2009Mechanisms of non-genotoxic carcinogens and importance of a weight of evidence approachMutat Res6829410910.1016/j.mrrev.2009.07.002<?supplied-pmid 19631282?>19631282 </plain></SENT>
+</text></ref><ref id="b4-tr-32-289"><text><SENT sid="192" pm="."><plain>4RobinsonJFPenningsJLPiersmaAH2012A review of toxicogenomic approaches in developmental toxicologyMethods Mol Biol88934737110.1007/978-1-61779-867-2_22<?supplied-pmid 22669676?>22669676 </plain></SENT>
+</text></ref><ref id="b5-tr-32-289"><text><SENT sid="193" pm="."><plain>5National Research Council (US) Committee on Applications of Toxicogenomic Technologies to Predictive Toxicology2007Applications of Toxicogenomic Technologies to Predictive Toxicology and Risk AssessmentNational Academies Press (US)Washington </plain></SENT>
+</text></ref><ref id="b6-tr-32-289"><text><SENT sid="194" pm="."><plain>6IgarashiYNakatsuNYamashitaTOnoAOhnoYUrushidaniTYamadaH2015Open TG-GATEs: a large-scale toxicogenomics databaseNucleic Acids Res43D921D92710.1093/nar/gku95525313160 </plain></SENT>
+</text></ref><ref id="b7-tr-32-289"><text><SENT sid="195" pm="."><plain>7FitzpatrickRB2008CPDB: Carcinogenic Potency DatabaseMed Ref Serv Q2730331110.1080/02763860802198895<?supplied-pmid 19042710?>19042710 </plain></SENT>
+</text></ref><ref id="b8-tr-32-289"><text><SENT sid="196" pm="."><plain>8GanterBTugendreichSPearsonCIAyanogluEBaumhueterSBostianKABradyLBrowneLJCalvinJTDayGJBreckenridgeNDunleaSEynonBPFurnessLMFerngJFieldenMRFujimotoSYGongLHuCIduryRJudoMSKolajaKLLeeMDMcSorleyCMinorJMNairRVNatsoulisGNguyenPNicholsonSMPhamHRoterAHSunDTanSThodeSTolleyAMVladimirovaAYangJZhouZJarnaginK2005Development of a large-scale chemogenomics database to improve drug candidate selection and to understand mechanisms of chemical toxicity and actionJ Biotechnol11921924410.1016/j.jbiotec.2005.03.022<?supplied-pmid 16005536?>16005536 </plain></SENT>
+</text></ref><ref id="b9-tr-32-289"><text><SENT sid="197" pm="."><plain>9R Core Team2015R: A language and environment for statistical computingR Foundation for Statistical ComputingVienna </plain></SENT>
+</text></ref><ref id="b10-tr-32-289"><text><SENT sid="198" pm="."><plain>10BenjaminiYYekutieliD2001The control of the false discovery rate in multiple testing under dependencyAnn Statist2911651188 </plain></SENT>
+</text></ref><ref id="b11-tr-32-289"><text><SENT sid="199" pm="."><plain>11Díaz-UriarteRAlvarez de AndrésS2006Gene selection and classification of microarray data using random forestBMC Bioinformatics7310.1186/1471-2105-7-3<?supplied-pmid 16398926?>16398926 </plain></SENT>
+</text></ref><ref id="b12-tr-32-289"><text><SENT sid="200" pm="."><plain>12BreimanL2001Random forestsMach Learn4553210.1023/A:1010933404324 </plain></SENT>
+</text></ref><ref id="b13-tr-32-289"><text><SENT sid="201" pm="."><plain>13EfronBTibshiraniR1997Improvements on cross-validation: the 632+ bootstrap methodJ Am Stat Assoc92548560 </plain></SENT>
+</text></ref><ref id="b14-tr-32-289"><text><SENT sid="202" pm="."><plain>14AlexaARahnenfuhrerJLengauerT2006Improved scoring of functional groups from gene expression data by decorrelating go graph structureBioinformatics221600160710.1093/bioinformatics/btl140<?supplied-pmid 16606683?>16606683 </plain></SENT>
+</text></ref><ref id="b15-tr-32-289"><text><SENT sid="203" pm="."><plain>15EngelbergA2004Iconix Pharmaceuticals, Inc.-removing barriers to efficient drug discovery through chemogenomicsPharmacogenomics574174410.1517/14622416.5.6.741<?supplied-pmid 15335294?>15335294 </plain></SENT>
+</text></ref><ref id="b16-tr-32-289"><text><SENT sid="204" pm="."><plain>16MelnickRLKohnMCPortierCJ1996Implications for risk assessment of suggested non-genotoxic mechanisms of chemical carcinogenesisEnviron Health Perspect104Suppl 112313410.1289/ehp.96104s11238722116 </plain></SENT>
+</text></ref><ref id="b17-tr-32-289"><text><SENT sid="205" pm="."><plain>17WuSNLiHFJanCRShenAY1999Inhibition of Ca2+-activated K+ current by clotrimazole in rat anterior pituitary GH3 cellsNeuropharmacology3897998910.1016/S0028-3908(99)00027-1<?supplied-pmid 10428416?>10428416 </plain></SENT>
+</text></ref><ref id="b18-tr-32-289"><text><SENT sid="206" pm="."><plain>18ZhangWRamamoorthyYKilicarslanTNolteHTyndaleRFSellersEM2002Inhibition of cytochromes P450 by antifungal imidazole derivativesDrug Metab Dispos3031431810.1124/dmd.30.3.314<?supplied-pmid 11854151?>11854151 </plain></SENT>
+</text></ref><ref id="b19-tr-32-289"><text><SENT sid="207" pm="."><plain>19Gurer-OrhanHOrhanHVermeulenNPMeermanJH2006Screening the oxidative potential of several mono-and di-halogenated biphenyls and biphenyl ethers in rat hepatocytesComb Chem High Throughput Screen944945410.2174/138620706777698517<?supplied-pmid 16842226?>16842226 </plain></SENT>
+</text></ref><ref id="b20-tr-32-289"><text><SENT sid="208" pm="."><plain>20El EtrebyMFGrafKJGiinzelPNeumannF1979Evaluation of effects of sexual steroids on the hypothalamic- pituitary system of animals and manMechanism of toxic action on some target organs drugs and other substances Proceedings of the european society of toxicologyChambersPLGiinzelPSpringer-VerlagBerlin Heidelberg114010.1007/978-3-642-67265-1_2 </plain></SENT>
+</text></ref><ref id="b21-tr-32-289"><text><SENT sid="209" pm="."><plain>21SingerCFKronsteinerNHudelistGMartonEWalterIKubistaMCzerwenkaKSchreiberMSeifertMKubistaE2003Interleukin 1 system and sex steroid receptor expression in human breast cancer: interleukin 1alpha protein secretion is correlated with malignant phenotypeClin Cancer Res948774883<?supplied-pmid 14581361?>14581361 </plain></SENT>
+</text></ref><ref id="b22-tr-32-289"><text><SENT sid="210" pm="."><plain>22van DelftJHvan AgenEvan BredaSGHerwijnenMHStaalYCKleinjansJC2004Discrimination of genotoxic from non-genotoxic carcinogens by gene expression profilingCarcinogenesis2512651276[Erratum in: 2004, 25, 2525; 2005, 26, 511]10.1093/carcin/bgh108<?supplied-pmid 14963013?>14963013 </plain></SENT>
+</text></ref><ref id="b23-tr-32-289"><text><SENT sid="211" pm="."><plain>23NakayamaKKawanoYKawakamiYMoriwakiNSekijimaMOtsukaMYakabeYMiyauraHSaitoKSumidaKShiraiT2006Differences in gene expression profiles in the liver between carcinogenic and non-carcinogenic isomers of compounds given to ratsToxicol Appl Pharmacol21729930710.1016/j.taap.2006.09.008<?supplied-pmid 17070881?>17070881 </plain></SENT>
+</text></ref><ref id="b24-tr-32-289"><text><SENT sid="212" pm="."><plain>24FieldenMRBrennanRGollubJ2007A gene expression biomarker provides early prediction and mechanistic assessment of hepatic tumor induction by non-genotoxic chemicalsToxicol Sci999010010.1093/toxsci/kfm156<?supplied-pmid 17557906?>17557906 </plain></SENT>
+</text></ref><ref id="b25-tr-32-289"><text><SENT sid="213" pm="."><plain>25Ellinger-ZiegelbauerHGmuenderHBandenburgAAhrHJ2008Prediction of a carcinogenic potential of rat hepatocarcinogens using toxicogenomics analysis of shortterm in vivo studiesMutat Res637233910.1016/j.mrfmmm.2007.06.01017689568 </plain></SENT>
+</text></ref><ref id="b26-tr-32-289"><text><SENT sid="214" pm="."><plain>26AuerbachSSShahRRMavDSmitCSWalkerNJVallantMKBoormanGAIrwinRD2010Predicting the hepatocarcinogenic potential of alkenylbenzene flavoring agents using toxicogenomics and machine learningToxicol Appl Pharmacol24330031410.1016/j.taap.2009.11.02120004213 </plain></SENT>
+</text></ref><ref id="b27-tr-32-289"><text><SENT sid="215" pm="."><plain>27UeharaTMinowaYMorikawaYKondoCMaruyamaTKatoINakatsuNIgarashiYOnoAHayashiHMitsumoriKYamadaHOhnoYUrushidaniT2011Prediction model of potential hepatocarcinogenicity of rat hepatocarcinogens using a large-scale toxicogenomics databaseToxicol Appl Pharmacol25529730610.1016/j.taap.2011.07.001<?supplied-pmid 21784091?>21784091 </plain></SENT>
+</text></ref><ref id="b28-tr-32-289"><text><SENT sid="216" pm="."><plain>28LeeSJYumYNKimSCKimYLimJLeeWJKooKHKimJHKimJELeeWSSohnSParkSNParkJHLeeJKwonSW2013Distinguishing between genotoxic and non-genotoxic hepatocarcinogens by gene expression profiling and bioinformatics pathway analysisSci Rep3278324089152 </plain></SENT>
+</text></ref><ref id="b29-tr-32-289"><text><SENT sid="217" pm="."><plain>29GusenleitnerDAuerbachSSMeliaTGómezHFSherrDHMontiS2014Genomic models of shortterm exposure accurately predict long-term chemical carcinogenicity and identify putative mechanisms of actionPLoS ONE9e10257910.1371/journal.pone.010257925058030 </plain></SENT>
+</text></ref><ref id="b30-tr-32-289"><text><SENT sid="218" pm="."><plain>30HeLVasiliouKNebertDW2009Analysis and update of the human solute carrier (SLC) gene superfamilyHum Genomics319520610.1186/1479-7364-3-2-195<?supplied-pmid 19164095?>19164095 </plain></SENT>
+</text></ref></ref-list></SecTag></back><floats-group><SecTag type="FIG"><fig id="f1-tr-32-289" orientation="portrait" position="float"><label>Fig. 1</label><caption><p><text><SENT sid="219" pm="."><plain>Principal Component Analysis (PCA) of differential expressed genes for DrugMatrix chemicals. </plain></SENT>
+<SENT sid="220" pm="."><plain>Each compound was averaged among replicates. </plain></SENT>
+<SENT sid="221" pm="."><plain>Shapes indicate their class: circles correspond to non-genotoxic carcinogens, squares to genotoxins and triangles to non-hepatocarcinogens. </plain></SENT>
+</text></p></caption><graphic xlink:href="tr-32-289f1"/></fig></SecTag><SecTag type="FIG"><fig id="f2-tr-32-289" orientation="portrait" position="float"><label>Fig. 2</label><caption><p><text><SENT sid="222" pm="."><plain>Principal Component Analysis (PCA) performed with the 54 selected genes on the DrugMatrix set. </plain></SENT>
+<SENT sid="223" pm="."><plain>Each compound was averaged among replicates. </plain></SENT>
+<SENT sid="224" pm="."><plain>Shapes indicate their class: circles correspond to non-genotoxic carcinogens, squares to genotoxins and triangles to non-hepatocarcinogens. </plain></SENT>
+<SENT sid="225" pm="."><plain>Note that non-genotoxic carcinogens (circles) clustered at the right of PC1, with the exception of CC4. </plain></SENT>
+</text></p></caption><graphic xlink:href="tr-32-289f2"/></fig></SecTag><SecTag type="FIG"><fig id="f3-tr-32-289" orientation="portrait" position="float"><label>Fig. 3</label><caption><p><text><SENT sid="226" pm="."><plain>Mean differential expression of the predictor genes in log2 scale. </plain></SENT>
+<SENT sid="227" pm="."><plain>Black bars represent overexpressed genes; gray bars represent under-expressed genes. </plain></SENT>
+</text></p></caption><graphic xlink:href="tr-32-289f3"/></fig></SecTag><SecTag type="TABLE"><table-wrap id="t1-tr-32-289" orientation="portrait" position="float"><label>Table 1</label><caption><p><text><SENT sid="228" pm="."><plain>Groups of chemicals for classification analysis </plain></SENT>
+</text></p></caption><table frame="hsides" rules="rows"><thead><tr><th valign="bottom" align="left" rowspan="1" colspan="1"><text><SENT sid="229" pm="."><plain>Drugs </plain></SENT>
+</text></th><th valign="bottom" align="left" rowspan="1" colspan="1"><text><SENT sid="230" pm="."><plain>Analysis set </plain></SENT>
+</text></th></tr></thead><tbody><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="231" pm="."><plain>DrugMatrix </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"/></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="232" pm="."><plain>Non Genotoxic carcinogens (n = 9) Carbon Tetrachloride (CCL4), Methapyrilene (MP), Cyproterone Acetate (CPA) Phenobarbital (PBT), Fenofibrate (FF), Clofibrate (CFB), Bezafibrate (BF), Diethylstilbestrol (DES), Gemfibrozil (GFZ)Genotoxic Carcinogens and non-hepatocarcinogens (n=9) 2-Acetylaminofluorene (2-AAF), 3-Methylcholanthrene (MCA), Albendazole (ALB), Doxorubicin (DOX), Ibuprofen (IBF), 1-Naphthyl Isothiocyanate (ANIT), Methyl salicylate (MS), Amiodarone (AMI), Hydrazine (N2H4) </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="233" pm="."><plain>Training set </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="234" pm="."><plain>Non Genotoxic carcinogens (n = 4) Clofibric Acid (CA), Carbamazepine (CBZ), Ethinylestradiol (EE), 17-methyltestosterone (MET)Genotoxic carcinogens and non-hepatocarcinogens (n = 29) Clotrimazole (CLOT), Nimesulide (NIM), Naproxen (NAP), Dexamethasone (DXM), Diclofenac (DFNa), Fluphenazine (FP), Clomipramine (CMP), Erythromycin (ERM), Meloxicam (MLX), Stavudine (D4T), Promethazine (PMZ), Valproic acid (VPA), Allyl alcohol (AA), Troglitazone (TGZ), Methimazole (MTZ), 6-Mercaptopurine (MP), Pioglitazone (PGZ), Tamoxifen (TMX), Altretamine (HMM), Chlorambucil (CBC), Carmustine (BCNU), Aflatoxin b1 (AFB1), N-nitrosodiethylamine (NDEA), Raloxifene (RLX), Lomustine (LS), Safrole (SF), Mitomycin-c (MMC), Streptozotocin (STZ), Cytarabine (ara-C) </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="235" pm="."><plain>Test set </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="236" pm="."><plain>Unknown (n = 26) Aminoglutethimide (AG), Closantel (CLO), Tandutinib (MLN518), Clomiphene (CLM), Sulindac (SULIN), Progesterone (PR), Cinnarizine (CIN), nystatin (NYS), indomethacin (IM), catechol (CC), ketorolac (KET), Isoeugenol (IEUG), Leflunomide (LEF), Finasteride (FIN), Danazol (DZ), Salicylamide (SA), Chloroxylenol (CXL), Balsalazide (BZ), Crotamiton(CROT), Zileuton (ZL), Propylthiouracil (PTU), Rosiglitazone (RGZ), Carbimazole (CBZ), Ketoconazole (KET), Modafinil (MO), Simvastatin (SIM) </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="237" pm="."><plain>Unknown/ </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="238" pm="."><plain>TGGATE </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"/></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="239" pm="."><plain>Non Genotoxic carcinogens (n = 13) Methyltestosterone (MTS), Monocrotaline (MCT), Ethinylestradiol (EE), Fenofibrate (FFB), Methapyrilene (MP), Phenobarbital (PBT), Thioacetamide (TAA), Carbon tetrachloride (CCL4), Clofibrate (CFB), WY-14643 (WY), Gemfibrozil (GFZ), Carbamazepine (CBZ), Acetamide (AAA)Genotoxic carcinogens and non-hepatocarcinogens (n = 21) Tamoxifen (TMX), Lomustine (LS), Colchicine (COL), Carboplatin (CBP), Acetamidofluorene (AAF), Doxorubicin (DOX), Naphthyl isothiocyanate (ANIT), ketoconazole (KC), Tetracycline (TC), Erythromycin ethylsuccinate (EME), Caffeine (CAF), Tannic acid (TAN), Promethazine (PMZ), Nimesulide (NIM), Ethanol (ETN), Gentamicin (GMC), Acetaminophen (APAP), Amiodarone (AM), Aspirin (ASA), Diclofenac (DFNa), Allyl alcohol (AA) </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="240" pm="."><plain>Validation set </plain></SENT>
+</text></td></tr></tbody></table></table-wrap></SecTag><SecTag type="TABLE"><table-wrap id="t2-tr-32-289" orientation="portrait" position="float"><label>Table 2</label><caption><p><text><SENT sid="241" pm="."><plain>Class discrimination analysis by Random Forest in DrugMatrix data </plain></SENT>
+</text></p></caption><table frame="hsides" rules="groups"><thead><tr><th valign="middle" align="center" rowspan="1" colspan="1"><text><SENT sid="242" pm="."><plain>Chemicals </plain></SENT>
+</text></th><th valign="middle" align="center" rowspan="1" colspan="1"><text><SENT sid="243" pm="."><plain>Dose level (mg/mL) </plain></SENT>
+</text></th><th valign="middle" align="center" rowspan="1" colspan="1"><text><SENT sid="244" pm="."><plain>Random Forest classificationa </plain></SENT>
+</text></th></tr><tr><th colspan="3" valign="middle" align="left" rowspan="1"><text><SENT sid="245" pm="."><plain> </plain></SENT>
+</text></th></tr><tr><th valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="246" pm="."><plain>Training set (N = 18) </plain></SENT>
+</text></th><th valign="middle" align="center" rowspan="1" colspan="1"/><th valign="middle" align="center" rowspan="1" colspan="1"><text><SENT sid="247" pm="."><plain>Predicted class </plain></SENT>
+</text></th></tr></thead><tbody><tr><td colspan="3" valign="top" align="left" rowspan="1"><text><SENT sid="248" pm="."><plain>NGTX </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="249" pm="."><plain> Carbon Tetrachloride (CCL4) </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="250" pm="."><plain>1175 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="251" pm="."><plain>0(*) </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="252" pm="."><plain> Methapyrilene (MT) </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="253" pm="."><plain>100 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="254" pm="."><plain>NGTXC </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="255" pm="."><plain> Cyproterone Acetate (CPA) </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="256" pm="."><plain>2500 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="257" pm="."><plain>NGTXC </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="258" pm="."><plain> Phenobarbital (PBT) </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="259" pm="."><plain>54 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="260" pm="."><plain>NGTXC </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="261" pm="."><plain> Fenofibrate (FF) </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="262" pm="."><plain>215 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="263" pm="."><plain>NGTXC </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="264" pm="."><plain> Clofibrate (CFB) </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="265" pm="."><plain>130 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="266" pm="."><plain>NGTXC </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="267" pm="."><plain> Bezafibrate (BF) </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="268" pm="."><plain>617 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="269" pm="."><plain>NGTXC </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="270" pm="."><plain> Diethylstilbestrol (DES) </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="271" pm="."><plain>280 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="272" pm="."><plain>NGTXC </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="273" pm="."><plain> Gemfibrozil (GFB) </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="274" pm="."><plain>700 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="275" pm="."><plain>NGTXC </plain></SENT>
+</text></td></tr><tr><td colspan="3" valign="top" align="left" rowspan="1"><text><SENT sid="276" pm="."><plain>GTX </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="277" pm="."><plain> 2-Acetylaminofluorene (2-AAF) </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="278" pm="."><plain>30 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="279" pm="."><plain>0 </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="280" pm="."><plain> 3-Methylcholanthrene (MCA) </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="281" pm="."><plain>300 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="282" pm="."><plain>0 </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="283" pm="."><plain> Doxorubicin (DOXO) </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="284" pm="."><plain>3 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="285" pm="."><plain>0 </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="286" pm="."><plain> Hydrazine (N2H4) </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="287" pm="."><plain>45 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="288" pm="."><plain>0 </plain></SENT>
+</text></td></tr><tr><td colspan="3" valign="top" align="left" rowspan="1"><text><SENT sid="289" pm="."><plain>Non hepathocarcinogen </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="290" pm="."><plain> 1-Naphthyl Isothiocyanate (ANIT) </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="291" pm="."><plain>60 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="292" pm="."><plain>0 </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="293" pm="."><plain> Methyl salicylate (MS) </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="294" pm="."><plain>444 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="295" pm="."><plain>0 </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="296" pm="."><plain> Albendazole (ALB) </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="297" pm="."><plain>62 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="298" pm="."><plain>0 </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="299" pm="."><plain> Amiodarone (AMI) </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="300" pm="."><plain>147 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="301" pm="."><plain>0 </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="302" pm="."><plain> Ibuprofen (IBF) </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="303" pm="."><plain>263 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="304" pm="."><plain>0 </plain></SENT>
+</text></td></tr><tr><td colspan="3" valign="top" align="left" rowspan="1"><text><SENT sid="305" pm="."><plain> </plain></SENT>
+</text></td></tr><tr><td colspan="3" valign="top" align="left" rowspan="1"><text><SENT sid="306" pm="."><plain>Test set (n = 33) </plain></SENT>
+</text></td></tr><tr><td colspan="3" valign="top" align="left" rowspan="1"><text><SENT sid="307" pm="."><plain> </plain></SENT>
+</text></td></tr><tr><td colspan="3" valign="top" align="left" rowspan="1"><text><SENT sid="308" pm="."><plain>NGTX </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="309" pm="."><plain> Clofibric Acid (CA) </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="310" pm="."><plain>448 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="311" pm="."><plain>NGTX </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="312" pm="."><plain> Carbamazepine (CBZ) </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="313" pm="."><plain>490 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="314" pm="."><plain>NGTX </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="315" pm="."><plain> Ethinylestradiol (EE) </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="316" pm="."><plain>1480 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="317" pm="."><plain>NGTX </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="318" pm="."><plain> 17-Methyltestosterone (MET) </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="319" pm="."><plain>2000 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="320" pm="."><plain>NGTX </plain></SENT>
+</text></td></tr><tr><td colspan="3" valign="top" align="left" rowspan="1"><text><SENT sid="321" pm="."><plain>GTX </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="322" pm="."><plain> Aflatoxin b1 (AFB1) </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="323" pm="."><plain>0.3 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="324" pm="."><plain>0 </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="325" pm="."><plain> Carmustine (BCNU) </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="326" pm="."><plain>16 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="327" pm="."><plain>0 </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="328" pm="."><plain> Chlorambucil (CBC) </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="329" pm="."><plain>4.5 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="330" pm="."><plain>0 </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="331" pm="."><plain> Cytarabine (ara-C) </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="332" pm="."><plain>487 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="333" pm="."><plain>0 </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="334" pm="."><plain> Lomustine (LS) </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="335" pm="."><plain>8.75 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="336" pm="."><plain>0 </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="337" pm="."><plain> Mitomycin-c (MMC) </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="338" pm="."><plain>1.7 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="339" pm="."><plain>0 </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="340" pm="."><plain> N-nitrosodiethylamine (NDEA) </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="341" pm="."><plain>34 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="342" pm="."><plain>0 </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="343" pm="."><plain> Raloxifene (RLX) </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="344" pm="."><plain>650 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="345" pm="."><plain>0 </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="346" pm="."><plain> Safrole (SF) </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="347" pm="."><plain>488 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="348" pm="."><plain>0 </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="349" pm="."><plain> Streptozotocin (STZ), </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="350" pm="."><plain>138 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="351" pm="."><plain>0 </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="352" pm="."><plain> Tamoxifen (TMX) </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="353" pm="."><plain>64 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="354" pm="."><plain>0 </plain></SENT>
+</text></td></tr><tr><td colspan="3" valign="top" align="left" rowspan="1"><text><SENT sid="355" pm="."><plain> </plain></SENT>
+</text></td></tr><tr><td colspan="3" valign="top" align="left" rowspan="1"><text><SENT sid="356" pm="."><plain>Non hepathocarcinogen </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="357" pm="."><plain> 6-Mercaptopurine (MP) </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="358" pm="."><plain>25 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="359" pm="."><plain>0 </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="360" pm="."><plain> Allyl alcohol (AA) </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="361" pm="."><plain>32 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="362" pm="."><plain>0 </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="363" pm="."><plain> Altretamine (HMM) </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="364" pm="."><plain>40 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="365" pm="."><plain>0 </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="366" pm="."><plain> Clomipramine (CMP) </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="367" pm="."><plain>115 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="368" pm="."><plain>0 </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="369" pm="."><plain> Clotrimazole (CLOT) </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="370" pm="."><plain>89 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="371" pm="."><plain>NGTXC(*) </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="372" pm="."><plain> Dexamethasone (DXM) </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="373" pm="."><plain>150 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="374" pm="."><plain>NGTXC(*) </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="375" pm="."><plain> Diclofenac (DFNa) </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="376" pm="."><plain>10 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="377" pm="."><plain>0 </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="378" pm="."><plain> Erythromycin (ERM) </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="379" pm="."><plain>1500 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="380" pm="."><plain>0 </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="381" pm="."><plain> Fluphenazine (FP) </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="382" pm="."><plain>2.5 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="383" pm="."><plain>0 </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="384" pm="."><plain> Meloxicam (MLX) </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="385" pm="."><plain>33 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="386" pm="."><plain>0 </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="387" pm="."><plain> Methimazole (MTZ) </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="388" pm="."><plain>100 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="389" pm="."><plain>0 </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="390" pm="."><plain> Naproxen (NAP) </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="391" pm="."><plain>10 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="392" pm="."><plain>0 </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="393" pm="."><plain> Nimesulide (NIM) </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="394" pm="."><plain>162 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="395" pm="."><plain>0 </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="396" pm="."><plain> Pioglitazone (PGZ) </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="397" pm="."><plain>1500 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="398" pm="."><plain>0 </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="399" pm="."><plain> Promethazine (PMZ) </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="400" pm="."><plain>113 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="401" pm="."><plain>0 </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="402" pm="."><plain> Stavudine (D4T) </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="403" pm="."><plain>1400 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="404" pm="."><plain>NGTXC(*) </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="405" pm="."><plain> Troglitazone (TGZ) </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="406" pm="."><plain>1200 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="407" pm="."><plain>0 </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="408" pm="."><plain> Valproic acid (VPA) </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="409" pm="."><plain>1340 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="410" pm="."><plain>0 </plain></SENT>
+</text></td></tr><tr><td colspan="3" valign="top" align="left" rowspan="1"><text><SENT sid="411" pm="."><plain> </plain></SENT>
+</text></td></tr><tr><td colspan="3" valign="top" align="left" rowspan="1"><text><SENT sid="412" pm="."><plain>Unknown </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="413" pm="."><plain> Aminoglutethimide (AG) </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="414" pm="."><plain>350 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="415" pm="."><plain>NGTXC </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="416" pm="."><plain> Balsalazide (BZ) </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="417" pm="."><plain>1100 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="418" pm="."><plain>0 </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="419" pm="."><plain> Carbimazole (CBZ) </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="420" pm="."><plain>400 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="421" pm="."><plain>0 </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="422" pm="."><plain> Catechol (CC) </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="423" pm="."><plain>195 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="424" pm="."><plain>0 </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="425" pm="."><plain> Chloroxylenol (CXL) </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="426" pm="."><plain>1915 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="427" pm="."><plain>0 </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="428" pm="."><plain> Cinnarizine (CIN) </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="429" pm="."><plain>750 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="430" pm="."><plain>0 </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="431" pm="."><plain> Clomiphene (CLM) </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="432" pm="."><plain>250 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="433" pm="."><plain>0 </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="434" pm="."><plain> Closantel (CLO) </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="435" pm="."><plain>22 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="436" pm="."><plain>0 </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="437" pm="."><plain> Crotamiton(CROT) </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="438" pm="."><plain>750 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="439" pm="."><plain>NGTXC </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="440" pm="."><plain> Danazol (DZ) </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="441" pm="."><plain>2000 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="442" pm="."><plain>0 </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="443" pm="."><plain> Finasteride (FIN) </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="444" pm="."><plain>800 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="445" pm="."><plain>NGTXC </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="446" pm="."><plain> Indomethacin (IM) </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="447" pm="."><plain>12 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="448" pm="."><plain>0 </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="449" pm="."><plain> Isoeugenol (IEUG) </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="450" pm="."><plain>1560 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="451" pm="."><plain>0 </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="452" pm="."><plain> Ketoconazole (KET) </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="453" pm="."><plain>227 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="454" pm="."><plain>0 </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="455" pm="."><plain> Ketorolac (KET) </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="456" pm="."><plain>48 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="457" pm="."><plain>0 </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="458" pm="."><plain> Leflunomide (LEF) </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="459" pm="."><plain>60 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="460" pm="."><plain>0 </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="461" pm="."><plain> MLN518 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="462" pm="."><plain>212 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="463" pm="."><plain>0 </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="464" pm="."><plain> Modafinil (MO) </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="465" pm="."><plain>325 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="466" pm="."><plain>NGTXC </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="467" pm="."><plain> Nystatin (NYS) </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="468" pm="."><plain>134 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="469" pm="."><plain>0 </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="470" pm="."><plain> Progesterone (PR) </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="471" pm="."><plain>164 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="472" pm="."><plain>0 </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="473" pm="."><plain> Propylthiouracil (PTU) </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="474" pm="."><plain>625 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="475" pm="."><plain>Undb </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="476" pm="."><plain> Rosiglitazone (RGZ) </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="477" pm="."><plain>1800 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="478" pm="."><plain>NGTXC </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="479" pm="."><plain> Salicylamide (SA) </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="480" pm="."><plain>1300 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="481" pm="."><plain>0 </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="482" pm="."><plain> Simvastatin (SIM) </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="483" pm="."><plain>1200 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="484" pm="."><plain>NGTXC </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="485" pm="."><plain> Sulindac (SULIN) </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="486" pm="."><plain>132 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="487" pm="."><plain>0 </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="488" pm="."><plain> Zileuton (ZL) </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="489" pm="."><plain>450 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="490" pm="."><plain>0 </plain></SENT>
+</text></td></tr></tbody></table><table-wrap-foot><fn id="tfn1-tr-32-289"><p>Abbreviations: NGTXC, Non-genotoxic Carcinogen; GTX, Genotoxic compound; NH, Non hepatocarcinogen; 0, Negative for NGTXC.</p></fn><fn id="tfn2-tr-32-289"><label>a</label><p>Results based on the OOB classification.</p></fn><fn id="tfn3-tr-32-289"><label>b</label><p>Undetermined.</p></fn><fn id="tfn4-tr-32-289"><label>*</label><p>Misclassified.</p></fn></table-wrap-foot></table-wrap></SecTag><SecTag type="TABLE"><table-wrap id="t3-tr-32-289" orientation="portrait" position="float"><label>Table 3</label><caption><p><text><SENT sid="491" pm="."><plain>Random Forest classification of TG-GATE data according to dose level </plain></SENT>
+</text></p></caption><table frame="hsides" rules="groups"><thead><tr><th valign="bottom" align="left" rowspan="1" colspan="1"/><th colspan="2" valign="bottom" align="center" rowspan="1"><text><SENT sid="492" pm="."><plain>Low dose </plain></SENT>
+</text></th><th colspan="2" valign="bottom" align="center" rowspan="1"><text><SENT sid="493" pm="."><plain>Medium dose </plain></SENT>
+</text></th><th colspan="2" valign="bottom" align="center" rowspan="1"><text><SENT sid="494" pm="."><plain>High dose </plain></SENT>
+</text></th></tr><tr><th colspan="3" valign="bottom" align="left" rowspan="1"><text><SENT sid="495" pm="."><plain> </plain></SENT>
+</text></th><th colspan="2" valign="bottom" align="left" rowspan="1"><text><SENT sid="496" pm="."><plain> </plain></SENT>
+</text></th><th colspan="2" valign="bottom" align="left" rowspan="1"><text><SENT sid="497" pm="."><plain> </plain></SENT>
+</text></th></tr><tr><th valign="bottom" align="left" rowspan="1" colspan="1"><text><SENT sid="498" pm="."><plain>Samples </plain></SENT>
+</text></th><th valign="bottom" align="center" rowspan="1" colspan="1"><text><SENT sid="499" pm="."><plain>Conc. </plain></SENT>
+<SENT sid="500" pm="."><plain>(mg/mL) </plain></SENT>
+</text></th><th valign="bottom" align="center" rowspan="1" colspan="1"><text><SENT sid="501" pm="."><plain>Predicted class </plain></SENT>
+</text></th><th valign="bottom" align="center" rowspan="1" colspan="1"><text><SENT sid="502" pm="."><plain>Conc. </plain></SENT>
+<SENT sid="503" pm="."><plain>(mg/mL) </plain></SENT>
+</text></th><th valign="bottom" align="center" rowspan="1" colspan="1"><text><SENT sid="504" pm="."><plain>Predicted class </plain></SENT>
+</text></th><th valign="bottom" align="center" rowspan="1" colspan="1"><text><SENT sid="505" pm="."><plain>Conc. </plain></SENT>
+<SENT sid="506" pm="."><plain>(mg/mL) </plain></SENT>
+</text></th><th valign="bottom" align="center" rowspan="1" colspan="1"><text><SENT sid="507" pm="."><plain>Predicted class </plain></SENT>
+</text></th></tr></thead><tbody><tr><td colspan="7" valign="top" align="left" rowspan="1"><text><SENT sid="508" pm="."><plain>NGTXC </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="509" pm="."><plain> Acetamide </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="510" pm="."><plain>300 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="511" pm="."><plain>0(*) </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="512" pm="."><plain>1000 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="513" pm="."><plain>0(*) </plain></SENT>
+</text></td><td valign="top" align="right" rowspan="1" colspan="1"><text><SENT sid="514" pm="."><plain>200 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="515" pm="."><plain>0(*) </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="516" pm="."><plain> Carbamazepine </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="517" pm="."><plain>30 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="518" pm="."><plain>0(*) </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="519" pm="."><plain>100 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="520" pm="."><plain>0(*) </plain></SENT>
+</text></td><td valign="top" align="right" rowspan="1" colspan="1"><text><SENT sid="521" pm="."><plain>300 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="522" pm="."><plain>NGTX </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="523" pm="."><plain> Carbon tetrachloride </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="524" pm="."><plain>30 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="525" pm="."><plain>0(*) </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="526" pm="."><plain>100 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="527" pm="."><plain>0(*) </plain></SENT>
+</text></td><td valign="top" align="right" rowspan="1" colspan="1"><text><SENT sid="528" pm="."><plain>300 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="529" pm="."><plain>0(*) </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="530" pm="."><plain> Clofibrate </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="531" pm="."><plain>30 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="532" pm="."><plain>0(*) </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="533" pm="."><plain>100 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="534" pm="."><plain>0(*) </plain></SENT>
+</text></td><td valign="top" align="right" rowspan="1" colspan="1"><text><SENT sid="535" pm="."><plain>300 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="536" pm="."><plain>NGTX </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="537" pm="."><plain> Ethinylestradiol </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="538" pm="."><plain>1 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="539" pm="."><plain>0(*) </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="540" pm="."><plain>3 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="541" pm="."><plain>NGTX </plain></SENT>
+</text></td><td valign="top" align="right" rowspan="1" colspan="1"><text><SENT sid="542" pm="."><plain>10 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="543" pm="."><plain>NGTX </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="544" pm="."><plain> Fenofibrate </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="545" pm="."><plain>10 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="546" pm="."><plain>0(*) </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="547" pm="."><plain>100 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="548" pm="."><plain>NGTX </plain></SENT>
+</text></td><td valign="top" align="right" rowspan="1" colspan="1"><text><SENT sid="549" pm="."><plain>100 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="550" pm="."><plain>NGTX </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="551" pm="."><plain> Gemfibrozil </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="552" pm="."><plain>30 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="553" pm="."><plain>NGTX </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="554" pm="."><plain>100 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="555" pm="."><plain>NGTX </plain></SENT>
+</text></td><td valign="top" align="right" rowspan="1" colspan="1"><text><SENT sid="556" pm="."><plain>300 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="557" pm="."><plain>NGTX </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="558" pm="."><plain> Methapyrilene </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="559" pm="."><plain>10 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="560" pm="."><plain>0(*) </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="561" pm="."><plain>30 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="562" pm="."><plain>0(*) </plain></SENT>
+</text></td><td valign="top" align="right" rowspan="1" colspan="1"><text><SENT sid="563" pm="."><plain>100 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="564" pm="."><plain>0(*) </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="565" pm="."><plain> Methyltestosterone </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="566" pm="."><plain>30 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="567" pm="."><plain>0(*) </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="568" pm="."><plain>100 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="569" pm="."><plain>0(*) </plain></SENT>
+</text></td><td valign="top" align="right" rowspan="1" colspan="1"><text><SENT sid="570" pm="."><plain>300 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="571" pm="."><plain>0(*) </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="572" pm="."><plain> Monocrotaline </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="573" pm="."><plain>3 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="574" pm="."><plain>0(*) </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="575" pm="."><plain>10 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="576" pm="."><plain>0(*) </plain></SENT>
+</text></td><td valign="top" align="right" rowspan="1" colspan="1"><text><SENT sid="577" pm="."><plain>30 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="578" pm="."><plain>0(*) </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="579" pm="."><plain> Phenobarbital </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="580" pm="."><plain>10 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="581" pm="."><plain>0(*) </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="582" pm="."><plain>30 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="583" pm="."><plain>0(*) </plain></SENT>
+</text></td><td valign="top" align="right" rowspan="1" colspan="1"><text><SENT sid="584" pm="."><plain>100 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="585" pm="."><plain>NGTX </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="586" pm="."><plain> Thioacetamide </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="587" pm="."><plain>4.5 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="588" pm="."><plain>0(*) </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="589" pm="."><plain>15 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="590" pm="."><plain>NGTX </plain></SENT>
+</text></td><td valign="top" align="right" rowspan="1" colspan="1"><text><SENT sid="591" pm="."><plain>45 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="592" pm="."><plain>NGTX </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="593" pm="."><plain> WY-14643 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="594" pm="."><plain>10 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="595" pm="."><plain>NGTX </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="596" pm="."><plain>30 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="597" pm="."><plain>NGTX </plain></SENT>
+</text></td><td valign="top" align="right" rowspan="1" colspan="1"><text><SENT sid="598" pm="."><plain>100 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="599" pm="."><plain>NGTX </plain></SENT>
+</text></td></tr><tr><td colspan="7" valign="bottom" align="left" rowspan="1"><text><SENT sid="600" pm="."><plain> </plain></SENT>
+</text></td></tr><tr><td colspan="7" valign="top" align="left" rowspan="1"><text><SENT sid="601" pm="."><plain>GTX </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="602" pm="."><plain> Acetamidofluorene </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="603" pm="."><plain>30 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="604" pm="."><plain>0 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="605" pm="."><plain>100 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="606" pm="."><plain>0 </plain></SENT>
+</text></td><td valign="top" align="right" rowspan="1" colspan="1"><text><SENT sid="607" pm="."><plain>300 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="608" pm="."><plain>0 </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="609" pm="."><plain> Carboplatin </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="610" pm="."><plain>1 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="611" pm="."><plain>0 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="612" pm="."><plain>3 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="613" pm="."><plain>0 </plain></SENT>
+</text></td><td valign="top" align="right" rowspan="1" colspan="1"><text><SENT sid="614" pm="."><plain>10 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="615" pm="."><plain>0 </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="616" pm="."><plain> Colchicine </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="617" pm="."><plain>0.5 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="618" pm="."><plain>0 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="619" pm="."><plain>1.5 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="620" pm="."><plain>0 </plain></SENT>
+</text></td><td valign="top" align="right" rowspan="1" colspan="1"><text><SENT sid="621" pm="."><plain>5 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="622" pm="."><plain>0 </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="623" pm="."><plain> Doxorubicin </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="624" pm="."><plain>0.1 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="625" pm="."><plain>0 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="626" pm="."><plain>0.3 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="627" pm="."><plain>0 </plain></SENT>
+</text></td><td valign="top" align="right" rowspan="1" colspan="1"><text><SENT sid="628" pm="."><plain>1 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="629" pm="."><plain>0 </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="630" pm="."><plain> Lomustine </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="631" pm="."><plain>0.6 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="632" pm="."><plain>0 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="633" pm="."><plain>2 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="634" pm="."><plain>0 </plain></SENT>
+</text></td><td valign="top" align="right" rowspan="1" colspan="1"><text><SENT sid="635" pm="."><plain>6 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="636" pm="."><plain>0 </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="637" pm="."><plain> Naphthyl isothiocyanate </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="638" pm="."><plain>1.5 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="639" pm="."><plain>0 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="640" pm="."><plain>5 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="641" pm="."><plain>0 </plain></SENT>
+</text></td><td valign="top" align="right" rowspan="1" colspan="1"><text><SENT sid="642" pm="."><plain>15 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="643" pm="."><plain>0 </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="644" pm="."><plain> Tamoxifen </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="645" pm="."><plain>6 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="646" pm="."><plain>0 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="647" pm="."><plain>20 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="648" pm="."><plain>0 </plain></SENT>
+</text></td><td valign="top" align="right" rowspan="1" colspan="1"><text><SENT sid="649" pm="."><plain>60 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="650" pm="."><plain>0 </plain></SENT>
+</text></td></tr><tr><td colspan="7" valign="bottom" align="left" rowspan="1"><text><SENT sid="651" pm="."><plain> </plain></SENT>
+</text></td></tr><tr><td colspan="7" valign="top" align="left" rowspan="1"><text><SENT sid="652" pm="."><plain>Non-Hepatocarcinogen </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="653" pm="."><plain> Acetaminophen </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="654" pm="."><plain>300 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="655" pm="."><plain>0 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="656" pm="."><plain>600 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="657" pm="."><plain>0 </plain></SENT>
+</text></td><td valign="top" align="right" rowspan="1" colspan="1"><text><SENT sid="658" pm="."><plain>1000 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="659" pm="."><plain>0 </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="660" pm="."><plain> Allyl alcohol </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="661" pm="."><plain>3 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="662" pm="."><plain>0 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="663" pm="."><plain>10 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="664" pm="."><plain>0 </plain></SENT>
+</text></td><td valign="top" align="right" rowspan="1" colspan="1"><text><SENT sid="665" pm="."><plain>30 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="666" pm="."><plain>0 </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="667" pm="."><plain> Amiodarone </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="668" pm="."><plain>20 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="669" pm="."><plain>0 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="670" pm="."><plain>60 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="671" pm="."><plain>0 </plain></SENT>
+</text></td><td valign="top" align="right" rowspan="1" colspan="1"><text><SENT sid="672" pm="."><plain>200 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="673" pm="."><plain>0 </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="674" pm="."><plain> Aspirin </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="675" pm="."><plain>45 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="676" pm="."><plain>0 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="677" pm="."><plain>150 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="678" pm="."><plain>0 </plain></SENT>
+</text></td><td valign="top" align="right" rowspan="1" colspan="1"><text><SENT sid="679" pm="."><plain>450 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="680" pm="."><plain>0 </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="681" pm="."><plain> Caffeine </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="682" pm="."><plain>10 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="683" pm="."><plain>0 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="684" pm="."><plain>30 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="685" pm="."><plain>0 </plain></SENT>
+</text></td><td valign="top" align="right" rowspan="1" colspan="1"><text><SENT sid="686" pm="."><plain>100 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="687" pm="."><plain>0 </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="688" pm="."><plain> Diclofenac </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="689" pm="."><plain>1 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="690" pm="."><plain>0 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="691" pm="."><plain>3 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="692" pm="."><plain>0 </plain></SENT>
+</text></td><td valign="top" align="right" rowspan="1" colspan="1"><text><SENT sid="693" pm="."><plain>10 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="694" pm="."><plain>0 </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="695" pm="."><plain> Erythromycin ethylsuccinate </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="696" pm="."><plain>100 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="697" pm="."><plain>0 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="698" pm="."><plain>300 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="699" pm="."><plain>0 </plain></SENT>
+</text></td><td valign="top" align="right" rowspan="1" colspan="1"><text><SENT sid="700" pm="."><plain>1000 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="701" pm="."><plain>0 </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="702" pm="."><plain> Ethanol </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="703" pm="."><plain>400 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="704" pm="."><plain>0 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="705" pm="."><plain>1200 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="706" pm="."><plain>0 </plain></SENT>
+</text></td><td valign="top" align="right" rowspan="1" colspan="1"><text><SENT sid="707" pm="."><plain>4000 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="708" pm="."><plain>0 </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="709" pm="."><plain> Gentamicin </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="710" pm="."><plain>10 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="711" pm="."><plain>0 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="712" pm="."><plain>30 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="713" pm="."><plain>0 </plain></SENT>
+</text></td><td valign="top" align="right" rowspan="1" colspan="1"><text><SENT sid="714" pm="."><plain>100 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="715" pm="."><plain>0 </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="716" pm="."><plain> Nimesulide </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="717" pm="."><plain>10 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="718" pm="."><plain>0 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="719" pm="."><plain>30 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="720" pm="."><plain>0 </plain></SENT>
+</text></td><td valign="top" align="right" rowspan="1" colspan="1"><text><SENT sid="721" pm="."><plain>100 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="722" pm="."><plain>0 </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="723" pm="."><plain> Promethazine </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="724" pm="."><plain>20 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="725" pm="."><plain>0 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="726" pm="."><plain>60 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="727" pm="."><plain>0 </plain></SENT>
+</text></td><td valign="top" align="right" rowspan="1" colspan="1"><text><SENT sid="728" pm="."><plain>200 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="729" pm="."><plain>0 </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="730" pm="."><plain> Tannic acid </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="731" pm="."><plain>100 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="732" pm="."><plain>0 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="733" pm="."><plain>300 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="734" pm="."><plain>0 </plain></SENT>
+</text></td><td valign="top" align="right" rowspan="1" colspan="1"><text><SENT sid="735" pm="."><plain>1000 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="736" pm="."><plain>0 </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="737" pm="."><plain> Tetracycline </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="738" pm="."><plain>100 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="739" pm="."><plain>0 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="740" pm="."><plain>300 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="741" pm="."><plain>0 </plain></SENT>
+</text></td><td valign="top" align="right" rowspan="1" colspan="1"><text><SENT sid="742" pm="."><plain>1000 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="743" pm="."><plain>0 </plain></SENT>
+</text></td></tr></tbody></table><table-wrap-foot><fn id="tfn5-tr-32-289"><label>*</label><p>Misclassified.</p></fn></table-wrap-foot></table-wrap></SecTag><SecTag type="TABLE"><table-wrap id="t4-tr-32-289" orientation="portrait" position="float"><label>Table 4</label><caption><p><text><SENT sid="744" pm="."><plain>High-scoring genes selected according to mean decrease accuracy </plain></SENT>
+</text></p></caption><table frame="hsides" rules="groups"><thead><tr><th valign="bottom" align="left" rowspan="1" colspan="1"><text><SENT sid="745" pm="."><plain>Affymetrix n∘ </plain></SENT>
+</text></th><th valign="bottom" align="left" rowspan="1" colspan="1"><text><SENT sid="746" pm="."><plain>Symbol </plain></SENT>
+</text></th><th valign="bottom" align="left" rowspan="1" colspan="1"><text><SENT sid="747" pm="."><plain>Genename </plain></SENT>
+</text></th></tr></thead><tbody><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="748" pm="."><plain>1367696_at </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="749" pm="."><plain>Ifitm2 </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="750" pm="."><plain>Interferon induced transmembrane protein 2 </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="751" pm="."><plain>1367780_at </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="752" pm="."><plain>Pttg1 </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="753" pm="."><plain>Pituitary tumor-transforming 1 </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="754" pm="."><plain>1368205_at </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="755" pm="."><plain>Cfi </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="756" pm="."><plain>Complement factor I </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="757" pm="."><plain>1368260_at </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="758" pm="."><plain>Aurkb </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="759" pm="."><plain>Aurora kinase B </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="760" pm="."><plain>1368742_at </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="761" pm="."><plain>C5ar1 </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="762" pm="."><plain>Complement component 5a receptor 1 </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="763" pm="."><plain>1368745_at </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="764" pm="."><plain>Slc10a2 </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="765" pm="."><plain>Solute carrier family 10 (sodium/bile acid cotransporter), member 2 </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="766" pm="."><plain>1368860_at </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="767" pm="."><plain>Phlda1 </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="768" pm="."><plain>Pleckstrin homology-like domain, family A, member 1 </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="769" pm="."><plain>1368991_at </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="770" pm="."><plain>Smpd3 </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="771" pm="."><plain>Sphingomyelin phosphodiesterase 3, neutral membrane </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="772" pm="."><plain>1369031_at </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="773" pm="."><plain>Il18bp </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="774" pm="."><plain>Interleukin 18 binding protein </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="775" pm="."><plain>1369161_at </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="776" pm="."><plain>Abcb4 </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="777" pm="."><plain>ATP-binding cassette, subfamily B (MDR/TAP), member 4 </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="778" pm="."><plain>1369483_at </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="779" pm="."><plain>Cd4 </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="780" pm="."><plain>Cd4 molecule </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="781" pm="."><plain>1370166_at </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="782" pm="."><plain>Sdc2 </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="783" pm="."><plain>Syndecan 2 </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="784" pm="."><plain>1370381_at </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="785" pm="."><plain>Pnrc1 </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="786" pm="."><plain>Proline-rich nuclear receptor coactivator 1 </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="787" pm="."><plain>1370828_at </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="788" pm="."><plain>Zdhhc2 </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="789" pm="."><plain>Zinc finger, DHHC-type containing 2 </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="790" pm="."><plain>1371170_a_at </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="791" pm="."><plain>Il1a </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="792" pm="."><plain>Interleukin 1 alpha </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="793" pm="."><plain>1371388_at </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="794" pm="."><plain>Pdhb </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="795" pm="."><plain>Pyruvate dehydrogenase (lipoamide) beta </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="796" pm="."><plain>1371577_at </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="797" pm="."><plain>Ndufs1 </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="798" pm="."><plain>NADH dehydrogenase (ubiquinone) Fe-S protein 1 </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="799" pm="."><plain>1371754_at </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="800" pm="."><plain>Slc25a25 </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="801" pm="."><plain>Solute carrier family 25 (mitochondrial carrier, phosphate carrier), member 25 </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="802" pm="."><plain>1371809_at </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="803" pm="."><plain>Mrps18b </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="804" pm="."><plain>Mitochondrial ribosomal protein S18B </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="805" pm="."><plain>1371893_at </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="806" pm="."><plain>Col4a3bp </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="807" pm="."><plain>Collagen, type IV, alpha 3 (Goodpasture antigen) binding protein </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="808" pm="."><plain>1371924_at </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="809" pm="."><plain>Olfml3 </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="810" pm="."><plain>Olfactomedin-like 3 </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="811" pm="."><plain>1372013_at </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="812" pm="."><plain>Ifitm1 </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="813" pm="."><plain>Interferon induced transmembrane protein 1 </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="814" pm="."><plain>1372044_at </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="815" pm="."><plain>Tango2 </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="816" pm="."><plain>Transport and golgi organization 2 homolog </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="817" pm="."><plain>1372920_at </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="818" pm="."><plain>Prodh </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="819" pm="."><plain>Proline dehydrogenase (oxidase) 1 </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="820" pm="."><plain>1374061_at </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="821" pm="."><plain>Cd302 </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="822" pm="."><plain>CD302 molecule </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="823" pm="."><plain>1374537_at </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="824" pm="."><plain>Chsy1 </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="825" pm="."><plain>Chondroitin sulfate synthase 1 </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="826" pm="."><plain>1374540_at </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="827" pm="."><plain>Cdca7 </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="828" pm="."><plain>Cell division cycle associated 7 </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="829" pm="."><plain>1375861_at </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="830" pm="."><plain>Nap1l5 </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="831" pm="."><plain>Nucleosome assembly protein 1-like 5 </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="832" pm="."><plain>1376135_at </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="833" pm="."><plain>Dars2 </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="834" pm="."><plain>Aspartyl-tRNA synthetase 2 (mitochondrial) </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="835" pm="."><plain>1377011_at </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="836" pm="."><plain>Fry </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="837" pm="."><plain>Furry homolog (Drosophila) </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="838" pm="."><plain>1377012_at </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="839" pm="."><plain>Smarcad1 </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="840" pm="."><plain>SWI/SNF-related, matrix-associated actin-dependent regulator of chromatin, subfamily a, containing DEAD/H box 1 </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="841" pm="."><plain>1377785_at </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="842" pm="."><plain>Dhx40 </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="843" pm="."><plain>DEAH (Asp-Glu-Ala-His) box polypeptide 40 </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="844" pm="."><plain>1379046_at </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="845" pm="."><plain>Mlec </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="846" pm="."><plain>Malectin </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="847" pm="."><plain>1379636_at </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="848" pm="."><plain>Rmdn2 </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="849" pm="."><plain>Regulator of microtubule dynamics 2 </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="850" pm="."><plain>1380066_at </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="851" pm="."><plain>Tfr2 </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="852" pm="."><plain>Transferrin receptor 2 </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="853" pm="."><plain>1381975_at </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="854" pm="."><plain>Prune2 </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="855" pm="."><plain>Prune homolog 2 (Drosophila) </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="856" pm="."><plain>1382078_at </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="857" pm="."><plain>Tlr8 </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="858" pm="."><plain>Toll-like receptor 8 </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="859" pm="."><plain>1384240_at </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="860" pm="."><plain>Agtr1a </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="861" pm="."><plain>Angiotensin II receptor, type 1a </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="862" pm="."><plain>1385001_at </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="863" pm="."><plain>Gsdmd </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="864" pm="."><plain>Gasdermin D </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="865" pm="."><plain>1386080_at </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="866" pm="."><plain>Hey1 </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="867" pm="."><plain>Hes-related family bHLH transcription factor with YRPW motif 1 </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="868" pm="."><plain>1387029_at </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="869" pm="."><plain>Cfh </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="870" pm="."><plain>Complement factor H </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="871" pm="."><plain>1387243_at </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="872" pm="."><plain>Cyp1a2 </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="873" pm="."><plain>Cytochrome P450, family 1, subfamily a, polypeptide 2 </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="874" pm="."><plain>1387745_at </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="875" pm="."><plain>Cd200r1 </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="876" pm="."><plain>CD200 receptor 1 </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="877" pm="."><plain>1388301_at </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="878" pm="."><plain>Uqcrc1 </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="879" pm="."><plain>Ubiquinol-cytochrome c reductase core protein I </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="880" pm="."><plain>1388460_at </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="881" pm="."><plain>Capg </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="882" pm="."><plain>Capping protein (actin filament), gelsolin-like </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="883" pm="."><plain>1389180_at </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="884" pm="."><plain>Phkb </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="885" pm="."><plain>Phosphorylase kinase, beta </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="886" pm="."><plain>1390426_at </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="887" pm="."><plain>Notch1 </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="888" pm="."><plain>Notch 1 </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="889" pm="."><plain>1390667_at </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="890" pm="."><plain>Lrrc51 </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="891" pm="."><plain>Leucine rich repeat containing 51 </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="892" pm="."><plain>1390839_at </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="893" pm="."><plain>Pqlc3 </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="894" pm="."><plain>PQ loop repeat containing 3 </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="895" pm="."><plain>1391269_at </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="896" pm="."><plain>Pim2 </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="897" pm="."><plain>Pim-2 proto-oncogene, serine/threonine kinase </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="898" pm="."><plain>1392664_at </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="899" pm="."><plain>Gpr182 </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="900" pm="."><plain>G protein-coupled receptor 182 </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="901" pm="."><plain>1392990_at </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="902" pm="."><plain>Sox17 </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="903" pm="."><plain>SRY (sex determining region Y)-box 17 </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="904" pm="."><plain>1397317_at </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="905" pm="."><plain>Itgb3 </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="906" pm="."><plain>Integrin, beta 3 </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="907" pm="."><plain>1399030_at </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="908" pm="."><plain>Wdr45 </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="909" pm="."><plain>WD repeat domain 45 </plain></SENT>
+</text></td></tr></tbody></table></table-wrap></SecTag><SecTag type="TABLE"><table-wrap id="t5-tr-32-289" orientation="portrait" position="float"><label>Table 5</label><caption><p><text><SENT sid="910" pm="."><plain>Top GO terms of enriched analysis according to Fisher’s exact test </plain></SENT>
+</text></p></caption><table frame="hsides" rules="groups"><thead><tr><th valign="middle" align="center" rowspan="1" colspan="1"><text><SENT sid="911" pm="."><plain>Biological process </plain></SENT>
+</text></th><th valign="middle" align="center" rowspan="1" colspan="1"><text><SENT sid="912" pm="."><plain>Term </plain></SENT>
+</text></th><th valign="middle" align="center" rowspan="1" colspan="1"><text><SENT sid="913" pm="."><plain>Annotated </plain></SENT>
+</text></th><th valign="middle" align="center" rowspan="1" colspan="1"><text><SENT sid="914" pm="."><plain>Significant </plain></SENT>
+</text></th><th valign="middle" align="center" rowspan="1" colspan="1"><text><SENT sid="915" pm="."><plain>Expected </plain></SENT>
+</text></th><th valign="middle" align="center" rowspan="1" colspan="1"><text><SENT sid="916" pm="."><plain>F. classic </plain></SENT>
+</text></th></tr></thead><tbody><tr><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="917" pm="."><plain>GO:0045333 </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="918" pm="."><plain>Cellular respiration </plain></SENT>
+</text></td><td valign="top" align="right" rowspan="1" colspan="1"><text><SENT sid="919" pm="."><plain>28 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="920" pm="."><plain>5 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="921" pm="."><plain>0.42 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="922" pm="."><plain>4.8e-05 </plain></SENT>
+</text></td></tr><tr><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="923" pm="."><plain>GO:0015980 </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="924" pm="."><plain>Energy derivation by oxidation of organic compounds </plain></SENT>
+</text></td><td valign="top" align="right" rowspan="1" colspan="1"><text><SENT sid="925" pm="."><plain>50 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="926" pm="."><plain>6 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="927" pm="."><plain>0.75 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="928" pm="."><plain>8.3e-05 </plain></SENT>
+</text></td></tr><tr><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="929" pm="."><plain>GO:0014823 </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="930" pm="."><plain>Response to activity </plain></SENT>
+</text></td><td valign="top" align="right" rowspan="1" colspan="1"><text><SENT sid="931" pm="."><plain>23 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="932" pm="."><plain>4 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="933" pm="."><plain>0.35 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="934" pm="."><plain>0.00033 </plain></SENT>
+</text></td></tr><tr><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="935" pm="."><plain>GO:0007507 </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="936" pm="."><plain>Heart development </plain></SENT>
+</text></td><td valign="top" align="right" rowspan="1" colspan="1"><text><SENT sid="937" pm="."><plain>124 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="938" pm="."><plain>8 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="939" pm="."><plain>1.87 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="940" pm="."><plain>0.00043 </plain></SENT>
+</text></td></tr><tr><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="941" pm="."><plain>GO:0006091 </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="942" pm="."><plain>Generation of precursor metabolites and energy </plain></SENT>
+</text></td><td valign="top" align="right" rowspan="1" colspan="1"><text><SENT sid="943" pm="."><plain>68 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="944" pm="."><plain>6 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="945" pm="."><plain>1.03 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="946" pm="."><plain>0.00046 </plain></SENT>
+</text></td></tr><tr><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="947" pm="."><plain>GO:0042157 </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="948" pm="."><plain>Lipoprotein metabolic process </plain></SENT>
+</text></td><td valign="top" align="right" rowspan="1" colspan="1"><text><SENT sid="949" pm="."><plain>29 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="950" pm="."><plain>4 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="951" pm="."><plain>0.44 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="952" pm="."><plain>0.00082 </plain></SENT>
+</text></td></tr><tr><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="953" pm="."><plain>GO:0051701 </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="954" pm="."><plain>Interaction with host </plain></SENT>
+</text></td><td valign="top" align="right" rowspan="1" colspan="1"><text><SENT sid="955" pm="."><plain>30 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="956" pm="."><plain>4 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="957" pm="."><plain>0.45 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="958" pm="."><plain>0.00094 </plain></SENT>
+</text></td></tr><tr><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="959" pm="."><plain>GO:0006869 </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="960" pm="."><plain>Lipid transport </plain></SENT>
+</text></td><td valign="top" align="right" rowspan="1" colspan="1"><text><SENT sid="961" pm="."><plain>79 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="962" pm="."><plain>6 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="963" pm="."><plain>1.19 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="964" pm="."><plain>0.00104 </plain></SENT>
+</text></td></tr><tr><td colspan="6" valign="top" align="left" rowspan="1"><text><SENT sid="965" pm="."><plain> </plain></SENT>
+</text></td></tr><tr><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="966" pm="."><plain>Molecular function </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"/><td valign="top" align="right" rowspan="1" colspan="1"/><td valign="top" align="center" rowspan="1" colspan="1"/><td valign="top" align="center" rowspan="1" colspan="1"/><td valign="top" align="center" rowspan="1" colspan="1"/></tr><tr><td colspan="6" valign="top" align="left" rowspan="1"><text><SENT sid="967" pm="."><plain> </plain></SENT>
+</text></td></tr><tr><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="968" pm="."><plain>GO:0004872 </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="969" pm="."><plain>Receptor activity </plain></SENT>
+</text></td><td valign="top" align="right" rowspan="1" colspan="1"><text><SENT sid="970" pm="."><plain>172 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="971" pm="."><plain>8 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="972" pm="."><plain>2.3 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="973" pm="."><plain>0.0016 </plain></SENT>
+</text></td></tr><tr><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="974" pm="."><plain>GO:0008528 </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="975" pm="."><plain>G-protein coupled peptide receptor activity </plain></SENT>
+</text></td><td valign="top" align="right" rowspan="1" colspan="1"><text><SENT sid="976" pm="."><plain>20 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="977" pm="."><plain>3 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="978" pm="."><plain>0.27 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="979" pm="."><plain>0.0022 </plain></SENT>
+</text></td></tr><tr><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="980" pm="."><plain>GO:0001653 </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="981" pm="."><plain>Peptide receptor activity </plain></SENT>
+</text></td><td valign="top" align="right" rowspan="1" colspan="1"><text><SENT sid="982" pm="."><plain>21 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="983" pm="."><plain>3 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="984" pm="."><plain>0.28 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="985" pm="."><plain>0.0025 </plain></SENT>
+</text></td></tr><tr><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="986" pm="."><plain>GO:0060089 </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="987" pm="."><plain>Molecular transducer activity </plain></SENT>
+</text></td><td valign="top" align="right" rowspan="1" colspan="1"><text><SENT sid="988" pm="."><plain>215 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="989" pm="."><plain>8 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="990" pm="."><plain>2.88 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="991" pm="."><plain>0.0066 </plain></SENT>
+</text></td></tr><tr><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="992" pm="."><plain>GO:0001948 </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="993" pm="."><plain>Glycoprotein binding </plain></SENT>
+</text></td><td valign="top" align="right" rowspan="1" colspan="1"><text><SENT sid="994" pm="."><plain>31 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="995" pm="."><plain>3 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="996" pm="."><plain>0.42 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="997" pm="."><plain>0.0077 </plain></SENT>
+</text></td></tr><tr><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="998" pm="."><plain>GO:0038024 </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="999" pm="."><plain>Cargo receptor activity </plain></SENT>
+</text></td><td valign="top" align="right" rowspan="1" colspan="1"><text><SENT sid="1000" pm="."><plain>11 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="1001" pm="."><plain>2 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="1002" pm="."><plain>0.15 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="1003" pm="."><plain>0.0089 </plain></SENT>
+</text></td></tr><tr><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="1004" pm="."><plain>GO:0005319 </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="1005" pm="."><plain>Lipid transporter activity </plain></SENT>
+</text></td><td valign="top" align="right" rowspan="1" colspan="1"><text><SENT sid="1006" pm="."><plain>35 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="1007" pm="."><plain>3 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="1008" pm="."><plain>0.47 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="1009" pm="."><plain>0.0109 </plain></SENT>
+</text></td></tr><tr><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="1010" pm="."><plain>GO:0004930 </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="1011" pm="."><plain>G-protein coupled receptor activity </plain></SENT>
+</text></td><td valign="top" align="right" rowspan="1" colspan="1"><text><SENT sid="1012" pm="."><plain>49 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="1013" pm="."><plain>3 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="1014" pm="."><plain>0.66 </plain></SENT>
+</text></td><td valign="top" align="center" rowspan="1" colspan="1"><text><SENT sid="1015" pm="."><plain>0.0269 </plain></SENT>
+</text></td></tr></tbody></table></table-wrap></SecTag></floats-group></article>

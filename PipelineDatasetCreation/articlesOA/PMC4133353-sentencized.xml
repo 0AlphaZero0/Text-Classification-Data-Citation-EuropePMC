@@ -1,0 +1,882 @@
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD v1.1 20151215//EN" "JATS-archivearticle1.dtd"> 
+<article xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML" article-type="research-article"><?properties open_access?><?DTDIdentifier.IdentifierValue -//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD v1.1 20151215//EN?><?DTDIdentifier.IdentifierType public?><?SourceDTD.DTDName JATS-archivearticle1.dtd?><?SourceDTD.Version 1.1?><?ConverterInfo.XSLTName jp2nlmx2.xsl?><?ConverterInfo.Version 1?><front><journal-meta><journal-id journal-id-type="nlm-ta">PLoS One</journal-id><journal-id journal-id-type="iso-abbrev">PLoS ONE</journal-id><journal-id journal-id-type="publisher-id">plos</journal-id><journal-id journal-id-type="pmc">plosone</journal-id><journal-title-group><journal-title>PLoS ONE</journal-title></journal-title-group><issn pub-type="epub">1932-6203</issn><publisher><publisher-name>Public Library of Science</publisher-name><publisher-loc>San Francisco, USA</publisher-loc></publisher></journal-meta><article-meta><article-id pub-id-type="pmcid">4133353</article-id><article-id pub-id-type="pmid">25122487</article-id><article-id pub-id-type="publisher-id">PONE-D-14-11146</article-id><article-id pub-id-type="doi">10.1371/journal.pone.0105104</article-id><article-categories><subj-group subj-group-type="heading"><subject>Research Article</subject></subj-group><subj-group subj-group-type="Discipline-v2"><subject>Biology and life sciences</subject><subj-group><subject>Cell Biology</subject><subj-group><subject>Cell Processes</subject><subj-group><subject>Cellular Stress Responses</subject></subj-group></subj-group><subj-group><subject>Molecular Cell Biology</subject></subj-group></subj-group><subj-group><subject>Computational Biology</subject><subj-group><subject>Genome Analysis</subject><subj-group><subject>Transcriptome Analysis</subject><subj-group><subject>Genome Expression Analysis</subject></subj-group></subj-group></subj-group></subj-group><subj-group><subject>Genetics</subject><subj-group><subject>Gene expression</subject><subj-group><subject>DNA transcription</subject></subj-group></subj-group><subj-group><subject>Genomics</subject></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v2"><subject>Medicine and Health Sciences</subject><subj-group><subject>Dermatology</subject><subj-group><subject>Skin Neoplasms</subject><subj-group><subject>Skin Tumors</subject></subj-group></subj-group></subj-group><subj-group><subject>Oncology</subject><subj-group><subject>Basic Cancer Research</subject><subj-group><subject>Tumor Physiology</subject></subj-group></subj-group><subj-group><subject>Cancers and Neoplasms</subject><subj-group><subject>Gynecological Tumors</subject><subj-group><subject>Ovarian Cancer</subject></subj-group></subj-group><subj-group><subject>Melanomas</subject></subj-group></subj-group></subj-group></subj-group></article-categories><title-group><article-title><SecTag type="TITLE"><text><SENT sid="0" pm="."><plain>Global Gene Expression Profiling in Three Tumor Cell Lines Subjected to Experimental Cycling and Chronic Hypoxia </plain></SENT>
+</text></SecTag></article-title><alt-title alt-title-type="running-head">Gene Expression under Hypoxia in Tumor Cells</alt-title></title-group><contrib-group><contrib contrib-type="author"><name><surname>Olbryt</surname><given-names>Magdalena</given-names></name><xref ref-type="aff" rid="aff1">
+<sup>1</sup>
+</xref><xref ref-type="corresp" rid="cor1">
+<sup>*</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Habryka</surname><given-names>Anna</given-names></name><xref ref-type="aff" rid="aff1">
+<sup>1</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Student</surname><given-names>Sebastian</given-names></name><xref ref-type="aff" rid="aff2">
+<sup>2</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Jarząb</surname><given-names>Michał</given-names></name><xref ref-type="aff" rid="aff3">
+<sup>3</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Tyszkiewicz</surname><given-names>Tomasz</given-names></name><xref ref-type="aff" rid="aff4">
+<sup>4</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Lisowska</surname><given-names>Katarzyna Marta</given-names></name><xref ref-type="aff" rid="aff1">
+<sup>1</sup>
+</xref></contrib></contrib-group><aff id="aff1">
+<label>1</label>
+<addr-line>Center for Translational Research and Molecular Biology of Cancer, Maria Skłodowska-Curie Memorial Cancer Center and Institute of Oncology, Gliwice Branch, Gliwice, Poland</addr-line>
+</aff><aff id="aff2">
+<label>2</label>
+<addr-line>Institute of Automatic Control, Silesian University of Technology, Gliwice, Poland</addr-line>
+</aff><aff id="aff3">
+<label>3</label>
+<addr-line>III Department of Radiation Therapy and Chemotherapy, Maria Skłodowska-Curie Memorial Cancer Center and Institute of Oncology, Gliwice Branch, Gliwice, Poland</addr-line>
+</aff><aff id="aff4">
+<label>4</label>
+<addr-line>Nuclear Medicine and Endocrine Oncology Department, Maria Skłodowska-Curie Memorial Cancer Center and Institute of Oncology, Gliwice Branch, Gliwice, Poland</addr-line>
+</aff><contrib-group><contrib contrib-type="editor"><name><surname>Koritzinsky</surname><given-names>Marianne</given-names></name><role>Editor</role><xref ref-type="aff" rid="edit1"/></contrib></contrib-group><aff id="edit1">
+<addr-line>University Health Network, Canada</addr-line>
+</aff><author-notes><corresp id="cor1">* E-mail: <email>molbryt@io.gliwice.pl</email></corresp><fn fn-type="COI-statement"><p><text><SENT sid="1" pm="."><plain>Competing Interests: The authors have declared that no competing interests exist. </plain></SENT>
+</text></p></fn><fn fn-type="con"><p><text><SENT sid="2" pm="."><plain>Conceived and designed the experiments: MO AH. </plain></SENT>
+<SENT sid="3" pm="."><plain>Performed the experiments: MO AH TT. </plain></SENT>
+<SENT sid="4" pm="."><plain>Analyzed the data: SS MJ. </plain></SENT>
+<SENT sid="5" pm="."><plain>Contributed reagents/materials/analysis tools: KML SS. </plain></SENT>
+<SENT sid="6" pm="."><plain>Wrote the paper: MO KML. </plain></SENT>
+</text></p></fn></author-notes><pub-date pub-type="collection"><year>2014</year></pub-date><pub-date pub-type="epub"><day>14</day><month>8</month><year>2014</year></pub-date><volume>9</volume><issue>8</issue><elocation-id>e105104</elocation-id><history><date date-type="received"><day>12</day><month>3</month><year>2014</year></date><date date-type="accepted"><day>18</day><month>7</month><year>2014</year></date></history><permissions><copyright-statement>© 2014 Olbryt et al</copyright-statement><copyright-year>2014</copyright-year><copyright-holder>Olbryt et al</copyright-holder><license xlink:href="http://creativecommons.org/licenses/by/4.0/"><license-p>This is an open-access article distributed under the terms of the Creative Commons Attribution License, which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are properly credited.</license-p></license></permissions><abstract><p><SecTag type="ABS"><text><SENT sid="7" pm="."><plain>Hypoxia is one of the most important features of the tumor microenvironment, exerting an adverse effect on tumor aggressiveness and patient prognosis. </plain></SENT>
+<SENT sid="8" pm="."><plain>Two types of hypoxia may occur within the tumor mass, chronic (prolonged) and cycling (transient, intermittent) hypoxia. </plain></SENT>
+<SENT sid="9" pm="."><plain>Cycling hypoxia has been shown to induce aggressive tumor cell phenotype and radioresistance more significantly than chronic hypoxia, though little is known about the molecular mechanisms underlying this phenomenon. </plain></SENT>
+<SENT sid="10" pm="."><plain>The aim of this study was to delineate the molecular response to both types of hypoxia induced experimentally in tumor cells, with a focus on cycling hypoxia. </plain></SENT>
+<SENT sid="11" pm="."><plain>We analyzed in vitro gene expression profile in three human cancer cell lines (melanoma, ovarian cancer, and prostate cancer) exposed to experimental chronic or transient hypoxia conditions. </plain></SENT>
+<SENT sid="12" pm="."><plain>As expected, the cell-type specific variability in response to hypoxia was significant. </plain></SENT>
+<SENT sid="13" pm="."><plain>However, the expression of 240 probe sets was altered in all 3 cell lines. </plain></SENT>
+<SENT sid="14" pm="."><plain>We found that gene expression profiles induced by both types of hypoxia were qualitatively similar and strongly depend on the cell type. </plain></SENT>
+<SENT sid="15" pm="."><plain>Cycling hypoxia altered the expression of fewer genes than chronic hypoxia (6,132 vs. 8,635 probe sets, FDR adjusted p&lt;0.05), and with lower fold changes. </plain></SENT>
+<SENT sid="16" pm="."><plain>However, the expression of some of these genes was significantly more affected by cycling hypoxia than by prolonged hypoxia, such as IL8, PLAU, and epidermal growth factor (EGF) pathway-related genes (AREG, HBEGF, and EPHA2). </plain></SENT>
+<SENT sid="17" pm="."><plain>These transcripts were, in most cases, validated by quantitative reverse transcription polymerase chain reaction (qRT-PCR). </plain></SENT>
+<SENT sid="18" pm="."><plain>Our results indicate that experimental cycling hypoxia exerts similar, although less intense effects, on the examined cancer cell lines than its chronic counterpart. </plain></SENT>
+<SENT sid="19" pm="."><plain>Nonetheless, we identified genes and molecular pathways that seem to be preferentially regulated by cyclic hypoxia. </plain></SENT>
+</text></SecTag></p></abstract><funding-group><funding-statement>This work was supported by the Polish Ministry of Science and Higher Education (grant number PBZ-MNiI-2/1/2005) (MO MJ TT KML) and partially by the National Science Center (NCN, Poland) grant number DEC-2012/05/B/ST6/03472 (SS). The data analysis was partially performed using the infrastructure supported by POIG.02.03.01-24-099/13 grant: “GCONiI- Upper-Silesian Center for Scientific Computation”. The funders had no role in study design, data collection and analysis, decision to publish, or preparation of the manuscript.</funding-statement></funding-group><counts><page-count count="11"/></counts></article-meta></front><body><SecTag type="INTRO"><sec id="s1"><title><text><SENT sid="20" pm="."><plain>Introduction </plain></SENT>
+</text></title><p><text><SENT sid="21" pm="."><plain>In the tumor microenvironment, hypoxia is one of the crucial factors, which promote an aggressive phenotype of tumor cells and decrease the effectiveness of standard treatment. </plain></SENT>
+<SENT sid="22" pm="."><plain>There are two types of hypoxia: chronic (uninterrupted) hypoxia, which is associated with an increasing distance of proliferating cells to the vessels, and cycling (acute, interrupted) hypoxia, which is mainly caused by fluctuations in the blood flow rate [1]. </plain></SENT>
+</text></p><p><text><SENT sid="23" pm="."><plain>The existence of acutely hypoxic cells in tumors was first observed several decades ago [2] and was attributed to transient changes in blood perfusion [3]. </plain></SENT>
+<SENT sid="24" pm="."><plain>These preliminary observations were subsequently confirmed in spontaneous animal tumors [4], experimental tumors [5], [6], [7], and in naturally occurring human tumors [8]. </plain></SENT>
+<SENT sid="25" pm="."><plain>Recently, with the usage of pO2-tissue assessment technologies, the existence of cycling hypoxia was directly observed in human tumors [9]. </plain></SENT>
+<SENT sid="26" pm="."><plain>It was estimated that tumor areas exposed to cycling hypoxia can range from 12 to 43%, (20% [3]; 35% [7]; 12% and 43% [10]), and can even be greater than the areas of chronic hypoxia in some tumors [10]. </plain></SENT>
+</text></p><p><text><SENT sid="27" pm="."><plain>The presence of cycling hypoxia in tumors has direct consequences on the tumor behavior. </plain></SENT>
+<SENT sid="28" pm="."><plain>Cycling hypoxia promotes spontaneous metastasis [11], [12] and the cells exposed to such conditions have even greater metastatic potential than cells exposed to chronic hypoxia [10], [13]. </plain></SENT>
+<SENT sid="29" pm="."><plain>Cycling hypoxia also affects the effectiveness of anticancer therapies, most predominantly radiotherapy. </plain></SENT>
+<SENT sid="30" pm="."><plain>Glioma cells grown both in vitro and as tumor xenografts, preconditioned with application of cycling hypoxia, are more radioresistant [14]. </plain></SENT>
+<SENT sid="31" pm="."><plain>Martinive et al. (2006) [15] observed a similar effect for melanoma B16-F10, fibrosarcoma, and hepatocellular cancer cells cultured in vitro. </plain></SENT>
+<SENT sid="32" pm="."><plain>Moreover, it seems that not only transient acute hypoxia affects the behavior of the cells constituting the tumor microenvironment, but also prolonged cycling hypoxia may lead to a selection of cells resistant to apoptosis and standard treatment modalities such as radiotherapy and chemotherapy [16]. </plain></SENT>
+<SENT sid="33" pm="."><plain>This effect may be further potentiated by increased genetic instability, which has also been attributed to the hypoxic tumor microenvironment [17]. </plain></SENT>
+<SENT sid="34" pm="."><plain>Intermittent blood flow in tumors also decreases the effectiveness of chemotherapy by limiting the delivery of drugs to tumor cells [18]. </plain></SENT>
+<SENT sid="35" pm="."><plain>Recent studies have shown that cycling hypoxia may also be a factor in selecting and promoting cells with stem cell-like phenotype, presenting increased tumor-initiating capabilities and metastatic potential [19]. </plain></SENT>
+</text></p><p><text><SENT sid="36" pm="."><plain>Collectively, these data suggest that cycling hypoxia, within the tumor mass, may not only cause resistance to conventional therapies, but may also facilitate a more aggressive phenotype of tumor cells. </plain></SENT>
+<SENT sid="37" pm="."><plain>These suggestions have been supported by the clinical observation that higher degree of tumor reoxygenation after radiotherapy is associated with worse patient prognosis [20]. </plain></SENT>
+<SENT sid="38" pm="."><plain>There are also reports showing that individual tumors differ depending on the extent of cycling hypoxia regions. </plain></SENT>
+<SENT sid="39" pm="."><plain>Tumors that present interchangeable states of hypoxia and reoxygenation, present an increased metastatic potential [10], [12] and are more radioresistant [14]. </plain></SENT>
+<SENT sid="40" pm="."><plain>Identification of these tumors would inevitably improve cancer prognosis and enable treatment of patients with therapy tailored to each individual case. </plain></SENT>
+<SENT sid="41" pm="."><plain>Thus, identifying the molecular pathways and genes involved in promoting the aggressive phenotype of tumor cells under cycling hypoxia conditions seems crucial. </plain></SENT>
+</text></p><p><text><SENT sid="42" pm="."><plain>Herein, we investigated the influence of cycling and chronic hypoxia on gene expression profile in three cancer cell lines, using a microarray platform. </plain></SENT>
+<SENT sid="43" pm="."><plain>The analysis indicated that cycling hypoxia exerts a similar, although weaker, influence on gene expression in cancer cells than chronic hypoxia. </plain></SENT>
+<SENT sid="44" pm="."><plain>The main differences observed between the two types of hypoxia involved the expression of several genes such as IL-8, CXCL2, EPHA2, AREG, HBEGF, and PLAU, which are relevant to tumor progression. </plain></SENT>
+<SENT sid="45" pm="."><plain>Our results indirectly suggest that cycling hypoxia may promote an aggressive phenotype by inducing the expression of genes regulating the immune response, invasion, and proliferation. </plain></SENT>
+</text></p></sec></SecTag><SecTag type="METHODS"><sec sec-type="materials|methods" id="s2"><title><text><SENT sid="46" pm="."><plain>Materials and Methods </plain></SENT>
+</text></title><sec id="s2a"><title><text><SENT sid="47" pm="."><plain>Cell culture and experimental design </plain></SENT>
+</text></title><p><text><SENT sid="48" pm="."><plain>The cell lines were purchased from American Type Culture Collection (ATCC; Manassas, Virginia, USA) and the early passages of cell cultures were used for the experiments. </plain></SENT>
+<SENT sid="49" pm="."><plain>The cells were grown in glass plates to eliminate oxygen permeation. </plain></SENT>
+<SENT sid="50" pm="."><plain>PC-3 prostate cancer cells and SK-OV-3 ovarian adenocarcinoma cells were cultured in RPMI medium and McCoy’s medium, respectively, supplemented with 10% fetal bovine serum (Gibco BRL, Grand Island, NY, USA). </plain></SENT>
+<SENT sid="51" pm="."><plain>Melanoma cells (WM793B) were grown in 2% Tu medium (4:1 mixture of MCDB 153 medium with 1.5 g/l of sodium bicarbonate and Leibovitz’s L-15 medium with 2 mmol/l of L-glutamine; Sigma-Aldrich, St Louis, MO), supplemented with 2% fetal bovine serum (Gibco BRL), bovine insulin (0.005 mg/ml) and 1.68 mmol/l CaCl2 (Sigma-Aldrich). </plain></SENT>
+</text></p><p><text><SENT sid="52" pm="."><plain>The cells were grown to the confluence of approx. </plain></SENT>
+<SENT sid="53" pm="."><plain>50–70% at 37°C in a standard humidified 5% CO2 incubator. </plain></SENT>
+<SENT sid="54" pm="."><plain>Then, the control cells were left in the same conditions, while the cells subjected to chronic hypoxia experiment were transferred to the atmosphere of 5% CO2, 1% O2, 94% N2 for 72 hours. </plain></SENT>
+<SENT sid="55" pm="."><plain>Cycling hypoxia was mimicked by 3 cycles of interchangeable states of hypoxia (1% O2) and reoxygenation (21% O2) following the order: 1% O2–4 h, 21% O2–4 h, 1% O2–12 h, 21% O2–4 h. </plain></SENT>
+<SENT sid="56" pm="."><plain>Each experimental point was performed in triplicate. </plain></SENT>
+<SENT sid="57" pm="."><plain>The experimental design is illustrated in Figure 1. </plain></SENT>
+</text></p><SecTag type="FIG"><fig id="pone-0105104-g001" orientation="portrait" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0105104.g001</object-id><label>Figure 1</label><caption><title><text><SENT sid="58" pm="."><plain>Experimental design. </plain></SENT>
+</text></title><p><text><SENT sid="59" pm="."><plain>Cells were subjected to cycling (interchanging periods of 1% and ambient oxygen), chronic hypoxia (constant 1% oxygen) or control conditions (ambient oxygen) for 72 hours. </plain></SENT>
+<SENT sid="60" pm="."><plain>The scheme predominantly shows the time scale of cycling hypoxia, which consisted of the following periods of hypoxia (1% oxygen) and reoxygenation (21% oxygen): 1%–4 hours, 21%–4 hours, followed by two cycles of 1%–12 hours, 21%–4 hours, 1%–4 hours, 21%–4 hours, followed by 4 hours of reoxygenation. </plain></SENT>
+</text></p></caption><graphic xlink:href="pone.0105104.g001"/></fig></SecTag></sec><sec id="s2b"><title><text><SENT sid="61" pm="."><plain>Immunocytochemical evaluation of hypoxic condition in cell cultures </plain></SENT>
+</text></title><p><text><SENT sid="62" pm="."><plain>Hypoxic conditions in cell cultures were identified using the HypoxyprobeTM-1 kit (Chemicon, California, USA). </plain></SENT>
+<SENT sid="63" pm="."><plain>Melanoma cells WM793B were grown in chamber glass slides. </plain></SENT>
+<SENT sid="64" pm="."><plain>After two hours of incubation in 1% oxygen or in an ambient atmosphere. </plain></SENT>
+</text></p><p><text><SENT sid="65" pm="."><plain>pimonidazole (HypoxyprobeTM-1,) was added to the medium (final concentration 60 µg/ml). </plain></SENT>
+<SENT sid="66" pm="."><plain>After 50 minutes of incubation the cells were fixed with 4% paraformaldehyde (pH, 7.4), stained with HypoxyprobeTM-1 antibody and DAPI. </plain></SENT>
+<SENT sid="67" pm="."><plain>The degree of hypoxia in tumor-derived material was judged based on the 3,30-diaminobenzidine staining intensity and representative fields were photographed using a Nikon ECLIPSE E800 microscope with a Nikon FDX-35 camera (Nikon Instruments Inc., Melville, New York, USA). </plain></SENT>
+</text></p></sec><sec id="s2c"><title><text><SENT sid="68" pm="."><plain>RNA isolation </plain></SENT>
+</text></title><p><text><SENT sid="69" pm="."><plain>Total RNA was isolated using the RNeasy Mini Kit (Qiagen, Hilden, Germany) supplemented with DNaseI (Qiagen) digestion step, according to the manufacturer’s protocol. </plain></SENT>
+<SENT sid="70" pm="."><plain>The quantity of isolated RNA was estimated spectrophotometrically by measuring absorbance at 260 nm and the quality was assessed using 2100 Bioanalyzer (Agilent Technologies, Palo Alto, California, USA). </plain></SENT>
+</text></p></sec><sec id="s2d"><title><text><SENT sid="71" pm="."><plain>cRNA synthesis and hybridization to microarrays </plain></SENT>
+</text></title><p><text><SENT sid="72" pm="."><plain>All procedures were performed according to the manufacturer’s instructions (Affymetrix, Santa Clara, CA, USA) using reagents recommended by Affymetrix. </plain></SENT>
+<SENT sid="73" pm="."><plain>Total RNA (5 µg) from each sample was used as a template for cDNA and subsequent cRNA syntheses. </plain></SENT>
+<SENT sid="74" pm="."><plain>Fragmented cRNA was hybridized to human oligonucleotide GeneChip Human Genome U133 Plus 2.0 Array (Affymetrix). </plain></SENT>
+<SENT sid="75" pm="."><plain>Arrays were scanned by GeneChip Scanner 3000 (Affymetrix). </plain></SENT>
+</text></p></sec><sec id="s2e"><title><text><SENT sid="76" pm="."><plain>Microarray Data Analysis </plain></SENT>
+</text></title><p><text><SENT sid="77" pm="."><plain>Obtained CEL files were pre-processed using the GC-RMA (GeneChip Robust Multiarray Averaging) algorithm available in R environment as the Bioconductor gcrma package (ver. </plain></SENT>
+<SENT sid="78" pm="."><plain>2.34.0). </plain></SENT>
+<SENT sid="79" pm="."><plain>Initial filtering was applied: genes showing minimal variation across the set of arrays were excluded from the analysis (only genes whose expression differed by at least 1.5 fold from the median, in at least 20% of the arrays, were retained). </plain></SENT>
+<SENT sid="80" pm="."><plain>This preselection led to the filtering out of more than 35 000 probe sets, thus the number of probe sets used for analysis was reduced from 54 675 ones present on each array, to the final number of 19,793 probe sets (approx. </plain></SENT>
+<SENT sid="81" pm="."><plain>40%). </plain></SENT>
+<SENT sid="82" pm="."><plain>Unsupervised analysis was carried out by multidimensional scaling and visualized on a 2-D plot. </plain></SENT>
+</text></p><p><text><SENT sid="83" pm="."><plain>The transcripts differentially expressed between the two classes of the samples were identified by t-test using the Random Variance Model (RVM) [21]. </plain></SENT>
+<SENT sid="84" pm="."><plain>Transcripts were considered to have a statistically significant difference in expression if the corrected p-value was less than 0.05 after Benjamini-Hochberg false discovery rate (FDR) multiple test correction [22]. </plain></SENT>
+<SENT sid="85" pm="."><plain>Differences were deemed biologically significant if the fold change was equal or above 2. </plain></SENT>
+<SENT sid="86" pm="."><plain>For between lists comparisons we used Venn diagrams. </plain></SENT>
+<SENT sid="87" pm="."><plain>In certain analyses, the RVM t-test was applied individually for each cell line. </plain></SENT>
+<SENT sid="88" pm="."><plain>When more than two groups were compared, F-test results were provided. </plain></SENT>
+<SENT sid="89" pm="."><plain>Also, the 2-way analysis of variance (MANOVA, FDR adjusted p&lt;0.05) was used to estimate the effect of both the hypoxia factor and the type of the cell line. </plain></SENT>
+</text></p><p><text><SENT sid="90" pm="."><plain>To identify the biological functions of gene groups selected in the consecutive comparisons the gene set enrichment analysis (GSEA) with c2: curated gene set collections from Molecular Signatures Database (MSigDB) or selected gene sets (289), was performed [23]. </plain></SENT>
+<SENT sid="91" pm="."><plain>In detail, we applied two independent tests: the KS permutation test and the Efron-Tibshirani Gene Set Analysis test (GSA). </plain></SENT>
+<SENT sid="92" pm="."><plain>We considered a GSEA category significantly differentially regulated if significance level in either of the tests was less than 0.05 after Benjamini-Hochberg false discovery rate (FDR) multiple test correction. </plain></SENT>
+<SENT sid="93" pm="."><plain>The union of lists was used instead of intersection, as these tests assess significantly different aspects of group expression changes (GSA test estimates the global change of all genes within the list, while the KS test assesses only the change in the subgroup of samples). </plain></SENT>
+<SENT sid="94" pm="."><plain>Analyses were performed using R (ver. </plain></SENT>
+<SENT sid="95" pm="."><plain>3.0.2) statistical environment with the Bioconductor software (ver. </plain></SENT>
+<SENT sid="96" pm="."><plain>2.13) and BRB-ArrayTools (developed by Dr. Richard Simon and the BRB-ArrayTools Development Team; ver. </plain></SENT>
+<SENT sid="97" pm="."><plain>4.4.0). </plain></SENT>
+<SENT sid="98" pm="."><plain>The CELL files are deposited in NCBIs Gene Expression Omnibus (GEO, <ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/geo/">http://www.ncbi.nlm.nih.gov/geo/</ext-link>; Accession ID: GSE53012). </plain></SENT>
+</text></p></sec><sec id="s2f"><title><text><SENT sid="99" pm="."><plain>Quantitative Reverse Transcription Polymerase Chain Reaction (qRT-PCR) </plain></SENT>
+</text></title><p><text><SENT sid="100" pm="."><plain>An aliquot of 1 µg or 0.5 µg of total RNA was taken for cDNA synthesis using Omniscript RT Kit (Qiagen) and random primers (4 µM, Sigma-Aldrich), oligo (dT) primer (1 µM, QBiogene Inc., Illkirch, Cedex-France) and RNase inhibitor (10 U, Fermentas, St. Leon-Rot, Germany). </plain></SENT>
+<SENT sid="101" pm="."><plain>The reaction was performed in 20 µl total volume, according to manufacturer’s protocol, using termocycler UNO II (Biometra, Göttingen, Germany). </plain></SENT>
+<SENT sid="102" pm="."><plain>The cDNA was diluted 10-fold and a 5-µl aliquot was taken for real-time polymerase chain reaction performed using Taqman 2x PCR Master Mix (Roche, Basel, Switzerland), Exiqon probe (100 nM, Roche) and appropriate primers (200 nM each). </plain></SENT>
+<SENT sid="103" pm="."><plain>The reaction was carried out using ABI PRISM7700 Sequence Detection System (Applied Biosystems, Foster City, California, USA) and the following PCR conditions: 2 min at 50°C, 10 min at 95°C, 40 cycles of 15 sec at 95°C, 1 min at 60°C, and 1 min at 72°C. </plain></SENT>
+<SENT sid="104" pm="."><plain>The expression was calculated using the modified Pfaffl model [24], (Q = EΔCt, where E is reaction efficiency and ΔCt = Ctcalibrator–Ctsample). </plain></SENT>
+<SENT sid="105" pm="."><plain>The calibrator sample was a mixture of total RNA isolated from each sample. </plain></SENT>
+<SENT sid="106" pm="."><plain>The gene expression was normalized to the expression of two genes selected by GeNorm program (ver. </plain></SENT>
+<SENT sid="107" pm="."><plain>3.5). </plain></SENT>
+<SENT sid="108" pm="."><plain>These genes were as follows: for PC-3 cells: HADHA and EIF5; SK-OV-3: HADHA and CTBP1, WM793B: CTBP1 and EIF5. </plain></SENT>
+<SENT sid="109" pm="."><plain>The statistical significance of the results was estimated using Mann-Whitney U test (Statistica ver. </plain></SENT>
+<SENT sid="110" pm="."><plain>10). </plain></SENT>
+<SENT sid="111" pm="."><plain>The sequence of the primers and the probe numbers are shown in Table S1. </plain></SENT>
+</text></p></sec></sec></SecTag><SecTag type="RESULTS"><sec id="s3"><title><text><SENT sid="112" pm="."><plain>Results </plain></SENT>
+</text></title><sec id="s3a"><title><text><SENT sid="113" pm="."><plain>The hypoxia response is cell line specific </plain></SENT>
+</text></title><p><text><SENT sid="114" pm="."><plain>There are two major types of oxygen kinetics detected in tumor mass, depending on time scales of oxygen fluctuations, the rapid oxygen kinetic (fluctuations within seconds and minutes) and the slower oxygen kinetic (fluctuations within hours and days). </plain></SENT>
+<SENT sid="115" pm="."><plain>While the first one is relatively well-known, the latter is not precisely characterized [25]. </plain></SENT>
+<SENT sid="116" pm="."><plain>Here, we present a gene expression analysis in three cancer cell lines exposed to either chronic or cycling experimental hypoxia, or grown in control conditions. </plain></SENT>
+<SENT sid="117" pm="."><plain>The cell lines used in this study represent three types of cancer, known to be affected by hypoxia (melanoma, ovarian, and prostate cancer). </plain></SENT>
+<SENT sid="118" pm="."><plain>The cycling conditions were chosen to mimic oxygen fluctuations in a slower time scale. In vivo, they occur during the remodeling of the vascular network when the hypoxic and reoxygenation periods last for hours or days [25]–[27] (for details, see Materials and Methods and the experimental setup in Figure 1). </plain></SENT>
+<SENT sid="119" pm="."><plain>To make sure that cells are exposed to hypoxia in this relatively short period of time, we evaluated the cell oxygenation state using a hypoxia marker, pimonidazole (Figure S1). </plain></SENT>
+</text></p><p><text><SENT sid="120" pm="."><plain>The experiment was performed in triplicate (27 microarrays in total). </plain></SENT>
+<SENT sid="121" pm="."><plain>First, we performed an unsupervised analysis with a multidimensional scaling method to delineate the main sources of variability in the whole group of samples. </plain></SENT>
+<SENT sid="122" pm="."><plain>The analysis revealed that the specific molecular profile characteristic to each cell line was the strongest factor differentiating the samples (the first and the second component), while the second factor (the third component) was the culture conditions, hypoxic vs. control culture conditions (Figure 2). </plain></SENT>
+<SENT sid="123" pm="."><plain>This observation was subsequently confirmed by class comparison analysis, which revealed that as many as approximately 19,000 probe sets (out of 19,793 being analyzed) were differentially expressed between melanoma, ovarian, and prostate cancer cells, although with such a large scale of differences, a reliable estimation is difficult. </plain></SENT>
+<SENT sid="124" pm="."><plain>Chronic hypoxia influenced the mRNA expression of 8,635 probe sets, while cycling hypoxia affected the mRNA expression level of 6,132 probe sets (Table S2). </plain></SENT>
+</text></p><SecTag type="FIG"><fig id="pone-0105104-g002" orientation="portrait" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0105104.g002</object-id><label>Figure 2</label><caption><title><text><SENT sid="125" pm="."><plain>Unsupervised analysis of all samples by multidimensional scaling. </plain></SENT>
+</text></title><p><text><SENT sid="126" pm="."><plain>The scheme shows that the difference between molecular profiles of the analyzed cell lines is the main source of variance. </plain></SENT>
+<SENT sid="127" pm="."><plain>The hypoxic stimulus is the second factor differentiating samples. </plain></SENT>
+<SENT sid="128" pm="."><plain>The dots represent replicas of samples: control (green), chronic hypoxia-treated (red) and cycling hypoxia-treated (blue). </plain></SENT>
+<SENT sid="129" pm="."><plain>The axes are titled: component #1 (the X-axis) and component #3 (the Y-axis). </plain></SENT>
+</text></p></caption><graphic xlink:href="pone.0105104.g002"/></fig></SecTag><p><text><SENT sid="130" pm="."><plain>Next, we analyzed how the chronic and cycling hypoxia affected gene expression in each cell line. </plain></SENT>
+<SENT sid="131" pm="."><plain>Six comparisons were conducted for each type of hypoxia and in each cell type separately. </plain></SENT>
+<SENT sid="132" pm="."><plain>Prostate cancer (PC-3 cell line) appeared to be the most hypoxia-responsive (4,616 probe sets), while melanoma cells (WM793B line) showed the weakest response to hypoxic conditions (2,088 probe sets). </plain></SENT>
+<SENT sid="133" pm="."><plain>In SK-OV-3 cells, approximately 3,800 probe sets were affected by hypoxia. </plain></SENT>
+<SENT sid="134" pm="."><plain>On the other hand, quantitatively, both ovarian and prostate cells were similarly affected by cycling hypoxia. </plain></SENT>
+<SENT sid="135" pm="."><plain>The expression of 1,749 and 1,706 probe sets, respectively, was affected. </plain></SENT>
+<SENT sid="136" pm="."><plain>Again, melanoma showed a relatively low response to this treatment (648 probe sets). </plain></SENT>
+<SENT sid="137" pm="."><plain>The vast majority of selected genes were cell-line specific and only a small percentage of probe sets was overlapping between three or two cell lines. </plain></SENT>
+<SENT sid="138" pm="."><plain>The numbers of genes (fold change (FC) ≥2, FDR adjusted p&lt;0.05) regulated by either cycling or chronic hypoxia in each cell line are presented in the Venn diagram (Figure 3). </plain></SENT>
+</text></p><SecTag type="FIG"><fig id="pone-0105104-g003" orientation="portrait" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0105104.g003</object-id><label>Figure 3</label><caption><title><text><SENT sid="139" pm="."><plain>Venn diagram showing numbers of hypoxia-responsive probe-sets. </plain></SENT>
+</text></title><p><text><SENT sid="140" pm="."><plain>The diagram shows the number of probe-sets (FDR adjusted p&lt;0.05), for which the expression changed (FC ≥2) under either chronic (A) or cycling (B) hypoxia in comparison to control samples in each cell line, (SK-OV-3, PC-3, and WM793B) as well as the probe sets common to all or two cell lines. </plain></SENT>
+</text></p></caption><graphic xlink:href="pone.0105104.g003"/></fig></SecTag></sec><sec id="s3b"><title><text><SENT sid="141" pm="."><plain>Gene expression profile induced by experimental cycling hypoxia </plain></SENT>
+</text></title><p><text><SENT sid="142" pm="."><plain>According to the scatter plot (Figure 2), cycling hypoxia induced similar, but weaker changes in gene expression profiles when compared to those induced by chronic hypoxia. </plain></SENT>
+<SENT sid="143" pm="."><plain>We arbitrarily defined the “cycling hypoxia-responsive genes” as those whose expression was not affected or affected to a much lesser extent, or reversely modulated by chronic hypoxia. </plain></SENT>
+<SENT sid="144" pm="."><plain>The comparison analysis of the merged chronic hypoxia samples vs. the merged cycling hypoxia samples did not allow the identification of genes, which met the above criteria. </plain></SENT>
+<SENT sid="145" pm="."><plain>However, 36 probe sets responded to cycling hypoxia in all three cell lines (fold change &gt;2 and FDR adjusted p&lt;0.05); presented in Table S3). </plain></SENT>
+<SENT sid="146" pm="."><plain>Nonetheless, all of them were also significantly affected by chronic hypoxia and could not be regarded as specifically regulated by cycling hypoxia. </plain></SENT>
+</text></p><p><text><SENT sid="147" pm="."><plain>Thus, we decided to analyze the gene expression profile induced by cycling hypoxia in each cell line separately. </plain></SENT>
+<SENT sid="148" pm="."><plain>We aimed at selecting genes (FDR adjusted p&lt;0.05), which met the following arbitrarily set criteria, their expression was affected by cycling hypoxia conditions at least twice (cycling samples vs. controls FC ≥2) and not affected or reversely modulated, or significantly less modulated by chronic hypoxia (cycling vs. chronic samples, FC ≥1.5). </plain></SENT>
+</text></p><p><text><SENT sid="149" pm="."><plain>We found 419, 61, and 33 probe sets, which met the above criteria for SK-OV-3, PC-3, and WM793B cell lines, respectively. </plain></SENT>
+<SENT sid="150" pm="."><plain>In ovarian cancer cells, the majority of selected genes were induced, while, in PC-3 and melanoma cells, most cycling hypoxia-regulated genes were suppressed. </plain></SENT>
+<SENT sid="151" pm="."><plain>The gene lists differed between the cell lines, but some transcripts were overlapping, including those of AREG, CXCL2, and PLAU, while HBEGF was marginal regarding these criteria. </plain></SENT>
+<SENT sid="152" pm="."><plain>Interestingly, CXCL2 regulation by hypoxia depended on the cell line. CXCL2 was induced by cycling hypoxia in ovarian cancer cells and repressed in melanoma. </plain></SENT>
+<SENT sid="153" pm="."><plain>The top 20 cycling hypoxia-responsive genes are presented for each cell line in Table 1. </plain></SENT>
+<SENT sid="154" pm="."><plain>The whole “cycling hypoxia-responsive gene” lists for each cell line are presented in Tables S4–S6. </plain></SENT>
+</text></p><SecTag type="TABLE"><table-wrap id="pone-0105104-t001" orientation="portrait" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0105104.t001</object-id><label>Table 1</label><caption><title><text><SENT sid="155" pm="."><plain>Cycling hypoxia-responsive genes in different cell lines (FDR adjusted p&lt;0.05; the highest fold change between cycling vs. chronic and/or chronic vs. cycling hypoxia). </plain></SENT>
+</text></title></caption><alternatives><graphic id="pone-0105104-t001-1" xlink:href="pone.0105104.t001"/><table frame="hsides" rules="groups"><colgroup span="1"><col align="left" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/></colgroup><thead><tr><td colspan="4" align="left" rowspan="1"><text><SENT sid="156" pm="."><plain>SK-OV-3 </plain></SENT>
+</text></td><td colspan="4" align="left" rowspan="1"><text><SENT sid="157" pm="."><plain>PC-3 </plain></SENT>
+</text></td><td colspan="4" align="left" rowspan="1"><text><SENT sid="158" pm="."><plain>WM793B </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="159" pm="."><plain>Genesymbol </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="160" pm="."><plain>GeneID </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="161" pm="."><plain>Cyclingvs.control(foldchange) </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="162" pm="."><plain>Chronicvs.control(foldchange) </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="163" pm="."><plain>Genesymbol </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="164" pm="."><plain>GeneID </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="165" pm="."><plain>Cyclingvs.control(foldchange) </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="166" pm="."><plain>Chronicvs.control(foldchange) </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="167" pm="."><plain>Genesymbol </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="168" pm="."><plain>GeneID </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="169" pm="."><plain>Cyclingvs. </plain></SENT>
+<SENT sid="170" pm="."><plain>control(foldchange) </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="171" pm="."><plain>Chronicvs. </plain></SENT>
+<SENT sid="172" pm="."><plain>control(foldchange) </plain></SENT>
+</text></td></tr></thead><tbody><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="173" pm="."><plain>E2F7 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="174" pm="."><plain>228033_at </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="175" pm="."><plain>+10.2 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="176" pm="."><plain>+5.7 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="177" pm="."><plain>DHRS9 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="178" pm="."><plain>224009_x_at </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="179" pm="."><plain>+17.5 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="180" pm="."><plain>+7.4 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="181" pm="."><plain>TRIM73 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="182" pm="."><plain>1554250_s_at </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="183" pm="."><plain>+3.3 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="184" pm="."><plain>+2.0 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="185" pm="."><plain>IL8 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="186" pm="."><plain>211506_s_at </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="187" pm="."><plain>+9.13 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="188" pm="."><plain>+1.8 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="189" pm="."><plain>CEACAM5 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="190" pm="."><plain>201884_at </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="191" pm="."><plain>+9.7 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="192" pm="."><plain>+6.8 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="193" pm="."><plain>C17orf91 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="194" pm="."><plain>214696_at </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="195" pm="."><plain>+2.4 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="196" pm="."><plain>–1.1 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="197" pm="."><plain>THBS1 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="198" pm="."><plain>201109_s_at </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="199" pm="."><plain>+8.9 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="200" pm="."><plain>+1,8 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="201" pm="."><plain>PDK3 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="202" pm="."><plain>206348_s_at </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="203" pm="."><plain>+6.6 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="204" pm="."><plain>+4.2 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="205" pm="."><plain>RASGRP1 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="206" pm="."><plain>205590_at </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="207" pm="."><plain>–2.0 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="208" pm="."><plain>+1.8 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="209" pm="."><plain>KITLG </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="210" pm="."><plain>226534_at </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="211" pm="."><plain>+9.6 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="212" pm="."><plain>+4.0 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="213" pm="."><plain>SERPINB2 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="214" pm="."><plain>204614_at </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="215" pm="."><plain>+5.9 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="216" pm="."><plain>+2.0 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="217" pm="."><plain>FAM13A </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="218" pm="."><plain>217047_s_at </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="219" pm="."><plain>–2.0 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="220" pm="."><plain>1.0 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="221" pm="."><plain>FAM83D </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="222" pm="."><plain>225687_at </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="223" pm="."><plain>+6.3 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="224" pm="."><plain>+3.0 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="225" pm="."><plain>IL1RN </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="226" pm="."><plain>212657_s_at </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="227" pm="."><plain>+5.3 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="228" pm="."><plain>+3.0 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="229" pm="."><plain>ARHGAP24 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="230" pm="."><plain>223422_s_at </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="231" pm="."><plain>–2.0 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="232" pm="."><plain>1.0 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="233" pm="."><plain>STK17A </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="234" pm="."><plain>202695_s_at </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="235" pm="."><plain>+5.7 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="236" pm="."><plain>+2.2 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="237" pm="."><plain>SHANK2 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="238" pm="."><plain>243681_at </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="239" pm="."><plain>+4.4 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="240" pm="."><plain>+0.9 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="241" pm="."><plain>BIRC3 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="242" pm="."><plain>210538_s_at </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="243" pm="."><plain>–2.1 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="244" pm="."><plain>+1.1 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="245" pm="."><plain>HBEGF </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="246" pm="."><plain>38037_at </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="247" pm="."><plain>+5.7 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="248" pm="."><plain>1.0 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="249" pm="."><plain>ST6GAL2 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="250" pm="."><plain>228821_at </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="251" pm="."><plain>+4.05 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="252" pm="."><plain>+2.6 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="253" pm="."><plain>TNFAIP3 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="254" pm="."><plain>202643_s_at </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="255" pm="."><plain>–2.1 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="256" pm="."><plain>+1.4 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="257" pm="."><plain>IRAK2 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="258" pm="."><plain>231779_at </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="259" pm="."><plain>+5.3 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="260" pm="."><plain>+2.2 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="261" pm="."><plain>CEACAM6 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="262" pm="."><plain>211657_at </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="263" pm="."><plain>+3.5 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="264" pm="."><plain>+1.9 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="265" pm="."><plain>MTSS1 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="266" pm="."><plain>203037_s_at </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="267" pm="."><plain>–2.1 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="268" pm="."><plain>–1.3 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="269" pm="."><plain>PHLDB2 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="270" pm="."><plain>238419_at </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="271" pm="."><plain>+5.2 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="272" pm="."><plain>+2.4 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="273" pm="."><plain>HBEGF* </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="274" pm="."><plain>38037_at </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="275" pm="."><plain>+3.2 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="276" pm="."><plain>+2.3 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="277" pm="."><plain>UBASH3B </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="278" pm="."><plain>238587_at </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="279" pm="."><plain>–2.1 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="280" pm="."><plain>–1.3 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="281" pm="."><plain>MKI67 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="282" pm="."><plain>212020_s_at </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="283" pm="."><plain>+5.05 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="284" pm="."><plain>+2.9 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="285" pm="."><plain>EDN1 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="286" pm="."><plain>222802_at </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="287" pm="."><plain>+3.0 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="288" pm="."><plain>+2.0 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="289" pm="."><plain>TNFAIP3 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="290" pm="."><plain>202644_s_at </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="291" pm="."><plain>–2.1 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="292" pm="."><plain>1.0 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="293" pm="."><plain>EPHA2 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="294" pm="."><plain>203499_at </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="295" pm="."><plain>+4.4 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="296" pm="."><plain>+1.8 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="297" pm="."><plain>AREGB </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="298" pm="."><plain>1557285_at </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="299" pm="."><plain>+3.0 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="300" pm="."><plain>+1.4 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="301" pm="."><plain>ABTB2 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="302" pm="."><plain>213497_at </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="303" pm="."><plain>–2.2 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="304" pm="."><plain>–1.2 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="305" pm="."><plain>PLAU </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="306" pm="."><plain>211668_s_at </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="307" pm="."><plain>+4.2 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="308" pm="."><plain>+2.1 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="309" pm="."><plain>CBLB </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="310" pm="."><plain>227900_at </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="311" pm="."><plain>+3.0 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="312" pm="."><plain>+1.4 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="313" pm="."><plain>IRAK2 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="314" pm="."><plain>231779_at </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="315" pm="."><plain>–2.4 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="316" pm="."><plain>–1.3 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="317" pm="."><plain>DUSP6 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="318" pm="."><plain>208893_s_at </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="319" pm="."><plain>+3.3 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="320" pm="."><plain>–1.4 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="321" pm="."><plain>AREGB </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="322" pm="."><plain>1557285_at </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="323" pm="."><plain>+2.9 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="324" pm="."><plain>+1.4 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="325" pm="."><plain>LINGO2 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="326" pm="."><plain>232720_at </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="327" pm="."><plain>–2.4 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="328" pm="."><plain>–1.5 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="329" pm="."><plain>AREG </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="330" pm="."><plain>205239_at </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="331" pm="."><plain>+2.7 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="332" pm="."><plain>–6.5 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="333" pm="."><plain>ARL14 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="334" pm="."><plain>220468_at </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="335" pm="."><plain>+2.9 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="336" pm="."><plain>+1.2 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="337" pm="."><plain>NFKBIZ </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="338" pm="."><plain>223218_s_at </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="339" pm="."><plain>–2.7 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="340" pm="."><plain>–1.4 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="341" pm="."><plain>IL1A </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="342" pm="."><plain>210118_s_at </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="343" pm="."><plain>+2.7 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="344" pm="."><plain>–1.6 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="345" pm="."><plain>PLAU </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="346" pm="."><plain>211668_s_at </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="347" pm="."><plain>+2.4 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="348" pm="."><plain>+1.4 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="349" pm="."><plain>CXCL3 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="350" pm="."><plain>207850_at </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="351" pm="."><plain>–2.9 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="352" pm="."><plain>–1.2 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="353" pm="."><plain>IL6 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="354" pm="."><plain>205207_at </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="355" pm="."><plain>+2.5 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="356" pm="."><plain>–1.7 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="357" pm="."><plain>AREG </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="358" pm="."><plain>205239_at </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="359" pm="."><plain>+2.4 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="360" pm="."><plain>+1.1 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="361" pm="."><plain>ZMYND8 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="362" pm="."><plain>209049_s_at </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="363" pm="."><plain>–3.3 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="364" pm="."><plain>–2.1 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="365" pm="."><plain>CXCL2 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="366" pm="."><plain>209774_x_at </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="367" pm="."><plain>+2.3 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="368" pm="."><plain>–3.9 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="369" pm="."><plain>ZNF846 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="370" pm="."><plain>1569157_s_at </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="371" pm="."><plain>+2.3 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="372" pm="."><plain>1.0 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="373" pm="."><plain>MIRHG2 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="374" pm="."><plain>229437_at </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="375" pm="."><plain>–4.4 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="376" pm="."><plain>–2.8 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="377" pm="."><plain>EREG </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="378" pm="."><plain>205767_at </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="379" pm="."><plain>+2.15 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="380" pm="."><plain>-12.7 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="381" pm="."><plain>HSPA6 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="382" pm="."><plain>213418_at </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="383" pm="."><plain>–3.6 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="384" pm="."><plain>–1.5 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="385" pm="."><plain>PDE4B </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="386" pm="."><plain>203708_at </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="387" pm="."><plain>–4.5 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="388" pm="."><plain>–1.9 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="389" pm="."><plain>IGFBP1 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="390" pm="."><plain>1558605_at </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="391" pm="."><plain>–3.4 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="392" pm="."><plain>+1.7 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="393" pm="."><plain>PSMB4 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="394" pm="."><plain>228204_at </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="395" pm="."><plain>–4.7 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="396" pm="."><plain>+1.8 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="397" pm="."><plain>CXCL2 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="398" pm="."><plain>209774_x_at </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="399" pm="."><plain>–4.5 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="400" pm="."><plain>–1.3 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="401" pm="."><plain>INSIG1 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="402" pm="."><plain>201626_at </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="403" pm="."><plain>–3.9 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="404" pm="."><plain>+1.9 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="405" pm="."><plain>RPLP2 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="406" pm="."><plain>200908_s_at </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="407" pm="."><plain>–6.0 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="408" pm="."><plain>+1.1 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="409" pm="."><plain>ACSL6 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="410" pm="."><plain>213683_at </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="411" pm="."><plain>–6.8 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="412" pm="."><plain>–4.4 </plain></SENT>
+</text></td></tr></tbody></table></alternatives><table-wrap-foot><fn id="nt101"><label/><p><text><SENT sid="413" pm="."><plain>The genes in bold have been chosen for qRT-PCR validation. </plain></SENT>
+<SENT sid="414" pm="."><plain>The gene marked with * was marginal regarding the criteria described in the text. </plain></SENT>
+</text></p></fn></table-wrap-foot></table-wrap></SecTag><p><text><SENT sid="415" pm="."><plain>To find out what biological processes are regulated preferentially by cycling hypoxia, a Gene Set Enrichment Analysis (GSEA) was performed. </plain></SENT>
+<SENT sid="416" pm="."><plain>The analysis was done for each cell type separately and the results are presented in Table S7. </plain></SENT>
+<SENT sid="417" pm="."><plain>First, comparisons were conducted for each type of hypoxia and in each cell type (6 comparisons in total). </plain></SENT>
+<SENT sid="418" pm="."><plain>Among the total number of about 2,900 gene sets selected (FDR corrected p&lt;0.05 in either KS test or GSA test), the majority of genes was affected by both types of hypoxia. </plain></SENT>
+<SENT sid="419" pm="."><plain>Since we were interested in gene sets predominantly affected by cycling hypoxia, signatures which were significantly affected in samples subjected to cycling hypoxia, but not affected in samples subjected to chronic hypoxia were identified (FDR adjusted p&lt;0.05 in GSA and KS tests in comparison “cycling vs. control” and FDR adjusted p&gt;0.05 in comparison “chronic vs. control”). </plain></SENT>
+<SENT sid="420" pm="."><plain>There were 43, 85, and 40 gene sets that were preferentially affected by cycling hypoxia in prostate, ovarian, and melanoma cells respectively (marked with colors in Table S7). </plain></SENT>
+<SENT sid="421" pm="."><plain>The vast majority of the gene sets was specific to a particular cell line. </plain></SENT>
+<SENT sid="422" pm="."><plain>However, five signatures were common to two cell lines (Zucchi_Metastasis_dn, Brueckner_Targets_of_MIRLET7A3_dn, Reactome_Activation_of_Chaperone_Genes_by_XBP1S, Reactome_Metabolism_of_Nucleotides, Zhong_Response_to_Azacitidine_and_TSA_up). </plain></SENT>
+<SENT sid="423" pm="."><plain>Most of the genes constituting the aforementioned signatures were different between the cell lines, except for chemokines (e.g., CXCL2, CXCL1, CXCL3, and CXCL20). </plain></SENT>
+<SENT sid="424" pm="."><plain>Their expression was induced in both ovarian and prostate cancer cells, while repressed in melanoma cells. </plain></SENT>
+<SENT sid="425" pm="."><plain>Some signaling pathways were predominantly affected within a particular cell line, e.g., pathways related to TP53 or NFκB in prostate cells, the epidermal growth factor (EGF), the activator protein 1 (AP1), and immune response related pathways in ovarian cancer, while fatty acids metabolism and response to exogenous chemicals associated pathway were affected in melanoma cells (marked with colors in Table S7). </plain></SENT>
+<SENT sid="426" pm="."><plain>Since the abundance and the variability of the gene sets made it difficult to draw precise conclusions, we decided to perform a GSEA with gene sets related to selected processes (proliferation, cell cycle, replication, migration, adhesion, invasion, stress response, immune response, DNA repair, and hypoxia response) and signaling pathways (hypoxia inducible factor (HIF), NFκB, Ap1, EGF, and vascular endothelial growth factor (VEGF)). </plain></SENT>
+<SENT sid="427" pm="."><plain>The analysis of selected gene sets (289) confirmed that transcripts linked to the NFκB, AP1, as well as VEGF and EGF signaling pathways were more affected by cycling hypoxia than chronic hypoxia in ovarian and prostate cancer cells; while those related to immune response and replication were preferentially affected in melanoma cells exposed to cycling hypoxia. </plain></SENT>
+<SENT sid="428" pm="."><plain>In addition, gene sets related to invasiveness were slightly more represented in SK-OV-3 cells subjected to cycling hypoxia than in SK-OV-3 cells subjected to chronic hypoxia. </plain></SENT>
+<SENT sid="429" pm="."><plain>The difference between cycling and chronic hypoxia conditions was even more significant when gene sets, which were significantly affected in either KS or GSA test, were taken into account in the analysis. </plain></SENT>
+<SENT sid="430" pm="."><plain>In these settings, genes linked to adhesion, immune response, cell cycle, and proliferation were more affected in ovarian cancer cells exposed to cycling hypoxia than in cells subjected to chronic hypoxia, while, in prostate cancer cells, genes involved in DNA repair seemed to be more responsive to cycling hypoxia than to chronic hypoxia. </plain></SENT>
+<SENT sid="431" pm="."><plain>For HIF and hypoxia signaling pathways, no differences were observed between cycling and chronic hypoxia treatment. </plain></SENT>
+<SENT sid="432" pm="."><plain>The results are presented in Table S8. </plain></SENT>
+</text></p></sec><sec id="s3c"><title><text><SENT sid="433" pm="."><plain>“Universal” chronic hypoxia genes </plain></SENT>
+</text></title><p><text><SENT sid="434" pm="."><plain>In search for genes of core response to hypoxia, 240 probe sets, which displayed a statistically significant (FDR adjusted p&lt;0.05) change in mRNA expression under hypoxic conditions across all three cell lines (fold change ≥2) were identified. </plain></SENT>
+<SENT sid="435" pm="."><plain>The expression of 30 genes was induced five or more times in hypoxic conditions. </plain></SENT>
+<SENT sid="436" pm="."><plain>The chosen ones are presented in Table S9. </plain></SENT>
+<SENT sid="437" pm="."><plain>Among the selected genes, some are well-documented as hypoxia-regulated genes (e.g., CA9, VEGF, ADM, BNIP3, RNASE4, and SLC2A1), some weakly documented (e.g., ANKRD37, STC1, STC2, and TMEM45A) and some have not been linked with hypoxia so far (e.g., TAF9B and ARRDC3). </plain></SENT>
+<SENT sid="438" pm="."><plain>The entire gene list is presented in supplemental data (Table S10). </plain></SENT>
+</text></p><p><text><SENT sid="439" pm="."><plain>Again, the analysis revealed that a vast majority of genes responding to hypoxia is cell type specific. </plain></SENT>
+<SENT sid="440" pm="."><plain>Among them, numerous genes are known to be related to carcinogenesis and/or tumor progression such as BRAF (the main oncogene in melanoma), NEDD9, LOX, CXCR4 (related to cancer spreading), DNA repair genes (BRCA1 and BRCA2), angiogenesis regulators (ADM, ANG, and ANGPTL4), and cancer suppressor genes (NME1 and WISP2). </plain></SENT>
+</text></p><p><text><SENT sid="441" pm="."><plain>The arbitrarily selected genes, regarded as the most interesting biologically, are presented in Table 2. </plain></SENT>
+<SENT sid="442" pm="."><plain>A full list of hypoxia-responsive genes selected for each particular cell line is available as supplemental data (Tables S11–S13). </plain></SENT>
+</text></p><SecTag type="TABLE"><table-wrap id="pone-0105104-t002" orientation="portrait" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0105104.t002</object-id><label>Table 2</label><caption><title><text><SENT sid="443" pm="."><plain>Hypoxia-regulated genes strongly related to carcinogenesis. </plain></SENT>
+</text></title></caption><alternatives><graphic id="pone-0105104-t002-2" xlink:href="pone.0105104.t002"/><table frame="hsides" rules="groups"><colgroup span="1"><col align="left" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/></colgroup><thead><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="444" pm="."><plain>GENE </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="445" pm="."><plain>ID </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="446" pm="."><plain>Role in cancerbiology </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="447" pm="."><plain>WM793B(Foldchange) </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="448" pm="."><plain>PC-3(Fold change) </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="449" pm="."><plain>SK-OV-3(Fold change) </plain></SENT>
+</text></td></tr></thead><tbody><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="450" pm="."><plain>ADM </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="451" pm="."><plain>202912_at </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="452" pm="."><plain>Angiogenesis </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="453" pm="."><plain>+4.9 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="454" pm="."><plain>+20.1 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="455" pm="."><plain>+17.5 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="456" pm="."><plain>ANG </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="457" pm="."><plain>205141_at </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="458" pm="."><plain>Angiogenesis </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="459" pm="."><plain>+5.5 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="460" pm="."><plain>+2.7 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="461" pm="."><plain>+11.4 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="462" pm="."><plain>ANGPTL4 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="463" pm="."><plain>223333_s_at </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="464" pm="."><plain>Angiogenesis </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="465" pm="."><plain>+11.4 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="466" pm="."><plain>+93.7 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="467" pm="."><plain>+42.4 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="468" pm="."><plain>ATF3 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="469" pm="."><plain>202672_s_at </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="470" pm="."><plain>Pro- and antitumorogenic,invasiveness </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="471" pm="."><plain>+2.06 (p = 0.0022) </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="472" pm="."><plain>+7.4 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="473" pm="."><plain>–7.3 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="474" pm="."><plain>BRAF </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="475" pm="."><plain>206044_s_at </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="476" pm="."><plain>Main oncogene inmelanoma </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="477" pm="."><plain>+3.55 (p = 0.0055) </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="478" pm="."><plain>- </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="479" pm="."><plain>- </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="480" pm="."><plain>BRCA1 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="481" pm="."><plain>211851_x_at </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="482" pm="."><plain>DNA repair, stabilitygene </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="483" pm="."><plain>–4.1 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="484" pm="."><plain>- </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="485" pm="."><plain>- </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="486" pm="."><plain>BRCA1 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="487" pm="."><plain>204531_s_at </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="488" pm="."><plain>DNA repair, stabilitygene </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="489" pm="."><plain>–3.9 (p = 0.0036) </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="490" pm="."><plain>–3.45 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="491" pm="."><plain>- </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="492" pm="."><plain>BRCA2 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="493" pm="."><plain>214727_at </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="494" pm="."><plain>DNA repair, stabilitygene </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="495" pm="."><plain>–2.2 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="496" pm="."><plain>- </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="497" pm="."><plain>- </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="498" pm="."><plain>CADM1 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="499" pm="."><plain>209032_s_at </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="500" pm="."><plain>Tumor suppressor </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="501" pm="."><plain>- </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="502" pm="."><plain>- </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="503" pm="."><plain>+4.5 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="504" pm="."><plain>CXCL12 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="505" pm="."><plain>209687_at </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="506" pm="."><plain>Drug resistance,metastatic spreading </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="507" pm="."><plain>–10.9 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="508" pm="."><plain>- </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="509" pm="."><plain>- </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="510" pm="."><plain>CXCR4 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="511" pm="."><plain>217028_at </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="512" pm="."><plain>Drug resistance,metastatic spreading </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="513" pm="."><plain>- </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="514" pm="."><plain>+25.6 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="515" pm="."><plain>+264.1 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="516" pm="."><plain>CXCR7 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="517" pm="."><plain>212977_at </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="518" pm="."><plain>Drug resistance,metastatic spreading </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="519" pm="."><plain>- </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="520" pm="."><plain>+10.5 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="521" pm="."><plain>+38.15 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="522" pm="."><plain>EREG </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="523" pm="."><plain>205767_at </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="524" pm="."><plain>Proliferation, cellsurvival </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="525" pm="."><plain>- </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="526" pm="."><plain>- </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="527" pm="."><plain>–12.7 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="528" pm="."><plain>FGF1 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="529" pm="."><plain>1552721_a_at </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="530" pm="."><plain>Proliferation,resistance to celldeath, angiogenesis,invasiveness </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="531" pm="."><plain>- </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="532" pm="."><plain>+16.6 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="533" pm="."><plain>- </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="534" pm="."><plain>FN1 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="535" pm="."><plain>210495_x_at </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="536" pm="."><plain>Adhesion, migration,invasiveness </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="537" pm="."><plain>+2.0 (p = 0.0013) </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="538" pm="."><plain>+1.3 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="539" pm="."><plain>- </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="540" pm="."><plain>ICAM2 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="541" pm="."><plain>213620_s_at </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="542" pm="."><plain>Immune surveillance </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="543" pm="."><plain>– </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="544" pm="."><plain>- </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="545" pm="."><plain>+10.4 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="546" pm="."><plain>KITLG </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="547" pm="."><plain>226534_at </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="548" pm="."><plain>Tumor growth, anti-apoptosis </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="549" pm="."><plain>– </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="550" pm="."><plain>- </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="551" pm="."><plain>+4.06 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="552" pm="."><plain>LOX </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="553" pm="."><plain>215446_s_at </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="554" pm="."><plain>Metastasis,nvasiveness, EpithelialMesenchymalTransition (EMT), </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="555" pm="."><plain>+4.7 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="556" pm="."><plain>+4.4 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="557" pm="."><plain>+1.7 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="558" pm="."><plain>MCAM </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="559" pm="."><plain>209087_x_at </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="560" pm="."><plain>Invasiveness, tumorsuppressor </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="561" pm="."><plain>- </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="562" pm="."><plain>–2.15 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="563" pm="."><plain>- </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="564" pm="."><plain>MCAM </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="565" pm="."><plain>211042_x_at </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="566" pm="."><plain>Invasiveness, tumorsuppressor </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="567" pm="."><plain>–2.1 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="568" pm="."><plain>–2.3 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="569" pm="."><plain>+1.9 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="570" pm="."><plain>NEDD9 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="571" pm="."><plain>202149_at </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="572" pm="."><plain>Invasiveness, metastasis </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="573" pm="."><plain>- </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="574" pm="."><plain>–2.55 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="575" pm="."><plain>+5.7 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="576" pm="."><plain>NME1 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="577" pm="."><plain>201577_at </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="578" pm="."><plain>Metastasis suppressor </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="579" pm="."><plain>–1.6 (p = 0.0033) </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="580" pm="."><plain>–2.7 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="581" pm="."><plain>- </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="582" pm="."><plain>OSMR </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="583" pm="."><plain>1554008_at </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="584" pm="."><plain>Invasiveness, </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="585" pm="."><plain>+5.8 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="586" pm="."><plain>- </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="587" pm="."><plain>+7.9 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="588" pm="."><plain>SERPINE1 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="589" pm="."><plain>202628_s_at </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="590" pm="."><plain>Invasiveness, metastasis </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="591" pm="."><plain>- </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="592" pm="."><plain>+1.7 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="593" pm="."><plain>+10.8 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="594" pm="."><plain>SERPINE1 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="595" pm="."><plain>202627_s_at </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="596" pm="."><plain>Invasiveness,metastasis </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="597" pm="."><plain>- </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="598" pm="."><plain>+6.4 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="599" pm="."><plain>+17.4 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="600" pm="."><plain>STAT1 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="601" pm="."><plain>200887_s_at </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="602" pm="."><plain>Proliferation, cellgrowth </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="603" pm="."><plain>–1.7 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="604" pm="."><plain>–2.45 (p = 0.0013) </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="605" pm="."><plain>+2.2 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="606" pm="."><plain>WISP2 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="607" pm="."><plain>205792_at </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="608" pm="."><plain>Tumor suppressor inbreast and pancreaticcancer </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="609" pm="."><plain>- </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="610" pm="."><plain>- </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="611" pm="."><plain>+183.4 </plain></SENT>
+</text></td></tr></tbody></table></alternatives><table-wrap-foot><fn id="nt102"><label/><p><text><SENT sid="612" pm="."><plain>“+” and “–” signify increase and decrease in expression, respectively. </plain></SENT>
+</text></p></fn></table-wrap-foot></table-wrap></SecTag><p><text><SENT sid="613" pm="."><plain>The core hypoxia-responsive processes were also revealed in GSEA. </plain></SENT>
+<SENT sid="614" pm="."><plain>More than 40 signatures were significantly affected by hypoxia in all cell lines, most of which were associated with hypoxic stimulus itself or known processes regulated by hypoxia such as glycolysis or HIF-targets. </plain></SENT>
+<SENT sid="615" pm="."><plain>There were also gene sets related to cancer signaling pathways (MYC, STAT3, and CDH1) or genes moderately involved in cancer (IRF4, SOX4, and EZH2), as well as some associated with various aspects of cancer such as cell transformation, metastasis, and response to therapeutics (Table S7). </plain></SENT>
+</text></p></sec><sec id="s3d"><title><text><SENT sid="616" pm="."><plain>Validation of the results by quantitative reverse transcription- polymerase chain reaction (qRT-PCR) analysis </plain></SENT>
+</text></title><p><text><SENT sid="617" pm="."><plain>Out of the genes that were classified as more affected by cycling hypoxia than chronic hypoxia, six genes were chosen for verification by qRT-PCR. </plain></SENT>
+<SENT sid="618" pm="."><plain>The selected genes had the highest fold change (FC) when comparing “cycling vs. control,” the highest FC between chronic and cycling hypoxia, and/or were found to be hypoxia-regulated in more than one cell line. </plain></SENT>
+<SENT sid="619" pm="."><plain>These genes were Il8, PLAU, EPHA2, AREG, CXCL2, and HBEGF. The selected genes were validated in independent material (see Materials and Methods section). </plain></SENT>
+<SENT sid="620" pm="."><plain>Generally, we confirmed the tendency observed in the microarray analysis for most genes and cell lines (p&lt;0.05, Mann-Whitney U test). </plain></SENT>
+<SENT sid="621" pm="."><plain>However, the results obtained for the SK-OV-3 cell line were only marginally significant (p = 0.051), probably due to the low number of samples (three). </plain></SENT>
+<SENT sid="622" pm="."><plain>The genes that were not validated in qRT-PCR analysis were EPHA2 and PLAU for SK-OV-3 cells and HBEGF for PC3 cells. </plain></SENT>
+<SENT sid="623" pm="."><plain>On the other hand, EPHA2 was differentially expressed in PC-3 cells subjected to cycling hypoxia, although this was not detected by microarray analysis. </plain></SENT>
+<SENT sid="624" pm="."><plain>The results are presented in Table 3. </plain></SENT>
+</text></p><SecTag type="TABLE"><table-wrap id="pone-0105104-t003" orientation="portrait" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0105104.t003</object-id><label>Table 3</label><caption><title><text><SENT sid="625" pm="."><plain>Validation of the results by qRT-PCR analysis. </plain></SENT>
+</text></title></caption><alternatives><graphic id="pone-0105104-t003-3" xlink:href="pone.0105104.t003"/><table frame="hsides" rules="groups"><colgroup span="1"><col align="left" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/></colgroup><thead><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="626" pm="."><plain>Gene </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="627" pm="."><plain>SK-OV-3cycling vs.control foldchange(array/qRT-PCR) </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="628" pm="."><plain>SK-OV-3chronic vs.control foldchange(array/qRT-PCR) </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="629" pm="."><plain>PC-3 cyclingvs. controlfold change(array/qRT-PCR) </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="630" pm="."><plain>PC-3 chronicvs. controlfold change(array/qRT-PCR) </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="631" pm="."><plain>WM793Bcycling vs.controlfoldchange(array/qRT-PCR) </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="632" pm="."><plain>WM793B chronic vs. control foldchange (array/qRT-PCR) </plain></SENT>
+</text></td></tr></thead><tbody><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="633" pm="."><plain>Il8 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="634" pm="."><plain>9.1/ 6.2# </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="635" pm="."><plain>1.8/2.2# </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="636" pm="."><plain>6.5/3.5 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="637" pm="."><plain>9.2/4.5 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="638" pm="."><plain>0.9/0.65 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="639" pm="."><plain>1.0/1.0 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="640" pm="."><plain>AREG </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="641" pm="."><plain>2.7/1.75# </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="642" pm="."><plain>0.15/0.5# </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="643" pm="."><plain>2.4/1.8* </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="644" pm="."><plain>1.15/0.8* </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="645" pm="."><plain>Low or noexpression </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="646" pm="."><plain>Low or noexpression </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="647" pm="."><plain>HBEGF </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="648" pm="."><plain>5.7/2.25# </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="649" pm="."><plain>1.0/1.45# </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="650" pm="."><plain>3.0/0.86 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="651" pm="."><plain>2.4/1.8 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="652" pm="."><plain>Low/1.45 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="653" pm="."><plain>Low/0.75 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="654" pm="."><plain>EPHA2 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="655" pm="."><plain>4.4/2.2* </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="656" pm="."><plain>1.8/2.1* </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="657" pm="."><plain>1.0/1.3* </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="658" pm="."><plain>0.82/0.8* </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="659" pm="."><plain>1.3/1.25* </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="660" pm="."><plain>0.9/1.0 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="661" pm="."><plain>PLAU </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="662" pm="."><plain>4.2/1.8 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="663" pm="."><plain>2.1/1.6 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="664" pm="."><plain>2.4/2.1* </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="665" pm="."><plain>1.4/0.6* </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="666" pm="."><plain>Low or noexpression </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="667" pm="."><plain>Low or noexpression </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="668" pm="."><plain>CXCL2 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="669" pm="."><plain>2.3/2.9# </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="670" pm="."><plain>0.25/1.6 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="671" pm="."><plain>3.4/3.1* </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="672" pm="."><plain>3.7/2.3* </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="673" pm="."><plain>0.2/0.3* </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="674" pm="."><plain>0.8/0.7 </plain></SENT>
+</text></td></tr></tbody></table></alternatives><table-wrap-foot><fn id="nt103"><label/><p><text><SENT sid="675" pm="."><plain>In bold are results showing the differential gene expression between cycling and chronic samples assessed by qRT-PCR. </plain></SENT>
+<SENT sid="676" pm="."><plain>The results marked with * are statistically significant (p&lt;0.05; U Mann-Whitney test), whereas those marked with # have p = 0.051. </plain></SENT>
+</text></p></fn></table-wrap-foot></table-wrap></SecTag></sec></sec></SecTag><SecTag type="DISCUSS"><sec id="s4"><title><text><SENT sid="677" pm="."><plain>Discussion </plain></SENT>
+</text></title><sec id="s4a"><title><text><SENT sid="678" pm="."><plain>Cycling vs. chronic hypoxia </plain></SENT>
+</text></title><p><text><SENT sid="679" pm="."><plain>In this study, we present a report on global gene expression analysis in three tumor cell lines subjected to experimental cycling and chronic hypoxia. </plain></SENT>
+<SENT sid="680" pm="."><plain>Since there is more and more data on the role of cycling hypoxia in tumor cell aggressiveness and resistance to therapies, we aimed at identifying the molecular response to those stressing conditions in tumor cells. </plain></SENT>
+</text></p><p><text><SENT sid="681" pm="."><plain>The unsupervised analysis of the microarray data revealed that molecular differences between the examined cell lines were the main source of variance. </plain></SENT>
+<SENT sid="682" pm="."><plain>This observation is easily explainable since each cell line comes from a single tumor, which is a unique genetic and molecular entity [28]. </plain></SENT>
+<SENT sid="683" pm="."><plain>Additionally, our cell lines were derived from different tissues. </plain></SENT>
+<SENT sid="684" pm="."><plain>Hypoxia was the second factor differentiating the samples, causing a change of expression in the range of approximately 10–23% (chronic) and 3–8% (cycling) genes. </plain></SENT>
+<SENT sid="685" pm="."><plain>For chronic hypoxia, the response was much larger than that observed previously e.g., 10.3% [29], 1.5% [30], and 0.5% [31]. </plain></SENT>
+<SENT sid="686" pm="."><plain>The observed discrepancies may be the result of technical (data analysis methods), experimental (relatively long exposure to hypoxia), and biological (cell type) factors. </plain></SENT>
+<SENT sid="687" pm="."><plain>The last one influenced not only the number of affected genes, but also gene expression patterns, which were cell line-specific. </plain></SENT>
+<SENT sid="688" pm="."><plain>This observation is in line with commonly reported phenomenon of the inter-cellular heterogeneity in molecular response to hypoxia [29]. </plain></SENT>
+<SENT sid="689" pm="."><plain>Since the molecular response to cycling hypoxia was not largely reported, it was the focus of our study. </plain></SENT>
+</text></p><p><text><SENT sid="690" pm="."><plain>The comparison between chronic and cycling hypoxia revealed that, generally, the expression profiles induced by these two types of hypoxia were similar, though the latter one had a weaker effect on the transcriptome, as manifested by a lower number of affected genes and a lower fold changes. </plain></SENT>
+<SENT sid="691" pm="."><plain>In our data, the expression of known HIF1-regulated genes was less affected by cycling hypoxia than by chronic hypoxia, suggesting that HIF1 is more active during chronic hypoxia. </plain></SENT>
+<SENT sid="692" pm="."><plain>This result contrasts with previous data, which showed that acute hypoxia activates HIF1 more strongly than chronic hypoxia [14], [15], [32]. </plain></SENT>
+<SENT sid="693" pm="."><plain>Since the aforementioned results come from analyses of cycles of hypoxia and reoxygenation lasting for seconds or minutes, one may speculate that the strong HIF1 activation occurs preferentially in cells exposed to short-time cycles of hypoxia and reoxygenation rather than cycle of hypoxia lasting hours or days. </plain></SENT>
+<SENT sid="694" pm="."><plain>This is supported by Weinmann et al. observations. </plain></SENT>
+<SENT sid="695" pm="."><plain>Exposition of HCI H460 cells (lung carcinoma cells) to 10 cycles of hypoxia (48 h) and reoxygenation (120 h) not only did not induce HIF1-regulated genes, but also suppressed a substantial number of them [16]. </plain></SENT>
+<SENT sid="696" pm="."><plain>Moreover, one cannot exclude that what is actually being measured is more the effect of reoxygenation rather that cycling hypoxia itself. </plain></SENT>
+<SENT sid="697" pm="."><plain>The limitations in interpretations of the data associated with cycling versus chronic hypoxia and reoxygenation are, at least, partially caused by the lack of a defined experimental in vitro model of cycling hypoxia [33]. </plain></SENT>
+<SENT sid="698" pm="."><plain>A systematic microarray or PCR analysis at various time points of experimental cycling hypoxia would provide additional information on this issue. </plain></SENT>
+</text></p><p><text><SENT sid="699" pm="."><plain>Our experimental model did not allow us to identify a gene set more significantly affected in all three cell lines by cycling hypoxia rather than by chronic hypoxia. </plain></SENT>
+<SENT sid="700" pm="."><plain>This finding may be explained by two facts. </plain></SENT>
+<SENT sid="701" pm="."><plain>Firstly, gene expression profiles induced by cycling hypoxia did not differ much from those induced by chronic hypoxia, and, secondly, the cell line-specificity was relatively high in cycling hypoxia-responsiveness. </plain></SENT>
+<SENT sid="702" pm="."><plain>Thus, we decided to select transcripts separately for each cell line. </plain></SENT>
+<SENT sid="703" pm="."><plain>The numbers of identified genes differed between the cell lines and were consistent with the intrinsic hypoxia-responsiveness of the analyzed cells, with SK-OV-3 being the most responsive and WM793B the least. </plain></SENT>
+<SENT sid="704" pm="."><plain>A substantial number of genes selected for prostate cancer and melanoma cells presented a relatively low expression. </plain></SENT>
+<SENT sid="705" pm="."><plain>However, the expression of most of them were above the background noise level, which, based on Gaussian mixture decomposition method [34], was estimated to be 5. </plain></SENT>
+<SENT sid="706" pm="."><plain>qRT-PCR analysis also confirmed the calculation since the results obtained for HMGB, its expression ranged between 15.3 and 52.74 in SK-OV-3 cells, was validated by this method. </plain></SENT>
+</text></p><p><text><SENT sid="707" pm="."><plain>Among the most induced genes selected for SK-OV-3 cells, some were involved in the regulation of proliferation such as E2F7 and some genes belonged to the EGF pathway, either ligands (AREG, HBEGF, and EREG) or its target gene (EPHA2). </plain></SENT>
+<SENT sid="708" pm="."><plain>All of them encode for proteins known to play a role in cancer progression. </plain></SENT>
+<SENT sid="709" pm="."><plain>E2F7 is involved in resistance to therapy [35], while EPHA2 is overexpressed in a substantial number of tumors and promotes metastasis by stimulating tumor cell migration, invasion, and angiogenesis [36]. </plain></SENT>
+<SENT sid="710" pm="."><plain>The AREG protein guarantees tumor cell self-sufficiency in generating growth signals, limitless replicative potential, and resistance to apoptosis [37]. </plain></SENT>
+<SENT sid="711" pm="."><plain>EREG prognostic value has been demonstrated [38], while HBEGF was shown to regulate tumor cell metastatic phenotype [39]. </plain></SENT>
+</text></p><p><text><SENT sid="712" pm="."><plain>Some of the aforementioned genes (AREG and HBEGF), together with AREGB, were also induced by cycling hypoxia in PC-3 cells, though AREG was not confirmed by qRT-PCR. </plain></SENT>
+<SENT sid="713" pm="."><plain>On the other hand, EPHA2 was upregulated in WM793B under cycling hypoxia. </plain></SENT>
+<SENT sid="714" pm="."><plain>The fold changes for the aforementioned genes were relatively low, though, for HBEGF and EPHA2, the results were statistically significant in qRT-PCR analysis. </plain></SENT>
+</text></p><p><text><SENT sid="715" pm="."><plain>The preferential regulation of the EGF pathway by cycling hypoxia was also observed in GSEA, which showed a predominance of gene sets associated with EGF in cycling samples subjected to hypoxia, especially in ovarian and prostate cancer cells. </plain></SENT>
+<SENT sid="716" pm="."><plain>Since the EGF pathway is generally involved in establishing and maintaining the malignant phenotype, our results suggest that this pathway may contribute to cycling hypoxia-related adverse effects. </plain></SENT>
+<SENT sid="717" pm="."><plain>GSEA also confirmed that exposition to hypoxia and reoxygenation affected the NFκB and AP1 signaling pathways, which have been previously shown to be involved in cellular response to transient/acute hypoxia [40], [41]. </plain></SENT>
+</text></p><p><text><SENT sid="718" pm="."><plain>The other group of genes induced by cycling hypoxia in SK-OV-3 cells comprised transcripts of proinflammatory cytokines such as IL8, IL6, and IL1A and chemokine such as CXCL2. </plain></SENT>
+<SENT sid="719" pm="."><plain>CXCL2 was also slightly more induced by cycling hypoxia than by chronic hypoxia in PC-3 cells. </plain></SENT>
+<SENT sid="720" pm="."><plain>In contrast, in melanoma cells, its expression was significantly suppressed under cycling hypoxia. </plain></SENT>
+<SENT sid="721" pm="."><plain>All these genes are known to play a role in cancer biology. </plain></SENT>
+<SENT sid="722" pm="."><plain>The predominance of the regulation of immune response genes by cycling hypoxia in melanoma and ovarian cancer cells was also evidenced by GSEA. </plain></SENT>
+<SENT sid="723" pm="."><plain>Moreover, in ovarian cancer cells, sets of genes regulating adhesion, migration, and invasion as well as proliferation and cell cycle proved to be more responsive to cycling than to chronic hypoxia. </plain></SENT>
+<SENT sid="724" pm="."><plain>However, the flow cytometry analysis did not show any differences in cell cycle either in samples subjected to chronic or cycling hypoxia compared to control samples (data not shown). </plain></SENT>
+</text></p><p><text><SENT sid="725" pm="."><plain>In contrast to SK-OV-3 and PC-3 cells, the melanoma cell line appeared to be the least responsive to cycling hypoxia. </plain></SENT>
+<SENT sid="726" pm="."><plain>Gene expression was rather suppressed than stimulated in these cells. </plain></SENT>
+<SENT sid="727" pm="."><plain>The fold changes were also relatively low. </plain></SENT>
+<SENT sid="728" pm="."><plain>Moreover, out of the six validated genes, qRT-PCR only allowed us to confirm the differential expression of EPHA2 and CXCL2. EPHA2 has a significant role in melanoma biology as an oncogene and pro-malignant protein [42], while CXCL2 is a neutrophil attractant. CXCL2 down-regulation is related to inhibition of neutrophil accumulation and their survival [43]. </plain></SENT>
+<SENT sid="729" pm="."><plain>Thus, EPHA2 and CXCL2 potential role in cycling hypoxia-induced melanoma progression is worth further investigation. </plain></SENT>
+</text></p></sec><sec id="s4b"><title><text><SENT sid="730" pm="."><plain>“Universal” hypoxia genes </plain></SENT>
+</text></title><p><text><SENT sid="731" pm="."><plain>We selected 240 probe sets representing approximately 190 genes, which presented a variable, though consistent response to hypoxic conditions in all the three cell lines. </plain></SENT>
+<SENT sid="732" pm="."><plain>The gene set contains both well-known hypoxia-responsive genes and, more interestingly, some genes that were not linked to hypoxic stimulus or genes for which hypoxia-responsiveness is not well established. </plain></SENT>
+<SENT sid="733" pm="."><plain>The first group consists of the most common hypoxia markers: CAIX, GLUT1, and VEGF as well as glycolytic genes (ALDOC, ENO2, HK2, and PFKP), and others (BNIP3, ADM, NDRG1, RNASE4, and MXI1), which appear in most of the previously identified hypoxic signatures [30], [44]–[47], including those selected under severe hypoxia [29], [48]. </plain></SENT>
+<SENT sid="734" pm="."><plain>Their elevated expression may be treated as a validation of our experimental setting. </plain></SENT>
+<SENT sid="735" pm="."><plain>The novel, most modulated hypoxia-responsive genes detected in our study are TAF9B and ARRDC3. </plain></SENT>
+<SENT sid="736" pm="."><plain>These genes encode proteins that, among other functions, play roles in processes that presumably help the cell to survive hypoxic and stress conditions by regulating its viability, transcription repression (TAF9B, [49], and energy expenditure (ARRDC3, [50]). </plain></SENT>
+<SENT sid="737" pm="."><plain>Additionally, our data confirmed the involvement of certain genes, which have been modestly reported so far, in hypoxia response. </plain></SENT>
+<SENT sid="738" pm="."><plain>These include previously identified HIF-1 target genes such as ANKRD37 [47], STC-2 [51], and STC-1 [52], [48], as well as COL5A1 induced by hypoxia in the ventricle [53], ZNF395 regulated by hypoxia in glioblastoma [54], and TMEM45 in hematopoietic stem cells [55]. </plain></SENT>
+<SENT sid="739" pm="."><plain>Some of them have also been shown to be involved in cancer progression such as STC1 [56] and ZNF395 [57]. </plain></SENT>
+<SENT sid="740" pm="."><plain>Most of the aforementioned genes were highly induced by hypoxia in the analyzed cell lines and, in conjunction with the known hypoxia genes, they could be used as putative universal hypoxia signatures for further analysis and validation in clinical material. </plain></SENT>
+<SENT sid="741" pm="."><plain>Prognostic values of some hypoxic signatures based partially on in vitro data were already successfully validated in clinical material [58], [59]. </plain></SENT>
+<SENT sid="742" pm="."><plain>On the other hand, a huge study by Starmans et al., (2012) suggested that hypoxia-regulated genes may constitute a part of prognostic signature rather than be significant as individual molecular prognostic markers [60]. </plain></SENT>
+</text></p><p><text><SENT sid="743" pm="."><plain>In conclusion, our global gene expression analysis of three tumor cell lines exposed to cycling and chronic hypoxia revealed substantial similarities in the molecular profiles induced by these two different experimental hypoxic conditions. </plain></SENT>
+<SENT sid="744" pm="."><plain>Additionally, we have selected genes and indicated processes, which seem to be preferentially regulated by cycling hypoxia and reoxygenation, but which are not regulated or weakly regulated by chronic hypoxia in selected tumor cell types. </plain></SENT>
+<SENT sid="745" pm="."><plain>Despite the fact that the identified genes were relatively cell line-specific, induction of some EGF pathway-related transcripts in the analyzed cell lines suggests that this molecular pathway may be involved in the tumor cell response to cycling hypoxia. </plain></SENT>
+<SENT sid="746" pm="."><plain>Conceivably, they may mediate cycling hypoxia-induced tumor aggressiveness, though, due to the lack of established models of cycling hypoxia, caution in data interpretation is recommended. </plain></SENT>
+<SENT sid="747" pm="."><plain>Nevertheless, these genes as well as newly reported more universal hypoxia-responsive genes are worth further validation. </plain></SENT>
+</text></p></sec></sec></SecTag><SecTag type="SUPPL"><sec sec-type="supplementary-material" id="s5"><title><text><SENT sid="748" pm="."><plain>Supporting Information </plain></SENT>
+</text></title><supplementary-material content-type="local-data" id="pone.0105104.s001"><label>Figure S1</label><caption><p><text><SENT sid="749" pm="."><plain>Pimonidazole-staining of WM793B cells after 2 hour incubation in hypoxic atmosphere (1% O2). </plain></SENT>
+</text></p><p><text><SENT sid="750" pm="."><plain>(TIF) </plain></SENT>
+</text></p></caption><media xlink:href="pone.0105104.s001.tif"><caption><p><text><SENT sid="751" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="pone.0105104.s002"><label>Table S1</label><caption><p><text><SENT sid="752" pm="."><plain>Sequence of the primers used for qRT-PCR analysis. </plain></SENT>
+</text></p><p><text><SENT sid="753" pm="."><plain>(DOC) </plain></SENT>
+</text></p></caption><media xlink:href="pone.0105104.s002.doc"><caption><p><text><SENT sid="754" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="pone.0105104.s003"><label>Table S2</label><caption><p><text><SENT sid="755" pm="."><plain>Multivariate analysis. </plain></SENT>
+</text></p><p><text><SENT sid="756" pm="."><plain>(DOC) </plain></SENT>
+</text></p></caption><media xlink:href="pone.0105104.s003.doc"><caption><p><text><SENT sid="757" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="pone.0105104.s004"><label>Table S3</label><caption><p><text><SENT sid="758" pm="."><plain>Cycling hypoxia-responsive genes common to all three cell lines. </plain></SENT>
+</text></p><p><text><SENT sid="759" pm="."><plain>(XLS) </plain></SENT>
+</text></p></caption><media xlink:href="pone.0105104.s004.xls"><caption><p><text><SENT sid="760" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="pone.0105104.s005"><label>Table S4</label><caption><p><text><SENT sid="761" pm="."><plain>Cycling hypoxia-responsive genes selected for SK-OV-3 cell line. </plain></SENT>
+</text></p><p><text><SENT sid="762" pm="."><plain>(XLS) </plain></SENT>
+</text></p></caption><media xlink:href="pone.0105104.s005.xls"><caption><p><text><SENT sid="763" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="pone.0105104.s006"><label>Table S5</label><caption><p><text><SENT sid="764" pm="."><plain>Cycling hypoxia-responsive genes selected for PC-3 cell line. </plain></SENT>
+</text></p><p><text><SENT sid="765" pm="."><plain>(XLS) </plain></SENT>
+</text></p></caption><media xlink:href="pone.0105104.s006.xls"><caption><p><text><SENT sid="766" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="pone.0105104.s007"><label>Table S6</label><caption><p><text><SENT sid="767" pm="."><plain>Cycling hypoxia-responsive genes selected for WM793B cell line. </plain></SENT>
+</text></p><p><text><SENT sid="768" pm="."><plain>(XLS) </plain></SENT>
+</text></p></caption><media xlink:href="pone.0105104.s007.xls"><caption><p><text><SENT sid="769" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="pone.0105104.s008"><label>Table S7</label><caption><p><text><SENT sid="770" pm="."><plain>The results of GSEA with c2: curated gene set collections MSigDB (3818 Gene Sets). </plain></SENT>
+</text></p><p><text><SENT sid="771" pm="."><plain>(XLSX) </plain></SENT>
+</text></p></caption><media xlink:href="pone.0105104.s008.xlsx"><caption><p><text><SENT sid="772" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="pone.0105104.s009"><label>Table S8</label><caption><p><text><SENT sid="773" pm="."><plain>The results of GSEA with gene sets for selected processes and signaling pathways (289 Gene Sets). </plain></SENT>
+</text></p><p><text><SENT sid="774" pm="."><plain>(XLSX) </plain></SENT>
+</text></p></caption><media xlink:href="pone.0105104.s009.xlsx"><caption><p><text><SENT sid="775" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="pone.0105104.s010"><label>Table S9</label><caption><p><text><SENT sid="776" pm="."><plain>Selected hypoxia-regulated genes common to all three tumor cell lines. </plain></SENT>
+</text></p><p><text><SENT sid="777" pm="."><plain>(DOC) </plain></SENT>
+</text></p></caption><media xlink:href="pone.0105104.s010.doc"><caption><p><text><SENT sid="778" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="pone.0105104.s011"><label>Table S10</label><caption><p><text><SENT sid="779" pm="."><plain>The entire gene set of hypoxia-regulated probe sets common to all three cell lines. </plain></SENT>
+</text></p><p><text><SENT sid="780" pm="."><plain>(XLS) </plain></SENT>
+</text></p></caption><media xlink:href="pone.0105104.s011.xls"><caption><p><text><SENT sid="781" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="pone.0105104.s012"><label>Table S11</label><caption><p><text><SENT sid="782" pm="."><plain>Hypoxia-responsive genes selected for SK-OV-3. </plain></SENT>
+</text></p><p><text><SENT sid="783" pm="."><plain>(XLS) </plain></SENT>
+</text></p></caption><media xlink:href="pone.0105104.s012.xls"><caption><p><text><SENT sid="784" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="pone.0105104.s013"><label>Table S12</label><caption><p><text><SENT sid="785" pm="."><plain>Hypoxia-responsive genes selected for PC-3. </plain></SENT>
+</text></p><p><text><SENT sid="786" pm="."><plain>(XLS) </plain></SENT>
+</text></p></caption><media xlink:href="pone.0105104.s013.xls"><caption><p><text><SENT sid="787" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="pone.0105104.s014"><label>Table S13</label><caption><p><text><SENT sid="788" pm="."><plain>Hypoxia-responsive genes selected for WM793B. </plain></SENT>
+</text></p><p><text><SENT sid="789" pm="."><plain>(XLS) </plain></SENT>
+</text></p></caption><media xlink:href="pone.0105104.s014.xls"><caption><p><text><SENT sid="790" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media></supplementary-material></sec></SecTag></body><back><SecTag type="REF"><ref-list><title>References</title><ref id="pone.0105104-Vaupel1"><text><SENT sid="791" pm="."><plain>1 VaupelP, HarrisonL (2004) Tumor hypoxia: causative factors, compensatory mechanisms, and cellular response. The Oncologist 9: 4–9. </plain></SENT>
+</text></ref><ref id="pone.0105104-Brown1"><text><SENT sid="792" pm="."><plain>2 BrownJM (1979) Evidence for acutely hypoxic cells in mouse tumours, and a possible mechanism of reoxygenation. Br J Radiol 52: 650–656.486895 </plain></SENT>
+</text></ref><ref id="pone.0105104-Chaplin1"><text><SENT sid="793" pm="."><plain>3 ChaplinDJ, OlivePL, DurandRE (1987) Intermittent blood flow in a murine tumor: radiobiological effects. Cancer Res 47: 597–601.3791244 </plain></SENT>
+</text></ref><ref id="pone.0105104-Brurberg1"><text><SENT sid="794" pm="."><plain>4 BrurbergKG, SkogmoHK, GraffBA, OlsenDR, RofstadEK (2005) Fluctuations in pO2 in poorly and well-oxygenated spontaneous canine tumors before and during fractionated radiation therapy. Radiother Oncol 77: 220–226.16257074 </plain></SENT>
+</text></ref><ref id="pone.0105104-Lanzen1"><text><SENT sid="795" pm="."><plain>5 LanzenJ, BraunRD, KlitzmanB, BrizelD, SecombTW, et al (2006) Dewhirst MW: Direct demonstration of instabilities in oxygen concentrations within the extravascular compartment of an experimental tumor. Cancer Res 66: 2219–2223.16489024 </plain></SENT>
+</text></ref><ref id="pone.0105104-CrdenasNavia1"><text><SENT sid="796" pm="."><plain>6 Cárdenas-NaviaLI, MaceD, RichardsonRA, WilsonDF, ShanS, et al (2008) The pervasive presence of fluctuating oxygenation in tumors. Cancer Res 68: 5812–5819.18632635 </plain></SENT>
+</text></ref><ref id="pone.0105104-Kimura1"><text><SENT sid="797" pm="."><plain>7 KimuraH, BraunRD, OngET, HsuR, SecombTW, et al (1996) Fluctuations in red cell flux in tumor microvessels can lead to transient hypoxia and reoxygenation in tumor parenchyma. Cancer Res 56: 5522–5528.8968110 </plain></SENT>
+</text></ref><ref id="pone.0105104-Pigott1"><text><SENT sid="798" pm="."><plain>8 PigottKH, HillSA, ChaplinDJ, SaundersMI (1996) Microregional fluctuations in perfusion within human tumours detected using laser Doppler flowmetry. Radiother Oncol 40: 45–50.8844886 </plain></SENT>
+</text></ref><ref id="pone.0105104-Matsumoto1"><text><SENT sid="799" pm="."><plain>9 MatsumotoS, YasuiH, MitchellJB, KrishnaMC (2010) Imaging cycling tumor hypoxia. Cancer Res 70: 10019–10023.21159626 </plain></SENT>
+</text></ref><ref id="pone.0105104-Rofstad1"><text><SENT sid="800" pm="."><plain>10 RofstadEK, GalappathiK, MathiesenB, RuudEB (2007) Fluctuating and diffusion-limited hypoxia in hypoxia-induced metastasis. Clin Cancer Res 3: 1971–1978. </plain></SENT>
+</text></ref><ref id="pone.0105104-Cairns1"><text><SENT sid="801" pm="."><plain>11 CairnsRA, KalliomakiT, HillRP (2001) Acute (cyclic) hypoxia enhances spontaneous metastasis of KHT murine tumors. Cancer Res 61: 8903–8908.11751415 </plain></SENT>
+</text></ref><ref id="pone.0105104-Cairns2"><text><SENT sid="802" pm="."><plain>12 CairnsRA, HillRP (2004) Acute hypoxia enhances spontaneous lymph node metastasis in an orthotopic murine model of human cervical carcinoma. Cancer Res 64: 2054–2061.15026343 </plain></SENT>
+</text></ref><ref id="pone.0105104-Rofstad2"><text><SENT sid="803" pm="."><plain>13 RofstadEK, GaustadJV, EgelandTA, MathiesenB, GalappathiK (2010) Tumors exposed to acute cyclic hypoxic stress show enhanced angiogenesis, perfusion and metastatic dissemination. Int J Cancer 27: 1535–1546. </plain></SENT>
+</text></ref><ref id="pone.0105104-Hsieh1"><text><SENT sid="804" pm="."><plain>14 HsiehCH, ShyuWC, ChiangCY, KuoJW, ShenWC, et al (2011) NADPH oxidase subunit 4-mediated reactive oxygen species contribute to cycling hypoxia-promoted tumor progression in glioblastoma multiforme. PLoS One 6: e23945.21935366 </plain></SENT>
+</text></ref><ref id="pone.0105104-Martinive1"><text><SENT sid="805" pm="."><plain>15 MartiniveP, DefresneF, BouzinC, SaliezJ, LairF, et al (2006) Preconditioning of the tumor vasculature and tumor cells by intermittent hypoxia: implications for anticancer therapies. Cancer Res 66: 11736–11744.17178869 </plain></SENT>
+</text></ref><ref id="pone.0105104-Weinmann1"><text><SENT sid="806" pm="."><plain>16 WeinmannM, JendrossekV, GünerD, GoeckeB, BelkaC (2005) Cyclic exposure to hypoxia and reoxygenation selects for tumor cells with defects in mitochondrial apoptotic pathways. FASEB J 18: 1906–1908. </plain></SENT>
+</text></ref><ref id="pone.0105104-Reynolds1"><text><SENT sid="807" pm="."><plain>17 ReynoldsTY, RockwellS, GlazerPM (1996) Genetic instability induced by the tumor microenvironment. Cancer Res 56: 5754–5757.8971187 </plain></SENT>
+</text></ref><ref id="pone.0105104-Durand1"><text><SENT sid="808" pm="."><plain>18 DurandRE (2001) Intermittent blood flow in solid tumours–an under-appreciated source of ‘drug resistance’. Cancer Metastasis Rev 20: 57–61.11831648 </plain></SENT>
+</text></ref><ref id="pone.0105104-Louie1"><text><SENT sid="809" pm="."><plain>19 LouieE, NikS, ChenJS, SchmidtM, SongB, et al (2010) Identification of a stem-like cell population by exposing metastatic breast cancer cell lines to repetitive cycles of hypoxia and reoxygenation. Breast Cancer Res 12: R94.21067584 </plain></SENT>
+</text></ref><ref id="pone.0105104-Dietz1"><text><SENT sid="810" pm="."><plain>20 DietzA, VanselowB, RudatV, ConradtC, WeidauerH (2003) Prognostic impact of reoxygenation in advanced cancer of the head and neck during the initial course of chemoradiation or radiotherapy alone. Head Neck 25: 50–58.12478544 </plain></SENT>
+</text></ref><ref id="pone.0105104-Wright1"><text><SENT sid="811" pm="."><plain>21 WrightGW, SimonRM (2003) A random variance model for detection of differential gene expression in small microarray experiments. Bioinformatics 18: 2448–2455. </plain></SENT>
+</text></ref><ref id="pone.0105104-Benjamini1"><text><SENT sid="812" pm="."><plain>22 BenjaminiY, HochbergY (1995) Controlling the false discovery rate: A practical and powerful approach to multiple testing. J Roy Statist Soc B 85: 289–300. </plain></SENT>
+</text></ref><ref id="pone.0105104-Subramanian1"><text><SENT sid="813" pm="."><plain>23 SubramanianA, TamayoP, MoothaVK, MukherjeeS, EbertBL, et al (2005) Gene set enrichment analysis: a knowledge-based approach for interpreting genome-wide expression profiles. Proc Natl Acad Sci USA 102: 15545–15550.16199517 </plain></SENT>
+</text></ref><ref id="pone.0105104-Pfaffl1"><text><SENT sid="814" pm="."><plain>24 PfafflMW (2001) A new mathematical model for relative quantification in real-time RT-PCR. Nucleic Acids Res 29: e45.11328886 </plain></SENT>
+</text></ref><ref id="pone.0105104-Dewhirst1"><text><SENT sid="815" pm="."><plain>25 DewhirstMW (2007) Intermittent hypoxia furthers the rationale for hypoxia-inducible factor-1 targeting. Cancer Res 67: 854–5.17283112 </plain></SENT>
+</text></ref><ref id="pone.0105104-Kim1"><text><SENT sid="816" pm="."><plain>26 KimYJ, AhnJY, LiangP, IpC, ZhangY, et al (2007) Human prx1 gene is a target of Nrf2 and is up-regulated by hypoxia/reoxygenation: implication to tumor biology. Cancer Res 67: 546–554.17234762 </plain></SENT>
+</text></ref><ref id="pone.0105104-Dewhirst2"><text><SENT sid="817" pm="."><plain>27 DewhirstMW, CaoY, MoellerB (2008) Cycling hypoxia and free radicals regulate angiogenesis and radiotherapy response. Nat Rev Cancer 8: 425–37.18500244 </plain></SENT>
+</text></ref><ref id="pone.0105104-Marusyk1"><text><SENT sid="818" pm="."><plain>28 MarusykA, PolyakK (2010) Tumor heterogeneity: causes and consequences. Biochim Biophys Acta 805: 105–117. </plain></SENT>
+</text></ref><ref id="pone.0105104-Chi1"><text><SENT sid="819" pm="."><plain>29 ChiJT, WangZ, NuytenDS, RodriguezEH, SchanerME (2006) Gene expression programs in response to hypoxia: cell type specificity and prognostic significance in human cancers. PLoS Med 3: e47.16417408 </plain></SENT>
+</text></ref><ref id="pone.0105104-Denko1"><text><SENT sid="820" pm="."><plain>30 DenkoNC, FontanaLA, HudsonKM, SutphinPD, RaychaudhuriS, et al (2003) Investigating hypoxic tumor physiology through gene expression patterns. Oncogene 22: 5907–5914.12947397 </plain></SENT>
+</text></ref><ref id="pone.0105104-Lal1"><text><SENT sid="821" pm="."><plain>31 Lal A1, Peters H, St Croix B, Haroon ZA, Dewhirst MW (2001) Transcriptional response to hypoxia in human tumors. J Natl Cancer Inst 93: 1337–1343.11535709 </plain></SENT>
+</text></ref><ref id="pone.0105104-Yuan1"><text><SENT sid="822" pm="."><plain>32 Yuan G1, Nanduri J, Khan S, Semenza GL, Prabhakar NR (2008) Induction of HIF-1alpha expression by intermittent hypoxia: involvement of NADPH oxidase, Ca2+ signaling, prolyl hydroxylases, and mTOR. J Cell Physiol 217: 674–85.18651560 </plain></SENT>
+</text></ref><ref id="pone.0105104-Bayer1"><text><SENT sid="823" pm="."><plain>33 BayerC, VaupelP (2012) Acute versus chronic hypoxia in tumors: Controversial data concerning time frames and biological consequences. Strahlenther Onkol 188: 616–27.22454045 </plain></SENT>
+</text></ref><ref id="pone.0105104-Marczyk1"><text><SENT sid="824" pm="."><plain>34 MarczykM, JaksikR, PolańskiA, PolańskaJ (2013) Adaptive Filtering of Microarray Gene Expression Data Based on Gaussian Mixture Decomposition. BMC Bioinformatics 14: 101.23510016 </plain></SENT>
+</text></ref><ref id="pone.0105104-Reimer1"><text><SENT sid="825" pm="."><plain>35 ReimerD, SadrS, WiedemairA, StadlmannS, ConcinN, et al (2007) Clinical relevance of E2F family members in ovarian cancer–an evaluation in a training set of 77 patients. Clin Cancer Res 3: 144–151. </plain></SENT>
+</text></ref><ref id="pone.0105104-Wykosky1"><text><SENT sid="826" pm="."><plain>36 WykoskyJ, DebinskiW (2008) The EphA2 receptor and ephrinA1 ligand in solid tumors: function and therapeutic targeting. Mol Cancer Res 6: 1795–1806.19074825 </plain></SENT>
+</text></ref><ref id="pone.0105104-Busser1"><text><SENT sid="827" pm="."><plain>37 BusserB, SanceyL, BrambillaE, CollJL, HurbinA (2011) The multiple roles of amphiregulin in human cancer. Biochim Biophys Acta 6: 119–131. </plain></SENT>
+</text></ref><ref id="pone.0105104-Jacobs1"><text><SENT sid="828" pm="."><plain>38 JacobsB, De RoockW, PiessevauxH, Van OirbeekR, BiesmansB, et al (2009) Amphiregulin and epiregulin mRNA expression in primary tumors predicts outcome in metastatic colorectal cancer treated with cetuximab. J Clin Oncol 27: 5068–5074.19738126 </plain></SENT>
+</text></ref><ref id="pone.0105104-Bos1"><text><SENT sid="829" pm="."><plain>39 BosPD, ZhangXH, NadalC, ShuW, GomisRR, et al (2009) Genes that mediate breast cancer metastasis to the brain. Nature 459: 1005–1009.19421193 </plain></SENT>
+</text></ref><ref id="pone.0105104-Rupec1"><text><SENT sid="830" pm="."><plain>40 Rupec RA1, Baeuerle PA (1995) The genomic response of tumor cells to hypoxia and reoxygenation. Differential activation of transcription factors AP-1 and NF-kappa B. </plain></SENT>
+<SENT sid="831" pm="."><plain>Eur J Biochem 234: 632–40.8536713 </plain></SENT>
+</text></ref><ref id="pone.0105104-Chihab1"><text><SENT sid="832" pm="."><plain>41 Chihab R1, Ferry C, Koziel V, Monin P, Daval JL (1998) Sequential activation of activator protein-1-related transcription factors and JNK protein kinases may contribute to apoptotic death induced by transient hypoxia in developing brain neurons. Brain Res Mol Brain Res 63: 105–20.9838068 </plain></SENT>
+</text></ref><ref id="pone.0105104-Udayakumar1"><text><SENT sid="833" pm="."><plain>42 UdayakumarD, ZhangG, JiZ, NjauwCN, MrozP, et al (2011) EphA2 is a critical oncogene in melanoma. Oncogene 30: 4921–4929.21666714 </plain></SENT>
+</text></ref><ref id="pone.0105104-Richards1"><text><SENT sid="834" pm="."><plain>43 RichardsH, WilliamsA, JonesE, HindleyJ, GodkinA, et al (2010) Novel role of regulatory T cells in limiting early neutrophil responses in skin. Immunology 131: 583–592.20722759 </plain></SENT>
+</text></ref><ref id="pone.0105104-Vengellur1"><text><SENT sid="835" pm="."><plain>44 Vengellur A1, LaPres JJ (2004) The role of hypoxia inducible factor 1alpha in cobalt chloride induced cell death in mouse embryonic fibroblasts. Toxicol Sci 82: 638–46.15375294 </plain></SENT>
+</text></ref><ref id="pone.0105104-Greijer1"><text><SENT sid="836" pm="."><plain>45 GreijerAE, van der GroepP, KemmingD, ShvartsA, SemenzaGL, et al (2005) Up-regulation of gene expression by hypoxia is mediated predominantly by hypoxia-inducible factor 1 (HIF-1). J Pathol 206: 291–304.15906272 </plain></SENT>
+</text></ref><ref id="pone.0105104-Mense1"><text><SENT sid="837" pm="."><plain>46 Mense SM1, Sengupta A, Zhou M, Lan C, Bentsman G, et al (2006) Gene expression profiling reveals the profound upregulation of hypoxia-responsive genes in primary human astrocytes. Physiol Genomics 25: 435–49.16507782 </plain></SENT>
+</text></ref><ref id="pone.0105104-Benita1"><text><SENT sid="838" pm="."><plain>47 BenitaY, KikuchiH, SmithAD, ZhangMQ, ChungDC, et al (2009) An integrative genomics approach identifies Hypoxia Inducible Factor-1 (HIF-1)-target genes that form the core response to hypoxia. Nucleic Acids Res 37: 4587–4602.19491311 </plain></SENT>
+</text></ref><ref id="pone.0105104-Hu1"><text><SENT sid="839" pm="."><plain>48 HuX, WuR, ShehadehLA, ZhouQ, JiangC, et al (2014) Severe hypoxia exerts parallel and cell-specific regulation of gene expression and alternative splicing in human mesenchymal stem cells. BMC Genomics 15: 303.24758227 </plain></SENT>
+</text></ref><ref id="pone.0105104-Chen1"><text><SENT sid="840" pm="."><plain>49 ChenZ, ManleyJL (2003) In vivo functional analysis of the histone 3-like TAF9 and a TAF9-related factor, TAF9L. J Biol Chem 278: 35172–35183.12837753 </plain></SENT>
+</text></ref><ref id="pone.0105104-Patwari1"><text><SENT sid="841" pm="."><plain>50 PatwariP, EmilssonV, SchadtEE, ChutkowWA, LeeS, et al (2011) The arrestin domain-containing 3 protein regulates body mass and energy expenditure. Cell Metab 14: 671–683.21982743 </plain></SENT>
+</text></ref><ref id="pone.0105104-Law1"><text><SENT sid="842" pm="."><plain>51 LawAY, WongCK (2010) Stanniocalcin-2 is a HIF-1 target gene that promotes cell proliferation in hypoxia. Exp Cell Res 316: 466–476.19786016 </plain></SENT>
+</text></ref><ref id="pone.0105104-Yeung1"><text><SENT sid="843" pm="."><plain>52 YeungHY, LaiKP, ChanHY, MakNK, WagnerGF, et al (2005) Hypoxia-inducible factor-1-mediated activation of stanniocalcin-1 in human cancer cells. Endocrinology 146: 4951–4960.16109785 </plain></SENT>
+</text></ref><ref id="pone.0105104-Ramirez1"><text><SENT sid="844" pm="."><plain>53 RamirezTA, Jourdan-Le SauxC, JoyA, ZhangJ, DaiQ, et al (2012) Chronic and intermittent hypoxia differentially regulate left ventricular inflammatory and extracellular matrix responses. Hypertens Res 35: 811–818.22495609 </plain></SENT>
+</text></ref><ref id="pone.0105104-Murat1"><text><SENT sid="845" pm="."><plain>54 MuratA, MigliavaccaE, HussainSF, HeimbergerAB, DesbailletsI, et al (2009) Modulation of angiogenic and inflammatory response in glioblastoma by hypoxia. PLoS One 4: e5947.19536297 </plain></SENT>
+</text></ref><ref id="pone.0105104-MartinRendon1"><text><SENT sid="846" pm="."><plain>55 Martin-RendonE, HaleSJ, RyanD, BabanD, FordeSP, et al (2007) Transcriptional profiling of human cord blood CD133+ and cultured bone marrow mesenchymal stem cells in response to hypoxia. Stem Cells 25: 1003–1012.17185612 </plain></SENT>
+</text></ref><ref id="pone.0105104-Shirakawa1"><text><SENT sid="847" pm="."><plain>56 ShirakawaM, FujiwaraY, SugitaY, MoonJH, TakiguchiS, et al (2012) Assessment of stanniocalcin-1 as a prognostic marker in human esophageal squamous cell carcinoma. Oncol Rep 27: 940–946.22200953 </plain></SENT>
+</text></ref><ref id="pone.0105104-Tsukahara1"><text><SENT sid="848" pm="."><plain>57 TsukaharaT, KawaguchiS, TorigoeT, KimuraS, MuraseM, et al (2008) Prognostic impact and immunogenicity of a novel osteosarcoma antigen, papillomavirus binding factor, in patients with osteosarcoma. Cancer Sci 99: 368–75.18271936 </plain></SENT>
+</text></ref><ref id="pone.0105104-Winter1"><text><SENT sid="849" pm="."><plain>58 WinterSC, BuffaFM, SilvaP, MillerC, et al (2007) Relation of a hypoxia metagene derived from head and neck cancer to prognosis of multiple cancers. Cancer Res 67: 3441–3449.17409455 </plain></SENT>
+</text></ref><ref id="pone.0105104-Toustrup1"><text><SENT sid="850" pm="."><plain>59 ToustrupK, ToustrupK, SørensenBS, LassenP, WiufC, et al (2012) Gene expression classifier predicts for hypoxic modification of radiotherapy with nimorazole in squamous cell carcinomas of the head and neck. Radiother Oncol 102: 122–129.21996521 </plain></SENT>
+</text></ref><ref id="pone.0105104-Starmans1"><text><SENT sid="851" pm="."><plain>60 Starmans MH1, Chu KC, Haider S, Nguyen F, Seigneuric R, et al (2012) The prognostic value of temporal in vitro and in vivo derived hypoxia gene-expression signatures in breast cancer. Radiother Oncol 102: 436–43.22356756 </plain></SENT>
+</text></ref></ref-list></SecTag></back></article>

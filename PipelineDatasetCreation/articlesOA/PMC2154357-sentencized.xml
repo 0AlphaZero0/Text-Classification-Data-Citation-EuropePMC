@@ -1,0 +1,496 @@
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD v1.1 20151215//EN" "JATS-archivearticle1.dtd"> 
+<article xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML" article-type="research-article"><?properties open_access?><?DTDIdentifier.IdentifierValue -//NLM//DTD Journal Archiving and Interchange DTD v2.3 20070202//EN?><?DTDIdentifier.IdentifierType public?><?SourceDTD.DTDName archivearticle.dtd?><?SourceDTD.Version 2.3?><?ConverterInfo.XSLTName jp2nlmx2.xsl?><?ConverterInfo.Version 1?><front><journal-meta><journal-id journal-id-type="nlm-ta">J Gen Physiol</journal-id><journal-id journal-id-type="iso-abbrev">J. Gen. Physiol</journal-id><journal-title-group><journal-title>The Journal of General Physiology</journal-title></journal-title-group><issn pub-type="ppub">0022-1295</issn><issn pub-type="epub">1540-7748</issn><publisher><publisher-name>The Rockefeller University Press</publisher-name></publisher></journal-meta><article-meta><article-id pub-id-type="pmcid">2154357</article-id><article-id pub-id-type="publisher-id">200609633</article-id><article-id pub-id-type="doi">10.1085/jgp.200609633</article-id><article-id pub-id-type="pmid">17227917</article-id><article-categories><subj-group subj-group-type="heading"><subject>Articles</subject><subj-group><subject>Article</subject></subj-group></subj-group></article-categories><title-group><article-title><SecTag type="TITLE"><text><SENT sid="0" pm="."><plain>Importance of Hydration and Dynamics on the Selectivity of the KcsA and NaK Channels </plain></SENT>
+</text></SecTag></article-title></title-group><contrib-group><contrib contrib-type="author"><name><surname>Noskov</surname><given-names>Sergei Yu.</given-names></name><xref ref-type="aff" rid="aff1">1</xref><xref ref-type="aff" rid="aff2">2</xref></contrib><contrib contrib-type="author"><name><surname>Roux</surname><given-names>Benoît</given-names></name><xref ref-type="aff" rid="aff1">1</xref></contrib></contrib-group><aff id="aff1">
+<label>1</label>Institute for Molecular Pediatric Sciences, Gordon Center for Integrative Sciences, University of Chicago, Chicago, IL 60637</aff><aff id="aff2">
+<label>2</label>Institute for Biocomplexity and Informatics, Department of Biological Sciences, University of Calgary, Calgary, AB, Canada, T2N 1N4</aff><author-notes><fn><p><text><SENT sid="1" pm="."><plain>Correspondence to Benoît Roux: roux@uchicago.edu </plain></SENT>
+</text></p></fn></author-notes><pub-date pub-type="ppub"><month>2</month><year>2007</year></pub-date><volume>129</volume><issue>2</issue><fpage>135</fpage><lpage>143</lpage><history><date date-type="received"><day>18</day><month>7</month><year>2006</year></date><date date-type="accepted"><day>12</day><month>12</month><year>2006</year></date></history><permissions><copyright-statement>Copyright © 2007, The Rockefeller University Press</copyright-statement><license license-type="openaccess"><license-p>This article is distributed under the terms of an Attribution–Noncommercial–Share Alike–No Mirror Sites license for the first six months after the publication date (see <ext-link ext-link-type="uri" xlink:href="http://www.rupress.org/terms">http://www.rupress.org/terms</ext-link>). After six months it is available under a Creative Commons License (Attribution–Noncommercial–Share Alike 4.0 Unported license, as described at <ext-link ext-link-type="uri" xlink:href="http://creativecommons.org/licenses/by-nc-sa/4.0/">http://creativecommons.org/licenses/by-nc-sa/4.0/</ext-link>).</license-p></license></permissions><self-uri xlink:title="pdf" xlink:type="simple" xlink:href="jgp1290135.pdf"/><abstract><p><SecTag type="ABS"><text><SENT sid="2" pm="."><plain>Fundamental concepts governing ion selectivity in narrow pores are reviewed and the microscopic factors responsible for the lack of selectivity of the NaK channel, which is structurally similar to the K+-selective KcsA channel, are elucidated on the basis of all-atom molecular dynamics free energy simulations. </plain></SENT>
+<SENT sid="3" pm="."><plain>The results on NaK are contrasted and compared with previous studies of the KcsA channel. </plain></SENT>
+<SENT sid="4" pm="."><plain>Analysis indicates that differences in hydration of the cation in the pore of NaK is at the origin of the lack of selectivity of NaK. </plain></SENT>
+</text></SecTag></p></abstract></article-meta><notes><fn-group><fn><p><text><SENT sid="5" pm="."><plain>Abbreviations used in this paper: FEP/MD, free energy perturbation molecular dynamics. </plain></SENT>
+</text></p></fn></fn-group></notes></front><body><SecTag type="INTRO"><sec><title><text><SENT sid="6" pm="."><plain>INTRODUCTION </plain></SENT>
+</text></title><p><text><SENT sid="7" pm="."><plain>Selectivity is one of the most fascinating properties of ion channels. </plain></SENT>
+<SENT sid="8" pm="."><plain>The x-ray structure of the KcsA channel has revealed the basic architectural organization of a K+-selective ion channel (Doyle et al., 1998; Zhou et al., 2001). </plain></SENT>
+<SENT sid="9" pm="."><plain>The recent determination of the structure of the NaK channel by Shi et al. (2006), a nonselective cationic channel apparently able to conduct both K+ and Na+, provides fresh insights into the possible molecular organization of Na+-selective tetrameric channels. </plain></SENT>
+</text></p><p><text><SENT sid="10" pm="."><plain>Though there are some notable differences, the overall organization of the nonselective NaK channel is very similar to that of the K+-selective KcsA channel. </plain></SENT>
+<SENT sid="11" pm="."><plain>Furthermore, some of the NaK binding sites are almost identical to their KcsA counterparts, as any angstrom-scale differences would be well within the range of atomic thermal fluctuations for flexible protein binding sites at room temperature (even accounting for the moderate resolution afforded by the current diffraction data). </plain></SENT>
+</text></p><p><text><SENT sid="12" pm="."><plain>These puzzling observations suggest that some factors, other than the average geometry of the protein atoms, should be responsible for the lack of selectivity of the NaK channel. </plain></SENT>
+<SENT sid="13" pm="."><plain>Previous computational studies of KcsA have shown that it is essential to take the influence of flexibility and dynamical factors into account to explain the microscopic basis of ion selectivity (Noskov et al., 2004). </plain></SENT>
+<SENT sid="14" pm="."><plain>Simple considerations based on static structures appear to be inherently insufficient. </plain></SENT>
+<SENT sid="15" pm="."><plain>The goal of this article is to review the fundamental concepts governing ion selectivity and examine the microscopic factors that could be responsible for the lack of selectivity of the NaK channel using free energy perturbation molecular dynamics (FEP/MD) simulations based on atomic models. </plain></SENT>
+</text></p></sec></SecTag><SecTag type="METHODS"><sec sec-type="materials|methods"><title><text><SENT sid="16" pm="."><plain>MATERIALS AND METHODS </plain></SENT>
+</text></title><p><text><SENT sid="17" pm="."><plain>The atomic simulation system comprises the NaK channel embedded in an explicit dipalmitoylphosphatidylcholine (DPPC) membrane solvated by 150 mM NaCl aqueous solution. </plain></SENT>
+<SENT sid="18" pm="."><plain>The total number of atoms in the system is 56,001. </plain></SENT>
+<SENT sid="19" pm="."><plain>All calculations were performed using the program CHARMM (Brooks et al., 1983) with the PARAM27 force field (MacKerell et al., 1998). </plain></SENT>
+<SENT sid="20" pm="."><plain>The relative free energy of Na+ and K+ was computed using alchemical FEP/MD simulations (Kollman, 1993). </plain></SENT>
+<SENT sid="21" pm="."><plain>The FEP/MD methodology is identical to that used previously (Noskov et al., 2004). </plain></SENT>
+<SENT sid="22" pm="."><plain>In brief, the system is simulated at constant pressure (1 Atm) and constant temperature (315 K) with periodic boundary conditions (Feller et al., 1995), with no truncation of electrostatic interactions using a particle mesh Ewald algorithm (Essmann et al., 1995) Several of the free energy computations on KcsA (site S1, S2, S3) and NaK (site S2 and S3) were redone using the AMBER force field (Cornell et al., 1995) and the ion parameters from Åqvist (1990). </plain></SENT>
+<SENT sid="23" pm="."><plain>For each site in the NaK channel, the FEP/MD selectivity computations are performed on the basis of representative multi-ion configurations. </plain></SENT>
+<SENT sid="24" pm="."><plain>There are always at least two ions in the pore. </plain></SENT>
+<SENT sid="25" pm="."><plain>It is assumed that ions do not occupy adjacent binding sites in the most probable occupancy states as suggested by previous computations on KcsA (Åqvist and Luzhkov, 2000; Bernèche and Roux, 2001). </plain></SENT>
+<SENT sid="26" pm="."><plain>Furthermore, the site S2 is water filled during the FEP/MD computations for S3 and S4. </plain></SENT>
+<SENT sid="27" pm="."><plain>No ion is detected in this site in the x-ray data, which is indicative of a low affinity site. </plain></SENT>
+<SENT sid="28" pm="."><plain>Accordingly, the occupancy state for the FEP/MD computation on site S2 is [S0=Ca2+, S2=K+→Na+, S3=water, S4=water, Cavity=water]. </plain></SENT>
+<SENT sid="29" pm="."><plain>The state for the S3 computation is [S0=Ca2+, S2=water, S3=K+→Na+, S4=water, Cavity=water]. </plain></SENT>
+<SENT sid="30" pm="."><plain>The state for the S4 computation is [S0=Ca2+, S2=water, S3=water, S4=K+→Na+, Cavity=water]. </plain></SENT>
+<SENT sid="31" pm="."><plain>For the computations on the cavity site, the state is [S0=Ca2+, S2=Na+, S3=water, S4=water, Cavity= K+→Na+]. </plain></SENT>
+<SENT sid="32" pm="."><plain>The computed ΔΔG [K+ to Na+] are −0.9 (−1.1), 1.1 (1.7), −0.9, and −0.6 kcal/mol for S2, S3, S4, and the cavity, respectively (numbers in parenthesis were obtained with the AMBER force field). </plain></SENT>
+<SENT sid="33" pm="."><plain>A trajectory of 2.2 ns following an equilibration of at least 1.5 ns was used for each of the separate free energy calculations. </plain></SENT>
+<SENT sid="34" pm="."><plain>All values are reported in Table I together with previous results on KcsA (Bernèche and Roux, 2001; Noskov et al., 2004). </plain></SENT>
+<SENT sid="35" pm="."><plain>We estimate that the accuracy and overall significance of the calculated free energies is roughly on the order of 1 kcal/mol, based on the difference between the computations with 1K4C (Noskov et al., 2004) and 1BL8 (Bernèche and Roux, 2001) and the comparison between the CHARMM PARAM27 and AMBER force fields. </plain></SENT>
+<SENT sid="36" pm="."><plain>For the simulations with the AMBER force field, the systems were reequilibriated for 1.5 ns before starting the free energy computations. </plain></SENT>
+<SENT sid="37" pm="."><plain>The hydration number of K+ and Na+ in the various binding sites were computed from the average of 800 ps of MD for each configuration; statistical error was estimated by comparing block averages. </plain></SENT>
+</text></p><SecTag type="TABLE"><table-wrap id="tbl1" position="float"><label>TABLE I</label><caption><p><text><SENT sid="38" pm="."><plain>Calculated ΔΔG (in kcal/mol) for the Binding Sites of KcsA and NaK </plain></SENT>
+</text></p></caption><table frame="hsides" rules="groups"><thead><tr><th colspan="1" rowspan="1" align="left"><text><SENT sid="39" pm="."><plain>Site </plain></SENT>
+</text></th><th colspan="1" rowspan="1" align="center"><text><SENT sid="40" pm="."><plain>KcsA (1K4C) </plain></SENT>
+</text></th><th colspan="1" rowspan="1" align="center"><text><SENT sid="41" pm="."><plain>KcsA (1BL8) </plain></SENT>
+</text></th><th colspan="1" rowspan="1" align="center"><text><SENT sid="42" pm="."><plain>NaK </plain></SENT>
+</text></th></tr></thead><tbody><tr><td colspan="1" rowspan="1" align="left"><text><SENT sid="43" pm="."><plain>S0 </plain></SENT>
+</text></td><td colspan="1" rowspan="1" align="center"><text><SENT sid="44" pm="."><plain>−1.3 </plain></SENT>
+</text></td><td colspan="1" rowspan="1" align="char" char="."><text><SENT sid="45" pm="."><plain>−1.1 </plain></SENT>
+</text></td><td colspan="1" rowspan="1" align="left" valign="top"/></tr><tr><td colspan="1" rowspan="1" align="left"><text><SENT sid="46" pm="."><plain>S1 </plain></SENT>
+</text></td><td colspan="1" rowspan="1" align="center"><text><SENT sid="47" pm="."><plain>2.6 (2.1) </plain></SENT>
+</text></td><td colspan="1" rowspan="1" align="char" char="."><text><SENT sid="48" pm="."><plain>2.8 </plain></SENT>
+</text></td><td colspan="1" rowspan="1" align="left" valign="top"/></tr><tr><td colspan="1" rowspan="1" align="left"><text><SENT sid="49" pm="."><plain>S2 </plain></SENT>
+</text></td><td colspan="1" rowspan="1" align="center"><text><SENT sid="50" pm="."><plain>5.3 (4.8) </plain></SENT>
+</text></td><td colspan="1" rowspan="1" align="char" char="."><text><SENT sid="51" pm="."><plain>6.6 </plain></SENT>
+</text></td><td colspan="1" rowspan="1" align="center"><text><SENT sid="52" pm="."><plain>−0.9 (−1.1) </plain></SENT>
+</text></td></tr><tr><td colspan="1" rowspan="1" align="left"><text><SENT sid="53" pm="."><plain>S3 </plain></SENT>
+</text></td><td colspan="1" rowspan="1" align="center"><text><SENT sid="54" pm="."><plain>1.8 (2.7) </plain></SENT>
+</text></td><td colspan="1" rowspan="1" align="char" char="."><text><SENT sid="55" pm="."><plain>2.4 </plain></SENT>
+</text></td><td colspan="1" rowspan="1" align="center"><text><SENT sid="56" pm="."><plain>1.1 (1.7) </plain></SENT>
+</text></td></tr><tr><td colspan="1" rowspan="1" align="left"><text><SENT sid="57" pm="."><plain>S4 </plain></SENT>
+</text></td><td colspan="1" rowspan="1" align="center"><text><SENT sid="58" pm="."><plain>−1.2 </plain></SENT>
+</text></td><td colspan="1" rowspan="1" align="char" char="."><text><SENT sid="59" pm="."><plain>−1.5 </plain></SENT>
+</text></td><td colspan="1" rowspan="1" align="center"><text><SENT sid="60" pm="."><plain>−0.9 </plain></SENT>
+</text></td></tr><tr><td colspan="1" rowspan="1" align="left"><text><SENT sid="61" pm="."><plain>Cavity </plain></SENT>
+</text></td><td colspan="1" rowspan="1" align="center"><text><SENT sid="62" pm="."><plain>−0.8 </plain></SENT>
+</text></td><td colspan="1" rowspan="1" align="char" char="."><text><SENT sid="63" pm="."><plain>−0.2 </plain></SENT>
+</text></td><td colspan="1" rowspan="1" align="center"><text><SENT sid="64" pm="."><plain>−0.6 </plain></SENT>
+</text></td></tr></tbody></table><table-wrap-foot><fn><p><text><SENT sid="65" pm="."><plain>The calculations on the KcsA channel were done for the x-ray structures 1K4C (Noskov et al., 2004) and 1BL8 (Bernèche and Roux, 2001) using the CHARMM PARAM27 force field (MacKerell et al., 1998). </plain></SENT>
+<SENT sid="66" pm="."><plain>Results in parentheses were obtained with the AMBER force field (Cornell et al., 1995) and the Åqvist ion parameters (Åqvist, 1990). </plain></SENT>
+</text></p></fn></table-wrap-foot></table-wrap></SecTag><p><text><SENT sid="67" pm="."><plain>The toy models of freely fluctuating ligands include only the ion surrounded by the ligands in the first coordination shell, with nothing else (thus, no periodic boundary conditions and no particle mesh Ewald are applied). </plain></SENT>
+<SENT sid="68" pm="."><plain>For example, in the case of the model with eight carbonyl-like ligands, there are 17 particles (eight carbon C, eight oxygen O, and one ion). </plain></SENT>
+<SENT sid="69" pm="."><plain>The free energy computations for the toy models were performed with the same FEP methodology and the same values of thermodynamic coupling parameter. </plain></SENT>
+<SENT sid="70" pm="."><plain>To ensure thermalization of such a small system, the FEP/MD simulations were generated with Langevin dynamics at a temperature of 315 K with a friction coefficient equal to 25 ps−1 (the value of the friction coefficient has no impact on equilibrium thermodynamics and calculated free energies). </plain></SENT>
+<SENT sid="71" pm="."><plain>The Lennard-Jones parameters and partial charges (see Table S1, available at <ext-link ext-link-type="uri" xlink:href="http://www.jgp.org/cgi/content/full/jgp.200609633/DC1">http://www.jgp.org/cgi/content/full/jgp.200609633/DC1</ext-link>) were all taken from the all-atom PARAM27 CHARMM force field, and the electrostatic interactions between the particles is not altered by any dielectric shielding (the surrounding space is vacuum with dielectric constant equal to 1). </plain></SENT>
+<SENT sid="72" pm="."><plain>The ligands are restrained by a flat-bottom half-harmonic potential. </plain></SENT>
+<SENT sid="73" pm="."><plain>The restraining potential, defined as a function of the distance R between the ion and the oxygen ligands, is equal to K(R − 3.5)2 when R &gt; 3.5 Å, and zero otherwise. </plain></SENT>
+<SENT sid="74" pm="."><plain>The force constant, K, is equal to 100 kcal/mol/Å2 (the precise value of K has no impact on the results). </plain></SENT>
+<SENT sid="75" pm="."><plain>The ligands around the ion in the toy model are allowed to move freely in any direction and that no restraint prevent the collapse of the ligands to cradle the small Na+ ion; absolutely no restraining force is applied to the ligands for R &lt; 3.5 Å. </plain></SENT>
+<SENT sid="76" pm="."><plain>For comparison, the calculations with the toy models were repeated using the AMBER force field. </plain></SENT>
+<SENT sid="77" pm="."><plain>All results are given in Table II. </plain></SENT>
+</text></p><sec><title><text><SENT sid="78" pm="."><plain>Online Supplemental Material </plain></SENT>
+</text></title><p><text><SENT sid="79" pm="."><plain>The supplemental material (available at <ext-link ext-link-type="uri" xlink:href="http://www.jgp.org/cgi/content/full/jgp.200609633/DC1">http://www.jgp.org/cgi/content/full/jgp.200609633/DC1</ext-link>) includes one table (Table S1) with the partial atomic charges and the Lennard-Jones parameters used for the toy models. </plain></SENT>
+</text></p><SecTag type="TABLE"><table-wrap id="tbl2" position="float"><label>TABLE II</label><caption><p><text><SENT sid="80" pm="."><plain>The Variation of ΔΔG as a Function of a Toy Model Ligand Composition </plain></SENT>
+</text></p></caption><table frame="hsides" rules="groups"><thead><tr><th colspan="1" rowspan="1" align="left"><text><SENT sid="81" pm="."><plain>Number of carbonyls </plain></SENT>
+</text></th><th colspan="1" rowspan="1" align="center"><text><SENT sid="82" pm="."><plain>Number of watermolecules </plain></SENT>
+</text></th><th colspan="1" rowspan="1" align="center"><text><SENT sid="83" pm="."><plain>Number ofcarboxylates </plain></SENT>
+</text></th><th colspan="2" rowspan="1" align="center"><text><SENT sid="84" pm="."><plain>ΔΔG (kcal/mol) </plain></SENT>
+</text></th></tr></thead><tbody><tr><td colspan="1" rowspan="1" align="left"><text><SENT sid="85" pm="."><plain>8 </plain></SENT>
+</text></td><td colspan="1" rowspan="1" align="char" char="."><text><SENT sid="86" pm="."><plain>0 </plain></SENT>
+</text></td><td colspan="1" rowspan="1" align="char" char="."><text><SENT sid="87" pm="."><plain>0 </plain></SENT>
+</text></td><td colspan="1" rowspan="1" align="char" char="."><text><SENT sid="88" pm="."><plain>6.2 </plain></SENT>
+</text></td><td colspan="1" rowspan="1" align="char" char="."><text><SENT sid="89" pm="."><plain>(4.1) </plain></SENT>
+</text></td></tr><tr><td colspan="1" rowspan="1" align="left"><text><SENT sid="90" pm="."><plain>7 </plain></SENT>
+</text></td><td colspan="1" rowspan="1" align="char" char="."><text><SENT sid="91" pm="."><plain>1 </plain></SENT>
+</text></td><td colspan="1" rowspan="1" align="char" char="."><text><SENT sid="92" pm="."><plain>0 </plain></SENT>
+</text></td><td colspan="1" rowspan="1" align="char" char="."><text><SENT sid="93" pm="."><plain>4.8 </plain></SENT>
+</text></td><td colspan="1" rowspan="1" align="char" char="."><text><SENT sid="94" pm="."><plain>(3.6) </plain></SENT>
+</text></td></tr><tr><td colspan="1" rowspan="1" align="left"><text><SENT sid="95" pm="."><plain>6 </plain></SENT>
+</text></td><td colspan="1" rowspan="1" align="char" char="."><text><SENT sid="96" pm="."><plain>2 </plain></SENT>
+</text></td><td colspan="1" rowspan="1" align="char" char="."><text><SENT sid="97" pm="."><plain>0 </plain></SENT>
+</text></td><td colspan="1" rowspan="1" align="char" char="."><text><SENT sid="98" pm="."><plain>2.3 </plain></SENT>
+</text></td><td colspan="1" rowspan="1" align="char" char="."><text><SENT sid="99" pm="."><plain>(3.1) </plain></SENT>
+</text></td></tr><tr><td colspan="1" rowspan="1" align="left"><text><SENT sid="100" pm="."><plain>5 </plain></SENT>
+</text></td><td colspan="1" rowspan="1" align="char" char="."><text><SENT sid="101" pm="."><plain>3 </plain></SENT>
+</text></td><td colspan="1" rowspan="1" align="char" char="."><text><SENT sid="102" pm="."><plain>0 </plain></SENT>
+</text></td><td colspan="1" rowspan="1" align="char" char="."><text><SENT sid="103" pm="."><plain>−0.7 </plain></SENT>
+</text></td><td colspan="1" rowspan="1" align="char" char="."><text><SENT sid="104" pm="."><plain>(2.2) </plain></SENT>
+</text></td></tr><tr><td colspan="1" rowspan="1" align="left"><text><SENT sid="105" pm="."><plain>4 </plain></SENT>
+</text></td><td colspan="1" rowspan="1" align="char" char="."><text><SENT sid="106" pm="."><plain>4 </plain></SENT>
+</text></td><td colspan="1" rowspan="1" align="char" char="."><text><SENT sid="107" pm="."><plain>0 </plain></SENT>
+</text></td><td colspan="1" rowspan="1" align="char" char="."><text><SENT sid="108" pm="."><plain>−2.1 </plain></SENT>
+</text></td><td colspan="1" rowspan="1" align="char" char="."><text><SENT sid="109" pm="."><plain>(0.5) </plain></SENT>
+</text></td></tr><tr><td colspan="1" rowspan="1" align="left"><text><SENT sid="110" pm="."><plain>6 </plain></SENT>
+</text></td><td colspan="1" rowspan="1" align="char" char="."><text><SENT sid="111" pm="."><plain>0 </plain></SENT>
+</text></td><td colspan="1" rowspan="1" align="char" char="."><text><SENT sid="112" pm="."><plain>0 </plain></SENT>
+</text></td><td colspan="1" rowspan="1" align="char" char="."><text><SENT sid="113" pm="."><plain>3.4 </plain></SENT>
+</text></td><td colspan="1" rowspan="1" align="char" char="."><text><SENT sid="114" pm="."><plain>(1.9) </plain></SENT>
+</text></td></tr><tr><td colspan="1" rowspan="1" align="left"><text><SENT sid="115" pm="."><plain>5 </plain></SENT>
+</text></td><td colspan="1" rowspan="1" align="char" char="."><text><SENT sid="116" pm="."><plain>1 </plain></SENT>
+</text></td><td colspan="1" rowspan="1" align="char" char="."><text><SENT sid="117" pm="."><plain>0 </plain></SENT>
+</text></td><td colspan="1" rowspan="1" align="char" char="."><text><SENT sid="118" pm="."><plain>3.2 </plain></SENT>
+</text></td><td colspan="1" rowspan="1" align="char" char="."><text><SENT sid="119" pm="."><plain>(1.7) </plain></SENT>
+</text></td></tr><tr><td colspan="1" rowspan="1" align="left"><text><SENT sid="120" pm="."><plain>4 </plain></SENT>
+</text></td><td colspan="1" rowspan="1" align="char" char="."><text><SENT sid="121" pm="."><plain>2 </plain></SENT>
+</text></td><td colspan="1" rowspan="1" align="char" char="."><text><SENT sid="122" pm="."><plain>0 </plain></SENT>
+</text></td><td colspan="1" rowspan="1" align="char" char="."><text><SENT sid="123" pm="."><plain>0.3 </plain></SENT>
+</text></td><td colspan="1" rowspan="1" align="char" char="."><text><SENT sid="124" pm="."><plain>(0.9) </plain></SENT>
+</text></td></tr><tr><td colspan="1" rowspan="1" align="left"><text><SENT sid="125" pm="."><plain>7 </plain></SENT>
+</text></td><td colspan="1" rowspan="1" align="char" char="."><text><SENT sid="126" pm="."><plain>0 </plain></SENT>
+</text></td><td colspan="1" rowspan="1" align="char" char="."><text><SENT sid="127" pm="."><plain>1 </plain></SENT>
+</text></td><td colspan="1" rowspan="1" align="char" char="."><text><SENT sid="128" pm="."><plain>−1.1 </plain></SENT>
+</text></td><td colspan="1" rowspan="1" align="char" char="."><text><SENT sid="129" pm="."><plain>(−1.0) </plain></SENT>
+</text></td></tr><tr><td colspan="1" rowspan="1" align="left"><text><SENT sid="130" pm="."><plain>6 </plain></SENT>
+</text></td><td colspan="1" rowspan="1" align="char" char="."><text><SENT sid="131" pm="."><plain>1 </plain></SENT>
+</text></td><td colspan="1" rowspan="1" align="char" char="."><text><SENT sid="132" pm="."><plain>1 </plain></SENT>
+</text></td><td colspan="1" rowspan="1" align="char" char="."><text><SENT sid="133" pm="."><plain>−1.3 </plain></SENT>
+</text></td><td colspan="1" rowspan="1" align="char" char="."><text><SENT sid="134" pm="."><plain>(−1.2) </plain></SENT>
+</text></td></tr><tr><td colspan="1" rowspan="1" align="left"><text><SENT sid="135" pm="."><plain>5 </plain></SENT>
+</text></td><td colspan="1" rowspan="1" align="char" char="."><text><SENT sid="136" pm="."><plain>2 </plain></SENT>
+</text></td><td colspan="1" rowspan="1" align="char" char="."><text><SENT sid="137" pm="."><plain>1 </plain></SENT>
+</text></td><td colspan="1" rowspan="1" align="char" char="."><text><SENT sid="138" pm="."><plain>−2.0 </plain></SENT>
+</text></td><td colspan="1" rowspan="1" align="char" char="."><text><SENT sid="139" pm="."><plain>(−1.9) </plain></SENT>
+</text></td></tr><tr><td colspan="1" rowspan="1" align="left"><text><SENT sid="140" pm="."><plain>4 </plain></SENT>
+</text></td><td colspan="1" rowspan="1" align="char" char="."><text><SENT sid="141" pm="."><plain>2 </plain></SENT>
+</text></td><td colspan="1" rowspan="1" align="char" char="."><text><SENT sid="142" pm="."><plain>1 </plain></SENT>
+</text></td><td colspan="1" rowspan="1" align="char" char="."><text><SENT sid="143" pm="."><plain>−2.8 </plain></SENT>
+</text></td><td colspan="1" rowspan="1" align="char" char="."><text><SENT sid="144" pm="."><plain>(−2.2) </plain></SENT>
+</text></td></tr><tr><td colspan="1" rowspan="1" align="left"><text><SENT sid="145" pm="."><plain>3 </plain></SENT>
+</text></td><td colspan="1" rowspan="1" align="char" char="."><text><SENT sid="146" pm="."><plain>2 </plain></SENT>
+</text></td><td colspan="1" rowspan="1" align="char" char="."><text><SENT sid="147" pm="."><plain>1 </plain></SENT>
+</text></td><td colspan="1" rowspan="1" align="char" char="."><text><SENT sid="148" pm="."><plain>−3.4 </plain></SENT>
+</text></td><td colspan="1" rowspan="1" align="char" char="."><text><SENT sid="149" pm="."><plain>(−2.5) </plain></SENT>
+</text></td></tr></tbody></table><table-wrap-foot><fn><p><text><SENT sid="150" pm="."><plain>The results are based on the FEP computations done on a simple model of one cation surrounded by dynamical ligands allowed to move freely within a sphere of radius 3.5 Å using the CHARMM PARAM27 force field (MacKerell et al., 1998). </plain></SENT>
+<SENT sid="151" pm="."><plain>Results in parenthesis were obtained with the AMBER force field (Cornell et al., 1995) and the Åqvist ion parameters (Åqvist, 1990). </plain></SENT>
+</text></p></fn></table-wrap-foot></table-wrap></SecTag></sec></sec></SecTag><SecTag type="RESULTS"><sec><title><text><SENT sid="152" pm="."><plain>RESULTS </plain></SENT>
+</text></title><sec><title><text><SENT sid="153" pm="."><plain>Fundamental Concepts </plain></SENT>
+</text></title><p><text><SENT sid="154" pm="."><plain>It is worthwhile reviewing the fundamental concepts governing Na+/K+ selectivity in narrow pores. </plain></SENT>
+<SENT sid="155" pm="."><plain>Although kinetic factors must be taken into consideration for a complete description of ions fluxes, the present discussion will be limited to ion-binding selectivity, which is governed by equilibrium thermodynamics. </plain></SENT>
+</text></p><p><text><SENT sid="156" pm="."><plain>Small alkali ions are very strongly hydrated in the bulk phase; the hydration free energy of Na+ and K+ is about −98 kcal/mol and −80 kcal/mol, respectively (Friedman and Krishnan, 1973). </plain></SENT>
+<SENT sid="157" pm="."><plain>To be “recognized” by a protein, an ion must shed at least part of its first hydration shell in the bound state. </plain></SENT>
+<SENT sid="158" pm="."><plain>For an ion to bind favorably, the free energy cost for dehydration must be compensated by interactions gained in the binding site. </plain></SENT>
+<SENT sid="159" pm="."><plain>Selectivity arises when the difference in free energies of ions in the binding site departs from the corresponding difference in the bulk. </plain></SENT>
+<SENT sid="160" pm="."><plain>It follows that ion selectivity of binding is fundamentally governed by differences in relative free energies, and that the problem of ion selectivity can be stated from the point of view of thermodynamic equilibrium as,(1)\documentclass[10pt]{article} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{pmc} \usepackage[Euler]{upgreek} \pagestyle{empty} \oddsidemargin -1.0in \begin{document} \begin{equation*}{\mathrm{{\Delta}{\Delta}G}}[{\mathrm{K}}^{+}{\rightarrow}{\mathrm{Na}}^{+}]={\mathrm{{\Delta}G}}_{{\mathrm{pore}}}[{\mathrm{K}}^{+}{\rightarrow}{\mathrm{Na}}^{+}]-{\mathrm{{\Delta}G}}_{{\mathrm{bulk}}}[{\mathrm{K}}^{+}{\rightarrow}{\mathrm{Na}}^{+}].\end{equation*}\end{document} </plain></SENT>
+</text></p><p><text><SENT sid="161" pm="."><plain>(For simplicity, the bracket [K+→Na+] will be omitted in the following.) The difference of 18 kcal/mol in the hydration free energies of Na+ and K+ ions, corresponding to ΔGbulk, sets the fundamental “baseline” for the Na/K selectivity of all biological ion channels (specific for Na+ or for K+). </plain></SENT>
+<SENT sid="162" pm="."><plain>At the simplest level, the concepts invoked in host–guest chemistry (Dietrich, 1985), in which a host molecule with a (preorganized) cavity binds an ion of the appropriate radius, provide a basis for a rational discussion of ΔGpore. </plain></SENT>
+<SENT sid="163" pm="."><plain>For example, selectivity for Na+ over K+ might be understood by imagining a cavity that would fit Na+ well but that would be too small to hold K+. </plain></SENT>
+<SENT sid="164" pm="."><plain>In contrast, selectivity for K+ over Na+ is more puzzling because it is the larger of the two cations that is favored. </plain></SENT>
+<SENT sid="165" pm="."><plain>The most intuitively appealing explanation of K+ selectivity is the concept of the “snug-fit” proposed in the early 1970s (Bezanilla and Armstrong, 1972). </plain></SENT>
+<SENT sid="166" pm="."><plain>As illustrated in Fig. 1 (A and B), the snug-fit mechanism posits that the binding site is, for structural reasons, rigidly constrained in an optimal geometry so that a dehydrated K+ fits with proper coordination but that Na+ is too small and is, thus, poorly coordinated by the host. </plain></SENT>
+<SENT sid="167" pm="."><plain>Selectivity then comes about from the difference in the interaction of the ion with the coordinating ligands compared with the hydration free energy. </plain></SENT>
+</text></p><SecTag type="FIG"><fig id="fig1" position="float"><label>Figure 1.</label><caption><p><text><SENT sid="168" pm="."><plain>Illustration of fundamental concepts in ion selectivity. </plain></SENT>
+<SENT sid="169" pm="."><plain>In the top, K+ and Na+ are pictured in bulk solution with their first hydration shell. </plain></SENT>
+<SENT sid="170" pm="."><plain>The difference in hydration free energy ΔGbulk between these two cations is ∼18 kcal/mol. </plain></SENT>
+<SENT sid="171" pm="."><plain>Binding to a rigid host (B) with a cavity size matching precisely a K+ ion (left) does not provide a favorable environment for the smaller Na+ (right). </plain></SENT>
+<SENT sid="172" pm="."><plain>In this case, selectivity arises from the poor coordination interaction free energy ΔGint between the ion and its rigid host. </plain></SENT>
+<SENT sid="173" pm="."><plain>This is the classical snug-fit mechanism (Bezanilla and Armstrong, 1972). </plain></SENT>
+<SENT sid="174" pm="."><plain>However, selectivity may also be achieved by a flexible host (C) able to deform and adapt to both K+ and Na+ ion, as long as there is a sufficient buildup of strain energy ΔGstrain This situation is characteristic of an induced-fit mechanism. </plain></SENT>
+</text></p></caption><graphic xlink:href="jgp1290135f01"/></fig></SecTag><p><text><SENT sid="175" pm="."><plain>The concept of snug-fit as pictured in Fig. 1 (A and B) is obviously an idealization. </plain></SENT>
+<SENT sid="176" pm="."><plain>In reality, molecules are flexible and may be able to structurally deform and adapt (to some extent) to a bound ion. </plain></SENT>
+<SENT sid="177" pm="."><plain>This situation, characteristic of an induced-fit mechanism, is pictured in Fig. 1 C. </plain></SENT>
+<SENT sid="178" pm="."><plain>When there is flexibility, the net difference in the direct ion–ligand interaction energy may exactly balance the difference in hydration free energy for both K+ and Na+ and, yet, selectivity may be preserved as long as there is a sufficient buildup of unfavorable energy to deform and adapt the host for a given ion. </plain></SENT>
+<SENT sid="179" pm="."><plain>This relates to the classical concept of strain energy invoked in host–guest chemistry (Dietrich, 1985). </plain></SENT>
+<SENT sid="180" pm="."><plain>At first sight, the contribution from strain energy may seem somewhat counterintuitive because both ions appear well coordinated in the bound complexes (Fig. 1 C). </plain></SENT>
+<SENT sid="181" pm="."><plain>For example, a visual examination of a crystallographic structure with a bound K+ would be unable to reveal if one is dealing with the situation of Fig. 1 B (left) or 1 C (left). </plain></SENT>
+<SENT sid="182" pm="."><plain>Nonetheless, the indirect effect of strain on the relative free energy ΔGpore is mathematically rigorous and unambiguous. </plain></SENT>
+<SENT sid="183" pm="."><plain>One should note that the concept of strain energy in host–guest chemistry is traditionally associated with structural distortions of the host (e.g., involving bonds, angles, and dihedrals). </plain></SENT>
+<SENT sid="184" pm="."><plain>The implication is that size selectivity would be expected to vanish in the limit of a flexible host without sufficient structural stiffness. </plain></SENT>
+<SENT sid="185" pm="."><plain>Quantitatively, the effective elastic restoring forces associated with the molecular stiffness are inversely proportional to the magnitude of the atomic thermal fluctuations (Allen et al., 2004). </plain></SENT>
+<SENT sid="186" pm="."><plain>It is shown below that local factors—other than architectural deformations—unexpectedly contribute to the strain energy. </plain></SENT>
+</text></p></sec><sec><title><text><SENT sid="187" pm="."><plain>The K+-selective KcsA Channel </plain></SENT>
+</text></title><p><text><SENT sid="188" pm="."><plain>These classical ideas can be tested and illustrated by carrying detailed computations on the basis of the KcsA channel. </plain></SENT>
+<SENT sid="189" pm="."><plain>Results from previous studies of KcsA are summarized in Table I. </plain></SENT>
+<SENT sid="190" pm="."><plain>According to all-atom free energy MD simulations (Noskov et al., 2004), the most selective binding site of the KcsA, S2, favors K+ over Na+ by ∼5 kcal/mol; the result is 5.3 and 4.8 kcal/mol with the CHARMM PARAM27 (MacKerell et al., 1998) and AMBER (Cornell et al., 1995) force fields, respectively. </plain></SENT>
+<SENT sid="191" pm="."><plain>Nonetheless, the existence of significant thermal fluctuations of the carbonyl groups lining the selectivity filter (∼0.8 Å RMS), much larger than the size difference between Na+ and K+ (∼0.38 Å), seems somewhat at odds with a very selective binding site. </plain></SENT>
+<SENT sid="192" pm="."><plain>Furthermore, it is difficult to imagine how there could be a sufficient buildup of structural strain energy to explain such a robust selectivity (Allen et al., 2004). </plain></SENT>
+<SENT sid="193" pm="."><plain>The carbonyl ligands in the selectivity filter display “liquid-like” dynamics at the sub-angstrom level. </plain></SENT>
+<SENT sid="194" pm="."><plain>Turning off the carbonyl–carbonyl repulsion annihilates the selectivity of the site S2 (Noskov et al., 2004), which indicates that the carbonyl cage forming the binding site is not significantly restrained by the surrounding atoms. </plain></SENT>
+<SENT sid="195" pm="."><plain>Results with a semisynthetic KcsA-like K+ channel recently confirmed the extensive flexibility of the selectivity filter (Valiyaveetil et al., 2006), in accord with the conclusions from previous computational studies (Noskov et al., 2004; Bernèche and Roux, 2005). </plain></SENT>
+</text></p><p><text><SENT sid="196" pm="?"><plain>This leads to the hypothetical but fundamental question: could selectivity for K+ over Na+ be maintained, even in the absence of any sub-angstrom structural stiffness? </plain></SENT>
+<SENT sid="197" pm="."><plain>To address this question, we considered an exceedingly simple “toy model” of eight freely fluctuating carbonyl groups (total of 17 particles). </plain></SENT>
+<SENT sid="198" pm="."><plain>This minimalistic model is a caricature of reality intended to illustrate the concept of selectivity by flexible ligands. </plain></SENT>
+<SENT sid="199" pm="."><plain>By construction, the model possesses no sub-angstrom structural stiffness whatsoever; a harmonic force brings back the carbonyls if they get farther than 3.5 Å from the ion, but no structural forces prevent the carbonyls from collapsing to cradle the small Na+ ion. </plain></SENT>
+<SENT sid="200" pm="."><plain>Surprisingly, the toy model is found to be robustly selective for K+ over Na+ by 6.2 kcal/mol using the CHARMM PARAM27 force field (MacKerell et al., 1998) and 4.1 kcal/mol using the AMBER (Cornell et al., 1995) force field. </plain></SENT>
+<SENT sid="201" pm="."><plain>Analysis shows that the contribution from the ion–ligands interaction cancels out exactly the offset in hydration free energy, and that it is the variation in the ligand–ligand electrostatic repulsion that establishes the selectivity for K+ over Na+. </plain></SENT>
+</text></p><p><text><SENT sid="202" pm="."><plain>The role of ligand–ligand repulsion in dynamical systems can be understood very simply by analogy with the concept of strain energy used in host–guest chemistry (Dietrich, 1985). </plain></SENT>
+<SENT sid="203" pm="."><plain>However, while the classical concept of strain energy in host–guest chemistry is traditionally associated with structural deformations of the host, in the present case strain is realized via “through-space” electrostatic interactions between the ligands coordinating the cation without any sub-angstrom information from the architecture of the protein. </plain></SENT>
+<SENT sid="204" pm="."><plain>The strain energy that gives rise to the selectivity for K+ over Na+ in the toy model corresponds to a buildup of electrostatic repulsion between the ligands forming the coordination shell of the ion. </plain></SENT>
+<SENT sid="205" pm="."><plain>It should be emphasized that the electrostatic repulsion does not prevent the carbonyl oxygens from approaching close enough from one another to form a cage small enough to coordinate the smaller Na+ ion; as in the classical view of strain energy (Fig. 1 C), both K+ and Na+ are well coordinated. </plain></SENT>
+</text></p><p><text><SENT sid="206" pm="."><plain>The key role of specific interactions can be highlighted with a thermodynamic decomposition of the results of FEP/MD simulations, ΔG = ΔH − TΔS. </plain></SENT>
+<SENT sid="207" pm="."><plain>This shows that the relative solvation free energy of ions in the binding site, ΔGpore, is largely dominated by relative enthalpic contributions, ΔHpore, and that relative entropic effects, −TΔSpore, are less important (this does not imply that the absolute contribution from entropy is negligible). </plain></SENT>
+<SENT sid="208" pm="."><plain>This is fortunate because variations in ΔHpore are relatively straightforward to interpret as they involve direct changes in the average potential energy components. </plain></SENT>
+<SENT sid="209" pm="."><plain>The latter can be calculated directly from unbiased all-atom MD simulations of the channel with Na+ or K+. </plain></SENT>
+<SENT sid="210" pm="."><plain>Here, ΔHpore is dominated by two opposing terms: the ion–ligand interaction, which favors a small cation, and the ligand–ligand interaction, which favors a large cation. </plain></SENT>
+<SENT sid="211" pm="."><plain>In going from K+ to Na+, the average change in ion–ligand attraction is about −28.3 kcal/mol, whereas the change in ligand–ligand repulsion is about +14.3 kcal/mol, yielding a ΔΔG of ∼4 kcal/mol favoring K+ over Na+ (after accounting for the change in ΔGbulk), close to the result from FEP/MD computations. </plain></SENT>
+<SENT sid="212" pm="."><plain>This analysis explains why turning off the carbonyl–carbonyl repulsion can have a large impact on selectivity in KcsA in all-atom FEP/MD computations, while not affecting the coordination structure (Noskov et al., 2004; Noskov and Roux, 2006). </plain></SENT>
+<SENT sid="213" pm="."><plain>One should note that the ligand–ligand repulsion energy does change when substituting K+ by Na+ in the binding site, showing that the carbonyls do approach closer from each other to coordinate the smaller Na+ ion (i.e., the effect of the repulsion is not to prevent the carbonyl oxygen atoms from approaching closer from each other). </plain></SENT>
+</text></p><p><text><SENT sid="214" pm="."><plain>As long as its structural integrity is maintained (within ∼1 Å), a flexible site with eight carbonyl groups has the intrinsic propensity to select K+ over Na+ by virtue of the electrostatic properties of the ligands. </plain></SENT>
+<SENT sid="215" pm="."><plain>In such a context, selectivity is expected to be very sensitive to the number and the dipole moment of the coordinating ligands. </plain></SENT>
+<SENT sid="216" pm="."><plain>Modifying the number and/or the type of ligands involved in coordination of the ion is thus a potent mechanism for altering the selectivity of a flexible binding site. </plain></SENT>
+<SENT sid="217" pm="."><plain>As illustrated in Table II, small changes in hydration, in particular, can have a big impact. </plain></SENT>
+<SENT sid="218" pm="."><plain>For example, a toy model of eight carbonyls is K+ selective (∼6 kcal/mol), but progressively replacing the carbonyls by water molecules leads to a loss of selectivity (Noskov and Roux, 2006). </plain></SENT>
+<SENT sid="219" pm="."><plain>A system of five carbonyls and three waters is nonselective with CHARMM while a system of four carbonyls and four waters is nonselective with AMBER. </plain></SENT>
+<SENT sid="220" pm="."><plain>In both cases, there is a systematic loss of selectivity for each water molecule that replaces a carbonyl group (∼1.8 kcal/mol and 0.8 kcal/mol per water using CHARMM and AMBER, respectively). </plain></SENT>
+<SENT sid="221" pm="."><plain>An interesting question is whether it is possible to achieve selectivity for a smaller ion in the limit of no structural rigidity. </plain></SENT>
+<SENT sid="222" pm="."><plain>One way to select Na+ over K+ is to introduce a high-field ligand in the first coordination shell of the ion (Eisenman, 1962, Noskov et al., 2004; Noskov and Roux, 2006). </plain></SENT>
+<SENT sid="223" pm="."><plain>Replacement of a single carbonyl by a negatively charged carboxylate group is sufficient to annihilate the K+ selectivity in the toy model (−1.1 kcal/mol). </plain></SENT>
+<SENT sid="224" pm="."><plain>For example, a flexible binding site comprising one carboxylate with two water molecules and three carbonyls yields a robust selectivity for Na+ (−3.4 kcal/mol with CHARMM and −2.5 kcal/mol with AMBER). </plain></SENT>
+<SENT sid="225" pm="."><plain>Obviously, a number of variations are possible. </plain></SENT>
+</text></p></sec><sec><title><text><SENT sid="226" pm="."><plain>The Nonselective NaK Channel </plain></SENT>
+</text></title><p><text><SENT sid="227" pm="."><plain>The above considerations provide the essential elements to understand the lack of selectivity of the NaK channel. </plain></SENT>
+<SENT sid="228" pm="."><plain>Previous molecular dynamics (MD) free energy simulations (Bernèche and Roux, 2001; Noskov et al., 2004) with the CHARMM PARAM27 force field (MacKerell et al., 1998) as well as additional computations based on the AMBER force field (Cornell et al., 1995) all indicate that the binding site S2 corresponds to the most K+-selective region of the pore of KcsA (see Table I). </plain></SENT>
+<SENT sid="229" pm="."><plain>This is consistent with one of the most striking structural features of the NaK selectivity filter, where the site S2 is widened sufficiently to hold up a “droplet” of approximately three water molecules. </plain></SENT>
+<SENT sid="230" pm="."><plain>To further understand the impact of this structural feature of the NaK pore on selectivity, all-atom free energy MD simulations based on the NaK channel embedded in a solvated lipid membrane were performed (see Fig. 2). </plain></SENT>
+<SENT sid="231" pm="."><plain>The results are summarized in Table I. </plain></SENT>
+<SENT sid="232" pm="."><plain>Those computations confirm that in the NaK channel, the selectivity of the site S2 is annihilated, with a ΔΔG of −0.9 kcal/mol and −1.1 kcal/mol with CHARMM and AMBER, respectively. </plain></SENT>
+<SENT sid="233" pm="."><plain>In NaK, the site S3 is slightly selective for K+ (1.1 kcal/mol with CHARMM and 1.7 kcal/mol with AMBER), though somewhat less than in KcsA (1.8 kcal/mol with CHARMM and 2.7 kcal/mol with AMBER). </plain></SENT>
+<SENT sid="234" pm="."><plain>For both KcsA and NaK the site S4 is marginally selective for Na+. </plain></SENT>
+<SENT sid="235" pm="."><plain>Therefore, disruption of the site S2 thus appears as the major factor explaining why the NaK channel permits conduction of both K+ and Na+. </plain></SENT>
+<SENT sid="236" pm="."><plain>This observation is consistent with previous results on KcsA (Bernèche and Roux, 2001; Noskov et al., 2004). </plain></SENT>
+</text></p><SecTag type="FIG"><fig id="fig2" position="float"><label>Figure 2.</label><caption><p><text><SENT sid="237" pm="."><plain>Molecular dynamics simulations of the NaK channel. </plain></SENT>
+<SENT sid="238" pm="."><plain>(A) Atomic simulation system comprising the NaK channel and the DPPC bilayer solvated by a 150 mM NaCl aqueous solution (total of 56,001 atoms). </plain></SENT>
+<SENT sid="239" pm="."><plain>(B and C) Superposition of 10 instantaneous configurations taken from MD simulations illustrating the coordination and partial hydration of Na+ (B) and K+ (C) in site S3 (Na+, yellow; K+, magenta; water oxygens, red dots). </plain></SENT>
+<SENT sid="240" pm="."><plain>(D and E) Superposition of 10 frames from MD simulations illustrating K+ coordination and partial hydration in sites S2 (D) and S4 (E). </plain></SENT>
+<SENT sid="241" pm="."><plain>The average number of water is 2.3 around Na+ in S3 (B), and is 2.5, 2.1, and 2.4 around K+ in S2 (D), S3 (C), and S4 (E). </plain></SENT>
+</text></p></caption><graphic xlink:href="jgp1290135f02"/></fig></SecTag><p><text><SENT sid="242" pm="."><plain>An important factor appears to be the difference in partial ion hydration between the binding sites of KcsA and NaK. </plain></SENT>
+<SENT sid="243" pm="."><plain>Average hydration numbers computed from MD trajectories are reported in Table III. </plain></SENT>
+<SENT sid="244" pm="."><plain>The differences between the various binding sites of KcsA and NaK are small but statistically well defined. </plain></SENT>
+<SENT sid="245" pm="."><plain>A Na+ in the binding sites of NaK is slightly more hydrated than in the corresponding KcsA sites. </plain></SENT>
+<SENT sid="246" pm="."><plain>In KcsA, cations (K+ or Na+) are hydrated typically by less than two water molecules in the selective sites S1–S3. </plain></SENT>
+<SENT sid="247" pm="."><plain>In the NaK channel there are more water molecules in the first shell of K+. </plain></SENT>
+<SENT sid="248" pm="."><plain>The differences are more striking in the case of a Na+ bound in S3 due to the widening of the pore at S2 (Fig. 2 B); there are 2.3 water molecules for NaK in contrast to 1.9 water molecules for KcsA. </plain></SENT>
+<SENT sid="249" pm="."><plain>Such differences in hydration number between the KcsA and NaK channels are somewhat counterintuitive because in a static view, a bound ion would be expected to make contact with the two adjacent water molecules in the single file along the narrow pore. </plain></SENT>
+<SENT sid="250" pm="."><plain>However, ion, protein atoms, and water molecules are all undergoing thermal fluctuations at room temperature and there are subtle variations. </plain></SENT>
+<SENT sid="251" pm="."><plain>For example, the Na+ bound in the S3 site of NaK does not remain at the center of the cage of eight carbonyls, but fluctuates extensively near its upper and lower edge where it can coordinate water molecules (see Fig. 2 B). </plain></SENT>
+<SENT sid="252" pm="."><plain>Transient contacts with additional water molecules are thus possible without significant distortion of the binding sites. </plain></SENT>
+<SENT sid="253" pm="."><plain>Even though the variations in partial hydration are small, they have nonetheless an important impact on relative free energies. </plain></SENT>
+<SENT sid="254" pm="."><plain>This is illustrated in Fig. 3 where the key results from Tables I–III  have been combined. </plain></SENT>
+<SENT sid="255" pm="."><plain>The figure shows that an increase in the average hydration number correlates strongly with a loss of selectivity for K+ in favor of Na+. </plain></SENT>
+<SENT sid="256" pm="."><plain>This qualitative trend appears to hold for the binding sites of the KcsA and NaK channels, as well as for the toy models with carbonyl and water molecules. </plain></SENT>
+</text></p><SecTag type="TABLE"><table-wrap id="tbl3" position="float"><label>TABLE III</label><caption><p><text><SENT sid="257" pm="."><plain>Average Hydration Number of K + in the Selectivity Filter of KcsA and NaK </plain></SENT>
+</text></p></caption><table frame="hsides" rules="groups"><thead><tr><th colspan="1" rowspan="1" align="left"><text><SENT sid="258" pm="."><plain>Sites </plain></SENT>
+</text></th><th colspan="1" rowspan="1" align="center"><text><SENT sid="259" pm="."><plain>KcsA </plain></SENT>
+</text></th><th colspan="1" rowspan="1" align="center"><text><SENT sid="260" pm="."><plain>NaK </plain></SENT>
+</text></th></tr></thead><tbody><tr><td colspan="1" rowspan="1" align="left"><text><SENT sid="261" pm="."><plain>S0 </plain></SENT>
+</text></td><td colspan="1" rowspan="1" align="center"><text><SENT sid="262" pm="."><plain>2.2 ± 0.5 (2.4 ± 0.4) </plain></SENT>
+</text></td><td colspan="1" rowspan="1" align="left" valign="top"/></tr><tr><td colspan="1" rowspan="1" align="left"><text><SENT sid="263" pm="."><plain>S1 </plain></SENT>
+</text></td><td colspan="1" rowspan="1" align="center"><text><SENT sid="264" pm="."><plain>1.9 ± 0.2 (1.9 ± 0.2) </plain></SENT>
+</text></td><td colspan="1" rowspan="1" align="left" valign="top"/></tr><tr><td colspan="1" rowspan="1" align="left"><text><SENT sid="265" pm="."><plain>S2 </plain></SENT>
+</text></td><td colspan="1" rowspan="1" align="center"><text><SENT sid="266" pm="."><plain>1.4 ± 0.1 (1.4 ± 0.1) </plain></SENT>
+</text></td><td colspan="1" rowspan="1" align="center"><text><SENT sid="267" pm="."><plain>2.5 ± 0.4 (2.7 ± 0.2) </plain></SENT>
+</text></td></tr><tr><td colspan="1" rowspan="1" align="left"><text><SENT sid="268" pm="."><plain>S3 </plain></SENT>
+</text></td><td colspan="1" rowspan="1" align="center"><text><SENT sid="269" pm="."><plain>1.9 ± 0.2 (1.9 ± 0.2) </plain></SENT>
+</text></td><td colspan="1" rowspan="1" align="center"><text><SENT sid="270" pm="."><plain>2.1 ± 0.3 (2.3 ± 0.3) </plain></SENT>
+</text></td></tr><tr><td colspan="1" rowspan="1" align="left"><text><SENT sid="271" pm="."><plain>S4 </plain></SENT>
+</text></td><td colspan="1" rowspan="1" align="center"><text><SENT sid="272" pm="."><plain>2.5 ± 0.5 (2.2 ± 0.4) </plain></SENT>
+</text></td><td colspan="1" rowspan="1" align="center"><text><SENT sid="273" pm="."><plain>2.4 ± 0.1 (2.3 ± 0.2) </plain></SENT>
+</text></td></tr><tr><td colspan="1" rowspan="1" align="left"><text><SENT sid="274" pm="."><plain>Cavity </plain></SENT>
+</text></td><td colspan="1" rowspan="1" align="center"><text><SENT sid="275" pm="."><plain>5.5 ± 0.2 (6.0 ± 0.2) </plain></SENT>
+</text></td><td colspan="1" rowspan="1" align="center"><text><SENT sid="276" pm="."><plain>5.9 ± 0.1 </plain></SENT>
+</text></td></tr></tbody></table><table-wrap-foot><fn><p><text><SENT sid="277" pm="."><plain>Number in parentheses is for Na+. </plain></SENT>
+<SENT sid="278" pm="."><plain>The averages were determined by counting the water oxygens within a sphere of 3 Å around the ion during MD. </plain></SENT>
+</text></p></fn></table-wrap-foot></table-wrap></SecTag><SecTag type="FIG"><fig id="fig3" position="float"><label>Figure 3.</label><caption><p><text><SENT sid="279" pm="."><plain>Relative free energy ΔΔG as a function of the average hydration number. </plain></SENT>
+<SENT sid="280" pm="."><plain>The free energy results were taken from Table I for all the binding sites of KcsA and NaK and from Table II for the toy models with eight ligands (eight carbonyls, seven carbonyls and one water, six carbonyls and two water, etc.). </plain></SENT>
+<SENT sid="281" pm="."><plain>The free energies correspond to the computations with the CHARMM force field. </plain></SENT>
+<SENT sid="282" pm="."><plain>The average hydration numbers were taken from Table III in the case of K+ occupying the given binding sites. </plain></SENT>
+<SENT sid="283" pm="."><plain>The dotted line is only a visual guide. </plain></SENT>
+</text></p></caption><graphic xlink:href="jgp1290135f03"/></fig></SecTag></sec><sec><title><text><SENT sid="284" pm="."><plain>Comparing a Selective and a Nonselective Binding Site </plain></SENT>
+</text></title><p><text><SENT sid="285" pm="."><plain>Shi et al. (2006) proposed that structural differences arising from the protein atoms surrounding the ion-binding sites might account (through geometric constraints) for the observed size selectivity of KcsA and NaK. </plain></SENT>
+<SENT sid="286" pm="."><plain>The underlying assumption is that the geometry of the binding sites is more stiffly enforced in the case of the highly selective KcsA (e.g., Fig. 1 B), but not so in the more permissive NaK (e.g., Fig. 1 C). </plain></SENT>
+<SENT sid="287" pm="."><plain>Such a structural mechanism has a clear implication: the geometry of a “stiff” and selective (KcsA) or “flexible” and permissive (NaK) binding site should respond differently to the presence of a bound K+ or a Na+. </plain></SENT>
+</text></p><p><text><SENT sid="288" pm="."><plain>To shed some light on this issue, we compare the site S3 in NaK, which is essentially nonselective, with the site S2 in KcsA, which is highly selective. </plain></SENT>
+<SENT sid="289" pm="."><plain>One would expect that the geometry of S3 in NaK would be significantly different with a bound Na+ than with a bound K+. </plain></SENT>
+<SENT sid="290" pm="."><plain>In contrast, the geometry of S2 in KcsA should be closely maintained, whether a K+ or a Na+ is bound. </plain></SENT>
+<SENT sid="291" pm="."><plain>To characterize the average structure of the binding sites in KcsA and NaK, we calculate the ion–carbonyl and carbonyl–carbonyl radial distribution functions from the MD trajectories. </plain></SENT>
+<SENT sid="292" pm="."><plain>The results are shown in Fig. 4. </plain></SENT>
+<SENT sid="293" pm="."><plain>The ion–carbonyl oxygen radial distribution function (top) shows that both ions K+ (black) and Na+ (green) are in direct contact with their coordinating oxygen ligands in those binding sites; the peaks are around 2.4 and 2.8 Å for Na+ (green) and K+ (black), respectively. </plain></SENT>
+<SENT sid="294" pm="."><plain>However, there are clear differences in coordination number (dashed line) between the two binding sites. </plain></SENT>
+<SENT sid="295" pm="."><plain>The coordination number rises rapidly up to eight ligands in the case of the S2 site in KcsA, while it rises more slowly in the case of the site S3 in NaK. </plain></SENT>
+<SENT sid="296" pm="."><plain>Notably, there are only four carbonyl oxygens within a distance of 4 Å from a Na+ occupying the site S3 of NaK because the Na+ ion fluctuates near the edges of the carbonyl cage. </plain></SENT>
+<SENT sid="297" pm="."><plain>The ion is coordinated by ∼4 carbonyls and ∼2.3 water molecules (Table III), for a total of approximately six ligands. </plain></SENT>
+<SENT sid="298" pm="."><plain>Consequently, the cage of eight carbonyls is nearly unperturbed. </plain></SENT>
+<SENT sid="299" pm="."><plain>As shown in Fig. 4 (bottom right), the main peak in the diagonal carbonyl oxygen–oxygen distribution function for the site S3 of NaK shifts by ∼0.1 Å toward shorter distance when a K+ (black) is substituted by a Na+ (green). </plain></SENT>
+<SENT sid="300" pm="."><plain>In contrast, the corresponding shift in the diagonal carbonyl oxygen–oxygen distribution function is ∼0.4 Å for the site S2 of KcsA (Fig. 4, bottom, left). </plain></SENT>
+<SENT sid="301" pm="."><plain>Such a shift means that the site S2 of KcsA does indeed collapse to cradle the smaller Na+ ion. </plain></SENT>
+<SENT sid="302" pm="."><plain>Consistent with these results, the change in the average carbonyl–carbonyl interaction of the selective site S2 of KcsA, with a K+ or a Na+ bound, is 14.3 kcal/mol according to unbiased all-atom MD simulations (see above). </plain></SENT>
+<SENT sid="303" pm="."><plain>In contrast, the corresponding change is only 0.4 kcal/mol for the nonselective S3 site of NaK, implying that the carbonyl cage does not collapse onto the smaller ion in this case and that no major structural changes are needed to bind Na+ or K+. </plain></SENT>
+<SENT sid="304" pm="."><plain>Finally, the average root-mean-square deviation of the Na-loaded and K-loaded S3 site relative to the x-ray structure is calculated from the MD trajectory, which is only ∼0.8 Å and ∼0.9 Å, respectively. </plain></SENT>
+<SENT sid="305" pm="."><plain>All those results are consistent with the x-ray data on the NaK channel showing that the structures of the K-loaded and Na-loaded binding sites are very similar. </plain></SENT>
+</text></p><SecTag type="FIG"><fig id="fig4" position="float"><label>Figure 4.</label><caption><p><text><SENT sid="306" pm="."><plain>Comparison of radial distribution functions for the selective site S2 in KcsA (left) and the permissive site S3 in NaK (right). </plain></SENT>
+<SENT sid="307" pm="."><plain>(Top) Ion–carbonyl oxygen radial distribution function (solid line, axis label on the left) and integrated coordination number (dashed line, axis label on the right) for K+ (black) and Na+ (green). </plain></SENT>
+<SENT sid="308" pm="."><plain>(Bottom) Oxygen–oxygen radial distribution function for the opposite diagonal sides of the carbonyl cage forming the binding site for K+ (black) Na+ (green); a similar analysis has been performed by Asthagiri et al. (2006). </plain></SENT>
+</text></p></caption><graphic xlink:href="jgp1290135f04"/></fig></SecTag><p><text><SENT sid="309" pm="."><plain>To summarize the results from all-atom simulations, the carbonyls of the highly selective S2 site of KcsA collapse onto a bound Na+, whereas the permissive S3 site of NaK remains structurally unchanged with Na+ or K+. </plain></SENT>
+<SENT sid="310" pm="."><plain>Such surprising and counterintuitive results simply cannot be reconciled with traditional arguments that ascribe size selectivity exclusively to structural and geometrical factors. </plain></SENT>
+<SENT sid="311" pm="."><plain>As evidenced by this analysis, the collapse of a carbonyl cage to cradle a bound Na+ does not necessarily imply that a site should be nonselective (e.g., S2 in KcsA), and correspondingly, the absence of collapse does not imply that a binding site should be very selective (e.g., S3 in NaK). </plain></SENT>
+<SENT sid="312" pm="."><plain>It should be noted that the present results do not mean that the site S3 of NaK is more rigid than the site S2 in KcsA because the number of water coordinating the ion affect the average geometry of the protein ligands in a flexible binding. </plain></SENT>
+<SENT sid="313" pm="."><plain>The present analysis highlights the importance of taking into consideration the influence of hydration and dynamical factors on the chemistry of ion coordination in discussions of ion selectivity. </plain></SENT>
+</text></p></sec></sec></SecTag><SecTag type="DISCUSS"><sec><title><text><SENT sid="314" pm="."><plain>DISCUSSION </plain></SENT>
+</text></title><p><text><SENT sid="315" pm="."><plain>Ion channels are complex macromolecules and many microscopic factors may have an impact on the selectivity of their binding sites. </plain></SENT>
+<SENT sid="316" pm="."><plain>Because of this complexity, it is necessary to go beyond naive considerations solely based on static structures. </plain></SENT>
+<SENT sid="317" pm="."><plain>In principle, free energy computations based on detailed all-atom MD simulations offer a (the only?) rational approach for assessing the importance of these various factors. </plain></SENT>
+<SENT sid="318" pm="."><plain>Even though present-day simulations could be improved, they are sufficiently accurate to help delineate the physical mechanisms governing ion selectivity in KcsA and NaK. </plain></SENT>
+</text></p><p><text><SENT sid="319" pm="."><plain>The structural difference between the central binding site S2 in KcsA and NaK has major consequences. </plain></SENT>
+<SENT sid="320" pm="."><plain>While this site is the most selective in KcsA, it is widened and nonselective in NaK. </plain></SENT>
+<SENT sid="321" pm="."><plain>This loss of selectivity in S2 is the principal reason why the NaK channel is able to conduct Na+, unlike KcsA. </plain></SENT>
+<SENT sid="322" pm="."><plain>Furthermore, due to the widened S2 site, the NaK selectivity filter is left with a relatively short-length segment forming the two binding sites S3 and S4. </plain></SENT>
+<SENT sid="323" pm="."><plain>A Na+ bound in the S3 site of NaK is slightly more hydrated than would be the case in the S3 site of KcsA. </plain></SENT>
+<SENT sid="324" pm="."><plain>Therefore, in spite of their apparent structural similarity, the chemistry of ion coordination in the S3 site is not truly identical in KcsA and NaK when dynamical hydration effects are taken into account. </plain></SENT>
+<SENT sid="325" pm="."><plain>The calculations show that increased partial hydration is directly implicated in the loss of selectivity at those sites in NaK. </plain></SENT>
+<SENT sid="326" pm="."><plain>In a counterintuitive twist, the calculations also show that the highly selective site S2 in KcsA distorts to coordinate Na+ but the nonselective site S3 in NaK does not. </plain></SENT>
+</text></p><p><text><SENT sid="327" pm="?"><plain>What is the underlying physical mechanism yielding such differences in ion selectivity for binding sites that are seemingly quite similar? </plain></SENT>
+<SENT sid="328" pm="."><plain>The results of the calculations show that selectivity of the binding sites of KcsA and NaK is largely controlled by the dynamical interplay of local ion–ligand and ligand–ligand interactions. </plain></SENT>
+<SENT sid="329" pm="."><plain>Ion–ligand interactions are obviously attractive, while ligand–ligand repulsion acts as a “through-space” electrostatic strain energy. </plain></SENT>
+<SENT sid="330" pm="."><plain>The coordination number alone does not predetermine ion selectivity because both ion–ligand and ligand–ligand interactions depend on the intrinsic physical and electrostatic properties of the ligands, which complicates attempts to achieve mechanistic insight. </plain></SENT>
+<SENT sid="331" pm="."><plain>The key variables that we have identified are the number of coordinating ligands, as well as their particular properties. </plain></SENT>
+<SENT sid="332" pm="."><plain>Most importantly, coordinating oxygen atoms donated by a carbonyl or a water molecule are not equivalent. </plain></SENT>
+<SENT sid="333" pm="."><plain>Different combinations of those ligands can give rise to different K+/Na+ selectivity, as exemplified by the results of Table II. </plain></SENT>
+<SENT sid="334" pm="."><plain>A dynamical site with eight carbonyl groups is robustly selective for K+ over Na+, but the selectivity is lost as the carbonyl groups progressively are replaced by water molecules. </plain></SENT>
+<SENT sid="335" pm="."><plain>As illustrated in Fig. 3, relatively minor changes in hydration number have a significant impact on selectivity. </plain></SENT>
+<SENT sid="336" pm="."><plain>According to the present analysis, it appears that tightly controlled dehydration of permeating cations, as enforced by the long and narrow KcsA pore, is an essential aspect that enables the robust selectivity for K+ over Na+. </plain></SENT>
+<SENT sid="337" pm="."><plain>Because of the widening at the level corresponding to the site S2, the NaK pore allows a minor increase in ion hydration and is permissive to Na+. </plain></SENT>
+</text></p><p><text><SENT sid="338" pm="."><plain>Consistent with the classical concept of “field strength” introduced by Eisenman, the presence of one high-field ligand such as a carboxylate acidic group shifts selectivity in favor of Na+. </plain></SENT>
+<SENT sid="339" pm="."><plain>A robust selectivity for Na+ over K+ can be achieved, for example, by a dynamical site comprising a few carbonyls, water molecules, and one carboxylate. </plain></SENT>
+<SENT sid="340" pm="."><plain>Other ways may be possible, but these results suggest that partial hydration along the permeation pathway, together with one or two carboxylate groups, might be features of Na+-selective channels. </plain></SENT>
+</text></p><p><text><SENT sid="341" pm="."><plain>The present study of the KcsA and NaK channels helps to better delineate the role of the different factors affecting ion selectivity in biological systems. </plain></SENT>
+<SENT sid="342" pm="."><plain>Structural forces, by virtue of the three-dimensional organization of the protein, aim at keeping a set of ligands near some configuration in order to allow for favorable coordination of a specific ion. </plain></SENT>
+<SENT sid="343" pm="."><plain>Increasing the structural stiffness to enforce an optimal ligand geometry specifically for K+ or Na+, evidently, can make a binding site more selective. </plain></SENT>
+<SENT sid="344" pm="."><plain>Such structural forces exist, but there are severe limitations on the stiffness that can be tolerated in the case of ion channels because the ligands must remain sufficiently flexible to allow a high throughput rate. </plain></SENT>
+<SENT sid="345" pm="."><plain>Those limitations may be less stringent in the case of membrane transporters, which operate on much slower timescales; consequently, their ion binding sites could be quite rigid without disrupting function. </plain></SENT>
+<SENT sid="346" pm="."><plain>It is, however, a common misconception that size selectivity can be conferred only by structurally enforcing a precise geometry for the ligands coordinating the ion. </plain></SENT>
+<SENT sid="347" pm="."><plain>As a selective binding site becomes more dynamical and flexible, the dynamical interplay of local ion–ligand and ligand–ligand interactions begins to play an increasingly prominent role. </plain></SENT>
+<SENT sid="348" pm="."><plain>Variations in the type and number of coordinating ligands (including water molecules) offer a wide range of possibilities to engineer robust Na+/K+ selectivity in flexible binding sites, without a need for significant underlying structural rigidity. </plain></SENT>
+<SENT sid="349" pm="."><plain>The robustness of this fundamental mechanism leads us to conjecture that any existing structural stiffness of the binding sites serve primarily to reinforce the basic trend in selectivity set by the number and type of ligands coordinating the ion. </plain></SENT>
+</text></p></sec></SecTag><SecTag type="SUPPL"><sec sec-type="supplementary-material"><title><text><SENT sid="350" pm="."><plain>Supplemental Material </plain></SENT>
+</text></title><supplementary-material content-type="local-data" id="PMC_1"><caption><title><text><SENT sid="351" pm="."><plain>Supplemental Material Index </plain></SENT>
+</text></title></caption><media mimetype="text" mime-subtype="html" xlink:href="jgenphysiol_jgp.200609633_index.html" xlink:type="simple" id="d35e1361" position="anchor"/><media xlink:role="associated-file" mimetype="text" mime-subtype="html" xlink:href="jgenphysiol_jgp.200609633_1.html" xlink:type="simple" id="d35e1362" position="anchor"/></supplementary-material></sec></SecTag></body><back><SecTag type="ACK_FUND"><ack><p><text4fund><text><SENT sid="352" pm="."><plain>The computations were carried out at National Center for Supercomputing Applications (NCSA) and on the WestGrid (Canada). </plain></SENT>
+<SENT sid="353" pm="."><plain>The help of T.W. </plain></SENT>
+<SENT sid="354" pm="."><plain>Allen with the AMBER force field is gratefully acknowledged. </plain></SENT>
+</text></text4fund></p><p><text4fund><text><SENT sid="355" pm="."><plain>This work was supported by grant GM062342 from the National Institutes of Health. </plain></SENT>
+<SENT sid="356" pm="."><plain>S.Y. </plain></SENT>
+<SENT sid="357" pm="."><plain>Noskov was supported by a fellowship from the American Epilepsy Foundation. </plain></SENT>
+</text></text4fund></p><p><text4fund><text><SENT sid="358" pm="."><plain>Olaf S. </plain></SENT>
+<SENT sid="359" pm="."><plain>Andersen served as editor. </plain></SENT>
+</text></text4fund></p></ack></SecTag><SecTag type="REF"><ref-list><ref id="bib1"><text><SENT sid="360" pm="."><plain>Allen, T.W., O.S. </plain></SENT>
+<SENT sid="361" pm="."><plain>Andersen, and B. </plain></SENT>
+<SENT sid="362" pm="."><plain>Roux. 2004. </plain></SENT>
+<SENT sid="363" pm="."><plain>On the importance of atomic fluctuations, protein flexibility and solvent in ion permeation. J. </plain></SENT>
+<SENT sid="364" pm="."><plain>Gen. </plain></SENT>
+<SENT sid="365" pm="."><plain>Physiol. 124:679–690. <?supplied-pmid 15572347?>15572347 </plain></SENT>
+</text></ref><ref id="bib2"><text><SENT sid="366" pm="."><plain>Åqvist, J. 1990 Ion water interaction potential derived from free energy perturbation simulations. J. </plain></SENT>
+<SENT sid="367" pm="."><plain>Phys. </plain></SENT>
+<SENT sid="368" pm="."><plain>Chem. 94:8021–8024. </plain></SENT>
+</text></ref><ref id="bib3"><text><SENT sid="369" pm="."><plain>Åqvist, J., and V. </plain></SENT>
+<SENT sid="370" pm="."><plain>Luzhkov. 2000. </plain></SENT>
+<SENT sid="371" pm="."><plain>Ion permeation mechanism of the potassium channel. Nature. 404:881–884. <?supplied-pmid 10786795?>10786795 </plain></SENT>
+</text></ref><ref id="bib4"><text><SENT sid="372" pm="."><plain>Asthagiri, D., L.R. </plain></SENT>
+<SENT sid="373" pm="."><plain>Pratt, and M.E. </plain></SENT>
+<SENT sid="374" pm="."><plain>Paulaitis. 2006. </plain></SENT>
+<SENT sid="375" pm="."><plain>Role of fluctuations in a snug-fit mechanism of KcsA channel selectivity. J. </plain></SENT>
+<SENT sid="376" pm="."><plain>Chem. </plain></SENT>
+<SENT sid="377" pm="."><plain>Phys. 125:24701. <?supplied-pmid 16848598?>16848598 </plain></SENT>
+</text></ref><ref id="bib5"><text><SENT sid="378" pm="."><plain>Bernèche, S., and B. </plain></SENT>
+<SENT sid="379" pm="."><plain>Roux. 2001. </plain></SENT>
+<SENT sid="380" pm="."><plain>Energetics of ion conduction through the K+ channel. Nature. 414:73–77. <?supplied-pmid 11689945?>11689945 </plain></SENT>
+</text></ref><ref id="bib6"><text><SENT sid="381" pm="."><plain>Bernèche, S., and B. </plain></SENT>
+<SENT sid="382" pm="."><plain>Roux. 2005 A gate in the selectivity filter of potassium channels. Struc. 13:591–600. </plain></SENT>
+</text></ref><ref id="bib7"><text><SENT sid="383" pm="."><plain>Bezanilla, F., and C.M. </plain></SENT>
+<SENT sid="384" pm="."><plain>Armstrong. 1972. </plain></SENT>
+<SENT sid="385" pm="."><plain>Negative conductance caused by entry of sodium and cesium ions into the potassium channels of squid axons. J. </plain></SENT>
+<SENT sid="386" pm="."><plain>Gen. </plain></SENT>
+<SENT sid="387" pm="."><plain>Physiol. 60:588–608. <?supplied-pmid 4644327?>4644327 </plain></SENT>
+</text></ref><ref id="bib8"><text><SENT sid="388" pm="."><plain>Brooks, B.R., R.E. </plain></SENT>
+<SENT sid="389" pm="."><plain>Bruccoleri, B.D. </plain></SENT>
+<SENT sid="390" pm="."><plain>Olafson, D.J. </plain></SENT>
+<SENT sid="391" pm="."><plain>States, S. </plain></SENT>
+<SENT sid="392" pm="."><plain>Swaminathan, and M. </plain></SENT>
+<SENT sid="393" pm="."><plain>Karplus. 1983 CHARMM: a program for macromolecular energy minimization and dynamics calculations. J. </plain></SENT>
+<SENT sid="394" pm="."><plain>Comput. </plain></SENT>
+<SENT sid="395" pm="."><plain>Chem. 4:187–217. </plain></SENT>
+</text></ref><ref id="bib9"><text><SENT sid="396" pm="."><plain>Cornell, W.D., P. </plain></SENT>
+<SENT sid="397" pm="."><plain>Cieplak, C.I. </plain></SENT>
+<SENT sid="398" pm="."><plain>Bayly, I.R. </plain></SENT>
+<SENT sid="399" pm="."><plain>Gould, K.M. </plain></SENT>
+<SENT sid="400" pm="."><plain>Merz Jr, D.M. </plain></SENT>
+<SENT sid="401" pm="."><plain>Ferguson, D.C. </plain></SENT>
+<SENT sid="402" pm="."><plain>Spellmeyer, T. </plain></SENT>
+<SENT sid="403" pm="."><plain>Fox, J.W. </plain></SENT>
+<SENT sid="404" pm="."><plain>Caldwell, and P.A. </plain></SENT>
+<SENT sid="405" pm="."><plain>Kollman. 1995 A second generation force field for the simulation of proteins and nucleic acids. J. </plain></SENT>
+<SENT sid="406" pm="."><plain>Am. </plain></SENT>
+<SENT sid="407" pm="."><plain>Chem. </plain></SENT>
+<SENT sid="408" pm="."><plain>Soc. 117:5179–5197. </plain></SENT>
+</text></ref><ref id="bib10"><text><SENT sid="409" pm="."><plain>Dietrich, B. 1985 Coordination chemistry of alkali and alkaline-earth cations with macrocyclic ligands. J. </plain></SENT>
+<SENT sid="410" pm="."><plain>Chem. </plain></SENT>
+<SENT sid="411" pm="."><plain>Edu. 62:954–964. </plain></SENT>
+</text></ref><ref id="bib11"><text><SENT sid="412" pm="."><plain>Doyle, D.A., J.M. </plain></SENT>
+<SENT sid="413" pm="."><plain>Cabral, R.A. </plain></SENT>
+<SENT sid="414" pm="."><plain>Pfuetzner, A. </plain></SENT>
+<SENT sid="415" pm="."><plain>Kuo, J.M. </plain></SENT>
+<SENT sid="416" pm="."><plain>Gulbis, S.L. </plain></SENT>
+<SENT sid="417" pm="."><plain>Cohen, B.T. </plain></SENT>
+<SENT sid="418" pm="."><plain>Chait, and R. </plain></SENT>
+<SENT sid="419" pm="."><plain>MacKinnon. 1998. </plain></SENT>
+<SENT sid="420" pm="."><plain>The structure of the potassium channel: molecular basis of K+ conduction and selectivity. Science. 280:69–77. <?supplied-pmid 9525859?>9525859 </plain></SENT>
+</text></ref><ref id="bib12"><text><SENT sid="421" pm="."><plain>Eisenman, G. 1962. </plain></SENT>
+<SENT sid="422" pm="."><plain>Cation selective electrodes and their mode of operation. Biophys. </plain></SENT>
+<SENT sid="423" pm="."><plain>J. 2:259–323. <?supplied-pmid 13889686?>13889686 </plain></SENT>
+</text></ref><ref id="bib13"><text><SENT sid="424" pm="."><plain>Essmann, U., L. </plain></SENT>
+<SENT sid="425" pm="."><plain>Perera, M. </plain></SENT>
+<SENT sid="426" pm="."><plain>Berkowitz, T. </plain></SENT>
+<SENT sid="427" pm="."><plain>Darden, H. </plain></SENT>
+<SENT sid="428" pm="."><plain>Lee, and L. </plain></SENT>
+<SENT sid="429" pm="."><plain>Pedersen. 1995 A smooth particle mesh ewald method. J. </plain></SENT>
+<SENT sid="430" pm="."><plain>Chem. </plain></SENT>
+<SENT sid="431" pm="."><plain>Physiol. 103:8577–8593. </plain></SENT>
+</text></ref><ref id="bib14"><text><SENT sid="432" pm="."><plain>Feller, S., Y. </plain></SENT>
+<SENT sid="433" pm="."><plain>Zhang, R. </plain></SENT>
+<SENT sid="434" pm="."><plain>Pastor, and B. </plain></SENT>
+<SENT sid="435" pm="."><plain>Brooks. 1995 Constant pressure molecular dynamics simulation - the Langevin piston method. J. </plain></SENT>
+<SENT sid="436" pm="."><plain>Chem. </plain></SENT>
+<SENT sid="437" pm="."><plain>Phys. 103:4613–4621. </plain></SENT>
+</text></ref><ref id="bib15"><text><SENT sid="438" pm="."><plain>Friedman, H.L., and C.V. </plain></SENT>
+<SENT sid="439" pm="."><plain>Krishnan. 1973. </plain></SENT>
+<SENT sid="440" pm="."><plain>Water: A Comprehensive Treatise. </plain></SENT>
+<SENT sid="441" pm="."><plain>Volume 3. </plain></SENT>
+<SENT sid="442" pm="."><plain>F. </plain></SENT>
+<SENT sid="443" pm="."><plain>Franks, editor. </plain></SENT>
+<SENT sid="444" pm="."><plain>Plenum Press, New York. </plain></SENT>
+<SENT sid="445" pm="."><plain>118 pp. </plain></SENT>
+</text></ref><ref id="bib16"><text><SENT sid="446" pm="."><plain>Jorgensen, W.L., J. </plain></SENT>
+<SENT sid="447" pm="."><plain>Chandrasekhar, J.D. </plain></SENT>
+<SENT sid="448" pm="."><plain>Madura, R.W. </plain></SENT>
+<SENT sid="449" pm="."><plain>Impey, and M.L. </plain></SENT>
+<SENT sid="450" pm="."><plain>Klein. 1983 Comparison of simple potential functions for simulating liquid water. J. </plain></SENT>
+<SENT sid="451" pm="."><plain>Chem. </plain></SENT>
+<SENT sid="452" pm="."><plain>Phys. 79:926–935. </plain></SENT>
+</text></ref><ref id="bib17"><text><SENT sid="453" pm="."><plain>Kollman, P.A. 1993 Free energy calculations: applications to chemical and biochemical phenomena. Chem. </plain></SENT>
+<SENT sid="454" pm="."><plain>Rev. 93:2395–2417. </plain></SENT>
+</text></ref><ref id="bib18"><text><SENT sid="455" pm="."><plain>MacKerell, A.D.J., D. </plain></SENT>
+<SENT sid="456" pm="."><plain>Bashford, M. </plain></SENT>
+<SENT sid="457" pm="."><plain>Bellot, R.L. </plain></SENT>
+<SENT sid="458" pm="."><plain>Dunbrack, J.D. </plain></SENT>
+<SENT sid="459" pm="."><plain>Evanseck, M.J. </plain></SENT>
+<SENT sid="460" pm="."><plain>Field, S. </plain></SENT>
+<SENT sid="461" pm="."><plain>Fischer, J. </plain></SENT>
+<SENT sid="462" pm="."><plain>Gao, H. </plain></SENT>
+<SENT sid="463" pm="."><plain>Guo, D.J.-M.S. </plain></SENT>
+<SENT sid="464" pm="."><plain>Ha, et al. 1998 All-atom empirical potential for molecular modeling and dynamics studies of proteins. J. </plain></SENT>
+<SENT sid="465" pm="."><plain>Phys. </plain></SENT>
+<SENT sid="466" pm="."><plain>Chem. </plain></SENT>
+<SENT sid="467" pm="."><plain>B 102:3586–3616.24889800 </plain></SENT>
+</text></ref><ref id="bib19"><text><SENT sid="468" pm="."><plain>Noskov, S.Y., S. </plain></SENT>
+<SENT sid="469" pm="."><plain>Bernèche, and B. </plain></SENT>
+<SENT sid="470" pm="."><plain>Roux. 2004. </plain></SENT>
+<SENT sid="471" pm="."><plain>Control of ion selectivity in potassium channels by electrostatic and dynamic properties of carbonyl ligands. Nature. 431:830–834. <?supplied-pmid 15483608?>15483608 </plain></SENT>
+</text></ref><ref id="bib20"><text><SENT sid="472" pm="."><plain>Noskov, S.Y., and B. </plain></SENT>
+<SENT sid="473" pm="."><plain>Roux. 2006. </plain></SENT>
+<SENT sid="474" pm="."><plain>Ion selectivity in potassium channels. Biophys. </plain></SENT>
+<SENT sid="475" pm="."><plain>Chem. 124:279–291. <?supplied-pmid 16843584?>16843584 </plain></SENT>
+</text></ref><ref id="bib21"><text><SENT sid="476" pm="."><plain>Shi, N., S. </plain></SENT>
+<SENT sid="477" pm="."><plain>Ye, A. </plain></SENT>
+<SENT sid="478" pm="."><plain>Alam, L. </plain></SENT>
+<SENT sid="479" pm="."><plain>Chen, and Y. </plain></SENT>
+<SENT sid="480" pm="."><plain>Jiang. 2006. </plain></SENT>
+<SENT sid="481" pm="."><plain>Atomic structure of a Na+- and K+-conducting channel. Nature. 440:570–574. <?supplied-pmid 16467789?>16467789 </plain></SENT>
+</text></ref><ref id="bib22"><text><SENT sid="482" pm="."><plain>Valiyaveetil, F.I., M. </plain></SENT>
+<SENT sid="483" pm="."><plain>Leonetti, T.W. </plain></SENT>
+<SENT sid="484" pm="."><plain>Muir, and R. </plain></SENT>
+<SENT sid="485" pm="."><plain>Mackinnon. 2006. </plain></SENT>
+<SENT sid="486" pm="."><plain>Ion selectivity in a semisynthetic K+ channel locked in the conductive conformation. Science. 314:1004–1007. <?supplied-pmid 17095703?>17095703 </plain></SENT>
+</text></ref><ref id="bib23"><text><SENT sid="487" pm="."><plain>Zhou, Y., J.H. </plain></SENT>
+<SENT sid="488" pm="."><plain>Morais-Cabral, S. </plain></SENT>
+<SENT sid="489" pm="."><plain>Mann, and R. </plain></SENT>
+<SENT sid="490" pm="."><plain>MacKinnon. 2001. </plain></SENT>
+<SENT sid="491" pm="."><plain>Chemistry of ion coordination and hydration revealed by a K+ channel-Fab complex at 2.0 Å resolution. Nature. 414:43–48. <?supplied-pmid 11689936?>11689936 </plain></SENT>
+</text></ref></ref-list></SecTag></back></article>
