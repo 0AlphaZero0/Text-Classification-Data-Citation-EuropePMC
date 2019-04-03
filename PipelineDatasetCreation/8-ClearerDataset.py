@@ -63,3 +63,11 @@ while indexDataset < len(citation):
     dataset.write("\n")
     indexDataset+=1
 dataset.close()
+filelen=codecs.open("filelen.csv","w",encoding="utf-8")
+for cit in citation:
+    filelen.write(str(len(cit)))
+    filelen.write("\n")
+for cit in citationBefore:
+    filelen.write(str(len(cit)))
+    filelen.write("\n")
+filelen.close()

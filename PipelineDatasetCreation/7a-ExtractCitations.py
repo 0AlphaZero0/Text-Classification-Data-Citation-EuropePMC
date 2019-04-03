@@ -26,6 +26,8 @@ Then the script will load the corresponding sentencized XML file. If the accessi
 
 ###################################################    Main     ###################################################
 length=(len(os.listdir("./articlesOA"))-1)/2
+minlen=25
+maxlen=500
 
 resultFile=codecs.open("resultCitations.csv","w",encoding="utf-8")
 resultFile.write("PMCID")
@@ -83,9 +85,9 @@ for file in os.listdir("./articlesOA"):
                     secTagCitation=secTagCitation.get("type")
                 for secTagCitationBefore in sentences[sentencesIndex-1].iterancestors("SecTag"):
                     secTagCitationBefore=secTagCitationBefore.get("type")
-                if secTagCitation==secTagCitationBefore:
+                if secTagCitation==secTagCitationBefore and minlen<len(''.join(sentences[sentencesIndex-1].itertext()))<maxlen:
                     tmpbefore=''.join(sentences[sentencesIndex-1].itertext())
-                if accessionNb in ''.join(tmp.itertext()):
+                if accessionNb in ''.join(tmp.itertext()) and minlen<len(''.join(tmp.itertext()))<maxlen:
                     tmpafter=''
                     for preCitPost in preCitPosts:# this loop is made to extract section type & subtype
                         if preCitPost[0] in ''.join(tmp.itertext()):
@@ -112,14 +114,13 @@ for file in os.listdir("./articlesOA"):
                     if sentencesIndex+1<len(sentences):
                         for secTagCitation1 in sentences[sentencesIndex+1].iterancestors("SecTag"):
                             secTagCitation1=secTagCitation1.get("type")
-                        if secTagCitation==secTagCitation1:
+                        if secTagCitation==secTagCitation1 and minlen<len(''.join(sentences[sentencesIndex+1].itertext()))<maxlen:
                             tmpafter=tmpafter+''.join(sentences[sentencesIndex+1].itertext())
                             if sentencesIndex+2<len(sentences):
                                 for secTagCitation2 in sentences[sentencesIndex+2].iterancestors("SecTag"):
                                     secTagCitation2=secTagCitation2.get("type")
-                                if secTagCitation==secTagCitation2:
+                                if secTagCitation==secTagCitation2 and minlen<len(''.join(sentences[sentencesIndex+2].itertext()))<maxlen:
                                     tmpafter=tmpafter+''.join(sentences[sentencesIndex+2].itertext())
-                    
                     resultString=''.join(tmp.itertext())
                     resultFile.write(str(file).split("-")[0])
                     resultFile.write("\t")
