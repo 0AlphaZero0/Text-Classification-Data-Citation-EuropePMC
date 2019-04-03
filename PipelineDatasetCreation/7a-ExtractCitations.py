@@ -69,6 +69,10 @@ for file in os.listdir("./articlesOA"):
         fileSentencizedTmp=fileSentencized.read()
         fileSentencized.close()
         fileSentencizedTmp=etree.fromstring(fileSentencizedTmp)
+        # Remove Tables
+        for table in fileSentencizedTmp.xpath("//SecTag"):
+            if table.attrib["type"]=="TABLE":
+                table.getparent().remove(table)
         sentences=fileSentencizedTmp.findall(".//SENT")
         sentencesIndex=0
         while sentencesIndex<len(sentences):

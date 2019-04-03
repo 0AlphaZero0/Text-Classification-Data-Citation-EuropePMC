@@ -111,7 +111,188 @@
 <SENT sid="96" pm="."><plain>Among the 618 predicted proteins, 437 had existing annotations in the GO database, and thus could be used to evaluate the CSIDOP method. </plain></SENT>
 <SENT sid="97" pm="."><plain>Among the 437 proteins, 417 were assigned with correct functions by the CSIDOP (assigned functions have an exact match with the ‘true’ terms), i.e., the CSIDOP method had an accuracy of 95.42% (Table 1) using 2,972 GO functional terms, which is higher than most of the existing in silico methods. </plain></SENT>
 <SENT sid="98" pm="."><plain>For comparison, we also tested the Majority Rule (MR) method by Schwikowski et al. [14], a simple domain based method, and orthology based method. </plain></SENT>
-</text></p><SecTag type="TABLE"></SecTag></sec><sec id="s2e"><title><text><SENT sid="280" pm="."><plain>Novel function assignment for currently uncharacterized human proteins </plain></SENT>
+</text></p><SecTag type="TABLE"><table-wrap id="pone-0001562-t001" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0001562.t001</object-id><label>Table 1</label><caption><title><text><SENT sid="99" pm="."><plain>Method Comparison </plain></SENT>
+</text></title></caption><alternatives><graphic id="pone-0001562-t001-1" xlink:href="pone.0001562.t001"/><table frame="hsides" rules="groups"><colgroup span="1"><col align="left" span="1"/><col align="center" span="1"/></colgroup><thead><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="100" pm="."><plain>Method </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="101" pm="."><plain>Accuracy </plain></SENT>
+</text></td></tr></thead><tbody><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="102" pm="."><plain>CSIDOP </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="103" pm="."><plain>95.42% </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="104" pm="."><plain>Majority Rule (MR) </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="105" pm="."><plain>59.50% </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="106" pm="."><plain>Pfam domain based method </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="107" pm="."><plain>61.98% </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="108" pm="."><plain>Orthology based method </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="109" pm="."><plain>83.86% </plain></SENT>
+</text></td></tr></tbody></table></alternatives><table-wrap-foot><fn id="nt101"><p><text><SENT sid="110" pm="."><plain>Accuracy of the CSIDOP, Majority Rule (MR), Pfam domain based, and orthology based methods are compared in protein function prediction. </plain></SENT>
+<SENT sid="111" pm="."><plain>The accuracy is defined as the percentage of proteins predicted with correct function terms. </plain></SENT>
+<SENT sid="112" pm="."><plain>A protein is considered to be correctly annotated if the known function occurred among the predicted terms. </plain></SENT>
+</text></p></fn></table-wrap-foot></table-wrap></SecTag><p><text><SENT sid="113" pm="."><plain>Generally, the MR algorithm assigns a protein with the most frequent function terms among its direct interaction partners. </plain></SENT>
+<SENT sid="114" pm="."><plain>Assessing the MR algorithm on the same target dataset that we used in CSIDOP, MR made functional predictions with an accuracy of 59.50% (Table 1). </plain></SENT>
+<SENT sid="115" pm="."><plain>As for the domain based method, considering the fact that a number of protein domains are annotated in Pfam [29] with specific functions, and thus it is possible to make protein function predictions according to the functional terms associated with its domains. </plain></SENT>
+<SENT sid="116" pm="."><plain>Using the same set of proteins, only 61.98% were assigned with correct functions using the simple domain based scheme (Table 1). </plain></SENT>
+<SENT sid="117" pm="."><plain>Lastly, for the orthology based method, we attempted to assign functions to proteins according to their annotated orthologs in other species. </plain></SENT>
+<SENT sid="118" pm="."><plain>The orthologs were retrieved using Inparanoid [31]. </plain></SENT>
+<SENT sid="119" pm="."><plain>The orthology based method achieved prediction accuracy of 83.86%, and among the novel predictions, it only covered 56.35% of our novel discoveries. </plain></SENT>
+<SENT sid="120" pm="."><plain>Therefore, our CSIDOP method can provide an extra power in protein function prediction compared to the orthology detection. </plain></SENT>
+</text></p><p><text><SENT sid="121" pm="."><plain>Most existing methods have been evaluated on the S. cerevisae proteome using a smaller number of functional categories. </plain></SENT>
+<SENT sid="122" pm="."><plain>Schwikowski et al. [14], Hishigaki et al [15], and Brun et al [21] used 42, 41, and 44 “cellular role” categories in the Yeast Protein Database (YPD) [32], and the accuracies achieved were 72%, 64%, and 67%, respectively. </plain></SENT>
+<SENT sid="123" pm="."><plain>In [19], Vazquez et al. evaluated their method using two different level of functional classification in MIPS [30]. </plain></SENT>
+<SENT sid="124" pm="."><plain>In the coarse-grained level containing only 20 functional categories, the accuracy was about 83%. </plain></SENT>
+<SENT sid="125" pm="."><plain>In the finest level containing 424 functional categories, the accuracy decreased to 65%. </plain></SENT>
+<SENT sid="126" pm="."><plain>Noticeably, the CSIDOP prediction was made over 2,972 GO functional categories, which is significantly larger than those employed in other methods. </plain></SENT>
+<SENT sid="127" pm="."><plain>Accordingly, the assigned functions were specific rather than generic. </plain></SENT>
+<SENT sid="128" pm="."><plain>In principle, the more coarse-grained the classification, the easier the prediction is. </plain></SENT>
+<SENT sid="129" pm="."><plain>Applying the same definition of success, our CSIDOP method was able to make correct predictions an astounding 95.42% of the time using the full 2,972 GO molecular function categories. </plain></SENT>
+<SENT sid="130" pm="."><plain>However, in the GO function tree, the closer a node is to the root, the lower the level in GO tree, which means that the corresponding function is more abstract and the farther it is from the root, the higher the level in GO tree, thus the more detailed. </plain></SENT>
+<SENT sid="131" pm="."><plain>An important advantage of the CSIDOP method is that it can be tailored to different levels in the GO database based upon need. </plain></SENT>
+<SENT sid="132" pm="."><plain>For example, suppose that GO level is set to five, then all predicted terms at GO tree levels higher than or equal to five will be generalized to the corresponding function at level five. </plain></SENT>
+<SENT sid="133" pm="."><plain>In other words, the more specific functional terms that reside at higher levels of the tree are replaced with their ancestor terms which are located at level five. </plain></SENT>
+<SENT sid="134" pm="."><plain>Higher prediction accuracy is expected as we lower the GO depth. </plain></SENT>
+<SENT sid="135" pm="."><plain>Consistent with this, the prediction accuracy in the test dataset reached 98.85% when the depth parameter was set to 2, which still contains 129 GO functional categories (Table 2). Table 2 shows the prediction accuracy as a function of GO level for this test dataset and indicates the robustness and reliability of the CSIDOP method. </plain></SENT>
+<SENT sid="136" pm="."><plain>This depth parameter allows users to assign function terms for a protein at different resolutions according to their individual needs. </plain></SENT>
+</text></p><SecTag type="TABLE"><table-wrap id="pone-0001562-t002" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0001562.t002</object-id><label>Table 2</label><caption><title><text><SENT sid="137" pm="."><plain>Evaluation of the CSIDOP algorithm. </plain></SENT>
+</text></title></caption><alternatives><graphic id="pone-0001562-t002-2" xlink:href="pone.0001562.t002"/><table frame="hsides" rules="groups"><colgroup span="1"><col align="left" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/></colgroup><thead><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="138" pm="."><plain>Depth in the GO graph </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="139" pm="."><plain># of unique GO functional categories </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="140" pm="."><plain># of correctly Predicted proteins </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="141" pm="."><plain># of predicted proteins different from their GO terms </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="142" pm="."><plain>Prediction accuracy </plain></SENT>
+</text></td></tr></thead><tbody><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="143" pm="."><plain>2 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="144" pm="."><plain>129 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="145" pm="."><plain>432 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="146" pm="."><plain>5 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="147" pm="."><plain>98.85% </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="148" pm="."><plain>3 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="149" pm="."><plain>473 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="150" pm="."><plain>427 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="151" pm="."><plain>10 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="152" pm="."><plain>97.71% </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="153" pm="."><plain>4 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="154" pm="."><plain>961 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="155" pm="."><plain>422 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="156" pm="."><plain>15 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="157" pm="."><plain>96.56% </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="158" pm="."><plain>5 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="159" pm="."><plain>1996 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="160" pm="."><plain>419 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="161" pm="."><plain>18 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="162" pm="."><plain>95.88% </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="163" pm="."><plain>6 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="164" pm="."><plain>2598 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="165" pm="."><plain>418 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="166" pm="."><plain>19 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="167" pm="."><plain>95.65% </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="168" pm="."><plain>7 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="169" pm="."><plain>2816 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="170" pm="."><plain>417 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="171" pm="."><plain>20 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="172" pm="."><plain>95.42% </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="173" pm="."><plain>8 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="174" pm="."><plain>2938 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="175" pm="."><plain>417 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="176" pm="."><plain>20 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="177" pm="."><plain>95.42% </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="178" pm="."><plain>9 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="179" pm="."><plain>2957 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="180" pm="."><plain>417 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="181" pm="."><plain>20 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="182" pm="."><plain>95.42% </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="183" pm="."><plain>10 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="184" pm="."><plain>2972 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="185" pm="."><plain>417 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="186" pm="."><plain>20 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="187" pm="."><plain>95.42% </plain></SENT>
+</text></td></tr></tbody></table></alternatives><table-wrap-foot><fn id="nt102"><p><text><SENT sid="188" pm="."><plain>Accuracy is assessed over a number of values for the depth parameter (i.e. generalizing annotated terms when parameter decreases). </plain></SENT>
+<SENT sid="189" pm="."><plain>A protein is considered to be correctly annotated if the known function occurred among the predicted terms. </plain></SENT>
+</text></p></fn></table-wrap-foot></table-wrap></SecTag></sec><sec id="s2d"><title><text><SENT sid="190" pm="."><plain>CSIDOP complements the current GO annotation </plain></SENT>
+</text></title><p><text><SENT sid="191" pm="."><plain>A protein often exhibits multiple molecular functions and its annotation in GO may therefore not be complete. </plain></SENT>
+<SENT sid="192" pm="."><plain>For the 20 proteins with predicted functions that do not match with their ‘true’ terms, the differences between the predicted terms and the ‘true’ terms may be due to incompleteness of the GO annotations. </plain></SENT>
+<SENT sid="193" pm="."><plain>Moreover, the CSIDOP may provide additional functional terms to existing proteins. </plain></SENT>
+<SENT sid="194" pm="."><plain>For example, the Alpha-2-macroglobulin precursor [Swiss-Prot: P01023], was predicted by CSIDOP to be involved in protease inhibitor activity (GO:0030414), which is not among the current list of functions annotated in GO. </plain></SENT>
+<SENT sid="195" pm="."><plain>Consistent with this prediction, alpha-2-macroglobulin is found to be a major human plasma protease inhibitor capable of inhibiting most endopeptidases tested [33]. </plain></SENT>
+<SENT sid="196" pm="."><plain>Another example is the PRS7 [Swiss-Prot: P35998] gene in human, which is currently annotated in GO to participate in protein binding (GO:0005515), with no other listed terms. </plain></SENT>
+<SENT sid="197" pm="."><plain>Our CSIDOP method predicted that it is also involved in ATP binding (GO:0005524), hydrolase activity (GO:0016787), nucleotide binding (GO:0000166), and nucleoside_triphosphatase activity (GO:0017111), all of which can be verified in InterPro [34]. </plain></SENT>
+<SENT sid="198" pm="."><plain>Other assigned terms for PRS7 by CSIDOP included endopeptidase activity (GO:0004175) and ATPase activity (GO:0016887), which were observed in the orthologous proteins of PRS7. </plain></SENT>
+<SENT sid="199" pm="."><plain>An orthologous protein in D. melanogaster, RPT1 [Fly-Base: FBgn0028687], is annotated with endopeptidase activity inferred from direct assay [35]. </plain></SENT>
+<SENT sid="200" pm="."><plain>Another orthologous protein in S. cerevisiae, YKL145W is also annotated with the function terms endopeptidase activity and ATPase activity. </plain></SENT>
+</text></p><p><text><SENT sid="201" pm="."><plain>To gain insight into the 20 proteins that were “incorrectly” annotated by CSIDOP, we analyzed the relationship between the predicted terms and their true GO terms. Figure 2 shows a histogram of distances between the predicted terms and the ‘true’ GO terms, which is defined as the number of edges between these two terms in the GO graph. </plain></SENT>
+<SENT sid="202" pm="."><plain>As illustrated in Figure 2, 15 out of the 20 proteins were predicted with function distances of one or two. </plain></SENT>
+<SENT sid="203" pm="."><plain>A distance of one means that the two terms have a direct parent-child relationship; for instance, protein binding (GO:0005515) is a known function of Furin precursor protein [Swiss-Prot: P09958], and our method predicted it to be involved in protein domain specific binding (GO:0019904), which is a direct child term of protein binding in GO. </plain></SENT>
+<SENT sid="204" pm="."><plain>If we consider such cases to also be successful prediction, then the accuracy improves from 95.42% to 97.71%. </plain></SENT>
+<SENT sid="205" pm="."><plain>A distance of two indicates that the two terms share a parent. </plain></SENT>
+<SENT sid="206" pm="."><plain>For example, suppressor of cytokine signaling 1 [Swiss-Prot: O15524] was identified in GO to be associated with insulin-like growth factor receptor binding (GO:0005159), whereas we assigned the function term, sevenless binding (GO:0005118). </plain></SENT>
+<SENT sid="207" pm="."><plain>The two terms share a parent term, receptor binding (GO:0005102). </plain></SENT>
+<SENT sid="208" pm="."><plain>In this case, if the more general terms were used, a correct functional annotation would have been achieved. </plain></SENT>
+</text></p><SecTag type="FIG"><fig id="pone-0001562-g002" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0001562.g002</object-id><label>Figure 2</label><caption><title><text><SENT sid="209" pm="."><plain>Histogram of distances between the wrongly predicted GO terms and the ‘true’ GO terms. </plain></SENT>
+</text></title></caption><graphic xlink:href="pone.0001562.g002"/></fig></SecTag><p><text><SENT sid="210" pm="."><plain>Moreover, we analyzed correlations between the predicted function terms and the ‘true’ terms. </plain></SENT>
+<SENT sid="211" pm="."><plain>In GO, gene products can be associated with more than one term. </plain></SENT>
+<SENT sid="212" pm="."><plain>Therefore, the correlation between two GO terms is defined based on the number of gene products in common [36]. </plain></SENT>
+<SENT sid="213" pm="."><plain>The larger the correlation value is, the closer the two GO terms are. </plain></SENT>
+<SENT sid="214" pm="."><plain>In order to assess the significance of the correlation scores between the predicted and ‘true’ terms, 10,000 GO term pairs were randomly selected, and a correlation score was computed for each pair. </plain></SENT>
+<SENT sid="215" pm="."><plain>E-value is described as the probability of random GO term pairs achieving at least a certain correlation score. </plain></SENT>
+<SENT sid="216" pm="."><plain>For instance, an E-value of 0.0008 implies that only eight out of the 10,000 random GO term pairs have scores equal to or higher than a particular correlation score. </plain></SENT>
+<SENT sid="217" pm="."><plain>As a result, it was observed that among the 20 “incorrectly” annotated proteins, many predicted terms are closely correlated to the true GO terms with significant E-values. Table 3 shows the number of proteins versus different E-values. </plain></SENT>
+<SENT sid="218" pm="."><plain>Examples of proteins in which extremely high correlation exists between the predicted and ‘true’ terms (E-value≤0.0008) are illustrated in Table 4. </plain></SENT>
+</text></p><SecTag type="TABLE"><table-wrap id="pone-0001562-t003" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0001562.t003</object-id><label>Table 3</label><caption><title><text><SENT sid="219" pm="."><plain>Correlation analysis for proteins with known terms that differ from predicted ones </plain></SENT>
+</text></title></caption><alternatives><graphic id="pone-0001562-t003-3" xlink:href="pone.0001562.t003"/><table frame="hsides" rules="groups"><colgroup span="1"><col align="left" span="1"/><col align="center" span="1"/><col align="center" span="1"/></colgroup><thead><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="220" pm="."><plain>E-value </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="221" pm="."><plain>Correlation Score (≥score) </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="222" pm="."><plain># of Proteins </plain></SENT>
+</text></td></tr></thead><tbody><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="223" pm="."><plain>0.0116 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="224" pm="."><plain>1 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="225" pm="."><plain>19 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="226" pm="."><plain>0.0028 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="227" pm="."><plain>10 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="228" pm="."><plain>16 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="229" pm="."><plain>0.0021 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="230" pm="."><plain>20 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="231" pm="."><plain>14 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="232" pm="."><plain>0.0014 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="233" pm="."><plain>50 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="234" pm="."><plain>12 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="235" pm="."><plain>0.0008 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="236" pm="."><plain>100 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="237" pm="."><plain>10 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="238" pm="."><plain>0.0006 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="239" pm="."><plain>200 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="240" pm="."><plain>8 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="241" pm="."><plain>0.0005 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="242" pm="."><plain>300 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="243" pm="."><plain>6 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="244" pm="."><plain>0.0003 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="245" pm="."><plain>500 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="246" pm="."><plain>5 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="247" pm="."><plain>0.0001 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="248" pm="."><plain>3000 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="249" pm="."><plain>3 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="250" pm="."><plain>0.0000 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="251" pm="."><plain>10000 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="252" pm="."><plain>1 </plain></SENT>
+</text></td></tr></tbody></table></alternatives><table-wrap-foot><fn id="nt103"><p><text><SENT sid="253" pm="."><plain>Correlation score between two GO terms is defined as the number of gene products in common. </plain></SENT>
+<SENT sid="254" pm="."><plain>E-value is defined as the probability of random GO term pairs achieving at least a certain correlation score. </plain></SENT>
+<SENT sid="255" pm="."><plain>The third column shows number of the wrongly predicted proteins reaching different correlation scores between predicted and ‘true’ terms. </plain></SENT>
+</text></p></fn></table-wrap-foot></table-wrap></SecTag><SecTag type="TABLE"><table-wrap id="pone-0001562-t004" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0001562.t004</object-id><label>Table 4</label><caption><title><text><SENT sid="256" pm="."><plain>Examples of proteins with high correlation scores </plain></SENT>
+</text></title></caption><alternatives><graphic id="pone-0001562-t004-4" xlink:href="pone.0001562.t004"/><table frame="hsides" rules="groups"><colgroup span="1"><col align="left" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/></colgroup><thead><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="257" pm="."><plain>Protein </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="258" pm="."><plain>True GO Term </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="259" pm="."><plain>Predicted GO Term </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="260" pm="."><plain>Direct Correlation Score </plain></SENT>
+</text></td></tr></thead><tbody><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="261" pm="."><plain>Partitioning defective 6 homolog alpha [Swiss-Prot: Q9NPB6] </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="262" pm="."><plain>GO:0017048 Rho GTPase binding </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="263" pm="."><plain>GO:0003779 Actin binding </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="264" pm="."><plain>186 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="265" pm="."><plain>SH3-containing GRB2-like protein 2 [Swiss-Prot: Q99962] </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="266" pm="."><plain>GO:0016740 Transferase activity </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="267" pm="."><plain>GO:0005509 Calcium ion binding </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="268" pm="."><plain>425 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="269" pm="."><plain>Hepatocyte growth factor precursor [Swiss-Prot: P14210] </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="270" pm="."><plain>GO:0004252 Serine-type endopeptidase activity </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="271" pm="."><plain>GO:0008233 Peptidase activity </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="272" pm="."><plain>6430 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="273" pm="."><plain>Erythrocyte membrane protein band 4.2 [Swiss-Prot: P16452] </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="274" pm="."><plain>GO:0005524 ATP binding </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="275" pm="."><plain>GO:0016740 Transferase activity </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="276" pm="."><plain>33762 </plain></SENT>
+</text></td></tr></tbody></table></alternatives><table-wrap-foot><fn id="nt104"><p><text><SENT sid="277" pm="."><plain>Examples of proteins with predicted terms different from their ‘true’ terms but sharing high correlation scores (i.e. E-value≤0.0008). </plain></SENT>
+<SENT sid="278" pm="."><plain>True GO term is the annotated term for a protein in GO. </plain></SENT>
+<SENT sid="279" pm="."><plain>Predicted GO term is by the CSIDOP method. </plain></SENT>
+</text></p></fn></table-wrap-foot></table-wrap></SecTag></sec><sec id="s2e"><title><text><SENT sid="280" pm="."><plain>Novel function assignment for currently uncharacterized human proteins </plain></SENT>
 </text></title><p><text><SENT sid="281" pm="."><plain>Importantly, the CSIDOP predicted functional annotations for 181 H. sapiens proteins that are not currently described in the GO database. </plain></SENT>
 <SENT sid="282" pm="."><plain>Some of these novel annotations can be supported with evidence provided by QuickGO, a web browser of gene ontology data maintained by the European Bioinformatics Institute [37]. </plain></SENT>
 <SENT sid="283" pm="."><plain>For instance, the gene FHL1, four and a half LIM domains protein [Swiss-Prot: Q13642], was identified by the CSIDOP to participate in metal ion binding (GO:0046872) and zinc ion binding (GO:0008270). </plain></SENT>

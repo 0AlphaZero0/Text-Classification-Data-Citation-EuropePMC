@@ -4,6 +4,7 @@
 # 01/04/2019
 ########################
 import codecs # Allows to load a file containing UTF-8 characters
+from lxml import etree # Allows to manipulate xml file easily
 import os # Allows to modify some things on the os
 import re # Allows to make regex requests
 
@@ -23,22 +24,19 @@ for file in os.listdir("./articlesOA"):
         tmpFile=oldFile.read()
         oldFile.close()
         matchesEtAl=re.findall(r'\set\sal\.\s(</plain></SENT>\n<[^>]+pm=\"\.\"><plain>)',tmpFile)
-        matchesSurname=re.findall(r'\s[^h\d%;]\.\s(</plain></SENT>\n<[^>]+pm=\"\.\"><plain>)',tmpFile)
-        matchesCa=re.findall(r'\sca\.\s(</plain></SENT>\n<[^>]+pm=\"\.\"><plain>)',tmpFile)
-        matchesApprox=re.findall(r'\sapprox\.\s(</plain></SENT>\n<[^>]+pm=\"\.\"><plain>)',tmpFile)
-        matchesRef=re.findall(r'\(ref\.\s(</plain></SENT>\n<[^>]+pm=\"\.\"><plain>)',tmpFile)
-        matchesTable=re.findall(r'(<table-wrap[\s\S]+</table-wrap>)',tmpFile)
         for match in matchesEtAl:
             tmpFile=tmpFile.replace(match,'')
+        matchesSurname=re.findall(r'\s[^h\d%;]\.\s(</plain></SENT>\n<[^>]+pm=\"\.\"><plain>)',tmpFile)
         for match in matchesSurname:
             tmpFile=tmpFile.replace(match,'')
+        matchesCa=re.findall(r'\sca\.\s(</plain></SENT>\n<[^>]+pm=\"\.\"><plain>)',tmpFile)
         for match in matchesCa:
             tmpFile=tmpFile.replace(match,'')
+        matchesApprox=re.findall(r'\sapprox\.\s(</plain></SENT>\n<[^>]+pm=\"\.\"><plain>)',tmpFile)
         for match in matchesApprox:
             tmpFile=tmpFile.replace(match,'')
+        matchesRef=re.findall(r'\(ref\.\s(</plain></SENT>\n<[^>]+pm=\"\.\"><plain>)',tmpFile)
         for match in matchesRef:
-            tmpFile=tmpFile.replace(match,'')
-        for match in matchesTable:
             tmpFile=tmpFile.replace(match,'')
         newFile=codecs.open("./articlesOA/"+str(file),"w",encoding="utf-8")
         newFile.write(tmpFile)
