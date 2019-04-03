@@ -103,8 +103,7 @@
 <SENT sid="74" pm="."><plain>Fragmented cRNA was hybridized to human oligonucleotide GeneChip Human Genome U133 Plus 2.0 Array (Affymetrix). </plain></SENT>
 <SENT sid="75" pm="."><plain>Arrays were scanned by GeneChip Scanner 3000 (Affymetrix). </plain></SENT>
 </text></p></sec><sec id="s2e"><title><text><SENT sid="76" pm="."><plain>Microarray Data Analysis </plain></SENT>
-</text></title><p><text><SENT sid="77" pm="."><plain>Obtained CEL files were pre-processed using the GC-RMA (GeneChip Robust Multiarray Averaging) algorithm available in R environment as the Bioconductor gcrma package (ver. </plain></SENT>
-<SENT sid="78" pm="."><plain>2.34.0). </plain></SENT>
+</text></title><p><text><SENT sid="77" pm="."><plain>Obtained CEL files were pre-processed using the GC-RMA (GeneChip Robust Multiarray Averaging) algorithm available in R environment as the Bioconductor gcrma package (ver. 2.34.0). </plain></SENT>
 <SENT sid="79" pm="."><plain>Initial filtering was applied: genes showing minimal variation across the set of arrays were excluded from the analysis (only genes whose expression differed by at least 1.5 fold from the median, in at least 20% of the arrays, were retained). </plain></SENT>
 <SENT sid="80" pm="."><plain>This preselection led to the filtering out of more than 35 000 probe sets, thus the number of probe sets used for analysis was reduced from 54 675 ones present on each array, to the final number of 19,793 probe sets (approx. </plain></SENT>
 <SENT sid="81" pm="."><plain>40%). </plain></SENT>
@@ -120,10 +119,7 @@
 <SENT sid="91" pm="."><plain>In detail, we applied two independent tests: the KS permutation test and the Efron-Tibshirani Gene Set Analysis test (GSA). </plain></SENT>
 <SENT sid="92" pm="."><plain>We considered a GSEA category significantly differentially regulated if significance level in either of the tests was less than 0.05 after Benjamini-Hochberg false discovery rate (FDR) multiple test correction. </plain></SENT>
 <SENT sid="93" pm="."><plain>The union of lists was used instead of intersection, as these tests assess significantly different aspects of group expression changes (GSA test estimates the global change of all genes within the list, while the KS test assesses only the change in the subgroup of samples). </plain></SENT>
-<SENT sid="94" pm="."><plain>Analyses were performed using R (ver. </plain></SENT>
-<SENT sid="95" pm="."><plain>3.0.2) statistical environment with the Bioconductor software (ver. </plain></SENT>
-<SENT sid="96" pm="."><plain>2.13) and BRB-ArrayTools (developed by Dr. Richard Simon and the BRB-ArrayTools Development Team; ver. </plain></SENT>
-<SENT sid="97" pm="."><plain>4.4.0). </plain></SENT>
+<SENT sid="94" pm="."><plain>Analyses were performed using R (ver. 3.0.2) statistical environment with the Bioconductor software (ver. 2.13) and BRB-ArrayTools (developed by Dr. Richard Simon and the BRB-ArrayTools Development Team; ver. 4.4.0). </plain></SENT>
 <SENT sid="98" pm="."><plain>The CELL files are deposited in NCBIs Gene Expression Omnibus (GEO, <ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/geo/">http://www.ncbi.nlm.nih.gov/geo/</ext-link>; Accession ID: GSE53012). </plain></SENT>
 </text></p></sec><sec id="s2f"><title><text><SENT sid="99" pm="."><plain>Quantitative Reverse Transcription Polymerase Chain Reaction (qRT-PCR) </plain></SENT>
 </text></title><p><text><SENT sid="100" pm="."><plain>An aliquot of 1 µg or 0.5 µg of total RNA was taken for cDNA synthesis using Omniscript RT Kit (Qiagen) and random primers (4 µM, Sigma-Aldrich), oligo (dT) primer (1 µM, QBiogene Inc., Illkirch, Cedex-France) and RNase inhibitor (10 U, Fermentas, St. Leon-Rot, Germany). </plain></SENT>
@@ -132,11 +128,9 @@
 <SENT sid="103" pm="."><plain>The reaction was carried out using ABI PRISM7700 Sequence Detection System (Applied Biosystems, Foster City, California, USA) and the following PCR conditions: 2 min at 50°C, 10 min at 95°C, 40 cycles of 15 sec at 95°C, 1 min at 60°C, and 1 min at 72°C. </plain></SENT>
 <SENT sid="104" pm="."><plain>The expression was calculated using the modified Pfaffl model [24], (Q = EΔCt, where E is reaction efficiency and ΔCt = Ctcalibrator–Ctsample). </plain></SENT>
 <SENT sid="105" pm="."><plain>The calibrator sample was a mixture of total RNA isolated from each sample. </plain></SENT>
-<SENT sid="106" pm="."><plain>The gene expression was normalized to the expression of two genes selected by GeNorm program (ver. </plain></SENT>
-<SENT sid="107" pm="."><plain>3.5). </plain></SENT>
+<SENT sid="106" pm="."><plain>The gene expression was normalized to the expression of two genes selected by GeNorm program (ver. 3.5). </plain></SENT>
 <SENT sid="108" pm="."><plain>These genes were as follows: for PC-3 cells: HADHA and EIF5; SK-OV-3: HADHA and CTBP1, WM793B: CTBP1 and EIF5. </plain></SENT>
-<SENT sid="109" pm="."><plain>The statistical significance of the results was estimated using Mann-Whitney U test (Statistica ver. </plain></SENT>
-<SENT sid="110" pm="."><plain>10). </plain></SENT>
+<SENT sid="109" pm="."><plain>The statistical significance of the results was estimated using Mann-Whitney U test (Statistica ver. 10). </plain></SENT>
 <SENT sid="111" pm="."><plain>The sequence of the primers and the probe numbers are shown in Table S1. </plain></SENT>
 </text></p></sec></sec></SecTag><SecTag type="RESULTS"><sec id="s3"><title><text><SENT sid="112" pm="."><plain>Results </plain></SENT>
 </text></title><sec id="s3a"><title><text><SENT sid="113" pm="."><plain>The hypoxia response is cell line specific </plain></SENT>

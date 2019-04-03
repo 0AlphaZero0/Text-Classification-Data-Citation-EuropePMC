@@ -38,6 +38,9 @@ for file in os.listdir("./articlesOA"):
         matchesRef=re.findall(r'\(ref\.\s(</plain></SENT>\n<[^>]+pm=\"\.\"><plain>)',tmpFile)
         for match in matchesRef:
             tmpFile=tmpFile.replace(match,'')
+        matchesVer=re.findall(r'ver\.\s(</plain></SENT>\n<[^>]+pm=\"\.\"><plain>)',tmpFile)
+        for match in matchesVer:
+            tmpFile=tmpFile.replace(match,'')
         newFile=codecs.open("./articlesOA/"+str(file),"w",encoding="utf-8")
         newFile.write(tmpFile)
         newFile.close()
