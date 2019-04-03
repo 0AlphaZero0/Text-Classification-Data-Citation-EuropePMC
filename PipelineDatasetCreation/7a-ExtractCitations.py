@@ -79,7 +79,12 @@ for file in os.listdir("./articlesOA"):
             for accessionNb in accessionNames:
                 section=''
                 tmp=sentences[sentencesIndex]
-                tmpbefore=''.join(sentences[sentencesIndex-1].itertext())
+                for secTagCitation in tmp.iterancestors("SecTag"):
+                    secTagCitation=secTagCitation.get("type")
+                for secTagCitationBefore in sentences[sentencesIndex-1].iterancestors("SecTag"):
+                    secTagCitationBefore=secTagCitationBefore.get("type")
+                if secTagCitation==secTagCitationBefore:
+                    tmpbefore=''.join(sentences[sentencesIndex-1].itertext())
                 if accessionNb in ''.join(tmp.itertext()):
                     tmpafter=''
                     for preCitPost in preCitPosts:# this loop is made to extract section type & subtype
@@ -105,9 +110,16 @@ for file in os.listdir("./articlesOA"):
                                     section=section.split(" (")[0]
                                     subtype=preCitPost[2]
                     if sentencesIndex+1<len(sentences):
-                        tmpafter=tmpafter+''.join(sentences[sentencesIndex+1].itertext())
-                        if sentencesIndex+2<len(sentences):
-                            tmpafter=tmpafter+''.join(sentences[sentencesIndex+2].itertext())
+                        for secTagCitation1 in sentences[sentencesIndex+1].iterancestors("SecTag"):
+                            secTagCitation1=secTagCitation1.get("type")
+                        if secTagCitation==secTagCitation1:
+                            tmpafter=tmpafter+''.join(sentences[sentencesIndex+1].itertext())
+                            if sentencesIndex+2<len(sentences):
+                                for secTagCitation2 in sentences[sentencesIndex+2].iterancestors("SecTag"):
+                                    secTagCitation2=secTagCitation2.get("type")
+                                if secTagCitation==secTagCitation2:
+                                    tmpafter=tmpafter+''.join(sentences[sentencesIndex+2].itertext())
+                    
                     resultString=''.join(tmp.itertext())
                     resultFile.write(str(file).split("-")[0])
                     resultFile.write("\t")
