@@ -103,7 +103,7 @@ Prediction : does it pass pre-screening if so does it pass peer review; if not i
 
 //
 
-[:top::top::top::top::top::top::top::top::top::top::top::top::top::top:Got to the top:top::top::top::top::top::top::top::top::top::top::top::top::top::top::top:](#top)
+[:top::top::top::top::top::top::top::top::top::top::top::top::top::top:Go to the top:top::top::top::top::top::top::top::top::top::top::top::top::top::top::top:](#top)
 
 <a name="11/03"></a>
 ### :mega: 11/03 - Defintions of planinng, needs and requests :
@@ -119,7 +119,7 @@ Needs & requests :
   - Good draft of the internship report.
   - Presentation of the work done
 
-[:top::top::top::top::top::top::top::top::top::top::top::top::top::top:Got to the top:top::top::top::top::top::top::top::top::top::top::top::top::top::top::top:](#top)
+[:top::top::top::top::top::top::top::top::top::top::top::top::top::top:Go to the top:top::top::top::top::top::top::top::top::top::top::top::top::top::top::top:](#top)
 
 <a name="12/03"></a>
 ### :mega: 12/03 - Questions & path set up :
@@ -152,7 +152,7 @@ Are there any challenging problems? ML algorithms etc.
 
 Results and analysis  
 
-[:top::top::top::top::top::top::top::top::top::top::top::top::top::top:Got to the top:top::top::top::top::top::top::top::top::top::top::top::top::top::top::top:](#top)
+[:top::top::top::top::top::top::top::top::top::top::top::top::top::top:Go to the top:top::top::top::top::top::top::top::top::top::top::top::top::top::top::top:](#top)
 
 <a name="19/03"></a>
 ### :mega: 19/03 - Dataset conception :
@@ -165,7 +165,7 @@ Results and analysis
   * Mine for citation
   * Need to discuss with Fransesco
 
-[:top::top::top::top::top::top::top::top::top::top::top::top::top::top:Got to the top:top::top::top::top::top::top::top::top::top::top::top::top::top::top::top:](#top)
+[:top::top::top::top::top::top::top::top::top::top::top::top::top::top:Go to the top:top::top::top::top::top::top::top::top::top::top::top::top::top::top::top:](#top)
 
 <a name="25/03"></a>
 ### :mega: 25/03 - XML Talks / Data creation :
@@ -178,7 +178,7 @@ Results and analysis
   * Look at lXML & W3sch XML
   * Split sentences using designed tool
 
-[:top::top::top::top::top::top::top::top::top::top::top::top::top::top:Got to the top:top::top::top::top::top::top::top::top::top::top::top::top::top::top::top:](#top)
+[:top::top::top::top::top::top::top::top::top::top::top::top::top::top:Go to the top:top::top::top::top::top::top::top::top::top::top::top::top::top::top::top:](#top)
 
 <a name="02/04"></a>
 ### :mega: 02/04 - Summary of March :
@@ -192,7 +192,7 @@ Results and analysis
    * [OpenCitations](http://opencitations.net/)
 
 
-[:top::top::top::top::top::top::top::top::top::top::top::top::top::top:Got to the top:top::top::top::top::top::top::top::top::top::top::top::top::top::top::top:](#top)
+[:top::top::top::top::top::top::top::top::top::top::top::top::top::top:Go to the top:top::top::top::top::top::top::top::top::top::top::top::top::top::top::top:](#top)
 
 ______________________________________________________________________
 
@@ -363,7 +363,7 @@ Citations with no snetiment are considered as OBJECTIVES.
 
 ***Classification*** = **SVM with features : "1-3 grams + Dependency features + Window Based Negation"**
 
-[:top::top::top::top::top::top::top::top::top::top::top::top::top::top:Got to the top:top::top::top::top::top::top::top::top::top::top::top::top::top::top::top:](#top)
+[:top::top::top::top::top::top::top::top::top::top::top::top::top::top:Go to the top:top::top::top::top::top::top::top::top::top::top::top::top::top::top::top:](#top)
 
 <a name="Week2"></a>
 ### :date: Week 2 - 11/03-17/03 :
@@ -438,7 +438,7 @@ They use 6 categories to classify citations :
  - Comparison OR Contrasts (*Express similarity/differences to P*)
  - Future (*P is a potential avenue for future work*)
 
-[:top::top::top::top::top::top::top::top::top::top::top::top::top::top:Got to the top:top::top::top::top::top::top::top::top::top::top::top::top::top::top::top:](#top)
+[:top::top::top::top::top::top::top::top::top::top::top::top::top::top:Go to the top:top::top::top::top::top::top::top::top::top::top::top::top::top::top::top:](#top)
 
 <a name="Week3"></a>
 ### :date: Week 3 - 18/03-24/03 :
@@ -542,7 +542,7 @@ They also use Punctuation but useless in scientific paper.
   
 This article show how to build a lexicon automaticaly so it could be a solution, to do the sentiment analysis.
 
-[:top::top::top::top::top::top::top::top::top::top::top::top::top::top:Got to the top:top::top::top::top::top::top::top::top::top::top::top::top::top::top::top:](#top)
+[:top::top::top::top::top::top::top::top::top::top::top::top::top::top:Go to the top:top::top::top::top::top::top::top::top::top::top::top::top::top::top::top:](#top)
 
 <a name="Week4"></a>
 ### :date: Week 4 - 25/03-31/03 :
@@ -569,7 +569,7 @@ During this week I've start to create a pipeline that can extract data citations
 
 Moving to a cross-discipline standard for acknowledging the data allows researchers to justify continued funding for their data collection efforts (Uhlir, 2012; CODATA-ICSTI Task Group , 2013)
 
-[:top::top::top::top::top::top::top::top::top::top::top::top::top::top:Got to the top:top::top::top::top::top::top::top::top::top::top::top::top::top::top::top:](#top)
+[:top::top::top::top::top::top::top::top::top::top::top::top::top::top:Go to the top:top::top::top::top::top::top::top::top::top::top::top::top::top::top::top:](#top)
 
 <a name="Month2"></a>
 <a name="Week5"></a>
@@ -580,12 +580,12 @@ I've try to improve a kind of pipeline to create dataset for the future analysis
 To create a good dataset we decide to take the section and the subtype of the citation eg. section= *Results* or *Methods* and SubType= *ENA* or *PDBe*.
 
 We also decide to remove citations that have less than 25 characters and more than 500 characters, indeed those with less than 25 are most of the time title like *INTRODUCTION* or *Suplementary-material*.
-
+Thanks to a little analysis we fix those two limits indeed most of the length of citations and context sentences are between 25 and 800. But those which are mined start from 1 to 30000 characters.
 
 - *Papers & Blogs* :
 
 
-[:top::top::top::top::top::top::top::top::top::top::top::top::top::top:Got to the top:top::top::top::top::top::top::top::top::top::top::top::top::top::top::top:](#top)
+[:top::top::top::top::top::top::top::top::top::top::top::top::top::top:Go to the top:top::top::top::top::top::top::top::top::top::top::top::top::top::top::top:](#top)
 
 ______________________________________________________________________
 
