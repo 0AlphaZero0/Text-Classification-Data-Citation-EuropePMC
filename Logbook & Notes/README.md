@@ -575,6 +575,7 @@ Moving to a cross-discipline standard for acknowledging the data allows research
 <a name="Week5"></a>
 ### :date: Week 5 - 01/04-07/04 :
 
+I've try to improve a kind of pipeline to create dataset for the future analysis, for this First I extract papers that are open access and contains Accession Numbers so there is a full-txt and an Accession-Numbers file in XML format from the annotation API and RESTful API. Then I extract a PMCID list that it used to "sentencized" full-txt XML files. Then I use a little script to repare result files, indeed the splitter sometimes made mistakes, And it's kind of easy to fix some of these#####################
 
 
 - *Papers & Blogs* :
