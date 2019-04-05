@@ -582,6 +582,10 @@ To create a good dataset we decide to take the section and the subtype of the ci
 We also decide to remove citations that have less than 25 characters and more than 500 characters, indeed those with less than 25 are most of the time title like *INTRODUCTION* or *Suplementary-material*.
 Thanks to a little analysis we fix those two limits indeed most of the length of citations and context sentences are between 25 and 800. But those which are mined start from 1 to 30000 characters.
 
+And I've also notice that citations are mostly at the end of a paragraph unlike the beginning of it.
+
+It could be great to add a feature **Figure** that can be set to *True* or *False* or reaplce the section feature (Abstract, Methods etc. by *Figure* when the citation take place in a caption's figure.
+
 - *Papers & Blogs* :
 
 
