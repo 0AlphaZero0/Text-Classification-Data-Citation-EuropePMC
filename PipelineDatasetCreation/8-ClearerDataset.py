@@ -29,6 +29,9 @@ citationAfter=[]
 
 csvfile=codecs.open("resultCitations.csv","r",encoding="utf-8")
 for line in csvfile.readlines():
+    for char in line:
+        if ord(char)>128:
+            char=''
     line=line.split("\t")
     if line[2]=="":
         pass
