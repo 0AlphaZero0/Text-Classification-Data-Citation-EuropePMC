@@ -576,18 +576,18 @@ Moving to a cross-discipline standard for acknowledging the data allows research
 <a name="Week5"></a>
 ### :date: Week 5 - 01/04-07/04 :
 
-I've try to improve a kind of pipeline to create dataset for the future analysis, for this First I extract papers that are open access and contains Accession Numbers so there is a full-txt and an Accession-Numbers file in XML format from the annotation API and RESTful API. Then I extract a PMCID list that it used to "sentencized" full-txt XML files. Then I use a little script to repare result files, indeed the splitter sometimes made mistakes, And it's kind of easy to fix some of these. Then I extract citation from those repared files and it result in a file with all sentences containing all citations. But we're focusing on citations that are currently mine by the annotation API.
+I've try to improve a kind of **pipeline to create dataset for the future analysis**, for this First I extract papers that are open access and contains Accession Numbers so there is a full-txt and an Accession-Numbers file in XML format from the annotation API and RESTful API. Then I extract a PMCID list that it used to "sentencized" full-txt XML files. Then I use a little script to repare result files, indeed the splitter sometimes made mistakes, And it's kind of easy to fix some of these. Then I extract citation from those repared files and it result in a file with all sentences containing all citations. But we're focusing on citations that are currently mine by the annotation API.
 
-To create a good dataset we decide to take the section and the subtype of the citation eg. section= *Results* or *Methods* and SubType= *ENA* or *PDBe*.
+To create a good dataset we decide to take the **section** and the **subtype** of the citation eg. section= *Results* or *Methods* and SubType= *ENA* or *PDBe*.
 
-We also decide to remove citations that have less than 25 characters and more than 500 characters, indeed those with less than 25 are most of the time title like *INTRODUCTION* or *Suplementary-material*.
+We also decide to **remove citations** that have less than 25 characters and more than 500 characters, indeed those with less than 25 are most of the time title like *INTRODUCTION* or *Suplementary-material*.
 Thanks to a little analysis we fix those two limits indeed most of the length of citations and context sentences are between 25 and 800. But those which are mined start from 1 to 30000 characters.
 
 And I've also notice that citations are mostly at the end of a paragraph unlike the beginning of it.
 
 It could be great to add a feature **Figure** that can be set to *True* or *False* or reaplce the section feature (Abstract, Methods etc. by *Figure* when the citation take place in a caption's figure.
 
-At the end I've start to annotate ~1000 citations with categories : Background, Use, ClinicalTrials, Creation 
+At the end I've start to annotate ~1000 citations with categories : **Background, Use, ClinicalTrials, Creation **
 
 [:top::top::top::top::top::top::top::top::top::top::top::top::top::top:Go to the top:top::top::top::top::top::top::top::top::top::top::top::top::top::top::top:](#top)
 
@@ -596,16 +596,16 @@ At the end I've start to annotate ~1000 citations with categories : Background, 
 
 I had a features called **Figure** which can be *True* or *False* because it seems like if a data citation is in a caption's figure, so there is high chance to be use in the paper.
 
-I've also implemented non-ascii character suppression, because it looks like sometimes it just corrupt a complete sentence even for an human reading.
+I've also implemented **non-ascii character suppression**, because it looks like sometimes it just corrupt a complete sentence even for an human reading.
 
-I thought to other class because sometimes the limit is really blurry :
+I thought to **other categories** because sometimes the limit is really blurry :
 
  - Unclassifiable/other : it take references and sentences that doesn't make any that look like false positive.
  - Study : here authors have study the current data
  - Match : here they don't really use the data but match them like with a BLASTX or BLASTN etc.
  - Design/Inspire : I've note that a lot of authors told that they design thanks to a dataset something, it's a background thing but maybe it could be split between thses two.
 
-I've note something that acn be helpfull : sometimes citations looks like : *AccessionNb **to** AccessionNb+n*, so I think it mean that authors use AccessionNb, AccessionNb+1, AccessionNb+2, AccessionNb+3,... AccessionNb+n where n is the last of the series., so in one citation there is sometimes more AccessionNb than what is written.
+:warning:I've note something that can be helpfull : sometimes citations looks like : *AccessionNb **to** AccessionNb+n*, so I think it mean that authors use AccessionNb, AccessionNb+1, AccessionNb+2, AccessionNb+3,... AccessionNb+n where n is the last of the series., so in one citation there is sometimes more AccessionNb than what is written.
 
 - *Papers & Blogs* :
 
