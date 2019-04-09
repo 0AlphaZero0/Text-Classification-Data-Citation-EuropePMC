@@ -23,6 +23,7 @@ pmcid=[]
 accessionNb=[]
 section=[]
 subtype=[]
+figure=[]
 citationBefore=[]
 citation=[]
 citationAfter=[]
@@ -35,16 +36,17 @@ for line in csvfile.readlines():
     line=line.split("\t")
     if line[2]=="":
         pass
-    elif line[5] not in citation:
+    elif line[6] not in citation:
         pmcid.append(line[0])
         accessionNb.append(line[1])
         section.append(line[2])
         subtype.append(line[3])
-        citationBefore.append(line[4])
-        citation.append(line[5])
-        citationAfter.append(line[6][:-2])
+        figure.append(line[4])
+        citationBefore.append(line[5])
+        citation.append(line[6])
+        citationAfter.append(line[7][:-2])
     else:
-        indexCitation=citation.index(line[5])
+        indexCitation=citation.index(line[6])
         accessionNb[indexCitation]=accessionNb[indexCitation]+","+line[1]
 dataset=codecs.open("./articlesOA/dataset1.csv","w",encoding="utf-8")
 indexDataset=0
@@ -57,6 +59,8 @@ while indexDataset < len(citation):
     dataset.write(section[indexDataset])
     dataset.write("\t")
     dataset.write(subtype[indexDataset])
+    dataset.write("\t")
+    dataset.write(figure[indexDataset])
     dataset.write("\t")
     dataset.write(citationBefore[indexDataset])
     dataset.write("\t")

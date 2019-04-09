@@ -7,9 +7,10 @@ import codecs # Allows to load a file containing UTF-8 characters
 import os # Allows to modify some things on the os
 import re # Allows to make regex requests
 
-file=codecs.open("dataset-test.csv","r",encoding="utf-8")
+
+file=codecs.open("dataset-update.csv","r",encoding="utf-8")
 oldFile=file
-newFile=codecs.open("dataset-test-rearrange.csv","w",encoding="utf-8")
+newFile=codecs.open("dataset-update-rearrange.csv","w",encoding="utf-8")
 for line in oldFile.readlines():
     line=line.split("\t")
     accessionNumbers=line[1].split(",")
@@ -22,9 +23,22 @@ for line in oldFile.readlines():
         newFile.write("\t")
         newFile.write(line[3])#SubType
         newFile.write("\t")
-        newFile.write(line[4])#Pre-citation
+        newFile.write(line[4])#Figure
         newFile.write("\t")
-        newFile.write(line[5])#Citation
+        newFile.write(line[5])#Pre-citation
         newFile.write("\t")
-        newFile.write(line[6])#Post-citation
+        newFile.write(line[6])#Citation
+        newFile.write("\t")
+        newFile.write(line[7])#Post-citation
 newFile.close()
+
+file= codecs.open("dataset-update-rearrange.csv","r",encoding="utf-8")
+tmp=file.read()
+for char in tmp:
+    if ord(char)>128:
+        char=''
+resultFile=codecs.open("dataset-update.csv","w",encoding="utf-8")
+resultFile.write(tmp)
+resultFile.close()
+
+os.remove("dataset-update-rearrange.csv")
