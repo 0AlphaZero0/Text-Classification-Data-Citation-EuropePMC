@@ -587,12 +587,14 @@ And I've also notice that citations are mostly at the end of a paragraph unlike 
 
 It could be great to add a feature **Figure** that can be set to *True* or *False* or reaplce the section feature (Abstract, Methods etc. by *Figure* when the citation take place in a caption's figure.
 
+At the end I've start to annotate ~1000 citations with categories : Background, Use, ClinicalTrials, Creation 
+
 [:top::top::top::top::top::top::top::top::top::top::top::top::top::top:Go to the top:top::top::top::top::top::top::top::top::top::top::top::top::top::top::top:](#top)
 
 <a name="Week6"></a>
 ### :date: Week 6 - 08/04-14/04 :
 
-I had a features called Figure which can be *True* or *False* because it seems like if a data citation is in a caption's figure, so there is high chance to be use in the paper.
+I had a features called **Figure** which can be *True* or *False* because it seems like if a data citation is in a caption's figure, so there is high chance to be use in the paper.
 
 I've also implemented non-ascii character suppression, because it looks like sometimes it just corrupt a complete sentence even for an human reading.
 
