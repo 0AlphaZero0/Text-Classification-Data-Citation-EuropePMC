@@ -32,6 +32,7 @@ ______________________________________________________________________
   * [Week 4 - 25/03-31/03](#Week4)
 - [Month 2 - 01/04-30/04](#Month2)
   * [Week 5 - 01/04-07/04](#Week5)
+  * [Week 6 - 08/04-14/04](#Week6)
 ______________________________________________________________________
 
 ### :bookmark_tabs: Index
@@ -585,6 +586,24 @@ Thanks to a little analysis we fix those two limits indeed most of the length of
 And I've also notice that citations are mostly at the end of a paragraph unlike the beginning of it.
 
 It could be great to add a feature **Figure** that can be set to *True* or *False* or reaplce the section feature (Abstract, Methods etc. by *Figure* when the citation take place in a caption's figure.
+
+[:top::top::top::top::top::top::top::top::top::top::top::top::top::top:Go to the top:top::top::top::top::top::top::top::top::top::top::top::top::top::top::top:](#top)
+
+<a name="Week6"></a>
+### :date: Week 6 - 08/04-14/04 :
+
+I had a features called Figure which can be *True* or *False* because it seems like if a data citation is in a caption's figure, so there is high chance to be use in the paper.
+
+I've also implemented non-ascii character suppression, because it looks like sometimes it just corrupt a complete sentence even for an human reading.
+
+I thought to other class because sometimes the limit is really blurry :
+
+ - Unclassifiable/other : it take references and sentences that doesn't make any that look like false positive.
+ - Study : here authors have study the current data
+ - Match : here they don't really use the data but match them like with a BLASTX or BLASTN etc.
+ - Design/Inspire : I've note that a lot of authors told that they design thanks to a dataset something, it's a background thing but maybe it could be split between thses two.
+
+I've note something that acn be helpfull : sometimes citations looks like : *AccessionNb **to** AccessionNb+n*, so I think it mean that authors use AccessionNb, AccessionNb+1, AccessionNb+2, AccessionNb+3,... AccessionNb+n where n is the last of the series., so in one citation there is sometimes more AccessionNb than what is written.
 
 - *Papers & Blogs* :
 
