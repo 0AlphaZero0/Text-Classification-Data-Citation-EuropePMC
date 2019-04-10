@@ -47,6 +47,9 @@ resultFile.write("\t")
 resultFile.write("Post-citation")
 resultFile.write("\n")
 
+numberOfExtracted=0
+numberOfAnnotations=0
+
 # for a PMCID file sentencized :
 for file in os.listdir("./articlesOA"):
     # Check first the PMCID-AccessionNb.xml file
@@ -59,6 +62,7 @@ for file in os.listdir("./articlesOA"):
         xmlAccessionNb=etree.fromstring(fileAccessTmp) # loading XML file as a tree
         ### Extract Accession number
         names=xmlAccessionNb.findall(".//name")
+        numberOfAnnotations+=len(names)
         for name in names:
             if name.text not in accessionNames:
                 accessionNames.append(name.text)
@@ -71,9 +75,8 @@ for file in os.listdir("./articlesOA"):
         preCitPosts=[]
         index=0
         while index<len(names):
-            preCitPosts.append([''.join(prefixes[index].itertext())+''.join(names[index].itertext())+''.join(postfixes[index].itertext()),''.join(sections[index].itertext()),''.join(subtypes[index].itertext())])
+            preCitPosts.append([''.join(prefixes[index].itertext())+''.join(names[index].itertext())+''.join(postfixes[index].itertext()),''.join(names[index].itertext()),''.join(sections[index].itertext()),''.join(subtypes[index].itertext())])
             index+=1
-
         ### Check then the PMCID-sentencized.xml file
         fileSentencized=codecs.open("./articlesOA/"+(str(file).split("-")[0])+"-sentencized.xml","r",encoding="utf-8")
         fileSentencizedTmp=fileSentencized.read()
@@ -87,11 +90,25 @@ for file in os.listdir("./articlesOA"):
         sentences=fileSentencizedTree.findall(".//SENT")
         sentencesIndex=0
         while sentencesIndex<len(sentences):
-            for accessionNb in accessionNames:# for each accessionNb
-                section=''
-                subtype=''
+            for preCitPost in preCitPosts:# for each accessionNb
                 citation=sentences[sentencesIndex]
-                if accessionNb in ''.join(citation.itertext()) and minlen<len(''.join(citation.itertext()))<maxlen:
+                citationStr=''.join(citation.itertext())
+                indexMatch=citationStr.find(preCitPost[1])
+                beginning=indexMatch-20
+                if beginning<0:
+                    beginning=0
+                ending=indexMatch+len(preCitPost[1])
+                if ending>len(citationStr)-1:
+                    ending=len(citationStr)
+                strAnnot=citation[beginning:ending]
+                strRatio=SequenceMatcher(None,strAnnot,preCitPost[0])
+                scheme=re.escape(preCitPost[0])
+                if preCitPost[0] in citationStr and minlen<len(citationStr)<maxlen or citationStr.find(preCitPost[0])>-1 and minlen<len(citationStr)<maxlen or re.search(scheme,citationStr)!=None and minlen<len(citationStr)<maxlen:
+                    numberOfExtracted+=1
+                    # remove the "()" part of the string
+                    section=preCitPost[2]
+                    if "(" in section:
+                        section=section.split(" (")[0]
                     #check the section of the sentence
                     for secTag in citation.iterancestors("SecTag"):#citation secTag
                         secTag=secTag.get("type")
@@ -109,7 +126,6 @@ for file in os.listdir("./articlesOA"):
                         citationbefore=''.join(sentences[sentencesIndex-1].itertext())
                     #check the section of the next sentence
                     citationafter=''
-                    ##!!!!!!!!!!!!!!!!!!!!!si erreur identation!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!if sentencesIndex+1<len(sentences): # check if the script doesn't go to far
                     for secTagAfter1 in sentences[sentencesIndex+1].iterancestors("SecTag"):
                         secTagAfter1=secTagAfter1.get("type")
                         break
@@ -121,46 +137,30 @@ for file in os.listdir("./articlesOA"):
                                 break
                             if secTag==secTagAfter2 and minlen<len(''.join(sentences[sentencesIndex+2].itertext()))<maxlen:# check if the section of the next next sentence is the same of the citation one
                                 citationafter=citationafter+''.join(sentences[sentencesIndex+2].itertext())
-                    ## !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!fin indentation!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                    for preCitPost in preCitPosts:# this loop is made to extract section type & subtype
-                        if preCitPost[0] in ''.join(citation.itertext()):
-                            section=preCitPost[1]
-                            if "(" in section:
-                                section=section.split(" (")[0]
-                                subtype=preCitPost[2]
-                        else:# this is not really accurate maybe should I check later the ratio
-                            tmpStrRatio=''.join(citation.itertext())
-                            indexMatch=tmpStrRatio.find(accessionNb)
-                            beginning=indexMatch-20
-                            if beginning <0:
-                                beginning=0
-                            ending=indexMatch+len(accessionNb)+20
-                            if ending>len(tmpStrRatio)-1:
-                                ending=len(tmpStrRatio)
-                            tmpStrRatio=tmpStrRatio[beginning:ending]
-                            strRatio=SequenceMatcher(None,tmpStrRatio,preCitPost[0])
-                            if strRatio.ratio()>0.75: #50% of similarity through those string.
-                                section=preCitPost[1]
-                                if "(" in section:
-                                    section=section.split(" (")[0]
-                                    subtype=preCitPost[2]
                     resultString=''.join(citation.itertext())
-                    resultFile.write(str(file).split("-")[0])
+                    resultFile.write(str(file).split("-")[0])# PMCID
                     resultFile.write("\t")
-                    resultFile.write(accessionNb)
+                    resultFile.write(preCitPost[1])# AccessionNb
                     resultFile.write("\t")
-                    resultFile.write(section)
+                    resultFile.write(section)# Section
                     resultFile.write("\t")
-                    resultFile.write(subtype)
+                    resultFile.write(preCitPost[3])# SubType
                     resultFile.write("\t")
-                    resultFile.write(str(figure))
+                    resultFile.write(str(figure))# Figure
                     resultFile.write("\t")
-                    resultFile.write(citationbefore)
+                    resultFile.write(citationbefore)# Pre-citation
                     resultFile.write("\t")
-                    resultFile.write(resultString)
+                    resultFile.write(resultString)# Citation
                     resultFile.write("\t")
-                    resultFile.write(citationafter)
+                    resultFile.write(citationafter)# Post-citation
                     resultFile.write("\n")
+                if preCitPost[1] in ''.join(citation.itertext()):
+                    print (preCitPost[0])
+                    print (''.join(citation.itertext()))
             sentencesIndex+=1
 resultFile.close()
+print("There is ",numberOfAnnotations," that are mined by AnnotationAPI.")
+print("There is ",numberOfExtracted," citations that have been extracted.")
+success=numberOfExtracted/numberOfAnnotations*100
+print(success,"% of successfull extracted citations")
 print("DONE")
