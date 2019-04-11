@@ -90,20 +90,20 @@ for file in os.listdir("./articlesOA"):
         sentences=fileSentencizedTree.findall(".//SENT")
         sentencesIndex=0
         while sentencesIndex<len(sentences):
-            for preCitPost in preCitPosts:# for each accessionNb
+            for preCitPost in preCitPosts:# for citation
                 citation=sentences[sentencesIndex]
                 citationStr=''.join(citation.itertext())
                 indexMatch=citationStr.find(preCitPost[1])
-                beginning=indexMatch-20
+                beginning=indexMatch-19
                 if beginning<0:
                     beginning=0
-                ending=indexMatch+len(preCitPost[1])
+                ending=indexMatch+len(preCitPost[1])+20
                 if ending>len(citationStr)-1:
                     ending=len(citationStr)
-                strAnnot=citation[beginning:ending]
+                strAnnot=citationStr[beginning:ending]
                 strRatio=SequenceMatcher(None,strAnnot,preCitPost[0])
                 scheme=re.escape(preCitPost[0])
-                if preCitPost[0] in citationStr and minlen<len(citationStr)<maxlen or citationStr.find(preCitPost[0])>-1 and minlen<len(citationStr)<maxlen or re.search(scheme,citationStr)!=None and minlen<len(citationStr)<maxlen:
+                if preCitPost[0] in citationStr and minlen<len(citationStr)<maxlen or citationStr.find(preCitPost[0])>-1 and minlen<len(citationStr)<maxlen or strRatio.ratio()>0.75 and minlen<len(citationStr)<maxlen:
                     numberOfExtracted+=1
                     # remove the "()" part of the string
                     section=preCitPost[2]
@@ -154,9 +154,12 @@ for file in os.listdir("./articlesOA"):
                     resultFile.write("\t")
                     resultFile.write(citationafter)# Post-citation
                     resultFile.write("\n")
-                if preCitPost[1] in ''.join(citation.itertext()):
-                    print (preCitPost[0])
-                    print (''.join(citation.itertext()))
+                else:
+                    if preCitPost[1] in ''.join(citation.itertext()):
+                        print (preCitPost[0],"########## substring")
+                        print (''.join(citation.itertext()),"########## String")
+                        print (strAnnot,"###### strRatio")
+                        print ("###################################")
             sentencesIndex+=1
 resultFile.close()
 print("There is ",numberOfAnnotations," that are mined by AnnotationAPI.")
