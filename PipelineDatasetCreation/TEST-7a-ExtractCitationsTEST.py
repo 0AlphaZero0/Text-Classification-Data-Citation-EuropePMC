@@ -9,6 +9,7 @@ from lxml import etree # Allows to manipulate xml file easily
 import os # Allows to modify some things on the os
 import re # Allows to make regex requests
 import xml # Allows to manipulate xml files
+import string
 
 """
 This script take place in a pipeline that extract citation of data in scientific papers, thanks to EuropePMC, RESTful API and Annotation API.
@@ -22,19 +23,81 @@ Indeed the context of citation is really important so there is a need to extract
 In the fist time the script will load a file that end like "-AccessionNb.xml" it contain the Accession numbers of a specific paper (they are find thanks to the lxml etree module : .findall(".//name")).
 Then the script will load the corresponding sentencized XML file. If the accession number is in the sentence then the previous sentence and the two after are saved in the file.
 """
-#################################################    Function     #################################################
 
-def save():
-    pass
-
-###################################################    Main     ###################################################
+####################################################    Var    ####################################################
 length=(len(os.listdir("./articlesOA"))-1)/2
 minlen=25
 maxlen=500
+numberOfExtracted=0
+numberOfAnnotations=0
+threshold=0.85
+fileNameMistakes="mistakes.csv"
+fileNameResult="Result.csv"
+#################################################    Function     #################################################
 
-outputmistakefile=codecs.open("mistakefile.csv","w",encoding="utf-8")
+def save(sentences,sentencesIndex,resultFile,preCitPost):
+    global numberOfExtracted
+    numberOfExtracted+=1
+    citation=sentences[sentencesIndex]
+    # remove the "()" part of the string
+    section=preCitPost[3]
+    if "(" in section:
+        section=section.split(" (")[0]
+    #check the section of the sentence
+    secTag=''
+    figure=False
+    for secTag in sentences[sentencesIndex].iterancestors("SecTag"):#citation secTag
+        secTag=secTag.get("type")
+        if secTag=="FIG":# Assign type of figure or not.
+            figure=True
+        else:
+            figure=False
+        break
+    #check the section of the previous sentence
+    citationbefore=''
+    secTagBefore=''
+    for secTagBefore in sentences[sentencesIndex-1].iterancestors("SecTag"):#citationBefore secTag
+        secTagBefore=secTagBefore.get("type")
+        break
+    if secTag==secTagBefore and minlen<len(''.join(sentences[sentencesIndex-1].itertext()))<maxlen:# check if the section of the previous sentence is the same of the citation one
+        citationbefore=''.join(sentences[sentencesIndex-1].itertext())
+    #check the section of the next sentence
+    citationafter=''
+    secTagAfter1=''
+    secTagAfter2=''
+    for secTagAfter1 in sentences[sentencesIndex+1].iterancestors("SecTag"):
+        secTagAfter1=secTagAfter1.get("type")
+        break
+    if secTag==secTagAfter1 and minlen<len(''.join(sentences[sentencesIndex+1].itertext()))<maxlen:# check if the section of the next sentence is the same of the citation one
+        citationafter=citationafter+''.join(sentences[sentencesIndex+1].itertext())
+        if sentencesIndex+2<len(sentences):
+            for secTagAfter2 in sentences[sentencesIndex+2].iterancestors("SecTag"):
+                secTagAfter2=secTagAfter2.get("type")
+                break
+            if secTag==secTagAfter2 and minlen<len(''.join(sentences[sentencesIndex+2].itertext()))<maxlen:# check if the section of the next next sentence is the same of the citation one
+                citationafter=citationafter+''.join(sentences[sentencesIndex+2].itertext())
+    resultString=''.join(citation.itertext())
+    resultFile.write(str(file).split("-")[0])# PMCID
+    resultFile.write("\t")
+    resultFile.write(preCitPost[1])# AccessionNb
+    resultFile.write("\t")
+    resultFile.write(section)# Section
+    resultFile.write("\t")
+    resultFile.write(preCitPost[3])# SubType
+    resultFile.write("\t")
+    resultFile.write(str(figure))# Figure
+    resultFile.write("\t")
+    resultFile.write(citationbefore)# Pre-citation
+    resultFile.write("\t")
+    resultFile.write(resultString)# Citation
+    resultFile.write("\t")
+    resultFile.write(citationafter)# Post-citation
+    resultFile.write("\n")    
 
-resultFile=codecs.open("resultCitations.csv","w",encoding="utf-8")
+###################################################    Main     ###################################################
+
+outputmistakefile=codecs.open(fileNameMistakes,"w",encoding="utf-8")
+resultFile=codecs.open(fileNameResult,"w",encoding="utf-8")
 resultFile.write("PMCID")
 resultFile.write("\t")
 resultFile.write("AccessionNb")
@@ -51,11 +114,6 @@ resultFile.write("Citation")
 resultFile.write("\t")
 resultFile.write("Post-citation")
 resultFile.write("\n")
-
-numberOfExtracted=0
-numberOfAnnotations=0
-threshold=0.85
-
 # for a PMCID file sentencized :
 for file in os.listdir("./articlesOA"):
     # Check first the PMCID-AccessionNb.xml file
@@ -121,89 +179,21 @@ for file in os.listdir("./articlesOA"):
                         PrefixRatio=SequenceMatcher(None,comparingStrPrefix,preCitPost[0].replace(" ",""))
                         PostfixRatio=SequenceMatcher(None,comparingStrPostfix,preCitPost[2].replace(" ",""))
                         citationAnnot=preCitPost[0]+preCitPost[1]+preCitPost[2]
-                        if citationAnnot.replace(" ","") in sentence.replace(" ","") or sentence[beginning:ending].replace(" ","") in citationAnnot.replace(" ",""):
-                            numberOfExtracted+=1
-                            # print (sentence)# function
-                            # print ("#####################")
+                        tmpCitationAnnot=citationAnnot.translate(str.maketrans('', '', string.punctuation))
+                        tmpSentence=sentence.translate(str.maketrans('', '', string.punctuation))
+                        if tmpCitationAnnot.replace(" ","") in tmpSentence.replace(" ","") or tmpSentence[beginning:ending].replace(" ","") in tmpCitationAnnot.replace(" ",""):
+                            save(sentences, sentencesIndex,resultFile,preCitPost)
                         elif PrefixRatio.ratio()>threshold and PostfixRatio.ratio()>threshold:
-                            numberOfExtracted+=1
-                            # print (sentence)# function
-                            # print ("*****************************")
+                            save(sentences, sentencesIndex,resultFile,preCitPost)
                         else:
                             outputmistakefile.write(citationAnnot)
                             outputmistakefile.write("\n")
                             outputmistakefile.write(sentence[beginning:ending])
                             outputmistakefile.write("\n\n")
-                            print (citationAnnot)
-                            print (sentence[beginning:ending])
-                            print ("!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
-            sentencesIndex+=1        
-        # while sentencesIndex<len(sentences):
-        #     for preCitPost in preCitPosts:# for citation
-        #         citation=sentences[sentencesIndex]
-        #         citationStr=''.join(citation.itertext())
-        #         indexMatch=citationStr.find(preCitPost[1])
-        #         beginning=indexMatch-19
-        #         if beginning<0:
-        #             beginning=0
-        #         ending=indexMatch+len(preCitPost[1])+20
-        #         if ending>len(citationStr)-1:
-        #             ending=len(citationStr)
-        #         strAnnot=citationStr[beginning:ending]
-        #         strRatio=SequenceMatcher(None,strAnnot,preCitPost[0])
-        #         scheme=re.escape(preCitPost[0])
-        #         if preCitPost[0] in citationStr and minlen<len(citationStr)<maxlen :#or citationStr.find(preCitPost[0])>-1 and minlen<len(citationStr)<maxlen or strRatio.ratio()>0.98 and minlen<len(citationStr)<maxlen:
-        #             numberOfExtracted+=1
-        #             # remove the "()" part of the string
-        #             section=preCitPost[2]
-        #             if "(" in section:
-        #                 section=section.split(" (")[0]
-        #             #check the section of the sentence
-        #             for secTag in citation.iterancestors("SecTag"):#citation secTag
-        #                 secTag=secTag.get("type")
-        #                 if secTag=="FIG":# Assign type of figure or not.
-        #                     figure=True
-        #                 else:
-        #                     figure=False
-        #                 break
-        #             #check the section of the previous sentence
-        #             citationbefore=''
-        #             for secTagBefore in sentences[sentencesIndex-1].iterancestors("SecTag"):#citationBefore secTag
-        #                 secTagBefore=secTagBefore.get("type")
-        #                 break
-        #             if secTag==secTagBefore and minlen<len(''.join(sentences[sentencesIndex-1].itertext()))<maxlen:# check if the section of the previous sentence is the same of the citation one
-        #                 citationbefore=''.join(sentences[sentencesIndex-1].itertext())
-        #             #check the section of the next sentence
-        #             citationafter=''
-        #             for secTagAfter1 in sentences[sentencesIndex+1].iterancestors("SecTag"):
-        #                 secTagAfter1=secTagAfter1.get("type")
-        #                 break
-        #             if secTag==secTagAfter1 and minlen<len(''.join(sentences[sentencesIndex+1].itertext()))<maxlen:# check if the section of the next sentence is the same of the citation one
-        #                 citationafter=citationafter+''.join(sentences[sentencesIndex+1].itertext())
-        #                 if sentencesIndex+2<len(sentences):
-        #                     for secTagAfter2 in sentences[sentencesIndex+2].iterancestors("SecTag"):
-        #                         secTagAfter2=secTagAfter2.get("type")
-        #                         break
-        #                     if secTag==secTagAfter2 and minlen<len(''.join(sentences[sentencesIndex+2].itertext()))<maxlen:# check if the section of the next next sentence is the same of the citation one
-        #                         citationafter=citationafter+''.join(sentences[sentencesIndex+2].itertext())
-        #             resultString=''.join(citation.itertext())
-        #             resultFile.write(str(file).split("-")[0])# PMCID
-        #             resultFile.write("\t")
-        #             resultFile.write(preCitPost[1])# AccessionNb
-        #             resultFile.write("\t")
-        #             resultFile.write(section)# Section
-        #             resultFile.write("\t")
-        #             resultFile.write(preCitPost[3])# SubType
-        #             resultFile.write("\t")
-        #             resultFile.write(str(figure))# Figure
-        #             resultFile.write("\t")
-        #             resultFile.write(citationbefore)# Pre-citation
-        #             resultFile.write("\t")
-        #             resultFile.write(resultString)# Citation
-        #             resultFile.write("\t")
-        #             resultFile.write(citationafter)# Post-citation
-        #             resultFile.write("\n")
-        #     sentencesIndex+=1
+                            # print (citationAnnot)
+                            # print (sentence[beginning:ending])
+                            # print ("!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+            sentencesIndex+=1
 resultFile.close()
 outputmistakefile.close()
 print("There is ",numberOfAnnotations," that are mined by AnnotationAPI.")
