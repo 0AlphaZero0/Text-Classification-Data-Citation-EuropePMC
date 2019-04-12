@@ -1,0 +1,582 @@
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD v1.1 20151215//EN" "JATS-archivearticle1.dtd"> 
+<article xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML" article-type="research-article"><?properties open_access?><?DTDIdentifier.IdentifierValue -//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD v1.1 20151215//EN?><?DTDIdentifier.IdentifierType public?><?SourceDTD.DTDName JATS-archivearticle1.dtd?><?SourceDTD.Version 1.1?><?ConverterInfo.XSLTName jp2nlmx2.xsl?><?ConverterInfo.Version 1?><front><journal-meta><journal-id journal-id-type="nlm-ta">Can J Infect Dis Med Microbiol</journal-id><journal-id journal-id-type="iso-abbrev">Can J Infect Dis Med Microbiol</journal-id><journal-id journal-id-type="publisher-id">CJIDMM</journal-id><journal-title-group><journal-title>The Canadian Journal of Infectious Diseases &amp; Medical Microbiology = Journal Canadien des Maladies Infectieuses et de la Microbiologie Médicale</journal-title></journal-title-group><issn pub-type="ppub">1712-9532</issn><issn pub-type="epub">1918-1493</issn><publisher><publisher-name>Hindawi Publishing Corporation</publisher-name></publisher></journal-meta><article-meta><article-id pub-id-type="pmcid">4983356</article-id><article-id pub-id-type="doi">10.1155/2016/6403928</article-id><article-categories><subj-group subj-group-type="heading"><subject>Research Article</subject></subj-group></article-categories><title-group><article-title><SecTag type="TITLE"><text><SENT sid="0" pm="."><plain>Fluoroquinolone Resistance among Clonal Complex 1 Group B Streptococcus Strains </plain></SENT>
+</text></SecTag></article-title></title-group><contrib-group><contrib contrib-type="author"><contrib-id contrib-id-type="orcid" authenticated="false">http://orcid.org/0000-0003-3103-5823</contrib-id><name><surname>Neemuchwala</surname><given-names>Alefiya</given-names></name><xref ref-type="aff" rid="I1">
+<sup>1</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Teatero</surname><given-names>Sarah</given-names></name><xref ref-type="aff" rid="I1">
+<sup>1</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Patel</surname><given-names>Samir N.</given-names></name><xref ref-type="aff" rid="I1">
+<sup>1</sup>
+</xref><xref ref-type="aff" rid="I2">
+<sup>2</sup>
+</xref></contrib><contrib contrib-type="author"><contrib-id contrib-id-type="orcid" authenticated="false">http://orcid.org/0000-0001-9553-3798</contrib-id><name><surname>Fittipaldi</surname><given-names>Nahuel</given-names></name><xref ref-type="aff" rid="I1">
+<sup>1</sup>
+</xref><xref ref-type="aff" rid="I2">
+<sup>2</sup>
+</xref><xref ref-type="corresp" rid="cor1">
+<sup>*</sup>
+</xref></contrib></contrib-group><aff id="I1"><sup>1</sup>Public Health Ontario Laboratory, Toronto, ON, Canada M5G 1M1</aff><aff id="I2"><sup>2</sup>Department of Laboratory Medicine and Pathobiology, Faculty of Medicine, University of Toronto, Toronto, ON, Canada M5S 1A1</aff><author-notes><corresp id="cor1">*Nahuel Fittipaldi: <email>nahuel.fittipaldi@oahpp.ca</email></corresp><fn fn-type="other"><p><text><SENT sid="1" pm="."><plain>Academic Editor: Jorge Garbino </plain></SENT>
+</text></p></fn></author-notes><pub-date pub-type="ppub"><year>2016</year></pub-date><pub-date pub-type="epub"><day>31</day><month>7</month><year>2016</year></pub-date><volume>2016</volume><elocation-id>6403928</elocation-id><history><date date-type="received"><day>14</day><month>4</month><year>2016</year></date><date date-type="accepted"><day>14</day><month>6</month><year>2016</year></date></history><permissions><copyright-statement>Copyright © 2016 Alefiya Neemuchwala et al.</copyright-statement><copyright-year>2016</copyright-year><license xlink:href="https://creativecommons.org/licenses/by/4.0/"><license-p>This is an open access article distributed under the Creative Commons Attribution License, which permits unrestricted use, distribution, and reproduction in any medium, provided the original work is properly cited.</license-p></license></permissions><abstract><p><SecTag type="ABS"><text><SENT sid="2" pm="."><plain>Fluoroquinolone resistance in group B Streptococcus is increasingly being reported worldwide. </plain></SENT>
+<SENT sid="3" pm="."><plain>Here, we correlated fluoroquinolone resistance with mutations in gyrA, gyrB, parC, and parE genes, identified by mining whole-genome sequencing (WGS) data of 190 clonal complex 1 group B Streptococcus strains recovered from patients with invasive diseases in North America. </plain></SENT>
+<SENT sid="4" pm="."><plain>We report a high prevalence of fluoroquinolone resistance (12%) among GBS strains in our collection. </plain></SENT>
+<SENT sid="5" pm="."><plain>Our approach is the first step towards accurate prediction of fluoroquinolone resistance from WGS data in this opportunistic pathogen. </plain></SENT>
+</text></SecTag></p></abstract><funding-group><award-group><funding-source>Public Health Ontario</funding-source></award-group></funding-group></article-meta></front><body><SecTag type="INTRO"><sec id="sec1"><title><text><SENT sid="6" pm="."><plain>1. </plain></SENT>
+<SENT sid="7" pm="."><plain>Introduction </plain></SENT>
+</text></title><p><text><SENT sid="8" pm="."><plain>Group B Streptococcus (GBS) causes neonatal sepsis and meningitis and is increasingly recognized as the causative agent of opportunistic infections in adults, particularly the elderly and those immunocompromised [1]. </plain></SENT>
+<SENT sid="9" pm="."><plain>Ten GBS serotypes (Ia, Ib, and II to IX) have been described [2]. </plain></SENT>
+<SENT sid="10" pm="."><plain>Historically, serotype V and, more recently, serotype IV have been associated with adult invasive GBS disease in North America [3–5]. </plain></SENT>
+<SENT sid="11" pm="."><plain>Most serotype V strains isolated in this continent from the blood of adult patients with invasive GBS disease belonged to the multilocus sequence typing (MLST) sequence type (ST) 1 [3], whereas North American serotype IV isolates from adult invasive infections predominantly belonged to ST459 [4, 5]. </plain></SENT>
+<SENT sid="12" pm="."><plain>These two STs are grouped in MLST clonal complex (CC) 1. </plain></SENT>
+<SENT sid="13" pm="."><plain>Although penicillin continues to be the first antimicrobial choice for treatment, recent reports have described decreased susceptibility in some GBS isolates [6, 7]. </plain></SENT>
+<SENT sid="14" pm="."><plain>Resistance to other agents such as erythromycin, clindamycin, and tetracycline is also common among invasive GBS strains [3–5]. </plain></SENT>
+<SENT sid="15" pm="."><plain>Fluoroquinolones are another important antibiotic class commonly used in adults to treat infections [8, 9]. </plain></SENT>
+<SENT sid="16" pm="."><plain>Resistance to fluoroquinolones among GBS strains has also been observed globally [10–12]. </plain></SENT>
+</text></p><p><text><SENT sid="17" pm="."><plain>Phenotypic assays are the method of choice for determining drug susceptibility. </plain></SENT>
+<SENT sid="18" pm="."><plain>However, nucleic acid-based tests detecting the presence of resistance genes and/or mutations in key genes leading to resistance have long proven useful for resistance prediction and elucidation of resistance mechanisms [8, 10, 13]. </plain></SENT>
+<SENT sid="19" pm="."><plain>In recent years, nucleic acid-based detection systems have been impacted by the advent of relatively inexpensive whole-genome sequencing (WGS). </plain></SENT>
+<SENT sid="20" pm="."><plain>Several bioinformatics tools permitting prediction of antimicrobial resistance encoded by acquired genes (i.e., those genes which can be either present in or absent from the genome of any particular strain) have been developed [13, 14]. </plain></SENT>
+<SENT sid="21" pm="."><plain>Molecular prediction of fluoroquinolone resistance requires amplification and sequencing of genes parC, parE, gyrA, and gyrB [15]. </plain></SENT>
+<SENT sid="22" pm="."><plain>Acquisition of mutation information by direct inspection of WGS short-read data obtained using the most common Illumina sequencing technology is challenging, as these genes are present in all strains, and no consistent database of known mutations is available. </plain></SENT>
+</text></p></sec></SecTag><SecTag type="METHODS"><sec id="sec2"><title><text><SENT sid="23" pm="."><plain>2. </plain></SENT>
+<SENT sid="24" pm="."><plain>Materials and Methods </plain></SENT>
+</text></title><sec id="sec2.1"><title><text><SENT sid="25" pm="."><plain>2.1. </plain></SENT>
+<SENT sid="26" pm="."><plain>Bacterial Strains </plain></SENT>
+</text></title><p><text><SENT sid="27" pm="."><plain>We tested 190 clonal complex 1 (85 serotype V ST1 and 105 serotype IV ST459) isolates that were recovered from patients with invasive infections in Canada as part of laboratory surveillance from 2009 to 2013 (Table 1). </plain></SENT>
+<SENT sid="28" pm="."><plain>These isolates have been described earlier [3–5]. </plain></SENT>
+<SENT sid="29" pm="."><plain>Isolates were grown on Columbia Blood agar at 37°C in the presence of 5% CO2. </plain></SENT>
+</text></p></sec><sec id="sec2.2"><title><text><SENT sid="30" pm="."><plain>2.2. </plain></SENT>
+<SENT sid="31" pm="."><plain>Antibiotic Susceptibility Testing </plain></SENT>
+</text></title><p><text><SENT sid="32" pm="."><plain>Minimum inhibitory concentrations (MICs) for levofloxacin, ciprofloxacin, and norfloxacin were determined using the agar dilution method. </plain></SENT>
+<SENT sid="33" pm="."><plain>The levofloxacin MIC results were interpreted as per Clinical and Laboratory Standards Institute (CLSI) guidelines [16], whereas norfloxacin and ciprofloxacin MIC results were interpreted based on previous studies [8, 9, 17]. </plain></SENT>
+</text></p></sec><sec id="sec2.3"><title><text><SENT sid="34" pm="."><plain>2.3. </plain></SENT>
+<SENT sid="35" pm="."><plain>Whole-Genome Sequencing and Phylogenetic Analysis </plain></SENT>
+</text></title><p><text><SENT sid="36" pm="."><plain>We used paired-end (150 nt + 150 nt or 101 nt + 101 nt) reads obtained using Illumina MiSeq or HiSeq instruments. </plain></SENT>
+<SENT sid="37" pm="."><plain>NCBI Sequence-Read Archive accession numbers for WGS have been reported previously [3–5]. </plain></SENT>
+<SENT sid="38" pm="."><plain>To evaluate the feasibility of predicting resistance to fluoroquinolones in GBS directly from short-read genome data, we first searched the literature for articles reporting mutations in genes parC, parE, gyrA, and gyrB that have been associated with fluoroquinolone resistance and created a working database of known mutations conferring resistance to this antimicrobial class. </plain></SENT>
+<SENT sid="39" pm="."><plain>Next, we interrogated the 190 GBS genomes in our collection for mutations in parC, parE, gyrA, and gyrB. </plain></SENT>
+<SENT sid="40" pm="."><plain>Briefly, we aligned the Illumina short-reads against reference strains (strain NGBS061 for ST459 isolates and strain SGBS001 for ST1 isolates, GenBank accession numbers CP007631.2 and CP010867.2, resp.) and identified polymorphisms using the variant ascertainment algorithm (VAAL) [18]. </plain></SENT>
+<SENT sid="41" pm="."><plain>We also investigated the presence of genes encoding putative efflux pumps which might mediate fluoroquinolone resistance. </plain></SENT>
+<SENT sid="42" pm="."><plain>To this end, we first generated de novo genome assemblies for all 190 strains using the A5 pipeline [19], followed by BLAST comparisons using the nucleotide sequences of known efflux pumps as queries. </plain></SENT>
+</text></p></sec></sec></SecTag><SecTag type="RESULTS"><sec id="sec3"><title><text><SENT sid="43" pm="."><plain>3. </plain></SENT>
+<SENT sid="44" pm="."><plain>Results </plain></SENT>
+</text></title><p><text><SENT sid="45" pm="."><plain>Previous studies have shown that CC1 GBS is a group of organisms predominantly associated with invasive diseases in adults [3–5]. </plain></SENT>
+<SENT sid="46" pm="."><plain>Most of the isolates used here were recovered from the blood of adults and older adult patients (Table 1). </plain></SENT>
+<SENT sid="47" pm="."><plain>Previous studies which evaluated in part the 190 GBS isolates in our collection reported highly prevalent resistance to erythromycin, clindamycin, and tetracycline [3–5]. </plain></SENT>
+<SENT sid="48" pm="."><plain>Macrolide resistance was mostly attributed to the presence of ermB, ermTR, and/or other genes, while tetracycline resistance was associated with tetM genes [3–5]. </plain></SENT>
+<SENT sid="49" pm="."><plain>Analysis of short-read WGS data revealed that 22 CC1 isolates had nonsynonymous single-nucleotide polymorphisms (SNPs) in genes parC, parE, gyrA, and gyrB (Table 2). </plain></SENT>
+<SENT sid="50" pm="."><plain>All strains with a wild-type (WT) parC, parE, gyrA, and gyrB allele (defined as the DNA sequence of the allele found in the reference strain genome) were susceptible to levofloxacin (MIC &lt; 1 mg/L), norfloxacin (MIC &lt; 4 mg/L), and ciprofloxacin (MIC &lt; 0.125 mg/L). </plain></SENT>
+<SENT sid="51" pm="."><plain>Mutations in parC predominated among GBS strains exhibiting fluoroquinolone resistance. </plain></SENT>
+<SENT sid="52" pm="."><plain>The predicted amino acid (aa) substitutions at positions 79 and 83 of ParC correlated with increased MICs to ciprofloxacin and levofloxacin. </plain></SENT>
+<SENT sid="53" pm="."><plain>Four of the ST1 isolates with aa substitutions in ParC also had aa substitutions in GyrA, at aa positions 85 (n = 3) and 81 (n = 1). </plain></SENT>
+<SENT sid="54" pm="."><plain>All of these isolates exhibited very high MICs to fluoroquinolones (Table 2). </plain></SENT>
+<SENT sid="55" pm="."><plain>Thus, our data supports the previous observation that single point mutations in specific aa residues of ParC are sufficient to cause high-level resistance against norfloxacin and ciprofloxacin and to reduce susceptibility against levofloxacin [8]. </plain></SENT>
+<SENT sid="56" pm="."><plain>However, the presence of mutations in both parC and gyrA resulted in very high level of resistance (MICs &gt; 32 mg/L) of the strains to all fluoroquinolones including levofloxacin. </plain></SENT>
+<SENT sid="57" pm="."><plain>We found that a single point substitution in ParC (S79F) in 3 different isolates leads to high level resistance (MIC &gt; 32 mg/L) to norfloxacin and intermediate resistance to ciprofloxacin (MIC 4 mg/L). </plain></SENT>
+<SENT sid="58" pm="."><plain>Thus, we speculate that aa substitution at residue 79 impacts more severely the binding of fluoroquinolones than substitutions at aa position 83. </plain></SENT>
+<SENT sid="59" pm="."><plain>None of the single point mutations at aa position 83 of ParC led to the development of high level resistance to levofloxacin and ciprofloxacin. </plain></SENT>
+<SENT sid="60" pm="."><plain>In addition, none of the other single mutations in the gyrA gene that we identified led to fluoroquinolone resistance per se. </plain></SENT>
+<SENT sid="61" pm="."><plain>Similarly, most mutations in gyrB did not lead to development of resistance. </plain></SENT>
+<SENT sid="62" pm="."><plain>However, a single aa substitution (E224G) in GyrB resulted in an MIC of 16 mg/L for norfloxacin in a single ST1 isolate. </plain></SENT>
+<SENT sid="63" pm="."><plain>We also identified several mutations in the parE gene. </plain></SENT>
+<SENT sid="64" pm="."><plain>We discovered that a Q444K substitution in ParE led to ciprofloxacin resistance. </plain></SENT>
+<SENT sid="65" pm="."><plain>Another substitution (R449S) in ParE also led to low level resistance to norfloxacin. </plain></SENT>
+<SENT sid="66" pm="."><plain>Finally, we identified one GBS strain without mutations in any of parC, parE, gyrA, and gyrB genes which was highly resistant to norfloxacin (MIC &gt; 32 mg/L) and ciprofloxacin (MIC = 8 mg/L) but susceptible to levofloxacin. </plain></SENT>
+<SENT sid="67" pm="."><plain>BLAST analysis of the genome of this strain identified the presence of a gene that is very similar to S. pneumoniae pmr, a known norfloxacin efflux pump [20]. </plain></SENT>
+<SENT sid="68" pm="."><plain>BLAST comparisons did not identify this efflux pump in any of the other 189 GBS strains. </plain></SENT>
+</text></p></sec></SecTag><SecTag type="DISCUSS"><sec id="sec4"><title><text><SENT sid="69" pm="."><plain>4. </plain></SENT>
+<SENT sid="70" pm="."><plain>Discussion </plain></SENT>
+</text></title><p><text><SENT sid="71" pm="."><plain>GBS causes neonatal diseases and is also responsible for an increasing number of invasive infections in adults. </plain></SENT>
+<SENT sid="72" pm="."><plain>The serotype V ST1 and the serotype IV ST459 GBS isolates included in this study represent two emerging GBS groups associated with adult invasive GBS infections in North America. </plain></SENT>
+<SENT sid="73" pm="."><plain>Previous work has shown that rates of resistance to tetracyclines, erythromycin, and clindamycin among GBS strains in general and in strains included in our collection in particular are relatively high [3–5]. </plain></SENT>
+<SENT sid="74" pm="."><plain>Here, we report a relatively high rate (12.4%) of fluoroquinolone nonsusceptible isolates and high resistance to levofloxacin (2%) among serotypes V and IV CC1 GBS strains causing adult invasive diseases. </plain></SENT>
+<SENT sid="75" pm="."><plain>A previous investigation described low (0.7%) fluoroquinolone resistance rates among β-hemolytic streptococci in North America [11], but that study did not discriminate among GBS subtypes. </plain></SENT>
+<SENT sid="76" pm="."><plain>On the other hand, high rates of fluoroquinolone resistance have been observed in GBS isolates (mostly serotype III or Ib ST19 strains) from Japan (18.4%), Taiwan (4.8%), and China (37.5%) [12]. </plain></SENT>
+<SENT sid="77" pm="."><plain>Although resistance to fluoroquinolones appears to be on the rise in Canada, the rates reported here are lower than those in these Asian countries, which may be reflective of differences in antimicrobial usage practice in these different geographies. </plain></SENT>
+<SENT sid="78" pm="."><plain>Interestingly, recent reports have also described reduced susceptibility to penicillin mediated by mutations in penicillin-binding protein PBP2X among some fluoroquinolone-resistant GBS from Japan [6, 7]. </plain></SENT>
+<SENT sid="79" pm="."><plain>However, we did not observe mutations in PBP2X among fluoroquinolone-resistant GBS isolates in our collection. </plain></SENT>
+</text></p><p><text><SENT sid="80" pm="."><plain>We found that high level of fluoroquinolone resistance correlated with mutations in both parC and gyrA genes. </plain></SENT>
+<SENT sid="81" pm="."><plain>Varying levels of resistance were observed when single amino acid substitutions occurred in either parC, gyrA, parE, or gyrB. </plain></SENT>
+<SENT sid="82" pm="."><plain>Resistance to fluoroquinolones can arise from mutations in the so-called quinolone resistance determining region (QRDR) of parC, parE, gyrA, and gyrB genes but can also result from protection of quinolone binding to gyrA and topoisomerase and/or the action of efflux pumps, which are sometimes encoded in extra chromosomal genetic elements [15]. </plain></SENT>
+<SENT sid="83" pm="."><plain>Interestingly, although norfloxacin is no longer used in treatment, we also identified that a single strain with no mutations in these four genes but which was resistant to norfloxacin possessed a copy of a gene encoding a known efflux pump described in other species [20]. </plain></SENT>
+<SENT sid="84" pm="."><plain>A recent study from South Korea also reported norfloxacin resistance in GBS isolates mediated by the action of efflux pumps [17]. </plain></SENT>
+</text></p><p><text><SENT sid="85" pm="."><plain>Several tools permitting rapid detection of antimicrobial resistance encoded by acquired genes (i.e., those which can be either present in or absent from the genome of any particular strain) have been developed [13, 14]. </plain></SENT>
+<SENT sid="86" pm="."><plain>Our findings suggest that, provided a consistent database of known mutations, fluoroquinolone resistance can be predicted from WGS data with relative ease. </plain></SENT>
+<SENT sid="87" pm="."><plain>WGS of hundreds of bacterial organisms at diagnostic and public health laboratories is now a reality. </plain></SENT>
+<SENT sid="88" pm="."><plain>Working towards the development of curated databases linking genotypic information, such as the mutations described here, with phenotypic results is crucial to achieve the goal of predicting antimicrobial resistance from WGS data rapidly and accurately. </plain></SENT>
+</text></p><p><text><SENT sid="89" pm="."><plain>One limitation of our study is that our collection of organisms is temporally restricted (isolates recovered 2009–2013), thus hampering investigations into the evolution of mutations associated with fluoroquinolone resistance. </plain></SENT>
+<SENT sid="90" pm="."><plain>However, we identified that most mutations related to fluoroquinolone resistance appeared only once, consistent with highly clonal ST1 and ST459 GBS organisms that may be undergoing continuous clonal expansion [3–5]. </plain></SENT>
+<SENT sid="91" pm="."><plain>We also did not observe any conclusive evidence of strain clustering based on mutations in genes associated with fluoroquinolone resistance nor any obvious temporal associations (data not shown). </plain></SENT>
+<SENT sid="92" pm="."><plain>Another limitation is that we do not know whether the patients from whom isolates were recovered had been prescribed fluoroquinolones. </plain></SENT>
+<SENT sid="93" pm="."><plain>However, even if fluoroquinolones might not be commonly used to treat GBS adult infections in Canada, it can be speculated that increased fluoroquinolone utilization in treatment of respiratory and urinary tract infections may be contributing to selection of resistant strains among the commensal GBS population in adults [9]. </plain></SENT>
+<SENT sid="94" pm="."><plain>Interrogating WGS data to identify mutations leading to resistance in GBS is challenging as there is no database of known mutations. </plain></SENT>
+<SENT sid="95" pm="."><plain>Susceptibility testing is the gold standard for identifying resistance among clinical strains. </plain></SENT>
+<SENT sid="96" pm="."><plain>Our study provides further evidence on linking resistance to mutations in parC, parE, gyrA, and gyrB genes and demonstrates the feasibility of applying WGS data to identify antimicrobial resistance for such genes. </plain></SENT>
+</text></p></sec></SecTag></body><back><SecTag type="ACK_FUND"><ack><title>Acknowledgments</title><p><text4fund><text><SENT sid="97" pm="."><plain>The authors thank William Tennant and staff at Public Health Ontario Media Department for preparing culture media used in this study. </plain></SENT>
+<SENT sid="98" pm="."><plain>This work was supported by Public Health Ontario. </plain></SENT>
+</text></text4fund></p></ack></SecTag><SecTag type="COMP_INT"><sec><title>Competing Interests</title><p>The authors declare that there are no competing interests regarding the publication of this paper.</p></sec></SecTag><SecTag type="REF"><ref-list><ref id="B1"><text><SENT sid="99" pm="."><plain>1FarleyM. </plain></SENT>
+<SENT sid="100" pm="."><plain>M.HarveyR. </plain></SENT>
+<SENT sid="101" pm="."><plain>C.StullT.A population-based assessment of invasive disease due to group B Streptococcus in nonpregnant adultsThe New England Journal of Medicine1993328251807181110.1056/nejm1993062432825032-s2.0-00273089898502269 </plain></SENT>
+</text></ref><ref id="B2"><text><SENT sid="102" pm="."><plain>2LancefieldR. </plain></SENT>
+<SENT sid="103" pm="."><plain>C.A serological differentiation of specific types of bovine hemolytic streptococci (group B)The Journal of Experimental Medicine193459444145810.1084/jem.59.4.44119870257 </plain></SENT>
+</text></ref><ref id="B3"><text><SENT sid="104" pm="."><plain>3FloresA. </plain></SENT>
+<SENT sid="105" pm="."><plain>R.Galloway-PeñaJ.SahasrabhojaneP.Sequence type 1 group B Streptococcus, an emerging cause of invasive disease in adults, evolves by small genetic changesProceedings of the National Academy of Sciences of the United States of America2015112206431643610.1073/pnas.150472511225941374 </plain></SENT>
+</text></ref><ref id="B4"><text><SENT sid="106" pm="."><plain>4TeateroS.McGeerA.LiA.Population structure and antimicrobial resistance of invasive serotype IV group B Streptococcus, Toronto, Ontario, CanadaEmerging Infectious Diseases201521458559110.3201/eid2104.1407592-s2.0-8492495657925811284 </plain></SENT>
+</text></ref><ref id="B5"><text><SENT sid="107" pm="."><plain>5TeateroS.AtheyT. </plain></SENT>
+<SENT sid="108" pm="."><plain>B. </plain></SENT>
+<SENT sid="109" pm="."><plain>T.Van CaeseeleP.Emergence of serotype IV group B Streptococcus adult invasive disease in Manitoba and Saskatchewan, Canada, is driven by clonal sequence type 459 strainsJournal of Clinical Microbiology20155392919292610.1128/jcm.01128-152-s2.0-8494005594426135871 </plain></SENT>
+</text></ref><ref id="B6"><text><SENT sid="110" pm="."><plain>6DaheshS.HenslerM. </plain></SENT>
+<SENT sid="111" pm="."><plain>E.Van SorgeN. </plain></SENT>
+<SENT sid="112" pm="."><plain>M.Point mutation in the group B streptococcal pbp2x gene conferring decreased susceptibility to β-lactam antibioticsAntimicrobial Agents and Chemotherapy20085282915291810.1128/aac.00461-082-s2.0-4874909393418541727 </plain></SENT>
+</text></ref><ref id="B7"><text><SENT sid="113" pm="."><plain>7KimuraK.SuzukiS.WachinoJ.-I.First molecular characterization of group B streptococci with reduced penicillin susceptibilityAntimicrobial Agents and Chemotherapy20085282890289710.1128/AAC.00185-082-s2.0-4874911798518490507 </plain></SENT>
+</text></ref><ref id="B8"><text><SENT sid="114" pm="."><plain>8PatelS. </plain></SENT>
+<SENT sid="115" pm="."><plain>N.McGeerA.MelanoR.Susceptibility of Streptococcus pneumoniae to fluoroquinolones in CanadaAntimicrobial Agents and Chemotherapy20115583703370810.1128/aac.00237-112-s2.0-7996033611021628545 </plain></SENT>
+</text></ref><ref id="B9"><text><SENT sid="116" pm="."><plain>9TaziA.GueudetT.VaronE.GillyL.Trieu-CuotP.PoyartC.Fluoroquinolone-resistant group B streptococci in acute exacerbation of chronic bronchitisEmerging Infectious Diseases200814234935010.3201/eid1402.0710062-s2.0-3894917705418258143 </plain></SENT>
+</text></ref><ref id="B10"><text><SENT sid="117" pm="."><plain>10KawamuraY.FujiwaraH.MishimaN.First Streptococcus agalactiae isolates highly resistant to quinolones, with point mutations in gyrA and parC Antimicrobial Agents and Chemotherapy200347113605360910.1128/aac.47.11.3605-3609.20032-s2.0-024229094014576126 </plain></SENT>
+</text></ref><ref id="B11"><text><SENT sid="118" pm="."><plain>11BiedenbachD. </plain></SENT>
+<SENT sid="119" pm="."><plain>J.TolemanM. </plain></SENT>
+<SENT sid="120" pm="."><plain>A.WalshT. </plain></SENT>
+<SENT sid="121" pm="."><plain>R.JonesR. </plain></SENT>
+<SENT sid="122" pm="."><plain>N.Characterization of fluoroquinolone-resistant β-hemolytic Streptococcus spp. isolated in North America and Europe including the first report of fluoroquinolone-resistant Streptococcus dysgalactiae subspecies equisimilis: report from the SENTRY Antimicrobial Surveillance Program (1997–2004)Diagnostic Microbiology and Infectious Disease200655211912710.1016/j.diagmicrobio.2005.12.0062-s2.0-3364691136816530373 </plain></SENT>
+</text></ref><ref id="B12"><text><SENT sid="123" pm="."><plain>12PiccinelliG.GargiuloF.CorbelliniS.Emergence of the first levofloxacin-resistant strains of Streptococcus agalactiae isolated in ItalyAntimicrobial Agents and Chemotherapy20155942466246910.1128/aac.05127-142-s2.0-8494911764625666148 </plain></SENT>
+</text></ref><ref id="B13"><text><SENT sid="124" pm="."><plain>13ZankariE.HasmanH.KaasR. </plain></SENT>
+<SENT sid="125" pm="."><plain>S.Genotyping using whole-genome sequencing is a realistic alternative to surveillance based on phenotypic antimicrobial susceptibility testingThe Journal of Antimicrobial Chemotherapy2013684771777dks49610.1093/jac/dks4962-s2.0-8487526548323233485 </plain></SENT>
+</text></ref><ref id="B14"><text><SENT sid="126" pm="."><plain>14InouyeM.DashnowH.RavenL.-A.SRST2: rapid genomic surveillance for public health and hospital microbiology labsGenome Medicine2014611, article 9010.1186/s13073-014-0090-62-s2.0-84928040686 </plain></SENT>
+</text></ref><ref id="B15"><text><SENT sid="127" pm="."><plain>15HooperD. </plain></SENT>
+<SENT sid="128" pm="."><plain>C.JacobyG. </plain></SENT>
+<SENT sid="129" pm="."><plain>A.Mechanisms of drug resistance: quinolone resistanceAnnals of the New York Academy of Sciences201513541123110.1111/nyas.128302-s2.0-8494544428026190223 </plain></SENT>
+</text></ref><ref id="B16"><text><SENT sid="130" pm="."><plain>16Clinical and Laboratory Standards InstitutePerformance standards for antimicrobial susceptibility testing. </plain></SENT>
+<SENT sid="131" pm="."><plain>24th informational supplement2014M100–S24Wayne, Pa, USAClinical and Laboratory Standards Institute </plain></SENT>
+</text></ref><ref id="B17"><text><SENT sid="132" pm="."><plain>17DangT. </plain></SENT>
+<SENT sid="133" pm="."><plain>N.SrinivasanU.BrittZ.Efflux-mediated resistance identified among norfloxacin resistant clinical strains of group B Streptococcus from South KoreaEpidemiology and Health201436e201402210.4178/epih/e2014022 </plain></SENT>
+</text></ref><ref id="B18"><text><SENT sid="134" pm="."><plain>18NusbaumC.OhsumiT. </plain></SENT>
+<SENT sid="135" pm="."><plain>K.GomezJ.Sensitive, specific polymorphism discovery in bacteria using massively parallel sequencingNature Methods200961676910.1038/nmeth.12862-s2.0-5814921580319079253 </plain></SENT>
+</text></ref><ref id="B19"><text><SENT sid="136" pm="."><plain>19TrittA.EisenJ. </plain></SENT>
+<SENT sid="137" pm="."><plain>A.FacciottiM. </plain></SENT>
+<SENT sid="138" pm="."><plain>T.DarlingA. </plain></SENT>
+<SENT sid="139" pm="."><plain>E.An integrated pipeline for de novo assembly of microbial genomesPLoS ONE201279e4230410.1371/journal.pone.00423042-s2.0-84866391549 </plain></SENT>
+</text></ref><ref id="B20"><text><SENT sid="140" pm="."><plain>20GillM. </plain></SENT>
+<SENT sid="141" pm="."><plain>J.BrenwaldN. </plain></SENT>
+<SENT sid="142" pm="."><plain>P.WiseR.Identification of an efflux pump gene, pmrA, associated with fluoroquinolone resistance in Streptococcus pneumoniae Antimicrobial Agents and Chemotherapy199943118718910.1093/jac/43.2.1872-s2.0-00329077049869592 </plain></SENT>
+</text></ref></ref-list></SecTag></back><floats-group><SecTag type="TABLE"><table-wrap id="tab1" orientation="portrait" position="float"><label>Table 1</label><caption><p><text><SENT sid="143" pm="."><plain>Clonal complex 1 group B Streptococcus strains used in this study. </plain></SENT>
+</text></p></caption><table frame="hsides" rules="groups"><thead><tr><th rowspan="2" align="left" colspan="1"><text><SENT sid="144" pm="."><plain>Age groupa </plain></SENT>
+</text></th><th rowspan="2" align="center" colspan="1"><text><SENT sid="145" pm="."><plain>Sequence type </plain></SENT>
+</text></th><th rowspan="2" align="center" colspan="1"><text><SENT sid="146" pm="."><plain>Number of strains </plain></SENT>
+</text></th><th colspan="3" align="center" rowspan="1"><text><SENT sid="147" pm="."><plain>Source of isolation </plain></SENT>
+</text></th><th colspan="6" align="center" rowspan="1"><text><SENT sid="148" pm="."><plain>Year of isolation </plain></SENT>
+</text></th><th colspan="3" align="center" rowspan="1"><text><SENT sid="149" pm="."><plain>Macrolide resistance gene </plain></SENT>
+</text></th><th align="center" rowspan="1" colspan="1"><text><SENT sid="150" pm="."><plain>Tetracycline resistance gene </plain></SENT>
+</text></th></tr><tr><th align="center" rowspan="1" colspan="1"><text><SENT sid="151" pm="."><plain>Blood </plain></SENT>
+</text></th><th align="center" rowspan="1" colspan="1"><text><SENT sid="152" pm="."><plain>Joint fluid </plain></SENT>
+</text></th><th align="center" rowspan="1" colspan="1"><text><SENT sid="153" pm="."><plain>Otherb </plain></SENT>
+</text></th><th align="center" rowspan="1" colspan="1"><text><SENT sid="154" pm="."><plain>2009 </plain></SENT>
+</text></th><th align="center" rowspan="1" colspan="1"><text><SENT sid="155" pm="."><plain>2010 </plain></SENT>
+</text></th><th align="center" rowspan="1" colspan="1"><text><SENT sid="156" pm="."><plain>2011 </plain></SENT>
+</text></th><th align="center" rowspan="1" colspan="1"><text><SENT sid="157" pm="."><plain>2012 </plain></SENT>
+</text></th><th align="center" rowspan="1" colspan="1"><text><SENT sid="158" pm="."><plain>2013 </plain></SENT>
+</text></th><th align="center" rowspan="1" colspan="1"><text><SENT sid="159" pm="."><plain>2014 </plain></SENT>
+</text></th><th align="left" rowspan="1" colspan="1"><text><SENT sid="160" pm="."><plain>ermTR </plain></SENT>
+</text></th><th align="center" rowspan="1" colspan="1"><text><SENT sid="161" pm="."><plain>ermB </plain></SENT>
+</text></th><th align="center" rowspan="1" colspan="1"><text><SENT sid="162" pm="."><plain>mefA </plain></SENT>
+</text></th><th align="center" rowspan="1" colspan="1"><text><SENT sid="163" pm="."><plain>tetM </plain></SENT>
+</text></th></tr></thead><tbody><tr><td rowspan="2" align="left" colspan="1"><text><SENT sid="164" pm="."><plain>EOD (n = 6) </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="165" pm="."><plain>1 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="166" pm="."><plain>3 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="167" pm="."><plain>2 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="168" pm="."><plain>— </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="169" pm="."><plain>1 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="170" pm="."><plain>— </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="171" pm="."><plain>1 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="172" pm="."><plain>2 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="173" pm="."><plain>— </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="174" pm="."><plain>— </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="175" pm="."><plain>— </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="176" pm="."><plain>— </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="177" pm="."><plain>1 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="178" pm="."><plain>— </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="179" pm="."><plain>2 </plain></SENT>
+</text></td></tr><tr><td align="center" rowspan="1" colspan="1"><text><SENT sid="180" pm="."><plain>459 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="181" pm="."><plain>3 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="182" pm="."><plain>1 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="183" pm="."><plain>— </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="184" pm="."><plain>2 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="185" pm="."><plain>— </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="186" pm="."><plain>— </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="187" pm="."><plain>— </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="188" pm="."><plain>1 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="189" pm="."><plain>2 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="190" pm="."><plain>— </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="191" pm="."><plain>3 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="192" pm="."><plain>— </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="193" pm="."><plain>— </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="194" pm="."><plain>3 </plain></SENT>
+</text></td></tr><tr><td align="center" colspan="16" rowspan="1"><text><SENT sid="195" pm="."><plain> </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="196" pm="."><plain>LOD (n = 1) </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="197" pm="."><plain>459 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="198" pm="."><plain>1 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="199" pm="."><plain>1 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="200" pm="."><plain>— </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="201" pm="."><plain>— </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="202" pm="."><plain>— </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="203" pm="."><plain>— </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="204" pm="."><plain>— </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="205" pm="."><plain>1 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="206" pm="."><plain>— </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="207" pm="."><plain>— </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="208" pm="."><plain>— </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="209" pm="."><plain>— </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="210" pm="."><plain>— </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="211" pm="."><plain>1 </plain></SENT>
+</text></td></tr><tr><td align="center" colspan="16" rowspan="1"><text><SENT sid="212" pm="."><plain> </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="213" pm="."><plain>Child (n = 3) </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="214" pm="."><plain>459 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="215" pm="."><plain>3 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="216" pm="."><plain>2 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="217" pm="."><plain>— </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="218" pm="."><plain>1 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="219" pm="."><plain>— </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="220" pm="."><plain>1 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="221" pm="."><plain>1 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="222" pm="."><plain>1 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="223" pm="."><plain>— </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="224" pm="."><plain>— </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="225" pm="."><plain>3 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="226" pm="."><plain>— </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="227" pm="."><plain>— </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="228" pm="."><plain>2 </plain></SENT>
+</text></td></tr><tr><td align="center" colspan="16" rowspan="1"><text><SENT sid="229" pm="."><plain> </plain></SENT>
+</text></td></tr><tr><td rowspan="2" align="left" colspan="1"><text><SENT sid="230" pm="."><plain>Adult (n = 74) </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="231" pm="."><plain>1 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="232" pm="."><plain>19 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="233" pm="."><plain>16 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="234" pm="."><plain>3 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="235" pm="."><plain>— </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="236" pm="."><plain>— </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="237" pm="."><plain>5 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="238" pm="."><plain>8 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="239" pm="."><plain>6 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="240" pm="."><plain>— </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="241" pm="."><plain>— </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="242" pm="."><plain>3 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="243" pm="."><plain>2 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="244" pm="."><plain>1 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="245" pm="."><plain>15 </plain></SENT>
+</text></td></tr><tr><td align="center" rowspan="1" colspan="1"><text><SENT sid="246" pm="."><plain>459 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="247" pm="."><plain>55 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="248" pm="."><plain>23 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="249" pm="."><plain>3 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="250" pm="."><plain>29 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="251" pm="."><plain>— </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="252" pm="."><plain>13 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="253" pm="."><plain>12 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="254" pm="."><plain>15 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="255" pm="."><plain>11 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="256" pm="."><plain>4 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="257" pm="."><plain>51 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="258" pm="."><plain>— </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="259" pm="."><plain>— </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="260" pm="."><plain>48 </plain></SENT>
+</text></td></tr><tr><td align="center" colspan="16" rowspan="1"><text><SENT sid="261" pm="."><plain> </plain></SENT>
+</text></td></tr><tr><td rowspan="2" align="left" colspan="1"><text><SENT sid="262" pm="."><plain>Older adult (n = 106) </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="263" pm="."><plain>1 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="264" pm="."><plain>63 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="265" pm="."><plain>61 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="266" pm="."><plain>1 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="267" pm="."><plain>1 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="268" pm="."><plain>2 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="269" pm="."><plain>26 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="270" pm="."><plain>23 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="271" pm="."><plain>12 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="272" pm="."><plain>— </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="273" pm="."><plain>— </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="274" pm="."><plain>16 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="275" pm="."><plain>13 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="276" pm="."><plain>2 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="277" pm="."><plain>51 </plain></SENT>
+</text></td></tr><tr><td align="center" rowspan="1" colspan="1"><text><SENT sid="278" pm="."><plain>459 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="279" pm="."><plain>43 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="280" pm="."><plain>30 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="281" pm="."><plain>4 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="282" pm="."><plain>9 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="283" pm="."><plain>1 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="284" pm="."><plain>4 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="285" pm="."><plain>16 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="286" pm="."><plain>11 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="287" pm="."><plain>8 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="288" pm="."><plain>3 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="289" pm="."><plain>41 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="290" pm="."><plain>— </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="291" pm="."><plain>— </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="292" pm="."><plain>37 </plain></SENT>
+</text></td></tr></tbody></table><table-wrap-foot><fn><p>
+<sup>a</sup>Isolates were collected from neonates with early onset disease (EOD) (less than 7 days of age); infants with late onset disease (LOD) (7 to 90 days of age); children (aged more than 90 days to 18 years); adults (19 years to 59 years); and older adults (more than 60 years of age).</p></fn><fn><p>
+<sup>b</sup>Samples collected from normally sterile sites other than blood or synovial fluid.</p></fn></table-wrap-foot></table-wrap></SecTag><SecTag type="TABLE"><table-wrap id="tab2" orientation="portrait" position="float"><label>Table 2</label><caption><p><text><SENT sid="293" pm="."><plain>Characteristics of mutations observed in GyrA, GyrB, ParC, and ParE among ST459 and ST1 group B Streptococcus isolates used in this study. </plain></SENT>
+</text></p></caption><table frame="hsides" rules="groups"><thead><tr><th rowspan="2" align="left" colspan="1"><text><SENT sid="294" pm="."><plain>ST </plain></SENT>
+</text></th><th rowspan="2" align="center" colspan="1"><text><SENT sid="295" pm="."><plain>Number of isolates </plain></SENT>
+</text></th><th colspan="4" align="center" rowspan="1"><text><SENT sid="296" pm="."><plain> Predicted amino acid substitution </plain></SENT>
+</text></th><th colspan="3" align="center" rowspan="1"><text><SENT sid="297" pm="."><plain>Antibiotica </plain></SENT>
+</text></th><th colspan="3" align="center" rowspan="1"><text><SENT sid="298" pm="."><plain>MIC (mg/L) </plain></SENT>
+</text></th><th rowspan="2" align="center" colspan="1"><text><SENT sid="299" pm="."><plain>Year </plain></SENT>
+</text></th><th rowspan="2" align="center" colspan="1"><text><SENT sid="300" pm="."><plain>Reference </plain></SENT>
+</text></th></tr><tr><th align="center" rowspan="1" colspan="1"><text><SENT sid="301" pm="."><plain>GyrB </plain></SENT>
+</text></th><th align="center" rowspan="1" colspan="1"><text><SENT sid="302" pm="."><plain>GyrA </plain></SENT>
+</text></th><th align="center" rowspan="1" colspan="1"><text><SENT sid="303" pm="."><plain>ParC </plain></SENT>
+</text></th><th align="center" rowspan="1" colspan="1"><text><SENT sid="304" pm="."><plain>ParE </plain></SENT>
+</text></th><th align="center" rowspan="1" colspan="1"><text><SENT sid="305" pm="."><plain>LVX </plain></SENT>
+</text></th><th align="center" rowspan="1" colspan="1"><text><SENT sid="306" pm="."><plain>NOR </plain></SENT>
+</text></th><th align="center" rowspan="1" colspan="1"><text><SENT sid="307" pm="."><plain>CIP </plain></SENT>
+</text></th><th align="center" rowspan="1" colspan="1"><text><SENT sid="308" pm="."><plain>LVX </plain></SENT>
+</text></th><th align="center" rowspan="1" colspan="1"><text><SENT sid="309" pm="."><plain>NOR </plain></SENT>
+</text></th><th align="center" rowspan="1" colspan="1"><text><SENT sid="310" pm="."><plain>CIP </plain></SENT>
+</text></th></tr></thead><tbody><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="311" pm="."><plain>1 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="312" pm="."><plain>3 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="313" pm="."><plain>  </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="314" pm="."><plain>E85K </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="315" pm="."><plain>S79F </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="316" pm="."><plain>  </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="317" pm="."><plain>R </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="318" pm="."><plain>R </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="319" pm="."><plain>R </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="320" pm="."><plain>&gt;32 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="321" pm="."><plain>&gt;32 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="322" pm="."><plain>&gt;32 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="323" pm="."><plain>2010, 2012 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="324" pm="."><plain>[7, 10] </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="325" pm="."><plain>1 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="326" pm="."><plain>1 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="327" pm="."><plain>  </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="328" pm="."><plain>S81L </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="329" pm="."><plain>S79F </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="330" pm="."><plain>  </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="331" pm="."><plain>R </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="332" pm="."><plain>R </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="333" pm="."><plain>R </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="334" pm="."><plain>&gt;32 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="335" pm="."><plain>&gt;32 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="336" pm="."><plain>&gt;32 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="337" pm="."><plain>2011 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="338" pm="."><plain>[7, 9] </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="339" pm="."><plain>1 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="340" pm="."><plain>1 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="341" pm="."><plain>V79I </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="342" pm="."><plain>  </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="343" pm="."><plain>  </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="344" pm="."><plain>  </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="345" pm="."><plain>S </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="346" pm="."><plain>R </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="347" pm="."><plain>NS </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="348" pm="."><plain>1.5 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="349" pm="."><plain>8 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="350" pm="."><plain>1 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="351" pm="."><plain>2010 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="352" pm="."><plain>This study </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="353" pm="."><plain>1 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="354" pm="."><plain>1 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="355" pm="."><plain>E224G </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="356" pm="."><plain>  </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="357" pm="."><plain>  </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="358" pm="."><plain>  </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="359" pm="."><plain>S </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="360" pm="."><plain>R </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="361" pm="."><plain>NS </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="362" pm="."><plain>1.5 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="363" pm="."><plain>16 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="364" pm="."><plain>1 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="365" pm="."><plain>2010 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="366" pm="."><plain>This study </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="367" pm="."><plain>1 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="368" pm="."><plain>1 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="369" pm="."><plain>E566D </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="370" pm="."><plain>  </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="371" pm="."><plain>  </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="372" pm="."><plain>  </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="373" pm="."><plain>S </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="374" pm="."><plain>R </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="375" pm="."><plain>NS </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="376" pm="."><plain>1 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="377" pm="."><plain>4 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="378" pm="."><plain>1 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="379" pm="."><plain>2012 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="380" pm="."><plain>This study </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="381" pm="."><plain>1 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="382" pm="."><plain>1 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="383" pm="."><plain>  </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="384" pm="."><plain>G717S </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="385" pm="."><plain>  </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="386" pm="."><plain>  </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="387" pm="."><plain>S </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="388" pm="."><plain>R </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="389" pm="."><plain>NS </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="390" pm="."><plain>1.5 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="391" pm="."><plain>4 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="392" pm="."><plain>1 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="393" pm="."><plain>2010 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="394" pm="."><plain>This study </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="395" pm="."><plain>1 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="396" pm="."><plain>1 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="397" pm="."><plain>  </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="398" pm="."><plain>  </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="399" pm="."><plain>S79F </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="400" pm="."><plain>  </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="401" pm="."><plain>I </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="402" pm="."><plain>R </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="403" pm="."><plain>R </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="404" pm="."><plain>4 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="405" pm="."><plain>&gt;32 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="406" pm="."><plain>4 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="407" pm="."><plain>2010 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="408" pm="."><plain>[7, 10, 11] </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="409" pm="."><plain>1 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="410" pm="."><plain>1 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="411" pm="."><plain>  </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="412" pm="."><plain>  </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="413" pm="."><plain>D83G, D806G </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="414" pm="."><plain>  </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="415" pm="."><plain>I </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="416" pm="."><plain>R </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="417" pm="."><plain>R </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="418" pm="."><plain>4 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="419" pm="."><plain>16 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="420" pm="."><plain>2 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="421" pm="."><plain>2011 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="422" pm="."><plain>[7, 10] </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="423" pm="."><plain>1 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="424" pm="."><plain>1 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="425" pm="."><plain>  </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="426" pm="."><plain>  </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="427" pm="."><plain>  </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="428" pm="."><plain>R449S </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="429" pm="."><plain>S </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="430" pm="."><plain>R </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="431" pm="."><plain>NS </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="432" pm="."><plain>2 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="433" pm="."><plain>16 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="434" pm="."><plain>1 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="435" pm="."><plain>2010 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="436" pm="."><plain>This study </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="437" pm="."><plain>1 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="438" pm="."><plain>1 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="439" pm="."><plain>  </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="440" pm="."><plain>  </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="441" pm="."><plain>  </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="442" pm="."><plain>Q444K </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="443" pm="."><plain>S </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="444" pm="."><plain>R </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="445" pm="."><plain>R </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="446" pm="."><plain>1.5 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="447" pm="."><plain>8 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="448" pm="."><plain>8 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="449" pm="."><plain>2011 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="450" pm="."><plain>This study </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="451" pm="."><plain>1 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="452" pm="."><plain>1 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="453" pm="."><plain>  </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="454" pm="."><plain>  </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="455" pm="."><plain>  </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="456" pm="."><plain>A218T </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="457" pm="."><plain>S </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="458" pm="."><plain>R </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="459" pm="."><plain>NS </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="460" pm="."><plain>1.5 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="461" pm="."><plain>4 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="462" pm="."><plain>1 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="463" pm="."><plain>2012 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="464" pm="."><plain>This study </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="465" pm="."><plain>459 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="466" pm="."><plain>1 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="467" pm="."><plain>S412L </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="468" pm="."><plain>  </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="469" pm="."><plain>  </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="470" pm="."><plain>  </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="471" pm="."><plain>S </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="472" pm="."><plain>R </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="473" pm="."><plain>NS </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="474" pm="."><plain>1 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="475" pm="."><plain>8 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="476" pm="."><plain>1 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="477" pm="."><plain>2012 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="478" pm="."><plain>This study </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="479" pm="."><plain>459 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="480" pm="."><plain>2 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="481" pm="."><plain>  </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="482" pm="."><plain>R474H </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="483" pm="."><plain>  </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="484" pm="."><plain>  </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="485" pm="."><plain>S </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="486" pm="."><plain>R </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="487" pm="."><plain>NS </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="488" pm="."><plain>1 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="489" pm="."><plain>4 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="490" pm="."><plain>1 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="491" pm="."><plain>2010, 2012 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="492" pm="."><plain>This study </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="493" pm="."><plain>459 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="494" pm="."><plain>1 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="495" pm="."><plain>  </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="496" pm="."><plain>  </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="497" pm="."><plain>D83V </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="498" pm="."><plain>  </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="499" pm="."><plain>I </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="500" pm="."><plain>R </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="501" pm="."><plain>R </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="502" pm="."><plain>4 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="503" pm="."><plain>32 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="504" pm="."><plain>4 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="505" pm="."><plain>2012 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="506" pm="."><plain>This study </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="507" pm="."><plain>459 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="508" pm="."><plain>1 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="509" pm="."><plain>  </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="510" pm="."><plain>  </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="511" pm="."><plain>D83Y </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="512" pm="."><plain>  </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="513" pm="."><plain>I </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="514" pm="."><plain>R </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="515" pm="."><plain>R </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="516" pm="."><plain>4 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="517" pm="."><plain>&gt;32 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="518" pm="."><plain>4 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="519" pm="."><plain>2012 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="520" pm="."><plain>[10] </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="521" pm="."><plain>459 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="522" pm="."><plain>2 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="523" pm="."><plain>  </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="524" pm="."><plain>  </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="525" pm="."><plain>S79F </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="526" pm="."><plain>  </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="527" pm="."><plain>I </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="528" pm="."><plain>R </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="529" pm="."><plain>R </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="530" pm="."><plain>4 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="531" pm="."><plain>&gt;32 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="532" pm="."><plain>4 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="533" pm="."><plain>2011 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="534" pm="."><plain>[7] </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="535" pm="."><plain>459 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="536" pm="."><plain>1 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="537" pm="."><plain>  </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="538" pm="."><plain>  </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="539" pm="."><plain>  </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="540" pm="."><plain>V627I </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="541" pm="."><plain>S </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="542" pm="."><plain>R </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="543" pm="."><plain>R </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="544" pm="."><plain>1.5 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="545" pm="."><plain>8 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="546" pm="."><plain>2 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="547" pm="."><plain>2010 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="548" pm="."><plain>This study </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="549" pm="."><plain>459 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="550" pm="."><plain>1 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="551" pm="."><plain>  </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="552" pm="."><plain>  </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="553" pm="."><plain>  </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="554" pm="."><plain>V206I </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="555" pm="."><plain>S </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="556" pm="."><plain>R </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="557" pm="."><plain>NS </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="558" pm="."><plain>1 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="559" pm="."><plain>4 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="560" pm="."><plain>1 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="561" pm="."><plain>2012 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="562" pm="."><plain>This study </plain></SENT>
+</text></td></tr></tbody></table><table-wrap-foot><fn><p>
+<sup>a</sup>R: resistant, S: susceptible, I: intermediate resistance, and NS: increased MIC. For levofloxacin (LVX), MIC of ≥8 mg/L: resistant, 4 mg/L: intermediate resistant, and ≤2 mg/L: susceptible. For norfloxacin (NOR), MIC of ≥4 mg/L: resistant; ≤1 mg/L: susceptible. For ciprofloxacin (CIP), MIC of &gt;2 mg/L: resistant; ≤0.125: susceptible. Values which were in the range of 0.125 to 2 were considered as having reduced susceptibility (NS).</p></fn></table-wrap-foot></table-wrap></SecTag></floats-group></article>

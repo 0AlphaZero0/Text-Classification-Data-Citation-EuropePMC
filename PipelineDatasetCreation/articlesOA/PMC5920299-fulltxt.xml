@@ -1,0 +1,1797 @@
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD v1.1 20151215//EN" "JATS-archivearticle1.dtd"> 
+<article xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML" article-type="research-article"><?properties open_access?><?DTDIdentifier.IdentifierValue -//NLM//DTD JATS (Z39.96) Journal Publishing DTD v1.1 20151215//EN?><?DTDIdentifier.IdentifierType public?><?SourceDTD.DTDName JATS-journalpublishing1.dtd?><?SourceDTD.Version 1.1?><?ConverterInfo.XSLTName jp2nlmx2.xsl?><?ConverterInfo.Version 1?><front><journal-meta><journal-id journal-id-type="nlm-ta">Syst Biol</journal-id><journal-id journal-id-type="iso-abbrev">Syst. Biol</journal-id><journal-id journal-id-type="publisher-id">sysbio</journal-id><journal-title-group><journal-title>Systematic Biology</journal-title></journal-title-group><issn pub-type="ppub">1063-5157</issn><issn pub-type="epub">1076-836X</issn><publisher><publisher-name>Oxford University Press</publisher-name></publisher></journal-meta><article-meta><article-id pub-id-type="pmcid">5920299</article-id><article-id pub-id-type="pmid">29186587</article-id><article-id pub-id-type="doi">10.1093/sysbio/syx090</article-id><article-id pub-id-type="publisher-id">syx090</article-id><article-categories><subj-group subj-group-type="heading"><subject>Regular Articles</subject></subj-group></article-categories><title-group><article-title>Effective Online Bayesian Phylogenetics via Sequential Monte Carlo with Guided Proposals</article-title></title-group><contrib-group><contrib contrib-type="author"><name><surname>Fourment</surname><given-names>Mathieu</given-names></name><xref ref-type="aff" rid="syx090-AFF1">1</xref><xref ref-type="corresp" rid="syx090-COR1"/><!--<email>mathieu.fourment@uts.edu.au</email>--></contrib><contrib contrib-type="author"><name><surname>Claywell</surname><given-names>Brian C</given-names></name><xref ref-type="aff" rid="syx090-AFF2">2</xref></contrib><contrib contrib-type="author"><name><surname>Dinh</surname><given-names>Vu</given-names></name><xref ref-type="aff" rid="syx090-AFF2">2</xref></contrib><contrib contrib-type="author"><name><surname>McCoy</surname><given-names>Connor</given-names></name><xref ref-type="aff" rid="syx090-AFF2">2</xref></contrib><contrib contrib-type="author"><name><surname>Matsen IV</surname><given-names>Frederick A</given-names></name><xref ref-type="aff" rid="syx090-AFF2">2</xref></contrib><contrib contrib-type="author"><name><surname>Darling</surname><given-names>Aaron E</given-names></name><xref ref-type="aff" rid="syx090-AFF1">1</xref></contrib></contrib-group><contrib-group><contrib contrib-type="editor"><name><surname>Suskso</surname><given-names>Edward</given-names></name><role>Associate Editor</role></contrib></contrib-group><aff id="syx090-AFF1"><label>1</label>
+<italic>ithree institute, University of Technology Sydney, Ultimo, NSW 2007, Australia</italic>
+</aff><aff id="syx090-AFF2"><label>2</label>
+<italic>Fred Hutchinson Cancer Research Center, Seattle, WA 98109, USA</italic>
+</aff><author-notes><corresp id="syx090-COR1">Correspondence to be sent to: ithree institute, University of Technology Sydney, PO Box 123, Ultimo, NSW 2007, Australia; E-mail: <email>mathieu.fourment@uts.edu.au</email>.</corresp></author-notes><pub-date pub-type="ppub"><month>5</month><year>2018</year></pub-date><pub-date pub-type="epub" iso-8601-date="2017-11-27"><day>27</day><month>11</month><year>2017</year></pub-date><pub-date pub-type="pmc-release"><day>27</day><month>11</month><year>2017</year></pub-date><!-- PMC Release delay is 0 months and 0 days and was based on the <pub-date pub-type="epub"/>. --><volume>67</volume><issue>3</issue><fpage>490</fpage><lpage>502</lpage><history><date date-type="received"><day>2</day><month>6</month><year>2017</year></date><date date-type="rev-recd"><day>16</day><month>11</month><year>2017</year></date><date date-type="accepted"><day>20</day><month>11</month><year>2017</year></date></history><permissions><copyright-statement>&#x000a9; The Author(s) 2017. Published by Oxford University Press, on behalf of the Society of Systematic Biologists.</copyright-statement><copyright-year>2017</copyright-year><license license-type="cc-by" xlink:href="http://creativecommons.org/licenses/by/4.0/"><license-p>This is an Open Access article distributed under the terms of the Creative Commons Attribution License (<ext-link ext-link-type="uri" xlink:href="http://creativecommons.org/licenses/by/4.0/">http://creativecommons.org/licenses/by/4.0/</ext-link>), which permits unrestricted reuse, distribution, and reproduction in any medium, provided the original work is properly cited.</license-p></license></permissions><self-uri xlink:href="syx090.pdf"/><related-article id="d35e161" related-article-type="companion" ext-link-type="doi" xlink:href="10.1093/sysbio/syx087"/><abstract><title>Abstract</title><p>Modern infectious disease outbreak surveillance produces continuous streams of sequence data which require phylogenetic analysis as data arrives. Current software packages for Bayesian phylogenetic inference are unable to quickly incorporate new sequences as they become available, making them less useful for dynamically unfolding evolutionary stories. This limitation can be addressed by applying a class of Bayesian statistical inference algorithms called sequential Monte Carlo (SMC) to conduct <italic>online inference</italic>, wherein new data can be continuously incorporated to update the estimate of the posterior probability distribution. In this article, we describe and evaluate several different online phylogenetic sequential Monte Carlo (OPSMC) algorithms. We show that proposing new phylogenies with a density similar to the Bayesian prior suffers from poor performance, and we develop &#x0201c;guided&#x0201d; proposals that better match the proposal density to the posterior. Furthermore, we show that the simplest guided proposals can exhibit pathological behavior in some situations, leading to poor results, and that the situation can be resolved by heating the proposal density. The results demonstrate that relative to the widely used MCMC-based algorithm implemented in MrBayes, the total time required to compute a series of phylogenetic posteriors as sequences arrive can be significantly reduced by the use of OPSMC, without incurring a significant loss in accuracy.</p></abstract><kwd-group kwd-group-type="author"><kwd>Bayesian inference</kwd><kwd>online inference</kwd><kwd>phylogenetics</kwd><kwd>sequential Monte Carlo</kwd></kwd-group><funding-group><award-group award-type="grant"><funding-source><named-content content-type="funder-name">National Science Foundation</named-content><named-content content-type="funder-identifier">10.13039/100000001</named-content></funding-source><award-id>DMS-1223057</award-id><award-id>CISE-1564137</award-id></award-group><award-group award-type="grant"><funding-source><named-content content-type="funder-name">National Institutes of Health</named-content><named-content content-type="funder-identifier">10.13039/100000002</named-content></funding-source><award-id>U54-GM111274</award-id></award-group></funding-group><counts><page-count count="13"/></counts></article-meta></front><body><p>Phylogenetic techniques are quickly becoming an essential tool in the investigation and surveillance of infectious disease outbreaks (<xref rid="B16" ref-type="bibr">Gardy et al. 2015</xref>; <xref rid="B30" ref-type="bibr">Neher and Bedford 2015</xref>; <xref rid="B34" ref-type="bibr">Rusu et al. 2015</xref>). Meanwhile, advances in DNA sequencing technology have made the generation of complete genome data for isolates of bacteria and viruses a routine practice in public health laboratories. These genome data are collected into public databases such as the FDA GenomeTrakr (<xref rid="B13" ref-type="bibr">FDA 2016</xref>), which in 2016 accumulated new data at an average rate of over 1000 pathogen genomes per week. Sequencing technology itself continues to evolve, with new devices based on nanopore detection capable of generating a continuous stream of sequence data, supporting interactive real-time analysis (<xref rid="B28" ref-type="bibr">Loose et al. 2016</xref>).</p><p>Ideally these new data streams would be matched with appropriate sequence analysis tools, including Bayesian phylogenetic inference. Bayesian inference has particular value in epidemiological investigations due to its ability to operate on models with a wide range of unknown parameters, including divergence times, lineage-specific mutation rates, population demographics, and geography (<xref rid="B27" ref-type="bibr">Lemey et al. 2009</xref>; <xref rid="B25" ref-type="bibr">K&#x000fc;hnert et al. 2014</xref>). However, all current methods for Bayesian inference treat the data set as a static entity that has been observed in its entirety at the time that computation of the posterior probability distribution begins. Updating a data set with new sequences, as might be required when a new case of an infection is presented and sequenced, necessitates that the entire analysis be restarted.</p><p>Although <xref rid="B20" ref-type="bibr">Izquierdo-Carrasco et al. (2014)</xref> have proposed a maximum likelihood approach to update a phylogenetic tree with new sequences, no such tool exists for Bayesian phylogenetic inference. Each run using popular Bayesian phylogenetic inference tools like MrBayes (<xref rid="B33" ref-type="bibr">Ronquist et al. 2012</xref>) or BEAST (<xref rid="B4" ref-type="bibr">Bouckaert et al. 2014</xref>) can take days or weeks of CPU time to approximate a posterior distribution for realistic models and data sets. The inability to quickly incorporate new data into an existing analysis is a major impediment to the use of Bayesian phylogenetics as a decision support tool for infectious disease management and surveillance, where interventions are most likely to be effective if made within hours or days.</p><p>Recently, <xref rid="B8" ref-type="bibr">Dinh et al. (2016)</xref> described a theoretical framework for updating a phylogenetic posterior approximation, called Online Phylogenetic Sequential Monte Carlo (OPSMC). An overview of OPSMC is given in <xref ref-type="fig" rid="F1">Figure 1</xref>. At each generation, a population of particles representing a posterior sample of trees on <inline-formula><tex-math id="M1">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$n-1$\end{document}</tex-math></inline-formula> sequences is updated to give a sample from the corresponding posterior on <inline-formula><tex-math id="M2">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$n$\end{document}</tex-math></inline-formula> sequences. Optionally, one or more Metropolis&#x02013;Hastings steps (not shown in the figure) can be applied to increase the effective sample size. <xref rid="B8" ref-type="bibr">Dinh et al. (2016)</xref> show consistency of OPSMC in terms of weak convergence: as the number of particles goes to infinity, the weighted average of a test function over a collection of particles converges to the integral of that test function with respect to the posterior distribution. In addition, the effective sample size (ESS) (defined below) is bounded below by a constant multiple of the number of particles. However, even given these attractive theoretical properties, it was not clear if OPSMC could be translated into a competitive sampler. In addition, more research is needed on the design of effective transition kernels for OPSMC, a subject of some debate in related literature (<xref rid="B39" ref-type="bibr">Teh et al. 2008</xref>; <xref rid="B3" ref-type="bibr">Bouchard-C&#x000f4;t&#x000e9; et al. 2012</xref>).</p><fig id="F1" orientation="portrait" position="float"><label>Figure 1.</label><caption><p>An overview of the OPSMC algorithm as implemented in <inline-formula><tex-math id="M3">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$\textsf{sts}$\end{document}</tex-math></inline-formula>. Panel A) shows a population of particles going through an SMC iteration. For each particle, a new sequence (taxon) <inline-formula><tex-math id="M4">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$\psi_n$\end{document}</tex-math></inline-formula> is attached to the tree using proposal <inline-formula><tex-math id="M5">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$Q^n(\cdot)$\end{document}</tex-math></inline-formula>, its weight is computed, and particles are resampled using the weights. Panel B) depicts the three-step proposal applied by <inline-formula><tex-math id="M6">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$\textsf{sts}$\end{document}</tex-math></inline-formula> to a single particle.</p></caption><graphic xlink:href="syx090f1"/></fig><p>In this work, we implement OPSMC with a variety of transition kernels and compare their ability to efficiently update phylogenetic posteriors with new data. In particular, we compare the efficiency of na&#x000ef;ve proposals to guided proposals showing that the extra effort required to compute a guided proposal leads to a significant overall improvement in sampler efficiency. Finally, we discuss prospects for the incorporation of OPSMC into widely used algorithms and software packages for Bayesian phylogenetic inference. For this article, we restrict ourselves to &#x0201c;pure&#x0201d; SMC without Metropolis&#x02013;Hastings steps. Our implementation is available at <ext-link ext-link-type="uri" xlink:href="https://github.com/OnlinePhylo/sts/">https://github.com/OnlinePhylo/sts/</ext-link>.</p><p>Our results build upon several key pieces of previous work on building trees using SMC via subtree merging. <xref rid="B39" ref-type="bibr">Teh et al. (2008)</xref> were the first to describe the use of Sequential Monte Carlo for Bayesian inference of tree-structured models. <xref rid="B3" ref-type="bibr">Bouchard-C&#x000f4;t&#x000e9; et al. (2012)</xref> adapted that work to infer rooted, ultrametric phylogenetic trees. <xref rid="B40" ref-type="bibr">Wang et al. (2015)</xref> showed that SMC could also be applied to unrooted phylogenetic trees and provided an implementation of the algorithm and performance comparison with the widely used MrBayes software. Because each of these methods proceeds by joining the roots of subtrees merged by previous steps, they can only add additional sequences at the root of the tree. Thus each of those previous contributions is only appropriate for the case where the data set is static and completely known when inference begins.</p><p>In contrast, our work relaxes those assumptions to evaluate algorithms for online inference. <xref rid="B8" ref-type="bibr">Dinh et al. (2016)</xref> was the first to describe a theoretical framework to extend phylogenetic SMC approaches to online inference. In parallel work, <xref rid="B10" ref-type="bibr">Everitt et al. (2016)</xref> have also described an online phylogenetic inference step as part of a larger framework of SMC methods for spaces of varying dimension (see also <xref rid="B11" ref-type="bibr">Everitt et al. 2017</xref>). We will compare our work and that of these authors in the Discussion.</p><sec sec-type="materials|methods" id="SEC1"><title>Material and Methods</title><sec id="SEC1.1"><title>Definitions</title><p>In Bayesian inference, we are interested in estimating the posterior distribution of a model conditioned on data. In phylogenetics, the data are a set of nucleotide or amino acid sequences <inline-formula><tex-math id="M7">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$\boldsymbol{\psi} = (\psi_1, \psi_2,\dots, \psi_N)$\end{document}</tex-math></inline-formula> collected from <inline-formula><tex-math id="M8">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$N$\end{document}</tex-math></inline-formula> taxa, wherein the homologous nucleotides among sequences have been identified and grouped as sites (columns) in a sequence alignment (<xref rid="B14" ref-type="bibr">Felsenstein 2004</xref>). We assume that alignment sites are independent and identically distributed (IID) and that mutation events along each branch of a phylogenetic tree <inline-formula><tex-math id="M9">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$\tau$\end{document}</tex-math></inline-formula> occur independently accordingly to a continuous time Markov chain. In this article, we use the Jukes&#x02013;Cantor (<xref rid="B22" ref-type="bibr">Jukes et al. 1969</xref>) substitution model with equal base frequencies and equal transition rates.</p><p>The posterior probability of a phylogenetic tree with topology <inline-formula><tex-math id="M10">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$\tau$\end{document}</tex-math></inline-formula> and branch lengths <inline-formula><tex-math id="M11">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$\mathbf{l} = (l_1, \dots, l_{2N-3})$\end{document}</tex-math></inline-formula> conditioned on <inline-formula><tex-math id="M12">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$\boldsymbol{\psi}$\end{document}</tex-math></inline-formula> follows from Bayes Theorem:
+<disp-formula id="syx090UM1"><tex-math id="M13">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}\[
+\pi(\tau, \mathbf{l} \mid \boldsymbol{\psi}) = \frac{\mathbb{P}(\boldsymbol{\psi} \mid \tau, \mathbf{l}) \pi(\tau, \mathbf{l}) }{\mathbb{P}(\boldsymbol{\psi})},
+\]\end{document}</tex-math></disp-formula>
+where <inline-formula><tex-math id="M14">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$\mathbb{P}(\boldsymbol{\psi} \mid \tau, \mathbf{l})$\end{document}</tex-math></inline-formula> is the phylogenetic likelihood calculated using the standard Felsenstein pruning algorithm (<xref rid="B14" ref-type="bibr">Felsenstein 2004</xref>), and <inline-formula><tex-math id="M15">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$\pi(\tau, \mathbf{l})$\end{document}</tex-math></inline-formula> is the prior on the topology and branch lengths of the phylogenetic tree. We define <inline-formula><tex-math id="M16">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$\hat \pi(\tau, \mathbf{l} \mid \boldsymbol{\psi})$\end{document}</tex-math></inline-formula> as the unnormalized posterior density <inline-formula><tex-math id="M17">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$\mathbb{P}(\boldsymbol{\psi} \mid \tau, \mathbf{l}) \pi(\tau, \mathbf{l})$\end{document}</tex-math></inline-formula>. For unrooted trees, branch length priors are usually assumed to be IID with a simple distribution such as truncated uniform or exponential. A prior can also be specified on the unrooted topologies, a common choice being the uniform distribution. The marginal likelihood of the model <inline-formula><tex-math id="M18">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$\mathbb{P}(\boldsymbol{\psi})=\sum \int{\mathbb{P}(\boldsymbol{\psi}, \tau, \mathbf{l})}$\end{document}</tex-math></inline-formula> is analytically intractable. Therefore, the joint posterior distribution is usually approximated using Monte Carlo methods.</p></sec><sec id="SEC1.2"><title>Sequential Monte Carlo</title><p>SMC algorithms are a class of sampling methods that have been extensively investigated in the context of sequential Bayesian inference. We consider that data arrive sequentially <inline-formula><tex-math id="M19">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$\psi_1, \dots, \psi_N$\end{document}</tex-math></inline-formula>, and we wish to update the approximation of a probability distribution.</p><p>The idea is to track, at each generation <inline-formula><tex-math id="M20">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$n$\end{document}</tex-math></inline-formula>, a collection of <inline-formula><tex-math id="M21">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$K_n$\end{document}</tex-math></inline-formula> particles <inline-formula><tex-math id="M22">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$t_1^n, \dots, t_{K_n}^n$\end{document}</tex-math></inline-formula> associated with positive weights <inline-formula><tex-math id="M23">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$w_1^n, \dots, w_{K_n}^n$\end{document}</tex-math></inline-formula> whose empirical distribution converges to the target distribution <inline-formula><tex-math id="M24">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$\pi_n$\end{document}</tex-math></inline-formula> (the target distribution is the distribution of interest, in the present case a posterior distribution on trees).</p><p>Given a collection of weighted particles from the previous generation <inline-formula><tex-math id="M25">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$n$\end{document}</tex-math></inline-formula> the algorithm applies the three steps: resampling, mutation, and reweighting.</p><p>The resampling step prunes particles associated with low weights. This step is optional and is typically triggered when the ESS (<xref rid="B2" ref-type="bibr">Beskos et al. 2014</xref>) of the particle collection drops below a predetermined threshold. The ESS for a collection of particles with normalized weight <inline-formula><tex-math id="M26">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$w_i^n$\end{document}</tex-math></inline-formula> for the <inline-formula><tex-math id="M27">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$i$\end{document}</tex-math></inline-formula>th particle at generation <inline-formula><tex-math id="M28">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$n$\end{document}</tex-math></inline-formula> is
+<disp-formula id="syx090UM2"><tex-math id="M29">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}\[
+\operatorname{ESS}_n= \left(\sum_{i=1}^{K_n} w_i^n\right)^2 \left/ \sum_{i=1}^{K_n} (w_i^n)^2 \right..
+\]\end{document}</tex-math></disp-formula></p><p>Resampling obtains <inline-formula><tex-math id="M30">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$K_{n+1}$\end{document}</tex-math></inline-formula> particles, <inline-formula><tex-math id="M31">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$s_1^{n}, \dots, s_{K_{n+1}}^{n}$\end{document}</tex-math></inline-formula>, via a multinomial distribution on the particles <inline-formula><tex-math id="M32">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$t_1^{n}, \dots, t_{K_{n}}^{n}$\end{document}</tex-math></inline-formula> parameterized with the weights <inline-formula><tex-math id="M33">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$w_1^{n}, \dots, w_{K_{n}}^{n}$\end{document}</tex-math></inline-formula>. Alternatively, more sophisticated resampling methods such as stratified resampling (<xref rid="B24" ref-type="bibr">Kitagawa 1996</xref>) and residual resampling can be used in order to reduce the variance of the new particle population (<xref rid="B9" ref-type="bibr">Doucet et al. 2001</xref>; <xref rid="B7" ref-type="bibr">Del Moral et al. 2012</xref>).</p><p>The mutation step draws <inline-formula><tex-math id="M34">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$K_{n+1}$\end{document}</tex-math></inline-formula> new particles from a proposal distribution <inline-formula><tex-math id="M35">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$Q^n(s_i^{n} \rightarrow t_i^{n+1})$\end{document}</tex-math></inline-formula> for <inline-formula><tex-math id="M36">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$i=1, \dots, K_{n+1}$\end{document}</tex-math></inline-formula>.</p><p>The unnormalized weight <inline-formula><tex-math id="M37">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$\tilde{w}_{i}^{n+1}$\end{document}</tex-math></inline-formula> of each particle <inline-formula><tex-math id="M38">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$t_i^{n+1}$\end{document}</tex-math></inline-formula> is updated:
+<disp-formula id="syx090UM3"><tex-math id="M39">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}\[
+\tilde{w}_i^{n+1} = \frac{\hat \pi_{n+1}(t_i^{n+1})}{\hat \pi_{n}(s_i^{n}) Q^n(s_i^{n} \rightarrow t_i^{n+1})};
+\]\end{document}</tex-math></disp-formula></p><p>In the OPSMC context, we can approximate the integral for any function <inline-formula><tex-math id="M40">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$\phi$\end{document}</tex-math></inline-formula> with respect to the posterior distribution <inline-formula><tex-math id="M41">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$\pi_{n}$\end{document}</tex-math></inline-formula> using normalized weights <inline-formula><tex-math id="M42">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$w_i^{n}$\end{document}</tex-math></inline-formula>:
+<disp-formula id="syx090UM4"><tex-math id="M43">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}\[
+\sum_{i=1}^{K_{n}} w_i^{n} \phi(t_i^{n}) \approx \frac{1}{V_n} \sum_\tau \int_{[0,\infty]^{2n-3}} \phi(\tau, l) \pi_{n}(\tau, l) dl,
+\]\end{document}</tex-math></disp-formula>
+where <inline-formula><tex-math id="M44">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$V_n$\end{document}</tex-math></inline-formula> is the number of different topologies.</p><p>The SMC sampler initializes each particle with equal weights <inline-formula><tex-math id="M45">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$w_i^0 = 1/K_0$\end{document}</tex-math></inline-formula> for all <inline-formula><tex-math id="M46">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$i = 1, \dots, K_0$\end{document}</tex-math></inline-formula>.</p></sec><sec id="SEC1.3"><title>Online Phylogenetic Sequential Monte Carlo</title><p>Given an initial set of phylogenetic trees that represent a sample from the posterior distribution, we set out to update the posterior approximation represented by these samples with new sequences using an OPSMC.</p><p>In the OPSMC context, each particle represents a phylogenetic tree. These particles are initialized using a sample of trees generated by a Bayesian method such as the MCMC algorithm implemented in MrBayes.</p><p>While the state space of standard SMCs is of fixed dimension, the model complexity and dimension in the OPSMC setting increases as the number of taxa increases. Indeed, the number of tree topologies increases superexponentially with the number of taxa for both rooted and unrooted trees (<xref rid="B35" ref-type="bibr">St. John 2016</xref>). In addition to the discrete component of the tree space, the addition of each taxon requires additional continuous parameters. For rooted trees with a molecular clock, each additional taxon introduces two new parameters (the coalescence time and the identity of the branch where the new lineage attaches) whereas three parameters are introduced in the nonclock case: the attachment branch, the attachment position on the attachment branch, and the length of the pendant branch leading to the new taxon. Unless stated otherwise, in the rest of the article trees are assumed to be unrooted with no clock and that the continuous-time Markov mutation process is reversible. Nevertheless, it will be convenient for the purposes of description that the trees have been given an arbitrary root.</p><p>The OPSMC algorithm assumes that sequences arrive sequentially one by one: even if several new sequences have become available, every particle will incorporate the same sequence at a given generation. This simplification circumvents the overcounting problem highlighted in <xref rid="B3" ref-type="bibr">Bouchard-C&#x000f4;t&#x000e9; et al. (2012)</xref> and <xref rid="B40" ref-type="bibr">Wang et al. (2015)</xref> who showed that uniform tree proposals were biased toward balanced tree topologies. It should be clear that, unlike previously described phylogenetic SMCs, the OPSMC method does not require specifying an extension over a forest of trees since each particle represents a single tree.</p><p>Each of the proposals follows a three step process:</p><p>
+<list list-type="order"><list-item><p>Choose an attachment branch <inline-formula><tex-math id="M47">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$e$\end{document}</tex-math></inline-formula> from <inline-formula><tex-math id="M48">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$2n-3$\end{document}</tex-math></inline-formula> branches.</p></list-item><list-item><p>Choose location <inline-formula><tex-math id="M49">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$x$\end{document}</tex-math></inline-formula> along <inline-formula><tex-math id="M50">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$e$\end{document}</tex-math></inline-formula> to attach the new taxon. We refer to <inline-formula><tex-math id="M51">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$x$\end{document}</tex-math></inline-formula> as the <italic>distal length</italic>: distance from the attachment location to the end of the edge that is farthest away from the root of the tree. In these proposals, the length of the attachment branch does not change.</p></list-item><list-item><p>Propose a new pendant branch length <inline-formula><tex-math id="M52">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$y$\end{document}</tex-math></inline-formula> leading to the new taxon.</p></list-item></list>
+</p><p>One can mix and match choices for each of these steps from the following strategies.</p><p>We encode each step with a single letter to distinguish among the possible methods used at that step (<xref ref-type="table" rid="T1">Table 1</xref>). We will use the resulting three-letter code to describe a complete proposal strategy: for example the LAF proposal uses the L method for the first step, A for the second step, and F for the third step. Some of the methods are decorated with a tilde in order to distinguish heated from unheated proposals (the exact meaning of a heated proposal will be clarified below).</p><p>
+<table-wrap id="T1" orientation="portrait" position="float"><label>Table 1.</label><caption><p>A summary of the proposal distributions for the three steps: first, sampling an attachment edge, second, sampling a position at which to attach the new pendant branch, and third, sampling a pendant branch length</p></caption><table frame="hsides" rules="groups"><thead><tr><th align="left" rowspan="1" colspan="1">Step 1</th><th align="left" rowspan="1" colspan="1">Step 2</th><th align="left" rowspan="1" colspan="1">Step 3</th></tr></thead><tbody><tr><td rowspan="1" colspan="1">&#x000a0;</td><td rowspan="1" colspan="1">&#x000a0;</td><td rowspan="1" colspan="1">&#x000a0;</td></tr><tr><td rowspan="1" colspan="1">Uniform [<inline-formula><tex-math id="M53">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$\widetilde{\textrm{U}}$\end{document}</tex-math></inline-formula>]</td><td rowspan="1" colspan="1">
+<inline-formula><tex-math id="M54">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$ X \sim \mathcal{U}(0, |e|)$\end{document}</tex-math></inline-formula> [U]</td><td rowspan="1" colspan="1">
+<inline-formula><tex-math id="M55">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$Y \sim \operatorname{Exp}(\lambda=10)$\end{document}</tex-math></inline-formula> [P]</td></tr><tr><td rowspan="1" colspan="1">Likelihood [<inline-formula><tex-math id="M56">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$\widetilde{\textrm{L}}$\end{document}</tex-math></inline-formula>]/[L]</td><td rowspan="1" colspan="1">
+<inline-formula><tex-math id="M57">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$X \sim \mathcal{N} (x_{\text{MLE}},\,|e|/4)$\end{document}</tex-math></inline-formula>, <inline-formula><tex-math id="M58">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$0 \leq X \leq |e|$\end{document}</tex-math></inline-formula> [N]</td><td rowspan="1" colspan="1">
+<inline-formula><tex-math id="M59">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$Y \sim \operatorname{Exp}(\lambda=1/y_{\text{MLE}})$\end{document}</tex-math></inline-formula> [M]</td></tr><tr><td rowspan="1" colspan="1">Parsimony [<inline-formula><tex-math id="M60">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$\widetilde{\textrm{P}}$\end{document}</tex-math></inline-formula>]/[P]</td><td rowspan="1" colspan="1">
+<inline-formula><tex-math id="M61">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$X \sim \mathcal{N} (x_{\text{MLE}},\,I(x_{\text{MLE}})^{-1/2})$\end{document}</tex-math></inline-formula>, <inline-formula><tex-math id="M62">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$0 \leq X \leq |e|$\end{document}</tex-math></inline-formula> [A]</td><td rowspan="1" colspan="1">
+<inline-formula><tex-math id="M63">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$Y \sim \textsf{lcfit}$\end{document}</tex-math></inline-formula> [F]</td></tr></tbody></table><table-wrap-foot><fn id="tblfn1"><p>Notes: The one-letter code of each sampling strategy is between square brackets. In Step 1, the one-letter code is decorated with a tilde for nonheated proposal.</p></fn></table-wrap-foot></table-wrap>
+</p><p>In the remainder of this section, we describe different proposals for each of the three steps and for each step two broad classes of methods are described. The simplest methods are called unguided proposals. Although unguided proposals are fast and simple to implement they tend to generate a very large number of particles with low likelihoods. This causes much CPU time to be expended on calculating likelihoods and SMC weights for particles that ultimately drop out of the posterior approximation during the weighted resampling step. Guided proposals refer to more complex methods that use the data to get more accurate proposals.</p><p>
+<list list-type="simple"><list-item><p>Step 1: <italic>attachment branch choice.</italic>&#x02014; Uniform (<inline-formula><tex-math id="M64">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$\widetilde{\textrm{U}}$\end{document}</tex-math></inline-formula>) proposals: The unguided uniform proposals are the simplest proposal scheme investigated in this article, and they bear similarities to the &#x0201c;PriorPrior&#x0201d; proposal described in <xref rid="B39" ref-type="bibr">Teh et al. (2008)</xref>. In our implementation of uniform proposals, the attachment branch is chosen uniformly among all branches. Alternatively, the branch can be selected with weight proportional to its length.</p><p>Likelihood (<inline-formula><tex-math id="M65">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$\widetilde{\textrm{L}}$\end{document}</tex-math></inline-formula>) proposals: For each branch in the current tree, an attachment weight for the new taxon is calculated as described below. The attachment branch is then drawn randomly according to a multinomial distribution parameterized with the attachment branch weights.</p><p>Calculating the maximum likelihood attachment configuration for each branch is computationally expensive, so we instead resort to a heuristic approach inspired by a similar strategy used in <inline-formula><tex-math id="M66">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$\textsf{pplacer}$\end{document}</tex-math></inline-formula> (<xref rid="B29" ref-type="bibr">Matsen et al. 2010</xref>). The new taxon is attached in the middle of each branch and likelihoods are calculated using a set of predetermined branch lengths. By default OPSMC calculates the tree likelihood with pendant branch length equal to 0 and separately with the pendant branch length set to the median branch length from the first tree in the initial posterior sample of trees we want to update with the new taxa.</p><p>This allows discarding branches that are unlikely candidates (i.e. low probability) for attaching the new taxon. The resulting attachment location is selected from a multinomial distribution with weights equal to the highest likelihood among the set of pendant branch lengths tested for each branch.</p><p>This heuristic could be refined at the cost of additional compute time. For example the likelihood profile of a fixed number of edges with the highest attachment probability can be improved by testing more attachment locations and additional potential pendant branch lengths (e.g., {0, median/2, median} instead of {0, median}). Alternatively, the posterior probability of attachment on each branch could be calculated directly (<xref rid="B29" ref-type="bibr">Matsen et al. 2010</xref>); however, this may be too time consuming to be a practical improvement.</p><p>Parsimony (<inline-formula><tex-math id="M67">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$\widetilde{\textrm{P}}$\end{document}</tex-math></inline-formula>) proposal: Alternatively, multinomial weights can be derived using parsimony scores, which are simply calculated using the first pass of the <xref rid="B15" ref-type="bibr">Fitch (1971)</xref> algorithm. The unnormalized attachment weight <inline-formula><tex-math id="M68">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$\tilde{g}_i$\end{document}</tex-math></inline-formula> for the <inline-formula><tex-math id="M69">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$i$\end{document}</tex-math></inline-formula>th branch is calculated with the heuristic
+<disp-formula id="syx090UM5"><tex-math id="M70">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}\[
+\tilde{g}_i = \exp(\min(S) - s_i),
+\]\end{document}</tex-math></disp-formula>
+where <inline-formula><tex-math id="M71">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$S=(s_i, \dots, s_{2n-3})$\end{document}</tex-math></inline-formula> is a vector containing the parsimony score of each attachment branch.</p><p>Heated parsimony (P) and likelihood (L) proposals: Through our simulations we noted that when simply normalizing the parsimony scores or likelihoods to a sampling distribution, the probability of the highest scoring branch is often several log units higher than the attachment probabilities of the other branches. Therefore, the proposal often chooses the same branch with high probability. Unfortunately, for some sequences and tree configurations this attachment branch proposal algorithm can, with high probability, propose tree topologies that have low posterior support. That is, the attachment branch proposal distribution and posterior distribution can be poorly matched for some trees and sequences.</p><p>To mitigate the impact of poorly matching proposal and posterior distributions, we explored a &#x0201c;heated&#x0201d; proposal distribution created by raising the attachment probabilities to the power <inline-formula><tex-math id="M72">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$\alpha = 0.05$\end{document}</tex-math></inline-formula>. This approach is inspired by the Metropolis-coupled MCMC method (<xref rid="B17" ref-type="bibr">Geyer 1991</xref>) in which the posterior distribution of a hot chain is exponentiated with a number less than one, hence flattening out the posterior distribution. The one-letter code of nonheated proposals is decorated with a tilde. For example, <inline-formula><tex-math id="M73">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$\widetilde{\textrm{L}}$\end{document}</tex-math></inline-formula> refers to the nonheated likelihood-based proposal, and <inline-formula><tex-math id="M74">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$\textrm{L}$\end{document}</tex-math></inline-formula> denotes the corresponding heated proposal. In our implementation, <inline-formula><tex-math id="M75">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$\alpha$\end{document}</tex-math></inline-formula> was chosen by evaluating a range of possible values on an independent simulated test data set and is fixed throughout the simulations presented in the result section. Tuning the <inline-formula><tex-math id="M76">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$\alpha$\end{document}</tex-math></inline-formula> parameter might improve the efficiency of the sampler. We have not explored this possibility.</p></list-item><list-item><p>Step 2: <italic>distal length choice.&#x02014;</italic> Uniform (U) proposal: The location on the attachment branch <inline-formula><tex-math id="M77">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$e$\end{document}</tex-math></inline-formula> to attach the pendant branch is drawn from a uniform distribution, <inline-formula><tex-math id="M78">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$X \sim \mathcal{U}(0, |e|)$\end{document}</tex-math></inline-formula>, where <inline-formula><tex-math id="M79">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$|e|$\end{document}</tex-math></inline-formula> is the length of branch <inline-formula><tex-math id="M80">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$e$\end{document}</tex-math></inline-formula>.</p><p>Maximum likelihood normal (N) proposal: In this proposal scheme, the attachment location along branch <inline-formula><tex-math id="M81">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$a$\end{document}</tex-math></inline-formula> of the new branch and the pendant branch length are coestimated using maximum likelihood. The distal length <inline-formula><tex-math id="M82">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$x$\end{document}</tex-math></inline-formula> is then drawn from a truncated normal distribution with location parameter <inline-formula><tex-math id="M83">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$\mu$\end{document}</tex-math></inline-formula> equal to the maximum likelihood estimate (MLE) of the distal branch length. The distribution is truncated below 0 and above the length of the attachment branch. The scale parameter <inline-formula><tex-math id="M84">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$\sigma$\end{document}</tex-math></inline-formula> is arbitrarily chosen to be <inline-formula><tex-math id="M85">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$\sigma=|e|/4$\end{document}</tex-math></inline-formula>. The distal length is set to 0 for <inline-formula><tex-math id="M86">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$|e| &#x0003c; 1 \times 10^{-8}$\end{document}</tex-math></inline-formula>.</p><p>Maximum likelihood asymptotic (A) proposal: This method proceeds in the same manner as N, except that the standard deviation in the proposal distribution is found using the posterior distribution around its maximum. Specifically, we use a quadratic approximation to the log likelihood distribution <inline-formula><tex-math id="M87">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$\mathcal{L}$\end{document}</tex-math></inline-formula> centered on the MLE of <inline-formula><tex-math id="M88">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$x$\end{document}</tex-math></inline-formula>. That is,
+<disp-formula id="syx090UM6"><tex-math id="M89">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}\[
+X \sim \mathcal{N}(x_{\text{MLE}}, [I(x_{\text{MLE}})]^{-1/2}),
+\]\end{document}</tex-math></disp-formula>
+where <inline-formula><tex-math id="M90">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$I(x_{\text{MLE}})$\end{document}</tex-math></inline-formula> is the observed information
+<disp-formula id="syx090UM7"><tex-math id="M91">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}\[
+I(x_{\text{MLE}})=-\frac{d^2}{dx^2} \mathcal{L}(x_{\text{MLE}} \mid \boldsymbol{\psi}).
+\]\end{document}</tex-math></disp-formula></p><p>The MLE is obtained using the Brent method (<xref rid="B5" ref-type="bibr">Brent 1973</xref>), a standard univariate optimization technique, and the observed information is calculated using the analytic second derivative of the log-likelihood with respect to the branch length <inline-formula><tex-math id="M92">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$x$\end{document}</tex-math></inline-formula>.</p></list-item><list-item><p>Step 3: <italic>branch length choice.&#x02014;</italic> Prior (P) proposal: The pendant branch length is simply drawn from the prior (e.g., <inline-formula><tex-math id="M93">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$Y \sim \operatorname{Exp}(10)$\end{document}</tex-math></inline-formula>).</p><p>Maximum likelihood (M) proposal: The first guided method to draw the pendant branch length is similar in spirit to Step 2: the branch length is drawn from an exponential distribution with mean equal to the MLE of the pendant branch as calculated in the previous step.</p><p>
+<inline-formula><tex-math id="M94">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$\textsf{lcfit}$\end{document}</tex-math></inline-formula> (F) proposal: The second method makes use of a surrogate log-likelihood function to approximate the marginal posterior distribution of the pendant branch. This four-parameter surrogate function, called <inline-formula><tex-math id="M95">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$\textsf{lcfit}$\end{document}</tex-math></inline-formula>, is specialized to the task of approximating single-branch phylogenetic likelihood functions (<ext-link ext-link-type="uri" xlink:href="https://github.com/matsengrp/lcfit">https://github.com/matsengrp/lcfit</ext-link>; <xref rid="B6" ref-type="bibr">Claywell et al. 2017</xref>). For completeness we outline the method here.</p><p>Let <inline-formula><tex-math id="M96">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$f$\end{document}</tex-math></inline-formula> be the <inline-formula><tex-math id="M97">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$\textsf{lcfit}$\end{document}</tex-math></inline-formula> function, which is defined by four non-negative parameters, and evaluated at branch lengths <inline-formula><tex-math id="M98">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$t$\end{document}</tex-math></inline-formula>:
+<disp-formula id="syx090UM8"><tex-math id="M99">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}
+\begin{align*}
+&#x00026; f(c,m,r,b;t)\\
+&#x00026;\quad{} = c \log[(1+e^{-r(t+b)})/2] + m \log[(1-e^{-r(t+b)})/2].
+\end{align*}\end{document}</tex-math></disp-formula></p><p>Ignoring the parameter <inline-formula><tex-math id="M100">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$b$\end{document}</tex-math></inline-formula>, this is the log-likelihood function of the binary substitution model on a two-taxon sequence alignment with <inline-formula><tex-math id="M101">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$c$\end{document}</tex-math></inline-formula> constant sites, <inline-formula><tex-math id="M102">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$m$\end{document}</tex-math></inline-formula> mutated sites, and substitution rate <inline-formula><tex-math id="M103">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$r$\end{document}</tex-math></inline-formula>. The parameter <inline-formula><tex-math id="M104">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$b$\end{document}</tex-math></inline-formula> effectively allows truncation of the left-hand side of the curve, which enables modeling of likelihood curves with nonzero likelihood at <inline-formula><tex-math id="M105">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$t=0$\end{document}</tex-math></inline-formula>.</p></list-item></list>
+</p><p>One can fit the likelihood curve efficiently with access to the maximum likelihood branch length, an estimate of the second derivative at this location, and several other sampled points. By setting the surrogate second derivative equal to the estimated second derivative at the maximum likelihood branch length, one reduces the fitting problem to a 2D fit which can be performed using least squares (<xref rid="B6" ref-type="bibr">Claywell et al. 2017</xref>). Once the parameters of the <inline-formula><tex-math id="M106">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$\textsf{lcfit}$\end{document}</tex-math></inline-formula> surrogate are fit, one can use rejection sampling to obtain samples from the surrogate posterior formed by the product of the surrogate <inline-formula><tex-math id="M107">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$\textsf{lcfit}$\end{document}</tex-math></inline-formula> likelihood and the branch length prior.</p></sec><sec id="SEC1.4"><title>Simulations</title><p>We generated five replicates of 10, 50, and 100 taxon trees under the birth-death process (<inline-formula><tex-math id="M108">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$\lambda=6$\end{document}</tex-math></inline-formula>, <inline-formula><tex-math id="M109">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$\mu=2$\end{document}</tex-math></inline-formula>) using the R package TreeSim (<xref rid="B36" ref-type="bibr">Stadler 2017</xref>). Data sets will be labeled D<italic>x</italic>T<italic>y</italic> where the <italic>x</italic> is the replicate index and the <italic>y</italic> corresponds to the number of taxa (e.g., data set D1T10 is the first of five data sets containing 10 taxa). For each tree a nucleotide alignment with 1000 sites was simulated using the Jukes&#x02013;Cantor substitution model (JC69) using <inline-formula><tex-math id="M110">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$\textsf{bppseqgen}$\end{document}</tex-math></inline-formula> from the Bio++ package (<xref rid="B18" ref-type="bibr">Gu&#x000e9;guen et al. 2013</xref>). The posterior distribution of each phylogeny was approximated in two independent runs using MrBayes with three chains (i.e., two heated chains) for 300,000 iterations, ensuring an average standard deviation of split frequencies (ASDSF) below 0.01. A uniform prior on the topology and an exponential prior with mean 0.1 on branch lengths were specified. The chain was thinned down to 1000 samples, of which the first 250 iterations were discarded.</p><p>For each data set, 1, 3, or 5 sequences were removed and the posterior distribution of each tree was approximated again using MrBayes, as described above.</p><p>The resulting posteriors were used as a starting point for inference with the <inline-formula><tex-math id="M111">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$\textsf{sts}$\end{document}</tex-math></inline-formula> software (described below). The, 1, 3, or 5 removed sequences were sequentially added to MrBayes posterior samples using <inline-formula><tex-math id="M112">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$\textsf{sts}$\end{document}</tex-math></inline-formula> to approximate the full posterior. <inline-formula><tex-math id="M113">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$\textsf{sts}$\end{document}</tex-math></inline-formula> used the same priors as in the MrBayes analysis. We tested various numbers of particles in our SMC runs, each of which was a multiple of the number of trees in the original sample (in this case, 750). Define the <italic>particle factor</italic> to be the number of particles in the SMC divided by the number of trees in the original sample. If we use a particle factor of two and the MrBayes tree file contains 100 trees, then the total number of particles throughout the analysis will be 200. In other words, <inline-formula><tex-math id="M114">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$\textsf{sts}$\end{document}</tex-math></inline-formula> will generate two particles for each tree in the Mrbayes tree file.</p></sec></sec><sec sec-type="results" id="SEC2"><title>Results</title><p>We implemented a prototype of OPSMC in an open source software package called <inline-formula><tex-math id="M115">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$\textsf{sts}$\end{document}</tex-math></inline-formula>. <inline-formula><tex-math id="M116">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$\textsf{sts}$\end{document}</tex-math></inline-formula> implements several different transition kernels for updating a phylogenetic posterior with new sequences. These transition kernels are described in detail in the Methods section and include a uniform proposal and more sophisticated proposals that were developed with the aim of sampling updated trees more efficiently. As a prototype developed to test transition kernels rather than for practical use, the current <inline-formula><tex-math id="M117">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$\textsf{sts}$\end{document}</tex-math></inline-formula> software implements only the JC69 model and uses the stratified resampling technique (<xref rid="B24" ref-type="bibr">Kitagawa 1996</xref>) as implemented in SMCTC (<xref rid="B21" ref-type="bibr">Johansen 2009</xref>). The current <inline-formula><tex-math id="M118">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$\textsf{sts}$\end{document}</tex-math></inline-formula> implementation can update an existing posterior distribution produced by MrBayes with new sequences. <inline-formula><tex-math id="M119">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$\textsf{sts}$\end{document}</tex-math></inline-formula> is available from <ext-link ext-link-type="uri" xlink:href="http://github.com/OnlinePhylo/sts">http://github.com/OnlinePhylo/sts</ext-link>.</p><p>We evaluated the sequence addition proposals on data sets consisting of 10, 50, and 100 taxa using a variety of proposal step combinations for the transition kernel. These proposal combinations are indicated using a three letter code as described above. For example, in the following results &#x0201c;<inline-formula><tex-math id="M120">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$\widetilde{\textrm{U}}$\end{document}</tex-math></inline-formula>UP&#x0201d; denotes a nonheated transition kernel constructed by proposing a branch uniformly at random (Step 1 <inline-formula><tex-math id="M121">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$\widetilde{\textrm{U}}$\end{document}</tex-math></inline-formula>), then proposing an attachment location uniformly along this branch (Step 2 U), and finally drawing a pendant branch length from the prior (Step 3 P).</p><p>In order to understand whether OPSMC is providing an accurate posterior approximation, we compare the OPSMC results after the addition of 1, 2, and 5 sequences to what was obtained by running MrBayes on the same data sets. In what follows, we present the results based on data sets D1T50 and D1T100 in detail. Analysis of the other data sets showed similar results, and these are provided as <ext-link ext-link-type="uri" xlink:href="https://academic.oup.com/sysbio/article-lookup/doi/10.1093/sysbio/syx090#supplementary-data">supplementary material</ext-link> available on Dryad at <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.5061/dryad.n7n85">http://dx.doi.org/10.5061/dryad.n7n85</ext-link>.</p><sec id="SEC2.1"><title>ESS from OPSMC</title><p>In the following sections, we report the final ESS of the particle population in the last iteration before resampling. The guided proposals showed clearly superior ESS compared to the uniform proposal with any particle factor (<xref ref-type="fig" rid="F2">Fig. 2</xref>). The ESS produced by guided proposals also shows a strong linear relationship with the number of particles. This relationship was predicted by <xref rid="B8" ref-type="bibr">Dinh et al. (2016)</xref>, where the ESS of the sampler was bounded below by a constant multiple of the number of particles. These linear regressions have different slopes, suggesting that as the user targets higher ESSs the differences between proposals become more important. In <xref ref-type="fig" rid="F2">Figure 2</xref>, we find that proposals using likelihood to select an attachment branch (Step 1 L) have higher ESS than parsimony, while use of <inline-formula><tex-math id="M122">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$\textsf{lcfit}$\end{document}</tex-math></inline-formula> to propose pendant branch lengths (Step 3 F) yields a large advantage in ESS.</p><fig id="F2" orientation="portrait" position="float"><label>Figure 2.</label><caption><p>Mean ESS as a function of the particle factor across every data set.</p></caption><graphic xlink:href="syx090f2"/></fig><p>As discussed further below, we unfortunately cannot always equate high ESS with good quality posterior samples since ESS alone does not guarantee the OPSMC is sampling a high-probability region. Therefore, we performed a detailed comparison with the MrBayes posteriors.</p></sec><sec id="SEC2.2"><title>Comparison of Posteriors from SMC and MrBayes MCMC</title><p>We investigated the difference of split frequencies between the samples generated by <inline-formula><tex-math id="M123">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$\textsf{sts}$\end{document}</tex-math></inline-formula> and MrBayes. Split frequencies for each tree were calculated using scripts from Bali-Phy (<xref rid="B37" ref-type="bibr">Suchard and Redelings 2006</xref>). As a reference, we calculated the absolute differences between split posteriors generated by two independent chains in MrBayes. Similarly, we calculated the absolute difference between split frequencies between trees generated from one of the two MrBayes runs and the tree sample generated by <inline-formula><tex-math id="M124">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$\textsf{sts}$\end{document}</tex-math></inline-formula>. <xref ref-type="fig" rid="F3">Figures 3</xref> and <xref ref-type="fig" rid="F4">4</xref> shows the absolute difference between split frequencies using the LAF and PAF on several data sets. Under the assumption that the MCMC implemented in MrBayes has been run long enough to accurately approximate the true posterior, the ability of each OPSMC proposal scheme to approximate the true posterior distribution can be assessed by comparing the distribution of their split frequencies to that produced by MrBayes. The split distribution for every analysis (<xref ref-type="table" rid="T2">Table 2</xref> and <ext-link ext-link-type="uri" xlink:href="https://academic.oup.com/sysbio/article-lookup/doi/10.1093/sysbio/syx090#supplementary-data">Supplementary</ext-link> Figs. S11&#x02013;S25 available on Dryad) confirms the superiority of LAF and PAF over less sophisticated proposals. We also measured the distance between the maximum likelihood tree inferred with PhyML (<xref rid="B19" ref-type="bibr">Guindon et al. 2010</xref>) and each tree in the MrBayes posterior samples and the OPSMC posterior samples using the weighted Robinson&#x02013;Foulds (L1-norm) distance (<xref rid="B32" ref-type="bibr">Robinson and Foulds 1981</xref>) calculated with the DendroPy library (<xref rid="B38" ref-type="bibr">Sukumaran and Holder 2010</xref>). The results also suggest that guided proposals, especially PAF and LAF, yield superior posterior approximations to those produced by <inline-formula><tex-math id="M125">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$\widetilde{\textrm{U}}$\end{document}</tex-math></inline-formula>UP (<ext-link ext-link-type="uri" xlink:href="https://academic.oup.com/sysbio/article-lookup/doi/10.1093/sysbio/syx090#supplementary-data">Supplementary</ext-link> Figs. S26&#x02013;S40 available on Dryad).</p><fig id="F3" orientation="portrait" position="float"><label>Figure 3.</label><caption><p>Absolute value of the difference between the split frequencies of <inline-formula><tex-math id="M126">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$\textsf{sts}$\end{document}</tex-math></inline-formula> and MrBayes. These results are for data set D1T50. Labels on the right of the <italic>y</italic>-axis indicate which taxa were removed.</p></caption><graphic xlink:href="syx090f3"/></fig><fig id="F4" orientation="portrait" position="float"><label>Figure 4.</label><caption><p>Absolute value of the difference between the split frequencies of <inline-formula><tex-math id="M127">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$\textsf{sts}$\end{document}</tex-math></inline-formula> and MrBayes. These results are for data set D1T100. Labels on the right of the <italic>y</italic>-axis indicate which taxa were removed.</p></caption><graphic xlink:href="syx090f4"/></fig><p>
+<table-wrap id="T2" orientation="portrait" position="float"><label>Table 2.</label><caption><p>Summary statistics of the absolute value of the difference between the split frequencies of <inline-formula><tex-math id="M128">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$\textsf{sts}$\end{document}</tex-math></inline-formula> and MrBayes These results are for data set D1T10 with particle factors equal to 1 and 100</p></caption><table frame="hsides" rules="groups"><thead><tr><th align="left" rowspan="1" colspan="1">&#x000a0;</th><th align="center" colspan="2" rowspan="1">Particle factor 1</th><th align="center" colspan="2" rowspan="1">Particle factor 100</th></tr><tr><th align="left" rowspan="1" colspan="1">Proposal</th><th align="left" rowspan="1" colspan="1">Mean</th><th align="left" rowspan="1" colspan="1">Standard deviation</th><th align="left" rowspan="1" colspan="1">Mean</th><th align="left" rowspan="1" colspan="1">Standard deviation</th></tr></thead><tbody><tr><td rowspan="1" colspan="1">
+<inline-formula><tex-math id="M129">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$\widetilde{\textrm{U}}$\end{document}</tex-math></inline-formula>UP</td><td rowspan="1" colspan="1">0.12184</td><td rowspan="1" colspan="1">0.18994</td><td rowspan="1" colspan="1">0.029868</td><td rowspan="1" colspan="1">0.05839</td></tr><tr><td rowspan="1" colspan="1">
+<inline-formula><tex-math id="M130">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$\widetilde{\textrm{L}}$\end{document}</tex-math></inline-formula>NM</td><td rowspan="1" colspan="1">0.04356</td><td rowspan="1" colspan="1">0.09056</td><td rowspan="1" colspan="1">0.014681</td><td rowspan="1" colspan="1">0.03399</td></tr><tr><td rowspan="1" colspan="1">
+<inline-formula><tex-math id="M131">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$\widetilde{\textrm{L}}$\end{document}</tex-math></inline-formula>AF</td><td rowspan="1" colspan="1">0.01590</td><td rowspan="1" colspan="1">0.03600</td><td rowspan="1" colspan="1">0.014010</td><td rowspan="1" colspan="1">0.03067</td></tr><tr><td rowspan="1" colspan="1">LAF</td><td rowspan="1" colspan="1">0.01185</td><td rowspan="1" colspan="1">0.02275</td><td rowspan="1" colspan="1">0.009447</td><td rowspan="1" colspan="1">0.01598</td></tr><tr><td rowspan="1" colspan="1">PAF</td><td rowspan="1" colspan="1">0.01376</td><td rowspan="1" colspan="1">0.02432</td><td rowspan="1" colspan="1">0.009228</td><td rowspan="1" colspan="1">0.01551</td></tr></tbody></table><table-wrap-foot><fn id="tblfn2"><p>Notes: These results are for data set D1T10 with particle factors equal to 1 and 100.</p></fn></table-wrap-foot></table-wrap>
+</p></sec><sec id="SEC2.3"><title>Measuring Convergence with the Average Standard Deviation of Split Frequencies (ASDSF)</title><p>The average standard deviation of split frequencies (ASDSF) (<xref rid="B26" ref-type="bibr">Lakner et al. 2008</xref>; <xref rid="B33" ref-type="bibr">Ronquist et al. 2012</xref>) is a widely employed statistic used to assess the convergence of independent MCMC analyses. The ASDSF approaches zero when the set of topologies contained in the posterior approximations of different Monte Carlo sampling runs have converged. We used this metric to determine whether the posterior approximation produced by sequential taxon addition in <inline-formula><tex-math id="M132">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$\textsf{sts}$\end{document}</tex-math></inline-formula> is similar to that which would have been produced by simply running MrBayes on the complete data set. We calculated the ASDSF between the updated posterior distribution generated by <inline-formula><tex-math id="M133">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$\textsf{sts}$\end{document}</tex-math></inline-formula> and an independent MrBayes analysis on the full data set. It is common practice to use ASDSF as a convergence criterion, stopping Bayesian MCMC once the ASDSF is less than 0.01 (<xref rid="B26" ref-type="bibr">Lakner et al. 2008</xref>).</p><p>We find that that guided proposals can yield an ASDSF less than 0.01, even with relatively small particle factors (<xref ref-type="fig" rid="F5">Fig. 5</xref> and <ext-link ext-link-type="uri" xlink:href="https://academic.oup.com/sysbio/article-lookup/doi/10.1093/sysbio/syx090#supplementary-data">Supplementary</ext-link> Figs. S7&#x02013;S9 available on Dryad). In contrast, unguided proposals such as <inline-formula><tex-math id="M134">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$\widetilde{\textrm{U}}$\end{document}</tex-math></inline-formula>UP consistently yielded posterior approximations with an ASDSF that was an order of magnitude higher (worse), even when large particle systems were employed (particle factor 100, with 75,000 particles). Also, the simple likelihood-based guided proposals (Step 1 <inline-formula><tex-math id="M135">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$\widetilde{\textrm{L}}$\end{document}</tex-math></inline-formula>) fail to yield posterior approximations that meet the convergence criterion, whereas their heated relatives perform much better.</p><fig id="F5" orientation="portrait" position="float"><label>Figure 5.</label><caption><p>Average standard deviation of split frequencies (ASDSF) between <inline-formula><tex-math id="M136">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$\textsf{sts}$\end{document}</tex-math></inline-formula> and MrBayes posterior samples. These results are for the three data sets D1T10, D1T50, D1T100, and include several particle factors. The first row shows the results for every proposal while the second row only shows the LAF and PAF results. The horizontal line represents the ASDSF calculated using two chains in MrBayes. The horizontal dashed line marks 0.01, a common convergence criterion.</p></caption><graphic xlink:href="syx090f5"/></fig><p>We also investigated OPSMC&#x02019;s ability to build trees <italic>without</italic> a starting set of trees using <inline-formula><tex-math id="M137">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$\textsf{sts}$\end{document}</tex-math></inline-formula> with the LAF proposal. Most of the tree samples for data sets containing 10 taxa appeared to be good posterior approximations, as suggested by the ASDSF (<ext-link ext-link-type="uri" xlink:href="https://academic.oup.com/sysbio/article-lookup/doi/10.1093/sysbio/syx090#supplementary-data">Supplementary</ext-link> Fig. S10 available on Dryad). In contrast, the posterior distributions of larger data sets were poorly approximated, with only a few replicates yielding ASDSFs below 0.01.</p></sec><sec id="SEC2.4"><title>Compute Time of OPSMC Proposal Schemes</title><p>In previous studies of phylogenetic SMC (<xref rid="B3" ref-type="bibr">Bouchard-C&#x000f4;t&#x000e9; et al. 2012</xref>; <xref rid="B40" ref-type="bibr">Wang et al. 2015</xref>), the number of peeling recurrences were used as a proxy to compare the running time of different proposals. Since some nonlikelihood aspects of our implementation (such as calculation of the parsimony score in the PAF proposal) incur a non-negligible compute load, we directly investigated the wall clock time for each proposal instead.</p><p>As expected, we find that uniform proposals are at least an order of magnitude faster per proposal operation than the guided proposals (<ext-link ext-link-type="uri" xlink:href="https://academic.oup.com/sysbio/article-lookup/doi/10.1093/sysbio/syx090#supplementary-data">Supplementary</ext-link> Figs. S4&#x02013;S6 available on Dryad). The timing results also suggest that in the current implementation, the <inline-formula><tex-math id="M138">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$\textsf{lcfit}$\end{document}</tex-math></inline-formula> approximation (Step 3 F) incurs a significant cost in compute time relative to the other approaches.</p><p>However, when measured in terms of compute time required per unit of ESS in the resulting sample, we find that the guided proposals outperform <inline-formula><tex-math id="M139">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$\widetilde{\textrm{U}}$\end{document}</tex-math></inline-formula>UP by a large margin (<xref ref-type="fig" rid="F6">Fig. 6</xref>). We note that in SMC, a high ESS is necessary (but not sufficient) for an accurate posterior approximation. Interestingly, the results show that the extra compute time used by the normal approximation in Step 2 and <inline-formula><tex-math id="M140">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$\textsf{lcfit}$\end{document}</tex-math></inline-formula> in Step 3 may be justified since the <inline-formula><tex-math id="M141">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$\widetilde{\textrm{L}}$\end{document}</tex-math></inline-formula>AF proposal has on average superior ESS per unit time relative to <inline-formula><tex-math id="M142">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$\widetilde{\textrm{L}}$\end{document}</tex-math></inline-formula>NM. For some replicates (e.g., D5T10) the runtime-to-ESS ratio is much higher for the <inline-formula><tex-math id="M143">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$\widetilde{\textrm{L}}$\end{document}</tex-math></inline-formula>NM and <inline-formula><tex-math id="M144">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$\widetilde{\textrm{L}}$\end{document}</tex-math></inline-formula>AF proposals than for the heated proposals. The ESSs of those runs are extremely low (<ext-link ext-link-type="uri" xlink:href="https://academic.oup.com/sysbio/article-lookup/doi/10.1093/sysbio/syx090#supplementary-data">Supplementary</ext-link> Fig. S2 available on Dryad), highlighting that some data sets are more difficult to analyze (see also <ext-link ext-link-type="uri" xlink:href="https://academic.oup.com/sysbio/article-lookup/doi/10.1093/sysbio/syx090#supplementary-data">Supplementary</ext-link> Figs. S1&#x02013;S3 available on Dryad).</p><fig id="F6" orientation="portrait" position="float"><label>Figure 6.</label><caption><p>Running time in minutes per ESS unit for each proposal method. These results are for every data set and include all five particle factors. Numerical labels on top of each subplot give the number of taxa in each data set.</p></caption><graphic xlink:href="syx090f6"/></fig><p>Next, we evaluated compute time in a situation that commonly arises in genomic epidemiology, where an updated phylogenetic posterior is desired every time a new sequence becomes available. We thus simulated the sequential arrival of five taxa, comparing the time required for <inline-formula><tex-math id="M145">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$\textsf{sts}$\end{document}</tex-math></inline-formula> to update posteriors against the approach of sampling each of the five posteriors from scratch with MCMC. These new sequences are added to an existing data set containing 45 or 95 sequences. In an offline setting, this is equivalent to running MrBayes once each on alignments containing 46 to 50 or 96 to 100 sequences. We compared the total amount of time for the five MrBayes runs to a single run of <inline-formula><tex-math id="M146">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$\textsf{sts}$\end{document}</tex-math></inline-formula> with the same five sequences. For each method, we report the minimum particle factor required to compute a posterior approximation that meets the widely used Monte Carlo convergence criterion of an ASDSF lower than 0.01 (<xref ref-type="fig" rid="F7">Fig. 7</xref>). For example, using LAF on data set D1T10, the ASDSFs obtained with particle factors 1, 5, 10, 50, and 100 were 0.011, 0.009, 0.007, 0.006, and 0.006 respectively. We therefore report the running time associated with particle factor 5 since it is the lowest particle factor with ASDSF below 0.01. The plot shows the results based on ten data sets (D1T50-D5T50 and D1T100-D5T100) that we described above and for each replicate the five sequences were sequentially added in three different orders across three runs. Runs from <inline-formula><tex-math id="M147">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$\textsf{sts}$\end{document}</tex-math></inline-formula> that do not reach an ASDSF below 0.01 are not included in the plots, therefore each panel contains at most 15 points for <inline-formula><tex-math id="M148">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$\textsf{sts}$\end{document}</tex-math></inline-formula>. We find that <inline-formula><tex-math id="M149">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$\textsf{sts}$\end{document}</tex-math></inline-formula> is faster than MrBayes and that PAF and LAF required a particle factor of only one in 11 and 14 cases, respectively, for data sets containing 50 sequences. LAF performed marginally better than PAF for the larger 100 taxon data set, wherein the LAF proposal reached the target ASDSF 12 times while PAF reached it 11 times (<ext-link ext-link-type="uri" xlink:href="https://academic.oup.com/sysbio/article-lookup/doi/10.1093/sysbio/syx090#supplementary-data">Supplementary</ext-link> Table S1 available on Dryad). In contrast, <inline-formula><tex-math id="M150">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$\widetilde{\textrm{U}}$\end{document}</tex-math></inline-formula>UP was not able to sample trees that would meet the convergence criterion.</p><fig id="F7" orientation="portrait" position="float"><label>Figure 7.</label><caption><p>Running time in minutes (on a log scale) to sequentially add five new sequences to a data set of 45 or 95 sequences with MrBayes and <inline-formula><tex-math id="M151">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$\textsf{sts}$\end{document}</tex-math></inline-formula>. Here <inline-formula><tex-math id="M152">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$\textsf{sts}$\end{document}</tex-math></inline-formula> is run with particle factors ranging from 1 to 100 and the lowest time reported that achieved an ASDSF less than 0.010. Runs for which no particle factors resulted in an ASDSF less than 0.010 are not shown on the plot. Results are based on five data sets in which the taxa were added in three different orders, resulting in at most 15 data points. For example, the LAF plots contain 14 and 12 data points for data sets consisting of 50 and 100 sequences, respectively (see <ext-link ext-link-type="uri" xlink:href="https://academic.oup.com/sysbio/article-lookup/doi/10.1093/sysbio/syx090#supplementary-data">Supplementary</ext-link> Table S1 available on Dryad for a full description of the other proposals).</p></caption><graphic xlink:href="syx090f7"/></fig><p>The other nonheated methods provide intermediate results. We note that opportunities exist for further reduction of compute time required for <inline-formula><tex-math id="M153">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$\textsf{sts}$\end{document}</tex-math></inline-formula> (see Discussion), and that more significant efforts have been made to optimize MrBayes 3.2 (<xref rid="B33" ref-type="bibr">Ronquist et al. 2012</xref>), so the results here could be interpreted as a rough lower bound for the speed advantage that OPSMC may have over sequential runs of MCMC.</p></sec></sec><sec sec-type="discussion" id="SEC3"><title>Discussion</title><p>Here, we have implemented the OPSMC framework described by <xref rid="B8" ref-type="bibr">Dinh et al. (2016)</xref> and evaluated how several alternative proposal schemes behave on synthetic data sets.</p><sec id="SEC3.1"><title>Related Work</title><p>
+<xref rid="B10" ref-type="bibr">Everitt et al. (2016)</xref> have also developed theory and an implementation for SMC on phylogenies. In their case, they are focused on inferring ultrametric trees in a coalescent framework, whereas OPSMC as described here is for unrooted trees. Their clever attachment proposal is described in terms of lineage (path from root to leaf) and branching time. They use proposals choosing lineage based on differences from the leaf to be attached and the existing leaves using a distribution based on Ewens&#x02019; sampling formula (<xref rid="B12" ref-type="bibr">Ewens 1972</xref>), and a branching time which also uses pairwise differences. They also make an interesting suggestion to ease the transition between the different posterior distributions by using &#x0201c;intermediate distributions.&#x0201d; However, they do not compare their output to samples from an existing MCMC phylogenetics package, and they have not yet provided an open source implementation that would allow others to do so.</p></sec><sec id="SEC3.2"><title>Guided Proposals Work</title><p>In contrast with previous suggestions (<xref rid="B3" ref-type="bibr">Bouchard-C&#x000f4;t&#x000e9; et al. 2012</xref>), we show that guided proposal schemes can greatly improve both the computational efficiency and the accuracy of a phylogenetic posterior approximation over simple uniform proposal schemes. When quality of posterior approximation is measured by either the split frequencies (<xref ref-type="fig" rid="F3">Figs. 3</xref> and <xref ref-type="fig" rid="F4">4</xref>) or ASDSF (<xref ref-type="fig" rid="F5">Fig. 5</xref>), the LAF and PAF proposals clearly outperform the other schemes. Both LAF and PAF are able to achieve ASDSF below the 0.01 threshold that is typically used as an indicator of MCMC convergence, and can do so even with relatively small particle system sizes. This finding is especially important for the future application of SMC to phylogenetics, suggesting that proposal efficiency matters much more for SMC than MCMC.</p></sec><sec id="SEC3.3"><title>High ESS Does Not Imply Accurate Posterior Approximation</title><p>On the other hand the <inline-formula><tex-math id="M154">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$\widetilde{\textrm{L}}$\end{document}</tex-math></inline-formula>AF proposal provides the highest ESSs among any of the various proposal schemes, yet fails to achieve a low ASDSF, suggesting a poor posterior approximation. Detailed inspection of the behavior of <inline-formula><tex-math id="M155">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$\widetilde{\textrm{L}}$\end{document}</tex-math></inline-formula>AF reveals that, without heating the likelihoods, the highest scoring attachment branch can be several log units above the others (including the correct branch), resulting in a multinomial weight close to 1 while the others are close to zero. The bias leads <inline-formula><tex-math id="M156">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$\widetilde{\textrm{L}}$\end{document}</tex-math></inline-formula>AF to always propose the same attachment branch even when a large particle system is employed, causing it to sample a narrow region of the tree space. The subsequent Steps 2 and 3 proposals yield a large number of configurations with similar weights, resulting in a high ESS.</p></sec><sec id="SEC3.4"><title>Opportunities for Computational Optimization</title><p>Path degeneracy is a well-known drawback of SMC algorithms, characterized by a large number of identical particles after the resampling step. However, path degeneracy offers an opportunity for computational optimization of guided proposals. The Step 1 proposal distributions for identical particles can be computed once and then reused. Similarly, Step 2 involves repeatedly calculating MLEs of the distal and pendant branch lengths, which are identical for identical trees. For the cost of a modest amount of bookkeeping, those estimates can be computed just once for each tree in the particle system, rather than once for each particle, yielding a significant speedup.</p></sec><sec id="SEC3.5"><title>Limitations</title><sec id="SEC3.5.1"><title>Limitations: OPSMC proposals.</title><p>A common feature of the proposals we evaluated are that they consist of three steps: (i) selection of an attachment branch, (ii) selection of an attachment point on the attachment branch, and (iii) selection of a pendant branch length. However, the three step structure imposes some potentially undesirable restrictions on the resulting trees. One such restriction is that the length of the attachment branch selected in Step 1 is fixed, and is not adjusted in Steps 2 or 3. Another potential issue is that the length of two adjacent branches in a phylogenetic tree can be strongly correlated. The current three step proposal scheme does not account for this correlation structure. The efficiency of the sampler could in principle be increased by combining the proposals in Steps 2 and 3 to account for the dependency in lengths of the three branches incident to the attachment point. The branch lengths could be modeled as a multivariate truncated normal distribution where the covariance matrix captures correlations across branches. Alternatively, an extension of the surrogate function described in the <inline-formula><tex-math id="M157">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$\textsf{lcfit}$\end{document}</tex-math></inline-formula> algorithm to multiple branches could improve the proposal.</p></sec><sec id="SEC3.5.2"><title>Limitations: computational complexity.</title><p>The computational complexity of choosing the attachment branch (i.e. Step 1) grows linearly with the number of taxa in the tree. Profiling of our implementation indicates that at the data set sizes we evaluated, Step 1 consumes less than 5% of total compute time. Nevertheless, scaling our approach to thousands of sequences or beyond is likely to require new heuristics or other techniques to reduce the time complexity of branch selection in Step 1. This is in contrast with drawing branch lengths in the other steps, which has a constant complexity with respect to the number of taxa. As in other standard SMCs, the memory requirement of <inline-formula><tex-math id="M158">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$\textsf{sts}$\end{document}</tex-math></inline-formula> scales linearly with the number of particles. The development of memory-efficient (<xref rid="B23" ref-type="bibr">Jun and Bouchard-C&#x000f4;t&#x000e9; 2014</xref>) and highly parallel (<xref rid="B31" ref-type="bibr">Paige et al. 2014</xref>) variants would be an essential step for scaling to large data sets.</p></sec><sec id="SEC3.5.3"><title>Limitations: evolutionary models.</title><p>The present work has focused on updating the tree topology and branch lengths in the very simple JC69 model of sequence evolution. In practice, richer phylogenetic models will almost always be preferred as they can provide a better fit to the sequence data, for example by modeling unequal rates of nucleotide substitution or clade-specific evolutionary rates. These additional model parameters are often continuous real-valued parameters. One way to sample these parameters was described and implemented by Bouchard and colleagues (<xref rid="B40" ref-type="bibr">Wang et al. 2015</xref>) who developed a method based on particle MCMC (<xref rid="B1" ref-type="bibr">Andrieu et al. 2010</xref>). Particle MCMC uses SMC on the tree topology and branch lengths to approximate the marginal likelihood of the remaining continuous parameters, which are sampled using MCMC moves. A similar particle MCMC approach, or another means to sample the evolutionary model parameters has yet to be developed in the context of online phylogenetic SMC.</p></sec><sec id="SEC3.5.4"><title>Limitations: path degeneracy.</title><p>OPSMC, like all SMC algorithms, is prone to path degeneracy, especially when the sampler iterates through generations with low ESS. As previously suggested (<xref rid="B3" ref-type="bibr">Bouchard-C&#x000f4;t&#x000e9; et al. 2012</xref>; <xref rid="B8" ref-type="bibr">Dinh et al. 2016</xref>), the use of MCMC moves between generations of an SMC can help alleviate the path degeneracy problem. Although some simple MCMC moves have been implemented in <inline-formula><tex-math id="M159">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$\textsf{sts}$\end{document}</tex-math></inline-formula>, preliminary results suggest that such a large number of these simple moves would be required to address the path degeneracy problem that a better result can be achieved by simply using a larger particle system. <xref rid="B8" ref-type="bibr">Dinh et al. (2016)</xref> suggest a valid sampler could be constructed using any mix of MCMC and SMC moves, ranging from entirely SMC to almost entirely MCMC, but a thorough investigation of the optimal blend, incorporating known advanced MCMC proposals (<xref rid="B33" ref-type="bibr">Ronquist et al. 2012</xref>), is yet to be done.</p></sec><sec id="SEC3.5.5"><title>Limitations: constraints on the properties of new sequences.</title><p>In order to guarantee the quality of the OPSMC posterior approximation, the sequences to be added must satisfy certain properties described in the theoretical work of <xref rid="B8" ref-type="bibr">Dinh et al. (2016)</xref>. In particular, the sequences to be added must introduce new branches with lengths that are similar to the average branch length of existing sequences. Addition of one or a series of outgroup taxa which introduce many long branches would not satisfy these criteria. Addition of such sequences has the potential to shift the posterior on clades present in earlier iterations of the SMC, leading to degeneracy, low ESS, and a poor approximation to the true posterior.</p></sec><sec id="SEC3.5.6"><title>Limitations: convergence diagnostics.</title><p>In the current work we have evaluated the accuracy of the OPSMC&#x02019;s posterior approximation by comparing the sample to a collection of MCMC samples derived from MrBayes. This approach is inviable in practice, since an independent posterior approximation derived from MCMC will not generally be available. Further work is needed to develop and evaluate comparable approaches for convergence diagnostics to be used with OPSMC.</p></sec></sec></sec><sec sec-type="conclusions" id="SEC4"><title>Conclusion</title><p>Phylogenetic inference is quickly becoming an essential tool in modern infectious disease epidemiology. When sequence data arrives continuously, as in the case of an outbreak, it would be preferable to simply update a previous analysis rather than recomputing results for all sequences. Here, we show that online Bayesian phylogenetics using Sequential Monte Carlo can be a practical means of updating an existing posterior. Our findings suggest that the choice of proposal distribution is especially important for successful inference with OPSMC, and to this end we have described several transition kernels and evaluated their strengths and weaknesses. We have also found that simple likelihood-based proposals can strongly bias the proposal distribution away from the posterior and have shown that smoothing of these proposals can yield a posterior approximation that meets the <italic>de facto</italic> standard criteria for topological convergence in phylogenetic MCMC. The current <inline-formula><tex-math id="M160">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$\textsf{sts}$\end{document}</tex-math></inline-formula> implementation is limited to the simplest evolutionary models, and although our initial findings are promising, significant future work will be required to integrate the approach into the familiar software packages that implement the more complex evolutionary models in common use today.</p><p>In the last two decades, MCMC has become the <italic>de facto</italic> standard method to approximate posterior distributions in phylogenetics. Although OPSMC has the attractive advantage over MCMC that it becomes possible to efficiently update a posterior distribution with new data, several challenges remain to be solved in order to realize this promise. At a minimum, work must be done to develop methods that jointly sample evolutionary model parameters and tree topologies in the OPSMC framework and to develop and evaluate appropriate methods to estimate the quality of posterior approximations computed via OPSMC. Combination of MCMC and SMC could in principle yield superior results to application of either approach in isolation, but the efficacy of such strategies remain largely unexplored. Research into OPSMC is still in its infancy and although we have demonstrated a proof of concept in the <inline-formula><tex-math id="M161">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$\textsf{sts}$\end{document}</tex-math></inline-formula> software, much work remains to be done before these approaches can be routinely applied in phylogenetics.</p></sec></body><back><ack><title>Acknowledgements</title><p>The authors would like to thank Aaron Gallagher for his early contributions to the <inline-formula><tex-math id="M162">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$\textsf{sts}$\end{document}</tex-math></inline-formula> source code, and to Julien Dutheil and Bastien Boussau for assistance with the Bio++ suite.</p></ack><sec sec-type="materials"><title>Supplementary Material</title><p>Data available from the Dryad Digital Repository: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.5061/dryad.n7n85">http://dx.doi.org/10.5061/dryad.n7n85</ext-link>.</p></sec><sec><title>Funding</title><p>This work was funded by National Science Foundation grants [DMS-1223057, CISE-1564137 to V.D. and F.A.M.]; National Institutes of Health grant [U54-GM111274 to V.D. and F.A.M.]; Faculty Scholar grant from the Howard Hughes Medical Institute and the Simons Foundation to F.A.M.</p></sec><ref-list><title>References</title><ref id="B1"><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name name-style="western"><surname>Andrieu</surname><given-names>C.,</given-names></name><name name-style="western"><surname>Doucet</surname><given-names>A.,</given-names></name><name name-style="western"><surname>Holenstein</surname><given-names>R.</given-names></name></person-group>
+<year>2010</year>
+<article-title>Particle Markov chain Monte Carlo methods.</article-title><source>J. R. Stat. Soc. Ser. B</source><volume>72</volume>:<fpage>269</fpage>&#x02013;<lpage>342</lpage>.</mixed-citation></ref><ref id="B2"><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name name-style="western"><surname>Beskos</surname><given-names>A.,</given-names></name><name name-style="western"><surname>Crisan</surname><given-names>D.,</given-names></name><name name-style="western"><surname>Jasra</surname><given-names>A.</given-names></name></person-group>
+<year>2014</year>
+<article-title>On the stability of sequential Monte Carlo methods in high dimensions.</article-title><source>Ann. Appl. Probab.</source><volume>24</volume>:<fpage>1396</fpage>&#x02013;<lpage>1445</lpage>.</mixed-citation></ref><ref id="B3"><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name name-style="western"><surname>Bouchard-C&#x000f4;t&#x000e9;</surname><given-names>A.,</given-names></name><name name-style="western"><surname>Sankararaman</surname><given-names>S.,</given-names></name><name name-style="western"><surname>Jordan</surname><given-names>M.I.</given-names></name></person-group>
+<year>2012</year>
+<article-title>Phylogenetic inference via sequential Monte Carlo.</article-title><source>Syst. Biol.</source><volume>61</volume>:<fpage>579</fpage>&#x02013;<lpage>593</lpage>.<pub-id pub-id-type="pmid">22223445</pub-id></mixed-citation></ref><ref id="B4"><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name name-style="western"><surname>Bouckaert</surname><given-names>R.,</given-names></name><name name-style="western"><surname>Heled</surname><given-names>J.,</given-names></name><name name-style="western"><surname>K&#x000fc;hnert</surname><given-names>D.,</given-names></name><name name-style="western"><surname>Vaughan</surname><given-names>T.,</given-names></name><name name-style="western"><surname>Wu</surname><given-names>C.-H.,</given-names></name><name name-style="western"><surname>Xie</surname><given-names>D.,</given-names></name><name name-style="western"><surname>Suchard</surname><given-names>M.A.,</given-names></name><name name-style="western"><surname>Rambaut</surname><given-names>A.,</given-names></name><name name-style="western"><surname>Drummond</surname><given-names>A. J.</given-names></name></person-group>
+<year>2014</year>
+<article-title>BEAST 2: a software platform for Bayesian evolutionary analysis.</article-title><source>PLoS Comput. Biol.</source><volume>10</volume>:<fpage>e1003537</fpage>.<pub-id pub-id-type="pmid">24722319</pub-id></mixed-citation></ref><ref id="B5"><mixed-citation publication-type="book">
+<person-group person-group-type="author"><name name-style="western"><surname>Brent</surname><given-names>R.</given-names></name></person-group>
+<year>1973</year>
+<article-title>Algorithms for minimization without derivatives.</article-title><publisher-loc>Englewood Clifts, New Jersey</publisher-loc>: <publisher-name>Prentice-Hall</publisher-name>.</mixed-citation></ref><ref id="B6"><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name name-style="western"><surname>Claywell</surname><given-names>B.C.,</given-names></name><name name-style="western"><surname>Dinh</surname><given-names>V.,</given-names></name><name name-style="western"><surname>Fourment</surname><given-names>M.,</given-names></name><name name-style="western"><surname>McCoy</surname><given-names>C.O.,</given-names></name><name name-style="western"><surname>Matsen</surname><given-names>F.A.</given-names></name></person-group>
+<comment>IV</comment>
+<year>2017</year>
+<article-title>A surrogate function for one-dimensional phylogenetic likelihoods.</article-title><source>Mol. Biol. Evol.</source><comment>Advance online publication.</comment><pub-id pub-id-type="doi">10.1093/molbev/msx253</pub-id>.</mixed-citation></ref><ref id="B7"><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name name-style="western"><surname>Del Moral</surname><given-names>P.,</given-names></name><name name-style="western"><surname>Doucet</surname><given-names>A.,</given-names></name><name name-style="western"><surname>Jasra</surname><given-names>A.</given-names></name></person-group>
+<year>2012</year>
+<article-title>On adaptive resampling strategies for sequential Monte Carlo methods.</article-title><source>Bernoulli</source><volume>18</volume>:<fpage>252</fpage>&#x02013;<lpage>278</lpage>.</mixed-citation></ref><ref id="B8"><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name name-style="western"><surname>Dinh</surname><given-names>V.,</given-names></name><name name-style="western"><surname>Darling</surname><given-names>A.E.,</given-names></name><name name-style="western"><surname>Matsen</surname><given-names>F.A.</given-names></name></person-group>
+<comment>IV. Forthcoming</comment>
+<year>2016</year>
+<article-title>Online Bayesian phylogenetic inference: theoretical foundations via sequential Monte Carlo.</article-title><source>Syst. Biol,</source><comment>Advance online publication.</comment><ext-link ext-link-type="uri" xlink:href="https://arxiv.org/abs/1610.08148">https://arxiv.org/abs/1610.08148</ext-link>.</mixed-citation></ref><ref id="B9"><mixed-citation publication-type="book">
+<person-group person-group-type="author"><name name-style="western"><surname>Doucet</surname><given-names>A.,</given-names></name><name name-style="western"><surname>De Freitas</surname><given-names>N.,</given-names></name><name name-style="western"><surname>Gordon</surname><given-names>N.</given-names></name></person-group>
+<year>2001</year>
+<article-title>An introduction to sequential Monte Carlo methods.</article-title> In: <person-group person-group-type="editor"><name name-style="western"><surname>Doucet,</surname><given-names>A,</given-names></name><name name-style="western"><surname>De Freitas,</surname><given-names>N,</given-names></name><name name-style="western"><surname>Gordon,</surname><given-names>N,</given-names></name></person-group> editors. <comment>Sequential Monte Carlo methods in practice.</comment><publisher-loc>New York</publisher-loc>: <publisher-name>Springer</publisher-name> p. <fpage>3</fpage>&#x02013;<lpage>14</lpage>.</mixed-citation></ref><ref id="B10"><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name name-style="western"><surname>Everitt</surname><given-names>R.G.,</given-names></name><name name-style="western"><surname>Culliford</surname><given-names>R.,</given-names></name><name name-style="western"><surname>Medina-Aguayo</surname><given-names>F.,</given-names></name><name name-style="western"><surname>Wilson</surname><given-names>D.J.</given-names></name></person-group>
+<year>2016</year>
+<article-title>Sequential Bayesian inference for mixture models and the coalescent using sequential Monte Carlo samplers with transformations.</article-title><ext-link ext-link-type="uri" xlink:href="https://arxiv.org/abs/1612.06468">https://arxiv.org/abs/1612.06468</ext-link>.</mixed-citation></ref><ref id="B11"><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name name-style="western"><surname>Everitt</surname><given-names>R.G.,</given-names></name><name name-style="western"><surname>Johansen</surname><given-names>A.M.,</given-names></name><name name-style="western"><surname>Rowing</surname><given-names>E.,</given-names></name><name name-style="western"><surname>Evdemon-Hogan</surname><given-names>M.</given-names></name></person-group>
+<year>2017</year>
+<article-title>Bayesian model comparison with un-normalised likelihoods.</article-title><source>Stat. Comput.</source><volume>27</volume>:<fpage>403</fpage>&#x02013;<lpage>422</lpage>.</mixed-citation></ref><ref id="B12"><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name name-style="western"><surname>Ewens</surname><given-names>W.J.</given-names></name></person-group>
+<year>1972</year>
+<article-title>The sampling theory of selectively neutral alleles.</article-title><source>Theor. Popul. Biol.</source><volume>3</volume>:<fpage>87</fpage>&#x02013;<lpage>112</lpage>.<pub-id pub-id-type="pmid">4667078</pub-id></mixed-citation></ref><ref id="B13"><mixed-citation publication-type="other">
+<collab>FDA</collab>. <year>2016</year>
+<article-title>GenomeTrakr</article-title>. <comment>Available from</comment>: <ext-link ext-link-type="uri" xlink:href="http://www.fda.gov/Food/FoodScienceResearch/WholeGenomeSequencingProgramWGS/">http://www.fda.gov/Food/FoodScienceResearch/WholeGenomeSequencingProgramWGS/</ext-link>. <comment>accessed June 1 2017</comment>.</mixed-citation></ref><ref id="B14"><mixed-citation publication-type="book">
+<person-group person-group-type="author"><name name-style="western"><surname>Felsenstein</surname><given-names>J.</given-names></name></person-group>
+<year>2004</year>
+<article-title>Inferring phylogenies.</article-title><edition>2nd ed.</edition><publisher-loc>Sunderland (MA)</publisher-loc>: <publisher-name>Sinauer Associates, Inc.</publisher-name></mixed-citation></ref><ref id="B15"><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name name-style="western"><surname>Fitch</surname><given-names>W.M.</given-names></name></person-group>
+<year>1971</year>
+<article-title>Toward defining the course of evolution: minimum change for a specific tree topology.</article-title><source>Syst. Biol.</source><volume>20</volume>:<fpage>406</fpage>&#x02013;<lpage>416</lpage>.</mixed-citation></ref><ref id="B16"><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name name-style="western"><surname>Gardy</surname><given-names>J.,</given-names></name><name name-style="western"><surname>Loman</surname><given-names>N.J.,</given-names></name><name name-style="western"><surname>Rambaut</surname><given-names>A.</given-names></name></person-group>
+<year>2015</year>
+<article-title>Real-time digital pathogen surveillance&#x02013;-the time is now.</article-title><source>Genome Biol.</source><fpage>16</fpage>:<lpage>155</lpage>.<pub-id pub-id-type="pmid">25622821</pub-id></mixed-citation></ref><ref id="B17"><mixed-citation publication-type="book">
+<person-group person-group-type="author"><name name-style="western"><surname>Geyer</surname><given-names>C.J.</given-names></name></person-group>
+<year>1991</year>
+<article-title>Markov chain monte carlo maximum likelihood.</article-title> In: <person-group person-group-type="editor"><name name-style="western"><surname>Keramidas</surname><given-names>E.M.,</given-names></name><name name-style="western"><surname>Kaufman</surname><given-names>S.M.,</given-names></name></person-group> editors. <comment>Computing Science and Statistics: Proceedings of the 23rd Symposium on the Interface.</comment><publisher-loc>Fairfax Station</publisher-loc>: <publisher-name>Inferface Foundation</publisher-name> p. <fpage>156</fpage>&#x02013;<lpage>163</lpage>.</mixed-citation></ref><ref id="B18"><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name name-style="western"><surname>Gu&#x000e9;guen</surname><given-names>L.,</given-names></name><name name-style="western"><surname>Gaillard</surname><given-names>S.,</given-names></name><name name-style="western"><surname>Boussau</surname><given-names>B.,</given-names></name><name name-style="western"><surname>Gouy</surname><given-names>M.,</given-names></name><name name-style="western"><surname>Groussin</surname><given-names>M.,</given-names></name><name name-style="western"><surname>Rochette</surname><given-names>N.C.,</given-names></name><name name-style="western"><surname>Bigot</surname><given-names>T.,</given-names></name><name name-style="western"><surname>Fournier</surname><given-names>D.,</given-names></name><name name-style="western"><surname>Pouyet</surname><given-names>F.,</given-names></name><name name-style="western"><surname>Cahais</surname><given-names>V.,</given-names></name><name name-style="western"><surname>Aur&#x000e9;lien</surname><given-names>B.,</given-names></name><name name-style="western"><surname>C&#x000e9;line</surname><given-names>S.,</given-names></name><name name-style="western"><surname>Beno&#x000ee;t</surname><given-names>N.,</given-names></name><name name-style="western"><surname>Annabelle</surname><given-names>H.,</given-names></name><name name-style="western"><surname>Lo&#x000ef;c</surname><given-names>D.,</given-names></name><name name-style="western"><surname>Nicolas</surname><given-names>G.,</given-names></name><name name-style="western"><surname>Khalid</surname><given-names>B.,</given-names></name><name name-style="western"><surname>Julien</surname><given-names>D. Y.</given-names></name></person-group>
+<year>2013</year>
+<article-title>Bio++: efficient extensible libraries and tools for computational molecular evolution.</article-title><source>Mol. Biol. Evol.</source><volume>30</volume>:<fpage>1745</fpage>&#x02013;<lpage>1750</lpage>.<pub-id pub-id-type="pmid">23699471</pub-id></mixed-citation></ref><ref id="B19"><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name name-style="western"><surname>Guindon</surname><given-names>S.,</given-names></name><name name-style="western"><surname>Dufayard</surname><given-names>J.-F.,</given-names></name><name name-style="western"><surname>Lefort</surname><given-names>V.,</given-names></name><name name-style="western"><surname>Anisimova</surname><given-names>M.,</given-names></name><name name-style="western"><surname>Hordijk</surname><given-names>W.,</given-names></name><name name-style="western"><surname>Gascuel</surname><given-names>O.</given-names></name></person-group>
+<year>2010</year>
+<article-title>New algorithms and methods to estimate maximum-likelihood phylogenies: assessing the performance of PhyML 3.0.</article-title><source>Syst. Biol.</source><volume>59</volume>:<fpage>307</fpage>&#x02013;<lpage>321</lpage>.<pub-id pub-id-type="pmid">20525638</pub-id></mixed-citation></ref><ref id="B20"><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name name-style="western"><surname>Izquierdo-Carrasco</surname><given-names>F.,</given-names></name><name name-style="western"><surname>Cazes</surname><given-names>J.,</given-names></name><name name-style="western"><surname>Smith</surname><given-names>S.A.,</given-names></name><name name-style="western"><surname>Stamatakis</surname><given-names>A.</given-names></name></person-group>
+<year>2014</year>
+<article-title>PUmPER: phylogenies updated perpetually.</article-title><source>Bioinformatics</source><volume>30</volume>:<fpage>1476</fpage>&#x02013;<lpage>1477</lpage>.<pub-id pub-id-type="pmid">24478338</pub-id></mixed-citation></ref><ref id="B21"><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name name-style="western"><surname>Johansen</surname><given-names>A.M.</given-names></name></person-group>
+<year>2009</year>
+<article-title>SMCTC: sequential Monte Carlo in C++.</article-title><source>J. Stat. Softw.</source><volume>30</volume>:<fpage>1</fpage>&#x02013;<lpage>41</lpage>.<pub-id pub-id-type="pmid">21666874</pub-id></mixed-citation></ref><ref id="B22"><mixed-citation publication-type="book">
+<person-group person-group-type="author"><name name-style="western"><surname>Jukes</surname><given-names>T.H.,</given-names></name><name name-style="western"><surname>Cantor</surname><given-names>C.R.</given-names></name></person-group>
+<year>1969</year>
+<article-title>Evolution of protein molecules.</article-title> In: <person-group person-group-type="editor"><name name-style="western"><surname>Munro</surname><given-names>H.N.,</given-names></name></person-group> ed. <comment>Mammalian protein metabolism.</comment><volume>Vol. 3.</volume><publisher-loc>New York</publisher-loc>:<publisher-name>Academic Press</publisher-name> p. <fpage>132</fpage>.</mixed-citation></ref><ref id="B23"><mixed-citation publication-type="book">
+<person-group person-group-type="author"><name name-style="western"><surname>Jun</surname><given-names>S.-H.,</given-names></name><name name-style="western"><surname>Bouchard-C&#x000f4;t&#x000e9;,</surname><given-names>A.</given-names></name></person-group>
+<year>2014</year>
+<article-title>Memory (and time) efficient sequential Monte Carlo.</article-title> In: <source>Proceedings of the 31st International Conference on Machine Learning, Beijing, China,</source><year>2014</year>
+<publisher-loc>JMLR</publisher-loc>: <publisher-name>W&#x00026;CP</publisher-name><volume>volume 32.</volume></mixed-citation></ref><ref id="B24"><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name name-style="western"><surname>Kitagawa</surname><given-names>G.</given-names></name></person-group>
+<year>1996</year>
+<article-title>Monte Carlo filter and smoother for non-Gaussian nonlinear state space models.</article-title><source>J. Comput. Graph. Stat.</source><volume>5</volume>:<fpage>1</fpage>&#x02013;<lpage>25</lpage>.</mixed-citation></ref><ref id="B25"><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name name-style="western"><surname>K&#x000fc;hnert</surname><given-names>D.,</given-names></name><name name-style="western"><surname>Stadler</surname><given-names>T.,</given-names></name><name name-style="western"><surname>Vaughan</surname><given-names>T.G.,</given-names></name><name name-style="western"><surname>Drummond</surname><given-names>A.J.</given-names></name></person-group>
+<year>2014</year>
+<article-title>Simultaneous reconstruction of evolutionary history and epidemiological dynamics from viral sequences with the birth&#x02013;death SIR model.</article-title><source>J. R. Soc. Interface</source><fpage>11</fpage>:<lpage>20131106</lpage>.</mixed-citation></ref><ref id="B26"><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name name-style="western"><surname>Lakner</surname><given-names>C.,</given-names></name><name name-style="western"><surname>van der Mark</surname><given-names>P.,</given-names></name><name name-style="western"><surname>Huelsenbeck</surname><given-names>J.P.,</given-names></name><name name-style="western"><surname>Larget</surname><given-names>B.,</given-names></name><name name-style="western"><surname>Ronquist</surname><given-names>F.</given-names></name></person-group>
+<year>2008</year>
+<article-title>Efficiency of Markov chain Monte Carlo tree proposals in Bayesian phylogenetics.</article-title><source>Syst. Biol.</source><volume>57</volume>:<fpage>86</fpage>&#x02013;<lpage>103</lpage>.<pub-id pub-id-type="pmid">18278678</pub-id></mixed-citation></ref><ref id="B27"><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name name-style="western"><surname>Lemey</surname><given-names>P.,</given-names></name><name name-style="western"><surname>Rambaut</surname><given-names>A.,</given-names></name><name name-style="western"><surname>Drummond</surname><given-names>A.J.,</given-names></name><name name-style="western"><surname>Suchard</surname><given-names>M.A.</given-names></name></person-group>
+<year>2009</year>
+<article-title>Bayesian phylogeography finds its roots.</article-title><source>PLoS Comput. Biol.</source><volume>5</volume>:<fpage>e1000520</fpage>.<pub-id pub-id-type="pmid">19779555</pub-id></mixed-citation></ref><ref id="B28"><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name name-style="western"><surname>Loose</surname><given-names>M.,</given-names></name><name name-style="western"><surname>Malla</surname><given-names>S.,</given-names></name><name name-style="western"><surname>Stout</surname><given-names>M.</given-names></name></person-group>
+<year>2016</year>
+<article-title>Real-time selective sequencing using nanopore technology.</article-title><source>Nat. Methods</source><volume>13</volume>:<fpage>751</fpage>&#x02013;<lpage>754</lpage>.<pub-id pub-id-type="pmid">27454285</pub-id></mixed-citation></ref><ref id="B29"><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name name-style="western"><surname>Matsen</surname><given-names>F.A.,</given-names></name><name name-style="western"><surname>Kodner</surname><given-names>R.B.,</given-names></name><name name-style="western"><surname>Armbrust</surname><given-names>E.V.</given-names></name></person-group>
+<year>2010</year>
+<article-title>pplacer: linear time maximum-likelihood and Bayesian phylogenetic placement of sequences onto a fixed reference tree.</article-title><source>BMC Bioinform.</source><fpage>11</fpage>:<lpage>1</lpage>.</mixed-citation></ref><ref id="B30"><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name name-style="western"><surname>Neher</surname><given-names>R.A.,</given-names></name><name name-style="western"><surname>Bedford</surname><given-names>T.</given-names></name></person-group>
+<year>2015</year>
+<article-title>nextflu: real-time tracking of seasonal influenza virus evolution in humans.</article-title><source>Bioinformatics</source><volume>31</volume>:<fpage>3546</fpage>&#x02013;<lpage>3548</lpage>.<pub-id pub-id-type="pmid">26115986</pub-id></mixed-citation></ref><ref id="B31"><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name name-style="western"><surname>Paige</surname><given-names>B.,</given-names></name><name name-style="western"><surname>Wood</surname><given-names>F.,</given-names></name><name name-style="western"><surname>Doucet</surname><given-names>A.,</given-names></name><name name-style="western"><surname>Teh</surname><given-names>Y.W.</given-names></name></person-group>
+<year>2014</year>
+<article-title>Asynchronous anytime sequential Monte Carlo.</article-title><source>In: Advances in Neural Information Processing Systems.</source><volume>27</volume> p. <fpage>3410</fpage>&#x02013;<lpage>3418</lpage>.</mixed-citation></ref><ref id="B32"><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name name-style="western"><surname>Robinson</surname><given-names>D.F.,</given-names></name><name name-style="western"><surname>Foulds</surname><given-names>L.R.</given-names></name></person-group>
+<year>1981</year>
+<article-title>Comparison of phylogenetic trees.</article-title><source>Math. Biosci.</source><volume>53</volume>:<fpage>131</fpage>&#x02013;<lpage>147</lpage>.</mixed-citation></ref><ref id="B33"><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name name-style="western"><surname>Ronquist</surname><given-names>F.,</given-names></name><name name-style="western"><surname>Teslenko</surname><given-names>M.,</given-names></name><name name-style="western"><surname>van der Mark</surname><given-names>P.,</given-names></name><name name-style="western"><surname>Ayres</surname><given-names>D.L.,</given-names></name><name name-style="western"><surname>Darling</surname><given-names>A.,</given-names></name><name name-style="western"><surname>H&#x000f6;hna</surname><given-names>S.,</given-names></name><name name-style="western"><surname>Larget</surname><given-names>B.,</given-names></name><name name-style="western"><surname>Liu</surname><given-names>L.,</given-names></name><name name-style="western"><surname>Suchard</surname><given-names>M.A.,</given-names></name><name name-style="western"><surname>Huelsenbeck</surname><given-names>J.P.</given-names></name></person-group>
+<year>2012</year>
+<article-title>MrBayes 3.2: efficient Bayesian phylogenetic inference and model choice across a large model space.</article-title><source>Syst. Biol.</source><volume>61</volume>:<fpage>539</fpage>&#x02013;<lpage>42</lpage>.<pub-id pub-id-type="pmid">22357727</pub-id></mixed-citation></ref><ref id="B34"><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name name-style="western"><surname>Rusu</surname><given-names>L.I.,</given-names></name><name name-style="western"><surname>Wyres</surname><given-names>K.L.,</given-names></name><name name-style="western"><surname>Reumann</surname><given-names>M.,</given-names></name><name name-style="western"><surname>Queiroz</surname><given-names>C.,</given-names></name><name name-style="western"><surname>Bojovschi</surname><given-names>A.,</given-names></name><name name-style="western"><surname>Conway</surname><given-names>T.,</given-names></name><name name-style="western"><surname>Garg</surname><given-names>S.,</given-names></name><name name-style="western"><surname>Edwards</surname><given-names>D.J.,</given-names></name><name name-style="western"><surname>Hogg</surname><given-names>G.,</given-names></name><name name-style="western"><surname>Holt</surname><given-names>K.E.</given-names></name></person-group>
+<year>2015</year>
+<article-title>A platform for leveraging next generation sequencing for routine microbiology and public health use.</article-title><source>Health Inf. Sci. Syst.</source><volume>3</volume>:<fpage>S7</fpage>.<pub-id pub-id-type="pmid">25870761</pub-id></mixed-citation></ref><ref id="B35"><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name name-style="western"><surname>St. John</surname><given-names>K.</given-names></name></person-group>
+<year>2016</year>
+<article-title>Review paper: the shape of phylogenetic treespace.</article-title><source>Syst. Biol.</source><volume>66</volume>:<fpage>83</fpage>&#x02013;<lpage>94</lpage>.</mixed-citation></ref><ref id="B36"><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name name-style="western"><surname>Stadler</surname><given-names>T.</given-names></name></person-group>
+<year>2017</year>
+<article-title>TreeSim - simulating phylogenetic treespace</article-title> [<comment>Internet</comment>], <year>2017</year><comment>Available from</comment>: <ext-link ext-link-type="uri" xlink:href="http://cran.r-project.org/web/packages/TreeSim/index.html">http://cran.r-project.org/web/packages/TreeSim/index.html</ext-link></mixed-citation></ref><ref id="B37"><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name name-style="western"><surname>Suchard</surname><given-names>M.A.,</given-names></name><name name-style="western"><surname>Redelings</surname><given-names>B.D.</given-names></name></person-group>
+<year>2006</year>
+<article-title>BAli-Phy: simultaneous Bayesian inference of alignment and phylogeny.</article-title><source>Bioinformatics</source><volume>22</volume>:<fpage>2047</fpage>&#x02013;<lpage>2048</lpage>.<pub-id pub-id-type="pmid">16679334</pub-id></mixed-citation></ref><ref id="B38"><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name name-style="western"><surname>Sukumaran</surname><given-names>J.,</given-names></name><name name-style="western"><surname>Holder</surname><given-names>M.T.</given-names></name></person-group>
+<year>2010</year>
+<article-title>DendroPy: a Python library for phylogenetic computing.</article-title><source>Bioinformatics</source><volume>26</volume>:<fpage>1569</fpage>&#x02013;<lpage>1571</lpage>.<pub-id pub-id-type="pmid">20421198</pub-id></mixed-citation></ref><ref id="B39"><mixed-citation publication-type="book">
+<person-group person-group-type="author"><name name-style="western"><surname>Teh</surname><given-names>Y.W.,</given-names></name><name name-style="western"><surname>Hsu</surname><given-names>D.J.,</given-names></name><name name-style="western"><surname>Daume</surname><given-names>H.</given-names></name></person-group>
+<year>2008</year>
+<article-title>Bayesian agglomerative clustering with coalescents.</article-title> In: <person-group person-group-type="editor"><name name-style="western"><surname>Platt</surname><given-names>J.C.,</given-names></name><name name-style="western"><surname>Koller</surname><given-names>D.,</given-names></name><name name-style="western"><surname>Singer</surname><given-names>Y.,</given-names></name><name name-style="western"><surname>Roweis</surname><given-names>S.T.,</given-names></name></person-group> editors. <source>Advances in Neural Information Processing Systems 20.</source><publisher-loc>Curran Associates, Inc. Cambridge (MA)</publisher-loc>: <publisher-name>MIT Press</publisher-name>, p. <fpage>1473</fpage>&#x02013;<lpage>1480</lpage>.</mixed-citation></ref><ref id="B40"><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name name-style="western"><surname>Wang</surname><given-names>L.,</given-names></name><name name-style="western"><surname>Bouchard-C&#x000f4;t&#x000e9;,</surname><given-names>A.,</given-names></name><name name-style="western"><surname>Doucet</surname><given-names>A.</given-names></name></person-group>
+<year>2015</year>
+<article-title>Bayesian phylogenetic inference using a combinatorial sequential Monte Carlo method.</article-title><source>J. Am. Stat. Assoc.</source><volume>110</volume>:<fpage>1362</fpage>&#x02013;<lpage>1374</lpage>.</mixed-citation></ref></ref-list></back></article>

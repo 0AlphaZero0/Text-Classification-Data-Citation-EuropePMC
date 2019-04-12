@@ -1,0 +1,536 @@
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD v1.1 20151215//EN" "JATS-archivearticle1.dtd"> 
+<article xmlns:ali="http://www.niso.org/schemas/ali/1.0/" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML" article-type="research-article"><?properties open_access?><?DTDIdentifier.IdentifierValue -//NLM//DTD JATS (Z39.96) Journal Publishing DTD v1.0 20120330//EN?><?DTDIdentifier.IdentifierType public?><?SourceDTD.DTDName JATS-journalpublishing1.dtd?><?SourceDTD.Version 1.0?><?ConverterInfo.XSLTName jp2nlmx2.xsl?><?ConverterInfo.Version 2?><front><journal-meta><journal-id journal-id-type="nlm-ta">J Biol Chem</journal-id><journal-id journal-id-type="iso-abbrev">J. Biol. Chem</journal-id><journal-id journal-id-type="hwp">jbc</journal-id><journal-id journal-id-type="pmc">jbc</journal-id><journal-id journal-id-type="publisher-id">JBC</journal-id><journal-title-group><journal-title>The Journal of Biological Chemistry</journal-title></journal-title-group><issn pub-type="ppub">0021-9258</issn><issn pub-type="epub">1083-351X</issn><publisher><publisher-name>American Society for Biochemistry and Molecular Biology</publisher-name><publisher-loc>11200 Rockville Pike, Suite 302, Rockville, MD 20852-3110, U.S.A.</publisher-loc></publisher></journal-meta><article-meta><article-id pub-id-type="pmcid">4933163</article-id><article-id pub-id-type="pmid">27143480</article-id><article-id pub-id-type="publisher-id">M116.715565</article-id><article-id pub-id-type="doi">10.1074/jbc.M116.715565</article-id><article-categories><subj-group subj-group-type="heading"><subject>Computational Biology</subject></subj-group></article-categories><title-group><article-title><SecTag type="TITLE"><text><SENT sid="0" pm="."><plain>Insights into the Tunnel Mechanism of Cholesteryl Ester Transfer Protein through All-atom Molecular Dynamics Simulations* </plain></SENT>
+</text></SecTag></article-title><alt-title alt-title-type="short">CETP Tunnel Mechanism by MD Simulations</alt-title></title-group><contrib-group><contrib contrib-type="author"><name><surname>Lei</surname><given-names>Dongsheng</given-names></name><xref ref-type="aff" rid="aff1"><sup>‡</sup></xref><xref ref-type="aff" rid="aff2"><sup>§</sup></xref></contrib><contrib contrib-type="author"><name><surname>Rames</surname><given-names>Matthew</given-names></name><xref ref-type="aff" rid="aff1"><sup>‡</sup></xref></contrib><contrib contrib-type="author"><name><surname>Zhang</surname><given-names>Xing</given-names></name><xref ref-type="aff" rid="aff1"><sup>‡</sup></xref><xref ref-type="aff" rid="aff2"><sup>§</sup></xref></contrib><contrib contrib-type="author"><name><surname>Zhang</surname><given-names>Lei</given-names></name><xref ref-type="aff" rid="aff2"><sup>§</sup></xref></contrib><contrib contrib-type="author"><name><surname>Zhang</surname><given-names>Shengli</given-names></name><xref ref-type="aff" rid="aff2"><sup>§</sup></xref><xref ref-type="corresp" rid="cor1"><sup>1</sup></xref></contrib><contrib contrib-type="author"><name><surname>Ren</surname><given-names>Gang</given-names></name><xref ref-type="aff" rid="aff1"><sup>‡</sup></xref><xref ref-type="corresp" rid="cor2"><sup>2</sup></xref></contrib><aff id="aff1">From <label>‡</label>The Molecular Foundry, Lawrence Berkeley National Laboratory, Berkeley, California 94720 and </aff><aff id="aff2">the <label>§</label>Department of Applied Physics, Xi'an Jiaotong University, Xi'an, Shaanxi 710049, China</aff></contrib-group><author-notes><corresp id="cor1"><label>1</label> To whom correspondence may be addressed. Tel.: <phone>86-29-82663366</phone>; Fax: <fax>86-29-82667872</fax>; E-mail: <email>zhangsl@xjtu.edu.cn</email>.</corresp><corresp id="cor2"><label>2</label> To whom correspondence may be addressed. Tel.: <phone>510-495-2375</phone>; Fax: <fax>510-486-7268</fax>; E-mail: <email>gren@lbl.gov</email>.</corresp></author-notes><pub-date pub-type="ppub"><day>1</day><month>7</month><year>2016</year></pub-date><pub-date pub-type="epub"><day>3</day><month>5</month><year>2016</year></pub-date><pub-date pub-type="pmc-release"><day>3</day><month>5</month><year>2016</year></pub-date><volume>291</volume><issue>27</issue><fpage>14034</fpage><lpage>14044</lpage><history><date date-type="received"><day>13</day><month>1</month><year>2016</year></date><date date-type="rev-recd"><day>2</day><month>5</month><year>2016</year></date></history><permissions><copyright-statement>© 2016 by The American Society for Biochemistry and Molecular Biology, Inc.</copyright-statement><copyright-year>2016</copyright-year><copyright-holder>The American Society for Biochemistry and Molecular Biology, Inc.</copyright-holder><license license-type="open-access"><license-p><italic>Author's Choice</italic>—Final version free via <ext-link ext-link-type="uri" xlink:href="http://creativecommons.org/licenses/by/4.0">Creative Commons CC-BY license</ext-link>.</license-p></license></permissions><self-uri content-type="pdf" xlink:href="zbc02716014034.pdf"/><abstract><p><SecTag type="ABS"><text><SENT sid="1" pm="."><plain>Cholesteryl ester transfer protein (CETP) mediates cholesteryl ester (CE) transfer from the atheroprotective high density lipoprotein (HDL) cholesterol to the atherogenic low density lipoprotein cholesterol. </plain></SENT>
+<SENT sid="2" pm="."><plain>In the past decade, this property has driven the development of CETP inhibitors, which have been evaluated in large scale clinical trials for treating cardiovascular diseases. </plain></SENT>
+<SENT sid="3" pm="."><plain>Despite the pharmacological interest, little is known about the fundamental mechanism of CETP in CE transfer. </plain></SENT>
+<SENT sid="4" pm="."><plain>Recent electron microscopy (EM) experiments have suggested a tunnel mechanism, and molecular dynamics simulations have shown that the flexible N-terminal distal end of CETP penetrates into the HDL surface and takes up a CE molecule through an open pore. </plain></SENT>
+<SENT sid="5" pm="."><plain>However, it is not known whether a CE molecule can completely transfer through an entire CETP molecule. </plain></SENT>
+<SENT sid="6" pm="."><plain>Here, we used all-atom molecular dynamics simulations to evaluate this possibility. </plain></SENT>
+<SENT sid="7" pm="."><plain>The results showed that a hydrophobic tunnel inside CETP is sufficient to allow a CE molecule to completely transfer through the entire CETP within a predicted transfer time and at a rate comparable with those obtained through physiological measurements. </plain></SENT>
+<SENT sid="8" pm="."><plain>Analyses of the detailed interactions revealed several residues that might be critical for CETP function, which may provide important clues for the effective development of CETP inhibitors and treatment of cardiovascular diseases. </plain></SENT>
+</text></SecTag></p></abstract><SecTag type="KEYWORD"><kwd-group><kwd>cholesterol</kwd><kwd>cholesterol metabolism</kwd><kwd>cholesterol regulation</kwd><kwd>cholesterol-binding protein</kwd><kwd>lipid metabolism</kwd><kwd>lipid transport</kwd><kwd>lipid-protein interaction</kwd><kwd>lipoprotein metabolism</kwd><kwd>molecular dynamics</kwd></kwd-group></SecTag><funding-group><award-group id="award1"><funding-source>National Heart, Lung, and Blood Institute
+<named-content content-type="funder-id">http://dx.doi.org/10.13039/100000050</named-content></funding-source><award-id>1R01HL115153</award-id></award-group><award-group id="award2"><funding-source>National Natural Science Foundation of China
+<named-content content-type="funder-id">http://dx.doi.org/10.13039/501100001809</named-content></funding-source><award-id>11074196</award-id><award-id>11374237</award-id></award-group><award-group id="award3"><funding-source>U. S. Department of Energy
+<named-content content-type="funder-id">http://dx.doi.org/10.13039/100000015</named-content></funding-source><award-id>DE-AC02–05CH11231</award-id></award-group></funding-group></article-meta></front><body><SecTag type="INTRO"><sec sec-type="intro"><title><text><SENT sid="9" pm="."><plain>Introduction </plain></SENT>
+</text></title><p><text><SENT sid="10" pm="."><plain>Cardiovascular diseases cause nearly one million deaths annually in the United States (1). </plain></SENT>
+<SENT sid="11" pm="."><plain>Two major risk factors of cardiovascular diseases are decreased levels of high density lipoprotein cholesterol (HDL-C)3 and elevated levels of low density lipoprotein (LDL) cholesterol (2, 3). </plain></SENT>
+<SENT sid="12" pm="."><plain>In plasma, cholesteryl ester transfer proteins (CETPs) transfer cholesteryl esters (CEs) from high density lipoprotein (HDL) to low density lipoprotein and very low density lipoprotein (VLDL) (4). </plain></SENT>
+<SENT sid="13" pm="."><plain>Human plasma CETP is a 476-amino acid hydrophobic glycoprotein. </plain></SENT>
+<SENT sid="14" pm="."><plain>Genetic deficiency of CETP increases HDL-C levels and decreases LDL cholesterol levels (5, 6). </plain></SENT>
+<SENT sid="15" pm="."><plain>As a result, CETP has become a promising drug target for the prevention and treatment of cardiovascular diseases. </plain></SENT>
+<SENT sid="16" pm="."><plain>To date, four synthetic CETP inhibitors, torcetrapib, dalcetrapib, anacetrapib, and evacetrapib, have been evaluated in Phase III clinical studies in the past decade (7–10). </plain></SENT>
+<SENT sid="17" pm="."><plain>The clinical data have shown that all CETP inhibitors elevate HDL-C levels, and nearly all CETP inhibitors decrease LDL cholesterol levels (7–10). </plain></SENT>
+<SENT sid="18" pm="."><plain>Although anacetrapib is still being tested in clinical studies, the failures of torcetrapib (due to off-target effects) (7) and dalcetrapib and evacetrapib (due to their unexpected low efficacy) (8, 11) highlight that the detailed mechanism underlying the CETP-mediated transfer of CE molecules between HDL and LDL/VLDL needs to be elucidated. </plain></SENT>
+</text></p><p><text><SENT sid="19" pm="."><plain>Three hypotheses of the CETP mechanism have been proposed: a shuttle mechanism in which CETP collects CEs from HDL and then delivers them through the aqueous environment to LDL/VLDL (12); a ternary complex mechanism in which CETP simultaneously interacts with HDL and LDL/VLDL, thus forming a ternary complex that induces CE transfer from HDL to LDL/VLDL (13); and a modified ternary complex mechanism that implicates a CETP dimer instead of a monomer (14). </plain></SENT>
+</text></p><p><text><SENT sid="20" pm="."><plain>The crystal structure of CETP revealed a banana-shaped molecule composed of N- and C-terminal β-barrel domains, a central β-sheet, and an ∼60-Å-long hydrophobic central cavity (15). </plain></SENT>
+<SENT sid="21" pm="."><plain>Two pores near the central β-sheet domain occupied by two phospholipid molecules have been suspected to be the gates between which the central cavity would interact with the aqueous environment or lipoproteins, thus favoring the shuttle mechanism (15). </plain></SENT>
+</text></p><p><text><SENT sid="22" pm="."><plain>Experimental studies on the kinetics of the plasma protein-catalyzed exchange of phosphatidylcholine and CE between plasma LDL and HDL have suggested that the exchange occurs by a sequential mechanism involving an HDL-CETP-LDL ternary complex (13). </plain></SENT>
+<SENT sid="23" pm="."><plain>Recent electron microscopy (EM) studies have shown the presence of a ternary complex among CETP, HDL, and LDL/VLDL (16) in which the CETP N-terminal distal end interacts with HDL via a hydrophobic interaction (17). </plain></SENT>
+<SENT sid="24" pm="."><plain>Independently, molecular dynamics (MD) simulations have revealed that the CETP distal ends are structurally flexible (18), and the N-terminal end penetrates into the HDL surface and takes up a CE molecule (19). </plain></SENT>
+<SENT sid="25" pm="."><plain>A tunnel mechanism has been proposed because the CETP crystal structure displays a long hydrophobic central cavity containing two CE molecules (16). </plain></SENT>
+<SENT sid="26" pm="."><plain>Here, we used all-atom MD simulations to evaluate the tunnel mechanism by testing whether a long tunnel could be formed and is large enough to allow CE to pass through the entire CETP molecule. </plain></SENT>
+</text></p></sec></SecTag><SecTag type="METHODS"><sec sec-type="methods"><title><text><SENT sid="27" pm="."><plain>Experimental Procedures </plain></SENT>
+</text></title><sec><title/><sec><title/><sec><title><text><SENT sid="28" pm="."><plain>Strategy for Setting Up the Simulation System </plain></SENT>
+</text></title><p><text><SENT sid="29" pm="."><plain>In the tunnel mechanism, CETP interacts with HDL and LDL simultaneously and forms a ternary complex (see Fig. 1, A and B). </plain></SENT>
+<SENT sid="30" pm="."><plain>EM experiments have suggested that the flexible N-terminal β-barrel domain of CETP penetrates into the phospholipid monolayer on the HDL surface via hydrophobic interactions (16, 17) and that the distal end reaches the HDL CE-rich pool. </plain></SENT>
+<SENT sid="31" pm="."><plain>However, the flexible C-terminal β-barrel domain penetrates into the phospholipid monolayer of the LDL surface and interacts with the inner LDL triglyceride (TG)-rich pool (16). </plain></SENT>
+<SENT sid="32" pm="."><plain>To test whether the ternary complex could form a tunnel within CETP that allows a CE molecule to transfer through the entire CETP molecule, we constructed an MD simulation system to match the observed EM ternary complex as closely as possible. </plain></SENT>
+<SENT sid="33" pm="."><plain>In this system, a CETP molecule was embedded into an aqueous environment with its two distal β-barrel domain ends penetrating into the two opposite phospholipid monolayers that envelop the CE and TG pools (Fig. 1, C and D). </plain></SENT>
+</text></p></sec><sec><title><text><SENT sid="34" pm="."><plain>Simulation System Components </plain></SENT>
+</text></title><p><text><SENT sid="35" pm="."><plain>To reach equilibrium for the above simulated system within a practical period of time, our strategy was to separately equilibrate each component, i.e. the CE and TG pools, CETP, the phospholipid monolayers, and their simple combinations. </plain></SENT>
+<SENT sid="36" pm="."><plain>In brief, the CE and TG pools were constructed from a non-CHARMM force field equilibration (20, 21) with a periodically expanded cross-sectional area of 96 × 96 Å. The CE pool and TG pool were then submitted for equilibration for 74.0 and 9.5 ns under a CHARMM force field (22–25) and physiological conditions using all-atom MD simulations. </plain></SENT>
+<SENT sid="38" pm="."><plain>The equilibrated phospholipid monolayers were obtained from an equilibrated 1-palmitoyl-2-oleoyl-sn-glycero-3-phosphocholine (POPC) bilayer (26) that was further equilibrated for 20.0 ns by using a CHARMM force field (24, 25). </plain></SENT>
+<SENT sid="39" pm="."><plain>All equilibrations were conducted with the Nanoscale Molecular Dynamics version 2 (NAMD2) software package (from the University of Illinois at Champaign-Urbana) (27) at 310 K and 1 atm. </plain></SENT>
+<SENT sid="40" pm="."><plain>During the equilibrations, the 310 K temperature was maintained through Langevin dynamics (28) with a damping coefficient of 5 ps, whereas the 1-atm pressure was maintained by using the Langevin piston Nose-Hoover method (29) with a piston period of 100 fs and a decay time of 50 fs. </plain></SENT>
+<SENT sid="41" pm="."><plain>Periodic boundary conditions and a cutoff distance of 12 Å for van der Waals interactions were applied, and the particle mesh Ewald method (30) (grid spacing &lt;1 Å) was used to compute the long range electrostatic interactions. </plain></SENT>
+</text></p><p><text><SENT sid="42" pm="."><plain>The equilibrated CETP was obtained by equilibrating the CETP crystal structure (Protein Data Bank code <ext-link ext-link-type="pdb" xlink:href="2OBD">2OBD</ext-link>) (15) embedded into a cubic box containing 66,020 TIP3P (Transferable Intermolecular Potential 3 Point) water molecules and 15 Na+ atoms (for neutralizing the CETP surface charges). </plain></SENT>
+<SENT sid="43" pm="."><plain>The water box boundary was at least 25 Å away from the CETP surface. </plain></SENT>
+<SENT sid="44" pm="."><plain>The missing hydrogen atoms within the CETP crystal structure were recovered by using the AutoPSF module of the Visual Molecular Dynamics (VMD) software package (from the University of Illinois at Champaign-Urbana) (31). </plain></SENT>
+<SENT sid="45" pm="."><plain>The system, containing a total of 206,041 atoms, was subjected to energy minimization via a total of 20,000 steps to remove the atomic clashes. </plain></SENT>
+<SENT sid="46" pm="."><plain>Within the first 10,000 steps, the protein backbone atoms were fixed. </plain></SENT>
+<SENT sid="47" pm="."><plain>In the next 10,000 steps, the protein backbone atoms were constrained under a force constant of 5 kcal/mol/Å2. </plain></SENT>
+<SENT sid="48" pm="."><plain>The energy-minimized system was subsequently heated from 0 to 310 K over 31 ps to initiate the all-atom MD simulations. </plain></SENT>
+<SENT sid="49" pm="."><plain>The system at 310 K and 1 atm reached equilibration after 5.4 ns; the constraints on the protein were removed after the first 0.4-ns simulation. </plain></SENT>
+</text></p></sec><sec><title><text><SENT sid="50" pm="."><plain>Assembling the Simulation System </plain></SENT>
+</text></title><p><text><SENT sid="51" pm="."><plain>The assembly process was conducted through the following three steps: (i) sandwiching the above equilibrated CE pool between two equilibrated POPC monolayers before further equilibration, (ii) sandwiching the above equilibrated TG pool with two monolayers, and (iii) allowing the two CETP β-barrel domain distal ends to penetrate into each of the above phospholipid sandwiches. </plain></SENT>
+<SENT sid="52" pm="."><plain>The depths of penetration were ∼3–4 nm according to transmission EM measurements (16) in which the molecules clashing with CETP were removed. </plain></SENT>
+<SENT sid="53" pm="."><plain>The simulation system, consisting of a total of ∼330,000 atoms, was then obtained after filling the gap between the two phospholipid sandwiches with equilibrated water (with 15 Na+ atoms for neutralization). </plain></SENT>
+</text></p></sec><sec><title><text><SENT sid="54" pm="."><plain>Equilibration of the Simulation System </plain></SENT>
+</text></title><p><text><SENT sid="55" pm="."><plain>The equilibration of the above system was achieved via three steps. </plain></SENT>
+<SENT sid="56" pm="."><plain>(i) The overlapping molecules were manually shifted away from CETP, and then the system was subsequently subjected to 10,000 steps of energy minimization and a 0.2-ns MD simulation. </plain></SENT>
+<SENT sid="57" pm="."><plain>This 0.2-ns simulation included a step of heating from 0 to 310 K within 62 ps and a simulation step at 310 K and 1 atm and a constraint of the heavy atoms (non-hydrogen atoms) of both water and CETP. </plain></SENT>
+<SENT sid="58" pm="."><plain>(ii) The constraints on the water heavy atoms (oxygen) were gradually released via 10,000 steps of energy minimization followed by a 0.2-ns MD simulation. </plain></SENT>
+<SENT sid="59" pm="."><plain>Within this step, an intermediate stage of constraint was used in which the water oxygen atoms were allowed to transfer only in parallel to the lipid monolayers under an initial force constant of 10 kcal/mol/Å2. </plain></SENT>
+<SENT sid="60" pm="."><plain>(iii) The constraints on the CETP heavy atoms were gradually released via 15,000 steps of energy minimization and a 0.4-ns MD simulation. </plain></SENT>
+<SENT sid="61" pm="."><plain>In this step, three intermediate stages were used to prevent deformations in the protein structure, i.e. releasing the side chain constraints, releasing non-Cα atom constraints, and gradually releasing the constraints on the Cα atoms (10 kcal/mol/Å2). </plain></SENT>
+<SENT sid="62" pm="."><plain>After releasing all constraints, the system was subjected to 40-ns MD simulations at 310 K and 1 atm with NAMD2 software to achieve equilibration (27). </plain></SENT>
+<SENT sid="63" pm="."><plain>The MD simulation used to achieve this equilibrated system was repeated three times. </plain></SENT>
+</text></p></sec><sec><title><text><SENT sid="64" pm="."><plain>Equilibration Analysis of the Simulation System </plain></SENT>
+</text></title><p><text><SENT sid="65" pm="."><plain>The equilibration analyses were conducted using VMD (31) by monitoring the changes in the following parameters. </plain></SENT>
+<SENT sid="66" pm="."><plain>(i) The root mean square deviation (RMSD) was calculated by the spatial changes in CETP Cα atoms relative to their initial positions. </plain></SENT>
+<SENT sid="67" pm="."><plain>(ii) The size of CETP was computed from the radius of gyration of the Cα atoms. </plain></SENT>
+<SENT sid="68" pm="."><plain>(iii) The molecular volume was measured by using a grid size of 0.25 Å. (iv) The volumes of the CE and TG pools were estimated on the basis of the distance between the attached POPC monolayers. </plain></SENT>
+<SENT sid="70" pm="."><plain>(v) The average distance among POPC molecules was determined from the first peak of the phosphorus radial distribution function. </plain></SENT>
+</text></p><p><text><SENT sid="71" pm="."><plain>The system was suggested to be equilibrated after 20 ns on the basis of the convergence analyses of the CETP and lipid structures. </plain></SENT>
+<SENT sid="72" pm="."><plain>The CETP convergence was indicated by the RMSD (a plateau of ∼2 Å), the radius of gyration of the CETP Cα atoms, and the CETP molecular volume. </plain></SENT>
+<SENT sid="73" pm="."><plain>The CETP structure with the lowest Cα RMSD (compared with the averaged structure within the last 20 ns of the simulation) was used to analyze the internal cavities and pore positions, which were calculated with the fpocket program with a minimum α sphere radius of 3 Å (32). </plain></SENT>
+<SENT sid="74" pm="."><plain>The small cavities and pores containing fewer than 15 α spheres were discarded. </plain></SENT>
+<SENT sid="75" pm="."><plain>For comparison, the cavities in the crystal structure were also identified through the same procedure. </plain></SENT>
+<SENT sid="76" pm="."><plain>Lipid convergence was suggested on the basis of the volumes of the CE and TG pools and the average distances of the POPC molecules in each monolayer. </plain></SENT>
+<SENT sid="77" pm="."><plain>No systematic drift was observed during the last 20 ns of the simulation. </plain></SENT>
+</text></p></sec><sec><title><text><SENT sid="78" pm="."><plain>Determination of the CE Transfer Pathway </plain></SENT>
+</text></title><p><text><SENT sid="79" pm="."><plain>Given that the CE transfer from HDL to LDL is on an approximately second time scale, a driving force was used to detect the transfer pathway within a practical time period. </plain></SENT>
+<SENT sid="80" pm="."><plain>A CE located near but not directly contacting the distal end of the N-terminal β-barrel domain (the minimum distance between CE and CETP was more than 2.4 Å, the diameter of the hydrogen van der Waals surface) was selected as a representative molecule to probe the CE transfer pathway within the equilibrated CETP after the CEs and phospholipids it contained were removed. </plain></SENT>
+<SENT sid="81" pm="."><plain>A step-by-step method for pathway searching was conducted as described below. </plain></SENT>
+<SENT sid="82" pm="."><plain>When the selected CE molecule was pulled toward the center of a “pore” located in the distal end of the CETP N-terminal β-barrel domain under an example force of 8 kcal/mol/Å (applied onto the CE acyl chain end), the pore became larger (∼7 Å in diameter) and deeper (calculated by the MOLE 2.0 program (33)). </plain></SENT>
+<SENT sid="83" pm="."><plain>The center of the deeper pore was then used as a new target to guide the driving force required to pull CE even further into CETP. </plain></SENT>
+<SENT sid="84" pm="."><plain>After sequentially repeating the above procedures, the CE molecule was able to completely transfer through the entire CETP and exit (where the minimum distance between CE and CETP was more than 2.4 Å) from the C-terminal distal end. </plain></SENT>
+<SENT sid="85" pm="."><plain>This process showed that CE can be transferred through a CETP molecule. </plain></SENT>
+</text></p></sec><sec><title><text><SENT sid="86" pm="."><plain>Transfer Time under Different Driving Forces </plain></SENT>
+</text></title><p><text><SENT sid="87" pm="."><plain>To test how different driving forces influence the CE transfer process, 18 different forces (6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, and 23 kcal/mol/Å) were applied to the same CE molecule. </plain></SENT>
+<SENT sid="88" pm="."><plain>Under each driving force, the MD simulations were repeated four times. </plain></SENT>
+<SENT sid="89" pm="."><plain>Therefore, a total of 72 simulations were performed in this test. </plain></SENT>
+<SENT sid="90" pm="."><plain>These simulations yielded a total of 72 different transfer times. </plain></SENT>
+<SENT sid="91" pm="."><plain>The relationship between the driving force and transfer time was analyzed with MATLAB. </plain></SENT>
+</text></p></sec><sec><title><text><SENT sid="92" pm="."><plain>Estimation of the CE Transfer Time through Radiolabeling Experiments </plain></SENT>
+</text></title><p><text><SENT sid="93" pm="."><plain>To the best of our knowledge, there are no experimental data on the CE transfer time. </plain></SENT>
+<SENT sid="94" pm="."><plain>However, the CE transfer time can be estimated from the experimental data of the CE transfer rates. </plain></SENT>
+<SENT sid="95" pm="."><plain>Radioactive experiments have shown that the CE transfer rate with CETP is ∼75.7 ± 1.5 nmol/h/μg (34) and that the CE transfer rate with plasma is ∼64 ± 5 μg/h/ml (35), which corresponds to ∼1.14–1.54 CE molecules/s/CETP. </plain></SENT>
+<SENT sid="96" pm="."><plain>This calculation is based on a plasma CETP concentration of ∼1.75 μg/ml (34), a CETP molecular mass of ∼73 kDa, and a CE molecular mass of ∼651 Da. </plain></SENT>
+<SENT sid="97" pm="."><plain>Thus, the transfer time is ∼0.65–0.88 s/CE molecule/CETP. </plain></SENT>
+</text></p></sec><sec><title><text><SENT sid="98" pm="."><plain>Analyses of the Hydrophobicity and Diameter of the CE Transfer Pathway </plain></SENT>
+</text></title><p><text><SENT sid="99" pm="."><plain>The hydrophobicity of the CE transfer pathway was calculated by using a weighted averaging method and the hydrophilicities of the contact residues. </plain></SENT>
+<SENT sid="100" pm="."><plain>The contact residues were defined as those CETP residues within a distance of less than 2.4 Å from the transferred CE at each particular pathway position. </plain></SENT>
+<SENT sid="101" pm="."><plain>The weight of a contact residue was calculated as the ratio of the solvent-accessible surface area of the residue to the total solvent-accessible surface area of all contact residues. </plain></SENT>
+<SENT sid="102" pm="."><plain>The hydrophilicity of a contacting residue was defined by the Kyte and Doolittle (36) scale. </plain></SENT>
+<SENT sid="103" pm="."><plain>The diameter of the CE transfer pathway was measured with MOLE 2.0 (33) with a 3.0-Å probe radius and a 1.25-Å interior threshold. </plain></SENT>
+</text></p></sec><sec><title><text><SENT sid="104" pm="."><plain>Analyses of the Interaction Energies of CE-CETP and CE-Lipid along the CE Transfer Pathway </plain></SENT>
+</text></title><p><text><SENT sid="105" pm="."><plain>The interaction energy between the transferred CE and CETP at each particular point along the pathway was calculated by using the pair interaction function of NAMD2. </plain></SENT>
+<SENT sid="106" pm="."><plain>The periodic boundary conditions, cutoff distance of 12 Å for van der Waals interactions, and particle mesh Ewald method for calculating long range electrostatic interactions were used for this calculation. </plain></SENT>
+<SENT sid="107" pm="."><plain>The interaction energy between the transferred CE and all other lipids at each particular point along the pathway was calculated by the same method. </plain></SENT>
+</text></p></sec></sec></sec></sec></SecTag><SecTag type="RESULTS,DISCUSS"><sec><title><text><SENT sid="108" pm="."><plain>Results and Discussion </plain></SENT>
+</text></title><sec><title/><sec><title/><sec><title><text><SENT sid="109" pm="."><plain>Simulation System Setup </plain></SENT>
+</text></title><p><text><SENT sid="110" pm="."><plain>To simulate CE transfer from HDL to LDL via CETP, a simulated system was established on the basis of the results of transmission EM experiments (16, 17). </plain></SENT>
+<SENT sid="111" pm="."><plain>Transmission EM experiments have shown that the CETP N-terminal β-barrel domain penetrates into the HDL surface via a hydrophobic interaction (16, 17), whereas the C-terminal β-barrel domain penetrates into the LDL/VLDL surface; the depths of penetration are ∼3–4 nm (16). </plain></SENT>
+<SENT sid="112" pm="."><plain>A representative transmission EM image in which a CETP penetrates into both HDL and LDL is shown in Fig. 1A. </plain></SENT>
+<SENT sid="113" pm="."><plain>To simulate this CETP interaction with HDL and LDL (Fig. 1B), (i) the N-terminal β-barrel domain of an equilibrated crystal structure of CETP (15) was allowed to penetrate ∼35 Å into an equilibrated POPC monolayer adhering to an equilibrated CE pool. </plain></SENT>
+<SENT sid="114" pm="."><plain>(ii) The C-terminal β-barrel domain was allowed to penetrate ∼32 Å into an opposite POPC monolayer adjacent to a TG pool (Fig. 1, C and D). </plain></SENT>
+<SENT sid="115" pm="."><plain>(iii) The middle portion of CETP was surrounded by equilibrated and neutralized water molecules (Fig. 1D). </plain></SENT>
+<SENT sid="116" pm="."><plain>This system contains a total of ∼330,000 atoms. </plain></SENT>
+</text></p><SecTag type="FIG"><fig id="F1" orientation="portrait" position="float"><label>FIGURE 1.</label><caption><p><text><SENT sid="117" pm="."><plain>Simulation system for studying CE transfer. A, a representative negative staining EM image shows that CETP bridged HDL and LDL, forming a ternary complex (shown in schematic in B). C, a simplified simulation system (shown in schematic) was used to simulate the ternary complex to elucidate CE transfer from HDL to LDL at an atomic level. D, the N-terminal β-barrel domain of the CETP was inserted ∼35 Å deep into a POPC monolayer adhered to a CE pool, whereas the C-terminal β-barrel domain penetrated ∼32 Å inside an opposing POPC monolayer attached to a TG pool. </plain></SENT>
+<SENT sid="118" pm="."><plain>The region between the two opposing lipid monolayers was filled with water molecules. </plain></SENT>
+<SENT sid="119" pm="."><plain>The POPC headgroups and fatty tails are colored yellow and green, respectively, and the CE, TG, CETP, and water molecules are colored pink, gray, blue, and orange, respectively. </plain></SENT>
+<SENT sid="120" pm="."><plain>The CE molecule is highlighted using van der Waals spheres. </plain></SENT>
+</text></p></caption><graphic xlink:href="zbc0281646650001"/></fig></SecTag></sec><sec><title><text><SENT sid="121" pm="."><plain>Conformational Changes of CETP </plain></SENT>
+</text></title><p><text><SENT sid="122" pm="."><plain>The above system was subjected to all-atom MD simulations for 40 ns to reach an equilibrium state under physiological conditions (Fig. 2, A and B). </plain></SENT>
+<SENT sid="123" pm="."><plain>After the simulation was repeated three times, a root mean square fluctuation (RMSF) analysis of the Cα atoms showed that CETP presented higher stability when it was embedded in the lipid monolayers (∼4% Cα atoms showed an RMSF greater than 1.4 Å) than when it was in solution (∼11% above 1.4 Å) (18). </plain></SENT>
+<SENT sid="124" pm="."><plain>However, the distal ends of the β-barrel domains, helix X (Glu465–Ser476), and the loop connecting the two β-barrel domains (Asp240–Arg259) remained relatively flexible compared with the crystal structure (Fig. 2, C and D). </plain></SENT>
+<SENT sid="125" pm="."><plain>Both distal ends exhibited distinguishable conformational changes (Fig. 3A). </plain></SENT>
+<SENT sid="126" pm="."><plain>In the N-terminal distal end, loop Ω6 (Gln155–Trp162) shifted by a maximum distance of ∼6.2 Å (on the basis of the Cα shift) at residues Gln155 and Gly156, which directly enlarged internal cavity C1, consequently connected it to the nearby distal end pore, and indirectly connected cavities C2 and C3 (Fig. 3, B and C). </plain></SENT>
+<SENT sid="127" pm="."><plain>These changes are similar to results from a recent MD simulation (19) where the Ω5 and Ω6 loops separate upon penetrating into HDL and open the N-terminal distal end to take up a CE molecule. </plain></SENT>
+<SENT sid="128" pm="."><plain>This conformational change may be a result of the hydrophobic interaction between the CETP N-terminal distal end and the hydrophobic core (17). </plain></SENT>
+<SENT sid="129" pm="."><plain>In the C-terminal distal end, a portion of helix B′ (Ile405–Met412) and the flexible regions Ω1 (Ser286–Thr322), Ω2 (Lys347–Thr362), and Ω3 (Lys392–Ser404) bend along the β-barrel domain center away from the longitudinal axis of CETP with a maximum angle of ∼6° (Fig. 3A, right panel). </plain></SENT>
+<SENT sid="130" pm="."><plain>This bending directly generates a pore (P2) in this distal end (Fig. 3C), indirectly enlarges the central cavity in the central β-sheet domain, subsequently connects the central cavity to pore P2, and ultimately forms a large tunnel linked to the TG pool (Fig. 3C). </plain></SENT>
+</text></p><SecTag type="FIG"><fig id="F2" orientation="portrait" position="float"><label>FIGURE 2.</label><caption><p><text><SENT sid="131" pm="."><plain>Equilibration of the simulation system through all-atom MD simulations. A, three repeated equilibrations of CETP were monitored on the basis of the RMSD (top panel), the radius of gyration (Rgyr) against the mass center of the molecule (middle panel), and the volume of the entire molecule (bottom panel). B, the equilibration of the CE and TG pools was achieved after a stable measured pool thickness was reached (top panel). </plain></SENT>
+<SENT sid="132" pm="."><plain>The equilibration of the POPC monolayers was achieved after the distance (Dist.) between POPC molecules was stable (indicated by the first peak of the phosphorus radial distribution function (bottom panel)). C, the fluctuation of CETP in lipid monolayers (blue line), as indicated by the RMSF of the Cα atom, was calculated from the last 20 ns of simulations and compared with the RMSF of this molecule in solution (orange line). D, the CETP structure in the lipid monolayer is colored according to the RMSF values (the color and value relationship are shown as a color bar). </plain></SENT>
+</text></p></caption><graphic xlink:href="zbc0281646650002"/></fig></SecTag><SecTag type="FIG"><fig id="F3" orientation="portrait" position="float"><label>FIGURE 3.</label><caption><p><text><SENT sid="133" pm="."><plain>Conformational changes in the CETP structure after equilibration. A, the conformational changes in the CETP structure were determined after computing the shifts of the Cα atoms in the average structures from the last 20 ns of simulations against the crystal structure. </plain></SENT>
+<SENT sid="134" pm="."><plain>The CETP structure is colored according to the value of the shift (the color and value relationship are shown as a color bar). </plain></SENT>
+<SENT sid="135" pm="."><plain>Zoomed-in views of two predominant conformational changes located in the distal ends of the N- and C-terminal β-barrel domains are shown. </plain></SENT>
+<SENT sid="136" pm="."><plain>These regions (blue) were magnified and compared with the crystal structure (yellow). </plain></SENT>
+<SENT sid="137" pm="."><plain>Two perpendicular views show the CETP internal cavities and pores in the crystal structure (B) and the structure after equilibration in lipid monolayers (C). </plain></SENT>
+</text></p></caption><graphic xlink:href="zbc0281646650003"/></fig></SecTag></sec><sec><title><text><SENT sid="138" pm="."><plain>CE Transfer Strategy </plain></SENT>
+</text></title><p><text><SENT sid="139" pm="."><plain>To test whether a CE molecule could transfer through an entire CETP under conditions as close as possible to the real experimental conditions, an all-atom simulation method, i.e. a steered molecular dynamics simulation, was used. </plain></SENT>
+<SENT sid="140" pm="."><plain>Because the time required to transfer a CE molecule from HDL to LDL is on an approximately second time scale (described under “Experimental Procedures”), all-atom simulations on such a large simulation system for nearly a second are quite challenging for the current advanced supercomputers. </plain></SENT>
+<SENT sid="141" pm="."><plain>Although some coarse grain and implicit model methods can speed up the simulation by simplifying a group of atoms as one united bead or the solvent/lipid as a continuous medium and are highly successful in simulating protein dynamics, modeling, design, and prediction (37, 38), this simplification may also reduce the accuracy of the simulation and distort the protein structure. </plain></SENT>
+<SENT sid="142" pm="."><plain>For example, an implicit model for both the solvent and lipids has been shown to fail to maintain the structure of the transmembrane helix dimers of ErbB1/B2 and EphA1, potentially causing kinking, bending, or even twisting within the structure of these helices (39). </plain></SENT>
+<SENT sid="143" pm="."><plain>Therefore, an all-atom simulation is still required to simulate the detailed process of CE transfer. </plain></SENT>
+<SENT sid="144" pm="."><plain>However, we must find a practical solution tailored to the limitations of current computational capabilities regarding simulation time. </plain></SENT>
+</text></p><p><text><SENT sid="145" pm="."><plain>Our intermediate solution was to introduce a driving force on the transferred CE molecule to speed up the CE transfer process on the basis of the following reasons. </plain></SENT>
+<SENT sid="146" pm="."><plain>(i) The transfer process involves no chemical reaction or external energy. </plain></SENT>
+<SENT sid="147" pm="."><plain>(ii) The chemical properties of HDL and LDL are similar (40, 41). </plain></SENT>
+<SENT sid="148" pm="."><plain>(iii) CE transfer from HDL to LDL is likely to be a kinetic process (13). </plain></SENT>
+<SENT sid="149" pm="."><plain>We believe that the differences in the physical properties of HDL and LDL, such as the inner pressures and CE concentrations, play a key role in generating a driving force for CE transfer. </plain></SENT>
+<SENT sid="150" pm="."><plain>Experimental measurements have shown that HDL and LDL have a similar surface tension (42–44). </plain></SENT>
+<SENT sid="151" pm="."><plain>According to the Young-Laplace equation, the smaller the particle, such as HDL, the higher the internal pressure over a larger particle, such as LDL, under the same surface tension. </plain></SENT>
+<SENT sid="152" pm="."><plain>This difference in internal pressure would generate a force to drive CE transfer. </plain></SENT>
+</text></p><p><text><SENT sid="153" pm="."><plain>To avoid a potential error induced by using a specific force, a series of driving forces were also applied to the transferred CE. </plain></SENT>
+<SENT sid="154" pm="."><plain>By statistically analyzing the simulation results under different driving forces, we may gain a new understanding of the detailed transfer process and mechanism. </plain></SENT>
+</text></p></sec><sec><title><text><SENT sid="155" pm="."><plain>Probing the CE Transfer Pathway </plain></SENT>
+</text></title><p><text><SENT sid="156" pm="."><plain>Under a representative force of 11 kcal/mol/Å, a CE molecule was pulled to the surface pore at the CETP N-terminal distal end (prior to this simulation, two phospholipids and two CE molecules inside this CETP were removed). </plain></SENT>
+<SENT sid="157" pm="."><plain>When CE penetrated the pore (Fig. 4A), a deeper pore was generated via the rearrangement of the nearby side chains of CETP. </plain></SENT>
+<SENT sid="158" pm="."><plain>Through the continued pulling of CE deeper into the pore (Fig. 4B), additional conformational changes were induced in CETP (Fig. 4C), i.e. a roughly counterclockwise rotation of the N-terminal β-barrel domain, as proposed previously (16). </plain></SENT>
+<SENT sid="159" pm="."><plain>This rotation connected the pore to the nearby internal cavities C2 and C3 and formed a connection to the central cavity within the central β-sheet domain. </plain></SENT>
+<SENT sid="160" pm="."><plain>By sequentially pulling the CE through CETP, this molecule eventually exited from the C-terminal distal pore after a total simulation time of ∼0.5 ns (Fig. 4A; before and after transfer, there is no physical contact between CE and CETP). </plain></SENT>
+<SENT sid="161" pm="."><plain>This process was repeated four times (Figs. </plain></SENT>
+<SENT sid="162" pm="."><plain>4E and 5A), and each time, we confirmed that a CE molecule could be transferred through the entire CETP molecule (Figs. </plain></SENT>
+<SENT sid="163" pm="."><plain>4A and 5A and <ext-link ext-link-type="uri" xlink:href="http://www.jbc.org/cgi/content/full/M116.715565/DC1">supplemental Movie 1</ext-link>). </plain></SENT>
+</text></p><SecTag type="FIG"><fig id="F4" orientation="portrait" position="float"><label>FIGURE 4.</label><caption><p><text><SENT sid="164" pm="."><plain>CE transfer through the CETP molecule through all-atom steered molecular dynamics simulations. A, snapshots of a CE molecule (shown in van der Waals spheres) during transfer through a CETP molecule (shown in ribbon) under a representative force of 11 kcal/mol/Å. </plain></SENT>
+<SENT sid="165" pm="."><plain>The POPC headgroups and fatty tails are colored yellow and green, respectively, and the CE, TG, CETP, and water molecules are colored pink, gray, blue, and orange, respectively. </plain></SENT>
+<SENT sid="166" pm="."><plain>Shown is a representative snapshot image of CETP when the CE molecule was in the middle of the N-terminal β-barrel domain (B), leading to the rotation of the N-terminal β-barrel domain (C, blue arrows). D, each residue shifts from its original position during CE transfer. </plain></SENT>
+<SENT sid="167" pm="."><plain>For each Cα atom, the maximum shift from four simulations was averaged and colored on the CETP structure (the color and value relationship are shown as a color bar). E, CE transfer through CETP was simulated four times under the representative force of 11 kcal/mol/Å. </plain></SENT>
+<SENT sid="168" pm="."><plain>The RMSD from each simulation versus the CE position along the CE transfer pathway is shown. </plain></SENT>
+</text></p></caption><graphic xlink:href="zbc0281646650004"/></fig></SecTag><p><text><SENT sid="169" pm="."><plain>Although the CE orientations during the four repeated simulations (indicated by the direction of the C10–C19 bond shown in Fig. 5A) were flexible before entering the CETP and after exiting from the CETP, the CE steroid ring exhibited relatively constrained orientations that were parallel to each other during CE transfer within the N- and C-terminal β-barrel domains (Fig. 5, A and B). </plain></SENT>
+<SENT sid="170" pm="."><plain>Notably, CE made an ∼90° turn near the central β-sheet, a result consistent with the observed ∼90° difference in orientations between the two CEs within the crystal structure (15). </plain></SENT>
+</text></p><SecTag type="FIG"><fig id="F5" orientation="portrait" position="float"><label>FIGURE 5.</label><caption><p><text><SENT sid="171" pm="."><plain>CE transfer pathways and the relationship between transfer time and driving force. A, the transfer processes described above were repeated four times. </plain></SENT>
+<SENT sid="172" pm="."><plain>The CE transfer pathways are shown by the trajectories of the C10–C19 bond of the CE steroid ring during its transfer within the CETP tunnel. </plain></SENT>
+<SENT sid="173" pm="."><plain>Each pathway of CE transfer is shown in different colors. </plain></SENT>
+<SENT sid="174" pm="."><plain>The rotational angle of the C10–C19 bond against the paper surface in the side view was used as an indicator of the CE steroid ring orientation (B). Error bars represent S.D. </plain></SENT>
+<SENT sid="175" pm="."><plain>The CE steroid ring would rotate ∼90° to pass through the central cavity and exit the C-terminal distal pore. </plain></SENT>
+<SENT sid="176" pm="."><plain>After repeating the CE transfer 72 times under a series of 18 driving forces (from 6 to 23 kcal/mol/Å) (C), the relationship between CE transfer time and driving force is plotted according to the negative log and subsequently fitted using a linear equation (D). </plain></SENT>
+<SENT sid="177" pm="."><plain>The best fit line has a slope of 2.75 and an R-factor of 0.96, corresponding to the following time and force relationship: Time (ns) = 475 × Force (kcal/mol/Å)−2.75. </plain></SENT>
+</text></p></caption><graphic xlink:href="zbc0281646650005"/></fig></SecTag></sec><sec><title><text><SENT sid="178" pm="."><plain>Analysis of CE Transfer Time </plain></SENT>
+</text></title><p><text><SENT sid="179" pm="."><plain>To confirm the ability of the CE molecule to transfer through the entire CETP molecule, a series of different driving forces (from 6 to 23 kcal/mol/Å with increments of 1 kcal/mol/Å) were sequentially applied to the CE molecule. </plain></SENT>
+<SENT sid="180" pm="."><plain>Under each driving force, the simulations were repeated four times. </plain></SENT>
+<SENT sid="181" pm="."><plain>In all of the 72 simulations, the CE molecule was confirmed to transfer through the entire CETP molecule, and the average transfer times under each driving force were 4.98 ± 1.94, 2.93 ± 0.57, 1.58 ± 0.30, 1.08 ± 0.12, 0.66 ± 0.06, 0.54 ± 0.06, 0.51 ± 0.13, 0.35 ± 0.06, 0.28 ± 0.02, 0.24 ± 0.01, 0.21 ± 0.02, 0.18 ± 0.01, 0.16 ± 0.01, 0.15 ± 0.01, 0.14 ± 0.01, 0.13 ± 0.01, 0.11 ± 0.01, and 0.10 ± 0.01 ns (mean ± S.D.) from 6 to 23 kcal/mol/Å, respectively (Fig. 5C). </plain></SENT>
+<SENT sid="182" pm="."><plain>Statistical analysis of the relationship between the driving force and transfer time showed that the negative log of the transfer time presented a linear relationship with the log of the driving force with an R-factor of 0.96 and a slope of 2.75 (Fig. 5D). </plain></SENT>
+</text></p><p><text><SENT sid="183" pm="."><plain>From the above relationship between the driving force and transfer time, we predicted that the CE transfer time should be ∼0.008–0.03 s/CE molecule (i.e. ∼33–125 CE molecules/s/CETP) under an estimated driving force of ∼0.018–0.029 kcal/mol/Å. </plain></SENT>
+<SENT sid="184" pm="."><plain>The exact experimental driving force on the transferred CE has not been measured. </plain></SENT>
+<SENT sid="185" pm="."><plain>However, we were able to estimate the driving force by using the method described below. </plain></SENT>
+<SENT sid="186" pm="."><plain>The driving force should be calculated on the basis of the different chemical potentials between HDL and LDL. </plain></SENT>
+<SENT sid="187" pm="."><plain>The chemical potential μ is defined as U + PV − TS where the U is the internal energy (related to the chemical reaction and phase transition); P and V are the pressure and volume, respectively; and T and S are the temperature and entropy, respectively. </plain></SENT>
+<SENT sid="188" pm="."><plain>Given that the chemical components within HDL and LDL are similar (neutral lipid core, i.e. CEs and TGs, surrounded by a phospholipid monolayer and amphipathic apolipoproteins) and that there is no relevant chemical reaction, temperature change, phase transition, or net CE volume change during CE transfer, the differences in the pressures and entropies would dominate the difference in chemical potential. </plain></SENT>
+<SENT sid="189" pm="."><plain>HDL should have a higher chemical potential than LDL because of its higher internal pressure (discussed above) and lower entropy (i.e. higher CE concentration). </plain></SENT>
+</text></p><p><text><SENT sid="190" pm="."><plain>From the internal pressure differences and the dimensions of the CETP tunnel (∼6 Å measured using the MOLE 2.0 program, which is similar to that of the steroid ring of CE, i.e. ∼6 Å in width and ∼4 Å in thickness (15)), we calculated that the driving force is ∼0.018–0.029 kcal/mol/Å. </plain></SENT>
+<SENT sid="191" pm="."><plain>The inner pressure difference was calculated by using the Young-Laplace equation (P = 2α/R where α is the surface tension and R is the radius of the particle) and the following experimental results. </plain></SENT>
+<SENT sid="192" pm="."><plain>(i) The surface tensions of HDL and LDL are both ∼0.020–0.033 newton/m according to previous surface balance and surface radioactivity experiments (42–44). </plain></SENT>
+<SENT sid="193" pm="."><plain>(ii) The average diameters of HDL and LDL are ∼100 (45) and ∼220 Å (46), respectively. </plain></SENT>
+</text></p><p><text><SENT sid="194" pm="."><plain>On the basis of the above driving force, the transfer times were predicted to be ∼0.008–0.03 s/CE molecule (i.e. ∼33–125 CE molecules/s/CETP). </plain></SENT>
+<SENT sid="195" pm="."><plain>This transfer time is shorter than the value that was calculated from the radiolabeled CE experiments with the plasma CETP concentration (34, 35), i.e. ∼0.65–0.88 s/CE molecule or ∼1.14–1.54 CE molecules/s/CETP molecule. </plain></SENT>
+<SENT sid="196" pm="."><plain>Because the time spent for CETP travel, sensing, interacting, and penetrating both HDL and LDL was not included in the predicted transfer time from our simulations, a longer time should be expected for CE transfer under physiological conditions. </plain></SENT>
+</text></p></sec><sec><title><text><SENT sid="197" pm="."><plain>Interaction Energy between CE and CETP </plain></SENT>
+</text></title><p><text><SENT sid="198" pm="."><plain>Calculation of the free energy is an ideal method to analyze the system energy. </plain></SENT>
+<SENT sid="199" pm="."><plain>This free energy calculation, particularly the portion attributed to entropy (47), is practically impossible in our simulated system containing ∼34,000 molecules with multiple dimensions of freedom (such as the internal bending and rotational degrees of freedom of the transferred CE molecule) because of the limitation of computational power. </plain></SENT>
+<SENT sid="200" pm="."><plain>Although a fast and easy estimation of free energy can be achieved by using an implicit solvent model, the model may also distort the protein structure as described previously (39). </plain></SENT>
+<SENT sid="201" pm="."><plain>Therefore, we chose the most reliable all-atom simulation result to calculate two specific interaction energies (i.e. CE-CETP and CE-lipid) as a part of our energy analyses. </plain></SENT>
+</text></p><p><text><SENT sid="202" pm="."><plain>Under a representative driving force of 11 kcal/mol/Å, the all-atom simulation results were used to compute the interaction energy between the transferred CE and CETP against the CE transfer pathway (Fig. 6, A and B, blue lines). </plain></SENT>
+<SENT sid="203" pm="."><plain>The energy distribution showed that CE exhibited a higher CE-CETP interaction energy, which quickly decreased when CE penetrated into the CETP tunnel. </plain></SENT>
+<SENT sid="204" pm="."><plain>In the middle of the tunnel, this interaction energy was relatively flat except for a relatively high energy barrier that was observed near the central β-sheet where the CE steroid ring turned ∼90° to pass through this portion of the tunnel (Fig. 5, A and B). </plain></SENT>
+</text></p><SecTag type="FIG"><fig id="F6" orientation="portrait" position="float"><label>FIGURE 6.</label><caption><p><text><SENT sid="205" pm="."><plain>Energy barriers, energy wells, and residues required for CE transfer through CETP. A, energy distributions along the CE transfer pathway under a series of driving forces (ranging from 6 to 23 kcal/mol/Å). </plain></SENT>
+<SENT sid="206" pm="."><plain>Each curve was averaged from four experiments repeated with the same driving force. </plain></SENT>
+<SENT sid="207" pm="."><plain>The combination energy (black line) includes the interaction energies, i.e. the energy between the transferring CE molecule and lipid pools (orange line) and the energy between the transferring CE molecule and the CETP molecule (blue line). </plain></SENT>
+<SENT sid="208" pm="."><plain>The energy distribution was calculated within a 6-Å step along the transfer pathway. </plain></SENT>
+<SENT sid="209" pm="."><plain>The combined energy under a representative driving force of 11 kcal/mol/Å is highlighted in purple. </plain></SENT>
+<SENT sid="210" pm="."><plain>The energy under the driving forces of 6 and 23 kcal/mol/Å is indicated by arrows. </plain></SENT>
+<SENT sid="211" pm="."><plain>B, the representative energy distributions under a driving force of 11 kcal/mol/Å are shown with error bars indicating S.D. calculated from four repeated simulations within a 1-Å step along the transfer pathway. </plain></SENT>
+<SENT sid="212" pm="."><plain>The central energy barrier and low energy wells within the β-barrel domains are indicated by purple and green arrows, respectively. C, the hydrophobicity of the tunnel wall surrounding the transferred CE molecule (distance &lt;2.4 Å) is displayed as the average hydrophobicity within a 1-Å step against the CE transfer pathway. Error bars represent S.D. D, the residues that predominantly contributed to the energy wells in the N-terminal and C-terminal β-barrel domains (left and right panels) and to the energy barrier in the central region (central panel) are highlighted in green. </plain></SENT>
+<SENT sid="213" pm="."><plain>E, a schematic showing the residues that might regulate CE transfer via strong interactions. </plain></SENT>
+</text></p></caption><graphic xlink:href="zbc0281646650006"/></fig></SecTag></sec><sec><title><text><SENT sid="214" pm="."><plain>Interaction Energy between CE and Lipids </plain></SENT>
+</text></title><p><text><SENT sid="215" pm="."><plain>Similarly, we used the same all-atom simulation result to analyze the interaction energy between the transferred CE and all other lipids (Fig. 6, A and B, orange lines). </plain></SENT>
+<SENT sid="216" pm="."><plain>The energy distribution throughout the transfer pathway showed that CE exhibited a lower energy when it was close to either side of the neutral lipid pools and exhibited a higher energy when it was located between the neutral lipid pools. </plain></SENT>
+</text></p><p><text><SENT sid="217" pm="."><plain>The combined energy of the CE-CETP and CE-lipid showed a much more flat distribution than did either the CE-CETP or CE-lipid interaction. </plain></SENT>
+<SENT sid="218" pm="."><plain>Notably, the combination energies were similarly low at the positions before CE penetration or after CE exit from the CETP tunnel, thus suggesting that CE transfer required nearly no initial potential energy. </plain></SENT>
+<SENT sid="219" pm="."><plain>When CE was transferring into the tunnel, the combination energy was dominated by the CE-CETP interactions in which the highest interaction energy was around the central tunnel region. </plain></SENT>
+<SENT sid="220" pm="."><plain>These combination energy distribution profiles were similar to one another under different driving forces. </plain></SENT>
+<SENT sid="221" pm="."><plain>The central energy barrier was maintained at the same position even after the driving force was decreased to 6 from 23 kcal/mol/Å (Fig. 6A), which corresponded to a ∼50-fold increase in simulation time. </plain></SENT>
+<SENT sid="222" pm="."><plain>The similarities in energy profiles and barrier locations reflected that our simulations may reveal intrinsic information about CE transfer through the CETP tunnel. </plain></SENT>
+</text></p></sec><sec><title><text><SENT sid="223" pm="."><plain>Residues Associated with the Energy Barrier and the Energy Wells </plain></SENT>
+</text></title><p><text><SENT sid="224" pm="."><plain>Although the combined energy distribution was relatively low and flat (Fig. 6, A and B, black line) compared with either the CE-lipid or CE-CETP energy, a relatively high energy barrier was observed when CE was located near the central tunnel region. </plain></SENT>
+<SENT sid="225" pm="."><plain>To determine the residues that might contribute to this energy barrier, we conducted the following analyses based on hydrophobicity and geometrics. </plain></SENT>
+</text></p><p><text><SENT sid="226" pm="."><plain>The hydrophobicity analysis showed that the entire tunnel/pathway is relatively hydrophobic (Fig. 6C), thus providing the condition required for CE transfer through CETP. </plain></SENT>
+<SENT sid="227" pm="."><plain>The geometric analysis showed that the tunnel diameter near the central region was only ∼6.0 ± 0.6 Å. This narrow region (called the “neck” of the tunnel in the crystal structure (15)) is similar to or slightly larger than the width of a CE molecule (∼6 Å wide and ∼4 Å thick (15)), thus suggesting that it may be possible to transfer an entire CE molecule through this region (Fig. 6D). </plain></SENT>
+<SENT sid="229" pm="."><plain>We found that the residues surrounding this narrow region (within ∼10-Å distance range), including Ile15, Leu23, Ala202, Ile205, Leu206, Phe263, Phe265, and Met433 (Fig. 6D, central panel), participated in physical contacts with the CE molecule (distance within 2.4 Å, the diameter of a hydrogen van der Waals surface), which might contribute to this local high energy barrier. </plain></SENT>
+</text></p><p><text><SENT sid="230" pm="."><plain>In addition to the above energy barrier, a low energy well was observed within both the N-terminal and C-terminal β-barrel domains (Fig. 6B). </plain></SENT>
+<SENT sid="231" pm="."><plain>The Phe115, Arg158, and Phe167 residues contributed the greatest energy to the N-terminal energy well (Fig. 6D, left panel), which may attract CE molecules from the CE pool into the CETP tunnel. </plain></SENT>
+<SENT sid="232" pm="."><plain>The Phe301 and Met412 residues contributed the greatest energy to the C-terminal energy well (Fig. 6D, right panel), which may orient or facilitate the rotation of the CE steroid ring to allow exit from the C-terminal pore (Fig. 5A). </plain></SENT>
+</text></p><p><text><SENT sid="233" pm="."><plain>Because the residues identified above can form physical contacts or strong interactions with the transferred CE, mutation of these residues may change their contacts or interactions with CE, thus affecting the CE transfer rate. </plain></SENT>
+<SENT sid="234" pm="."><plain>Consistent with this hypothesis, experiments have shown that mutating the Ile15 and Met433 at the CETP central narrow region to the bulky residue tryptophan (i.e. I15W and M433W) and the F301D mutation at the C-terminal distal end decreases CETP transfer activities by ∼60, ∼40, and ∼20%, respectively (15). </plain></SENT>
+<SENT sid="235" pm="."><plain>For the other identified residues, there have been no reported results from mutational experiments to the best of our knowledge. </plain></SENT>
+<SENT sid="236" pm="."><plain>Additional mutational analyses of these residues are needed to further verify the tunnel transfer mechanism. </plain></SENT>
+<SENT sid="237" pm="."><plain>Notably, the mutations of several residues, such as L468Q (48), T138Y, and L457W (15), have shown effects on CE transfer. </plain></SENT>
+<SENT sid="238" pm="."><plain>However, those residues were not identified in our energy and physical interaction analyses. </plain></SENT>
+<SENT sid="239" pm="."><plain>The failure to identify these residues may be because only the mutated residues may form direct interactions with the transferred CE, or their mutation may generate a secondary effect on other nearby residues that interact with the transferred CE. </plain></SENT>
+</text></p></sec><sec><title><text><SENT sid="240" pm="."><plain>CE Transfer Mechanisms </plain></SENT>
+</text></title><p><text><SENT sid="241" pm="."><plain>Our previous EM studies have demonstrated the existence of a ternary complex of HDL-CETP-LDL/VLDL (16), suggesting a tunnel mechanism for CETP. </plain></SENT>
+<SENT sid="242" pm="."><plain>The simulations indicated that it is possible for a hydrophobic CE molecule to transfer through an entire CETP via a continuous hydrophobic tunnel between the two distal ends of CETP (Fig. 6E). </plain></SENT>
+<SENT sid="243" pm="."><plain>This tunnel might facilitate CE uptake into the tunnel without using energy. </plain></SENT>
+<SENT sid="244" pm="."><plain>Upon entering the tunnel, hydrophobic interactions among the CE fatty tails and residues Phe115 and Phe167 may mediate the penetration of the CE molecule further into the tunnel. </plain></SENT>
+<SENT sid="245" pm="."><plain>During subsequent penetration of the hydrophobic CE molecule through this hydrophobic tunnel, a narrow region might act as a rate-limiting site, leading to a prominent energy barrier for CE transfer. </plain></SENT>
+<SENT sid="246" pm="."><plain>The internal pressure difference between HDL and LDL might provide the additional energy required for CE to pass through this energy barrier. </plain></SENT>
+<SENT sid="247" pm="."><plain>Upon passing through this region, no further major energy barrier would prevent the exit of CE from the C-terminal opening. </plain></SENT>
+<SENT sid="248" pm="."><plain>Residues Phe301 and Met412 may even assist the exit of CE by facilitating the rotation of the CE steroid ring. </plain></SENT>
+<SENT sid="249" pm="."><plain>This observed CE flow from HDL to LDL requires no external energy input, thus suggesting that CE may transfer through the CETP tunnel by diffusion. </plain></SENT>
+</text></p><p><text><SENT sid="250" pm="."><plain>The prominent interaction energy barrier for CE transfer through CETP is ∼21 kcal/mol (Fig. 6B) (estimated under a driving force of 11 kcal/mol/Å and transfer time of ∼0.5 ns and without including entropy). </plain></SENT>
+<SENT sid="251" pm="."><plain>To understand this barrier, we estimated the energy barrier for CE transfer into an aqueous phase through a lipid monolayer. </plain></SENT>
+<SENT sid="252" pm="."><plain>It has been reported that the peak free energy barrier is ∼140 kJ/mol (i.e. ∼33.5 kcal/mol) for transfer of a cholesteryl oleate through a 1,2-dimyristoyl-sn-glycero-3-phosphocholine lipid monolayer into an aqueous phase (49, 50) in which the interaction energy (without including the entropy) has been estimated to be ∼28.6 kcal/mol. </plain></SENT>
+<SENT sid="253" pm="."><plain>This energy barrier is higher than our energy barrier. </plain></SENT>
+<SENT sid="254" pm="."><plain>Moreover, because the transfer time (under a driving force of 11 kcal/mol/Å) is 109–1010 times faster than the transfer time measured experimentally (approximately seconds) (34, 35), the energy barrier under the experimental transfer time should be even much lower than ∼21 kcal/mol, thus suggesting that it would be even easier for the CE molecule to transfer through the CETP molecule than through the lipid monolayer into an aqueous phase. </plain></SENT>
+</text></p><p><text><SENT sid="255" pm="."><plain>Although the tunnel model was favored by our test, some other experiments have not favored this model. </plain></SENT>
+<SENT sid="256" pm="."><plain>For example, by incubating small peptides of the CETP C terminus with HDL (49), small micelle-like structures have been generated through secondary structure disorder-to-order transitions of these small peptides. </plain></SENT>
+<SENT sid="257" pm="."><plain>The authors of this previous study have proposed a small micelle-like structure transfer model in which those micelle-like structures mediated CE transfer from HDL to LDL/VLDL. </plain></SENT>
+<SENT sid="258" pm="."><plain>In this proposed model, the authors have not explained how those micelle-like particles, which contain no protein, could function to sense, target, and bind to LDL/VLDL (instead of HDL, other plasma vesicles, and cells in plasma) for directional CE transfer. </plain></SENT>
+<SENT sid="259" pm="."><plain>Moreover, these micelle-like structures have not been observed after incubation of full-length CETP with HDL (16, 17). </plain></SENT>
+<SENT sid="260" pm="."><plain>A recent, independent EM study has concluded that CE transfer does not require a ternary tunnel complex with CETP according to negative evidence, i.e. the lack of an observation showing the existence of the CETP-LDL complex or the HDL-CETP-LDL complex (51). </plain></SENT>
+<SENT sid="261" pm="."><plain>The weakness of the logic in this study is that this failure to observe the complex has been used as evidence of its non-existence instead of being used as non-supporting evidence. </plain></SENT>
+</text></p><p><text><SENT sid="262" pm="."><plain>Although our simulations support the possibility of CE transfer through the CETP tunnel, a study directly observing the CE molecule transfer process or more convincing experiments are still necessary to validate this mechanism. </plain></SENT>
+<SENT sid="263" pm="."><plain>An indirect validation study could be designed by using new CETP inhibitors to target the CETP hydrophobic tunnel, particularly the narrow central region and distal end pore regions, to introduce energy barriers for CE passage. </plain></SENT>
+<SENT sid="264" pm="."><plain>Our insights into the CE transfer pathway through CETP may provide important clues for the design of new CETP inhibitors to efficiently treat cardiovascular diseases. </plain></SENT>
+</text></p></sec></sec></sec></sec></SecTag><SecTag type="AUTH_CONT"><sec><title><text><SENT sid="265" pm="."><plain>Author Contributions </plain></SENT>
+</text></title><p><text><SENT sid="266" pm="."><plain>G. </plain></SENT>
+<SENT sid="267" pm="."><plain>R. initiated and designed this project, and D. L., S. Z., X. Z., M. R., and L. Z. modified this project. </plain></SENT>
+<SENT sid="273" pm="."><plain>D. </plain></SENT>
+<SENT sid="274" pm="."><plain>L. performed the modeling, MD simulations, and data analyses. </plain></SENT>
+<SENT sid="275" pm="."><plain>D. </plain></SENT>
+<SENT sid="276" pm="."><plain>L., M. R., and G. R. interpreted the data and drafted the initial manuscript, and D. L., X. Z., M. R., L. Z., G. R., and S. Z. revised the manuscript. </plain></SENT>
+</text></p></sec></SecTag>
+<SecTag type="SUPPL"><sec sec-type="supplementary-material">
+<title><text><SENT sid="285" pm="."><plain>Supplementary Material </plain></SENT>
+</text></title>
+<supplementary-material id="PMC_1" content-type="local-data">
+<caption>
+<title><text><SENT sid="286" pm="."><plain>Supplemental Data </plain></SENT>
+</text></title>
+</caption>
+<media mimetype="text" mime-subtype="html" xlink:href="supp_291_27_14034__index.html"/>
+<media xlink:role="associated-file" mimetype="video" mime-subtype="x-msvideo" xlink:href="10.1074_M116.715565_jbc.M116.715565-1.avi"/>
+</supplementary-material>
+</sec></SecTag>
+</body><back><fn-group><SecTag type="ACK_FUND"><fn fn-type="supported-by" id="FN1"><label>*</label><p><text4fund><text><SENT sid="287" pm="."><plain>This work was supported by National Institutes of Health Grant 1R01HL115153 from the NHLBI (to G. R.) and National Natural Science Foundation of China Grants 11074196 and 11374237 (to S. Z.). </plain></SENT>
+<SENT sid="290" pm="."><plain>The work performed at the Molecular Foundry was supported by the Office of Science, Office of Basic Energy Sciences, of the United States Department of Energy under Contract DE-AC02-05CH11231. </plain></SENT>
+<SENT sid="291" pm="."><plain>The authors declare that they have no conflicts of interest with the contents of this article. </plain></SENT>
+<SENT sid="292" pm="."><plain>The content is solely the responsibility of the authors and does not necessarily represent the official views of the National Institutes of Health. </plain></SENT>
+</text></text4fund></p></fn></SecTag><SecTag type="SUPPL"><fn fn-type="supplementary-material" id="FN2"><label><inline-graphic xlink:href="sbox.jpg"/></label><p><text><SENT sid="293" pm="."><plain>This article contains <ext-link ext-link-type="uri" xlink:href="http://www.jbc.org/cgi/content/full/M116.715565/DC1">supplemental Movie 1</ext-link>. </plain></SENT>
+</text></p></fn></SecTag></fn-group><fn-group content-type="abbreviations"><fn id="FN3"><label>3</label><p><text><SENT sid="294" pm="."><plain>The abbreviations used are: HDL-Chigh density lipoprotein cholesterolCEcholesteryl esterCETPcholesteryl ester transfer proteinMDmolecular dynamicsPOPC1-palmitoyl-2-oleoyl-sn-glycero-3-phosphocholineRMSDroot mean square deviationRMSFroot mean square fluctuationTGtriglyceride. </plain></SENT>
+</text></p></fn></fn-group><SecTag type="ACK_FUND"><ack><title>Acknowledgments</title><p><text4fund><text><SENT sid="295" pm="."><plain>We thank Shengbo Jiang, Zhaodi Cai, and Prof. </plain></SENT>
+<SENT sid="296" pm="."><plain>Jingyuan Li for helpful discussions. </plain></SENT>
+</text></text4fund></p></ack></SecTag><SecTag type="REF"><ref-list><title>References</title><ref id="B1"><text><SENT sid="297" pm="."><plain>1. MozaffarianD., BenjaminE. </plain></SENT>
+<SENT sid="298" pm="."><plain>J., GoA. </plain></SENT>
+<SENT sid="299" pm="."><plain>S., ArnettD. </plain></SENT>
+<SENT sid="300" pm="."><plain>K., BlahaM. </plain></SENT>
+<SENT sid="301" pm="."><plain>J., CushmanM., de FerrantiS., DesprésJ. </plain></SENT>
+<SENT sid="302" pm="."><plain>P., FullertonH. </plain></SENT>
+<SENT sid="303" pm="."><plain>J., HowardV. </plain></SENT>
+<SENT sid="304" pm="."><plain>J., HuffmanM. </plain></SENT>
+<SENT sid="305" pm="."><plain>D., JuddS. </plain></SENT>
+<SENT sid="306" pm="."><plain>E., KisselaB. </plain></SENT>
+<SENT sid="307" pm="."><plain>M., LacklandD. </plain></SENT>
+<SENT sid="308" pm="."><plain>T., LichtmanJ. </plain></SENT>
+<SENT sid="309" pm="."><plain>H., et al (2015) Heart disease and stroke statistics—2015 update: a report from the American Heart Association. Circulation 131, e29–e32225520374 </plain></SENT>
+</text></ref><ref id="B2"><text><SENT sid="310" pm="."><plain>2. GordonT., CastelliW. </plain></SENT>
+<SENT sid="311" pm="."><plain>P., HjortlandM. </plain></SENT>
+<SENT sid="312" pm="."><plain>C., KannelW. </plain></SENT>
+<SENT sid="313" pm="."><plain>B., and DawberT. </plain></SENT>
+<SENT sid="314" pm="."><plain>R. (1977) High density lipoprotein as a protective factor against coronary heart disease. Am. </plain></SENT>
+<SENT sid="315" pm="."><plain>J. </plain></SENT>
+<SENT sid="316" pm="."><plain>Med. 62, 707–714193398 </plain></SENT>
+</text></ref><ref id="B3"><text><SENT sid="317" pm="."><plain>3. CamejoG., WaichS., QuinteroG., BerrizbeitiaM. </plain></SENT>
+<SENT sid="318" pm="."><plain>L., and LalagunaF. (1976) The affinity of low density lipoproteins for an arterial macromolecular complex. </plain></SENT>
+<SENT sid="319" pm="."><plain>A study in ischemic heart disease and controls. Atherosclerosis 24, 341–354184797 </plain></SENT>
+</text></ref><ref id="B4"><text><SENT sid="320" pm="."><plain>4. TallA. </plain></SENT>
+<SENT sid="321" pm="."><plain>R. (1986) Plasma lipid transfer proteins. J. Lipid Res. 27, 361–3673522782 </plain></SENT>
+</text></ref><ref id="B5"><text><SENT sid="323" pm="."><plain>5. BrownM. </plain></SENT>
+<SENT sid="324" pm="."><plain>L., InazuA., HeslerC. </plain></SENT>
+<SENT sid="325" pm="."><plain>B., AgellonL. </plain></SENT>
+<SENT sid="326" pm="."><plain>B., MannC., WhitlockM. </plain></SENT>
+<SENT sid="327" pm="."><plain>E., MarcelY. </plain></SENT>
+<SENT sid="328" pm="."><plain>L., MilneR. </plain></SENT>
+<SENT sid="329" pm="."><plain>W., KoizumiJ., MabuchiH., TakedaR., and TallA. </plain></SENT>
+<SENT sid="330" pm="."><plain>R. (1989) Molecular basis of lipid transfer protein deficiency in a family with increased high-density lipoproteins. Nature 342, 448–4512586614 </plain></SENT>
+</text></ref><ref id="B6"><text><SENT sid="331" pm="."><plain>6. SakaiN., MatsuzawaY., HiranoK., YamashitaS., NozakiS., UeyamaY., KuboM., and TaruiS. (1991) Detection of two species of low density lipoprotein particles in cholesteryl ester transfer protein deficiency. Arterioscler. </plain></SENT>
+<SENT sid="332" pm="."><plain>Thromb. 11, 71–791988006 </plain></SENT>
+</text></ref><ref id="B7"><text><SENT sid="333" pm="."><plain>7. BarterP. </plain></SENT>
+<SENT sid="334" pm="."><plain>J., CaulfieldM., ErikssonM., GrundyS. </plain></SENT>
+<SENT sid="335" pm="."><plain>M., KasteleinJ. </plain></SENT>
+<SENT sid="336" pm="."><plain>J., KomajdaM., Lopez-SendonJ., MoscaL., TardifJ. </plain></SENT>
+<SENT sid="337" pm="."><plain>C., WatersD. </plain></SENT>
+<SENT sid="338" pm="."><plain>D., ShearC. </plain></SENT>
+<SENT sid="339" pm="."><plain>L., RevkinJ. </plain></SENT>
+<SENT sid="340" pm="."><plain>H., BuhrK. </plain></SENT>
+<SENT sid="341" pm="."><plain>A., FisherM. </plain></SENT>
+<SENT sid="342" pm="."><plain>R., TallA. </plain></SENT>
+<SENT sid="343" pm="."><plain>R., et al (2007) Effects of torcetrapib in patients at high risk for coronary events. New Engl. </plain></SENT>
+<SENT sid="344" pm="."><plain>J. </plain></SENT>
+<SENT sid="345" pm="."><plain>Med. 357, 2109–212217984165 </plain></SENT>
+</text></ref><ref id="B8"><text><SENT sid="346" pm="."><plain>8. SchwartzG. </plain></SENT>
+<SENT sid="347" pm="."><plain>G., OlssonA. </plain></SENT>
+<SENT sid="348" pm="."><plain>G., AbtM., BallantyneC. </plain></SENT>
+<SENT sid="349" pm="."><plain>M., BarterP. </plain></SENT>
+<SENT sid="350" pm="."><plain>J., BrummJ., ChaitmanB. </plain></SENT>
+<SENT sid="351" pm="."><plain>R., HolmeI. </plain></SENT>
+<SENT sid="352" pm="."><plain>M., KallendD., LeiterL. </plain></SENT>
+<SENT sid="353" pm="."><plain>A., LeitersdorfE., McMurrayJ. </plain></SENT>
+<SENT sid="354" pm="."><plain>J., MundlH., NichollsS. </plain></SENT>
+<SENT sid="355" pm="."><plain>J., ShahP. </plain></SENT>
+<SENT sid="356" pm="."><plain>K., et al (2012) Effects of dalcetrapib in patients with a recent acute coronary syndrome. New Engl. </plain></SENT>
+<SENT sid="357" pm="."><plain>J. </plain></SENT>
+<SENT sid="358" pm="."><plain>Med. 367, 2089–209923126252 </plain></SENT>
+</text></ref><ref id="B9"><text><SENT sid="359" pm="."><plain>9. GottoA. </plain></SENT>
+<SENT sid="360" pm="."><plain>M.Jr., and MoonJ. </plain></SENT>
+<SENT sid="361" pm="."><plain>E. (2012) Safety of inhibition of cholesteryl ester transfer protein with anacetrapib: the DEFINE study. Expert Rev. </plain></SENT>
+<SENT sid="362" pm="."><plain>Cardiovasc. </plain></SENT>
+<SENT sid="363" pm="."><plain>Ther. 10, 955–96323030283 </plain></SENT>
+</text></ref><ref id="B10"><text><SENT sid="364" pm="."><plain>10. NichollsS. </plain></SENT>
+<SENT sid="365" pm="."><plain>J., BrewerH. </plain></SENT>
+<SENT sid="366" pm="."><plain>B., KasteleinJ. </plain></SENT>
+<SENT sid="367" pm="."><plain>J., KruegerK. </plain></SENT>
+<SENT sid="368" pm="."><plain>A., WangM. </plain></SENT>
+<SENT sid="369" pm="."><plain>D., ShaoM., HuB., McErleanE., and NissenS. </plain></SENT>
+<SENT sid="370" pm="."><plain>E. (2011) Effects of the CETP inhibitor evacetrapib administered as monotherapy or in combination with statins on HDL and LDL cholesterol: a randomized controlled trial. JAMA 306, 2099–210922089718 </plain></SENT>
+</text></ref><ref id="B11"><text><SENT sid="371" pm="."><plain>11. JarvisL. (2015) Lilly pulls heart drug. Chem. </plain></SENT>
+<SENT sid="372" pm="."><plain>Eng. </plain></SENT>
+<SENT sid="373" pm="."><plain>News 93, 9 </plain></SENT>
+</text></ref><ref id="B12"><text><SENT sid="374" pm="."><plain>12. BarterP. </plain></SENT>
+<SENT sid="375" pm="."><plain>J., and JonesM. </plain></SENT>
+<SENT sid="376" pm="."><plain>E. (1980) Kinetic studies of the transfer of esterified cholesterol between human plasma low and high density lipoproteins. J. Lipid Res. 21, 238–2497373163 </plain></SENT>
+</text></ref><ref id="B13"><text><SENT sid="378" pm="."><plain>13. IhmJ., QuinnD. </plain></SENT>
+<SENT sid="379" pm="."><plain>M., BuschS. </plain></SENT>
+<SENT sid="380" pm="."><plain>J., ChataingB., and HarmonyJ. </plain></SENT>
+<SENT sid="381" pm="."><plain>A. (1982) Kinetics of plasma protein-catalyzed exchange of phosphatidylcholine and cholesteryl ester between plasma lipoproteins. J. Lipid Res. 23, 1328–13417161562 </plain></SENT>
+</text></ref><ref id="B14"><text><SENT sid="383" pm="."><plain>14. TallA. </plain></SENT>
+<SENT sid="384" pm="."><plain>R. (1993) Plasma cholesteryl ester transfer protein. J. Lipid Res. 34, 1255–12748409761 </plain></SENT>
+</text></ref><ref id="B15"><text><SENT sid="386" pm="."><plain>15. QiuX., MistryA., AmmiratiM. </plain></SENT>
+<SENT sid="387" pm="."><plain>J., ChrunykB. </plain></SENT>
+<SENT sid="388" pm="."><plain>A., ClarkR. </plain></SENT>
+<SENT sid="389" pm="."><plain>W., CongY., CulpJ. </plain></SENT>
+<SENT sid="390" pm="."><plain>S., DanleyD. </plain></SENT>
+<SENT sid="391" pm="."><plain>E., FreemanT. </plain></SENT>
+<SENT sid="392" pm="."><plain>B., GeogheganK. </plain></SENT>
+<SENT sid="393" pm="."><plain>F., GrifforM. </plain></SENT>
+<SENT sid="394" pm="."><plain>C., HawrylikS. </plain></SENT>
+<SENT sid="395" pm="."><plain>J., HaywardC. </plain></SENT>
+<SENT sid="396" pm="."><plain>M., HensleyP., HothL. </plain></SENT>
+<SENT sid="397" pm="."><plain>R., et al (2007) Crystal structure of cholesteryl ester transfer protein reveals a long tunnel and four bound lipid molecules. Nat. </plain></SENT>
+<SENT sid="398" pm="."><plain>Struct. </plain></SENT>
+<SENT sid="399" pm="."><plain>Mol. </plain></SENT>
+<SENT sid="400" pm="."><plain>Biol. 14, 106–11317237796 </plain></SENT>
+</text></ref><ref id="B16"><text><SENT sid="401" pm="."><plain>16. ZhangL., YanF., ZhangS., LeiD., CharlesM. </plain></SENT>
+<SENT sid="402" pm="."><plain>A., CavigiolioG., OdaM., KraussR. </plain></SENT>
+<SENT sid="403" pm="."><plain>M., WeisgraberK. </plain></SENT>
+<SENT sid="404" pm="."><plain>H., RyeK. </plain></SENT>
+<SENT sid="405" pm="."><plain>A., PownallH. </plain></SENT>
+<SENT sid="406" pm="."><plain>J., QiuX., and RenG. (2012) Structural basis of transfer between lipoproteins by cholesteryl ester transfer protein. Nat. </plain></SENT>
+<SENT sid="407" pm="."><plain>Chem. </plain></SENT>
+<SENT sid="408" pm="."><plain>Biol. 8, 342–34922344176 </plain></SENT>
+</text></ref><ref id="B17"><text><SENT sid="409" pm="."><plain>17. ZhangM., CharlesR., TongH., ZhangL., PatelM., WangF., RamesM. </plain></SENT>
+<SENT sid="410" pm="."><plain>J., RenA., RyeK. </plain></SENT>
+<SENT sid="411" pm="."><plain>A., QiuX., JohnsD. </plain></SENT>
+<SENT sid="412" pm="."><plain>G., CharlesM. </plain></SENT>
+<SENT sid="413" pm="."><plain>A., and RenG. (2015) HDL surface lipids mediate CETP binding as revealed by electron microscopy and molecular dynamics simulation. Sci. </plain></SENT>
+<SENT sid="414" pm="."><plain>Rep. 5, 874125737239 </plain></SENT>
+</text></ref><ref id="B18"><text><SENT sid="415" pm="."><plain>18. LeiD., ZhangX., JiangS., CaiZ., RamesM. </plain></SENT>
+<SENT sid="416" pm="."><plain>J., ZhangL., RenG., and ZhangS. (2013) Structural features of cholesteryl ester transfer protein: a molecular dynamics simulation study. Proteins 81, 415–42523042613 </plain></SENT>
+</text></ref><ref id="B19"><text><SENT sid="417" pm="."><plain>19. Cilpa-KarhuG., JauhiainenM., and RiekkolaM. </plain></SENT>
+<SENT sid="418" pm="."><plain>L. (2015) Atomistic MD simulation reveals the mechanism by which CETP penetrates into HDL enabling lipid transfer from HDL to CETP. J. Lipid Res. 56, 98–10825424006 </plain></SENT>
+</text></ref><ref id="B20"><text><SENT sid="420" pm="."><plain>20. HeikeläM., VattulainenI., and HyvönenM. </plain></SENT>
+<SENT sid="421" pm="."><plain>T. (2006) Atomistic simulation studies of cholesteryl oleates: model for the core of lipoprotein particles. Biophys. </plain></SENT>
+<SENT sid="422" pm="."><plain>J. 90, 2247–225716399839 </plain></SENT>
+</text></ref><ref id="B21"><text><SENT sid="423" pm="."><plain>21. HallA., RepakovaJ., and VattulainenI. (2008) Modeling of the triglyceride-rich core in lipoprotein particles. J. Phys. </plain></SENT>
+<SENT sid="425" pm="."><plain>Chem. </plain></SENT>
+<SENT sid="426" pm="."><plain>B 112, 13772–1378218844397 </plain></SENT>
+</text></ref><ref id="B22"><text><SENT sid="427" pm="."><plain>22. CourniaZ., SmithJ. </plain></SENT>
+<SENT sid="428" pm="."><plain>C., and UllmannG. </plain></SENT>
+<SENT sid="429" pm="."><plain>M. (2005) A molecular mechanics force field for biologically important sterols. J. Comput. </plain></SENT>
+<SENT sid="431" pm="."><plain>Chem. 26, 1383–139916028234 </plain></SENT>
+</text></ref><ref id="B23"><text><SENT sid="432" pm="."><plain>23. FellerS. </plain></SENT>
+<SENT sid="433" pm="."><plain>E., and MacKerellA. </plain></SENT>
+<SENT sid="434" pm="."><plain>D. (2000) An improved empirical potential energy function for molecular simulations of phospholipids. J. Phys. </plain></SENT>
+<SENT sid="436" pm="."><plain>Chem. </plain></SENT>
+<SENT sid="437" pm="."><plain>B 104, 7510–7515 </plain></SENT>
+</text></ref><ref id="B24"><text><SENT sid="438" pm="."><plain>24. SchlenkrichM., BrickmannJ., MacKerellA. </plain></SENT>
+<SENT sid="439" pm="."><plain>D.Jr., and KarplusM. (1996) An empirical potential energy function for phospholipids: criteria for parameter optimization and applications, in Biological Membranes: A Molecular Perspective from Computation and Experiment (MerzK. </plain></SENT>
+<SENT sid="440" pm="."><plain>M., and RouxB., eds), pp. 31–81, Birkhäuser Boston, Boston, MA </plain></SENT>
+</text></ref><ref id="B25"><text><SENT sid="441" pm="."><plain>25. FellerS. </plain></SENT>
+<SENT sid="442" pm="."><plain>E., YinD., PastorR. </plain></SENT>
+<SENT sid="443" pm="."><plain>W., and MacKerellA. </plain></SENT>
+<SENT sid="444" pm="."><plain>D.Jr. (1997) Molecular dynamics simulation of unsaturated lipid bilayers at low hydration: parameterization and comparison with diffraction studies. Biophys. </plain></SENT>
+<SENT sid="445" pm="."><plain>J. 73, 2269–22799370424 </plain></SENT>
+</text></ref><ref id="B26"><text><SENT sid="446" pm="."><plain>26. ArmenR. </plain></SENT>
+<SENT sid="447" pm="."><plain>S., UittoO. </plain></SENT>
+<SENT sid="448" pm="."><plain>D., and FellerS. </plain></SENT>
+<SENT sid="449" pm="."><plain>E. (1998) Phospholipid component volumes: determination and application to bilayer structure calculations. Biophys. </plain></SENT>
+<SENT sid="450" pm="."><plain>J. 75, 734–7449675175 </plain></SENT>
+</text></ref><ref id="B27"><text><SENT sid="451" pm="."><plain>27. KaleL., SkeelR., BhandarkarM., BrunnerR., GursoyA., KrawetzN., PhillipsJ., ShinozakiA., VaradarajanK., and SchultenK. (1999) NAMD2: greater scalability for parallel molecular dynamics. J. Comput. </plain></SENT>
+<SENT sid="453" pm="."><plain>Phys. 151, 283–312 </plain></SENT>
+</text></ref><ref id="B28"><text><SENT sid="454" pm="."><plain>28. GrestG. </plain></SENT>
+<SENT sid="455" pm="."><plain>S., and KremerK. (1986) Molecular dynamics simulation for polymers in the presence of a heat bath. Phys. </plain></SENT>
+<SENT sid="456" pm="."><plain>Rev. </plain></SENT>
+<SENT sid="457" pm="."><plain>A 33, 3628–3631 </plain></SENT>
+</text></ref><ref id="B29"><text><SENT sid="458" pm="."><plain>29. FellerS. </plain></SENT>
+<SENT sid="459" pm="."><plain>E., ZhangY., PastorR. </plain></SENT>
+<SENT sid="460" pm="."><plain>W., and BrooksB. </plain></SENT>
+<SENT sid="461" pm="."><plain>R. (1995) Constant pressure molecular dynamics simulation: the Langevin piston method. J. Chem. </plain></SENT>
+<SENT sid="463" pm="."><plain>Phys. 103, 4613–4621 </plain></SENT>
+</text></ref><ref id="B30"><text><SENT sid="464" pm="."><plain>30. DardenT., YorkD., and PedersenL. (1993) Particle mesh Ewald: an N·log(N) method for Ewald sums in large systems. J. Chem. </plain></SENT>
+<SENT sid="466" pm="."><plain>Phys. 98, 10089–10092 </plain></SENT>
+</text></ref><ref id="B31"><text><SENT sid="467" pm="."><plain>31. HumphreyW., DalkeA., and SchultenK. (1996) VMD: visual molecular dynamics. J. Mol. </plain></SENT>
+<SENT sid="469" pm="."><plain>Graph. 14, 33–38, 27–288744570 </plain></SENT>
+</text></ref><ref id="B32"><text><SENT sid="470" pm="."><plain>32. SchmidtkeP., Le GuillouxV., MaupetitJ., and TufféryP. (2010) fpocket: online tools for protein ensemble pocket detection and tracking. Nucleic Acids Res. 38, W582–W58920478829 </plain></SENT>
+</text></ref><ref id="B33"><text><SENT sid="471" pm="."><plain>33. BerkaK., HanákO., SehnalD., BanásP., NavrátilováV., JaiswalD., IonescuC. </plain></SENT>
+<SENT sid="472" pm="."><plain>M., Svobodová VarekováR., KocaJ., and OtyepkaM. (2012) MOLEonline 2.0: interactive web-based analysis of biomacromolecular channels. Nucleic Acids Res. 40, W222–W22722553366 </plain></SENT>
+</text></ref><ref id="B34"><text><SENT sid="473" pm="."><plain>34. HannukselaM., MarcelY. </plain></SENT>
+<SENT sid="474" pm="."><plain>L., KesäniemiY. </plain></SENT>
+<SENT sid="475" pm="."><plain>A., and SavolainenM. </plain></SENT>
+<SENT sid="476" pm="."><plain>J. (1992) Reduction in the concentration and activity of plasma cholesteryl ester transfer protein by alcohol. J. Lipid Res. 33, 737–7441619365 </plain></SENT>
+</text></ref><ref id="B35"><text><SENT sid="478" pm="."><plain>35. LasselT. </plain></SENT>
+<SENT sid="479" pm="."><plain>S., GuérinM., AuboironS., ChapmanM. </plain></SENT>
+<SENT sid="480" pm="."><plain>J., and Guy-GrandB. (1998) Preferential cholesteryl ester acceptors among triglyceride-rich lipoproteins during alimentary lipemia in normolipidemic subjects. Arterioscler. </plain></SENT>
+<SENT sid="481" pm="."><plain>Thromb. </plain></SENT>
+<SENT sid="482" pm="."><plain>Vasc. </plain></SENT>
+<SENT sid="483" pm="."><plain>Biol. 18, 65–749445258 </plain></SENT>
+</text></ref><ref id="B36"><text><SENT sid="484" pm="."><plain>36. KyteJ., and DoolittleR. </plain></SENT>
+<SENT sid="485" pm="."><plain>F. (1982) A simple method for displaying the hydropathic character of a protein. J. Mol. </plain></SENT>
+<SENT sid="487" pm="."><plain>Biol. 157, 105–1327108955 </plain></SENT>
+</text></ref><ref id="B37"><text><SENT sid="488" pm="."><plain>37. NguyenH., PérezA., BermeoS., and SimmerlingC. (2015) Refinement of generalized Born implicit solvation parameters for nucleic acids and their complexes with proteins. J. Chem. </plain></SENT>
+<SENT sid="490" pm="."><plain>Theory Comput. 11, 3714–372826574454 </plain></SENT>
+</text></ref><ref id="B38"><text><SENT sid="491" pm="."><plain>38. KleinjungJ., and FraternaliF. (2014) Design and application of implicit solvent models in biomolecular simulations. Curr. </plain></SENT>
+<SENT sid="492" pm="."><plain>Opin. </plain></SENT>
+<SENT sid="493" pm="."><plain>Struct. </plain></SENT>
+<SENT sid="494" pm="."><plain>Biol. 25, 126–13424841242 </plain></SENT>
+</text></ref><ref id="B39"><text><SENT sid="495" pm="."><plain>39. ZhangL., SodtA. </plain></SENT>
+<SENT sid="496" pm="."><plain>J., VenableR. </plain></SENT>
+<SENT sid="497" pm="."><plain>M., PastorR. </plain></SENT>
+<SENT sid="498" pm="."><plain>W., and BuckM. (2013) Prediction, refinement, and persistency of transmembrane helix dimers in lipid bilayers using implicit and explicit solvent/lipid representations: microsecond molecular dynamics simulations of ErbB1/B2 and EphA1. Proteins 81, 365–37623042146 </plain></SENT>
+</text></ref><ref id="B40"><text><SENT sid="499" pm="."><plain>40. HevonojaT., PentikäinenM. </plain></SENT>
+<SENT sid="500" pm="."><plain>O., HyvönenM. </plain></SENT>
+<SENT sid="501" pm="."><plain>T., KovanenP. </plain></SENT>
+<SENT sid="502" pm="."><plain>T., and Ala-KorpelaM. (2000) Structure of low density lipoprotein (LDL) particles: basis for understanding molecular changes in modified LDL. Biochim. </plain></SENT>
+<SENT sid="503" pm="."><plain>Biophys. </plain></SENT>
+<SENT sid="504" pm="."><plain>Acta 1488, 189–21011082530 </plain></SENT>
+</text></ref><ref id="B41"><text><SENT sid="505" pm="."><plain>41. Lund-KatzS., LiuL., ThuahnaiS. </plain></SENT>
+<SENT sid="506" pm="."><plain>T., and PhillipsM. </plain></SENT>
+<SENT sid="507" pm="."><plain>C. (2003) High density lipoprotein structure. Front. </plain></SENT>
+<SENT sid="508" pm="."><plain>Biosci. 8, d1044–d105412700101 </plain></SENT>
+</text></ref><ref id="B42"><text><SENT sid="509" pm="."><plain>42. WeinbergR. </plain></SENT>
+<SENT sid="510" pm="."><plain>B., IbdahJ. </plain></SENT>
+<SENT sid="511" pm="."><plain>A., and PhillipsM. </plain></SENT>
+<SENT sid="512" pm="."><plain>C. (1992) Adsorption of apolipoprotein A-IV to phospholipid monolayers spread at the air/water interface. </plain></SENT>
+<SENT sid="513" pm="."><plain>A model for its labile binding to high density lipoproteins. J. Biol. </plain></SENT>
+<SENT sid="515" pm="."><plain>Chem. 267, 8977–89831577735 </plain></SENT>
+</text></ref><ref id="B43"><text><SENT sid="516" pm="."><plain>43. IbdahJ. </plain></SENT>
+<SENT sid="517" pm="."><plain>A., Lund-KatzS., and PhillipsM. </plain></SENT>
+<SENT sid="518" pm="."><plain>C. (1989) Molecular packing of high-density and low-density lipoprotein surface lipids and apolipoprotein A-I binding. Biochemistry 28, 1126–11332496753 </plain></SENT>
+</text></ref><ref id="B44"><text><SENT sid="519" pm="."><plain>44. SlotteJ. </plain></SENT>
+<SENT sid="520" pm="."><plain>P., and GrönbergL. (1990) Oxidation of cholesterol in low density and high density lipoproteins by cholesterol oxidase. J. Lipid Res. 31, 2235–22422090717 </plain></SENT>
+</text></ref><ref id="B45"><text><SENT sid="522" pm="."><plain>45. ZhangL., SongJ., CavigiolioG., IshidaB. </plain></SENT>
+<SENT sid="523" pm="."><plain>Y., ZhangS., KaneJ. </plain></SENT>
+<SENT sid="524" pm="."><plain>P., WeisgraberK. </plain></SENT>
+<SENT sid="525" pm="."><plain>H., OdaM. </plain></SENT>
+<SENT sid="526" pm="."><plain>N., RyeK. </plain></SENT>
+<SENT sid="527" pm="."><plain>A., PownallH. </plain></SENT>
+<SENT sid="528" pm="."><plain>J., and RenG. (2011) Morphology and structure of lipoproteins revealed by an optimized negative-staining protocol of electron microscopy. J. Lipid Res. 52, 175–18420978167 </plain></SENT>
+</text></ref><ref id="B46"><text><SENT sid="530" pm="."><plain>46. RenG., RudenkoG., LudtkeS. </plain></SENT>
+<SENT sid="531" pm="."><plain>J., DeisenhoferJ., ChiuW., and PownallH. </plain></SENT>
+<SENT sid="532" pm="."><plain>J. (2010) Model of human low-density lipoprotein and bound receptor based on cryoEM. Proc. </plain></SENT>
+<SENT sid="533" pm="."><plain>Natl. </plain></SENT>
+<SENT sid="534" pm="."><plain>Acad. </plain></SENT>
+<SENT sid="535" pm="."><plain>Sci. </plain></SENT>
+<SENT sid="536" pm="."><plain>U.S.A. 107, 1059–106420080547 </plain></SENT>
+</text></ref><ref id="B47"><text><SENT sid="537" pm="."><plain>47. ElderR. </plain></SENT>
+<SENT sid="538" pm="."><plain>M., and JayaramanA. (2012) Sequence-specific recognition of cancer drug-DNA adducts by HMGB1a repair protein. Biophys. </plain></SENT>
+<SENT sid="539" pm="."><plain>J. 102, 2331–233822677386 </plain></SENT>
+</text></ref><ref id="B48"><text><SENT sid="540" pm="."><plain>48. WangS., WangX., DengL., RassartE., MilneR. </plain></SENT>
+<SENT sid="541" pm="."><plain>W., and TallA. </plain></SENT>
+<SENT sid="542" pm="."><plain>R. (1993) Point mutagenesis of carboxyl-terminal amino acids of cholesteryl ester transfer protein. </plain></SENT>
+<SENT sid="543" pm="."><plain>Opposite faces of an amphipathic helix important for cholesteryl ester transfer or for binding neutralizing antibody. J. Biol. </plain></SENT>
+<SENT sid="545" pm="."><plain>Chem. 268, 1955–19597678413 </plain></SENT>
+</text></ref><ref id="B49"><text><SENT sid="546" pm="."><plain>49. García-GonzálezV., Gutiérrez-QuintanarN., Mendoza-EspinosaP., BrocosP., PiñeiroA., and Mas-OlivaJ. (2014) Key structural arrangements at the C-terminus domain of CETP suggest a potential mechanism for lipid-transfer activity. J. Struct. </plain></SENT>
+<SENT sid="548" pm="."><plain>Biol. 186, 19–2724530617 </plain></SENT>
+</text></ref><ref id="B50"><text><SENT sid="549" pm="."><plain>50. McLeanL. </plain></SENT>
+<SENT sid="550" pm="."><plain>R., and PhillipsM. </plain></SENT>
+<SENT sid="551" pm="."><plain>C. (1984) Kinetics of phosphatidylcholine and lysophosphatidylcholine exchange between unilamellar vesicles. Biochemistry 23, 4624–46306498159 </plain></SENT>
+</text></ref><ref id="B51"><text><SENT sid="552" pm="."><plain>51. LauerM. </plain></SENT>
+<SENT sid="553" pm="."><plain>E., Graff-MeyerA., RuferA. </plain></SENT>
+<SENT sid="554" pm="."><plain>C., MaugeaisC., von der MarkE., MatileH., D'ArcyB., MaggC., RinglerP., MüllerS. </plain></SENT>
+<SENT sid="555" pm="."><plain>A., SchererS., DernickG., ThomaR., HennigM., NiesorE. </plain></SENT>
+<SENT sid="556" pm="."><plain>J., et al (2016) Cholesteryl ester transfer between lipoproteins does not require a ternary tunnel complex with CETP. J. Struct. </plain></SENT>
+<SENT sid="558" pm="."><plain>Biol. 194, 191–19826876146 </plain></SENT>
+</text></ref></ref-list></SecTag></back></article>

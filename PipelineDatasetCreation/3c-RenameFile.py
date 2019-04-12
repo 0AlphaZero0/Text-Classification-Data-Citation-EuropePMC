@@ -14,13 +14,9 @@ This script will extract PMCID of all papers that were previously extracted and 
 
 #################################    Main     ###################################################
 
-for file in os.listdir("./"):
+for file in os.listdir("./articlesOA"):
     if file.endswith(".xml"):
-        pmcidlist=codecs.open(str(file),"r",encoding="utf-8")
-        tmp=pmcidlist.read()
-        pmcidlist.close()
-        newfile=codecs.open(str(file).split(".")[0]+"-sentencized.xml","w",encoding="utf-8")
-        newfile.write(tmp)
-        newfile.close()
-        os.remove(str(file))
-        
+        if file.endswith("-AccessionNb.xml") or file.endswith("-fulltxt.xml"):
+            pass
+        else:
+            os.rename("./articlesOA/"+str(file),"./articlesOA/"+str(file).split(".")[0]+"-sentencized.xml")

@@ -1,0 +1,886 @@
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD v1.1 20151215//EN" "JATS-archivearticle1.dtd"> 
+<article xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML" article-type="research-article"><?properties open_access?><?DTDIdentifier.IdentifierValue -//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD v1.1 20151215//EN?><?DTDIdentifier.IdentifierType public?><?SourceDTD.DTDName JATS-archivearticle1.dtd?><?SourceDTD.Version 1.1?><?ConverterInfo.XSLTName jp2nlmx2.xsl?><?ConverterInfo.Version 1?><front><journal-meta><journal-id journal-id-type="nlm-ta">PLoS One</journal-id><journal-id journal-id-type="iso-abbrev">PLoS ONE</journal-id><journal-id journal-id-type="publisher-id">plos</journal-id><journal-id journal-id-type="pmc">plosone</journal-id><journal-title-group><journal-title>PLoS ONE</journal-title></journal-title-group><issn pub-type="epub">1932-6203</issn><publisher><publisher-name>Public Library of Science</publisher-name><publisher-loc>San Francisco, USA</publisher-loc></publisher></journal-meta><article-meta><article-id pub-id-type="pmcid">3694976</article-id><article-id pub-id-type="pmid">23826213</article-id><article-id pub-id-type="publisher-id">PONE-D-12-30245</article-id><article-id pub-id-type="doi">10.1371/journal.pone.0067134</article-id><article-categories><subj-group subj-group-type="heading"><subject>Research Article</subject></subj-group><subj-group subj-group-type="Discipline-v2"><subject>Biology</subject><subj-group><subject>Computational Biology</subject><subj-group><subject>Sequence Analysis</subject></subj-group></subj-group><subj-group><subject>Developmental Biology</subject><subj-group><subject>Cell Differentiation</subject></subj-group></subj-group><subj-group><subject>Genetics</subject><subj-group><subject>Molecular Genetics</subject><subj-group><subject>Gene Identification and Analysis</subject></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v2"><subject>Medicine</subject><subj-group><subject>Hematology</subject><subj-group><subject>Hematologic Cancers and Related Disorders</subject><subj-group><subject>Leukemias</subject><subj-group><subject>Acute Myeloid Leukemia</subject></subj-group></subj-group></subj-group></subj-group></subj-group></article-categories><title-group><article-title><SecTag type="TITLE"><text><SENT sid="0" pm="."><plain>Global Identification of EVI1 Target Genes in Acute Myeloid Leukemia </plain></SENT>
+</text></SecTag></article-title><alt-title alt-title-type="running-head">Global EVI1 Gene Targets</alt-title></title-group><contrib-group><contrib contrib-type="author" equal-contrib="yes"><name><surname>Glass</surname><given-names>Carolyn</given-names></name><xref ref-type="aff" rid="aff1">
+<sup>1</sup>
+</xref></contrib><contrib contrib-type="author" equal-contrib="yes"><name><surname>Wuertzer</surname><given-names>Charles</given-names></name><xref ref-type="aff" rid="aff1">
+<sup>1</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Cui</surname><given-names>Xiaohui</given-names></name><xref ref-type="aff" rid="aff1">
+<sup>1</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Bi</surname><given-names>Yingtao</given-names></name><xref ref-type="aff" rid="aff2">
+<sup>2</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Davuluri</surname><given-names>Ramana</given-names></name><xref ref-type="aff" rid="aff2">
+<sup>2</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Xiao</surname><given-names>Ying-Yi</given-names></name><xref ref-type="aff" rid="aff3">
+<sup>3</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Wilson</surname><given-names>Michael</given-names></name><xref ref-type="aff" rid="aff1">
+<sup>1</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Owens</surname><given-names>Kristina</given-names></name><xref ref-type="aff" rid="aff1">
+<sup>1</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Zhang</surname><given-names>Yi</given-names></name><xref ref-type="aff" rid="aff1">
+<sup>1</sup>
+</xref><xref ref-type="corresp" rid="cor1">
+<sup>*</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Perkins</surname><given-names>Archibald</given-names></name><xref ref-type="aff" rid="aff1">
+<sup>1</sup>
+</xref><xref ref-type="corresp" rid="cor1">
+<sup>*</sup>
+</xref></contrib></contrib-group><aff id="aff1">
+<label>1</label>
+<addr-line>Department of Pathology and Lab Medicine, University of Rochester Medical Center, Rochester, New York, United States of America</addr-line>
+</aff><aff id="aff2">
+<label>2</label>
+<addr-line>Molecular and Cellular Oncogenesis Program, Center for Systems and Computational Biology The Wistar Institute, Philadelphia, Pennsylvania, United States of America</addr-line>
+</aff><aff id="aff3">
+<label>3</label>
+<addr-line>Department of Pathology, Yale University School of Medicine, New Haven, Connecticut, United States of America</addr-line>
+</aff><contrib-group><contrib contrib-type="editor"><name><surname>Tse</surname><given-names>William</given-names></name><role>Editor</role><xref ref-type="aff" rid="edit1"/></contrib></contrib-group><aff id="edit1">
+<addr-line>West Virginia University School of Medicine, United States of America</addr-line>
+</aff><author-notes><corresp id="cor1">* E-mail: <email>yi_zhang@urmc.rochester.edu</email> (YZ); <email>archibald_perkins@urmc.rochester.edu</email> (AP)</corresp><fn fn-type="COI-statement"><p><text><SENT sid="1" pm="."><plain>Competing Interests: The authors have declared that no competing interests exist. </plain></SENT>
+</text></p></fn><fn fn-type="con"><p><text><SENT sid="2" pm="."><plain>Conceived and designed the experiments: CG CW YZ AP YX. </plain></SENT>
+<SENT sid="3" pm="."><plain>Performed the experiments: XC CW CG MW KO YZ. </plain></SENT>
+<SENT sid="4" pm="."><plain>Analyzed the data: CG YB. </plain></SENT>
+<SENT sid="5" pm="."><plain>Contributed reagents/materials/analysis tools: YB RD. </plain></SENT>
+<SENT sid="6" pm="."><plain>Wrote the paper: CG. </plain></SENT>
+</text></p></fn></author-notes><pub-date pub-type="collection"><year>2013</year></pub-date><pub-date pub-type="epub"><day>27</day><month>6</month><year>2013</year></pub-date><volume>8</volume><issue>6</issue><elocation-id>e67134</elocation-id><history><date date-type="received"><day>2</day><month>10</month><year>2012</year></date><date date-type="accepted"><day>19</day><month>5</month><year>2013</year></date></history><permissions><copyright-statement>© 2013 Glass et al</copyright-statement><copyright-year>2013</copyright-year><copyright-holder>Glass et al</copyright-holder><license xlink:href="http://creativecommons.org/licenses/by/4.0/"><license-p>This is an open-access article distributed under the terms of the Creative Commons Attribution License, which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are properly credited.</license-p></license></permissions><abstract><p><SecTag type="ABS"><text><SENT sid="7" pm="."><plain>The ecotropic virus integration site 1 (EVI1) transcription factor is associated with human myeloid malignancy of poor prognosis and is overexpressed in 8–10% of adult AML and strikingly up to 27% of pediatric MLL-rearranged leukemias. </plain></SENT>
+<SENT sid="8" pm="."><plain>For the first time, we report comprehensive genomewide EVI1 binding and whole transcriptome gene deregulation in leukemic cells using a combination of ChIP-Seq and RNA-Seq expression profiling. </plain></SENT>
+<SENT sid="9" pm="."><plain>We found disruption of terminal myeloid differentiation and cell cycle regulation to be prominent in EVI-induced leukemogenesis. </plain></SENT>
+<SENT sid="10" pm="."><plain>Specifically, we identified EVI1 directly binds to and downregulates the master myeloid differentiation gene Cebpe and several of its downstream gene targets critical for terminal myeloid differentiation. </plain></SENT>
+<SENT sid="11" pm="."><plain>We also found EVI1 binds to and downregulates Serpinb2 as well as numerous genes involved in the Jak-Stat signaling pathway. </plain></SENT>
+<SENT sid="12" pm="."><plain>Finally, we identified decreased expression of several ATP-dependent P2X purinoreceptors genes involved in apoptosis mechanisms. </plain></SENT>
+<SENT sid="13" pm="."><plain>These findings provide a foundation for future study of potential therapeutic gene targets for EVI1-induced leukemia. </plain></SENT>
+</text></SecTag></p></abstract><funding-group><funding-statement>This work was supported in part by the National Institutes of Health (NIH) (R01CA120313 to ASP), New York State Stem Cell Science (NYSTEM) (C026423 to YZ), and a National Heart Lung Blood Institute T32 post-doctoral fellowship grant under Dr. Thomas Pearson, Director of the University of Rochester Clinical Translational Research Institute. The funders had no role in study design, data collection and analysis, decision to publish, or preparation of the manuscript.</funding-statement></funding-group><counts><page-count count="18"/></counts></article-meta></front><body><SecTag type="INTRO"><sec id="s1"><title><text><SENT sid="14" pm="."><plain>Introduction </plain></SENT>
+</text></title><sec id="s1a"><title><text><SENT sid="15" pm="."><plain>Evidence for the Role of EVI1 in Myeloid Leukemia </plain></SENT>
+</text></title><p><text><SENT sid="16" pm="."><plain>The ecotropic virus integration site 1 (EVI1) is an oncogenic transcription factor associated with human myeloid malignancy and several solid epithelial cancers [1], [2], [3]. </plain></SENT>
+<SENT sid="17" pm="."><plain>Aberrant EVI1 expression occurs in 8–10% of human adult acute myeloid leukemia (AML) and strikingly up to 27% of pediatric mixed lineage leukemia (MLL) rearranged leukemias [4]. </plain></SENT>
+<SENT sid="18" pm="."><plain>EVI1 is one of several protein isoforms encoded by the MECOM locus at human chromosome 3q26 which also yields the MDS1 and MDS-EVI1 protein isoforms [5]. </plain></SENT>
+<SENT sid="19" pm="."><plain>The role of MDS1 and MDS-EVI1 in malignancy is still unclear, while the EVI1 transcription factor, specifically the 135kDa isoform has been reported as a malignant contender [6]. </plain></SENT>
+<SENT sid="20" pm="."><plain>EVI1 overexpression in human AML most frequently occurs with rearrangements at chromosome 3q26 [7], [8]. </plain></SENT>
+<SENT sid="21" pm="."><plain>The MLL-AF9 fusion oncoprotein has also been shown to activate the MECOM locus in the setting of AML [9]. </plain></SENT>
+</text></p><p><text><SENT sid="22" pm="."><plain>Although previous studies have certainly supported the role of EVI1 in myeloid malignancy, establishing an experimental system with consistent disease induction has been challenging. </plain></SENT>
+<SENT sid="23" pm="."><plain>Forced expression of Evi1 in murine lineage-negative bone marrow (BM) cells via retroviral transduction followed by transplantation back into irradiated recipients has yielded conflicting results. </plain></SENT>
+<SENT sid="24" pm="."><plain>Buonamici et al demonstrated Evi1 transduced BM in C57BL6 recipients developed lethal myelodysplastic syndrome (MDS) 8–12 months after bone marrow transplantation (BMT), but none developed AML [10]. </plain></SENT>
+<SENT sid="25" pm="."><plain>In another study, Cuenco et al showed none of the mice that received BM cells transduced with the Evi1 retrovirus developed AML [11]. </plain></SENT>
+<SENT sid="26" pm="."><plain>In contrast to these results, Yoshimi et al showed C57BL6 mice transplanted with Evi1-transduced bone marrow cells all developed AML (characterized by high percentage of blasts on BM smear, positive myeloid markers for leukemic cells, marked splenomegaly) and died within 6–11 months after BMT [12]. </plain></SENT>
+<SENT sid="27" pm="."><plain>Furthermore, a separate study demonstrated Evi1 does not induce AML alone, but requires co-expression with Hoxa9/Meis1 to drive leukemogenesis [13]. </plain></SENT>
+<SENT sid="28" pm="."><plain>Collectively, the current data does not support a specific experimental approach by which Evi1 overexpression by itself consistently induces leukemogenesis. </plain></SENT>
+</text></p></sec><sec id="s1b"><title><text><SENT sid="29" pm="."><plain>EVI1 Binds DNA to Induce Leukemic Transformation </plain></SENT>
+</text></title><p><text><SENT sid="30" pm="."><plain>The Evi1 gene spans 65 kb of genomic DNA with 16 exons which generate 3 different isoforms (135kDa [14], 123kDa [15], 103kDa [16], [17]). </plain></SENT>
+<SENT sid="31" pm="."><plain>The 135kDa and 123kDa isoforms both contain two zinc finger domains, ZF1 and ZF2 that bind DNA in a sequence specific manner [18], [19]. </plain></SENT>
+<SENT sid="32" pm="."><plain>The 103kDa isoform lacks ZF1 domain fingers 6 and 7, and fails to bind DNA via that domain [16]. </plain></SENT>
+<SENT sid="33" pm="."><plain>We previously demonstrated ZF1 binds to the motif GACAAGATA with high affinity and specificity in vitro [19] and showed ZF1, but not ZF2 is critical for malignant activity [20], [21]. </plain></SENT>
+<SENT sid="34" pm="."><plain>Zhang et al recently demonstrated ZF1 DNA binding can be inhibited with a pyrrole-imidazole polyamide with high specificity and affinity [20]. </plain></SENT>
+</text></p><p><text><SENT sid="35" pm="."><plain>Several studies have identified EVI1 downstream target genes associated with putative leukemogenic functions [22], [23], [24], [25], [26], [27], [28], [29]. </plain></SENT>
+<SENT sid="36" pm="."><plain>Direct EVI1 binding to the promoter of Gata2, an essential regulator of HSC proliferation [30], was demonstrated by ChIP-qPCR. Gata2 has been reported to be aberrantly expressed in 87% of de novo AML cases [31]; our analysis of RNA expression data from AML patients shows a good correlation between EVI1 and GATA2 expression (Pearson correlation (r) of 0.42–0.52; unpublished data). </plain></SENT>
+<SENT sid="37" pm="."><plain>However a definitive requirement for Gata2 in EVI1-induced leukemogenesis has yet to be shown. </plain></SENT>
+<SENT sid="38" pm="."><plain>A genome wide transcription factor binding study for EVI1 has been reported recently for a human ovarian cancer cell line [28]. </plain></SENT>
+<SENT sid="39" pm="."><plain>The study demonstrated over 25% of EVI1-occupied genes were also bound by activator protein 1 (AP1), providing evidence for a synergistic cooperative interaction between EVI1 and AP1, specifically the FOS protein. </plain></SENT>
+<SENT sid="40" pm="."><plain>AP1 controls important cellular processes such as apoptosis, cellular differentiation and proliferation and has been described as a “nuclear decision-maker” critical for determining life or death cell fate decisions [32]. </plain></SENT>
+<SENT sid="41" pm="."><plain>Taken together, these studies provide evidence that EVI1 directly binds critical genes associated with malignant transformation. </plain></SENT>
+</text></p></sec><sec id="s1c"><title><text><SENT sid="42" pm="."><plain>Biologic Effects of EVI1 </plain></SENT>
+</text></title><p><text><SENT sid="43" pm="."><plain>AML cells harbor dysfunction of one or more of the following decision processes: cellular differentiation, programmed cell death (apoptosis) and cellular growth control. </plain></SENT>
+<SENT sid="44" pm="."><plain>In regards to differentiation, EVI1-induced leukemic cells have been associated with defects in terminal myeloid differentiation, specifically disruption of granulocytic and erythroid commitment [33], [34]. </plain></SENT>
+<SENT sid="45" pm="."><plain>Morishita et al first reported Evi1 overexpression in 32Dc13 myeloid cells inhibits terminal differentiation to granulocytes in response to granulocyte-colony stimulating factor (G-CSF) [34]. </plain></SENT>
+<SENT sid="46" pm="."><plain>However it was later shown that native 32Dc13 cells harbor a proviral insertion at Evi1 and overexpress both mRNA and protein [35]. </plain></SENT>
+<SENT sid="47" pm="."><plain>In addition, this assay is difficult to interpret, since the EVI1-overexpressing cells undergo cell death upon treatment with G-CSF. </plain></SENT>
+<SENT sid="48" pm="."><plain>Another study showed Evi1 overexpression in BM progenitors result in impaired myeloid terminal differentiation associated with a subset of genes regulated by PU.1 binding [36]. </plain></SENT>
+<SENT sid="49" pm="."><plain>More recently, Evi1 has been shown to be preferentially expressed in HSCs and required for the maintenance of hematopoiesis [37], [38]. </plain></SENT>
+<SENT sid="50" pm="."><plain>However, there is still a paucity of data connecting EVI1 binding to specific gene targets and how it influences definitive hematopoietic cell lineage decisions. </plain></SENT>
+</text></p><p><text><SENT sid="51" pm="."><plain>In addition to blocked differentiation, Evi1 leukemic cells also demonstrate resistance to apoptosis which has been associated with ineffectiveness of chemotherapy regimens, high relapse rates and poor prognosis [39]. </plain></SENT>
+<SENT sid="52" pm="."><plain>The survival advantage conferred by Evi1 in myeloid leukemic cells has been well studied [40], [41], [42]. </plain></SENT>
+<SENT sid="53" pm="."><plain>Kurokawa et al showed EVI1 directly interacts with and inhibits c-Jun N-terminal kinase (JNK) to protect cells from JNK-activated stress-induced cell death [42]. </plain></SENT>
+<SENT sid="54" pm="."><plain>EVI1 ZF1 also binds and activates the BCL-XL promoter in the colon carcinoma HT-29 cell line overexpressing EVI1, resulting in inhibition of apoptosis [40]. </plain></SENT>
+<SENT sid="55" pm="."><plain>However, a role for the deregulation of JNK and BCL-XL in leukemogenesis has not been directly addressed. </plain></SENT>
+<SENT sid="56" pm="."><plain>We have also shown that Evi1 knockdown in DA-1 leukemic cells induces apoptotic features such as DNA fragmentation, reduction in mitochondrial membrane potential and cleavage of procaspases 3 and 9 (delCampo et al, in revision). </plain></SENT>
+<SENT sid="57" pm="."><plain>Previous studies demonstrate a single amino acid mutation (R205N) in ZF1 prevents EVI1 binding to DNA [23]. </plain></SENT>
+<SENT sid="58" pm="."><plain>Preliminary data shows DA-1 leukemic cells overexpressing the R205N mutant EVI1 exhibit significantly increased apoptosis, supporting the notion that ZF1 DNA binding is critical in suppressing apoptosis (del Campo et al, in revision). </plain></SENT>
+<SENT sid="59" pm="."><plain>Collectively, there appears to be good evidence for EVI1-induced anti-apoptosis mechanisms, but additional studies are needed to confirm these findings and to flesh out the precise mechanism. </plain></SENT>
+</text></p><p><text><SENT sid="60" pm="."><plain>Finally, inappropriate Evi1 expression has been associated with aberrant cell cycle regulation resulting in excessive proliferation [43], [44], [45]. </plain></SENT>
+<SENT sid="61" pm="."><plain>Abnormal cellular proliferation mediated by the TGFβ pathway has frequently been cited in Evi1 expressing cells. </plain></SENT>
+<SENT sid="62" pm="."><plain>EVI1 has been reported to interact with and repress SMAD3 function, resulting in loss of TGFβ- induced antiproliferative effects [43]. </plain></SENT>
+<SENT sid="63" pm="."><plain>However, the relevance of this to AML is not clear. Evi1 has also been shown to accelerate the cell cycle of Rat-1 fibroblasts [45], murine 32Dcl3 myeloid cells [44] and murine embryonic stem cells [46]. </plain></SENT>
+<SENT sid="64" pm="."><plain>However according to other reports, the cell cycle and proliferative activity of HEL cells is not influenced by EVI1 overexpression [47]. </plain></SENT>
+<SENT sid="65" pm="."><plain>These conflicting data seem to indicate that EVI1-regulated proliferative effects in AML have yet to be elucidated. </plain></SENT>
+</text></p><p><text><SENT sid="66" pm="."><plain>Various other biologic functions regulated by EVI1 downstream gene targets have also been identified by ChIP assay and confirmed by PCR experiments. </plain></SENT>
+<SENT sid="67" pm="."><plain>These functions include disruption of normal hematopoiesis [48], growth arrest in response to stressful stimuli [27], calreticulin function [24], and microRNA gene silencing [26]. </plain></SENT>
+</text></p><p><text><SENT sid="68" pm="."><plain>Despite these many findings, a cohesive mechanism by which Evi1 induces leukemogenesis remains elusive. </plain></SENT>
+</text></p><p><text><SENT sid="69" pm="."><plain>Here, we report for the first time ChIP-Seq combined with RNA-Seq expression profiling in Evi1-overexpressed leukemic cells. </plain></SENT>
+<SENT sid="70" pm="."><plain>We found that deregulation of genes involving apoptosis, differentiation and proliferative mechanisms likely all contribute to the development of Evi1 leukemogenesis. </plain></SENT>
+<SENT sid="71" pm="."><plain>Specifically, we identified EVI1 directly binds to and downregulates a master myeloid differentiation regulator gene, Cebpe, in both Evi1 overexpressed leukemic cell lines. </plain></SENT>
+<SENT sid="72" pm="."><plain>We found a high number of downstream gene targets of Cebpe were also downregulated in EVI1 leukemic cells. </plain></SENT>
+<SENT sid="73" pm="."><plain>We also identified EVI1 binds to and deregulates Serpinb2 as well as numerous genes involved in the Jak-Stat signaling pathway to drive cellular differentiation. </plain></SENT>
+<SENT sid="74" pm="."><plain>Finally, we found several ATP-dependent P2X purinoreceptors involved in apoptosis mechanisms, particularly P2rx7, to be significantly downregulated. </plain></SENT>
+</text></p></sec></sec></SecTag><SecTag type="RESULTS"><sec id="s2"><title><text><SENT sid="75" pm="."><plain>Results </plain></SENT>
+</text></title><sec id="s2a"><title><text><SENT sid="76" pm="."><plain>Whole Transcriptome Analysis using RNA-Seq </plain></SENT>
+</text></title><p><text><SENT sid="77" pm="."><plain>To identify genes differentially expressed between Evi1 overexpressed (DA-1, NFS-60) and in shRNA Evi1 knockdown cells, RNA was extracted to generate transcriptome-wide expression profiles. </plain></SENT>
+<SENT sid="78" pm="."><plain>Genes with expression levels significantly greater or reduced relative to the control shRNAs (shLuc and shScr) cell lines have been termed upregulated and downregulated, respectively. </plain></SENT>
+<SENT sid="79" pm="."><plain>High throughput parallel sequencing using the Illumina Genome Analyzer IIx revealed 806 significantly deregulated (p&lt;0.05) genes in DA-1 cells (481 upregulated, 325 downregulated in the Evi1 overexpressed cells compared to the Evi1 shRNA knockdown) and 782 deregulated genes in the NFS-60 cell line (437 upregulated, 345 downregulated, Dataset S1). </plain></SENT>
+</text></p><p><text><SENT sid="80" pm="."><plain>To gain further insight into biological pathways associated with the significantly up or downregulated genes identified in EVI1-induced leukemia, analysis using the Database for Annotation, Visualization and Integrated Discovery (DAVID) [49] bioinformatics tool was performed (Table 1). </plain></SENT>
+<SENT sid="81" pm="."><plain>In DA-1 EVI1 leukemic cells, significantly upregulated genes were enriched for KEGG pathways involving hematopoietic cell lineage (myeloid, but not lymphoid p = 7.5E−3) and cytokine-cytokine interaction (p = 6.7E−2). </plain></SENT>
+<SENT sid="82" pm="."><plain>Significantly downregulated DA-1 genes were enriched for pathways involving cytokine-cytokine receptor interaction (p = 9.4E−3), Mapk signaling (p = 8.3E−2), Jak-Stat signaling, and hematopoietic cell lineage (p = 8.7E−2). </plain></SENT>
+<SENT sid="83" pm="."><plain>In NFS-60 EVI1 leukemic cells, significantly upregulated genes (i.e., higher in EVI1-expressing cells) were enriched for KEGG pathways involving hematopoietic cell lineage (p = 7.1E−3) and pathways in cancer (p = 4.3E−2). </plain></SENT>
+<SENT sid="84" pm="."><plain>Significantly downregulated NFS-60 genes were enriched for cytokine-cytokine receptor interaction (p = 6.6E−6), Jak-Stat signaling (p = 1.2E−2), and chemokine signaling (p = 1.4E−2). </plain></SENT>
+</text></p><SecTag type="TABLE"><table-wrap id="pone-0067134-t001" orientation="portrait" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0067134.t001</object-id><label>Table 1</label><caption><title><text><SENT sid="85" pm="."><plain>Significantly enriched KEGG pathways for genes with aberrant expression levels in EVI1 leukemic cells. </plain></SENT>
+</text></title></caption><alternatives><graphic id="pone-0067134-t001-1" xlink:href="pone.0067134.t001"/><table frame="hsides" rules="groups"><colgroup span="1"><col align="left" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/></colgroup><thead><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="86" pm="."><plain>Enriched KEGG Pathway </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="87" pm="."><plain>DA-1 Upregulated Genes </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="88" pm="."><plain>NFS-60 Upregulated Genes </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="89" pm="."><plain>DA-1 Downregulated Genes </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="90" pm="."><plain>NFS-60 Downregulated Genes </plain></SENT>
+</text></td></tr></thead><tbody><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="91" pm="."><plain>Chemokine signaling </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="92" pm="."><plain>x </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="93" pm="."><plain>Cytokine-cytokine interaction </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="94" pm="."><plain>× </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="95" pm="."><plain>× </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="96" pm="."><plain>× </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="97" pm="."><plain>Hematopoietic cell lineage </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="98" pm="."><plain>× </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="99" pm="."><plain>× </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="100" pm="."><plain>× </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="101" pm="."><plain>Jak-Stat signaling </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="102" pm="."><plain>× </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="103" pm="."><plain>× </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="104" pm="."><plain>Mapk signaling </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="105" pm="."><plain>× </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="106" pm="."><plain>Pathways in cancer </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="107" pm="."><plain>× </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/></tr></tbody></table></alternatives><table-wrap-foot><fn id="nt101"><label/><p><text><SENT sid="108" pm="."><plain>DAVID analysis was performed for significantly upregulated and downregulated genes in both the Evi1 overexpressing DA-1 and NFS-60 leukemic cell lines. </plain></SENT>
+</text></p></fn></table-wrap-foot></table-wrap></SecTag><p><text><SENT sid="109" pm="."><plain>A total of 35 genes were significantly upregulated and 42 genes were significantly downregulated in both cell lines (Table 2). </plain></SENT>
+<SENT sid="110" pm="."><plain>We identified a 2-fold downregulation of Cebpe, a master regulator of terminal myeloid differentiation, in both the murine EVI1 leukemic cell lines. </plain></SENT>
+<SENT sid="111" pm="."><plain>However significance was only reached in the NFS-60 cell line due to the low number of RNA-Seq reads in the DA-1 cell line for the Cebpe gene (Dataset 1). </plain></SENT>
+<SENT sid="112" pm="."><plain>A U937 human leukemic cell line with Evi1 overexpression via retroviral infection also confirmed significant downregulation of Cebpe by PCR (Figure 1a). </plain></SENT>
+<SENT sid="113" pm="."><plain>We also found a high number (N = 6) of significantly downregulated direct gene targets of C/EBP-ε in DA-1 leukemic cells (Dataset S2, Figure 2a and 2b). </plain></SENT>
+<SENT sid="114" pm="."><plain>In NFS-60 leukemic cells, 3 C/EBP-ε direct gene targets were also significantly downregulated (Dataset S3, Figure 2c). </plain></SENT>
+<SENT sid="115" pm="."><plain>These results demonstrate EVI1 leukemic cells not only exhibit downregulation of Cebpe expression, but also suppression of downstream target genes of the master differentiation regulator. </plain></SENT>
+</text></p><SecTag type="FIG"><fig id="pone-0067134-g001" orientation="portrait" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0067134.g001</object-id><label>Figure 1</label><caption><title><text><SENT sid="116" pm="."><plain>Significant downregulation of Cebpe in human Evi1 overexpressed leukemic cells. </plain></SENT>
+</text></title><p><text><SENT sid="117" pm="."><plain>a) Lanes 1 and 2 are beta-actin positive controls for U937 wildtype and U937+Evi1 cells, respectively. </plain></SENT>
+<SENT sid="118" pm="."><plain>Lane 3 sample is U937 wildtype cells (without Evi1 overexpression) and Lane 4 sample is U937 with Evi1 overexpression. Cebpe is downregulated in EVI1 overexpressed U937 human leukemic cells (Lane 4). b) Quantitative RT-PCR shows significant downregulation of Cebpe in Evi1 overexpressed human leukemic cells. </plain></SENT>
+<SENT sid="119" pm="."><plain>The y-axis value denotes the relative levels of RNA expression based on normalized Ct values. </plain></SENT>
+<SENT sid="120" pm="."><plain>U937+Evi1 cells had 8 point increase in Ct value (or 256 fold decrease) compared to the U937 wildtype cells (p&lt;0.001). </plain></SENT>
+</text></p></caption><graphic xlink:href="pone.0067134.g001"/></fig></SecTag><SecTag type="FIG"><fig id="pone-0067134-g002" orientation="portrait" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0067134.g002</object-id><label>Figure 2</label><caption><title><text><SENT sid="121" pm="."><plain>Direct downstream gene targets of the C/EBP-ε transcription factor. </plain></SENT>
+</text></title><p><text><SENT sid="122" pm="."><plain>Several C/EBP-ε target genes were significantly downregulated in both Evi1 overexpressed leukemic cell lines. </plain></SENT>
+<SENT sid="123" pm="."><plain>The x-axis is the significantly downregulated gene and the y-axis denotes reads per million on RNA-Seq analysis. a) In DA-1 Evi1 overexpressed cells, Serpinb2 had an 11.4-fold decrease (p = 0.0006), Myc had a 2.5-fold decrease (p = 0.04), Lcn2 had a 3.4-fold decrease (p = 0.001), Epx had a 13.5-fold decrease (p = 0.0003). b) In DA-1 Evi1 overexpressed cells, although the overall level of transcription for Mmp8 and Prg2 were reduced compared to the other significantly downregulated C/EBP-ε gene targets, they exhibited a very large significant fold change in the EVI leukemic cells. Mmp8 had a 13.5-fold decrease (p = 0.02), and Prg2 had a19.0-fold decrease (p = 0.003) in the EVI1 leukemic cells compared to the knockdown. c) In NFS-60 Evi1 overexpressed cells, Lcn2 had a 3.9-fold decrease (p = 0.001), Mmp8 had a 12.7-fold decrease (p = 6.5E−5), and Serpinb2 had an 11.5-fold decrease (p = 5.8E−5). </plain></SENT>
+</text></p></caption><graphic xlink:href="pone.0067134.g002"/></fig></SecTag><SecTag type="TABLE"><table-wrap id="pone-0067134-t002" orientation="portrait" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0067134.t002</object-id><label>Table 2</label><caption><title><text><SENT sid="124" pm="."><plain>Significantly deregulated genes based on RNA-Seq demonstrated in both murine cell lines (DA-1 and NFS-60). </plain></SENT>
+</text></title></caption><alternatives><graphic id="pone-0067134-t002-2" xlink:href="pone.0067134.t002"/><table frame="hsides" rules="groups"><colgroup span="1"><col align="left" span="1"/><col align="center" span="1"/></colgroup><thead><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="125" pm="."><plain>Significantly Upregulated Gene in Both Cell Lines (N = 35) </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="126" pm="."><plain>Significantly Downregulated Gene in Both Cell Lines (N = 42) </plain></SENT>
+</text></td></tr></thead><tbody><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="127" pm="."><plain>Asph </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="128" pm="."><plain>Acsbg1 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="129" pm="."><plain>Cenpe </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="130" pm="."><plain>Anxa3 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="131" pm="."><plain>Ces2g </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="132" pm="."><plain>Aqp9 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="133" pm="."><plain>Cmpk2 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="134" pm="."><plain>Bcat1 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="135" pm="."><plain>Ddx60 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="136" pm="."><plain>Car12 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="137" pm="."><plain>Eif2ak2 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="138" pm="."><plain>Ccl4 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="139" pm="."><plain>Enpp5 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="140" pm="."><plain>Ccl6 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="141" pm="."><plain>Fam46b </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="142" pm="."><plain>Ccl9 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="143" pm="."><plain>Gp1ba </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="144" pm="."><plain>Cpa3 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="145" pm="."><plain>Gp9 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="146" pm="."><plain>Ctla2a </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="147" pm="."><plain>Igf1r </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="148" pm="."><plain>Ctsg </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="149" pm="."><plain>Ltb </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="150" pm="."><plain>Cyp11a1 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="151" pm="."><plain>Lyst </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="152" pm="."><plain>Dgat2 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="153" pm="."><plain>Mecom (Evi1) </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="154" pm="."><plain>Fcgr2b </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="155" pm="."><plain>Mfsd2b </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="156" pm="."><plain>Fcgr3 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="157" pm="."><plain>Mki67 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="158" pm="."><plain>Fgf21 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="159" pm="."><plain>Msrb3 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="160" pm="."><plain>Fos </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="161" pm="."><plain>Nmnat2 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="162" pm="."><plain>Gas7 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="163" pm="."><plain>Nox1 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="164" pm="."><plain>Gng10 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="165" pm="."><plain>Oas2 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="166" pm="."><plain>Gpr34 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="167" pm="."><plain>Plekha6 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="168" pm="."><plain>Hif1a </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="169" pm="."><plain>Plekhg5 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="170" pm="."><plain>Hrk </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="171" pm="."><plain>Scarf1 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="172" pm="."><plain>Ifitm1 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="173" pm="."><plain>Serpini1 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="174" pm="."><plain>Ifitm6 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="175" pm="."><plain>Slc6a20a </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="176" pm="."><plain>Il1rn </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="177" pm="."><plain>Smpdl3b </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="178" pm="."><plain>Lcn2 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="179" pm="."><plain>Sox6 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="180" pm="."><plain>Lif </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="181" pm="."><plain>Spns2 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="182" pm="."><plain>Mcpt8 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="183" pm="."><plain>Tlr1 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="184" pm="."><plain>Mmp8 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="185" pm="."><plain>Tmod1 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="186" pm="."><plain>Olr1 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="187" pm="."><plain>Treml2 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="188" pm="."><plain>Osm </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="189" pm="."><plain>Ube1l </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="190" pm="."><plain>P2rx3 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="191" pm="."><plain>Utrn </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="192" pm="."><plain>Reep6 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="193" pm="."><plain>Zcchc24 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="194" pm="."><plain>Saa3 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="195" pm="."><plain>Zfpm1 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="196" pm="."><plain>Serpinb2 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="197" pm="."><plain>Serpinf1 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="198" pm="."><plain>Slamf9 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="199" pm="."><plain>Slpi </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="200" pm="."><plain>Socs1 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="201" pm="."><plain>Srm </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="202" pm="."><plain>Svip </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="203" pm="."><plain>Tph1 </plain></SENT>
+</text></td></tr></tbody></table></alternatives></table-wrap></SecTag><p><text><SENT sid="204" pm="."><plain>Expression levels of numerous genes associated with the regulation of Jak-Stat signaling (a principal pathway by which cytokines and growth factors control differentiation, proliferation and apoptosis) were found to be aberrant in both EVI1 leukemic cell lines (Figure 3). Socs1 (supressor of cytokine signaling 1), an inhibitor of STAT transcription factors, was significantly downregulated by 5.7-fold in DA-1 EVI1 leukemic cells, p = 0.01 (Dataset S2), and by 4.4-fold in NFS-60 EVI1 leukemic cells, p = 0.02 (Dataset S3). </plain></SENT>
+<SENT sid="205" pm="."><plain>In NFS-60 leukemic cells, Stat1 and Stat5 expression levels were also significantly upregulated (p = 0.02 and p = 0.01 respectively, Dataset S3). </plain></SENT>
+<SENT sid="206" pm="."><plain>Phosphorylation of STAT1 in Evi1 overexpressed cells was tested in two separate human hematopoietic cell lines with verified Evi1 overexpression (Kasumi 3 and U937+Evi1). </plain></SENT>
+<SENT sid="207" pm="."><plain>Marked increased total STAT1 protein was present in Kasumi 3 cells (an established human leukemic cell line with Evi1 overexpression) at baseline compared to the control. </plain></SENT>
+<SENT sid="208" pm="."><plain>There was also an increase in phosphorylated STAT1 in Kasumi 3 cells (Figure 4). </plain></SENT>
+<SENT sid="209" pm="."><plain>U937 wildtype and U937+Evi1 overexpressed cells did not show a marked difference in total STAT1 or phosphorylated STAT1 protein levels (data not shown). </plain></SENT>
+</text></p><SecTag type="FIG"><fig id="pone-0067134-g003" orientation="portrait" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0067134.g003</object-id><label>Figure 3</label><caption><title><text><SENT sid="210" pm="."><plain>Significant deregulation of the Jak-Stat signaling pathway. </plain></SENT>
+</text></title><p><text><SENT sid="211" pm="."><plain>Numerous genes involved in the Jak-Stat pathway were found to be aberrantly expressed in both the EVI1 leukemic cell lines. </plain></SENT>
+<SENT sid="212" pm="."><plain>The x-axis is the significantly downregulated gene and the y-axis denotes reads per million on RNA-Seq analysis. a) In DA-1 Evi1 overexpressed cells, Socs1 had a 5.7-fold decrease (p = 0.001), Osm had a 13-fold decrease (p = 0.0003), Myc had a 2.5-fold decrease (p = 0.04), Il6 had a 2.8-fold decrease (p = 0.02), Csf2rb had a 3.2-fold decrease (p = 0.02). b) In NFS-60 Evi1 overexpressed cells, Stat5 had a 2.1-fold increase (p = 0.01), Stat1 had a 2.0-fold increase (p = 0.02), Socs3 had a 3.7-fold decrease (p = 0.03), Socs2 had a 3.0-fold decrease (p = 0.01), Socs1 had a 4.5-fold decrease (p = 0.02). c) In NFS-60 Evi1 overexpressed cells, Pik3c2g had a 2.8-fold increase (p = 0.04) Pim1 had 2.2-fold decrease (p = 0.01), Osm had a 1.8-fold decrease (p = 0.04), Il4r had a 2.3-fold decrease (p = 0.01), Crebbp had a 1.9-fold increase (p = 0.05), Cish had a 2.0-fold decrease (p = 0.05). </plain></SENT>
+</text></p></caption><graphic xlink:href="pone.0067134.g003"/></fig></SecTag><SecTag type="FIG"><fig id="pone-0067134-g004" orientation="portrait" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0067134.g004</object-id><label>Figure 4</label><caption><title><text><SENT sid="213" pm="."><plain>Increased endogenous STAT1 phosphorylation in human Evi1 overexpressed leukemic cell lines. </plain></SENT>
+</text></title><p><text><SENT sid="214" pm="."><plain>a) Western blot analysis using anti-total-STAT1 antibody. </plain></SENT>
+<SENT sid="215" pm="."><plain>Lane 1 from left shows total STAT1 protein expression level in Kasumi 1 cells. </plain></SENT>
+<SENT sid="216" pm="."><plain>Lane 2 shows total STAT1 protein level in Kasumi 3 cells. Evi1 overexpressed myeloid leukemic cells demonstrate a higher baseline of STAT1 protein, consistent with our mRNA findings. b) Western blot analysis using anti-phospho-STAT1 antibody. </plain></SENT>
+<SENT sid="217" pm="."><plain>Lane 1 from left shows endogenous phosphorylated STAT1 protein expression level in Kasumi 1 cells (human leukemic cell line without Evi1 expression. </plain></SENT>
+<SENT sid="218" pm="."><plain>Lane 2 shows the STAT1 protein level in Kasumi 3 cells. c) Beta actin loading control. </plain></SENT>
+</text></p></caption><graphic xlink:href="pone.0067134.g004"/></fig></SecTag><p><text><SENT sid="219" pm="."><plain>Osm (oncostatin M), a cytokine in the interleukin 6 group originally identified to inhibit cell growth in lymphoma cells, was significantly decreased in both DA-1 and NFS-60 leukemic cells (13-fold decrease, p&lt;0.0004 and 1.8-fold decrease, p&lt;0.04, respectively, Datasets S2 and S3). </plain></SENT>
+<SENT sid="220" pm="."><plain>We also identified significant upregulation of Ube1l in both cell lines (DA-1 cells 2.5-fold upregulation, p = 0.02, and NFS-60 cells 2-fold upregulation, p = 0.03, Datasets S2 and S3). </plain></SENT>
+<SENT sid="221" pm="."><plain>UBE1L is an activating E1 ubiquitin-like enzyme required for the function of interferon stimulating gene 15 protein (ISG15) [50], a critical modifier of Jak-Stat pathway proteins [51]. </plain></SENT>
+</text></p><p><text><SENT sid="222" pm="."><plain>Several genes associated with cell cycle regulation, specifically those in the serine protease inhibitor (Serpin) family, were significantly downregulated in both EVI1 leukemic cell lines. </plain></SENT>
+<SENT sid="223" pm="."><plain>These included Serpinb2 and Serpinf1. </plain></SENT>
+<SENT sid="224" pm="."><plain>There was a striking 11.4-fold decrease in Serpinb2 expression in DA-1 EVI1 leukemic cells (Dataset S2), and an 11.5-fold decrease in NFS-60 leukemic cells (Dataset S3). </plain></SENT>
+<SENT sid="225" pm="."><plain>Using conventional and q PCR, we were also able to demonstrate marked Serpinb2 downregulation in the two human hematopoietic cell lines with Evi1 overexpression, Kasumi 3 and U937+Evi1 (Figure 5). Serpinf1 (also known as pigment epithelium-derived factor, PEDF) was also significantly reduced (DA-1 cells 3.4-fold downregulation, p = 0.02, and NFS-60 cells 2.1-fold downregulation, p = 0.01, Datasets S2 and S3). </plain></SENT>
+</text></p><SecTag type="FIG"><fig id="pone-0067134-g005" orientation="portrait" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0067134.g005</object-id><label>Figure 5</label><caption><title><text><SENT sid="226" pm="."><plain>Serpinb2 downregulation in two human hematopoietic cell lines with Evi1 overexpression. </plain></SENT>
+</text></title><p><text><SENT sid="227" pm="."><plain>a) Conventional PCR using cDNA from Kasumi 3 with Evi1 overexpression (Lane 1) and Kasumi1 cells without Evi1 overexpression (Lane 2). Serpinb2 is markedly downregulated (no cDNA band detected in PCR) in Evi1 overexpressed Kasumi 3 human myeloid leukemic cells, consistent with findings in the murine cell lines. b) Quantitative RT-PCR shows significant downregulation of Serpinb2 in Evi1 overexpressed human leukemic cells. </plain></SENT>
+<SENT sid="228" pm="."><plain>The y-axis value denotes the relative levels of RNA expression based on normalized Ct values. </plain></SENT>
+<SENT sid="229" pm="."><plain>Kasumi 3 cells had &gt;10 point increase in Ct value (less DNA) compared to the Kasumi 1 cells (p&lt;0.0001). c) Conventional PCR using cDNA from U937 human leukemic cells. </plain></SENT>
+<SENT sid="230" pm="."><plain>Lane 1 shows U937 wildtype cells (without Evi1 overexpression) and Lane 2 U937+Evi1 cells (Evi1 overexpression). Serpinb2 is significantly downregulated U937+Evi1 cells (no cDNA band detected in PCR). </plain></SENT>
+<SENT sid="231" pm="."><plain>d) Quantitative RT-PCR shows significant downregulation of Serpinb2 in Evi1 overexpressed human leukemic cells. </plain></SENT>
+<SENT sid="232" pm="."><plain>The y-axis value denotes the relative levels of RNA expression based on normalized Ct values. </plain></SENT>
+<SENT sid="233" pm="."><plain>U937 WT cells had &gt;8 point increase in Ct value (less DNA) compared to the U937+Evi1 cells (p&lt;0.01). </plain></SENT>
+</text></p></caption><graphic xlink:href="pone.0067134.g005"/></fig></SecTag><p><text><SENT sid="234" pm="."><plain>Finally we identified several P2X purinoceptors to be significantly downregulated in EVI1 leukemic cells. </plain></SENT>
+<SENT sid="235" pm="."><plain>In DA-1 leukemic cells there was a 6.8-fold decrease in P2rx2 expression (p&lt;0.05), 21-fold decrease in P2rx3 (p&lt;0.001), 2.5-fold decrease in P2rx4, and 13.6-fold decrease in P2rx7 (p&lt;0.0003). </plain></SENT>
+<SENT sid="236" pm="."><plain>In NFS-60 cells, there was a 2.0-fold decrease in P2rx3 expression (Datasets S3 and S4). </plain></SENT>
+<SENT sid="237" pm="."><plain>P2X purinoceptors are ligand-gated ion channel responsible for ATP mediated apoptosis in neutrophils and macrophages [52]. </plain></SENT>
+</text></p></sec><sec id="s2b"><title><text><SENT sid="238" pm="."><plain>ChIP-Seq for EVI1 DNA Binding Sites </plain></SENT>
+</text></title><p><text><SENT sid="239" pm="."><plain>To globally identify direct gene targets of EVI1, we performed ChIP-Seq experiment. </plain></SENT>
+<SENT sid="240" pm="."><plain>DNA bound to EVI1 from the DA-1 murine leukemic cell line was precipitated using both anti C- and N-terminal EVI1 mouse antisera [23]. </plain></SENT>
+<SENT sid="241" pm="."><plain>The generated sequencing reads were mapped to the mouse genome (mm9) by using the bowtie program [53]. </plain></SENT>
+<SENT sid="242" pm="."><plain>This resulted in around 5 million uniquely mapped reads. </plain></SENT>
+<SENT sid="243" pm="."><plain>To identify EVI1 binding peaks, we applied Model-based Analysis of ChIP-Seq (MACS) program [54], which was designed to analyze data generated by short read sequencers such as from the SOLiD platform to first estimate peak size and location, using SAM files as an input. </plain></SENT>
+<SENT sid="244" pm="."><plain>We identified 16,745 significant peaks by using the cutoff of 1.00e-05 for the p-value. </plain></SENT>
+<SENT sid="245" pm="."><plain>We then mapped those peaks on genome-wide scale relative to RefSeq mouse genes (Figure 6a). </plain></SENT>
+<SENT sid="246" pm="."><plain>7.1% of peaks were within 1kb of the transcription start site (TSS). </plain></SENT>
+<SENT sid="247" pm="."><plain>A de novo motif discovery algorithm, MEME [54], was performed on the top 1000 ranked EVI1 ChIP-Seq peaks. </plain></SENT>
+<SENT sid="248" pm="."><plain>MEME identified an AGGAAG ETS-like motif (E-value = 2.1e-193). </plain></SENT>
+<SENT sid="249" pm="."><plain>We then refined this motif by running TPD [55] all those 16,745 peak regions. </plain></SENT>
+<SENT sid="250" pm="."><plain>Finally, 14,672 out of 16,745 (88%) peaks contained at least one of this ETS-like motif (Figure 6b). </plain></SENT>
+<SENT sid="251" pm="."><plain>Of the 14,672 ChIP-Seq peaks with the AGGAAG ETS-like motif, 4,585 peaks were within promoter regions of an annotated gene (Dataset S4). </plain></SENT>
+<SENT sid="252" pm="."><plain>Our results were consistent with the previously reported EVI1 ChIP-Seq study in ovarian cancer cells which reported 5097 EVI1 significant binding peaks with an ETS-like motif, and over 2000 direct gene targets bound by EVI1 through the ETS-like motif [28]. </plain></SENT>
+</text></p><SecTag type="FIG"><fig id="pone-0067134-g006" orientation="portrait" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0067134.g006</object-id><label>Figure 6</label><caption><title><text><SENT sid="253" pm="."><plain>Significant EVI1 DNA binding peaks. </plain></SENT>
+</text></title><p><text><SENT sid="254" pm="."><plain>Analysis using the UCSC Genome Browser showed the ChIP-Seq EVI1 binding sites demonstrated 10.9% alignment with the whole mouse genome (approximately 5 million reads). </plain></SENT>
+<SENT sid="255" pm="."><plain>16,745 significant peaks, defined as a difference in number of reads between the control rabbit IgG and EVI1 antiserum antibody yielding a p-value &lt;0.001, were identified based on a Poisson distribution. a) Of the 16,745 generated significant peaks (p&lt;0.001), 45.5% were within introns, 35.0% within distal intergenic region, 7.1% were within the proximal (within 1kb) of the TSS. b) A 500bp DNA sequence extracted around each significant peak was matched to de novo consensus sequence discovery programs. </plain></SENT>
+<SENT sid="256" pm="."><plain>The AGGAAG ETS-like motif was identified and refined in 88% of the significant EVI1 ChIP-Seq binding sites. </plain></SENT>
+</text></p></caption><graphic xlink:href="pone.0067134.g006"/></fig></SecTag><p><text><SENT sid="257" pm="."><plain>To provide biological meaning to the significant EVI1 peaks, the Stanford GREAT Analysis Tool was used to assign peaks to nearby annotated genes [56]. </plain></SENT>
+<SENT sid="258" pm="."><plain>EVI1 peaks were significantly associated with 8565 annotated genes (Dataset S5). </plain></SENT>
+<SENT sid="259" pm="."><plain>Of the 35 significantly upregulated and 42 downregulated genes shared by both EVI1 leukemic cell lines, 86% exhibited significant EVI1 DNA binding and deregulation of transcription (Dataset S6). Cebpe, Socs1 and Ube1l were all noted to have significant EVI1 binding. </plain></SENT>
+<SENT sid="260" pm="."><plain>Seven significant EVI1 binding sites were found for Cebpe (Figure 7a), 5 with the AGGAAG ETS-like motif and 2 of which were in the promoter region (-2185, −2585 relative to the TSS). </plain></SENT>
+<SENT sid="261" pm="."><plain>Significant EVI1 binding sites were identified for several of the C/EBP family of genes (Cebpa Cebpb, Cebpd, Cebpe and Cebpg). </plain></SENT>
+<SENT sid="262" pm="."><plain>However &gt;2-fold changes in gene expression were only present for Cebpe in both cell lines (2.2-fold decrease in DA-1 and 2.0–fold decrease in NFS-60, p = 0.02). </plain></SENT>
+</text></p><SecTag type="FIG"><fig id="pone-0067134-g007" orientation="portrait" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0067134.g007</object-id><label>Figure 7</label><caption><title><text><SENT sid="263" pm="."><plain>Illustrations of significant ChIP-Seq binding peaks. </plain></SENT>
+</text></title><p><text><SENT sid="264" pm="."><plain>The UCSC Genome Browser was used to generate significant ChIP-Seq binding peak patterns for Cebpε, Socs1, Osm, Ube1l, Serpinb2 and P2rx7 in EVI1 overexpressed leukemic cells. </plain></SENT>
+</text></p></caption><graphic xlink:href="pone.0067134.g007"/></fig></SecTag><p><text><SENT sid="265" pm="."><plain>Eight significant EVI1 DNA binding sites were identified for Socs1 (Figure 7b), 7 with the ETS-like motif and 3 of which were within the promoter region (-307, −657 and −1007 relative to the TSS). </plain></SENT>
+<SENT sid="266" pm="."><plain>Significant EVI1 binding sites were also identified for Socs3 (2 significant binding sites at −5610, −10360 relative to TSS), Socs4, Socs5, and Socs7, but with the exception of Socs3 in NFS-60 cells, the expression levels for these genes were not significantly different in EVI1 leukemic cells. </plain></SENT>
+<SENT sid="267" pm="."><plain>For Osm, 7 significant EVI1 binding sites were found, 6 which were within the promoter region (Figure 7c). </plain></SENT>
+<SENT sid="268" pm="."><plain>Four of the promoter region Osm binding sites had the ETS-like binding motif. </plain></SENT>
+<SENT sid="269" pm="."><plain>Two significant EVI1 DNA binding sites were identified for Ube1l (Figure 7d), both of which were within the promoter region (-397 and −3447 relative to the transcription start site, TSS) and had the ETS-like motif. </plain></SENT>
+</text></p><p><text><SENT sid="270" pm="."><plain>Six significant EVI1 DNA binding sites were found for Serpinb2 (Figure 7e), all of which had the ETS-like motif, 2 of which were within the promoter region (-1745, −3945 relative to the TSS). </plain></SENT>
+<SENT sid="271" pm="."><plain>Two significant EVI1 DNA binding sites were identified for Serpinf1 (-6601 and +7384 relative to TSS), both of which had the ETS-like motif. </plain></SENT>
+</text></p><p><text><SENT sid="272" pm="."><plain>Regarding genes regulating cellular death, ChIP-Seq revealed 7 EVI1 binding sites for the P2rx7 gene (Figure 7f), all of which had the ETS-like motif, 3 within the promoter region (+451, +901, +1701 relative to the TSS). </plain></SENT>
+</text></p><p><text><SENT sid="273" pm="."><plain>We validated ChIP-Seq peaks for selected genes near or in promoter regions by standard and quantitative PCR analysis using EVI1 antisera and no antibody immunoprecipitated chromatin (Figure 8). </plain></SENT>
+</text></p><SecTag type="FIG"><fig id="pone-0067134-g008" orientation="portrait" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0067134.g008</object-id><label>Figure 8</label><caption><title><text><SENT sid="274" pm="."><plain>ChIP-qPCR for EVI1 target genes Serpinb2 and P2rx7. </plain></SENT>
+</text></title><p><text><SENT sid="275" pm="."><plain>ChIP assay was performed using anti-EVI1 C-terminus antisera, anti-EVI1 N-terminus antisera, and a no antibody negative control. </plain></SENT>
+<SENT sid="276" pm="."><plain>The y-axis value denotes the difference in Ct value between the input DNA and sample DNA. </plain></SENT>
+<SENT sid="277" pm="."><plain>The no antibody control had &gt;5 point increase in Ct value (less DNA) compared to the anti-EVI1 DNA samples for both EVI1 target gene primers (p&lt;0.01). </plain></SENT>
+</text></p></caption><graphic xlink:href="pone.0067134.g008"/></fig></SecTag></sec><sec id="s2c"><title><text><SENT sid="278" pm="."><plain>Shared DNA Binding Sites with Other Transcription Factors </plain></SENT>
+</text></title><p><text><SENT sid="279" pm="."><plain>An unusually large number of EVI1 binding sites were identified within 1.5kb of annotated genes, indicating binding within promoter regions and raising the possibility of interactions with other transcription factors (Figure 9). </plain></SENT>
+<SENT sid="280" pm="."><plain>To determine if other transcription factors might bind within the ±1.5 kb regions centered about the annotated EVI1 DNA binding sites, we performed an analysis using the MATCH program and TRANSFAC database [57]. </plain></SENT>
+<SENT sid="281" pm="."><plain>In DA-1 leukemic cells, 79 transcription factors were found to share binding within the promoter regions of EVI1 target genes (p&lt;0.05). </plain></SENT>
+<SENT sid="282" pm="."><plain>In NFS-60 leukemic cells, 67 had shared binding (p&lt;0.05). </plain></SENT>
+<SENT sid="283" pm="."><plain>Sixty two of the same transcription factors were identified to be present in both EVI1 leukemic cell lines. </plain></SENT>
+<SENT sid="284" pm="."><plain>Of these ELK1, an ETS-like transcription factor was found to significantly share binding with EVI1 promoter regions (p = 0.003). </plain></SENT>
+</text></p><SecTag type="FIG"><fig id="pone-0067134-g009" orientation="portrait" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0067134.g009</object-id><label>Figure 9</label><caption><title><text><SENT sid="285" pm="."><plain>Distribution of significant EVI1 binding sites. </plain></SENT>
+</text></title><p><text><SENT sid="286" pm="."><plain>The distribution of the 16,745 significant EVI1 ChIP-Seq peaks was plotted against all known transcription start sites (TSS) of annotated genes within the mouse genome using the Stanford Bejerano Lab Great Genomic Regions Enrichment Analyses Tool. </plain></SENT>
+<SENT sid="287" pm="."><plain>EVI1 significantly bound within 5kb of 2,430 annotated genes. </plain></SENT>
+</text></p></caption><graphic xlink:href="pone.0067134.g009"/></fig></SecTag><p><text><SENT sid="288" pm="."><plain>Activator Protein 1 (AP1) was also identified to share EVI1 promoter binding (p&lt;0.03). </plain></SENT>
+<SENT sid="289" pm="."><plain>In a previous ChIP-Seq study in human ovarian cancer cells, AP1 was shown to significantly share EVI1 promoter sites [28]. </plain></SENT>
+<SENT sid="290" pm="."><plain>Other significantly shared transcription factors included NFKβ (p&lt;0.002), PAX4 (p&lt;0.02), PAX5 (p&lt;0.02), and P53 (p&lt;0.03). </plain></SENT>
+</text></p></sec><sec id="s2d"><title><text><SENT sid="291" pm="."><plain>Integrated Functional Pathway Analysis </plain></SENT>
+</text></title><p><text><SENT sid="292" pm="."><plain>To determine the important biological pathways involved with genome-wide EVI1 transcription factor binding in Evi1 overexpressed leukemic cells, DAVID analysis was performed for the 8565 annotated genes significantly associated with EVI1 peaks. </plain></SENT>
+<SENT sid="293" pm="."><plain>The most significant KEGG pathway based on global EVI1 binding were Pathways in cancer (p = 2.5E−15), followed by Jak-Stat signaling (p = 2.3E−11), Mapk signaling (p = 9.1E−9) and Chemokine signaling (p = 1.6E−7). </plain></SENT>
+<SENT sid="294" pm="."><plain>Direct EVI1 target genes were also significantly enriched for KEGG pathways specific for Acute Myeloid Leukemia (p = 5.4E−6), Apoptosis (p = 3.9E−4), Hematopoietic Cell Lineage (p = 3.5E−5) and p53 signaling (p = 2.1E−3 ). </plain></SENT>
+</text></p><p><text><SENT sid="295" pm="."><plain>DAVID analysis was also performed for the 4,585 annotated genes associated with an EVI1 ChIP-Seq peak with an ETS-like binding motif within its promoter region. </plain></SENT>
+<SENT sid="296" pm="."><plain>Jak-Stat signaling was the most significantly enriched KEGG pathway associated with the annotated genes harboring an AGGAAG ETS-like motif (p&lt;.6E−7, Figure 10). </plain></SENT>
+<SENT sid="297" pm="."><plain>EVI1 bound to the promoter regions of 78% of the major genes involved in the Jak-Stat pathway. </plain></SENT>
+</text></p><SecTag type="FIG"><fig id="pone-0067134-g010" orientation="portrait" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0067134.g010</object-id><label>Figure 10</label><caption><title><text><SENT sid="298" pm="."><plain>Pathway diagram of the KEGG Jak-Stat pathway using DAVID analysis. </plain></SENT>
+</text></title><p><text><SENT sid="299" pm="."><plain>EVI1 binds to the majority (78%) of major genes involved in the regulation of the Jak-Stat signaling pathway. </plain></SENT>
+<SENT sid="300" pm="."><plain>These include Il10, Il10ra, Il6, Il6ra, Cbl, Jak1, Pias2, Stat1, Stat4, Stat5, Stat6, Grb, Sos2, Akt1, Akt2, Socs1,Pim1, Ccnd1, Ccnd2, Ccnd3, Myc, and Spred1. </plain></SENT>
+<SENT sid="301" pm="."><plain>EVI1 binds to an AGGAAG ETS-like motif which is present in the promoter region of all of these Jak-Stat pathway genes. </plain></SENT>
+<SENT sid="302" pm="."><plain>Illustration taken from DAVID website <ext-link ext-link-type="uri" xlink:href="http://david.abcc.ncifcrf.gov/">http://david.abcc.ncifcrf.gov/</ext-link>. </plain></SENT>
+</text></p></caption><graphic xlink:href="pone.0067134.g010"/></fig></SecTag><p><text><SENT sid="303" pm="."><plain>Gene set enrichment analysis (GSEA) using curated gene sets from published genomic studies (GSEA Modules C2-C5) was performed to identify distinct molecular signatures for the global EVI1 gene targets. </plain></SENT>
+<SENT sid="304" pm="."><plain>Only genes with significant EVI1 binding sites and deregulation of mRNA transcription were used as input data for the analysis. </plain></SENT>
+<SENT sid="305" pm="."><plain>GSEA revealed these genes were significantly associated with signatures only involving cancer or cancer-oriented genes (C4 Module) (p&lt;0.001, FDR &lt;0.1). </plain></SENT>
+</text></p></sec></sec></SecTag><SecTag type="DISCUSS"><sec id="s3"><title><text><SENT sid="306" pm="."><plain>Discussion </plain></SENT>
+</text></title><p><text><SENT sid="307" pm="."><plain>The ecotropic virus integration site 1 (EVI1) is an oncogenic transcription factor associated with a wide range of human malignancies including AML. </plain></SENT>
+<SENT sid="308" pm="."><plain>EVI1 is an independent biomarker that confers poor prognosis in AML. </plain></SENT>
+<SENT sid="309" pm="."><plain>We report here the first genome-wide study of EVI1 DNA binding sites in leukemic cells. </plain></SENT>
+<SENT sid="310" pm="."><plain>We confirmed EVI binding to and deregulation of a select number of previously-reported EVI1 downstream gene targets (Table 3), but not others (Table 4). </plain></SENT>
+<SENT sid="311" pm="."><plain>We also identified novel EVI target genes involved in terminal myeloid differentiation, cell cycle regulation and apoptosis previously unreported in EVI1-induced leukomogenesis. </plain></SENT>
+<SENT sid="312" pm="."><plain>Furthermore, we found the majority of significant EVI1 binding sites contained an ETS-like motif. </plain></SENT>
+</text></p><SecTag type="TABLE"><table-wrap id="pone-0067134-t003" orientation="portrait" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0067134.t003</object-id><label>Table 3</label><caption><title><text><SENT sid="313" pm="."><plain>Previously identified EVI1 target genes. </plain></SENT>
+</text></title></caption><alternatives><graphic id="pone-0067134-t003-3" xlink:href="pone.0067134.t003"/><table frame="hsides" rules="groups"><colgroup span="1"><col align="left" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/></colgroup><thead><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="314" pm="."><plain>Study </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="315" pm="."><plain>EVI Target Gene (s) </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="316" pm="."><plain>Assay </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="317" pm="."><plain>Present Study </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="318" pm="."><plain>AGGAAG ETS-like Motif Within ChIP Peak </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="319" pm="."><plain>Significant Deregulation in EVI1 Leukemic Cells </plain></SENT>
+</text></td></tr></thead><tbody><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="320" pm="."><plain>Kim et al </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="321" pm="."><plain>Itpr3 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="322" pm="."><plain>cDNA hybrid selection </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="323" pm="."><plain>1 peak </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="324" pm="."><plain>(1) </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="325" pm="."><plain>– </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="326" pm="."><plain>Yuasa et al </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="327" pm="."><plain>Gata2 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="328" pm="."><plain>ChIP-PCR </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="329" pm="."><plain>15 peaks </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="330" pm="."><plain>(4) </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="331" pm="."><plain>– </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="332" pm="."><plain>Yatsula et al </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="333" pm="."><plain>2610305D13Rik </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="334" pm="."><plain>ChIP-PCR </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="335" pm="."><plain>Dcn 3 peaks </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="336" pm="."><plain>Dcn (0) </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="337" pm="."><plain>Map3k14 (upregulated in NFS-60) </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="338" pm="."><plain>4930503B16Rik </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="339" pm="."><plain>Gadd45g 19 peaks </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="340" pm="."><plain>Gadd45g (5) </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/></tr><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="341" pm="."><plain>4930527E24Rik </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="342" pm="."><plain>Gata2 15 peaks </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="343" pm="."><plain>Gata2 (4) </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/></tr><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="344" pm="."><plain>Dcn </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="345" pm="."><plain>Klf5 2 peaks </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="346" pm="."><plain>Klf5 (1) </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/></tr><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="347" pm="."><plain>Drd1ip </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="348" pm="."><plain>Map3k14 2 peaks </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="349" pm="."><plain>Map3k14 (1) </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/></tr><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="350" pm="."><plain>Gadd45g </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="351" pm="."><plain>Skil 3 peaks </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="352" pm="."><plain>Skil (3) </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/></tr><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="353" pm="."><plain>Gata2 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="354" pm="."><plain>Tnnt2 1 peak </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="355" pm="."><plain>Tnnt2 (1) </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/></tr><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="356" pm="."><plain>Gata3 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="357" pm="."><plain>Zfpm2 5 peaks </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="358" pm="."><plain>Zfpm2 (1) </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/></tr><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="359" pm="."><plain>Klf5 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/></tr><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="360" pm="."><plain>Map3k14 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/></tr><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="361" pm="."><plain>Napb </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/></tr><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="362" pm="."><plain>Plagl1 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/></tr><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="363" pm="."><plain>Skil </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/></tr><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="364" pm="."><plain>Tnnt2 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/></tr><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="365" pm="."><plain>Xmr </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/></tr><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="366" pm="."><plain>Zfpm2 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="367" pm="."><plain>Qui et al </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="368" pm="."><plain>Calr </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="369" pm="."><plain>ChIP-PCR </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="370" pm="."><plain>1 peak </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="371" pm="."><plain>(1) </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="372" pm="."><plain>Calr (upregulated in DA-1) </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="373" pm="."><plain>Shimabe et al </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="374" pm="."><plain>Pbx1 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="375" pm="."><plain>ChIP-PCR </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="376" pm="."><plain>16 peaks </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="377" pm="."><plain>(15) </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="378" pm="."><plain>Pbx1 (upregulated in DA-1) </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="379" pm="."><plain>Yoshimi et al </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="380" pm="."><plain>Pten </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="381" pm="."><plain>ChIP-PCR </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="382" pm="."><plain>9 peaks </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="383" pm="."><plain>(5) </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="384" pm="."><plain>– </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="385" pm="."><plain>DeWeer et al </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="386" pm="."><plain>Mir449 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="387" pm="."><plain>ChIP-PCR </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="388" pm="."><plain>None </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="389" pm="."><plain>– </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="390" pm="."><plain>Pradhan et al </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="391" pm="."><plain>Sirt1 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="392" pm="."><plain>ChIP-PCR </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="393" pm="."><plain>1 peak </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="394" pm="."><plain>(0) </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="395" pm="."><plain>– </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="396" pm="."><plain>Pradhan et al </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="397" pm="."><plain>Bcl-xL </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="398" pm="."><plain>ChIP-ChIP, EMSA </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="399" pm="."><plain>None </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="400" pm="."><plain>– </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="401" pm="."><plain>Bard-Chapeau et al </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="402" pm="."><plain>Fos </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="403" pm="."><plain>ChIP-Seq </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="404" pm="."><plain>Fos 7 peaks </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="405" pm="."><plain>Fos (5) </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="406" pm="."><plain>Fos (downregulated in DA-1 and NFS-60) </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="407" pm="."><plain>Jun </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="408" pm="."><plain>Jun 6 peaks </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="409" pm="."><plain>Jun (6) </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="410" pm="."><plain>Jun (downregulated in DA-1 and NFS-60) </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="411" pm="."><plain>Gata2 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/></tr><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="412" pm="."><plain>Numerous others </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/></tr></tbody></table></alternatives><table-wrap-foot><fn id="nt102"><label/><p><text><SENT sid="413" pm="."><plain>Our study confirmed several EVI1 binding sites near or within previously reported target genes. </plain></SENT>
+<SENT sid="414" pm="."><plain>The number of EVI1 binding sites identified for the specific gene is listed under Present Study. </plain></SENT>
+<SENT sid="415" pm="."><plain>The number of AGGAAG ETS-like motif contained within the ChIP-Seq peaks for the specific EVI1 gene target is in parenthesis. </plain></SENT>
+<SENT sid="416" pm="."><plain>Genes with aberrant expression levels identified by RNA-Seq with bonafide DNA binding by ChIP-Seq in this present study are listed. </plain></SENT>
+</text></p></fn></table-wrap-foot></table-wrap></SecTag><SecTag type="TABLE"><table-wrap id="pone-0067134-t004" orientation="portrait" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0067134.t004</object-id><label>Table 4</label><caption><title><text><SENT sid="417" pm="."><plain>Our study did not identify some previously reported putative EVI1 binding gene targets. </plain></SENT>
+</text></title></caption><alternatives><graphic id="pone-0067134-t004-4" xlink:href="pone.0067134.t004"/><table frame="hsides" rules="groups"><colgroup span="1"><col align="left" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/></colgroup><thead><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="418" pm="."><plain>Study </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="419" pm="."><plain>Reported EVI Target Gene (s) </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="420" pm="."><plain>Assay </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="421" pm="."><plain>Present Study ChIP-Peaks </plain></SENT>
+</text></td></tr></thead><tbody><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="422" pm="."><plain>Yatsula et al </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="423" pm="."><plain>2610305D13Rik </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="424" pm="."><plain>ChIP-PCR </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="425" pm="."><plain>None </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="426" pm="."><plain>4930503B16Rik </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/></tr><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="427" pm="."><plain>4930527E24Rik </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/></tr><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="428" pm="."><plain>Drd1ip </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/></tr><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="429" pm="."><plain>Gata3 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/></tr><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="430" pm="."><plain>Napb </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/></tr><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="431" pm="."><plain>Plagl1 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/></tr><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="432" pm="."><plain>Xmr </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/></tr></tbody></table></alternatives></table-wrap></SecTag><sec id="s3a"><title><text><SENT sid="433" pm="."><plain>EVI1 Binds and Deregulates a Major Terminal Myeloid Differentiation Gene </plain></SENT>
+</text></title><p><text><SENT sid="434" pm="."><plain>C/EBP-ε (CCAAT/enhancer binding protein-ε) is a well established regulator of myeloid lineage differentiation and is critical for the terminal differentiation of granulocytes [58], [59], [60]. </plain></SENT>
+<SENT sid="435" pm="."><plain>Seven significant EVI1 binding sites, 2 of which were within the promoter region, were identified for Cebpe. </plain></SENT>
+<SENT sid="436" pm="."><plain>This was associated with a 2-fold downregulation of Cebpe in both the Evi1 overexpressed leukemic cell lines. </plain></SENT>
+<SENT sid="437" pm="."><plain>Unlike other C/EBP family proteins, Cebpe expression is restricted to hematopoietic cells, and its activation is associated with terminal differentiation of neutrophils and eosinophils [58]. </plain></SENT>
+<SENT sid="438" pm="."><plain>Koeffler et al demonstrated Cebpe knockout mice exhibit neutrophils blocked at the myelocytes and metamyelocytes stage. </plain></SENT>
+<SENT sid="439" pm="."><plain>Clonogenic assays revealed a significant decrease in the number of myeloid colonies, and a significant increase in Lin-Sca1+c-Kit+ colonies [59]. </plain></SENT>
+<SENT sid="440" pm="."><plain>The Yale group showed neutrophils with Cebpe knockout have bilobed nuclei, lack secondary granules and mRNA for secondary granule proteins, and exhibit aberrant chemotaxis [61]. </plain></SENT>
+</text></p><p><text><SENT sid="441" pm="."><plain>As a master regulator of terminal myeloid differentiation, C/EBP-ε binds and activates several downstream gene targets to produce mature granulocytes. </plain></SENT>
+<SENT sid="442" pm="."><plain>To generate a mature neutrophil, a series of committed steps occur from the pluripotent hematopoietic stem cell, which differentiates into the myeloblast, promyelocyte, myelocyte, and finally the band stage. </plain></SENT>
+<SENT sid="443" pm="."><plain>The presence of secondary granules marks the transition from the promyelocyte to the fully committed myelocyte stage [62]. </plain></SENT>
+<SENT sid="444" pm="."><plain>Secondary granule protein genes such as lactoferrin, transcobalamin I, neutrophil collagenase, and neutrophil gelatinase are direct targets of C/EBP-ε [63], [64]. </plain></SENT>
+<SENT sid="445" pm="."><plain>We identified several downregulated C/EBP-ε downstream gene targets in EVI1 leukemic cells. </plain></SENT>
+<SENT sid="446" pm="."><plain>In both Evi1 overexpressed leukemic cell lines, expression of neutrophil collagenase (Mmp8) and neutrophil gelatinase-associated lipocalin (Lcn2) were significantly reduced. </plain></SENT>
+<SENT sid="447" pm="."><plain>In the DA-1 leukemic cells, 2 major genes involved in eosinophil maturation (Epx and Prg2), were also significantly downregulated. </plain></SENT>
+<SENT sid="448" pm="."><plain>We identified at least 6 different downstream C/EBP-ε direct target genes to be downregulated in EVI1-induced leukemic cells. </plain></SENT>
+<SENT sid="449" pm="."><plain>These results suggest it is unlikely that EVI1 directly regulates critical genes involved in myeloid differentiation individually, but binds to and downregulates a master regulator. </plain></SENT>
+<SENT sid="450" pm="."><plain>To our knowledge this is the first report of Cebpe deregulation in EVI1-induced leukemia. </plain></SENT>
+</text></p></sec><sec id="s3b"><title><text><SENT sid="451" pm="."><plain>Deregulation of Jak-Stat Signaling in EVI1 Leukemia </plain></SENT>
+</text></title><p><text><SENT sid="452" pm="."><plain>Global biological function analysis using all significant EVI1 binding gene targets revealed the Pathways in cancer and Jak-Stat signaling pathways were most aberrant. </plain></SENT>
+<SENT sid="453" pm="."><plain>Given a surprising 88% of the EVI1 binding sites contained an ETS-like AGGAAG binding motif, we repeated the analysis using only EVI1 gene targets with the motif. </plain></SENT>
+<SENT sid="454" pm="."><plain>This revealed the Jak-Stat signaling was the most significantly enriched KEGG pathway. </plain></SENT>
+<SENT sid="455" pm="."><plain>We found EVI1 significantly binds to the promoter region of a remarkable 50 gene targets involved in the Jak-Stat signaling pathway (Figure 10). </plain></SENT>
+<SENT sid="456" pm="."><plain>Of these 50 genes, expression levels of 10 were significantly aberrant. </plain></SENT>
+</text></p><p><text><SENT sid="457" pm="."><plain>Jak-Stat signaling is one of the principal mechanism by which extracellular signals, specifically cytokines and growth factors, are translated into intracellular responses [65]. </plain></SENT>
+<SENT sid="458" pm="."><plain>Various ligands such as erythropoietin, growth hormones, interferons and interleukins bind their cognate receptors which are associated with JAK tyrosine kinases (JAK1, JAK2, JAK 3 and TYK2) [66], [67]. </plain></SENT>
+<SENT sid="459" pm="."><plain>Upon ligand binding, JAKs are transphosphorylated and subsequently phosphorylate latent STAT transcription factors in the cytoplasm. </plain></SENT>
+<SENT sid="460" pm="."><plain>Phosphorylated STATs enter the nucleus and activate or repress gene targets critical for cellular differentiation, proliferation and death [68]. </plain></SENT>
+<SENT sid="461" pm="."><plain>STAT transcription factors are regulated through various inhibitory factors, including the suppressor of cytokine signaling (SOCS) proteins [69]. </plain></SENT>
+</text></p><p><text><SENT sid="462" pm="."><plain>Excessive Jak-Stat signaling activation results in numerous inflammatory diseases and hematopoietic disorders such as essential thrombocythemia, polycythemia vera, myelofibrosis and leukemias [66], [67]. </plain></SENT>
+<SENT sid="463" pm="."><plain>JAK2 mutations which induce auto-activation of STAT proteins have been well documented in AML [67]. </plain></SENT>
+<SENT sid="464" pm="."><plain>Constitutive activation of STAT 1, 3 and 5 in proliferating human AML blasts have also been reported [70]. </plain></SENT>
+<SENT sid="465" pm="."><plain>We identified Socs1, which encodes for an inhibitor of STAT transcription factors, was significantly downregulated by 5.7-fold in DA-1 EVI1 leukemic cells, and by 4.4-fold in NFS-60 EVI1 leukemic cells. </plain></SENT>
+<SENT sid="466" pm="."><plain>We identified 8 significant EVI1 DNA binding sites for Socs1, 3 of which were within the promoter region. </plain></SENT>
+<SENT sid="467" pm="."><plain>Two significant EVI1 binding sites were also identified for Socs3, but not for Socs2. </plain></SENT>
+<SENT sid="468" pm="."><plain>Interestingly, we also found EVI1 significantly binds to and overactivates Stat1 and Stat5 genes in one of the Evi1 overexpressed murine cell lines (NFS-60). </plain></SENT>
+<SENT sid="469" pm="."><plain>We therefore examined if phosphorylated STAT1 protein was increased in two separate human hematopoietic cell lines with verified Evi1 overexpression (Kasumi 3 and U937+Evi1). </plain></SENT>
+<SENT sid="470" pm="."><plain>We found an increased level of endogenous STAT1 protein phosphorylation in Kasumi 3 Evi1 overexpressed leukemic cells. </plain></SENT>
+<SENT sid="471" pm="."><plain>However, we also noted a marked elevation of total STAT1 protein in these cells, which was consistent with our mRNA findings. </plain></SENT>
+<SENT sid="472" pm="."><plain>Given the baseline level of total STAT1 was much higher in Evi1 overexpressed leukemic cells, it is unclear at this point if EVI1 directly overactivates Jak-Stat signaling via STAT activation. </plain></SENT>
+<SENT sid="473" pm="."><plain>Although there is a clear interaction between EVI1 and the Jak-Stat pathway, further studies are necessary to elucidate potential mechanisms. </plain></SENT>
+</text></p><p><text><SENT sid="474" pm="."><plain>Osm (oncostatin M), which encodes for a cytokine in the interleukin 6 family, was also significantly downregulated in our EVI1 leukemic cells. </plain></SENT>
+<SENT sid="475" pm="."><plain>The role of OSM in malignancy remains unclear. </plain></SENT>
+<SENT sid="476" pm="."><plain>Yoshimura et al demonstrated Osm is a downstream target of the Jak-Stat pathway [71], transcriptionally induced by cytokines that specifically activate STAT5. </plain></SENT>
+<SENT sid="477" pm="."><plain>OSM has been reported to act as a growth factor in myeloid neoplasms and has also been shown to inhibit proliferation of numerous malignant cell lines, including murine M1 myeloid leukemic cells [72]. </plain></SENT>
+<SENT sid="478" pm="."><plain>OSM also induces differentiation of M1 monocytic leukemia cells and suppresses embryonic stem cell function [73]. </plain></SENT>
+<SENT sid="479" pm="."><plain>We identified 7 significant EVI1 binding sites for Osm, 6 which were within the promoter region. </plain></SENT>
+<SENT sid="480" pm="."><plain>EVI1 binding was associated with a significant decrease in transcription in both DA-1 and NFS-60 leukemic cells (13-fold and 1.8-fold decrease, respectively). </plain></SENT>
+<SENT sid="481" pm="."><plain>This suggests downregulation of Osm may have an important role in failure of myeloid differentiation in EVI1-induced leukemogenesis. </plain></SENT>
+</text></p><p><text><SENT sid="482" pm="."><plain>We also identified a significant increase in Ube1l expression in both EVI1 leukemic cell lines (DA-1 cells 2.5-fold and NFS-60 cells 2-fold upregulation). </plain></SENT>
+<SENT sid="483" pm="."><plain>UBE1L is an E1 ubiquitin-like enzyme that is activated at the transcriptional level by type I interferons. </plain></SENT>
+<SENT sid="484" pm="."><plain>UBE1L is required for the conjugation and function of interferon stimulating gene 15 protein (ISG15) [50], a critical modifier of Jak-Stat pathway proteins [51]. Isg15 is one of the strongest genes induced by type I interferons in response to cellular stress and infection. </plain></SENT>
+<SENT sid="485" pm="."><plain>Upregulation of ISG15 activity has been associated with several cancers [74], [75]. </plain></SENT>
+<SENT sid="486" pm="."><plain>UBE1L E1 enzyme charges ISG15 by forming a thiolester intermediate suitable for transfer to the UBCH8 E2 enzyme [76]. </plain></SENT>
+<SENT sid="487" pm="."><plain>Cong et al demonstrated multipotent hematopoietic progenitor cells from Ube1L deficient mice exhibit a G2/M phase block and delay in cellular proliferation, without an effect on survival or differentiation functions [77]. </plain></SENT>
+<SENT sid="488" pm="."><plain>We identified 2 significant EVI1 DNA binding sites for Ube1l, both of which were within the promoter region, and associated with a significant increase in Ube1l expression in both EVI1 leukemic cell lines. </plain></SENT>
+<SENT sid="489" pm="."><plain>These results suggest EVI1 leukemic cells may harbor sensitivity to cellular stress or inflammatory responses, resulting in uncontrolled cellular proliferation mediated by aberrant UBE1L-ISG15 activation. </plain></SENT>
+</text></p></sec><sec id="s3c"><title><text><SENT sid="490" pm="."><plain>Serpinb2 Downregulation in EVI1 Leukemia </plain></SENT>
+</text></title><p><text><SENT sid="491" pm="."><plain>Serpinb2, which encodes for a serine protease inhibitor, was significantly bound by EVI1 and downregulated by &gt;10-fold in both Evi1 overexpressed leukemic cell lines. Serpinb2 encodes for plasminogen activator inhibitor (PAI-2), a coagulation factor that inhibits tissue plasminogen activator and urokinase. </plain></SENT>
+<SENT sid="492" pm="."><plain>PAI-2 exists in a secreted, extracellular glycosylated form and an unsecreted intracellular form. </plain></SENT>
+<SENT sid="493" pm="."><plain>PAI-2 is present in monocytes and exists predominantly in the cell cytosol as a 47 kDa nonglycosylated intracellular form [78]. </plain></SENT>
+<SENT sid="494" pm="."><plain>However the intracellular role of PAI-2 is still being established [79]. </plain></SENT>
+</text></p><p><text><SENT sid="495" pm="."><plain>Some studies report PAI-2 plays a critical role in cell cycle regulation [80], [81]. </plain></SENT>
+<SENT sid="496" pm="."><plain>Nuclear PAI-2 has been shown to bind to the retinoblastoma protein (Rb), a tumor suppressor that prevents excessive cellular division [80]. </plain></SENT>
+<SENT sid="497" pm="."><plain>Inactivation of Rb is associated with malignancy [82]. </plain></SENT>
+<SENT sid="498" pm="."><plain>PAI-2 protects Rb from proteolysis and inhibits its turnover, leading to accelerated Rb-mediated cellular senescence [80]. </plain></SENT>
+<SENT sid="499" pm="."><plain>Monocytes constitutively express PAI-2, but under stress increase Serpinb2 expression to surprisingly high levels (up to 10,000- fold) [83]. </plain></SENT>
+<SENT sid="500" pm="."><plain>Interestingly, THP-1 monocyte cells do not produce a functionally active PAI-2 protein due to a translocation anomaly [84]. </plain></SENT>
+<SENT sid="501" pm="."><plain>Yu et al demonstrated transfection of wildtype active PAI-2 into THP-1 cells rescues accelerated cellular proliferation [81]. </plain></SENT>
+<SENT sid="502" pm="."><plain>We found significantly decreased Serpinb2 expression in EVI1 leukemic cells, suggesting it may play an important role in enhancing cellular proliferation by preventing protection of Rb proteolysis. </plain></SENT>
+</text></p><p><text><SENT sid="503" pm="."><plain>Alternatively, the decrease in Serpinb2 expression found in EVI1 leukemic cells may be a marker of reduced differentiation in immature myeloid cells. </plain></SENT>
+<SENT sid="504" pm="."><plain>PAI-2 gene activation has been associated with monocyte differentiation in U-937 monocyte-like cells [85]. </plain></SENT>
+<SENT sid="505" pm="."><plain>Suppressed Serpinb2 expression may be a reflection of EVI1-induced inhibition of myeloid differentiation. </plain></SENT>
+</text></p><p><text><SENT sid="506" pm="."><plain>The PAI-2 promoter is tightly regulated under the control of an upstream silencer element (located between −1977 and −1675, termed PAUSE-1) and a repressor element (between −219 and −1100) [86]. </plain></SENT>
+<SENT sid="507" pm="."><plain>We identified a very prominent EVI1 binding site which lies directly within the Serpinb2 silencer element (position −1745), suggesting EVI1 can potentially disrupt or alter normal binding and function of PAUSE-1 transcription factors. </plain></SENT>
+<SENT sid="508" pm="."><plain>A 67kDa PAUSE-1 BP complex has been shown to bind the silencer element. </plain></SENT>
+<SENT sid="509" pm="."><plain>However, cooperative DNA-binding partners have yet to be identified and may be an area for future study. </plain></SENT>
+<SENT sid="510" pm="."><plain>Additionally, AP1-like elements, AP1a (position −103 to −97) and AP1b (position −114 to −108) have been identified to bind to regulatory elements of Serpinb2 and induce transcriptional regulation [86]. </plain></SENT>
+<SENT sid="511" pm="."><plain>We have shown EVI1 binds Serpinb2 to reduce its expression. </plain></SENT>
+<SENT sid="512" pm="."><plain>Bard et al previously demonstrated AP1 physically interacts with EVI1 and frequently shares promoter binding to putative target genes [28]. </plain></SENT>
+<SENT sid="513" pm="."><plain>Collectively, these results suggest the EVI/AP1 may bind Serpinb2 as a complex to reduce expression and increase cellular proliferation in leukemic cells. </plain></SENT>
+</text></p></sec><sec id="s3d"><title><text><SENT sid="514" pm="."><plain>Disruption of Apoptosis Mediated by Downregulation of ATP-Dependent Purinoceptors </plain></SENT>
+</text></title><p><text><SENT sid="515" pm="."><plain>We identified significant downregulation of several genes that encode for ligand gated P2 purinoreceptors, specifically P2rx3, Prx4, and P2rx7 in EVI1 leukemic cells. P2rx7 was of particular interest, given its well established role in regulating apoptosis in macrophages [87], [88], [89]. </plain></SENT>
+<SENT sid="516" pm="."><plain>P2RX7 is a cell surface ATP receptor involved in rapid cell death via calcium influx, and is primarily expressed in macrophages and neutrophils [87]. </plain></SENT>
+<SENT sid="517" pm="."><plain>The ionotropic ligand gated channel is activated by graded doses of ATP which induces reversible permeabilization of the plasma membrane. </plain></SENT>
+<SENT sid="518" pm="."><plain>After channel opening, calcium influx and rapid depolarization [90], [91] leads to a signaling cascade that have been linked to superoxide-mediated mechanisms [89], [92]. </plain></SENT>
+<SENT sid="519" pm="."><plain>Suh et al demonstrated that P2RX7 activation is coupled to the generation of superoxides in human neutrophils [89]. </plain></SENT>
+<SENT sid="520" pm="."><plain>However, the mechanism by which the superoxide production cascade occurs remains unclear. </plain></SENT>
+</text></p><p><text><SENT sid="521" pm="."><plain>Previous studies have also shown P2RX7 activation results in release of interferon-1β, accumulation of transcription factors that mediate apoptosis, specifically NFAT and NFKβ [93], [94], and macrophage cell death [87]. </plain></SENT>
+<SENT sid="522" pm="."><plain>P2RX7 activation has also been associated with increased caspase-1 and caspase-3 activity [88]. </plain></SENT>
+<SENT sid="523" pm="."><plain>Caspase inhibitors have shown to inhibit P2RX7-induced NFKβ activity [92]. </plain></SENT>
+<SENT sid="524" pm="."><plain>Humphreys et al demonstrated P2RX7 stimulation with ATP rapidly elevates caspase-3 protease activity associated with DNA fragmentation, and is also strongly linked to upregulation of the c-Jun N-terminal kinase pathway [95]. </plain></SENT>
+<SENT sid="525" pm="."><plain>Failure of apoptosis due to P2 purinoreceptor dysfunction has been implicated in previous studies [96], [97]. </plain></SENT>
+<SENT sid="526" pm="."><plain>We report here that EVI1 binds to 3 sites within the P2rx7 gene promoter region with significant reduction of P2rx7 transcription leukemic cells. </plain></SENT>
+<SENT sid="527" pm="."><plain>Our study provides evidence for a potential new mechanism of apoptotic deregulation in the development of AML via ion channel regulation. </plain></SENT>
+</text></p></sec><sec id="s3e"><title><text><SENT sid="528" pm="."><plain>EVI1 Significantly Binds to an ETS-like Binding Motif </plain></SENT>
+</text></title><p><text><SENT sid="529" pm="."><plain>We identified 14,672 ChIP-Seq peaks (88%) with an AGGAAG ETS-like motif. </plain></SENT>
+<SENT sid="530" pm="."><plain>Over 4,500 peaks with this motif were within promoter regions of an annotated gene. </plain></SENT>
+<SENT sid="531" pm="."><plain>Our results are consistent with the only other reported EVI1 ChIP-Seq study, which was performed in human ovarian cancer cells. </plain></SENT>
+<SENT sid="532" pm="."><plain>Their study demonstrated over 5,000 significant EVI1 peaks contained an ETS-like binding motif [28] [28]. </plain></SENT>
+<SENT sid="533" pm="."><plain>The ETS family includes 28 transcription factors in the mouse and has been reported to be important in tissue development and cancer progression [98]. </plain></SENT>
+</text></p><p><text><SENT sid="534" pm="."><plain>Shared transcription factor analysis revealed the ETS-like transcription factor ELK1, significantly occupied binding sites with EVI1 promoter regions. </plain></SENT>
+<SENT sid="535" pm="."><plain>ELK1 is one of the most studied ETS-like transcription factors [99] and has been implicated in several malignancies, including bladder, breast, esophageal cancers and glioblastoma [99], [100], [101], [102], [103]. </plain></SENT>
+<SENT sid="536" pm="."><plain>Interestingly, a recent ELK1 ChIP-Seq study demonstrated ELK1 binds to redundant DNA regions in cooperation with another ETS-like transcription factor, GABPA 104. </plain></SENT>
+<SENT sid="537" pm="."><plain>However, regions that are occupied by ELK1 but not GAPBA were defined as unique regions associated with gene expression of critical cellular functions. </plain></SENT>
+<SENT sid="538" pm="."><plain>Putative ELK1 competition with GABPA, and potentially other ETS proteins, presents an interesting area for additional study. </plain></SENT>
+</text></p><p><text><SENT sid="539" pm="."><plain>In summary, these findings represent the first global genome-wide study of EVI1 DNA binding associated with whole transcriptome expression analysis. </plain></SENT>
+<SENT sid="540" pm="."><plain>Our results reveal several important genes with an ETS-like binding motif, is involved in terminal myeloid differentiation, cell cycle regulation and apoptosis [Figure 11]. </plain></SENT>
+<SENT sid="541" pm="."><plain>The Jak-stat pathway and response to inflammatory and stress conditions were notably aberrant. </plain></SENT>
+<SENT sid="542" pm="."><plain>We have previously shown that small molecule inhibitors against EVI1 gene targets can be designed to successfully block its binding [20]. </plain></SENT>
+<SENT sid="543" pm="."><plain>This study provides a list of critical genes that can be targeted for future anti-leukemic therapies. </plain></SENT>
+<SENT sid="544" pm="."><plain>We demonstrate that several gene targets work in concert to drive leukemogenesis. </plain></SENT>
+<SENT sid="545" pm="."><plain>This suggest a cocktail of inhibitors targeting a select number of DNA sites, rather than a drug targeting an isolated gene, may be a more promising approach for developing a cure for EVI1-induced leukemogenesis. </plain></SENT>
+</text></p><SecTag type="FIG"><fig id="pone-0067134-g011" orientation="portrait" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0067134.g011</object-id><label>Figure 11</label><caption><title><text><SENT sid="546" pm="."><plain>Summary diagram of critical genes involved in EVI1 leukemia. </plain></SENT>
+</text></title></caption><graphic xlink:href="pone.0067134.g011"/></fig></SecTag></sec></sec></SecTag><SecTag type="METHODS"><sec sec-type="materials|methods" id="s4"><title><text><SENT sid="547" pm="."><plain>Materials and Methods </plain></SENT>
+</text></title><sec id="s4a"><title><text><SENT sid="548" pm="."><plain>shRNA Suppression of Evi11 and RNA-Sequencing </plain></SENT>
+</text></title><p><text><SENT sid="549" pm="."><plain>Evi1 expressing AML cell lines (DA-1 [105]and NFS-60 [106]) were transduced with retrovirus expressing EVI1 targeting shRNAs (sh11 and sh54) and OFF-targeting shRNAs (shScr and shLuc). </plain></SENT>
+<SENT sid="550" pm="."><plain>After 48 hrs cells were selected for puromycin-resistance for 48 hrs and purified on Ficoll-Paque PLUS gradient (GE healthcare Bio-Sciences AB; Uppsula Sweden). </plain></SENT>
+<SENT sid="551" pm="."><plain>Ficoll-buoyant cells were harvested and Western blot analyses of protein extracts from DA-1 and NFS-60 cells transduced with control (shScr) or anti-Evi1 (sh11) was completed using anti-EVI1 serum. </plain></SENT>
+<SENT sid="552" pm="."><plain>Total RNA was prepared with Qiagen RNeasy plus kit with QIAshredders (Qiagen Sciences; Maryland). </plain></SENT>
+<SENT sid="553" pm="."><plain>Quantitative RT-PCR analysis of Evi1 transcript levels in DA-1 and NFS-60 cells were performed following retroviral infection with the shRNA constructs. </plain></SENT>
+<SENT sid="554" pm="."><plain>200 ng of RNA per sample were processed with Illumina TruSeq RNA High-Throughput sample preparation protocol (Illumina,Inc; SanDiego, CA) and analyzed on Genome Analyzer IIx (Illumina,Inc; SanDiego, CA). </plain></SENT>
+</text></p></sec><sec id="s4b"><title><text><SENT sid="555" pm="."><plain>Evi1 Overexpression in Human Hematopoietic Cell Lines </plain></SENT>
+</text></title><p><text><SENT sid="556" pm="."><plain>Kasumi 3 cells, an established human AML cell line with 3q27 translocation and Evi1 overexpression were purchased from ATCC® and expanded in RPMI-1640 media with 10% FBS. </plain></SENT>
+<SENT sid="557" pm="."><plain>Kasumi 1 cells, a leukemic cell line with 8q21 translocation and without Evi1 overexpression was used as a control to demonstrate downregulation of significant genes. </plain></SENT>
+<SENT sid="558" pm="."><plain>U937 histiocytic lymphoma cells purchased from ATCC® were retrovirally transduced with an Evi1 construct to overexpress EVI1. </plain></SENT>
+<SENT sid="559" pm="."><plain>T293 cells were transfected using the Gag Pol and VSV viral packaging system. </plain></SENT>
+<SENT sid="560" pm="."><plain>Forty eight hours post tranfection the viral supernatant was used to infect U937 wildtype cells. </plain></SENT>
+<SENT sid="561" pm="."><plain>A Western blot was performed to confirm overexpression of EVI1 (Figure 12). </plain></SENT>
+<SENT sid="562" pm="."><plain>U937 cells with Evi1 overexpression were sorted using flow cytometry using the green fluorescent protein selection marker. </plain></SENT>
+</text></p><SecTag type="FIG"><fig id="pone-0067134-g012" orientation="portrait" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0067134.g012</object-id><label>Figure 12</label><caption><title><text><SENT sid="563" pm="."><plain>Western blot to confirm EVI1 overexpression. </plain></SENT>
+</text></title><p><text><SENT sid="564" pm="."><plain>T293 cells were transfected using the Gag Pol and VSV viral packaging system. </plain></SENT>
+<SENT sid="565" pm="."><plain>Forty-eight hours post tranfection the viral supernatant was used to infect U937 wildtype cells. </plain></SENT>
+<SENT sid="566" pm="."><plain>This figure shows the Western blot to confirm overexpression of EVI1 in U937 cells. </plain></SENT>
+<SENT sid="567" pm="."><plain>Lane 1 from the left shows no EVI1 band in U937 wildtype cells while lane 2 represents EVI1 expression in transfected U937 cells with Evi1 construct. </plain></SENT>
+</text></p></caption><graphic xlink:href="pone.0067134.g012"/></fig></SecTag></sec><sec id="s4c"><title><text><SENT sid="568" pm="."><plain>Western Blot in Human Leukemic Cells </plain></SENT>
+</text></title><p><text><SENT sid="569" pm="."><plain>Immunoblot analysis using the EVI1 C-terminal antibody was performed. </plain></SENT>
+<SENT sid="570" pm="."><plain>Approximately 3 million cells were lysed in ice cold RIPA buffer with protease and phosphatase inhibitors. </plain></SENT>
+<SENT sid="571" pm="."><plain>A Bradford assay was used to calculate protein concentrations for each sample (Kasumi 1, Kasumi 3, U937 wildtype. </plain></SENT>
+<SENT sid="572" pm="."><plain>U937+ Evi1). </plain></SENT>
+<SENT sid="573" pm="."><plain>Samples were diluted in 5X SDS buffer for equal concentration gel loading. </plain></SENT>
+<SENT sid="574" pm="."><plain>Beta actin was used as a gel loading control (Figure 4). </plain></SENT>
+<SENT sid="575" pm="."><plain>Protein transfer to a nitrocellulose membrane was completed as previously described. </plain></SENT>
+<SENT sid="576" pm="."><plain>Primary antibodies included anti-phosph-STAT1 (Cell Signaling®, 1∶1000 dilution), anti-STAT1 (BD Transduction®, 1∶1000 dilution) and anti-beta-actin (Cell Signaling®, 1∶1000 dilution). </plain></SENT>
+<SENT sid="577" pm="."><plain>Conjugated HRP sheep-anti mouse and donkey-anti rabbit secondary antibodies were used (GE Healthcare®). </plain></SENT>
+<SENT sid="578" pm="."><plain>The Biorad® ChemiDoc™ XRS+ System and Image Lab software were used to detect chemiluminescence. </plain></SENT>
+</text></p></sec><sec id="s4d"><title><text><SENT sid="579" pm="."><plain>ChIP-Seq and PCR </plain></SENT>
+</text></title><p><text><SENT sid="580" pm="."><plain>ChIP was completed using a lyophilized Staph A Cell (Pansorbin®) Assay Protocol as previously described [107]. </plain></SENT>
+<SENT sid="581" pm="."><plain>Antisera specific for the N- and C-terminus of the murine EVI1 protein (GenBank™ accession number M21829) were generated using purified protein as previously described [23]. </plain></SENT>
+<SENT sid="582" pm="."><plain>Immunoprecipitation was performed using EVI1 antisera, with no antibody and rabbit IgG as negative controls. </plain></SENT>
+<SENT sid="583" pm="."><plain>Confirmation of genomic DNA for selected EVI1 binding target genes was completed with quantitative PCR reactions using the appropriate positive and negative control primers (Table 5). </plain></SENT>
+<SENT sid="584" pm="."><plain>Input DNA libraries were prepared and sequenced using the SOLiD™ System (Applied Biosystems) platform [53], [54]. </plain></SENT>
+<SENT sid="585" pm="."><plain>PCR reaction primers for cDNA expression in human Kasumi1, Kasumi3, U937 wildtype and U937+Evi1 are listed in Table 6. </plain></SENT>
+</text></p><SecTag type="TABLE"><table-wrap id="pone-0067134-t005" orientation="portrait" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0067134.t005</object-id><label>Table 5</label><caption><title><text><SENT sid="586" pm="."><plain>Quantitative PCR primer sets used to confirm novel EVI1 target genes. </plain></SENT>
+</text></title></caption><alternatives><graphic id="pone-0067134-t005-5" xlink:href="pone.0067134.t005"/><table frame="hsides" rules="groups"><colgroup span="1"><col align="left" span="1"/><col align="center" span="1"/><col align="center" span="1"/></colgroup><thead><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="587" pm="."><plain>Gene </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="588" pm="."><plain>Forward Primer </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="589" pm="."><plain>Reverse Primer </plain></SENT>
+</text></td></tr></thead><tbody><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="590" pm="."><plain>Cebpe </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="591" pm="."><plain>GCC GAG CTT ATC TCC CA </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="592" pm="."><plain>GGA AAT CCC TAT CAC CAC </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="593" pm="."><plain>P2rx7 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="594" pm="."><plain>GAC TGT CAC CAG CAG CA </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="595" pm="."><plain>GGA GCT GAT AAC AGG CT </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="596" pm="."><plain>Serpinb2 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="597" pm="."><plain>GCA CGA TAT GCT GTC AT </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="598" pm="."><plain>TAC TCC AGG AAG GAA GAG </plain></SENT>
+</text></td></tr></tbody></table></alternatives></table-wrap></SecTag><SecTag type="TABLE"><table-wrap id="pone-0067134-t006" orientation="portrait" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0067134.t006</object-id><label>Table 6</label><caption><title><text><SENT sid="599" pm="."><plain>PCR primer sets used to confirm significantly downregulated cDNA expression levels in Evi1 overexpressed human cell lines. </plain></SENT>
+</text></title></caption><alternatives><graphic id="pone-0067134-t006-6" xlink:href="pone.0067134.t006"/><table frame="hsides" rules="groups"><colgroup span="1"><col align="left" span="1"/><col align="center" span="1"/><col align="center" span="1"/></colgroup><thead><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="600" pm="."><plain>Gene </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="601" pm="."><plain>Forward Primer </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="602" pm="."><plain>Reverse Primer </plain></SENT>
+</text></td></tr></thead><tbody><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="603" pm="."><plain>Cebpe </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="604" pm="."><plain>AGCTAGGGGACATGTGT </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="605" pm="."><plain>TGGAGGGTAGGCAAA </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="606" pm="."><plain>Serpinb2 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="607" pm="."><plain>CCAAGCCATGGTGGATGTG </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="608" pm="."><plain>TGGGCCTCCATGTCCAGTT </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="609" pm="."><plain>Beta Actin </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="610" pm="."><plain>TGGATGATGATATCGCC </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="611" pm="."><plain>ATGCCTCTCTTGCTCTG </plain></SENT>
+</text></td></tr></tbody></table></alternatives></table-wrap></SecTag></sec><sec id="s4e"><title><text><SENT sid="612" pm="."><plain>Computational and Functional Analysis </plain></SENT>
+</text></title><p><text><SENT sid="613" pm="."><plain>The ChIP-Seq read were mapped to a reference genome by bowtie program, allowing two mismatches. </plain></SENT>
+<SENT sid="614" pm="."><plain>Multiple aligned reads were removed from the analysis. </plain></SENT>
+<SENT sid="615" pm="."><plain>The aligned sequence reads were displayed as a track onto the mouse reference genome using the University of California at Santa Cruz (UCSC) genome browser (<ext-link ext-link-type="uri" xlink:href="http://genome.ucsc.edu/index.html">http://genome.ucsc.edu/index.html</ext-link>) for visual inspection. </plain></SENT>
+<SENT sid="616" pm="."><plain>To determine where the EVI1 bound to the genome, we applied the MACS program to look for areas where there were significantly more enriched reads mapped in the ChIP sample. </plain></SENT>
+<SENT sid="617" pm="."><plain>The Stanford Genomic Regions Enrichment of Annotations Tool (GREAT v1.2.6) was used to assign significant peaks (non-coding genomic regions) to annotated genes in cis [56]. </plain></SENT>
+<SENT sid="618" pm="."><plain>A 500bp DNA sequence was extracted around each peak and run against MEME and TPD programs to identify potential EVI1 consensus binding motifs. </plain></SENT>
+<SENT sid="619" pm="."><plain>The MATCH program in the TRANSFAC database was used to perform the search for the enrichment of other transcription factors binding sites (TFBS) in the ±250 bp regions centered on the annotated EVI1 binding sites. </plain></SENT>
+<SENT sid="620" pm="."><plain>We set up a filtering step utilizing the cross-species conservation information. </plain></SENT>
+<SENT sid="621" pm="."><plain>The conservation score for each TFBS was evaluated to be the average phastCons score within the TFBS region. </plain></SENT>
+<SENT sid="622" pm="."><plain>A cut-off of 0.5 for the conservation score was applied here and Fisher’s exact test was used to detected statistical significance. </plain></SENT>
+</text></p><p><text><SENT sid="623" pm="."><plain>Integrated functional pathway analysis using DAVID and GSEA were completed for gene lists generated from significantly up and downregulated transcripts with EVI1 DNA binding sites. </plain></SENT>
+<SENT sid="624" pm="."><plain>For GSEA, a hypergeometric distribution was used to determine enrichment score (FDR &lt;0.10) when compared to curated GSEA gene sets C2-C5. </plain></SENT>
+<SENT sid="625" pm="."><plain>C2-C5 collection of gene sets included data from over 340 PubMed articles and online databases from Biocarta, Gene array, BioScience Corp, KEGG, Reactome, Sigma-Aldrich Pathways, Signal Transduction Knowledge Environment and Signaling Gateway [108]. </plain></SENT>
+</text></p></sec></sec></SecTag><SecTag type="SUPPL"><sec sec-type="supplementary-material" id="s5"><title><text><SENT sid="626" pm="."><plain>Supporting Information </plain></SENT>
+</text></title><supplementary-material content-type="local-data" id="pone.0067134.s001"><label>Dataset S1</label><caption><p><text><SENT sid="627" pm="."><plain>RNA-Seq data in  Evi1  overexpressed myeloid leukemic cells (DA-1, NFS-60) and in shRNA  Evi1  knockdown cells. To identify genes differentially expressed between Evi1 overexpressed myeloid leukemic cells (DA-1, NFS-60) and in shRNA Evi1 knockdown cells, RNA was extracted to generate transcriptome-wide expression profiles. </plain></SENT>
+<SENT sid="628" pm="."><plain>High throughput parallel sequencing revealed 806 significantly deregulated (p&lt;0.05) genes in DA-1 cells (481 upregulated, 325 downregulated in the Evi1 overexpressed cells compared to the Evi1 shRNA knockdown) and 782 deregulated genes in the NFS-60 cell line (437 upregulated, 345 downregulated). </plain></SENT>
+</text></p><p><text><SENT sid="629" pm="."><plain>(XLS) </plain></SENT>
+</text></p></caption><media xlink:href="pone.0067134.s001.xls"><caption><p><text><SENT sid="630" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="pone.0067134.s002"><label>Dataset S2</label><caption><p><text><SENT sid="631" pm="."><plain>Genes differentially expressed between DA-1  Evi1  overexpressed myeloid leukemic cells and in shRNA  Evi1  knockdown cells, In DA-1 Evi1 overexpressed leukemic cells, a high number (N = 6) of significantly downregulated direct gene targets of C/EBP-ε were identified. </plain></SENT>
+</text></p><p><text><SENT sid="632" pm="."><plain>(XLS) </plain></SENT>
+</text></p></caption><media xlink:href="pone.0067134.s002.xls"><caption><p><text><SENT sid="633" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="pone.0067134.s003"><label>Dataset S3</label><caption><p><text><SENT sid="634" pm="."><plain>Genes differentially expressed between NFS-60  Evi1  overexpressed myeloid leukemic cells and in shRNA  Evi1  knockdown cells, In NFS-60 leukemic cells, 3 C/EBP-ε direct gene targets were also significantly downregulated. </plain></SENT>
+<SENT sid="635" pm="."><plain>These results demonstrate EVI1 leukemic cells induce downregulation of Cebpe expression, but also repress downstream target genes of the master differentiation regulator. </plain></SENT>
+</text></p><p><text><SENT sid="636" pm="."><plain>(XLS) </plain></SENT>
+</text></p></caption><media xlink:href="pone.0067134.s003.xls"><caption><p><text><SENT sid="637" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="pone.0067134.s004"><label>Dataset S4</label><caption><p><text><SENT sid="638" pm="."><plain>EVI1 binds within the promoter region of an annotated gene. MEME identified an AGGAAG ETS-like motif (E-value = 2.1e-193). </plain></SENT>
+<SENT sid="639" pm="."><plain>Eighty-eight percent of significant peaks contained at least one of this ETS-like motif. </plain></SENT>
+<SENT sid="640" pm="."><plain>Of these, 4,585 peaks were within promoter regions of an annotated gene. </plain></SENT>
+</text></p><p><text><SENT sid="641" pm="."><plain>(XLS) </plain></SENT>
+</text></p></caption><media xlink:href="pone.0067134.s004.xls"><caption><p><text><SENT sid="642" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="pone.0067134.s005"><label>Dataset S5</label><caption><p><text><SENT sid="643" pm="."><plain>The Stanford GREAT Analysis Tool (Bejerano Lab). To provide biological meaning to the significant EVI1 peaks, peaks were assigned to nearby annotated genes and associated with 8565 genes. </plain></SENT>
+</text></p><p><text><SENT sid="644" pm="."><plain>(XLS) </plain></SENT>
+</text></p></caption><media xlink:href="pone.0067134.s005.xls"><caption><p><text><SENT sid="645" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="pone.0067134.s006"><label>Dataset S6</label><caption><p><text><SENT sid="646" pm="."><plain>Deregulated genes in both DA-1 and NFS-60 cell lines. Of the 35 significantly upregulated and 42 downregulated genes shared by both EVI1 leukemic cell lines, 86% exhibited significant EVI1 DNA binding and deregulation of transcription. </plain></SENT>
+</text></p><p><text><SENT sid="647" pm="."><plain>(XLS) </plain></SENT>
+</text></p></caption><media xlink:href="pone.0067134.s006.xls"><caption><p><text><SENT sid="648" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media></supplementary-material></sec></SecTag></body><back><SecTag type="ACK_FUND"><ack><p><text4fund><text><SENT sid="649" pm="."><plain>We thank Dr. Anthony Almudevar, University of Rochester Department of Computational Biology, for his bioinformatics and statistical analysis consultation. </plain></SENT>
+</text></text4fund></p></ack></SecTag><SecTag type="REF"><ref-list><title>References</title><ref id="pone.0067134-Koos1"><text><SENT sid="650" pm="."><plain>1 KoosBr, BenderS, WittH, MertschS, FelsbergJr, et al (2011) The Transcription Factor Evi-1 Is Overexpressed, Promotes Proliferation, and Is Prognostically Unfavorable in Infratentorial Ependymomas. Clinical Cancer Research 17: 3631–3637.21493867 </plain></SENT>
+</text></ref><ref id="pone.0067134-Jazaeri1"><text><SENT sid="651" pm="."><plain>2 JazaeriAA, FerrissJS, BryantJL, DaltonMS, DuttaA (2010) Evaluation of EVI1 and EVI1s (Œî324) as potential therapeutic targets in ovarian cancer. Gynecologic Oncology 118: 189–195.20462630 </plain></SENT>
+</text></ref><ref id="pone.0067134-Balgobind1"><text><SENT sid="652" pm="."><plain>3Balgobind BV, Lugthart S, Hollink IH, Arentsen-Peters STJCM, van Wering ER, et al.. </plain></SENT>
+<SENT sid="653" pm="."><plain>(2010) EVI1 overexpression in distinct subtypes of pediatric acute myeloid leukemia. </plain></SENT>
+<SENT sid="654" pm="."><plain>Leukemia\ 24\: 942\-949\. </plain></SENT>
+</text></ref><ref id="pone.0067134-Bindels1"><text><SENT sid="655" pm="."><plain>4 BindelsEMJ, HavermansM, LugthartS, ErpelinckC, WocjtowiczE, et al (2012) EVI1 is critical for the pathogenesis of a subset of MLL-AF9‚Äìrearranged AMLs. Blood 119: 5838–5849.22553314 </plain></SENT>
+</text></ref><ref id="pone.0067134-Fears1"><text><SENT sid="656" pm="."><plain>5 FearsS, MathieuC, Zeleznick-LeN, HuangS, RowleyJ, et al (1996) Intergenic splicing of MDS1 and EVI1 occurs in normal tissues as well as in myeloid leukemia and produces a new member of the PR domain family. Proc Natl Acad Sci USA 93: 1642–1647.8643684 </plain></SENT>
+</text></ref><ref id="pone.0067134-Buonamici1"><text><SENT sid="657" pm="."><plain>6 BuonamiciS, ChakrabortyS, SenyukV, NuciforaG (2003) The role of EVI1 in normal and leukemic cells. Blood cells, Molecules, and Diseases 31: 206–212. </plain></SENT>
+</text></ref><ref id="pone.0067134-Lugthart1"><text><SENT sid="658" pm="."><plain>7 LugthartS, GroschelS, BeverlooH, KayserS, ValkP, et al (2010) Clinical, Molecular, and Prognostic Significance of WHO Type inv(3)(q21q26.2)/t(3;3)(q21;q26.2) and Various Other 3q Abnormalities in Acute Myeloid Leukemia. J Clin Oncol 28: 3890–3898.20660833 </plain></SENT>
+</text></ref><ref id="pone.0067134-DeBraekeleer1"><text><SENT sid="659" pm="."><plain>8 De BraekeleerE, Douet-GuilbertN, BasinkoA, BovoC, GueganicN, et al (2011) Conventional cytogenetics and breakpoint distribution by fluorescent in situ hybridization in patients with malignant hemopathies associated with inv(3)(q21;q26) and t(3;3)(q21;q26). Anticancer Research 31: 3441–3448.21965759 </plain></SENT>
+</text></ref><ref id="pone.0067134-Arai1"><text><SENT sid="660" pm="."><plain>9 AraiS, YoshimiA, ShimabeM, IchikawaM, NakagawaM, et al (2011) Evi-1 is a transcriptional target of mixed-lineage leukemia oncoproteins in hematopoietic stem cells. Blood 117: 6304–6314.21190993 </plain></SENT>
+</text></ref><ref id="pone.0067134-Buonamici2"><text><SENT sid="661" pm="."><plain>10 BuonamiciS, DL, ChiY, ZhaoR, WangX, et al (2004) EVI1 induces myelodysplastic syndrome in mice. J Clin Invest 114: 713–719.15343390 </plain></SENT>
+</text></ref><ref id="pone.0067134-Cuenco1"><text><SENT sid="662" pm="."><plain>11 CuencoG, RenR (2004) Both AML1 and EVI1 oncogenic components are required for the cooperation of AML1/MDS1/EVI1 with BCR/ABL in the induction of acute myelogenous leukemia in mice. Oncogene 23: 569–579.14724585 </plain></SENT>
+</text></ref><ref id="pone.0067134-Yoshimi1"><text><SENT sid="663" pm="."><plain>12 YoshimiA, GoyamaS, Watanabe-OkochiN, YoshikiY, NannyaY, et al (2011) Evi1 represses PTEN expression and activates PI3K/AKT/mTOR via interactions with polycomb proteins. Blood 117: 3617–3628.21289308 </plain></SENT>
+</text></ref><ref id="pone.0067134-Jin1"><text><SENT sid="664" pm="."><plain>13 JinG, YamazakiY, TakuwaM, TakaharaT, KanekoK, et al (2007)  Trib1 and Evi1 cooperate with Hoxa and Meis1 in myeloid leukemogenesis. Blood 109: 3998–4005.17227832 </plain></SENT>
+</text></ref><ref id="pone.0067134-Morishita1"><text><SENT sid="665" pm="."><plain>14 MorishitaK, ParkerDS, MucenskiML, JenkinsNA, CopelandNG, et al (1988) Retroviral activation of a novel gene encoding a zinc finger protein in IL3-dependent myeloid leukemia cell lines. Cell 54: 831–840.2842066 </plain></SENT>
+</text></ref><ref id="pone.0067134-Bartholomew1"><text><SENT sid="666" pm="."><plain>15 BartholomewC, ClarkAM (1994) Induction of two alternatively spliced evi-1 proto-oncogene transcripts by cAMP in kidney cells. Oncogene 9: 939–942.8108138 </plain></SENT>
+</text></ref><ref id="pone.0067134-Bordereaux1"><text><SENT sid="667" pm="."><plain>16 BordereauxD, FichelsonS, TambourinP, GisselbrechtS (1990) Alternative splicing of the Evi-1 zinc finger gene generates mRNAs which differ by the number of zinc finger motifs. Oncogene 5: 925–927.2113669 </plain></SENT>
+</text></ref><ref id="pone.0067134-Morishita2"><text><SENT sid="668" pm="."><plain>17 MorishitaK, ParganasE, DouglassEC, IhleJN (1990) Unique expression of the human Evi-1 gene in an endometrial carcinoma cell line: Sequence of cDNAs and structure of alternatively spliced transcripts. Oncogene 5: 963–971.2115646 </plain></SENT>
+</text></ref><ref id="pone.0067134-Funabiki1"><text><SENT sid="669" pm="."><plain>18 FunabikiT, KreiderBL, IhleJN (1994) The carboxyl domain of zinc fingers of the Evi-1 myeloid transforming gene binds a consensus sequence GAAGATGAG. Oncogene 9: 1575–1581.8183551 </plain></SENT>
+</text></ref><ref id="pone.0067134-Perkins1"><text><SENT sid="670" pm="."><plain>19 PerkinsAS, FishelR, JenkinsNA, CopelandNG (1991)  Evi-1, a murine zinc finger proto-oncogene, encodes a sequence-specific DNA-binding protein. Mol Cell Biol 11: 2665–2674.2017172 </plain></SENT>
+</text></ref><ref id="pone.0067134-Zhang1"><text><SENT sid="671" pm="."><plain>20 ZhangY, SicotG, CuiX, VogelM, WuertzerC, et al (2011) Targeting a DNA binding motif of the EVI1 protein by a pyrrole-imidazole polyamide. Biochemistry 50: 10431–10441.22039883 </plain></SENT>
+</text></ref><ref id="pone.0067134-Bartholomew2"><text><SENT sid="672" pm="."><plain>21 BartholomewC, KilbeyA, ClarkA, WalkerM (1997) The Evi-1 proto-oncogene encodes a transcriptional repressor activity associated with transformation. Oncogene 14: 569–577.9053855 </plain></SENT>
+</text></ref><ref id="pone.0067134-Kim1"><text><SENT sid="673" pm="."><plain>22 KimJ, HuiP, YueD, AycockJ, LeclercC, et al (1998) Identification of candidate target genes for EVI1, a zinc finger oncoprotein, using a novel selection strategy. Oncogene 17: 1527–1538.9794230 </plain></SENT>
+</text></ref><ref id="pone.0067134-Yatsula1"><text><SENT sid="674" pm="."><plain>23 YatsulaB, LinS, ReadA, PoholekA, YatesK, et al (2005) Identification of binding sites of EVI1 in mammalian cells. J Biol Chem 280: 30712–30722.16006653 </plain></SENT>
+</text></ref><ref id="pone.0067134-Qiu1"><text><SENT sid="675" pm="."><plain>24 QiuY, LynchJ, GuoL, YatsulaB, PerkinsA, et al (2008) Regulation of the calreticulin gene by GATA6 and Evi-1 transcription factors. Biochemistry 47: 3697–3704.18303859 </plain></SENT>
+</text></ref><ref id="pone.0067134-Shimabe1"><text><SENT sid="676" pm="."><plain>25Shimabe M, Goyama S, Watanabe-Okochi N, Yoshimi A, Ichikawa M, et al.. </plain></SENT>
+<SENT sid="677" pm="."><plain>(2009) Pbx1 is a downstream target of Evi-1 in hematopoietic stem/progenitors and leukemic cells. </plain></SENT>
+<SENT sid="678" pm="."><plain>Oncogene\ 28\: 4364\-4374\. </plain></SENT>
+</text></ref><ref id="pone.0067134-DeWeer1"><text><SENT sid="679" pm="."><plain>26 De WeerA, Van der MeulenJ, RondouP, TaghonT, KonradTA, et al (2011) EVI1-mediated down regulation of MIR449A is essential for the survival of EVI1 positive leukaemic cells. British Journal of Haematology 154: 337–348.21569010 </plain></SENT>
+</text></ref><ref id="pone.0067134-Pradhan1"><text><SENT sid="680" pm="."><plain>27 PradhanAK, KuilaN, SinghS, ChakrabortyS (2011) EVI1 up-regulates the stress responsive gene SIRT1 which triggers deacetylation and degradation of EVI1. Biochimica et Biophysica Acta (BBA) - Gene Regulatory Mechanisms 1809: 269–275.21555002 </plain></SENT>
+</text></ref><ref id="pone.0067134-BardChapeau1"><text><SENT sid="681" pm="."><plain>28 Bard-ChapeauEA, JeyakaniJ, KokCH, MullerJ, ChuaBQ, et al (2012) Ecotopic viral integration site 1 (EVI1) regulates multiple cellular processes important for cancer and is a synergistic partner for FOS protein in invasive tumors. Proceedings of the National Academy of Sciences 109: 2168–2173. </plain></SENT>
+</text></ref><ref id="pone.0067134-Cristobal1"><text><SENT sid="682" pm="."><plain>29 CristobalI, Garcia-OrtiL, CirauquiC, Cortes-LavaudX, Garcia-SanchezM, et al (2012) Overexpression of SET is a recurrent event associated with poor outcome and\ contributes to protein phosphatase 2A inhibition in acute myeloid leukemia. Haematologica 97: 543–550.22133779 </plain></SENT>
+</text></ref><ref id="pone.0067134-Yuasa1"><text><SENT sid="683" pm="."><plain>30 YuasaH, OikeY, IwamaA, NishikataI, SugiyamaD, et al (2005) Oncogenic transcription factor Evi1 regulates hematopoietic stem cell proliferation through GATA-2 expression. Embo J 24: 1976–1987.15889140 </plain></SENT>
+</text></ref><ref id="pone.0067134-Shimamoto1"><text><SENT sid="684" pm="."><plain>31 ShimamotoT, OhyashikiJ, OhyashikiK, KawakuboK, KimuraN, et al (1994) GATA-1, GATA-2, and stem cell leukemia gene expression in acute myeloid leukemia. Leukemia 8: 1176–1180.8035609 </plain></SENT>
+</text></ref><ref id="pone.0067134-Shaulian1"><text><SENT sid="685" pm="."><plain>32 ShaulianE, KarinM (2001) AP-1 in cell proliferation and survival. Oncogene 20: 2390–2400.11402335 </plain></SENT>
+</text></ref><ref id="pone.0067134-Kreider1"><text><SENT sid="686" pm="."><plain>33 KreiderB, OrkinS, IhleJ (1993) Loss of erythropoietin responsiveness in erythroid progenitors due to expression of the Evi-1 myeloid transforming gene. Proc Natl Acad Sci, USA 90: 6454–6458.8341654 </plain></SENT>
+</text></ref><ref id="pone.0067134-Morishita3"><text><SENT sid="687" pm="."><plain>34 MorishitaK, ParganasE, MatsugiT, IhleJN (1992) Expression of the Evi-1 zinc finger gene in 32Dcl3 myeloid cells blocks granulocytic differentiation in response to granulocyte colony-stimulating factor. Mol Cell Biol 12: 183–189.1370341 </plain></SENT>
+</text></ref><ref id="pone.0067134-KhannaGupta1"><text><SENT sid="688" pm="."><plain>35 Khanna-GuptaA, LopingcoM, SavinelliT, ZibelloT, BerlinerN, et al (1996) Retroviral insertional activation of the Evi1 oncogene does not prevent G-CSF-induced maturation of the murine pluripotent myeloid cell line, 32DCl3. Oncogene 12: 563–569.8637713 </plain></SENT>
+</text></ref><ref id="pone.0067134-LaricchiaRobbio1"><text><SENT sid="689" pm="."><plain>36 Laricchia-RobbioL, PremanandK, RinaldiCR, NuciforaG (2009) EVI1 Impairs myelopoiesis by deregulation of PU.1 function. Cancer Res 69: 1633–1642.19208846 </plain></SENT>
+</text></ref><ref id="pone.0067134-Zhang2"><text><SENT sid="690" pm="."><plain>37 ZhangY, Stehling-SunS, Lezon-GeydaK, JunejaS, CoillardL, et al (2011) PR domain-containing Mds1-Evi1 is critical for long-term hematopoietic stem cells function. Blood 118: 3853–3861.21666053 </plain></SENT>
+</text></ref><ref id="pone.0067134-Goyama1"><text><SENT sid="691" pm="."><plain>38 GoyamaS, YamamotoG, ShimabeM, SatoT, IchikawaM, et al (2008) Evi-1 is a critical regulator for hematopoietic stem cells and transformed leukemic cells. Cell Stem Cell 3: 207–220.18682242 </plain></SENT>
+</text></ref><ref id="pone.0067134-Valk1"><text><SENT sid="692" pm="."><plain>39 ValkP, VerhaakR, BeijenM, ErpelinckC, Doorn-KhosrovaniS, et al (2004) Prognostically useful gene-expression profiles in acute myeloid leukemia. New Engl J Med 350: 1617–1628.15084694 </plain></SENT>
+</text></ref><ref id="pone.0067134-Pradhan2"><text><SENT sid="693" pm="."><plain>40 PradhanAK, MohapatraAD, NayakKB, ChakrabortyS (2011) Acetylation of the proto-oncogene EVI1 abrogates Bcl-xL promoter binding and induces apoptosis. PLoS One 6: e25370.21980434 </plain></SENT>
+</text></ref><ref id="pone.0067134-Liu1"><text><SENT sid="694" pm="."><plain>41 LiuY, ChenL, KoT, FieldsA, ThompsonE (2006) Evi1 is a survival factor which conveys resistance to both TGFb- and taxol-mediated cell death via PI3K/AKT. Oncogene advance online publication 25: 3565–3575. </plain></SENT>
+</text></ref><ref id="pone.0067134-Kurokawa1"><text><SENT sid="695" pm="."><plain>42 KurokawaM, MitaniK, YamagataT, TakahashiT, IzutsuK, et al (2000) The Evi-1 oncoprotein inhibits c-Jun N-terminal kinase and prevents stress-induced cell death. EMBO J 19: 2958–2968.10856240 </plain></SENT>
+</text></ref><ref id="pone.0067134-Izutsu1"><text><SENT sid="696" pm="."><plain>43 IzutsuK, KurokawaM, ImaiY, MakiK, MitaniK, et al (2001) The corepressor CtBP interacts with Evi-1 to repress transforming growth factor beta signaling. Blood 97: 2815–2822.11313276 </plain></SENT>
+</text></ref><ref id="pone.0067134-Chakraborty1"><text><SENT sid="697" pm="."><plain>44 ChakrabortyS, SenyukV, SitailoS, ChiY, NuciforaG (2001) Interaction of EVI1 with cAMP-responsive element-binding protein-binding protein (CBP) and p300/CBP-associated factor (P/CAF) results in reversible acetylation of EVI1 and in co-localization in nuclear speckles. J Biol Chem 276: 44936–44943.11568182 </plain></SENT>
+</text></ref><ref id="pone.0067134-Kilbey1"><text><SENT sid="698" pm="."><plain>45 KilbeyA, StephensV, BartholomewC (1999) Loss of cell cycle control by deregulation of cyclin-dependent kinase 2 kinase activity in Evi-1 transformed fibroblasts. Cell Growth Diff 10: 601–610.10511310 </plain></SENT>
+</text></ref><ref id="pone.0067134-Sitailo1"><text><SENT sid="699" pm="."><plain>46 SitailoS, SoodR, BartonK, NuciforaG (1999) Forced expression of the leukemia-associated gene EVI1 in ES cells: a model for myeloid leukemia with 3q26 rearrangements. Leukemia 13: 1639–1645.10557037 </plain></SENT>
+</text></ref><ref id="pone.0067134-Kilbey2"><text><SENT sid="700" pm="."><plain>47 KilbeyA, AlzuherriH, McCollJ, CalesC, FramptonJ, et al (2005) The Evi1 proto-oncoprotein blocks endomitosis in megakaryocytes by inhibiting sustained cyclin-dependent kinase 2 catalytic activity. British Journal of Haematology 130: 902–911.16156860 </plain></SENT>
+</text></ref><ref id="pone.0067134-Yuasa2"><text><SENT sid="701" pm="."><plain>48 YuasaH, OikeY, IwamaA, NishikataI, SugiyamaD, et al (2005) Oncogenic transcription factor Evi1 regulates hematopoietic stem cell proliferation through GATA-2 expression. Embo J 24: 1976–1987.15889140 </plain></SENT>
+</text></ref><ref id="pone.0067134-Jiao1"><text><SENT sid="702" pm="."><plain>49 JiaoX, ShermanB, Huangda, W, StephensR, et al (2012) DAVID-WS: a stateful web service to facilitate gene/protein list analysis. Bioinformatics 28: 1805–1806.22543366 </plain></SENT>
+</text></ref><ref id="pone.0067134-Durfee1"><text><SENT sid="703" pm="."><plain>50 DurfeeLA, HuibregtseJM (2012) The ISG15 conjugation system. Methods in molecular biology (Clifton, NJ) 832: 141–149. </plain></SENT>
+</text></ref><ref id="pone.0067134-Malakhova1"><text><SENT sid="704" pm="."><plain>51 MalakhovaOA, YanM, MalakhovMP, YuanY, RitchieKJ, et al (2003) Protein ISGylation modulates the JAK-STAT signaling pathway. Genes &amp; Development 17: 455–460.12600939 </plain></SENT>
+</text></ref><ref id="pone.0067134-Zhang3"><text><SENT sid="705" pm="."><plain>52 ZhangX, MengL, HeB, ChenJ, LiuP, et al (2009) The role of P2X7 receptor in ATP-mediated human leukemia cell death: calcium influx-independent. Acta biochimica et biophysica Sinica 41: 362–369.19430700 </plain></SENT>
+</text></ref><ref id="pone.0067134-Mane1"><text><SENT sid="706" pm="."><plain>53 ManeSP, ModiseT, SobralBW (2011) Analysis of high-throughput sequencing data. Methods in molecular biology (Clifton, NJ) 678: 1–11. </plain></SENT>
+</text></ref><ref id="pone.0067134-Machanick1"><text><SENT sid="707" pm="."><plain>54 MachanickP, BaileyT (2011) MEME-ChIP: motif analysis of large DNA datasets. Bioinformatics 27: 1696–1697.21486936 </plain></SENT>
+</text></ref><ref id="pone.0067134-Bi1"><text><SENT sid="708" pm="."><plain>55Bi Y, Kim H, Gupta R, Davuluri RV (2011) Tree-based position weight matrix approach to model transcription factor binding site profiles. </plain></SENT>
+</text></ref><ref id="pone.0067134-McLean1"><text><SENT sid="709" pm="."><plain>56 McLeanCY, BristorD, HillerM, ClarkeSL, SchaarBT, et al (2010) GREAT improves functional interpretation of cis-regulatory regions. Nat Biotech 28: 495–501. </plain></SENT>
+</text></ref><ref id="pone.0067134-Hu1"><text><SENT sid="710" pm="."><plain>57 HuM, YuJ, TaylorJMG, ChinnaiyanAM, QinZS (2010) On the detection and refinement of transcription factor binding sites using ChIP-Seq data. Nucleic Acids Research 38: 2154–2167.20056654 </plain></SENT>
+</text></ref><ref id="pone.0067134-Yamanaka1"><text><SENT sid="711" pm="."><plain>58 YamanakaR, KimG, RadomskaH, Lekstrom-HimesJ, SmithL, et al (1997) CCAAT/enhancer binding protein epsilon is preferentially up-regulated during granulocytic differentiation and its functional versatility is determined by alternative use of promoters and differential splicing. Proc Natl Acad Sci USA 94: 6462–6467.9177240 </plain></SENT>
+</text></ref><ref id="pone.0067134-Akagi1"><text><SENT sid="712" pm="."><plain>59 AkagiT, ThoennissenN, GeorgeA, CrooksG, SongJ, et al (2010) In Vivo Deficiency of Both C/EBPβ and C/EBPε Results in Highly Defective Myeloid Differentiation and Lack of Cytokine Response. PLoS One 5: e15419.21072215 </plain></SENT>
+</text></ref><ref id="pone.0067134-Nakajima1"><text><SENT sid="713" pm="."><plain>60 NakajimaH, WatanabeN, ShibataF, KitamuraT, IkedaY, et al (2006) N-terminal Region of CCAAT/Enhancer-binding Protein œµ Is Critical for Cell Cycle Arrest, Apoptosis, and Functional Maturation during Myeloid Differentiation. Journal of Biological Chemistry 281: 14494–14502.16531405 </plain></SENT>
+</text></ref><ref id="pone.0067134-Halene1"><text><SENT sid="714" pm="."><plain>61 HaleneS, GainesP, SunH, ZibelloT, LinS, et al (2010) C/EBPepsilon directs granulocytic-vs-monocytic lineage determination and confers chemotactic function via Hlx. Experimental Hematology 38: 90–103.e104.19925846 </plain></SENT>
+</text></ref><ref id="pone.0067134-WitkoSarsat1"><text><SENT sid="715" pm="."><plain>62Witko-Sarsat V, Rieu P, Descamps-Latscha B, Lesavre P, Halbwachs-Mecarelli L (2000) Neutrophils: Molecules, Functions and Pathophysiological Aspects. </plain></SENT>
+<SENT sid="716" pm="."><plain>Lab Invest\ 80\: 617\-653\. </plain></SENT>
+</text></ref><ref id="pone.0067134-KhannaGupta2"><text><SENT sid="717" pm="."><plain>63 Khanna-GuptaA, ZibelloT, IdoneV, SunH, Lekstrom-HimesJ, et al (2005) Human neutrophil collagenase expression is C/EBP-dependent during myeloid development. Experimental Hematology 33: 42–52.15661397 </plain></SENT>
+</text></ref><ref id="pone.0067134-Gombart1"><text><SENT sid="718" pm="."><plain>64 GombartAF, KwokSH, AndersonKL, YamaguchiY, TorbettBE, et al (2003) Regulation of neutrophil and eosinophil secondary granule gene expression by transcription factors C/EBPŒµ and PU.1. Blood 101: 3265–3273.12515729 </plain></SENT>
+</text></ref><ref id="pone.0067134-Aaronson1"><text><SENT sid="719" pm="."><plain>65 AaronsonDS, HorvathCM (2002) A road map for those who don't know JAK-STAT. Science (New York, NY) 296: 1653–1655. </plain></SENT>
+</text></ref><ref id="pone.0067134-Hebenstreit1"><text><SENT sid="720" pm="."><plain>66 HebenstreitD, Horejs-HoeckJ, DuschlA (2005) JAK/STAT-dependent gene regulation by cytokines. Drug news &amp; perspectives 18: 243–249.16034480 </plain></SENT>
+</text></ref><ref id="pone.0067134-Levine1"><text><SENT sid="721" pm="."><plain>67Levine R (2011) JAK-Mutant Myeloproliferative Neoplasms. </plain></SENT>
+<SENT sid="722" pm="."><plain>Curr Top Microbiol Immunol. </plain></SENT>
+</text></ref><ref id="pone.0067134-Kiu1"><text><SENT sid="723" pm="."><plain>68Kiu H, Nicholson SE (2012) Biology and significance of the JAK/STAT signalling pathways. </plain></SENT>
+<SENT sid="724" pm="."><plain>2 ed. </plain></SENT>
+<SENT sid="725" pm="."><plain>England: Walter &amp; Eliza Hall Institute, 1G Royal Parade, Parkville 3052, Australia. </plain></SENT>
+<SENT sid="726" pm="."><plain>88–106. </plain></SENT>
+</text></ref><ref id="pone.0067134-Krebs1"><text><SENT sid="727" pm="."><plain>69Krebs DL, Hilton DJ (2001) SOCS proteins: negative regulators of cytokine signaling. </plain></SENT>
+<SENT sid="728" pm="."><plain>5 ed. </plain></SENT>
+<SENT sid="729" pm="."><plain>United States: The Walter and Eliza Hall Institute of Medical Research and the Cooperative Research Center for Cellular Growth Factors, Royal Melbourne Hospital, Victoria, Australia. krebs@wehi.edu.au. </plain></SENT>
+<SENT sid="730" pm="."><plain>378–387. </plain></SENT>
+</text></ref><ref id="pone.0067134-Spiekermann1"><text><SENT sid="731" pm="."><plain>70Spiekermann K, Biethahn S, Wilde S, Hiddemann W, Alves F (2001) Constitutive activation of STAT transcription factors in acute myelogenous leukemia. </plain></SENT>
+<SENT sid="732" pm="."><plain>2 ed. </plain></SENT>
+<SENT sid="733" pm="."><plain>Denmark: Department of Medicine III, Grosshadern, Germany. karsten.spiekermann@med3.med.uni-muenchen.de. </plain></SENT>
+<SENT sid="734" pm="."><plain>63–71. </plain></SENT>
+</text></ref><ref id="pone.0067134-Yoshimura1"><text><SENT sid="735" pm="."><plain>71Yoshimura A, Ichihara M, Kinjyo I, Moriyama M, Copeland NG, et al.. </plain></SENT>
+<SENT sid="736" pm="."><plain>(1996) Mouse oncostatin M: an immediate early gene induced by multiple cytokines through the JAK-STAT5 pathway. </plain></SENT>
+<SENT sid="737" pm="."><plain>5 ed. </plain></SENT>
+<SENT sid="738" pm="."><plain>ENGLAND: Institute of Life Science, Kurame University, Japan. </plain></SENT>
+<SENT sid="739" pm="."><plain>1055–1063. </plain></SENT>
+</text></ref><ref id="pone.0067134-Rose1"><text><SENT sid="740" pm="."><plain>72 RoseTM, BruceAG (1991) Oncostatin M is a member of a cytokine family that includes leukemia-inhibitory factor, granulocyte colony-stimulating factor, and interleukin 6. </plain></SENT>
+<SENT sid="741" pm="."><plain>19 ed. UNITED STATES: Fred Hutchinson Cancer Research Center, Seattle, WA 98104: 8641–8645. </plain></SENT>
+</text></ref><ref id="pone.0067134-Bruce1"><text><SENT sid="742" pm="."><plain>73 BruceAG, LinsleyPS, RoseTM (1992) Oncostatin M. 2 ed. ENGLAND: Bristol-Myers Squibb, Pharmaceutical Research Institute-Seattle, WA. 98121: 157–170. </plain></SENT>
+</text></ref><ref id="pone.0067134-PithaRowe1"><text><SENT sid="744" pm="."><plain>74Pitha-Rowe IF, Pitha PM (2007) Viral defense, carcinogenesis and ISG15: novel roles for an old ISG. </plain></SENT>
+<SENT sid="745" pm="."><plain>5–6 ed. </plain></SENT>
+<SENT sid="746" pm="."><plain>England: Dartmouth Medical School, Hanover, NH 03755, United States. </plain></SENT>
+<SENT sid="747" pm="."><plain>409–417. </plain></SENT>
+</text></ref><ref id="pone.0067134-Andersen1"><text><SENT sid="748" pm="?"><plain>75Andersen JB, Hassel BA (2006) The interferon regulated ubiquitin-like protein, ISG15, in tumorigenesis: friend or foe? </plain></SENT>
+<SENT sid="749" pm="."><plain>6 ed. </plain></SENT>
+<SENT sid="750" pm="."><plain>England: University of Maryland, Marlene and Stewart Greenebaum Cancer Center, Baltimore, MD 21201, USA. </plain></SENT>
+<SENT sid="751" pm="."><plain>411–421. </plain></SENT>
+</text></ref><ref id="pone.0067134-Takeuchi1"><text><SENT sid="752" pm="."><plain>76 TakeuchiT, IwaharaS, SaekiY, SasajimaH, YokosawaH (2005) Link between the ubiquitin conjugation system and the ISG15 conjugation system: ISG15 conjugation to the UbcH6 ubiquitin E2 enzyme. </plain></SENT>
+<SENT sid="753" pm="."><plain>6 ed. Japan: Department of Biochemistry, Graduate School of Pharmaceutical Sciences, Hokkaido University, Sapporo 060–0812: 711–719. </plain></SENT>
+</text></ref><ref id="pone.0067134-Cong1"><text><SENT sid="754" pm="."><plain>77Cong X, Yan M, Yin X, Zhang D-E (2010) Hematopoietic cells from Ube1L-deficient mice exhibit an impaired proliferation defect under the stress of bone marrow transplantation. </plain></SENT>
+<SENT sid="755" pm="."><plain>2 ed. </plain></SENT>
+<SENT sid="756" pm="."><plain>United States: Moores UCSD Cancer Center, University of California San Diego, La Jolla, 92093, USA. </plain></SENT>
+<SENT sid="757" pm="."><plain>103–111. </plain></SENT>
+</text></ref><ref id="pone.0067134-Genton1"><text><SENT sid="758" pm="."><plain>78 GentonC, KruithofE, SchleuningW (1987) Phorbol ester induces the biosynthesis of glycosylated and nonglycosylated plasminogen activator inhibitor 2 in high excess over urokinase-type plasminogen activator in human U-937 lymphoma cells. J Cell Biol 104: 705–712.3102504 </plain></SENT>
+</text></ref><ref id="pone.0067134-Medcalf1"><text><SENT sid="759" pm="."><plain>79 MedcalfR, StasinopoulosS (2005) The undecided serpin. </plain></SENT>
+<SENT sid="760" pm="."><plain>The ins and outs of plasminogen activator inhibitor type 2. FEBS J 272: 4858–4867.16176260 </plain></SENT>
+</text></ref><ref id="pone.0067134-Darnell1"><text><SENT sid="761" pm="."><plain>80Darnell GA, Antalis TM, Johnstone RW, Stringer BW, Ogbourne SM, et al.. </plain></SENT>
+<SENT sid="762" pm="."><plain>(2003) Inhibition of retinoblastoma protein degradation by interaction with the serpin plasminogen activator inhibitor 2 via a novel consensus motif. </plain></SENT>
+<SENT sid="763" pm="."><plain>18 ed. </plain></SENT>
+<SENT sid="764" pm="."><plain>United States: Australian National Centre for International and Tropical Health and Nutrition, Queensland Institute of Medical Research and University of Queensland, 300 Herston Road, Brisbane, Queensland 4029, Australia. </plain></SENT>
+<SENT sid="765" pm="."><plain>6520–6532. </plain></SENT>
+</text></ref><ref id="pone.0067134-Yu1"><text><SENT sid="766" pm="."><plain>81 YuH, MaurerF, MedcalfR (2002) Plasminogen activator inhibitor type 2: a regulator of monocyte proliferation and differentiation. Blood 99: 2810–2818.11929770 </plain></SENT>
+</text></ref><ref id="pone.0067134-Tonnetti1"><text><SENT sid="767" pm="."><plain>82Tonnetti L, Netzel-Arnett S, Darnell GA, Hayes T, Buzza MS, et al.. </plain></SENT>
+<SENT sid="768" pm="."><plain>(2008) SerpinB2 protection of retinoblastoma protein from calpain enhances tumor cell survival. </plain></SENT>
+<SENT sid="769" pm="."><plain>14 ed. </plain></SENT>
+<SENT sid="770" pm="."><plain>United States: Center for Vascular and Inflammatory Diseases, Department of Physiology, University of Maryland School of Medicine, Baltimore, Maryland 21201, USA. </plain></SENT>
+<SENT sid="771" pm="."><plain>5648–5657. </plain></SENT>
+</text></ref><ref id="pone.0067134-Ritchie1"><text><SENT sid="772" pm="."><plain>83Ritchie H, Jamieson A, Booth NA (1995) Thrombin modulates synthesis of plasminogen activator inhibitor type 2 by human peripheral blood monocytes. </plain></SENT>
+<SENT sid="773" pm="."><plain>9 ed. </plain></SENT>
+<SENT sid="774" pm="."><plain>UNITED STATES: Department of Molecular and Cell Biology, University of Aberdeen, Scotland, UK. </plain></SENT>
+<SENT sid="775" pm="."><plain>3428–3435. </plain></SENT>
+</text></ref><ref id="pone.0067134-Gross1"><text><SENT sid="776" pm="."><plain>84 GrossTJ, SitrinRG (1990) The THP-1 cell line is a urokinase-secreting mononuclear phagocyte with a novel defect in the production of plasminogen activator inhibitor-2. </plain></SENT>
+<SENT sid="777" pm="."><plain>5 ed. UNITED STATES: Department of Internal Medicine, University of Michigan Medical Center, Ann Arbor 48109–0360: 1873–1879. </plain></SENT>
+</text></ref><ref id="pone.0067134-Schleuning1"><text><SENT sid="778" pm="."><plain>85 SchleuningW, MedcalfR, HessionC, RothenbuhlerR, ShawA, et al (1987) Plasminogen activator inhibitor 2: regulation of gene transcription during phorbol ester-mediated differentiation of U-937 human histiocytic lymphoma cells. Mol Cell Biol 7: 4564–4567.3325828 </plain></SENT>
+</text></ref><ref id="pone.0067134-Stringer1"><text><SENT sid="779" pm="."><plain>86Stringer B, Udofa EA, Antalis TM (2012) Regulation of the human plasminogen activator inhibitor type 2 gene: cooperation of an upstream silencer and transactivator. </plain></SENT>
+<SENT sid="780" pm="."><plain>13 ed. </plain></SENT>
+<SENT sid="781" pm="."><plain>United States: Center for Vascular and Inflammatory Diseases and Department of Physiology, University of Maryland School of Medicine, Baltimore, Maryland 21201, USA. </plain></SENT>
+<SENT sid="782" pm="."><plain>10579–10589. </plain></SENT>
+</text></ref><ref id="pone.0067134-Noguchi1"><text><SENT sid="783" pm="."><plain>87Noguchi T, Ishii K, Fukutomi H, Naguro I, Matsuzawa A, et al.. </plain></SENT>
+<SENT sid="784" pm="."><plain>(2008) Requirement of reactive oxygen species-dependent activation of ASK1-p38 MAPK pathway for extracellular ATP-induced apoptosis in macrophage. </plain></SENT>
+<SENT sid="785" pm="."><plain>12 ed. </plain></SENT>
+<SENT sid="786" pm="."><plain>United States: Laboratory of Cell Signaling, Graduate School of Pharmaceutical Sciences, Center of Excellence Program, Japan Science and Technology Corporation, The University of Tokyo, 7–3-1 Hongo, Bunkyo-ku, Tokyo 113–0033, Japan. </plain></SENT>
+<SENT sid="787" pm="."><plain>7657–7665. </plain></SENT>
+</text></ref><ref id="pone.0067134-Placido1"><text><SENT sid="788" pm="."><plain>88Placido R, Auricchio G, Falzoni S, Battistini L, Colizzi V, et al.. </plain></SENT>
+<SENT sid="789" pm="."><plain>(2006) P2X(7) purinergic receptors and extracellular ATP mediate apoptosis of human monocytes/macrophages infected with Mycobacterium tuberculosis reducing the intracellular bacterial viability. </plain></SENT>
+<SENT sid="790" pm="."><plain>1 ed. </plain></SENT>
+<SENT sid="791" pm="."><plain>United States: Neuroimmunology Unit, European Centre for Brain Research, S. Lucia Foundation, I.R.C.C.S, Rome, Italy. </plain></SENT>
+<SENT sid="793" pm="."><plain>10–18. </plain></SENT>
+</text></ref><ref id="pone.0067134-Suh1"><text><SENT sid="794" pm="."><plain>89Suh BC, Kim JS, Namgung U, Ha H, Kim KT (2001) P2X7 nucleotide receptor mediation of membrane pore formation and superoxide generation in human promyelocytes and neutrophils. </plain></SENT>
+<SENT sid="795" pm="."><plain>11 ed. </plain></SENT>
+<SENT sid="796" pm="."><plain>United States: Department of Life Science, Division of Molecular and Life Science, Pohang University of Science and Technology, Hyoja-Dong, Pohang 790–784, Republic of Korea. </plain></SENT>
+<SENT sid="797" pm="."><plain>6754–6763. </plain></SENT>
+</text></ref><ref id="pone.0067134-North1"><text><SENT sid="798" pm="."><plain>90North RA (2002) Molecular physiology of P2X receptors. </plain></SENT>
+<SENT sid="799" pm="."><plain>4 ed. </plain></SENT>
+<SENT sid="800" pm="."><plain>United States: Institute of Molecular Physiology, University of Sheffield, Western Bank, Sheffield, United Kingdom. </plain></SENT>
+<SENT sid="801" pm="."><plain>R.A.North@Sheffield.ac.uk. </plain></SENT>
+<SENT sid="802" pm="."><plain>1013–1067. </plain></SENT>
+</text></ref><ref id="pone.0067134-Rassendren1"><text><SENT sid="803" pm="."><plain>91Rassendren F, Buell GN, Virginio C, Collo G, North RA, et al.. </plain></SENT>
+<SENT sid="804" pm="."><plain>(1997) The permeabilizing ATP receptor, P2X7. </plain></SENT>
+<SENT sid="805" pm="."><plain>Cloning and expression of a human cDNA.9 ed. </plain></SENT>
+<SENT sid="806" pm="."><plain>UNITED STATES: Geneva Biomedical Research Institute, GlaxoWellcome Research and Development, Plan-les-Ouates, 1228 Geneva, Switzerland. </plain></SENT>
+<SENT sid="807" pm="."><plain>FAR14949@ggr.co.uk. </plain></SENT>
+<SENT sid="808" pm="."><plain>5482–5486. </plain></SENT>
+</text></ref><ref id="pone.0067134-Hewinson1"><text><SENT sid="809" pm="."><plain>92Hewinson J, Moore SF, Glover C, Watts AG, MacKenzie AB (2008) A key role for redox signaling in rapid P2X7 receptor-induced IL-1 beta processing in human monocytes. </plain></SENT>
+<SENT sid="810" pm="."><plain>12 ed. </plain></SENT>
+<SENT sid="811" pm="."><plain>United States: Department of Pharmacy and Pharmacology, University of Bath, Bath, UK. </plain></SENT>
+<SENT sid="812" pm="."><plain>8410–8420. </plain></SENT>
+</text></ref><ref id="pone.0067134-Ferrari1"><text><SENT sid="813" pm="."><plain>93Ferrari D, Stroh C, Schulze-Osthoff K (1999) P2X7/P2Z purinoreceptor-mediated activation of transcription factor NFAT in microglial cells. </plain></SENT>
+<SENT sid="814" pm="."><plain>19 ed. </plain></SENT>
+<SENT sid="815" pm="."><plain>UNITED STATES: Department of Internal Medicine I, Medical Clinics, Eberhard-Karls-University, D-72076 Tubingen, Germany. </plain></SENT>
+<SENT sid="816" pm="."><plain>13205–13210. </plain></SENT>
+</text></ref><ref id="pone.0067134-Ferrari2"><text><SENT sid="817" pm="."><plain>94Ferrari D, Wesselborg S, Bauer MK, Schulze-Osthoff K (1997) Extracellular ATP activates transcription factor NF-kappaB through the P2Z purinoreceptor by selectively targeting NF-kappaB p65. </plain></SENT>
+<SENT sid="818" pm="."><plain>7 ed. </plain></SENT>
+<SENT sid="819" pm="."><plain>UNITED STATES: Department of Internal Medicine I, Medical Clinics, Eberhard-Karls-University, D-72076 Tubingen, Germany. </plain></SENT>
+<SENT sid="820" pm="."><plain>1635–1643. </plain></SENT>
+</text></ref><ref id="pone.0067134-Humphreys1"><text><SENT sid="821" pm="."><plain>95Humphreys BD, Rice J, Kertesy SB, Dubyak GR (2000) Stress-activated protein kinase/JNK activation and apoptotic induction by the macrophage P2X7 nucleotide receptor. </plain></SENT>
+<SENT sid="822" pm="."><plain>35 ed. </plain></SENT>
+<SENT sid="823" pm="."><plain>UNITED STATES: Department of Physiology and Biophysics, School of Medicine, Case Western Reserve University, Cleveland, Ohio 44106, USA. </plain></SENT>
+<SENT sid="824" pm="."><plain>26792–26798. </plain></SENT>
+</text></ref><ref id="pone.0067134-LeStunff1"><text><SENT sid="825" pm="."><plain>96Le Stunff H, Auger R, Kanellopoulos J, Raymond M-N (2004) The Pro-451 to Leu polymorphism within the C-terminal tail of P2X7 receptor impairs cell death but not phospholipase D activation in murine thymocytes. </plain></SENT>
+<SENT sid="826" pm="."><plain>17 ed. </plain></SENT>
+<SENT sid="827" pm="."><plain>United States: Laboratoire d'activation Cellulaire et Transduction des Signaux, Institut de Biochimie et de Biophysique Moleculaire et Cellulaire, UMR 8619 CNRS, Batiment 430, Universite Paris-Sud, 91405 Orsay Cedex, France. </plain></SENT>
+<SENT sid="828" pm="."><plain>16918–16926. </plain></SENT>
+</text></ref><ref id="pone.0067134-Gu1"><text><SENT sid="829" pm="."><plain>97 GuBJ, ZhangW, WorthingtonRA, SluyterR, Dao-UngP, et al (2001) A Glu-496 to Ala polymorphism leads to loss of function of the human P2X7 receptor. </plain></SENT>
+<SENT sid="830" pm="."><plain>14 ed. United States: Departments of Medicine and Anatomy and Histology, University of Sydney, Sydney, New South Wales 2006: 11135–11142. </plain></SENT>
+</text></ref><ref id="pone.0067134-Sharrocks1"><text><SENT sid="831" pm="."><plain>98Sharrocks AD (2001) The ETS-domain transcription factor family. </plain></SENT>
+<SENT sid="832" pm="."><plain>Nat Rev Mol Cell Biol\ 2\: 827\-837\. </plain></SENT>
+</text></ref><ref id="pone.0067134-Shaw1"><text><SENT sid="833" pm="."><plain>99 ShawPE, SaxtonJ (2003) Ternary complex factors: prime nuclear targets for mitogen-activated protein kinases. The International Journal of Biochemistry &amp; Cell Biology 35: 1210–1226.12757758 </plain></SENT>
+</text></ref><ref id="pone.0067134-Swiatkowski1"><text><SENT sid="834" pm="."><plain>100 SwiatkowskiS, SeifertH-H, SteinhoffC, PriorA, ThievessenI, et al (2003) Activities of MAP-Kinase Pathways in Normal Uroepithelial Cells and Urothelial Carcinoma Cell Lines. Experimental Cell Research 282: 48–57.12490193 </plain></SENT>
+</text></ref><ref id="pone.0067134-Duan1"><text><SENT sid="835" pm="."><plain>101 DuanR, XieW, BurghardtRC, SafeS (2001) Estrogen Receptor-mediated Activation of the Serum Response Element in MCF-7 Cells through MAPK-dependent Phosphorylation of Elk-1. Journal of Biological Chemistry 276: 11590–11598.11145955 </plain></SENT>
+</text></ref><ref id="pone.0067134-Chen1"><text><SENT sid="836" pm="."><plain>102 ChenAG, YuZC, YuXF, CaoWF, DingF, et al (2006) Overexpression of Ets-like protein 1 in human esophageal squamous cell carcinoma. World journal of gastroenterology : WJG 12: 7859–7863.17203534 </plain></SENT>
+</text></ref><ref id="pone.0067134-Uht1"><text><SENT sid="837" pm="."><plain>103Uht RM, Amos S, Martin PM, Riggan AE, Hussaini IM (2006) The protein kinase C-[eta] isoform induces proliferation in glioblastoma cell lines through an ERK//Elk-1 pathway. </plain></SENT>
+<SENT sid="838" pm="."><plain>Oncogene\ 26\: 2885\–2893\. </plain></SENT>
+</text></ref><ref id="pone.0067134-Odrowaz1"><text><SENT sid="839" pm="."><plain>104 OdrowazZ, SharrocksAD (2012) ELK1 Uses Different DNA Binding Modes to Regulate Functionally Distinct Classes of Target Genes. PLoS Genet 8: e1002694.22589737 </plain></SENT>
+</text></ref><ref id="pone.0067134-Ihle1"><text><SENT sid="840" pm="."><plain>105Ihle J, Rein A, Mural R (1984) Immunologic and virologic mechanisms in retrovirus-induced murine leukemogenesis. </plain></SENT>
+<SENT sid="841" pm="."><plain>In: Klein G, editor. </plain></SENT>
+<SENT sid="842" pm="."><plain>Adv Oncol. </plain></SENT>
+<SENT sid="843" pm="."><plain>NY: Raven. </plain></SENT>
+<SENT sid="844" pm="."><plain>95–137. </plain></SENT>
+</text></ref><ref id="pone.0067134-Holmes1"><text><SENT sid="845" pm="."><plain>106 HolmesK, PalaszynskiE, FredericksonT, MorseH, IhleJ (1985) Correlation of cell-surface phenotype with the establishment of interleukin 3-dependent cell lines from wild- mouse murine leukemia virus-induced neoplasms. Proc Natl Acad Sci USA 82: 6687–6691.2995979 </plain></SENT>
+</text></ref><ref id="pone.0067134-Witt1"><text><SENT sid="846" pm="."><plain>107Witt H, O'Geen H, Kim R (2007) Chromatin immunoprecipitation protocol. </plain></SENT>
+</text></ref><ref id="pone.0067134-Subramanian1"><text><SENT sid="847" pm="."><plain>108Subramanian A, Kuehn H, Gould J, Tamayo P, Mesirov JP (2007) GSEA-P: a desktop application for Gene Set Enrichment Analysis. </plain></SENT>
+<SENT sid="848" pm="."><plain>23 ed. </plain></SENT>
+<SENT sid="849" pm="."><plain>England: Broad Institute of MIT and Harvard, Cambridge, MA 02142, USA. </plain></SENT>
+<SENT sid="850" pm="."><plain>3251–3253. </plain></SENT>
+</text></ref></ref-list></SecTag></back></article>

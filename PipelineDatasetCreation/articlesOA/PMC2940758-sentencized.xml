@@ -1,0 +1,638 @@
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD v1.1 20151215//EN" "JATS-archivearticle1.dtd"> 
+<article xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML" article-type="research-article"><?properties open_access?><?DTDIdentifier.IdentifierValue -//NLM//DTD Journal Publishing DTD v2.3 20031101//EN?><?DTDIdentifier.IdentifierType public?><?SourceDTD.DTDName journalpublishing.dtd?><?SourceDTD.Version 2.3?><?ConverterInfo.XSLTName jp2nlmx2.xsl?><?ConverterInfo.Version 1?><front><journal-meta><journal-id journal-id-type="nlm-ta">PLoS Pathog</journal-id><journal-id journal-id-type="iso-abbrev">PLoS Pathog</journal-id><journal-id journal-id-type="publisher-id">plos</journal-id><journal-id journal-id-type="pmc">plospath</journal-id><journal-title-group><journal-title>PLoS Pathogens</journal-title></journal-title-group><issn pub-type="ppub">1553-7366</issn><issn pub-type="epub">1553-7374</issn><publisher><publisher-name>Public Library of Science</publisher-name><publisher-loc>San Francisco, USA</publisher-loc></publisher></journal-meta><article-meta><article-id pub-id-type="pmcid">2940758</article-id><article-id pub-id-type="pmid">20862324</article-id><article-id pub-id-type="publisher-id">10-PLPA-RA-3046R2</article-id><article-id pub-id-type="doi">10.1371/journal.ppat.1001038</article-id><article-categories><subj-group subj-group-type="heading"><subject>Research Article</subject></subj-group><subj-group subj-group-type="Discipline"><subject>Biochemistry</subject><subject>Biochemistry/Protein Folding</subject><subject>Biophysics/Structural Genomics</subject><subject>Virology/Emerging Viral Diseases</subject><subject>Virology/Viral Replication and Gene Regulation</subject></subj-group></article-categories><title-group><article-title><SecTag type="TITLE"><text><SENT sid="0" pm="."><plain>The N-Terminal Domain of the Arenavirus L Protein Is an RNA Endonuclease Essential in mRNA Transcription </plain></SENT>
+</text></SecTag></article-title><alt-title alt-title-type="running-head">Arenavirus Endonuclease Structure</alt-title></title-group><contrib-group><contrib contrib-type="author"><name><surname>Morin</surname><given-names>Benjamin</given-names></name><xref ref-type="aff" rid="aff1">
+<sup>1</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Coutard</surname><given-names>Bruno</given-names></name><xref ref-type="aff" rid="aff1">
+<sup>1</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Lelke</surname><given-names>Michaela</given-names></name><xref ref-type="aff" rid="aff2">
+<sup>2</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Ferron</surname><given-names>François</given-names></name><xref ref-type="aff" rid="aff1">
+<sup>1</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Kerber</surname><given-names>Romy</given-names></name><xref ref-type="aff" rid="aff2">
+<sup>2</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Jamal</surname><given-names>Saïd</given-names></name><xref ref-type="aff" rid="aff1">
+<sup>1</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Frangeul</surname><given-names>Antoine</given-names></name><xref ref-type="aff" rid="aff1">
+<sup>1</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Baronti</surname><given-names>Cécile</given-names></name><xref ref-type="aff" rid="aff3">
+<sup>3</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Charrel</surname><given-names>Rémi</given-names></name><xref ref-type="aff" rid="aff3">
+<sup>3</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>de Lamballerie</surname><given-names>Xavier</given-names></name><xref ref-type="aff" rid="aff3">
+<sup>3</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Vonrhein</surname><given-names>Clemens</given-names></name><xref ref-type="aff" rid="aff4">
+<sup>4</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Lescar</surname><given-names>Julien</given-names></name><xref ref-type="aff" rid="aff1">
+<sup>1</sup>
+</xref><xref ref-type="aff" rid="aff5">
+<sup>5</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Bricogne</surname><given-names>Gérard</given-names></name><xref ref-type="aff" rid="aff4">
+<sup>4</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Günther</surname><given-names>Stephan</given-names></name><xref ref-type="aff" rid="aff2">
+<sup>2</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Canard</surname><given-names>Bruno</given-names></name><xref ref-type="aff" rid="aff1">
+<sup>1</sup>
+</xref><xref ref-type="corresp" rid="cor1">
+<sup>*</sup>
+</xref></contrib></contrib-group><aff id="aff1">
+<label>1</label>
+<addr-line>Architecture et Fonction des Macromolécules Biologiques, CNRS and Universités d'Aix-Marseille I et II, UMR 6098, ESIL Case 925, Marseille, France</addr-line>
+</aff><aff id="aff2">
+<label>2</label>
+<addr-line>Department of Virology, Bernhard-Nocht-Institute for Tropical Medicine, Hamburg, Germany</addr-line>
+</aff><aff id="aff3">
+<label>3</label>
+<addr-line>Unité des Virus Emergents UMR190, Université de la Méditerranée &amp; Institut de Recherche pour le Développement, Marseille, France</addr-line>
+</aff><aff id="aff4">
+<label>4</label>
+<addr-line>Global Phasing Ltd., Cambridge, United Kingdom</addr-line>
+</aff><aff id="aff5">
+<label>5</label>
+<addr-line>School of Biological Sciences, Nanyang Technological University, Singapore, Singapore</addr-line>
+</aff><contrib-group><contrib contrib-type="editor"><name><surname>Buchmeier</surname><given-names>Michael J.</given-names></name><role>Editor</role><xref ref-type="aff" rid="edit1"/></contrib></contrib-group><aff id="edit1">University of California Irvine, United States of America</aff><author-notes><corresp id="cor1">* E-mail: <email>bruno.canard@afmb.univ-mrs.fr</email></corresp><fn fn-type="con"><p><text><SENT sid="1" pm="."><plain>Conceived and designed the experiments: B. Morin, R. Charrel, S. Günther, B. Canard. </plain></SENT>
+<SENT sid="6" pm="."><plain>Performed the experiments: B. Morin, B. Coutard, M. Lelke, F. Ferron, R. Kerber, S. Jamal, A. Frangeul, C. Baronti, R. Charrel, X. de Lamballerie, J. Lescar. </plain></SENT>
+<SENT sid="17" pm="."><plain>Analyzed the data: B. Morin, B. Coutard, M. Lelke, F. Ferron, R. Kerber, C. Vonrhein, G. Bricogne, S. Günther, B. Canard. </plain></SENT>
+<SENT sid="27" pm="."><plain>Contributed reagents/materials/analysis tools: G. Bricogne, B. Canard. </plain></SENT>
+<SENT sid="30" pm="."><plain>Wrote the paper: B. Morin, J. Lescar, B. Canard. </plain></SENT>
+<SENT sid="34" pm="."><plain>Coordinated the study: B. Canard. </plain></SENT>
+</text></p></fn></author-notes><pub-date pub-type="collection"><month>9</month><year>2010</year></pub-date><pub-date pub-type="epub"><day>16</day><month>9</month><year>2010</year></pub-date><volume>6</volume><issue>9</issue><elocation-id>e1001038</elocation-id><history><date date-type="received"><day>7</day><month>4</month><year>2010</year></date><date date-type="accepted"><day>12</day><month>7</month><year>2010</year></date></history><permissions><copyright-statement>Morin et al.</copyright-statement><copyright-year>2010</copyright-year><license xlink:href="http://creativecommons.org/licenses/by/4.0/"><license-p>This is an open-access article distributed under the terms of the Creative Commons Attribution License, which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are properly credited.</license-p></license></permissions><related-article id="RA1" related-article-type="companion" vol="6" page="e1001101" ext-link-type="pmc">
+<article-title><SecTag type="TITLE"><text><SENT sid="0" pm="."><plain>Bunyaviridae RNA Polymerases (L-protein) Have an N-Terminal, Influenza-Like Endonuclease Domain, Essential for Viral Cap-Dependent Transcription </plain></SENT>
+</text></SecTag></article-title>
+</related-article><abstract><p><SecTag type="ABS"><text><SENT sid="1" pm="."><plain>Arenaviridae synthesize viral mRNAs using short capped primers presumably acquired from cellular transcripts by a ‘cap-snatching’ mechanism. Here, we report the crystal structure and functional characterization of the N-terminal 196 residues (NL1) of the L protein from the prototypic arenavirus: lymphocytic choriomeningitis virus. The NL1 domain is able to bind and cleave RNA. The 2.13 Å resolution crystal structure of NL1 reveals a type II endonuclease α/β architecture similar to the N-terminal end of the influenza virus PA protein. Superimposition of both structures, mutagenesis and reverse genetics studies reveal a unique spatial arrangement of key active site residues related to the PD…(D/E)XK type II endonuclease signature sequence. </plain></SENT>
+<SENT sid="6" pm="."><plain>We show that this endonuclease domain is conserved and active across the virus families Arenaviridae, Bunyaviridae and Orthomyxoviridae and propose that the arenavirus NL1 domain is the Arenaviridae cap-snatching endonuclease. </plain></SENT>
+</text></SecTag></p></abstract><abstract abstract-type="summary"><title><text><SENT sid="7" pm="."><plain>Author Summary </plain></SENT>
+</text></title><p><SecTag type="ABS"><text><SENT sid="8" pm="."><plain>The Arenaviridae virus family includes several life-threatening human pathogens that cause meningitis or hemorrhagic fever. These RNA viruses replicate and transcribe their genome using an RNA synthesis machinery for which no structural data currently exist. They synthesize viral mRNAs using short capped primers presumably acquired from cellular transcripts by a ‘cap-snatching’ mechanism thought to involve the large L protein, which carries RNA-dependent RNA polymerase signature sequences. Here, we report the crystal structure and functional characterization of an isolated N-terminal domain of the L protein (NL1) from the prototypic arenavirus: lymphocytic choriomeningitis virus. The NL1 domain is able to bind and cleave RNA. The 2.13 Å resolution crystal structure of NL1 reveals a type II endonuclease α/β architecture similar to the N-terminal end of the influenza virus PA protein. Superimposition of both structures and mutagenesis studies reveal a unique spatial arrangement of key active site residues related to the PD…(D/E)XK type II endonuclease signature sequence. Reverse genetic studies show that mutation of active site residues selectively abolish transcription, not replication. We show that this endonuclease domain is conserved and active across the virus families: Arenaviridae, Bunyaviridae and Orthomyxoviridae and propose that the arenavirus NL1 domain is the Arenaviridae cap-snatching endonuclease. </plain></SENT>
+</text></SecTag></p></abstract><counts><page-count count="11"/></counts></article-meta></front><body><SecTag type="INTRO"><sec id="s1"><title><text><SENT sid="17" pm="."><plain>Introduction </plain></SENT>
+</text></title><p><text><SENT sid="18" pm="."><plain>The Arenaviridae family includes 22 viral species into a single genus Arenavirus, with new species awaiting classification [1], [2]. They cause chronic and asymptomatic infections in rodents, and occasional transmission to man may result in life-threatening meningitis and/or hemorrhagic fever. Lymphocytic choriomeningitis virus (LCMV) is the prototypic species and first arenavirus isolated in 1933. Because its natural host is the common house mouse (Mus musculus), LCMV is the only known arenavirus presumably exhibiting a worldwide distribution. LCMV is a human pathogen of significant clinical relevance, causing central nervous system disease, congenital malformation, choriomeningitis, and systemic and highly fatal infection in immuno-compromised, organt transplant recipient patients [3], [4], [5], [6]. Humans are generally infected through the respiratory tract after exposure to aerosols, or by direct contact with infectious material. </plain></SENT>
+</text></p><p><text><SENT sid="23" pm="."><plain>Arenaviruses are enveloped viruses with a bisegmented negative single-strand RNA genome. Each RNA segment, called large (L; ∼7.2 kb) and short (S; ∼3.5 kb), contains two open reading frames in mutually opposite orientations and use an ambisense coding strategy to direct the synthesis of two polypeptides [7]. Between the two open reading frames of each segment resides a non-coding intergenic region (IGR), composed of a sequence predicted to form a stable hairpin structure [8]. The S RNA encodes the viral nucleoprotein (NP; ∼63 kDa) and glycoprotein precursor (GPC; ∼75 kDa), whereas the L RNA encodes a small RING finger protein (Z; ∼11 kDa) and a large protein (L; ∼250 kDa) which is the viral RNA-dependent RNA polymerase (RdRp). </plain></SENT>
+<SENT sid="27" pm="."><plain>The two RNA genomes are encapsidated by the NP, which is the most abundant protein in virions and infected cells, and act as templates for two fundamentally different processes, RNA replication and transcription. During RNA replication, the L protein first binds to the 3′-end of RNA templates and reads them from end to end to direct the synthesis of encapsidated full-length anti-genomes. During transcription, the RdRp stops RNA synthesis at a pause site located near the IGR [7]. </plain></SENT>
+<SENT sid="30" pm="."><plain>The newly synthesized mRNA molecules have a non-polyadenylated 3′-end with a heterogeneous sequence mapped within the predicted hairpin in the IGR [9]. Furthermore, non template-directed sequences have been identified at the 5′-end of the subgenomic mRNA [10]. These sequences are variable in length [9], [10], [11] and terminate with a 5′-cap structure, which suggests the presence of a cap-snatching mechanism for arenaviruses. In this process, originally described for influenza viruses [12], [13] and bunyaviruses [14], the viral RdRp binds cellular mRNAs caps and ‘steals’ them using an endonuclease activity, located in the influenza PA subunit [15], [16], and presumably in L protein of bunyaviruses. </plain></SENT>
+<SENT sid="34" pm="."><plain>These short capped RNAs are then used as primers for mRNA synthesis. The arenavirus L protein is an essential element in genome replication and transcription [17]. </plain></SENT>
+<SENT sid="36" pm="."><plain>It is the largest viral protein composed of approximately 2200 amino-acid (aa) residues, and sequence analysis using homologous proteins led to the prediction of several conserved domains [18], [19]. </plain></SENT>
+<SENT sid="37" pm="."><plain>A biological function can be inferred for the L3 domain containing conserved and typical RdRp signature sequence motifs [19], [20]. </plain></SENT>
+<SENT sid="38" pm="."><plain>For Tacaribe virus, both domains L1 and L3 interact with the Z protein [21]. </plain></SENT>
+<SENT sid="39" pm="."><plain>By analogy with influenza and bunyaviruses, the L protein may also carry activities and domains responsible for a cap-snatching mechanism that would account for the sequence diversity found at the 5′-end of RNA transcripts. </plain></SENT>
+<SENT sid="40" pm="."><plain>The expression and purification of such a large viral polymerase is problematic and has not been documented. </plain></SENT>
+</text></p><p><text><SENT sid="41" pm="."><plain>We report here the first crystal structure of an Arenaviridae L protein domain at 2.13 Å resolution, that of the N-terminus domain of the LCMV L protein. </plain></SENT>
+<SENT sid="42" pm="."><plain>We show that this domain is able to bind nucleotides, with a preference for UTP, and RNA. </plain></SENT>
+<SENT sid="43" pm="."><plain>Structural comparison with the N-terminal part of the influenza virus PA protein characterizes unambiguously the domain as an endonuclease. </plain></SENT>
+<SENT sid="44" pm="."><plain>Sequence and secondary structure analysis of L proteins from various Bunyaviridae family members predict that their N-terminal end carries a similar endonuclease activity, that we demonstrate for Toscana virus (TOSV) (genus Phlebovirus, family Bunyaviridae). </plain></SENT>
+<SENT sid="45" pm="."><plain>Activity assays and mutagenesis show that the arenavirus endonuclease exhibits sequence-specificity with a preference for uracil-containing substrates. </plain></SENT>
+<SENT sid="46" pm="."><plain>Lastly, reverse genetics studies correlate expression of endonuclease activity with the selective production of mRNA, making the N-terminus domain of the L protein a likely candidate to be involved in the cap-snatching mechanism of arenaviruses. </plain></SENT>
+</text></p></sec></SecTag><SecTag type="RESULTS"><sec id="s2"><title><text><SENT sid="47" pm="."><plain>Results </plain></SENT>
+</text></title><sec id="s2a"><title><text><SENT sid="48" pm="."><plain>Delineation of an Arenavirus L Protein Domain and its Crystal Structure </plain></SENT>
+</text></title><p><text><SENT sid="49" pm="."><plain>Based on aa sequence conservation across arenaviruses and on the presence of a potential nucleotide-binding site, we designed cDNA constructs encoding aa residues 1 to ∼250 for the N-terminal end of four arenavirus (Pirital virus (PIRV), Lassa fever virus (LASV), Parana virus (PARV), and LCMV) L proteins. </plain></SENT>
+<SENT sid="50" pm="."><plain>All four domains were expressed as soluble recombinant proteins. </plain></SENT>
+<SENT sid="51" pm="."><plain>We observed a self-limited proteolysis of the Parana arenavirus N-terminus L domain which prompted us to refine boundaries into a shorter 196 aa form, hereafter named “NL1”, fully included in the previously predicted arenavirus L1 domain (1–250 aa) [19]. </plain></SENT>
+<SENT sid="52" pm="."><plain>The construct was expressed in E.coli and purified, but yielded crystals diffracting to 8 Å. However, the homologous 196 residues domain of LCMV yielded well-diffracting crystals. </plain></SENT>
+<SENT sid="54" pm="."><plain>The atomic structure of NL1 was first determined by the SAD technique with seleno-methionylated crystals that diffracted to 3.4 Å. The structure was refined using a native data set at 2.13 Å resolution (Table 1). </plain></SENT>
+<SENT sid="56" pm="."><plain>Two NL1 molecules are present within the asymmetric unit. </plain></SENT>
+<SENT sid="57" pm="."><plain>Residues 1–191 are visible for one molecule whilst only 1–175 could be modelled for the other NL1 molecule owing to high mobility of the C-terminal end of helix α7. </plain></SENT>
+</text></p><SecTag type="TABLE"><table-wrap id="ppat-1001038-t001" position="float"><object-id pub-id-type="doi">10.1371/journal.ppat.1001038.t001</object-id><label>Table 1</label><caption><title><text><SENT sid="58" pm="."><plain>Data Collection and Refinement Statistics. </plain></SENT>
+</text></title></caption><alternatives><graphic id="ppat-1001038-t001-1" xlink:href="ppat.1001038.t001"/><table frame="hsides" rules="groups"><colgroup span="1"><col align="left" span="1"/><col align="center" span="1"/></colgroup><thead><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="59" pm="."><plain>Data collection and refinement statistics </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="60" pm="."><plain>LCMV NL1 </plain></SENT>
+</text></td></tr></thead><tbody><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="61" pm="."><plain>Space group </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="62" pm="."><plain>C2221 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="63" pm="."><plain>Cell dimensions </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="64" pm="."><plain>a, b, c (Å) </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="65" pm="."><plain>145.0, 159.3, 52.6 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="66" pm="."><plain>Resolution (Å) </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="67" pm="."><plain>107.25−2.13 (2.19–2.13)* </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="68" pm="."><plain>Measured/unique reflections </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="69" pm="."><plain>231,821/33,999 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="70" pm="."><plain>R merge </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="71" pm="."><plain>3.9 (45.2) </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="72" pm="."><plain>&lt;I/σI&gt; </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="73" pm="."><plain>27.1 (1.9) </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="74" pm="."><plain>Completeness (%) </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="75" pm="."><plain>97.9 (97.8) </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="76" pm="."><plain>Redundancy </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="77" pm="."><plain>6.8 (2.9) </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="78" pm="."><plain>Resolution (Å) </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="79" pm="."><plain>72.50−2.13 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="80" pm="."><plain>No. reflections </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="81" pm="."><plain>33,931 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="82" pm="."><plain>R work/R free(%) </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="83" pm="."><plain>19.86/22.21 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="84" pm="."><plain>No. atoms </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="85" pm="."><plain>3,297 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="86" pm="."><plain>Protein </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="87" pm="."><plain>3,011 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="88" pm="."><plain>Water </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="89" pm="."><plain>253 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="90" pm="."><plain>B-factors </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="91" pm="."><plain>Protein </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="92" pm="."><plain>57.6 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="93" pm="."><plain>Water </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="94" pm="."><plain>68.2 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="95" pm="."><plain>R.m.s. deviations </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="96" pm="."><plain>Bond lengths (Å) </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="97" pm="."><plain>0.010 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="98" pm="."><plain>Bond angles (°) </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="99" pm="."><plain>1.14 </plain></SENT>
+</text></td></tr></tbody></table></alternatives><table-wrap-foot><fn id="nt101"><label/><p><text><SENT sid="100" pm="."><plain>*Values in parentheses are for the highest-resolution shell. </plain></SENT>
+</text></p></fn></table-wrap-foot></table-wrap></SecTag></sec><sec id="s2b"><title><text><SENT sid="101" pm="."><plain>The LCMV NL1 Domain Exhibits a Type II Endonuclease Fold </plain></SENT>
+</text></title><p><text><SENT sid="102" pm="."><plain>The LCMV NL1 monomer structure has approximate dimensions of 59 Å ×37 Å ×27 Å. It features four mixed β-strands forming a twisted plane surrounded by seven α-helices (Figure 1A). </plain></SENT>
+<SENT sid="104" pm="."><plain>The two anti-parallel strands β1 and β2 are connected by helix α4, whereas the two parallel strands β3 and β4 are connected by the long helix α5. </plain></SENT>
+<SENT sid="105" pm="."><plain>These two helices run parallel to the central β-sheet and are disposed at the same side of the latter. </plain></SENT>
+<SENT sid="106" pm="."><plain>On the opposite side of the β-sheet, helix α3 is surrounded at its extremity by two N-terminal (α1 and α2) and C-terminal helices (α6 and α7). </plain></SENT>
+<SENT sid="107" pm="."><plain>A search for similar protein folds using the DALI server [22] returned the PA N-terminal domain structure that was recently identified as a type II endonuclease domain [15], [16]. </plain></SENT>
+<SENT sid="108" pm="."><plain>The structural match with published molecular structures of the influenza PA N-terminal domains (PAN) returns a Z-score of 5.7 and an r.s.m.d. of 3.9 Å for 121 superposed aa (PDB code 3EBJ) and Z-score 5.2, r.m.s.d. </plain></SENT>
+<SENT sid="109" pm="."><plain>4 Å for 122 aa (PDB code 2W69). </plain></SENT>
+<SENT sid="110" pm="."><plain>As was the case for PAN, other type II endonuclease proteins are also recovered: the Tt1808 hypothetical protein from Thermus Thermophilus HB88 (PDB code 1WDJ, Z-score 3.8, r.m.s.d. </plain></SENT>
+<SENT sid="111" pm="."><plain>3.4 Å for 81 aa), and the restriction endonuclease SdaI (PDB code 2IXS, Z-score 3.6, r.m.s.d. </plain></SENT>
+<SENT sid="112" pm="."><plain>6.3 Å for 104 aa). </plain></SENT>
+</text></p><SecTag type="FIG"><fig id="ppat-1001038-g001" position="float"><object-id pub-id-type="doi">10.1371/journal.ppat.1001038.g001</object-id><label>Figure 1</label><caption><title><text><SENT sid="113" pm="."><plain>NL1 structure and comparisons with the influenza PAN structure. </plain></SENT>
+</text></title><p><text><SENT sid="114" pm="."><plain>A, Cartoon-representation of the NL1 structure. </plain></SENT>
+<SENT sid="115" pm="."><plain>Secondary-structure elements are labelled and colored as follows: α-helices, blue, β-strands, orange, and loops, green. </plain></SENT>
+<SENT sid="116" pm="."><plain>Side-chains for residues within the NL1 endonuclease active site are shown as red sticks and labelled. B, Electrostatic surface representation showing NL1 in the same orientation as in panel (A). </plain></SENT>
+<SENT sid="117" pm="."><plain>The arrow indicates the putative RNA binding groove and the active site crevice. </plain></SENT>
+<SENT sid="118" pm="."><plain>Negative charges are in red and positive charges in blue and neutral in white. C, Superimposition (view in the same orientation as in A) of the structures of NL1 (grey) and PAN (PDB code:2W69, cyan) highlighting their shared structural core as well as variations in the form of an extra loop only present in the PAN structure (circled). </plain></SENT>
+<SENT sid="119" pm="."><plain>The two Mn2+ ions in the PAN structure active site are depicted as green spheres. D, Topology diagrams of the NL1 (left) and PAN (right) structures. α-helices are represented as yellow tubes and β-strands are blue arrows. </plain></SENT>
+<SENT sid="120" pm="."><plain>The extra-loop of PAN protein is circled as in panel C. Key residues from the endonuclease active site (PD, E/D, and K), are schematically depicted by colored dots and labelled, highlighting the fact that they project from conserved structural elements between the influenza PAN protein and the arenavirus NL1 domain. </plain></SENT>
+</text></p></caption><graphic xlink:href="ppat.1001038.g001"/></fig></SecTag><p><text><SENT sid="122" pm="."><plain>The β-sheet forms a negatively charged cavity creating a binding site for divalent cations, whilst above that cavity, the C-terminal end of helix α5 forms a positively charged patch and a concave surface that is likely to accommodate the RNA substrate (Figure 1B, arrow). </plain></SENT>
+<SENT sid="123" pm="."><plain>The PA protein constitutes one subunit that associates with PB1 and PB2 to form the heterotrimeric influenza virus polymerase. </plain></SENT>
+<SENT sid="124" pm="."><plain>Its N-terminal domain PAN hosts the RNA cap-snatching endonuclease activity [15], [16]. </plain></SENT>
+<SENT sid="125" pm="."><plain>Both NL1 and PAN share a similar core structure. </plain></SENT>
+<SENT sid="126" pm="."><plain>Except for the absence of a fifth β-strand in NL1, all other secondary structure elements are conserved (Figure 1C) and the overall topology of these two structures is very similar (Figure 1D), albeit with interesting differences in the vicinity of the PAN active site (discussed below). </plain></SENT>
+<SENT sid="127" pm="."><plain>At the aa sequence level, NL1 shares the conserved active site sequence motif characteristic of type II endonucleases: PD…(D/E)XK. </plain></SENT>
+<SENT sid="128" pm="."><plain>In NL1, the corresponding residues are P88, D89…E102, and either K115 or K122 (Figure S1A, B). </plain></SENT>
+<SENT sid="129" pm="."><plain>The identity of the distal lysine is not certain since it is found at different positions in the primary sequence, as is the case for influenza virus. </plain></SENT>
+<SENT sid="130" pm="."><plain>The influenza PAN domain was crystallized either in the presence of magnesium or manganese ions in the active site which comprises five conserved catalytic residues: H41, E80, D108, E119 and K134. </plain></SENT>
+<SENT sid="131" pm="."><plain>A structural superimposition of the arenavirus NL1 and influenza PAN active sites shows that the side-chains of three evolutionary-conserved residues within arenaviruses (P88, D89 and E102) closely superimpose with P107, D108 and E119 of the influenza virus PAN protein, pointing to a common function for these residues (Figure 2A and Figure S1B). </plain></SENT>
+<SENT sid="132" pm="."><plain>Upon superimposition with PAN, one Mn2+ ion needed for the enzymatic reaction coordinated by D108 in the PAN active site, falls at right distances to be coordinated by the carboxylate side-chains of D89 and E102. </plain></SENT>
+<SENT sid="133" pm="."><plain>NL1 was crystallized without metal ions and a water molecule is found close to the position that should be occupied by the divalent metal. </plain></SENT>
+<SENT sid="134" pm="."><plain>Interestingly, no close structural match is found neither for H41 nor K134 of the influenza virus PAN. </plain></SENT>
+<SENT sid="135" pm="."><plain>This points to differences between the two active sites since His41 was proposed to play a catalytic role in the influenza PAN. </plain></SENT>
+<SENT sid="136" pm="."><plain>However, we note that another possible contributor could be NL1 C103 main-chain carbonyl as it superimposes quite well with PAN I120 main-chain carbonyl (Figure 2B). </plain></SENT>
+<SENT sid="137" pm="."><plain>The triad made of K115, D119, and K122 in NL1 is spatially equivalent to K134 in PAN. </plain></SENT>
+<SENT sid="138" pm="."><plain>In summary, despite no aa sequence homology, the active site structures of the influenza PAN and LCMV NL1 domains are clearly related but not identical (Figure 1C, 2), strongly suggesting that these two domains exhibit closely related enzymatic activities (see below). </plain></SENT>
+</text></p><SecTag type="FIG"><fig id="ppat-1001038-g002" position="float"><object-id pub-id-type="doi">10.1371/journal.ppat.1001038.g002</object-id><label>Figure 2</label><caption><title><text><SENT sid="139" pm="."><plain>The endonuclease active site. </plain></SENT>
+</text></title><p><text><SENT sid="140" pm="."><plain>A, Structure-based superimposition of the endonuclease active site from the influenza PAN protein and the arenavirus NL1 domain. </plain></SENT>
+<SENT sid="141" pm="."><plain>Putative active site residues of NL1 are shown as grey sticks and the active site of PAN (PDB code 2W69) in cyan. </plain></SENT>
+<SENT sid="142" pm="."><plain>The two Mn2+ ions present in the PAN structure (but not in the present NL1 domain crystal structure) are shown as light green spheres with their closest ligand indicated by a dashed line. B, C-alpha trace ribbon-representation of the superimposition of the endonuclease active site from the influenza PAN (cyan) protein and the arenavirus NL1 domain (grey). </plain></SENT>
+<SENT sid="143" pm="."><plain>The carbonyl main-chain of PAN I120 and NL1 C103 are shown in sticks. </plain></SENT>
+<SENT sid="144" pm="."><plain>The metal ions are shown as light green spheres. </plain></SENT>
+</text></p></caption><graphic xlink:href="ppat.1001038.g002"/></fig></SecTag></sec><sec id="s2c"><title><text><SENT sid="145" pm="."><plain>The NL1 Endonuclease Fold is Conserved Amongst Bunyaviridae </plain></SENT>
+</text></title><p><text><SENT sid="146" pm="."><plain>In addition to Arenaviridae and Orthomyxoviridae, Bunyaviridae is the other family of virus to possess a segmented negative-strand RNA genome. </plain></SENT>
+<SENT sid="147" pm="."><plain>It contains four genera of animal viruses (Orthobunyavirus, Phlebovirus, Nairovirus, Hantavirus) and one genus of plant virus (Tospovirus) [23]. </plain></SENT>
+<SENT sid="148" pm="."><plain>Although the genomic organisation differs between these three virus families, Bunyaviridae are also thought to use a cap-snatching mechanism to prime mRNA synthesis [24]. </plain></SENT>
+<SENT sid="149" pm="."><plain>Arenaviruses, and Bunyaviridae share a conserved RdRp motif within their large L protein, as well as a conserved N-terminus domain [18]. </plain></SENT>
+<SENT sid="150" pm="."><plain>Amino-acid sequence alignments, assisted by secondary structured prediction, of the N-terminal part of LCMV and Bunyaviridae L protein reveal that the latter also possesses the conserved active site motifs characteristic of type II endonucleases (Figure S2A). </plain></SENT>
+<SENT sid="151" pm="."><plain>However, we could identify the catalytic motif within the L protein N-terminal end for only four out of the five bunyavirus genera: Orthobunyavirus, Phlebovirus, Hantavirus and Tospovirus. </plain></SENT>
+<SENT sid="152" pm="."><plain>The L protein of Nairovirus is much larger (∼4000 aa) than the L protein of other members of the Bunyaviridae family (∼2200 aa). </plain></SENT>
+<SENT sid="153" pm="."><plain>The putative endonuclease catalytic motif was located after aa ∼700, the N-terminal of Nairovirus L protein being assigned as a so-called OTU-like domain [25]. </plain></SENT>
+</text></p><p><text><SENT sid="154" pm="."><plain>Secondary structure predictions were used to draw the topology diagram of the NL1-like domain for each genera (Figure S2B). </plain></SENT>
+<SENT sid="155" pm="."><plain>As expected from the sequence alignment, each genus seems to share a β-sheet with a variable number of β-strands. </plain></SENT>
+<SENT sid="156" pm="."><plain>Furthermore, the PD catalytic motifs are in each case located in a loop before a β-strand, as expected. </plain></SENT>
+<SENT sid="157" pm="."><plain>The PUMV, HLCV and RVFV NL1-like domains are more closely related to LCMV NL1 than are the TOMV and CCGV. </plain></SENT>
+<SENT sid="158" pm="."><plain>The TOMV NL1-like domain contains 6 β-strands and shares the PD motif just upstream the first β-strand, whereas it is just upstream the second β-strand in the case of NL1 and PAN. </plain></SENT>
+<SENT sid="159" pm="."><plain>Finally, the structural organization of the putative CCGV endonuclease domain seems to diverge even further from the others. </plain></SENT>
+<SENT sid="160" pm="."><plain>Indeed, whereas the conserved lysine is shared by the same helix for all the domains, that of Nairovirus may be located at the end of the β4 strand (Figure S2B). </plain></SENT>
+<SENT sid="161" pm="."><plain>Thus we conclude that the endonuclease motif is conserved across four animal virus genera Orthobunyavirus, Phlebovirus, Nairovirus and Hantavirus. </plain></SENT>
+</text></p></sec><sec id="s2d"><title><text><SENT sid="162" pm="."><plain>NL1 is a Mn2+-Dependent RNA Endonuclease </plain></SENT>
+</text></title><p><text><SENT sid="163" pm="."><plain>Recent crystal structures of complexes of PAN with three different nucleoside monophosphates show that PAN binds nucleotides [26]. </plain></SENT>
+<SENT sid="164" pm="."><plain>The ability of NL1 to bind nucleotides was investigated using UV-crosslink experiments. </plain></SENT>
+<SENT sid="165" pm="."><plain>We observe that NL1 binds NTPs, preferably UTP and GTP, whereas ATP and CTP show a weaker association (Figure 3A). </plain></SENT>
+<SENT sid="166" pm="."><plain>The PAN structures were determined in complex with ATP, CTP and UTP but not GTP [26] whereas NL1 bind GTP in a stronger fashion than ATP or CTP. </plain></SENT>
+<SENT sid="167" pm="."><plain>The crystal structure relatedness to the endonuclease fold would suggest that the NL1 domain is able to bind RNA rather than nucleotides. </plain></SENT>
+<SENT sid="168" pm="."><plain>We tested RNA binding by NL1, and found that indeed, NL1 binds RNA (Figure 3B). </plain></SENT>
+<SENT sid="169" pm="."><plain>The band shift assay is also suggestive that the RNA substrate is cleaved under the assay conditions, as judged by degradation products at the bottom of the gel under the labeled RNA oligo (Figure 3B). </plain></SENT>
+<SENT sid="170" pm="."><plain>Therefore, we surmise that nucleotide binding properties observed here reflect the ability of NL1 to bind RNA with some sequence specificity in the cap-snatching pathway (see below). </plain></SENT>
+</text></p><SecTag type="FIG"><fig id="ppat-1001038-g003" position="float"><object-id pub-id-type="doi">10.1371/journal.ppat.1001038.g003</object-id><label>Figure 3</label><caption><title><text><SENT sid="171" pm="."><plain>Nucleotide and RNA binding assays of LCMV NL1 domain. </plain></SENT>
+</text></title><p><text><SENT sid="172" pm="."><plain>A, Cross-linking assay. </plain></SENT>
+<SENT sid="173" pm="."><plain>7 µg of purified protein were incubated in the absence (−) or presence of each indicated radiolabelled NTP. </plain></SENT>
+<SENT sid="174" pm="."><plain>The mixture was then UV-irradiated and loaded onto a denaturing polyacrylamide gel. </plain></SENT>
+<SENT sid="175" pm="."><plain>The latter was analyzed by autoradiography (top) and Coomassie blue staining (bottom). B, Band shift assay. </plain></SENT>
+<SENT sid="176" pm="."><plain>Radiolabelled RNA was incubated with increasing quantities (1.4 µg (+), 4.2 µg (++) and 7 µg (+++)) of NL1 protein. </plain></SENT>
+<SENT sid="177" pm="."><plain>Reaction mixture was then analyzed by PAGE, and the gel was visualized by autoradiography (left) and Coomassie blue staining (right). </plain></SENT>
+<SENT sid="178" pm="."><plain>Apparent degradation products are indicated by arrows under the RNA input arrow. </plain></SENT>
+</text></p></caption><graphic xlink:href="ppat.1001038.g003"/></fig></SecTag><p><text><SENT sid="179" pm="."><plain>Several synthetic RNA oligonucleotides were used to characterize the endonuclease activity (Figure 4). </plain></SENT>
+<SENT sid="180" pm="."><plain>NL1 is able to cleave ssRNA having no stable secondary structure at specific sites indicating a preference for the presence of uracil (Figure 4A, B), and adenosine to a lesser extent. </plain></SENT>
+<SENT sid="181" pm="."><plain>Likewise, a moderately stable RNA hairpin containing uracil (ΔG = −3.4 kcal/mole) is cleaved down to a 14/15-mer product whereas a stable (ΔG = −14.7 kcal/mole) RNA hairpin devoid of uracil remains unattacked even in its single stranded regions (Figure 4A, B). </plain></SENT>
+<SENT sid="182" pm="."><plain>PolyU RNA is cleaved randomly down to a 8-mer product with a better efficiency than polyA, whereas polyC is not a substrate for NL1 (not shown). </plain></SENT>
+<SENT sid="183" pm="."><plain>A 5′-terminal nucleoside uracil or adenosine 5′-monophosphate is also cleaved and the 5′-monophosphate RNA end apparently competes for internal cleavage. </plain></SENT>
+<SENT sid="184" pm="."><plain>A 5′-capped RNA of 264 nucleotides in length also acts as a substrate. </plain></SENT>
+<SENT sid="185" pm="."><plain>It is cleaved at several specific positions indicated by the sequential appearance of band products over time (Figure 4B). </plain></SENT>
+<SENT sid="186" pm="."><plain>This indicates that the cap structure does not seem to be a direct RNA binding determinant. </plain></SENT>
+<SENT sid="187" pm="."><plain>A Phlebovirus (Toscana) virus endonuclease domain was prepared according to bio-informatic predictions described above. </plain></SENT>
+<SENT sid="188" pm="."><plain>Its endonuclease activity was compared to both that of arenavirus NL1 and the influenza H5N1 endonuclease [16]. </plain></SENT>
+<SENT sid="189" pm="."><plain>The enzymes were equally active using short RNA substrates, although it is apparent that sequence-specific cleavage is different for each enzyme: the influenza enzymes prefers cleavage at puric sites, Toscana virus and LCMV enzymes prefer adenosine- and uracil-containing sites (Figure 4B). </plain></SENT>
+<SENT sid="190" pm="."><plain>NL1 is ∼90-fold more active in the presence of Mn2+ than Mg2+, and shows background activity with Ca2+ and Zn2+(Figure 4C and not shown). </plain></SENT>
+<SENT sid="191" pm="."><plain>The Mn2+ ion has also a significant stabilizing effect as judged by thermostability studies, whereas Zn2+ has a deleterious effect. </plain></SENT>
+</text></p><SecTag type="FIG"><fig id="ppat-1001038-g004" position="float"><object-id pub-id-type="doi">10.1371/journal.ppat.1001038.g004</object-id><label>Figure 4</label><caption><title><text><SENT sid="192" pm="."><plain>Endonuclease activity of NL1. </plain></SENT>
+</text></title><p><text><SENT sid="193" pm="."><plain>A, Nucleotide sequence of the radiolabelled RNA used for the activity assays. </plain></SENT>
+<SENT sid="194" pm="."><plain>The * indicates the radiolabelled nucleotide. </plain></SENT>
+<SENT sid="195" pm="."><plain>Big and small triangles indicates the primary and secondary cleavage site by wild-type (WT) NL1, respectively. B, Kinetics of endonuclease activity of WT NL1 on different substrates (left), and for Influenza and Toscana virus (INFV, TOSV) endonuclease domain (right). </plain></SENT>
+<SENT sid="196" pm="."><plain>Activity assays were performed as described in Materials and Methods, using 3.3 µM of RNA and 1 µM of protein. </plain></SENT>
+<SENT sid="197" pm="."><plain>Reactions were quenched by the addition of EDTA/formamide, and analyzed using 20% polyacrylamide/7M urea gel. </plain></SENT>
+<SENT sid="198" pm="."><plain>Substrate and degradation product sizes are indicated. C, Divalent cations effect on the NL1 activity. </plain></SENT>
+<SENT sid="199" pm="."><plain>The reaction was allowed to proceed during 45 min as described in Materials and Methods. </plain></SENT>
+<SENT sid="200" pm="."><plain>The divalent cation assay (left) was run during 45 min without intermediate points. </plain></SENT>
+<SENT sid="201" pm="."><plain>Titration of divalent ions on NL1 by thermal shift assay (right). </plain></SENT>
+<SENT sid="202" pm="."><plain>Tm is the melting temperature of NL1 with the divalent ions ; To is the melting temperature of the protein alone. D, Mutational analysis of NL1 domain on the endonuclease activity. </plain></SENT>
+<SENT sid="203" pm="."><plain>Kinetics were performed as described above, with WT, D89A and D119A mutants (Left). </plain></SENT>
+<SENT sid="204" pm="."><plain>Graph showing the % of endonuclease activity determined using FujiImager normalized quantitation for the different mutants (right). </plain></SENT>
+</text></p></caption><graphic xlink:href="ppat.1001038.g004"/></fig></SecTag><p><text><SENT sid="205" pm="."><plain>Mutagenesis analysis of most residues identified as part of the active site (Figure 2A) impaired the endonuclease activity. </plain></SENT>
+<SENT sid="206" pm="."><plain>The most drastic effect was observed for D119, but residual activity was scored for E51, D89, and less for E102 (Figure 4D). </plain></SENT>
+<SENT sid="207" pm="."><plain>As these three residues might coordinate metal ions as proposed above, defective metal-binding due to a point mutation might be compensated by the presence of the remaining two adjacent acidic residues. </plain></SENT>
+<SENT sid="208" pm="."><plain>A double mutant D89A/E102A shows further reduced but not abolished activity. </plain></SENT>
+<SENT sid="209" pm="."><plain>Mutations K115A and K122A generated strongly altered activity, but the similar level of residual activity does not allow the identification of which lysine is predominant in catalysis. </plain></SENT>
+</text></p></sec><sec id="s2e"><title><text><SENT sid="210" pm="."><plain>The Endonuclease Activity is Essential for RNA Transcription, not Replication </plain></SENT>
+</text></title><p><text><SENT sid="211" pm="."><plain>The effect of 33 mutations in L1 on virus RNA and protein expression was studied in a cell-based mini-replicon system. </plain></SENT>
+<SENT sid="212" pm="."><plain>The LCMV L protein mediates the synthesis of two RNA species: first, capped mRNA terminating within the intergenic region, and second, antigenomic RNA being a full-length copy of the genomic RNA template [9], [27]. </plain></SENT>
+<SENT sid="213" pm="."><plain>This dual role in RNA synthesis is recapitulated in the mini-replicon system. </plain></SENT>
+<SENT sid="214" pm="."><plain>It contains all trans-acting factors (L protein and NP) required for transcription and replication of a genome analogue containing Renilla luciferase as a reporter gene (mini-genome). </plain></SENT>
+<SENT sid="215" pm="."><plain>Reporter gene expression was measured in luciferase assay (Table 2), while RNA synthesis was measured in Northern blot (Figure 5), in which luciferase mRNA and antigenome can easily be distinguished due to their size difference. </plain></SENT>
+<SENT sid="216" pm="."><plain>Wild-type (WT) L protein led to expression of high levels of Renilla luciferase (2–3 log units signal-to-noise ratio) as well as Renilla luciferase mRNA and antigenome in a ratio of about 1∶1. </plain></SENT>
+<SENT sid="217" pm="."><plain>Expression of mutant L protein was verified by immunoblotting (Figure S3). </plain></SENT>
+</text></p><SecTag type="FIG"><fig id="ppat-1001038-g005" position="float"><object-id pub-id-type="doi">10.1371/journal.ppat.1001038.g005</object-id><label>Figure 5</label><caption><title><text><SENT sid="218" pm="."><plain>Mutational analysis of the L protein in the context of the LCMV replicon system. </plain></SENT>
+</text></title><p><text><SENT sid="219" pm="."><plain>Synthesis of antigenomic RNA and Renilla luciferase mRNA was analyzed by Northern blotting. </plain></SENT>
+<SENT sid="220" pm="."><plain>Negative control cells (neg. ctrl.) expressed mini-genome, NP, and an L protein mutant with a mutation in the catalytic site of the RNA-dependent RNA polymerase. </plain></SENT>
+<SENT sid="221" pm="."><plain>The methylene blue-stained 28S rRNA is shown below the blots as a marker for gel loading and RNA transfer. </plain></SENT>
+<SENT sid="222" pm="."><plain>Each panel represents an independent experiment with separate controls. </plain></SENT>
+<SENT sid="223" pm="."><plain>Careful examination of the blots revealed residual signals at the mRNA position for some mutants negative in Renilla luciferase assay. </plain></SENT>
+<SENT sid="224" pm="."><plain>Thus, these signals do not correspond to functional mRNA, but may be prematurely terminated antigenome. </plain></SENT>
+</text></p></caption><graphic xlink:href="ppat.1001038.g005"/></fig></SecTag><SecTag type="TABLE"><table-wrap id="ppat-1001038-t002" position="float"><object-id pub-id-type="doi">10.1371/journal.ppat.1001038.t002</object-id><label>Table 2</label><caption><title><text><SENT sid="225" pm="."><plain>Functional Analysis of L Protein Mutants in LCMV Mini-Replicon System. </plain></SENT>
+</text></title></caption><alternatives><graphic id="ppat-1001038-t002-2" xlink:href="ppat.1001038.t002"/><table frame="hsides" rules="groups"><colgroup span="1"><col align="left" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/></colgroup><thead><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="226" pm="."><plain>Mutant1 </plain></SENT>
+</text></td><td colspan="2" align="left" rowspan="1"><text><SENT sid="227" pm="."><plain>Renilla luciferase activity (sRLU) </plain></SENT>
+</text></td><td colspan="2" align="left" rowspan="1"><text><SENT sid="228" pm="."><plain>RNA expression level (Northern blot signal) </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="229" pm="."><plain>% of wild-type2 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="230" pm="."><plain>Signal-to-noise ratio3 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="231" pm="."><plain>Antigenome level, % of wild-type4 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="232" pm="."><plain>mRNA-to-antigenome ratio, relative to wild-type5 </plain></SENT>
+</text></td></tr></thead><tbody><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="233" pm="."><plain>E41A </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="234" pm="."><plain>44.3 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="235" pm="."><plain>243.2 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="236" pm="."><plain>21.9 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="237" pm="."><plain>2.01 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="238" pm="."><plain>E41Q </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="239" pm="."><plain>42.4 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="240" pm="."><plain>310.7 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="241" pm="."><plain>25.5 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="242" pm="."><plain>1.95 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="243" pm="."><plain>K44A </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="244" pm="."><plain>30.2 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="245" pm="."><plain>215.8 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="246" pm="."><plain>23.6 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="247" pm="."><plain>0.93 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="248" pm="."><plain>E51A </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="249" pm="."><plain>1.3 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="250" pm="."><plain>8.5 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="251" pm="."><plain>28.5 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="252" pm="."><plain>0.39 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="253" pm="."><plain>E51Q </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="254" pm="."><plain>0.5 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="255" pm="."><plain>3.6 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="256" pm="."><plain>32.9 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="257" pm="."><plain>0.26 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="258" pm="."><plain>S54A </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="259" pm="."><plain>23.5 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="260" pm="."><plain>175.6 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="261" pm="."><plain>28.3 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="262" pm="."><plain>0.80 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="263" pm="."><plain>C60A </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="264" pm="."><plain>47.9 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="265" pm="."><plain>357.7 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="266" pm="."><plain>62.4 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="267" pm="."><plain>1.13 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="268" pm="."><plain>D89A </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="269" pm="."><plain>0.5 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="270" pm="."><plain>3.5 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="271" pm="."><plain>107.6 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="272" pm="."><plain>0.20 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="273" pm="."><plain>D89N </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="274" pm="."><plain>0.5 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="275" pm="."><plain>3.8 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="276" pm="."><plain>138.5 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="277" pm="."><plain>0.19 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="278" pm="."><plain>E102A </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="279" pm="."><plain>0.9 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="280" pm="."><plain>3.5 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="281" pm="."><plain>119.3 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="282" pm="."><plain>0.22 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="283" pm="."><plain>E102N </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="284" pm="."><plain>3.3 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="285" pm="."><plain>13.6 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="286" pm="."><plain>78.2 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="287" pm="."><plain>0.26 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="288" pm="."><plain>F104A </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="289" pm="."><plain>0.6 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="290" pm="."><plain>3.8 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="291" pm="."><plain>— </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="292" pm="."><plain>— </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="293" pm="."><plain>R106A </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="294" pm="."><plain>4.4 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="295" pm="."><plain>32.5 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="296" pm="."><plain>— </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="297" pm="."><plain>— </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="298" pm="."><plain>T108S </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="299" pm="."><plain>29.7 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="300" pm="."><plain>212.7 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="301" pm="."><plain>48.0 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="302" pm="."><plain>0.89 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="303" pm="."><plain>F112A </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="304" pm="."><plain>0.3 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="305" pm="."><plain>1.8 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="306" pm="."><plain>— </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="307" pm="."><plain>— </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="308" pm="."><plain>K115A </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="309" pm="."><plain>0.9 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="310" pm="."><plain>6.8 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="311" pm="."><plain>— </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="312" pm="."><plain>— </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="313" pm="."><plain>F116A </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="314" pm="."><plain>27.4 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="315" pm="."><plain>209.4 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="316" pm="."><plain>39.1 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="317" pm="."><plain>1.79 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="318" pm="."><plain>D119A </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="319" pm="."><plain>2.0 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="320" pm="."><plain>12.5 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="321" pm="."><plain>47.5 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="322" pm="."><plain>0.06 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="323" pm="."><plain>D119N </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="324" pm="."><plain>8.0 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="325" pm="."><plain>43.0 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="326" pm="."><plain>46.4 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="327" pm="."><plain>0.07 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="328" pm="."><plain>K122A </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="329" pm="."><plain>1.6 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="330" pm="."><plain>9.3 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="331" pm="."><plain>55.3 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="332" pm="."><plain>0.04 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="333" pm="."><plain>D129A </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="334" pm="."><plain>1.3 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="335" pm="."><plain>6.5 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="336" pm="."><plain>56.5 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="337" pm="."><plain>0.04 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="338" pm="."><plain>D129N </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="339" pm="."><plain>1.3 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="340" pm="."><plain>7.4 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="341" pm="."><plain>54.1 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="342" pm="."><plain>0.05 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="343" pm="."><plain>D142A </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="344" pm="."><plain>2.8 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="345" pm="."><plain>17.6 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="346" pm="."><plain>— </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="347" pm="."><plain>— </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="348" pm="."><plain>D142N </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="349" pm="."><plain>42.8 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="350" pm="."><plain>270.6 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="351" pm="."><plain>66.1 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="352" pm="."><plain>0.93 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="353" pm="."><plain>R144A </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="354" pm="."><plain>2.3 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="355" pm="."><plain>10.2 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="356" pm="."><plain>— </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="357" pm="."><plain>— </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="358" pm="."><plain>W155A </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="359" pm="."><plain>34.7 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="360" pm="."><plain>203.3 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="361" pm="."><plain>91.0 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="362" pm="."><plain>0.91 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="363" pm="."><plain>R161A </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="364" pm="."><plain>3.4 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="365" pm="."><plain>17.6 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="366" pm="."><plain>— </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="367" pm="."><plain>— </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="368" pm="."><plain>E179A </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="369" pm="."><plain>40.0 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="370" pm="."><plain>239.4 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="371" pm="."><plain>109.9 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="372" pm="."><plain>0.46 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="373" pm="."><plain>E179Q </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="374" pm="."><plain>25.4 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="375" pm="."><plain>174.6 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="376" pm="."><plain>105.0 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="377" pm="."><plain>0.44 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="378" pm="."><plain>E182A </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="379" pm="."><plain>32.6 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="380" pm="."><plain>201.3 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="381" pm="."><plain>154.9 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="382" pm="."><plain>0.40 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="383" pm="."><plain>E182Q </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="384" pm="."><plain>29.3 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="385" pm="."><plain>184.9 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="386" pm="."><plain>103.1 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="387" pm="."><plain>0.42 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="388" pm="."><plain>Y183A </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="389" pm="."><plain>16.9 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="390" pm="."><plain>98.8 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="391" pm="."><plain>82.3 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="392" pm="."><plain>0.48 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="393" pm="."><plain>R185A </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="394" pm="."><plain>0.3 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="395" pm="."><plain>1.4 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="396" pm="."><plain>— </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="397" pm="."><plain>— </plain></SENT>
+</text></td></tr></tbody></table></alternatives><table-wrap-foot><fn id="nt102"><label>1</label><p><text><SENT sid="398" pm="."><plain>Mutants with selective defect in mRNA synthesis are shown in boldface. </plain></SENT>
+</text></p></fn><fn id="nt103"><label>2</label><p><text><SENT sid="399" pm="."><plain>Standardized relative light unit (sRLU) value (wild-type = 100%). </plain></SENT>
+<SENT sid="400" pm="."><plain>Mean of ≥2 independent transfection experiments. </plain></SENT>
+</text></p></fn><fn id="nt104"><label>3</label><p><text><SENT sid="401" pm="."><plain>sRLU value of mutant divided by sRLU value of negative control mutant containing a mutation in the catalytic site of the RNA-dependent RNA polymerase. </plain></SENT>
+<SENT sid="402" pm="."><plain>Mean of ≥2 independent transfection experiments. </plain></SENT>
+</text></p></fn><fn id="nt105"><label>4</label><p><text><SENT sid="403" pm="."><plain>Antigenome signals in Northern blots were quantified via intensity profiles (wild-type = 100%). </plain></SENT>
+</text></p></fn><fn id="nt106"><label>5</label><p><text><SENT sid="404" pm="."><plain>RNA signals in Northern blots were quantified and the mRNA-to-antigenome signal ratio was calculated. </plain></SENT>
+<SENT sid="405" pm="."><plain>The wild-type ratio was set at 1 for each experiment (i.e. the signal ratio of a mutant was normalized with the wild-type ratio) to render independent blots comparable. </plain></SENT>
+</text></p></fn></table-wrap-foot></table-wrap></SecTag><p><text><SENT sid="406" pm="."><plain>The phenotype of mutants E41A, E41Q, K44A, S54A, C60A, T108S, F116A, D142N, and W155A is similar to that of wild-type. </plain></SENT>
+<SENT sid="407" pm="."><plain>Mutants E179A, E179Q, E182A, E182Q, and Y183A also express luciferase and RNA at high level, but the steady-state level of mRNA relative to that of antigenome is reduced by about 50%. </plain></SENT>
+<SENT sid="408" pm="."><plain>Mutants F104A, R106A, F112A, K115A, D142A, R144A, R161A, R185A neither express Renilla luciferase nor any RNA species, indicating that global functions of L protein are affected. </plain></SENT>
+</text></p><p><text><SENT sid="409" pm="."><plain>The most interesting phenotype is observed with mutants D89A, D89N, E102A, E102N, D119A, D119N, K122A, D129A, and D129N. </plain></SENT>
+<SENT sid="410" pm="."><plain>They synthesize antigenome close or equal to wild-type level, but are defective in mRNA and, thus, reporter gene expression (Figure 5 and Table 2, shown in boldface). </plain></SENT>
+<SENT sid="411" pm="."><plain>A similar phenotype is seen with mutants E51A and E51Q, though associated with reduced antigenome level. </plain></SENT>
+<SENT sid="412" pm="."><plain>These data indicate that residues E51, D89, E102, D119, K122, and D129A are essential for viral mRNA synthesis, but not required for expression of uncapped RNA species. </plain></SENT>
+<SENT sid="413" pm="."><plain>With the exception of the D129 residue located at the surface of the protein remote from the endonuclease active site, it is remarkable that these transcription-null mutants form the catalytic site (Figure 2) and match precisely those of the PD…(D/E)XK endonuclease type II signature sequence. </plain></SENT>
+</text></p></sec></sec></SecTag><SecTag type="DISCUSS"><sec id="s3"><title><text><SENT sid="414" pm="."><plain>Discussion </plain></SENT>
+</text></title><p><text><SENT sid="415" pm="."><plain>The structural and functional results presented here show that the LCMV NL1 domain is an RNA endonuclease. </plain></SENT>
+<SENT sid="416" pm="."><plain>The uncoupling of RNA replication from transcription and selective disappearance of mRNA when NL1 active site residues are mutated strongly suggests that this activity is involved in cap-snatching. </plain></SENT>
+</text></p><p><text><SENT sid="417" pm="."><plain>The identification of the arenavirus endonuclease is in line with the recent discovery of the PAN endonuclease domain of influenza virus. </plain></SENT>
+<SENT sid="418" pm="."><plain>Whereas the active site of influenza virus features a cluster of three acidic residues, the active site of arenavirus contains four acidic residues (E51, D89, E102 and D119), as well as two important lysine residues K115 and K122 neighboring D119 (Figure 2A). </plain></SENT>
+<SENT sid="419" pm="."><plain>The NL1 active site resembles but is clearly distinct from that of influenza PAN. </plain></SENT>
+<SENT sid="420" pm="."><plain>Indeed, there is no histidine in the catalytic center, and the arenavirus NL1 nuclease has some specific features both upstream and downstream of the PD signature sequence. </plain></SENT>
+<SENT sid="421" pm="."><plain>We define the arenavirus endonuclease motif as E-X38-P-D-X(11,13)-E-X12-K-X3-D-X2-K. </plain></SENT>
+<SENT sid="422" pm="."><plain>The most obvious difference with the only known related RNA endonuclease, that of influenza virus PAN, is a divergence upstream the PD motif in structural elements carrying the E51 residue (Figure 1C), and the presence of a triad K…D…K at the distal side of the latter signature sequence (Figure 2A). </plain></SENT>
+<SENT sid="423" pm="."><plain>Contrary to PAN which shares a conserved and essential histidine involved in the binding of both the metal ion and a nucleotide onto helix α3 [15], [16], [26], NL1 does not possess this conserved histidine residue. </plain></SENT>
+<SENT sid="424" pm="."><plain>Instead, NL1 has a glutamic acid residue E51, which might reflect a different nucleobase specificity as detected in our nuclease assays (Figure 4). </plain></SENT>
+<SENT sid="425" pm="."><plain>Likewise, residues downstream the PD motifs are distinct from the consensus sequence, and differently organized into a triad including two lysines. </plain></SENT>
+<SENT sid="426" pm="."><plain>The presence of water molecules and previous structural models for influenza PAN allows to propose putative positions of metal ions, coordinated by D89 and E102. </plain></SENT>
+</text></p><p><text><SENT sid="427" pm="."><plain>The first step in the general mechanism for phosphodiester hydrolysis is the preparation of the attacking nucleophile by deprotonation, usually involving a general base deprotonating a water molecule. </plain></SENT>
+<SENT sid="428" pm="."><plain>Lysine is often considered as this general base candidate in endonucleases but is not strictly conserved [28], [29]. </plain></SENT>
+<SENT sid="429" pm="."><plain>Here, there are no indications against D119 being this general base. </plain></SENT>
+<SENT sid="430" pm="."><plain>Alternately, it could well be either lysine K115 or K122. </plain></SENT>
+<SENT sid="431" pm="."><plain>Both are oriented towards the active site, and they could well have their pKa lowered by D119 in order to initiate the reaction. </plain></SENT>
+<SENT sid="432" pm="."><plain>Reverse genetic studies provide evidence for K122, not K115. </plain></SENT>
+<SENT sid="433" pm="."><plain>Indeed, mRNA production is selectively abolished and clearly uncoupled from RNA synthesis in the case of K122A mutant, while the K115A mutant was completely defective preventing interpretation of its role in the endonuclease catalytic site. </plain></SENT>
+<SENT sid="434" pm="."><plain>Although it is not known if uncapped mRNAs are synthesized and degraded for the transcription-null mutants, the most plausible scenario is that primer shortage prevents significant capped mRNA synthesis. </plain></SENT>
+<SENT sid="435" pm="."><plain>Overall, the replicon data presented here closely match those obtained on the closely related Lassa arenavirus using a similar replicon system [30]. </plain></SENT>
+<SENT sid="436" pm="."><plain>Arenaviruses may thus use two clearly independent and distinct RNA synthesis priming mechanisms: one is dependent on an active endonuclease carried by the N-terminus of the L protein, and the other might be linked to the observation that an extra G residue is found at the 5′-end of arenavirus genomes and antigenomes. </plain></SENT>
+<SENT sid="437" pm="."><plain>The latter G bases would thus reflect a yet-uncharacterized priming mechanism unrelated to the U/A cleavage sequence preference of NL1. </plain></SENT>
+</text></p><p><text><SENT sid="438" pm="."><plain>NL1 also binds nucleotides, but the NTP binding site should differ from that of PAN. </plain></SENT>
+<SENT sid="439" pm="."><plain>Indeed, the influenza PAN histidine 41 is involved in binding the nucleobase of the presumed incoming RNA substrate. </plain></SENT>
+<SENT sid="440" pm="."><plain>The NL1 endonuclease does not share the same sequence specificity, and E51 is positioned at a spatially equivalent position. </plain></SENT>
+</text></p><p><text><SENT sid="441" pm="."><plain>The cap structure does not seem to be a direct RNA binding determinant (Figure 4B), as endonucleolytic cleavage is not directed to cleavage sites preferentially in the vicinity of the cap. </plain></SENT>
+<SENT sid="442" pm="."><plain>We thus infer that an independent cap-binding site way exist elsewhere in viral proteins to bind and select cellular mRNAs, a possibility reminiscent of influenza for which PA carries the endonuclease activity and PB2 the cap binding site [15], [16], [31]. </plain></SENT>
+</text></p><p><text><SENT sid="443" pm="."><plain>Structure and sequence alignment studies show that the N-terminal endonuclease domain of the L protein is also conserved in the Bunyaviridae family, although the Nairovirus endonuclease domain is not located into the N-terminal end of the protein. </plain></SENT>
+<SENT sid="444" pm="."><plain>These findings were confirmed by the endonuclease activity of the N-terminal end of the L protein of TOSV (Figure 4B). </plain></SENT>
+<SENT sid="445" pm="."><plain>Thus, we provide evidence that all three segmented negative single-strand RNA virus species share an endonuclease domain probably involved in the cap-snatching process during the viral life cycle. </plain></SENT>
+<SENT sid="446" pm="."><plain>These data raise the question of a possible common ancestor for these viruses. </plain></SENT>
+<SENT sid="447" pm="."><plain>Indeed, these three virus families use a cap-snatching mechanism involving binding and cleavage of cellular mRNA caps subsequently used by a large primer-dependent RNA-dependent RNA polymerase. </plain></SENT>
+<SENT sid="448" pm="."><plain>It seems more plausible that the L gene has evolved by divergence over time, rather than by multiple acquisitions of several activities converging into a common structure, at least in the case of the endonuclease. </plain></SENT>
+<SENT sid="449" pm="."><plain>Furthermore, our study raises the interesting possibility that other activities involved in RNA replication/transcrition might be discovered by comparative analysis of Orthomyxoviridae PB1, PB2, PA and Arenaviridae/Bunyaviridae L proteins. </plain></SENT>
+</text></p><p><text><SENT sid="450" pm="."><plain>To our knowledge, a single crystal structure of a functional arenavirus protein is currently available, that of the Machupo virus glycoprotein GP1 in complex with its human receptor, TfR1 [32]. </plain></SENT>
+<SENT sid="451" pm="."><plain>Our results provide an arenavirus L domain structure, with a role consistent with the hypothesis of a cap-snatching mechanism suggested for arenaviruses [9], [10]. </plain></SENT>
+<SENT sid="452" pm="."><plain>The strategy used here to produce individually active domains might be useful to further characterize the Arenaviridae/Bunyaviridae large L protein which had so far resisted all biochemical characterization attempts. </plain></SENT>
+</text></p><p><text><SENT sid="453" pm="."><plain>The influenza, Arenaviridae and Bunyaviridae endonucleases are so far the only three examples of RNA endonucleases similar to type II DNA restriction endonucleases. </plain></SENT>
+<SENT sid="454" pm="."><plain>The presence of such an endonuclease suggests that it could serve as a fruitful target for antiviral strategies against these two families, since such kind of inhibitors have been reported in the case of the influenza virus [33], [34], [35]. </plain></SENT>
+</text></p></sec></SecTag><SecTag type="METHODS"><sec sec-type="materials|methods" id="s4"><title><text><SENT sid="455" pm="."><plain>Materials and Methods </plain></SENT>
+</text></title><sec id="s4a"><title><text><SENT sid="456" pm="."><plain>Cloning, Expression and Purification of LCMV NL1 Domain </plain></SENT>
+</text></title><p><text><SENT sid="457" pm="."><plain>The LCMV NL1 cDNA (Armstrong strain, aa 1 to 196) was cloned into pDest14 with a N-terminus hexa-histidine tag and expressed in E.coli Rosetta (DE3) pLysS (Novagen), at 17°C in 2YT medium overnight after induction with 500 µM IPTG. </plain></SENT>
+<SENT sid="458" pm="."><plain>Cell pellets from harvested cultures were resuspended in 50 mM Tris buffer, pH 8.0, 300 mM NaCl, 10 mM imidazole, 0.1% Triton, 5% Glycerol. </plain></SENT>
+<SENT sid="459" pm="."><plain>Lysozyme (0.25 mg/ml), PMSF (1 mM), DNase I (2 µg/ml), and EDTA free protease cocktail (Roche) were added before sonication. </plain></SENT>
+<SENT sid="460" pm="."><plain>IMAC chromatography of clarified lysates was performed on a 5 ml His prep column (Akta Xpress FPLC system, GE Healthcare) eluted with imidazole. </plain></SENT>
+<SENT sid="461" pm="."><plain>Size exclusion chromatography was performed on preparative Superdex 200 column (GE Healthcare) pre-equilibrated in 10 mM Imidazole, pH 8.0, 50 mM NaCl, 2 mM DTT. </plain></SENT>
+<SENT sid="462" pm="."><plain>Protein was concentrated (28 mg/ml) using a centrifugal concentrator. </plain></SENT>
+<SENT sid="463" pm="."><plain>For enzymatic studies, WT and mutants were express in the E.coli BL21 star strain (Invitrogen) and further purified on HiTrap Q sepharose 1 ml column (GE Healthcare) to remove E. coli RNase contaminants. </plain></SENT>
+<SENT sid="464" pm="."><plain>Proteins eluted in a linear gradient from 50 mM to 1 M NaCl in 10 mM Hepes buffer, pH 7.5, 2 mM DTT. </plain></SENT>
+<SENT sid="465" pm="."><plain>A synthetic gene of the H5N1 PAN endonuclease was designed as described [16]. </plain></SENT>
+<SENT sid="466" pm="."><plain>The Toscana virus (strain France AR_2005, aa 2 to 233) cDNA was obtained from infected cell cultures. </plain></SENT>
+<SENT sid="467" pm="."><plain>Both ORFs were cloned as a N-terminal Thioredoxin-Hexahistidine fusion in pETG20A. </plain></SENT>
+<SENT sid="468" pm="."><plain>The tag was cleaved using TEV protease before a final gel filtration. </plain></SENT>
+</text></p></sec><sec id="s4b"><title><text><SENT sid="469" pm="."><plain>Crystallization </plain></SENT>
+</text></title><p><text><SENT sid="470" pm="."><plain>Crystals grew in LiSO4 250 mM, citrate 50 mM, isopropanol 5.5%, using the hanging drop vapor diffusion method in Linbro plates by mixing 1 µl of protein solution with 1 µl of reservoir solution. </plain></SENT>
+<SENT sid="471" pm="."><plain>Crystals were cryoprotected by dipping in a solution containing 65% of crystallization buffer and 35% of a buffer made of size exclusion chromatography buffer/glycerol (50/50). </plain></SENT>
+<SENT sid="472" pm="."><plain>Crystals were cryo-cooled in liquid N2. </plain></SENT>
+<SENT sid="473" pm="."><plain>The crystals belong to space group C2221 and have two molecules per asymmetric unit. </plain></SENT>
+<SENT sid="474" pm="."><plain>Despite repeated attempts, crystal soaked into the above buffer supplemented with various concentrations of MnCl2 yielded crystals diffracting to &gt;4 Å. </plain></SENT>
+</text></p></sec><sec id="s4c"><title><text><SENT sid="475" pm="."><plain>Data Collection and Structure Determination </plain></SENT>
+</text></title><p><text><SENT sid="476" pm="."><plain>Diffraction intensities were recorded on the ID14-4 beamline at the European Synchrotron Radiation facility, Grenoble, France. </plain></SENT>
+<SENT sid="477" pm="."><plain>Data were processed and integrated with MOSFLM [36]. </plain></SENT>
+<SENT sid="478" pm="."><plain>Scaling and merging of the intensities was performed with SCALA and programs from the Collaborative Computational Project, No. 4 (CCP4) suite [37]. </plain></SENT>
+<SENT sid="479" pm="."><plain>The structure was determined using SAD data from one selenomethionylated protein crystal diffracting to 3.4 Å resolution with SHARP/autoSHARP, followed by density modification with SOLOMON and DM. </plain></SENT>
+<SENT sid="480" pm="."><plain>An initial model was built using BUCCANEER and completed in COOT, followed by refinement using BUSTER (see Text S1). </plain></SENT>
+<SENT sid="481" pm="."><plain>Details of structure determination are given as supplemental material. </plain></SENT>
+<SENT sid="482" pm="."><plain>Data from a native crystals diffracting to a 2.13-Å resolution were collected on an ADSC QUANTUM 315r at a wavelength of 0.9835 Å. The structure was refined with BUSTER and COOT using this data set (Table 1) [38]. </plain></SENT>
+<SENT sid="484" pm="."><plain>The atomic coordinates have been deposited at the PDB (3JSB). </plain></SENT>
+</text></p></sec><sec id="s4d"><title><text><SENT sid="485" pm="."><plain>Sequence Retrieval </plain></SENT>
+</text></title><p><text><SENT sid="486" pm="."><plain>A PHI-BLAST search using the sequence corresponding to the L1 domain and the signature of the Arenaviridae endonuclease motif i.e. P-D-x(11,13)-E-x(12)-K-x(3)-D-x(2)-K ; was performed against non-redundant databases [39]. </plain></SENT>
+<SENT sid="487" pm="."><plain>After 3 iterations, Batai and Kairi viruses both belonging to Orthomyxoviridae, appears in the section with an E-Value below threshold. </plain></SENT>
+<SENT sid="488" pm="."><plain>A fourth iteration including these two sequences allows retrieving the entire family of orthomyxoviruses, with E-value comprised between 3e−18 and 2e−4. </plain></SENT>
+</text></p><p><text><SENT sid="489" pm="."><plain>A standard CDD search from the sequence of Tensaw virus allows retrieving all the L of the Bunyaviridae family hitting the pfam 04196 [40]. </plain></SENT>
+</text></p></sec><sec id="s4e"><title><text><SENT sid="490" pm="."><plain>Sequence Comparison </plain></SENT>
+</text></title><p><text><SENT sid="491" pm="."><plain>A multiple sequence alignment of the N-terminal end of the L protein from LCMV, HLCV, BUNV, HANV, PUMV, RVFV, TOSV, TOMV, WTMV, CCGV, DUGV, was first performed with the T-coffee algorithm (<ext-link ext-link-type="uri" xlink:href="http://tcoffee.vital-it.ch/cgi-bin/Tcoffee/tcoffee_cgi/index.cgi">http://tcoffee.vital-it.ch/cgi-bin/Tcoffee/tcoffee_cgi/index.cgi</ext-link>). </plain></SENT>
+<SENT sid="492" pm="."><plain>Using the secondary structure prediction of the endonuclease domain of L proteins, the putative conserved active site residues were identified and placed correctly in the alignment. </plain></SENT>
+</text></p></sec><sec id="s4f"><title><text><SENT sid="493" pm="."><plain>UV-Crosslink Experiments </plain></SENT>
+</text></title><p><text><SENT sid="494" pm="."><plain>7 µg of purified protein were incubated for 15 min at 25°C, with 0.5 µl of the various α-32P NTP (0.4 µCi/µl) in 10 µl of reaction buffer containing 10 mM Imidazole, pH 8.0, 50 mM NaCl, 2 mM DTT. </plain></SENT>
+<SENT sid="495" pm="."><plain>The reaction mixtures were then exposed to UV light (254 nm) for 6 min at 5 mm distance. </plain></SENT>
+<SENT sid="496" pm="."><plain>The crosslinked species were separated in a 15% polyacrylamide denaturing gel and visualized by autoradiography using photo-stimulated plates and a Fujilmager (Fuji). </plain></SENT>
+</text></p></sec><sec id="s4g"><title><text><SENT sid="497" pm="."><plain>RNA Binding Experiments </plain></SENT>
+</text></title><p><text><SENT sid="498" pm="."><plain>The RNA 5′-AUUUUGUUUUUAAUAUUUC-3′ (Ambion) was [32P] 5′-end labeled, and 0.4 µM of radiolabelled RNA was incubated 20 min at 25°C without and with 1.4 µg, 4.2 µg and 7 µg of protein in 10 µl of 10 mM Imidazole, pH 8.0, 50 mM NaCl, 2 mM DTT. </plain></SENT>
+<SENT sid="499" pm="."><plain>Reaction mixtures was analyzed by PAGE and visualized by autoradiography. </plain></SENT>
+</text></p></sec><sec id="s4h"><title><text><SENT sid="500" pm="."><plain>Ion Binding Assays </plain></SENT>
+</text></title><p><text><SENT sid="501" pm="."><plain>Titration curves with CaCl2, MnCl2, MgCl2 and ZnCl2 were performed at 1 mg/ml protein in gel filtration buffer using thermal shift assay. </plain></SENT>
+<SENT sid="502" pm="."><plain>Technical details can be be found in [41]. </plain></SENT>
+</text></p></sec><sec id="s4i"><title><text><SENT sid="503" pm="."><plain>Endonuclease Assays </plain></SENT>
+</text></title><p><text><SENT sid="504" pm="."><plain>Endonuclease activity was assayed using 4 different heteromeric RNA substrates: an unstructured 19 mer as described above, a 21 mer stable hairpin (5′-UGAGGCCCGGAAACCGGGGCC-3′ (Ambion), ΔG = −14.7 Kcal/mole), a 22 mer moderately stable hairpin (5′- CGCAGUUAGCUCCUAAUCGCCC-3′ (Ambion), ΔG = −3.4 Kcal/mole), and a long 264 mer RNA corresponding to the SARS-CoV 5′-genome sequence. </plain></SENT>
+<SENT sid="505" pm="."><plain>The latter was radiolabelled with a cap structure at its 5′-end using the ScriptCap m7G Capping System (Epicentre Biotechnologies) with [α32P]GTP. </plain></SENT>
+<SENT sid="506" pm="."><plain>Endonuclease assays were carried out using 3.3 µM of radio-labeled RNA in a buffer containing 40 mM Tris-base, pH 7.5, 100 mM NaCl, 10 mM β-Mercaptoethanol and 2 mM MnCl2. </plain></SENT>
+<SENT sid="507" pm="."><plain>Reactions were initiated by the addition of 1 µM of protein and incubated at 37°C, and stopped by the addition of EDTA/formamide. </plain></SENT>
+<SENT sid="508" pm="."><plain>Reactions products were analyzed using denaturing polyacrylamide gel electrophoresis (20% polyacrylamide, 7 M urea in TTE buffer (89 mM Tris, 28 mM taurine, 0.5 mM EDTA) and analyzed by autoradiography. </plain></SENT>
+</text></p></sec><sec id="s4j"><title><text><SENT sid="509" pm="."><plain>Mutagenesis and Reverse Genetics Assays Using a LCMV Mini-Replicon System </plain></SENT>
+</text></title><p><text><SENT sid="510" pm="."><plain>The LCMV replicon system is based on strain Armstrong clone 13 and has been established in analogy to the Lassa virus replicon described previously [42]. </plain></SENT>
+<SENT sid="511" pm="."><plain>BSR T7/5 cells constitutively expressing T7 RNA polymerase [43] were transiently transfected with T7 promoter-driven expression constructs for L protein, nucleoprotein (NP), mini-genome (MG) containing Renilla luciferase reporter gene, and firefly luciferase as a transfection control. </plain></SENT>
+<SENT sid="512" pm="."><plain>L protein mutants were generated as described [44]. </plain></SENT>
+<SENT sid="513" pm="."><plain>One day after transfection, total RNA was prepared for Northern blotting and cell lysate was assayed for firefly and Renilla luciferase activity. </plain></SENT>
+<SENT sid="514" pm="."><plain>Renilla luciferase levels were normalised with firefly luciferase levels resulting in standardized relative light units (sRLU). </plain></SENT>
+<SENT sid="515" pm="."><plain>Northern blot was performed using an antisense 32P-labeled riboprobe targeting the Renilla luciferase gene. </plain></SENT>
+<SENT sid="516" pm="."><plain>Autoradiography was quantified on a PhosphorImager (Amersham Biosciences). </plain></SENT>
+<SENT sid="517" pm="."><plain>To verify protein expression, hemagglutinin (HA)-tagged L protein was expressed in BSR T7/5 cells inoculated with modified vaccinia virus Ankara expressing T7 RNA polymerase (MVA- T7) [45] and detected in immunoblot using anti-HA antibody. </plain></SENT>
+</text></p></sec></sec></SecTag><SecTag type="SUPPL"><sec sec-type="supplementary-material" id="s5"><title><text><SENT sid="518" pm="."><plain>Supporting Information </plain></SENT>
+</text></title><supplementary-material content-type="local-data" id="ppat.1001038.s001"><label>Figure S1</label><caption><p><text><SENT sid="519" pm="."><plain>Sequence Alignment of Viral Endonuclease Domains. A, Structure-based sequence alignment of NL1 with the two influenza PAN (3EBJ, 2W69), Tt1808 (1WDJ) and SdaI (2IXS), showing the structurally-conserved endonuclease motif (Highlighted in red). B, Sequence alignment of arenavirus NL1: Lymphocytic choriomeningitis virus (LCMV), Dandenong virus (DANV), Mopeia virus (MOPV), Morogoro virus (MORV), Mobala virus (MOBV), Ippy virus (IPPV), Lassa virus (LASV), Lujo Virus (LUJV), Parana virus (PARV), Pichinde virus (PICV), Allpahuayo virus (ALLV), Chapare virus (CHAV), Tamiami virus (TAMV), Whitewater Arroyo virus (WWAV), Bear Canyon virus (BCNV), Flexal virus (FLEV), Pirital virus (PIRV), Amapari virus (AMAV), Guanarito virus (GTOV), Cupixi virus (CPXV), Machupo virus (MACV), Junin virus (JUNV), Tacaribe virus (TCRV), Sabia virus (SABV), Oliveros virus (OLVV), Latino virus (LATV). </plain></SENT>
+<SENT sid="520" pm="."><plain>Residues in a solid red background are strictly conserved. </plain></SENT>
+<SENT sid="521" pm="."><plain>The blue point indicates the key active site residues. </plain></SENT>
+</text></p><p><text><SENT sid="522" pm="."><plain>(4.29 MB TIF) </plain></SENT>
+</text></p></caption><media xlink:href="ppat.1001038.s001.tif"><caption><p><text><SENT sid="523" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="ppat.1001038.s002"><label>Figure S2</label><caption><p><text><SENT sid="524" pm="."><plain>Conservation of NL1 Between Arenaviruses and Bunyaviruses. A, Sequence alignment showing endonuclease motif (highlighted in red) of the NL1 domain from LCMV and the five genus of the Bunyaviridae families. </plain></SENT>
+<SENT sid="525" pm="."><plain>Each genera is represented by two viruses: Orthobunyavirus: Human La Cross Virus (HLCV) and Bunyamwera virus (BUNV), Hantavirus: Hantaan virus (HANV) and Puumala virus (PUMV), Phlebovirus: Rift valley fever virus (RVFV) and Toscana virus (TOSV), Tospovirus: Tomato virus (TOMV) and Watermelon silver mottle virus (WTMV), Nairovirus: Crimean-Congo hemorrhagic fever virus (CCGV) and Dugbe virus (DUGV). </plain></SENT>
+<SENT sid="526" pm="."><plain>Position of the start of the motif is labelled in blue for each virus. B, Based on secondary structure predictions topology diagrams were drawn for the NL1 domains from PUMV, RVFV, TOMV, HANV, CCGV. </plain></SENT>
+<SENT sid="527" pm="."><plain>Colours are the same as in Figure 1D. </plain></SENT>
+<SENT sid="528" pm="."><plain>N-terminal and C-terminal position are labelled with the aa position. </plain></SENT>
+<SENT sid="529" pm="."><plain>The two red dots, the black dot and the green dot indicate the PD, E/D, and K residues, respectively, from the key active site. </plain></SENT>
+<SENT sid="530" pm="."><plain>Principal conserved secondary structures are labelled as for LCMV NL1 domain. </plain></SENT>
+</text></p><p><text><SENT sid="531" pm="."><plain>(8.97 MB TIF) </plain></SENT>
+</text></p></caption><media xlink:href="ppat.1001038.s002.tif"><caption><p><text><SENT sid="532" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="ppat.1001038.s003"><label>Figure S3</label><caption><p><text><SENT sid="533" pm="."><plain>Verification of L protein expression by immunoblotting. </plain></SENT>
+<SENT sid="534" pm="."><plain>L protein used for analysis in replicon assay was tagged with HA tag, expressed under T7 promoter control in cells inoculated with modified vaccinia virus Ankara expressing T7 RNA polymerase (MVA-T7), and detected in immunoblot using anti-HA antibody. </plain></SENT>
+<SENT sid="535" pm="."><plain>MVA, cells inoculated with MVA-T7 but not transfected; neg. ctrl., L mutant containing a mutation in the catalytic site of the RdRp. </plain></SENT>
+</text></p><p><text><SENT sid="536" pm="."><plain>(1.13 MB TIF) </plain></SENT>
+</text></p></caption><media xlink:href="ppat.1001038.s003.tif"><caption><p><text><SENT sid="537" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="ppat.1001038.s004"><label>Text S1</label><caption><p><text><SENT sid="538" pm="."><plain>Supplementary Methods. </plain></SENT>
+</text></p><p><text><SENT sid="539" pm="."><plain>(0.08 MB DOC) </plain></SENT>
+</text></p></caption><media xlink:href="ppat.1001038.s004.doc"><caption><p><text><SENT sid="540" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media></supplementary-material></sec></SecTag></body><back><SecTag type="ACK_FUND"><ack><p><text4fund><text><SENT sid="541" pm="."><plain>We thank Joëlle Boretto, Violaine Lantez, Karen Dalle for excellent technical assistance in preparing cDNAs and proteins used throughout, Lukas Flatz and Daniel Pinschewer for providing L and NP gene plasmids to facilitate construction of the LCMV mini-replicon system, Boris Klempa for helpful discussion and support on Bunyavirus work, Rolf Hilgenfeld and Hugues Tolou for sharing information and brainstorming at the initial phase of the project. </plain></SENT>
+</text></text4fund></p></ack></SecTag><fn-group><fn fn-type="COI-statement"><p><text><SENT sid="542" pm="."><plain>The authors have declared that no competing interests exist. </plain></SENT>
+</text></p></fn><SecTag type="ACK_FUND"><fn fn-type="financial-disclosure"><p><text4fund><text><SENT sid="543" pm="."><plain>Toscana virus and H5N1 influenza endonuclease domains were produced as part of the European Virus Archive (EVA) project (European FP7 Capacities Project no 228292, <ext-link ext-link-type="uri" xlink:href="http://www.european-virus-archive.com/">http://www.european-virus-archive.com/</ext-link>). </plain></SENT>
+<SENT sid="544" pm="."><plain>This work was supported in part by the VIZIER integrated project (LSHG-CT-2004-511960) of the European Union 6th Framework Programme (FP6), the Direction Générale de l'Armement (DGA 09cà402), the Fondation pour la Recherche Médicale (FRM-Aide aux équipes), the German Research Foundation grant GU 883/1-1, and a grant from the “Vereinigung der Freunde des Tropeninstituts Hamburg e.V.” to ML. </plain></SENT>
+<SENT sid="545" pm="."><plain>JL was supported by grant 08/1/22/19/589 from BMRC and an ATIP from CNRS. </plain></SENT>
+<SENT sid="546" pm="."><plain>We gratefully acknowledge the ID14-4 beamline staff and equipment at the European Syncrotron Radiation facility, Grenoble, France. </plain></SENT>
+<SENT sid="547" pm="."><plain>The funders had no role in study design, data collection and analysis, decision to publish, or preparation of the manuscript. </plain></SENT>
+</text></text4fund></p></fn></SecTag></fn-group><SecTag type="REF"><ref-list><title>References</title><ref id="ppat.1001038-Briese1"><text><SENT sid="548" pm="."><plain>1 BrieseTPaweskaJTMcMullanLKHutchisonSKStreetC 2009 Genetic detection and characterization of Lujo virus, a new hemorrhagic fever-associated arenavirus from southern Africa. PLoS Pathog 5 e1000455 19478873 </plain></SENT>
+</text></ref><ref id="ppat.1001038-Charrel1"><text><SENT sid="549" pm="."><plain>2 CharrelRNde LamballerieXEmonetS 2008 Phylogeny of the genus Arenavirus. Curr Opin Microbiol 11 362 368 18602020 </plain></SENT>
+</text></ref><ref id="ppat.1001038-Barton1"><text><SENT sid="550" pm="."><plain>3 BartonLLBuddSCMorfittWSPetersCJKsiazekTG 1993 Congenital lymphocytic choriomeningitis virus infection in twins. Pediatr Infect Dis J 12 942 946 8265286 </plain></SENT>
+</text></ref><ref id="ppat.1001038-Barton2"><text><SENT sid="551" pm="."><plain>4 BartonLLHyndmanNJ 2000 Lymphocytic choriomeningitis virus: reemerging central nervous system pathogen. Pediatrics 105 E35 10699137 </plain></SENT>
+</text></ref><ref id="ppat.1001038-Fischer1"><text><SENT sid="552" pm="."><plain>5 FischerSAGrahamMBKuehnertMJKottonCNSrinivasanA 2006 Transmission of lymphocytic choriomeningitis virus by organ transplantation. N Engl J Med 354 2235 2249 16723615 </plain></SENT>
+</text></ref><ref id="ppat.1001038-Palacios1"><text><SENT sid="553" pm="."><plain>6 PalaciosGDruceJDuLTranTBirchC 2008 A new arenavirus in a cluster of fatal transplant-associated diseases. N Engl J Med 358 991 998 18256387 </plain></SENT>
+</text></ref><ref id="ppat.1001038-Meyer1"><text><SENT sid="554" pm="."><plain>7 MeyerBJde la TorreJCSouthernPJ 2002 Arenaviruses: genomic RNAs, transcription, and replication. Curr Top Microbiol Immunol 262 139 157 11987804 </plain></SENT>
+</text></ref><ref id="ppat.1001038-Salvato1"><text><SENT sid="555" pm="."><plain>8 SalvatoMSShimomayeEM 1989 The completed sequence of lymphocytic choriomeningitis virus reveals a unique RNA structure and a gene for a zinc finger protein. Virology 173 1 10 2510401 </plain></SENT>
+</text></ref><ref id="ppat.1001038-Meyer2"><text><SENT sid="556" pm="."><plain>9 MeyerBJSouthernPJ 1993 Concurrent sequence analysis of 5′ and 3′ RNA termini by intramolecular circularization reveals 5′ nontemplated bases and 3′ terminal heterogeneity for lymphocytic choriomeningitis virus mRNAs. J Virol 67 2621 2627 7682625 </plain></SENT>
+</text></ref><ref id="ppat.1001038-Raju1"><text><SENT sid="557" pm="."><plain>10 RajuRRajuLHackerDGarcinDCompansR 1990 Nontemplated bases at the 5′ ends of Tacaribe virus mRNAs. Virology 174 53 59 2294647 </plain></SENT>
+</text></ref><ref id="ppat.1001038-Polyak1"><text><SENT sid="558" pm="."><plain>11 PolyakSJZhengSHarnishDG 1995 5′ termini of Pichinde arenavirus S RNAs and mRNAs contain nontemplated nucleotides. J Virol 69 3211 3215 7707553 </plain></SENT>
+</text></ref><ref id="ppat.1001038-Plotch1"><text><SENT sid="559" pm="."><plain>12 PlotchSJBouloyMKrugRM 1979 Transfer of 5′-terminal cap of globin mRNA to influenza viral complementary RNA during transcription in vitro. Proc Natl Acad Sci U S A 76 1618 1622 287003 </plain></SENT>
+</text></ref><ref id="ppat.1001038-Plotch2"><text><SENT sid="560" pm="."><plain>13 PlotchSJBouloyMUlmanenIKrugRM 1981 A unique cap(m7GpppXm)-dependent influenza virion endonuclease cleaves capped RNAs to generate the primers that initiate viral RNA transcription. Cell 23 847 858 6261960 </plain></SENT>
+</text></ref><ref id="ppat.1001038-Bishop1"><text><SENT sid="561" pm="."><plain>14 BishopDHGayMEMatsuokoY 1983 Nonviral heterogeneous sequences are present at the 5′ ends of one species of snowshoe hare bunyavirus S complementary RNA. Nucleic Acids Res 11 6409 6418 6312422 </plain></SENT>
+</text></ref><ref id="ppat.1001038-Dias1"><text><SENT sid="562" pm="."><plain>15 DiasABouvierDCrepinTMcCarthyAAHartDJ 2009 The cap-snatching endonuclease of influenza virus polymerase resides in the PA subunit. Nature 458 914 918 19194459 </plain></SENT>
+</text></ref><ref id="ppat.1001038-Yuan1"><text><SENT sid="563" pm="."><plain>16 YuanPBartlamMLouZChenSZhouJ 2009 Crystal structure of an avian influenza polymerase PA(N) reveals an endonuclease active site. Nature 458 909 913 19194458 </plain></SENT>
+</text></ref><ref id="ppat.1001038-Lopez1"><text><SENT sid="564" pm="."><plain>17 LopezNJacamoRFranze-FernandezMT 2001 Transcription and RNA replication of tacaribe virus genome and antigenome analogs require N and L proteins: Z protein is an inhibitor of these processes. J Virol 75 12241 12251 11711615 </plain></SENT>
+</text></ref><ref id="ppat.1001038-Muller1"><text><SENT sid="565" pm="."><plain>18 MullerRPochODelarueMBishopDHBouloyM 1994 Rift Valley fever virus L segment: correction of the sequence and possible functional role of newly identified regions conserved in RNA-dependent polymerases. J Gen Virol 75 Pt 6 1345 1352 7515937 </plain></SENT>
+</text></ref><ref id="ppat.1001038-Vieth1"><text><SENT sid="566" pm="."><plain>19 ViethSTordaAEAsperMSchmitzHGuntherS 2004 Sequence analysis of L RNA of Lassa virus. Virology 318 153 168 14972544 </plain></SENT>
+</text></ref><ref id="ppat.1001038-Lukashevich1"><text><SENT sid="567" pm="."><plain>20 LukashevichISDjavaniMShapiroKSanchezARavkovE 1997 The Lassa fever virus L gene: nucleotide sequence, comparison, and precipitation of a predicted 250 kDa protein with monospecific antiserum. J Gen Virol 78 Pt 3 547 551 9049403 </plain></SENT>
+</text></ref><ref id="ppat.1001038-Wilda1"><text><SENT sid="568" pm="."><plain>21 WildaMLopezNCasabonaJCFranze-FernandezMT 2008 Mapping of the tacaribe arenavirus Z-protein binding sites on the L protein identified both amino acids within the putative polymerase domain and a region at the N terminus of L that are critically involved in binding. J Virol 82 11454 11460 18799569 </plain></SENT>
+</text></ref><ref id="ppat.1001038-Holm1"><text><SENT sid="569" pm="."><plain>22 HolmLKaariainenSRosenstromPSchenkelA 2008 Searching protein structure databases with DaliLite v.3. Bioinformatics 24 2780 2781 18818215 </plain></SENT>
+</text></ref><ref id="ppat.1001038-Nichol1"><text><SENT sid="570" pm="."><plain>23 NicholSTBBJElliottRM 2005 Virus Taxonomy, VIIIth Report of the ICTV. Fauquet CM, Mayo AM, Maniloff J et al eds London: Elsevier Academic Press 695 716  </plain></SENT>
+</text></ref><ref id="ppat.1001038-Gro1"><text><SENT sid="571" pm="."><plain>24 GroMCDi BonitoPAccardiLGiorgiC 1992 Analysis of 3′ and 5′ ends of N and NSs messenger RNAs of Toscana Phlebovirus. Virology 191 435 438 1413515 </plain></SENT>
+</text></ref><ref id="ppat.1001038-FriasStaheli1"><text><SENT sid="572" pm="."><plain>25 Frias-StaheliNGiannakopoulosNVKikkertMTaylorSLBridgenA 2007 Ovarian tumor domain-containing viral proteases evade ubiquitin- and ISG15-dependent innate immune responses. Cell Host Microbe 2 404 416 18078692 </plain></SENT>
+</text></ref><ref id="ppat.1001038-Zhao1"><text><SENT sid="573" pm="."><plain>26 ZhaoCLouZGuoYMaMChenY 2009 Nucleoside monophosphate complex structures of the endonuclease domain from the influenza virus polymerase PA subunit reveal the substrate binding site inside the catalytic center. J Virol 83 9024 9030 19587036 </plain></SENT>
+</text></ref><ref id="ppat.1001038-Garcin1"><text><SENT sid="574" pm="."><plain>27 GarcinDKolakofskyD 1990 A novel mechanism for the initiation of Tacaribe arenavirus genome replication. J Virol 64 6196 6203 2243392 </plain></SENT>
+</text></ref><ref id="ppat.1001038-Newman1"><text><SENT sid="575" pm="."><plain>28 NewmanMStrzeleckaTDornerLFSchildkrautIAggarwalAK 1994 Structure of restriction endonuclease BamHI and its relationship to EcoRI. Nature 368 660 664 8145855 </plain></SENT>
+</text></ref><ref id="ppat.1001038-Pingoud1"><text><SENT sid="576" pm="."><plain>29 PingoudAFuxreiterMPingoudVWendeW 2005 Type II restriction endonucleases: structure and mechanism. Cell Mol Life Sci 62 685 707 15770420 </plain></SENT>
+</text></ref><ref id="ppat.1001038-Lelke1"><text><SENT sid="577" pm="."><plain>30 LelkeMBrunotteLBuschCGuntherS 2010 An N-terminal region of Lassa virus L protein plays a critical role in transcription but not replication of the virus genome. J Virol 84 1934 1944 20007273 </plain></SENT>
+</text></ref><ref id="ppat.1001038-Guilligay1"><text><SENT sid="578" pm="."><plain>31 GuilligayDTarendeauFResa-InfantePColomaRCrepinT 2008 The structural basis for cap binding by influenza virus polymerase subunit PB2. Nat Struct Mol Biol 15 500 506 18454157 </plain></SENT>
+</text></ref><ref id="ppat.1001038-Abraham1"><text><SENT sid="579" pm="."><plain>32 AbrahamJCorbettKDFarzanMChoeHHarrisonSC Structural basis for receptor recognition by New World hemorrhagic fever arenaviruses. Nat Struct Mol Biol  </plain></SENT>
+</text></ref><ref id="ppat.1001038-DeClercq1"><text><SENT sid="580" pm="."><plain>33 De ClercqENeytsJ 2007 Avian influenza A (H5N1) infection: targets and strategies for chemotherapeutic intervention. Trends Pharmacol Sci 28 280 285 17481739 </plain></SENT>
+</text></ref><ref id="ppat.1001038-Hsieh1"><text><SENT sid="581" pm="."><plain>34 HsiehHPHsuJT 2007 Strategies of development of antiviral agents directed against influenza virus replication. Curr Pharm Des 13 3531 3542 18220789 </plain></SENT>
+</text></ref><ref id="ppat.1001038-Parkes1"><text><SENT sid="582" pm="."><plain>35 ParkesKEErmertPFasslerJIvesJMartinJA 2003 Use of a pharmacophore model to discover a new class of influenza endonuclease inhibitors. J Med Chem 46 1153 1164 12646026 </plain></SENT>
+</text></ref><ref id="ppat.1001038-Powell1"><text><SENT sid="583" pm="."><plain>36 PowellHR 1999 The Rossmann Fourier autoindexing algorithm in MOSFLM. Acta Crystallogr D Biol Crystallogr 55 1690 1695 10531518 </plain></SENT>
+</text></ref><ref id="ppat.1001038-1"><text><SENT sid="584" pm="."><plain>37 1994 The CCP4 suite: programs for protein crystallography. Acta Crystallogr D Biol Crystallogr 50 760 763 15299374 </plain></SENT>
+</text></ref><ref id="ppat.1001038-Emsley1"><text><SENT sid="585" pm="."><plain>38 EmsleyPCowtanK 2004 Coot: model-building tools for molecular graphics. Acta Crystallogr D Biol Crystallogr 60 2126 2132 15572765 </plain></SENT>
+</text></ref><ref id="ppat.1001038-Altschul1"><text><SENT sid="586" pm="."><plain>39 AltschulSFMaddenTLSchafferAAZhangJZhangZ 1997 Gapped BLAST and PSI-BLAST: a new generation of protein database search programs. Nucleic Acids Res 25 3389 3402 9254694 </plain></SENT>
+</text></ref><ref id="ppat.1001038-Finn1"><text><SENT sid="587" pm="."><plain>40 FinnRDMistryJTateJCoggillPHegerA The Pfam protein families database. Nucleic Acids Res 38 D211 222 19920124 </plain></SENT>
+</text></ref><ref id="ppat.1001038-Malet1"><text><SENT sid="588" pm="."><plain>41 MaletHCoutardBJamalSDutartreHPapageorgiouN 2009 The crystal structures of Chikungunya and Venezuelan equine encephalitis virus nsP3 macro domains define a conserved adenosine binding pocket. J Virol 83 6534 6545 19386706 </plain></SENT>
+</text></ref><ref id="ppat.1001038-Hass1"><text><SENT sid="589" pm="."><plain>42 HassMGölnitzUMüllerSBecker-ZiajaBGüntherS 2004 Replicon system for Lassa virus. J Virol 78 13793 13803 15564487 </plain></SENT>
+</text></ref><ref id="ppat.1001038-Buchholz1"><text><SENT sid="590" pm="."><plain>43 BuchholzUJFinkeSConzelmannKK 1999 Generation of bovine respiratory syncytial virus (BRSV) from cDNA: BRSV NS2 is not essential for virus replication in tissue culture, and the human RSV leader region acts as a functional BRSV genome promoter. J Virol 73 251 259 9847328 </plain></SENT>
+</text></ref><ref id="ppat.1001038-Hass2"><text><SENT sid="591" pm="."><plain>44 HassMLelkeMBuschCBecker-ZiajaBGüntherS 2008 Mutational evidence for a structural model of the Lassa virus RNA polymerase domain and identification of two residues, Gly1394 and Asp1395, that are critical for transcription but not replication of the genome. J Virol 82 10207 10217 18667512 </plain></SENT>
+</text></ref><ref id="ppat.1001038-Sutter1"><text><SENT sid="592" pm="."><plain>45 SutterGOhlmannMErfleV 1995 Non-replicating vaccinia vector efficiently expresses bacteriophage T7 RNA polymerase. FEBS Lett 371 9 12 7664891 </plain></SENT>
+</text></ref><ref id="ppat.1001038-2"><text><SENT sid="593" pm="."><plain>46 Kabsch W Xds. Acta Crystallogr D Biol Crystallogr 66 125 132 20124692 </plain></SENT>
+</text></ref><ref id="ppat.1001038-Evans1"><text><SENT sid="594" pm="."><plain>47 EvansP 2006 Scaling and assessment of data quality. Acta Crystallogr D Biol Crystallogr 62 72 82 16369096 </plain></SENT>
+</text></ref><ref id="ppat.1001038-Vonrhein1"><text><SENT sid="595" pm="."><plain>48 VonrheinCBlancERoversiPBricogneG 2007 Automated structure solution with autoSHARP. Methods Mol Biol 364 215 230 17172768 </plain></SENT>
+</text></ref><ref id="ppat.1001038-Schneider1"><text><SENT sid="596" pm="."><plain>49 SchneiderTRSheldrickGM 2002 Substructure solution with SHELXD. Acta Crystallogr D Biol Crystallogr 58 1772 1779 12351820 </plain></SENT>
+</text></ref><ref id="ppat.1001038-Bricogne1"><text><SENT sid="597" pm="."><plain>50 BricogneGVonrheinCFlensburgCSchiltzMPaciorekW 2003 Generation, representation and flow of phase information in structure determination: recent developments in and around SHARP 2.0. Acta Crystallogr D Biol Crystallogr 59 2023 2030 14573958 </plain></SENT>
+</text></ref><ref id="ppat.1001038-Cowtan1"><text><SENT sid="598" pm="."><plain>51 CowtanK 1994 An automated procedure for phase improvement by density modification. Joint CCP4 and ESF-EACBM Newsletter on Protein Crystallography 31 34 38  </plain></SENT>
+</text></ref><ref id="ppat.1001038-Cowtan2"><text><SENT sid="599" pm="."><plain>52 CowtanK 2006 The Buccaneer software for automated model building. </plain></SENT>
+<SENT sid="600" pm="."><plain>1. </plain></SENT>
+<SENT sid="601" pm="."><plain>Tracing protein chains. Acta Crystallogr D Biol Crystallogr 62 1002 1011 16929101 </plain></SENT>
+</text></ref><ref id="ppat.1001038-Abrahams1"><text><SENT sid="602" pm="."><plain>53 AbrahamsJPLeslieAG 1996 Methods used in the structure determination of bovine mitochondrial F1 ATPase. Acta Crystallogr D Biol Crystallogr 52 30 42 15299723 </plain></SENT>
+</text></ref><ref id="ppat.1001038-Emsley2"><text><SENT sid="603" pm="."><plain>54 EmsleyPLohkampBScottWGCowtanK Features and development of Coot. Acta Crystallogr D Biol Crystallogr 66 486 501 20383002 </plain></SENT>
+</text></ref><ref id="ppat.1001038-Bricogne2"><text><SENT sid="604" pm="."><plain>55 BricogneGBlancEBrandlMFlensburgCKellerP 2010 BUSTER version 2.X. Global Phasing Ltd Cambridge, United Kingdom  </plain></SENT>
+</text></ref><ref id="ppat.1001038-Leslie1"><text><SENT sid="605" pm="."><plain>56 LeslieAG 1992 MOSFLM - Recent changes and future developments. Joint CCP4 and ESF-EACBM Newsletter on Protein Crystallography 35 18 19  </plain></SENT>
+</text></ref><ref id="ppat.1001038-Murshudov1"><text><SENT sid="606" pm="."><plain>57 MurshudovGNVaginAADodsonEJ 1997 Refinement of macromolecular structures by the maximum-likelihood method. Acta Crystallogr D Biol Crystallogr 53 240 255 15299926 </plain></SENT>
+</text></ref><ref id="ppat.1001038-Smart1"><text><SENT sid="607" pm="."><plain>58 SmartOBrandlMFlensburgCKellerPPaciorekW 2008 Refinement with Local Structure Similarity Restraints (LSSR) Enables Exploitation of Information from Related Structures and Facilitates use of NCS. Annual Meeting of the American Crystallographic Association  </plain></SENT>
+</text></ref></ref-list></SecTag></back></article>

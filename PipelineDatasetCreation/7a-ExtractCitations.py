@@ -162,7 +162,7 @@ for file in os.listdir("./articlesOA"):
         # Find all sentences for checking..
         sentences=fileSentencizedTree.findall(".//SENT")
         sentencesIndex=0
-        while sentencesIndex<len(sentences):
+        while sentencesIndex<len(sentences)-2:
             sentence=''.join(sentences[sentencesIndex].itertext())
             if minlen<len(sentence)<maxlen:
                 checkedNames=[]
