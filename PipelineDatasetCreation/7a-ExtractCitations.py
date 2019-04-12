@@ -83,7 +83,7 @@ def save(sentences,sentencesIndex,resultFile,preCitPost):
     resultFile.write("\t")
     resultFile.write(section)# Section
     resultFile.write("\t")
-    resultFile.write(preCitPost[3])# SubType
+    resultFile.write(preCitPost[4])# SubType
     resultFile.write("\t")
     resultFile.write(str(figure))# Figure
     resultFile.write("\t")
