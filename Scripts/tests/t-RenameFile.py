@@ -19,7 +19,7 @@ for file in os.listdir("./"):
         pmcidlist=codecs.open(str(file),"r",encoding="utf-8")
         tmp=pmcidlist.read()
         pmcidlist.close()
-        newfile=codecs.open(str(file).split("-")[0]+"-sentencized.xml","w",encoding="utf-8")
+        newfile=codecs.open(str(file).split(".")[0]+"-sentencized.xml","w",encoding="utf-8")
         newfile.write(tmp)
         newfile.close()
         os.remove(str(file))
