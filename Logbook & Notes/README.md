@@ -618,9 +618,11 @@ There is a big difference between citations from Annotation match and my match o
 <a name="Week7"></a>
 ### :date: Week 7 - 15/04-21/04 :
 
-#### Analysis :
+#### :bar_chart: Analysis :
 
 - Categories repartition 
+
+<p align="center">
 
 | Categories     | Count of Categories | Percentage |
 |----------------|---------------------|------------|
@@ -632,18 +634,15 @@ There is a big difference between citations from Annotation match and my match o
 | Use            | 861                 | 62.98%     |
 | TOTAL          | 1367                | 100.00%    |
 
-<div class="row">
-  <div class="column">
-    <p align="center">
-      <img width="50%" height="50%" src="https://github.com/0AlphaZero0/Sentiment-Analysis-Data-Citation-EuropePMC/blob/master/Logbook%20%26%20Notes/Analysis/CategoriesRepartitionCircle.PNG">
-    </p>
-  </div>
-  <div class="column">
-    <p align="center">
-      <img width="40%" height="40%" src="https://github.com/0AlphaZero0/Sentiment-Analysis-Data-Citation-EuropePMC/blob/master/Logbook%20%26%20Notes/Analysis/CategoriesRepartitionGraphic.PNG">
-    </p>
-  </div>
-</div>
+</p>
+
+<p align="center">
+  <img width="70%" height="70%" src="https://github.com/0AlphaZero0/Sentiment-Analysis-Data-Citation-EuropePMC/blob/master/Logbook%20%26%20Notes/Analysis/CategoriesRepartitionCircle.PNG">
+</p>
+
+<p align="center">
+  <img width="70%" height="70%" src="https://github.com/0AlphaZero0/Sentiment-Analysis-Data-Citation-EuropePMC/blob/master/Logbook%20%26%20Notes/Analysis/CategoriesRepartitionGraphic.PNG">
+</p>
 
 [:top::top::top::top::top::top::top::top::top::top::top::top::top::top:Go to the top:top::top::top::top::top::top::top::top::top::top::top::top::top::top::top:](#top)
 
