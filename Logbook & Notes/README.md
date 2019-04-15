@@ -667,6 +667,78 @@ There is a big difference between citations from Annotation match and my match o
   <img width="70%" height="70%" src="https://github.com/0AlphaZero0/Sentiment-Analysis-Data-Citation-EuropePMC/blob/master/Logbook%20%26%20Notes/Analysis/SectionsRepartitionGraphic.PNG">
 </p>
 
+- FIGURE features repartitions :
+
+| Figure | Count   of Figure | Percentage |
+|--------|-------------------|------------|
+| FALSE  | 1188              | 87%        |
+| TRUE   | 179               | 13%        |
+| TOTAL  | 1367              | 100%       |
+
+<p align="center">
+  <img width="70%" height="70%" src="https://github.com/0AlphaZero0/Sentiment-Analysis-Data-Citation-EuropePMC/blob/master/Logbook%20%26%20Notes/Analysis/FigureRepartitionGraphic.PNG">
+</p>
+
+- SubType repartitions :
+
+| SubType            | Count   of SubType | Percentage |
+|--------------------|--------------------|------------|
+| ArrayExpress       | 5                  | 0%         |
+| BioProject         | 23                 | 2%         |
+| dbGaP              | 5                  | 0%         |
+| DOI                | 25                 | 2%         |
+| EMDB               | 1                  | 0%         |
+| ENA                | 392                | 29%        |
+| Ensembl            | 3                  | 0%         |
+| EUDRACT            | 2                  | 0%         |
+| GCA                | 6                  | 0%         |
+| Gene Ontology (GO) | 46                 | 3%         |
+| GEO                | 31                 | 2%         |
+| HGNC               | 2                  | 0%         |
+| HPA                | 2                  | 0%         |
+| IGSR/1000 Genomes  | 7                  | 1%         |
+| InterPro           | 4                  | 0%         |
+| NCT                | 123                | 9%         |
+| OMIM               | 51                 | 4%         |
+| PDBe               | 376                | 28%        |
+| Pfam               | 18                 | 1%         |
+| PRIDE              | 2                  | 0%         |
+| RefSeq             | 26                 | 2%         |
+| RefSNP             | 164                | 12%        |
+| RRID               | 7                  | 1%         |
+| UniProt            | 46                 | 3%         |
+| TOTAL              | 1367               | 100%       |
+
+<p align="center">
+  <img width="70%" height="70%" src="https://github.com/0AlphaZero0/Sentiment-Analysis-Data-Citation-EuropePMC/blob/master/Logbook%20%26%20Notes/Analysis/SubTypeRepartitionGraphic.PNG">
+</p>
+
+- Repartitions by categories :
+
+| Categories     | Abstract | Acknowledgments | Article | Case study | Conclusion | Discussion | Figure | Introduction | Methods | References | Results | Supplementary material | Title |
+|----------------|----------|-----------------|---------|------------|------------|------------|--------|--------------|---------|------------|---------|------------------------|-------|
+| Background     | 1        | 0               | 44      | 0          | 2          | 34         | 1      | 29           | 17      | 0          | 30      | 1                      | 0     |
+| ClinicalTrials | 31       | 1               | 39      | 0          | 1          | 7          | 0      | 13           | 30      | 0          | 2       | 0                      | 0     |
+| Compare        | 0        | 0               | 0       | 0          | 0          | 0          | 0      | 0            | 0       | 0          | 4       | 0                      | 0     |
+| Creation       | 2        | 2               | 37      | 0          | 3          | 0          | 0      | 0            | 95      | 0          | 24      | 0                      | 0     |
+| Unclassifiable | 1        | 1               | 17      | 1          | 0          | 0          | 0      | 1            | 7       | 12         | 14      | 2                      | 0     |
+| Use            | 23       | 0               | 33      | 7          | 2          | 51         | 90     | 35           | 241     | 0          | 361     | 16                     | 2     |
+| TOTAL          | 58       | 4               | 170     | 8          | 8          | 92         | 91     | 78           | 390     | 12         | 435     | 19                     | 2     |
+
+| Categories     | Abstract | Acknowledgments | Article | Case study | Conclusion | Discussion | Figure | Introduction | Methods | References | Results | Supplementary material | Title  |
+|----------------|----------|-----------------|---------|------------|------------|------------|--------|--------------|---------|------------|---------|------------------------|--------|
+| Background     | 1.7%     | 0.0%            | 25.9%   | 0.0%       | 25.0%      | 37.0%      | 1.1%   | 37.2%        | 4.4%    | 0.0%       | 6.9%    | 5.3%                   | 0.0%   |
+| ClinicalTrials | 53.4%    | 25.0%           | 22.9%   | 0.0%       | 12.5%      | 7.6%       | 0.0%   | 16.7%        | 7.7%    | 0.0%       | 0.5%    | 0.0%                   | 0.0%   |
+| Compare        | 0.0%     | 0.0%            | 0.0%    | 0.0%       | 0.0%       | 0.0%       | 0.0%   | 0.0%         | 0.0%    | 0.0%       | 0.9%    | 0.0%                   | 0.0%   |
+| Creation       | 3.4%     | 50.0%           | 21.8%   | 0.0%       | 37.5%      | 0.0%       | 0.0%   | 0.0%         | 24.4%   | 0.0%       | 5.5%    | 0.0%                   | 0.0%   |
+| Unclassifiable | 1.7%     | 25.0%           | 10.0%   | 12.5%      | 0.0%       | 0.0%       | 0.0%   | 1.3%         | 1.8%    | 100.0%     | 3.2%    | 10.5%                  | 0.0%   |
+| Use            | 39.7%    | 0.0%            | 19.4%   | 87.5%      | 25.0%      | 55.4%      | 98.9%  | 44.9%        | 61.8%   | 0.0%       | 83.0%   | 84.2%                  | 100.0% |
+| TOTAL          | 100.0%   | 100.0%          | 100.0%  | 100.0%     | 100.0%     | 100.0%     | 100.0% | 100.0%       | 100.0%  | 100.0%     | 100.0%  | 100.0%                 | 100.0% |
+
+<p align="center">
+  <img width="70%" height="70%" src="https://github.com/0AlphaZero0/Sentiment-Analysis-Data-Citation-EuropePMC/blob/master/Logbook%20%26%20Notes/Analysis/ByCategoriesRepartitionGraphic.PNG">
+</p>
+
 [:top::top::top::top::top::top::top::top::top::top::top::top::top::top:Go to the top:top::top::top::top::top::top::top::top::top::top::top::top::top::top::top:](#top)
 
 ______________________________________________________________________
