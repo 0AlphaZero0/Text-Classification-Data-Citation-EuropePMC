@@ -632,15 +632,9 @@ There is a big difference between citations from Annotation match and my match o
 | Use            | 861                 | 62.98%     |
 | TOTAL          | 1367                | 100.00%    |
 
+<img align="left" width="100%" height="100%" src="https://github.com/0AlphaZero0/Sentiment-Analysis-Data-Citation-EuropePMC/blob/master/Logbook%20%26%20Notes/Analysis/CategoriesRepartitionCircle.PNG">
 
-
-
-
-
-
-<img align="left" width="20%" height="20%" src="">
-
-
+&nbsp;  &nbsp;  &nbsp; 
 [:top::top::top::top::top::top::top::top::top::top::top::top::top::top:Go to the top:top::top::top::top::top::top::top::top::top::top::top::top::top::top::top:](#top)
 
 ______________________________________________________________________
