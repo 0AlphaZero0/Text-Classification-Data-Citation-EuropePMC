@@ -632,14 +632,11 @@ There is a big difference between citations from Annotation match and my match o
 | Use            | 861                 | 62.98%     |
 | TOTAL          | 1367                | 100.00%    |
 
-<div class="row">
-  <div class="column">
-    <img width="40%" height="40%" src="https://github.com/0AlphaZero0/Sentiment-Analysis-Data-Citation-EuropePMC/blob/master/Logbook%20%26%20Notes/Analysis/CategoriesRepartitionCircle.PNG">
-  </div>
-  <div class="column">
-    <img width="40%" height="40%" src="https://github.com/0AlphaZero0/Sentiment-Analysis-Data-Citation-EuropePMC/blob/master/Logbook%20%26%20Notes/Analysis/CategoriesRepartitionGraphic.PNG">
-  </div>
-</div>
+
+<img width="70%" height="70%" src="https://github.com/0AlphaZero0/Sentiment-Analysis-Data-Citation-EuropePMC/blob/master/Logbook%20%26%20Notes/Analysis/CategoriesRepartitionCircle.PNG">
+
+<img width="70%" height="70%" src="https://github.com/0AlphaZero0/Sentiment-Analysis-Data-Citation-EuropePMC/blob/master/Logbook%20%26%20Notes/Analysis/CategoriesRepartitionGraphic.PNG">
+
 
 [:top::top::top::top::top::top::top::top::top::top::top::top::top::top:Go to the top:top::top::top::top::top::top::top::top::top::top::top::top::top::top::top:](#top)
 
