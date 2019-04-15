@@ -620,6 +620,12 @@ There is a big difference between citations from Annotation match and my match o
 
 #### :bar_chart: Analysis :
 
+As we can see with this first analysis we can note that the category *use* is most represented with almost 63% of all citations, then there is 11.92% of *creation* of data, 11.63% of *background* and also 9.07% of *ClinicalTrials*.
+We decide to create a specific category for *clinicalTrials* indeed it's hard to say if the clinicalTrials is use or create, so we decide to create this.
+
+We can also see that there is most of citations in the section *result* and *methods*. Those two categories are followed by the *article* section, it's a category that seems pretty weird and I think it seems most of the time like a *background/use/creation* section. So this section could be a noisy for the future algorithm. Then the other categories could explain their score by the fact that they are rare for some of these like *conclusion* or *case study*.
+
+
 - Categories repartition :
 
 | Categories     | Count of Categories | Percentage |
