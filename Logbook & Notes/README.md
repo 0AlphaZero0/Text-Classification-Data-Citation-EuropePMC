@@ -620,9 +620,7 @@ There is a big difference between citations from Annotation match and my match o
 
 #### :bar_chart: Analysis :
 
-- Categories repartition 
-
-<p align="center">
+- Categories repartition :
 
 | Categories     | Count of Categories | Percentage |
 |----------------|---------------------|------------|
@@ -634,14 +632,39 @@ There is a big difference between citations from Annotation match and my match o
 | Use            | 861                 | 62.98%     |
 | TOTAL          | 1367                | 100.00%    |
 
-</p>
-
 <p align="center">
   <img width="70%" height="70%" src="https://github.com/0AlphaZero0/Sentiment-Analysis-Data-Citation-EuropePMC/blob/master/Logbook%20%26%20Notes/Analysis/CategoriesRepartitionCircle.PNG">
 </p>
 
 <p align="center">
   <img width="70%" height="70%" src="https://github.com/0AlphaZero0/Sentiment-Analysis-Data-Citation-EuropePMC/blob/master/Logbook%20%26%20Notes/Analysis/CategoriesRepartitionGraphic.PNG">
+</p>
+
+- Sections repartitions :
+
+| Section                | Count   of Section | Percentage |
+|------------------------|--------------------|------------|
+| Abstract               | 58                 | 4%         |
+| Acknowledgments        | 4                  | 0%         |
+| Article                | 170                | 12%        |
+| Case study             | 8                  | 1%         |
+| Conclusion             | 8                  | 1%         |
+| Discussion             | 92                 | 7%         |
+| Figure                 | 91                 | 7%         |
+| Introduction           | 78                 | 6%         |
+| Methods                | 390                | 29%        |
+| References             | 12                 | 1%         |
+| Results                | 435                | 32%        |
+| Supplementary material | 19                 | 1%         |
+| Title                  | 2                  | 0%         |
+| TOTAL                  | 1367               | 100%       |
+
+<p align="center">
+  <img width="70%" height="70%" src="https://github.com/0AlphaZero0/Sentiment-Analysis-Data-Citation-EuropePMC/blob/master/Logbook%20%26%20Notes/Analysis/SectionsRepartitionCircle.PNG">
+</p>
+
+<p align="center">
+  <img width="70%" height="70%" src="https://github.com/0AlphaZero0/Sentiment-Analysis-Data-Citation-EuropePMC/blob/master/Logbook%20%26%20Notes/Analysis/SectionsRepartitionGraphic.PNG">
 </p>
 
 [:top::top::top::top::top::top::top::top::top::top::top::top::top::top:Go to the top:top::top::top::top::top::top::top::top::top::top::top::top::top::top::top:](#top)
