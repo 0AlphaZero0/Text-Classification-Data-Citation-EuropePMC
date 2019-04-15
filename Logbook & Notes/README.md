@@ -33,6 +33,7 @@ ______________________________________________________________________
 - [Month 2 - 01/04-30/04](#Month2)
   * [Week 5 - 01/04-07/04](#Week5)
   * [Week 6 - 08/04-14/04](#Week6)
+  * [Week 7 - 15/04-21/04](#Week7)
 ______________________________________________________________________
 
 ### :bookmark_tabs: Index
@@ -607,7 +608,15 @@ I thought to **other categories** because sometimes the limit is really blurry :
 
 :warning:I've note something that can be helpfull : sometimes citations looks like : *AccessionNb **to** AccessionNb+n*, so I think it mean that authors use AccessionNb, AccessionNb+1, AccessionNb+2, AccessionNb+3,... AccessionNb+n where n is the last of the series., so in one citation there is sometimes more AccessionNb than what is written.
 
-- *Papers & Blogs* :
+Fix the extract citation script that were bugged for the section assignation. ~800 citations extracted / ~1200 txt-mined by [AnnotationAPI](http://europepmc.org/AnnotationsApi) / ~65% / ~2000 exact match (citations that are not extracted are citations from tables, etc..)
+
+
+[:top::top::top::top::top::top::top::top::top::top::top::top::top::top:Go to the top:top::top::top::top::top::top::top::top::top::top::top::top::top::top::top:](#top)
+
+<a name="Week7"></a>
+### :date: Week 7 - 15/04-21/04 :
+
+
 
 
 [:top::top::top::top::top::top::top::top::top::top::top::top::top::top:Go to the top:top::top::top::top::top::top::top::top::top::top::top::top::top::top::top:](#top)
