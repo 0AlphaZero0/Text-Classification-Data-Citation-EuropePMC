@@ -610,6 +610,8 @@ I thought to **other categories** because sometimes the limit is really blurry :
 
 Fix the extract citation script that were bugged for the section assignation. ~800 citations extracted / ~1200 txt-mined by [AnnotationAPI](http://europepmc.org/AnnotationsApi) / ~65% / ~2000 exact match (citations that are not extracted are citations from tables, etc..)
 
+There is a big difference between citations from Annotation match and my match of accession number from AnnotationAPI because it need to go over different filters and validate each one. 
+
 
 [:top::top::top::top::top::top::top::top::top::top::top::top::top::top:Go to the top:top::top::top::top::top::top::top::top::top::top::top::top::top::top::top:](#top)
 
