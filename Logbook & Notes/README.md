@@ -618,7 +618,27 @@ There is a big difference between citations from Annotation match and my match o
 <a name="Week7"></a>
 ### :date: Week 7 - 15/04-21/04 :
 
+#### Analysis :
 
+- Categories repartition 
+
+| Categories     | Count of Categories | Percentage |
+|----------------|---------------------|------------|
+| Background     | 159                 | 11.63%     |
+| ClinicalTrials | 124                 | 9.07%      |
+| Compare        | 4                   | 0.29%      |
+| Creation       | 163                 | 11.92%     |
+| Unclassifiable | 56                  | 4.10%      |
+| Use            | 861                 | 62.98%     |
+| TOTAL          | 1367                | 100.00%    |
+
+
+
+
+
+
+
+<img align="left" width="20%" height="20%" src="">
 
 
 [:top::top::top::top::top::top::top::top::top::top::top::top::top::top:Go to the top:top::top::top::top::top::top::top::top::top::top::top::top::top::top::top:](#top)
