@@ -618,9 +618,11 @@ There is a big difference between citations from Annotation match and my match o
 <a name="Week7"></a>
 ### :date: Week 7 - 15/04-21/04 :
 
-#### Analysis :
+#### :bar_chart: Analysis :
 
 - Categories repartition 
+
+<center>
 
 | Categories     | Count of Categories | Percentage |
 |----------------|---------------------|------------|
@@ -631,6 +633,8 @@ There is a big difference between citations from Annotation match and my match o
 | Unclassifiable | 56                  | 4.10%      |
 | Use            | 861                 | 62.98%     |
 | TOTAL          | 1367                | 100.00%    |
+
+</center>
 
 <p align="center">
   <img width="70%" height="70%" src="https://github.com/0AlphaZero0/Sentiment-Analysis-Data-Citation-EuropePMC/blob/master/Logbook%20%26%20Notes/Analysis/CategoriesRepartitionCircle.PNG">
