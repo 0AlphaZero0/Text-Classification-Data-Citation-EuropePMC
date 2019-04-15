@@ -640,10 +640,11 @@ There is a big difference between citations from Annotation match and my match o
   </div>
   <div class="column">
     <p align="center">
-      <img width="50%" height="50%" src="https://github.com/0AlphaZero0/Sentiment-Analysis-Data-Citation-EuropePMC/blob/master/Logbook%20%26%20Notes/Analysis/CategoriesRepartitionGraphic.PNG">
+      <img width="40%" height="40%" src="https://github.com/0AlphaZero0/Sentiment-Analysis-Data-Citation-EuropePMC/blob/master/Logbook%20%26%20Notes/Analysis/CategoriesRepartitionGraphic.PNG">
     </p>
   </div>
 </div>
+
 [:top::top::top::top::top::top::top::top::top::top::top::top::top::top:Go to the top:top::top::top::top::top::top::top::top::top::top::top::top::top::top::top:](#top)
 
 ______________________________________________________________________
