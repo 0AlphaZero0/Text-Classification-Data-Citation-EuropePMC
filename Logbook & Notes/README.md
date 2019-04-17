@@ -28,13 +28,13 @@ ______________________________________________________________________
 
 - ***[Month 1 - 01/03-31/03](#Month1)***
   * [Week 1 - 01/03-10/03 - Bibliography](#Week1)
-  * [Week 2 - 11/03-17/03](#Week2)
-  * [Week 3 - 18/03-24/03](#Week3)
-  * [Week 4 - 25/03-31/03](#Week4)
+  * [Week 2 - 11/03-17/03 - Idea of workflow](#Week2)
+  * [Week 3 - 18/03-24/03 - Pre-existing datasets & Approaches](#Week3)
+  * [Week 4 - 25/03-31/03 - Dataset extraction pipeline & Bibliography](#Week4)
 - ***[Month 2 - 01/04-30/04](#Month2)***
-  * [Week 5 - 01/04-07/04](#Week5)
-  * [Week 6 - 08/04-14/04](#Week6)
-  * [Week 7 - 15/04-21/04](#Week7)
+  * [Week 5 - 01/04-07/04 - Dataset extraction pipeline Improvements & Annotations](#Week5)
+  * [Week 6 - 08/04-14/04 - Dataset extraction pipeline Improvements & First idea of Categories](#Week6)
+  * [Week 7 - 15/04-21/04 - Dataset & Categories & Pre-analysis](#Week7)
 ______________________________________________________________________
 
 ### :bookmark_tabs: [Bibliography](#bibliography01)
