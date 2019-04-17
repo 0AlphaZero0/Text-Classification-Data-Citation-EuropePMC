@@ -45,15 +45,11 @@ This part contain all link to papers that I've read and my notes about those.
 
 ______________________________________________________________________
 
-### :bookmark_tabs: Index
-
-[Index](#index01)
+### :bookmark_tabs: [Index](#index01)
 
 ______________________________________________________________________
 
-### :bookmark: Attachments
-
-[Attachments](#attachments01)
+### :bookmark: [Attachments](#attachments01)
 
 ______________________________________________________________________
 
