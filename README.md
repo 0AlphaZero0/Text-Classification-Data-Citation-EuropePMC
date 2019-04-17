@@ -33,7 +33,7 @@ ______________________________________________________________________
 ### Description :
 
 <p align="center">
-  :warning::warning::warning::warning::warning::warning::warning::warning: ***In progress*** :warning::warning::warning::warning::warning::warning::warning::warning:
+  :warning::warning::warning::warning::warning::warning::warning::warning: In progress :warning::warning::warning::warning::warning::warning::warning::warning:
  </p>
 
 This project is based on [EuropePMC](http://europepmc.org/), this is an on-line database that offers free access to a large and growing collection of biomedical research literature. Actually there is more than 35.3 million of abstract and 5.3 million of full text articles on this database. [EuropePMC](http://europepmc.org/) team is part of the [EMBL-EBI](https://www.ebi.ac.uk/), this organisation is itself part of the [EMBL](https://www.embl.org/) organisation. This structure is an international one, composed of 24 country and the goal of this organisation is to develop biology research. It is for this purpose that the EMBL-EBI was created, indeed in the last few years *bioinformatics* had a real impact on biology research, this is due to the fact that the data in this environment has grown in an impressive way, mostly come from genetics. The goal of EMBL-EBI is to create open access tools to facilitate the biology research. 
@@ -47,7 +47,7 @@ In this perspective a large number of tools have been created in particular:
 [Ensembl](http://www.ensembl.org/)
 
 <p align="center">
-  :warning::warning::warning::warning::warning::warning::warning::warning: ***In progress*** :warning::warning::warning::warning::warning::warning::warning::warning:
+  :warning::warning::warning::warning::warning::warning::warning::warning: In progress :warning::warning::warning::warning::warning::warning::warning::warning:
  </p>
 ______________________________________________________________________
 
