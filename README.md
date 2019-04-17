@@ -17,6 +17,8 @@ ______________________________________________________________________
 
 - *[Description](#Descrition)*
 
+- *[Organisation](#Organisation)*
+
 - *[Planning](https://github.com/0AlphaZero0/Sentiment-Analysis-EuropePMC/projects/1)*
 
 - *[Logbook & Notes](https://github.com/0AlphaZero0/Sentiment-Analysis-EuropePMC/blob/master/Logbook%20%26%20Notes/README.md)*
@@ -41,5 +43,35 @@ In this perspective a large number of tools have been created in particular:
 [Ensembl](http://www.ensembl.org/)
 ______________________________________________________________________
 
+<a name="Organisation"></a>
+### Organisation :
+
+This GitHub is ogranized as follows : 
+
+- [Bibliography](https://github.com/0AlphaZero0/Sentiment-Analysis-Data-Citation-EuropePMC/tree/master/Bibliography) 
+  * It corresponds to all articles I've read. There is a [README.md](https://github.com/0AlphaZero0/Sentiment-Analysis-Data-Citation-EuropePMC/blob/master/Bibliography/README.md) that contain all citations as BibText and link to papers pdf. All papers that I've read are stored in this folder.
+  
+- [Datasets](https://github.com/0AlphaZero0/Sentiment-Analysis-Data-Citation-EuropePMC/tree/master/Datasets)
+  * There is two folder in this folder, one that contain [existing datasets](https://github.com/0AlphaZero0/Sentiment-Analysis-Data-Citation-EuropePMC/tree/master/Datasets/Existing-Dataset) and a second one that contain [dataset created](https://github.com/0AlphaZero0/Sentiment-Analysis-Data-Citation-EuropePMC/tree/master/Datasets/Dataset-created) for machine learning analysis 
+
+- [Logbook & Notes](https://github.com/0AlphaZero0/Sentiment-Analysis-Data-Citation-EuropePMC/tree/master/Logbook%20%26%20Notes)
+  * In this folder there is all of my notes for the complete internship, there is also a lot of figure that I use in my notes, all of these informations are displayed in the [README.md](https://github.com/0AlphaZero0/Sentiment-Analysis-Data-Citation-EuropePMC/blob/master/Logbook%20%26%20Notes/README.md)
+
+- [ML Analysis](https://github.com/0AlphaZero0/Sentiment-Analysis-Data-Citation-EuropePMC/tree/master/MLAnalysis)
+  * In this folder there is all of the machine learning script and pipeline that I use for an automatic classification of data citations.
+  
+- [PipelineDatasetCreation](https://github.com/0AlphaZero0/Sentiment-Analysis-Data-Citation-EuropePMC/tree/master/PipelineDatasetCreation)
+  * In this folder there is the pipeline that I use to create a complete dataset of data citations.
+
+______________________________________________________________________
+
 <a name="Acknowledgment"></a>
 ### Acknowledgment :
+
+- Xiao Yang
+- Aravind Venkatesan
+- Johanna McEntyre
+- Awais Athar
+- Fransesco Talo
+- Mariia Levchenko
+- & all Literature team members
