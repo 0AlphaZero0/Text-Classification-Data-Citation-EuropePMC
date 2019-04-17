@@ -35,7 +35,7 @@ data=pd.read_csv(filename,header=0,sep="\t")
 #print(data.Categories.value_counts())
 data["Categories_num"]=data.Categories.map({'Background':0,"ClinicalTrials":1,"Compare":2,"Creation":3,"Unclassifiable":4,"Use":5})
 #print(data.head(10))
-X=data
+X=data.Citation
 y=data.Categories_num
 #print(X.shape)
 #print(y.shape)
@@ -48,5 +48,7 @@ X_train_dtm=vect.fit_transform(X_train)
 X_test_dtm=vect.transform(X_test)
 clf.fit(X_train_dtm,y_train)
 y_pred_class=clf.predict(X_test_dtm)
-print(metrics.accuracy_score(y_test,y_pred_class))
-print(metrics.confusion_matrix(y_test,y_pred_class))
+# print(metrics.accuracy_score(y_test,y_pred_class))
+# print(metrics.confusion_matrix(y_test,y_pred_class))
+# print(X_test[y_pred_class > y_test])# false positive
+print(X_test[y_pred_class < y_test])# false negative
