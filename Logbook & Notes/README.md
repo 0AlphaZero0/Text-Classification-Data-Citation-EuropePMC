@@ -778,8 +778,17 @@ ______________________________________________________________________
 <a name="bibliography01"></a>
 ## :bookmark_tabs: Bibliography :
 
-
-
+- [Deep Learning, NLP, Representation](#Deep1)
+- [SciLite](#SciLite1)
+- [Database citation in full text biomedical papers](#Database1)
+- [EuropePMC](#EuropePMC1)
+- [Sentiment analysis of scientific citation](#Sentiment1)
+- [Measuring the Evolution of a Scientific Field through Citation Frames](#Measuring2)
+- [New Features for Sentiment Analysis: Do Sentences Matter?](#NewFeatures3)
+- [Sentiment Symposium Tutorial](http://sentiment.christopherpotts.net/index.html)
+- [AUTOLEX: An Automatic Lexicon Builder for Minority Languages Using an Open Corpus](#AUTOLEX3)
+- [Data Citation Synthesis Group: Joint Declaration of Data Citation Principles. Martone M. (ed.) San Diego CA: FORCE11; 2014](https://doi.org/10.25490/a97f-egyk)
+- [Achieving human and machine accessibility of cited data in scholarly publications](#Achieving4)
 
 [:top::top::top::top::top::top::top::top::top::top::top::top::top::top:Go to the top:top::top::top::top::top::top::top::top::top::top::top::top::top::top::top:](#top)
 
