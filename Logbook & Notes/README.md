@@ -37,11 +37,9 @@ ______________________________________________________________________
   * [Week 7 - 15/04-21/04](#Week7)
 ______________________________________________________________________
 
-### :bookmark_tabs: Bibliography
+### :bookmark_tabs: [Bibliography](#bibliography01)
 
-[Bibliography](#bibliography01)
-
-This part contain all link to papers that I've read and my notes about those.
+  *This part contain all link to papers that I've read and my notes about those.*
 
 ______________________________________________________________________
 
