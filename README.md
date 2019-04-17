@@ -63,6 +63,7 @@ This GitHub is ogranized as follows :
 - [PipelineDatasetCreation](https://github.com/0AlphaZero0/Sentiment-Analysis-Data-Citation-EuropePMC/tree/master/PipelineDatasetCreation)
   * In this folder there is the pipeline that I use to create a complete dataset of data citations.
 
+There is also a planning that you can find [here](https://github.com/0AlphaZero0/Sentiment-Analysis-Data-Citation-EuropePMC/projects/1)
 ______________________________________________________________________
 
 <a name="Acknowledgment"></a>
