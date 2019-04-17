@@ -68,10 +68,10 @@ ______________________________________________________________________
 <a name="Acknowledgment"></a>
 ### Acknowledgment :
 
-- Xiao Yang
-- Aravind Venkatesan
-- Johanna McEntyre
-- Awais Athar
-- Fransesco Talo
-- Mariia Levchenko
-- & all Literature team members
+- [Xiao Yang](https://www.ebi.ac.uk/about/people/xiao-yang)
+- [Aravind Venkatesan](https://www.ebi.ac.uk/about/people/aravind-venkatesan)
+- [Johanna McEntyre](https://www.ebi.ac.uk/about/people/johanna-mcentyre)
+- [Awais Athar](https://www.ebi.ac.uk/about/people/awais-athar)
+- [Fransesco Talo](https://www.ebi.ac.uk/about/people/francesco-talo)
+- [Mariia Levchenko](https://www.ebi.ac.uk/about/people/mariia-levchenko)
+- [& all Literature team members](https://www.ebi.ac.uk/about/people/johanna-mcentyre)
