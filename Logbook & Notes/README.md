@@ -19,8 +19,9 @@ ______________________________________________________________________
 - [11/03 - Defintions of planinng, needs and requests](#11/03)
 - [12/03 - Questions & path set up](#12/03)
 - [19/03 - Dataset conception](#19/03)
-- [25/03 - XML Talks / Data creation](#25/03)
-- [02/04 - Summary of March](#02/04)
+- [25/03 - XML Talks & Data creation](#25/03)
+- ***[02/04 - Summary of March](#02/04)***
+- [16/04 - Pre-Analysis & Discussion with A.Athar](#16/04)
 
 ______________________________________________________________________
 ### :green_book: Notes
@@ -193,6 +194,21 @@ Results and analysis
    * [CiTO, the Citation Typing Ontology](https://sparontologies.github.io/cito/current/cito.html)
    * [OpenCitations](http://opencitations.net/)
 
+
+[:top::top::top::top::top::top::top::top::top::top::top::top::top::top:Go to the top:top::top::top::top::top::top::top::top::top::top::top::top::top::top::top:](#top)
+
+<a name="16/04"></a>
+### :mega: 16/04 - Pre-Analysis & Discussion with A.Athar :
+
+- Meeting with Xiao Yang :
+  * Time and categories for the annotation of the dataset
+  * Previous analysis correct 
+  * Future work : *Random forest* ; *Naive Bayes* ; *SVM* ; *Logistic Regression*
+  * Interesting extracting features to work on :  *Stemming* ; *Tokenization* ; *~~POS tag~~* ; *~~Lexicons~~* ; *N-grams* ; *Word Embedding* ; *Dependency based* ; *Lemma ; *~~Window based Negation~~*
+
+- Meeting with Xiao Yang & Awais Athar : 
+  * *ClinicalTrials* are problematic. See with curators from A.Athar team.
+  * Doubt about *Creation* category
 
 [:top::top::top::top::top::top::top::top::top::top::top::top::top::top:Go to the top:top::top::top::top::top::top::top::top::top::top::top::top::top::top::top:](#top)
 
