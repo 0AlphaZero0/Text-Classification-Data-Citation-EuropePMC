@@ -28,7 +28,7 @@ ______________________________________________________________________
 
 - ***[Month 1 - 01/03-31/03](#Month1)***
   * [Week 1 - 01/03-10/03 - Bibliography](#Week1)
-  * [Week 2 - 11/03-17/03 - Idea of workflow](#Week2)
+  * [Week 2 - 11/03-17/03 - Idea of workflow & Bibliography](#Week2)
   * [Week 3 - 18/03-24/03 - Pre-existing datasets & Approaches](#Week3)
   * [Week 4 - 25/03-31/03 - Dataset extraction pipeline & Bibliography](#Week4)
 - ***[Month 2 - 01/04-30/04](#Month2)***
@@ -220,7 +220,7 @@ ______________________________________________________________________
 
 <a name="Month1"></a>
 <a name="Week1"></a>
-### :date: Week 1 - 01/03-10/03 :
+### :date: Week 1 - 01/03-10/03 - Bibliography :
 
 *Papers & Blogs* :
 - [Deep Learning, NLP, Representation](#Deep1)
@@ -386,7 +386,7 @@ Citations with no snetiment are considered as OBJECTIVES.
 [:top::top::top::top::top::top::top::top::top::top::top::top::top::top:Go to the top:top::top::top::top::top::top::top::top::top::top::top::top::top::top::top:](#top)
 
 <a name="Week2"></a>
-### :date: Week 2 - 11/03-17/03 :
+### :date: Week 2 - 11/03-17/03 - Idea of workflow & Bibliography :
 
 - *Papers & Blogs* :
   * [Measuring the Evolution of a Scientific Field through Citation Frames](#Measuring2)
@@ -461,7 +461,7 @@ They use 6 categories to classify citations :
 [:top::top::top::top::top::top::top::top::top::top::top::top::top::top:Go to the top:top::top::top::top::top::top::top::top::top::top::top::top::top::top::top:](#top)
 
 <a name="Week3"></a>
-### :date: Week 3 - 18/03-24/03 :
+### :date: Week 3 - 18/03-24/03 - Pre-existing datasets & Approaches:
 
 - *Papers & Blogs* :
   * [New Features for Sentiment Analysis: Do Sentences Matter?](#NewFeatures3)
@@ -565,7 +565,7 @@ This article show how to build a lexicon automaticaly so it could be a solution,
 [:top::top::top::top::top::top::top::top::top::top::top::top::top::top:Go to the top:top::top::top::top::top::top::top::top::top::top::top::top::top::top::top:](#top)
 
 <a name="Week4"></a>
-### :date: Week 4 - 25/03-31/03 :
+### :date: Week 4 - 25/03-31/03 - Dataset extraction pipeline & Bibliography:
 
 During this week I've start to create a pipeline that can extract data citations from EPMC. It should be completed at the beginning of the next week. ([Week 5](#Week5))
 
@@ -593,7 +593,7 @@ Moving to a cross-discipline standard for acknowledging the data allows research
 
 <a name="Month2"></a>
 <a name="Week5"></a>
-### :date: Week 5 - 01/04-07/04 :
+### :date: Week 5 - 01/04-07/04 - Dataset extraction pipeline Improvements & Annotations :
 
 I've try to improve a kind of **pipeline to create dataset for the future analysis**, for this First I extract papers that are open access and contains Accession Numbers so there is a full-txt and an Accession-Numbers file in XML format from the annotation API and RESTful API. Then I extract a PMCID list that it used to "sentencized" full-txt XML files. Then I use a little script to repare result files, indeed the splitter sometimes made mistakes, And it's kind of easy to fix some of these. Then I extract citation from those repared files and it result in a file with all sentences containing all citations. But we're focusing on citations that are currently mine by the annotation API.
 
@@ -611,7 +611,7 @@ At the end I've start to annotate ~1000 citations with categories : **Background
 [:top::top::top::top::top::top::top::top::top::top::top::top::top::top:Go to the top:top::top::top::top::top::top::top::top::top::top::top::top::top::top::top:](#top)
 
 <a name="Week6"></a>
-### :date: Week 6 - 08/04-14/04 :
+### :date: Week 6 - 08/04-14/04 - Dataset extraction pipeline Improvements & First idea of Categories :
 
 I had a features called **Figure** which can be *True* or *False* because it seems like if a data citation is in a caption's figure, so there is high chance to be use in the paper.
 
@@ -634,7 +634,7 @@ There is a big difference between citations from Annotation match and my match o
 [:top::top::top::top::top::top::top::top::top::top::top::top::top::top:Go to the top:top::top::top::top::top::top::top::top::top::top::top::top::top::top::top:](#top)
 
 <a name="Week7"></a>
-### :date: Week 7 - 15/04-21/04 :
+### :date: Week 7 - 15/04-21/04 - Dataset & Categories & Pre-Analysis :
 
 #### :bar_chart: Analysis :
 
