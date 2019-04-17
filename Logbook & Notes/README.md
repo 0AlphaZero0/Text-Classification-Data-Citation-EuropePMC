@@ -27,7 +27,7 @@ ______________________________________________________________________
 ### :green_book: Notes
 
 - ***[Month 1 - 01/03-31/03](#Month1)***
-  * [Week 1 - 01/03-10/03](#Week1)
+  * [Week 1 - 01/03-10/03 - Bibliography](#Week1)
   * [Week 2 - 11/03-17/03](#Week2)
   * [Week 3 - 18/03-24/03](#Week3)
   * [Week 4 - 25/03-31/03](#Week4)
@@ -35,6 +35,14 @@ ______________________________________________________________________
   * [Week 5 - 01/04-07/04](#Week5)
   * [Week 6 - 08/04-14/04](#Week6)
   * [Week 7 - 15/04-21/04](#Week7)
+______________________________________________________________________
+
+### :bookmark_tabs: Bibliography
+
+[Bibliography](#bibliography01)
+
+This part contain all link to papers that I've read and my notes about those.
+
 ______________________________________________________________________
 
 ### :bookmark_tabs: Index
@@ -768,6 +776,16 @@ We can also see that there is most of citations in the section *result* and *met
 <p align="center">
   <img width="70%" height="70%" src="https://github.com/0AlphaZero0/Sentiment-Analysis-Data-Citation-EuropePMC/blob/master/Logbook%20%26%20Notes/Analysis/ByCategoriesRepartitionGraphic.PNG">
 </p>
+
+[:top::top::top::top::top::top::top::top::top::top::top::top::top::top:Go to the top:top::top::top::top::top::top::top::top::top::top::top::top::top::top::top:](#top)
+
+______________________________________________________________________
+
+<a name="bibliography01"></a>
+## :bookmark_tabs: Bibliography :
+
+
+
 
 [:top::top::top::top::top::top::top::top::top::top::top::top::top::top:Go to the top:top::top::top::top::top::top::top::top::top::top::top::top::top::top::top:](#top)
 
