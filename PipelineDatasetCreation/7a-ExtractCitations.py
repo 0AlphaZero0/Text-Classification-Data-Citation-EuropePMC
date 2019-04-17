@@ -108,11 +108,11 @@ resultFile.write("SubType")
 resultFile.write("\t")
 resultFile.write("Figure")
 resultFile.write("\t")
-resultFile.write("Pre-citation")
+resultFile.write("PreCitation")
 resultFile.write("\t")
 resultFile.write("Citation")
 resultFile.write("\t")
-resultFile.write("Post-citation")
+resultFile.write("PostCitation")
 resultFile.write("\n")
 # for a PMCID file sentencized :
 for file in os.listdir("./articlesOA"):
