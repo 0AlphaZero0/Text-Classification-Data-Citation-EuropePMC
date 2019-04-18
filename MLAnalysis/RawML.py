@@ -9,6 +9,9 @@ import numpy as np # Allows to manipulate the necessary table for sklearn
 import os # Allows to modify some things on the os
 import pandas as pd # Allows some data manipulations
 import random # Allows to use random variables
+import matplotlib
+import matplotlib.pyplot as plt
+import seaborn as sns
 # import requests # Allows to make http requests
 from sklearn import metrics
 from sklearn import svm # Allows to use the SVM classification method
@@ -54,6 +57,7 @@ clfList=[[clfLR,"Logistic Regression"],
 ################################################    Functions     #################################################
 
 
+
 ###################################################    Main     ###################################################
 
 data=pd.read_csv(filename,header=0,sep="\t")
@@ -85,44 +89,48 @@ for subType in data.SubType:
 data[SubType_num_str]=data.SubType.map(subTypeDict)
 #
 ##################################################################
-
+plt.figure()
+cor=data.corr()
+sns.heatmap(cor,annot=True,cmap=plt.cm.Reds)
+plt.show()
+##################################################################
 X=data[featuresList]
 y=data.Categories_num
 
 X_train,X_test,y_train,y_test=train_test_split(X,y,random_state=1)
 
 X_train_dtm= np.concatenate(
-    (X_train[[Section_num_str]].values,
-    X_train[[SubType_num_str]].values,
-    X_train[[Figure_num_str]].values,
-    pre_vect.fit_transform(X_train[[PreCitation_str]].fillna('').values.reshape(-1)).todense(),
-    citation_vect.fit_transform(X_train[[Citation_str]].fillna('').values.reshape(-1)).todense(),
-    post_vect.fit_transform(X_train[[PostCitation_str]].fillna('').values.reshape(-1)).todense()),
-    axis=1
-        )
+	(X_train[[Section_num_str]].values,
+	X_train[[SubType_num_str]].values,
+	X_train[[Figure_num_str]].values,
+	pre_vect.fit_transform(X_train[[PreCitation_str]].fillna('').values.reshape(-1)).todense(),
+	citation_vect.fit_transform(X_train[[Citation_str]].fillna('').values.reshape(-1)).todense(),
+	post_vect.fit_transform(X_train[[PostCitation_str]].fillna('').values.reshape(-1)).todense()),
+	axis=1
+		)
 X_test_dtm= np.concatenate(
-    (X_test[[Section_num_str]].values,
-    X_test[[SubType_num_str]].values,
-    X_test[[Figure_num_str]].values,
-    pre_vect.transform(X_test[[PreCitation_str]].fillna('').values.reshape(-1)).todense(),
-    citation_vect.transform(X_test[[Citation_str]].fillna('').values.reshape(-1)).todense(),
-    post_vect.transform(X_test[[PostCitation_str]].fillna('').values.reshape(-1)).todense()),
-    axis=1
+	(X_test[[Section_num_str]].values,
+	X_test[[SubType_num_str]].values,
+	X_test[[Figure_num_str]].values,
+	pre_vect.transform(X_test[[PreCitation_str]].fillna('').values.reshape(-1)).todense(),
+	citation_vect.transform(X_test[[Citation_str]].fillna('').values.reshape(-1)).todense(),
+	post_vect.transform(X_test[[PostCitation_str]].fillna('').values.reshape(-1)).todense()),
+	axis=1
 )
 ##################################################################
 for clf in clfList:
-    start=time.time()
-    try:
-        print (X_train_dtm.shape)
-        print (y_train.shape)
-        clf[0].fit(X_train_dtm,y_train)
-        # print (clf.feature_importance)
-        y_pred_class=clf[0].predict(X_test_dtm)
-    except TypeError:
-        clf[0].fit(X_train_dtm.toarray(),y_train)
-        y_pred_class=clf[0].predict(X_test_dtm.toarray())
-        # print (clf.feature_importance)
-    end=time.time()
-    target_names=["Background","ClinicalTrials","Compare","Creation","Unclassifiable","Use"]
-    print(metrics.classification_report(y_test,y_pred_class,target_names=target_names),metrics.accuracy_score(y_test,y_pred_class),"\t", clf[1],"\t",str(round((end-start),3))+" sec")
-    print("#######################################################")
+	start=time.time()
+	try:
+		print (X_train_dtm.shape)
+		print (y_train.shape)
+		clf[0].fit(X_train_dtm,y_train)
+		print (clf[0].feature_importance)
+		y_pred_class=clf[0].predict(X_test_dtm)
+	except TypeError:
+		clf[0].fit(X_train_dtm.toarray(),y_train)
+		y_pred_class=clf[0].predict(X_test_dtm.toarray())
+		print (clf[0].feature_importance)
+	end=time.time()
+	target_names=["Background","ClinicalTrials","Compare","Creation","Unclassifiable","Use"]
+	print(metrics.classification_report(y_test,y_pred_class,target_names=target_names),metrics.accuracy_score(y_test,y_pred_class),"\t", clf[1],"\t",str(round((end-start),3))+" sec")
+	print("#######################################################")
