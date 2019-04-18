@@ -124,12 +124,10 @@ for clf in clfList:
 		print (X_train_dtm.shape)
 		print (y_train.shape)
 		clf[0].fit(X_train_dtm,y_train)
-		print (clf[0].feature_importance)
 		y_pred_class=clf[0].predict(X_test_dtm)
 	except TypeError:
 		clf[0].fit(X_train_dtm.toarray(),y_train)
 		y_pred_class=clf[0].predict(X_test_dtm.toarray())
-		print (clf[0].feature_importance)
 	end=time.time()
 	target_names=["Background","ClinicalTrials","Compare","Creation","Unclassifiable","Use"]
 	print(metrics.classification_report(y_test,y_pred_class,target_names=target_names),metrics.accuracy_score(y_test,y_pred_class),"\t", clf[1],"\t",str(round((end-start),3))+" sec")
