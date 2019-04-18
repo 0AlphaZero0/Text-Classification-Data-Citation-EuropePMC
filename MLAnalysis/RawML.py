@@ -41,9 +41,9 @@ clfMultinomialNB= MultinomialNB()
 pre_vect=TfidfVectorizer()
 citation_vect=TfidfVectorizer()
 post_vect=TfidfVectorizer()
-Section_num,SubType_num,Figure_num="Section_num","SubType_num","Figure_num"
-
-featuresList=[Section_num,SubType_num,Figure_num,'PreCitation','Citation','PostCitation']
+Section_num_str,SubType_num_str,Figure_num_str="Section_num","SubType_num","Figure_num"
+PreCitation_str,Citation_str,PostCitation_str="PreCitation","Citation","PostCitation"
+featuresList=[Section_num_str,SubType_num_str,Figure_num_str,PreCitation_str,Citation_str,PostCitation_str]
 clfList=[[clfLR,"Logistic Regression"],
         [clfBernoulliNB,"BernoulliNB"],
         [clfComplementNB,"ComplementNB"],
@@ -65,7 +65,7 @@ data["Categories_num"]=data.Categories.map({"Background":6,
                                             "Unclassifiable":4,
                                             "Use":5})
 #
-data[Figure_num]=data.Figure.map({True:0,
+data[Figure_num_str]=data.Figure.map({True:0,
                                     False:1})
 #
 sectionDict={}
@@ -74,7 +74,7 @@ for section in data.Section:
     if section not in sectionDict:
         sectionDict[section]=index
         index+=1
-data[Section_num]=data.Section.map(sectionDict)
+data[Section_num_str]=data.Section.map(sectionDict)
 #
 subTypeDict={}
 index=1
@@ -82,7 +82,7 @@ for subType in data.SubType:
     if subType not in subTypeDict:
         subTypeDict[subType]=index
         index+=1
-data[SubType_num]=data.SubType.map(subTypeDict)
+data[SubType_num_str]=data.SubType.map(subTypeDict)
 #
 ##################################################################
 
@@ -92,21 +92,21 @@ y=data.Categories_num
 X_train,X_test,y_train,y_test=train_test_split(X,y,random_state=1)
 
 X_train_dtm= np.concatenate(
-    (X_train[[Section_num]].values,
-    X_train[[SubType_num]].values,
-    X_train[[Figure_num]].values,
-    pre_vect.fit_transform(X_train[['PreCitation']].fillna('').values.reshape(-1)).todense(),
-    citation_vect.fit_transform(X_train[['Citation']].fillna('').values.reshape(-1)).todense(),
-    post_vect.fit_transform(X_train[['PostCitation']].fillna('').values.reshape(-1)).todense()),
+    (X_train[[Section_num_str]].values,
+    X_train[[SubType_num_str]].values,
+    X_train[[Figure_num_str]].values,
+    pre_vect.fit_transform(X_train[[PreCitation_str]].fillna('').values.reshape(-1)).todense(),
+    citation_vect.fit_transform(X_train[[Citation_str]].fillna('').values.reshape(-1)).todense(),
+    post_vect.fit_transform(X_train[[PostCitation_str]].fillna('').values.reshape(-1)).todense()),
     axis=1
         )
 X_test_dtm= np.concatenate(
-    (X_test[[Section_num]].values,
-    X_test[[SubType_num]].values,
-    X_test[[Figure_num]].values,
-    pre_vect.transform(X_test[['PreCitation']].fillna('').values.reshape(-1)).todense(),
-    citation_vect.transform(X_test[['Citation']].fillna('').values.reshape(-1)).todense(),
-    post_vect.transform(X_test[['PostCitation']].fillna('').values.reshape(-1)).todense()),
+    (X_test[[Section_num_str]].values,
+    X_test[[SubType_num_str]].values,
+    X_test[[Figure_num_str]].values,
+    pre_vect.transform(X_test[[PreCitation_str]].fillna('').values.reshape(-1)).todense(),
+    citation_vect.transform(X_test[[Citation_str]].fillna('').values.reshape(-1)).todense(),
+    post_vect.transform(X_test[[PostCitation_str]].fillna('').values.reshape(-1)).todense()),
     axis=1
 )
 ##################################################################
