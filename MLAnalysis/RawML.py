@@ -9,7 +9,7 @@ import numpy as np # Allows to manipulate the necessary table for sklearn
 import os # Allows to modify some things on the os
 import pandas as pd # Allows some data manipulations
 import random # Allows to use random variables
-import requests # Allows to make http requests
+# import requests # Allows to make http requests
 from sklearn import metrics
 from sklearn import svm # Allows to use the SVM classification method
 from sklearn.ensemble import RandomForestClassifier
@@ -38,7 +38,9 @@ clfBernoulliNB=BernoulliNB()
 clfComplementNB=ComplementNB()
 clfGaussianNB=GaussianNB()
 clfMultinomialNB= MultinomialNB()
-vect=TfidfVectorizer()
+pre_vect=TfidfVectorizer()
+citation_vect=TfidfVectorizer()
+post_vect=TfidfVectorizer()
 featuresList=['Section_num','SubType_num','Figure_num','PreCitation','Citation','PostCitation']
 ################################################    Functions     #################################################
 
@@ -110,6 +112,27 @@ X=data[featuresList]
 y=data.Categories_num
 
 X_train,X_test,y_train,y_test=train_test_split(X,y,random_state=1)
+print(X_train[['Section_num']].shape)
+print(X_train[['SubType_num']].shape)
+print(X_train[['Figure_num']].shape)
+print(X_train[['PreCitation']].shape)
+print(X_train[['PreCitation']].values.reshape(-1))
+print(pre_vect.fit_transform(X_train[['PreCitation']].fillna('').values.reshape(-1)).todense().shape)
+print(citation_vect.fit_transform(X_train[['Citation']].fillna('').values.reshape(-1)).todense().shape)
+print(post_vect.fit_transform(X_train[['PostCitation']].fillna('').values.reshape(-1)).todense().shape)
+
+all = np.concatenate(
+    (X_train[['Section_num']].values,
+    X_train[['SubType_num']].values,
+    X_train[['Figure_num']].values,
+    pre_vect.fit_transform(X_train[['PreCitation']].fillna('').values.reshape(-1)).todense(),
+    citation_vect.fit_transform(X_train[['Citation']].fillna('').values.reshape(-1)).todense(),
+    post_vect.fit_transform(X_train[['PostCitation']].fillna('').values.reshape(-1)).todense()),
+    axis=1
+)
+
+print(all.shape)
+raise
 X_train_dtm=np.concatenate((X_train[['Section_num']],X_train[['SubType_num']],X_train[['Figure_num']],vect.fit_transform(X_train[['PreCitation']]),vect.fit_transform(X_train[['Citation']]),vect.fit_transform(X_train[['PostCitation']])))
 X_test_dtm=np.concatenate((X_test[['Section_num']],X_test[['SubType_num']],X_test[['Figure_num']],vect.fit_transform(X_test[['PreCitation']]),vect.fit_transform(X_test[['Citation']]),vect.fit_transform(X_test[['PostCitation']])))
 ##################################################################
