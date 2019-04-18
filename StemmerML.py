@@ -45,6 +45,9 @@ clfMultinomialNB= MultinomialNB()
 pre_vect=TfidfVectorizer()
 citation_vect=TfidfVectorizer()
 post_vect=TfidfVectorizer()
+
+
+
 Section_num_str,SubType_num_str,Figure_num_str="Section_num","SubType_num","Figure_num"
 PreCitation_str,Citation_str,PostCitation_str="PreCitation","Citation","PostCitation"
 featuresList=[Section_num_str,SubType_num_str,Figure_num_str,PreCitation_str,Citation_str,PostCitation_str]
