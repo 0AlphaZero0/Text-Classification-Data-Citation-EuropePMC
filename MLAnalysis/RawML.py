@@ -41,30 +41,9 @@ clfMultinomialNB= MultinomialNB()
 pre_vect=TfidfVectorizer()
 citation_vect=TfidfVectorizer()
 post_vect=TfidfVectorizer()
-featuresList=['Section_num','SubType_num','Figure_num','PreCitation','Citation','PostCitation']
-################################################    Functions     #################################################
+Section_num,SubType_num,Figure_num="Section_num","SubType_num","Figure_num"
 
-def combinations(a):
-    def fn(n,src,got,all):
-        if n==0:
-            if len(got)>0:
-                all.append(got)
-            return
-        j=0
-        while j<len(src):
-            fn(n-1, src[:j], [src[j]] + got, all)
-            j=j+1
-        return
-    all=[]
-    i=0
-    while i<len(a):
-        fn(i,a,[],all)
-        i=i+1
-    all.append(a)
-    return all
-
-###################################################    Main     ###################################################
-
+featuresList=[Section_num,SubType_num,Figure_num,'PreCitation','Citation','PostCitation']
 clfList=[[clfLR,"Logistic Regression"],
         [clfBernoulliNB,"BernoulliNB"],
         [clfComplementNB,"ComplementNB"],
@@ -72,71 +51,65 @@ clfList=[[clfLR,"Logistic Regression"],
         [clfMultinomialNB,"MultinomialNB"],
         [clfRF,"Random Forest"],
         [clfSVM,"SVM"]]
+################################################    Functions     #################################################
+
+
+###################################################    Main     ###################################################
 
 data=pd.read_csv(filename,header=0,sep="\t")
-
-data["Categories_num"]=data.Categories.map({"Background":0,
+#
+data["Categories_num"]=data.Categories.map({"Background":6,
                                             "ClinicalTrials":1,
                                             "Compare":2,
                                             "Creation":3,
                                             "Unclassifiable":4,
                                             "Use":5})
-data["Figure_num"]=data.Figure.map({'True':1,
-                                    'False':0})
+#
+data[Figure_num]=data.Figure.map({True:0,
+                                    False:1})
+#
 sectionDict={}
-index=0
+index=1
 for section in data.Section:
     if section not in sectionDict:
         sectionDict[section]=index
         index+=1
-data["Section_num"]=data.Section.map(sectionDict)
+data[Section_num]=data.Section.map(sectionDict)
+#
 subTypeDict={}
-index=0
+index=1
 for subType in data.SubType:
     if subType not in subTypeDict:
         subTypeDict[subType]=index
         index+=1
-data["SubType_num"]=data.SubType.map(subTypeDict)
-
+data[SubType_num]=data.SubType.map(subTypeDict)
+#
 ##################################################################
-"""
-X=data.Citation
-y=data.Categories_num
 
-X_train,X_test,y_train,y_test=train_test_split(X,y,random_state=1)
-
-X_train_dtm=vect.fit_transform(X_train)
-X_test_dtm=vect.transform(X_test)
-"""
 X=data[featuresList]
 y=data.Categories_num
 
 X_train,X_test,y_train,y_test=train_test_split(X,y,random_state=1)
-print(X_train[['Section_num']].shape)
-print(X_train[['SubType_num']].shape)
-print(X_train[['Figure_num']].shape)
-print(X_train[['PreCitation']].shape)
-print(X_train[['PreCitation']].values.reshape(-1))
-print(pre_vect.fit_transform(X_train[['PreCitation']].fillna('').values.reshape(-1)).todense().shape)
-print(citation_vect.fit_transform(X_train[['Citation']].fillna('').values.reshape(-1)).todense().shape)
-print(post_vect.fit_transform(X_train[['PostCitation']].fillna('').values.reshape(-1)).todense().shape)
 
-all = np.concatenate(
-    (X_train[['Section_num']].values,
-    X_train[['SubType_num']].values,
-    X_train[['Figure_num']].values,
+X_train_dtm= np.concatenate(
+    (X_train[[Section_num]].values,
+    X_train[[SubType_num]].values,
+    X_train[[Figure_num]].values,
     pre_vect.fit_transform(X_train[['PreCitation']].fillna('').values.reshape(-1)).todense(),
     citation_vect.fit_transform(X_train[['Citation']].fillna('').values.reshape(-1)).todense(),
     post_vect.fit_transform(X_train[['PostCitation']].fillna('').values.reshape(-1)).todense()),
     axis=1
+        )
+X_test_dtm= np.concatenate(
+    (X_test[[Section_num]].values,
+    X_test[[SubType_num]].values,
+    X_test[[Figure_num]].values,
+    pre_vect.transform(X_test[['PreCitation']].fillna('').values.reshape(-1)).todense(),
+    citation_vect.transform(X_test[['Citation']].fillna('').values.reshape(-1)).todense(),
+    post_vect.transform(X_test[['PostCitation']].fillna('').values.reshape(-1)).todense()),
+    axis=1
 )
-
-print(all.shape)
-raise
-X_train_dtm=np.concatenate((X_train[['Section_num']],X_train[['SubType_num']],X_train[['Figure_num']],vect.fit_transform(X_train[['PreCitation']]),vect.fit_transform(X_train[['Citation']]),vect.fit_transform(X_train[['PostCitation']])))
-X_test_dtm=np.concatenate((X_test[['Section_num']],X_test[['SubType_num']],X_test[['Figure_num']],vect.fit_transform(X_test[['PreCitation']]),vect.fit_transform(X_test[['Citation']]),vect.fit_transform(X_test[['PostCitation']])))
 ##################################################################
-
 for clf in clfList:
     start=time.time()
     try:
