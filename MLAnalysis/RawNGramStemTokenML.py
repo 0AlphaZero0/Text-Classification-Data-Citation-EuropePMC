@@ -36,6 +36,11 @@ gamma='auto'
 C=10
 max_iter=10000
 class_weight='balanced'
+ngram_range=(1,3)
+Section_num_str,SubType_num_str,Figure_num_str="Section_num","SubType_num","Figure_num"
+PreCitation_str,Citation_str,PostCitation_str="PreCitation","Citation","PostCitation"
+featuresList=[Section_num_str,SubType_num_str,Figure_num_str,PreCitation_str,Citation_str,PostCitation_str]
+
 clfSVM=svm.LinearSVC(C=C,max_iter=max_iter,class_weight=class_weight)
 clfLR=LogisticRegression(C=C,solver='lbfgs',multi_class='multinomial',max_iter=max_iter,class_weight=class_weight)
 clfRF = RandomForestClassifier(n_estimators=100,random_state=0) # max_depth=2
@@ -43,12 +48,6 @@ clfBernoulliNB=BernoulliNB()
 clfComplementNB=ComplementNB()
 clfGaussianNB=GaussianNB()
 clfMultinomialNB= MultinomialNB()
-pre_vect=TfidfVectorizer()
-citation_vect=TfidfVectorizer()
-post_vect=TfidfVectorizer()
-Section_num_str,SubType_num_str,Figure_num_str="Section_num","SubType_num","Figure_num"
-PreCitation_str,Citation_str,PostCitation_str="PreCitation","Citation","PostCitation"
-featuresList=[Section_num_str,SubType_num_str,Figure_num_str,PreCitation_str,Citation_str,PostCitation_str]
 clfList=[[clfLR,"Logistic Regression"],
 	[clfBernoulliNB,"BernoulliNB"],
 	[clfComplementNB,"ComplementNB"],
@@ -57,6 +56,12 @@ clfList=[[clfLR,"Logistic Regression"],
 	[clfRF,"Random Forest"],
 	[clfSVM,"SVM"]]
 
+pre_vect=TfidfVectorizer()
+ngram_pre_vect=TfidfVectorizer(ngram_range=ngram_range)
+citation_vect=TfidfVectorizer()
+ngram_citation_vect=TfidfVectorizer(ngram_range=ngram_range)
+post_vect=TfidfVectorizer()
+ngram_post_vect=TfidfVectorizer(ngram_range=ngram_range)
 stemmer = SnowballStemmer('english',ignore_stopwords=True)
 analyzer = TfidfVectorizer().build_analyzer()
 ################################################    Functions     #################################################
@@ -102,8 +107,6 @@ for subType in data.SubType:
 data[SubType_num_str]=data.SubType.map(subTypeDict)
 #
 ##################################################################
-
-##################################################################
 #
 X=data[featuresList]
 y=data.Categories_num
@@ -118,42 +121,49 @@ X_train,X_test,y_train,y_test=train_test_split(X,y,random_state=1)
 # X_train_dtm = stem_citation_vect.fit_transform(X_train[[Citation_str]].fillna('').values.reshape(-1)).todense()
 # X_test_dtm = stem_citation_vect.transform(X_test[[Citation_str]].fillna('').values.reshape(-1)).todense()
 
-X_train_dtm= np.concatenate(
-    (citation_vect.fit_transform(X_train[[Citation_str]].fillna('').values.reshape(-1)).todense(),
-	stem_citation_vect.fit_transform(X_train[[Citation_str]].fillna('').values.reshape(-1)).todense()),
-    axis=1
-	)
-
-X_test_dtm= np.concatenate(
-    (citation_vect.transform(X_test[[Citation_str]].fillna('').values.reshape(-1)).todense(),
-	stem_citation_vect.transform(X_test[[Citation_str]].fillna('').values.reshape(-1)).todense()),
-    axis=1
-)
-
+# TfdfVect & Stemming with Citation #
 # X_train_dtm= np.concatenate(
-#     (X_train[[Section_num_str]].values,
-#     X_train[[SubType_num_str]].values,
-#     X_train[[Figure_num_str]].values,
-#     pre_vect.fit_transform(X_train[[PreCitation_str]].fillna('').values.reshape(-1)).todense(),
-# 	stem_precitation_vect.fit_transform(X_train[[PreCitation_str]].fillna('').values.reshape(-1)).todense(),
-#     citation_vect.fit_transform(X_train[[Citation_str]].fillna('').values.reshape(-1)).todense(),
-# 	stem_citation_vect.fit_transform(X_train[[Citation_str]].fillna('').values.reshape(-1)).todense(),
-#     post_vect.fit_transform(X_train[[PostCitation_str]].fillna('').values.reshape(-1)).todense(),
-# 	stem_postcitation_vect.fit_transform(X_train[[PostCitation_str]].fillna('').values.reshape(-1)).todense()),
+#     (citation_vect.fit_transform(X_train[[Citation_str]].fillna('').values.reshape(-1)).todense(),
+# 	stem_citation_vect.fit_transform(X_train[[Citation_str]].fillna('').values.reshape(-1)).todense()),
 #     axis=1
 # 	)
+
 # X_test_dtm= np.concatenate(
-#     (X_test[[Section_num_str]].values,
-#     X_test[[SubType_num_str]].values,
-#     X_test[[Figure_num_str]].values,
-#     pre_vect.transform(X_test[[PreCitation_str]].fillna('').values.reshape(-1)).todense(),
-# 	stem_precitation_vect.transform(X_test[[PreCitation_str]].fillna('').values.reshape(-1)).todense(),
-#     citation_vect.transform(X_test[[Citation_str]].fillna('').values.reshape(-1)).todense(),
-# 	stem_citation_vect.transform(X_test[[Citation_str]].fillna('').values.reshape(-1)).todense(),
-#     post_vect.transform(X_test[[PostCitation_str]].fillna('').values.reshape(-1)).todense(),
-# 	stem_postcitation_vect.transform(X_test[[PostCitation_str]].fillna('').values.reshape(-1)).todense()),
+#     (citation_vect.transform(X_test[[Citation_str]].fillna('').values.reshape(-1)).todense(),
+# 	stem_citation_vect.transform(X_test[[Citation_str]].fillna('').values.reshape(-1)).todense()),
 #     axis=1
 # )
+
+X_train_dtm= np.concatenate(
+    (X_train[[Section_num_str]].values,
+    X_train[[SubType_num_str]].values,
+    X_train[[Figure_num_str]].values,
+    pre_vect.fit_transform(X_train[[PreCitation_str]].fillna('').values.reshape(-1)).todense(),
+	ngram_pre_vect.fit_transform(X_train[[PreCitation_str]].fillna('').values.reshape(-1)).todense(),
+	stem_precitation_vect.fit_transform(X_train[[PreCitation_str]].fillna('').values.reshape(-1)).todense(),
+    citation_vect.fit_transform(X_train[[Citation_str]].fillna('').values.reshape(-1)).todense(),
+	ngram_citation_vect.fit_transform(X_train[[Citation_str]].fillna('').values.reshape(-1)).todense(),
+	stem_citation_vect.fit_transform(X_train[[Citation_str]].fillna('').values.reshape(-1)).todense(),
+    post_vect.fit_transform(X_train[[PostCitation_str]].fillna('').values.reshape(-1)).todense(),
+	ngram_post_vect.fit_transform(X_train[[PostCitation_str]].fillna('').values.reshape(-1)).todense(),
+	stem_postcitation_vect.fit_transform(X_train[[PostCitation_str]].fillna('').values.reshape(-1)).todense()),
+    axis=1
+	)
+X_test_dtm= np.concatenate(
+    (X_test[[Section_num_str]].values,
+    X_test[[SubType_num_str]].values,
+    X_test[[Figure_num_str]].values,
+    pre_vect.transform(X_test[[PreCitation_str]].fillna('').values.reshape(-1)).todense(),
+	ngram_pre_vect.transform(X_test[[PreCitation_str]].fillna('').values.reshape(-1)).todense(),
+	stem_precitation_vect.transform(X_test[[PreCitation_str]].fillna('').values.reshape(-1)).todense(),
+    citation_vect.transform(X_test[[Citation_str]].fillna('').values.reshape(-1)).todense(),
+	ngram_citation_vect.transform(X_test[[Citation_str]].fillna('').values.reshape(-1)).todense(),
+	stem_citation_vect.transform(X_test[[Citation_str]].fillna('').values.reshape(-1)).todense(),
+    post_vect.transform(X_test[[PostCitation_str]].fillna('').values.reshape(-1)).todense(),
+	ngram_post_vect.transform(X_test[[PostCitation_str]].fillna('').values.reshape(-1)).todense(),
+	stem_postcitation_vect.transform(X_test[[PostCitation_str]].fillna('').values.reshape(-1)).todense()),
+    axis=1
+)
 ##################################################################
 for clf in clfList:
 	start=time.time()
