@@ -134,36 +134,36 @@ X_train,X_test,y_train,y_test=train_test_split(X,y,random_state=1)
 #     axis=1
 # )
 
-X_train_dtm= np.concatenate(
-    (X_train[[Section_num_str]].values,
-    X_train[[SubType_num_str]].values,
-    X_train[[Figure_num_str]].values,
-    pre_vect.fit_transform(X_train[[PreCitation_str]].fillna('').values.reshape(-1)).todense(),
-	ngram_pre_vect.fit_transform(X_train[[PreCitation_str]].fillna('').values.reshape(-1)).todense(),
-	stem_precitation_vect.fit_transform(X_train[[PreCitation_str]].fillna('').values.reshape(-1)).todense(),
-    citation_vect.fit_transform(X_train[[Citation_str]].fillna('').values.reshape(-1)).todense(),
-	ngram_citation_vect.fit_transform(X_train[[Citation_str]].fillna('').values.reshape(-1)).todense(),
-	stem_citation_vect.fit_transform(X_train[[Citation_str]].fillna('').values.reshape(-1)).todense(),
-    post_vect.fit_transform(X_train[[PostCitation_str]].fillna('').values.reshape(-1)).todense(),
-	ngram_post_vect.fit_transform(X_train[[PostCitation_str]].fillna('').values.reshape(-1)).todense(),
-	stem_postcitation_vect.fit_transform(X_train[[PostCitation_str]].fillna('').values.reshape(-1)).todense()),
-    axis=1
-	)
-X_test_dtm= np.concatenate(
-    (X_test[[Section_num_str]].values,
-    X_test[[SubType_num_str]].values,
-    X_test[[Figure_num_str]].values,
-    pre_vect.transform(X_test[[PreCitation_str]].fillna('').values.reshape(-1)).todense(),
-	ngram_pre_vect.transform(X_test[[PreCitation_str]].fillna('').values.reshape(-1)).todense(),
-	stem_precitation_vect.transform(X_test[[PreCitation_str]].fillna('').values.reshape(-1)).todense(),
-    citation_vect.transform(X_test[[Citation_str]].fillna('').values.reshape(-1)).todense(),
-	ngram_citation_vect.transform(X_test[[Citation_str]].fillna('').values.reshape(-1)).todense(),
-	stem_citation_vect.transform(X_test[[Citation_str]].fillna('').values.reshape(-1)).todense(),
-    post_vect.transform(X_test[[PostCitation_str]].fillna('').values.reshape(-1)).todense(),
-	ngram_post_vect.transform(X_test[[PostCitation_str]].fillna('').values.reshape(-1)).todense(),
-	stem_postcitation_vect.transform(X_test[[PostCitation_str]].fillna('').values.reshape(-1)).todense()),
-    axis=1
-)
+# X_train_dtm= np.concatenate(
+#     (X_train[[Section_num_str]].values,
+#     X_train[[SubType_num_str]].values,
+#     X_train[[Figure_num_str]].values,
+#     pre_vect.fit_transform(X_train[[PreCitation_str]].fillna('').values.reshape(-1)).todense(),
+# 	ngram_pre_vect.fit_transform(X_train[[PreCitation_str]].fillna('').values.reshape(-1)).todense(),
+# 	stem_precitation_vect.fit_transform(X_train[[PreCitation_str]].fillna('').values.reshape(-1)).todense(),
+#     citation_vect.fit_transform(X_train[[Citation_str]].fillna('').values.reshape(-1)).todense(),
+# 	ngram_citation_vect.fit_transform(X_train[[Citation_str]].fillna('').values.reshape(-1)).todense(),
+# 	stem_citation_vect.fit_transform(X_train[[Citation_str]].fillna('').values.reshape(-1)).todense(),
+#     post_vect.fit_transform(X_train[[PostCitation_str]].fillna('').values.reshape(-1)).todense(),
+# 	ngram_post_vect.fit_transform(X_train[[PostCitation_str]].fillna('').values.reshape(-1)).todense(),
+# 	stem_postcitation_vect.fit_transform(X_train[[PostCitation_str]].fillna('').values.reshape(-1)).todense()),
+#     axis=1
+# 	)
+# X_test_dtm= np.concatenate(
+#     (X_test[[Section_num_str]].values,
+#     X_test[[SubType_num_str]].values,
+#     X_test[[Figure_num_str]].values,
+#     pre_vect.transform(X_test[[PreCitation_str]].fillna('').values.reshape(-1)).todense(),
+# 	ngram_pre_vect.transform(X_test[[PreCitation_str]].fillna('').values.reshape(-1)).todense(),
+# 	stem_precitation_vect.transform(X_test[[PreCitation_str]].fillna('').values.reshape(-1)).todense(),
+#     citation_vect.transform(X_test[[Citation_str]].fillna('').values.reshape(-1)).todense(),
+# 	ngram_citation_vect.transform(X_test[[Citation_str]].fillna('').values.reshape(-1)).todense(),
+# 	stem_citation_vect.transform(X_test[[Citation_str]].fillna('').values.reshape(-1)).todense(),
+#     post_vect.transform(X_test[[PostCitation_str]].fillna('').values.reshape(-1)).todense(),
+# 	ngram_post_vect.transform(X_test[[PostCitation_str]].fillna('').values.reshape(-1)).todense(),
+# 	stem_postcitation_vect.transform(X_test[[PostCitation_str]].fillna('').values.reshape(-1)).todense()),
+#     axis=1
+# )
 ##################################################################
 for clf in clfList:
 	start=time.time()
