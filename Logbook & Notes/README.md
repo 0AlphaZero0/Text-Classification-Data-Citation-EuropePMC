@@ -1373,6 +1373,7 @@ Unclassifiable       1.00      0.56      0.72        16
 ```
 
 **With Section, SubType, Figure, Pre-Citation, Citation, Post-Citation**
+
 ```
 (1025, 136919) X_train shape
 (1025,) y_train shape
@@ -1487,6 +1488,129 @@ Unclassifiable       1.00      0.56      0.72        16
  0.8888888888888888 	 SVM 	 81.115 sec
 #######################################################
 
+```
+
+<a name="lemma07"></a>
+#### Lemma :
+**With Citations only** :
+
+
+
+**With Section, SubType, Figure, Pre-Citation, Citation, Post-Citation**
+
+```
+(1025, 149048) X_train shape
+(1025,) y_train shape
+                precision    recall  f1-score   support
+
+    Background       0.93      0.72      0.81        53
+ClinicalTrials       1.00      0.96      0.98        28
+       Compare       1.00      1.00      1.00         1
+      Creation       0.85      0.88      0.86        40
+Unclassifiable       1.00      0.69      0.81        16
+           Use       0.90      0.98      0.94       204
+
+     micro avg       0.91      0.91      0.91       342
+     macro avg       0.95      0.87      0.90       342
+  weighted avg       0.91      0.91      0.91       342
+ 0.9093567251461988 	 Logistic Regression 	 588.231 sec
+#######################################################
+(1025, 149048) X_train shape
+(1025,) y_train shape
+                precision    recall  f1-score   support
+
+    Background       1.00      0.11      0.20        53
+ClinicalTrials       1.00      0.29      0.44        28
+       Compare       0.00      0.00      0.00         1
+      Creation       1.00      0.03      0.05        40
+Unclassifiable       0.00      0.00      0.00        16
+           Use       0.62      1.00      0.77       204
+
+     micro avg       0.64      0.64      0.64       342
+     macro avg       0.60      0.24      0.24       342
+  weighted avg       0.73      0.64      0.53       342
+ 0.6403508771929824 	 BernoulliNB 	 9.198 sec
+#######################################################
+(1025, 149048) X_train shape
+(1025,) y_train shape
+                precision    recall  f1-score   support
+
+    Background       1.00      0.28      0.44        53
+ClinicalTrials       1.00      0.64      0.78        28
+       Compare       0.00      0.00      0.00         1
+      Creation       1.00      0.53      0.69        40
+Unclassifiable       1.00      0.50      0.67        16
+           Use       0.73      1.00      0.84       204
+
+     micro avg       0.78      0.78      0.78       342
+     macro avg       0.79      0.49      0.57       342
+  weighted avg       0.84      0.78      0.75       342
+ 0.7777777777777778 	 ComplementNB 	 1.606 sec
+#######################################################
+(1025, 149048) X_train shape
+(1025,) y_train shape
+                precision    recall  f1-score   support
+
+    Background       1.00      0.47      0.64        53
+ClinicalTrials       1.00      0.82      0.90        28
+       Compare       1.00      1.00      1.00         1
+      Creation       0.96      0.60      0.74        40
+Unclassifiable       1.00      0.50      0.67        16
+           Use       0.78      1.00      0.88       204
+
+     micro avg       0.83      0.83      0.83       342
+     macro avg       0.96      0.73      0.80       342
+  weighted avg       0.87      0.83      0.82       342
+ 0.8333333333333334 	 GaussianNB 	 28.587 sec
+#######################################################
+(1025, 149048) X_train shape
+(1025,) y_train shape
+                precision    recall  f1-score   support
+
+    Background       1.00      0.04      0.07        53
+ClinicalTrials       1.00      0.21      0.35        28
+       Compare       0.00      0.00      0.00         1
+      Creation       1.00      0.17      0.30        40
+Unclassifiable       1.00      0.38      0.55        16
+           Use       0.64      1.00      0.78       204
+
+     micro avg       0.66      0.66      0.66       342
+     macro avg       0.77      0.30      0.34       342
+  weighted avg       0.78      0.66      0.56       342
+ 0.6578947368421053 	 MultinomialNB 	 1.508 sec
+#######################################################
+(1025, 149048) X_train shape
+(1025,) y_train shape
+                precision    recall  f1-score   support
+
+    Background       1.00      0.40      0.57        53
+ClinicalTrials       1.00      0.96      0.98        28
+       Compare       1.00      1.00      1.00         1
+      Creation       0.95      0.93      0.94        40
+Unclassifiable       1.00      0.50      0.67        16
+           Use       0.83      1.00      0.90       204
+
+     micro avg       0.87      0.87      0.87       342
+     macro avg       0.96      0.80      0.84       342
+  weighted avg       0.89      0.87      0.85       342
+ 0.868421052631579 	 Random Forest 	 30.092 sec
+#######################################################
+(1025, 149048) X_train shape
+(1025,) y_train shape
+                precision    recall  f1-score   support
+
+    Background       0.96      0.47      0.63        53
+ClinicalTrials       1.00      0.96      0.98        28
+       Compare       1.00      1.00      1.00         1
+      Creation       0.83      0.85      0.84        40
+Unclassifiable       1.00      0.50      0.67        16
+           Use       0.84      0.99      0.91       204
+
+     micro avg       0.87      0.87      0.87       342
+     macro avg       0.94      0.80      0.84       342
+  weighted avg       0.88      0.87      0.85       342
+ 0.8654970760233918 	 SVM 	 96.683 sec
+#######################################################
 ```
 
 [:top::top::top::top::top::top::top::top::top::top::top::top::top::top:Go to the top:top::top::top::top::top::top::top::top::top::top::top::top::top::top::top:](#top)
