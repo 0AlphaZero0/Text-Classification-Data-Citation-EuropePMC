@@ -636,6 +636,11 @@ There is a big difference between citations from Annotation match and my match o
 <a name="Week7"></a>
 ### :date: Week 7 - 15/04-21/04 - Dataset & Categories & Pre-Analysis :
 
+I've make a previous data analysis that can be seen [below](#previousanalysis07). 
+
+Also in the end I've implemented first machine learning test, [here](#firstresult07) is first results.
+
+<a name="previousanalysis07"></a>
 #### :bar_chart: Analysis :
 
 The final dataset or the pipeline after annotation will look like :
@@ -650,6 +655,7 @@ As we can see with this first analysis we can note that the category *use* is mo
 We decide to create a specific category for *clinicalTrials* indeed it's hard to say if the clinicalTrials is use or create, so we decide to create this.
 
 We can also see that there is most of citations in the section *result* and *methods*. Those two categories are followed by the *article* section, it's a category that seems pretty weird and I think it seems most of the time like a *background/use/creation* section. So this section could be a noisy for the future algorithm. Then the other categories could explain their score by the fact that they are rare for some of these like *conclusion* or *case study*.
+
 
 
 - Categories repartition :
@@ -770,6 +776,122 @@ We can also see that there is most of citations in the section *result* and *met
 <p align="center">
   <img width="70%" height="70%" src="https://github.com/0AlphaZero0/Sentiment-Analysis-Data-Citation-EuropePMC/blob/master/Logbook%20%26%20Notes/Analysis/ByCategoriesRepartitionGraphic.PNG">
 </p>
+
+<a name="firstresult07"></a>
+````
+(1025, 15674)
+(1025,)
+                precision    recall  f1-score   support
+
+    Background       0.91      0.81      0.86        53
+ClinicalTrials       1.00      0.96      0.98        28
+       Compare       1.00      1.00      1.00         1
+      Creation       0.84      0.90      0.87        40
+Unclassifiable       1.00      0.69      0.81        16
+           Use       0.93      0.97      0.95       204
+
+     micro avg       0.92      0.92      0.92       342
+     macro avg       0.95      0.89      0.91       342
+  weighted avg       0.93      0.92      0.92       342
+ 0.9239766081871345 	 Logistic Regression 	 82.163 sec
+#######################################################
+(1025, 15674)
+(1025,)
+                precision    recall  f1-score   support
+
+    Background       1.00      0.15      0.26        53
+ClinicalTrials       1.00      0.29      0.44        28
+       Compare       0.00      0.00      0.00         1
+      Creation       1.00      0.23      0.37        40
+Unclassifiable       1.00      0.38      0.55        16
+           Use       0.66      1.00      0.79       204
+
+     micro avg       0.69      0.69      0.69       342
+     macro avg       0.78      0.34      0.40       342
+  weighted avg       0.79      0.69      0.62       342
+ 0.6871345029239766 	 BernoulliNB 	 0.888 sec
+#######################################################
+(1025, 15674)
+(1025,)
+                precision    recall  f1-score   support
+
+    Background       1.00      0.23      0.37        53
+ClinicalTrials       1.00      0.64      0.78        28
+       Compare       0.00      0.00      0.00         1
+      Creation       1.00      0.50      0.67        40
+Unclassifiable       1.00      0.50      0.67        16
+           Use       0.72      1.00      0.84       204
+
+     micro avg       0.77      0.77      0.77       342
+     macro avg       0.79      0.48      0.55       342
+  weighted avg       0.83      0.77      0.73       342
+ 0.7660818713450293 	 ComplementNB 	 0.169 sec
+#######################################################
+(1025, 15674)
+(1025,)
+                precision    recall  f1-score   support
+
+    Background       1.00      0.53      0.69        53
+ClinicalTrials       1.00      0.86      0.92        28
+       Compare       1.00      1.00      1.00         1
+      Creation       0.92      0.57      0.71        40
+Unclassifiable       1.00      0.50      0.67        16
+           Use       0.80      1.00      0.89       204
+
+     micro avg       0.84      0.84      0.84       342
+     macro avg       0.95      0.74      0.81       342
+  weighted avg       0.87      0.84      0.83       342
+ 0.8421052631578947 	 GaussianNB 	 3.153 sec
+#######################################################
+(1025, 15674)
+(1025,)
+                precision    recall  f1-score   support
+
+    Background       0.00      0.00      0.00        53
+ClinicalTrials       0.00      0.00      0.00        28
+       Compare       0.00      0.00      0.00         1
+      Creation       0.00      0.00      0.00        40
+Unclassifiable       0.00      0.00      0.00        16
+           Use       0.60      1.00      0.75       204
+
+     micro avg       0.60      0.60      0.60       342
+     macro avg       0.10      0.17      0.12       342
+  weighted avg       0.36      0.60      0.45       342
+ 0.5964912280701754 	 MultinomialNB 	 0.117 sec
+#######################################################
+(1025, 15674)
+(1025,)
+                precision    recall  f1-score   support
+
+    Background       1.00      0.42      0.59        53
+ClinicalTrials       0.96      0.96      0.96        28
+       Compare       1.00      1.00      1.00         1
+      Creation       0.97      0.93      0.95        40
+Unclassifiable       1.00      0.50      0.67        16
+           Use       0.83      1.00      0.91       204
+
+     micro avg       0.87      0.87      0.87       342
+     macro avg       0.96      0.80      0.85       342
+  weighted avg       0.89      0.87      0.86       342
+ 0.8742690058479532 	 Random Forest 	 6.673 sec
+#######################################################
+(1025, 15674)
+(1025,)
+                precision    recall  f1-score   support
+
+    Background       0.94      0.60      0.74        53
+ClinicalTrials       1.00      0.96      0.98        28
+       Compare       1.00      1.00      1.00         1
+      Creation       0.88      0.93      0.90        40
+Unclassifiable       1.00      0.62      0.77        16
+           Use       0.89      0.99      0.94       204
+
+     micro avg       0.90      0.90      0.90       342
+     macro avg       0.95      0.85      0.89       342
+  weighted avg       0.91      0.90      0.90       342
+ 0.9035087719298246 	 SVM 	 11.238 sec
+#######################################################
+````
 
 [:top::top::top::top::top::top::top::top::top::top::top::top::top::top:Go to the top:top::top::top::top::top::top::top::top::top::top::top::top::top::top::top:](#top)
 
