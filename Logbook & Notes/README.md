@@ -34,7 +34,8 @@ ______________________________________________________________________
 - ***[Month 2 - 01/04-30/04](#Month2)***
   * [Week 5 - 01/04-07/04 - Dataset extraction pipeline Improvements & Annotations](#Week5)
   * [Week 6 - 08/04-14/04 - Dataset extraction pipeline Improvements & First idea of Categories](#Week6)
-  * [Week 7 - 15/04-21/04 - Dataset & Categories & Pre-analysis](#Week7)
+  * [Week 7 - 15/04-21/04 - Dataset & Categories & Pre-analysis & First ML models](#Week7)
+  * [Week 8 - 22/04-28/04 - ML models](#Week8)
 ______________________________________________________________________
 
 ### :bookmark_tabs: [Bibliography](#bibliography01)
@@ -634,7 +635,7 @@ There is a big difference between citations from Annotation match and my match o
 [:top::top::top::top::top::top::top::top::top::top::top::top::top::top:Go to the top:top::top::top::top::top::top::top::top::top::top::top::top::top::top::top:](#top)
 
 <a name="Week7"></a>
-### :date: Week 7 - 15/04-21/04 - Dataset & Categories & Pre-Analysis :
+### :date: Week 7 - 15/04-21/04 - Dataset & Categories & Pre-Analysis & First ML models :
 
 I've made a previous data analysis that can be seen [below](#previousanalysis07). 
 
@@ -894,6 +895,12 @@ Unclassifiable       1.00      0.62      0.77        16
  0.9035087719298246 	 SVM 	 11.238 sec
 #######################################################
 ````
+
+[:top::top::top::top::top::top::top::top::top::top::top::top::top::top:Go to the top:top::top::top::top::top::top::top::top::top::top::top::top::top::top::top:](#top)
+
+<a name="Week8"></a>
+### :date: Week 8 - 22/04-28/04 - ML models :
+
 
 [:top::top::top::top::top::top::top::top::top::top::top::top::top::top:Go to the top:top::top::top::top::top::top::top::top::top::top::top::top::top::top::top:](#top)
 
