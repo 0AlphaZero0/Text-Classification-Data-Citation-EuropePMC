@@ -781,6 +781,123 @@ We can also see that there is most of citations in the section *result* and *met
 </p>
 
 <a name="firstresult07"></a>
+
+**With Citations only** :
+```
+(1025, 5629) X_train shape
+(1025,) y_train shape
+                precision    recall  f1-score   support
+
+    Background       0.80      0.70      0.75        53
+ClinicalTrials       1.00      0.93      0.96        28
+       Compare       1.00      1.00      1.00         1
+      Creation       0.82      0.93      0.87        40
+Unclassifiable       1.00      0.56      0.72        16
+           Use       0.90      0.95      0.93       204
+
+     micro avg       0.89      0.89      0.89       342
+     macro avg       0.92      0.84      0.87       342
+  weighted avg       0.89      0.89      0.89       342
+ 0.8888888888888888 	 Logistic Regression 	 4.667 sec
+#######################################################
+(1025, 5629) X_train shape
+(1025,) y_train shape
+                precision    recall  f1-score   support
+
+    Background       1.00      0.17      0.29        53
+ClinicalTrials       1.00      0.36      0.53        28
+       Compare       0.00      0.00      0.00         1
+      Creation       0.94      0.40      0.56        40
+Unclassifiable       1.00      0.38      0.55        16
+           Use       0.68      1.00      0.81       204
+
+     micro avg       0.72      0.72      0.72       342
+     macro avg       0.77      0.38      0.46       342
+  weighted avg       0.80      0.72      0.66       342
+ 0.716374269005848 	 BernoulliNB 	 0.351 sec
+#######################################################
+(1025, 5629) X_train shape
+(1025,) y_train shape
+                precision    recall  f1-score   support
+
+    Background       0.92      0.45      0.61        53
+ClinicalTrials       1.00      0.93      0.96        28
+       Compare       0.00      0.00      0.00         1
+      Creation       0.79      0.95      0.86        40
+Unclassifiable       1.00      0.50      0.67        16
+           Use       0.85      0.97      0.90       204
+
+     micro avg       0.86      0.86      0.86       342
+     macro avg       0.76      0.63      0.67       342
+  weighted avg       0.87      0.86      0.84       342
+ 0.8596491228070176 	 ComplementNB 	 0.056 sec
+#######################################################
+(1025, 5629) X_train shape
+(1025,) y_train shape
+                precision    recall  f1-score   support
+
+    Background       0.89      0.62      0.73        53
+ClinicalTrials       1.00      0.89      0.94        28
+       Compare       1.00      1.00      1.00         1
+      Creation       0.79      0.65      0.71        40
+Unclassifiable       1.00      0.56      0.72        16
+           Use       0.84      0.98      0.91       204
+
+     micro avg       0.86      0.86      0.86       342
+     macro avg       0.92      0.78      0.84       342
+  weighted avg       0.87      0.86      0.85       342
+ 0.8596491228070176 	 GaussianNB 	 0.709 sec
+#######################################################
+(1025, 5629) X_train shape
+(1025,) y_train shape
+                precision    recall  f1-score   support
+
+    Background       1.00      0.06      0.11        53
+ClinicalTrials       1.00      0.68      0.81        28
+       Compare       0.00      0.00      0.00         1
+      Creation       1.00      0.42      0.60        40
+Unclassifiable       1.00      0.38      0.55        16
+           Use       0.69      1.00      0.81       204
+
+     micro avg       0.73      0.73      0.73       342
+     macro avg       0.78      0.42      0.48       342
+  weighted avg       0.81      0.73      0.66       342
+ 0.7280701754385965 	 MultinomialNB 	 0.041 sec
+#######################################################
+(1025, 5629) X_train shape
+(1025,) y_train shape
+                precision    recall  f1-score   support
+
+    Background       1.00      0.43      0.61        53
+ClinicalTrials       1.00      0.93      0.96        28
+       Compare       1.00      1.00      1.00         1
+      Creation       0.92      0.90      0.91        40
+Unclassifiable       1.00      0.56      0.72        16
+           Use       0.83      0.99      0.90       204
+
+     micro avg       0.87      0.87      0.87       342
+     macro avg       0.96      0.80      0.85       342
+  weighted avg       0.89      0.87      0.85       342
+ 0.868421052631579 	 Random Forest 	 3.678 sec
+#######################################################
+(1025, 5629) X_train shape
+(1025,) y_train shape
+                precision    recall  f1-score   support
+
+    Background       0.90      0.72      0.80        53
+ClinicalTrials       1.00      0.93      0.96        28
+       Compare       1.00      1.00      1.00         1
+      Creation       0.84      0.93      0.88        40
+Unclassifiable       1.00      0.56      0.72        16
+           Use       0.91      0.98      0.94       204
+
+     micro avg       0.91      0.91      0.91       342
+     macro avg       0.94      0.85      0.88       342
+  weighted avg       0.91      0.91      0.91       342
+ 0.9093567251461988 	 SVM 	 0.378 sec
+#######################################################
+```
+**With Section, SubType, Figure, Pre-Citation, Citation, Post-Citation**
 ````
 (1025, 15674)
 (1025,)
