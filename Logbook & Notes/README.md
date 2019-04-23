@@ -638,7 +638,9 @@ There is a big difference between citations from Annotation match and my match o
 
 I've made a previous data analysis that can be seen [below](#previousanalysis07). 
 
-Also in the end I've implemented first machine learning test, [here](#firstresult07) is first results. It as been made with the [TfidfVectorizer](https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.TfidfVectorizer.html#sklearn.feature_extraction.text.TfidfVectorizer) of [Scikit-learn](https://scikit-learn.org/stable/index.html)
+Also in the end I've implemented first machine learning test, [here](#firstresult07) is first results. It as been made with the [TfidfVectorizer](https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.TfidfVectorizer.html#sklearn.feature_extraction.text.TfidfVectorizer) of [Scikit-learn](https://scikit-learn.org/stable/index.html).
+
+:warning: **Surprisingly giving the vectorizer the complete set of features gives lower result, than just giving the sentence of the citation. And also break Naive bayes approach as we can see with *MultinomialNB*.**
 
 <a name="previousanalysis07"></a>
 #### :bar_chart: Analysis :
