@@ -1018,7 +1018,7 @@ Unclassifiable       1.00      0.62      0.77        16
 <a name="Week8"></a>
 ### :date: Week 8 - 22/04-28/04 - ML models :
 
-I've add [stemming apporach](#stemming07) [N-gram apporach](#ngram07) :
+I've add [stemming apporach](#stemming07), [N-gram apporach](#ngram07), [Lemma approach](#lemma07) :
 <a name="stemming07"></a>
 #### Stemming :
 **With Citations only** :
