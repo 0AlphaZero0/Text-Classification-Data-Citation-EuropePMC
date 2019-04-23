@@ -121,16 +121,22 @@ X_train,X_test,y_train,y_test=train_test_split(X,y,random_state=1)
 # X_train_dtm = stem_citation_vect.fit_transform(X_train[[Citation_str]].fillna('').values.reshape(-1)).todense()
 # X_test_dtm = stem_citation_vect.transform(X_test[[Citation_str]].fillna('').values.reshape(-1)).todense()
 
-# TfdfVect & Stemming with Citation #
+# Ngram & Token & Stemming with Citation #
 # X_train_dtm= np.concatenate(
-#     (citation_vect.fit_transform(X_train[[Citation_str]].fillna('').values.reshape(-1)).todense(),
-# 	stem_citation_vect.fit_transform(X_train[[Citation_str]].fillna('').values.reshape(-1)).todense()),
+#     (X_train[[Section_num_str]].values,
+#     X_train[[SubType_num_str]].values,
+#     X_train[[Figure_num_str]].values,citation_vect.fit_transform(X_train[[Citation_str]].fillna('').values.reshape(-1)).todense(),
+# 	stem_citation_vect.fit_transform(X_train[[Citation_str]].fillna('').values.reshape(-1)).todense(),
+# 	ngram_citation_vect.fit_transform(X_train[[Citation_str]].fillna('').values.reshape(-1)).todense()),
 #     axis=1
 # 	)
 
 # X_test_dtm= np.concatenate(
-#     (citation_vect.transform(X_test[[Citation_str]].fillna('').values.reshape(-1)).todense(),
-# 	stem_citation_vect.transform(X_test[[Citation_str]].fillna('').values.reshape(-1)).todense()),
+#     (X_test[[Section_num_str]].values,
+#     X_test[[SubType_num_str]].values,
+#     X_test[[Figure_num_str]].values,citation_vect.transform(X_test[[Citation_str]].fillna('').values.reshape(-1)).todense(),
+# 	stem_citation_vect.transform(X_test[[Citation_str]].fillna('').values.reshape(-1)).todense(),
+# 	ngram_citation_vect.transform(X_test[[Citation_str]].fillna('').values.reshape(-1)).todense()),
 #     axis=1
 # )
 
