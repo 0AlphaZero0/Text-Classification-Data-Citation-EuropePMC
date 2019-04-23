@@ -57,25 +57,12 @@ clfList=[[clfLR,"Logistic Regression"],
 	[clfMultinomialNB,"MultinomialNB"],
 	[clfRF,"Random Forest"],
 	[clfSVM,"SVM"]]
-#
-pre_vect=TfidfVectorizer()
-ngram_pre_vect=TfidfVectorizer(ngram_range=ngram_range)
-lemma_pre_vect=TfidfVectorizer(tokenizer=LemmaTokenizer())
-citation_vect=TfidfVectorizer()
-ngram_citation_vect=TfidfVectorizer(ngram_range=ngram_range)
-lemma_citation_vect=TfidfVectorizer(tokenizer=LemmaTokenizer())
-post_vect=TfidfVectorizer()
-ngram_post_vect=TfidfVectorizer(ngram_range=ngram_range)
-lemma_post_vect=TfidfVectorizer(tokenizer=LemmaTokenizer())
-#
-stemmer = SnowballStemmer('english',ignore_stopwords=True)
-analyzer = TfidfVectorizer().build_analyzer()
 
 ##################################################    Class     ###################################################
 
 class LemmaTokenizer(object):
 	def __init__(self):
-		self.wnl =WorldNetLemmatizer()
+		self.wnl =WordNetLemmatizer()
 	def __call__(self, doc):
 		return [self.wnl.lemmatize(t) for t in word_tokenize(doc)]
 
@@ -89,6 +76,20 @@ stem_precitation_vect=TfidfVectorizer(analyzer=stemmed_words)
 stem_postcitation_vect=TfidfVectorizer(analyzer=stemmed_words)
 
 ###################################################    Main     ###################################################
+#
+pre_vect=TfidfVectorizer()
+ngram_pre_vect=TfidfVectorizer(ngram_range=ngram_range)
+lemma_pre_vect=TfidfVectorizer(tokenizer=LemmaTokenizer())
+citation_vect=TfidfVectorizer()
+ngram_citation_vect=TfidfVectorizer(ngram_range=ngram_range)
+lemma_citation_vect=TfidfVectorizer(tokenizer=LemmaTokenizer())
+post_vect=TfidfVectorizer()
+ngram_post_vect=TfidfVectorizer(ngram_range=ngram_range)
+lemma_post_vect=TfidfVectorizer(tokenizer=LemmaTokenizer())
+#
+stemmer = SnowballStemmer('english',ignore_stopwords=True)
+analyzer = TfidfVectorizer().build_analyzer()
+#
 
 data=pd.read_csv(filename,header=0,sep="\t")
 #
