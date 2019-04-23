@@ -28,6 +28,8 @@ from sklearn.naive_bayes import MultinomialNB
 import time # Allows to measure execution time.
 # import warnings
 from nltk.stem.snowball import SnowballStemmer
+from nltk import word_tokenize
+from nltk.stem import WordNetLemmatizer
 
 ################################################    Variables     #################################################
 #
@@ -56,6 +58,14 @@ clfList=[[clfLR,"Logistic Regression"],
 	[clfRF,"Random Forest"],
 	[clfSVM,"SVM"]]
 
+##################################################    Class     ###################################################
+
+class LemmaTokenizer(object):
+	def __init__(self):
+		self.wnl =WordNetLemmatizer()
+	def __call__(self, doc):
+		return [self.wnl.lemmatize(t) for t in word_tokenize(doc)]
+
 ################################################    Functions     #################################################
 
 def stemmed_words(doc):
@@ -69,10 +79,13 @@ stem_postcitation_vect=TfidfVectorizer(analyzer=stemmed_words)
 #
 pre_vect=TfidfVectorizer()
 ngram_pre_vect=TfidfVectorizer(ngram_range=ngram_range)
+lemma_pre_vect=TfidfVectorizer(tokenizer=LemmaTokenizer())
 citation_vect=TfidfVectorizer()
 ngram_citation_vect=TfidfVectorizer(ngram_range=ngram_range)
+lemma_citation_vect=TfidfVectorizer(tokenizer=LemmaTokenizer())
 post_vect=TfidfVectorizer()
 ngram_post_vect=TfidfVectorizer(ngram_range=ngram_range)
+lemma_post_vect=TfidfVectorizer(tokenizer=LemmaTokenizer())
 #
 stemmer = SnowballStemmer('english',ignore_stopwords=True)
 analyzer = TfidfVectorizer().build_analyzer()
@@ -130,7 +143,8 @@ X_train,X_test,y_train,y_test=train_test_split(X,y,random_state=1)
 #     X_train[[SubType_num_str]].values,
 #     X_train[[Figure_num_str]].values,citation_vect.fit_transform(X_train[[Citation_str]].fillna('').values.reshape(-1)).todense(),
 # 	stem_citation_vect.fit_transform(X_train[[Citation_str]].fillna('').values.reshape(-1)).todense(),
-# 	ngram_citation_vect.fit_transform(X_train[[Citation_str]].fillna('').values.reshape(-1)).todense()),
+# 	ngram_citation_vect.fit_transform(X_train[[Citation_str]].fillna('').values.reshape(-1)).todense(),
+# 	lemma_citation_vect.fit_transform(X_train[[Citation_str]].fillna('').values.reshape(-1)).todense()),
 #     axis=1
 # 	)
 
@@ -139,7 +153,8 @@ X_train,X_test,y_train,y_test=train_test_split(X,y,random_state=1)
 #     X_test[[SubType_num_str]].values,
 #     X_test[[Figure_num_str]].values,citation_vect.transform(X_test[[Citation_str]].fillna('').values.reshape(-1)).todense(),
 # 	stem_citation_vect.transform(X_test[[Citation_str]].fillna('').values.reshape(-1)).todense(),
-# 	ngram_citation_vect.transform(X_test[[Citation_str]].fillna('').values.reshape(-1)).todense()),
+# 	ngram_citation_vect.transform(X_test[[Citation_str]].fillna('').values.reshape(-1)).todense(),
+# 	lemma_citation_vect.transform(X_test[[Citation_str]].fillna('').values.reshape(-1)).todense()),
 #     axis=1
 # )
 
@@ -150,12 +165,15 @@ X_train_dtm= np.concatenate(
     pre_vect.fit_transform(X_train[[PreCitation_str]].fillna('').values.reshape(-1)).todense(),
 	ngram_pre_vect.fit_transform(X_train[[PreCitation_str]].fillna('').values.reshape(-1)).todense(),
 	stem_precitation_vect.fit_transform(X_train[[PreCitation_str]].fillna('').values.reshape(-1)).todense(),
+    lemma_pre_vect.fit_transform(X_train[[PreCitation_str]].fillna('').values.reshape(-1)).todense(),
 	citation_vect.fit_transform(X_train[[Citation_str]].fillna('').values.reshape(-1)).todense(),
 	ngram_citation_vect.fit_transform(X_train[[Citation_str]].fillna('').values.reshape(-1)).todense(),
 	stem_citation_vect.fit_transform(X_train[[Citation_str]].fillna('').values.reshape(-1)).todense(),
+    lemma_citation_vect.fit_transform(X_train[[PreCitation_str]].fillna('').values.reshape(-1)).todense(),
 	post_vect.fit_transform(X_train[[PostCitation_str]].fillna('').values.reshape(-1)).todense(),
 	ngram_post_vect.fit_transform(X_train[[PostCitation_str]].fillna('').values.reshape(-1)).todense(),
-	stem_postcitation_vect.fit_transform(X_train[[PostCitation_str]].fillna('').values.reshape(-1)).todense()),
+	stem_postcitation_vect.fit_transform(X_train[[PostCitation_str]].fillna('').values.reshape(-1)).todense(),
+	lemma_post_vect.fit_transform(X_train[[PreCitation_str]].fillna('').values.reshape(-1)).todense()),
     axis=1
 	)
 X_test_dtm= np.concatenate(
@@ -165,12 +183,15 @@ X_test_dtm= np.concatenate(
     pre_vect.transform(X_test[[PreCitation_str]].fillna('').values.reshape(-1)).todense(),
 	ngram_pre_vect.transform(X_test[[PreCitation_str]].fillna('').values.reshape(-1)).todense(),
 	stem_precitation_vect.transform(X_test[[PreCitation_str]].fillna('').values.reshape(-1)).todense(),
+    lemma_pre_vect.transform(X_test[[PreCitation_str]].fillna('').values.reshape(-1)).todense(),
 	citation_vect.transform(X_test[[Citation_str]].fillna('').values.reshape(-1)).todense(),
 	ngram_citation_vect.transform(X_test[[Citation_str]].fillna('').values.reshape(-1)).todense(),
 	stem_citation_vect.transform(X_test[[Citation_str]].fillna('').values.reshape(-1)).todense(),
+    lemma_citation_vect.transform(X_test[[PreCitation_str]].fillna('').values.reshape(-1)).todense(),
 	post_vect.transform(X_test[[PostCitation_str]].fillna('').values.reshape(-1)).todense(),
 	ngram_post_vect.transform(X_test[[PostCitation_str]].fillna('').values.reshape(-1)).todense(),
-	stem_postcitation_vect.transform(X_test[[PostCitation_str]].fillna('').values.reshape(-1)).todense()),
+	stem_postcitation_vect.transform(X_test[[PostCitation_str]].fillna('').values.reshape(-1)).todense(),
+	lemma_post_vect.transform(X_test[[PreCitation_str]].fillna('').values.reshape(-1)).todense()),
     axis=1
 )
 ##################################################################
