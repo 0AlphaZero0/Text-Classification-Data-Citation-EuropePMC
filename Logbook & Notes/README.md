@@ -636,9 +636,9 @@ There is a big difference between citations from Annotation match and my match o
 <a name="Week7"></a>
 ### :date: Week 7 - 15/04-21/04 - Dataset & Categories & Pre-Analysis :
 
-I've make a previous data analysis that can be seen [below](#previousanalysis07). 
+I've made a previous data analysis that can be seen [below](#previousanalysis07). 
 
-Also in the end I've implemented first machine learning test, [here](#firstresult07) is first results.
+Also in the end I've implemented first machine learning test, [here](#firstresult07) is first results. It as been made with the [TfidfVectorizer](https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.TfidfVectorizer.html#sklearn.feature_extraction.text.TfidfVectorizer) of [Scikit-learn](https://scikit-learn.org/stable/index.html)
 
 <a name="previousanalysis07"></a>
 #### :bar_chart: Analysis :
