@@ -33,7 +33,7 @@ from nltk.stem import WordNetLemmatizer
 
 ################################################    Variables     #################################################
 #
-filename="Dataset1.csv"
+filename="Dataset2.csv"
 gamma='auto'
 C=10
 max_iter=10000
