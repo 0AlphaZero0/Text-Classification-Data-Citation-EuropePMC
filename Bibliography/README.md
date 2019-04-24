@@ -62,7 +62,7 @@ ______________________________________________________________________
 <a name="2"></a>
 - [Database citation in supplementary data linked to Europe PubMed Central full text biomedical articles](https://github.com/0AlphaZero0/Sentiment-Analysis-EuropePMC/blob/master/Bibliography/Database%20citation%20in%20supplementary%20data%20linked%20to_S.Kafkas_et_al.pdf)
 
-Citation : <pre><code>  @Article{Kafkas2015,
+Citation : <pre><code>@Article{Kafkas2015,
 author="Kafkas, {\c{S}}enay
 and Kim, Jee-Hyub
 and Pi, Xingjun
@@ -85,7 +85,7 @@ url="https://doi.org/10.1186/2041-1480-6-1"
 <a name="9"></a>
 - [GloVe Global Vectors forWord Representation](https://github.com/0AlphaZero0/Sentiment-Analysis-Data-Citation-EuropePMC/blob/master/Bibliography/GloVe%20Global%20Vectors%20forWord%20Representation_J.Pennington_et_al.pdf)
 
-Citation : <pre><code>	@inproceedings{pennington2014glove,
+Citation : <pre><code>@inproceedings{pennington2014glove,
   author = {Jeffrey Pennington and Richard Socher and Christopher D. Manning},
   booktitle = {Empirical Methods in Natural Language Processing (EMNLP)},
   title = {GloVe: Global Vectors for Word Representation},
