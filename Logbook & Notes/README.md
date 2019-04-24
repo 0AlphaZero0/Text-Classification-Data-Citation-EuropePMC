@@ -22,6 +22,7 @@ ______________________________________________________________________
 - [25/03 - XML Talks & Data creation](#25/03)
 - ***[02/04 - Summary of March](#02/04)***
 - [16/04 - Pre-Analysis & Discussion with A.Athar](#16/04)
+- [24/04 - ML models & Discussion with A.Athar](#24/04)
 
 ______________________________________________________________________
 ### :green_book: Notes
@@ -212,6 +213,19 @@ Results and analysis
 - Meeting with Xiao Yang & Awais Athar : 
   * *ClinicalTrials* are problematic. See with curators from A.Athar team.
   * Doubt about *Creation* category
+
+[:top::top::top::top::top::top::top::top::top::top::top::top::top::top:Go to the top:top::top::top::top::top::top::top::top::top::top::top::top::top::top::top:](#top)
+
+<a name="24/04"></a>
+### :mega: 24/04 - ML models & Discussion with A.Athar :
+
+- Meeting with Xiao Yang :
+  * Need to check MultinomialNB
+  * Look at [Glove](https://nlp.stanford.edu/pubs/glove.pdf) for word Embedding
+  * Word Embedding with *Multilayer*, *CNN*, *LSTM* classifier
+
+- Meeting with Xiao Yang & Awais Athar : 
+  
 
 [:top::top::top::top::top::top::top::top::top::top::top::top::top::top:Go to the top:top::top::top::top::top::top::top::top::top::top::top::top::top::top::top:](#top)
 
