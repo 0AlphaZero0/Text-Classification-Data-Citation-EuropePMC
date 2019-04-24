@@ -17,6 +17,7 @@ ______________________________________________________________________
 - [AUTOLEX: An Automatic Lexicon Builder for Minority Languages Using an Open Corpus](#8)
 - [Database Citation in Full Text Biomedical Articles](#1) 
 - [Database citation in supplementary data linked to Europe PubMed Central full text biomedical articles](#2)
+- [GloVe Global Vectors forWord Representation](#9)
 - [Measuring the Evolution of a Scientific Field through Citation Frames](#5)
 - [New Features for Sentiment Analysis: Do Sentences Matter?](#7)
 - [Patterns of database citation in articles and patents indicate long-term scientific and industry value of biological data resources](#3)
@@ -81,6 +82,18 @@ url="https://doi.org/10.1186/2041-1480-6-1"
 } 
 </code></pre>
 
+<a name="9"></a>
+- [GloVe Global Vectors forWord Representation](https://github.com/0AlphaZero0/Sentiment-Analysis-Data-Citation-EuropePMC/blob/master/Bibliography/GloVe%20Global%20Vectors%20forWord%20Representation_J.Pennington_et_al.pdf)
+
+Citation : <pre><code>	@inproceedings{pennington2014glove,
+  author = {Jeffrey Pennington and Richard Socher and Christopher D. Manning},
+  booktitle = {Empirical Methods in Natural Language Processing (EMNLP)},
+  title = {GloVe: Global Vectors for Word Representation},
+  year = {2014},
+  pages = {1532--1543},
+  url = {http://www.aclweb.org/anthology/D14-1162},
+}</code></pre>
+
 <a name="3"></a>
 - [Patterns of database citation in articles and patents indicate long-term scientific and industry value of biological data resources](https://github.com/0AlphaZero0/Sentiment-Analysis-EuropePMC/blob/master/Bibliography/Patterns%20of%20database%20citation%20in%20articles%20and%20patents%20indicate_D.Bousfield_et_al.pdf)
 
@@ -128,6 +141,14 @@ title = {New Features for Sentiment Analysis: Do Sentences Matter?},
 volume = {917},
 journal = {CEUR Workshop Proceedings}
 }</code></pre>
+
+
+
+
+
+
+
+
 
 ______________________________________________________________________
 
