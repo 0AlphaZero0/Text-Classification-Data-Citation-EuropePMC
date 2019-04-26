@@ -23,7 +23,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.naive_bayes import ComplementNB
 from sklearn.naive_bayes import GaussianNB
 from sklearn.naive_bayes import MultinomialNB
-from sklearn.model_selection import KFold
+from sklearn.model_selection import cross_val_score
 # import sys # Provides access to some variables used or maintained by the interpreter and to functions that interact strongly with the interpreter.
 import time # Allows to measure execution time.
 # import warnings
@@ -62,7 +62,10 @@ extra_features = [
 	lemma,
 	stem]
 countVectorizerList = [
-	"MultinomialNB"]
+	"MultinomialNB",
+	"ComplementNB",
+	"GaussianNB",
+	"Random Forest"]
 #
 clfSVM = svm.LinearSVC(C = C,max_iter = max_iter,class_weight = class_weight)
 clfLR = LogisticRegression(C = C,solver = 'lbfgs',multi_class = 'multinomial',max_iter = max_iter,class_weight = class_weight)
@@ -161,65 +164,63 @@ data[SubType_num_str] = data.SubType.map(subTypeDict)
 X = data[featuresList]
 y = data.Categories_num
 
-kf=KFold(n_splits=5,shuffle=True)
-
-# X_train,X_test,y_train,y_test = train_test_split(X,y,random_state = 1)
+X_train,X_test,y_train,y_test = train_test_split(X,y,random_state = 1)
 
 combinations_list = combinations(extra_features)
 
 for combination in combinations_list:
 	for clf in clfList:
-		accuracyList=[]
-		X=np.array(X)
-		y=np.array(y)
-		for train_index,test_index in kf.split(X):
-			X_train,X_test=X[train_index],X[test_index]
-			y_train,y_test=y[train_index],y[test_index]
-			print(y_test)
-			vect_X_train,vect_X_test = [],[]
-			if clf[1] in countVectorizerList:
-				for vect in vect_list_countvectorizer:
-					if vect[2] in combination:
-						vect_X_train.append(vect[0].fit_transform(X_train[[vect[1]]].fillna('').values.reshape(-1)).todense())
-						vect_X_test.append(vect[0].transform(X_test[[vect[1]]].fillna('').values.reshape(-1)).todense())
-			else:
-				for vect in vect_list:
-					if vect[2] in combination:
-						vect_X_train.append(vect[0].fit_transform(X_train[[vect[1]]].fillna('').values.reshape(-1)).todense())
-						vect_X_test.append(vect[0].transform(X_test[[vect[1]]].fillna('').values.reshape(-1)).todense())
+		vect_X_train,vect_X_test = [],[]
+		if clf[1] in countVectorizerList:
+			for vect in vect_list_countvectorizer:
+				if vect[2] in combination:
+					vect_X_train.append(vect[0].fit_transform(X_train[[vect[1]]].fillna('').values.reshape(-1)).todense())
+					vect_X_test.append(vect[0].transform(X_test[[vect[1]]].fillna('').values.reshape(-1)).todense())
+		else:
+			for vect in vect_list:
+				if vect[2] in combination:
+					vect_X_train.append(vect[0].fit_transform(X_train[[vect[1]]].fillna('').values.reshape(-1)).todense())
+					vect_X_test.append(vect[0].transform(X_test[[vect[1]]].fillna('').values.reshape(-1)).todense())
 
-			vect_X_train.extend((
-				X_train[[Section_num_str]].values,
-				X_train[[SubType_num_str]].values,
-				X_train[[Figure_num_str]].values))
-			vect_X_test.extend((
-				X_test[[Section_num_str]].values,
-				X_test[[SubType_num_str]].values,
-				X_test[[Figure_num_str]].values))
+		vect_X_train.extend((
+			X_train[[Section_num_str]].values,
+			X_train[[SubType_num_str]].values,
+			X_train[[Figure_num_str]].values))
+		vect_X_test.extend((
+			X_test[[Section_num_str]].values,
+			X_test[[SubType_num_str]].values,
+			X_test[[Figure_num_str]].values))
 
-			X_train_dtm = np.concatenate(vect_X_train, axis = 1)
+		X_train_dtm = np.concatenate(vect_X_train, axis = 1)
 
-			X_test_dtm = np.concatenate(vect_X_test, axis = 1)
+		X_test_dtm = np.concatenate(vect_X_test, axis = 1)
 
-			##################################################################
-			start = time.time()
-			try:
-				print (X_train_dtm.shape,"X_train shape")
-				print (y_train.shape,"y_train shape")
-				clf[0].fit(X_train_dtm,y_train)
-				y_pred_class = clf[0].predict(X_test_dtm)
-			except TypeError:
-				clf[0].fit(X_train_dtm.toarray(),y_train)
-				y_pred_class = clf[0].predict(X_test_dtm.toarray())
-			end = time.time()
-			print(
-				metrics.classification_report(y_test,y_pred_class,target_names = target_names),
-				metrics.accuracy_score(y_test,y_pred_class),
-				"\t",
-				clf[1],
-				"\t",
-				str(round((end-start),3))+" sec",
-				"Approaches :"+str(combination))
-			print("#######################################################")
-			accuracyList.append(metrics.accuracy_score(y_test,y_pred_class))
-		print(sum(accuracyList)/len(accuracyList))
+		X_train_test = np.concatenate((X_train_dtm,X_test_dtm))
+
+		y_train_test = np.concatenate((y_train,y_test))
+		##################################################################
+		start = time.time()
+		try:
+			print ("#######################################################")
+			print (X_train_dtm.shape,"X_train shape")
+			print (y_train.shape,"y_train shape")
+			clf[0].fit(X_train_dtm,y_train)
+			y_pred_class = clf[0].predict(X_test_dtm)
+			scores=cross_val_score(clf[0], X_train_test, y_train_test, cv = 5)
+		except TypeError:
+			clf[0].fit(X_train_dtm.toarray(),y_train)
+			y_pred_class = clf[0].predict(X_test_dtm.toarray())
+			scores=cross_val_score(clf[0], X_train_test, y_train_test, cv = 5)
+		end = time.time()
+		print(
+			metrics.classification_report(y_test,y_pred_class,target_names = target_names),
+			str(round(metrics.accuracy_score(y_test,y_pred_class)*100,3)),
+			"\t",
+			clf[1],
+			"\t",
+			str(round((end-start),3))+" sec",
+			"Approaches :"+str(combination),
+			"\n",
+			"Cross validation score : "+str(round((sum(scores)/len(scores))*100,3)),
+			"#######################################################")
+
