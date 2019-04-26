@@ -1,16 +1,29 @@
+#######################################################
+#                                                     #
+#   Those results come from diverse machine learning  #
+# tests, it has been run on an ASUS (64 bits) laptop  #
+# with :                                              #
+#  - CPU : Intel(R) Core(TM) i7-7500U CPU @ 2.70GHz   #
+#     2.90GHz                                         #
+#  - Memory RAM : 8,00 Go (7.88 Go usable)            #
+#  - NVIDIA GeForce GTX 960M                          #
+#                                                     #
+#######################################################
 (890, 6527) X_train shape
 (890,) y_train shape
               precision    recall  f1-score   support
 
-  Background       0.88      0.75      0.81        40
+  Background       0.87      0.85      0.86        40
      Compare       1.00      1.00      1.00         1
-    Creation       0.98      0.93      0.96        46
-         Use       0.94      0.98      0.96       210
+    Creation       0.96      0.96      0.96        46
+         Use       0.96      0.97      0.96       210
 
-   micro avg       0.94      0.94      0.94       297
-   macro avg       0.95      0.92      0.93       297
-weighted avg       0.94      0.94      0.94       297
- 0.9393939393939394 	 Logistic Regression 	 17.405 sec Approaches :['Tokenization']
+   micro avg       0.95      0.95      0.95       297
+   macro avg       0.95      0.94      0.95       297
+weighted avg       0.95      0.95      0.95       297
+ 94.949 	 Logistic Regression 	 76.35 sec Approaches :['Tokenization'] 
+ Cross validation score : 91.499
+#######################################################
 #######################################################
 (890, 6527) X_train shape
 (890,) y_train shape
@@ -24,7 +37,9 @@ weighted avg       0.94      0.94      0.94       297
    micro avg       0.92      0.92      0.92       297
    macro avg       0.91      0.92      0.92       297
 weighted avg       0.92      0.92      0.92       297
- 0.9225589225589226 	 ComplementNB 	 0.275 sec Approaches :['Tokenization']
+ 92.256 	 ComplementNB 	 0.948 sec Approaches :['Tokenization'] 
+ Cross validation score : 84.27
+#######################################################
 #######################################################
 (890, 6527) X_train shape
 (890,) y_train shape
@@ -38,7 +53,9 @@ weighted avg       0.92      0.92      0.92       297
    micro avg       0.90      0.90      0.90       297
    macro avg       0.93      0.84      0.88       297
 weighted avg       0.90      0.90      0.89       297
- 0.898989898989899 	 GaussianNB 	 0.851 sec Approaches :['Tokenization']
+ 89.899 	 GaussianNB 	 3.212 sec Approaches :['Tokenization'] 
+ Cross validation score : 88.546
+#######################################################
 #######################################################
 (890, 6527) X_train shape
 (890,) y_train shape
@@ -52,7 +69,9 @@ weighted avg       0.90      0.90      0.89       297
    micro avg       0.91      0.91      0.91       297
    macro avg       0.67      0.65      0.66       297
 weighted avg       0.91      0.91      0.91       297
- 0.9124579124579124 	 MultinomialNB 	 0.237 sec Approaches :['Tokenization']
+ 91.246 	 MultinomialNB 	 0.863 sec Approaches :['Tokenization'] 
+ Cross validation score : 86.452
+#######################################################
 #######################################################
 (890, 6527) X_train shape
 (890,) y_train shape
@@ -66,35 +85,41 @@ weighted avg       0.91      0.91      0.91       297
    micro avg       0.94      0.94      0.94       297
    macro avg       0.98      0.89      0.93       297
 weighted avg       0.94      0.94      0.94       297
- 0.9393939393939394 	 Random Forest 	 2.912 sec Approaches :['Tokenization']
+ 93.939 	 Random Forest 	 20.152 sec Approaches :['Tokenization'] 
+ Cross validation score : 90.992
+#######################################################
 #######################################################
 (890, 6527) X_train shape
 (890,) y_train shape
               precision    recall  f1-score   support
 
-  Background       0.81      0.75      0.78        40
+  Background       0.91      0.72      0.81        40
      Compare       1.00      1.00      1.00         1
-    Creation       0.97      0.83      0.89        46
-         Use       0.92      0.96      0.94       210
+    Creation       0.98      0.93      0.96        46
+         Use       0.94      0.98      0.96       210
 
-   micro avg       0.91      0.91      0.91       297
-   macro avg       0.93      0.88      0.90       297
-weighted avg       0.91      0.91      0.91       297
- 0.9124579124579124 	 SVM 	 2.387 sec Approaches :['Tokenization']
+   micro avg       0.94      0.94      0.94       297
+   macro avg       0.95      0.91      0.93       297
+weighted avg       0.94      0.94      0.94       297
+ 93.939 	 SVM 	 24.975 sec Approaches :['Tokenization'] 
+ Cross validation score : 91.58
+#######################################################
 #######################################################
 (890, 50109) X_train shape
 (890,) y_train shape
               precision    recall  f1-score   support
 
-  Background       0.94      0.75      0.83        40
+  Background       0.89      0.85      0.87        40
      Compare       1.00      1.00      1.00         1
-    Creation       0.98      0.93      0.96        46
-         Use       0.94      0.99      0.96       210
+    Creation       0.92      0.96      0.94        46
+         Use       0.96      0.96      0.96       210
 
    micro avg       0.95      0.95      0.95       297
-   macro avg       0.96      0.92      0.94       297
-weighted avg       0.95      0.95      0.94       297
- 0.9461279461279462 	 Logistic Regression 	 116.013 sec Approaches :['N-gram']
+   macro avg       0.94      0.94      0.94       297
+weighted avg       0.95      0.95      0.95       297
+ 94.613 	 Logistic Regression 	 546.062 sec Approaches :['N-gram'] 
+ Cross validation score : 90.578
+#######################################################
 #######################################################
 (890, 50109) X_train shape
 (890,) y_train shape
@@ -108,7 +133,9 @@ weighted avg       0.95      0.95      0.94       297
    micro avg       0.94      0.94      0.94       297
    macro avg       0.95      0.91      0.93       297
 weighted avg       0.94      0.94      0.93       297
- 0.936026936026936 	 ComplementNB 	 1.843 sec Approaches :['N-gram']
+ 93.603 	 ComplementNB 	 8.261 sec Approaches :['N-gram'] 
+ Cross validation score : 75.865
+#######################################################
 #######################################################
 (890, 50109) X_train shape
 (890,) y_train shape
@@ -122,7 +149,9 @@ weighted avg       0.94      0.94      0.93       297
    micro avg       0.92      0.92      0.92       297
    macro avg       0.95      0.87      0.91       297
 weighted avg       0.92      0.92      0.92       297
- 0.9191919191919192 	 GaussianNB 	 6.863 sec Approaches :['N-gram']
+ 91.919 	 GaussianNB 	 22.053 sec Approaches :['N-gram'] 
+ Cross validation score : 90.735
+#######################################################
 #######################################################
 (890, 50109) X_train shape
 (890,) y_train shape
@@ -136,7 +165,9 @@ weighted avg       0.92      0.92      0.92       297
    micro avg       0.93      0.93      0.93       297
    macro avg       0.70      0.64      0.67       297
 weighted avg       0.92      0.93      0.92       297
- 0.9259259259259259 	 MultinomialNB 	 1.808 sec Approaches :['N-gram']
+ 92.593 	 MultinomialNB 	 6.952 sec Approaches :['N-gram'] 
+ Cross validation score : 78.721
+#######################################################
 #######################################################
 (890, 50109) X_train shape
 (890,) y_train shape
@@ -150,35 +181,41 @@ weighted avg       0.92      0.93      0.92       297
    micro avg       0.93      0.93      0.93       297
    macro avg       0.98      0.87      0.91       297
 weighted avg       0.94      0.93      0.93       297
- 0.9292929292929293 	 Random Forest 	 15.742 sec Approaches :['N-gram']
+ 92.929 	 Random Forest 	 119.678 sec Approaches :['N-gram'] 
+ Cross validation score : 90.99
+#######################################################
 #######################################################
 (890, 50109) X_train shape
 (890,) y_train shape
               precision    recall  f1-score   support
 
-  Background       0.81      0.72      0.76        40
+  Background       0.94      0.78      0.85        40
      Compare       1.00      1.00      1.00         1
-    Creation       0.97      0.76      0.85        46
-         Use       0.91      0.97      0.94       210
+    Creation       0.98      0.93      0.96        46
+         Use       0.95      0.99      0.97       210
 
-   micro avg       0.90      0.90      0.90       297
-   macro avg       0.92      0.86      0.89       297
-weighted avg       0.90      0.90      0.90       297
- 0.9023569023569024 	 SVM 	 9.527 sec Approaches :['N-gram']
+   micro avg       0.95      0.95      0.95       297
+   macro avg       0.97      0.92      0.94       297
+weighted avg       0.95      0.95      0.95       297
+ 94.949 	 SVM 	 145.155 sec Approaches :['N-gram'] 
+ Cross validation score : 91.247
+#######################################################
 #######################################################
 (890, 6637) X_train shape
 (890,) y_train shape
               precision    recall  f1-score   support
 
-  Background       0.79      0.78      0.78        40
+  Background       0.85      0.82      0.84        40
      Compare       1.00      1.00      1.00         1
-    Creation       0.91      0.89      0.90        46
-         Use       0.94      0.95      0.94       210
+    Creation       0.98      0.89      0.93        46
+         Use       0.94      0.97      0.96       210
 
-   micro avg       0.92      0.92      0.92       297
-   macro avg       0.91      0.90      0.91       297
-weighted avg       0.92      0.92      0.92       297
- 0.9158249158249159 	 Logistic Regression 	 24.755 sec Approaches :['Lemmatization']
+   micro avg       0.94      0.94      0.94       297
+   macro avg       0.94      0.92      0.93       297
+weighted avg       0.94      0.94      0.94       297
+ 93.603 	 Logistic Regression 	 72.292 sec Approaches :['Lemmatization'] 
+ Cross validation score : 92.17
+#######################################################
 #######################################################
 (890, 6637) X_train shape
 (890,) y_train shape
@@ -192,7 +229,9 @@ weighted avg       0.92      0.92      0.92       297
    micro avg       0.92      0.92      0.92       297
    macro avg       0.91      0.91      0.91       297
 weighted avg       0.91      0.92      0.92       297
- 0.9158249158249159 	 ComplementNB 	 0.213 sec Approaches :['Lemmatization']
+ 91.582 	 ComplementNB 	 0.884 sec Approaches :['Lemmatization'] 
+ Cross validation score : 84.602
+#######################################################
 #######################################################
 (890, 6637) X_train shape
 (890,) y_train shape
@@ -206,7 +245,9 @@ weighted avg       0.91      0.92      0.92       297
    micro avg       0.90      0.90      0.90       297
    macro avg       0.96      0.83      0.88       297
 weighted avg       0.91      0.90      0.89       297
- 0.898989898989899 	 GaussianNB 	 0.621 sec Approaches :['Lemmatization']
+ 89.899 	 GaussianNB 	 2.759 sec Approaches :['Lemmatization'] 
+ Cross validation score : 88.463
+#######################################################
 #######################################################
 (890, 6637) X_train shape
 (890,) y_train shape
@@ -220,7 +261,9 @@ weighted avg       0.91      0.90      0.89       297
    micro avg       0.91      0.91      0.91       297
    macro avg       0.69      0.63      0.66       297
 weighted avg       0.91      0.91      0.91       297
- 0.9124579124579124 	 MultinomialNB 	 0.182 sec Approaches :['Lemmatization']
+ 91.246 	 MultinomialNB 	 0.919 sec Approaches :['Lemmatization'] 
+ Cross validation score : 87.374
+#######################################################
 #######################################################
 (890, 6637) X_train shape
 (890,) y_train shape
@@ -234,35 +277,41 @@ weighted avg       0.91      0.91      0.91       297
    micro avg       0.93      0.93      0.93       297
    macro avg       0.98      0.87      0.91       297
 weighted avg       0.93      0.93      0.92       297
- 0.9259259259259259 	 Random Forest 	 2.614 sec Approaches :['Lemmatization']
+ 92.593 	 Random Forest 	 20.977 sec Approaches :['Lemmatization'] 
+ Cross validation score : 90.484
+#######################################################
 #######################################################
 (890, 6637) X_train shape
 (890,) y_train shape
               precision    recall  f1-score   support
 
-  Background       0.81      0.75      0.78        40
+  Background       0.88      0.75      0.81        40
      Compare       1.00      1.00      1.00         1
-    Creation       0.95      0.78      0.86        46
-         Use       0.91      0.96      0.94       210
+    Creation       0.98      0.89      0.93        46
+         Use       0.93      0.98      0.95       210
 
-   micro avg       0.91      0.91      0.91       297
-   macro avg       0.92      0.87      0.89       297
-weighted avg       0.91      0.91      0.90       297
- 0.9057239057239057 	 SVM 	 2.158 sec Approaches :['Lemmatization']
+   micro avg       0.93      0.93      0.93       297
+   macro avg       0.95      0.90      0.92       297
+weighted avg       0.93      0.93      0.93       297
+ 93.266 	 SVM 	 30.107 sec Approaches :['Lemmatization'] 
+ Cross validation score : 91.408
+#######################################################
 #######################################################
 (890, 5635) X_train shape
 (890,) y_train shape
               precision    recall  f1-score   support
 
-  Background       0.80      0.82      0.81        40
+  Background       0.88      0.88      0.88        40
      Compare       1.00      1.00      1.00         1
-    Creation       0.98      0.91      0.94        46
-         Use       0.95      0.96      0.95       210
+    Creation       0.98      0.93      0.96        46
+         Use       0.96      0.97      0.97       210
 
-   micro avg       0.93      0.93      0.93       297
-   macro avg       0.93      0.92      0.93       297
-weighted avg       0.93      0.93      0.93       297
- 0.9326599326599326 	 Logistic Regression 	 16.584 sec Approaches :['Stemming']
+   micro avg       0.95      0.95      0.95       297
+   macro avg       0.95      0.95      0.95       297
+weighted avg       0.95      0.95      0.95       297
+ 95.286 	 Logistic Regression 	 66.277 sec Approaches :['Stemming'] 
+ Cross validation score : 91.753
+#######################################################
 #######################################################
 (890, 5635) X_train shape
 (890,) y_train shape
@@ -276,7 +325,9 @@ weighted avg       0.93      0.93      0.93       297
    micro avg       0.91      0.91      0.91       297
    macro avg       0.90      0.91      0.90       297
 weighted avg       0.91      0.91      0.91       297
- 0.9090909090909091 	 ComplementNB 	 0.192 sec Approaches :['Stemming']
+ 90.909 	 ComplementNB 	 0.741 sec Approaches :['Stemming'] 
+ Cross validation score : 84.182
+#######################################################
 #######################################################
 (890, 5635) X_train shape
 (890,) y_train shape
@@ -290,7 +341,9 @@ weighted avg       0.91      0.91      0.91       297
    micro avg       0.90      0.90      0.90       297
    macro avg       0.95      0.83      0.87       297
 weighted avg       0.90      0.90      0.89       297
- 0.8956228956228957 	 GaussianNB 	 0.475 sec Approaches :['Stemming']
+ 89.562 	 GaussianNB 	 2.415 sec Approaches :['Stemming'] 
+ Cross validation score : 88.378
+#######################################################
 #######################################################
 (890, 5635) X_train shape
 (890,) y_train shape
@@ -304,7 +357,9 @@ weighted avg       0.90      0.90      0.89       297
    micro avg       0.90      0.90      0.90       297
    macro avg       0.65      0.64      0.65       297
 weighted avg       0.90      0.90      0.90       297
- 0.898989898989899 	 MultinomialNB 	 0.163 sec Approaches :['Stemming']
+ 89.899 	 MultinomialNB 	 0.702 sec Approaches :['Stemming'] 
+ Cross validation score : 86.03
+#######################################################
 #######################################################
 (890, 5635) X_train shape
 (890,) y_train shape
@@ -318,35 +373,41 @@ weighted avg       0.90      0.90      0.90       297
    micro avg       0.94      0.94      0.94       297
    macro avg       0.98      0.89      0.93       297
 weighted avg       0.94      0.94      0.94       297
- 0.9393939393939394 	 Random Forest 	 2.264 sec Approaches :['Stemming']
+ 93.939 	 Random Forest 	 21.306 sec Approaches :['Stemming'] 
+ Cross validation score : 90.823
+#######################################################
 #######################################################
 (890, 5635) X_train shape
 (890,) y_train shape
               precision    recall  f1-score   support
 
-  Background       0.78      0.80      0.79        40
+  Background       0.84      0.80      0.82        40
      Compare       1.00      1.00      1.00         1
-    Creation       0.95      0.89      0.92        46
-         Use       0.94      0.95      0.94       210
+    Creation       0.98      0.91      0.94        46
+         Use       0.94      0.97      0.96       210
 
-   micro avg       0.92      0.92      0.92       297
-   macro avg       0.92      0.91      0.91       297
-weighted avg       0.92      0.92      0.92       297
- 0.9191919191919192 	 SVM 	 2.199 sec Approaches :['Stemming']
+   micro avg       0.94      0.94      0.94       297
+   macro avg       0.94      0.92      0.93       297
+weighted avg       0.94      0.94      0.94       297
+ 93.603 	 SVM 	 30.656 sec Approaches :['Stemming'] 
+ Cross validation score : 92.167
+#######################################################
 #######################################################
 (890, 56633) X_train shape
 (890,) y_train shape
               precision    recall  f1-score   support
 
-  Background       0.94      0.72      0.82        40
+  Background       0.92      0.82      0.87        40
      Compare       1.00      1.00      1.00         1
-    Creation       0.98      0.93      0.96        46
-         Use       0.94      0.99      0.96       210
+    Creation       0.96      0.96      0.96        46
+         Use       0.96      0.98      0.97       210
 
-   micro avg       0.94      0.94      0.94       297
-   macro avg       0.96      0.91      0.93       297
-weighted avg       0.94      0.94      0.94       297
- 0.9427609427609428 	 Logistic Regression 	 176.04 sec Approaches :['Tokenization', 'N-gram']
+   micro avg       0.95      0.95      0.95       297
+   macro avg       0.96      0.94      0.95       297
+weighted avg       0.95      0.95      0.95       297
+ 95.286 	 Logistic Regression 	 586.358 sec Approaches :['Tokenization', 'N-gram'] 
+ Cross validation score : 91.752
+#######################################################
 #######################################################
 (890, 56633) X_train shape
 (890,) y_train shape
@@ -360,7 +421,9 @@ weighted avg       0.94      0.94      0.94       297
    micro avg       0.94      0.94      0.94       297
    macro avg       0.95      0.91      0.93       297
 weighted avg       0.94      0.94      0.93       297
- 0.936026936026936 	 ComplementNB 	 2.232 sec Approaches :['Tokenization', 'N-gram']
+ 93.603 	 ComplementNB 	 5.448 sec Approaches :['Tokenization', 'N-gram'] 
+ Cross validation score : 79.06
+#######################################################
 #######################################################
 (890, 56633) X_train shape
 (890,) y_train shape
@@ -374,7 +437,9 @@ weighted avg       0.94      0.94      0.93       297
    micro avg       0.91      0.91      0.91       297
    macro avg       0.94      0.85      0.89       297
 weighted avg       0.91      0.91      0.90       297
- 0.9090909090909091 	 GaussianNB 	 7.875 sec Approaches :['Tokenization', 'N-gram']
+ 90.909 	 GaussianNB 	 17.869 sec Approaches :['Tokenization', 'N-gram'] 
+ Cross validation score : 90.316
+#######################################################
 #######################################################
 (890, 56633) X_train shape
 (890,) y_train shape
@@ -388,7 +453,9 @@ weighted avg       0.91      0.91      0.90       297
    micro avg       0.92      0.92      0.92       297
    macro avg       0.69      0.64      0.66       297
 weighted avg       0.92      0.92      0.92       297
- 0.9225589225589226 	 MultinomialNB 	 2.047 sec Approaches :['Tokenization', 'N-gram']
+ 92.256 	 MultinomialNB 	 5.354 sec Approaches :['Tokenization', 'N-gram'] 
+ Cross validation score : 81.999
+#######################################################
 #######################################################
 (890, 56633) X_train shape
 (890,) y_train shape
@@ -402,35 +469,41 @@ weighted avg       0.92      0.92      0.92       297
    micro avg       0.93      0.93      0.93       297
    macro avg       0.98      0.88      0.92       297
 weighted avg       0.94      0.93      0.93       297
- 0.9326599326599326 	 Random Forest 	 15.435 sec Approaches :['Tokenization', 'N-gram']
+ 93.266 	 Random Forest 	 70.833 sec Approaches :['Tokenization', 'N-gram'] 
+ Cross validation score : 91.243
+#######################################################
 #######################################################
 (890, 56633) X_train shape
 (890,) y_train shape
               precision    recall  f1-score   support
 
-  Background       0.80      0.70      0.75        40
+  Background       0.94      0.72      0.82        40
      Compare       1.00      1.00      1.00         1
-    Creation       0.97      0.76      0.85        46
-         Use       0.90      0.97      0.93       210
+    Creation       0.96      0.93      0.95        46
+         Use       0.94      0.98      0.96       210
 
-   micro avg       0.90      0.90      0.90       297
-   macro avg       0.92      0.86      0.88       297
-weighted avg       0.90      0.90      0.90       297
- 0.898989898989899 	 SVM 	 9.975 sec Approaches :['Tokenization', 'N-gram']
+   micro avg       0.94      0.94      0.94       297
+   macro avg       0.96      0.91      0.93       297
+weighted avg       0.94      0.94      0.94       297
+ 93.939 	 SVM 	 73.183 sec Approaches :['Tokenization', 'N-gram'] 
+ Cross validation score : 91.916
+#######################################################
 #######################################################
 (890, 13161) X_train shape
 (890,) y_train shape
               precision    recall  f1-score   support
 
-  Background       0.83      0.75      0.79        40
+  Background       0.89      0.82      0.86        40
      Compare       1.00      1.00      1.00         1
-    Creation       0.95      0.91      0.93        46
-         Use       0.94      0.96      0.95       210
+    Creation       0.98      0.93      0.96        46
+         Use       0.95      0.98      0.96       210
 
-   micro avg       0.93      0.93      0.93       297
-   macro avg       0.93      0.91      0.92       297
-weighted avg       0.92      0.93      0.92       297
- 0.9259259259259259 	 Logistic Regression 	 38.323 sec Approaches :['Tokenization', 'Lemmatization']
+   micro avg       0.95      0.95      0.95       297
+   macro avg       0.96      0.93      0.94       297
+weighted avg       0.95      0.95      0.95       297
+ 94.949 	 Logistic Regression 	 124.785 sec Approaches :['Tokenization', 'Lemmatization'] 
+ Cross validation score : 92.172
+#######################################################
 #######################################################
 (890, 13161) X_train shape
 (890,) y_train shape
@@ -444,7 +517,9 @@ weighted avg       0.92      0.93      0.92       297
    micro avg       0.92      0.92      0.92       297
    macro avg       0.91      0.91      0.91       297
 weighted avg       0.92      0.92      0.92       297
- 0.9191919191919192 	 ComplementNB 	 0.45 sec Approaches :['Tokenization', 'Lemmatization']
+ 91.919 	 ComplementNB 	 1.409 sec Approaches :['Tokenization', 'Lemmatization'] 
+ Cross validation score : 84.688
+#######################################################
 #######################################################
 (890, 13161) X_train shape
 (890,) y_train shape
@@ -458,7 +533,9 @@ weighted avg       0.92      0.92      0.92       297
    micro avg       0.90      0.90      0.90       297
    macro avg       0.95      0.83      0.87       297
 weighted avg       0.90      0.90      0.89       297
- 0.8956228956228957 	 GaussianNB 	 1.643 sec Approaches :['Tokenization', 'Lemmatization']
+ 89.562 	 GaussianNB 	 4.366 sec Approaches :['Tokenization', 'Lemmatization'] 
+ Cross validation score : 87.873
+#######################################################
 #######################################################
 (890, 13161) X_train shape
 (890,) y_train shape
@@ -472,7 +549,9 @@ weighted avg       0.90      0.90      0.89       297
    micro avg       0.92      0.92      0.92       297
    macro avg       0.69      0.65      0.67       297
 weighted avg       0.92      0.92      0.92       297
- 0.9225589225589226 	 MultinomialNB 	 0.47 sec Approaches :['Tokenization', 'Lemmatization']
+ 92.256 	 MultinomialNB 	 1.591 sec Approaches :['Tokenization', 'Lemmatization'] 
+ Cross validation score : 86.789
+#######################################################
 #######################################################
 (890, 13161) X_train shape
 (890,) y_train shape
@@ -486,35 +565,41 @@ weighted avg       0.92      0.92      0.92       297
    micro avg       0.93      0.93      0.93       297
    macro avg       0.97      0.87      0.91       297
 weighted avg       0.93      0.93      0.92       297
- 0.9259259259259259 	 Random Forest 	 4.021 sec Approaches :['Tokenization', 'Lemmatization']
+ 92.593 	 Random Forest 	 21.413 sec Approaches :['Tokenization', 'Lemmatization'] 
+ Cross validation score : 91.413
+#######################################################
 #######################################################
 (890, 13161) X_train shape
 (890,) y_train shape
               precision    recall  f1-score   support
 
-  Background       0.81      0.72      0.76        40
+  Background       0.88      0.72      0.79        40
      Compare       1.00      1.00      1.00         1
-    Creation       0.95      0.76      0.84        46
-         Use       0.91      0.96      0.93       210
+    Creation       1.00      0.91      0.95        46
+         Use       0.93      0.98      0.96       210
 
-   micro avg       0.90      0.90      0.90       297
-   macro avg       0.91      0.86      0.88       297
-weighted avg       0.90      0.90      0.90       297
- 0.898989898989899 	 SVM 	 3.284 sec Approaches :['Tokenization', 'Lemmatization']
+   micro avg       0.94      0.94      0.94       297
+   macro avg       0.95      0.90      0.93       297
+weighted avg       0.94      0.94      0.93       297
+ 93.603 	 SVM 	 31.715 sec Approaches :['Tokenization', 'Lemmatization'] 
+ Cross validation score : 91.913
+#######################################################
 #######################################################
 (890, 56743) X_train shape
 (890,) y_train shape
               precision    recall  f1-score   support
 
-  Background       0.86      0.75      0.80        40
+  Background       0.92      0.85      0.88        40
      Compare       1.00      1.00      1.00         1
-    Creation       0.98      0.89      0.93        46
-         Use       0.93      0.97      0.95       210
+    Creation       0.96      0.93      0.95        46
+         Use       0.96      0.98      0.97       210
 
-   micro avg       0.93      0.93      0.93       297
-   macro avg       0.94      0.90      0.92       297
-weighted avg       0.93      0.93      0.93       297
- 0.9292929292929293 	 Logistic Regression 	 219.208 sec Approaches :['N-gram', 'Lemmatization']
+   micro avg       0.95      0.95      0.95       297
+   macro avg       0.96      0.94      0.95       297
+weighted avg       0.95      0.95      0.95       297
+ 95.286 	 Logistic Regression 	 517.617 sec Approaches :['N-gram', 'Lemmatization'] 
+ Cross validation score : 92.006
+#######################################################
 #######################################################
 (890, 56743) X_train shape
 (890,) y_train shape
@@ -528,7 +613,9 @@ weighted avg       0.93      0.93      0.93       297
    micro avg       0.94      0.94      0.94       297
    macro avg       0.96      0.90      0.93       297
 weighted avg       0.94      0.94      0.93       297
- 0.936026936026936 	 ComplementNB 	 2.096 sec Approaches :['N-gram', 'Lemmatization']
+ 93.603 	 ComplementNB 	 5.865 sec Approaches :['N-gram', 'Lemmatization'] 
+ Cross validation score : 79.648
+#######################################################
 #######################################################
 (890, 56743) X_train shape
 (890,) y_train shape
@@ -542,7 +629,9 @@ weighted avg       0.94      0.94      0.93       297
    micro avg       0.90      0.90      0.90       297
    macro avg       0.94      0.84      0.88       297
 weighted avg       0.90      0.90      0.89       297
- 0.898989898989899 	 GaussianNB 	 7.818 sec Approaches :['N-gram', 'Lemmatization']
+ 89.899 	 GaussianNB 	 18.018 sec Approaches :['N-gram', 'Lemmatization'] 
+ Cross validation score : 90.146
+#######################################################
 #######################################################
 (890, 56743) X_train shape
 (890,) y_train shape
@@ -556,7 +645,9 @@ weighted avg       0.90      0.90      0.89       297
    micro avg       0.92      0.92      0.92       297
    macro avg       0.70      0.62      0.66       297
 weighted avg       0.92      0.92      0.91       297
- 0.9158249158249159 	 MultinomialNB 	 2.059 sec Approaches :['N-gram', 'Lemmatization']
+ 91.582 	 MultinomialNB 	 5.468 sec Approaches :['N-gram', 'Lemmatization'] 
+ Cross validation score : 83.009
+#######################################################
 #######################################################
 (890, 56743) X_train shape
 (890,) y_train shape
@@ -570,35 +661,41 @@ weighted avg       0.92      0.92      0.91       297
    micro avg       0.93      0.93      0.93       297
    macro avg       0.98      0.87      0.91       297
 weighted avg       0.94      0.93      0.93       297
- 0.9292929292929293 	 Random Forest 	 14.874 sec Approaches :['N-gram', 'Lemmatization']
+ 92.929 	 Random Forest 	 69.223 sec Approaches :['N-gram', 'Lemmatization'] 
+ Cross validation score : 91.073
+#######################################################
 #######################################################
 (890, 56743) X_train shape
 (890,) y_train shape
               precision    recall  f1-score   support
 
-  Background       0.81      0.72      0.76        40
+  Background       0.93      0.70      0.80        40
      Compare       1.00      1.00      1.00         1
-    Creation       0.97      0.74      0.84        46
-         Use       0.90      0.97      0.93       210
+    Creation       0.98      0.89      0.93        46
+         Use       0.92      0.99      0.95       210
 
-   micro avg       0.90      0.90      0.90       297
-   macro avg       0.92      0.86      0.88       297
-weighted avg       0.90      0.90      0.90       297
- 0.898989898989899 	 SVM 	 9.193 sec Approaches :['N-gram', 'Lemmatization']
+   micro avg       0.93      0.93      0.93       297
+   macro avg       0.96      0.89      0.92       297
+weighted avg       0.93      0.93      0.93       297
+ 93.266 	 SVM 	 69.944 sec Approaches :['N-gram', 'Lemmatization'] 
+ Cross validation score : 91.328
+#######################################################
 #######################################################
 (890, 12159) X_train shape
 (890,) y_train shape
               precision    recall  f1-score   support
 
-  Background       0.79      0.78      0.78        40
+  Background       0.90      0.88      0.89        40
      Compare       1.00      1.00      1.00         1
     Creation       0.98      0.93      0.96        46
-         Use       0.94      0.96      0.95       210
+         Use       0.96      0.98      0.97       210
 
-   micro avg       0.93      0.93      0.93       297
-   macro avg       0.93      0.92      0.92       297
-weighted avg       0.93      0.93      0.93       297
- 0.9292929292929293 	 Logistic Regression 	 41.053 sec Approaches :['Tokenization', 'Stemming']
+   micro avg       0.96      0.96      0.96       297
+   macro avg       0.96      0.95      0.95       297
+weighted avg       0.96      0.96      0.96       297
+ 95.623 	 Logistic Regression 	 113.96 sec Approaches :['Tokenization', 'Stemming'] 
+ Cross validation score : 92.089
+#######################################################
 #######################################################
 (890, 12159) X_train shape
 (890,) y_train shape
@@ -612,7 +709,9 @@ weighted avg       0.93      0.93      0.93       297
    micro avg       0.92      0.92      0.92       297
    macro avg       0.91      0.91      0.91       297
 weighted avg       0.92      0.92      0.92       297
- 0.9158249158249159 	 ComplementNB 	 0.371 sec Approaches :['Tokenization', 'Stemming']
+ 91.582 	 ComplementNB 	 1.172 sec Approaches :['Tokenization', 'Stemming'] 
+ Cross validation score : 84.605
+#######################################################
 #######################################################
 (890, 12159) X_train shape
 (890,) y_train shape
@@ -626,7 +725,9 @@ weighted avg       0.92      0.92      0.92       297
    micro avg       0.90      0.90      0.90       297
    macro avg       0.94      0.83      0.88       297
 weighted avg       0.90      0.90      0.89       297
- 0.8956228956228957 	 GaussianNB 	 1.055 sec Approaches :['Tokenization', 'Stemming']
+ 89.562 	 GaussianNB 	 3.857 sec Approaches :['Tokenization', 'Stemming'] 
+ Cross validation score : 88.208
+#######################################################
 #######################################################
 (890, 12159) X_train shape
 (890,) y_train shape
@@ -640,7 +741,9 @@ weighted avg       0.90      0.90      0.89       297
    micro avg       0.90      0.90      0.90       297
    macro avg       0.65      0.65      0.65       297
 weighted avg       0.90      0.90      0.90       297
- 0.9023569023569024 	 MultinomialNB 	 0.345 sec Approaches :['Tokenization', 'Stemming']
+ 90.236 	 MultinomialNB 	 1.212 sec Approaches :['Tokenization', 'Stemming'] 
+ Cross validation score : 86.03
+#######################################################
 #######################################################
 (890, 12159) X_train shape
 (890,) y_train shape
@@ -654,35 +757,41 @@ weighted avg       0.90      0.90      0.90       297
    micro avg       0.94      0.94      0.94       297
    macro avg       0.98      0.90      0.93       297
 weighted avg       0.94      0.94      0.94       297
- 0.9393939393939394 	 Random Forest 	 4.037 sec Approaches :['Tokenization', 'Stemming']
+ 93.939 	 Random Forest 	 21.135 sec Approaches :['Tokenization', 'Stemming'] 
+ Cross validation score : 91.495
+#######################################################
 #######################################################
 (890, 12159) X_train shape
 (890,) y_train shape
               precision    recall  f1-score   support
 
-  Background       0.78      0.80      0.79        40
+  Background       0.84      0.78      0.81        40
      Compare       1.00      1.00      1.00         1
-    Creation       0.97      0.80      0.88        46
-         Use       0.92      0.95      0.94       210
+    Creation       0.98      0.93      0.96        46
+         Use       0.94      0.97      0.96       210
 
-   micro avg       0.91      0.91      0.91       297
-   macro avg       0.92      0.89      0.90       297
-weighted avg       0.91      0.91      0.91       297
- 0.9090909090909091 	 SVM 	 3.757 sec Approaches :['Tokenization', 'Stemming']
+   micro avg       0.94      0.94      0.94       297
+   macro avg       0.94      0.92      0.93       297
+weighted avg       0.94      0.94      0.94       297
+ 93.603 	 SVM 	 29.003 sec Approaches :['Tokenization', 'Stemming'] 
+ Cross validation score : 91.664
+#######################################################
 #######################################################
 (890, 55741) X_train shape
 (890,) y_train shape
               precision    recall  f1-score   support
 
-  Background       0.88      0.72      0.79        40
+  Background       0.89      0.85      0.87        40
      Compare       1.00      1.00      1.00         1
-    Creation       0.98      0.93      0.96        46
-         Use       0.94      0.98      0.96       210
+    Creation       0.98      0.96      0.97        46
+         Use       0.96      0.98      0.97       210
 
-   micro avg       0.94      0.94      0.94       297
-   macro avg       0.95      0.91      0.93       297
-weighted avg       0.93      0.94      0.93       297
- 0.936026936026936 	 Logistic Regression 	 205.67 sec Approaches :['N-gram', 'Stemming']
+   micro avg       0.96      0.96      0.96       297
+   macro avg       0.96      0.95      0.95       297
+weighted avg       0.96      0.96      0.96       297
+ 95.623 	 Logistic Regression 	 512.055 sec Approaches :['N-gram', 'Stemming'] 
+ Cross validation score : 91.753
+#######################################################
 #######################################################
 (890, 55741) X_train shape
 (890,) y_train shape
@@ -696,7 +805,9 @@ weighted avg       0.93      0.94      0.93       297
    micro avg       0.93      0.93      0.93       297
    macro avg       0.95      0.90      0.92       297
 weighted avg       0.93      0.93      0.93       297
- 0.9326599326599326 	 ComplementNB 	 1.93 sec Approaches :['N-gram', 'Stemming']
+ 93.266 	 ComplementNB 	 5.405 sec Approaches :['N-gram', 'Stemming'] 
+ Cross validation score : 79.228
+#######################################################
 #######################################################
 (890, 55741) X_train shape
 (890,) y_train shape
@@ -710,7 +821,9 @@ weighted avg       0.93      0.93      0.93       297
    micro avg       0.91      0.91      0.91       297
    macro avg       0.95      0.85      0.89       297
 weighted avg       0.91      0.91      0.90       297
- 0.9090909090909091 	 GaussianNB 	 8.028 sec Approaches :['N-gram', 'Stemming']
+ 90.909 	 GaussianNB 	 17.682 sec Approaches :['N-gram', 'Stemming'] 
+ Cross validation score : 90.148
+#######################################################
 #######################################################
 (890, 55741) X_train shape
 (890,) y_train shape
@@ -724,7 +837,9 @@ weighted avg       0.91      0.91      0.90       297
    micro avg       0.92      0.92      0.92       297
    macro avg       0.71      0.63      0.66       297
 weighted avg       0.92      0.92      0.92       297
- 0.9225589225589226 	 MultinomialNB 	 1.955 sec Approaches :['N-gram', 'Stemming']
+ 92.256 	 MultinomialNB 	 5.354 sec Approaches :['N-gram', 'Stemming'] 
+ Cross validation score : 82.588
+#######################################################
 #######################################################
 (890, 55741) X_train shape
 (890,) y_train shape
@@ -738,35 +853,41 @@ weighted avg       0.92      0.92      0.92       297
    micro avg       0.93      0.93      0.93       297
    macro avg       0.98      0.88      0.92       297
 weighted avg       0.94      0.93      0.93       297
- 0.9326599326599326 	 Random Forest 	 15.384 sec Approaches :['N-gram', 'Stemming']
+ 93.266 	 Random Forest 	 71.929 sec Approaches :['N-gram', 'Stemming'] 
+ Cross validation score : 90.739
+#######################################################
 #######################################################
 (890, 55741) X_train shape
 (890,) y_train shape
               precision    recall  f1-score   support
 
-  Background       0.77      0.75      0.76        40
+  Background       0.94      0.78      0.85        40
      Compare       1.00      1.00      1.00         1
-    Creation       0.97      0.76      0.85        46
-         Use       0.91      0.96      0.93       210
+    Creation       0.96      0.93      0.95        46
+         Use       0.94      0.98      0.96       210
 
-   micro avg       0.90      0.90      0.90       297
-   macro avg       0.91      0.87      0.89       297
-weighted avg       0.90      0.90      0.90       297
- 0.898989898989899 	 SVM 	 10.237 sec Approaches :['N-gram', 'Stemming']
+   micro avg       0.95      0.95      0.95       297
+   macro avg       0.96      0.92      0.94       297
+weighted avg       0.95      0.95      0.94       297
+ 94.613 	 SVM 	 71.218 sec Approaches :['N-gram', 'Stemming'] 
+ Cross validation score : 91.749
+#######################################################
 #######################################################
 (890, 12269) X_train shape
 (890,) y_train shape
               precision    recall  f1-score   support
 
-  Background       0.82      0.78      0.79        40
+  Background       0.89      0.82      0.86        40
      Compare       1.00      1.00      1.00         1
-    Creation       0.95      0.87      0.91        46
-         Use       0.93      0.96      0.94       210
+    Creation       0.98      0.93      0.96        46
+         Use       0.95      0.98      0.96       210
 
-   micro avg       0.92      0.92      0.92       297
-   macro avg       0.92      0.90      0.91       297
-weighted avg       0.92      0.92      0.92       297
- 0.9191919191919192 	 Logistic Regression 	 47.61 sec Approaches :['Lemmatization', 'Stemming']
+   micro avg       0.95      0.95      0.95       297
+   macro avg       0.96      0.93      0.94       297
+weighted avg       0.95      0.95      0.95       297
+ 94.949 	 Logistic Regression 	 106.805 sec Approaches :['Lemmatization', 'Stemming'] 
+ Cross validation score : 92.424
+#######################################################
 #######################################################
 (890, 12269) X_train shape
 (890,) y_train shape
@@ -780,7 +901,9 @@ weighted avg       0.92      0.92      0.92       297
    micro avg       0.92      0.92      0.92       297
    macro avg       0.92      0.91      0.92       297
 weighted avg       0.92      0.92      0.92       297
- 0.9225589225589226 	 ComplementNB 	 0.371 sec Approaches :['Lemmatization', 'Stemming']
+ 92.256 	 ComplementNB 	 1.176 sec Approaches :['Lemmatization', 'Stemming'] 
+ Cross validation score : 85.193
+#######################################################
 #######################################################
 (890, 12269) X_train shape
 (890,) y_train shape
@@ -794,7 +917,9 @@ weighted avg       0.92      0.92      0.92       297
    micro avg       0.89      0.89      0.89       297
    macro avg       0.95      0.82      0.87       297
 weighted avg       0.90      0.89      0.88       297
- 0.8922558922558923 	 GaussianNB 	 1.089 sec Approaches :['Lemmatization', 'Stemming']
+ 89.226 	 GaussianNB 	 3.895 sec Approaches :['Lemmatization', 'Stemming'] 
+ Cross validation score : 88.125
+#######################################################
 #######################################################
 (890, 12269) X_train shape
 (890,) y_train shape
@@ -808,7 +933,9 @@ weighted avg       0.90      0.89      0.88       297
    micro avg       0.92      0.92      0.92       297
    macro avg       0.68      0.65      0.66       297
 weighted avg       0.92      0.92      0.92       297
- 0.9191919191919192 	 MultinomialNB 	 0.34 sec Approaches :['Lemmatization', 'Stemming']
+ 91.919 	 MultinomialNB 	 1.193 sec Approaches :['Lemmatization', 'Stemming'] 
+ Cross validation score : 86.788
+#######################################################
 #######################################################
 (890, 12269) X_train shape
 (890,) y_train shape
@@ -822,35 +949,41 @@ weighted avg       0.92      0.92      0.92       297
    micro avg       0.93      0.93      0.93       297
    macro avg       0.97      0.88      0.91       297
 weighted avg       0.93      0.93      0.93       297
- 0.9292929292929293 	 Random Forest 	 3.519 sec Approaches :['Lemmatization', 'Stemming']
+ 92.929 	 Random Forest 	 18.345 sec Approaches :['Lemmatization', 'Stemming'] 
+ Cross validation score : 90.909
+#######################################################
 #######################################################
 (890, 12269) X_train shape
 (890,) y_train shape
               precision    recall  f1-score   support
 
-  Background       0.76      0.78      0.77        40
+  Background       0.88      0.75      0.81        40
      Compare       1.00      1.00      1.00         1
-    Creation       0.95      0.80      0.87        46
-         Use       0.92      0.95      0.93       210
+    Creation       1.00      0.91      0.95        46
+         Use       0.94      0.98      0.96       210
 
-   micro avg       0.90      0.90      0.90       297
-   macro avg       0.91      0.88      0.89       297
-weighted avg       0.90      0.90      0.90       297
- 0.9023569023569024 	 SVM 	 3.475 sec Approaches :['Lemmatization', 'Stemming']
+   micro avg       0.94      0.94      0.94       297
+   macro avg       0.95      0.91      0.93       297
+weighted avg       0.94      0.94      0.94       297
+ 93.939 	 SVM 	 27.298 sec Approaches :['Lemmatization', 'Stemming'] 
+ Cross validation score : 92.167
+#######################################################
 #######################################################
 (890, 63267) X_train shape
 (890,) y_train shape
               precision    recall  f1-score   support
 
-  Background       0.86      0.75      0.80        40
+  Background       0.92      0.82      0.87        40
      Compare       1.00      1.00      1.00         1
-    Creation       0.98      0.89      0.93        46
-         Use       0.93      0.97      0.95       210
+    Creation       0.98      0.96      0.97        46
+         Use       0.96      0.98      0.97       210
 
-   micro avg       0.93      0.93      0.93       297
-   macro avg       0.94      0.90      0.92       297
-weighted avg       0.93      0.93      0.93       297
- 0.9292929292929293 	 Logistic Regression 	 268.239 sec Approaches :['Tokenization', 'N-gram', 'Lemmatization']
+   micro avg       0.96      0.96      0.96       297
+   macro avg       0.96      0.94      0.95       297
+weighted avg       0.96      0.96      0.96       297
+ 95.623 	 Logistic Regression 	 374.555 sec Approaches :['Tokenization', 'N-gram', 'Lemmatization'] 
+ Cross validation score : 91.922
+#######################################################
 #######################################################
 (890, 63267) X_train shape
 (890,) y_train shape
@@ -864,7 +997,9 @@ weighted avg       0.93      0.93      0.93       297
    micro avg       0.93      0.93      0.93       297
    macro avg       0.95      0.90      0.92       297
 weighted avg       0.93      0.93      0.93       297
- 0.9326599326599326 	 ComplementNB 	 2.518 sec Approaches :['Tokenization', 'N-gram', 'Lemmatization']
+ 93.266 	 ComplementNB 	 4.808 sec Approaches :['Tokenization', 'N-gram', 'Lemmatization'] 
+ Cross validation score : 80.824
+#######################################################
 #######################################################
 (890, 63267) X_train shape
 (890,) y_train shape
@@ -878,7 +1013,9 @@ weighted avg       0.93      0.93      0.93       297
    micro avg       0.90      0.90      0.90       297
    macro avg       0.95      0.84      0.88       297
 weighted avg       0.91      0.90      0.90       297
- 0.9023569023569024 	 GaussianNB 	 9.933 sec Approaches :['Tokenization', 'N-gram', 'Lemmatization']
+ 90.236 	 GaussianNB 	 21.544 sec Approaches :['Tokenization', 'N-gram', 'Lemmatization'] 
+ Cross validation score : 89.811
+#######################################################
 #######################################################
 (890, 63267) X_train shape
 (890,) y_train shape
@@ -892,7 +1029,9 @@ weighted avg       0.91      0.90      0.90       297
    micro avg       0.93      0.93      0.93       297
    macro avg       0.71      0.64      0.67       297
 weighted avg       0.92      0.93      0.92       297
- 0.9259259259259259 	 MultinomialNB 	 2.296 sec Approaches :['Tokenization', 'N-gram', 'Lemmatization']
+ 92.593 	 MultinomialNB 	 6.443 sec Approaches :['Tokenization', 'N-gram', 'Lemmatization'] 
+ Cross validation score : 84.522
+#######################################################
 #######################################################
 (890, 63267) X_train shape
 (890,) y_train shape
@@ -906,35 +1045,41 @@ weighted avg       0.92      0.93      0.92       297
    micro avg       0.93      0.93      0.93       297
    macro avg       0.98      0.87      0.91       297
 weighted avg       0.94      0.93      0.93       297
- 0.9292929292929293 	 Random Forest 	 16.304 sec Approaches :['Tokenization', 'N-gram', 'Lemmatization']
+ 92.929 	 Random Forest 	 72.792 sec Approaches :['Tokenization', 'N-gram', 'Lemmatization'] 
+ Cross validation score : 91.158
+#######################################################
 #######################################################
 (890, 63267) X_train shape
 (890,) y_train shape
               precision    recall  f1-score   support
 
-  Background       0.81      0.72      0.76        40
+  Background       0.94      0.72      0.82        40
      Compare       1.00      1.00      1.00         1
-    Creation       0.97      0.74      0.84        46
-         Use       0.90      0.97      0.93       210
+    Creation       0.98      0.93      0.96        46
+         Use       0.94      0.99      0.96       210
 
-   micro avg       0.90      0.90      0.90       297
-   macro avg       0.92      0.86      0.88       297
-weighted avg       0.90      0.90      0.90       297
- 0.898989898989899 	 SVM 	 12.125 sec Approaches :['Tokenization', 'N-gram', 'Lemmatization']
+   micro avg       0.94      0.94      0.94       297
+   macro avg       0.96      0.91      0.93       297
+weighted avg       0.94      0.94      0.94       297
+ 94.276 	 SVM 	 81.556 sec Approaches :['Tokenization', 'N-gram', 'Lemmatization'] 
+ Cross validation score : 91.918
+#######################################################
 #######################################################
 (890, 62265) X_train shape
 (890,) y_train shape
               precision    recall  f1-score   support
 
-  Background       0.88      0.72      0.79        40
+  Background       0.92      0.82      0.87        40
      Compare       1.00      1.00      1.00         1
-    Creation       0.96      0.96      0.96        46
-         Use       0.94      0.97      0.96       210
+    Creation       0.98      0.96      0.97        46
+         Use       0.96      0.98      0.97       210
 
-   micro avg       0.94      0.94      0.94       297
-   macro avg       0.94      0.91      0.93       297
-weighted avg       0.93      0.94      0.93       297
- 0.936026936026936 	 Logistic Regression 	 231.006 sec Approaches :['Tokenization', 'N-gram', 'Stemming']
+   micro avg       0.96      0.96      0.96       297
+   macro avg       0.96      0.94      0.95       297
+weighted avg       0.96      0.96      0.96       297
+ 95.623 	 Logistic Regression 	 524.708 sec Approaches :['Tokenization', 'N-gram', 'Stemming'] 
+ Cross validation score : 92.088
+#######################################################
 #######################################################
 (890, 62265) X_train shape
 (890,) y_train shape
@@ -948,7 +1093,9 @@ weighted avg       0.93      0.94      0.93       297
    micro avg       0.93      0.93      0.93       297
    macro avg       0.95      0.90      0.92       297
 weighted avg       0.93      0.93      0.93       297
- 0.9326599326599326 	 ComplementNB 	 2.464 sec Approaches :['Tokenization', 'N-gram', 'Stemming']
+ 93.266 	 ComplementNB 	 6.033 sec Approaches :['Tokenization', 'N-gram', 'Stemming'] 
+ Cross validation score : 80.742
+#######################################################
 #######################################################
 (890, 62265) X_train shape
 (890,) y_train shape
@@ -962,7 +1109,9 @@ weighted avg       0.93      0.93      0.93       297
    micro avg       0.91      0.91      0.91       297
    macro avg       0.95      0.85      0.89       297
 weighted avg       0.91      0.91      0.90       297
- 0.9057239057239057 	 GaussianNB 	 8.759 sec Approaches :['Tokenization', 'N-gram', 'Stemming']
+ 90.572 	 GaussianNB 	 19.885 sec Approaches :['Tokenization', 'N-gram', 'Stemming'] 
+ Cross validation score : 89.896
+#######################################################
 #######################################################
 (890, 62265) X_train shape
 (890,) y_train shape
@@ -976,7 +1125,9 @@ weighted avg       0.91      0.91      0.90       297
    micro avg       0.92      0.92      0.92       297
    macro avg       0.70      0.63      0.66       297
 weighted avg       0.92      0.92      0.92       297
- 0.9225589225589226 	 MultinomialNB 	 2.582 sec Approaches :['Tokenization', 'N-gram', 'Stemming']
+ 92.256 	 MultinomialNB 	 6.248 sec Approaches :['Tokenization', 'N-gram', 'Stemming'] 
+ Cross validation score : 83.511
+#######################################################
 #######################################################
 (890, 62265) X_train shape
 (890,) y_train shape
@@ -990,35 +1141,41 @@ weighted avg       0.92      0.92      0.92       297
    micro avg       0.93      0.93      0.93       297
    macro avg       0.98      0.88      0.92       297
 weighted avg       0.94      0.93      0.93       297
- 0.9326599326599326 	 Random Forest 	 17.743 sec Approaches :['Tokenization', 'N-gram', 'Stemming']
+ 93.266 	 Random Forest 	 72.818 sec Approaches :['Tokenization', 'N-gram', 'Stemming'] 
+ Cross validation score : 91.076
+#######################################################
 #######################################################
 (890, 62265) X_train shape
 (890,) y_train shape
               precision    recall  f1-score   support
 
-  Background       0.77      0.75      0.76        40
+  Background       0.94      0.72      0.82        40
      Compare       1.00      1.00      1.00         1
-    Creation       1.00      0.76      0.86        46
-         Use       0.91      0.96      0.93       210
+    Creation       0.98      0.93      0.96        46
+         Use       0.94      0.99      0.96       210
 
-   micro avg       0.90      0.90      0.90       297
-   macro avg       0.92      0.87      0.89       297
-weighted avg       0.90      0.90      0.90       297
- 0.898989898989899 	 SVM 	 12.419 sec Approaches :['Tokenization', 'N-gram', 'Stemming']
+   micro avg       0.94      0.94      0.94       297
+   macro avg       0.96      0.91      0.93       297
+weighted avg       0.94      0.94      0.94       297
+ 94.276 	 SVM 	 83.744 sec Approaches :['Tokenization', 'N-gram', 'Stemming'] 
+ Cross validation score : 91.58
+#######################################################
 #######################################################
 (890, 18793) X_train shape
 (890,) y_train shape
               precision    recall  f1-score   support
 
-  Background       0.83      0.72      0.77        40
+  Background       0.89      0.80      0.84        40
      Compare       1.00      1.00      1.00         1
-    Creation       0.95      0.91      0.93        46
-         Use       0.93      0.96      0.95       210
+    Creation       0.98      0.93      0.96        46
+         Use       0.95      0.98      0.96       210
 
-   micro avg       0.92      0.92      0.92       297
-   macro avg       0.93      0.90      0.91       297
-weighted avg       0.92      0.92      0.92       297
- 0.9225589225589226 	 Logistic Regression 	 90.636 sec Approaches :['Tokenization', 'Lemmatization', 'Stemming']
+   micro avg       0.95      0.95      0.95       297
+   macro avg       0.95      0.93      0.94       297
+weighted avg       0.95      0.95      0.95       297
+ 94.613 	 Logistic Regression 	 168.461 sec Approaches :['Tokenization', 'Lemmatization', 'Stemming'] 
+ Cross validation score : 92.17
+#######################################################
 #######################################################
 (890, 18793) X_train shape
 (890,) y_train shape
@@ -1032,7 +1189,9 @@ weighted avg       0.92      0.92      0.92       297
    micro avg       0.93      0.93      0.93       297
    macro avg       0.92      0.92      0.92       297
 weighted avg       0.93      0.93      0.93       297
- 0.9292929292929293 	 ComplementNB 	 0.755 sec Approaches :['Tokenization', 'Lemmatization', 'Stemming']
+ 92.929 	 ComplementNB 	 1.836 sec Approaches :['Tokenization', 'Lemmatization', 'Stemming'] 
+ Cross validation score : 85.11
+#######################################################
 #######################################################
 (890, 18793) X_train shape
 (890,) y_train shape
@@ -1046,7 +1205,9 @@ weighted avg       0.93      0.93      0.93       297
    micro avg       0.90      0.90      0.90       297
    macro avg       0.95      0.83      0.87       297
 weighted avg       0.90      0.90      0.89       297
- 0.8956228956228957 	 GaussianNB 	 2.642 sec Approaches :['Tokenization', 'Lemmatization', 'Stemming']
+ 89.562 	 GaussianNB 	 5.967 sec Approaches :['Tokenization', 'Lemmatization', 'Stemming'] 
+ Cross validation score : 88.042
+#######################################################
 #######################################################
 (890, 18793) X_train shape
 (890,) y_train shape
@@ -1060,7 +1221,9 @@ weighted avg       0.90      0.90      0.89       297
    micro avg       0.92      0.92      0.92       297
    macro avg       0.68      0.65      0.67       297
 weighted avg       0.92      0.92      0.92       297
- 0.9225589225589226 	 MultinomialNB 	 0.707 sec Approaches :['Tokenization', 'Lemmatization', 'Stemming']
+ 92.256 	 MultinomialNB 	 1.829 sec Approaches :['Tokenization', 'Lemmatization', 'Stemming'] 
+ Cross validation score : 86.453
+#######################################################
 #######################################################
 (890, 18793) X_train shape
 (890,) y_train shape
@@ -1074,35 +1237,41 @@ weighted avg       0.92      0.92      0.92       297
    micro avg       0.94      0.94      0.94       297
    macro avg       0.97      0.89      0.92       297
 weighted avg       0.94      0.94      0.93       297
- 0.936026936026936 	 Random Forest 	 5.792 sec Approaches :['Tokenization', 'Lemmatization', 'Stemming']
+ 93.603 	 Random Forest 	 25.39 sec Approaches :['Tokenization', 'Lemmatization', 'Stemming'] 
+ Cross validation score : 91.579
+#######################################################
 #######################################################
 (890, 18793) X_train shape
 (890,) y_train shape
               precision    recall  f1-score   support
 
-  Background       0.82      0.80      0.81        40
+  Background       0.88      0.72      0.79        40
      Compare       1.00      1.00      1.00         1
-    Creation       0.95      0.76      0.84        46
-         Use       0.92      0.96      0.94       210
+    Creation       1.00      0.91      0.95        46
+         Use       0.93      0.98      0.96       210
 
-   micro avg       0.91      0.91      0.91       297
-   macro avg       0.92      0.88      0.90       297
-weighted avg       0.91      0.91      0.91       297
- 0.9090909090909091 	 SVM 	 5.479 sec Approaches :['Tokenization', 'Lemmatization', 'Stemming']
+   micro avg       0.94      0.94      0.94       297
+   macro avg       0.95      0.90      0.93       297
+weighted avg       0.94      0.94      0.93       297
+ 93.603 	 SVM 	 42.77 sec Approaches :['Tokenization', 'Lemmatization', 'Stemming'] 
+ Cross validation score : 91.83
+#######################################################
 #######################################################
 (890, 62375) X_train shape
 (890,) y_train shape
               precision    recall  f1-score   support
 
-  Background       0.86      0.75      0.80        40
+  Background       0.89      0.82      0.86        40
      Compare       1.00      1.00      1.00         1
-    Creation       0.98      0.87      0.92        46
-         Use       0.93      0.97      0.95       210
+    Creation       0.98      0.96      0.97        46
+         Use       0.96      0.98      0.97       210
 
-   micro avg       0.93      0.93      0.93       297
-   macro avg       0.94      0.90      0.92       297
-weighted avg       0.93      0.93      0.92       297
- 0.9259259259259259 	 Logistic Regression 	 235.445 sec Approaches :['N-gram', 'Lemmatization', 'Stemming']
+   micro avg       0.95      0.95      0.95       297
+   macro avg       0.96      0.94      0.95       297
+weighted avg       0.95      0.95      0.95       297
+ 95.286 	 Logistic Regression 	 520.248 sec Approaches :['N-gram', 'Lemmatization', 'Stemming'] 
+ Cross validation score : 92.341
+#######################################################
 #######################################################
 (890, 62375) X_train shape
 (890,) y_train shape
@@ -1116,7 +1285,9 @@ weighted avg       0.93      0.93      0.92       297
    micro avg       0.94      0.94      0.94       297
    macro avg       0.96      0.90      0.93       297
 weighted avg       0.94      0.94      0.93       297
- 0.936026936026936 	 ComplementNB 	 2.434 sec Approaches :['N-gram', 'Lemmatization', 'Stemming']
+ 93.603 	 ComplementNB 	 6.469 sec Approaches :['N-gram', 'Lemmatization', 'Stemming'] 
+ Cross validation score : 80.91
+#######################################################
 #######################################################
 (890, 62375) X_train shape
 (890,) y_train shape
@@ -1130,7 +1301,9 @@ weighted avg       0.94      0.94      0.93       297
    micro avg       0.91      0.91      0.91       297
    macro avg       0.96      0.84      0.89       297
 weighted avg       0.91      0.91      0.90       297
- 0.9057239057239057 	 GaussianNB 	 9.072 sec Approaches :['N-gram', 'Lemmatization', 'Stemming']
+ 90.572 	 GaussianNB 	 21.373 sec Approaches :['N-gram', 'Lemmatization', 'Stemming'] 
+ Cross validation score : 89.811
+#######################################################
 #######################################################
 (890, 62375) X_train shape
 (890,) y_train shape
@@ -1144,7 +1317,9 @@ weighted avg       0.91      0.91      0.90       297
    micro avg       0.93      0.93      0.93       297
    macro avg       0.71      0.64      0.67       297
 weighted avg       0.92      0.93      0.92       297
- 0.9259259259259259 	 MultinomialNB 	 2.374 sec Approaches :['N-gram', 'Lemmatization', 'Stemming']
+ 92.593 	 MultinomialNB 	 6.109 sec Approaches :['N-gram', 'Lemmatization', 'Stemming'] 
+ Cross validation score : 84.524
+#######################################################
 #######################################################
 (890, 62375) X_train shape
 (890,) y_train shape
@@ -1158,103 +1333,3 @@ weighted avg       0.92      0.93      0.92       297
    micro avg       0.93      0.93      0.93       297
    macro avg       0.98      0.87      0.91       297
 weighted avg       0.94      0.93      0.93       297
- 0.9292929292929293 	 Random Forest 	 15.66 sec Approaches :['N-gram', 'Lemmatization', 'Stemming']
-#######################################################
-(890, 62375) X_train shape
-(890,) y_train shape
-              precision    recall  f1-score   support
-
-  Background       0.79      0.75      0.77        40
-     Compare       1.00      1.00      1.00         1
-    Creation       0.97      0.76      0.85        46
-         Use       0.91      0.96      0.94       210
-
-   micro avg       0.90      0.90      0.90       297
-   macro avg       0.92      0.87      0.89       297
-weighted avg       0.90      0.90      0.90       297
- 0.9023569023569024 	 SVM 	 10.194 sec Approaches :['N-gram', 'Lemmatization', 'Stemming']
-#######################################################
-(890, 68899) X_train shape
-(890,) y_train shape
-              precision    recall  f1-score   support
-
-  Background       0.86      0.75      0.80        40
-     Compare       1.00      1.00      1.00         1
-    Creation       0.98      0.89      0.93        46
-         Use       0.93      0.97      0.95       210
-
-   micro avg       0.93      0.93      0.93       297
-   macro avg       0.94      0.90      0.92       297
-weighted avg       0.93      0.93      0.93       297
- 0.9292929292929293 	 Logistic Regression 	 271.058 sec Approaches :['Tokenization', 'N-gram', 'Lemmatization', 'Stemming']
-#######################################################
-(890, 68899) X_train shape
-(890,) y_train shape
-              precision    recall  f1-score   support
-
-  Background       0.94      0.75      0.83        40
-     Compare       1.00      1.00      1.00         1
-    Creation       0.93      0.91      0.92        46
-         Use       0.94      0.98      0.96       210
-
-   micro avg       0.94      0.94      0.94       297
-   macro avg       0.95      0.91      0.93       297
-weighted avg       0.94      0.94      0.93       297
- 0.936026936026936 	 ComplementNB 	 2.589 sec Approaches :['Tokenization', 'N-gram', 'Lemmatization', 'Stemming']
-#######################################################
-(890, 68899) X_train shape
-(890,) y_train shape
-              precision    recall  f1-score   support
-
-  Background       0.96      0.68      0.79        40
-     Compare       1.00      1.00      1.00         1
-    Creation       0.94      0.70      0.80        46
-         Use       0.89      0.99      0.94       210
-
-   micro avg       0.90      0.90      0.90       297
-   macro avg       0.95      0.84      0.88       297
-weighted avg       0.91      0.90      0.90       297
- 0.9023569023569024 	 GaussianNB 	 9.682 sec Approaches :['Tokenization', 'N-gram', 'Lemmatization', 'Stemming']
-#######################################################
-(890, 68899) X_train shape
-(890,) y_train shape
-              precision    recall  f1-score   support
-
-  Background       0.91      0.72      0.81        40
-     Compare       0.00      0.00      0.00         1
-    Creation       1.00      0.80      0.89        46
-         Use       0.91      0.99      0.95       210
-
-   micro avg       0.92      0.92      0.92       297
-   macro avg       0.70      0.63      0.66       297
-weighted avg       0.92      0.92      0.92       297
- 0.9225589225589226 	 MultinomialNB 	 2.549 sec Approaches :['Tokenization', 'N-gram', 'Lemmatization', 'Stemming']
-#######################################################
-(890, 68899) X_train shape
-(890,) y_train shape
-              precision    recall  f1-score   support
-
-  Background       1.00      0.65      0.79        40
-     Compare       1.00      1.00      1.00         1
-    Creation       1.00      0.87      0.93        46
-         Use       0.91      1.00      0.95       210
-
-   micro avg       0.93      0.93      0.93       297
-   macro avg       0.98      0.88      0.92       297
-weighted avg       0.94      0.93      0.93       297
- 0.9326599326599326 	 Random Forest 	 15.142 sec Approaches :['Tokenization', 'N-gram', 'Lemmatization', 'Stemming']
-#######################################################
-(890, 68899) X_train shape
-(890,) y_train shape
-              precision    recall  f1-score   support
-
-  Background       0.79      0.75      0.77        40
-     Compare       1.00      1.00      1.00         1
-    Creation       0.97      0.76      0.85        46
-         Use       0.91      0.96      0.94       210
-
-   micro avg       0.90      0.90      0.90       297
-   macro avg       0.92      0.87      0.89       297
-weighted avg       0.90      0.90      0.90       297
- 0.9023569023569024 	 SVM 	 11.968 sec Approaches :['Tokenization', 'N-gram', 'Lemmatization', 'Stemming']
-#######################################################
