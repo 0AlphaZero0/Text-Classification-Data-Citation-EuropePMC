@@ -222,5 +222,5 @@ for combination in combinations_list:
 			"Approaches :"+str(combination),
 			"\n",
 			"Cross validation score : "+str(round((sum(scores)/len(scores))*100,3)),
-			"#######################################################")
+			"\n#######################################################")
 
