@@ -1032,6 +1032,10 @@ Unclassifiable       1.00      0.62      0.77        16
 <a name="Week8"></a>
 ### :date: Week 8 - 22/04-28/04 - ML models :
 
+
+So in the end we have a set of 1187 citations from 400 papers OpenAccess and containing data citations (~ 3 interesting citations/paper). For a little reminder the AnnotationAPI found ~2000 citations that pass the control tests and with the same exact name already found by AnnotationAPI in the same paper there is almost ~4000 times where the Accession number is write. To reach 1187 citations we remove rfom the citations mined by AnnotationAPI citations that are shorter than 25 characters, because most of the times those citations are titles or take place in table or in References, we also remove citations that are longer than 500 characters, because we remove table (we decide to not take those citations) but sometimes the AnnotationAPI let pass a table and say it's a sentence, to avoid those citation we've set a limit (shorter-longer-table citations represent ~600 citations). We also decide to remove *ClinicalTrials* & *Unclassifiable* ~200 citations.
+
+
 I've add [stemming apporach](#stemming07), [N-gram apporach](#ngram07), [Lemma approach](#lemma07) :
 <a name="stemming07"></a>
 #### Stemming :
