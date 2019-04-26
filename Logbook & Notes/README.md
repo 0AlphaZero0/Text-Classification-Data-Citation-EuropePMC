@@ -16,7 +16,7 @@ ______________________________________________________________________
 ### :closed_book: Meetings
 
 - [05/03 - CambMetrics](#05/03)
-- [11/03 - Defintions of planinng, needs and requests](#11/03)
+- ***[11/03 - Defintions of planinng, needs and requests](#11/03)***
 - [12/03 - Questions & path set up](#12/03)
 - [19/03 - Dataset conception](#19/03)
 - [25/03 - XML Talks & Data creation](#25/03)
