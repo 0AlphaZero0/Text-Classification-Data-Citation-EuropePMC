@@ -180,13 +180,24 @@ for combination in combinations_list:
 			X_test[[Section_num_str]].values,
 			X_test[[SubType_num_str]].values,
 			X_test[[Figure_num_str]].values))
-		X_train_dtm = tf.keras.utils.normalize(np.concatenate(vect_X_train, axis = 1), axis = 1)
-		X_test_dtm = tf.keras.utils.normalize(np.concatenate(vect_X_test, axis = 1), axis = 1)
+			
+		X_train_dtm = np.concatenate(vect_X_train, axis = 1)
+		X_train_dtm=np.reshape(X_train_dtm,X_train_dtm.shape+(-1,))
+		X_train_dtm = tf.keras.utils.normalize(X_train_dtm, axis = 1)
+		X_test_dtm = np.concatenate(vect_X_test, axis = 1)
+		X_test_dtm=np.reshape(X_test_dtm,X_train_dtm.shape+(-1,))
+		X_test_dtm=tf.keras.utils.normalize(X_test_dtm, axis = 1)
+
 		X_train_test = np.concatenate((X_train_dtm,X_test_dtm))
 		y_train_test = np.concatenate((y_train,y_test))
-		
+
+		print(X_train_dtm.shape)
+		print(X_train_dtm[0].shape)
+		print(type(X_train_dtm))
+		print(X_train_dtm)
+
 		model = tf.keras.models.Sequential([
-		tf.keras.layers.Flatten(input_shape=X_train_dtm.shape),
+		tf.keras.layers.Flatten(input_shape = X_train_dtm.shape),
 		tf.keras.layers.Dense(128, activation = tf.nn.relu),
 		tf.keras.layers.Dense(128, activation = tf.nn.relu),
 		tf.keras.layers.Dense(128, activation = tf.nn.relu),
