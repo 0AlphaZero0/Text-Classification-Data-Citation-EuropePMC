@@ -182,7 +182,19 @@ for combination in combinations_list:
 			X_test[[Figure_num_str]].values))
 			
 		X_train_dtm = np.concatenate(vect_X_train, axis = 1)
-		X_train_dtm=np.reshape(X_train_dtm,X_train_dtm.shape+(-1,))
+		# print (np.size(X_train_dtm,1))# 6527 features
+		# print (np.size(X_train_dtm,0))# 890  samples
+		# X_train_dtm=np.reshape(X_train_dtm,X_train_dtm.shape+(-1,))
+		# split dataset in 10 subset to look like (10,89,6527)
+		X_train_batched=[]
+		while len(X_train_dtm)!=len(X_train_batched):
+			print (len(X_train_dtm),len(X_train_batched))
+			X_train_batched.append(X_train_dtm[10:])
+			X_train_dtm=X_train_dtm[:10]
+
+		print(X_train_batched.shape)
+
+
 		X_train_dtm = tf.keras.utils.normalize(X_train_dtm, axis = 1)
 		X_test_dtm = np.concatenate(vect_X_test, axis = 1)
 		X_test_dtm=np.reshape(X_test_dtm,X_test_dtm.shape+(-1,))
