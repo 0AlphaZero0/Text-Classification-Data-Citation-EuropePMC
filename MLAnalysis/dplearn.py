@@ -196,7 +196,7 @@ for combination in combinations_list:
 		print(X_train_dtm)
 
 		model = tf.keras.models.Sequential([
-		tf.keras.layers.Dense(128, activation = 'relu', input_dim = X_train_dtm.shape),
+		tf.keras.layers.Dense(128, activation = 'relu', input_shape = X_train_dtm.shape),
 		tf.keras.layers.Dense(128, activation = 'relu'),
 		tf.keras.layers.Dense(128, activation = 'relu'),
 		tf.keras.layers.Dense(128, activation = 'relu'),
