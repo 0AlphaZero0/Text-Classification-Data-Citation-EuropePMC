@@ -37,6 +37,8 @@ ______________________________________________________________________
   * [Week 6 - 08/04-14/04 - Dataset extraction pipeline Improvements & First idea of Categories](#Week6)
   * [Week 7 - 15/04-21/04 - Dataset & Categories & Pre-analysis & First ML models](#Week7)
   * [Week 8 - 22/04-28/04 - ML models](#Week8)
+- ***[Month 3 - 29/04-02/06](#Month3)***
+  * [Week 9 - 29/04-05/05 - ](#Week9)
 ______________________________________________________________________
 
 ### :bookmark_tabs: [Bibliography](#bibliography01)
@@ -1039,6 +1041,8 @@ For a little reminder the **AnnotationAPI found ~ 2 000 citations** that pass th
 
 To reach 1187 citations we remove from the citations mined by AnnotationAPI citations that are **shorter than 25 characters**, because most of the times those citations are titles or take place in table or in References, we also remove citations that are **longer than 500 characters**, because **we remove tables** (we decide to not take those citations) but sometimes the AnnotationAPI let pass a table and say it's a sentence, to avoid those citation we've set a limit (**shorter-longer-table citations represent ~600 citations**). We also decide to remove *ClinicalTrials* & *Unclassifiable* **~200 citations**.
 
+:Warning: ***There is a problem in cross-validation indeed the compare category seems to "light" to be well represented in those tests***.
+
 
 I've add [stemming apporach](#stemming07), [N-gram apporach](#ngram07), [Lemma approach](#lemma07) :
 <a name="stemming07"></a>
@@ -1749,6 +1753,10 @@ Unclassifiable       1.00      0.50      0.67        16
 ```
 
 [:top::top::top::top::top::top::top::top::top::top::top::top::top::top:Go to the top:top::top::top::top::top::top::top::top::top::top::top::top::top::top::top:](#top)
+
+<a name="Month3"></a>
+<a name="Week9"></a>
+### :date: Week 9 - 29/04-05/05- :
 
 ______________________________________________________________________
 
