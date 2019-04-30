@@ -182,33 +182,33 @@ for combination in combinations_list:
 			X_test[[Figure_num_str]].values))
 			
 		X_train_dtm = np.concatenate(vect_X_train, axis = 1)
-		# print (np.size(X_train_dtm,1))# 6527 features
-		# print (np.size(X_train_dtm,0))# 890  samples
-		# X_train_dtm=np.reshape(X_train_dtm,X_train_dtm.shape+(-1,))
-		# split dataset in 10 subset to look like (10,89,6527)
-		X_train_batched=[]
-		while len(X_train_dtm)!=len(X_train_batched):
-			print (len(X_train_dtm),len(X_train_batched))
-			X_train_batched.append(X_train_dtm[10:])
-			X_train_dtm=X_train_dtm[:10]
-
-		print(X_train_batched.shape)
-
-
+		X_train_dtm = np.array(np.array_split(X_train_dtm, 10, axis = 0))
+		y_train = np.array(np.array_split(y_train, 10, axis = 0))
 		X_train_dtm = tf.keras.utils.normalize(X_train_dtm, axis = 1)
+
+		print(X_train_dtm.shape,"Train dtm")
+		print(y_train.shape,"y_train")
+
 		X_test_dtm = np.concatenate(vect_X_test, axis = 1)
-		X_test_dtm=np.reshape(X_test_dtm,X_test_dtm.shape+(-1,))
+		print(X_test_dtm.shape)
+		X_test_dtm = np.array(np.array_split(X_test_dtm, 10, axis = 0))
+		y_test = np.array(np.array_split(y_test, 10, axis = 0))
 		X_test_dtm=tf.keras.utils.normalize(X_test_dtm, axis = 1)
+		
+		print(X_test_dtm.shape,"dtm test")
+		print(y_test.shape,"y_test")
 
-		X_train_test = np.concatenate((X_train_dtm,X_test_dtm))
-		y_train_test = np.concatenate((y_train,y_test))
 
-		print(X_train_dtm.shape)
-		print(X_train_dtm[0].shape)
-		print(X_train_dtm)
+		# X_train_test = np.concatenate((X_train_dtm,X_test_dtm))
+		# y_train_test = np.concatenate((y_train,y_test))
+
+		# print(X_train_dtm.shape)
+		# print(X_train_dtm[0].shape)
+		# print(y_train.shape)
+		# print(X_train_dtm)
 
 		model = tf.keras.models.Sequential([
-		tf.keras.layers.Dense(128, activation = 'relu', input_shape = X_train_dtm.shape),
+		tf.keras.layers.Dense(128, activation = 'relu', input_shape = X_train_dtm[0].shape),
 		tf.keras.layers.Dense(128, activation = 'relu'),
 		tf.keras.layers.Dense(128, activation = 'relu'),
 		tf.keras.layers.Dense(128, activation = 'relu'),
@@ -219,3 +219,7 @@ for combination in combinations_list:
 			loss="sparse_categorical_crossentropy",
 			metrics=['accuracy'])
 		model.fit(X_train_dtm, y_train, epochs = 3)
+
+		val_loss, val_acc = model.evaluate(X_test_dtm, y_test)
+		print(val_loss)
+		print(val_acc)
