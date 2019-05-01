@@ -23,6 +23,7 @@ ______________________________________________________________________
 - ***[02/04 - Summary of March](#02/04)***
 - [16/04 - Pre-Analysis & Discussion with A.Athar](#16/04)
 - [24/04 - ML models & Discussion with A.Athar](#24/04)
+- [30/04 - ML models & DL models](#30/04)
 
 ______________________________________________________________________
 ### :green_book: Notes
@@ -227,6 +228,15 @@ Results and analysis
   * Word Embedding with *Multilayer*, *CNN*, *LSTM* classifier
 
 - Meeting with Xiao Yang & Awais Athar : 
+  
+
+[:top::top::top::top::top::top::top::top::top::top::top::top::top::top:Go to the top:top::top::top::top::top::top::top::top::top::top::top::top::top::top::top:](#top)
+
+<a name="30/04"></a>
+### :mega: 30/04 - ML models & DL models :
+
+- ML models : Needs to look at stratified 4-fold, because compare category contains only 4 citations.
+- DL models : Needs to add metrics like precision and recall for a good comparison with scientific works.
   
 
 [:top::top::top::top::top::top::top::top::top::top::top::top::top::top:Go to the top:top::top::top::top::top::top::top::top::top::top::top::top::top::top::top:](#top)
