@@ -4,38 +4,45 @@
 # 01/04/2019
 ########################
 
-import tensorflow as tf
+import codecs
+import tensorflow as tf # 1.13.1
 import numpy as np
 import pandas as pd
-import time
+import os
 
-from sklearn import svm # Allows to use the SVM classification method
-from sklearn.ensemble import RandomForestClassifier
 from sklearn.feature_extraction.text import TfidfVectorizer # Allows transformations of string in number
 from sklearn.feature_extraction.text import CountVectorizer
-from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import train_test_split
-from sklearn.naive_bayes import ComplementNB
-from sklearn.naive_bayes import GaussianNB
-from sklearn.naive_bayes import MultinomialNB
+from sklearn import metrics
 
 from nltk.stem.snowball import SnowballStemmer
 from nltk import word_tokenize
 from nltk.stem import WordNetLemmatizer
 
-completeCitation = "CompleteCitation"
-token = 'Tokenization'
-ngram = 'N-gram'
-lemma = 'Lemmatization'
-stem = "Stemming"
+from keras import backend as K
+
+##################################################    Variables     ###################################################
+
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
+
+
 filename = "Dataset2.csv"
-gamma = 'auto'
-Section_num_str,SubType_num_str,Figure_num_str = "Section_num","SubType_num","Figure_num"
-PreCitation_str,Citation_str,PostCitation_str = "PreCitation","Citation","PostCitation"
-C = 10
-max_iter = 10000
-class_weight = 'balanced'
+result_output="ResultDL.csv"
+average="macro" # binary | micro | macro | weighted | samples
+class_weight = {
+	0 : 15.,
+	1 : 50.,
+	2 : 15.,
+	3 : 10.}
+epochs = 5
+input_node = 1280
+node1 = 128
+node2 = 128
+output_node = 4
 ngram_range = (1,3)
+token,ngram,lemma,stem = "Tokenization","N-gram","Lemmatization","Stemming"
+Section_num_str,SubType_num_str,Figure_num_str = "Section_num","SubType_num","Figure_num"
+PreCitation_str,Citation_str,PostCitation_str,completeCitation = "PreCitation","Citation","PostCitation","CompleteCitation"
 featuresList = [
 	Section_num_str,
 	SubType_num_str,
@@ -51,25 +58,6 @@ extra_features = [
 	ngram,
 	lemma,
 	stem]
-countVectorizerList = [
-	"MultinomialNB",
-	"ComplementNB",
-	"GaussianNB",
-	"Random Forest"]
-#
-clfSVM = svm.LinearSVC(C = C,max_iter = max_iter,class_weight = class_weight)
-clfLR = LogisticRegression(C = C,solver = 'lbfgs',multi_class = 'multinomial',max_iter = max_iter,class_weight = class_weight)
-clfRF  =  RandomForestClassifier(n_estimators = 100,random_state = 0) # max_depth = 2
-clfComplementNB = ComplementNB()
-clfGaussianNB = GaussianNB()
-clfMultinomialNB =  MultinomialNB()
-#
-clfList = [[clfLR,"Logistic Regression"],
-	[clfComplementNB,"ComplementNB"],
-	[clfGaussianNB,"GaussianNB"],
-	[clfMultinomialNB,"MultinomialNB"],
-	[clfRF,"Random Forest"],
-	[clfSVM,"SVM"]]
 
 ##################################################    Class     ###################################################
 
@@ -110,11 +98,6 @@ vect_list = [
 	[TfidfVectorizer(ngram_range = ngram_range), completeCitation, ngram],
 	[TfidfVectorizer(tokenizer = LemmaTokenizer()), completeCitation, lemma],
 	[TfidfVectorizer(analyzer = stemmed_words), completeCitation, stem]]
-vect_list_countvectorizer = [
-	[CountVectorizer(), completeCitation, token],
-	[CountVectorizer(ngram_range = ngram_range), completeCitation, ngram],
-	[CountVectorizer(tokenizer = LemmaTokenizer()), completeCitation, lemma],
-	[CountVectorizer(analyzer = stemmed_words), completeCitation, stem]]
 #
 stemmer = SnowballStemmer('english',ignore_stopwords = True)
 analyzer = TfidfVectorizer().build_analyzer()
@@ -158,68 +141,102 @@ X_train,X_test,y_train,y_test = train_test_split(X,y,random_state = 1)
 
 combinations_list = combinations(extra_features)
 
+output_file=codecs.open(result_output,'w',encoding='utf8')
+output_file.write("f1-score\tPrecision\tRecall\tAccuracy\tLoss\tCombination\tToken\tNgram\tLemma\tStem\n")
 for combination in combinations_list:
-	for clf in clfList:
-		vect_X_train,vect_X_test = [],[]
-		if clf[1] in countVectorizerList:
-			for vect in vect_list_countvectorizer:
-				if vect[2] in combination:
-					vect_X_train.append(vect[0].fit_transform(X_train[[vect[1]]].fillna('').values.reshape(-1)).todense())
-					vect_X_test.append(vect[0].transform(X_test[[vect[1]]].fillna('').values.reshape(-1)).todense())
-		else:
-			for vect in vect_list:
-				if vect[2] in combination:
-					vect_X_train.append(vect[0].fit_transform(X_train[[vect[1]]].fillna('').values.reshape(-1)).todense())
-					vect_X_test.append(vect[0].transform(X_test[[vect[1]]].fillna('').values.reshape(-1)).todense())
+	vect_X_train,vect_X_test = [],[]
+	vect_tmp=[]
+	for vect in vect_list:
+		if vect[2] in combination:
+			vect_tmp.append(vect[2])
+			print(vect[2])
+			vect_X_train.append(vect[0].fit_transform(X_train[[vect[1]]].fillna('').values.reshape(-1)).todense())
+			vect_X_test.append(vect[0].transform(X_test[[vect[1]]].fillna('').values.reshape(-1)).todense())
 
-		vect_X_train.extend((
-			X_train[[Section_num_str]].values,
-			X_train[[SubType_num_str]].values,
-			X_train[[Figure_num_str]].values))
-		vect_X_test.extend((
-			X_test[[Section_num_str]].values,
-			X_test[[SubType_num_str]].values,
-			X_test[[Figure_num_str]].values))
-			
-		X_train_dtm = np.concatenate(vect_X_train, axis = 1)
-		X_train_dtm = np.array(np.array_split(X_train_dtm, 10, axis = 0))
-		y_train = np.array(np.array_split(y_train, 10, axis = 0))
-		X_train_dtm = tf.keras.utils.normalize(X_train_dtm, axis = 1)
+	vect_X_train.extend((
+		X_train[[Section_num_str]].values,
+		X_train[[SubType_num_str]].values,
+		X_train[[Figure_num_str]].values))
+	vect_X_test.extend((
+		X_test[[Section_num_str]].values,
+		X_test[[SubType_num_str]].values,
+		X_test[[Figure_num_str]].values))
+	
+	X_train_dtm = np.concatenate(vect_X_train, axis = 1)
+	X_train_dtm = tf.keras.utils.normalize(X_train_dtm, axis = 1)
 
-		print(X_train_dtm.shape,"Train dtm")
-		print(y_train.shape,"y_train")
+	X_test_dtm = np.concatenate(vect_X_test, axis = 1)
+	X_test_dtm = tf.keras.utils.normalize(X_test_dtm, axis = 1)
 
-		X_test_dtm = np.concatenate(vect_X_test, axis = 1)
-		print(X_test_dtm.shape)
-		X_test_dtm = np.array(np.array_split(X_test_dtm, 10, axis = 0))
-		y_test = np.array(np.array_split(y_test, 10, axis = 0))
-		X_test_dtm=tf.keras.utils.normalize(X_test_dtm, axis = 1)
-		
-		print(X_test_dtm.shape,"dtm test")
-		print(y_test.shape,"y_test")
-
-
-		# X_train_test = np.concatenate((X_train_dtm,X_test_dtm))
-		# y_train_test = np.concatenate((y_train,y_test))
-
-		# print(X_train_dtm.shape)
-		# print(X_train_dtm[0].shape)
-		# print(y_train.shape)
-		# print(X_train_dtm)
-
-		model = tf.keras.models.Sequential([
-		tf.keras.layers.Dense(128, activation = 'relu', input_shape = X_train_dtm[0].shape),
-		tf.keras.layers.Dense(128, activation = 'relu'),
-		tf.keras.layers.Dense(128, activation = 'relu'),
-		tf.keras.layers.Dense(128, activation = 'relu'),
-		tf.keras.layers.Dense(10, activation = 'softmax'),
+	model = tf.keras.models.Sequential([
+		tf.keras.layers.Dense(input_node, activation = 'relu', input_dim=X_train_dtm[0].shape[1]),
+		tf.keras.layers.Dense(node1, activation = 'relu'),
+		tf.keras.layers.Dense(node2, activation = 'relu'),
+		tf.keras.layers.Dense(output_node, activation = 'softmax'),
 		])
-		model.compile(
-			optimizer="adam",
-			loss="sparse_categorical_crossentropy",
-			metrics=['accuracy'])
-		model.fit(X_train_dtm, y_train, epochs = 3)
 
-		val_loss, val_acc = model.evaluate(X_test_dtm, y_test)
-		print(val_loss)
-		print(val_acc)
+	model.compile(
+		optimizer="adam",
+		loss="sparse_categorical_crossentropy",
+		metrics=['accuracy'])
+
+	model.fit(
+		X_train_dtm,
+		y_train,
+		epochs = epochs,
+		batch_size = 20,
+		class_weight = class_weight)
+
+	val_loss, val_acc = model.evaluate(X_test_dtm, y_test)
+
+	result = model.predict(X_test_dtm)
+	
+	y_pred=[]
+	for sample in result:
+		y_pred.append(np.argmax(sample))
+	
+	f1_score = round(metrics.f1_score(y_test, y_pred, average = average)*100,3)
+	precision = round(metrics.precision_score(y_test, y_pred, average = average)*100,3)
+	recall = round(metrics.recall_score(y_test, y_pred, average = average)*100,3)
+
+	print(
+		metrics.classification_report(y_test,y_pred,target_names = target_names),
+		"Accuracy score : "+str(round(metrics.accuracy_score(y_test,y_pred)*100,3)),
+		"\tF1_score : "+str(f1_score),
+		"\tPrecision : "+str(precision),
+		"\tRecall : "+str(recall),
+		"\n#######################################################")
+
+	output_file.write(str(f1_score))
+	output_file.write("\t")
+	output_file.write(str(precision))
+	output_file.write("\t")
+	output_file.write(str(recall))
+	output_file.write("\t")
+	output_file.write(str(val_acc))
+	output_file.write("\t")
+	output_file.write(str(val_loss))
+	output_file.write("\t")
+	output_file.write(str(vect_tmp))
+	output_file.write("\t")
+	if token in vect_tmp:
+		output_file.write("True")
+	else:
+		output_file.write("False")
+	output_file.write("\t")
+	if ngram in vect_tmp:
+		output_file.write("True")
+	else:
+		output_file.write("False")
+	output_file.write("\t")
+	if lemma in vect_tmp:
+		output_file.write("True")
+	else:
+		output_file.write("False")
+	output_file.write("\t")
+	if stem in vect_tmp:
+		output_file.write("True")
+	else:
+		output_file.write("False")
+	output_file.write("\n")
+	

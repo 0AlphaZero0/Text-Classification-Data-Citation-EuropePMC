@@ -3,7 +3,7 @@
 # THOUVENIN Arthur athouvenin@outlook.fr
 # 01/04/2019
 ########################
-# import codecs # Allows to load a file containing UTF-8 characters
+import codecs # Allows to load a file containing UTF-8 characters
 # import copy # Allows to duplicate objects
 import numpy as np # Allows to manipulate the necessary table for sklearn
 # import os # Allows to modify some things on the os
@@ -33,15 +33,13 @@ from nltk.stem import WordNetLemmatizer
 
 ################################################    Variables     #################################################
 #
-completeCitation = "CompleteCitation"
-token = 'Tokenization'
-ngram = 'N-gram'
-lemma = 'Lemmatization'
-stem = "Stemming"
+result_output="ResultML.csv"
 filename = "Dataset2.csv"
-gamma = 'auto'
+token,ngram,lemma,stem = "Tokenization","N-gram","Lemmatization","Stemming"
 Section_num_str,SubType_num_str,Figure_num_str = "Section_num","SubType_num","Figure_num"
-PreCitation_str,Citation_str,PostCitation_str = "PreCitation","Citation","PostCitation"
+PreCitation_str,Citation_str,PostCitation_str,completeCitation = "PreCitation","Citation","PostCitation","CompleteCitation"
+average = "macro"
+gamma = 'auto'
 C = 10
 max_iter = 10000
 class_weight = 'balanced'
@@ -95,23 +93,23 @@ def stemmed_words(doc):
 	return (stemmer.stem(w) for w in analyzer(doc))
 
 def combinations(a):
-    def fn(n,src,got,all):
-        if n==0:
-            if len(got)>0:
-                all.append(got)
-            return
-        j = 0
-        while j<len(src):
-            fn(n-1, src[:j], [src[j]] + got, all)
-            j = j+1
-        return
-    all = []
-    i = 0
-    while i<len(a):
-        fn(i,a,[],all)
-        i = i+1
-    all.append(a)
-    return all #a = [1,2,3,4] print(combinations(a))
+	def fn(n,src,got,all):
+		if n==0:
+			if len(got)>0:
+				all.append(got)
+			return
+		j = 0
+		while j<len(src):
+			fn(n-1, src[:j], [src[j]] + got, all)
+			j = j+1
+		return
+	all = []
+	i = 0
+	while i<len(a):
+		fn(i,a,[],all)
+		i = i+1
+	all.append(a)
+	return all #a = [1,2,3,4] print(combinations(a))
 
 ###################################################    Main     ###################################################
 #
@@ -168,17 +166,22 @@ X_train,X_test,y_train,y_test = train_test_split(X,y,random_state = 1)
 
 combinations_list = combinations(extra_features)
 
+output_file=codecs.open(result_output,'w',encoding='utf8')
+output_file.write("f1-score\tPrecision\tRecall\tAccuracy\tCombination\tToken\tNgram\tLemma\tStem\n")
 for combination in combinations_list:
 	for clf in clfList:
 		vect_X_train,vect_X_test = [],[]
+		vect_tmp=[]
 		if clf[1] in countVectorizerList:
 			for vect in vect_list_countvectorizer:
 				if vect[2] in combination:
+					vect_tmp.append(vect[2])
 					vect_X_train.append(vect[0].fit_transform(X_train[[vect[1]]].fillna('').values.reshape(-1)).todense())
 					vect_X_test.append(vect[0].transform(X_test[[vect[1]]].fillna('').values.reshape(-1)).todense())
 		else:
 			for vect in vect_list:
 				if vect[2] in combination:
+					vect_tmp.append(vect[2])
 					vect_X_train.append(vect[0].fit_transform(X_train[[vect[1]]].fillna('').values.reshape(-1)).todense())
 					vect_X_test.append(vect[0].transform(X_test[[vect[1]]].fillna('').values.reshape(-1)).todense())
 
@@ -212,15 +215,46 @@ for combination in combinations_list:
 			y_pred_class = clf[0].predict(X_test_dtm.toarray())
 			scores=cross_val_score(clf[0], X_train_test, y_train_test, cv = 5)
 		end = time.time()
+
+		f1_score = round(metrics.f1_score(y_test, y_pred_class, average = average)*100,3)
+		precision = round(metrics.precision_score(y_test, y_pred_class, average = average)*100,3)
+		recall = round(metrics.recall_score(y_test, y_pred_class, average = average)*100,3)
+		accuracy = round(metrics.accuracy_score(y_test,y_pred_class)*100,3)
+
 		print(
 			metrics.classification_report(y_test,y_pred_class,target_names = target_names),
-			str(round(metrics.accuracy_score(y_test,y_pred_class)*100,3)),
-			"\t",
-			clf[1],
-			"\t",
-			str(round((end-start),3))+" sec",
-			"Approaches :"+str(combination),
-			"\n",
-			"Cross validation score : "+str(round((sum(scores)/len(scores))*100,3)),
+			"Accuracy score : " + str(accuracy),
+			"\tF1_score : " + str(f1_score),
+			"\tPrecision : " + str(precision),
+			"\tRecall : " + str(recall),
 			"\n#######################################################")
-
+		output_file.write(str(f1_score))
+		output_file.write("\t")
+		output_file.write(str(precision))
+		output_file.write("\t")
+		output_file.write(str(recall))
+		output_file.write("\t")
+		output_file.write(str(accuracy))
+		output_file.write("\t")
+		output_file.write(str(vect_tmp))
+		output_file.write("\t")
+		if token in vect_tmp:
+			output_file.write("True")
+		else:
+			output_file.write("False")
+		output_file.write("\t")
+		if ngram in vect_tmp:
+			output_file.write("True")
+		else:
+			output_file.write("False")
+		output_file.write("\t")
+		if lemma in vect_tmp:
+			output_file.write("True")
+		else:
+			output_file.write("False")
+		output_file.write("\t")
+		if stem in vect_tmp:
+			output_file.write("True")
+		else:
+			output_file.write("False")
+		output_file.write("\n")

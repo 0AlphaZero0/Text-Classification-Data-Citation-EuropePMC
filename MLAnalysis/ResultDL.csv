@@ -1,0 +1,14 @@
+f1-score	Precision	Recall	Accuracy	Loss	Combination	Token	Ngram	Lemma	Stem
+65.526	68.34	63.427	0.9158249	0.29930910839376224	['Tokenization']	True	False	False	False
+65.01	63.805	67.015	0.9023569	0.2772557862880655	['N-gram']	False	True	False	False
+67.485	68.047	66.955	0.9292929	0.24187115567300457	['Lemmatization']	False	False	True	False
+66.243	70.534	63.077	0.9225589	0.29424854176846466	['Stemming']	False	False	False	True
+64.966	71.272	61.158	0.9158249	0.42468167005517593	['Tokenization', 'N-gram']	True	True	False	False
+65.003	71.51	60.815	0.9158249	0.4017933525822379	['Tokenization', 'Lemmatization']	True	False	True	False
+68.836	69.81	68.199	0.94276094	0.2701799201556428	['N-gram', 'Lemmatization']	False	True	True	False
+66.779	69.015	65.237	0.9259259	0.2790188995340482	['Tokenization', 'Stemming']	True	False	False	True
+90.046	88.599	92.908	0.9023569	0.2983700110254063	['N-gram', 'Stemming']	False	True	False	True
+66.975	70.149	64.507	0.9292929	0.287397871728397	['Lemmatization', 'Stemming']	False	False	True	True
+93.623	96.712	91.3	0.94276094	0.2209457850604246	['Tokenization', 'N-gram', 'Lemmatization']	True	True	True	False
+93.623	96.712	91.3	0.94276094	0.23916132559667433	['Tokenization', 'N-gram', 'Stemming']	True	True	False	True
+92.49	97.408	89.12	0.93602693	0.35670643254663004	['Tokenization', 'Lemmatization', 'Stemming']	True	False	True	True
