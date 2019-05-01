@@ -1768,6 +1768,8 @@ Unclassifiable       1.00      0.50      0.67        16
 <a name="Week9"></a>
 ### :date: Week 9 - 29/04-05/05- :
 
+Fit on a model already fit will delete everything and start from 0.
+
 ______________________________________________________________________
 
 <a name="bibliography01"></a>
