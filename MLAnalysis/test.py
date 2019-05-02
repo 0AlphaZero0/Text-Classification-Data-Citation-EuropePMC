@@ -167,7 +167,7 @@ X_train,X_test,y_train,y_test = train_test_split(X,y,random_state = 1)
 combinations_list = combinations(extra_features)
 
 output_file=codecs.open(result_output,'w',encoding='utf8')
-output_file.write("f1-score\tPrecision\tRecall\tAccuracy\tCombination\tToken\tNgram\tLemma\tStem\n")
+output_file.write("f1-score\tPrecision\tRecall\tAccuracy\tCross-validation-score\tCombination\tToken\tNgram\tLemma\tStem\tMethod\n")
 for combination in combinations_list:
 	for clf in clfList:
 		vect_X_train,vect_X_test = [],[]
@@ -220,9 +220,12 @@ for combination in combinations_list:
 		precision = round(metrics.precision_score(y_test, y_pred_class, average = average)*100,3)
 		recall = round(metrics.recall_score(y_test, y_pred_class, average = average)*100,3)
 		accuracy = round(metrics.accuracy_score(y_test,y_pred_class)*100,3)
+		cross_score = round((sum(scores)/len(scores))*100,3)
 
 		print(
 			metrics.classification_report(y_test,y_pred_class,target_names = target_names),
+			"Method : "+str(clf[1]),
+			"Corss validation score : "+str(cross_score),
 			"Accuracy score : " + str(accuracy),
 			"\tF1_score : " + str(f1_score),
 			"\tPrecision : " + str(precision),
@@ -235,6 +238,10 @@ for combination in combinations_list:
 		output_file.write(str(recall))
 		output_file.write("\t")
 		output_file.write(str(accuracy))
+		output_file.write("\t")
+		output_file.write(str(cross_score))
+		output_file.write("\t")
+		output_file.write(str(clf[1]))
 		output_file.write("\t")
 		output_file.write(str(vect_tmp))
 		output_file.write("\t")
