@@ -33,10 +33,10 @@ from nltk.stem import WordNetLemmatizer
 
 ################################################    Variables     #################################################
 #
-result_output="ResultML.csv"
-filename = "Dataset2.csv"
+result_output="ResultMLnb.csv"
+filename = "Datasetnb.csv"
 token,ngram,lemma,stem = "Tokenization","N-gram","Lemmatization","Stemming"
-Section_num_str,SubType_num_str,Figure_num_str = "Section_num","SubType_num","Figure_num"
+Section_num_str,SubType_num_str,Figure_num_str,NbPaperCitation = "Section_num","SubType_num","Figure_num","NbPaperCitation"
 PreCitation_str,Citation_str,PostCitation_str,completeCitation = "PreCitation","Citation","PostCitation","CompleteCitation"
 average = "macro"
 gamma = 'auto'
@@ -48,6 +48,7 @@ featuresList = [
 	Section_num_str,
 	SubType_num_str,
 	Figure_num_str,
+	NbPaperCitation,
 	completeCitation]
 target_names = [
 	"Background",
@@ -167,7 +168,7 @@ X_train,X_test,y_train,y_test = train_test_split(X,y,random_state = 1)
 combinations_list = combinations(extra_features)
 
 output_file=codecs.open(result_output,'w',encoding='utf8')
-output_file.write("f1-score\tPrecision\tRecall\tAccuracy\tCross-validation-score\tCombination\tToken\tNgram\tLemma\tStem\tMethod\n")
+output_file.write("f1-score\tPrecision\tRecall\tAccuracy\tCross-validation-score\tMethod\tCombination\tToken\tNgram\tLemma\tStem\n")
 for combination in combinations_list:
 	for clf in clfList:
 		vect_X_train,vect_X_test = [],[]
@@ -225,7 +226,7 @@ for combination in combinations_list:
 		print(
 			metrics.classification_report(y_test,y_pred_class,target_names = target_names),
 			"Method : "+str(clf[1]),
-			"Corss validation score : "+str(cross_score),
+			"Cross validation score : "+str(cross_score),
 			"Accuracy score : " + str(accuracy),
 			"\tF1_score : " + str(f1_score),
 			"\tPrecision : " + str(precision),
