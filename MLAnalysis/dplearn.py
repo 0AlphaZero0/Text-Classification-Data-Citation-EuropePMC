@@ -26,8 +26,8 @@ from keras import backend as K
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 
 
-filename = "Dataset2.csv"
-result_output="ResultDL.csv"
+filename = "Datasetnb.csv"
+result_output="ResultDLnb.csv"
 average="macro" # binary | micro | macro | weighted | samples
 class_weight = {
 	0 : 15.,
@@ -41,12 +41,13 @@ node2 = 128
 output_node = 4
 ngram_range = (1,3)
 token,ngram,lemma,stem = "Tokenization","N-gram","Lemmatization","Stemming"
-Section_num_str,SubType_num_str,Figure_num_str = "Section_num","SubType_num","Figure_num"
+Section_num_str,SubType_num_str,Figure_num_str,NbPaperCitation = "Section_num","SubType_num","Figure_num","NbPaperCitation"
 PreCitation_str,Citation_str,PostCitation_str,completeCitation = "PreCitation","Citation","PostCitation","CompleteCitation"
 featuresList = [
 	Section_num_str,
 	SubType_num_str,
 	Figure_num_str,
+	NbPaperCitation,
 	completeCitation]
 target_names = [
 	"Background",
