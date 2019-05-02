@@ -47,7 +47,7 @@ featuresList = [
 	Section_num_str,
 	SubType_num_str,
 	Figure_num_str,
-	NbPaperCitation,
+	# NbPaperCitation,
 	completeCitation]
 target_names = [
 	"Background",
