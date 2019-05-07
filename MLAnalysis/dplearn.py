@@ -26,8 +26,8 @@ from keras import backend as K
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 
 
-filename = "Datasetnb.csv"
-result_output="ResultDLnb.csv"
+filename = "Dataset2.csv"
+result_output="ResultDLparam.csv"
 average="macro" # binary | micro | macro | weighted | samples
 class_weight = {
 	0 : 15.,
@@ -35,19 +35,22 @@ class_weight = {
 	2 : 15.,
 	3 : 10.}
 epochs = 5
-input_node = 1280
+# input_node = 1280
+activation_input_node = 'relu'
 node1 = 128
+activation_node1 = 'relu'
 node2 = 128
+activation_node2 = 'relu'
 output_node = 4
+activation_output_node='softmax'
 ngram_range = (1,3)
 token,ngram,lemma,stem = "Tokenization","N-gram","Lemmatization","Stemming"
-Section_num_str,SubType_num_str,Figure_num_str,NbPaperCitation = "Section_num","SubType_num","Figure_num","NbPaperCitation"
+Section_num_str,SubType_num_str,Figure_num_str = "Section_num","SubType_num","Figure_num"
 PreCitation_str,Citation_str,PostCitation_str,completeCitation = "PreCitation","Citation","PostCitation","CompleteCitation"
 featuresList = [
 	Section_num_str,
 	SubType_num_str,
 	Figure_num_str,
-	# NbPaperCitation,
 	completeCitation]
 target_names = [
 	"Background",
@@ -169,11 +172,12 @@ for combination in combinations_list:
 	X_test_dtm = np.concatenate(vect_X_test, axis = 1)
 	X_test_dtm = tf.keras.utils.normalize(X_test_dtm, axis = 1)
 
+	print (X_train_dtm[0].shape[1])
 	model = tf.keras.models.Sequential([
-		tf.keras.layers.Dense(input_node, activation = 'relu', input_dim=X_train_dtm[0].shape[1]),
-		tf.keras.layers.Dense(node1, activation = 'relu'),
-		tf.keras.layers.Dense(node2, activation = 'relu'),
-		tf.keras.layers.Dense(output_node, activation = 'softmax'),
+		tf.keras.layers.Dense(X_train_dtm[0].shape[1], activation = activation_input_node, input_dim=X_train_dtm[0].shape[1]),
+		tf.keras.layers.Dense(node1, activation = activation_node1),
+		tf.keras.layers.Dense(node2, activation = activation_node2),
+		tf.keras.layers.Dense(output_node, activation = activation_output_node),
 		])
 
 	model.compile(
@@ -214,7 +218,7 @@ for combination in combinations_list:
 	output_file.write("\t")
 	output_file.write(str(recall))
 	output_file.write("\t")
-	output_file.write(str(val_acc))
+	output_file.write(str(val_acc*100))
 	output_file.write("\t")
 	output_file.write(str(val_loss))
 	output_file.write("\t")
