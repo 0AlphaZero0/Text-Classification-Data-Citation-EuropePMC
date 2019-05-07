@@ -1769,7 +1769,10 @@ Unclassifiable       1.00      0.50      0.67        16
 ### :date: Week 9 - 29/04-05/05- :
 
 Fit on a model already fit will delete everything and start from 0.
-Firt result are provide from tables below and also we had a suspicion about a feature that could help the model to be better, indeed we thought that the number of paper citations in data citations could be a hint, so we add a column *"NbPaperCitation"* in the dataset (which can be found [here](https://github.com/0AlphaZero0/Sentiment-Analysis-Data-Citation-EuropePMC/blob/master/MLAnalysis/Datasetnb.csv). In the end after ML & DL analysis we discover that it bring more noise than help as we can see in those files : [ResultMLnb](https://github.com/0AlphaZero0/Sentiment-Analysis-Data-Citation-EuropePMC/blob/master/MLAnalysis/ResultMLnb.csv) and [ResultDLnb](https://github.com/0AlphaZero0/Sentiment-Analysis-Data-Citation-EuropePMC/blob/master/MLAnalysis/ResultDLnb.csv).
+
+Firt result are provide from tables below and also we had a suspicion about a feature that could help the model to be better, indeed we thought that the number of paper citations in data citations could be a hint, so we add a column *"NbPaperCitation"* in the dataset (which can be found [here](https://github.com/0AlphaZero0/Sentiment-Analysis-Data-Citation-EuropePMC/blob/master/MLAnalysis/Datasetnb.csv).
+
+In the end after ML & DL analysis we discover that it bring more noise than help as we can see in those files : [ResultMLnb](https://github.com/0AlphaZero0/Sentiment-Analysis-Data-Citation-EuropePMC/blob/master/MLAnalysis/ResultMLnb.csv) and [ResultDLnb](https://github.com/0AlphaZero0/Sentiment-Analysis-Data-Citation-EuropePMC/blob/master/MLAnalysis/ResultDLnb.csv).
 
 - ***Machine learning model*** [file](https://github.com/0AlphaZero0/Sentiment-Analysis-Data-Citation-EuropePMC/blob/master/MLAnalysis/ResultML1.csv) :
 
