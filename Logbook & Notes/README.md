@@ -39,7 +39,8 @@ ______________________________________________________________________
   * [Week 7 - 15/04-21/04 - Dataset & Categories & Pre-analysis & First ML models](#Week7)
   * [Week 8 - 22/04-28/04 - ML models](#Week8)
 - ***[Month 3 - 29/04-02/06](#Month3)***
-  * [Week 9 - 29/04-05/05 - ](#Week9)
+  * [Week 9 - 29/04-05/05 - Results & Analysis for ML & DL first models](#Week9)
+  * [Week 10 - 06/05-12/05 - ](#Week10)
 ______________________________________________________________________
 
 ### :bookmark_tabs: [Bibliography](#bibliography01)
@@ -1061,7 +1062,7 @@ I've add stemming apporach, N-gram apporach, Lemma approach (unfortunatly result
 
 <a name="Month3"></a>
 <a name="Week9"></a>
-### :date: Week 9 - 29/04-05/05- :
+### :date: Week 9 - 29/04-05/05- Results & Analysis for ML & DL first models :
 
 Fit on a model already fit will delete everything and start from 0.
 
@@ -1082,6 +1083,12 @@ See analysis in the file : [ResultML1](https://github.com/0AlphaZero0/Sentiment-
 <p align="center">
   <img src="https://github.com/0AlphaZero0/Sentiment-Analysis-Data-Citation-EuropePMC/blob/master/Logbook%20%26%20Notes/Analysis/NgramwithDL.PNG">
 </p>
+
+
+[:top::top::top::top::top::top::top::top::top::top::top::top::top::top:Go to the top:top::top::top::top::top::top::top::top::top::top::top::top::top::top::top:](#top)
+
+<a name="Week10"></a>
+### :date: Week 10 - 06/04-12/05- :
 
 
 [:top::top::top::top::top::top::top::top::top::top::top::top::top::top:Go to the top:top::top::top::top::top::top::top::top::top::top::top::top::top::top::top:](#top)
