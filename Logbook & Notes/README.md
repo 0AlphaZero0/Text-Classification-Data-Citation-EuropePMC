@@ -1786,9 +1786,12 @@ In the end after ML & DL analysis we discover that it bring more noise than help
 
 - ***Deep learning model*** [file](https://github.com/0AlphaZero0/Sentiment-Analysis-Data-Citation-EuropePMC/blob/master/MLAnalysis/ResultDL1.csv) :
 
+<p align="center">
+  <img src="https://github.com/0AlphaZero0/Sentiment-Analysis-Data-Citation-EuropePMC/blob/master/Logbook%20%26%20Notes/Analysis/NgramwithDL.PNG">
+</p>
 
 
-
+[:top::top::top::top::top::top::top::top::top::top::top::top::top::top:Go to the top:top::top::top::top::top::top::top::top::top::top::top::top::top::top::top:](#top)
 
 ______________________________________________________________________
 
