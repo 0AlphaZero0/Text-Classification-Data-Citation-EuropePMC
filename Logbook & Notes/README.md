@@ -1769,6 +1769,123 @@ Unclassifiable       1.00      0.50      0.67        16
 ### :date: Week 9 - 29/04-05/05- :
 
 Fit on a model already fit will delete everything and start from 0.
+Firt result are provide from tables below and also we had a suspicion about a feature that could help the model to be better, indeed we thought that the number of paper citations in data citations could be a hint, so we add a column *"NbPaperCitation"* in the dataset (which can be found [here](https://github.com/0AlphaZero0/Sentiment-Analysis-Data-Citation-EuropePMC/blob/master/MLAnalysis/Datasetnb.csv). In the end after ML & DL analysis we discover that it bring more noise than help as we can see in those files : [ResultMLnb](https://github.com/0AlphaZero0/Sentiment-Analysis-Data-Citation-EuropePMC/blob/master/MLAnalysis/ResultMLnb.csv) and [ResultDLnb](https://github.com/0AlphaZero0/Sentiment-Analysis-Data-Citation-EuropePMC/blob/master/MLAnalysis/ResultDLnb.csv).
+
+- ***Machine learning model*** [file](https://github.com/0AlphaZero0/Sentiment-Analysis-Data-Citation-EuropePMC/blob/master/MLAnalysis/ResultML1.csv) :
+
+f1-score	Precision	Recall	Accuracy	Cross-validation-score	Method	Combination	Token	Ngram	Lemma	Stem
+94.541	94.76	94.33	94.949	91.499	Logistic Regression	['Tokenization']	True	False	False	False
+91.779	91.241	92.365	92.256	84.27	ComplementNB	['Tokenization']	True	False	False	False
+87.733	93.4	83.991	89.899	88.546	GaussianNB	['Tokenization']	True	False	False	False
+66.025	66.746	65.43	91.246	86.452	MultinomialNB	['Tokenization']	True	False	False	False
+92.533	98.026	89.076	93.939	90.992	Random Forest	['Tokenization']	True	False	False	False
+92.981	95.497	91.018	93.939	91.58	SVM	['Tokenization']	True	False	False	False
+94.247	94.333	94.211	94.613	90.578	Logistic Regression	['N-gram']	False	True	False	False
+92.685	95.158	90.899	93.603	75.865	ComplementNB	['N-gram']	False	True	False	False
+90.535	94.869	87.333	91.919	90.735	GaussianNB	['N-gram']	False	True	False	False
+66.606	70.031	63.964	92.593	78.721	MultinomialNB	['N-gram']	False	True	False	False
+91.448	97.727	87.446	92.929	90.99	Random Forest	['N-gram']	False	True	False	False
+94.248	96.547	92.387	94.949	91.247	SVM	['N-gram']	False	True	False	False
+93.064	94.163	92.074	93.603	92.17	Logistic Regression	['Lemmatization']	False	False	True	False
+90.868	91.126	90.691	91.582	84.602	ComplementNB	['Lemmatization']	False	False	True	False
+87.916	96.061	83.06	89.899	88.463	GaussianNB	['Lemmatization']	False	False	True	False
+65.537	68.545	63.144	91.246	87.374	MultinomialNB	['Lemmatization']	False	False	True	False
+91.194	97.629	86.984	92.593	90.484	Random Forest	['Lemmatization']	False	False	True	False
+92.403	94.759	90.437	93.266	91.408	SVM	['Lemmatization']	False	False	True	False
+94.935	95.363	94.53	95.286	91.753	Logistic Regression	['Stemming']	False	False	False	True
+90.418	90.024	90.959	90.909	84.182	ComplementNB	['Stemming']	False	False	False	True
+87.341	94.534	82.941	89.562	88.378	GaussianNB	['Stemming']	False	False	False	True
+64.629	64.892	64.447	89.899	86.03	MultinomialNB	['Stemming']	False	False	False	True
+92.533	98.026	89.076	93.939	90.823	Random Forest	['Stemming']	False	False	False	True
+92.991	94.076	91.993	93.603	92.167	SVM	['Stemming']	False	False	False	True
+94.798	95.778	93.943	95.286	91.752	Logistic Regression	['Tokenization', 'N-gram']	True	True	False	False
+92.685	95.158	90.899	93.603	79.06	ComplementNB	['Tokenization', 'N-gram']	True	True	False	False
+88.88	94.398	85.115	90.909	90.316	GaussianNB	['Tokenization', 'N-gram']	True	True	False	False
+66.285	69.428	63.844	92.256	81.999	MultinomialNB	['Tokenization', 'N-gram']	True	True	False	False
+91.816	97.826	87.989	93.266	91.243	Random Forest	['Tokenization', 'N-gram']	True	True	False	False
+93.002	95.685	91.018	93.939	91.916	SVM	['Tokenization', 'N-gram']	True	True	False	False
+94.435	95.566	93.399	94.949	92.172	Logistic Regression	['Tokenization', 'Lemmatization']	True	False	True	False
+91.316	91.362	91.316	91.919	84.688	ComplementNB	['Tokenization', 'Lemmatization']	True	False	True	False
+87.397	94.534	83.023	89.562	87.873	GaussianNB	['Tokenization', 'Lemmatization']	True	False	True	False
+66.525	68.503	64.856	92.256	86.789	MultinomialNB	['Tokenization', 'Lemmatization']	True	False	True	False
+91.121	97.092	87.327	92.593	91.413	Random Forest	['Tokenization', 'Lemmatization']	True	False	True	False
+92.625	95.273	90.475	93.603	91.913	SVM	['Tokenization', 'Lemmatization']	True	False	True	False
+94.879	95.81	94.024	95.286	92.006	Logistic Regression	['N-gram', 'Lemmatization']	False	True	True	False
+92.654	95.554	90.475	93.603	79.648	ComplementNB	['N-gram', 'Lemmatization']	False	True	True	False
+87.929	94.016	83.909	89.899	90.146	GaussianNB	['N-gram', 'Lemmatization']	False	True	True	False
+65.6	70.274	62.252	91.582	83.009	MultinomialNB	['N-gram', 'Lemmatization']	False	True	True	False
+91.448	97.727	87.446	92.929	91.073	Random Forest	['N-gram', 'Lemmatization']	False	True	True	False
+92.143	95.841	89.425	93.266	91.328	SVM	['N-gram', 'Lemmatization']	False	True	True	False
+95.272	95.929	94.649	95.623	92.089	Logistic Regression	['Tokenization', 'Stemming']	True	False	False	True
+91.012	90.898	91.197	91.582	84.605	ComplementNB	['Tokenization', 'Stemming']	True	False	False	True
+87.51	93.89	83.447	89.562	88.208	GaussianNB	['Tokenization', 'Stemming']	True	False	False	True
+64.79	64.94	64.648	90.236	86.03	MultinomialNB	['Tokenization', 'Stemming']	True	False	False	True
+92.554	97.551	89.501	93.939	91.495	Random Forest	['Tokenization', 'Stemming']	True	False	False	True
+92.901	93.982	91.911	93.603	91.579	SVM	['Tokenization', 'Stemming']	True	False	False	True
+95.202	95.874	94.568	95.623	91.753	Logistic Regression	['N-gram', 'Stemming']	False	True	False	True
+92.337	95.016	90.356	93.266	79.228	ComplementNB	['N-gram', 'Stemming']	False	True	False	True
+89.114	95.132	85.115	90.909	90.148	GaussianNB	['N-gram', 'Stemming']	False	True	False	True
+66.46	70.543	63.42	92.256	82.588	MultinomialNB	['N-gram', 'Stemming']	False	True	False	True
+91.816	97.826	87.989	93.266	90.739	Random Forest	['N-gram', 'Stemming']	False	True	False	True
+93.925	95.998	92.268	94.613	91.749	SVM	['N-gram', 'Stemming']	False	True	False	True
+94.435	95.566	93.399	94.949	92.339	Logistic Regression	['Lemmatization', 'Stemming']	False	False	True	True
+91.624	91.845	91.435	92.256	85.193	ComplementNB	['Lemmatization', 'Stemming']	False	False	True	True
+86.758	95.138	81.973	89.226	88.125	GaussianNB	['Lemmatization', 'Stemming']	False	False	True	True
+66.206	67.943	64.737	91.919	86.788	MultinomialNB	['Lemmatization', 'Stemming']	False	False	True	True
+91.49	97.207	87.87	92.929	90.909	Random Forest	['Lemmatization', 'Stemming']	False	False	True	True
+93.087	95.468	91.1	93.939	92.167	SVM	['Lemmatization', 'Stemming']	False	False	True	True
+95.122	96.315	94.062	95.623	91.922	Logistic Regression	['Tokenization', 'N-gram', 'Lemmatization']	True	True	True	False
+92.337	95.016	90.356	93.266	80.824	ComplementNB	['Tokenization', 'N-gram', 'Lemmatization']	True	True	True	False
+88.276	94.859	84.028	90.236	89.811	GaussianNB	['Tokenization', 'N-gram', 'Lemmatization']	True	True	True	False
+66.557	70.564	63.539	92.593	84.522	MultinomialNB	['Tokenization', 'N-gram', 'Lemmatization']	True	True	True	False
+91.448	97.727	87.446	92.929	91.158	Random Forest	['Tokenization', 'N-gram', 'Lemmatization']	True	True	True	False
+93.325	96.235	91.137	94.276	91.918	SVM	['Tokenization', 'N-gram', 'Lemmatization']	True	True	True	False
+95.122	96.315	94.062	95.623	92.088	Logistic Regression	['Tokenization', 'N-gram', 'Stemming']	True	True	False	True
+92.337	95.016	90.356	93.266	80.742	ComplementNB	['Tokenization', 'N-gram', 'Stemming']	True	True	False	True
+88.7	94.996	84.572	90.572	89.896	GaussianNB	['Tokenization', 'N-gram', 'Stemming']	True	True	False	True
+66.23	69.913	63.42	92.256	83.511	MultinomialNB	['Tokenization', 'N-gram', 'Stemming']	True	True	False	True
+91.816	97.826	87.989	93.266	91.076	Random Forest	['Tokenization', 'N-gram', 'Stemming']	True	True	False	True
+93.325	96.235	91.137	94.276	91.58	SVM	['Tokenization', 'N-gram', 'Stemming']	True	True	False	True
+94.003	95.381	92.774	94.613	92.17	Logistic Regression	['Tokenization', 'Lemmatization', 'Stemming']	True	False	True	True
+92.281	92.496	92.098	92.929	85.11	ComplementNB	['Tokenization', 'Lemmatization', 'Stemming']	True	False	True	True
+87.245	95.287	82.598	89.562	88.042	GaussianNB	['Tokenization', 'Lemmatization', 'Stemming']	True	False	True	True
+66.643	68.168	65.362	92.256	86.453	MultinomialNB	['Tokenization', 'Lemmatization', 'Stemming']	True	False	True	True
+92.206	97.436	88.957	93.603	91.579	Random Forest	['Tokenization', 'Lemmatization', 'Stemming']	True	False	True	True
+92.625	95.273	90.475	93.603	91.83	SVM	['Tokenization', 'Lemmatization', 'Stemming']	True	False	True	True
+94.779	95.69	93.943	95.286	92.341	Logistic Regression	['N-gram', 'Lemmatization', 'Stemming']	False	True	True	True
+92.654	95.554	90.475	93.603	80.91	ComplementNB	['N-gram', 'Lemmatization', 'Stemming']	False	True	True	True
+88.589	95.584	84.147	90.572	89.811	GaussianNB	['N-gram', 'Lemmatization', 'Stemming']	False	True	True	True
+66.557	70.564	63.539	92.593	84.524	MultinomialNB	['N-gram', 'Lemmatization', 'Stemming']	False	True	True	True
+91.448	97.727	87.446	92.929	90.992	Random Forest	['N-gram', 'Lemmatization', 'Stemming']	False	True	True	True
+92.981	95.497	91.018	93.939	91.917	SVM	['N-gram', 'Lemmatization', 'Stemming']	False	True	True	True
+94.435	95.566	93.399	94.949	92.341	Logistic Regression	['Tokenization', 'N-gram', 'Lemmatization', 'Stemming']	True	True	True	True
+92.803	95.173	90.981	93.603	82.422	ComplementNB	['Tokenization', 'N-gram', 'Lemmatization', 'Stemming']	True	True	True	True
+88.276	94.859	84.028	90.236	89.474	GaussianNB	['Tokenization', 'N-gram', 'Lemmatization', 'Stemming']	True	True	True	True
+66.172	70.463	62.996	92.256	84.604	MultinomialNB	['Tokenization', 'N-gram', 'Lemmatization', 'Stemming']	True	True	True	True
+91.816	97.826	87.989	93.266	91.244	Random Forest	['Tokenization', 'N-gram', 'Lemmatization', 'Stemming']	True	True	True	True
+93.31	96.073	91.137	94.276	91.495	SVM	['Tokenization', 'N-gram', 'Lemmatization', 'Stemming']	True	True	True	True
+
+
+- ***Deep learning model*** [file](https://github.com/0AlphaZero0/Sentiment-Analysis-Data-Citation-EuropePMC/blob/master/MLAnalysis/ResultDL1.csv) :
+
+| f1-score | Precision | Recall | Accuracy   | Loss              | Combination                                             | Token | Ngram | Lemma | Stem  |
+|----------|-----------|--------|------------|-------------------|---------------------------------------------------------|-------|-------|-------|-------|
+| 66.682   | 69.737    | 64.388 | 0.9259259  | 0.309870811480314 | ['Tokenization']                                        | True  | False | False | False |
+| 65.145   | 69.486    | 62.089 | 0.9158249  | 0.361989980303645 | ['N-gram']                                              | False | True  | False | False |
+| 66.678   | 67.35     | 66.13  | 0.9225589  | 0.247241556293234 | ['Lemmatization']                                       | False | False | True  | False |
+| 67.334   | 67.998    | 66.792 | 0.9292929  | 0.241255890722277 | ['Stemming']                                            | False | False | False | True  |
+| 94.052   | 95.626    | 92.774 | 0.94612795 | 0.256007221778259 | ['Tokenization', 'N-gram']                              | True  | True  | False | False |
+| 65.032   | 71.76     | 60.815 | 0.9158249  | 0.448595494207509 | ['Tokenization', 'Lemmatization']                       | True  | False | True  | False |
+| 67.518   | 69.462    | 65.981 | 0.9326599  | 0.254777546713336 | ['N-gram', 'Lemmatization']                             | False | True  | True  | False |
+| 67.092   | 66.112    | 68.741 | 0.9225589  | 0.275929758005371 | ['Tokenization', 'Stemming']                            | True  | False | False | True  |
+| 94.052   | 95.626    | 92.774 | 0.94612795 | 0.22517392833275  | ['N-gram', 'Stemming']                                  | False | True  | False | True  |
+| 67.37    | 69.823    | 65.475 | 0.9326599  | 0.301958062187439 | ['Lemmatization', 'Stemming']                           | False | False | True  | True  |
+| 92.803   | 95.173    | 90.981 | 0.93602693 | 0.215468459812805 | ['Tokenization', 'N-gram', 'Lemmatization']             | True  | True  | True  | False |
+| 67.756   | 66.843    | 68.816 | 0.9292929  | 0.234148007024218 | ['Tokenization', 'N-gram', 'Stemming']                  | True  | True  | False | True  |
+| 67.948   | 67.891    | 68.005 | 0.9326599  | 0.254105700136034 | ['Tokenization', 'Lemmatization', 'Stemming']           | True  | False | True  | True  |
+| 94.02    | 96.017    | 92.35  | 0.94612795 | 0.241524525438294 | ['N-gram', 'Lemmatization', 'Stemming']                 | False | True  | True  | True  |
+| 93.519   | 96.75     | 91.219 | 0.94276094 | 0.237515086653056 | ['Tokenization', 'N-gram', 'Lemmatization', 'Stemming'] | True  | True  | True  | True  |
+
 
 ______________________________________________________________________
 
