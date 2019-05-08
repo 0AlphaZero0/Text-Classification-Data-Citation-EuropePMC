@@ -148,7 +148,7 @@ output_file=codecs.open(result_output,'w',encoding='utf8')
 output_file.write("f1-score\tPrecision\tRecall\tAccuracy\tLoss\tCombination\tToken\tNgram\tLemma\tStem\n")
 for combination in combinations_list:
 	accuracy_list=[]
-	for i in range(0,5):
+	for i in range(0,4):
 		print(str(i)+"/5 runs")
 		X_train,X_test,y_train,y_test = train_test_split(X,y,random_state = 1)
 		vect_X_train,vect_X_test = [],[]
@@ -177,7 +177,7 @@ for combination in combinations_list:
 
 		print (X_train_dtm[0].shape[1])
 		model = tf.keras.models.Sequential([
-			tf.keras.layers.Dense(1280, activation = activation_input_node, input_dim=X_train_dtm[0].shape[1]),# maybe this line check github
+			tf.keras.layers.Dense(1280, activation = activation_input_node, input_dim=X_train_dtm[0].shape[1]),
 			tf.keras.layers.Dense(node1, activation = activation_node1),
 			tf.keras.layers.Dense(node2, activation = activation_node2),
 			tf.keras.layers.Dense(output_node, activation = activation_output_node),

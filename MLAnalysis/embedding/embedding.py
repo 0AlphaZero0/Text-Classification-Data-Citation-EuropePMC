@@ -138,9 +138,23 @@ for subType in data.SubType:
 		index+=1
 data[SubType_num_str] = data.SubType.map(subTypeDict)
 #
-max_len = 400
 vocab_size = 500
-data[completeCitationEmbedd] = tf.keras.preprocessing.sequence.pad_sequences([one_hot(d, vocab_size,filters='!"#$%&()*+,-./:;<=>?@[\]^_`{|}~',lower=True, split=' ') for d in data[completeCitation]], maxlen = max_len, padding = 'pre')
+tmp_completeCitationEmbedd = [
+	one_hot(
+		d, 
+		vocab_size,
+		filters='!"#$%&()*+,-./:;<=>?@[\]^_`{|}~',
+		lower=True, 
+		split=' ') for d in data[completeCitation]]
+
+max_len = len(max(tmp_completeCitationEmbedd, key = len))
+
+data[completeCitationEmbedd] = tf.keras.preprocessing.sequence.pad_sequences(
+	tmp_completeCitationEmbedd,
+	maxlen = max_len, 
+	padding = 'pre')
+
+tmp_completeCitationEmbedd=None
 #
 ##################################################################
 #
