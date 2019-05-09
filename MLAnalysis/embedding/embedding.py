@@ -139,7 +139,7 @@ for subType in data.SubType:
 data[SubType_num_str] = data.SubType.map(subTypeDict)
 #
 vocab_size = 500
-tmp_completeCitationEmbedd = [
+data[completeCitationEmbedd] = [
 	one_hot(
 		d, 
 		vocab_size,
@@ -147,10 +147,10 @@ tmp_completeCitationEmbedd = [
 		lower=True, 
 		split=' ') for d in data[completeCitation]]
 
-max_len = len(max(tmp_completeCitationEmbedd, key = len))
+max_len = len(max(data[completeCitationEmbedd], key = len))
 
 data[completeCitationEmbedd] = tf.keras.preprocessing.sequence.pad_sequences(
-	tmp_completeCitationEmbedd,
+	data[completeCitationEmbedd],
 	maxlen = max_len, 
 	padding = 'pre')
 
@@ -185,7 +185,7 @@ conv_layer = tf.keras.layers.Convolution1D(
 	padding = 'valid',
 	activation = 'relu')(embedding)
 
-dropout_rate = 5 #don't know yet
+dropout_rate = 0.2 #don't know yet
 
 dropout_layer = tf.keras.layers.Dropout(dropout_rate)(conv_layer)
 
@@ -193,11 +193,11 @@ seq_features = tf.keras.layers.GlobalMaxPooling1D()(dropout_layer)
 
 other_features = tf.keras.layers.Input(shape = (3,))
 
-model = tf.keras.layers.Merge([seq_features,other_features], mode = 'concat')
+model = tf.keras.layers.Concatenate(axis = 1)([seq_features,other_features])
 
 model = tf.keras.layers.Dense(4, activation = 'softmax')(model)
 
-model = tf.keras.layers.Model([input_layer,other_features],model)
+model = tf.keras.models.Model([input_layer,other_features],model)
 
 model.compile(
 	optimizer = "adam",
@@ -205,6 +205,45 @@ model.compile(
 	metrics = ['accuracy']
 )
 
+model.fit(
+	X_train,
+	y_train,
+	epochs = epochs,
+	batch_size = 20,
+	class_weight = class_weight)
+
+val_loss, val_acc = model.evaluate(X_test, y_test)
+
+result = model.predict(X_test)
+
+y_pred=[]
+for sample in result:
+	y_pred.append(np.argmax(sample))
+
+f1_score = round(metrics.f1_score(y_test, y_pred, average = average)*100,3)
+precision = round(metrics.precision_score(y_test, y_pred, average = average)*100,3)
+recall = round(metrics.recall_score(y_test, y_pred, average = average)*100,3)
+
+print(
+	metrics.classification_report(y_test,y_pred,target_names = target_names),
+	"Accuracy score : "+str(round(metrics.accuracy_score(y_test,y_pred)*100,3)),
+	"\tF1_score : "+str(f1_score),
+	"\tPrecision : "+str(precision),
+	"\tRecall : "+str(recall),
+	"\n#######################################################")
+
+output_file=codecs.open(result_output,'w',encoding='utf8')
+output_file.write("f1-score\tPrecision\tRecall\tAccuracy\tCross-score\tLoss")
+output_file.write(str(f1_score))
+output_file.write("\t")
+output_file.write(str(precision))
+output_file.write("\t")
+output_file.write(str(recall))
+output_file.write("\t")
+output_file.write(str(val_acc*100))
+output_file.write("\t")
+output_file.write(str(val_loss))
+output_file.write("\n")
 
 # combinations_list = combinations(extra_features)
 

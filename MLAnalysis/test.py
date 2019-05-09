@@ -98,15 +98,6 @@ def combinations(a):
 
 ###################################################    Main     ###################################################
 #
-vect_list = [
-	[TfidfVectorizer(), completeCitation, token],
-	[TfidfVectorizer(ngram_range = ngram_range), completeCitation, ngram],
-	[TfidfVectorizer(tokenizer = LemmaTokenizer()), completeCitation, lemma],
-	[TfidfVectorizer(analyzer = stemmed_words), completeCitation, stem]]
-#
-stemmer = SnowballStemmer('english',ignore_stopwords = True)
-analyzer = TfidfVectorizer().build_analyzer()
-#
 data = pd.read_csv(filename,header = 0,sep = "\t")
 #
 data[completeCitation] = data[[PreCitation_str,Citation_str,PostCitation_str]].apply(lambda x : '{}{}'.format(x[0],x[1]), axis = 1)
@@ -149,6 +140,14 @@ output_file.write("f1-score\tPrecision\tRecall\tAccuracy\tLoss\tCombination\tTok
 for combination in combinations_list:
 	accuracy_list=[]
 	for i in range(5):
+		vect_list = [
+			[TfidfVectorizer(), completeCitation, token],
+			[TfidfVectorizer(ngram_range = ngram_range), completeCitation, ngram],
+			[TfidfVectorizer(tokenizer = LemmaTokenizer()), completeCitation, lemma],
+			[TfidfVectorizer(analyzer = stemmed_words), completeCitation, stem]]
+		#
+		stemmer = SnowballStemmer('english',ignore_stopwords = True)
+		analyzer = TfidfVectorizer().build_analyzer()
 		print(str(i+1)+"/5 runs")
 		X_train,X_test,y_train,y_test = train_test_split(X,y,random_state = 1)
 		vect_X_train,vect_X_test = [],[]
