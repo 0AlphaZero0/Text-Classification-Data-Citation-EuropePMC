@@ -154,7 +154,7 @@ data[completeCitationEmbedd] = tf.keras.preprocessing.sequence.pad_sequences(
 	maxlen = max_len, 
 	padding = 'pre')
 
-tmp_completeCitationEmbedd=None
+print (data[completeCitationEmbedd])
 #
 ##################################################################
 #
@@ -162,7 +162,10 @@ X = data[featuresList]
 y = data.Categories_num
 
 X_train,X_test,y_train,y_test = train_test_split(X,y,random_state = 1)
-
+X_train = np.asarray(X_train)
+X_test = np.asarray(X_test)
+y_train = np.asarray(y_train)
+y_test = np.asarray(y_test)
 ###
 input_layer = tf.keras.layers.Input(shape = (max_len,))
 
@@ -205,12 +208,15 @@ model.compile(
 	metrics = ['accuracy']
 )
 
+print (X_train)
+
 model.fit(
 	X_train,
 	y_train,
 	epochs = epochs,
 	batch_size = 20,
 	class_weight = class_weight)
+
 
 val_loss, val_acc = model.evaluate(X_test, y_test)
 

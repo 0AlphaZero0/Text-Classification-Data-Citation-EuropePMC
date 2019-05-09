@@ -5,9 +5,9 @@
 ########################
 
 import codecs
-import tensorflow as tf # 1.13.1
-import numpy as np
-import pandas as pd
+from numpy import concatenate
+from numpy import argmax
+from pandas import read_csv
 import os
 
 from sklearn.feature_extraction.text import TfidfVectorizer # Allows transformations of string in number
@@ -16,11 +16,12 @@ from sklearn.model_selection import train_test_split
 from sklearn.model_selection import cross_val_score
 from sklearn import metrics
 
+from keras.models import Sequential
+from keras.layers import Dense
+from keras.utils import normalize
 from nltk.stem.snowball import SnowballStemmer
 from nltk import word_tokenize
 from nltk.stem import WordNetLemmatizer
-
-from keras import backend as K
 
 ##################################################    Variables     ###################################################
 
@@ -98,7 +99,7 @@ def combinations(a):
 
 ###################################################    Main     ###################################################
 #
-data = pd.read_csv(filename,header = 0,sep = "\t")
+data = read_csv(filename,header = 0,sep = "\t")
 #
 data[completeCitation] = data[[PreCitation_str,Citation_str,PostCitation_str]].apply(lambda x : '{}{}'.format(x[0],x[1]), axis = 1)
 #
@@ -168,18 +169,18 @@ for combination in combinations_list:
 			X_test[[SubType_num_str]].values,
 			X_test[[Figure_num_str]].values))
 		
-		X_train_dtm = np.concatenate(vect_X_train, axis = 1)
-		X_train_dtm = tf.keras.utils.normalize(X_train_dtm, axis = 1)
+		X_train_dtm = concatenate(vect_X_train, axis = 1)
+		X_train_dtm = normalize(X_train_dtm, axis = 1)
 
-		X_test_dtm = np.concatenate(vect_X_test, axis = 1)
-		X_test_dtm = tf.keras.utils.normalize(X_test_dtm, axis = 1)
+		X_test_dtm = concatenate(vect_X_test, axis = 1)
+		X_test_dtm = normalize(X_test_dtm, axis = 1)
 
 		print (X_train_dtm[0].shape[1])
-		model = tf.keras.models.Sequential([
-			tf.keras.layers.Dense(1280, activation = activation_input_node, input_dim=X_train_dtm[0].shape[1]),
-			tf.keras.layers.Dense(node1, activation = activation_node1),
-			tf.keras.layers.Dense(node2, activation = activation_node2),
-			tf.keras.layers.Dense(output_node, activation = activation_output_node),
+		model = Sequential([
+			Dense(1280, activation = activation_input_node, input_dim=X_train_dtm[0].shape[1]),
+			Dense(node1, activation = activation_node1),
+			Dense(node2, activation = activation_node2),
+			Dense(output_node, activation = activation_output_node),
 			])
 
 		model.compile(
@@ -200,12 +201,12 @@ for combination in combinations_list:
 		
 		y_pred=[]
 		for sample in result:
-			y_pred.append(np.argmax(sample))
+			y_pred.append(argmax(sample))
 		
 		f1_score = round(metrics.f1_score(y_test, y_pred, average = average)*100,3)
 		precision = round(metrics.precision_score(y_test, y_pred, average = average)*100,3)
 		recall = round(metrics.recall_score(y_test, y_pred, average = average)*100,3)
-		accuracy_list.append(metrics.accuracy_score(y_test,y_pred))
+		accuracy_list.append(val_acc)
 
 	accuracy_mean = 0
 	for accuracy in accuracy_list:
