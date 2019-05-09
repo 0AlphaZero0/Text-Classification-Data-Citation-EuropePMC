@@ -145,7 +145,7 @@ y = data.Categories_num
 combinations_list = combinations(extra_features)
 
 output_file=codecs.open(result_output,'w',encoding='utf8')
-output_file.write("f1-score\tPrecision\tRecall\tAccuracy\tLoss\tCombination\tToken\tNgram\tLemma\tStem\n")
+output_file.write("f1-score\tPrecision\tRecall\tAccuracy\tCross-score\tLoss\tCombination\tToken\tNgram\tLemma\tStem\n")
 for combination in combinations_list:
 	accuracy_list=[]
 	for i in range(5):
