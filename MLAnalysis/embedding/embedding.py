@@ -5,10 +5,14 @@
 ########################
 
 import codecs
-import tensorflow as tf # 1.13.1
-import numpy as np
-import pandas as pd
+from numpy import asarray
+from numpy import argmax
+from numpy import zeros
+from pandas import read_csv
+from pandas import DataFrame
+from pandas import concat
 import os
+import time
 
 from sklearn.feature_extraction.text import TfidfVectorizer # Allows transformations of string in number
 from sklearn.feature_extraction.text import CountVectorizer
@@ -19,8 +23,12 @@ from nltk.stem.snowball import SnowballStemmer
 from nltk import word_tokenize
 from nltk.stem import WordNetLemmatizer
 
-from keras import backend as K
+from keras.preprocessing.sequence import pad_sequences
 from keras.preprocessing.text import one_hot
+from keras.preprocessing.text import Tokenizer
+from keras import layers
+from keras import models
+
 
 ##################################################    Variables     ###################################################
 
@@ -28,7 +36,8 @@ os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 
 
 filename = "Dataset2.csv"
-result_output="ResultDLEmbedding.csv"
+embedding_dims = 300 # Here 50/100/200/300
+result_output="ResultDLEmbedding"+str(embedding_dims)+"d.csv"
 average="macro" # binary | micro | macro | weighted | samples
 class_weight = {
 	0 : 15.,
@@ -52,8 +61,7 @@ featuresList = [
 	Section_num_str,
 	SubType_num_str,
 	Figure_num_str,
-	# completeCitation,
-	completeCitationEmbedd]
+	'Categories_num']
 target_names = [
 	"Background",
 	"Compare",
@@ -67,48 +75,11 @@ extra_features = [
 
 ##################################################    Class     ###################################################
 
-class LemmaTokenizer(object):
-	def __init__(self):
-		self.wnl = WordNetLemmatizer()
-	def __call__(self, doc):
-		return [self.wnl.lemmatize(t) for t in word_tokenize(doc)]
-
 ################################################    Functions     #################################################
-
-def stemmed_words(doc):
-	return (stemmer.stem(w) for w in analyzer(doc))
-
-def combinations(a):
-	def fn(n,src,got,all):
-		if n==0:
-			if len(got)>0:
-				all.append(got)
-			return
-		j = 0
-		while j<len(src):
-			fn(n-1, src[:j], [src[j]] + got, all)
-			j = j+1
-		return
-	all = []
-	i = 0
-	while i<len(a):
-		fn(i,a,[],all)
-		i = i+1
-	all.append(a)
-	return all #a = [1,2,3,4] print(combinations(a))
 
 ###################################################    Main     ###################################################
 #
-vect_list = [
-	[TfidfVectorizer(), completeCitation, token],
-	[TfidfVectorizer(ngram_range = ngram_range), completeCitation, ngram],
-	[TfidfVectorizer(tokenizer = LemmaTokenizer()), completeCitation, lemma],
-	[TfidfVectorizer(analyzer = stemmed_words), completeCitation, stem]]
-#
-stemmer = SnowballStemmer('english',ignore_stopwords = True)
-analyzer = TfidfVectorizer().build_analyzer()
-#
-data = pd.read_csv(filename,header = 0,sep = "\t")
+data = read_csv(filename,header = 0,sep = "\t")
 #
 data[completeCitation] = data[[PreCitation_str,Citation_str,PostCitation_str]].apply(lambda x : '{}{}'.format(x[0],x[1]), axis = 1)
 #
@@ -137,109 +108,131 @@ for subType in data.SubType:
 		subTypeDict[subType] = index
 		index+=1
 data[SubType_num_str] = data.SubType.map(subTypeDict)
-#
+###########################################################################################
 vocab_size = 500
-data[completeCitationEmbedd] = [
-	one_hot(
-		d, 
-		vocab_size,
-		filters='!"#$%&()*+,-./:;<=>?@[\]^_`{|}~',
-		lower=True, 
-		split=' ') for d in data[completeCitation]]
 
-max_len = len(max(data[completeCitationEmbedd], key = len))
+tokenizer = Tokenizer(num_words = vocab_size)
+tokenizer.fit_on_texts(data[completeCitation])
+tmp = tokenizer.texts_to_sequences(data[completeCitation])
 
-data[completeCitationEmbedd] = tf.keras.preprocessing.sequence.pad_sequences(
-	data[completeCitationEmbedd],
+word_index = tokenizer.word_index
+
+max_len = len(max(tmp, key = len))
+
+tmp = DataFrame(pad_sequences(
+	tmp,
 	maxlen = max_len, 
-	padding = 'pre')
+	padding = 'post'))
 
-print (data[completeCitationEmbedd])
-#
-##################################################################
-#
-X = data[featuresList]
+data = concat([data[featuresList],tmp], axis = 1)
+tmp = None
+
+X = data.drop(['Categories_num'], axis = 1)
 y = data.Categories_num
 
-X_train,X_test,y_train,y_test = train_test_split(X,y,random_state = 1)
-X_train = np.asarray(X_train)
-X_test = np.asarray(X_test)
-y_train = np.asarray(y_train)
-y_test = np.asarray(y_test)
-###
-input_layer = tf.keras.layers.Input(shape = (max_len,))
+accuracy_list = []
+k_cross_val=5
+start=time.time()
+for i in range(k_cross_val):
+	print (str(i+1)+"/5 runs")
+	X_train,X_test,y_train,y_test = train_test_split(X,y,random_state = 1)
+	X_train = [X_train.iloc[:, 3:],X_train.iloc[:, :3]] #seq_features,other_features
+	X_test = [X_test.iloc[:, 3:], X_test.iloc[:, :3]] #seq_features,other_features
 
-embedding_dims = 8 # don't know yet 
-embedding_matrix = 5 # don't know yet
-trainable = 5 # don't know yet
+	embedding_matrix = 5 # don't know yet
+	trainable = 5 # don't know yet
 
-embedding = tf.keras.layers.Embedding(
-	vocab_size,
-	embedding_dims,
-	input_length = max_len)(input_layer)
+	embeddings_index = {}
+	f = codecs.open('glove.6B.'+str(embedding_dims)+'d.txt','r',encoding='utf-8')
+	for line in f:
+		values = line.split()
+		word = values[0]
+		coefs = asarray(values[1:], dtype='float32')
+		embeddings_index[word] = coefs
+	f.close()
 
-nb_filter = 250 # don't know yet
-kernel_size = 3
+	embedding_matrix = zeros((len(word_index) + 1, embedding_dims))
+	for word, i in word_index.items():
+		embedding_vector = embeddings_index.get(word)
+		if embedding_vector is not None:
+			# words not found in embedding index will be all-zeros.
+			embedding_matrix[i] = embedding_vector
+	###
+	input_layer = layers.Input(shape = (X_train[0].shape[1],))
+
+	embedding = layers.Embedding(
+		len(word_index)+1,
+		embedding_dims,
+		weights = [embedding_matrix],
+		input_length = X_train[0].shape[1],
+		trainable = False)(input_layer)
+
+	nb_filter = 250 # don't know yet
+	kernel_size = 3
+
+	conv_layer = layers.Convolution1D(
+		nb_filter,
+		kernel_size,
+		padding = 'valid',
+		activation = 'relu')(embedding)
+
+	dropout_rate = 0.2 #don't know yet
+
+	dropout_layer = layers.Dropout(dropout_rate)(conv_layer)
+
+	seq_features = layers.GlobalMaxPooling1D()(dropout_layer)
+
+	other_features = layers.Input(shape = (3,))
+
+	model = layers.Concatenate(axis = 1)([seq_features,other_features])
+
+	model = layers.Dense(4, activation = 'softmax')(model)
+
+	model = models.Model([input_layer,other_features],model)
+
+	model.compile(
+		optimizer = "adam",
+		loss = "sparse_categorical_crossentropy",
+		metrics = ['accuracy'])
+
+	model.fit(
+		X_train,
+		y_train,
+		epochs = epochs,
+		batch_size = 20,
+		class_weight = class_weight)
 
 
-conv_layer = tf.keras.layers.Convolution1D(
-	nb_filter,
-	kernel_size,
-	padding = 'valid',
-	activation = 'relu')(embedding)
+	val_loss, val_acc = model.evaluate(X_test, y_test)
 
-dropout_rate = 0.2 #don't know yet
+	result = model.predict(X_test)
 
-dropout_layer = tf.keras.layers.Dropout(dropout_rate)(conv_layer)
+	y_pred=[]
+	for sample in result:
+		y_pred.append(argmax(sample))
 
-seq_features = tf.keras.layers.GlobalMaxPooling1D()(dropout_layer)
+	f1_score = round(metrics.f1_score(y_test, y_pred, average = average)*100,3)
+	precision = round(metrics.precision_score(y_test, y_pred, average = average)*100,3)
+	recall = round(metrics.recall_score(y_test, y_pred, average = average)*100,3)
+	accuracy_list.append(val_acc)
 
-other_features = tf.keras.layers.Input(shape = (3,))
-
-model = tf.keras.layers.Concatenate(axis = 1)([seq_features,other_features])
-
-model = tf.keras.layers.Dense(4, activation = 'softmax')(model)
-
-model = tf.keras.models.Model([input_layer,other_features],model)
-
-model.compile(
-	optimizer = "adam",
-	loss = "sparse_categorical_crossentropy",
-	metrics = ['accuracy']
-)
-
-print (X_train)
-
-model.fit(
-	X_train,
-	y_train,
-	epochs = epochs,
-	batch_size = 20,
-	class_weight = class_weight)
-
-
-val_loss, val_acc = model.evaluate(X_test, y_test)
-
-result = model.predict(X_test)
-
-y_pred=[]
-for sample in result:
-	y_pred.append(np.argmax(sample))
-
-f1_score = round(metrics.f1_score(y_test, y_pred, average = average)*100,3)
-precision = round(metrics.precision_score(y_test, y_pred, average = average)*100,3)
-recall = round(metrics.recall_score(y_test, y_pred, average = average)*100,3)
-
+accuracy_mean = 0
+for accuracy in accuracy_list:
+		accuracy_mean = float(accuracy_mean) + float(accuracy)
+accuracy_mean = accuracy_mean/len(accuracy_list)
+end=time.time()
 print(
 	metrics.classification_report(y_test,y_pred,target_names = target_names),
+	"Cross score ("+str(k_cross_val)+") : "+str(round(accuracy_mean*100,3)),
 	"Accuracy score : "+str(round(metrics.accuracy_score(y_test,y_pred)*100,3)),
 	"\tF1_score : "+str(f1_score),
 	"\tPrecision : "+str(precision),
 	"\tRecall : "+str(recall),
+	"\tTime : "+str(round(end-start,3)),
 	"\n#######################################################")
 
 output_file=codecs.open(result_output,'w',encoding='utf8')
-output_file.write("f1-score\tPrecision\tRecall\tAccuracy\tCross-score\tLoss")
+output_file.write("f1-score\tPrecision\tRecall\tAccuracy\tCross-score("+str(k_cross_val)+")\tLoss\tTime\n")
 output_file.write(str(f1_score))
 output_file.write("\t")
 output_file.write(str(precision))
@@ -248,108 +241,9 @@ output_file.write(str(recall))
 output_file.write("\t")
 output_file.write(str(val_acc*100))
 output_file.write("\t")
+output_file.write(str(round(accuracy_mean*100,3)))
+output_file.write("\t")
 output_file.write(str(val_loss))
+output_file.write("\t")
+output_file.write(str(round(end-start,3)))
 output_file.write("\n")
-
-# combinations_list = combinations(extra_features)
-
-# output_file=codecs.open(result_output,'w',encoding='utf8')
-# output_file.write("f1-score\tPrecision\tRecall\tAccuracy\tLoss\tCombination\tToken\tNgram\tLemma\tStem\n")
-# for combination in combinations_list:
-# 	vect_X_train,vect_X_test = [],[]
-# 	vect_tmp=[]
-# 	for vect in vect_list:
-# 		if vect[2] in combination:
-# 			vect_tmp.append(vect[2])
-# 			print(vect[2])
-# 			vect_X_train.append(vect[0].fit_transform(X_train[[vect[1]]].fillna('').values.reshape(-1)).todense())
-# 			vect_X_test.append(vect[0].transform(X_test[[vect[1]]].fillna('').values.reshape(-1)).todense())
-
-# 	vect_X_train.extend((
-# 		X_train[[Section_num_str]].values,
-# 		X_train[[SubType_num_str]].values,
-# 		X_train[[Figure_num_str]].values))
-# 	vect_X_test.extend((
-# 		X_test[[Section_num_str]].values,
-# 		X_test[[SubType_num_str]].values,
-# 		X_test[[Figure_num_str]].values))
-	
-# 	X_train_dtm = np.concatenate(vect_X_train, axis = 1)
-# 	X_train_dtm = tf.keras.utils.normalize(X_train_dtm, axis = 1)
-
-# 	X_test_dtm = np.concatenate(vect_X_test, axis = 1)
-# 	X_test_dtm = tf.keras.utils.normalize(X_test_dtm, axis = 1)
-
-	# print (X_train_dtm[0].shape[1])
-	# model = tf.keras.models.Sequential([
-	# 	tf.keras.layers.Dense(X_train_dtm[0].shape[1], activation = activation_input_node, input_dim=X_train_dtm[0].shape[1]),
-	# 	tf.keras.layers.Dense(node1, activation = activation_node1),
-	# 	tf.keras.layers.Dense(node2, activation = activation_node2),
-	# 	tf.keras.layers.Dense(output_node, activation = activation_output_node),
-	# 	])
-
-	# model.compile(
-	# 	optimizer="adam",
-	# 	loss="sparse_categorical_crossentropy",
-	# 	metrics=['accuracy'])
-
-	# model.fit(
-	# 	X_train_dtm,
-	# 	y_train,
-	# 	epochs = epochs,
-	# 	batch_size = 20,
-	# 	class_weight = class_weight)
-
-	# val_loss, val_acc = model.evaluate(X_test_dtm, y_test)
-
-	# result = model.predict(X_test_dtm)
-	
-	# y_pred=[]
-	# for sample in result:
-	# 	y_pred.append(np.argmax(sample))
-	
-	# f1_score = round(metrics.f1_score(y_test, y_pred, average = average)*100,3)
-	# precision = round(metrics.precision_score(y_test, y_pred, average = average)*100,3)
-	# recall = round(metrics.recall_score(y_test, y_pred, average = average)*100,3)
-
-	# print(
-	# 	metrics.classification_report(y_test,y_pred,target_names = target_names),
-	# 	"Accuracy score : "+str(round(metrics.accuracy_score(y_test,y_pred)*100,3)),
-	# 	"\tF1_score : "+str(f1_score),
-	# 	"\tPrecision : "+str(precision),
-	# 	"\tRecall : "+str(recall),
-	# 	"\n#######################################################")
-
-	# output_file.write(str(f1_score))
-	# output_file.write("\t")
-	# output_file.write(str(precision))
-	# output_file.write("\t")
-	# output_file.write(str(recall))
-	# output_file.write("\t")
-	# output_file.write(str(val_acc*100))
-	# output_file.write("\t")
-	# output_file.write(str(val_loss))
-	# output_file.write("\t")
-	# output_file.write(str(vect_tmp))
-	# output_file.write("\t")
-	# if token in vect_tmp:
-	# 	output_file.write("True")
-	# else:
-	# 	output_file.write("False")
-	# output_file.write("\t")
-	# if ngram in vect_tmp:
-	# 	output_file.write("True")
-	# else:
-	# 	output_file.write("False")
-	# output_file.write("\t")
-	# if lemma in vect_tmp:
-	# 	output_file.write("True")
-	# else:
-	# 	output_file.write("False")
-	# output_file.write("\t")
-	# if stem in vect_tmp:
-	# 	output_file.write("True")
-	# else:
-	# 	output_file.write("False")
-	# output_file.write("\n")
-	

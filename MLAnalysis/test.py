@@ -141,6 +141,9 @@ output_file.write("f1-score\tPrecision\tRecall\tAccuracy\tCross-score\tLoss\tCom
 for combination in combinations_list:
 	accuracy_list=[]
 	for i in range(5):
+		X_train_dtm = None
+		X_test_dtm = None
+		model = None
 		vect_list = [
 			[TfidfVectorizer(), completeCitation, token],
 			[TfidfVectorizer(ngram_range = ngram_range), completeCitation, ngram],
