@@ -34,10 +34,10 @@ from keras import models
 
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 
-
-filename = "Dataset2.csv"
-embedding_dims = 300 # Here 50/100/200/300
-result_output="ResultDLEmbedding"+str(embedding_dims)+"d.csv"
+dataset = "Dataset2.csv"
+embedding_dims = 50 # Here 50/100/200/300
+result_output = "ResultDLEmbedding"+str(embedding_dims)+"d.csv"
+embedding_file = 'glove.6B.'+str(embedding_dims)+'d.txt'
 average="macro" # binary | micro | macro | weighted | samples
 class_weight = {
 	0 : 15.,
@@ -79,7 +79,7 @@ extra_features = [
 
 ###################################################    Main     ###################################################
 #
-data = read_csv(filename,header = 0,sep = "\t")
+data = read_csv(dataset,header = 0,sep = "\t")
 #
 data[completeCitation] = data[[PreCitation_str,Citation_str,PostCitation_str]].apply(lambda x : '{}{}'.format(x[0],x[1]), axis = 1)
 #
@@ -143,7 +143,7 @@ for i in range(k_cross_val):
 	trainable = 5 # don't know yet
 
 	embeddings_index = {}
-	f = codecs.open('glove.6B.'+str(embedding_dims)+'d.txt','r',encoding='utf-8')
+	f = codecs.open(embedding_file,'r',encoding='utf-8')
 	for line in f:
 		values = line.split()
 		word = values[0]
