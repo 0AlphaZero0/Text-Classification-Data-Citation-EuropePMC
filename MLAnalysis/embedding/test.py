@@ -22,6 +22,7 @@ from sklearn import metrics
 from nltk.stem.snowball import SnowballStemmer
 from nltk import word_tokenize
 from nltk.stem import WordNetLemmatizer
+from nltk.parse.corenlp import CoreNLPParser
 
 from keras.preprocessing.sequence import pad_sequences
 from keras.preprocessing.text import one_hot
@@ -36,7 +37,7 @@ os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 
 dataset = "Dataset2.csv"
 embedding_dims = 50 # Here 50/100/200/300
-result_output = "ResultDLEmbedding"+str(embedding_dims)+"d.csv"
+result_output = "test"+str(embedding_dims)+"d.csv"
 embedding_file = 'glove.6B.'+str(embedding_dims)+'d.txt'
 average="macro" # binary | micro | macro | weighted | samples
 class_weight = {
@@ -110,6 +111,14 @@ for subType in data.SubType:
 data[SubType_num_str] = data.SubType.map(subTypeDict)
 ###########################################################################################
 vocab_size = 500
+
+st = CoreNLPParser()
+tmp=[]
+for sent in data[completeCitation]:
+	tmp.append(list(st.tokenize(sent)))
+
+print(tmp)
+raise
 
 tokenizer = Tokenizer(num_words = vocab_size)
 tokenizer.fit_on_texts(data[completeCitation])
