@@ -140,10 +140,18 @@ output_file=codecs.open(result_output,'w',encoding='utf8')
 output_file.write("f1-score\tPrecision\tRecall\tAccuracy\tCross-score\tLoss\tCombination\tToken\tNgram\tLemma\tStem\n")
 for combination in combinations_list:
 	accuracy_list=[]
-	for i in range(5):
+	for run in range(5):
+		f1_score = None
+		precision = None
+		recall = None
 		X_train_dtm = None
 		X_test_dtm = None
+		X_train = None
+		X_test = None
+		y_train=None
+		y_test=None
 		model = None
+
 		vect_list = [
 			[TfidfVectorizer(), completeCitation, token],
 			[TfidfVectorizer(ngram_range = ngram_range), completeCitation, ngram],
@@ -152,7 +160,7 @@ for combination in combinations_list:
 		#
 		stemmer = SnowballStemmer('english',ignore_stopwords = True)
 		analyzer = TfidfVectorizer().build_analyzer()
-		print(str(i+1)+"/5 runs")
+		print(str(run+1)+"/5 runs")
 		X_train,X_test,y_train,y_test = train_test_split(X,y,random_state = 1)
 		vect_X_train,vect_X_test = [],[]
 		vect_tmp=[]
@@ -178,7 +186,8 @@ for combination in combinations_list:
 		X_test_dtm = concatenate(vect_X_test, axis = 1)
 		X_test_dtm = normalize(X_test_dtm, axis = 1)
 
-		print (X_train_dtm[0].shape[1])
+		print (X_train_dtm.shape)
+		print (X_test_dtm.shape)
 		model = Sequential([
 			Dense(1280, activation = activation_input_node, input_dim=X_train_dtm[0].shape[1]),
 			Dense(node1, activation = activation_node1),
@@ -200,20 +209,22 @@ for combination in combinations_list:
 
 		val_loss, val_acc = model.evaluate(X_test_dtm, y_test)
 
-		result = model.predict(X_test_dtm)
-		
-		y_pred=[]
-		for sample in result:
-			y_pred.append(argmax(sample))
-		
-		f1_score = round(metrics.f1_score(y_test, y_pred, average = average)*100,3)
-		precision = round(metrics.precision_score(y_test, y_pred, average = average)*100,3)
-		recall = round(metrics.recall_score(y_test, y_pred, average = average)*100,3)
 		accuracy_list.append(val_acc)
+
+	result = model.predict(X_test_dtm)
+	
+	y_pred=[]
+	for sample in result:
+		y_pred.append(argmax(sample))
+
+	f1_score = round(metrics.f1_score(y_test, y_pred, average = average)*100,3)
+	precision = round(metrics.precision_score(y_test, y_pred, average = average)*100,3)
+	recall = round(metrics.recall_score(y_test, y_pred, average = average)*100,3)
+		
 
 	accuracy_mean = 0
 	for accuracy in accuracy_list:
-		accuracy_mean = float(accuracy_mean) + float(accuracy)
+		accuracy_mean = accuracy_mean + accuracy
 	accuracy_mean = accuracy_mean/len(accuracy_list)
 	print(
 		metrics.classification_report(y_test,y_pred,target_names = target_names),
@@ -230,11 +241,11 @@ for combination in combinations_list:
 	output_file.write("\t")
 	output_file.write(str(recall))
 	output_file.write("\t")
-	output_file.write(str(val_acc*100))
+	output_file.write(str(round(val_acc*100,3)))
 	output_file.write("\t")
 	output_file.write(str(round(accuracy_mean*100,3)))
 	output_file.write("\t")
-	output_file.write(str(val_loss))
+	output_file.write(str(round(val_loss,3)))
 	output_file.write("\t")
 	output_file.write(str(vect_tmp))
 	output_file.write("\t")
