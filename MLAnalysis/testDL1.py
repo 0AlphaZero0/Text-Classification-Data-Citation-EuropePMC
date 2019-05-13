@@ -97,10 +97,14 @@ def combinations(a):
 ###################################################    Main     ###################################################
 #
 vect_list = [
-	[TfidfVectorizer(), completeCitation, token],
-	[TfidfVectorizer(ngram_range = ngram_range), completeCitation, ngram],
-	[TfidfVectorizer(tokenizer = LemmaTokenizer()), completeCitation, lemma],
-	[TfidfVectorizer(analyzer = stemmed_words), completeCitation, stem]]
+	[TfidfVectorizer(), completeCitation, [token]],
+	[TfidfVectorizer(ngram_range = ngram_range), completeCitation, [ngram]],
+	[TfidfVectorizer(tokenizer = LemmaTokenizer()), completeCitation, [lemma]],
+	[TfidfVectorizer(analyzer = stemmed_words), completeCitation, [stem]],
+	[TfidfVectorizer(ngram_range = ngram_range, tokenizer = LemmaTokenizer()),completeCitation,[ngram,lemma]],
+	[TfidfVectorizer(ngram_range = ngram_range, analyzer = stemmed_words),completeCitation,[ngram,stem]],
+	[TfidfVectorizer(tokenizer = LemmaTokenizer(), analyzer = stemmed_words),completeCitation,[lemma,stem]],
+	[TfidfVectorizer(ngram_range = ngram_range, tokenizer = LemmaTokenizer(), analyzer = stemmed_words),completeCitation,[ngram,lemma,stem]]]
 #
 stemmer = SnowballStemmer('english',ignore_stopwords = True)
 analyzer = TfidfVectorizer().build_analyzer()

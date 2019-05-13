@@ -17,6 +17,7 @@ import time
 from sklearn.feature_extraction.text import TfidfVectorizer # Allows transformations of string in number
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.model_selection import train_test_split
+from sklearn.model_selection import StratifiedKFold
 from sklearn import metrics
 
 from nltk.stem.snowball import SnowballStemmer
@@ -35,7 +36,7 @@ from keras import models
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 
 dataset = "Dataset2.csv"
-embedding_dims = 50 # Here 50/100/200/300
+embedding_dims = 300 # Here 50/100/200/300
 result_output = "ResultDLEmbedding"+str(embedding_dims)+"d.csv"
 embedding_file = 'glove.6B.'+str(embedding_dims)+'d.txt'
 average="macro" # binary | micro | macro | weighted | samples
@@ -45,7 +46,7 @@ class_weight = {
 	2 : 15.,
 	3 : 10.}
 epochs = 5
-# input_node = 1280
+skf = StratifiedKFold(n_splits=4)
 activation_input_node = 'relu'
 node1 = 128
 activation_node1 = 'relu'
@@ -53,8 +54,6 @@ node2 = 128
 activation_node2 = 'relu'
 output_node = 4
 activation_output_node='softmax'
-ngram_range = (1,3)
-token,ngram,lemma,stem = "Tokenization","N-gram","Lemmatization","Stemming"
 Section_num_str,SubType_num_str,Figure_num_str = "Section_num","SubType_num","Figure_num"
 PreCitation_str,Citation_str,PostCitation_str,completeCitation,completeCitationEmbedd = "PreCitation","Citation","PostCitation","CompleteCitation","completeCitationEmbedd"
 featuresList = [
@@ -67,11 +66,6 @@ target_names = [
 	"Compare",
 	"Creation",
 	"Use"]
-extra_features = [
-	token,
-	ngram,
-	lemma,
-	stem]
 
 ##################################################    Class     ###################################################
 
@@ -133,14 +127,12 @@ y = data.Categories_num
 accuracy_list = []
 k_cross_val=5
 start=time.time()
-for i in range(k_cross_val):
-	print (str(i+1)+"/5 runs")
-	X_train,X_test,y_train,y_test = train_test_split(X,y,random_state = 1)
+for train_index,test_index in skf.split(X,y):
+	X_train, X_test = [X.ix[train_index], X.ix[test_index]] 
+	y_train, y_test = [y.ix[train_index], y.ix[test_index]]
+
 	X_train = [X_train.iloc[:, 3:],X_train.iloc[:, :3]] #seq_features,other_features
 	X_test = [X_test.iloc[:, 3:], X_test.iloc[:, :3]] #seq_features,other_features
-
-	embedding_matrix = 5 # don't know yet
-	trainable = 5 # don't know yet
 
 	embeddings_index = {}
 	f = codecs.open(embedding_file,'r',encoding='utf-8')
@@ -223,7 +215,7 @@ accuracy_mean = accuracy_mean/len(accuracy_list)
 end=time.time()
 print(
 	metrics.classification_report(y_test,y_pred,target_names = target_names),
-	"Cross score ("+str(k_cross_val)+") : "+str(round(accuracy_mean*100,3)),
+	"Cross validation score ("+str(k_cross_val)+") : "+str(round(accuracy_mean*100,3)),
 	"Accuracy score : "+str(round(metrics.accuracy_score(y_test,y_pred)*100,3)),
 	"\tF1_score : "+str(f1_score),
 	"\tPrecision : "+str(precision),
