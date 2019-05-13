@@ -40,7 +40,8 @@ class_weight = {
 	3 : 10.}
 skf = StratifiedKFold(n_splits=4)
 epochs = 5
-# input_node = 1280
+lemmatizer = WordNetLemmatizer()
+stemmer = SnowballStemmer('english',ignore_stopwords = True)
 activation_input_node = 'relu'
 node1 = 128
 activation_node1 = 'relu'
@@ -62,43 +63,28 @@ target_names = [
 	"Compare",
 	"Creation",
 	"Use"]
-extra_features = [
-	token,
-	ngram,
-	lemma,
-	stem]
-
-##################################################    Class     ###################################################
-
-class LemmaTokenizer(object):
-	def __init__(self):
-		self.wnl = WordNetLemmatizer()
-	def __call__(self, doc):
-		return [self.wnl.lemmatize(t) for t in word_tokenize(doc)]
 
 ################################################    Functions     #################################################
 
-def stemmed_words(doc):
-	return (stemmer.stem(w) for w in analyzer(doc))
+def lemma_word(word):
+	return lemmatizer.lemmatize(word)
 
-def combinations(a):
-	def fn(n,src,got,all):
-		if n==0:
-			if len(got)>0:
-				all.append(got)
-			return
-		j = 0
-		while j<len(src):
-			fn(n-1, src[:j], [src[j]] + got, all)
-			j = j+1
-		return
-	all = []
-	i = 0
-	while i<len(a):
-		fn(i,a,[],all)
-		i = i+1
-	all.append(a)
-	return all #a = [1,2,3,4] print(combinations(a))
+def lemma_tokenizer(doc):
+	tokens = word_tokenize(doc)
+	tokens = [lemma_word(t) for t in tokens]
+	return tokens
+
+def stem_word(word):
+	return stemmer.stem(word)
+
+def stem_tokenizer(doc):
+	tokens = word_tokenize(doc)
+	tokens = [stem_word(t) for t in tokens]
+	return tokens
+
+def tokenizer(doc):
+	tokens = word_tokenize(doc)
+	return tokens
 
 ###################################################    Main     ###################################################
 #
@@ -137,8 +123,6 @@ data[SubType_num_str] = data.SubType.map(subTypeDict)
 X = data[featuresList]
 y = data.Categories_num
 
-combinations_list = combinations(extra_features)
-
 ##################################"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
 import sys
 def sizeof_fmt(num, suffix='B'):
@@ -149,34 +133,31 @@ def sizeof_fmt(num, suffix='B'):
 	return "%.1f%s%s" % (num, 'Yi', suffix)
 ##################################"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
 
+vect_list = [
+	[TfidfVectorizer(tokenizer = tokenizer), completeCitation, [token]],
+	[TfidfVectorizer(ngram_range = ngram_range), completeCitation, [ngram]],
+	[TfidfVectorizer(tokenizer = lemma_tokenizer), completeCitation, [lemma]],
+	[TfidfVectorizer(tokenizer = stem_tokenizer), completeCitation, [stem]],
+	[TfidfVectorizer(ngram_range = ngram_range, tokenizer = lemma_tokenizer),completeCitation,[ngram,lemma]],
+	[TfidfVectorizer(ngram_range = ngram_range, tokenizer = stem_tokenizer),completeCitation,[ngram,stem]]]
 
 
 output_file=codecs.open(result_output,'w',encoding='utf8')
 output_file.write("f1-score\tPrecision\tRecall\tAccuracy\tCross-score\tLoss\tCombination\tToken\tNgram\tLemma\tStem\n")
-for combination in combinations_list:
+for vect in vect_list:
 	accuracy_list=[]
 	for train_index, test_index in skf.split(X,y):
+		print (vect[2])
 		X_train, X_test = X.ix[train_index], X.ix[test_index]
 		y_train, y_test = y.ix[train_index], y.ix[test_index]
 		print(str(list(set(y_train)))+" TRAIN\n"+str(list(set(y_test)))+" TEST\n")
+		
+		vect_X_train, vect_X_test = [], []
+		vect_X_train.append(vect[0].fit_transform(X_train[[vect[1]]].fillna('').values.reshape(-1)).todense())
+		vect_X_test.append(vect[0].transform(X_test[[vect[1]]].fillna('').values.reshape(-1)).todense())
 
-		vect_list = [
-			[TfidfVectorizer(), completeCitation, token],
-			[TfidfVectorizer(ngram_range = ngram_range), completeCitation, ngram],
-			[TfidfVectorizer(tokenizer = LemmaTokenizer()), completeCitation, lemma],
-			[TfidfVectorizer(analyzer = stemmed_words), completeCitation, stem]]
-		#
-		stemmer = SnowballStemmer('english',ignore_stopwords = True)
-		analyzer = TfidfVectorizer().build_analyzer()
-
-		vect_X_train,vect_X_test = [],[]
-		vect_tmp=[]
-		for vect in vect_list:
-			if vect[2] in combination:
-				vect_tmp.append(vect[2])
-				print(vect[2])
-				vect_X_train.append(vect[0].fit_transform(X_train[[vect[1]]].fillna('').values.reshape(-1)).todense())
-				vect_X_test.append(vect[0].transform(X_test[[vect[1]]].fillna('').values.reshape(-1)).todense())
+		print (vect_X_train)
+		print (vect_X_test)
 
 		vect_X_train.extend((
 			X_train[[Section_num_str]].values,
@@ -186,13 +167,12 @@ for combination in combinations_list:
 			X_test[[Section_num_str]].values,
 			X_test[[SubType_num_str]].values,
 			X_test[[Figure_num_str]].values))
-		
-		print ("combination list",len(combinations_list))
-		print ("combination",len(combination))
+
 		print ("vect_X_train",len(vect_X_train))
 		print ("vect_X_test",len(vect_X_test))
 
 		X_train_dtm = concatenate(vect_X_train, axis = 1)
+		print (X_train_dtm)
 		X_train_dtm = normalize(X_train_dtm, axis = 1)
 
 		X_test_dtm = concatenate(vect_X_test, axis = 1)
@@ -266,24 +246,24 @@ for combination in combinations_list:
 	output_file.write("\t")
 	output_file.write(str(round(val_loss,3)))
 	output_file.write("\t")
-	output_file.write(str(vect_tmp))
+	output_file.write(str(vect[2]))
 	output_file.write("\t")
-	if token in vect_tmp:
+	if token in vect[2]:
 		output_file.write("True")
 	else:
 		output_file.write("False")
 	output_file.write("\t")
-	if ngram in vect_tmp:
+	if ngram in vect[2]:
 		output_file.write("True")
 	else:
 		output_file.write("False")
 	output_file.write("\t")
-	if lemma in vect_tmp:
+	if lemma in vect[2]:
 		output_file.write("True")
 	else:
 		output_file.write("False")
 	output_file.write("\t")
-	if stem in vect_tmp:
+	if stem in vect[2]:
 		output_file.write("True")
 	else:
 		output_file.write("False")
@@ -300,7 +280,6 @@ for combination in combinations_list:
 	y_test=None
 	model = None
 	stemmer = None
-	analyzer = None
 	vect_list = None
 	vect_X_train,vect_X_test = None,None
 	vect_tmp = None
