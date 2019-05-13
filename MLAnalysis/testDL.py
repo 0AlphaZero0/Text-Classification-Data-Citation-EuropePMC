@@ -14,6 +14,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer # Allows transformat
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.model_selection import train_test_split
 from sklearn import metrics
+from sklearn.model_selection import StratifiedKFold
 
 from nltk.stem.snowball import SnowballStemmer
 from nltk import word_tokenize
@@ -25,15 +26,15 @@ from keras import backend as K
 
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 
-
 filename = "Dataset2.csv"
-result_output="ResultDL.csv"
+result_output="testDL.csv"
 average="macro" # binary | micro | macro | weighted | samples
 class_weight = {
 	0 : 15.,
 	1 : 50.,
 	2 : 15.,
 	3 : 10.}
+skf = StratifiedKFold(n_splits=4)
 epochs = 5
 input_node = 1280
 node1 = 128
@@ -137,70 +138,84 @@ data[SubType_num_str] = data.SubType.map(subTypeDict)
 X = data[featuresList]
 y = data.Categories_num
 
-X_train,X_test,y_train,y_test = train_test_split(X,y,random_state = 1)
+# X_train,X_test,y_train,y_test = train_test_split(X,y,random_state = 1)
 
 combinations_list = combinations(extra_features)
 
 output_file=codecs.open(result_output,'w',encoding='utf8')
 output_file.write("f1-score\tPrecision\tRecall\tAccuracy\tLoss\tCombination\tToken\tNgram\tLemma\tStem\n")
 for combination in combinations_list:
-	vect_X_train,vect_X_test = [],[]
-	vect_tmp=[]
-	for vect in vect_list:
-		if vect[2] in combination:
-			vect_tmp.append(vect[2])
-			print(vect[2])
-			vect_X_train.append(vect[0].fit_transform(X_train[[vect[1]]].fillna('').values.reshape(-1)).todense())
-			vect_X_test.append(vect[0].transform(X_test[[vect[1]]].fillna('').values.reshape(-1)).todense())
+	accuracy_list=[]
+	for train_index, test_index in skf.split(X,y):
+		X_train, X_test = X.ix[train_index], X.ix[test_index]
+		y_train, y_test = y.ix[train_index], y.ix[test_index]
+		print(str(list(set(y_train)))+" TRAIN\n"+str(list(set(y_test)))+" TEST\n")
+	######################################################
+		vect_X_train,vect_X_test = [],[]
+		vect_tmp=[]
+		for vect in vect_list:
+			if vect[2] in combination:
+				vect_tmp.append(vect[2])
+				print(vect[2])
+				vect_X_train.append(vect[0].fit_transform(X_train[[vect[1]]].fillna('').values.reshape(-1)).todense())
+				vect_X_test.append(vect[0].transform(X_test[[vect[1]]].fillna('').values.reshape(-1)).todense())
 
-	vect_X_train.extend((
-		X_train[[Section_num_str]].values,
-		X_train[[SubType_num_str]].values,
-		X_train[[Figure_num_str]].values))
-	vect_X_test.extend((
-		X_test[[Section_num_str]].values,
-		X_test[[SubType_num_str]].values,
-		X_test[[Figure_num_str]].values))
-	
-	X_train_dtm = np.concatenate(vect_X_train, axis = 1)
-	X_train_dtm = tf.keras.utils.normalize(X_train_dtm, axis = 1)
+		vect_X_train.extend((
+			X_train[[Section_num_str]].values,
+			X_train[[SubType_num_str]].values,
+			X_train[[Figure_num_str]].values))
+		vect_X_test.extend((
+			X_test[[Section_num_str]].values,
+			X_test[[SubType_num_str]].values,
+			X_test[[Figure_num_str]].values))
+		
+		X_train_dtm = np.concatenate(vect_X_train, axis = 1)
+		X_train_dtm = tf.keras.utils.normalize(X_train_dtm, axis = 1)
 
-	X_test_dtm = np.concatenate(vect_X_test, axis = 1)
-	X_test_dtm = tf.keras.utils.normalize(X_test_dtm, axis = 1)
+		X_test_dtm = np.concatenate(vect_X_test, axis = 1)
+		X_test_dtm = tf.keras.utils.normalize(X_test_dtm, axis = 1)
 
-	model = tf.keras.models.Sequential([
-		tf.keras.layers.Dense(input_node, activation = 'relu', input_dim=X_train_dtm[0].shape[1]),
-		tf.keras.layers.Dense(node1, activation = 'relu'),
-		tf.keras.layers.Dense(node2, activation = 'relu'),
-		tf.keras.layers.Dense(output_node, activation = 'softmax'),
-		])
+		model = tf.keras.models.Sequential([
+			tf.keras.layers.Dense(input_node, activation = 'relu', input_dim=X_train_dtm[0].shape[1]),
+			tf.keras.layers.Dense(node1, activation = 'relu'),
+			tf.keras.layers.Dense(node2, activation = 'relu'),
+			tf.keras.layers.Dense(output_node, activation = 'softmax'),
+			])
 
-	model.compile(
-		optimizer="adam",
-		loss="sparse_categorical_crossentropy",
-		metrics=['accuracy'])
+		model.compile(
+			optimizer="adam",
+			loss="sparse_categorical_crossentropy",
+			metrics=['accuracy'])
 
-	model.fit(
-		X_train_dtm,
-		y_train,
-		epochs = epochs,
-		batch_size = 20,
-		class_weight = class_weight)
+		model.fit(
+			X_train_dtm,
+			y_train,
+			epochs = epochs,
+			batch_size = 20,
+			class_weight = class_weight)
 
-	val_loss, val_acc = model.evaluate(X_test_dtm, y_test)
+		result = model.predict(X_test_dtm)
 
-	result = model.predict(X_test_dtm)
-	
-	y_pred=[]
-	for sample in result:
-		y_pred.append(np.argmax(sample))
-	
+		y_pred=[]
+		for sample in result:
+			y_pred.append(np.argmax(sample))
+
+		val_loss, val_acc = model.evaluate(X_test_dtm, y_test)
+		print(metrics.classification_report(y_test,y_pred,target_names = target_names))
+		accuracy_list.append(val_acc)
+
+	accuracy_mean = 0
+	for accuracy in accuracy_list:
+		accuracy_mean += accuracy
+	accuracy_mean = accuracy_mean/len(accuracy_list)
+
 	f1_score = round(metrics.f1_score(y_test, y_pred, average = average)*100,3)
 	precision = round(metrics.precision_score(y_test, y_pred, average = average)*100,3)
 	recall = round(metrics.recall_score(y_test, y_pred, average = average)*100,3)
 
 	print(
 		metrics.classification_report(y_test,y_pred,target_names = target_names),
+		"Cross score : "+str(round(accuracy_mean*100,3)),
 		"Accuracy score : "+str(round(metrics.accuracy_score(y_test,y_pred)*100,3)),
 		"\tF1_score : "+str(f1_score),
 		"\tPrecision : "+str(precision),
@@ -213,9 +228,11 @@ for combination in combinations_list:
 	output_file.write("\t")
 	output_file.write(str(recall))
 	output_file.write("\t")
-	output_file.write(str(val_acc))
+	output_file.write(str(round(val_acc*100,3)))
 	output_file.write("\t")
-	output_file.write(str(val_loss))
+	output_file.write(str(round(accuracy_mean*100,3)))
+	output_file.write("\t")
+	output_file.write(str(round(val_loss*100,3)))
 	output_file.write("\t")
 	output_file.write(str(vect_tmp))
 	output_file.write("\t")
