@@ -147,71 +147,69 @@ combinations_list = combinations(extra_features)
 output_file=codecs.open(result_output,'w',encoding='utf8')
 output_file.write("f1-score\tPrecision\tRecall\tAccuracy\tCross-score\tLoss\tCombination\tToken\tNgram\tLemma\tStem\n")
 for combination in combinations_list:
-	accuracy_list=[]
-	for i in range(5):
-		print(str(i+1)+"/5 runs")
-		X_train,X_test,y_train,y_test = train_test_split(X,y,random_state = 1)
-		vect_X_train,vect_X_test = [],[]
-		vect_tmp=[]
-		for vect in vect_list:
-			if vect[2] in combination:
-				vect_tmp.append(vect[2])
-				print(vect[2])
-				vect_X_train.append(vect[0].fit_transform(X_train[[vect[1]]].fillna('').values.reshape(-1)).todense())
-				vect_X_test.append(vect[0].transform(X_test[[vect[1]]].fillna('').values.reshape(-1)).todense())
+	X_train,X_test,y_train,y_test = train_test_split(X,y,random_state = 1)
+	vect_X_train,vect_X_test = [],[]
+	vect_tmp=[]
+	for vect in vect_list:
+		if vect[2] in combination:
+			vect_tmp.append(vect[2])
+			print(vect[2])
+			vect_X_train.append(vect[0].fit_transform(X_train[[vect[1]]].fillna('').values.reshape(-1)).todense())
+			vect_X_test.append(vect[0].transform(X_test[[vect[1]]].fillna('').values.reshape(-1)).todense())
 
-		vect_X_train.extend((
-			X_train[[Section_num_str]].values,
-			X_train[[SubType_num_str]].values,
-			X_train[[Figure_num_str]].values))
-		vect_X_test.extend((
-			X_test[[Section_num_str]].values,
-			X_test[[SubType_num_str]].values,
-			X_test[[Figure_num_str]].values))
-		
-		X_train_dtm = np.concatenate(vect_X_train, axis = 1)
-		X_train_dtm = tf.keras.utils.normalize(X_train_dtm, axis = 1)
+	vect_X_train.extend((
+		X_train[[Section_num_str]].values,
+		X_train[[SubType_num_str]].values,
+		X_train[[Figure_num_str]].values))
+	vect_X_test.extend((
+		X_test[[Section_num_str]].values,
+		X_test[[SubType_num_str]].values,
+		X_test[[Figure_num_str]].values))
+	
+	X_train_dtm = np.concatenate(vect_X_train, axis = 1)
+	X_train_dtm = tf.keras.utils.normalize(X_train_dtm, axis = 1)
 
-		X_test_dtm = np.concatenate(vect_X_test, axis = 1)
-		X_test_dtm = tf.keras.utils.normalize(X_test_dtm, axis = 1)
+	X_test_dtm = np.concatenate(vect_X_test, axis = 1)
+	X_test_dtm = tf.keras.utils.normalize(X_test_dtm, axis = 1)
 
-		print (X_train_dtm[0].shape[1])
-		model = tf.keras.models.Sequential([
-			tf.keras.layers.Dense(1280, activation = activation_input_node, input_dim=X_train_dtm[0].shape[1]),
-			tf.keras.layers.Dense(node1, activation = activation_node1),
-			tf.keras.layers.Dense(node2, activation = activation_node2),
-			tf.keras.layers.Dense(output_node, activation = activation_output_node),
-			])
+	X_train_test = np.concatenate((X_train_dtm,X_test_dtm))
 
-		model.compile(
-			optimizer="adam",
-			loss="sparse_categorical_crossentropy",
-			metrics=['accuracy'])
+	y_train_test = np.concatenate((y_train,y_test))
 
-		model.fit(
-			X_train_dtm,
-			y_train,
-			epochs = epochs,
-			batch_size = 20,
-			class_weight = class_weight)
+	print (X_train_dtm[0].shape[1])
+	model = tf.keras.models.Sequential([
+		tf.keras.layers.Dense(1280, activation = activation_input_node, input_dim=X_train_dtm[0].shape[1]),
+		tf.keras.layers.Dense(node1, activation = activation_node1),
+		tf.keras.layers.Dense(node2, activation = activation_node2),
+		tf.keras.layers.Dense(output_node, activation = activation_output_node),
+		])
 
-		val_loss, val_acc = model.evaluate(X_test_dtm, y_test)
+	model.compile(
+		optimizer="adam",
+		loss="sparse_categorical_crossentropy",
+		metrics=['accuracy'])
 
-		result = model.predict(X_test_dtm)
-		
-		y_pred=[]
-		for sample in result:
-			y_pred.append(np.argmax(sample))
-		
-		f1_score = round(metrics.f1_score(y_test, y_pred, average = average)*100,3)
-		precision = round(metrics.precision_score(y_test, y_pred, average = average)*100,3)
-		recall = round(metrics.recall_score(y_test, y_pred, average = average)*100,3)
-		accuracy_list.append(metrics.accuracy_score(y_test,y_pred))
+	model.fit(
+		X_train_dtm,
+		y_train,
+		epochs = epochs,
+		batch_size = 20,
+		class_weight = class_weight)
 
-	accuracy_mean = 0
-	for accuracy in accuracy_list:
-		accuracy_mean = float(accuracy_mean) + float(accuracy)
-	accuracy_mean = accuracy_mean/len(accuracy_list)
+	val_loss, val_acc = model.evaluate(X_test_dtm, y_test)
+
+	result = model.predict(X_test_dtm)
+	
+	y_pred=[]
+	for sample in result:
+		y_pred.append(np.argmax(sample))
+	
+	f1_score = round(metrics.f1_score(y_test, y_pred, average = average)*100,3)
+	precision = round(metrics.precision_score(y_test, y_pred, average = average)*100,3)
+	recall = round(metrics.recall_score(y_test, y_pred, average = average)*100,3)
+	scores=cross_val_score(model, X_train_test, y_train_test, cv = 4)
+	accuracy_mean = (sum(scores)/len(scores))
+
 	print(
 		metrics.classification_report(y_test,y_pred,target_names = target_names),
 		"Cross score : "+str(round(accuracy_mean*100,3)),

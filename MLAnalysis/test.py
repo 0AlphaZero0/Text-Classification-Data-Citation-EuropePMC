@@ -15,10 +15,12 @@ from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.model_selection import train_test_split
 from sklearn.model_selection import cross_val_score
 from sklearn import metrics
+from sklearn.model_selection import StratifiedKFold
 
 from keras.models import Sequential
 from keras.layers import Dense
 from keras.utils import normalize
+from keras import backend
 from nltk.stem.snowball import SnowballStemmer
 from nltk import word_tokenize
 from nltk.stem import WordNetLemmatizer
@@ -36,6 +38,7 @@ class_weight = {
 	1 : 50.,
 	2 : 15.,
 	3 : 10.}
+skf = StratifiedKFold(n_splits=4)
 epochs = 5
 # input_node = 1280
 activation_input_node = 'relu'
@@ -152,23 +155,10 @@ output_file=codecs.open(result_output,'w',encoding='utf8')
 output_file.write("f1-score\tPrecision\tRecall\tAccuracy\tCross-score\tLoss\tCombination\tToken\tNgram\tLemma\tStem\n")
 for combination in combinations_list:
 	accuracy_list=[]
-	for run in range(5):
-		f1_score = None
-		precision = None
-		recall = None
-		X_train_dtm = None
-		X_test_dtm = None
-		X_train = None
-		X_test = None
-		y_train=None
-		y_test=None
-		model = None
-		stemmer = None
-		analyzer = None
-		vect_list = None
-		vect_X_train,vect_X_test = None,None
-		vect_tmp = None
-		val_loss,val_acc=None,None
+	for train_index, test_index in skf.split(X,y):
+		X_train, X_test = X.ix[train_index], X.ix[test_index]
+		y_train, y_test = y.ix[train_index], y.ix[test_index]
+		print(str(list(set(y_train)))+" TRAIN\n"+str(list(set(y_test)))+" TEST\n")
 
 		vect_list = [
 			[TfidfVectorizer(), completeCitation, token],
@@ -178,8 +168,7 @@ for combination in combinations_list:
 		#
 		stemmer = SnowballStemmer('english',ignore_stopwords = True)
 		analyzer = TfidfVectorizer().build_analyzer()
-		print(str(run+1)+"/5 runs")
-		X_train,X_test,y_train,y_test = train_test_split(X,y,random_state = 1)
+
 		vect_X_train,vect_X_test = [],[]
 		vect_tmp=[]
 		for vect in vect_list:
@@ -198,14 +187,19 @@ for combination in combinations_list:
 			X_test[[SubType_num_str]].values,
 			X_test[[Figure_num_str]].values))
 		
+		print ("combination list",len(combinations_list))
+		print ("combination",len(combination))
+		print ("vect_X_train",len(vect_X_train))
+		print ("vect_X_test",len(vect_X_test))
+
 		X_train_dtm = concatenate(vect_X_train, axis = 1)
 		X_train_dtm = normalize(X_train_dtm, axis = 1)
 
 		X_test_dtm = concatenate(vect_X_test, axis = 1)
 		X_test_dtm = normalize(X_test_dtm, axis = 1)
 
-		print (X_train_dtm.shape)
-		print (X_test_dtm.shape)
+		print ("X_train_dtm shape",X_train_dtm.shape)
+		print ("X_test_dtm shape",X_test_dtm.shape)
 		model = Sequential([
 			Dense(1280, activation = activation_input_node, input_dim=X_train_dtm[0].shape[1]),
 			Dense(node1, activation = activation_node1),
@@ -235,7 +229,7 @@ for combination in combinations_list:
 	for name, size in sorted(((name, sys.getsizeof(value)) for name,value in globals().items()),key= lambda x: -x[1])[:10]:
 			print("{:>30}: {:>8}".format(name,sizeof_fmt(size)))
 	##################################"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
-
+	
 	result = model.predict(X_test_dtm)
 	
 	y_pred=[]
@@ -294,4 +288,22 @@ for combination in combinations_list:
 	else:
 		output_file.write("False")
 	output_file.write("\n")
+	
+	f1_score = None
+	precision = None
+	recall = None
+	X_train_dtm = None
+	X_test_dtm = None
+	X_train = None
+	X_test = None
+	y_train=None
+	y_test=None
+	model = None
+	stemmer = None
+	analyzer = None
+	vect_list = None
+	vect_X_train,vect_X_test = None,None
+	vect_tmp = None
+	val_loss,val_acc=None,None
+	backend.clear_session()
 		
