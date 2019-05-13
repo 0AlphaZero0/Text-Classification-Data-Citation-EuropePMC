@@ -40,7 +40,8 @@ ______________________________________________________________________
   * [Week 8 - 22/04-28/04 - ML models](#Week8)
 - ***[Month 3 - 29/04-02/06](#Month3)***
   * [Week 9 - 29/04-05/05 - Results & Analysis for ML & DL first models](#Week9)
-  * [Week 10 - 06/05-12/05 - ](#Week10)
+  * [Week 10 - 06/05-12/05 - Embedding& Cross-validation-score](#Week10)
+  * [Week 11 - 13/05-19/05 - ](#Week11)
 ______________________________________________________________________
 
 ### :bookmark_tabs: [Bibliography](#bibliography01)
@@ -1088,7 +1089,20 @@ See analysis in the file : [ResultML1](https://github.com/0AlphaZero0/Sentiment-
 [:top::top::top::top::top::top::top::top::top::top::top::top::top::top:Go to the top:top::top::top::top::top::top::top::top::top::top::top::top::top::top::top:](#top)
 
 <a name="Week10"></a>
-### :date: Week 10 - 06/04-12/05- :
+### :date: Week 10 - 06/04-12/05- Embedding& Cross-validation-score:
+
+This week I worked on Embedding and cross-validation score:
+
+- *Embedding*
+  * It seems like the embedding approach work really fine and give pretty optimistic results
+
+- *Cross-validation-score*
+  * We decide to use the k-fold function of scikit-learn but there is 2 problems the first one is the importance of the compare class indeed this class as it contains only 4 samples we can't go over 4-fold validationas it take at least 1 to test, so 5-fold and more are not possible. But there is also another problem, it seems that when we use this cross-validation score we run to really much tensorflows OOM errors, so that's an error we can't understand because it's just a loop that recreate the model and test it by the kfold methods. 
+
+[:top::top::top::top::top::top::top::top::top::top::top::top::top::top:Go to the top:top::top::top::top::top::top::top::top::top::top::top::top::top::top::top:](#top)
+
+<a name="Week11"></a>
+### :date: Week 11 - 13/05-19/05- :
 
 
 [:top::top::top::top::top::top::top::top::top::top::top::top::top::top:Go to the top:top::top::top::top::top::top::top::top::top::top::top::top::top::top::top:](#top)
