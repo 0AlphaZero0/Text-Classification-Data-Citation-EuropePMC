@@ -4,10 +4,10 @@
 # 14/05/2019
 ########################
 
-import codecs
-import numpy as np
+import codecs # Allows to load a file containing UTF-8 characters
+import numpy as np # Allows to manipulate the necessary table for sklearn
 import os
-import time
+import time # Allows to measure execution time.
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 
 from keras.models import Sequential
@@ -28,6 +28,8 @@ from sklearn.model_selection import cross_val_score
 from sklearn import metrics
 from sklearn.model_selection import StratifiedKFold
 
+from keras.callbacks import TensorBoard
+tensorboard=TensorBoard(log_dir='./logs',histogram_freq=0,write_graph=True,write_images=False)
 ##################################################    Variables     ###################################################
 
 # Files
@@ -222,7 +224,10 @@ for vect in vect_list:
 			y_train,
 			epochs=epochs,
 			batch_size=batch_size,
-			class_weight=class_weight)
+			validation_data=(X_test_dtm,y_test),
+			class_weight=class_weight,
+			shuffle=True,
+			callbacks=[tensorboard])
 
 		val_loss,val_acc=model.evaluate(X_test_dtm,y_test)
 
@@ -242,11 +247,11 @@ for vect in vect_list:
 	
 	accuracy_mean=0
 	for accuracy in accuracy_list:
-		accuracy_mean+=accuracy
+		accuracy_mean=accuracy+accuracy_mean
 	accuracy_mean=accuracy_mean/len(accuracy_list)
 	print(
 		metrics.classification_report(y_test,y_pred,target_names = target_names),
-		"Cross score : "+str(round(accuracy_mean*100,3)),
+		"Cross validation score : "+str(round(accuracy_mean*100,3)),
 		"Accuracy score : "+str(round(metrics.accuracy_score(y_test,y_pred)*100,3)),
 		"\tF1_score : "+str(f1_score),
 		"\tPrecision : "+str(precision),
