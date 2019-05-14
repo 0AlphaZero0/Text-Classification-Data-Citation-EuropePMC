@@ -1,31 +1,31 @@
 f1-score	Precision	Recall	Accuracy	Cross-validation-score	Method	Combination	Token	Ngram	Lemma	Stem	Time
-93.896	94.573	93.324	94.276	91.748	Logistic Regression	['Tokenization']	True	False	False	False	35.072
-90.697	90.368	91.078	91.246	83.926	ComplementNB	['Tokenization']	True	False	False	False	1.169
-88.089	95.365	83.566	89.899	89.135	GaussianNB	['Tokenization']	True	False	False	False	2.076
-65.876	69.223	63.263	91.582	87.708	MultinomialNB	['Tokenization']	True	False	False	False	1.119
-90.363	96.864	86.24	91.919	91.159	Random Forest	['Tokenization']	True	False	False	False	8.107
-92.269	95.168	89.931	93.266	92.252	SVM	['Tokenization']	True	False	False	False	12.989
-94.247	94.333	94.211	94.613	90.237	Logistic Regression	['N-gram']	False	True	False	False	250.12
-92.685	95.158	90.899	93.603	75.517	ComplementNB	['N-gram']	False	True	False	False	5.21
-90.535	94.869	87.333	91.919	91.24	GaussianNB	['N-gram']	False	True	False	False	11.83
-66.606	70.031	63.964	92.593	78.544	MultinomialNB	['N-gram']	False	True	False	False	3.948
-91.448	97.727	87.446	92.929	90.989	Random Forest	['N-gram']	False	True	False	False	45.802
-94.248	96.547	92.387	94.949	91.667	SVM	['N-gram']	False	True	False	False	44.746
-93.064	94.163	92.074	93.603	92.169	Logistic Regression	['Lemmatization']	False	False	True	False	31.684
-90.868	91.126	90.691	91.582	84.179	ComplementNB	['Lemmatization']	False	False	True	False	1.421
-87.916	96.061	83.06	89.899	88.967	GaussianNB	['Lemmatization']	False	False	True	False	2.43
-65.537	68.545	63.144	91.246	87.205	MultinomialNB	['Lemmatization']	False	False	True	False	1.466
-91.194	97.629	86.984	92.593	91.075	Random Forest	['Lemmatization']	False	False	True	False	7.908
-92.403	94.759	90.437	93.266	92.419	SVM	['Lemmatization']	False	False	True	False	13.354
-93.571	94.059	93.205	93.939	92.337	Logistic Regression	['Stemming']	False	False	False	True	27.488
-91.276	91.688	90.892	91.919	84.853	ComplementNB	['Stemming']	False	False	False	True	1.794
-87.916	96.061	83.06	89.899	89.556	GaussianNB	['Stemming']	False	False	False	True	2.554
-64.093	67.027	61.819	89.899	87.372	MultinomialNB	['Stemming']	False	False	False	True	1.858
-91.628	97.192	87.952	92.929	91.073	Random Forest	['Stemming']	False	False	False	True	7.637
-92.554	93.887	91.368	93.266	92.504	SVM	['Stemming']	False	False	False	True	14.368
-93.07	94.675	91.65	93.603	90.487	Logistic Regression	['N-gram', 'Lemmatization']	False	True	True	False	285.761
-93.18	96.186	90.757	93.939	77.115	ComplementNB	['N-gram', 'Lemmatization']	False	True	True	False	5.705
-91.949	96.443	88.621	92.929	90.821	GaussianNB	['N-gram', 'Lemmatization']	False	True	True	False	15.782
-65.481	69.769	62.333	91.582	80.141	MultinomialNB	['N-gram', 'Lemmatization']	False	True	True	False	5.593
-90.297	97.436	85.815	91.919	91.074	Random Forest	['N-gram', 'Lemmatization']	False	True	True	False	48.26
-92.725	96.034	90.132	93.603	91.412	SVM	['N-gram', 'Lemmatization']	False	True	True	False	50.436
+79.101	85.958	76.754	83.729	83.491	Logistic Regression	['Tokenization']	True	False	False	False	26.355
+70.999	84.448	71.713	78.305	80.11775	ComplementNB	['Tokenization']	True	False	False	False	2.851
+61.447	74.73	59.526	75.593	78.59575	GaussianNB	['Tokenization']	True	False	False	False	3.646
+46.807	60.865	45.3	81.356	82.05725	MultinomialNB	['Tokenization']	True	False	False	False	2.854
+67.324	92.584	66.658	81.695	82.05699999999999	Random Forest	['Tokenization']	True	False	False	False	7.948
+71.462	77.658	70.535	79.322	83.65	SVM	['Tokenization']	True	False	False	False	12.856
+74.209	75.268	76.38	80.0	82.13825	Logistic Regression	['N-gram']	False	True	False	False	174.01
+72.037	88.779	74.57	82.373	82.22775	ComplementNB	['N-gram']	False	True	False	False	4.825
+70.618	83.562	68.641	81.356	81.88675	GaussianNB	['N-gram']	False	True	False	False	9.705
+70.016	91.65	71.818	83.39	82.901	MultinomialNB	['N-gram']	False	True	False	False	4.836
+65.545	92.805	64.275	80.678	82.8945	Random Forest	['N-gram']	False	True	False	False	33.499
+75.169	91.597	76.025	85.085	84.75425	SVM	['N-gram']	False	True	False	False	40.06
+75.585	80.246	74.349	81.356	82.05749999999999	Logistic Regression	['Lemmatization']	False	False	True	False	27.079
+72.54	85.088	73.095	79.322	79.95150000000001	ComplementNB	['Lemmatization']	False	False	True	False	4.051
+61.447	74.73	59.526	75.593	77.67150000000001	GaussianNB	['Lemmatization']	False	False	True	False	4.736
+44.461	61.929	44.077	79.322	80.7075	MultinomialNB	['Lemmatization']	False	False	True	False	3.998
+65.772	93.728	64.275	80.678	82.1395	Random Forest	['Lemmatization']	False	False	True	False	8.883
+73.142	79.767	71.525	80.678	83.56700000000001	SVM	['Lemmatization']	False	False	True	False	13.155
+75.025	79.012	74.217	81.017	81.8055	Logistic Regression	['Stemming']	False	False	False	True	25.578
+70.628	79.105	71.772	76.949	79.18875	ComplementNB	['Stemming']	False	False	False	True	5.443
+59.666	70.463	58.361	75.254	77.3355	GaussianNB	['Stemming']	False	False	False	True	6.603
+46.713	61.48	45.259	79.661	81.71575	MultinomialNB	['Stemming']	False	False	False	True	5.239
+65.772	93.728	64.275	80.678	82.642	Random Forest	['Stemming']	False	False	False	True	11.599
+72.399	79.022	70.784	80.0	82.306	SVM	['Stemming']	False	False	False	True	15.969
+78.35	86.905	76.413	84.407	83.57724999999999	Logistic Regression	['N-gram', 'Lemmatization']	False	True	True	False	200.527
+72.232	90.253	72.768	83.051	83.6565	ComplementNB	['N-gram', 'Lemmatization']	False	True	True	False	8.702
+64.034	78.278	62.243	77.627	80.6195	GaussianNB	['N-gram', 'Lemmatization']	False	True	True	False	14.918
+67.059	91.209	66.935	81.017	81.299	MultinomialNB	['N-gram', 'Lemmatization']	False	True	True	False	8.671
+62.742	93.066	61.15	78.983	81.54675	Random Forest	['N-gram', 'Lemmatization']	False	True	True	False	37.016
+71.941	91.176	70.124	82.712	84.74875	SVM	['N-gram', 'Lemmatization']	False	True	True	False	46.789

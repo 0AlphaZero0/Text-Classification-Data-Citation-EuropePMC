@@ -23,19 +23,20 @@ from sklearn.model_selection import train_test_split
 from sklearn.naive_bayes import ComplementNB
 from sklearn.naive_bayes import GaussianNB
 from sklearn.naive_bayes import MultinomialNB
-from sklearn.model_selection import cross_val_score
+from sklearn.model_selection import StratifiedKFold
 
 ################################################    Variables     #################################################
 
 # Files
 dataset_filename="Dataset2.csv"
-result_outfile="ResultMLparam.csv"
+result_outfile="testResultMLparam.csv"
 # Parameters
 average="macro"
 gamma="auto"
 C=10
 max_iter=10000
 class_weight="balanced"
+skf=StratifiedKFold(n_splits=4)
 ngram_range=(1,3)
 # Lemmatizer & Stemmer
 lemmatizer=WordNetLemmatizer()
@@ -200,53 +201,60 @@ for index_vect_list in range(len(vect_list)-1):
 	print(index_vect_list)
 	for clf in clfList:
 		start=time.time()
-		vect_X_train,vect_X_test=[],[]
-		if clf[1] in countVectorizerList:
-			vect_tmp=vect_list_countvect[index_vect_list][2]
-			vect_X_train.append(vect_list_countvect[index_vect_list][0].fit_transform(X_train[[vect_list_countvect[index_vect_list][1]]].fillna('').values.reshape(-1)).todense())
-			vect_X_test.append(vect_list_countvect[index_vect_list][0].transform(X_test[[vect_list_countvect[index_vect_list][1]]].fillna('').values.reshape(-1)).todense())
-		else:
-			vect_tmp=vect_list[index_vect_list][2]
-			vect_X_train.append(vect_list[index_vect_list][0].fit_transform(X_train[[vect_list[index_vect_list][1]]].fillna('').values.reshape(-1)).todense())
-			vect_X_test.append(vect_list[index_vect_list][0].transform(X_test[[vect_list[index_vect_list][1]]].fillna('').values.reshape(-1)).todense())
+		accuracy_list=[]
+		print(vect_list[index_vect_list][2])
+		for train_index,test_index in skf.split(X,y):
+			X_train,X_test=X.ix[train_index],X.ix[test_index]
+			y_train,y_test=y.ix[train_index],y.ix[test_index]
+			vect_X_train,vect_X_test=[],[]
+			if clf[1] in countVectorizerList:
+				vect_tmp=vect_list_countvect[index_vect_list][2]
+				vect_X_train.append(vect_list_countvect[index_vect_list][0].fit_transform(X_train[[vect_list_countvect[index_vect_list][1]]].fillna('').values.reshape(-1)).todense())
+				vect_X_test.append(vect_list_countvect[index_vect_list][0].transform(X_test[[vect_list_countvect[index_vect_list][1]]].fillna('').values.reshape(-1)).todense())
+			else:
+				vect_tmp=vect_list[index_vect_list][2]
+				vect_X_train.append(vect_list[index_vect_list][0].fit_transform(X_train[[vect_list[index_vect_list][1]]].fillna('').values.reshape(-1)).todense())
+				vect_X_test.append(vect_list[index_vect_list][0].transform(X_test[[vect_list[index_vect_list][1]]].fillna('').values.reshape(-1)).todense())
 
-		vect_X_train.extend((
-			X_train[[Section_num_str]].values,
-			X_train[[SubType_num_str]].values,
-			X_train[[Figure_num_str]].values))
-		vect_X_test.extend((
-			X_test[[Section_num_str]].values,
-			X_test[[SubType_num_str]].values,
-			X_test[[Figure_num_str]].values))
+			vect_X_train.extend((
+				X_train[[Section_num_str]].values,
+				X_train[[SubType_num_str]].values,
+				X_train[[Figure_num_str]].values))
+			vect_X_test.extend((
+				X_test[[Section_num_str]].values,
+				X_test[[SubType_num_str]].values,
+				X_test[[Figure_num_str]].values))
 
-		X_train_dtm=np.concatenate(vect_X_train,axis=1)
+			X_train_dtm=np.concatenate(vect_X_train,axis=1)
+			X_test_dtm=np.concatenate(vect_X_test,axis=1)
 
-		X_test_dtm=np.concatenate(vect_X_test,axis=1)
+			X_train_test=np.concatenate((X_train_dtm,X_test_dtm))
+			y_train_test=np.concatenate((y_train,y_test))
 
-		X_train_test=np.concatenate((X_train_dtm,X_test_dtm))
+			try:
+				clf[0].fit(X_train_dtm,y_train)
+				y_pred_class=clf[0].predict(X_test_dtm)
+			except TypeError:
+				clf[0].fit(X_train_dtm.toarray(),y_train)
+				y_pred_class=clf[0].predict(X_test_dtm.toarray())
 
-		y_train_test=np.concatenate((y_train,y_test))
-
-		try:
-			clf[0].fit(X_train_dtm,y_train)
-			y_pred_class=clf[0].predict(X_test_dtm)
-			scores=cross_val_score(clf[0],X_train_test,y_train_test,cv=4)
-		except TypeError:
-			clf[0].fit(X_train_dtm.toarray(),y_train)
-			y_pred_class=clf[0].predict(X_test_dtm.toarray())
-			scores=cross_val_score(clf[0],X_train_test,y_train_test,cv=4)
+			f1_score=round(metrics.f1_score(y_test,y_pred_class,average=average)*100,3)
+			precision=round(metrics.precision_score(y_test,y_pred_class,average=average)*100,3)
+			recall=round(metrics.recall_score(y_test,y_pred_class,average=average)*100,3)
+			accuracy=round(metrics.accuracy_score(y_test,y_pred_class)*100,3)
+			accuracy_list.append(accuracy)
+		
 		end=time.time()
 
-		f1_score=round(metrics.f1_score(y_test,y_pred_class,average=average)*100,3)
-		precision=round(metrics.precision_score(y_test,y_pred_class,average=average)*100,3)
-		recall=round(metrics.recall_score(y_test,y_pred_class,average=average)*100,3)
-		accuracy=round(metrics.accuracy_score(y_test,y_pred_class)*100,3)
-		cross_score=round((sum(scores)/len(scores))*100,3)
+		accuracy_mean=0
+		for accuracy in accuracy_list:
+			accuracy_mean=accuracy+accuracy_mean
+		accuracy_mean=accuracy_mean/len(accuracy_list)
 
 		print(
 			metrics.classification_report(y_test,y_pred_class,target_names=target_names),
 			"Method : "+str(clf[1]),
-			"Cross validation score : "+str(cross_score),
+			"Cross validation score : "+str(accuracy_mean),
 			"Accuracy score : " + str(accuracy),
 			"\tF1_score : " + str(f1_score),
 			"\tPrecision : " + str(precision),
@@ -261,7 +269,7 @@ for index_vect_list in range(len(vect_list)-1):
 		output_file.write("\t")
 		output_file.write(str(accuracy))
 		output_file.write("\t")
-		output_file.write(str(cross_score))
+		output_file.write(str(accuracy_mean))
 		output_file.write("\t")
 		output_file.write(str(clf[1]))
 		output_file.write("\t")
