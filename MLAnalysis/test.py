@@ -171,8 +171,8 @@ for vect in vect_list:
 
 		X_train_dtm = concatenate(vect_X_train, axis = 1)
 		X_train_dtm = normalize(X_train_dtm, axis = 1)
-		print (X_train_dtm)
-		print(np.sum(X_train_dtm[0]))
+		# print (X_train_dtm)
+		# print(np.sum(X_train_dtm[0]))
 
 		X_test_dtm = concatenate(vect_X_test, axis = 1)
 		X_test_dtm = normalize(X_test_dtm, axis = 1)
