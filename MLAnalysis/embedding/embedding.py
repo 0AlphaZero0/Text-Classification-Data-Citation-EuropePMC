@@ -37,7 +37,7 @@ os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 
 dataset = "Dataset2.csv"
 embedding_dims = 300 # Here 50/100/200/300
-result_output = "ResultDLEmbedding"+str(embedding_dims)+"d.csv"
+result_output = "testResultDLEmbedding"+str(embedding_dims)+"d.csv"
 embedding_file = 'glove.6B.'+str(embedding_dims)+'d.txt'
 average="macro" # binary | micro | macro | weighted | samples
 class_weight = {
@@ -66,11 +66,74 @@ target_names = [
 	"Compare",
 	"Creation",
 	"Use"]
+# Lemmatizer & Stemmer
+lemmatizer=WordNetLemmatizer()
+stemmer=SnowballStemmer('english',ignore_stopwords=True)
 
 ##################################################    Class     ###################################################
 
 ################################################    Functions     #################################################
+#
+def lemma_word(word):
+	"""This function take as args word and return its lemma
+	
+	Args : 
+		- word : (str) a word that could lemmatize by the WordNetLemmatizer from nltk.stem
+	
+	Return : 
+		- word : (str) a lemma of the word gives in args
+	"""
+	return lemmatizer.lemmatize(word)
+#
+def lemma_tokenizer(doc):
+	""" This function take as args a doc that could be lemmatize.
 
+	Args : 
+		- doc : (str) a string that can be tokenize by the word_tokenize of nltk library
+	
+	Return : 
+		- tokens : (list) a list of tokens where each token corresponds to a lemmatized word 
+	"""
+	tokens = word_tokenize(doc)
+	tokens = [lemma_word(t) for t in tokens]
+	return tokens
+#
+def stem_word(word):
+	"""This function take as args word and return its stem
+	
+	Args : 
+		- word : (str) a word that could be stemmed by the SnowballStemmer from nltk.stem.snowball
+	
+	Return : 
+		- word : (str) a stem of the word gives in args
+	"""
+	return stemmer.stem(word)
+#
+def stem_tokenizer(doc):
+	""" This function take as args a doc that could be stemmed.
+
+	Args : 
+		- doc : (str) a string that can be tokenize by the word_tokenize of nltk library
+	
+	Return : 
+		- tokens : (list) a list of tokens where each token corresponds to a stemmed word 
+	"""
+	tokens = word_tokenize(doc)
+	tokens = [stem_word(t) for t in tokens]
+	return tokens
+#
+def tokenizer(doc):
+	""" This function take as args a doc that could be tokenize.
+
+	Args :
+		- doc : (str) a string that can be tokenize by the word_tokenize of nltk library
+	
+	Return : 
+		- tokens : (list) a list of tokens where each token corresponds to a word
+	"""
+	tokens = word_tokenize(doc)
+	return tokens
+#
 ###################################################    Main     ###################################################
 #
 data = read_csv(dataset,header = 0,sep = "\t")
@@ -108,7 +171,7 @@ vocab_size = 500
 tokenizer = Tokenizer(num_words = vocab_size)
 tokenizer.fit_on_texts(data[completeCitation])
 tmp = tokenizer.texts_to_sequences(data[completeCitation])
-
+print(tmp)
 word_index = tokenizer.word_index
 
 max_len = len(max(tmp, key = len))

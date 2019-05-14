@@ -185,7 +185,6 @@ for i in range(k_cross_val):
 	other_features = layers.Input(shape = (3,))
 
 	model = layers.Concatenate(axis = 1)([seq_features,other_features])
-	model.add(layers.LSTM(100))
 
 	model = layers.Dense(4, activation = 'softmax')(model)
 

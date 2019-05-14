@@ -249,6 +249,7 @@ for vect in vect_list:
 	for accuracy in accuracy_list:
 		accuracy_mean=accuracy+accuracy_mean
 	accuracy_mean=accuracy_mean/len(accuracy_list)
+	
 	print(
 		metrics.classification_report(y_test,y_pred,target_names = target_names),
 		"Cross validation score : "+str(round(accuracy_mean*100,3)),
