@@ -85,7 +85,6 @@ def stem_tokenizer(doc):
 
 def tokenizer(doc):
 	tokens = word_tokenize(doc)
-	print (tokens)
 	return tokens
 
 ###################################################    Main     ###################################################
