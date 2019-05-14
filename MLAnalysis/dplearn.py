@@ -278,10 +278,7 @@ for vect in vect_list:
 	y_train=None
 	y_test=None
 	model = None
-	stemmer = None
-	vect_list = None
 	vect_X_train,vect_X_test = None,None
-	vect_tmp = None
 	val_loss,val_acc=None,None
 	backend.clear_session()
 		

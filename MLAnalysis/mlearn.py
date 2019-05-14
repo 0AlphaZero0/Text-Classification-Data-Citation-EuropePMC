@@ -33,11 +33,13 @@ from nltk.stem import WordNetLemmatizer
 
 ################################################    Variables     #################################################
 #
-result_output="ResultMLnb.csv"
+result_output="testResultMLnb.csv"
 filename = "Datasetnb.csv"
 token,ngram,lemma,stem = "Tokenization","N-gram","Lemmatization","Stemming"
 Section_num_str,SubType_num_str,Figure_num_str,NbPaperCitation = "Section_num","SubType_num","Figure_num","NbPaperCitation"
 PreCitation_str,Citation_str,PostCitation_str,completeCitation = "PreCitation","Citation","PostCitation","CompleteCitation"
+lemmatizer = WordNetLemmatizer()
+stemmer = SnowballStemmer('english',ignore_stopwords = True)
 average = "macro"
 gamma = 'auto'
 C = 10
@@ -80,53 +82,45 @@ clfList = [[clfLR,"Logistic Regression"],
 	[clfRF,"Random Forest"],
 	[clfSVM,"SVM"]]
 
-##################################################    Class     ###################################################
-
-class LemmaTokenizer(object):
-	def __init__(self):
-		self.wnl = WordNetLemmatizer()
-	def __call__(self, doc):
-		return [self.wnl.lemmatize(t) for t in word_tokenize(doc)]
-
 ################################################    Functions     #################################################
 
-def stemmed_words(doc):
-	return (stemmer.stem(w) for w in analyzer(doc))
+def lemma_word(word):
+		return lemmatizer.lemmatize(word)
 
-def combinations(a):
-	def fn(n,src,got,all):
-		if n==0:
-			if len(got)>0:
-				all.append(got)
-			return
-		j = 0
-		while j<len(src):
-			fn(n-1, src[:j], [src[j]] + got, all)
-			j = j+1
-		return
-	all = []
-	i = 0
-	while i<len(a):
-		fn(i,a,[],all)
-		i = i+1
-	all.append(a)
-	return all #a = [1,2,3,4] print(combinations(a))
+def lemma_tokenizer(doc):
+	tokens = word_tokenize(doc)
+	tokens = [lemma_word(t) for t in tokens]
+	return tokens
+
+def stem_word(word):
+	return stemmer.stem(word)
+
+def stem_tokenizer(doc):
+	tokens = word_tokenize(doc)
+	tokens = [stem_word(t) for t in tokens]
+	return tokens
+
+def tokenizer(doc):
+	tokens = word_tokenize(doc)
+	return tokens
 
 ###################################################    Main     ###################################################
 #
 vect_list = [
-	[TfidfVectorizer(), completeCitation, token],
-	[TfidfVectorizer(ngram_range = ngram_range), completeCitation, ngram],
-	[TfidfVectorizer(tokenizer = LemmaTokenizer()), completeCitation, lemma],
-	[TfidfVectorizer(analyzer = stemmed_words), completeCitation, stem]]
+	[TfidfVectorizer(tokenizer = tokenizer), completeCitation, [token]],
+	[TfidfVectorizer(ngram_range = ngram_range), completeCitation, [ngram]],
+	[TfidfVectorizer(tokenizer = lemma_tokenizer), completeCitation, [lemma]],
+	[TfidfVectorizer(tokenizer = stem_tokenizer), completeCitation, [stem]],
+	[TfidfVectorizer(ngram_range = ngram_range, tokenizer = lemma_tokenizer),completeCitation,[ngram,lemma]],
+	[TfidfVectorizer(ngram_range = ngram_range, tokenizer = stem_tokenizer),completeCitation,[ngram,stem]]]
+
 vect_list_countvectorizer = [
-	[CountVectorizer(), completeCitation, token],
-	[CountVectorizer(ngram_range = ngram_range), completeCitation, ngram],
-	[CountVectorizer(tokenizer = LemmaTokenizer()), completeCitation, lemma],
-	[CountVectorizer(analyzer = stemmed_words), completeCitation, stem]]
-#
-stemmer = SnowballStemmer('english',ignore_stopwords = True)
-analyzer = TfidfVectorizer().build_analyzer()
+	[CountVectorizer(tokenizer = tokenizer), completeCitation, [token]],
+	[CountVectorizer(ngram_range = ngram_range), completeCitation, [ngram]],
+	[CountVectorizer(tokenizer = lemma_tokenizer), completeCitation, [lemma]],
+	[CountVectorizer(tokenizer = stem_tokenizer), completeCitation, [stem]],
+	[CountVectorizer(ngram_range = ngram_range, tokenizer = lemma_tokenizer),completeCitation,[ngram,lemma]],
+	[CountVectorizer(ngram_range = ngram_range, tokenizer = stem_tokenizer),completeCitation,[ngram,stem]]]
 #
 data = pd.read_csv(filename,header = 0,sep = "\t")
 #
@@ -165,26 +159,20 @@ y = data.Categories_num
 
 X_train,X_test,y_train,y_test = train_test_split(X,y,random_state = 1)
 
-combinations_list = combinations(extra_features)
-
 output_file=codecs.open(result_output,'w',encoding='utf8')
 output_file.write("f1-score\tPrecision\tRecall\tAccuracy\tCross-validation-score\tMethod\tCombination\tToken\tNgram\tLemma\tStem\n")
-for combination in combinations_list:
+for index_vect_list in range(len(vect_list)-1):
+	print(index_vect_list)
 	for clf in clfList:
 		vect_X_train,vect_X_test = [],[]
-		vect_tmp=[]
 		if clf[1] in countVectorizerList:
-			for vect in vect_list_countvectorizer:
-				if vect[2] in combination:
-					vect_tmp.append(vect[2])
-					vect_X_train.append(vect[0].fit_transform(X_train[[vect[1]]].fillna('').values.reshape(-1)).todense())
-					vect_X_test.append(vect[0].transform(X_test[[vect[1]]].fillna('').values.reshape(-1)).todense())
+			vect_tmp = vect_list_countvectorizer[index_vect_list][2]
+			vect_X_train.append(vect_list_countvectorizer[index_vect_list][0].fit_transform(X_train[[vect_list_countvectorizer[index_vect_list][1]]].fillna('').values.reshape(-1)).todense())
+			vect_X_test.append(vect_list_countvectorizer[index_vect_list][0].transform(X_test[[vect_list_countvectorizer[index_vect_list][1]]].fillna('').values.reshape(-1)).todense())
 		else:
-			for vect in vect_list:
-				if vect[2] in combination:
-					vect_tmp.append(vect[2])
-					vect_X_train.append(vect[0].fit_transform(X_train[[vect[1]]].fillna('').values.reshape(-1)).todense())
-					vect_X_test.append(vect[0].transform(X_test[[vect[1]]].fillna('').values.reshape(-1)).todense())
+			vect_tmp = vect_list[index_vect_list][2]
+			vect_X_train.append(vect_list[index_vect_list][0].fit_transform(X_train[[vect_list[index_vect_list][1]]].fillna('').values.reshape(-1)).todense())
+			vect_X_test.append(vect_list[index_vect_list][0].transform(X_test[[vect_list[index_vect_list][1]]].fillna('').values.reshape(-1)).todense())
 
 		vect_X_train.extend((
 			X_train[[Section_num_str]].values,
@@ -210,11 +198,11 @@ for combination in combinations_list:
 			print (y_train.shape,"y_train shape")
 			clf[0].fit(X_train_dtm,y_train)
 			y_pred_class = clf[0].predict(X_test_dtm)
-			scores=cross_val_score(clf[0], X_train_test, y_train_test, cv = 5)
+			scores=cross_val_score(clf[0], X_train_test, y_train_test, cv = 4)
 		except TypeError:
 			clf[0].fit(X_train_dtm.toarray(),y_train)
 			y_pred_class = clf[0].predict(X_test_dtm.toarray())
-			scores=cross_val_score(clf[0], X_train_test, y_train_test, cv = 5)
+			scores=cross_val_score(clf[0], X_train_test, y_train_test, cv = 4)
 		end = time.time()
 
 		f1_score = round(metrics.f1_score(y_test, y_pred_class, average = average)*100,3)
