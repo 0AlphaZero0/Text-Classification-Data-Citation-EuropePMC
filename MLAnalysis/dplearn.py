@@ -1,12 +1,13 @@
 #!/usr/bin/env python
 #-*- coding: utf-8 -*-
 # THOUVENIN Arthur athouvenin@outlook.fr
-# 01/04/2019
+# 14/05/2019
 ########################
 
 import codecs
 import numpy as np
 import os
+import time
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 
 from keras.models import Sequential
@@ -54,7 +55,7 @@ ngram_range=(1,3)
 # Lemmatizer & Stemmer
 lemmatizer = WordNetLemmatizer()
 stemmer = SnowballStemmer('english',ignore_stopwords = True)
-# Variables & list of those
+# Variables & lists of those
 token,ngram,lemma,stem="Tokenization","N-gram","Lemmatization","Stemming"
 Section_num_str,SubType_num_str,Figure_num_str="Section_num","SubType_num","Figure_num"
 PreCitation_str,Citation_str,PostCitation_str,completeCitation="PreCitation","Citation","PostCitation","CompleteCitation"
@@ -177,9 +178,10 @@ vect_list=[
 	[TfidfVectorizer(ngram_range=ngram_range,tokenizer=stem_tokenizer),completeCitation,[ngram,stem]]]
 
 output_file=codecs.open(result_outfile,'w',encoding='utf8')
-output_file.write("f1-score\tPrecision\tRecall\tAccuracy\tCross-score\tLoss\tCombination\tToken\tNgram\tLemma\tStem\n")
+output_file.write("f1-score\tPrecision\tRecall\tAccuracy\tCross-score\tLoss\tCombination\tToken\tNgram\tLemma\tStem\tTime\n")
 for vect in vect_list:
 	accuracy_list=[]
+	start=time.time()
 	for train_index, test_index in skf.split(X,y):
 		print(vect[2])
 		X_train,X_test=X.ix[train_index],X.ix[test_index]
@@ -226,6 +228,8 @@ for vect in vect_list:
 
 		accuracy_list.append(val_acc)
 	
+	end=time.time()
+
 	result=model.predict(X_test_dtm)
 	
 	y_pred=[]
@@ -247,6 +251,7 @@ for vect in vect_list:
 		"\tF1_score : "+str(f1_score),
 		"\tPrecision : "+str(precision),
 		"\tRecall : "+str(recall),
+		"\tTime : "+str(round(end-start,3))+" sec",
 		"\n#######################################################")
 
 	output_file.write(str(f1_score))
@@ -282,6 +287,8 @@ for vect in vect_list:
 		output_file.write("True")
 	else:
 		output_file.write("False")
+	output_file.write("\t")
+	output_file.write(str(round(end-start,3)))
 	output_file.write("\n")
 	# Clean run
 	f1_score=None
