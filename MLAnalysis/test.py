@@ -5,6 +5,7 @@
 ########################
 
 import codecs
+import numpy as np
 from numpy import concatenate
 from numpy import argmax
 from pandas import read_csv
@@ -84,6 +85,7 @@ def stem_tokenizer(doc):
 
 def tokenizer(doc):
 	tokens = word_tokenize(doc)
+	print (tokens)
 	return tokens
 
 ###################################################    Main     ###################################################
@@ -141,7 +143,6 @@ vect_list = [
 	[TfidfVectorizer(ngram_range = ngram_range, tokenizer = lemma_tokenizer),completeCitation,[ngram,lemma]],
 	[TfidfVectorizer(ngram_range = ngram_range, tokenizer = stem_tokenizer),completeCitation,[ngram,stem]]]
 
-
 output_file=codecs.open(result_output,'w',encoding='utf8')
 output_file.write("f1-score\tPrecision\tRecall\tAccuracy\tCross-score\tLoss\tCombination\tToken\tNgram\tLemma\tStem\n")
 for vect in vect_list:
@@ -150,14 +151,11 @@ for vect in vect_list:
 		print (vect[2])
 		X_train, X_test = X.ix[train_index], X.ix[test_index]
 		y_train, y_test = y.ix[train_index], y.ix[test_index]
-		print(str(list(set(y_train)))+" TRAIN\n"+str(list(set(y_test)))+" TEST\n")
+		# print(str(list(set(y_train)))+" TRAIN\n"+str(list(set(y_test)))+" TEST\n")
 		
 		vect_X_train, vect_X_test = [], []
 		vect_X_train.append(vect[0].fit_transform(X_train[[vect[1]]].fillna('').values.reshape(-1)).todense())
 		vect_X_test.append(vect[0].transform(X_test[[vect[1]]].fillna('').values.reshape(-1)).todense())
-
-		print (vect_X_train)
-		print (vect_X_test)
 
 		vect_X_train.extend((
 			X_train[[Section_num_str]].values,
@@ -168,18 +166,19 @@ for vect in vect_list:
 			X_test[[SubType_num_str]].values,
 			X_test[[Figure_num_str]].values))
 
-		print ("vect_X_train",len(vect_X_train))
-		print ("vect_X_test",len(vect_X_test))
+		# print ("vect_X_train",len(vect_X_train))
+		# print ("vect_X_test",len(vect_X_test))
 
 		X_train_dtm = concatenate(vect_X_train, axis = 1)
-		print (X_train_dtm)
 		X_train_dtm = normalize(X_train_dtm, axis = 1)
+		print (X_train_dtm)
+		print(np.sum(X_train_dtm[0]))
 
 		X_test_dtm = concatenate(vect_X_test, axis = 1)
 		X_test_dtm = normalize(X_test_dtm, axis = 1)
 
-		print ("X_train_dtm shape",X_train_dtm.shape)
-		print ("X_test_dtm shape",X_test_dtm.shape)
+		# print ("X_train_dtm shape",X_train_dtm.shape)
+		# print ("X_test_dtm shape",X_test_dtm.shape)
 		model = Sequential([
 			Dense(1280, activation = activation_input_node, input_dim=X_train_dtm[0].shape[1]),
 			Dense(node1, activation = activation_node1),
