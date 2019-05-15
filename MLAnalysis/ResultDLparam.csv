@@ -1,7 +1,19 @@
-f1-score	Precision	Recall	Accuracy	Cross-score	Loss	Combination	Token	Ngram	Lemma	Stem
-48.514	55.929	46.657	80.678	81.968	0.55	['Tokenization']	True	False	False	False
-45.854	67.023	48.185	84.068	77.599	0.717	['N-gram']	False	True	False	False
-43.853	57.316	42.843	78.644	80.704	0.655	['Lemmatization']	False	False	True	False
-46.703	50.842	47.454	78.644	77.255	0.73	['Stemming']	False	False	False	True
-69.524	91.823	70.685	83.051	79.196	0.839	['N-gram', 'Lemmatization']	False	True	True	False
-54.534	59.202	53.288	85.085	83.238	0.419	['N-gram', 'Stemming']	False	True	False	True
+f1-score	Precision	Recall	Accuracy	Cross-score	Loss	Combination	Token	Ngram	Lemma	Stem	Time	Epoch
+44.58	58.541	43.801	80.0	79.695	0.782	['Tokenization']	True	False	False	False	139.469	5
+45.075	66.667	46.935	83.39	82.48	0.734	['N-gram']	False	True	False	False	856.557	5
+52.55	51.638	54.084	79.661	78.52	0.595	['Lemmatization']	False	False	True	False	137.187	5
+44.722	58.352	41.29	80.0	80.284	0.72	['Stemming']	False	False	False	True	125.885	5
+67.321	90.859	67.56	81.356	81.8	0.888	['N-gram', 'Lemmatization']	False	True	True	False	951.442	5
+55.377	56.92	54.53	84.068	84.078	0.429	['N-gram', 'Stemming']	False	True	False	True	932.009	5
+74.049	74.492	74.236	77.966	81.795	0.733	['Tokenization']	True	False	False	False	370.813	10
+70.142	78.296	73.228	83.051	82.731	0.778	['N-gram']	False	True	False	False	2218.658	10
+69.77	82.696	70.095	79.661	81.716	0.884	['Lemmatization']	False	False	True	False	371.109	10
+62.88	59.574	76.604	78.983	79.021	0.693	['Stemming']	False	False	False	True	329.093	10
+69.299	90.955	71.077	82.712	82.224	0.667	['N-gram', 'Lemmatization']	False	True	True	False	2572.418	10
+69.026	74.576	70.336	82.034	83.232	0.628	['N-gram', 'Stemming']	False	True	False	True	2974.765	10
+74.157	75.72	74.352	78.305	82.637	0.654	['Tokenization']	True	False	False	False	389.564	15
+70.529	73.208	72.72	83.051	82.648	0.839	['N-gram']	False	True	False	False	2803.225	15
+70.13	76.482	69.269	78.644	80.115	0.793	['Lemmatization']	False	False	True	False	367.72	15
+72.594	75.733	72.269	78.305	80.788	0.654	['Stemming']	False	False	False	True	345.829	15
+80.484	77.539	86.117	79.322	81.628	0.628	['N-gram', 'Lemmatization']	False	True	True	False	3107.12	15
+69.936	92.001	71.31	83.39	83.404	0.807	['N-gram', 'Stemming']	False	True	False	True	3264.645	15

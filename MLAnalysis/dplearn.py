@@ -29,7 +29,8 @@ from sklearn import metrics
 from sklearn.model_selection import StratifiedKFold
 
 from keras.callbacks import TensorBoard
-tensorboard=TensorBoard(log_dir='./logs',histogram_freq=0,write_graph=True,write_images=False)
+NAME="dplearn{}".format(int(time.time()))
+tensorboard=TensorBoard(log_dir='./logs/{}'.format(NAME))
 ##################################################    Variables     ###################################################
 
 # Files
