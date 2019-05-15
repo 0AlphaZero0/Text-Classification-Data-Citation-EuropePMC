@@ -197,7 +197,7 @@ X_train,X_test,y_train,y_test=train_test_split(X,y,random_state=1)
 #
 output_file=codecs.open(result_outfile,'w',encoding='utf8')
 output_file.write("f1-score\tPrecision\tRecall\tAccuracy\tCross-validation-score\tMethod\tCombination\tToken\tNgram\tLemma\tStem\tTime\n")
-for index_vect_list in range(len(vect_list)-1):
+for index_vect_list in range(len(vect_list)):
 	print(index_vect_list)
 	for clf in clfList:
 		start=time.time()

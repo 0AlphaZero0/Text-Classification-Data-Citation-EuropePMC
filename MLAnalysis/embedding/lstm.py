@@ -33,35 +33,35 @@ from keras import models
 
 ##################################################    Variables     ###################################################
 
-os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
+os.environ['TF_CPP_MIN_LOG_LEVEL']='2'
 
-dataset = "Dataset2.csv"
-embedding_dims = 50 # Here 50/100/200/300
-result_output = "testResultLSTM"+str(embedding_dims)+"d.csv"
-embedding_file = 'glove.6B.'+str(embedding_dims)+'d.txt'
+dataset="Dataset2.csv"
+embedding_dims=50 # Here 50/100/200/300
+result_output="testResultLSTM"+str(embedding_dims)+"d.csv"
+embedding_file='glove.6B.'+str(embedding_dims)+'d.txt'
 average="macro" # binary | micro | macro | weighted | samples
-class_weight = {
+class_weight={
 	0 : 15.,
 	1 : 50.,
 	2 : 15.,
 	3 : 10.}
-epochs = 5
-skf = StratifiedKFold(n_splits=4)
-activation_input_node = 'relu'
-node1 = 128
-activation_node1 = 'relu'
-node2 = 128
-activation_node2 = 'relu'
-output_node = 4
+epochs=5
+skf=StratifiedKFold(n_splits=4)
+activation_input_node='relu'
+node1=128
+activation_node1='relu'
+node2=128
+activation_node2='relu'
+output_node=4
 activation_output_node='softmax'
-Section_num_str,SubType_num_str,Figure_num_str = "Section_num","SubType_num","Figure_num"
-PreCitation_str,Citation_str,PostCitation_str,completeCitation,completeCitationEmbedd = "PreCitation","Citation","PostCitation","CompleteCitation","completeCitationEmbedd"
-featuresList = [
+Section_num_str,SubType_num_str,Figure_num_str="Section_num","SubType_num","Figure_num"
+PreCitation_str,Citation_str,PostCitation_str,completeCitation,completeCitationEmbedd="PreCitation","Citation","PostCitation","CompleteCitation","completeCitationEmbedd"
+featuresList=[
 	Section_num_str,
 	SubType_num_str,
 	Figure_num_str,
 	'Categories_num']
-target_names = [
+target_names=[
 	"Background",
 	"Compare",
 	"Creation",
@@ -94,8 +94,8 @@ def lemma_tokenizer(doc):
 	Return : 
 		- tokens : (list) a list of tokens where each token corresponds to a lemmatized word 
 	"""
-	tokens = word_tokenize(doc)
-	tokens = [lemma_word(t) for t in tokens]
+	tokens=word_tokenize(doc)
+	tokens=[lemma_word(t) for t in tokens]
 	return tokens
 #
 def stem_word(word):
@@ -118,8 +118,8 @@ def stem_tokenizer(doc):
 	Return : 
 		- tokens : (list) a list of tokens where each token corresponds to a stemmed word 
 	"""
-	tokens = word_tokenize(doc)
-	tokens = [stem_word(t) for t in tokens]
+	tokens=word_tokenize(doc)
+	tokens=[stem_word(t) for t in tokens]
 	return tokens
 #
 def tokenizer(doc):
@@ -131,165 +131,148 @@ def tokenizer(doc):
 	Return : 
 		- tokens : (list) a list of tokens where each token corresponds to a word
 	"""
-	tokens = word_tokenize(doc)
+	tokens=word_tokenize(doc)
 	return tokens
 #
 ###################################################    Main     ###################################################
 #
-data = read_csv(dataset,header = 0,sep = "\t")
+data=read_csv(dataset,header=0,sep="\t")
 #
-data[completeCitation] = data[[PreCitation_str,Citation_str,PostCitation_str]].apply(lambda x : '{}{}'.format(x[0],x[1]), axis = 1)
+data[completeCitation]=data[[PreCitation_str,Citation_str,PostCitation_str]].apply(lambda x : '{}{}'.format(x[0],x[1]),axis=1)
 #
-data["Categories_num"] = data.Categories.map(
+data["Categories_num"]=data.Categories.map(
 	{"Background":0,
 	"Compare":1,
 	"Creation":2,
 	"Use":3})
 #
-data[Figure_num_str] = data.Figure.map(
+data[Figure_num_str]=data.Figure.map(
 	{True:0,
 	False:1})
 #
-sectionDict = {}
-index = 1
+sectionDict={}
+index=1
 for section in data.Section:
 	if section not in sectionDict:
-		sectionDict[section] = index
+		sectionDict[section]=index
 		index+=1
-data[Section_num_str] = data.Section.map(sectionDict)
+data[Section_num_str]=data.Section.map(sectionDict)
 #
-subTypeDict = {}
-index = 1
+subTypeDict={}
+index=1
 for subType in data.SubType:
 	if subType not in subTypeDict:
-		subTypeDict[subType] = index
+		subTypeDict[subType]=index
 		index+=1
-data[SubType_num_str] = data.SubType.map(subTypeDict)
+data[SubType_num_str]=data.SubType.map(subTypeDict)
 ###########################################################################################
-vocab_size = 500
+vocab_size=500
 
-tokenizer = Tokenizer(num_words = vocab_size)
+tokenizer=Tokenizer(num_words=vocab_size)
 tokenizer.fit_on_texts(data[completeCitation])
-tmp = tokenizer.texts_to_sequences(data[completeCitation])
+tmp=tokenizer.texts_to_sequences(data[completeCitation])
 
-word_index = tokenizer.word_index
+word_index=tokenizer.word_index
 
-max_len = len(max(tmp, key = len))
+max_len=len(max(tmp,key=len))
 
-tmp = DataFrame(pad_sequences(
+tmp=DataFrame(pad_sequences(
 	tmp,
-	maxlen = max_len, 
-	padding = 'post'))
+	maxlen=max_len,
+	padding='post'))
 
-data = concat([data[featuresList],tmp], axis = 1)
-tmp = None
+data=concat([data[featuresList],tmp],axis=1)
+tmp=None
 
-X = data.drop(['Categories_num'], axis = 1)
-y = data.Categories_num
+X=data.drop(['Categories_num'],axis=1)
+y=data.Categories_num
 
-accuracy_list = []
+accuracy_list=[]
 k_cross_val=5
 start=time.time()
 for train_index,test_index in skf.split(X,y):
-	X_train, X_test = [X.ix[train_index], X.ix[test_index]] 
-	y_train, y_test = [y.ix[train_index], y.ix[test_index]]
+	X_train,X_test=[X.ix[train_index],X.ix[test_index]] 
+	y_train,y_test=[y.ix[train_index],y.ix[test_index]]
 
-	X_train = [X_train.iloc[:, 3:],X_train.iloc[:, :3]] #seq_features,other_features
-	X_test = [X_test.iloc[:, 3:], X_test.iloc[:, :3]] #seq_features,other_features
+	X_train=[X_train.iloc[:,3:],X_train.iloc[:,:3]] #seq_features,other_features
+	X_test=[X_test.iloc[:,3:],X_test.iloc[:,:3]] #seq_features,other_features
 
-	embeddings_index = {}
-	f = codecs.open(embedding_file,'r',encoding='utf-8')
+	embeddings_index={}
+	f=codecs.open(embedding_file,'r',encoding='utf-8')
 	for line in f:
-		values = line.split()
-		word = values[0]
-		coefs = asarray(values[1:], dtype='float32')
-		embeddings_index[word] = coefs
+		values=line.split()
+		word=values[0]
+		coefs=asarray(values[1:],dtype='float32')
+		embeddings_index[word]=coefs
 	f.close()
 
-	embedding_matrix = zeros((len(word_index), embedding_dims))
-	for word, i in word_index.items():
-		embedding_vector = embeddings_index.get(word)
+	embedding_matrix=zeros((len(word_index),embedding_dims))
+	for word,i in word_index.items():
+		embedding_vector=embeddings_index.get(word)
 		if embedding_vector is not None:
 			# words not found in embedding index will be all-zeros.
-			embedding_matrix[i] = embedding_vector
+			embedding_matrix[i]=embedding_vector
 	###
-	input_layer = layers.Input(shape = (X_train[0].shape[1],))
+	input_layer=layers.Input(shape=(X_train[0].shape[1],))
 
-	embedding = layers.Embedding(
+	embedding=layers.Embedding(
 		len(word_index),
 		embedding_dims,
-		weights = [embedding_matrix],
-		input_length = X_train[0].shape[1],
-		trainable = False)(input_layer)
+		weights=[embedding_matrix],
+		input_length=X_train[0].shape[1],
+		trainable=False)(input_layer)
 
-	# nb_filter = 250 # don't know yet
-	# kernel_size = 3
+	seq_features=layers.LSTM(1280,go_backwards=True)(embedding)
 
-	# conv_layer = layers.Convolution1D(
-	# 	nb_filter,
-	# 	kernel_size,
-	# 	padding = 'valid',
-	# 	activation = 'relu')(embedding)
+	other_features=layers.Input(shape=(3,))
 
-	# dropout_rate = 0.2 #don't know yet
+	model=layers.Concatenate(axis=1)([seq_features,other_features])
 
-	# dropout_layer = layers.Dropout(dropout_rate)(conv_layer)
+	model=layers.Dense(1280,activation =activation_input_node)(model)
 
-	# seq_features = layers.GlobalMaxPooling1D()(dropout_layer)
+	model=layers.Dense(node1,activation=activation_node1)(model)
 
-	seq_features = layers.LSTM(1280,go_backwards = True)(embedding)
+	model=layers.Dense(node2,activation=activation_node2)(model)
 
-	# seq_features = layers.Flatten()(embedding)
+	model =layers.Dropout(rate =.4)(model)
 
-	other_features = layers.Input(shape = (3,))
+	model=layers.Dense(4,activation='softmax')(model)
 
-	model = layers.Concatenate(axis = 1)([seq_features,other_features])
-
-	model = layers.Dense(1280,activation =activation_input_node)(model)
-
-	model = layers.Dense(node1,activation=activation_node1)(model)
-
-	model = layers.Dense(node2,activation = activation_node2)(model)
-
-	model  = layers.Dropout(rate =.4)(model)
-
-	model = layers.Dense(4, activation = 'softmax')(model)
-
-	model = models.Model([input_layer,other_features],model)
+	model=models.Model([input_layer,other_features],model)
 
 	model.compile(
-		optimizer = "adam",
-		loss = "sparse_categorical_crossentropy",
-		metrics = ['accuracy'])
+		optimizer="adam",
+		loss="sparse_categorical_crossentropy",
+		metrics=['accuracy'])
 
 	model.fit(
 		X_train,
 		y_train,
-		epochs = epochs,
-		batch_size = 20,
-		class_weight = class_weight)
+		epochs=epochs,
+		batch_size=20,
+		class_weight=class_weight)
 
 
-	val_loss, val_acc = model.evaluate(X_test, y_test)
+	val_loss,val_acc=model.evaluate(X_test,y_test)
 
-	result = model.predict(X_test)
+	result=model.predict(X_test)
 
 	y_pred=[]
 	for sample in result:
 		y_pred.append(argmax(sample))
 
-	f1_score = round(metrics.f1_score(y_test, y_pred, average = average)*100,3)
-	precision = round(metrics.precision_score(y_test, y_pred, average = average)*100,3)
-	recall = round(metrics.recall_score(y_test, y_pred, average = average)*100,3)
+	f1_score=round(metrics.f1_score(y_test,y_pred,average=average)*100,3)
+	precision=round(metrics.precision_score(y_test,y_pred,average=average)*100,3)
+	recall=round(metrics.recall_score(y_test,y_pred,average=average)*100,3)
 	accuracy_list.append(val_acc)
 
-accuracy_mean = 0
+accuracy_mean=0
 for accuracy in accuracy_list:
-		accuracy_mean = float(accuracy_mean) + float(accuracy)
-accuracy_mean = accuracy_mean/len(accuracy_list)
+		accuracy_mean=float(accuracy_mean)+float(accuracy)
+accuracy_mean=accuracy_mean/len(accuracy_list)
 end=time.time()
 print(
-	metrics.classification_report(y_test,y_pred,target_names = target_names),
+	metrics.classification_report(y_test,y_pred,target_names=target_names),
 	"Cross validation score ("+str(k_cross_val)+") : "+str(round(accuracy_mean*100,3)),
 	"Accuracy score : "+str(round(metrics.accuracy_score(y_test,y_pred)*100,3)),
 	"\tF1_score : "+str(f1_score),
