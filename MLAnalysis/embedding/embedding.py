@@ -36,8 +36,8 @@ from keras import models
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 
 dataset = "Dataset2.csv"
-embedding_dims = 300 # Here 50/100/200/300
-result_output = "testResultDLEmbedding"+str(embedding_dims)+"d.csv"
+embedding_dims = 50 # Here 50/100/200/300
+result_output = "testResultEmbedding"+str(embedding_dims)+"d.csv"
 embedding_file = 'glove.6B.'+str(embedding_dims)+'d.txt'
 average="macro" # binary | micro | macro | weighted | samples
 class_weight = {
@@ -171,7 +171,7 @@ vocab_size = 500
 tokenizer = Tokenizer(num_words = vocab_size)
 tokenizer.fit_on_texts(data[completeCitation])
 tmp = tokenizer.texts_to_sequences(data[completeCitation])
-print(tmp)
+
 word_index = tokenizer.word_index
 
 max_len = len(max(tmp, key = len))
@@ -206,7 +206,7 @@ for train_index,test_index in skf.split(X,y):
 		embeddings_index[word] = coefs
 	f.close()
 
-	embedding_matrix = zeros((len(word_index) + 1, embedding_dims))
+	embedding_matrix = zeros((len(word_index), embedding_dims))
 	for word, i in word_index.items():
 		embedding_vector = embeddings_index.get(word)
 		if embedding_vector is not None:
@@ -216,30 +216,40 @@ for train_index,test_index in skf.split(X,y):
 	input_layer = layers.Input(shape = (X_train[0].shape[1],))
 
 	embedding = layers.Embedding(
-		len(word_index)+1,
+		len(word_index),
 		embedding_dims,
 		weights = [embedding_matrix],
 		input_length = X_train[0].shape[1],
 		trainable = False)(input_layer)
 
-	nb_filter = 250 # don't know yet
-	kernel_size = 3
+	# nb_filter = 250 # don't know yet
+	# kernel_size = 3
 
-	conv_layer = layers.Convolution1D(
-		nb_filter,
-		kernel_size,
-		padding = 'valid',
-		activation = 'relu')(embedding)
+	# conv_layer = layers.Convolution1D(
+	# 	nb_filter,
+	# 	kernel_size,
+	# 	padding = 'valid',
+	# 	activation = 'relu')(embedding)
 
-	dropout_rate = 0.2 #don't know yet
+	# dropout_rate = 0.2 #don't know yet
 
-	dropout_layer = layers.Dropout(dropout_rate)(conv_layer)
+	# dropout_layer = layers.Dropout(dropout_rate)(conv_layer)
 
-	seq_features = layers.GlobalMaxPooling1D()(dropout_layer)
+	# seq_features = layers.GlobalMaxPooling1D()(dropout_layer)
+
+	seq_features =layers.Flatten()(embedding)
 
 	other_features = layers.Input(shape = (3,))
 
 	model = layers.Concatenate(axis = 1)([seq_features,other_features])
+
+	model = layers.Dense(1280,activation =activation_input_node)(model)
+
+	model = layers.Dense(node1,activation=activation_node1)(model)
+
+	model = layers.Dense(node2,activation = activation_node2)(model)
+
+	model  = layers.Dropout(rate =.4)(model)
 
 	model = layers.Dense(4, activation = 'softmax')(model)
 

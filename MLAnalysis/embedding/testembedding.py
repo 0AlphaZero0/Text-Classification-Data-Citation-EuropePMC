@@ -177,17 +177,15 @@ for tokenizer in tokenizer_list:
 	if tokenizer[1]=='tokenizer':
 		tokenizer[0].fit_on_texts(data[completeCitation])
 		tmp=tokenizer[0].texts_to_sequences(data[completeCitation])
+		word_index = tokenizer[0].word_index
+		max_len = len(max(tmp, key = len))
+		tmp = DataFrame(pad_sequences(
+			tmp,
+			maxlen = max_len, 
+			padding = 'post'))
 	else:
 		tmp=tokenizer[0].fit_transform(data[completeCitation].fillna('').values.reshape(-1)).todense()
 
-word_index = tokenizer.word_index
-
-max_len = len(max(tmp, key = len))
-
-tmp = DataFrame(pad_sequences(
-	tmp,
-	maxlen = max_len, 
-	padding = 'post'))
 
 data = concat([data[featuresList],tmp], axis = 1)
 tmp = None
