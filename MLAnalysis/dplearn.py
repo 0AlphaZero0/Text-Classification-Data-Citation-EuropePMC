@@ -29,13 +29,17 @@ from sklearn import metrics
 from sklearn.model_selection import StratifiedKFold
 
 from keras.callbacks import TensorBoard
-NAME="dplearn{}".format(int(time.time()))
-tensorboard=TensorBoard(log_dir='./logs/{}'.format(NAME))
+
 ##################################################    Variables     ###################################################
 
 # Files
 dataset_filename="Dataset2.csv"
-result_outfile="ResultDLparam.csv"
+epochs=10
+
+result_outfile="ResultDL"+str(epochs)+"-epochs.csv"
+NAME="dplearn"+str(epochs)+"epochs-{}".format(int(time.time()))
+tensorboard=TensorBoard(log_dir='./logs/{}'.format(NAME))
+
 # Parameters
 average="macro" # binary | micro | macro | weighted | samples
 batch_size=20
@@ -45,7 +49,6 @@ class_weight={
 	2 : 15.,
 	3 : 10.}
 skf=StratifiedKFold(n_splits=4)
-epochs=5
 input_node_units=1280
 activation_input_node='relu'
 node1_units=128
