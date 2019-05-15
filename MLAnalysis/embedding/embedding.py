@@ -30,22 +30,27 @@ from keras.preprocessing.text import Tokenizer
 from keras import layers
 from keras import models
 
+from keras.callbacks import TensorBoard
 
 ##################################################    Variables     ###################################################
 
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 
 dataset = "Dataset2.csv"
-embedding_dims = 50 # Here 50/100/200/300
+embedding_dims = 300 # Here 50/100/200/300
+epochs = 15
 result_output = "testResultEmbedding"+str(embedding_dims)+"d.csv"
 embedding_file = 'glove.6B.'+str(embedding_dims)+'d.txt'
+
+NAME="embedding"+str(embedding_dims)+"D"+str(epochs)+"epochs-{}".format(int(time.time()))
+tensorboard=TensorBoard(log_dir='./logs/{}'.format(NAME))
+
 average="macro" # binary | micro | macro | weighted | samples
 class_weight = {
 	0 : 15.,
 	1 : 50.,
 	2 : 15.,
 	3 : 10.}
-epochs = 5
 skf = StratifiedKFold(n_splits=4)
 activation_input_node = 'relu'
 node1 = 128
@@ -222,21 +227,6 @@ for train_index,test_index in skf.split(X,y):
 		input_length = X_train[0].shape[1],
 		trainable = False)(input_layer)
 
-	# nb_filter = 250 # don't know yet
-	# kernel_size = 3
-
-	# conv_layer = layers.Convolution1D(
-	# 	nb_filter,
-	# 	kernel_size,
-	# 	padding = 'valid',
-	# 	activation = 'relu')(embedding)
-
-	# dropout_rate = 0.2 #don't know yet
-
-	# dropout_layer = layers.Dropout(dropout_rate)(conv_layer)
-
-	# seq_features = layers.GlobalMaxPooling1D()(dropout_layer)
-
 	seq_features =layers.Flatten()(embedding)
 
 	other_features = layers.Input(shape = (3,))
@@ -265,8 +255,9 @@ for train_index,test_index in skf.split(X,y):
 		y_train,
 		epochs = epochs,
 		batch_size = 20,
-		class_weight = class_weight)
-
+		class_weight = class_weight,
+		validation_data=(X_test,y_test),
+		callbacks=[tensorboard])
 
 	val_loss, val_acc = model.evaluate(X_test, y_test)
 
