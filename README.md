@@ -55,6 +55,25 @@ Also there is a lot of data resources thatare part of EBI and are currently main
 - and of course [Europe PMC](http://europepmc.org/)
 - [etc](https://www.ebi.ac.uk/services/all).
  
+ In this environnement the Europe PMC team is really close to biomedical scientits so they can answer in the best way biomedical problems for publishing scientific papers. AS they deal with millions of papers and try to give the best solution for curators and annotations. 
+ 
+ This last point is one of the reasons why this project is important, indeed analysing millions of papers by just reading them is an exhausting jobs, one of the solution, first, is text-mining, indeed mining for terms like protein name, GO terms, diseases, etc help a lot curators in their jobs. But this just help them and they still need to read a lot to give correct annotations of papers. The solution a recurrent task on millions documents seems pretty famous those last years, Machine Learning & Deep Learning.
+ 
+ So there is a specific field of neuro linguistic programming(NLP), that is Sentiment Analysis, this field try, thanks to machine learning and deep learning, to analyse the opinion in a sentence or a document. Indeed today we can transform words in numeric vectors that describe the words and this could be gived to a machine to be learn.
+ 
+ Recently it as be shown that sentiment could be apply in an other way indeed it has been shown that we could classify sentence with different category than just positives/negatives/objectives, it can be totally different and fit by the need we want like Background/Use/Compare/Motivation/Extensions/Future and maybe others. 
+
+So in this project we will work on data citations from Annotation API of Europe PMC and only on open access papers.
+
+In the first time a dataset will be created thanks to EuropePMC Annotation API, because this API thanks to text mining could return informations about open access and data citations/Accession numbers (and many other things). For this a Pipeline will be created it will extract citation and metadata from papers. It will look like :
+
+
+| PMCID      | AccessionNb | Section | SubType    | Figure | Categories | Pre-citation                                                                                | Citation                                                                                                                                                                           | Post-citation                                                                                                                                                |
+|------------|-------------|---------|------------|--------|------------|---------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| PMC2928273 | rs2234671   | Methods | RefSNP     | False  | Use        | SNP genotypes were called using the GeneMapper software (Applied Biosystems).               | Three SNPs: IL8RA:rs2234671, LTA:rs2229092 and IL4R:rs1805011 were removed because of excessive missing genotypes (>20%).                                                          | All genotyping was completed blinded with regard to toxicity status.                                                                                         |
+| PMC2928273 | rs2229092   | Methods | RefSNP     | False  | Use        | SNP genotypes were called using the GeneMapper software (Applied Biosystems).               | Three SNPs: IL8RA:rs2234671, LTA:rs2229092 and IL4R:rs1805011 were removed because of excessive missing genotypes (>20%).                                                          | All genotyping was completed blinded with regard to toxicity status.                                                                                         |
+| PMC4392464 | PRJNA242298 | Results | BioProject | False  | Creation   | There were 133 and 50,008 contigs longer than 10,000 and 1,000 bp, respectively (Table 1).  | All assembled sequences were deposited in NCBI’s Transcriptome Shotgun Assembly (TSA) database (http://www.ncbi.nlm.nih.gov/genbank/tsa/) under the accession number PRJNA242298.  | Of the 140,432 contigs, 91,303 (65.0%) had annotation information (Additional file 1: Table S1). For contigs with lengths ≥1,000 bp, 94.7% had BLASTX hits.  |
+
 
 <p align="center">
   :warning::warning::warning::warning::warning::warning::warning::warning: In progress :warning::warning::warning::warning::warning::warning::warning::warning:
