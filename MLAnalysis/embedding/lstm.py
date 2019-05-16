@@ -49,8 +49,8 @@ class_weight={
 	1 : 50.,
 	2 : 15.,
 	3 : 10.}
-
-skf=StratifiedKFold(n_splits=4)
+k_cross_val=4
+skf=StratifiedKFold(n_splits=k_cross_val)
 activation_input_node='relu'
 node1=128
 activation_node1='relu'
@@ -181,6 +181,8 @@ data["lemma_citation"]=lemma_citation
 data["stem_citation"]=stem_citation
 
 approaches=[data[completeCitation],data["lemma_citation"],data["stem_citation"]]
+output_file=codecs.open(result_output,'w',encoding='utf8')
+output_file.write("f1-score\tPrecision\tRecall\tAccuracy\tCross-score("+str(k_cross_val)+")\tLoss\tTime\tApproach\n")
 
 for approach in approaches:
     	
@@ -204,7 +206,6 @@ for approach in approaches:
 	y=data.Categories_num
 
 	accuracy_list=[]
-	k_cross_val=5
 	start=time.time()
 	control=0
 	for train_index,test_index in skf.split(X,y):
@@ -304,8 +305,6 @@ for approach in approaches:
 		"\tTime : "+str(round(end-start,3)),
 		"\n#######################################################")
 
-	output_file=codecs.open(result_output,'w',encoding='utf8')
-	output_file.write("f1-score\tPrecision\tRecall\tAccuracy\tCross-score("+str(k_cross_val)+")\tLoss\tTime\n")
 	output_file.write(str(f1_score))
 	output_file.write("\t")
 	output_file.write(str(precision))
@@ -319,4 +318,6 @@ for approach in approaches:
 	output_file.write(str(val_loss))
 	output_file.write("\t")
 	output_file.write(str(round(end-start,3)))
+	output_file.write("\t")
+	output_file.write(str(approach.name))
 	output_file.write("\n")
