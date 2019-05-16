@@ -75,6 +75,19 @@ In the first time a dataset will be created thanks to EuropePMC Annotation API, 
 | PMC4392464 | PRJNA242298 | Results | BioProject | False  | Creation   | There were 133 and 50,008 contigs longer than 10,000 and 1,000 bp, respectively (Table 1).  | All assembled sequences were deposited in NCBI’s Transcriptome Shotgun Assembly (TSA) database (http://www.ncbi.nlm.nih.gov/genbank/tsa/) under the accession number PRJNA242298.  | Of the 140,432 contigs, 91,303 (65.0%) had annotation information (Additional file 1: Table S1). For contigs with lengths ≥1,000 bp, 94.7% had BLASTX hits.  |
 
 
+Then some approaches will be study like :
+- Ngram
+- Embedding
+- LSTM
+- Lemmatization
+- Stemming
+- Neural Network
+- Supervised Machine Learning models:
+  * SVM
+  * Naive Bayes
+  * Random Forest
+  * Logistic Regression
+
 <p align="center">
   :warning::warning::warning::warning::warning::warning::warning::warning: In progress :warning::warning::warning::warning::warning::warning::warning::warning:
  </p>
