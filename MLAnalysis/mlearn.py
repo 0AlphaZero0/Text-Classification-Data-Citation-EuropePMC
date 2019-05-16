@@ -61,6 +61,7 @@ countVectorizerList=[
 	"ComplementNB",
 	"GaussianNB",
 	"Random Forest"]
+	
 ################################################    Models     #################################################
 #
 clfSVM=svm.LinearSVC(C=C,max_iter=max_iter,class_weight=class_weight)
@@ -71,11 +72,11 @@ clfGaussianNB=GaussianNB()
 clfMultinomialNB=MultinomialNB()
 #
 clfList=[
-	[clfLR,"Logistic Regression"],
+	[clfLR,"Logistic-Regression"],
 	[clfComplementNB,"ComplementNB"],
 	[clfGaussianNB,"GaussianNB"],
 	[clfMultinomialNB,"MultinomialNB"],
-	[clfRF,"Random Forest"],
+	[clfRF,"Random-Forest"],
 	[clfSVM,"SVM"]]
 #
 ################################################    Functions     #################################################
