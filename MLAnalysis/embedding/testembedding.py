@@ -30,16 +30,19 @@ from keras.preprocessing.text import Tokenizer
 from keras import layers
 from keras import models
 
+from keras.callbacks import TensorBoard
 
 ##################################################    Variables     ###################################################
 
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 
 dataset = "Dataset2.csv"
-embedding_dims = 50 # Here 50/100/200/300
-epochs = 5
+embedding_dims = 300 # Here 50/100/200/300
+epochs = 15
+
 result_output = "testtestResultDLEmbedding"+str(embedding_dims)+"d.csv"
 embedding_file = 'glove.6B.'+str(embedding_dims)+'d.txt'
+
 vocab_size = 500
 average="macro" # binary | micro | macro | weighted | samples
 class_weight = {
@@ -180,6 +183,7 @@ data["stem_citation"]=stem_citation
 approaches=[data[completeCitation],data["lemma_citation"],data["stem_citation"]]
 
 for approach in approaches:
+
 	tokenizer = Tokenizer(num_words = vocab_size)
 	tokenizer.fit_on_texts(approach)
 	tmp = tokenizer.texts_to_sequences(approach)
@@ -202,7 +206,12 @@ for approach in approaches:
 	accuracy_list = []
 	k_cross_val=5
 	start=time.time()
+	control=0
 	for train_index,test_index in skf.split(X,y):
+    	
+		NAME="testembedding-"+str(embedding_dims)+"D-epochs"+str(epochs)+"-"+str(approach.name)+str(control)+"-{}".format(int(time.time()))
+		tensorboard=TensorBoard(log_dir='./logs/{}'.format(NAME))
+
 		X_train, X_test = [X.ix[train_index], X.ix[test_index]] 
 		y_train, y_test = [y.ix[train_index], y.ix[test_index]]
 
@@ -277,8 +286,9 @@ for approach in approaches:
 			y_train,
 			epochs = epochs,
 			batch_size = 20,
-			class_weight = class_weight)
-
+			class_weight = class_weight,
+			validation_data=(X_test,y_test),
+			callbacks=[tensorboard])
 
 		val_loss, val_acc = model.evaluate(X_test, y_test)
 
@@ -292,6 +302,7 @@ for approach in approaches:
 		precision = round(metrics.precision_score(y_test, y_pred, average = average)*100,3)
 		recall = round(metrics.recall_score(y_test, y_pred, average = average)*100,3)
 		accuracy_list.append(val_acc)
+		control+=1
 
 	accuracy_mean = 0
 	for accuracy in accuracy_list:

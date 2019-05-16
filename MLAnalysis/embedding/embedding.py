@@ -37,20 +37,20 @@ from keras.callbacks import TensorBoard
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 
 dataset = "Dataset2.csv"
-embedding_dims = 300 # Here 50/100/200/300
-epochs = 15
-result_output = "testResultEmbedding"+str(embedding_dims)+"d.csv"
+embedding_dims = 50 # Here 50/100/200/300
+epochs = 5
+
+result_output = "ResultDLEmbedding"+str(embedding_dims)+"d.csv"
 embedding_file = 'glove.6B.'+str(embedding_dims)+'d.txt'
 
-NAME="embedding"+str(embedding_dims)+"D"+str(epochs)+"epochs-{}".format(int(time.time()))
-tensorboard=TensorBoard(log_dir='./logs/{}'.format(NAME))
-
+vocab_size = 500
 average="macro" # binary | micro | macro | weighted | samples
 class_weight = {
 	0 : 15.,
 	1 : 50.,
 	2 : 15.,
 	3 : 10.}
+
 skf = StratifiedKFold(n_splits=4)
 activation_input_node = 'relu'
 node1 = 128
@@ -145,14 +145,14 @@ data = read_csv(dataset,header = 0,sep = "\t")
 #
 data[completeCitation] = data[[PreCitation_str,Citation_str,PostCitation_str]].apply(lambda x : '{}{}'.format(x[0],x[1]), axis = 1)
 #
-data["Categories_num"] = data.Categories.map(
-	{"Background":0,
+data["Categories_num"] = data.Categories.map({
+	"Background":0,
 	"Compare":1,
 	"Creation":2,
 	"Use":3})
 #
-data[Figure_num_str] = data.Figure.map(
-	{True:0,
+data[Figure_num_str] = data.Figure.map({
+	True:0,
 	False:1})
 #
 sectionDict = {}
@@ -171,135 +171,167 @@ for subType in data.SubType:
 		index+=1
 data[SubType_num_str] = data.SubType.map(subTypeDict)
 ###########################################################################################
-vocab_size = 500
+lemma_citation=[]
+stem_citation=[]
+for citation in data[completeCitation]:
+	lemma_citation.append(" ".join(lemma_tokenizer(citation)))
+	stem_citation.append(" ".join(stem_tokenizer(citation)))
 
-tokenizer = Tokenizer(num_words = vocab_size)
-tokenizer.fit_on_texts(data[completeCitation])
-tmp = tokenizer.texts_to_sequences(data[completeCitation])
+data["lemma_citation"]=lemma_citation
+data["stem_citation"]=stem_citation
 
-word_index = tokenizer.word_index
+approaches=[data[completeCitation],data["lemma_citation"],data["stem_citation"]]
 
-max_len = len(max(tmp, key = len))
+for approach in approaches:
 
-tmp = DataFrame(pad_sequences(
-	tmp,
-	maxlen = max_len, 
-	padding = 'post'))
+	tokenizer = Tokenizer(num_words = vocab_size)
+	tokenizer.fit_on_texts(approach)
+	tmp = tokenizer.texts_to_sequences(approach)
 
-data = concat([data[featuresList],tmp], axis = 1)
-tmp = None
+	word_index = tokenizer.word_index
 
-X = data.drop(['Categories_num'], axis = 1)
-y = data.Categories_num
+	max_len = len(max(tmp, key = len))
 
-accuracy_list = []
-k_cross_val=5
-start=time.time()
-for train_index,test_index in skf.split(X,y):
-	X_train, X_test = [X.ix[train_index], X.ix[test_index]] 
-	y_train, y_test = [y.ix[train_index], y.ix[test_index]]
+	tmp = DataFrame(pad_sequences(
+		tmp,
+		maxlen = max_len, 
+		padding = 'post'))
 
-	X_train = [X_train.iloc[:, 3:],X_train.iloc[:, :3]] #seq_features,other_features
-	X_test = [X_test.iloc[:, 3:], X_test.iloc[:, :3]] #seq_features,other_features
+	data = concat([data[featuresList],tmp], axis = 1)
+	tmp = None
 
-	embeddings_index = {}
-	f = codecs.open(embedding_file,'r',encoding='utf-8')
-	for line in f:
-		values = line.split()
-		word = values[0]
-		coefs = asarray(values[1:], dtype='float32')
-		embeddings_index[word] = coefs
-	f.close()
+	X = data.drop(['Categories_num'], axis = 1)
+	y = data.Categories_num
 
-	embedding_matrix = zeros((len(word_index), embedding_dims))
-	for word, i in word_index.items():
-		embedding_vector = embeddings_index.get(word)
-		if embedding_vector is not None:
-			# words not found in embedding index will be all-zeros.
-			embedding_matrix[i] = embedding_vector
-	###
-	input_layer = layers.Input(shape = (X_train[0].shape[1],))
+	accuracy_list = []
+	k_cross_val=5
+	start=time.time()
+	control=0
+	for train_index,test_index in skf.split(X,y):
+    	
+		NAME="embedding-"+str(embedding_dims)+"D-epochs"+str(epochs)+"-"+str(approach.name)+str(control)+"-{}".format(int(time.time()))
+		tensorboard=TensorBoard(log_dir='./logs/{}'.format(NAME))
 
-	embedding = layers.Embedding(
-		len(word_index),
-		embedding_dims,
-		weights = [embedding_matrix],
-		input_length = X_train[0].shape[1],
-		trainable = False)(input_layer)
+		X_train, X_test = [X.ix[train_index], X.ix[test_index]] 
+		y_train, y_test = [y.ix[train_index], y.ix[test_index]]
 
-	seq_features =layers.Flatten()(embedding)
+		X_train = [X_train.iloc[:, 3:],X_train.iloc[:, :3]] #seq_features,other_features
+		X_test = [X_test.iloc[:, 3:], X_test.iloc[:, :3]] #seq_features,other_features
 
-	other_features = layers.Input(shape = (3,))
+		embeddings_index = {}
+		f = codecs.open(embedding_file,'r',encoding='utf-8')
+		for line in f:
+			values = line.split()
+			word = values[0]
+			coefs = asarray(values[1:], dtype='float32')
+			embeddings_index[word] = coefs
+		f.close()
 
-	model = layers.Concatenate(axis = 1)([seq_features,other_features])
+		embedding_matrix = zeros((len(word_index), embedding_dims))
+		for word, i in word_index.items():
+			embedding_vector = embeddings_index.get(word)
+			if embedding_vector is not None:
+				# words not found in embedding index will be all-zeros.
+				embedding_matrix[i] = embedding_vector
+		###
+		input_layer = layers.Input(shape = (X_train[0].shape[1],))
 
-	model = layers.Dense(1280,activation =activation_input_node)(model)
+		embedding = layers.Embedding(
+			len(word_index),
+			embedding_dims,
+			weights = [embedding_matrix],
+			input_length = X_train[0].shape[1],
+			trainable = False)(input_layer)
 
-	model = layers.Dense(node1,activation=activation_node1)(model)
+		# nb_filter = 250 # don't know yet
+		# kernel_size = 3
 
-	model = layers.Dense(node2,activation = activation_node2)(model)
+		# conv_layer = layers.Convolution1D(
+		# 	nb_filter,
+		# 	kernel_size,
+		# 	padding = 'valid',
+		# 	activation = 'relu')(embedding)
 
-	model  = layers.Dropout(rate =.4)(model)
+		# dropout_rate = 0.2 #don't know yet
 
-	model = layers.Dense(4, activation = 'softmax')(model)
+		# dropout_layer = layers.Dropout(dropout_rate)(conv_layer)
 
-	model = models.Model([input_layer,other_features],model)
+		# seq_features = layers.GlobalMaxPooling1D()(dropout_layer)
 
-	model.compile(
-		optimizer = "adam",
-		loss = "sparse_categorical_crossentropy",
-		metrics = ['accuracy'])
+		seq_features =layers.Flatten()(embedding)
 
-	model.fit(
-		X_train,
-		y_train,
-		epochs = epochs,
-		batch_size = 20,
-		class_weight = class_weight,
-		validation_data=(X_test,y_test),
-		callbacks=[tensorboard])
+		other_features = layers.Input(shape = (3,))
 
-	val_loss, val_acc = model.evaluate(X_test, y_test)
+		model = layers.Concatenate(axis = 1)([seq_features,other_features])
 
-	result = model.predict(X_test)
+		model = layers.Dense(1280,activation =activation_input_node)(model)
 
-	y_pred=[]
-	for sample in result:
-		y_pred.append(argmax(sample))
+		model = layers.Dense(node1,activation=activation_node1)(model)
 
-	f1_score = round(metrics.f1_score(y_test, y_pred, average = average)*100,3)
-	precision = round(metrics.precision_score(y_test, y_pred, average = average)*100,3)
-	recall = round(metrics.recall_score(y_test, y_pred, average = average)*100,3)
-	accuracy_list.append(val_acc)
+		model = layers.Dense(node2,activation = activation_node2)(model)
 
-accuracy_mean = 0
-for accuracy in accuracy_list:
-		accuracy_mean = float(accuracy_mean) + float(accuracy)
-accuracy_mean = accuracy_mean/len(accuracy_list)
-end=time.time()
-print(
-	metrics.classification_report(y_test,y_pred,target_names = target_names),
-	"Cross validation score ("+str(k_cross_val)+") : "+str(round(accuracy_mean*100,3)),
-	"Accuracy score : "+str(round(metrics.accuracy_score(y_test,y_pred)*100,3)),
-	"\tF1_score : "+str(f1_score),
-	"\tPrecision : "+str(precision),
-	"\tRecall : "+str(recall),
-	"\tTime : "+str(round(end-start,3)),
-	"\n#######################################################")
+		model  = layers.Dropout(rate =.4)(model)
 
-output_file=codecs.open(result_output,'w',encoding='utf8')
-output_file.write("f1-score\tPrecision\tRecall\tAccuracy\tCross-score("+str(k_cross_val)+")\tLoss\tTime\n")
-output_file.write(str(f1_score))
-output_file.write("\t")
-output_file.write(str(precision))
-output_file.write("\t")
-output_file.write(str(recall))
-output_file.write("\t")
-output_file.write(str(val_acc*100))
-output_file.write("\t")
-output_file.write(str(round(accuracy_mean*100,3)))
-output_file.write("\t")
-output_file.write(str(val_loss))
-output_file.write("\t")
-output_file.write(str(round(end-start,3)))
-output_file.write("\n")
+		model = layers.Dense(4, activation = 'softmax')(model)
+
+		model = models.Model([input_layer,other_features],model)
+
+		model.compile(
+			optimizer = "adam",
+			loss = "sparse_categorical_crossentropy",
+			metrics = ['accuracy'])
+
+		model.fit(
+			X_train,
+			y_train,
+			epochs = epochs,
+			batch_size = 20,
+			class_weight = class_weight,
+			validation_data=(X_test,y_test),
+			callbacks=[tensorboard])
+
+		val_loss, val_acc = model.evaluate(X_test, y_test)
+
+		result = model.predict(X_test)
+
+		y_pred=[]
+		for sample in result:
+			y_pred.append(argmax(sample))
+
+		f1_score = round(metrics.f1_score(y_test, y_pred, average = average)*100,3)
+		precision = round(metrics.precision_score(y_test, y_pred, average = average)*100,3)
+		recall = round(metrics.recall_score(y_test, y_pred, average = average)*100,3)
+		accuracy_list.append(val_acc)
+		control+=1
+
+	accuracy_mean = 0
+	for accuracy in accuracy_list:
+			accuracy_mean = float(accuracy_mean) + float(accuracy)
+	accuracy_mean = accuracy_mean/len(accuracy_list)
+	end=time.time()
+	print(
+		metrics.classification_report(y_test,y_pred,target_names = target_names),
+		"Cross validation score ("+str(k_cross_val)+") : "+str(round(accuracy_mean*100,3)),
+		"Accuracy score : "+str(round(metrics.accuracy_score(y_test,y_pred)*100,3)),
+		"\tF1_score : "+str(f1_score),
+		"\tPrecision : "+str(precision),
+		"\tRecall : "+str(recall),
+		"\tTime : "+str(round(end-start,3)),
+		"\n#######################################################")
+
+	output_file=codecs.open(result_output,'w',encoding='utf8')
+	output_file.write("f1-score\tPrecision\tRecall\tAccuracy\tCross-score("+str(k_cross_val)+")\tLoss\tTime\n")
+	output_file.write(str(f1_score))
+	output_file.write("\t")
+	output_file.write(str(precision))
+	output_file.write("\t")
+	output_file.write(str(recall))
+	output_file.write("\t")
+	output_file.write(str(val_acc*100))
+	output_file.write("\t")
+	output_file.write(str(round(accuracy_mean*100,3)))
+	output_file.write("\t")
+	output_file.write(str(val_loss))
+	output_file.write("\t")
+	output_file.write(str(round(end-start,3)))
+	output_file.write("\n")
