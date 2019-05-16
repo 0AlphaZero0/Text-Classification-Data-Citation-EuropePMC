@@ -41,7 +41,7 @@ ______________________________________________________________________
 - ***[Month 3 - 29/04-02/06](#Month3)***
   * [Week 9 - 29/04-05/05 - Results & Analysis for ML & DL first models](#Week9)
   * [Week 10 - 06/05-12/05 - Embedding& Cross-validation-score](#Week10)
-  * [Week 11 - 13/05-19/05 - ](#Week11)
+  * [Week 11 - 13/05-19/05 - TensorBoard & LSTM](#Week11)
 ______________________________________________________________________
 
 ### :bookmark_tabs: [Bibliography](#bibliography01)
@@ -1102,8 +1102,14 @@ This week I worked on Embedding and cross-validation score:
 [:top::top::top::top::top::top::top::top::top::top::top::top::top::top:Go to the top:top::top::top::top::top::top::top::top::top::top::top::top::top::top::top:](#top)
 
 <a name="Week11"></a>
-### :date: Week 11 - 13/05-19/05- :
+### :date: Week 11 - 13/05-19/05- TensorBoard & LSTM :
 
+- *General optimization* of all precedent NN, ML and embedding models
+  * Indeed I have to correct my implementation of embedding, ngram, lemmatization, stemming, tokenizer etc..
+  So the ngram and embedding are quite similar. But instead of tokenize by bag of words, embedding create a semantic sense so for each word there its "description" but also the "description" of words that are close of this word. In the end embedding represent word througha set of dimension (here from Glove we study 50/100/200/300 dimensions).
+  
+- *TensorBoard* 
+  * It's a tool to visualize what is going on through the trainning, so we can follow the loss, accuracy, validation loss and validation accuracy. It also provide a graph of the network created.
 
 [:top::top::top::top::top::top::top::top::top::top::top::top::top::top:Go to the top:top::top::top::top::top::top::top::top::top::top::top::top::top::top::top:](#top)
 
