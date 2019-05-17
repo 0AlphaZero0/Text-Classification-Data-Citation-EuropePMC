@@ -1111,6 +1111,8 @@ This week I worked on Embedding and cross-validation score:
 - *TensorBoard* 
   * It's a tool to visualize what is going on through the trainning, so we can follow the loss, accuracy, validation loss and validation accuracy. It also provide a graph of the network created.
 
+[Paper on LSTM for sentiment analysis](https://www.aclweb.org/anthology/O18-1021)
+
 [:top::top::top::top::top::top::top::top::top::top::top::top::top::top:Go to the top:top::top::top::top::top::top::top::top::top::top::top::top::top::top::top:](#top)
 
 ______________________________________________________________________
