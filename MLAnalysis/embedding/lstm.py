@@ -250,12 +250,6 @@ for approach in approaches:
 
 		model=layers.Concatenate(axis=1)([seq_features,other_features])
 
-		model=layers.Dense(1280,activation =activation_input_node)(model)
-
-		model=layers.Dense(node1,activation=activation_node1)(model)
-
-		model=layers.Dense(node2,activation=activation_node2)(model)
-
 		model =layers.Dropout(rate =.4)(model)
 
 		model=layers.Dense(4,activation='softmax')(model)
