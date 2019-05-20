@@ -24,6 +24,8 @@ ______________________________________________________________________
 - [16/04 - Pre-Analysis & Discussion with A.Athar](#16/04)
 - [24/04 - ML models & Discussion with A.Athar](#24/04)
 - [30/04 - ML models & DL models](#30/04)
+- [07/04 - LSTM & Embedding](07/04)
+- ***[18/05 - Summary of April](#18/05)***
 
 ______________________________________________________________________
 ### :green_book: Notes
@@ -238,6 +240,16 @@ Results and analysis
 ### :mega: 30/04 - ML models & DL models :
 
 - ML models : Needs to look at stratified 4-fold, because compare category contains only 4 citations.
+- DL models : Needs to add metrics like precision and recall for a good comparison with scientific works.
+  
+
+[:top::top::top::top::top::top::top::top::top::top::top::top::top::top:Go to the top:top::top::top::top::top::top::top::top::top::top::top::top::top::top::top:](#top)
+
+<a name="07/04"></a>
+### :mega: 07/04 - LSTM & Embedding :
+
+- Embedding : Re-work about approaches N-gram/Tokenizer/Lemmatization/Stemming.
+  * 
 - DL models : Needs to add metrics like precision and recall for a good comparison with scientific works.
   
 
