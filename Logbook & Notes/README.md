@@ -24,7 +24,7 @@ ______________________________________________________________________
 - [16/04 - Pre-Analysis & Discussion with A.Athar](#16/04)
 - [24/04 - ML models & Discussion with A.Athar](#24/04)
 - [30/04 - ML models & DL models](#30/04)
-- [07/04 - LSTM & Embedding](#07/04)
+- [07/05 - LSTM & Embedding](#07/05)
 - ***[18/05 - Summary of April](#18/05)***
 
 ______________________________________________________________________
@@ -232,26 +232,37 @@ Results and analysis
   * Word Embedding with *Multilayer*, *CNN*, *LSTM* classifier
 
 - Meeting with Xiao Yang & Awais Athar : 
-  
+  * *ClinicalTrials* should be removed as *Unclassifiable*. For *Background* and *Compare* category curators are not convinced by the utility for data citations.
 
 [:top::top::top::top::top::top::top::top::top::top::top::top::top::top:Go to the top:top::top::top::top::top::top::top::top::top::top::top::top::top::top::top:](#top)
 
 <a name="30/04"></a>
 ### :mega: 30/04 - ML models & DL models :
 
-- ML models : Needs to look at stratified 4-fold, because compare category contains only 4 citations.
-- DL models : Needs to add metrics like precision and recall for a good comparison with scientific works.
+- *ML models* : Needs to look at stratified 4-fold, because compare category contains only 4 citations.
+- *DL models* : Needs to add metrics like precision and recall for a good comparison with scientific works.
   
 
 [:top::top::top::top::top::top::top::top::top::top::top::top::top::top:Go to the top:top::top::top::top::top::top::top::top::top::top::top::top::top::top::top:](#top)
 
-<a name="07/04"></a>
-### :mega: 07/04 - LSTM & Embedding :
+<a name="07/05"></a>
+### :mega: 07/05 - LSTM & Embedding :
 
-- Embedding : Re-work about approaches N-gram/Tokenizer/Lemmatization/Stemming.
-  * 
-- DL models : Needs to add metrics like precision and recall for a good comparison with scientific works.
+- *Embedding* : Re-work about approaches N-gram/Tokenizer/Lemmatization/Stemming.
+  * Indeed I didn't understood that Lemmatization and stemming couldn't be use for a single approach. Stemming or Lemmatization should be used before the tokenizer or N-gram or Embedding. The tokenizer will make each word a token which can be represented by a value or a vector, the N-gram approach will make bag of words and assign a numerical vector to describe it, and the embedding will look at words before and after the current word and represent the word and its context in a numerical vector.
+- *LSTM* : It's weird that this Deep learning method gives worst results than embedding sowe need tolook deeper for any problems.
   
+
+[:top::top::top::top::top::top::top::top::top::top::top::top::top::top:Go to the top:top::top::top::top::top::top::top::top::top::top::top::top::top::top::top:](#top)
+
+<a name="18/05"></a>
+### :mega: 18/05 - Summary of April :
+
+- *Previous analysis* : good but needs to calculate ratio for each paper as it could be really different for each paper (eg. a paper can contain 30 data citation in Results section and another 3 data citations but 1 in Abstract, 1 in Results and 1 in Discussion.)
+
+- *Correction Annotation API* : it forget some citation already match by annotation API, example : if GOxxxx is match one time it would not be match in the paper each time it appears.
+
+- *Expect results soon* : ...
 
 [:top::top::top::top::top::top::top::top::top::top::top::top::top::top:Go to the top:top::top::top::top::top::top::top::top::top::top::top::top::top::top::top:](#top)
 
