@@ -44,6 +44,7 @@ ______________________________________________________________________
   * [Week 9 - 29/04-05/05 - Results & Analysis for ML & DL first models](#Week9)
   * [Week 10 - 06/05-12/05 - Embedding& Cross-validation-score](#Week10)
   * [Week 11 - 13/05-19/05 - TensorBoard & LSTM](#Week11)
+  * [Week 12 - 20/05-26/05 - ](#Week12)
 ______________________________________________________________________
 
 ### :bookmark_tabs: [Bibliography](#bibliography01)
@@ -1135,6 +1136,11 @@ This week I worked on Embedding and cross-validation score:
   * It's a tool to visualize what is going on through the trainning, so we can follow the loss, accuracy, validation loss and validation accuracy. It also provide a graph of the network created.
 
 [Paper on LSTM for sentiment analysis](https://www.aclweb.org/anthology/O18-1021)
+
+[:top::top::top::top::top::top::top::top::top::top::top::top::top::top:Go to the top:top::top::top::top::top::top::top::top::top::top::top::top::top::top::top:](#top)
+
+<a name="Week12"></a>
+### :date: Week 12 - 20/05-26/05-  :
 
 [:top::top::top::top::top::top::top::top::top::top::top::top::top::top:Go to the top:top::top::top::top::top::top::top::top::top::top::top::top::top::top::top:](#top)
 
