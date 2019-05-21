@@ -33,53 +33,28 @@ from keras import layers
 from keras import models
 
 from keras.callbacks import TensorBoard
-
-##################################################    Variables     ###################################################
-
-os.environ['TF_CPP_MIN_LOG_LEVEL']='2'
-
-dataset="Dataset2.csv"
+######################################
 embedding_dims = 50 # Here 50/100/200/300
 epochs = 2
-k_cross_val=5
-
+k_cross_val=4
+average="macro" # binary | micro | macro | weighted | samples
+# class_weight={
+# 	0 : 15.,
+# 	1 : 50.,
+# 	2 : 15.,
+# 	3 : 10.}
+skf=StratifiedKFold(n_splits=k_cross_val,random_state=25)
 result_output = "ResultLSTM"+str(embedding_dims)+"d.csv"
 embedding_file = 'glove.6B.'+str(embedding_dims)+'d.txt'
-
-average="macro" # binary | micro | macro | weighted | samples
-class_weight={
-	0 : 15.,
-	1 : 50.,
-	2 : 15.,
-	3 : 10.}
-
-skf=StratifiedKFold(n_splits=4,random_state=25)
-activation_input_node='relu'
-node1=128
-activation_node1='relu'
-node2=128
-activation_node2='relu'
-output_node=4
 vocab_size=500
-activation_output_node='softmax'
-Section_num_str,SubType_num_str,Figure_num_str="Section_num","SubType_num","Figure_num"
-PreCitation_str,Citation_str,PostCitation_str,completeCitation,completeCitationEmbedd="PreCitation","Citation","PostCitation","CompleteCitation","completeCitationEmbedd"
-featuresList=[
-	Section_num_str,
-	SubType_num_str,
-	Figure_num_str,
-	'Categories_num']
-target_names=[
-	"Background",
-	"Compare",
-	"Creation",
-	"Use"]
+completeCitation="CompleteCitation"
+file_dataset="SAR14.txt"
 # Lemmatizer & Stemmer
 lemmatizer=WordNetLemmatizer()
 stemmer=SnowballStemmer('english',ignore_stopwords=True)
-
-##################################################    Class     ###################################################
-
+target_names=[
+	"Negative",
+	"Positive"]
 ################################################    Functions     #################################################
 #
 def lemma_word(word):
@@ -144,49 +119,44 @@ def tokenizer(doc):
 #
 ###################################################    Main     ###################################################
 #
-data=read_csv(dataset,header=0,sep="\t")
-#
-data[completeCitation]=data[[PreCitation_str,Citation_str,PostCitation_str]].apply(lambda x : '{}{}'.format(x[0],x[1]),axis=1)
-#
-data["Categories_num"]=data.Categories.map({
-	"Background":0,
-	"Compare":1,
-	"Creation":2,
-	"Use":3})
-#
-data[Figure_num_str]=data.Figure.map({
-	True:0,
-	False:1})
-#
-sectionDict={}
-index=1
-for section in data.Section:
-	if section not in sectionDict:
-		sectionDict[section]=index
-		index+=1
-data[Section_num_str]=data.Section.map(sectionDict)
-#
-subTypeDict={}
-index=1
-for subType in data.SubType:
-	if subType not in subTypeDict:
-		subTypeDict[subType]=index
-		index+=1
-data[SubType_num_str]=data.SubType.map(subTypeDict)
-###########################################################################################
+dataset=codecs.open(
+	filename=file_dataset,
+	mode="r",
+	encoding="utf-8")
+citation=[]
+label=[]
+for line in dataset.readlines():
+	line=line.split('"')
+	citation.append(line[1])
+	label.append(int(line[2].split('\n')[0].split(',')[1]))
+tmp=[]
+for value in label:
+	if value<5:
+		tmp.append(0)
+	else:
+		tmp.append(1)
+label=tmp
+tmp=None
+TMP=[citation[0:10000],label[0:10000]]
+dataset.close()
+dataset=TMP
+TMP=None
+data=DataFrame.from_items([
+	(completeCitation,dataset[0]),
+	('Categories_num',dataset[1])])
+dataset=None
+citation=None
+label=None
 output_file=codecs.open(result_output,'w',encoding='utf8')
 output_file.write("f1-score\tPrecision\tRecall\tAccuracy\tCross-score("+str(k_cross_val)+")\tLoss\tTime\tApproach\n")
-
 lemma_citation=[]
 stem_citation=[]
 for citation in data[completeCitation]:
 	lemma_citation.append(" ".join(lemma_tokenizer(citation)))
 	stem_citation.append(" ".join(stem_tokenizer(citation)))
-
 data["lemma_citation"]=lemma_citation
 data["stem_citation"]=stem_citation
-
-approaches=[data[completeCitation],data["lemma_citation"],data["stem_citation"]]	
+approaches=[data[completeCitation],data["lemma_citation"],data["stem_citation"]]
 for approach in approaches:	
 	tokenizer=Tokenizer(num_words=vocab_size)
 	tokenizer.fit_on_texts(approach)
@@ -197,10 +167,13 @@ for approach in approaches:
 		sequences=tmp,
 		maxlen=max_len,
 		padding='post'))
-	data=concat([data[featuresList],tmp],axis=1)
-	tmp=None
-	X=data.drop(['Categories_num'],axis=1)
+	X=tmp
 	y=data.Categories_num
+	tmp=None
+	# data=concat([data[featuresList],tmp],axis=1)
+	# tmp=None
+	# X=data.drop(['Categories_num'],axis=1)
+	# y=data.Categories_num
 	accuracy_list=[]
 	start=time.time()
 	control=0
@@ -220,19 +193,19 @@ for approach in approaches:
 			embeddings_index[word]=coefs
 		f.close()
 		not_in_embedding=0
-		embedding_matrix=random.uniform(-0.5,0.5,(len(word_index),embedding_dims))
+		embedding_matrix=random.uniform(-0.5,0.5,(len(word_index)+1,embedding_dims))
 		for word,i in word_index.items():# building matrix
 			embedding_vector=embeddings_index.get(word)
 			if embedding_vector is not None:
 				embedding_matrix[i]=embedding_vector
 			else:
 				not_in_embedding+=1
-		print(not_in_embedding,"/",len(word_index))
+		print(not_in_embedding,"/",len(word_index)+1)
 		##################  MODEL  ########################
 		input_layer=layers.Input(
 			shape=(X_train[0].shape[1],))
 		embedding=layers.Embedding(
-			input_dim=len(word_index),
+			input_dim=len(word_index)+1,
 			output_dim=embedding_dims,
 			weights=[embedding_matrix],
 			input_length=X_train[0].shape[1],
@@ -241,16 +214,14 @@ for approach in approaches:
 		seq_features=layers.LSTM(
 			units=embedding_dims,
 			activation='tanh',
-			go_backwards=True,
-			dropout=0,
-			recurrent_dropout=0)(embedding)
+			go_backwards=True)(embedding)
 		model=layers.Dense(
 			units=128,
 			activation='relu')(seq_features)
 		# model=layers.Dropout(
 		# 	rate = .4)(model)
 		model=layers.Dense(
-			units=4,
+			units=len(target_names),
 			activation='softmax')(model)
 		model=models.Model(
 			inputs=[input_layer],
@@ -264,7 +235,7 @@ for approach in approaches:
 			y_train,
 			epochs=epochs,
 			batch_size=20,
-			class_weight=class_weight,
+			# class_weight=class_weight,
 			validation_data=(X_test[0],y_test),
 			callbacks=[tensorboard])
 		##################  MODEL  ########################
