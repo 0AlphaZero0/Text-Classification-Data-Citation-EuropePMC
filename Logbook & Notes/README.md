@@ -1123,6 +1123,8 @@ This week I worked on Embedding and cross-validation score:
 - *Cross-validation-score*
   * We decide to use the k-fold function of scikit-learn but there is 2 problems the first one is the importance of the compare class indeed this class as it contains only 4 samples we can't go over 4-fold validationas it take at least 1 to test, so 5-fold and more are not possible. But there is also another problem, it seems that when we use this cross-validation score we run to really much tensorflows OOM errors, so that's an error we can't understand because it's just a loop that recreate the model and test it by the kfold methods. 
 
+It seems those errors came from keras, indeed generating tensors/models in a loop doesn't overwrite previous ones so there is a need to clean the session from tensors and models at each turn of the loop. 
+
 [:top::top::top::top::top::top::top::top::top::top::top::top::top::top:Go to the top:top::top::top::top::top::top::top::top::top::top::top::top::top::top::top:](#top)
 
 <a name="Week11"></a>
