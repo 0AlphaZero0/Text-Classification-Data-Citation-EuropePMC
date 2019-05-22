@@ -16,7 +16,7 @@ This script will extract PMCID of all papers that were previously extracted and 
 
 for file in os.listdir("./articlesOA"):
     if file.endswith(".xml"):
-        if file.endswith("-AccessionNb.xml") or file.endswith("-fulltxt.xml"):
+        if file.endswith("-AccessionNb.xml") or file.endswith("-fulltxt.xml") or file.endswith("-sentencized.xml"):
             pass
         else:
             os.rename("./articlesOA/"+str(file),"./articlesOA/"+str(file).split(".")[0]+"-sentencized.xml")
