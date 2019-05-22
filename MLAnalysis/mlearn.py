@@ -61,7 +61,6 @@ countVectorizerList=[
 	"ComplementNB",
 	"GaussianNB",
 	"Random Forest"]
-	
 ################################################    Models     #################################################
 #
 clfSVM=svm.LinearSVC(C=C,max_iter=max_iter,class_weight=class_weight)
