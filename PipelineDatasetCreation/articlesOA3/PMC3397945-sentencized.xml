@@ -1,0 +1,694 @@
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD v1.1 20151215//EN" "JATS-archivearticle1.dtd"> 
+<article xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML" article-type="research-article"><?properties open_access?><?DTDIdentifier.IdentifierValue -//NLM//DTD Journal Publishing DTD v2.3 20031101//EN?><?DTDIdentifier.IdentifierType public?><?SourceDTD.DTDName journalpublishing.dtd?><?SourceDTD.Version 2.3?><?ConverterInfo.XSLTName jp2nlmx2.xsl?><?ConverterInfo.Version 1?><front><journal-meta><journal-id journal-id-type="nlm-ta">PLoS One</journal-id><journal-id journal-id-type="iso-abbrev">PLoS ONE</journal-id><journal-id journal-id-type="publisher-id">plos</journal-id><journal-id journal-id-type="pmc">plosone</journal-id><journal-title-group><journal-title>PLoS ONE</journal-title></journal-title-group><issn pub-type="epub">1932-6203</issn><publisher><publisher-name>Public Library of Science</publisher-name><publisher-loc>San Francisco, USA</publisher-loc></publisher></journal-meta><article-meta><article-id pub-id-type="pmcid">3397945</article-id><article-id pub-id-type="pmid">22815861</article-id><article-id pub-id-type="publisher-id">PONE-D-12-03573</article-id><article-id pub-id-type="doi">10.1371/journal.pone.0040900</article-id><article-categories><subj-group subj-group-type="heading"><subject>Research Article</subject></subj-group><subj-group subj-group-type="Discipline-v2"><subject>Biology</subject><subj-group><subject>Computational Biology</subject><subj-group><subject>Genomics</subject><subj-group><subject>Genome Expression Analysis</subject><subject>Pharmacogenomics</subject></subj-group></subj-group><subj-group><subject>Microarrays</subject></subj-group></subj-group><subj-group><subject>Genomics</subject><subj-group><subject>Genomic Medicine</subject></subj-group></subj-group><subj-group><subject>Molecular Cell Biology</subject><subj-group><subject>Gene Expression</subject><subject>Signal Transduction</subject></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v2"><subject>Medicine</subject><subj-group><subject>Oncology</subject><subj-group><subject>Cancer Treatment</subject><subj-group><subject>Chemotherapy and Drug Treatment</subject></subj-group></subj-group><subj-group><subject>Cancers and Neoplasms</subject><subj-group><subject>Breast Tumors</subject></subj-group></subj-group><subj-group><subject>Basic Cancer Research</subject></subj-group></subj-group></subj-group></article-categories><title-group><article-title><SecTag type="TITLE"><text><SENT sid="0" pm="."><plain>Distinct Genes Related to Drug Response Identified in ER Positive and ER Negative Breast Cancer Cell Lines </plain></SENT>
+</text></SecTag></article-title><alt-title alt-title-type="running-head">Distinct Drug Response Genes in ER+ and ER− Cells</alt-title></title-group><contrib-group><contrib contrib-type="author"><name><surname>Shen</surname><given-names>Kui</given-names></name><xref ref-type="aff" rid="aff1">
+<sup>1</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Rice</surname><given-names>Shara D.</given-names></name><xref ref-type="aff" rid="aff1">
+<sup>1</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Gingrich</surname><given-names>David A.</given-names></name><xref ref-type="aff" rid="aff1">
+<sup>1</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Wang</surname><given-names>Dakun</given-names></name><xref ref-type="aff" rid="aff1">
+<sup>1</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Mi</surname><given-names>Zhibao</given-names></name><xref ref-type="aff" rid="aff3">
+<sup>3</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Tian</surname><given-names>Chunqiao</given-names></name><xref ref-type="aff" rid="aff1">
+<sup>1</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Ding</surname><given-names>Zhenyu</given-names></name><xref ref-type="aff" rid="aff1">
+<sup>1</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Brower</surname><given-names>Stacey L.</given-names></name><xref ref-type="aff" rid="aff1">
+<sup>1</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Ervin</surname><given-names>Paul R.</given-names><suffix>Jr.</suffix></name><xref ref-type="aff" rid="aff1">
+<sup>1</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Gabrin</surname><given-names>Michael J.</given-names></name><xref ref-type="aff" rid="aff1">
+<sup>1</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Tseng</surname><given-names>George</given-names></name><xref ref-type="aff" rid="aff2">
+<sup>2</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Song</surname><given-names>Nan</given-names></name><xref ref-type="aff" rid="aff1">
+<sup>1</sup>
+</xref><xref ref-type="corresp" rid="cor1">
+<sup>*</sup>
+</xref></contrib></contrib-group><aff id="aff1">
+<label>1</label>
+<addr-line>Precision Therapeutics, Inc., Pittsburgh, Pennsylvania, United States of America</addr-line>
+</aff><aff id="aff2">
+<label>2</label>
+<addr-line>Department of Biostatistics, Graduate School of Public Health, University of Pittsburgh, Pittsburgh, Pennsylvania, United States of America</addr-line>
+</aff><aff id="aff3">
+<label>3</label>
+<addr-line>Cooperative Studies Program Coordinating Center, VA Maryland Health Care System, Perry Point, Maryland, United States of America</addr-line>
+</aff><contrib-group><contrib contrib-type="editor"><name><surname>Katz</surname><given-names>Elad</given-names></name><role>Editor</role><xref ref-type="aff" rid="edit1"/></contrib></contrib-group><aff id="edit1">University of Edinburgh, United Kingdom</aff><author-notes><corresp id="cor1">* E-mail: <email>nsong@ptilabs.com</email></corresp><fn fn-type="con"><p><text><SENT sid="1" pm="."><plain>Conceived and designed the experiments: NS KS GT PE MG SB DW ZM. </plain></SENT>
+<SENT sid="2" pm="."><plain>Performed the experiments: SR. </plain></SENT>
+<SENT sid="3" pm="."><plain>Analyzed the data: NS KS CT DG ZD ZM. </plain></SENT>
+<SENT sid="4" pm="."><plain>Wrote the paper: NS KS SB CT. </plain></SENT>
+</text></p></fn></author-notes><pub-date pub-type="collection"><year>2012</year></pub-date><pub-date pub-type="epub"><day>16</day><month>7</month><year>2012</year></pub-date><volume>7</volume><issue>7</issue><elocation-id>e40900</elocation-id><history><date date-type="received"><day>31</day><month>1</month><year>2012</year></date><date date-type="accepted"><day>14</day><month>6</month><year>2012</year></date></history><permissions><copyright-statement>Shen et al.</copyright-statement><copyright-year>2012</copyright-year><license xlink:href="http://creativecommons.org/licenses/by/4.0/"><license-p>This is an open-access article distributed under the terms of the Creative Commons Attribution License, which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are properly credited.</license-p></license></permissions><abstract><p><SecTag type="ABS"><text><SENT sid="5" pm="."><plain>Breast cancer patients have different responses to chemotherapeutic treatments. </plain></SENT>
+<SENT sid="6" pm="."><plain>Genes associated with drug response can provide insight to understand the mechanisms of drug resistance, identify promising therapeutic opportunities, and facilitate personalized treatment. </plain></SENT>
+<SENT sid="7" pm="."><plain>Estrogen receptor (ER) positive and ER negative breast cancer have distinct clinical behavior and molecular properties. </plain></SENT>
+<SENT sid="8" pm="."><plain>However, to date, few studies have rigorously assessed drug response genes in them. </plain></SENT>
+<SENT sid="9" pm="."><plain>In this study, our goal was to systematically identify genes associated with multidrug response in ER positive and ER negative breast cancer cell lines. </plain></SENT>
+<SENT sid="10" pm="."><plain>We tested 27 human breast cell lines for response to seven chemotherapeutic agents (cyclophosphamide, docetaxel, doxorubicin, epirubicin, fluorouracil, gemcitabine, and paclitaxel). </plain></SENT>
+<SENT sid="11" pm="."><plain>We integrated publicly available gene expression profiles of these cell lines with their in vitro drug response patterns, then applied meta-analysis to identify genes related to multidrug response in ER positive and ER negative cells separately. </plain></SENT>
+<SENT sid="12" pm="."><plain>One hundred eighty-eight genes were identified as related to multidrug response in ER positive and 32 genes in ER negative breast cell lines. </plain></SENT>
+<SENT sid="13" pm="."><plain>Of these, only three genes (DBI, TOP2A, and PMVK) were common to both cell types. </plain></SENT>
+<SENT sid="14" pm="."><plain>TOP2A was positively associated with drug response, and DBI was negatively associated with drug response. </plain></SENT>
+<SENT sid="15" pm="."><plain>Interestingly, PMVK was positively associated with drug response in ER positive cells and negatively in ER negative cells. </plain></SENT>
+<SENT sid="16" pm="."><plain>Functional analysis showed that while cell cycle affects drug response in both ER positive and negative cells, most biological processes that are involved in drug response are distinct. </plain></SENT>
+<SENT sid="17" pm="."><plain>A number of signaling pathways that are uniquely enriched in ER positive cells have complex cross talk with ER signaling, while in ER negative cells, enriched pathways are related to metabolic functions. </plain></SENT>
+<SENT sid="18" pm="."><plain>Taken together, our analysis indicates that distinct mechanisms are involved in multidrug response in ER positive and ER negative breast cells. </plain></SENT>
+</text></SecTag></p></abstract><counts><page-count count="9"/></counts></article-meta></front><body><SecTag type="INTRO"><sec id="s1"><title><text><SENT sid="19" pm="."><plain>Introduction </plain></SENT>
+</text></title><p><text><SENT sid="20" pm="."><plain>Although a multitude of chemotherapeutic drugs have been widely used in various combinations to treat breast cancer patients, the response to chemotherapy treatment varies considerably among patients; even among patients who have identical histological type. </plain></SENT>
+<SENT sid="21" pm="."><plain>Genomic research suggests that response to treatment is significantly related to intrinsic molecular characteristics of the tumor. </plain></SENT>
+<SENT sid="22" pm="."><plain>Studying these genes has important biological significance and potential clinical utility. </plain></SENT>
+<SENT sid="23" pm="."><plain>It may help in understanding the molecular mechanisms of drug response, classifying patients to different groups, and identifying new potential therapeutic targets to facilitate drug development. </plain></SENT>
+</text></p><p><text><SENT sid="24" pm="."><plain>During the past several years, various microarray expression studies have identified genes whose expression is related to response to chemotherapeutic agents [1], [2], [3], [4], [5]. </plain></SENT>
+<SENT sid="25" pm="."><plain>However, most of these studies did not take into account the heterogeneity of breast cancer. </plain></SENT>
+<SENT sid="26" pm="."><plain>It is increasingly recognized that breast cancer is a disease with distinct clinical behavior and molecular properties, in particular, estrogen receptor (ER) positive and ER negative cancers are the two most distinct subtypes [6]. </plain></SENT>
+<SENT sid="27" pm="."><plain>ER negative cancers tend to be more sensitive to chemotherapy, but associated with poor clinical outcome [7]. </plain></SENT>
+<SENT sid="28" pm="."><plain>Due to the substantial molecular difference between ER positive and ER negative tumors, it is hypothesized that different genes are related to drug response in ER positive and ER negative cancer, a finding suggested by a meta-analysis of breast cancer patient tumor samples [8]. </plain></SENT>
+<SENT sid="29" pm="."><plain>However, to date, few studies have rigorously assessed drug response genes in ER negative and ER positive breast cancer. </plain></SENT>
+<SENT sid="30" pm="."><plain>Since ER negative cells generally are more responsive than ER positive cells and ER status is a strong factor associated with drug response, genes identified from mixed breast tumors tend to be also related to ER status, and may be less informative after stratifying by ER subtype. </plain></SENT>
+<SENT sid="31" pm="."><plain>A comprehensive analysis of identifying genes related to drug response in ER positive and ER negative has yet to be performed. </plain></SENT>
+</text></p><p><text><SENT sid="32" pm="."><plain>In the current analysis, we used human breast cancer cell lines to systematically identify genes whose expression is related to response to chemotherapeutic agents, especially multiple chemotherapeutic agents for ER positive and ER negative cells. </plain></SENT>
+<SENT sid="33" pm="."><plain>The reason we focus on genes related to multidrug response is that multiple chemotherapeutic drugs have been widely used in various combinations in actual clinical treatment. </plain></SENT>
+<SENT sid="34" pm="."><plain>Using cell lines rather than patient response data allowed us to control several variables. </plain></SENT>
+<SENT sid="35" pm="."><plain>We used gene expression profiles measured by the same platform and a well-established chemoresponse assay to directly assess cell sensitivity to multiple drugs simultaneously, which is not possible to assess in patients. </plain></SENT>
+<SENT sid="36" pm="."><plain>Owing to these advantages, cell lines have been extensively used to investigate mechanisms of drug response [9], [10], [11], [12]. </plain></SENT>
+<SENT sid="37" pm="."><plain>Currently, a vote counting approach has been widely used for the identification of genes associated with multidrug response [10], [12]. </plain></SENT>
+<SENT sid="38" pm="."><plain>In this two-step approach, the first step identifies differentially expressed (DE) genes for a specific drug, i.e., by integrating gene expression profiles and drug response patterns, genes whose expression is either positively or negatively associated with drug response are identified. </plain></SENT>
+<SENT sid="39" pm="."><plain>The second step is to identify genes that are associated with the majority of tested drugs. </plain></SENT>
+<SENT sid="40" pm="."><plain>While the two-step approach is simple and straight forward, it does not control false discovery rate. </plain></SENT>
+<SENT sid="41" pm="."><plain>Moreover the two-step approach is not effective when it is difficult to detect DE genes in the first step. </plain></SENT>
+<SENT sid="42" pm="."><plain>Several previous studies indicate that ER negative breast cancer is very homogeneous and a substantially large number of samples are needed to detect DE genes. </plain></SENT>
+<SENT sid="43" pm="."><plain>To overcome these challenges, we adopted the r-th meta analysis method [13], a more powerful method and one that has been used in clinical studies, to identify multidrug response genes. </plain></SENT>
+</text></p><p><text><SENT sid="44" pm="."><plain>Specifically, taking advantage of 27 well-studied breast cell lines (11 ER positive and 16 ER negative) whose gene expressions are publicly available, we tested their sensitivity to 7 chemotherapy agents commonly used singly or in combination to treat breast cancer patients: cyclophosphamide, docetaxel, doxorubicin, epirubicin, fluorouracil, gemcitabine, and paclitaxel. </plain></SENT>
+<SENT sid="45" pm="."><plain>We then used r-th meta-analysis and identified 188 genes related to multidrug response in ER positive cells, 32 genes in ER negative cells, and only 3 genes common to both cell types. </plain></SENT>
+<SENT sid="46" pm="."><plain>Further functional analysis indicated that while cell cycle affects drug response in both ER positive and negative cells, most molecular mechanisms involved in multidrug response in ER positive cells are distinct from those in ER negative cells. </plain></SENT>
+</text></p></sec></SecTag><SecTag type="METHODS"><sec sec-type="materials|methods" id="s2"><title><text><SENT sid="47" pm="."><plain>Materials and Methods </plain></SENT>
+</text></title><sec id="s2a"><title><text><SENT sid="48" pm="."><plain>Material </plain></SENT>
+</text></title><p><text><SENT sid="49" pm="."><plain>In this study, 27 breast cell lines (as shown in Table 1) were obtained from American Type Culture Collection (Manassas, VA, USA). </plain></SENT>
+<SENT sid="50" pm="."><plain>Detailed information on cell lines, including ER, PR, HER2, TP53, source, tumor type, age, and ethnicity is available [14]. </plain></SENT>
+<SENT sid="51" pm="."><plain>Cells were cultured in RPMI 1640 (Mediatech, Herndon, VA, USA). </plain></SENT>
+<SENT sid="52" pm="."><plain>FBS was purchased from HyClone (Logan, UT, USA). </plain></SENT>
+<SENT sid="53" pm="."><plain>The following chemotherapeutic agents were used in the current study and prepared as recommended by the manufacturer in the growth media used for cell maintenance and treatment: preactivated cyclophosphamide (4-hydroperoxycyclophosphamide) (0.2 µM–13.6 µM), docetaxel (0.1 nM–25 nM), doxorubicin (2 nM–1.2 µM), epirubicin (0.7 nM–13.5 µM), fluorouracil (0.1 µM–50 µM), gemcitabine (0.7 nM–50 nM), and paclitaxel (0.2 nM–100 nM). </plain></SENT>
+</text></p><SecTag type="TABLE"><table-wrap id="pone-0040900-t001" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0040900.t001</object-id><label>Table 1</label><caption><title><text><SENT sid="54" pm="."><plain>Summary of chemosensitivity of 27 breast cell lines to 7 different drugs, measured by ChemoFx, their ER status and subtype. </plain></SENT>
+</text></title></caption><alternatives><graphic id="pone-0040900-t001-1" xlink:href="pone.0040900.t001"/><table frame="hsides" rules="groups"><colgroup span="1"><col align="left" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/></colgroup><thead><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/><td colspan="2" align="left" rowspan="1"><text><SENT sid="55" pm="."><plain>Taxol </plain></SENT>
+</text></td><td colspan="2" align="left" rowspan="1"><text><SENT sid="56" pm="."><plain>Antitumor Antibiotic </plain></SENT>
+</text></td><td colspan="2" align="left" rowspan="1"><text><SENT sid="57" pm="."><plain>Antimetabolites </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="58" pm="."><plain>Alkylating Agents </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="59" pm="."><plain>ER </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="60" pm="."><plain>Sub type </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="61" pm="."><plain>Doce taxel </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="62" pm="."><plain>Pacli taxel </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="63" pm="."><plain>Doxo rubicin </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="64" pm="."><plain>Epirubicin </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="65" pm="."><plain>Fluorouracil </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="66" pm="."><plain>Gemci tabine </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="67" pm="."><plain>Cyclophos phamide </plain></SENT>
+</text></td></tr></thead><tbody><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="68" pm="."><plain>MDAMB361 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="69" pm="."><plain>Pos </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="70" pm="."><plain>Lu </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="71" pm="."><plain>8.45 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="72" pm="."><plain>9.26 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="73" pm="."><plain>8.96 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="74" pm="."><plain>8.10 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="75" pm="."><plain>9.93 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="76" pm="."><plain>9.43 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="77" pm="."><plain>9.56 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="78" pm="."><plain>HCC1428 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="79" pm="."><plain>Pos </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="80" pm="."><plain>Lu </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="81" pm="."><plain>8.60 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="82" pm="."><plain>9.00 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="83" pm="."><plain>8.38 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="84" pm="."><plain>7.01 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="85" pm="."><plain>10.69 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="86" pm="."><plain>8.91 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="87" pm="."><plain>8.33 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="88" pm="."><plain>MDAMB175VII </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="89" pm="."><plain>Pos </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="90" pm="."><plain>Lu </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="91" pm="."><plain>8.32 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="92" pm="."><plain>7.88 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="93" pm="."><plain>7.5 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="94" pm="."><plain>6.52 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="95" pm="."><plain>10.54 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="96" pm="."><plain>7.94 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="97" pm="."><plain>9.24 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="98" pm="."><plain>MDAMB453 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="99" pm="."><plain>Neg </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="100" pm="."><plain>Lu </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="101" pm="."><plain>7.75 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="102" pm="."><plain>7.83 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="103" pm="."><plain>7.15 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="104" pm="."><plain>6.59 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="105" pm="."><plain>9.51 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="106" pm="."><plain>8.69 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="107" pm="."><plain>9.10 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="108" pm="."><plain>BT474 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="109" pm="."><plain>Pos </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="110" pm="."><plain>Lu </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="111" pm="."><plain>7.57 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="112" pm="."><plain>7.64 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="113" pm="."><plain>7.64 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="114" pm="."><plain>7.04 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="115" pm="."><plain>9.88 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="116" pm="."><plain>8.41 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="117" pm="."><plain>7.86 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="118" pm="."><plain>CAMA1 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="119" pm="."><plain>Pos </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="120" pm="."><plain>Lu </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="121" pm="."><plain>7.69 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="122" pm="."><plain>7.28 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="123" pm="."><plain>7.53 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="124" pm="."><plain>6.13 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="125" pm="."><plain>9.55 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="126" pm="."><plain>8.26 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="127" pm="."><plain>8.36 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="128" pm="."><plain>ZR7530 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="129" pm="."><plain>Pos </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="130" pm="."><plain>Lu </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="131" pm="."><plain>7.87 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="132" pm="."><plain>7.93 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="133" pm="."><plain>6.88 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="134" pm="."><plain>5.93 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="135" pm="."><plain>8.86 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="136" pm="."><plain>8.61 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="137" pm="."><plain>7.93 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="138" pm="."><plain>HCC1569 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="139" pm="."><plain>Neg </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="140" pm="."><plain>BaA </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="141" pm="."><plain>6.76 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="142" pm="."><plain>7.55 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="143" pm="."><plain>7.35 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="144" pm="."><plain>6.39 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="145" pm="."><plain>9.76 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="146" pm="."><plain>7.43 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="147" pm="."><plain>7.30 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="148" pm="."><plain>HCC1937 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="149" pm="."><plain>Neg </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="150" pm="."><plain>BaA </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="151" pm="."><plain>7.17 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="152" pm="."><plain>7.37 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="153" pm="."><plain>6.96 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="154" pm="."><plain>6.07 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="155" pm="."><plain>9.57 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="156" pm="."><plain>8.13 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="157" pm="."><plain>6.70 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="158" pm="."><plain>ZR751 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="159" pm="."><plain>Pos </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="160" pm="."><plain>Lu </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="161" pm="."><plain>6.19 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="162" pm="."><plain>7.4 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="163" pm="."><plain>6.62 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="164" pm="."><plain>5.98 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="165" pm="."><plain>9.28 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="166" pm="."><plain>7.96 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="167" pm="."><plain>8.52 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="168" pm="."><plain>BT20 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="169" pm="."><plain>Neg </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="170" pm="."><plain>BaA </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="171" pm="."><plain>6.7 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="172" pm="."><plain>7.06 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="173" pm="."><plain>6.38 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="174" pm="."><plain>5.47 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="175" pm="."><plain>8.86 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="176" pm="."><plain>8.47 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="177" pm="."><plain>7.73 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="178" pm="."><plain>MDAMB134VI </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="179" pm="."><plain>Pos </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="180" pm="."><plain>Lu </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="181" pm="."><plain>8.23 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="182" pm="."><plain>7.63 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="183" pm="."><plain>5.98 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="184" pm="."><plain>4.95 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="185" pm="."><plain>8.63 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="186" pm="."><plain>7.22 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="187" pm="."><plain>7.62 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="188" pm="."><plain>MCF7 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="189" pm="."><plain>Pos </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="190" pm="."><plain>Lu </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="191" pm="."><plain>7.29 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="192" pm="."><plain>7.04 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="193" pm="."><plain>6.54 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="194" pm="."><plain>5.76 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="195" pm="."><plain>8.09 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="196" pm="."><plain>7.99 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="197" pm="."><plain>7.12 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="198" pm="."><plain>MDAMB468 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="199" pm="."><plain>Neg </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="200" pm="."><plain>BaA </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="201" pm="."><plain>7.42 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="202" pm="."><plain>6.92 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="203" pm="."><plain>5.93 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="204" pm="."><plain>4.98 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="205" pm="."><plain>9.29 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="206" pm="."><plain>8.67 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="207" pm="."><plain>5.71 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="208" pm="."><plain>MDAMB436 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="209" pm="."><plain>Neg </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="210" pm="."><plain>BaB </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="211" pm="."><plain>7.79 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="212" pm="."><plain>7.46 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="213" pm="."><plain>5.8 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="214" pm="."><plain>5.24 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="215" pm="."><plain>9.28 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="216" pm="."><plain>6.38 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="217" pm="."><plain>6.6 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="218" pm="."><plain>HCC202 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="219" pm="."><plain>Neg </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="220" pm="."><plain>Lu </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="221" pm="."><plain>7.81 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="222" pm="."><plain>9.21 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="223" pm="."><plain>5.48 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="224" pm="."><plain>5.07 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="225" pm="."><plain>6.06 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="226" pm="."><plain>6.07 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="227" pm="."><plain>5.95 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="228" pm="."><plain>T47D </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="229" pm="."><plain>Pos </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="230" pm="."><plain>Lu </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="231" pm="."><plain>6.49 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="232" pm="."><plain>6.93 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="233" pm="."><plain>4.62 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="234" pm="."><plain>3.78 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="235" pm="."><plain>8.85 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="236" pm="."><plain>6.69 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="237" pm="."><plain>6.51 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="238" pm="."><plain>HCC1143 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="239" pm="."><plain>Neg </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="240" pm="."><plain>BaA </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="241" pm="."><plain>5.41 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="242" pm="."><plain>6.24 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="243" pm="."><plain>5.57 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="244" pm="."><plain>5.07 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="245" pm="."><plain>8.73 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="246" pm="."><plain>4.81 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="247" pm="."><plain>7.02 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="248" pm="."><plain>AU565 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="249" pm="."><plain>Neg </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="250" pm="."><plain>Lu </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="251" pm="."><plain>5.67 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="252" pm="."><plain>5.47 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="253" pm="."><plain>5.5 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="254" pm="."><plain>4.42 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="255" pm="."><plain>9.16 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="256" pm="."><plain>5.53 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="257" pm="."><plain>6.9 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="258" pm="."><plain>HCC1187 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="259" pm="."><plain>Neg </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="260" pm="."><plain>BaA </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="261" pm="."><plain>6.02 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="262" pm="."><plain>5.91 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="263" pm="."><plain>4.89 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="264" pm="."><plain>4.1 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="265" pm="."><plain>8.37 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="266" pm="."><plain>7.41 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="267" pm="."><plain>5.28 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="268" pm="."><plain>BT549 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="269" pm="."><plain>Neg </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="270" pm="."><plain>BaB </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="271" pm="."><plain>6.56 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="272" pm="."><plain>6.33 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="273" pm="."><plain>5.00 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="274" pm="."><plain>4.31 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="275" pm="."><plain>7.79 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="276" pm="."><plain>5.25 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="277" pm="."><plain>6.41 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="278" pm="."><plain>MCF10Aa </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="279" pm="."><plain>Neg </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="280" pm="."><plain>BaB </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="281" pm="."><plain>5.33 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="282" pm="."><plain>5.44 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="283" pm="."><plain>5.00 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="284" pm="."><plain>4.02 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="285" pm="."><plain>6.76 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="286" pm="."><plain>6.00 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="287" pm="."><plain>7.31 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="288" pm="."><plain>SKBR3 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="289" pm="."><plain>Neg </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="290" pm="."><plain>Lu </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="291" pm="."><plain>6.65 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="292" pm="."><plain>5.78 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="293" pm="."><plain>4.06 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="294" pm="."><plain>3.26 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="295" pm="."><plain>6.35 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="296" pm="."><plain>5.24 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="297" pm="."><plain>7.39 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="298" pm="."><plain>UACC812 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="299" pm="."><plain>Pos </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="300" pm="."><plain>Lu </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="301" pm="."><plain>7.03 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="302" pm="."><plain>5.95 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="303" pm="."><plain>3.88 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="304" pm="."><plain>2.97 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="305" pm="."><plain>8.65 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="306" pm="."><plain>3.89 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="307" pm="."><plain>6.31 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="308" pm="."><plain>MDAMB231 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="309" pm="."><plain>Neg </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="310" pm="."><plain>BaB </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="311" pm="."><plain>6.34 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="312" pm="."><plain>6.29 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="313" pm="."><plain>3.91 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="314" pm="."><plain>3.11 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="315" pm="."><plain>8.72 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="316" pm="."><plain>3.92 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="317" pm="."><plain>5.97 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="318" pm="."><plain>MDAMB157 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="319" pm="."><plain>Neg </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="320" pm="."><plain>BaB </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="321" pm="."><plain>4.81 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="322" pm="."><plain>5.3 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="323" pm="."><plain>4.02 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="324" pm="."><plain>3.16 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="325" pm="."><plain>8.33 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="326" pm="."><plain>5.10 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="327" pm="."><plain>6.74 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="328" pm="."><plain>HCC38 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="329" pm="."><plain>Neg </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="330" pm="."><plain>BaB </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="331" pm="."><plain>5.38 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="332" pm="."><plain>5.49 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="333" pm="."><plain>4.36 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="334" pm="."><plain>3.59 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="335" pm="."><plain>7.85 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="336" pm="."><plain>3.09 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="337" pm="."><plain>6.44 </plain></SENT>
+</text></td></tr></tbody></table></alternatives><table-wrap-foot><fn id="nt101"><label/><p><text><SENT sid="338" pm="."><plain>Cell lines are ranked in descending order of the average of chemosensitivity score (AUC), with lower AUC scores indicating greater sensitivity. </plain></SENT>
+<SENT sid="339" pm="."><plain>ER status and subtype information was from [14]. </plain></SENT>
+</text></p></fn><fn id="nt102"><label>a</label><p><text><SENT sid="340" pm="."><plain>is a non-malignant cell line since it was derived from a reduction mammoplasty. </plain></SENT>
+</text></p></fn></table-wrap-foot></table-wrap></SecTag></sec><sec id="s2b"><title><text><SENT sid="341" pm="."><plain>Assay for Drug Response </plain></SENT>
+</text></title><p><text><SENT sid="342" pm="."><plain>After reaching approximately 80% confluence, each cell line was trypsinized and seeded into 384-well microtiter plates (Corning, Lowell, MA, USA). </plain></SENT>
+<SENT sid="343" pm="."><plain>Drug response of the cell lines was determined by ChemoFx®, an established chemosensitivity and response assay as described previously [15]. </plain></SENT>
+<SENT sid="344" pm="."><plain>Cells were plated in triplicate and treated with 10 serial doses of each chemotherapeutic treatment after 24 hours of attachment (untreated cells were used as a control). </plain></SENT>
+<SENT sid="345" pm="."><plain>After an incubation period of 72 hours, the cells were fixed with ethanol, stained with DAPI, and counted. </plain></SENT>
+<SENT sid="346" pm="."><plain>The number of cells remaining after drug treatment was used to determine survival fraction (SF  =  average cell count dose x/average cell count control). </plain></SENT>
+<SENT sid="347" pm="."><plain>Dose-response curves were plotted to determine chemosensitivity, which is based on areas under the curve (AUC). </plain></SENT>
+<SENT sid="348" pm="."><plain>Lower AUC scores indicate greater sensitivity. </plain></SENT>
+</text></p></sec><sec id="s2c"><title><text><SENT sid="349" pm="."><plain>Preprocessing of Microarray Data </plain></SENT>
+</text></title><p><text><SENT sid="350" pm="."><plain>Gene expression profiles of 27 breast cell lines are publicly available and were downloaded from ArrayExpress [16] with accession number E-TABM-157. </plain></SENT>
+<SENT sid="351" pm="."><plain>The raw microarray data were processed by the software package RMA [17] for background adjustment and quantitative normalization. </plain></SENT>
+<SENT sid="352" pm="."><plain>The processed data were log2-transformed, and probes in Affymetrix HGU133a were mapped to gene symbols. </plain></SENT>
+<SENT sid="353" pm="."><plain>If a gene symbol was associated with multiple probes, the one with the largest interquartile range (IQR) was chosen. </plain></SENT>
+<SENT sid="354" pm="."><plain>Non-specific filtering was performed to filter out probes that had small variations or low expression values. </plain></SENT>
+</text></p></sec><sec id="s2d"><title><text><SENT sid="355" pm="."><plain>Correlation of Gene Expression and Drug Response </plain></SENT>
+</text></title><p><text><SENT sid="356" pm="."><plain>To analyze how gene expression is related to individual drug response in ER positive and negative cell lines, we calculated a standardized regression coefficient between drug response and gene expression [18]. </plain></SENT>
+<SENT sid="357" pm="."><plain>Gene-drug correlation can be either positive or negative. </plain></SENT>
+<SENT sid="358" pm="."><plain>A positive correlation indicates that cell lines that express more of the gene tend to more be responsive to the tested drug, and a negative correlation indicates that cell lines that express more of the gene tend to be more resistant to the drug. </plain></SENT>
+<SENT sid="359" pm="."><plain>Further, two dimensional hierarchical clustering was applied to the gene-drug correlation matrix. </plain></SENT>
+<SENT sid="360" pm="."><plain>Genes were clustered based on their correlations with drugs, and drugs in ER positive and ER negative cells were clustered based on their correlations with genes. </plain></SENT>
+</text></p></sec><sec id="s2e"><title><text><SENT sid="361" pm="."><plain>Identification of Genes Related to Multidrug Response through Meta-analysis </plain></SENT>
+</text></title><p><text><SENT sid="362" pm="."><plain>Meta-analysis was then applied to identify genes that are related to multidrug response. </plain></SENT>
+<SENT sid="363" pm="."><plain>In this study, we defined genes that are differentially expressed with respect to at least 5 out of 7 drugs as multidrug response genes and r-th rank statistic was applied. </plain></SENT>
+<SENT sid="364" pm="."><plain>The details of the meta-analysis algorithm are shown in Appendix S1. </plain></SENT>
+<SENT sid="365" pm="."><plain>The q-values of the r-th rank statistic were evaluated by a permutation test and genes whose q-values were less than 0.01 were considered to be related to multidrug response. </plain></SENT>
+<SENT sid="366" pm="."><plain>For each gene, the direction for multiple drugs was defined as the direction of the majority of drugs. </plain></SENT>
+</text></p></sec><sec id="s2f"><title><text><SENT sid="367" pm="."><plain>Functional Analysis of Genes Related to Multidrug Response </plain></SENT>
+</text></title><p><text><SENT sid="368" pm="."><plain>Genes related to multidrug response were evaluated by Ingenuity Pathways Analysis (IPA) software (Ingenuity System, Redwood City, CA, USA) to identify associated pathways. </plain></SENT>
+<SENT sid="369" pm="."><plain>For each pathway, a Fischer's exact test was used to calculate a p-value. </plain></SENT>
+<SENT sid="370" pm="."><plain>Pathways with p-values less than 0.05 were considered enriched. </plain></SENT>
+<SENT sid="371" pm="."><plain>We also performed network analysis to understand the global functional connection of these identified genes. </plain></SENT>
+<SENT sid="372" pm="."><plain>The identified genes were used as the starting point for generating biologic networks of size 35. </plain></SENT>
+<SENT sid="373" pm="."><plain>Networks with p-values less than 0.001 were considered significant. </plain></SENT>
+<SENT sid="374" pm="."><plain>A detailed description of IPA can be found on the Ingenuity Systems website (<ext-link ext-link-type="uri" xlink:href="http://www.ingenuity.com/">http://www.ingenuity.com/</ext-link>). </plain></SENT>
+</text></p></sec></sec></SecTag><SecTag type="RESULTS"><sec id="s3"><title><text><SENT sid="375" pm="."><plain>Results </plain></SENT>
+</text></title><sec id="s3a"><title><text><SENT sid="376" pm="."><plain>Drug Response of Cell Lines </plain></SENT>
+</text></title><p><text><SENT sid="377" pm="."><plain>We measured the drug response of 27 well-characterized breast cell lines to the following 7 widely used chemotherapeutic agents: cyclophosphamide, docetaxel, doxorubicin, epirubicin, fluorouracil, gemcitabine, and paclitaxel (Table 1). </plain></SENT>
+<SENT sid="378" pm="."><plain>These cell lines exhibited a heterogeneous response to all 7 drugs. </plain></SENT>
+<SENT sid="379" pm="."><plain>Consistent with other studies [19], our analysis showed that ER negative cell lines tended to be more responsive to chemotherapy drugs. </plain></SENT>
+<SENT sid="380" pm="."><plain>In addition, drugs with similar mechanisms showed similar response patterns. </plain></SENT>
+<SENT sid="381" pm="."><plain>Among the 7 drugs we tested, two taxane drugs, paclitaxel and docetaxel, were clustered together, and two anthracycline antitumor antibiotics, epirubicin and doxorubicin, were clustered together (Figure 1). </plain></SENT>
+</text></p><SecTag type="FIG"><fig id="pone-0040900-g001" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0040900.g001</object-id><label>Figure 1</label><caption><title><text><SENT sid="382" pm="."><plain>2D scatter plot of chemotherapeutic agents with respect to the first and second principal components. </plain></SENT>
+</text></title></caption><graphic xlink:href="pone.0040900.g001"/></fig></SecTag></sec><sec id="s3b"><title><text><SENT sid="383" pm="."><plain>Clustering Analysis on the Gene-drug Correlation </plain></SENT>
+</text></title><p><text><SENT sid="384" pm="."><plain>Since genes may play distinct roles in drug response for ER positive and negative cell lines, we calculated gene-drug correlation for ER positive and negative cell lines separately. </plain></SENT>
+<SENT sid="385" pm="."><plain>Gene-drug correlation can be either positive or negative. </plain></SENT>
+<SENT sid="386" pm="."><plain>Positive correlation means cell lines that express more of the gene tend to be more responsive to the tested drug. </plain></SENT>
+<SENT sid="387" pm="."><plain>On the contrary, negative correlation means cell lines that express more of the gene tend to be more resistant to the tested drug. </plain></SENT>
+</text></p><p><text><SENT sid="388" pm="."><plain>We performed two dimensional clustering analyses on the basis of gene-drug correlation. </plain></SENT>
+<SENT sid="389" pm="."><plain>In Figure 2, the Y axis represents the cluster tree of drugs. </plain></SENT>
+<SENT sid="390" pm="."><plain>Generally, drugs in ER positive and ER negative cells formed distinct clusters, although there were some exceptions. </plain></SENT>
+<SENT sid="391" pm="."><plain>Moreover, within each cluster (ER positive or ER negative) drugs with similar mechanisms, e.g. doxrubicin and epirubicin, clustered together. </plain></SENT>
+<SENT sid="392" pm="."><plain>On the X axis, genes with a similar extent and direction of association with drugs in ER positive and negative cell lines were clustered together. </plain></SENT>
+<SENT sid="393" pm="."><plain>Genes were clustered into 5 groups based on their correlations with drugs in ER positive and negative cell lines. </plain></SENT>
+<SENT sid="394" pm="."><plain>For most genes, within ER positive cells or ER negative cells, their associations with the 7 tested drugs were in the same direction, although to varying extents. </plain></SENT>
+<SENT sid="395" pm="."><plain>However, for genes in different clusters, the direction across ER positive and ER negative cells differed. </plain></SENT>
+<SENT sid="396" pm="."><plain>For clusters 4 and 5, the direction of gene-drug association tended to be similar in ER positive and ER negative cells, whereas, for clusters 1 and 2, the gene-drug correlations tended to be opposite in ER positive and ER negative cells. </plain></SENT>
+<SENT sid="397" pm="."><plain>The gene-drug associations in cluster 3 were weaker than in the other four clusters. </plain></SENT>
+</text></p><SecTag type="FIG"><fig id="pone-0040900-g002" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0040900.g002</object-id><label>Figure 2</label><caption><title><text><SENT sid="398" pm="."><plain>Heatmap of gene-drug correlation. </plain></SENT>
+</text></title><p><text><SENT sid="399" pm="."><plain>Each block represents a gene-drug correlation in ER positive or ER negative cell lines. </plain></SENT>
+<SENT sid="400" pm="."><plain>Red boxes represent high negative gene-drug correlations, i.e., cell lines with higher gene expression tend to be more resistant, and green boxes represent high positive gene-drug correlations, i.e. cell lines with higher gene expression tend to be more sensitive. </plain></SENT>
+<SENT sid="401" pm="."><plain>The bar across the top indicates the multidrug response genes identified in ER positive and ER negative cell lines. </plain></SENT>
+<SENT sid="402" pm="."><plain>Yellow corresponds to ER negative and blue corresponds to ER positive. </plain></SENT>
+</text></p></caption><graphic xlink:href="pone.0040900.g002"/></fig></SecTag></sec><sec id="s3c"><title><text><SENT sid="403" pm="."><plain>Identification of Genes Related to Multidrug Response through Meta-analysis </plain></SENT>
+</text></title><p><text><SENT sid="404" pm="."><plain>We applied r-th meta-analysis to identify genes related to multidrug response in breast cancer. </plain></SENT>
+<SENT sid="405" pm="."><plain>The majority of genes that were associated with multidrug response among ER positive cells were not statistically significantly associated with multidrug response among ER negative cells, and vice versa. </plain></SENT>
+</text></p><p><text><SENT sid="406" pm="."><plain>Using a q-value less than 0.01 as the cutoff, 188 genes were identified as related to multidrug response in ER positive cells (Table S1). </plain></SENT>
+<SENT sid="407" pm="."><plain>Among them, 123 were positively related and 65 were negatively related to drug response. </plain></SENT>
+<SENT sid="408" pm="."><plain>A large number of identified genes are related to cell cycle, growth or apoptosis. </plain></SENT>
+<SENT sid="409" pm="."><plain>Cyclin-dependent protein kinases (CDKs) and their regulators, such as cyclins, are involved in cell cycle regulation. </plain></SENT>
+<SENT sid="410" pm="."><plain>Among the identified genes, CDK7, CCNB1 (cyclin B1) and CCNG1 (cyclin G1) fall under this category. </plain></SENT>
+<SENT sid="411" pm="."><plain>Ubiquitin-mediated degradation plays a crucial role in a variety of cellular processes including cell division, signal transduction, apoptosis, and immunity and inflammatory response [20]. </plain></SENT>
+<SENT sid="412" pm="."><plain>Several of the identified genes (e.g. UBE2S, UBE2G1, and PSMD14) encode proteins that are involved in ubiquitin-mediated protein degradation. </plain></SENT>
+<SENT sid="413" pm="."><plain>UBE2S and UBE2G1 encode ubiquitin-conjugating enzymes; PSMD14 is a component of the 26S proteasome, which is involved in the ATP-dependent degradation of ubiquitinated proteins [21]. </plain></SENT>
+<SENT sid="414" pm="."><plain>Various kinases (e.g. CKS1B, CRKL, PRKCI, and PKMYT1) and phosphatases (e.g. PPP2R2A, PPP2R5E, and PTPN1) were identified. </plain></SENT>
+<SENT sid="415" pm="."><plain>Kinases and phosphatases have opposing action of adding or removing (respectively) phosphaste groups, and therefore, play an integral role in regulating cell growth, proliferation and apoptosis. </plain></SENT>
+<SENT sid="416" pm="."><plain>Furthermore, several genes (e.g. RRM2, NQO1, CBR1, MT1H, MT1P) which have been known to be related to drug response in other studies were also identified. </plain></SENT>
+<SENT sid="417" pm="."><plain>CBR1 (Carbonyl reductase 1) encodes a NADPH-dependent oxidoreductase, an enzyme that metabolizes many toxic environmental quinones and pharmacological relevant substrates such as doxorubicin [22]; NQO1 encodes enzyme NAD(P)H dehydrogenase 1, which is critically involved in the detoxification of xenobiotics and activation of anticancer drugs [23]. </plain></SENT>
+<SENT sid="418" pm="."><plain>MT1H and MT1P2 are members of the metallothionein family, which has a protective role against heavy metal toxicity. </plain></SENT>
+<SENT sid="419" pm="."><plain>Their increased expression has been demonstrated to be associated with drug resistance [24]. </plain></SENT>
+</text></p><p><text><SENT sid="420" pm="."><plain>A total of 32 genes were identified as related to multidrug response in ER negative cells (Table S2). </plain></SENT>
+<SENT sid="421" pm="."><plain>Among them, 14 were positively and 18 were negatively related to drug response. </plain></SENT>
+<SENT sid="422" pm="."><plain>Compared to the ER positive cells, far fewer number of genes were identified in the ER negative cells. </plain></SENT>
+<SENT sid="423" pm="."><plain>This may be because ER negative cells are more homogeneous, or due to the inclusion of a non–malignant cell line (MCF10A) in the group of ER negative cell lines. </plain></SENT>
+<SENT sid="424" pm="."><plain>Similar to genes identified in the ER positive group, several genes (e.g. IGFBP2, PMF1, and SLC9A1) identified in the ER negative group are also related to cell cycle, growth or apoptosis. </plain></SENT>
+<SENT sid="425" pm="."><plain>In addition, several other genes (e.g., ALDH3B2 and PRDX2) were involved in metabolism and reported to be related to drug response: ALDH3B2 encodes a member of the aldehyde dehydrogenase (ALDH) family. </plain></SENT>
+<SENT sid="426" pm="."><plain>ALDH has been reported to play an important role in cancer therapeutics; it can decrease the effectiveness of some anticancer drugs, such as cyclophosphamide and ifosfamide, by detoxifying their major active aldehyde metabolites [25]; PRDX2 encodes a member of the peroxiredoxin family of antioxidant enzymes, which play important roles in maintaining the intracellular redox homeostasis. </plain></SENT>
+<SENT sid="427" pm="."><plain>There is evidence suggesting that PRDX2 may have a proliferative effect and play important roles in cancer development or progression as well [26]. </plain></SENT>
+</text></p><p><text><SENT sid="428" pm="."><plain>Despite the fact that distinct genes are related to drug response for ER positive versus ER negative cell lines, 3 genes (TOP2A, DBI, and PMVK) were common between the two groups. </plain></SENT>
+<SENT sid="429" pm="."><plain>TOP2A encodes a DNA topoisomerase which play an important role in both DNA replication and transcription. </plain></SENT>
+<SENT sid="430" pm="."><plain>A number of studies have shown that TOP2A gene expression is associated with in vitro drug response [27] and better clinical outcome [28], [29]. </plain></SENT>
+<SENT sid="431" pm="."><plain>Consistent with these previous studies, in the current study, gene expression of TOP2A is positively associated with multidrug response (Figure 3A). </plain></SENT>
+<SENT sid="432" pm="."><plain>DBI (diazepam binding inhibitor) is regulated by hormones and is known to play roles in proliferation and mitogenesis. </plain></SENT>
+<SENT sid="433" pm="."><plain>DBI had been previously identified as a predictor of outcome after chemotherapy [30], [31]. </plain></SENT>
+<SENT sid="434" pm="."><plain>In this study, gene expression of DBI is negatively associated with multidrug response (Figure 3B). </plain></SENT>
+<SENT sid="435" pm="."><plain>It is interesting to note that expression of PMVK, the gene coding for a peroxisomal enzyme, is differentially related to multidrug response in ER positive and negative cells; i.e, its expression is positively correlated with drug response in ER positive cells and negatively correlated in ER negative cells (Figure 3C). </plain></SENT>
+</text></p><SecTag type="FIG"><fig id="pone-0040900-g003" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0040900.g003</object-id><label>Figure 3</label><caption><title><text><SENT sid="436" pm="."><plain>Association between gene expression of three genes [TOP2A (A), DBI (B) and PMVK(C)] and drug response in ER positive and ER negative breast cell lines. </plain></SENT>
+</text></title><p><text><SENT sid="437" pm="."><plain>The x-axis represents cell line drug response, represented as AUC value; higher AUC values are correlated with drug resistance, while low AUC values are correlated with drug sensitivity. </plain></SENT>
+<SENT sid="438" pm="."><plain>The y-axis represents the expression of genes in cell lines. </plain></SENT>
+</text></p></caption><graphic xlink:href="pone.0040900.g003"/></fig></SecTag><p><text><SENT sid="439" pm="."><plain>The observation of genes associated with drug response in different directions is intriguing. </plain></SENT>
+<SENT sid="440" pm="."><plain>To determine if this is a special case, the criteria for identifying multidrug response genes was relaxed. </plain></SENT>
+<SENT sid="441" pm="."><plain>When the cutoff was set up to 0.1, another 5 genes (LDHB, ZMYND11, PDAP1, RQCD1, ERMP1) were identified as having opposite associations in ER positive and ER negative cells. </plain></SENT>
+<SENT sid="442" pm="."><plain>Functional analysis indicates that these genes are involved in various biological processes, including cell cycle, cell proliferation, and metabolic processes. </plain></SENT>
+<SENT sid="443" pm="."><plain>Although previous studies have shown that substantial genes play distinct roles in ER positive and ER negative cancers, few studies have reported genes that play opposing roles in different disease subtypes. </plain></SENT>
+<SENT sid="444" pm="."><plain>This finding suggests an appealing avenue for further research into the biological mechanisms of drug response. </plain></SENT>
+</text></p></sec><sec id="s3d"><title><text><SENT sid="445" pm="."><plain>Distinct Functions of Multidrug Response Genes Identified in ER Positive vs. ER Negative Cells </plain></SENT>
+</text></title><p><text><SENT sid="446" pm="."><plain>We applied Ingenuity Pathways Analysis (IPA) software to identify enriched pathways that are related to multidrug response in ER positive and ER negative breast cell lines separately. </plain></SENT>
+<SENT sid="447" pm="."><plain>In IPA, pathways are organized hierarchically to different functional classes. </plain></SENT>
+<SENT sid="448" pm="."><plain>IPA includes two broad functional groups; one encompasses signaling pathways and the other metabolic pathways. </plain></SENT>
+<SENT sid="449" pm="."><plain>As shown in Table 2, the enriched pathways in ER positive and ER negative cells were distinct. </plain></SENT>
+<SENT sid="450" pm="."><plain>With a p-value &lt;0.05, 18 pathways were identified in ER positive and 5 in ER negative cell lines. </plain></SENT>
+<SENT sid="451" pm="."><plain>For ER positive multidrug response genes, 17 of the 18 enriched pathways were signaling pathways related to apoptosis, cancer, cell cycle regulation, cellular immune response, cellular stress and injury, cytokine signaling, and growth factor signaling. </plain></SENT>
+<SENT sid="452" pm="."><plain>For ER negative multidrug response genes, the 5 enriched pathways (glycolysis/gluconeogenesis, phenyalanine metabolism, methane metabolism, and stilbene, coumarine, and lignin biosynthesis) were all related to metabolic functions. </plain></SENT>
+</text></p><SecTag type="TABLE"><table-wrap id="pone-0040900-t002" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0040900.t002</object-id><label>Table 2</label><caption><title><text><SENT sid="453" pm="."><plain>Enriched pathways identified in ER positive and negative breast cancer cells by IPA. </plain></SENT>
+</text></title></caption><alternatives><graphic id="pone-0040900-t002-2" xlink:href="pone.0040900.t002"/><table frame="hsides" rules="groups"><colgroup span="1"><col align="left" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/></colgroup><thead><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="454" pm="."><plain>Ingenuity Canonical Pathways </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="455" pm="."><plain>-log(p-value) </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="456" pm="."><plain>Ratio </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="457" pm="."><plain>Molecules </plain></SENT>
+</text></td></tr></thead><tbody><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="458" pm="."><plain>ER positive </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="459" pm="."><plain>Cell Cycle: G2/M DNA Damage Checkpoint Regulation </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="460" pm="."><plain>3.450 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="461" pm="."><plain>0.102 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="462" pm="."><plain>CDK7,CKS1B,TOP2A,PKMYT1,CCNB1 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="463" pm="."><plain>Mitotic Roles of Polo-Like Kinase </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="464" pm="."><plain>3.040 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="465" pm="."><plain>0.078 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="466" pm="."><plain>HSP90B1,PPP2R2A,PKMYT1, PPP2R5E,CCNB1 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="467" pm="."><plain>IL-3 Signaling </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="468" pm="."><plain>2.370 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="469" pm="."><plain>0.068 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="470" pm="."><plain>SHC1,STAT6,PIK3C2B,PRKCI,CRKL </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="471" pm="."><plain>Neuregulin Signaling </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="472" pm="."><plain>2.080 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="473" pm="."><plain>0.049 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="474" pm="."><plain>SHC1,HSP90B1,PRKCI,CRKL,ITGA3 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="475" pm="."><plain>Hypoxia Signaling in the Cardiovascular System </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="476" pm="."><plain>1.960 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="477" pm="."><plain>0.059 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="478" pm="."><plain>HSP90B1,UBE2G1,NQO1,UBE2S </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="479" pm="."><plain>Cell Cycle Regulation by BTG Family Proteins </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="480" pm="."><plain>1.890 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="481" pm="."><plain>0.083 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="482" pm="."><plain>CNOT7,PPP2R2A,PPP2R5E </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="483" pm="."><plain>JAK/Stat Signaling </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="484" pm="."><plain>1.890 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="485" pm="."><plain>0.063 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="486" pm="."><plain>SHC1,STAT6,PIK3C2B,PTPN1 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="487" pm="."><plain>ERK/MAPK Signaling </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="488" pm="."><plain>1.810 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="489" pm="."><plain>0.034 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="490" pm="."><plain>SHC1,PIK3C2B,PRKCI,PPP2R2A, CRKL,PPP2R5E,ITGA3 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="491" pm="."><plain>Regulation of eIF4 and p70S6K Signaling </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="492" pm="."><plain>1.750 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="493" pm="."><plain>0.038 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="494" pm="."><plain>SHC1,PIK3C2B,PPP2R2A,PPP2R5E, ITGA3 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="495" pm="."><plain>Xenobiotic Metabolism Signaling </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="496" pm="."><plain>1.660 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="497" pm="."><plain>0.027 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="498" pm="."><plain>LIPA,PIK3C2B,HSP90B1,PRKCI, PPP2R2A,NQO1,PPP2R5E,CITED2 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="499" pm="."><plain>Cyclins and Cell Cycle Regulation </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="500" pm="."><plain>1.640 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="501" pm="."><plain>0.045 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="502" pm="."><plain>PPP2R2A,CDK7,PPP2R5E,CCNB1 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="503" pm="."><plain>p70S6K Signaling </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="504" pm="."><plain>1.570 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="505" pm="."><plain>0.039 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="506" pm="."><plain>SHC1,PIK3C2B,PRKCI,PPP2R2A, PPP2R5E </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="507" pm="."><plain>PI3K/AKT Signaling </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="508" pm="."><plain>1.570 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="509" pm="."><plain>0.036 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="510" pm="."><plain>SHC1,HSP90B1,PPP2R2A, PPP2R5E,ITGA3 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="511" pm="."><plain>Insulin Receptor Signaling </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="512" pm="."><plain>1.470 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="513" pm="."><plain>0.036 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="514" pm="."><plain>SHC1,PIK3C2B,PRKCI,CRKL, PTPN1 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="515" pm="."><plain>Biosynthesis of Steroids </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="516" pm="."><plain>1.420 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="517" pm="."><plain>0.017 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="518" pm="."><plain>PMVK,NQO1 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="519" pm="."><plain>NRF2-mediated Oxidative Stress Response </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="520" pm="."><plain>1.410 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="521" pm="."><plain>0.031 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="522" pm="."><plain>PIK3C2B,PRKCI,NQO1,GPX2, SQSTM1,CBR1 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="523" pm="."><plain>mTOR Signaling </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="524" pm="."><plain>1.330 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="525" pm="."><plain>0.031 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="526" pm="."><plain>PIK3C2B,PLD3,PRKCI,PPP2R2A, PPP2R5E </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="527" pm="."><plain>Glioma Invasiveness Signaling </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="528" pm="."><plain>1.310 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="529" pm="."><plain>0.050 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="530" pm="."><plain>PIK3C2B,HMMR,TIMP2 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="531" pm="."><plain>ER negative </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="532" pm="."><plain>Glycolysis/Gluconeogenesis </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="533" pm="."><plain>3.110 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="534" pm="."><plain>0.022 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="535" pm="."><plain>ALDH3B2,PFKP,LDHB </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="536" pm="."><plain>Phenylalanine Metabolism </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="537" pm="."><plain>2.460 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="538" pm="."><plain>0.018 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="539" pm="."><plain>ALDH3B2,PRDX2 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="540" pm="."><plain>Methane Metabolism </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="541" pm="."><plain>1.460 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="542" pm="."><plain>0.015 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="543" pm="."><plain>PRDX2 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="544" pm="."><plain>Stilbene, Coumarine and Lignin Biosynthesis </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="545" pm="."><plain>1.430 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="546" pm="."><plain>0.014 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="547" pm="."><plain>PRDX2 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="548" pm="."><plain>Biosynthesis of Steroids </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="549" pm="."><plain>1.310 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="550" pm="."><plain>0.008 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="551" pm="."><plain>PMVK </plain></SENT>
+</text></td></tr></tbody></table></alternatives></table-wrap></SecTag><p><text><SENT sid="552" pm="."><plain>To further understand the function of these multidrug response genes and how they coordinately work together, we performed network analyses using IPA software (Table S3). </plain></SENT>
+<SENT sid="553" pm="."><plain>Twelve significant networks were identified in ER positive cells and 2 in ER negative cells. </plain></SENT>
+<SENT sid="554" pm="."><plain>The 12 networks in ER positive cells are related to a broad range of functions that includes cell cycle, gene expression, cell signaling, immunological disease, and inflammatory response. </plain></SENT>
+<SENT sid="555" pm="."><plain>The 2 networks in ER negative cells are related to cell cycle, cellular growth and proliferation, and cell death. </plain></SENT>
+<SENT sid="556" pm="."><plain>For both ER positive and ER negative cells, multiple networks are related to cell cycle. </plain></SENT>
+</text></p></sec></sec></SecTag><SecTag type="DISCUSS"><sec id="s4"><title><text><SENT sid="557" pm="."><plain>Discussion </plain></SENT>
+</text></title><p><text><SENT sid="558" pm="."><plain>Recently, it has been increasingly recognized that ER positive and ER negative breast cancer are distinct types of breast cancer. </plain></SENT>
+<SENT sid="559" pm="."><plain>To date, few studies have rigorously assessed drug response genes in ER negative and ER positive breast cancer. </plain></SENT>
+<SENT sid="560" pm="."><plain>In this analysis, genes related to multidrug response in ER positive and ER negative breast cell lines were comprehensively identified. </plain></SENT>
+<SENT sid="561" pm="."><plain>The results show that the genes related to multidrug response in ER positive cell lines are distinct from those in ER negative cell lines. </plain></SENT>
+<SENT sid="562" pm="."><plain>Among 188 genes identified in ER positive cell lines (123 positively related, 65 negatively related) and 32 identified in ER negative cell lines (14 positively related, 18 negatively related), two genes (TOP2A and DBI) have similar association in both cell types, and one gene (PMVK) associated in opposing directions in each cell type. </plain></SENT>
+<SENT sid="563" pm="."><plain>By strictly controlling variables, including using gene expression profiles measured by the same platform and the same set of cells, testing the same panel of drugs, and using the same well-established chemoresponse assay, our results strongly indicate that the limited gene overlap is related to differences inherent in ER status. </plain></SENT>
+</text></p><p><text><SENT sid="564" pm="."><plain>Functional analysis also indicates that different biological processes are related to drug response in ER positive versus ER negative breast cells. </plain></SENT>
+<SENT sid="565" pm="."><plain>Most of the enriched pathways in ER positive cells are associated with various types of cellular signaling, including cell cycle regulation, apoptosis, cellular stress and injury, cytokine signaling, and growth factor signaling. </plain></SENT>
+<SENT sid="566" pm="."><plain>Noticeably, a number of signaling pathways that are uniquely enriched in the ER positive cell lines have complex cross talk with ER signaling at the receptor level (HMMR and ITGA3), as well as downstream of the receptor level, such as signaling adaptor proteins (e.g. SHC1), kinases (e.g. PI3K, PRKC1, CRKL and ERK), phosphatases (e.g. PPP2R2A, PPP2R5E), enzymes (NQO1), and transcription regulators (e.g. CITED2, CNOT7 and STAT6). </plain></SENT>
+</text></p><p><text><SENT sid="567" pm="."><plain>In ER negative cells, all five enriched pathways are related to metabolic functions, including Glycolysis/Gluconeogenesis, Phenylalanine Metabolism, Methane Metabolism, Stilbene, Coumarine and Lignin Biosynthesis, Biosynthesis of Steroids. </plain></SENT>
+<SENT sid="568" pm="."><plain>This is biologically reasonable since these pathways have been shown to play important roles in cell adhesion and modulate signaling, which may affect drug response. </plain></SENT>
+<SENT sid="569" pm="."><plain>Particularly, previous studies showed that cells with high glycolytic activity tend to have a decreased sensitivity to various anticancer agents and inhibition of glycolysis may be a promising therapeutic strategy [32]. </plain></SENT>
+</text></p><p><text><SENT sid="570" pm="."><plain>In addition to mechanisms that were unique to each molecular tumor type, functional analysis indicates that for both ER positive and negative cell lines, the efficacy of anticancer treatment was related to cell cycle and cell death (Table S3). </plain></SENT>
+<SENT sid="571" pm="."><plain>Many chemotherapeutic agents cause DNA damage or interfere with the ability of cells to replicate DNA correctly. </plain></SENT>
+<SENT sid="572" pm="."><plain>Cells that cannot replicate DNA will often die by apoptosis. </plain></SENT>
+<SENT sid="573" pm="."><plain>As such, regardless of distinct mechanisms of action, the efficacy of anticancer treatments depends on cell cycle. </plain></SENT>
+<SENT sid="574" pm="."><plain>This observation that the efficacy of anticancer treatment was related to cell cycle and cell death, especially in ER positive cells is consistent with other studies. </plain></SENT>
+<SENT sid="575" pm="."><plain>Previous studies also show that although several genomic signatures which have predictive value of drug response demonstrate limited overlap among them, they all include genes that are related to cell proliferation [33]. </plain></SENT>
+<SENT sid="576" pm="."><plain>The fact that cell cycle and cell death related genes have been identified from this cell based study, which is consistent with results from patient studies, support the feasibility of using cell line model to study drug response. </plain></SENT>
+</text></p><p><text><SENT sid="577" pm="."><plain>In this analysis, cell lines were used to identify genes related to drug response. </plain></SENT>
+<SENT sid="578" pm="."><plain>Compared to patient-based studies, cell lines afford experimental advantages of controlling experimental variables, as well as measuring the effect of multiple drugs simultaneously, which cannot be done in patient studies. </plain></SENT>
+<SENT sid="579" pm="."><plain>However, cell lines are not identical to cells from patient samples, and the use of cell lines ignores the influence of the tumor microenvironment on drug response. </plain></SENT>
+<SENT sid="580" pm="."><plain>Although breast cancer cell lines mirror many of the biological and genomic properties of in vivo tumors, cell lines also have characteristics that differ. </plain></SENT>
+<SENT sid="581" pm="."><plain>For example, patient-based studies have shown that, based on gene expression profiling, breast cancers can be primarily classified as luminal-A, luminal-B, HER2-enriched, and basal-like, as well as several other subtypes [34], [35], [36], [37], [38]. </plain></SENT>
+<SENT sid="582" pm="."><plain>In contrast, for breast cancer cell lines, there is no obvious distinction between luminal-A and luminal-B subtypes, and HER2-enriched cells do not form a separate subtype. </plain></SENT>
+<SENT sid="583" pm="."><plain>Moreover, basal-like cell lines form two clusters, with basal-B generally being more responsive than basal-A [14]. </plain></SENT>
+<SENT sid="584" pm="."><plain>Of the 27 cell lines that were used in this study, all 11 ER positive cell lines are classified as luminal (without A or B distinction), and, for the 16 ER negative cell lines, 6 were grouped into basal-A, 6 as basal-B and 4 as luminal. </plain></SENT>
+<SENT sid="585" pm="."><plain>Since breast cells lines of differing intrinsic subtype and ER status display distinct response patterns (data not shown), it would be informative to identify the genes related to multidrug response when further stratifying the cell lines by both intrinsic subtype and ER status in this current study. </plain></SENT>
+<SENT sid="586" pm="."><plain>However, the limited number of cell lines in each subgroup in this study has prevented this type of additional analysis. </plain></SENT>
+<SENT sid="587" pm="."><plain>In the future, as more cell lines become available for research, drug response genes may be identified by stratifying by both intrinsic subtype and ER status. </plain></SENT>
+<SENT sid="588" pm="."><plain>In addition, further investigations may be implemented towards understanding the possible discrepancy between cell lines and patient tumors with respect to intrinsic subtype, as well as elucidating a mechanism for translating cell line-based findings to patient tumors. </plain></SENT>
+</text></p><p><text><SENT sid="589" pm="."><plain>Finally, an additional strength of this study was the use of r-th meta-analysis rather than the more commonly used two-step approach [10], [12]. </plain></SENT>
+<SENT sid="590" pm="."><plain>The r-th meta-analysis employs a permutation test for statistical inference and controls the false discovery rate. </plain></SENT>
+<SENT sid="591" pm="."><plain>This unified method is more powerful than the simpler methods. </plain></SENT>
+<SENT sid="592" pm="."><plain>Moreover, by controlling r-th, we were able to identify the genes with biological interest. </plain></SENT>
+<SENT sid="593" pm="."><plain>For example, in this analysis, we set r-th at 5 out of 7, which allowed us to identify the genes related to the majority of drugs (5 out of 7). </plain></SENT>
+<SENT sid="594" pm="."><plain>r-th can be set at a maximun to identify genes that are important for all drugs tested or at a minimum to identify those important for only a single drug. </plain></SENT>
+<SENT sid="595" pm="."><plain>Analysis with r-th setting at a maximum or minimum shows similar trend that distinct genes are related to drug response in ER positive vs ER negative cells. </plain></SENT>
+</text></p><p><text><SENT sid="596" pm="."><plain>In summary, by taking advantage of the established gene expressions profiles of well-characterized breast cancer cell lines, applying a more powerful analytical method, and examining ER positive and ER negative cell lines separately, we have identified a number of genes related to multidrug response in these cells. </plain></SENT>
+<SENT sid="597" pm="."><plain>Further, we have found that they are predominantly distinct in the 2 cell types and related to distinct cellular processes. </plain></SENT>
+<SENT sid="598" pm="."><plain>These findings provide a basis for further research into the biological mechanisms of drug resistance. </plain></SENT>
+<SENT sid="599" pm="."><plain>Such information may ultimately lead to the identification of biomarkers for potential therapeutic options. </plain></SENT>
+</text></p></sec></SecTag><SecTag type="SUPPL"><sec sec-type="supplementary-material" id="s5"><title><text><SENT sid="600" pm="."><plain>Supporting Information </plain></SENT>
+</text></title><supplementary-material content-type="local-data" id="pone.0040900.s001"><label>Appendix S1</label><caption><p><text><SENT sid="601" pm="."><plain>Meta-analysis algorithm. </plain></SENT>
+</text></p><p><text><SENT sid="602" pm="."><plain>(DOC) </plain></SENT>
+</text></p></caption><media xlink:href="pone.0040900.s001.doc"><caption><p><text><SENT sid="603" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="pone.0040900.s002"><label>Table S1</label><caption><p><text><SENT sid="604" pm="."><plain>Gene identified to be related to multidrug response in ER positive cell lines. </plain></SENT>
+</text></p><p><text><SENT sid="605" pm="."><plain>(DOC) </plain></SENT>
+</text></p></caption><media xlink:href="pone.0040900.s002.doc"><caption><p><text><SENT sid="606" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="pone.0040900.s003"><label>Table S2</label><caption><p><text><SENT sid="607" pm="."><plain>Gene identified to be related to multidrug response in ER negative cell lines. </plain></SENT>
+</text></p><p><text><SENT sid="608" pm="."><plain>(DOC) </plain></SENT>
+</text></p></caption><media xlink:href="pone.0040900.s003.doc"><caption><p><text><SENT sid="609" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="pone.0040900.s004"><label>Table S3</label><caption><p><text><SENT sid="610" pm="."><plain>Top connectivity networks identified in ER positive and negative breast cell lines by IPA. </plain></SENT>
+</text></p><p><text><SENT sid="611" pm="."><plain>(DOC) </plain></SENT>
+</text></p></caption><media xlink:href="pone.0040900.s004.doc"><caption><p><text><SENT sid="612" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media></supplementary-material></sec></SecTag></body><back><SecTag type="ACK_FUND"><ack><p><text4fund><text><SENT sid="613" pm="."><plain>We thank Janice Sabatine, PhD, Avanti Strategies, Pittsburgh, PA, who received payment from Precision Therapeutics, Inc., for writing and editing assistance. </plain></SENT>
+</text></text4fund></p></ack></SecTag><fn-group><fn fn-type="COI-statement"><p><text><SENT sid="614" pm="."><plain>Competing Interests: KS, SR, CT, DG, DW, ZD, SB, PE, MG and NS were employees of Precision Therapeutics, Inc., and received salary from Precision Therapeutics, Inc. </plain></SENT>
+<SENT sid="615" pm="."><plain>Zhibao Mi and George Tseng are consultants of Precision Therapeutics, Inc. </plain></SENT>
+<SENT sid="616" pm="."><plain>A provisional patent application (# 61/265,588) related to the content of the manuscript has been filed. </plain></SENT>
+<SENT sid="617" pm="."><plain>This does not alter the authors' adherence to all the PLoS ONE policies on sharing data and materials. </plain></SENT>
+</text></p></fn><SecTag type="ACK_FUND"><fn fn-type="financial-disclosure"><p><text4fund><text><SENT sid="618" pm="."><plain>Funding: The authors have no support or funding to report. </plain></SENT>
+</text></text4fund></p></fn></SecTag></fn-group><SecTag type="REF"><ref-list><title>References</title><ref id="pone.0040900-Liedtke1"><text><SENT sid="619" pm="."><plain>1 LiedtkeCHatzisCSymmansWFDesmedtCHaibe-KainsB 2009 Genomic grade index is associated with response to chemotherapy in patients with breast cancer. J Clin Oncol 27 3185 3191 19364972 </plain></SENT>
+</text></ref><ref id="pone.0040900-Tabchy1"><text><SENT sid="620" pm="."><plain>2 TabchyAValeroVVidaurreTLluchAGomezH 2010 Evaluation of a 30-gene paclitaxel, fluorouracil, doxorubicin, and cyclophosphamide chemotherapy response predictor in a multicenter randomized trial in breast cancer. Clin Cancer Res 16 5351 5361 20829329 </plain></SENT>
+</text></ref><ref id="pone.0040900-Wang1"><text><SENT sid="621" pm="."><plain>3 WangYKlijnJGZhangYSieuwertsAMLookMP 2005 Gene-expression profiles to predict distant metastasis of lymph-node-negative primary breast cancer. Lancet 365 671 679 15721472 </plain></SENT>
+</text></ref><ref id="pone.0040900-Lee1"><text><SENT sid="622" pm="."><plain>4 LeeJKHavaleshkoDMChoHWeinsteinJNKaldjianEP 2007 A strategy for predicting the chemosensitivity of human cancers and its application to drug discovery. Proc Natl Acad Sci U S A 104 13086 13091 17666531 </plain></SENT>
+</text></ref><ref id="pone.0040900-Paik1"><text><SENT sid="623" pm="."><plain>5 PaikSTangGShakSKimCBakerJ 2006 Gene expression and benefit of chemotherapy in women with node-negative, estrogen receptor-positive breast cancer. J Clin Oncol 24 3726 3734 16720680 </plain></SENT>
+</text></ref><ref id="pone.0040900-Rouzier1"><text><SENT sid="624" pm="."><plain>6 RouzierRPerouCMSymmansWFIbrahimNCristofanilliM 2005 Breast cancer molecular subtypes respond differently to preoperative chemotherapy. Clin Cancer Res 11 5678 5685 16115903 </plain></SENT>
+</text></ref><ref id="pone.0040900-Andre1"><text><SENT sid="625" pm="."><plain>7 AndreFBroglioKRocheHMartinMMackeyJR 2008 Estrogen receptor expression and efficacy of docetaxel-containing adjuvant chemotherapy in patients with node-positive breast cancer: results from a pooled analysis. J Clin Oncol 26 2636 2643 18509176 </plain></SENT>
+</text></ref><ref id="pone.0040900-Iwamoto1"><text><SENT sid="626" pm="."><plain>8 IwamotoTBianchiniGBooserDQiYCoutantC 2011 Gene pathways associated with prognosis and chemotherapy sensitivity in molecular subtypes of breast cancer. J Natl Cancer Inst 103 264 272 21191116 </plain></SENT>
+</text></ref><ref id="pone.0040900-Scherf1"><text><SENT sid="627" pm="."><plain>9 ScherfURossDTWalthamMSmithLHLeeJK 2000 A gene expression database for the molecular pharmacology of cancer. Nat Genet 24 236 244 10700175 </plain></SENT>
+</text></ref><ref id="pone.0040900-Gyorffy1"><text><SENT sid="628" pm="."><plain>10 GyorffyBSurowiakPKiesslichODenkertCSchaferR 2006 Gene expression profiling of 30 cancer cell lines predicts resistance towards 11 anticancer drugs at clinically achieved concentrations. Int J Cancer 118 1699 1712 16217747 </plain></SENT>
+</text></ref><ref id="pone.0040900-Dan1"><text><SENT sid="629" pm="."><plain>11 DanSTsunodaTKitaharaOYanagawaRZembutsuH 2002 An integrated database of chemosensitivity to 55 anticancer drugs and gene expression profiles of 39 human cancer cell lines. Cancer Res 62 1139 1147 11861395 </plain></SENT>
+</text></ref><ref id="pone.0040900-Zembutsu1"><text><SENT sid="630" pm="."><plain>12 ZembutsuHOhnishiYTsunodaTFurukawaYKatagiriT 2002 Genome-wide cDNA microarray screening to correlate gene expression profiles with sensitivity of 85 human cancer xenografts to anticancer drugs. Cancer Res 62 518 527 11809704 </plain></SENT>
+</text></ref><ref id="pone.0040900-Council1"><text><SENT sid="631" pm="."><plain>13 CouncilNR editor 1992 Combining information: statistical issues and opportunities for research Washington DC: National Academy Press.  </plain></SENT>
+</text></ref><ref id="pone.0040900-Neve1"><text><SENT sid="632" pm="."><plain>14 NeveRMChinKFridlyandJYehJBaehnerFL 2006 A collection of breast cancer cell lines for the study of functionally distinct cancer subtypes Cancer Cell 10 515 527  </plain></SENT>
+</text></ref><ref id="pone.0040900-Mi1"><text><SENT sid="633" pm="."><plain>15 MiZHolmesFAHellerstedtBPippenJColleaR 2008 Feasibility assessment of a chemoresponse assay to predict pathologic response in neoadjuvant chemotherapy for breast cancer patients. Anticancer Res 28 1733 1740 18630452 </plain></SENT>
+</text></ref><ref id="pone.0040900-Rustici1"><text><SENT sid="634" pm="."><plain>16 RusticiGKapusheskyMKolesnikovNParkinsonHSarkansU 2008 Data storage and analysis in ArrayExpress and Expression Profiler. Curr Protoc Bioinformatics Chapter 7: Unit 7 13  </plain></SENT>
+</text></ref><ref id="pone.0040900-Bolstad1"><text><SENT sid="635" pm="."><plain>17 BolstadBMIrizarryRAAstrandMSpeedTP 2003 A comparison of normalization methods for high density oligonucleotide array data based on variance and bias. Bioinformatics 19 185 193 12538238 </plain></SENT>
+</text></ref><ref id="pone.0040900-Tusher1"><text><SENT sid="636" pm="."><plain>18 TusherVGTibshiraniRChuG 2001 Significance analysis of microarrays applied to the ionizing radiation response. Proceedings of the National Academy of Sciences of the United States of America 98 5116 5121 11309499 </plain></SENT>
+</text></ref><ref id="pone.0040900-Andre2"><text><SENT sid="637" pm="."><plain>19 AndreFPusztaiL 2006 Molecular classification of breast cancer: implications for selection of adjuvant chemotherapy. Nat Clin Pract Oncol 3 621 632 17080180 </plain></SENT>
+</text></ref><ref id="pone.0040900-Hershko1"><text><SENT sid="638" pm="."><plain>20 HershkoA 2005 The ubiquitin system for protein degradation and some of its roles in the control of the cell division cycle. Cell Death Differ 12 1191 1197 16094395 </plain></SENT>
+</text></ref><ref id="pone.0040900-Spataro1"><text><SENT sid="639" pm="."><plain>21 SpataroVTodaTCraigRSeegerMDubielW 1997 Resistance to diverse drugs and ultraviolet light conferred by overexpression of a novel human 26 S proteasome subunit. J Biol Chem 272 30470 30475 9374539 </plain></SENT>
+</text></ref><ref id="pone.0040900-Wermuth1"><text><SENT sid="640" pm="."><plain>22 WermuthBPlattsKLSeidelAOeschF 1986 Carbonyl reductase provides the enzymatic basis of quinone detoxication in man. Biochem Pharmacol 35 1277 1282 3083821 </plain></SENT>
+</text></ref><ref id="pone.0040900-Pink1"><text><SENT sid="641" pm="."><plain>23 PinkJJPlanchonSMTagliarinoCVarnesMESiegelD 2000 NAD(P)H:Quinone oxidoreductase activity is the principal determinant of beta-lapachone cytotoxicity. J Biol Chem 275 5416 5424 10681517 </plain></SENT>
+</text></ref><ref id="pone.0040900-Girnun1"><text><SENT sid="642" pm="."><plain>24 GirnunGDNaseriEVafaiSBQuLSzwayaJD 2007 Synergy between PPARgamma ligands and platinum-based drugs in cancer. Cancer Cell 11 395 406 17482130 </plain></SENT>
+</text></ref><ref id="pone.0040900-Marchitti1"><text><SENT sid="643" pm="."><plain>25 MarchittiSABrockerCStagosDVasiliouV 2008 Non-P450 aldehyde oxidizing enzymes: the aldehyde dehydrogenase superfamily. Expert Opin Drug Metab Toxicol 4 697 720 18611112 </plain></SENT>
+</text></ref><ref id="pone.0040900-Park1"><text><SENT sid="644" pm="."><plain>26 ParkJGYooJYJeongSJChoiJHLeeMR 2011 Peroxiredoxin 2 deficiency exacerbates atherosclerosis in apolipoprotein E-deficient mice. Circ Res 109 739 749 21835911 </plain></SENT>
+</text></ref><ref id="pone.0040900-Jarvinen1"><text><SENT sid="645" pm="."><plain>27 JarvinenTATannerMRantanenVBarlundMBorgA 2000 Amplification and deletion of topoisomerase IIalpha associate with ErbB-2 amplification and affect sensitivity to topoisomerase II inhibitor doxorubicin in breast cancer. Am J Pathol 156 839 847 10702400 </plain></SENT>
+</text></ref><ref id="pone.0040900-Knoop1"><text><SENT sid="646" pm="."><plain>28 KnoopASKnudsenHBalslevERasmussenBBOvergaardJ 2005 retrospective analysis of topoisomerase IIa amplifications and deletions as predictive markers in primary breast cancer patients randomly assigned to cyclophosphamide, methotrexate, and fluorouracil or cyclophosphamide, epirubicin, and fluorouracil: Danish Breast Cancer Cooperative Group. J Clin Oncol 23 7483 7490 16234514 </plain></SENT>
+</text></ref><ref id="pone.0040900-Tanner1"><text><SENT sid="647" pm="."><plain>29 TannerMIsolaJWiklundTEriksteinBKellokumpu-LehtinenP 2006 Topoisomerase IIalpha gene amplification predicts favorable treatment response to tailored and dose-escalated anthracycline-based adjuvant chemotherapy in HER-2/neu-amplified breast cancer: Scandinavian Breast Group Trial 9401. J Clin Oncol 24 2428 2436 16682728 </plain></SENT>
+</text></ref><ref id="pone.0040900-Takata1"><text><SENT sid="648" pm="."><plain>30 TakataRKatagiriTKanehiraMTsunodaTShuinT 2005 Predicting response to methotrexate, vinblastine, doxorubicin, and cisplatin neoadjuvant chemotherapy for bladder cancers through genome-wide gene expression profiling. Clin Cancer Res 11 2625 2636 15814643 </plain></SENT>
+</text></ref><ref id="pone.0040900-Pollard1"><text><SENT sid="649" pm="."><plain>31 PollardCNitzMBarasAWilliamsPMoskalukC 2009 Genoproteomic mining of urothelial cancer suggests {gamma}-glutamyl hydrolase and diazepam-binding inhibitor as putative urinary markers of outcome after chemotherapy. Am J Pathol 175 1824 1830 19815704 </plain></SENT>
+</text></ref><ref id="pone.0040900-Pelicano1"><text><SENT sid="650" pm="."><plain>32 PelicanoHMartinDSXuRHHuangP 2006 Glycolysis inhibition for anticancer treatment. Oncogene 25 4633 4646 16892078 </plain></SENT>
+</text></ref><ref id="pone.0040900-Iwamoto2"><text><SENT sid="651" pm="."><plain>33 IwamotoTLeeJSBianchiniGHubbardREYoungE 2011 First generation prognostic gene signatures for breast cancer predict both survival and chemotherapy sensitivity and identify overlapping patient populations. Breast Cancer Res Treat  </plain></SENT>
+</text></ref><ref id="pone.0040900-Parker1"><text><SENT sid="652" pm="."><plain>34 ParkerJSMullinsMCheangMCLeungSVoducD 2009 Supervised risk predictor of breast cancer based on intrinsic subtypes. J Clin Oncol 27 1160 1167 19204204 </plain></SENT>
+</text></ref><ref id="pone.0040900-Sorlie1"><text><SENT sid="653" pm="."><plain>35 SorlieTPerouCMTibshiraniRAasTGeislerS 2001 Gene expression patterns of breast carcinomas distinguish tumor subclasses with clinical implications. Proc Natl Acad Sci U S A 98 10869 10874 11553815 </plain></SENT>
+</text></ref><ref id="pone.0040900-Sorlie2"><text><SENT sid="654" pm="."><plain>36 SorlieTTibshiraniRParkerJHastieTMarronJS 2003 Repeated observation of breast tumor subtypes in independent gene expression data sets. Proc Natl Acad Sci U S A 100 8418 8423 12829800 </plain></SENT>
+</text></ref><ref id="pone.0040900-Perou1"><text><SENT sid="655" pm="."><plain>37 PerouCMSorlieTEisenMBvan de RijnMJeffreySS 2000 Molecular portraits of human breast tumours. Nature 406 747 752 10963602 </plain></SENT>
+</text></ref><ref id="pone.0040900-Hu1"><text><SENT sid="656" pm="."><plain>38 HuZFanCOhDSMarronJSHeX 2006 The molecular portraits of breast tumors are conserved across microarray platforms. BMC Genomics 7 96 16643655 </plain></SENT>
+</text></ref></ref-list></SecTag></back></article>

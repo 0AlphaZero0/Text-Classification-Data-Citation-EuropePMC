@@ -13,10 +13,10 @@ This script will extract PMCID of all papers that were previously extracted and 
 """
 
 #################################    Main     ###################################################
-
-for file in os.listdir("./articlesOA"):
+directory="./articlesOA/"
+for file in os.listdir(directory):
     if file.endswith(".xml"):
         if file.endswith("-AccessionNb.xml") or file.endswith("-fulltxt.xml") or file.endswith("-sentencized.xml"):
             pass
         else:
-            os.rename("./articlesOA/"+str(file),"./articlesOA/"+str(file).split(".")[0]+"-sentencized.xml")
+            os.rename(directory+str(file),directory+str(file).split(".")[0]+"-sentencized.xml")

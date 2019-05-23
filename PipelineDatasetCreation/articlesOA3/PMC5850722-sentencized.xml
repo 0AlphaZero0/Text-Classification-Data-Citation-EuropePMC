@@ -1,0 +1,386 @@
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD v1.1 20151215//EN" "JATS-archivearticle1.dtd"> 
+<article xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML" article-type="research-article"><?properties open_access?><?DTDIdentifier.IdentifierValue -//NLM//DTD JATS (Z39.96) Journal Publishing DTD v1.1 20151215//EN?><?DTDIdentifier.IdentifierType public?><?SourceDTD.DTDName JATS-journalpublishing1.dtd?><?SourceDTD.Version 1.1?><?ConverterInfo.XSLTName jp2nlmx2.xsl?><?ConverterInfo.Version 1?><front><journal-meta><journal-id journal-id-type="nlm-ta">Mol Biol Evol</journal-id><journal-id journal-id-type="iso-abbrev">Mol. Biol. Evol</journal-id><journal-id journal-id-type="publisher-id">molbev</journal-id><journal-title-group><journal-title>Molecular Biology and Evolution</journal-title></journal-title-group><issn pub-type="ppub">0737-4038</issn><issn pub-type="epub">1537-1719</issn><publisher><publisher-name>Oxford University Press</publisher-name></publisher></journal-meta><article-meta><article-id pub-id-type="pmcid">5850722</article-id><article-id pub-id-type="pmid">29029342</article-id><article-id pub-id-type="doi">10.1093/molbev/msx259</article-id><article-id pub-id-type="publisher-id">msx259</article-id><article-categories><subj-group subj-group-type="heading"><subject>Methods</subject></subj-group></article-categories><title-group><article-title><SecTag type="TITLE"><text><SENT sid="0" pm="."><plain>STRIDE: Species Tree Root Inference from Gene Duplication Events </plain></SENT>
+</text></SecTag></article-title></title-group><contrib-group><contrib contrib-type="author"><name><surname>Emms</surname><given-names>David M</given-names></name><xref ref-type="aff" rid="msx259-aff1">1</xref></contrib><contrib contrib-type="author"><name><surname>Kelly</surname><given-names>Steven</given-names></name><xref ref-type="corresp" rid="msx259-cor1"/><xref ref-type="aff" rid="msx259-aff1">1</xref></contrib></contrib-group><aff id="msx259-aff1">
+<label>1</label>Department of Plant Sciences, University of Oxford, Oxford, United Kingdom</aff><author-notes><corresp id="msx259-cor1"><label>*</label><bold>Corresponding author:</bold> E-mail: <email>steven.kelly@plants.ox.ac.uk</email>.</corresp><fn id="msx259-FM1"><p><text><SENT sid="1" pm="."><plain>Associate editor: Naruya Saitou </plain></SENT>
+</text></p></fn></author-notes><pub-date pub-type="ppub"><month>12</month><year>2017</year></pub-date><pub-date pub-type="epub" iso-8601-date="2017-09-26"><day>26</day><month>9</month><year>2017</year></pub-date><pub-date pub-type="pmc-release"><day>26</day><month>9</month><year>2017</year></pub-date><volume>34</volume><issue>12</issue><fpage>3267</fpage><lpage>3278</lpage><permissions><copyright-statement>© The Author 2017. Published by Oxford University Press on behalf of the Society for Molecular Biology and Evolution.</copyright-statement><copyright-year>2017</copyright-year><license license-type="cc-by" xlink:href="http://creativecommons.org/licenses/by/4.0/"><license-p>This is an Open Access article distributed under the terms of the Creative Commons Attribution License (<ext-link ext-link-type="uri" xlink:href="http://creativecommons.org/licenses/by/4.0/">http://creativecommons.org/licenses/by/4.0/</ext-link>), which permits unrestricted reuse, distribution, and reproduction in any medium, provided the original work is properly cited.</license-p></license></permissions><self-uri xlink:href="msx259.pdf"/><abstract><title><text><SENT sid="2" pm="."><plain>Abstract </plain></SENT>
+</text></title><p><SecTag type="ABS"><text><SENT sid="3" pm="."><plain>The correct interpretation of any phylogenetic tree is dependent on that tree being correctly rooted. </plain></SENT>
+<SENT sid="4" pm="."><plain>We present STRIDE, a fast, effective, and outgroup-free method for identification of gene duplication events and species tree root inference in large-scale molecular phylogenetic analyses. </plain></SENT>
+<SENT sid="5" pm="."><plain>STRIDE identifies sets of well-supported in-group gene duplication events from a set of unrooted gene trees, and analyses these events to infer a probability distribution over an unrooted species tree for the location of its root. </plain></SENT>
+<SENT sid="6" pm="."><plain>We show that STRIDE correctly identifies the root of the species tree in multiple large-scale molecular phylogenetic data sets spanning a wide range of timescales and taxonomic groups. </plain></SENT>
+<SENT sid="7" pm="."><plain>We demonstrate that the novel probability model implemented in STRIDE can accurately represent the ambiguity in species tree root assignment for data sets where information is limited. </plain></SENT>
+<SENT sid="8" pm="."><plain>Furthermore, application of STRIDE to outgroup-free inference of the origin of the eukaryotic tree resulted in a root probability distribution that provides additional support for leading hypotheses for the origin of the eukaryotes. </plain></SENT>
+</text></SecTag></p></abstract><SecTag type="KEYWORD"><kwd-group kwd-group-type="author"><kwd>phylogenetics</kwd><kwd>phylogenomics</kwd><kwd>tree inference</kwd><kwd>gene duplication</kwd></kwd-group></SecTag><counts><page-count count="12"/></counts></article-meta></front><body><SecTag type="INTRO"><sec sec-type="intro"><title><text><SENT sid="9" pm="."><plain>Introduction </plain></SENT>
+</text></title><p><text><SENT sid="10" pm="."><plain>The rooting of a phylogenetic tree is critical for the correct interpretation of the tree. </plain></SENT>
+<SENT sid="11" pm="."><plain>For example, the phylogeny for four species (fig. 1A) has five possible roots (fig. 1B–F) and each of the different roots corresponds to a different hypothesis as to the evolutionary history of the species. </plain></SENT>
+<SENT sid="12" pm="."><plain>For the presented tree, identifying a wrong branch as the root (e.g., fig. 1E) would lead us to conclude that elephants are more closely related to fish and birds than they are to wolves, even though we are using a tree with the correct topology. </plain></SENT>
+<SENT sid="13" pm="."><plain>A species tree only gives the correct evolutionary relationships when rooted correctly (fig. 1B). </plain></SENT>
+<SENT sid="14" pm="."><plain>Thus, it is of critical importance to our interpretation of relationships, and the evolutionary history of life on earth, that we have accurate methods of inferring the root of species phylogenies. </plain></SENT>
+</text></p><SecTag type="FIG"><fig id="msx259-F1" orientation="portrait" position="float"><label><sc>Fig</sc>. 1.</label><caption><p><text><SENT sid="15" pm="."><plain>Possible roots for a four-taxa species tree. </plain></SENT>
+<SENT sid="16" pm="."><plain>(A) Unrooted species tree for four species: elephant, wolf, fish, and bird. </plain></SENT>
+<SENT sid="17" pm="."><plain>(B) The correct rooting of the species tree. </plain></SENT>
+<SENT sid="18" pm="."><plain>(B–F) The five possible rooted species trees for the unrooted species tree in A. </plain></SENT>
+</text></p></caption><graphic xlink:href="msx259f1"/></fig></SecTag><p><text><SENT sid="19" pm="."><plain>Correct species tree rooting is also of critical importance for the inference of orthology relationships between genes. </plain></SENT>
+<SENT sid="20" pm="."><plain>Given an unrooted gene tree (fig. 2A), knowledge of the correct branching order of the species tree (fig. 1B) is required to correctly root the gene tree (fig. 2B). </plain></SENT>
+<SENT sid="21" pm="."><plain>An incorrect rooting of the species tree (fig. 1C–F) leads to an incorrect inference of the root of the gene tree (fig. 2C–F), and thus incorrect identification of orthologous genes (fig. 2G–H). </plain></SENT>
+<SENT sid="22" pm="."><plain>Therefore, our ability to compare the biology of species, through comparisons between orthologous genes, is reliant on accurate methods of inferring the root of species phylogenies. </plain></SENT>
+</text></p><SecTag type="FIG"><fig id="msx259-F2" orientation="portrait" position="float"><label><sc>Fig</sc>. 2.</label><caption><p><text><SENT sid="23" pm="."><plain>Orthologues inferred from gene trees depend on the root. </plain></SENT>
+<SENT sid="24" pm="."><plain>(A) An unrooted gene tree corresponding to an orthogroup with a gene duplication event in the common ancestor of wolf and elephant. </plain></SENT>
+<SENT sid="25" pm="."><plain>Genes from each species are represented by an image of the species. </plain></SENT>
+<SENT sid="26" pm="."><plain>(B–F) The most parsimonious rootings of the gene trees (fewest duplications and losses) for each of the five roots of the species tree, as shown in figure 1B–F. D—gene duplication event, L—gene loss event. </plain></SENT>
+<SENT sid="27" pm="."><plain>(G) Orthologues inferred from the incorrect trees C and E. </plain></SENT>
+<SENT sid="28" pm="."><plain>(H) Orthologues inferred from the correctly rooted tree B and also the close to correctly rooted trees D and F. </plain></SENT>
+</text></p></caption><graphic xlink:href="msx259f2"/></fig></SecTag><p><text><SENT sid="29" pm="."><plain>Although correct root placement is essential for our ability to interpret phylogenies, almost all models of sequence evolution used for tree inference are time-reversible and produce unrooted phylogenetic trees. </plain></SENT>
+<SENT sid="30" pm="."><plain>In order to identify the root of a phylogeny extra information is required, usually knowledge of an extra species that is a suitable (i.e., closely related) outgroup for the set of species for which the root is unknown. </plain></SENT>
+<SENT sid="31" pm="."><plain>However, outgroup choice is a common source of error in phylogenetic tree inference, with distantly related outgroups leading to inaccurate root placement and distortion of the phylogeny due to long branch attraction (Felsenstein 1981; Berger et al. </plain></SENT>
+<SENT sid="32" pm="."><plain>2011). </plain></SENT>
+<SENT sid="33" pm="."><plain>Although time-irreversible models of sequence evolution exist, they do not provide a method for accurately inferring the direction of time in a tree (Huelsenbeck et al. </plain></SENT>
+<SENT sid="34" pm="."><plain>2002; Williams et al. </plain></SENT>
+<SENT sid="35" pm="."><plain>2015). </plain></SENT>
+<SENT sid="36" pm="."><plain>To address this issue, methods have been developed that can simultaneously infer rooted species and gene trees (Boussau et al. </plain></SENT>
+<SENT sid="37" pm="."><plain>2013). </plain></SENT>
+<SENT sid="38" pm="."><plain>However, these methods are computationally expensive and do not scale well to moderate or large species sets. </plain></SENT>
+<SENT sid="39" pm="."><plain>Similarly, methods have been developed to root trees by minimizing a duplication and loss reconciliation cost (Chen et al. </plain></SENT>
+<SENT sid="40" pm="."><plain>2000; Gorecki and Tiuryn 2007; Gorecki et al. </plain></SENT>
+<SENT sid="41" pm="."><plain>2013). </plain></SENT>
+<SENT sid="42" pm="."><plain>However, these require a rooted species tree for the reconciliation process. </plain></SENT>
+</text></p><p><text><SENT sid="43" pm="."><plain>“Duplicate gene rooting” has also been proposed as an alternative method for rooting species trees (Donoghue and Mathews 1998; Simmons et al. </plain></SENT>
+<SENT sid="44" pm="."><plain>2000). </plain></SENT>
+<SENT sid="45" pm="."><plain>The conceptual basis for this approach is that gene duplication events are time-irreversible, unlike character substitution, and thus indicate the direction of time on the species tree. </plain></SENT>
+<SENT sid="46" pm="."><plain>Specifically, every node in an unrooted, binary gene tree has three branches incident upon it. </plain></SENT>
+<SENT sid="47" pm="."><plain>If the node is a speciation node then any of the three incident branches could be the edge in the direction of the root, with the other two being in the opposite direction. </plain></SENT>
+<SENT sid="48" pm="."><plain>Thus, speciation nodes are uninformative about the direction of time along the tree. </plain></SENT>
+<SENT sid="49" pm="."><plain>For a duplication node, however, the symmetry is broken. </plain></SENT>
+<SENT sid="50" pm="."><plain>Two of the edges will correspond to the two copies of the gene postduplication, whereas the third edge will correspond to the gene preduplication and thus point towards the root of the tree (fig. 2A, node marked “D”). </plain></SENT>
+<SENT sid="51" pm="."><plain>In the case of this example tree, it can be inferred that the root of the species tree must be outside of the subtree containing elephant and wolf. </plain></SENT>
+<SENT sid="52" pm="."><plain>In an idealized case (with no effects such as incomplete lineage sorting or lateral gene transfer) the two postduplication branches can be distinguished from the preduplication branch as the postduplication branches contain genes from overlapping species sets. </plain></SENT>
+<SENT sid="53" pm="."><plain>Furthermore, these species sets will be identical if there has been no gene loss or horizontal gene transfer, and the topology of the duplicate subtrees will recapitulate the species tree topology. </plain></SENT>
+<SENT sid="54" pm="."><plain>Thus, if gene duplication nodes can be accurately identified in an unrooted gene tree, then the direction of time can be ascertained for all branches in the postduplication subtrees. </plain></SENT>
+<SENT sid="55" pm="."><plain>The direction of time on these branches determines the direction of time on the corresponding branches of the species tree, and multiple gene duplication events can be aggregated to determine the direction of time across the whole species tree, thus revealing the location of the root. </plain></SENT>
+</text></p><p><text><SENT sid="56" pm="."><plain>Here, we present STRIDE, a novel algorithm for Species Tree Root Inference from gene Duplication Events. </plain></SENT>
+<SENT sid="57" pm="."><plain>STRIDE identifies sets of well-supported gene duplication events from sets of unrooted gene trees, and analyses these events to infer a probability distribution over an unrooted species tree for the location of the true root. </plain></SENT>
+<SENT sid="58" pm="."><plain>We show that STRIDE correctly identifies the community-accepted root of the majority of species trees. </plain></SENT>
+<SENT sid="59" pm="."><plain>Additionally, we demonstrate that STRIDE effectively captures uncertainty in root placement when data is limited or conflicting. </plain></SENT>
+<SENT sid="60" pm="."><plain>Finally, we demonstrate the utility of STRIDE to challenging phylogenetic problems by providing an outgroup-free root analysis of the origin of the eukaryotes. </plain></SENT>
+</text></p></sec></SecTag><sec><title><text><SENT sid="61" pm="."><plain>New Approaches </plain></SENT>
+</text></title><p><text><SENT sid="62" pm="."><plain>Here, we present a novel approach to rooting a species tree. </plain></SENT>
+<SENT sid="63" pm="."><plain>Instead of requiring the inclusion of an outgroup species that is already known to be at the root of the species tree, STRIDE roots a species tree with no a priori information as to the location of the root. </plain></SENT>
+<SENT sid="64" pm="."><plain>This is achieved through the identification of well-supported duplication events in a set of unrooted gene trees and from within the clade of species being studied. </plain></SENT>
+<SENT sid="65" pm="."><plain>This removes the need for an outgroup and avoids problems that can arise due to long-branch attraction effects caused by an outgroup species. </plain></SENT>
+</text></p></sec><SecTag type="RESULTS"><sec sec-type="results"><title><text><SENT sid="66" pm="."><plain>Results </plain></SENT>
+</text></title><sec><title><text><SENT sid="67" pm="."><plain>STRIDE Identifies the Correct Root of Species Trees Given Simulated Gene Tree Data Sets </plain></SENT>
+</text></title><p><text><SENT sid="68" pm="."><plain>The ability of STRIDE to correctly infer the root of a known species tree was tested using three published, simulated gene tree data sets. </plain></SENT>
+<SENT sid="69" pm="."><plain>The first data set consisted of 2,000 simulated gene trees from 40 species with heterogeneous rates of gene duplication and loss within trees (Boussau et al. </plain></SENT>
+<SENT sid="70" pm="."><plain>2013). </plain></SENT>
+<SENT sid="71" pm="."><plain>The second and third data sets consisted of 12,000 gene trees from 12 species and 7,500 gene trees from 17 species, respectively (Rasmussen and Kellis 2012). </plain></SENT>
+<SENT sid="72" pm="."><plain>These two data sets were similar to the first data set but also incorporated incomplete lineage sorting generated using a range of effective population sizes. </plain></SENT>
+<SENT sid="73" pm="."><plain>Since incomplete lineage sorting can lead to misidentification of gene duplication and loss events these latter two data sets provided a good test of STRIDE’s robustness in the face of gene-tree/species-tree incongruence. </plain></SENT>
+<SENT sid="74" pm="."><plain>For all three simulated data sets, STRIDE correctly inferred the root of the species tree and assigned it a probability of 100% (table 1 and supplementary file S1 and fig. </plain></SENT>
+<SENT sid="75" pm="."><plain>S1–S3, Supplementary Material online). </plain></SENT>
+<SENT sid="76" pm="."><plain>Thus for these simulated data sets the method performed well. Table 1.Summary of Data Sets and Results.GroupSpeciesGene TreesInformative DupsaNumber of Conflicting DupsaNumber of MP RootsCorrect MP RootProbability for MP Root (%)Probability for Correct Root (%)Metazoa (simb)402,00066401Yes100.0100.0Drosophila (simb)1212,0001,36011Yes100.0100.0Primates (simb)177,5001,59301Yes100.0100.0Birds4714,4545101No15.02.0Flies (Diptera)711,688279111Yes100.0100.0Fish1116,52065071Yes100.0100.0Fungi219,32541911Yes100.0100.0Hymenoptera59,15710871Yes100.0100.0Kinetoplastids169,7317641Yes55.055.0Laurasiatheria141,580413571No100.00.0Metazoa2113,0172,06501Yes48.048.0Nematoda78,3929321Yes100.0100.0Primates1119,096117111Yes8.08.0Rodents715,4852261No9.00.5Plants4228,3567,76131Yes100.0100.0Eukaryotes4516,7702,316025———Total simulated6921,5003,6171—3——Total biological254187,79514,09259—9——Total323209,29517,70960—12——aDups = duplications.bsim = simulated. </plain></SENT>
+</text></p><p><text><SENT sid="77" pm="."><plain>Although there are no comparable methods for inferring the probability distribution for the root of a species tree from gene duplication events, there are methods that can identify gene duplication events in an unrooted gene tree if a rooted species tree is provided. </plain></SENT>
+<SENT sid="78" pm="."><plain>It should be noted that these methods need to know the solution to the problem STRIDE is trying to solve in order to identify gene duplication events. </plain></SENT>
+<SENT sid="79" pm="."><plain>However, an analysis of the gene duplication event detection accuracy of STRIDE in the context of these methods is provided in supplementary file S1 and table S1, Supplementary Material online. </plain></SENT>
+<SENT sid="80" pm="."><plain>On the three simulated data sets, STRIDE had an overall precision of 99.9% and a recall of 34.8%. </plain></SENT>
+<SENT sid="81" pm="."><plain>By comparison, on the same data sets Notung and DLCpar_search achieved an overall precision of 21.0% and 43.0%, respectively, and an overall recall of 84.0% and 75.3%, respectively (supplementary file S1 and table S1, Supplementary Material online). </plain></SENT>
+<SENT sid="82" pm="."><plain>Thus, the precision of STRIDE is high even in the absence of knowledge of the root of the species tree. </plain></SENT>
+<SENT sid="83" pm="."><plain>The recall was lower than the other methods, however it was sufficient to unambiguously pinpoint the location of the root in all three cases (table 1 and supplementary file S1 and fig. </plain></SENT>
+<SENT sid="84" pm="."><plain>S1–S3, Supplementary Material online). </plain></SENT>
+</text></p></sec><sec><title><text><SENT sid="85" pm="."><plain>Application of STRIDE to Real Species Data Sets </plain></SENT>
+</text></title><p><text><SENT sid="86" pm="."><plain>Simulated data sets generally do not capture all the nuances and difficulties seen in real biological data sets. </plain></SENT>
+<SENT sid="87" pm="."><plain>These nuances include errors in orthogroup inference, alignment inference, and gene tree inference. </plain></SENT>
+<SENT sid="88" pm="."><plain>Thus to demonstrate the utility of STRIDE, a diverse range of groups of species were sampled from throughout the eukaryotic domain (table 1). </plain></SENT>
+<SENT sid="89" pm="."><plain>This included every group of eukaryotes on Ensembl Genomes containing &gt;4 genera (Yates et al. </plain></SENT>
+<SENT sid="90" pm="."><plain>2016). </plain></SENT>
+<SENT sid="91" pm="."><plain>To expand this group of tests, additional sets of genomes were obtained for 47 Birds (Jarvis et al. </plain></SENT>
+<SENT sid="92" pm="."><plain>2014), 42 Green Plants (Goodstein et al. </plain></SENT>
+<SENT sid="93" pm="."><plain>2012) and 16 Kinetoplastids (Aslett et al. </plain></SENT>
+<SENT sid="94" pm="."><plain>2010). </plain></SENT>
+<SENT sid="95" pm="."><plain>In total, this gave 12 species groups with varying levels of taxon sampling and with estimated divergence times ranging from c. </plain></SENT>
+<SENT sid="96" pm="."><plain>56 My for the Primates (dos Reis et al. </plain></SENT>
+<SENT sid="97" pm="."><plain>2014) to c. </plain></SENT>
+<SENT sid="98" pm="."><plain>1,500 My for the Green Plants (Parfrey et al. </plain></SENT>
+<SENT sid="99" pm="."><plain>2011). </plain></SENT>
+<SENT sid="100" pm="."><plain>These species sets thus provided a diverse group with which to test the utility of STRIDE. </plain></SENT>
+<SENT sid="101" pm="."><plain>Furthermore, for each of these species sets, there is an accepted consensus on the topology and location of the root of the species tree (supplementary file S1, Supplementary Material online). </plain></SENT>
+<SENT sid="102" pm="."><plain>In all cases these topologies and root branches were assumed to be true when STRIDE’s performance was assessed. </plain></SENT>
+<SENT sid="103" pm="."><plain>On average, across each of the simulated and real data set in this analysis STRIDE took ∼18 s to run using four cores of an Intel Core i7-4770 3.4 GHz CPU. </plain></SENT>
+</text></p><p><text><SENT sid="104" pm="."><plain>Orthogroups for each species set were inferred using OrthoFinder (Emms and Kelly 2015), and gene trees for each orthogroup were inferred using IQTREE v1.5.3 (Nguyen et al. </plain></SENT>
+<SENT sid="105" pm="."><plain>2015) from a multiple sequence alignment generated using MAFFT L-INS-I v7.305b (Katoh and Standley 2013). </plain></SENT>
+<SENT sid="106" pm="."><plain>For each species set, STRIDE was run with a published unrooted species tree (without branch lengths) and the complete set of gene trees inferred from all orthogroups identified by OrthoFinder. </plain></SENT>
+<SENT sid="107" pm="."><plain>The number species, gene trees, informative duplications, and other details are provided in table 1. </plain></SENT>
+</text></p><p><text><SENT sid="108" pm="."><plain>In all 12 test cases, there is a single maximum parsimony root. </plain></SENT>
+<SENT sid="109" pm="."><plain>In nine of the 12 tests this root agreed with the accepted root of the species set (table 1). Figures 3–5 present the results of the STRIDE analysis applied to the plant, fungi, and bird data sets. </plain></SENT>
+<SENT sid="110" pm="."><plain>These data sets correspond to the largest, median, and smallest number of informative duplications per species identified by STRIDE. </plain></SENT>
+<SENT sid="111" pm="."><plain>The results for the remaining data sets can be found in supplementary file S1 and figures S4–S12, Supplementary Material online. </plain></SENT>
+<SENT sid="112" pm="."><plain>For the plant data set, sufficient gene-duplication events were identified for the probability model to assign a probability of 100% to the accepted root separating the algae from the land plants (Ruhfel et al. </plain></SENT>
+<SENT sid="113" pm="."><plain>2014, 14: 23) (fig. 3). </plain></SENT>
+<SENT sid="114" pm="."><plain>A probability of 100% was also assigned for the correct root in the fungi, even though fewer informative gene duplication events were identified (fig. 4 andtable 1). </plain></SENT>
+<SENT sid="115" pm="."><plain>In both the plant and fungal data sets, STRIDE also identified substantial numbers of gene duplication events that support subclades within both species trees (figs. </plain></SENT>
+<SENT sid="116" pm="."><plain>3 and 4). </plain></SENT>
+</text></p><SecTag type="FIG"><fig id="msx259-F3" orientation="portrait" position="float"><label><sc>Fig</sc>. 3.</label><caption><p><text><SENT sid="117" pm="."><plain>STRIDE analysis applied the set of plant gene trees. </plain></SENT>
+<SENT sid="118" pm="."><plain>(A) Numbers of identified gene duplication events are marked on the branches they are observed on and arrows indicate the direction in which the duplication occurred. </plain></SENT>
+<SENT sid="119" pm="."><plain>Gene duplication events are in agreement with the maximum parsimony root of the tree if the arrow points away from the root, and are in green. </plain></SENT>
+<SENT sid="120" pm="."><plain>Those that disagree are in blue. </plain></SENT>
+<SENT sid="121" pm="."><plain>The maximum parsimony root is circled in red and is in agreement with the correct root, marked with a *. </plain></SENT>
+<SENT sid="122" pm="."><plain>(B) The probabilities for the location of the root calculated by STRIDE. </plain></SENT>
+</text></p></caption><graphic xlink:href="msx259f3"/></fig></SecTag><SecTag type="FIG"><fig id="msx259-F4" orientation="portrait" position="float"><label><sc>Fig</sc>. 4.</label><caption><p><text><SENT sid="123" pm="."><plain>STRIDE analysis applied the set of fungi gene trees. </plain></SENT>
+<SENT sid="124" pm="."><plain>(A) Numbers of identified gene duplication events are marked on the branches they are observed on and arrows indicate the direction in which the duplication occurred. </plain></SENT>
+<SENT sid="125" pm="."><plain>Gene duplication events are in agreement with the maximum parsimony root of the tree if the arrow points away from the root, and are in green. </plain></SENT>
+<SENT sid="126" pm="."><plain>Those that disagree are in blue. </plain></SENT>
+<SENT sid="127" pm="."><plain>The maximum parsimony root is circled in red and is in agreement with the correct root, marked with a *. </plain></SENT>
+<SENT sid="128" pm="."><plain>(B) The probabilities for the location of the root calculated by STRIDE. </plain></SENT>
+</text></p></caption><graphic xlink:href="msx259f4"/></fig></SecTag><SecTag type="FIG"><fig id="msx259-F5" orientation="portrait" position="float"><label><sc>Fig</sc>. 5.</label><caption><p><text><SENT sid="129" pm="."><plain>STRIDE analysis applied the set of Bird gene trees. </plain></SENT>
+<SENT sid="130" pm="."><plain>(A) Numbers of identified gene duplication events are marked on the branches they are observed on and arrows indicate the direction in which the duplication occurred. </plain></SENT>
+<SENT sid="131" pm="."><plain>Gene duplication events are in agreement with the maximum parsimony root of the tree if the arrow points away from the root, and are in green. </plain></SENT>
+<SENT sid="132" pm="."><plain>Those that disagree are in blue. </plain></SENT>
+<SENT sid="133" pm="."><plain>The maximum parsimony root is circled in red and is in agreement with the correct root, marked with a *. </plain></SENT>
+<SENT sid="134" pm="."><plain>(B) The probabilities for the location of the root calculated by STRIDE, cultured according to the displayed heat map. </plain></SENT>
+</text></p></caption><graphic xlink:href="msx259f5"/></fig></SecTag><p><text><SENT sid="135" pm="."><plain>Although STRIDE identified the community-accepted root in 75% of the data sets, it failed to identify this root for the bird (fig. 5), rodent and Laurasiatheria (supplementary file S1 and figs. </plain></SENT>
+<SENT sid="136" pm="."><plain>S11 and S12, Supplementary Material online) data sets. </plain></SENT>
+<SENT sid="137" pm="."><plain>These three data sets had the smallest, second smallest and fourth smallest number of informative gene duplication events per species, respectively (table 1). </plain></SENT>
+<SENT sid="138" pm="."><plain>In addition, while there were no conflicting gene duplication events in the bird data set, the rodent and Laurasiatheria data sets had the highest and fifth highest ratio of conflicting to informative duplications (table 1). </plain></SENT>
+<SENT sid="139" pm="."><plain>Consistent with these observations, analysis of the factors affecting the accuracy of STRIDE revealed that root probability assignment was positively correlated with the number of informative duplications per species (R2 = 0.17, supplementary file S1 and fig. </plain></SENT>
+<SENT sid="140" pm="."><plain>S13A, Supplementary Material online) and negatively correlated with the proportion of duplications which were in conflict (R2 = 0.24, supplementary file S1 and fig. </plain></SENT>
+<SENT sid="141" pm="."><plain>S13B, Supplementary Material online). </plain></SENT>
+<SENT sid="142" pm="."><plain>Furthermore, the proportion of conflicting duplications was negatively correlated with the number of species (R2 = 0.36, supplementary file S1 and fig. </plain></SENT>
+<SENT sid="143" pm="."><plain>S13C, Supplementary Material online), suggesting increased taxon sampling facilitated more accurate identification of gene duplication events. </plain></SENT>
+<SENT sid="144" pm="."><plain>Thus, the ability of STRIDE to detect the true root is affected by taxon sampling and the number of gene duplication events detected in the data set. </plain></SENT>
+</text></p></sec><sec><title><text><SENT sid="145" pm="."><plain>STRIDE Provides Evidence for Location of the Root of the Eukaryotic Tree </plain></SENT>
+</text></title><p><text><SENT sid="146" pm="."><plain>Given the performance of stride on the data sets outlined above it was assessed whether STRIDE could provide insight into one of the most contentious and difficult tree rooting problems in biology, the root of the eukaryotic tree (Burki 2014). </plain></SENT>
+<SENT sid="147" pm="."><plain>Here, a set of 45 species that were distributed across the eukaryotic tree were selected. </plain></SENT>
+<SENT sid="148" pm="."><plain>These were subject to orthogroup and gene tree inference as before and the complete set of 16,770 gene trees were submitted for analysis by STRIDE. </plain></SENT>
+<SENT sid="149" pm="."><plain>This identified 2,316 gene duplication events excluding the root from (and supporting the monophyly of) major clades within the eukaryotes including the opisthokonta, fungi, metazoa, and achiplastida (fig. 6A). </plain></SENT>
+<SENT sid="150" pm="."><plain>Duplication events supporting further subclades within these major groupings were also abundant (fig. 6A). </plain></SENT>
+<SENT sid="151" pm="."><plain>In contrast, other major subclades including amoebazoa, the SAR supergroup, and the excavata, did not receive support from gene duplication events (fig. 6A). </plain></SENT>
+<SENT sid="152" pm="."><plain>This lack of gene duplication events meant that STRIDE could not exclude the root of the species tree from the basal branches of these groups and thus could not provide evidence for or against the five most popular placements for the root of the eukaryotic tree (Burki 2014). </plain></SENT>
+<SENT sid="153" pm="."><plain>This ambiguity in root assignment is represented effectively in the probabilities assigned to all putative root-spanning branches (fig. 6B). </plain></SENT>
+</text></p><SecTag type="FIG"><fig id="msx259-F6" orientation="portrait" position="float"><label><sc>Fig</sc>. 6.</label><caption><p><text><SENT sid="154" pm="."><plain>STRIDE analysis applied the set of Eukaryotic gene trees. </plain></SENT>
+<SENT sid="155" pm="."><plain>(A) Numbers of identified gene duplication events are marked on the branches they are observed on and arrows indicate which block of the bipartition the duplicate genes occur in. </plain></SENT>
+<SENT sid="156" pm="."><plain>None of the gene duplication events contradict each other. </plain></SENT>
+<SENT sid="157" pm="."><plain>The maximum parsimony roots have red branches, the branches from which the root is excluded are black. </plain></SENT>
+<SENT sid="158" pm="."><plain>(B) The probabilities for the location of the root calculated by STRIDE. </plain></SENT>
+<SENT sid="159" pm="."><plain>Major groups of species are marked. </plain></SENT>
+</text></p></caption><graphic xlink:href="msx259f6"/></fig></SecTag></sec><sec><title><text><SENT sid="160" pm="."><plain>Discussion </plain></SENT>
+</text></title><p><text><SENT sid="161" pm="."><plain>STRIDE is an automated method for identifying and analyzing gene duplication events to infer the root of species trees. </plain></SENT>
+<SENT sid="162" pm="."><plain>Through analysis of simulated and real data sets, we show how the performance of STRIDE is affected by data quantity, data conflict, and taxon sampling. </plain></SENT>
+<SENT sid="163" pm="."><plain>Furthermore, we demonstrate that STRIDE is effective in identifying the root of species trees for the majority of species data sets and effectively captures the ambiguity in root assignment given the input data. </plain></SENT>
+</text></p><p><text><SENT sid="164" pm="."><plain>The aim of STRIDE is to infer a probability distribution over an entire species tree for the location of its root. </plain></SENT>
+<SENT sid="165" pm="."><plain>This aim is different from algorithms that attempt to reconcile gene trees with species trees (Szöllősi et al. </plain></SENT>
+<SENT sid="166" pm="."><plain>2015) or model duplication and loss processes on a tree (Gorecki and Eulenstein 2014). </plain></SENT>
+<SENT sid="167" pm="."><plain>STRIDE identifies and utilizes well-supported gene duplication events and does not evaluate gene loss events for the following reasons. </plain></SENT>
+<SENT sid="168" pm="."><plain>First, gene trees can distinguish parallel duplication events on adjacent branches from a single shared duplication event, which is not possible for gene loss events. </plain></SENT>
+<SENT sid="169" pm="."><plain>Second, the topology of the gene tree postduplication genes can be compared with the species tree to confirm the accuracy of the inference, this cannot be done with gene loss events. </plain></SENT>
+<SENT sid="170" pm="."><plain>Third, most genomes are incomplete and vary considerably in the quality of their annotation leading to high rates of false positive gene loss (Veeckman et al. </plain></SENT>
+<SENT sid="171" pm="."><plain>2016; Dunne and Kelly 2017). </plain></SENT>
+</text></p><p><text><SENT sid="172" pm="."><plain>A major advantage of using STRIDE is that sets of species can be analyzed without the inclusion on an outgroup. </plain></SENT>
+<SENT sid="173" pm="."><plain>This is potentially advantageous in situations where inclusion of an outgroup can affect the topology of gene trees inferred for the in-group species (Berger et al. </plain></SENT>
+<SENT sid="174" pm="."><plain>2011). </plain></SENT>
+<SENT sid="175" pm="."><plain>Moreover, if the outgroup is distantly related to the in-group species then additional problems of long branch attraction can lead to incorrect root placement (Philippe et al. </plain></SENT>
+<SENT sid="176" pm="."><plain>2011; Kuck et al. </plain></SENT>
+<SENT sid="177" pm="."><plain>2012; Salichos and Rokas 2013). </plain></SENT>
+<SENT sid="178" pm="."><plain>STRIDE is also suitable for large data set analysis and for situations where appropriate outgroups are not available. </plain></SENT>
+<SENT sid="179" pm="."><plain>Although STRIDE as presented is a method for identifying the root of an unrooted species tree, the output from STRIDE can provide a wealth of useful information. </plain></SENT>
+<SENT sid="180" pm="."><plain>For example, STRIDE identifies high confidence gene duplication events and maps these events to branches in a species tree. </plain></SENT>
+<SENT sid="181" pm="."><plain>In the simulated data sets, only two of the 3,617 gene duplication events identified by STRIDE were incorrect. </plain></SENT>
+<SENT sid="182" pm="."><plain>Similarly, in the real biological data sets only 60 of the 17,709 gene duplication events identified by STRIDE were conflicting and hence likely to be incorrect. </plain></SENT>
+<SENT sid="183" pm="."><plain>As gene duplication events provide strong evidence for monophyly of the species that share the gene duplication event. </plain></SENT>
+<SENT sid="184" pm="."><plain>STRIDE can be used to provide additional support to branches in a species tree that might be weakly supported by molecular sequence data. </plain></SENT>
+<SENT sid="185" pm="."><plain>In this context, it is worth noting that STRIDE could also be used to evaluate support for alternative species-tree topologies by providing support for clades from gene duplication events. </plain></SENT>
+</text></p><p><text><SENT sid="186" pm="."><plain>The application of STRIDE to the eukaryotes was able to exclude the root of the eukaryotes from the opisthokonts and from a number of other groups, however STRIDE was unable to uniquely place the root as there were insufficient gene duplication events identified that could exclude the root from other portions of the tree. </plain></SENT>
+<SENT sid="187" pm="."><plain>It is likely that poor taxon sampling for some of the groups (e.g., the amoebozoa and excavata), coupled with genome reduction associated with adaptation to parasitism in many of these species, impeded the discovery of these gene duplication events. </plain></SENT>
+<SENT sid="188" pm="."><plain>With improved taxon sampling STRIDE may ultimately be able to provide further insight as to the location of the root of the eukaryotic tree. </plain></SENT>
+<SENT sid="189" pm="."><plain>Furthermore, as STRIDE produces branch-level probabilities these could be combined with probabilities obtained from other analyses to perform a multi-data-type analysis of the origin of the eukaryotes. </plain></SENT>
+</text></p><p><text><SENT sid="190" pm="."><plain>In summary, STRIDE is a fast and effective method for genome scale phylogenetic analysis that can be used both to identify high confidence gene duplication events and identify the root of species trees without the requirement for an outgroup. </plain></SENT>
+</text></p></sec></sec></SecTag><SecTag type="METHODS"><sec><title><text><SENT sid="191" pm="."><plain>Materials and Methods </plain></SENT>
+</text></title><sec><title><text><SENT sid="192" pm="."><plain>Problem Definition and Approach </plain></SENT>
+</text></title><p><text><SENT sid="193" pm="."><plain>A branch of an unrooted species tree corresponds to a bipartition that splits the tree’s taxa into two blocks. </plain></SENT>
+<SENT sid="194" pm="."><plain>The presence of a well-supported gene duplication that respects the topology of the species tree is a synapamorphy that stipulates that the block in which the duplicates are found is a monophyletic clade. </plain></SENT>
+<SENT sid="195" pm="."><plain>This synapamorphy identifies the direction of time along the branches within this monophyletic clade. </plain></SENT>
+<SENT sid="196" pm="."><plain>The single exception to this is the branch in the unrooted tree corresponding to the root in which time flows in both directions. </plain></SENT>
+<SENT sid="197" pm="."><plain>This is because the branch that spans the root in the unrooted species tree corresponds to two branches in the rooted species tree and both of its corresponding blocks are monophyletic clades (fig. 1A and B). </plain></SENT>
+<SENT sid="198" pm="."><plain>The method presented here aims to identify this root branch by identifying and analyzing a set of well-supported gene-duplication events. </plain></SENT>
+<SENT sid="199" pm="."><plain>The method identifies the set of well-supported gene duplication events contained within a set of user-supplied gene trees and uses these to infer the location of the root of the species tree. </plain></SENT>
+<SENT sid="200" pm="."><plain>To express uncertainty in the case of limited data or data conflict, the method uses a probabilistic model of gene-duplication events to calculate a probability distribution across the branches of the species tree for the location of the root. </plain></SENT>
+</text></p></sec><sec><title><text><SENT sid="201" pm="."><plain>Inference of Orthogroups and Gene Trees </plain></SENT>
+</text></title><p><text><SENT sid="202" pm="."><plain>For each species set, the protein sequence translations of representative gene models were downloaded from appropriate online databases. </plain></SENT>
+<SENT sid="203" pm="."><plain>These protein sequences were then subject to orthogroup inference using OrthoFinder v1.1.4 (Emms and Kelly 2015). </plain></SENT>
+<SENT sid="204" pm="."><plain>The resulting sets of protein sequence orthogroups were aligned using MAFFT L-INS-I v7.305b (Katoh and Standley 2013) and subject phylogenetic inference using IQTREE v1.5.3 (Nguyen et al. </plain></SENT>
+<SENT sid="205" pm="."><plain>2015). </plain></SENT>
+<SENT sid="206" pm="."><plain>All methods used their default settings. </plain></SENT>
+<SENT sid="207" pm="."><plain>Parallelization of MAFFT and IQTREE runs was done using GNU Parallel (Tange 2011). </plain></SENT>
+<SENT sid="208" pm="."><plain>Alignments were viewed using AliView (Larsson 2014). </plain></SENT>
+<SENT sid="209" pm="."><plain>Trees were viewed using Dendroscope (Huson and Scornavacca 2012) and drawn using the ETE library (Huerta-Cepas et al. </plain></SENT>
+<SENT sid="210" pm="."><plain>2016). </plain></SENT>
+</text></p></sec><sec><title><text><SENT sid="211" pm="."><plain>Identification of Well-Supported Gene Duplication Events </plain></SENT>
+</text></title><p><text><SENT sid="212" pm="."><plain>Gene-duplication events are phylogenetically informative if they are observed in more than one species. </plain></SENT>
+<SENT sid="213" pm="."><plain>Methods for identifying gene duplication events have previously been proposed that minimize a duplication and loss reconciliation of an unrooted gene tree with a rooted species tree (Chen et al. </plain></SENT>
+<SENT sid="214" pm="."><plain>2000; Gorecki and Tiuryn 2007). </plain></SENT>
+<SENT sid="215" pm="."><plain>As STRIDE aims to identify the root of an unrooted species tree a novel method is proposed that does not require a rooted species tree as input. </plain></SENT>
+<SENT sid="216" pm="."><plain>The notation used to describe the algorithm is defined in the following paragraphs. </plain></SENT>
+<SENT sid="217" pm="."><plain>Additionally, a worked example of the algorithm with an accompanying explanatory figure is presented in supplementary file S1, text 1, and fig. </plain></SENT>
+<SENT sid="218" pm="."><plain>S14, Supplementary Material online. </plain></SENT>
+</text></p><p><text><SENT sid="219" pm="."><plain>An unrooted tree is an unordered pair, T=(N,E), where N is the set of nodes and E is the set of undirected edges {n1,n2}, n1,n2∈N. </plain></SENT>
+<SENT sid="220" pm="."><plain>The set of leaves, L={n|degreen=1}, correspond to the taxa (genes or species) in the tree. </plain></SENT>
+<SENT sid="221" pm="."><plain>Each edge in the tree corresponds to a bipartition, K, of the tree’s leaf set, splitting this set into two blocks, K=B1|B2, B1,B2⊂L. </plain></SENT>
+<SENT sid="222" pm="."><plain>For a rooted binary tree, we refer to the set of species below the (arbitrarily) left child node of the root by X and the species below the right child node of the root by Y. </plain></SENT>
+<SENT sid="223" pm="."><plain>The sets of species below the grandchild nodes are x1,x2,y1,y2, where x1∪x2=X and y1∪y2=Y. </plain></SENT>
+<SENT sid="224" pm="."><plain>For a gene tree, a set of genes is implicitly regarded as specifying another set, namely the set of species from which those genes come. </plain></SENT>
+<SENT sid="225" pm="."><plain>The set of species in a subtree, t, is denoted S(t). </plain></SENT>
+</text></p><p><text><SENT sid="226" pm="."><plain>A few additional objects are required to describe the algorithm. </plain></SENT>
+<SENT sid="227" pm="."><plain>The two blocks of a bipartition induce two disjoint subtrees. </plain></SENT>
+<SENT sid="228" pm="."><plain>Let T^(B) be the subtree of the species tree corresponding to block, B, rooted on the node separating this subtree from the other subtree. </plain></SENT>
+<SENT sid="229" pm="."><plain>Let T˜(n,e) be the rooted subtree of the gene tree “hanging” from e. </plain></SENT>
+<SENT sid="230" pm="."><plain>Specifically, if e={n,n'}, then removing the edge e from the original tree gives two subtrees, one containing n and one containing n'. T˜n,e is the subtree containing, and rooted on n'. </plain></SENT>
+<SENT sid="231" pm="."><plain>Let B(S,t) be the smallest block of a bipartition of the species tree, t, such that S⊆B(S,t), for the set of species, S. </plain></SENT>
+<SENT sid="232" pm="."><plain>Finally, let GC(t) be a function that returns the sets of taxa in the child and grandchild clades for the rooted subtree, t. </plain></SENT>
+<SENT sid="233" pm="."><plain>Namely, X,Y,x1,x2,y1,y2=GC(t). </plain></SENT>
+</text></p><p><text><SENT sid="234" pm="."><plain>To identify all the well-supported gene duplication events in a set of unrooted gene trees, the algorithm “FindDuplications” (fig. 7) is run in parallel on the set of gene trees and the counts of the gene duplications are aggregated. </plain></SENT>
+<SENT sid="235" pm="."><plain>The “FindDuplications” algorithm traverses an unrooted gene tree and in turn relies on the “Dup” algorithm (fig. 7) to determine if a pair of edges incident on a node in a gene tree correspond to a gene duplication event. </plain></SENT>
+</text></p><SecTag type="FIG"><fig id="msx259-F7" orientation="portrait" position="float"><label><sc>Fig</sc> 7.</label><caption><p><text><SENT sid="236" pm="."><plain>The STRIDE algorithm for identifying well-supported gene duplication events in an unrooted gene-tree. </plain></SENT>
+<SENT sid="237" pm="."><plain>For details of the objects in the algorithm see “Methods: Identification of Well-Supported Gene Duplication Events.” </plain></SENT>
+</text></p></caption><graphic xlink:href="msx259f7"/></fig></SecTag><p><text><SENT sid="238" pm="."><plain>A gene duplication event for a block, B, of the species tree provides evidence that this block is a monophyletic clade. </plain></SENT>
+<SENT sid="239" pm="."><plain>Partial gene loss subsequent to a gene duplication event can hamper the identification of the gene duplication event and the assignment of the event to the correct block of the species tree. </plain></SENT>
+<SENT sid="240" pm="."><plain>The algorithm is made robust to this by mapping the observed set of species, S, in a subtree of a gene tree to the smallest block of the species tree, t, containing this species set, B(S,t) (fig. 7, Algorithm 1 line 5). </plain></SENT>
+<SENT sid="241" pm="."><plain>Nodes with degree higher than three (unresolved polytomies) are excluded since they represent unresolved event in the gene tree (e.g., an amalgamation of several weakly supported bipartitions) and thus do not provide sufficiently strong evidence to accurately infer the gene history. </plain></SENT>
+<SENT sid="242" pm="."><plain>To ensure that there is strong evidence for the gene-duplication event having occurred on the identified branch of the species tree, the presence of genes from each of the expected “grandchild” clades is required (fig. 7, Algorithm 2 line 5). </plain></SENT>
+<SENT sid="243" pm="."><plain>Additionally, the local topology of each subtree postduplication is checked to ensure it matches the expected branching structure (fig. 7, Algorithm 2 line 6). </plain></SENT>
+</text></p></sec><sec><title><text><SENT sid="244" pm="."><plain>Identifying the Maximum-Parsimony Root of the Species Tree </plain></SENT>
+</text></title><p><text><SENT sid="245" pm="."><plain>A gene duplication on an edge of an unrooted species tree with the duplicates observed in one of the blocks of the corresponding bipartition stipulates the direction of time for all edges in the subtree derived from that bipartition. </plain></SENT>
+<SENT sid="246" pm="."><plain>Given a set of gene duplication events, the branch in the species tree that violates the fewest gene duplication events is identified as the maximum parsimony root. </plain></SENT>
+<SENT sid="247" pm="."><plain>If multiple such branches exist then they are each identified as equally parsimonious. </plain></SENT>
+<SENT sid="248" pm="."><plain>This method is similar to the plateau concept previously described (Gorecki et al. </plain></SENT>
+<SENT sid="249" pm="."><plain>2013). </plain></SENT>
+</text></p></sec><sec><title><text><SENT sid="250" pm="."><plain>Probability Model for the Root of the Species Tree </plain></SENT>
+</text></title><p><text><SENT sid="251" pm="."><plain>For any given set of gene-trees, it is possible that errors in gene-tree inference will lead to false positive inference of gene duplication events that past the filtration criteria. </plain></SENT>
+<SENT sid="252" pm="."><plain>To account for this, a probability model was developed for the location of the root of the tree given the set of (potentially conflicting) gene duplication events identified. </plain></SENT>
+<SENT sid="253" pm="."><plain>The model consisted of two parts. </plain></SENT>
+<SENT sid="254" pm="."><plain>The first part, the branch-level model, calculated the probability that a branch was the root given only the duplications observed in either direction along that branch. </plain></SENT>
+<SENT sid="255" pm="."><plain>The second part, the tree-level model, aggregated all duplications observed across all branches of tree to give the final probability distribution for the location of the root taking into account all information obtained from all gene duplication events observed across the tree. </plain></SENT>
+</text></p><p><text><SENT sid="256" pm="."><plain>At the branch-level, the set of gene duplication events identified on that branch are modeled by two Poisson processes, one giving rise to true positive gene duplications and the other to false positive duplications. </plain></SENT>
+<SENT sid="257" pm="."><plain>On a given branch, i, of a species tree, mi duplications are observed that support time flowing in one direction along the branch, ←, and ni duplications supporting time flowing in the opposite direction, →. </plain></SENT>
+<SENT sid="258" pm="."><plain>The set of duplications on branch i is then written, di=mi,ni, and D is the set of duplications observed on all branches of the species tree, D={d1,d2,…,db}. </plain></SENT>
+</text></p><p><text><SENT sid="259" pm="."><plain>Let oi∈{→,←,root} be the orientation of the branch i of the species tree and let oj(i)∈{→,←,root} be the orientation of the branch j that would be implied by the root of the tree being branch i. </plain></SENT>
+<SENT sid="260" pm="."><plain>The final tree-level probability distribution Poi=root|D takes into account the complete set of duplications, D, observed on all branches of the tree rather than just the duplications, di, observed on a single branch: (1)Poi=root|D=∏jPoj(i)|dj∑k∏jPoj(k)|dj </plain></SENT>
+</text></p><p><text><SENT sid="261" pm="."><plain>That is, the probability distribution for the root given all the gene duplication events on the tree can be expressed in terms of the probabilities for the orientation of each branch given only the gene duplications on that branch; P→|di, P←|di and Proot|di. </plain></SENT>
+</text></p></sec><sec><title><text><SENT sid="262" pm="."><plain>Poisson Model for Gene Duplications </plain></SENT>
+</text></title><p><text><SENT sid="263" pm="."><plain>To calculate Poi|di the duplications observed on a branch are modeled as arising from two Poisson processes. </plain></SENT>
+<SENT sid="264" pm="."><plain>One process describes the number of true positive duplications (corresponding to the actual direction of time along the branch) and the other describes the number of false positive duplications. </plain></SENT>
+<SENT sid="265" pm="."><plain>Let α be a parameter giving the relative frequency of false positives to true positives across all branches of the tree. </plain></SENT>
+<SENT sid="266" pm="."><plain>Then m∼Po(λ) and n∼Po(αλ), where λ is the expected number of true positives on the branch. </plain></SENT>
+<SENT sid="267" pm="."><plain>We set the total expected number of duplications on the branch from the two Poisson processes to match the actual number observed, N. </plain></SENT>
+<SENT sid="268" pm="."><plain>Thus, λ=N/(1+α). </plain></SENT>
+<SENT sid="269" pm="."><plain>The relative rate of false positives to true positives across the whole tree can be estimated from the number conflicting duplications given the maximum parsimony root of the tree. </plain></SENT>
+<SENT sid="270" pm="."><plain>So as not to reward contradictory duplications by creating an expectation for them, we take α to be one tenth of the ratio of the observed conflicting to nonconflicting duplications of the maximum parsimony root. </plain></SENT>
+<SENT sid="271" pm="."><plain>In almost all cases, however, the value of α had no discernible effect on the final probabilities of the model (supplementary file S1 and fig. </plain></SENT>
+<SENT sid="272" pm="."><plain>S15, Supplementary Material online). </plain></SENT>
+</text></p><p><text><SENT sid="273" pm="."><plain>Bayes’ rule gives Poi|di=P(di|oi)P(oi)P(di) where Pdi=∑o∈{→,←,r}Pdi|oP(o). </plain></SENT>
+<SENT sid="274" pm="."><plain>The priors are given by Proot=1b and P→=P←=b-12b, whereb=2t-3 is the number of branches on an unrooted tree with t taxa. </plain></SENT>
+<SENT sid="275" pm="."><plain>The probability mass function for the Poisson distribution immediately gives Pd|← and P(d|→): Pd|←=Pom;λPon;αλ=λme-λm!(αλ)ne-αλn! </plain></SENT>
+</text></p><p><text><SENT sid="276" pm="."><plain>and, Pd|→=Pon;λPom;αλ=λne-λn!(αλ)me-αλm! </plain></SENT>
+</text></p><p><text><SENT sid="277" pm="."><plain>The branch with the root is more complicated since it actually corresponds to two branches on the rooted tree we are attempting to recover. </plain></SENT>
+<SENT sid="278" pm="."><plain>On these two branches time flows in opposite directions, away from a central root that separates them. </plain></SENT>
+<SENT sid="279" pm="."><plain>We must allow for the m,n duplications on the branch to actually correspond to m-s,t duplications on one of the two branches and n-t,s on the other branch (with opposite orientation to the first). </plain></SENT>
+<SENT sid="280" pm="."><plain>The number of false positive duplications, s and t, are unknown and therefore must be summed over. </plain></SENT>
+<SENT sid="281" pm="."><plain>Similarly, the location of root could fall at any point along the length of the original branch. </plain></SENT>
+<SENT sid="282" pm="."><plain>If the root were a fraction, x, along the length of the branch then the expected rate of false positive and true positive duplications on that fraction of the branch would be xλ and xαλ, respectively, whereas on the other branch the rates would be (1-x)λ and (1-x)αλ. </plain></SENT>
+<SENT sid="283" pm="."><plain>Thus, integrating over the position of the root along the branch and summing over the distribution of the m,n duplications between true positives and false positives on the two resulting branches, we find: (2)Pd|root=∑s=0m∑t=0n∫01PoTm-s;xλPoFt;xαλPoTn-t;(1-x)λPoFs;(1-x)αλdx=∑s=0m∑t=0nB(m-s+t+1,n-t+s+1)λm-se-λm-s!(αλ)n-te-αλn-t!λs+tαs+2t-ns!t! </plain></SENT>
+</text></p><p><text><SENT sid="284" pm="."><plain>Where B(,)is the beta function. </plain></SENT>
+</text></p><p><text><SENT sid="285" pm="."><plain>The duplications observed in just one species are uninformative as to the location of the root and so should not affect the root probabilities produced by the model. </plain></SENT>
+<SENT sid="286" pm="."><plain>As such, the branch model for terminal branches is modified to only model the number of inward duplications (those supporting the tree minus the species on the terminal branch as a monophyletic clade). </plain></SENT>
+<SENT sid="287" pm="."><plain>The rates λTerm,TP and λTerm,FP are the observed true positive and false positive rates for inward duplications on the terminal branches for the maximum parsimony root. </plain></SENT>
+<SENT sid="288" pm="."><plain>For the terminal branches, the branch model is: PTermd|←=Pom;λTerm,FP </plain></SENT>
+</text></p><p><text><SENT sid="289" pm="."><plain>and PTermd|root=Pom;λTerm,TP. </plain></SENT>
+</text></p><p><text><SENT sid="290" pm="."><plain>The branch-level model takes into account only the duplications observed on a single branch and these probabilities feed into the tree-level model to give the final probabilities for the position of the root (fig. 8). </plain></SENT>
+<SENT sid="291" pm="."><plain>The behaviour of the branch model is in good agreement with an intuitive understanding of the probabilities that should be assigned to the three possible orientations for a branch given the number of putative duplications observed in either direction (fig. 8A–C). </plain></SENT>
+<SENT sid="292" pm="."><plain>The probability of time flowing to the left/right increases monotonically with the number of putative duplications supporting it. </plain></SENT>
+<SENT sid="293" pm="."><plain>The probability of a branch being a root is highest when the number of putative gene duplications in both directions is the same. </plain></SENT>
+<SENT sid="294" pm="."><plain>Finally, the probability of a branch being a root remains significantly above zero if there is any number of gene duplications in both directions (fig. 8B and C). </plain></SENT>
+<SENT sid="295" pm="."><plain>This reflects the fact that putative gene duplications supporting the monophyletic nature of both blocks of a bipartition support that bipartition being the root. </plain></SENT>
+<SENT sid="296" pm="."><plain>The fact that there could be a large difference in the number of gene duplications in one direction compared with the other due to different branch lengths on the two sides of the root is accounted for by integrating over the position of the root along the original root branch. </plain></SENT>
+<SENT sid="297" pm="."><plain>Thus, the probability of a branch being a root is &gt; 30% when there are 20 duplications in one direction compared with five in the opposite direction (fig. 8C). </plain></SENT>
+<SENT sid="298" pm="."><plain>For comparison, the probability of the orientation of the branch being in the direction of the five duplications is vanishingly small (∼10−13). </plain></SENT>
+<SENT sid="299" pm="."><plain>The branch-level probability model thus gives probabilities for each branch taking into account only the duplications observed on that branch. </plain></SENT>
+<SENT sid="300" pm="."><plain>The final probabilities for the root of the tree, taking into account all duplications across the tree are then given by the tree-level model (equation (1), fig. 8D and E). </plain></SENT>
+</text></p><SecTag type="FIG"><fig id="msx259-F8" orientation="portrait" position="float"><label><sc>Fig</sc>. 8.</label><caption><p><text><SENT sid="301" pm="."><plain>The branch-level probability model employed by STRIDE. </plain></SENT>
+<SENT sid="302" pm="."><plain>These branch-level probabilities are used by the tree probability model to give the overall probabilities for the location of the root of the species tree. </plain></SENT>
+<SENT sid="303" pm="."><plain>(A) A single branch in the tree with m/n duplications supporting L/R as monophyletic clades. </plain></SENT>
+<SENT sid="304" pm="."><plain>(B) Branch-level model probabilities for position of the root with respect to the branch when m = 0 (the model only takes into account duplications on that branch). </plain></SENT>
+<SENT sid="305" pm="."><plain>(C) As for B with m = 5. </plain></SENT>
+<SENT sid="306" pm="."><plain>(D) Hypothetical total number of gene duplication events on the four species phylogeny. </plain></SENT>
+<SENT sid="307" pm="."><plain>One gene duplication event is shared by elephant and dog and two are shared by elephant, dog, and bird. </plain></SENT>
+<SENT sid="308" pm="."><plain>(E) The final tree-level model probabilities for the location of the root calculated by STRIDE taking into account all the gene duplication events on all branches in D. </plain></SENT>
+</text></p></caption><graphic xlink:href="msx259f8"/></fig></SecTag></sec><sec><title><text><SENT sid="309" pm="."><plain>Time-Complexity </plain></SENT>
+</text></title><p><text><SENT sid="310" pm="."><plain>For a set of gene trees containing N genes in total from n species, the identification of all well-supported gene duplication events can be achieved in time OnN and the calculation of the probabilities in ONn.N as described in the following analysis. </plain></SENT>
+</text></p><p><text><SENT sid="311" pm="."><plain>Each gene tree can be analyzed using three traversals of the bipartitions of the gene tree. </plain></SENT>
+<SENT sid="312" pm="."><plain>The first two are preprocessing steps that cache the sets of species either side of each edge in the tree while the third traversal identifies all well-supported gene duplications in the tree (in fact, the second and third traversals can be combined). </plain></SENT>
+<SENT sid="313" pm="."><plain>The three traversals are as follows: With an arbitrary root of the tree, a postorder traversal is performed first to cache, for each edge, the set of species below that edge of the tree, a preorder traversal then caches the set of species above each edge using the data cached in the postorder traversal. </plain></SENT>
+<SENT sid="314" pm="."><plain>This takes OMn for a single gene tree, where M is the number of genes in the species tree. </plain></SENT>
+<SENT sid="315" pm="."><plain>For all gene trees this takes O(Nn). </plain></SENT>
+<SENT sid="316" pm="."><plain>To identify the well-supported gene duplications a tree must be traversed again (visiting the edges in any order). </plain></SENT>
+<SENT sid="317" pm="."><plain>For each edge the algorithm: Determines β, the smallest bipartition of the species tree containing the species (fig. 7, Algorithm 1, line 5) in average O(n). </plain></SENT>
+<SENT sid="318" pm="."><plain>For each putative duplication the algorithm checks that at least one gene from each of the expected grandchild clades is present (fig. 7, Algorithm 2, line 5) in average O(n). </plain></SENT>
+<SENT sid="319" pm="."><plain>For each putative duplication, the algorithms checks that each of the actual child clades are subsets of the expected child clades (fig. 7, Algorithm 2, line 5) in average O(n). </plain></SENT>
+<SENT sid="320" pm="."><plain>Thus, the identification of all well-supported gene duplications events in a single gene tree is O(nM), and is O(nN) for all gene trees since the total number of edges in the set of all gene trees is O(N). </plain></SENT>
+</text></p><p><text><SENT sid="321" pm="."><plain>Having identified the well-supported duplications in all gene trees, the maximum parsimony root can be identified in O(n). </plain></SENT>
+<SENT sid="322" pm="."><plain>In practice, calculating the final probabilities for the location of the root using Equations (1) and (2) is trivial. </plain></SENT>
+<SENT sid="323" pm="."><plain>Although a naive evaluation of Equation (1) requires On2, it can be calculated in time O(n) (Felsenstein 2004). </plain></SENT>
+<SENT sid="324" pm="."><plain>For Equation (2), assuming that the number of duplications per branch of the species tree is proportional to the number of gene families, Nn, then the time-complexity is ONn.N. </plain></SENT>
+</text></p></sec><sec><title><text><SENT sid="325" pm="."><plain>Testing Gene Duplication Event Identification Accuracy </plain></SENT>
+</text></title><p><text><SENT sid="326" pm="."><plain>The gene duplication event identification accuracy was examined on the three simulated data sets, for which the ground truth was known (Rasmussen and Kellis 2012; Boussau et al. </plain></SENT>
+<SENT sid="327" pm="."><plain>2013). </plain></SENT>
+<SENT sid="328" pm="."><plain>STRIDE was run as normal using as input the unrooted species tree and the set of unrooted gene trees. </plain></SENT>
+<SENT sid="329" pm="."><plain>For comparison two representative tree reconciliation methods, Notung (Chen et al. </plain></SENT>
+<SENT sid="330" pm="."><plain>2000) and dlcpar_search (Wu et al. </plain></SENT>
+<SENT sid="331" pm="."><plain>2014), were also run on the same data sets. </plain></SENT>
+<SENT sid="332" pm="."><plain>The comparison was not exact since both of these reconciliation methods require a rooted species tree (information not available to STRIDE). </plain></SENT>
+<SENT sid="333" pm="."><plain>Notung was run with the rooted species tree and unrooted gene trees using default parameters and the “–root” option, which roots the gene tree on the branch giving the lowest overall reconciliation cost. </plain></SENT>
+<SENT sid="334" pm="."><plain>Dlcpar_search is a more sophisticated tree reconciliation program that aims to give higher precision inference of duplications and losses by also modeling deep coalescence so as to better explain incongruence between the gene tree and the species tree that can arise from incomplete lineage sorting. </plain></SENT>
+<SENT sid="335" pm="."><plain>The program performs a heuristic search for a tree minimizing an overall duplication, loss and coalescence cost. </plain></SENT>
+<SENT sid="336" pm="."><plain>As it also requires that the gene trees be rooted, the companion program “reconroot” was used to first root the gene trees (as recommended, private correspondence) on the branch giving the lowest reconciliation cost when only duplication and loss events are considered. </plain></SENT>
+<SENT sid="337" pm="."><plain>The dlcpar_search method was then run on the rooted species tree and rooted gene trees using default parameters. </plain></SENT>
+</text></p></sec><sec><title><text><SENT sid="338" pm="."><plain>Algorithm Implementation and Availability </plain></SENT>
+</text></title><p><text><SENT sid="339" pm="."><plain>STRIDE is implemented in python. </plain></SENT>
+<SENT sid="340" pm="."><plain>Further information, use instructions, an example data set, and a standalone implementation of the algorithm is available under the University of Oxford Academic Use Licence at <ext-link ext-link-type="uri" xlink:href="https://github.com/davidemms/STRIDE">https://github.com/davidemms/STRIDE</ext-link>, last accessed October 4, 2017. </plain></SENT>
+<SENT sid="341" pm="."><plain>The complete set of gene trees and species trees required to replicate this analysis are provided for download form the Zenodo research data archive at <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.5281/zenodo.581360">https://doi.org/10.5281/zenodo.581360</ext-link>, last accessed October 4, 2017. </plain></SENT>
+</text></p></sec></sec></SecTag><SecTag type="SUPPL"><sec sec-type="supplementary-material"><title><text><SENT sid="342" pm="."><plain>Supplementary Material </plain></SENT>
+</text></title><supplementary-material content-type="local-data" id="sup1"><label>Supplementary Data</label><media xlink:href="msx259_supp.pdf"><caption><p><text><SENT sid="343" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media></supplementary-material></sec></SecTag></body><back><SecTag type="ACK_FUND"><ack><title>Acknowledgments</title><p><text4fund><text><SENT sid="344" pm="."><plain>S.K. is a Royal Society University Research Fellow. </plain></SENT>
+<SENT sid="345" pm="."><plain>This work was supported by the European Union’s Horizon 2020 research and innovation program under grant agreement number 637765. </plain></SENT>
+</text></text4fund></p></ack></SecTag><SecTag type="REF"><ref-list><title>References</title><ref id="msx259-B1"><text><SENT sid="346" pm="."><plain> AslettM, AurrecoecheaC, BerrimanM, BrestelliJ, BrunkBP, CarringtonM, DepledgeDP, FischerS, GajriaB, GaoX. 2010 TriTrypDB: a functional genomic resource for the Trypanosomatidae. Nucleic Acids Res.38(suppl_1): D457–D462.19843604 </plain></SENT>
+</text></ref><ref id="msx259-B2"><text><SENT sid="347" pm="."><plain> BergerSA, KrompassD, StamatakisA. 2011 Performance, accuracy, and web server for evolutionary placement of short sequence reads under maximum likelihood. Syst Biol.603: 291–302.21436105 </plain></SENT>
+</text></ref><ref id="msx259-B3"><text><SENT sid="348" pm="."><plain> BoussauB, SzollosiGJ, DuretL, GouyM, TannierE, DaubinV. 2013 Genome-scale coestimation of species and gene trees. Genome Res.232: 323–330.23132911 </plain></SENT>
+</text></ref><ref id="msx259-B4"><text><SENT sid="349" pm="."><plain> BurkiF. 2014 The Eukaryotic Tree of Life from a Global Phylogenomic Perspective. Cold Spring Harbor Persp Biol.65: a016147. </plain></SENT>
+</text></ref><ref id="msx259-B5"><text><SENT sid="350" pm="."><plain> ChenK, DurandD, Farach-ColtonM. 2000 NOTUNG: A program for dating gene duplications and optimizing gene family trees. J Comput Biol.7(3-4): 429–447.11108472 </plain></SENT>
+</text></ref><ref id="msx259-B7"><text><SENT sid="351" pm="."><plain> DonoghueMJ, MathewsS. 1998 Duplicate genes and the root of angiosperms, with an example using phytochrome sequences. Mol Phylogenet. </plain></SENT>
+<SENT sid="352" pm="."><plain>Evol.93: 489–500.9667997 </plain></SENT>
+</text></ref><ref id="msx259-B8"><text><SENT sid="353" pm="."><plain> dos ReisM, DonoghuePCJ, YangZH. 2014 Neither phylogenomic nor palaeontological data support a Palaeogene origin of placental mammals. Biol Lett.101: 20131003.24429684 </plain></SENT>
+</text></ref><ref id="msx259-B9"><text><SENT sid="354" pm="."><plain> DunneMP, KellyS. 2017 OrthoFiller: utilising data from multiple species to improve the completeness of genome annotations. bioRxiv. doi: 10.1101/098566. </plain></SENT>
+</text></ref><ref id="msx259-B10"><text><SENT sid="355" pm="."><plain> EmmsDM, KellyS. 2015 OrthoFinder: solving fundamental biases in whole genome comparisons dramatically improves orthogroup inference accuracy. Genome Biol.161:157.26243257 </plain></SENT>
+</text></ref><ref id="msx259-B11"><text><SENT sid="356" pm="."><plain> FelsensteinJ. 1981 Evolutionary trees from DNA-sequences: a maximum-likelihood approach. J Mol Evol.176: 368–376.7288891 </plain></SENT>
+</text></ref><ref id="msx259-B12"><text><SENT sid="357" pm="."><plain> FelsensteinJ. 2004 Inferring phylogenies. Sunderland (MA): Sinauer Associates. </plain></SENT>
+</text></ref><ref id="msx259-B13"><text><SENT sid="358" pm="."><plain> GoodsteinDM, ShuSQ, HowsonR, NeupaneR, HayesRD, FazoJ, MitrosT, DirksW, HellstenU, PutnamN, 2012 Phytozome: a comparative platform for green plant genomics. Nucleic Acids Res.40(Database issue): D1178–D1186.22110026 </plain></SENT>
+</text></ref><ref id="msx259-B14"><text><SENT sid="359" pm="."><plain> GoreckiP, EulensteinO. 2014 DrML: probabilistic modeling of gene duplications. J Comput Biol.211: 89–98.24073895 </plain></SENT>
+</text></ref><ref id="msx259-B15"><text><SENT sid="360" pm="."><plain> GoreckiP, EulensteinO, TiurynJ. 2013 Unrooted Tree Reconciliation: A Unified Approach. IEEE-ACM Trans Comput Biol Bioinformatics102: 522–536. </plain></SENT>
+</text></ref><ref id="msx259-B16"><text><SENT sid="361" pm="."><plain> GoreckiP, TiurynJ. 2007 Inferring phylogeny from whole genomes. Bioinformatics232: E116–E122.17237078 </plain></SENT>
+</text></ref><ref id="msx259-B17"><text><SENT sid="362" pm="."><plain> HuelsenbeckJP, BollbackJP, LevineAM. 2002 Inferring the root of a phylogenetic tree. Syst Biol.511: 32–43.11943091 </plain></SENT>
+</text></ref><ref id="msx259-B18"><text><SENT sid="363" pm="."><plain> Huerta-CepasJ, SerraF, BorkP. 2016 ETE 3: Reconstruction, analysis, and visualization of phylogenomic data. Mol Biol Evol.336: 1635–1638.26921390 </plain></SENT>
+</text></ref><ref id="msx259-B19"><text><SENT sid="364" pm="."><plain> HusonDH, ScornavaccaC. 2012 Dendroscope 3: an interactive tool for rooted phylogenetic trees and networks. Syst Biol.616: 1061–1067.22780991 </plain></SENT>
+</text></ref><ref id="msx259-B20"><text><SENT sid="365" pm="."><plain> JarvisED, MirarabS, AbererAJ, LiB, HoudeP, LiC, HoSYW, FairclothBC, NabholzB, HowardJT, 2014 Whole-genome analyses resolve early branches in the tree of life of modern birds. Science3466215: 1320–1331.25504713 </plain></SENT>
+</text></ref><ref id="msx259-B21"><text><SENT sid="366" pm="."><plain> KatohK, StandleyDM. 2013 MAFFT multiple sequence alignment software version 7: improvements in performance and usability. Mol Biol Evol.304: 772–780.23329690 </plain></SENT>
+</text></ref><ref id="msx259-B22"><text><SENT sid="367" pm="."><plain> KuckP, MayerC, WageleJW, MisofB. 2012 Long branch effects distort maximum likelihood phylogenies in simulations despite selection of the correct model. PLoS One7(5):e36593. </plain></SENT>
+</text></ref><ref id="msx259-B23"><text><SENT sid="368" pm="."><plain> LarssonA. 2014 AliView: a fast and lightweight alignment viewer and editor for large datasets. Bioinformatics3022: 3276–3278.25095880 </plain></SENT>
+</text></ref><ref id="msx259-B24"><text><SENT sid="369" pm="."><plain> NguyenLT, SchmidtHA, von HaeselerA, MinhBQ. 2015 IQ-TREE: a fast and effective stochastic algorithm for estimating maximum-likelihood phylogenies. Mol Biol Evol.321: 268–274.25371430 </plain></SENT>
+</text></ref><ref id="msx259-B25"><text><SENT sid="370" pm="."><plain> ParfreyLW, LahrDJG, KnollAH, KatzLA. 2011 Estimating the timing of early eukaryotic diversification with multigene molecular clocks. Proc Natl Acad Sci U S A.10833: 13624–13629.21810989 </plain></SENT>
+</text></ref><ref id="msx259-B26"><text><SENT sid="371" pm="."><plain> PhilippeH, BrinkmannH, LavrovDV, LittlewoodDTJ, ManuelM, WörheideG, BaurainD, PennyD. 2011 Resolving difficult phylogenetic questions: why more sequences are not enough. PLoS Biol.93: e1000602.21423652 </plain></SENT>
+</text></ref><ref id="msx259-B27"><text><SENT sid="372" pm="."><plain> RasmussenMD, KellisM. 2012 Unified modeling of gene duplication, loss, and coalescence using a locus tree. Genome Res.224: 755–765.22271778 </plain></SENT>
+</text></ref><ref id="msx259-B40"><text><SENT sid="373" pm="."><plain> RuhfelBR, GitzendannerMA, SoltisPS, SoltisDE, BurleighJG. 2014 From algae to angiosperms-inferring the phylogeny of green plants (Viridiplantae) from 360 plastid genomes. BMC Evol Biol.14: 23.24533922 </plain></SENT>
+</text></ref><ref id="msx259-B28"><text><SENT sid="374" pm="."><plain> SalichosL, RokasA. 2013 Inferring ancient divergences requires genes with strong phylogenetic signals. Nature4977449: 327–331.23657258 </plain></SENT>
+</text></ref><ref id="msx259-B29"><text><SENT sid="375" pm="."><plain> SimmonsMP, BaileyCD, NixonKC. 2000 Phylogeny reconstruction using duplicate genes. Mol Biol Evol.174: 469–473.10742039 </plain></SENT>
+</text></ref><ref id="msx259-B31"><text><SENT sid="376" pm="."><plain> SzöllősiGJ, TannierE, DaubinV, BoussauB. 2015 The inference of gene trees with species trees. Syst Biol.641: E42–E62.25070970 </plain></SENT>
+</text></ref><ref id="msx259-B32"><text><SENT sid="377" pm="."><plain> TangeO. 2011 GNU Parallel—the command-line power tool. ;login: The USENIX Mag. 36: 42–47. </plain></SENT>
+</text></ref><ref id="msx259-B33"><text><SENT sid="378" pm="?"><plain> VeeckmanE, RuttinkT, VandepoeleK. 2016 Are we there yet? </plain></SENT>
+<SENT sid="379" pm="."><plain>Reliably estimating the completeness of plant genome sequences. Plant Cell288: 1759–1768.27512012 </plain></SENT>
+</text></ref><ref id="msx259-B34"><text><SENT sid="380" pm="."><plain> WilliamsTA, HeapsSE, CherlinS, NyeTMW, BoysRJ, EmbleyTM. 2015 New substitution models for rooting phylogenetic trees. Philos Trans Roy Soc B Biol Sci.3701678: 20140336. </plain></SENT>
+</text></ref><ref id="msx259-B35"><text><SENT sid="381" pm="."><plain> WuYC, RasmussenMD, BansalMS, KellisM. 2014 Most parsimonious reconciliation in the presence of gene duplication, loss, and deep coalescence using labeled coalescent trees. Genome Res.243: 475–486.24310000 </plain></SENT>
+</text></ref><ref id="msx259-B36"><text><SENT sid="382" pm="."><plain> YatesA, AkanniW, AmodeMR, BarrellD, BillisK, Carvalho-SilvaD, CumminsC, ClaphamP, FitzgeraldS, GilL, 2016 Ensembl 2016. Nucleic Acids Res.44(D1): D710–D716.26687719 </plain></SENT>
+</text></ref></ref-list></SecTag></back></article>
