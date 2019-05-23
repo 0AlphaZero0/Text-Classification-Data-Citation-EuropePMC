@@ -1144,6 +1144,10 @@ It seems those errors came from keras, indeed generating tensors/models in a loo
 <a name="Week12"></a>
 ### :date: Week 12 - 20/05-26/05-  :
 
+This week we discover that our dataset dosen't work with LSTM network, we have some iddea why there is a problem here, indeed in our dataset there is some "repetitions" for example it's possible that in a sentence there is multiple different data citations so it result in "duplicates" in our dataset. Our solution is to extract another set of citations and annotate those to complete our dataset and make it bigger.
+
+In the end we have 800 papers Open Access with data citations (first dataset result with cleaning to 272papers/400papers - 1187citation(with duplicates).....:warnings:)
+
 [:top::top::top::top::top::top::top::top::top::top::top::top::top::top:Go to the top:top::top::top::top::top::top::top::top::top::top::top::top::top::top::top:](#top)
 
 ______________________________________________________________________
