@@ -269,6 +269,15 @@ Results and analysis
 
 [:top::top::top::top::top::top::top::top::top::top::top::top::top::top:Go to the top:top::top::top::top::top::top::top::top::top::top::top::top::top::top::top:](#top)
 
+<a name="28/05"></a>
+### :mega: 28/05 - Extraction updates :
+
+- From 800 papers there was ~5000 data citation detected by the Annotation API, then after removing « duplicates » and ClinicalTrials we finally got dataset of ~1500 data citations.
+- DOI, DNA & RNA interesting or not??
+- Multiple categories in the same sentence
+
+[:top::top::top::top::top::top::top::top::top::top::top::top::top::top:Go to the top:top::top::top::top::top::top::top::top::top::top::top::top::top::top::top:](#top)
+
 ______________________________________________________________________
 
 ## :green_book: Notes
