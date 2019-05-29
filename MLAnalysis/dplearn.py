@@ -34,9 +34,12 @@ from keras.callbacks import TensorBoard
 
 # Files
 dataset_filename="Dataset2.csv"
-epochs=5
+
+epochs=10
 
 result_outfile="ResultDL"+str(epochs)+"-epochs.csv"
+NAME="dplearn-epochs"+str(epochs)+"-{}".format(int(time.time()))
+tensorboard=TensorBoard(log_dir='./logs/{}'.format(NAME))
 
 # Parameters
 average="macro" # binary | micro | macro | weighted | samples
@@ -186,12 +189,7 @@ output_file.write("f1-score\tPrecision\tRecall\tAccuracy\tCross-score\tLoss\tCom
 for vect in vect_list:
 	accuracy_list=[]
 	start=time.time()
-	control=0
 	for train_index, test_index in skf.split(X,y):
-
-		NAME="dplearn"+str(epochs)+"epochs-"+"-".join(vect[2])+"-{}".format(int(time.time()))
-		tensorboard=TensorBoard(log_dir='./logs/{}'.format(NAME))
-
 		print(vect[2])
 		X_train,X_test=X.ix[train_index],X.ix[test_index]
 		y_train,y_test=y.ix[train_index],y.ix[test_index]
@@ -233,12 +231,12 @@ for vect in vect_list:
 			batch_size=batch_size,
 			validation_data=(X_test_dtm,y_test),
 			class_weight=class_weight,
+			shuffle=True,
 			callbacks=[tensorboard])
 
 		val_loss,val_acc=model.evaluate(X_test_dtm,y_test)
 
 		accuracy_list.append(val_acc)
-		control+=1
 	
 	end=time.time()
 
