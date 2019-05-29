@@ -26,6 +26,7 @@ ______________________________________________________________________
 - [30/04 - ML models & DL models](#30/04)
 - [07/05 - LSTM & Embedding](#07/05)
 - ***[18/05 - Summary of April](#18/05)***
+- [28/05 - Extraction updates](#28/05)
 
 ______________________________________________________________________
 ### :green_book: Notes
@@ -44,7 +45,8 @@ ______________________________________________________________________
   * [Week 9 - 29/04-05/05 - Results & Analysis for ML & DL first models](#Week9)
   * [Week 10 - 06/05-12/05 - Embedding& Cross-validation-score](#Week10)
   * [Week 11 - 13/05-19/05 - TensorBoard & LSTM](#Week11)
-  * [Week 12 - 20/05-26/05 - ](#Week12)
+  * [Week 12 - 20/05-26/05 - LSTM & Embedding & New data extraction](#Week12)
+  * [Week13 - 27/05-02/06 - ](#Week13)
 ______________________________________________________________________
 
 ### :bookmark_tabs: [Bibliography](#bibliography01)
@@ -264,6 +266,15 @@ Results and analysis
 - *Correction Annotation API* : it forget some citation already match by annotation API, example : if GOxxxx is match one time it would not be match in the paper each time it appears.
 
 - *Expect results soon* : ...
+
+[:top::top::top::top::top::top::top::top::top::top::top::top::top::top:Go to the top:top::top::top::top::top::top::top::top::top::top::top::top::top::top::top:](#top)
+
+<a name="28/05"></a>
+### :mega: 28/05 - Extraction updates :
+
+- From 800 papers there was ~5000 data citation detected by the Annotation API, then after removing « duplicates » and ClinicalTrials we finally got dataset of ~1500 data citations.
+- DOI, DNA & RNA interesting or not??
+- Multiple categories in the same sentence
 
 [:top::top::top::top::top::top::top::top::top::top::top::top::top::top:Go to the top:top::top::top::top::top::top::top::top::top::top::top::top::top::top::top:](#top)
 
@@ -1142,13 +1153,19 @@ It seems those errors came from keras, indeed generating tensors/models in a loo
 [:top::top::top::top::top::top::top::top::top::top::top::top::top::top:Go to the top:top::top::top::top::top::top::top::top::top::top::top::top::top::top::top:](#top)
 
 <a name="Week12"></a>
-### :date: Week 12 - 20/05-26/05-  :
+### :date: Week 12 - 20/05-26/05 - LSTM & Embedding & New data extraction :
 
-This week we discover that our dataset dosen't work with LSTM network, we have some iddea why there is a problem here, indeed in our dataset there is some "repetitions" for example it's possible that in a sentence there is multiple different data citations so it result in "duplicates" in our dataset. Our solution is to extract another set of citations and annotate those to complete our dataset and make it bigger.
+This week we discover that our dataset dosen't work with LSTM network, we have some ideas why there is a problem here, indeed in our dataset there is some "repetitions" for example it's possible that in a sentence there is multiple different data citations so it result in "duplicates" in our dataset. Our solution is to extract another set of citations and annotate those to complete our dataset and make it bigger.
 
-In the end we have 800 papers Open Access with data citations (first dataset result with cleaning to 272papers/400papers - 1187citations(with duplicates-> without duplicates 717citations).....:warning:)
+In the end we have 800 papers Open Access with data citations (5000 data citations from Annotation API cleaning those (removing shortest, longest, ClinicalTrials..) we have almost 1500 data citations :warning:)
 
 [:top::top::top::top::top::top::top::top::top::top::top::top::top::top:Go to the top:top::top::top::top::top::top::top::top::top::top::top::top::top::top::top:](#top)
+
+<a name="Week13"></a>
+### :date: Week 13- 28/05-02/06 -  :
+
+[:top::top::top::top::top::top::top::top::top::top::top::top::top::top:Go to the top:top::top::top::top::top::top::top::top::top::top::top::top::top::top::top:](#top)
+
 
 ______________________________________________________________________
 
