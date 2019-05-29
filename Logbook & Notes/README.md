@@ -1157,6 +1157,8 @@ It seems those errors came from keras, indeed generating tensors/models in a loo
 
 This week we discover that our dataset dosen't work with LSTM network, we have some ideas why there is a problem here, indeed in our dataset there is some "repetitions" for example it's possible that in a sentence there is multiple different data citations so it result in "duplicates" in our dataset. Our solution is to extract another set of citations and annotate those to complete our dataset and make it bigger.
 
+To make sure that the problem doesn't come from our model we run the model on another dataset (***[SAR14](https://github.com/daiquocnguyen/SAR14)*** from Dai Quoc Nguyen and Dat Quoc Nguyen and Thanh Vu and Son Bao Pham)
+
 In the end we have 800 papers Open Access with data citations (5000 data citations from Annotation API cleaning those (removing shortest, longest, ClinicalTrials..) we have almost 1500 data citations :warning:)
 
 [:top::top::top::top::top::top::top::top::top::top::top::top::top::top:Go to the top:top::top::top::top::top::top::top::top::top::top::top::top::top::top::top:](#top)
