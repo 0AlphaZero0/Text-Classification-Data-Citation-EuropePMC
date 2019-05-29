@@ -28,8 +28,8 @@ from sklearn.model_selection import StratifiedKFold
 ################################################    Variables     #################################################
 
 # Files
-dataset_filename="Dataset2.csv"
-result_outfile="testResultMLparam.csv"
+dataset_filename="Dataset23.csv"
+result_outfile="ResultMLparam.csv"
 # Parameters
 average="macro"
 gamma="auto"
@@ -53,7 +53,7 @@ featuresList=[
 	completeCitation]
 target_names=[
 	"Background",
-	"Compare",
+	# "Compare",
 	"Creation",
 	"Use"]
 countVectorizerList=[
@@ -142,7 +142,7 @@ def tokenizer(doc):
 #
 ###################################################    Main     ###################################################
 #
-data=read_csv(dataset_filename,header=0,sep="\t")
+data=read_csv(dataset_filename,header=0,sep=";")
 #
 data[completeCitation]=data[[PreCitation_str,Citation_str,PostCitation_str]].apply(lambda x : '{}{}'.format(x[0],x[1]),axis=1)
 #
@@ -193,12 +193,12 @@ vect_list_countvect=[
 	[CountVectorizer(ngram_range=ngram_range,tokenizer=lemma_tokenizer),completeCitation,[ngram,lemma]],
 	[CountVectorizer(ngram_range=ngram_range,tokenizer=stem_tokenizer),completeCitation,[ngram,stem]]]
 #
-X_train,X_test,y_train,y_test=train_test_split(X,y,random_state=1)
+# X_train,X_test,y_train,y_test=train_test_split(X,y,random_state=1)
 #
 output_file=codecs.open(result_outfile,'w',encoding='utf8')
 output_file.write("f1-score\tPrecision\tRecall\tAccuracy\tCross-validation-score\tMethod\tCombination\tToken\tNgram\tLemma\tStem\tTime\n")
 for index_vect_list in range(len(vect_list)):
-	print(index_vect_list)
+	print(str(index_vect_list)+"/"+str(len(vect_list)))
 	for clf in clfList:
 		start=time.time()
 		accuracy_list=[]
@@ -254,8 +254,8 @@ for index_vect_list in range(len(vect_list)):
 		print(
 			metrics.classification_report(y_test,y_pred_class,target_names=target_names),
 			"Method : "+str(clf[1]),
-			"Cross validation score : "+str(accuracy_mean),
-			"Accuracy score : " + str(accuracy),
+			"\nCross validation score : "+str(round(accuracy_mean,3)),
+			"\nAccuracy score : " + str(accuracy),
 			"\tF1_score : " + str(f1_score),
 			"\tPrecision : " + str(precision),
 			"\tRecall : " + str(recall),
