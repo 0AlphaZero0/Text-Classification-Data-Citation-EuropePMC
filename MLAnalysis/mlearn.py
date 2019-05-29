@@ -148,9 +148,11 @@ data[completeCitation]=data[[PreCitation_str,Citation_str,PostCitation_str]].app
 #
 data["Categories_num"]=data.Categories.map({
 	"Background":0,
-	"Compare":1,
-	"Creation":2,
-	"Use":3})
+	"Creation":1,
+	"Use":2})
+	# "Compare":1,
+	# "Creation":2,
+	# "Use":3})
 #
 data[Figure_num_str]=data.Figure.map({
 	True:0,
