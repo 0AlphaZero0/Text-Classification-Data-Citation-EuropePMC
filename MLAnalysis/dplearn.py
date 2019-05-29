@@ -33,13 +33,11 @@ from keras.callbacks import TensorBoard
 ##################################################    Variables     ###################################################
 
 # Files
-dataset_filename="Dataset2.csv"
+dataset_filename="Dataset23.csv"
 
 epochs=10
 
 result_outfile="ResultDL"+str(epochs)+"-epochs.csv"
-NAME="dplearn-epochs"+str(epochs)+"-{}".format(int(time.time()))
-tensorboard=TensorBoard(log_dir='./logs/{}'.format(NAME))
 
 # Parameters
 average="macro" # binary | micro | macro | weighted | samples
@@ -56,7 +54,6 @@ node1_units=128
 activation_node1='relu'
 node2_units=128
 activation_node2='relu'
-output_node_units=4
 activation_output_node='softmax'
 ngram_range=(1,3)
 # Lemmatizer & Stemmer
@@ -73,7 +70,7 @@ featuresList=[
 	completeCitation]
 target_names=[
 	"Background",
-	"Compare",
+	# "Compare",
 	"Creation",
 	"Use"]
 
@@ -141,15 +138,17 @@ def tokenizer(doc):
 
 ###################################################    Main     ###################################################
 #
-data=read_csv(dataset_filename,header=0,sep="\t")
+data=read_csv(dataset_filename,header=0,sep=";")
 #
 data[completeCitation] = data[[PreCitation_str,Citation_str,PostCitation_str]].apply(lambda x : '{}{}'.format(x[0],x[1]),axis=1)
 #
 data["Categories_num"] = data.Categories.map({
 	"Background":0,
-	"Compare":1,
-	"Creation":2,
-	"Use":3})
+	"Creation":1,
+	"Use":2,})
+	# "Compare":1,
+	# "Creation":2,
+	# "Use":3})
 #
 data[Figure_num_str] = data.Figure.map({
 	True:0,
@@ -190,6 +189,8 @@ for vect in vect_list:
 	accuracy_list=[]
 	start=time.time()
 	for train_index, test_index in skf.split(X,y):
+		NAME="dplearn-epochs"+str(epochs)+"-"+str(vect[2])+"-{}".format(int(time.time()))
+		tensorboard=TensorBoard(log_dir='./logs/{}'.format(NAME))
 		print(vect[2])
 		X_train,X_test=X.ix[train_index],X.ix[test_index]
 		y_train,y_test=y.ix[train_index],y.ix[test_index]
@@ -217,7 +218,7 @@ for vect in vect_list:
 			Dense(input_node_units,activation=activation_input_node,input_dim=X_train_dtm[0].shape[1]),
 			Dense(node1_units,activation=activation_node1),
 			Dense(node2_units,activation=activation_node2),
-			Dense(output_node_units,activation=activation_output_node)])
+			Dense(len(target_names),activation=activation_output_node)])
 
 		model.compile(
 			optimizer="adam",
@@ -257,8 +258,8 @@ for vect in vect_list:
 	
 	print(
 		metrics.classification_report(y_test,y_pred,target_names = target_names),
-		"Cross validation score : "+str(round(accuracy_mean*100,3)),
-		"Accuracy score : "+str(round(metrics.accuracy_score(y_test,y_pred)*100,3)),
+		"\nCross validation score : "+str(round(accuracy_mean*100,3)),
+		"\nAccuracy score : "+str(round(metrics.accuracy_score(y_test,y_pred)*100,3)),
 		"\tF1_score : "+str(f1_score),
 		"\tPrecision : "+str(precision),
 		"\tRecall : "+str(recall),
