@@ -1,0 +1,686 @@
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD v1.1 20151215//EN" "JATS-archivearticle1.dtd"> 
+<article xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML" article-type="research-article"><?properties open_access?><?DTDIdentifier.IdentifierValue -//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD v1.1 20151215//EN?><?DTDIdentifier.IdentifierType public?><?SourceDTD.DTDName JATS-archivearticle1.dtd?><?SourceDTD.Version 1.1?><?ConverterInfo.XSLTName jp2nlmx2.xsl?><?ConverterInfo.Version 1?><front><journal-meta><journal-id journal-id-type="nlm-ta">PLoS Comput Biol</journal-id><journal-id journal-id-type="iso-abbrev">PLoS Comput. Biol</journal-id><journal-id journal-id-type="publisher-id">plos</journal-id><journal-id journal-id-type="pmc">ploscomp</journal-id><journal-title-group><journal-title>PLoS Computational Biology</journal-title></journal-title-group><issn pub-type="ppub">1553-734X</issn><issn pub-type="epub">1553-7358</issn><publisher><publisher-name>Public Library of Science</publisher-name><publisher-loc>San Francisco, USA</publisher-loc></publisher></journal-meta><article-meta><article-id pub-id-type="pmcid">3757061</article-id><article-id pub-id-type="pmid">24009494</article-id><article-id pub-id-type="publisher-id">PCOMPBIOL-D-13-00121</article-id><article-id pub-id-type="doi">10.1371/journal.pcbi.1003207</article-id><article-categories><subj-group subj-group-type="heading"><subject>Research Article</subject></subj-group></article-categories><title-group><article-title><SecTag type="TITLE"><text><SENT sid="0" pm="."><plain>Network and Atomistic Simulations Unveil the Structural Determinants of Mutations Linked to Retinal Diseases </plain></SENT>
+</text></SecTag></article-title><alt-title alt-title-type="running-head">Network and Atomistic Modeling of Retinal Diseases</alt-title></title-group><contrib-group><contrib contrib-type="author"><name><surname>Mariani</surname><given-names>Simona</given-names></name><xref ref-type="aff" rid="aff1">
+<sup>1</sup>
+</xref><xref ref-type="aff" rid="aff2">
+<sup>2</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Dell'Orco</surname><given-names>Daniele</given-names></name><xref ref-type="aff" rid="aff3">
+<sup>3</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Felline</surname><given-names>Angelo</given-names></name><xref ref-type="aff" rid="aff1">
+<sup>1</sup>
+</xref><xref ref-type="aff" rid="aff2">
+<sup>2</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Raimondi</surname><given-names>Francesco</given-names></name><xref ref-type="aff" rid="aff1">
+<sup>1</sup>
+</xref><xref ref-type="aff" rid="aff2">
+<sup>2</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Fanelli</surname><given-names>Francesca</given-names></name><xref ref-type="aff" rid="aff1">
+<sup>1</sup>
+</xref><xref ref-type="aff" rid="aff2">
+<sup>2</sup>
+</xref><xref ref-type="corresp" rid="cor1">
+<sup>*</sup>
+</xref></contrib></contrib-group><aff id="aff1"><label>1</label><addr-line>Department of Life Sciences, University of Modena and Reggio Emilia, Modena, Italy</addr-line></aff><aff id="aff2"><label>2</label><addr-line>Dulbecco Telethon Institute (DTI), Modena, Italy</addr-line></aff><aff id="aff3"><label>3</label><addr-line>Department of Life Sciences and Reproduction Sect. of Biological Chemistry and Center for BioMedical Computing, University of Verona, Verona, Italy</addr-line></aff><contrib-group><contrib contrib-type="editor"><name><surname>Dunbrack</surname><given-names>Roland L.</given-names></name><role>Editor</role><xref ref-type="aff" rid="edit1"/></contrib></contrib-group><aff id="edit1"><addr-line>Fox Chase Cancer Center, United States of America</addr-line></aff><author-notes><corresp id="cor1">* E-mail: <email>fanelli@unimo.it</email></corresp><fn fn-type="COI-statement"><p><text><SENT sid="1" pm="."><plain>The authors have declared that no competing interests exist. </plain></SENT>
+</text></p></fn><fn fn-type="con"><p><text><SENT sid="2" pm="."><plain>Conceived and designed the experiments: SM FF. </plain></SENT>
+<SENT sid="3" pm="."><plain>Performed the experiments: SM. </plain></SENT>
+<SENT sid="4" pm="."><plain>Analyzed the data: SM FF. </plain></SENT>
+<SENT sid="5" pm="."><plain>Wrote the paper: FF. </plain></SENT>
+<SENT sid="6" pm="."><plain>Contributed to network simulation setup and analysis: DD. </plain></SENT>
+<SENT sid="7" pm="."><plain>Contributed to Protein Structure Network analysis: AF. </plain></SENT>
+<SENT sid="8" pm="."><plain>Contributed to Molecular Dynamics simulation setup and analysis: FR. </plain></SENT>
+</text></p></fn></author-notes><pub-date pub-type="collection"><month>8</month><year>2013</year></pub-date><pub-date pub-type="epub"><day>29</day><month>8</month><year>2013</year></pub-date><volume>9</volume><issue>8</issue><elocation-id>e1003207</elocation-id><history><date date-type="received"><day>20</day><month>1</month><year>2013</year></date><date date-type="accepted"><day>18</day><month>7</month><year>2013</year></date></history><permissions><copyright-statement>© 2013 Mariani et al</copyright-statement><copyright-year>2013</copyright-year><copyright-holder>Mariani et al</copyright-holder><license xlink:href="http://creativecommons.org/licenses/by/4.0/"><license-p>This is an open-access article distributed under the terms of the Creative Commons Attribution License, which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are properly credited.</license-p></license></permissions><abstract><p><SecTag type="ABS"><text><SENT sid="9" pm="."><plain>A number of incurable retinal diseases causing vision impairments derive from alterations in visual phototransduction. </plain></SENT>
+<SENT sid="10" pm="."><plain>Unraveling the structural determinants of even monogenic retinal diseases would require network-centered approaches combined with atomistic simulations. </plain></SENT>
+</text></SecTag></p><p><SecTag type="ABS"><text><SENT sid="11" pm="."><plain>The transducin G38D mutant associated with the Nougaret Congenital Night Blindness (NCNB) was thoroughly investigated by both mathematical modeling of visual phototransduction and atomistic simulations on the major targets of the mutational effect. </plain></SENT>
+</text></SecTag></p><p><SecTag type="ABS"><text><SENT sid="12" pm="."><plain>Mathematical modeling, in line with electrophysiological recordings, indicates reduction of phosphodiesterase 6 (PDE) recognition and activation as the main determinants of the pathological phenotype. </plain></SENT>
+<SENT sid="13" pm="."><plain>Sub-microsecond molecular dynamics (MD) simulations coupled with Functional Mode Analysis improve the resolution of information, showing that such impairment is likely due to disruption of the PDEγ binding cavity in transducin. </plain></SENT>
+<SENT sid="14" pm="."><plain>Protein Structure Network analyses additionally suggest that the observed slight reduction of theRGS9-catalyzed GTPase activity of transducin depends on perturbed communication between RGS9 and GTP binding site. </plain></SENT>
+<SENT sid="15" pm="."><plain>These findings provide insights into the structural fundamentals of abnormal functioning of visual phototransduction caused by a missense mutation in one component of the signaling network. </plain></SENT>
+<SENT sid="16" pm="."><plain>This combination of network-centered modeling with atomistic simulations represents a paradigm for future studies aimed at thoroughly deciphering the structural determinants of genetic retinal diseases. </plain></SENT>
+<SENT sid="17" pm="."><plain>Analogous approaches are suitable to unveil the mechanism of information transfer in any signaling network either in physiological or pathological conditions. </plain></SENT>
+</text></SecTag></p></abstract><abstract abstract-type="summary"><title><text><SENT sid="18" pm="."><plain>Author Summary </plain></SENT>
+</text></title><p><SecTag type="ABS"><text><SENT sid="19" pm="."><plain>Incurable retinal diseases causing vision impairments may be due to spontaneous mutations in one component of the visual phototransduction signaling network. </plain></SENT>
+<SENT sid="20" pm="."><plain>Such alterations include the transducin single point mutation G38D associated with the Nougaret Congenital Night Blindness (NCNB). </plain></SENT>
+<SENT sid="21" pm="."><plain>We combined a systems biology approach with atomistic simulations to gain insights into the structural fundamentals of the NCNB disease. </plain></SENT>
+<SENT sid="22" pm="."><plain>Consistent with in vitro evidence, mathematical modeling suggests reduced effector recognition and activation as the main determinants of the pathological phenotype. </plain></SENT>
+<SENT sid="23" pm="."><plain>Sub-microsecond molecular dynamics simulations improve the resolution of information, suggesting that such impairment is likely due to disruption of the effector binding cavity. </plain></SENT>
+<SENT sid="24" pm="."><plain>Atomistic simulations also suggest that the observed slight reduction of the RGS9-catalyzed GTPase activity of transducin depends on perturbed inter-protein communication involving the nucleotide. </plain></SENT>
+<SENT sid="25" pm="."><plain>The study highlighted manifold effects of a single point pathogenic mutation, thus paving the way for analogous studies towards a thorough understanding of the structural determinants of genetic retinal diseases. </plain></SENT>
+</text></SecTag></p></abstract><funding-group><funding-statement>This work was supported by a Telethon-Italy grant [GGP11210/S00068TELC]. The funders had no role in study design, data collection and analysis, decision to publish, or preparation of the manuscript.</funding-statement></funding-group><counts><page-count count="14"/></counts></article-meta></front><body><SecTag type="INTRO"><sec id="s1"><title><text><SENT sid="26" pm="."><plain>Introduction </plain></SENT>
+</text></title><p><text><SENT sid="27" pm="."><plain>A number of incurable diseases in the visual system involve one or more components of the phototransduction signaling network (Figure 1). </plain></SENT>
+<SENT sid="28" pm="."><plain>Visual phototransduction is the G protein-mediated process that generates a neuronal signal following light capture by visual pigments in photoreceptor cells (rods and cones). </plain></SENT>
+<SENT sid="29" pm="."><plain>A unique feature of rod cells, the vertebrate photoreceptors dedicated to dim light vision, is the capability to transduce signals from even single photons due to an extremely efficient amplification not paralleled by other signal transduction pathways [1], [2]. </plain></SENT>
+<SENT sid="30" pm="."><plain>The first event in scotopic vision is the absorption of a photon by rhodopsin (R), the cornerstone of family A of the seven-transmembrane G protein coupled receptors (GPCRs), which leads to the formation of the signaling active state (R*) [3], [4]. </plain></SENT>
+<SENT sid="31" pm="."><plain>The latter, in turn, catalyzes the exchange of bound GDP for GTP on the αβγ heterotrimeric G protein transducin (Gt). </plain></SENT>
+<SENT sid="32" pm="."><plain>The GTP-bound α subunit (GαGTP) dissociates from the βγ dimer thus stimulating the activation of phosphodiesterase 6 (PDE), a tetramer made of two nearly identical α and β catalytic subunits and two identical γ subunits [5]. </plain></SENT>
+<SENT sid="33" pm="."><plain>The binding of GαGTP to the γ subunit of PDE (PDEγ) releases its inhibitory constraint on the catalytic subunits, thus leading to the hydrolysis of guanosine 3′,5′-cyclic monophosphate (cGMP), followed by a rapid closure of the cGMP-gated ionic channels in the outer membrane and a drop in the circulating current. </plain></SENT>
+<SENT sid="34" pm="."><plain>The lowering in intracellular calcium concentration, associated with cell hyperpolarization ultimately signals the presence of light to the secondary neurons of retina. </plain></SENT>
+<SENT sid="35" pm="."><plain>Signaling shutoff includes at least three calcium feedback mechanisms as well as the simultaneous deactivation of GαGTP and PDE. </plain></SENT>
+<SENT sid="36" pm="."><plain>In this respect, the termination of PDE activation by GαGTP is achieved when the GTP-bound to Gα is hydrolyzed to GDP by the intrinsic GTPase activity of the protein. </plain></SENT>
+<SENT sid="37" pm="."><plain>The latter process is significantly accelerated by a multiprotein complex containing the ninth member of the Regulators of G protein Signaling (RGS) family, hereafter indicated as RGS [6]. </plain></SENT>
+<SENT sid="38" pm="."><plain>As a result of the GTPase Activating Protein (GAP) action of RGS, the GαGDP complex re-associates with the βγ dimer restoring the GαGDP-βγ heterotrimer (i.e. Gt). </plain></SENT>
+</text></p><SecTag type="FIG"><fig id="pcbi-1003207-g001" orientation="portrait" position="float"><object-id pub-id-type="doi">10.1371/journal.pcbi.1003207.g001</object-id><label>Figure 1</label><caption><title><text><SENT sid="39" pm="."><plain>Network structure of the phototransduction model in a rod cell used in the present work. </plain></SENT>
+</text></title><p><text><SENT sid="40" pm="."><plain>The different forms depict the molecular species involved in the cascade, whereas lines or arrows indicate reversible or irreversible reactions, respectively. </plain></SENT>
+<SENT sid="41" pm="."><plain>Those reactions whose kinetic parameters were changed in this study are numbered and listed accordingly in Table 1. </plain></SENT>
+<SENT sid="42" pm="."><plain>In this respect, red numbers indicate those reactions that were changed to properly model the NCNB pathological conditions. </plain></SENT>
+<SENT sid="43" pm="."><plain>The molecules involved in these reactions, i.e. GαGTP, PDE, and RGS, are blue, green, and magenta, respectively. </plain></SENT>
+<SENT sid="44" pm="."><plain>Filled red rectangles indicate the stoichiometric quantity of the specific molecule in the heteromeric complex, when higher than one. </plain></SENT>
+<SENT sid="45" pm="."><plain>Yellow stars indicate the number of PDE-activated catalytic subunits. </plain></SENT>
+<SENT sid="46" pm="."><plain>Hexagons indicate the molecular species that were used in atomistic simulations. </plain></SENT>
+</text></p></caption><graphic xlink:href="pcbi.1003207.g001"/></fig></SecTag><p><text><SENT sid="47" pm="."><plain>Misfunctioning of any component of the phototransduction network causes more or less severe vision impairments. </plain></SENT>
+<SENT sid="48" pm="."><plain>Such an example is the Nougaret form of dominant stationary night blindness (Nougaret Congenital Night Blindness, NCNB) caused by a missense mutation, G38D, found in the rod Gα of affected individuals [7]–[9]. </plain></SENT>
+<SENT sid="49" pm="."><plain>Stationary night blindness is not associated with retinal degeneration and is characterized by the inability to see in the dark, whereas daytime vision is largely unaffected [7]–[9]. In vitro characterization showed that the aspartate substitution for G38 does not alter the interaction between Gα and Gβγ or activation of transducin by R* [9]. </plain></SENT>
+<SENT sid="50" pm="."><plain>Furthermore, the mutant Gα is characterized by modestly reduced kcat value for the intrinsic (∼2.5-fold) and RGS-catalyzed (∼5 fold) GTP hydrolyses. </plain></SENT>
+<SENT sid="51" pm="."><plain>In contrast, biochemical data showed that G38D is totally impaired in its ability to bind and activate PDE [9], whereas suction electrode recordings revealed that homozygous GαGTP G38D−/− rods exhibit residual light responses, indicating that the mutation reduced but did not completely abolish effector function [8]. </plain></SENT>
+<SENT sid="52" pm="."><plain>Functional consequences of substituting the homologous amino acid in other G proteins were found to inhibit GTPase activity and to prevent stimulation by GAP in Ras-p21 [10], Gαi [11], Gαz [12], and Gαs [13]. </plain></SENT>
+</text></p><p><text><SENT sid="53" pm="."><plain>Thus, a single-point mutation in Gα seems to elicit a multitude of effects not entirely clarified by in vitro and in vivo experiments and likely involving more than one component in the phototransduction signaling network. </plain></SENT>
+<SENT sid="54" pm="."><plain>In this framework, to gain insights into the molecular bases of the NCNB disease, we integrated the information from in vitro/in vivo experiments with systems-based and atomistic modeling. </plain></SENT>
+<SENT sid="55" pm="."><plain>The systems-based approach relied on a comprehensive quantitative model of phototransduction in rod cells that explicitly includes most of the molecular components of the cascade [14] (Figure 1). </plain></SENT>
+<SENT sid="56" pm="."><plain>In this study, that model was extended to the NCNB pathological phenotype, thus highlighting those reactions and intermolecular interactions perturbed by the Gα mutation. </plain></SENT>
+<SENT sid="57" pm="."><plain>The molecular systems involved in those reactions were subjected to atomistic Molecular Dynamics (MD) simulations and included: wild type and mutated GαGTP taken both in their isolated forms (i.e. GαGTP WT and GαGTP G38D) and in the ternary complex with RGS and PDEγ (GαGTP-RGS-PDEγWT and GαGTP-RGS-PDEγG38D) (Figure 2). </plain></SENT>
+</text></p><SecTag type="FIG"><fig id="pcbi-1003207-g002" orientation="portrait" position="float"><object-id pub-id-type="doi">10.1371/journal.pcbi.1003207.g002</object-id><label>Figure 2</label><caption><title><text><SENT sid="58" pm="."><plain>Structure and primary sequence of GαGTP and GαGTP-RGS-PDEγWT. </plain></SENT>
+</text></title><p><text><SENT sid="59" pm="."><plain>A. The cartoon representation of GαGTP structure (PDB code: 1TND) is shown. </plain></SENT>
+<SENT sid="60" pm="."><plain>The G protein holds a Ras-like domain and an α-helical domain. </plain></SENT>
+<SENT sid="61" pm="."><plain>The interface between α-helical and Ras-like domain makes the nucleotide binding cleft. </plain></SENT>
+<SENT sid="62" pm="."><plain>The α-helical domain is an orthogonal bundle of six α-helices. </plain></SENT>
+<SENT sid="63" pm="."><plain>The Ras-like domain holds a Rossmann fold, characterized by a 3-layer(αβα) sandwich architecture due to the inversion in the order of the strands β3 and β1 as well as β1 and β4, which are adjacent to each other. </plain></SENT>
+<SENT sid="64" pm="."><plain>The Ras-like domain is colored according to secondary structure (i.e. helices, strands, and loops are, respectively, violet, yellow and white), whereas the α-helical domain is gray. </plain></SENT>
+<SENT sid="65" pm="."><plain>The mutation site is indicated by a cyan sphere centered on the Cα-atom. </plain></SENT>
+<SENT sid="66" pm="."><plain>The GTP nucleotide is represented by sticks colored by atoms type. </plain></SENT>
+<SENT sid="67" pm="."><plain>The nucleotide docks into a binding site contributed by the β1/α1, α1/β2 (αF/β2 in the Gα proteins), β3/α2, β5/α4 and β6/α5 loops. </plain></SENT>
+<SENT sid="68" pm="."><plain>These are ultraconserved regions also called G boxes 1–5 (G1–G5, colored green). </plain></SENT>
+<SENT sid="69" pm="."><plain>G2 is also called swI (α1/β2 loop (αF/β2 loop in the Gα proteins)), whereas G3 is part of the switch II (swII, or β3/α2 loop, plus the α2-helix). </plain></SENT>
+<SENT sid="70" pm="."><plain>The β2/β3 hairpin in between swI and swII is also called inter-switch. </plain></SENT>
+<SENT sid="71" pm="."><plain>The β4/α3 loop, which is not a G box, is also called swIII [19]. </plain></SENT>
+<SENT sid="72" pm="."><plain>In Gα proteins, the two domains are connected by two loops, linker 1 or α1/αA loop and linker 2 or αF/β2 loop; the latter corresponds to swI. B. According to computational experiments [20], the strands β1 and β4 divide the conserved domain into two dynamically distinct lobes, lobe 1 (i.e. the N-terminal half of the domain, colored magenta) and lobe 2 (i.e. the C-terminal half of the domain, colored blue). C. The cartoon representation of the complex involving GαGTP (gray), RGS (i.e. the RGS domain of RGS9, amino acids 286 to 418, orange), and PDEγ (green) is shown (PDB code: 1FQJ [16]). </plain></SENT>
+<SENT sid="73" pm="."><plain>In deep detail, the RGS domain is a bundle of nine α-helices, configured into two subdomains: an N- and a C-terminal region holding an orthogonal bundle architecture (helices α1, α2, α3, α8 and α9), and a prototypical right-handed, antiparallel four-helix bundle (helices α4, α5, α6 and α7). </plain></SENT>
+<SENT sid="74" pm="."><plain>PDEγ (residues 46–87) comprises three short α-helices and an N-terminal loop region that originates near the C-terminus and winds over helices α1 and α2. D. The primary sequence of Gα is shown. </plain></SENT>
+<SENT sid="75" pm="."><plain>Helices, strands, and loops are, respectively, violet, yellow, and white. </plain></SENT>
+<SENT sid="76" pm="."><plain>The G boxes are delimited by green boxes. </plain></SENT>
+<SENT sid="77" pm="."><plain>Black numbers on the left side of the alignment refer to the sequential numbering, whereas black numbers above the sequences indicate the beginning of a secondary structure/G-box motif. </plain></SENT>
+<SENT sid="78" pm="."><plain>An arbitrary numbering of each residue was set, characterized by the label of the secondary structure segment followed by the amino acid position within the segment. </plain></SENT>
+<SENT sid="79" pm="."><plain>In those cases where the G-boxes overlap with the secondary structure segment, positions refer to the G-boxes. </plain></SENT>
+<SENT sid="80" pm="."><plain>Orange and green stars mark, respectively, RGS and PDEγ recognition sites. </plain></SENT>
+</text></p></caption><graphic xlink:href="pcbi.1003207.g002"/></fig></SecTag></sec></SecTag><SecTag type="RESULTS"><sec id="s2"><title><text><SENT sid="81" pm="."><plain>Results </plain></SENT>
+</text></title><sec id="s2a"><title><text><SENT sid="82" pm="."><plain>Mathematical modeling of the NCNB phenotype </plain></SENT>
+</text></title><p><text><SENT sid="83" pm="."><plain>We presented a dynamical model of the phototransduction signaling network made up of ordinary differential equations, which describe the reactions and their kinetic parameters [14]. </plain></SENT>
+<SENT sid="84" pm="."><plain>The working model used in this study includes also the dynamic scaffolding reactions between dark rhodopsin and Gt [15]. </plain></SENT>
+<SENT sid="85" pm="."><plain>Herein, such model was further extended to describe the heterozygous (GαGTP G38D+/−) and homozygous (GαGTP G38D−/−) mutated conditions of GαGTP G38D. </plain></SENT>
+<SENT sid="86" pm="."><plain>This was accomplished by introducing the mutated G protein as an explicit new molecule and adding all the relative reactions in the phototransduction cascade, which concerned the GαGTP WT+/+ status (Table 1, see Methods). </plain></SENT>
+<SENT sid="87" pm="."><plain>The output of mathematical simulations (i.e. change in photocurrent with respect to dark value, ΔJ) was analyzed and compared with the photoresponses of rods from wild type and transgenic mice (Figure 3A, 3B, and 3C). </plain></SENT>
+<SENT sid="88" pm="."><plain>It is worth noting that, due to the significant difference in the species between in vitro (i.e. mammals, Figure 3A, 3B, and 3C) and in silico (i.e. amphibian rods [14], Figure 3D, 3E, and 3F) experiments, the time scales of the photoresponses is different, thus allowing for semi-quantitative comparisons. </plain></SENT>
+</text></p><SecTag type="FIG"><fig id="pcbi-1003207-g003" orientation="portrait" position="float"><object-id pub-id-type="doi">10.1371/journal.pcbi.1003207.g003</object-id><label>Figure 3</label><caption><title><text><SENT sid="89" pm="."><plain>Flash responses from wild type, GαGTP G38D+/−, and GαGTP G38D−/− rods. </plain></SENT>
+</text></title><p><text><SENT sid="90" pm="."><plain>Experimental (A, B, C) versus simulated (D, E, F) responses to flashes of increasing intensities from wild type GαGTP WT+/+ (A, D), heterozygous GαGTP G38D+/− (B, E) and homozygous GαGTP G38D−/− (C, F) rods are shown. </plain></SENT>
+<SENT sid="91" pm="."><plain>Experimental data, i.e. published in Moussaif et al. [8] and provided by Marie E. Burns, refer to mice rods exposed to flashes ranging from 5 to 97000 photons µm−2 (A and B) or from 650 to 94000 photons µm−2 (C). </plain></SENT>
+<SENT sid="93" pm="."><plain>Simulated responses derive from the model of an amphibian rod stimulated with the same light intensities as in vitro recordings. </plain></SENT>
+<SENT sid="94" pm="."><plain>The pathological GαGTP G38D+/− and GαGTP G38D−/− models were generated by changes in the kinetic parameters kP1, kP2 and kRGS1 as described in the text. </plain></SENT>
+<SENT sid="95" pm="."><plain>The dissimilar species justify the time scale difference between in vitro and in silico experiments. </plain></SENT>
+<SENT sid="96" pm="."><plain>The responses were normalized with respect to the maximum photocurrent. G. Normalized simulated light response amplitude is plotted as a function of flash strength. </plain></SENT>
+<SENT sid="97" pm="."><plain>For comparison to in vitro data, see Figure 5B in Moussaif et al. [8]. </plain></SENT>
+<SENT sid="98" pm="."><plain>Flash intensities are the same as in D, E and F. </plain></SENT>
+</text></p></caption><graphic xlink:href="pcbi.1003207.g003"/></fig></SecTag><SecTag type="TABLE"><table-wrap id="pcbi-1003207-t001" orientation="portrait" position="float"><object-id pub-id-type="doi">10.1371/journal.pcbi.1003207.t001</object-id><label>Table 1</label><caption><title><text><SENT sid="99" pm="."><plain>Reactions that were changed in the background of the G38D mutation. </plain></SENT>
+</text></title></caption><alternatives><graphic id="pcbi-1003207-t001-1" xlink:href="pcbi.1003207.t001"/><table frame="hsides" rules="groups"><colgroup span="1"><col align="left" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/></colgroup><thead><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="100" pm="."><plain>Na </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="101" pm="."><plain>Reaction Equation </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="102" pm="."><plain>Descriptionb </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="103" pm="."><plain>O.P.c </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="104" pm="."><plain>Mind </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="105" pm="."><plain>Maxd </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="106" pm="."><plain>Effecte </plain></SENT>
+</text></td></tr></thead><tbody><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="107" pm="."><plain>1 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="108" pm="."><plain> </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="109" pm="."><plain>Intrinsic GαGTP GTPase activity </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="110" pm="."><plain>0.05 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="111" pm="."><plain>×2 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="112" pm="."><plain>0 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="113" pm="."><plain>None </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="114" pm="."><plain>2 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="115" pm="."><plain> </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="116" pm="."><plain>Intrinsic GαGTP-PDE GTPase activity </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="117" pm="."><plain>0.033 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="118" pm="."><plain>×2 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="119" pm="."><plain>0 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="120" pm="."><plain>Slowed recovery when = 0 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="121" pm="."><plain>2 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="122" pm="."><plain> </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="123" pm="."><plain>Intrinsic GαGTP-PDE- GαGTP GTPase activity </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="124" pm="."><plain>0.033 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="125" pm="."><plain>×2 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="126" pm="."><plain>0 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="127" pm="."><plain>Slowed recovery when = 0 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="128" pm="."><plain>3 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="129" pm="."><plain> </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="130" pm="."><plain>Binding of GαGTP to inactive PDE </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="131" pm="."><plain>5.5e-2 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="132" pm="."><plain>×2 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="133" pm="."><plain>×109 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="134" pm="."><plain>Slowed activation, lower sensitivity and recovery with changes &gt;×106 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="135" pm="."><plain>4 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="136" pm="."><plain> </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="137" pm="."><plain>Activation of one PDE catalytic subunit </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="138" pm="."><plain>940.7 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="139" pm="."><plain>×2 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="140" pm="."><plain>×104 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="141" pm="."><plain>Slowed activation phase with changes &gt;×103 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="142" pm="."><plain>5 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="143" pm="."><plain> </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="144" pm="."><plain>Binding of GαGTP to GαGTP-PDE </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="145" pm="."><plain>1.498e-9 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="146" pm="."><plain>×2 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="147" pm="."><plain>×105 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="148" pm="."><plain>None </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="149" pm="."><plain>6 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="150" pm="."><plain> </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="151" pm="."><plain>Activation of the PDE tetramer </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="152" pm="."><plain>21.09 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="153" pm="."><plain>×2 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="154" pm="."><plain>×105 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="155" pm="."><plain>None </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="156" pm="."><plain>7 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="157" pm="."><plain> </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="158" pm="."><plain>Binding of RGS9 to GαGTP-PDE </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="159" pm="."><plain>1.57e-7 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="160" pm="."><plain>×2 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="161" pm="."><plain>×15 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="162" pm="."><plain>Slowed recovery phase </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="163" pm="."><plain>7 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="164" pm="."><plain> </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="165" pm="."><plain>Binding of RGS9 to GαGTP-PDE-GαGTP </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="166" pm="."><plain>1.57e-7 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="167" pm="."><plain>×2 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="168" pm="."><plain>×15 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="169" pm="."><plain>Slowed recovery phase </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="170" pm="."><plain>8 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="171" pm="."><plain> </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="172" pm="."><plain>GAP activity and disruption of the complexes </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="173" pm="."><plain>256.07 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="174" pm="."><plain>×2 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="175" pm="."><plain>×105 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="176" pm="."><plain>Increase in saturating phase for bright flashes with changes &gt;102 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="177" pm="."><plain>8 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="178" pm="."><plain> </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="179" pm="."><plain>GAP activity and disruption of the complexes </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="180" pm="."><plain>256.07 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="181" pm="."><plain>×2 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="182" pm="."><plain>×105 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="183" pm="."><plain>Increase in saturating phase for bright flashes with changes &gt;102 </plain></SENT>
+</text></td></tr></tbody></table></alternatives><table-wrap-foot><fn id="nt101"><label>a</label><p><text><SENT sid="184" pm="."><plain>Reaction number, corresponding to that in Figure 1. </plain></SENT>
+</text></p></fn><fn id="nt102"><label>b</label><p><text><SENT sid="185" pm="."><plain>Type of reaction. </plain></SENT>
+</text></p></fn><fn id="nt103"><label>c</label><p><text><SENT sid="186" pm="."><plain>Original value of the parameter governing the reaction kinetics in the mathematical model (s−1) [14]. </plain></SENT>
+</text></p></fn><fn id="nt104"><label>d</label><p><text><SENT sid="187" pm="."><plain>Minimum and maximum reductions the considered parameters were subjected to in the present study, in order to model the mutated conditions; when “Max R” was 0, the parameter was ultimately set to zero. </plain></SENT>
+</text></p></fn><fn id="nt105"><label>e</label><p><text><SENT sid="188" pm="."><plain>Effect of these reductions. </plain></SENT>
+</text></p></fn></table-wrap-foot></table-wrap></SecTag><p><text><SENT sid="189" pm="."><plain>The results obtained with our GαGTP WT+/+ model were in remarkable agreement with in vitro recordings on wild type cells (Figure 3A and 3D). </plain></SENT>
+</text></p><p><text><SENT sid="190" pm="."><plain>In order to fit the models onto the pathological NCNB condition, the rates of a number of reactions involving GαGTP G38D were systematically reduced by tuning the relative kinetic parameters in decreasing steps (Table 1, Figure 1, see Methods). </plain></SENT>
+<SENT sid="191" pm="."><plain>The reductions were combined into specific heterozygous and homozygous models. </plain></SENT>
+<SENT sid="192" pm="."><plain>At the end, the best fit with electrophysiological recordings of the mutant cells was obtained by making changes in the following reactions: </plain></SENT>
+</text></p><list list-type="order"><list-item><p><text><SENT sid="193" pm="."><plain> </plain></SENT>
+</text></p></list-item><list-item><p><text><SENT sid="194" pm="."><plain> </plain></SENT>
+</text></p></list-item><list-item><p><text><SENT sid="195" pm="."><plain> </plain></SENT>
+</text></p></list-item></list><p><text><SENT sid="196" pm="."><plain>describing, respectively, a) the binding of one molecule of GαGTP to one inactive PDE subunit, b) activation of the GαGTP-PDE complex, and c) binding of the RGS complex to a PDE tetramer with one active subunit. </plain></SENT>
+<SENT sid="197" pm="."><plain>The relative changes in the parameters were 35000-fold reduction in kP1 and kP2 and 2-fold reduction in kRGS1, with respect to the wild type value. </plain></SENT>
+<SENT sid="198" pm="."><plain>Following such changes, heterozygous cells show a similar behavior to wild type cells under dim flash responses but elongated recovery under brighter flashes associated with slight loss in sensitivity (i.e. a 40% brighter flash is required to generate a half-maximal response, Io; Figure 3G and Figure 5B in Moussaif et al. [8] and Table 2). </plain></SENT>
+<SENT sid="199" pm="."><plain>In contrast, homozygous cells show marked decrease in sensitivity to light (50-fold brighter Io, Table 2) and impaired response recoveries for all flash intensities. </plain></SENT>
+</text></p><SecTag type="FIG"><fig id="pcbi-1003207-g005" orientation="portrait" position="float"><object-id pub-id-type="doi">10.1371/journal.pcbi.1003207.g005</object-id><label>Figure 5</label><caption><title><text><SENT sid="200" pm="."><plain>SASA time series. </plain></SENT>
+</text></title><p><text><SENT sid="201" pm="."><plain>The SASA computed on Y254 (in the α3/β5 loop) is shown. </plain></SENT>
+<SENT sid="202" pm="."><plain>Cartoons of the GαGTP WT (A) and GαGTP G38D (B) snapshots halfway through the simulation (frame 50000th) are shown, which are zoomed on the swII/α3 cleft, the primary recognition site for PDEγ. </plain></SENT>
+<SENT sid="203" pm="."><plain>The Gα residues directly involved in PDEγ recognition (i.e. marked by green stars in the primary sequence in Figure 2) are shown in sticks. </plain></SENT>
+<SENT sid="204" pm="."><plain>The atom color code is grey for carbon, blue for nitrogen, and red for oxygen. </plain></SENT>
+<SENT sid="205" pm="."><plain>The residue Y254, on which the SASA index was computed, is green. </plain></SENT>
+<SENT sid="206" pm="."><plain>The cyan ball in B indicates the mutation site. </plain></SENT>
+<SENT sid="207" pm="."><plain>C. </plain></SENT>
+<SENT sid="208" pm="."><plain>The time series of the SASA index calculated on Y254 along the 100 ns trajectories of GαGTP WT (violet) and GαGTP G38D (green) are shown. </plain></SENT>
+</text></p></caption><graphic xlink:href="pcbi.1003207.g005"/></fig></SecTag><SecTag type="TABLE"><table-wrap id="pcbi-1003207-t002" orientation="portrait" position="float"><object-id pub-id-type="doi">10.1371/journal.pcbi.1003207.t002</object-id><label>Table 2</label><caption><title><text><SENT sid="209" pm="."><plain>in vitro and in silico flash responses. </plain></SENT>
+</text></title></caption><alternatives><graphic id="pcbi-1003207-t002-2" xlink:href="pcbi.1003207.t002"/><table frame="hsides" rules="groups"><colgroup span="1"><col align="left" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/></colgroup><thead><tr><td align="left" rowspan="1" colspan="1"/><td colspan="2" align="left" rowspan="1"><text><SENT sid="210" pm="."><plain>I0(photons/µm2)a </plain></SENT>
+</text></td><td colspan="2" align="left" rowspan="1"><text><SENT sid="211" pm="."><plain>Time to Peakb </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="212" pm="."><plain>in vitro </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="213" pm="."><plain>in silico </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="214" pm="."><plain>in vitro </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="215" pm="."><plain>in silico </plain></SENT>
+</text></td></tr></thead><tbody><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="216" pm="."><plain>GαGTPWT </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="217" pm="."><plain>48.3±2.1 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="218" pm="."><plain>23.64 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="219" pm="."><plain>111±6 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="220" pm="."><plain>0.96 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="221" pm="."><plain>GαGTPG38D+/− </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="222" pm="."><plain>77.4±6.0 (1.6) </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="223" pm="."><plain>31.5 (1.3) </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="224" pm="."><plain>109±9 (1) </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="225" pm="."><plain>0.975 (1.01) </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="226" pm="."><plain>GαGTPG38D−/− </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="227" pm="."><plain>2296±125 (47.5) </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="228" pm="."><plain>1854 (78.4) </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="229" pm="."><plain>192±43 (1.7) </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="230" pm="."><plain>2.345 (2.4) </plain></SENT>
+</text></td></tr></tbody></table></alternatives><table-wrap-foot><fn id="nt106"><label>a</label><p><text><SENT sid="231" pm="."><plain>Flash strength that elicited a half-maximal response. </plain></SENT>
+<SENT sid="232" pm="."><plain>The time scales for in vitro [8] and in silico measurements are ms and s, respectively. </plain></SENT>
+</text></p></fn><fn id="nt107"><label>b</label><p><text><SENT sid="233" pm="."><plain>Time to Peak of the flash. </plain></SENT>
+</text></p></fn><fn id="nt108"><label/><p><text><SENT sid="234" pm="."><plain>In vitro data were taken from the literature [8], while in silico data are the outcome of mathematical simulations done in this study. </plain></SENT>
+<SENT sid="235" pm="."><plain>In brackets, the ratios to the wild type value are shown. </plain></SENT>
+</text></p></fn></table-wrap-foot></table-wrap></SecTag><p><text><SENT sid="236" pm="."><plain>Same strengths of flashes delivered to the cells in simulations and electrophysiological recordings [8] result in quantitative differences concerning time scales and sensitivity of the photoresponses, likely due to the different species considered. </plain></SENT>
+<SENT sid="237" pm="."><plain>The higher ΔJ elicited by the dimmest flash in computational experiments compared to electrophysiological recordings is exemplar in this respect (Figure 3A and 3D). </plain></SENT>
+<SENT sid="238" pm="."><plain>Differences between the cellular properties of mammals and amphibian rods include temperature and volume, which likely influence initial conditions and concentrations of the molecular species involved in signal transduction [5]. </plain></SENT>
+</text></p><p><text><SENT sid="239" pm="."><plain>It is worth noting that, in the actual mathematical model, up to two GαGTP can bind, and in turn activate, either one of the catalytic subunits of PDE, hence leading to a 2∶1 stoichiometry. </plain></SENT>
+<SENT sid="240" pm="."><plain>Nevertheless, as previously discussed [14] (see also Table S4 therein), the 2∶1 GαGTP∶PDE complex is detectable only in the presence of light flashes with intensities in the order of 105 photons/µm2 and, even then, their presence is negligible. </plain></SENT>
+<SENT sid="241" pm="."><plain>As a confirmation of those results, deep reductions of kP3 and kP4 (regulating, respectively, the binding of the second molecule of GαGTP to GαGTP-PDE and the activation of both catalytic subunits of the PDE tetramer), in the background of any of the test models used in this study, did not elicit any change in the photoresponse (Table 1). </plain></SENT>
+<SENT sid="242" pm="."><plain>We cannot, however, exclude that this was due to an inaccurate modeling of this part of the network, whose biochemical detail remains mainly unknown. </plain></SENT>
+<SENT sid="243" pm="."><plain>For example, a finer treatment of the allosteric and regulatory mechanisms may be necessary to recover the role of the second PDE subunit [14]. </plain></SENT>
+<SENT sid="244" pm="."><plain>This might also explain why, with the changes in kP1, kP2, and kRGS1 necessary to reproduce GαGTP G38D−/− photoresponses, loss in sensitivity and delay of the time to peak are more marked in simulated responses compared to in vitro ones (78- vs 47- and 2.4- vs 1.7-fold, respectively, see Table 2). </plain></SENT>
+</text></p><p><text><SENT sid="245" pm="."><plain>In line with the statements above, we relied on the fact that, in the present model, changes in kRGS1 and kRGS2 only affect the formation and activity of the 1∶1∶1 GαGTP-RGS-PDE complex. </plain></SENT>
+<SENT sid="246" pm="."><plain>Noteworthy, as shown in Table 1, kRGS2 is a rather coarse parameter, as it describes the RGS-catalyzed GTPase activity in both GαGTP-RGS-PDE and GαGTP-RGS-PDE-GαGTP complexes as well as disruption of these complexes. </plain></SENT>
+<SENT sid="247" pm="."><plain>For this reason, we couldn't use the mathematical model to properly evaluate mutational effects on the GAP activity of RGS in the GαGTP-RGS-PDE complex. </plain></SENT>
+</text></p><p><text><SENT sid="248" pm="."><plain>In summary, consistent with electrophysiological recordings [8] but not with earlier biochemical data [9] mathematical modeling highlights reduction of both PDE binding and activation as the major mutation-induced perturbations in the visual phototransduction signaling network. </plain></SENT>
+<SENT sid="249" pm="."><plain>A marginal reduction in RGS binding helped as well in reproducing the electrophysiological phenotype. </plain></SENT>
+<SENT sid="250" pm="."><plain>On these bases, insights into the structural determinants of such perturbations were searched by atomistic MD simulations targeting both wild type and mutated Gα in its isolated form and in ternary complex with both RGS and PDEγ. </plain></SENT>
+</text></p></sec><sec id="s2b"><title><text><SENT sid="251" pm="."><plain>Atomistic simulations on the GαGTP system: The G38D mutant affects the swII/α3 cleft, primary determinant in PDEγ binding </plain></SENT>
+</text></title><p><text><SENT sid="252" pm="."><plain>Atomistic simulations were firstly carried out on the isolated GαGTP in its wild type and mutated forms (GαGTP WT and GαGTP G38D, respectively). </plain></SENT>
+</text></p><p><text><SENT sid="253" pm="."><plain>The mutation site is the third position of the G box 1 (i.e. G1:3, see Figure 2 and its legend for description and visualization of the G protein regions as well as for explanation of the position-based numbering). </plain></SENT>
+<SENT sid="254" pm="."><plain>Incidentally, the G boxes are five ultra-conserved regions of the Ras-like domain involved in nucleotide binding (Figure 2). </plain></SENT>
+<SENT sid="255" pm="."><plain>Such mutated position is not involved in backbone-mediated H-bonding interactions with the nucleotide neither in the wild type nor in the mutant, (Supplementary Figure 1A (Figure S1A)). </plain></SENT>
+<SENT sid="256" pm="."><plain>The interaction pattern of the nucleotide remains almost unchanged in the two forms following MD simulations, as also indicated by the patterns of interaction energies between GTP and surrounding residues (Figure S2). </plain></SENT>
+<SENT sid="257" pm="."><plain>Collectively, these data are consistent with the results of in vitro evidence that the mutation elicits a marginal effect on the intrinsic GTPase activity of the protein [8], [9]. </plain></SENT>
+</text></p><p><text><SENT sid="258" pm="."><plain>In contrast to lack of local structural effects, the G38D mutant turned out to affect the intrinsic dynamics of the protein. </plain></SENT>
+<SENT sid="259" pm="."><plain>Indeed, the Cα-atom Root Mean Square Deviation (RMSD) of the mutant is higher than that of the wild type especially over the second half of MD simulation (Figure S3). </plain></SENT>
+<SENT sid="260" pm="."><plain>As expected, Cα-atom fluctuations evaluated in terms of Root Mean Square Fluctuations (RMSFs) show peaks of flexibility in the loops connecting the elements of secondary structure, especially those in the α-helical domain. </plain></SENT>
+<SENT sid="261" pm="."><plain>This effect is greater in the mutant than the wild type (Figure 4). </plain></SENT>
+<SENT sid="262" pm="."><plain>In line with RMSFs, in the mutant form, selected portions of the protein show significant enhancements in their collective motions as inferred from the Principal Component Analysis (PCA) of the trajectories. </plain></SENT>
+<SENT sid="263" pm="."><plain>These portions include linker1, αB/αC loop, αC, αE, αF, inter-switch, and C-term of α3 (Figure 4). </plain></SENT>
+</text></p><SecTag type="FIG"><fig id="pcbi-1003207-g004" orientation="portrait" position="float"><object-id pub-id-type="doi">10.1371/journal.pcbi.1003207.g004</object-id><label>Figure 4</label><caption><title><text><SENT sid="264" pm="."><plain>RMSF profiles and PCA projections. </plain></SENT>
+</text></title><p><text><SENT sid="265" pm="."><plain>A. The Cα-RMSF profiles from MD trajectories of GαGTP WT (violet) and GαGTP G38D (green) are shown. </plain></SENT>
+<SENT sid="266" pm="."><plain>They refer to the 100000 frames constituting the 100 ns trajectory. </plain></SENT>
+<SENT sid="267" pm="."><plain>The secondary structure elements are shown on the abscissa, following the Noel's nomenclature [19]. B, C, D, E. The Cα-atom projections along the linear combination of the ED analysis-derived principal components, which describe the essential subspace of the trajectories of GαGTP WT (B and C) and GαGTP G38D (D and E) are shown (see text for an explanation of ED). </plain></SENT>
+<SENT sid="268" pm="."><plain>The number of PCs used was 111 for GαGTP WT and 74 for GαGTP G38D. </plain></SENT>
+<SENT sid="269" pm="."><plain>Cα-atom displacements are highlighted by color ranges from violet to blue for GαGTP WT, and from green to blue for GαGTP G38D. </plain></SENT>
+</text></p></caption><graphic xlink:href="pcbi.1003207.g004"/></fig></SecTag><p><text><SENT sid="270" pm="."><plain>To investigate whether mutation-induced changes in intrinsic dynamics may affect Gα portions deputed to RGS and/or PDEγ recognition, we monitored the solvent accessibility of all the RGS and PDEγ recognition sites on Gα (indicated, respectively, by orange and green stars in Figure 2), finding more marked effects on the PDEγ sites, in particular Y254 (in the α3/β5 loop). </plain></SENT>
+<SENT sid="271" pm="."><plain>The latter is, indeed, exposed to the solvent in the wild type but buried in the mutant form where it is permanently involved in inter-helical interaction with F211(s2:11), another PDEγ recognition site that becomes no longer available to PDEγ as well (Figure 5). </plain></SENT>
+<SENT sid="272" pm="."><plain>In line with these observations, Functional Mode Analysis (FMA, see Methods) found that the Solvent Accessible Surface Area (SASA) of Y254 is correlated with the modes describing the essential subspace of Gα. </plain></SENT>
+<SENT sid="273" pm="."><plain>Incidentally, the essential subspace (ES) is given by a variable number of eigenvectors whose associated eigenvalues account for 90% of the total variance of the Cα-atom displacements in a trajectory. </plain></SENT>
+<SENT sid="274" pm="."><plain>The correlation is already present in the wild type but increases in the mutant form (i.e. the correlation coefficients are 0.73 and 0.86, respectively). </plain></SENT>
+<SENT sid="275" pm="."><plain>Differences in functional modes between wild type and mutant amplify when considering only the first principal component (PC1); in fact, the correlation remains still significant for the mutant (i.e. 0.74) but it drops for the wild type (i.e. 0.39). </plain></SENT>
+<SENT sid="276" pm="."><plain>Collectively, FMA is suggestive of a functional link between protein dynamics and structural environment of Y254. </plain></SENT>
+<SENT sid="277" pm="."><plain>Thus, mutation-induced burying of Y254 results in deformation of the swII/α3 cleft, which is the primary determinant in PDEγ binding. </plain></SENT>
+</text></p><p><text><SENT sid="278" pm="."><plain>We also investigated mutational effects on the structural communication features of Gt by the Protein Structure Network (PSN) analysis, a product of graph theory applied to protein structures (see Methods). </plain></SENT>
+<SENT sid="279" pm="."><plain>The analysis searched for mutation-induced changes in network components (e.g. nodes, hubs, links, shortest communication pathways, etc) on the MD trajectories. </plain></SENT>
+<SENT sid="280" pm="."><plain>The comparative analyses of the Protein Structure Graphs (PSGs) of wild type and mutated Gα revealed a slight reduction in number of nodes, hubs, and links in the G38D mutant compared to the wild type (Table 3). </plain></SENT>
+<SENT sid="281" pm="."><plain>In contrast, the number of communication pathways and their average length increases in the mutant compared to the wild type. </plain></SENT>
+<SENT sid="282" pm="."><plain>In line with this trend, the maximal, minimal, and average strengths reached by the totality of links in the paths tend to be higher in the mutant compared to the wild type. </plain></SENT>
+</text></p><SecTag type="TABLE"><table-wrap id="pcbi-1003207-t003" orientation="portrait" position="float"><object-id pub-id-type="doi">10.1371/journal.pcbi.1003207.t003</object-id><label>Table 3</label><caption><title><text><SENT sid="283" pm="."><plain>Network parameters. </plain></SENT>
+</text></title></caption><alternatives><graphic id="pcbi-1003207-t003-3" xlink:href="pcbi.1003207.t003"/><table frame="hsides" rules="groups"><colgroup span="1"><col align="left" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/></colgroup><thead><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="284" pm="."><plain>GαGTP WT </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="285" pm="."><plain>GαGTP G38D </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="286" pm="."><plain>GαGTP-RGS-PDEWT </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="287" pm="."><plain>GαGTP-RGS-PDEG38D </plain></SENT>
+</text></td></tr></thead><tbody><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="288" pm="."><plain>Imina </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="289" pm="."><plain>3.24 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="290" pm="."><plain>3.23 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="291" pm="."><plain>3.52 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="292" pm="."><plain>3.58 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="293" pm="."><plain>Hubstotb </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="294" pm="."><plain>34 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="295" pm="."><plain>33 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="296" pm="."><plain>51 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="297" pm="."><plain>51 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="298" pm="."><plain>Nodes 1st Clsc </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="299" pm="."><plain>228 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="300" pm="."><plain>192 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="301" pm="."><plain>291 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="302" pm="."><plain>285 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="303" pm="."><plain>Hubs 1st Clsc </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="304" pm="."><plain>34 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="305" pm="."><plain>28 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="306" pm="."><plain>47 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="307" pm="."><plain>46 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="308" pm="."><plain>Links 1st Clsc </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="309" pm="."><plain>304 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="310" pm="."><plain>265 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="311" pm="."><plain>396 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="312" pm="."><plain>394 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="313" pm="."><plain>Number of Pathsd </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="314" pm="."><plain>268 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="315" pm="."><plain>330 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="316" pm="."><plain>1930 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="317" pm="."><plain>975 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="318" pm="."><plain>1st Cluster Popd </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="319" pm="."><plain>57 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="320" pm="."><plain>72 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="321" pm="."><plain>1819 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="322" pm="."><plain>924 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="323" pm="."><plain>2nd Cluster Popd </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="324" pm="."><plain>27 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="325" pm="."><plain>37 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="326" pm="."><plain>80 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="327" pm="."><plain>36 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="328" pm="."><plain>3rd Cluster Popd </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="329" pm="."><plain>26 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="330" pm="."><plain>34 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="331" pm="."><plain>22 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="332" pm="."><plain>7 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="333" pm="."><plain>4th Cluster Popd </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="334" pm="."><plain>22 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="335" pm="."><plain>23 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="336" pm="."><plain>22 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="337" pm="."><plain>4 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="338" pm="."><plain>5th Cluster Popd </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="339" pm="."><plain>13 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="340" pm="."><plain>19 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="341" pm="."><plain>22 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="342" pm="."><plain>/ </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="343" pm="."><plain>Max Lengthe </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="344" pm="."><plain>7 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="345" pm="."><plain>9 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="346" pm="."><plain>16 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="347" pm="."><plain>11 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="348" pm="."><plain>Avg Lengthe </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="349" pm="."><plain>5.4 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="350" pm="."><plain>5.6 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="351" pm="."><plain>7.7 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="352" pm="."><plain>6.1 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="353" pm="."><plain>Max Freqf </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="354" pm="."><plain>83.6 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="355" pm="."><plain>82.7 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="356" pm="."><plain>85.2 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="357" pm="."><plain>82.3 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="358" pm="."><plain>LengthMaxFreqf </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="359" pm="."><plain>5 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="360" pm="."><plain>5 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="361" pm="."><plain>5 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="362" pm="."><plain>5 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="363" pm="."><plain>Max Scoreg </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="364" pm="."><plain>1.0 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="365" pm="."><plain>1.0 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="366" pm="."><plain>1.0 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="367" pm="."><plain>1.0 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="368" pm="."><plain>Min Scoreg </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="369" pm="."><plain>0.4 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="370" pm="."><plain>0.6 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="371" pm="."><plain>0.4 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="372" pm="."><plain>0.5 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="373" pm="."><plain>Avg Scoreg </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="374" pm="."><plain>0.9 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="375" pm="."><plain>0.9 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="376" pm="."><plain>0.4 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="377" pm="."><plain>1.0 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="378" pm="."><plain>Max SumWgth </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="379" pm="."><plain>79.1 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="380" pm="."><plain>89.2 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="381" pm="."><plain>155.3 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="382" pm="."><plain>127.8 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="383" pm="."><plain>Min SumWgth </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="384" pm="."><plain>26.2 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="385" pm="."><plain>36.1 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="386" pm="."><plain>32.5 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="387" pm="."><plain>32.7 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="388" pm="."><plain>Avg SumWgth </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="389" pm="."><plain>51.1 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="390" pm="."><plain>54.9 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="391" pm="."><plain>77.1 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="392" pm="."><plain>62.9 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="393" pm="."><plain>Max AvgWgti </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="394" pm="."><plain>11.3 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="395" pm="."><plain>12.1 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="396" pm="."><plain>12.3 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="397" pm="."><plain>12.5 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="398" pm="."><plain>Min AvgWgti </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="399" pm="."><plain>4.3 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="400" pm="."><plain>5.9 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="401" pm="."><plain>5.4 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="402" pm="."><plain>5.5 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="403" pm="."><plain>Avg AvgWgti </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="404" pm="."><plain>7.9 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="405" pm="."><plain>8.3 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="406" pm="."><plain>8.8 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="407" pm="."><plain>8.9 </plain></SENT>
+</text></td></tr></tbody></table></alternatives><table-wrap-foot><fn id="nt109"><label>a</label><p><text><SENT sid="408" pm="."><plain>Imin values (%) employed for the four simulated systems. </plain></SENT>
+</text></p></fn><fn id="nt110"><label>b</label><p><text><SENT sid="409" pm="."><plain>Total number of hubs. </plain></SENT>
+</text></p></fn><fn id="nt111"><label>c</label><p><text><SENT sid="410" pm="."><plain>Number of nodes, hubs and links in the most populated node cluster. </plain></SENT>
+</text></p></fn><fn id="nt112"><label>d</label><p><text><SENT sid="411" pm="."><plain>Total number of paths characterized by frequency ≥30% and number of paths in the first five most populated path clusters. </plain></SENT>
+</text></p></fn><fn id="nt113"><label>e</label><p><text><SENT sid="412" pm="."><plain>Maximum and average path length excluding the two extremities. </plain></SENT>
+</text></p></fn><fn id="nt114"><label>f</label><p><text><SENT sid="413" pm="."><plain>Maximum path frequency and length of the maximum frequency path (i.e. excluding the extremities). </plain></SENT>
+</text></p></fn><fn id="nt115"><label>g</label><p><text><SENT sid="414" pm="."><plain>Maximum, minimum and average correlation score. </plain></SENT>
+</text></p></fn><fn id="nt116"><label>h</label><p><text><SENT sid="415" pm="."><plain>Maximum, minimum and average path strength obtained by summing the interaction strengths of the links constituting the path. </plain></SENT>
+</text></p></fn><fn id="nt117"><label>i</label><p><text><SENT sid="416" pm="."><plain>Maximum, minimum and average path strength obtained by summing the interaction strengths of the links constituting the path and dividing such sum by the number of links involved in the path. </plain></SENT>
+</text></p></fn></table-wrap-foot></table-wrap></SecTag><p><text><SENT sid="417" pm="."><plain>To infer a global and coarse view of mutation-induced changes in the communication pathways of Gα we drew global meta paths, i.e. assemblies of the most recurrent nodes and links in the pool of paths characterized by frequency ≥30% (Figure 6A and 6B, see Methods). </plain></SENT>
+<SENT sid="418" pm="."><plain>In this respect, whereas the wild type is characterized by nucleotide-mediated paths at the interface between Ras-like and α-helical domain, in the mutant form, inter-domain pathways are less frequent as also highlighted by the distribution of linked-node fragments (Figures 6 and S4). </plain></SENT>
+<SENT sid="419" pm="."><plain>This inter-domain uncoupling may be in part related to the fact that, in the mutant, selected portions of the α-helical domain undergo increases in essential dynamics compared to the wild type (Figure 4). </plain></SENT>
+<SENT sid="420" pm="."><plain>Noteworthy, this trend is also evident in the meta paths computed on the sub set of paths made by ≥50% of conserved amino acids (Figure S5A and S5B). </plain></SENT>
+<SENT sid="421" pm="."><plain>Differently from the wild type, in the mutant the most frequent nucleotide-involving pathways transverse essentially β1 and β3 rather than the swII/α3 interface, which is the primary PDEγ binding cleft (Figure 6A and 6B). </plain></SENT>
+</text></p><SecTag type="FIG"><fig id="pcbi-1003207-g006" orientation="portrait" position="float"><object-id pub-id-type="doi">10.1371/journal.pcbi.1003207.g006</object-id><label>Figure 6</label><caption><title><text><SENT sid="422" pm="."><plain>Global and coarse view of the communication pathways. </plain></SENT>
+</text></title><p><text><SENT sid="423" pm="."><plain>The global meta paths regarding GαGTP WT and GαGTP G38D in their free state (A and B panels, respectively) as well as in ternary complex with both RGS and PDEγ (C and D panels, respectively) are represented, colored violet and green, respectively. </plain></SENT>
+<SENT sid="424" pm="."><plain>The width of each link is proportional to r, while the sphere diameter is proportional to the average r of the connecting link (see Methods for r definition). </plain></SENT>
+<SENT sid="425" pm="."><plain>The α-helical and Ras-like domains are dark and light gray, respectively, the PDEγ binding site on Gα is aquamarine, RGS is orange and PDEγ is lemon-green. </plain></SENT>
+<SENT sid="426" pm="."><plain>The mutation site is indicated by the red sphere. </plain></SENT>
+</text></p></caption><graphic xlink:href="pcbi.1003207.g006"/></fig></SecTag><p><text><SENT sid="427" pm="."><plain>In summary, in spite of the lack of significant differences in the interaction pattern of GTP between wild type and mutated forms, GαGTP G38D is characterized by increased flexibility of the α-helical domain compared to wild type, which reflects on an apparent inter-domain uncoupling in terms of shortest communication pathways. </plain></SENT>
+<SENT sid="428" pm="."><plain>In contrast, in the wild type, inter-domain pathways localized on the nucleotide binding site cover a significant part of the structural communication modes. </plain></SENT>
+<SENT sid="429" pm="."><plain>Above all, the most significant effect of aspartate substitution for G38 is a structural perturbation in the swII/α3 cleft participating in the PDEγ binding site. </plain></SENT>
+<SENT sid="430" pm="."><plain>A marker of such perturbations is the solvent accessibility of Y254, which in the mutant becomes buried and no more available for PDEγ interaction, shielding also F211(s2:11) from effector binding. </plain></SENT>
+</text></p></sec><sec id="s2c"><title><text><SENT sid="431" pm="."><plain>Atomistic simulations on the GαGTP-RGS-PDEγ ternary complex: The G38D mutant affects the communication between nucleotide binding site and RGS </plain></SENT>
+</text></title><p><text><SENT sid="432" pm="."><plain>Atomistic MD simulations on monomeric GαGTP highlighted long-distance mutational effects on the Gα regions deputed to PDEγ recognition likely related to the reduced PDE binding and consequently activation inferred from both mathematical simulations and in vitro experiments [8]. </plain></SENT>
+</text></p><p><text><SENT sid="433" pm="."><plain>In order to clarify ambiguities by in vitro experiments on the GAP activity of RGS towards the G38D mutant [8], [9], which couldn't be properly addressed by mathematical simulations, wild type and mutated Gα were simulated also in the context of the ternary complex with PDEγ and RGS. </plain></SENT>
+<SENT sid="434" pm="."><plain>In this respect, MD simulations on the GαGTP-RGS-PDEγG38D ternary complex are justified by the fact that the mutated Gα holds a residual binding to PDEγ [8]. </plain></SENT>
+</text></p><p><text><SENT sid="435" pm="."><plain>Comparing the dynamics and structural communication features of all the components of the ternary complex in the presence of either wild type or mutated Gα served to infer the effects of the G38D mutation on different structural aspects such as: a) communication and interaction features of the nucleotide, b) intrinsic dynamics of each component of the complex, and c) inter-protein communication. </plain></SENT>
+</text></p><p><text><SENT sid="436" pm="."><plain>In line with simulations on monomeric GαGTP, simulations on the ternary complex show that the interaction pattern of the nucleotide is substantially similar in wild type and mutated Gα (Figure S1 and S2), thus not providing any clue on mutational effects on the GAP activity of RGS. </plain></SENT>
+</text></p><p><text><SENT sid="437" pm="."><plain>As for the intrinsic dynamics of the three proteins in the complex, differently from PDEγ, GαGTP and RGS are characterized by low mobility in terms of RMSDs, (Figure S3). </plain></SENT>
+<SENT sid="438" pm="."><plain>The higher mobility of PDEγ is likely due to the poor intramolecular and intermolecular tertiary contacts made by such protein, which is a 42-amino acid fragment of a small subunit. </plain></SENT>
+<SENT sid="439" pm="."><plain>In deep detail, as for GαGTP, the wild type and mutated forms do not differ significantly in terms of RMSDs or RMSFs; major differences concern only the swIII region, which fluctuates less in the mutant than in the wild type (Figures S3 and S6). </plain></SENT>
+<SENT sid="440" pm="."><plain>In line with such behavior, the overlap between the ES of the two Gα forms in the context of the heterotrimer is quite high (0.90), the essential motions of β2/β3 loop and swIII contributing to such differences (Figure S6). </plain></SENT>
+<SENT sid="441" pm="."><plain>RGS shows low mobility as well, its intrinsic flexibility being comparable in the complexes with wild type and mutated Gα (Figure S3). </plain></SENT>
+<SENT sid="442" pm="."><plain>In contrast, the intrinsic flexibility of PDEγ is higher in the complex with mutated GαGTP than in the complex with wild type GαGTP (Figures S3 and S7). </plain></SENT>
+<SENT sid="443" pm="."><plain>This suggests that the pathogenic Gα mutation increases the intrinsic flexibility of PDEγ, which would imply increased instability of the PDEγ-GαGTP interface. </plain></SENT>
+</text></p><p><text><SENT sid="444" pm="."><plain>According to the crystal structure of the heterotrimeric complex, RGS does not contribute directly to the active site by donating residues or through water-mediated interactions [16]. </plain></SENT>
+<SENT sid="445" pm="."><plain>It is rather thought that RGS would increase the GTP hydrolysis rate by stabilization of the Gα switch regions in their transition state conformation and orientation of the critical Gα carbonyls used to position the nucleophilic water [16], [17]. </plain></SENT>
+<SENT sid="446" pm="."><plain>Thus, RGS action is likely due to inter-protein structural communication. </plain></SENT>
+<SENT sid="447" pm="."><plain>On these bases, possible structural relations with the postulated mutation-induced reduction of the GAP activity of RGS were searched by the PSN analysis. </plain></SENT>
+<SENT sid="448" pm="."><plain>Significant differences between the two simulated ternary complexes could be inferred from the analysis of the shortest communication pathways, which were almost halved in the mutated complex compared to the wild type (Table 3). </plain></SENT>
+<SENT sid="449" pm="."><plain>Remarkably, more than 60% of the communication paths that characterize the wild type form hold the GTP-Q200(G3:5)-R:N364 fragment of linked nodes, which is completely absent in the mutant (Figure S4). </plain></SENT>
+<SENT sid="450" pm="."><plain>The global meta path representation clearly shows that the most significant communication in the GαGTP-RGS-PDEγWT involves GTP, Q200(G3:5), R:N364, and E203(s2:3) (i.e. the GTP-Q200(G3:5)-R:N364-E203(G3:8) meta fragment of linked nodes; Figure 6C and 6D). </plain></SENT>
+<SENT sid="451" pm="."><plain>Remarkably, the GTP-Q200(G3:5)-R:N364 connection found in the wild type form is essential for the GAP activity of RGS [16]. </plain></SENT>
+<SENT sid="452" pm="."><plain>Such connection is no longer present in the mutant. </plain></SENT>
+<SENT sid="453" pm="."><plain>In line with path fragment distribution, the most representative nucleotide-mediated paths in the GαGTP-RGS-PDEγG38D complex are intra-Gα located (Figure 6C, 6D, and S4). </plain></SENT>
+<SENT sid="454" pm="."><plain>These differences between wild type and mutant forms are strengthened by the meta paths computed on the sub set of paths made by ≥50% of conserved amino acids (Figure S5). </plain></SENT>
+<SENT sid="455" pm="."><plain>Thus, nucleotide-mediated paths involving the RGS-Gα interface are few and characterized by the D38(G1:3)-Q200(G3:5)-R:N364 fragment of linked nodes (Figure S4). </plain></SENT>
+<SENT sid="456" pm="."><plain>Another difference concerning the structural communication of wild type and mutated Gt is that, whereas for the wild type some (4%) of the shortest pathways describe a communication between Gα and PDEγ, in the mutant form such communication could not be found, likely due to the increased flexibility of the effector subunit. </plain></SENT>
+</text></p><p><text><SENT sid="457" pm="."><plain>In summary, atomistic simulations on the ternary complexes highlight a possible disturbing effect of the pathogenic mutation on the GAP activity of RGS. </plain></SENT>
+<SENT sid="458" pm="."><plain>This would act, at least in part, by destabilizing the Q200(G3:5)-mediated communication between GTP and R:N364. </plain></SENT>
+<SENT sid="459" pm="."><plain>Finally, they strengthen the influence of the mutation on the G protein-effector interface, in line with electrophysiological recordings and mathematical simulations. </plain></SENT>
+</text></p></sec></sec></SecTag><SecTag type="DISCUSS"><sec id="s3"><title><text><SENT sid="460" pm="."><plain>Discussion </plain></SENT>
+</text></title><p><text><SENT sid="461" pm="."><plain>Mutations in any components of the visual phototransduction signaling network may cause more or less severe impairments in vision. </plain></SENT>
+<SENT sid="462" pm="."><plain>Because of the complexity of such network, any alteration of one of the cascade components would lead to unpredictable and not easily determinable results. </plain></SENT>
+<SENT sid="463" pm="."><plain>Thus, a monogenic disease such as NCNB, considered in this study, can result from perturbations not circumscribed to the mutated protein but involving also other members of the network. </plain></SENT>
+<SENT sid="464" pm="."><plain>In this framework, modeling the effects of mutation by systems-based approaches serves to infer how the pathogenic signal propagates through the network and which molecular species are involved. </plain></SENT>
+<SENT sid="465" pm="."><plain>When possible, the latter information is passed to atomistic simulations to gain insights into the structural determinants of the disease. </plain></SENT>
+</text></p><p><text><SENT sid="466" pm="."><plain>In this study, we combined visual phototransduction modeling with atomistic simulations to thoroughly investigate the defect associated with the NCNB-causing G38D mutation of Gα. </plain></SENT>
+<SENT sid="467" pm="."><plain>The mathematical model of visual phototransduction was able to reproduce the key features of the behaviors of heterozygous and homozygous rods typical of the NCNB disease. </plain></SENT>
+<SENT sid="468" pm="."><plain>This could be possible upon reducing the constants governing: a) the binding of GαGTP to PDE, b) the activation of the catalytic activity of PDE, and c) the binding of the RGS complex to a PDE tetramer with one active subunit. </plain></SENT>
+<SENT sid="469" pm="."><plain>In fact, a strong reduction in PDE recognition and activation by GαGTP coupled to a two-fold reduction in the RGS binding constant was essential to reproduce the visual responses in Nougaret patients, while decreasing the intrinsic or RGS-catalyzed GTPase activities did not seem to have a significant effect. </plain></SENT>
+<SENT sid="470" pm="."><plain>Thus, mathematical modeling emphasized the formation and activation of the GαGTP-PDE complex as the processes more significantly affected by the aspartate substitution for G38 in Gα, in line with electrophysiological recordings [8]. </plain></SENT>
+<SENT sid="471" pm="."><plain>MD simulations on monomeric GαGTP suggest that such reduction in the PDEγ binding ability of mutated Gα is likely due to altered dynamics of the protein associated with changes in the architecture of the swII/α3 cavity, essential recognition point for PDEγ. </plain></SENT>
+<SENT sid="472" pm="."><plain>A detrimental effect of the mutation on such cavity had been also postulated based upon crystallographic analyses [16]. </plain></SENT>
+<SENT sid="473" pm="."><plain>We ended up independently with this conclusion by individuating also the main actors of this structural effect. </plain></SENT>
+<SENT sid="474" pm="."><plain>In this framework, the Y254 position seems to be particularly sensible to the concerted motions of the protein triggered by the mutation. </plain></SENT>
+<SENT sid="475" pm="."><plain>Indeed, deformation of the swII/α3 cavity results in the burying of Y254 in the α3/β5 loop, preventing both the Y254 itself and F211(s2:11) from being available to PDEγ. </plain></SENT>
+<SENT sid="476" pm="."><plain>We also speculated that mutation-induced reductions of the catalytic activity of PDE may derive from the formation of an improperly assembled GαGTP-PDEγ complex. </plain></SENT>
+<SENT sid="477" pm="."><plain>Along this line, also in the ternary complex with RGS and PDEγ the mutation exerts a long distance effect on the effector binding site resulting in increase in the intrinsic flexibility of PDEγ and lack of communication pathways at the Gα-PDEγ interface. </plain></SENT>
+<SENT sid="478" pm="."><plain>Another clear effect of the Gα mutation is the incapacity to form a stable Q200(G3:5)-mediated communication between the nucleotide and N364 of RGS. </plain></SENT>
+<SENT sid="479" pm="."><plain>Such communication is instead present in the wild type and is necessary for the GAP action of RGS [16]. </plain></SENT>
+</text></p><p><text><SENT sid="480" pm="."><plain>In conclusion, the main structural effects of the G38D mutation turned out to be deformation of the primary effector binding site in monomeric Gα and enhanced flexibility of PDEγ in the ternary complex, which would destabilize the Gα-effector interface. </plain></SENT>
+<SENT sid="481" pm="."><plain>Collectively these effects are connectable with the impaired effector recognition and activation shown by in vitro experiments. </plain></SENT>
+<SENT sid="482" pm="."><plain>Finally, the pathogenic mutation of Gα seems to affect the communication between RGS and nucleotide essential for the GAP activity, thus suggesting that the observed slight reduction of the RGS-catalyzed GTPase activity is a matter of perturbed inter-protein communication. </plain></SENT>
+</text></p><p><text><SENT sid="483" pm="."><plain>This study extends the dynamic model of visual phototransduction to the pathological NCNB phenotype and provides insights at the atomic level into the structural bases of the disease. </plain></SENT>
+<SENT sid="484" pm="."><plain>This is an example of a thorough computational investigation employing different scales of description, an approach which should be pursued to unveil the structural determinants of genetic retinal diseases. </plain></SENT>
+<SENT sid="485" pm="."><plain>Analogous approaches are suitable to infer the mechanisms of information transfer in any signaling network either in physiological or pathological conditions. </plain></SENT>
+</text></p></sec></SecTag><SecTag type="METHODS"><sec sec-type="methods" id="s4"><title><text><SENT sid="486" pm="."><plain>Methods </plain></SENT>
+</text></title><sec id="s4a"><title><text><SENT sid="487" pm="."><plain>Mathematical modeling </plain></SENT>
+</text></title><p><text><SENT sid="488" pm="."><plain>The mathematical model of rod phototransduction (BioModels ID: BIOMD0000000326), employed in the present work for numerical simulations of the phototransduction cascade includes 91 reactions, 71 molecular species, and 63 parameters and was previously developed and validated over a wide range of experimental data on normal and genetically modified rods [14]. </plain></SENT>
+<SENT sid="489" pm="."><plain>The rate of change of the molecular species are monitored by calculating, at given time steps, their rates of production and consumption [14]. </plain></SENT>
+<SENT sid="490" pm="."><plain>The original model was recently modified to account for the postulated R-Gt precoupling in the dark [15], leading to the inclusion of the following reactions, which describe: a) the dynamic formation and b) dissociation of dark R-Gt complexes: </plain></SENT>
+</text></p><list list-type="simple"><list-item><p><text><SENT sid="491" pm="."><plain>a) and its reverse </plain></SENT>
+</text></p></list-item><list-item><p><text><SENT sid="492" pm="."><plain>b) </plain></SENT>
+</text></p></list-item></list><p><text><SENT sid="493" pm="."><plain>The parameters were calculated as relative kinetic constants, following the relationships  and  taken from Surface Plasmon Resonance (SPR) experiments [15]. </plain></SENT>
+<SENT sid="494" pm="."><plain>This led to a ≈20% of Gt to be dynamically precoupled to Rin the dark, consistent with published data [15]. </plain></SENT>
+</text></p><p><text><SENT sid="495" pm="."><plain>In this study, we built a dynamic model able to describe the GαGTP G38D+/− and GαGTP G38D−/− mutated conditions of GαGTP G38D by introducing the mutated G protein as an explicit new molecule and adding all the relative reactions in the phototransduction cascade, which concerned the GαGTP WT+/+ status (Table 1). </plain></SENT>
+<SENT sid="496" pm="."><plain>The concentration of the new species (GαGTP G38D) was obtained by using its ratio to the normal concentration of Gα in wild type cells taken from expression levels in transgenic mice for the mutation [8]. </plain></SENT>
+<SENT sid="497" pm="."><plain>Therefore, the total level of Gα (25% of which is GαGTP G38D) in heterozygous cells is the same as in wild type rods, while only 35% of the native levels are found in homozygous cells for the mutation. </plain></SENT>
+<SENT sid="498" pm="."><plain>The levels of all the other proteins were kept unchanged and the mutation was assumed to have no effect on rhodopsin-GαGTP G38D binding [8], [9]. </plain></SENT>
+</text></p><p><text><SENT sid="499" pm="."><plain>In order to fit the models onto the pathological NCNB condition, the rates of a number of reactions involving GαGTP G38D were systematically reduced by tuning the relative kinetic parameters in decreasing steps (Table 1, Figure 1). </plain></SENT>
+<SENT sid="500" pm="."><plain>The reductions were combined into specific heterozygous and homozygous models. </plain></SENT>
+<SENT sid="501" pm="."><plain>In detail, these reactions refer to: a) intrinsic GTPase activity of GαGTP, b) binding of GαGTP to PDE and resulting PDE activation, and c) shut-off of the photoresponse by RGS binding and RGS-catalyzed GTP hydrolysis. </plain></SENT>
+<SENT sid="502" pm="."><plain>These reactions are highlighted in Figure 1 and listed in Table 1. </plain></SENT>
+<SENT sid="503" pm="."><plain>In line with in vitro electrophysiological recordings on rods from transgenic mice, we monitored the following features of the photocurrent elicited by increasingly stronger flashes of light (Figure 3): a) rate of the activation phase, b) light sensitivity, and c) speed of the recovery phase. </plain></SENT>
+<SENT sid="504" pm="."><plain>In detail, a) the rate of the activation phase was evaluated as the time needed to reach the maximum value of ΔJ after the delivery of the flash; b) light sensitivity was taken as the normalized response amplitude as a function of flash strength (Figure 3G and Figure 5B in Moussaif et al. [8]); and c) the speed of the recovery phase was evaluated as the time needed for the photocurrent to reestablish its dark value (ΔJ = 0) after a flash. </plain></SENT>
+<SENT sid="505" pm="."><plain>In some cases, the parameters had to be eventually set equal to 0, while in other cases also more limited reductions led to modification of the output (Table 1). </plain></SENT>
+<SENT sid="506" pm="."><plain>All the numerical simulations were carried out by means of Matlab, within the SBTOOLBOX2 framework [18] (<ext-link ext-link-type="uri" xlink:href="http://www.sbtoolbox2.org/main.php">http://www.sbtoolbox2.org/main.php</ext-link>) as already described [14]. </plain></SENT>
+</text></p></sec><sec id="s4b"><title><text><SENT sid="507" pm="."><plain>MD simulations: The structural models </plain></SENT>
+</text></title><p><text><SENT sid="508" pm="."><plain>The following PDB structures were selected as inputs of MD simulations: GαGTP WT (PDB code: 1TND [19], residue range 27–342), which is the GTP-bound form of Gα, and the GαGTP-RGS-PDEγWT ternary complex (PDB code: 1FQJ [16]) involving GαGTP (amino acids from 28 to 344), RGS (i.e. the RGS domain of RGS9, amino acids 286 to 418) and the 42-amino acid C-terminal fragment of PDEγ (residues 46–87). </plain></SENT>
+<SENT sid="509" pm="."><plain>Input structure setup required a number of modifications in the original crystal structures. </plain></SENT>
+<SENT sid="510" pm="."><plain>As for 1TND, the original GTPγS analogue was replaced by GTP, as recently reported [20]. </plain></SENT>
+<SENT sid="511" pm="."><plain>As for 1FQJ, the original Gα was indeed a chimera identical to Gαt except for residues 216–294 which were replaced with the corresponding homologous region of Gαi1 (residues 220–298). </plain></SENT>
+<SENT sid="512" pm="."><plain>The Gαi1 sequence was therefore mutated into the corresponding one in bovine Gαt. </plain></SENT>
+<SENT sid="513" pm="."><plain>Moreover, the original GDP-AlF4 − was replaced by GTP. </plain></SENT>
+</text></p><p><text><SENT sid="514" pm="."><plain>All the simulated systems hold the Mg2+ ion together with the coordinating water molecules. </plain></SENT>
+</text></p><p><text><SENT sid="515" pm="."><plain>The native G protein in the GαGTP WT and GαGTP-RGS-PDEγWT complexes was finally subjected to the substitution of aspartate for G38, in order to produce the pathogenic mutant (i.e. GαGTP G38D and GαGTP-RGS-PDEγG38D). In silico mutagenesis was performed by means of the Quanta software (<ext-link ext-link-type="uri" xlink:href="http://www.accelrys.com">www.accelrys.com</ext-link>). </plain></SENT>
+</text></p></sec><sec id="s4c"><title><text><SENT sid="516" pm="."><plain>MD simulation: Set-up </plain></SENT>
+</text></title><p><text><SENT sid="517" pm="."><plain>MD simulations on the four systems, GαGTP WT, GαGTP-RGS-PDEγWT, GαGTP G38D and GαGTP-RGS-PDEγG38D, were carried out by using the GROMACS4 simulation package [21] with the AMBER03 all atoms force field [22], [23]. </plain></SENT>
+<SENT sid="518" pm="."><plain>The TIP3P water model was employed to describe the solvent. </plain></SENT>
+<SENT sid="519" pm="."><plain>AMBER parameters to describe the GDP and GTP molecules were taken from the literature [24]. </plain></SENT>
+<SENT sid="520" pm="."><plain>Depending on the dimensions of the systems, a variable number of Na+ and Cl− ions were placed at optimum electrostatic positions in order to neutralize the system. </plain></SENT>
+<SENT sid="521" pm="."><plain>In detail, the systems included: 63740 total atoms for GαGTP WT (19512 water molecules, 48 Na+ and 38 Cl− ions); 63743 total atoms for GαGTP G38D (19511 water molecules, 49 Na+ and 38 Cl− ions); 81906 total atoms for GαGTP-RGS-PDEγWT (24609 water molecules, 60 Na+ and 50 Cl− ions); 81882 total atoms for GαGTP-RGS-PDEγG38D (24599 water molecules, 61 Na+ and 50 Cl− ions). </plain></SENT>
+</text></p><p><text><SENT sid="522" pm="."><plain>Periodic Boundary Conditions (PBC) were applied by using an octahedric box as a unit cell, imposing a minimum distance of 12 Å between the solute and the box boundaries. </plain></SENT>
+</text></p><p><text><SENT sid="523" pm="."><plain>MD simulation setup is the same as the one recently employed to simulate a number of Ras GTPases [20]. </plain></SENT>
+<SENT sid="524" pm="."><plain>All the input crystallographic structures were subjected to energy minimization keeping restricted the positions of the main chain atoms, the nucleotide, the Mg2+ cation and the coordinating water molecules. </plain></SENT>
+<SENT sid="525" pm="."><plain>The systems were then equilibrated at 300 K for 4 ns of backbone restricted MD simulations. </plain></SENT>
+<SENT sid="526" pm="."><plain>The Particle Mesh Ewald (PME) method was employed to compute the electrostatic interactions. </plain></SENT>
+<SENT sid="527" pm="."><plain>Short range repulsive and attractive interactions were computed by using a Lennard-Jones potential with a cutoff of 10 Å. The LINCS algorithm [25] was used to constrain all bond lengths except those in water molecules, allowing for an integration time step of 2 fs through the leap-frog algorithm. </plain></SENT>
+<SENT sid="529" pm="."><plain>The v-rescale thermostat [26] was employed to keep the system at a constant temperature of 300 K, by using a coupling constant (τt) of 0.1 ps. </plain></SENT>
+<SENT sid="530" pm="."><plain>The pressure of the system was kept fixed at 1 atm, using the Berendsen weak coupling algorithm [27] with a coupling constant (τp) of 1 ps. </plain></SENT>
+<SENT sid="531" pm="."><plain>The pre-equilibrated systems were then subjected to 100 ns of unrestrained isothermal-isobaric (T = 300K, P = 1 atm) MD simulations. </plain></SENT>
+</text></p></sec><sec id="s4d"><title><text><SENT sid="532" pm="."><plain>MD analyses of the intrinsic flexibility </plain></SENT>
+</text></title><p><text><SENT sid="533" pm="."><plain>MD trajectories were subjected to a variety of analyses aimed at inferring a) the time series of a number of structural descriptors such as the SASA, b) the intrinsic flexibility of the systems (e.g. RMSD, RMSF, and Essential Dynamics (ED) or PCA), and c) potential correlations between structural descriptors and essential motions (i.e. FMA). </plain></SENT>
+</text></p><p><text><SENT sid="534" pm="."><plain>As for ED, resting on the assumption that the major collective modes of fluctuation dominate the functional dynamics of a system, information on such global motions can be inferred from the atomic fluctuations by means of the PCA. </plain></SENT>
+<SENT sid="535" pm="."><plain>The latter allows the decomposition of the atomic fluctuations into a set of principal components (eigenvectors of the covariance matrix of positional fluctuations) that describe the concerted motions of these atoms (e.g. the Cα-atoms). </plain></SENT>
+<SENT sid="536" pm="."><plain>The technique is based on the diagonalization of such covariance matrix producing a set of eigenvector and eigenvalue pairs in which the eigenvector and the eigenvalue describe, respectively, direction and amplitude of the concerted atomic motion (a mode). </plain></SENT>
+<SENT sid="537" pm="."><plain>The atomic components of an eigenvector provide a quantitative measure of the participation of each Cα-atom to the collective motion described by the corresponding eigenvector. </plain></SENT>
+<SENT sid="538" pm="."><plain>The subspace spanned by the major modes of collective fluctuations is accordingly often referred to as “essential subspace (ES)”. </plain></SENT>
+<SENT sid="539" pm="."><plain>In the same framework, FMA is a technique to identify collective atomic motions related to a specific protein function. </plain></SENT>
+<SENT sid="540" pm="."><plain>Given a large set of structures of one protein, for example from an MD trajectory, the method detects a mode that is maximally correlated to an arbitrary quantity of interest. </plain></SENT>
+</text></p><p><text><SENT sid="541" pm="."><plain>Except for FMA, which was carried out by using the GROMACS package, all these MD analyses were performed by means of the Wordom software [28]. </plain></SENT>
+<SENT sid="542" pm="."><plain>As for PCA, the covariance matrices were built on the Cα-atoms of the isolated MD trajectories. </plain></SENT>
+</text></p><p><text><SENT sid="543" pm="."><plain>FMA [29] was carried out by using the Linear Mutual Information (LMI) estimator [30]. </plain></SENT>
+<SENT sid="544" pm="."><plain>The structural descriptor correlated with the Principal Components (PCs) was the SASA calculated on selected Gα amino acids involved in Gα-PDEγ and Gα-RGS interactions. </plain></SENT>
+<SENT sid="545" pm="."><plain>A number of PCs were probed. </plain></SENT>
+</text></p><p><text><SENT sid="546" pm="."><plain>Non bonded interaction energies for the nucleotide were monitored every 20 ps along the trajectory with GROMACS4. </plain></SENT>
+</text></p></sec><sec id="s4e"><title><text><SENT sid="547" pm="."><plain>MD analyses of the structural communication </plain></SENT>
+</text></title><p><text><SENT sid="548" pm="."><plain>The structural communication (i.e. PSGs and shortest communication paths) in the four simulated systems was inferred by means of the graph-based approach proposed by Vishveshwara and coworkers [31] and defined as Protein Structure Network (PSN), that was recently implemented in the Wordom software [28]. </plain></SENT>
+<SENT sid="549" pm="."><plain>With this approach, the dynamics of the system is taken into account in terms of occurrence of network components along the trajectory and of correlated motions [32]–[34]. </plain></SENT>
+</text></p><p><text><SENT sid="550" pm="."><plain>A graph is defined by a set of points (nodes) and connections (edges) between them. </plain></SENT>
+<SENT sid="551" pm="."><plain>In a PSG, each amino acid is represented as a node and these nodes are connected by edges based on the strength of non-covalent interactions between nodes [31]. </plain></SENT>
+<SENT sid="552" pm="."><plain>The strength of interaction between residues i and j (Iij) is evaluated as a percentage given by the following equation:where Iij is the percentage interaction between residues i and j; nij is the number of atom-atom pairs between the side chains of residues i and j within a distance cutoff (4.5 Å); Ni and Nj are normalization factors for residue types i and j, which take into account the differences in size of the side chains of the residue types and their propensity to make the maximum number of contacts with other amino acid residues in protein structures. </plain></SENT>
+<SENT sid="553" pm="."><plain>The normalization factors for the 20 amino acids were taken from the work by Kannan and Vishveshwara [35]; the normalization values for GTP (derived from 3 heterotrimeric G proteins), Mg2+ (based on 4 heterotrimeric G proteins to properly describe the coordination of such ion in the system under study) and water (based on 5 structures, comprising G proteins and rhodopsin) were 361.3, 23.8 and 27.0, respectively. </plain></SENT>
+<SENT sid="554" pm="."><plain>Thus, Iij are calculated for all nodes, excluding i ± n, where n is a given neighbor cutoff of 3. </plain></SENT>
+<SENT sid="555" pm="."><plain>An interaction strength cutoff Imin is then chosen and any residue pair ij for which Iij≥Imin is considered to be interacting and hence is connected in the PSG. </plain></SENT>
+</text></p><p><text><SENT sid="556" pm="."><plain>As previously demonstrated [31], the optimal Imin is the one at which the size of the largest cluster of nodes at Imin 0% halves. </plain></SENT>
+<SENT sid="557" pm="."><plain>Incidentally a node cluster is a set of connected nodes in a graph. </plain></SENT>
+<SENT sid="558" pm="."><plain>We approximated the Imin value to the second decimal place. </plain></SENT>
+<SENT sid="559" pm="."><plain>The final Imin cutoffs were: 3.24% for GαGTP WT, 3.23% for GαGTP G38D, 3.52% for GαGTP-RGS-PDEγWT, and 3.58% for GαGTP-RGS-PDEγG38D. </plain></SENT>
+<SENT sid="560" pm="."><plain>To build the PSG, only the edges present in at least 30% of the trajectory frames were used. </plain></SENT>
+<SENT sid="561" pm="."><plain>Those nodes involved in at least four links are named as hubs. </plain></SENT>
+</text></p><p><text><SENT sid="562" pm="."><plain>Possible shortest communication paths or optimal paths (OPs) in the different GαGTP binary complexes as well as between wild type and mutated GαGTP and the other two proteins in the GαGTP-RGS-PDEγ ternary complex were searched. </plain></SENT>
+<SENT sid="563" pm="."><plain>All residue pairs except those at sequence distance ±5 were considered as path extremities (i.e. the first and last amino acids in the path). </plain></SENT>
+<SENT sid="564" pm="."><plain>In detail, the number of intra-Gα amino acid pairs was 49770 for the wild type and mutated forms of isolated GαGTP and 50090 for the wild type and mutated forms of GαGTP in the ternary complex with RGS and PDEγ. </plain></SENT>
+<SENT sid="565" pm="."><plain>Finally, 56350 amino acid pairs were considered to search all possible communication paths between wild type and mutated GαGTP and the two proteins in the ternary complex. </plain></SENT>
+<SENT sid="566" pm="."><plain>Vishveshwara and co-workers implemented also the search for suboptimal paths (SOPs), alternate routes of communication, which can be computed by systematically removing all interactions of an OP node(s), thus forcing the traversal of a less than optimal path [36]. </plain></SENT>
+<SENT sid="567" pm="."><plain>Since our path searches, different from those by Vishveshwara and co-workers [36]–[38], are not limited to a few selected node pairs but systematically consider almost all node pairs in a system, the additional search for SOPs would have been too costly in terms of computer time with the high risk to produce more noise than relevant information. </plain></SENT>
+<SENT sid="568" pm="."><plain>For this reason our approach is dedicated exclusively to OPs. </plain></SENT>
+</text></p><p><text><SENT sid="569" pm="."><plain>The search for the shortest path(s) between pairs of nodes as implemented in the PSN-path module of Wordom relies on the Dijkstra's algorithm [39]. </plain></SENT>
+<SENT sid="570" pm="."><plain>They were searched by combining PSN data with cross-correlation of atomic motions calculated by using the LMI method. </plain></SENT>
+</text></p><p><text><SENT sid="571" pm="."><plain>Following calculation of the PSG and of correlated motions (by means of the LMI method [30]), for each frame, the procedure to search for the shortest path(s) between each residue pair consists of a) searching for the shortest path(s) between each selected amino acid pair based upon the stable PSN connectivities, and b) selecting the shortest path(s) that contains at least one residue correlated (i.e., with a LMI cross-correlation ≥0.3) with either one of the two extremities. </plain></SENT>
+<SENT sid="572" pm="."><plain>All the shortest paths that pass the filter of correlated motions are subjected to a further filter based upon path frequency, i.e. number of frames containing the selected path divided by the total number of frames in the trajectory. </plain></SENT>
+<SENT sid="573" pm="."><plain>The relative number of amino acids holding correlated motions with either one of the two extremities is quantified by the correlation score, i.e. the ratio between the number of correlated amino acids and the path length; the latter excludes the two extremities. </plain></SENT>
+</text></p><p><text><SENT sid="574" pm="."><plain>Outcome of this stage is the total pool of paths for the system under study. </plain></SENT>
+<SENT sid="575" pm="."><plain>Meta paths made of the most recurrent nodes and links in the path pool (i.e. global meta paths) are worth computing to infer a coarse/global picture of the structural communication in the considered system. </plain></SENT>
+<SENT sid="576" pm="."><plain>In this study, meta paths were computed on the ensemble of paths with frequency ≥30%. </plain></SENT>
+<SENT sid="577" pm="."><plain>For each link a recurrence score r is calculated using the following equation:where l is a given link present in the considered set of shortest paths, pij is the total number of shortest paths from node i to node j and pij(l) is the total number of shortest paths from node i to node j that include link l. Finally, only those links with a recurrence score ≥30% of the highest score are used in the meta path representation. </plain></SENT>
+</text></p></sec></sec></SecTag><SecTag type="SUPPL"><sec sec-type="supplementary-material" id="s5"><title><text><SENT sid="579" pm="."><plain>Supporting Information </plain></SENT>
+</text></title><supplementary-material content-type="local-data" id="pcbi.1003207.s001"><label>Figure S1</label><caption><p><text><SENT sid="580" pm="."><plain>Details of GTP binding modes in GαGTP (top) and GαGTP-RGS-PDEγ (bottom). In both panels, the superimposed structures of wild type (violet) and mutated (green) forms are shown. </plain></SENT>
+<SENT sid="581" pm="."><plain>The nucleotide is always colored by atom type. </plain></SENT>
+<SENT sid="582" pm="."><plain>Only the amino acids that contribute the most to interactions with the nucleotide are shown in sticks. </plain></SENT>
+<SENT sid="583" pm="."><plain>For those amino acids, which contribute through the backbone NH group, only the latter is shown. </plain></SENT>
+<SENT sid="584" pm="."><plain>The mutated side chain is cyan. </plain></SENT>
+<SENT sid="585" pm="."><plain>See the legend to Figure 2 for the labeling scheme. </plain></SENT>
+</text></p><p><text><SENT sid="586" pm="."><plain>(TIFF) </plain></SENT>
+</text></p></caption><media xlink:href="pcbi.1003207.s001.tiff"><caption><p><text><SENT sid="587" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="pcbi.1003207.s002"><label>Figure S2</label><caption><p><text><SENT sid="588" pm="."><plain>Nucleotide-protein non bonded interaction energies averaged along the trajectories for GαGTP (A) and GαGTP-RGS-PDEγ (B). In both panels, violet bars refer to the wild type form and green bars to the mutated form. </plain></SENT>
+<SENT sid="589" pm="."><plain>Vertical black bars indicate standard errors. </plain></SENT>
+<SENT sid="590" pm="."><plain>Only the non bonded interactions whose average values along the simulations were smaller than −20 kJ mol−1 were plotted. </plain></SENT>
+</text></p><p><text><SENT sid="591" pm="."><plain>(TIFF) </plain></SENT>
+</text></p></caption><media xlink:href="pcbi.1003207.s002.tiff"><caption><p><text><SENT sid="592" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="pcbi.1003207.s003"><label>Figure S3</label><caption><p><text><SENT sid="593" pm="."><plain>Cα-RMSD plots. The time series of the Cα-RMSD with respect to the input structures concerning isolated GαGTP from 1TND, complexed GαGTP from 1FQJ, PDEγ from 1FQJ, and RGS from 1FQJ are shown. </plain></SENT>
+<SENT sid="594" pm="."><plain>Violet refers to the wild type whereas green refers to the mutant. </plain></SENT>
+</text></p><p><text><SENT sid="595" pm="."><plain>(TIFF) </plain></SENT>
+</text></p></caption><media xlink:href="pcbi.1003207.s003.tiff"><caption><p><text><SENT sid="596" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="pcbi.1003207.s004"><label>Figure S4</label><caption><p><text><SENT sid="597" pm="."><plain>Fragment analysis on the pool of paths generated by GαGTP (top) and GαGTP-RGS-PDEγ (bottom) structures. In both panels, violet bars refer to the wild type form and green bars to the mutated form. </plain></SENT>
+<SENT sid="598" pm="."><plain>Fragment recurrence is the number of paths containing the given fragment divided by the total number of paths. </plain></SENT>
+<SENT sid="599" pm="."><plain>On the abscissa, the nodes constituting the fragment are numbered according to the secondary structure nomenclature explained in the legend to Figure 2 and used throughout the text. </plain></SENT>
+<SENT sid="600" pm="."><plain>Only fragments of length 3 were taken into account. </plain></SENT>
+</text></p><p><text><SENT sid="601" pm="."><plain>(TIFF) </plain></SENT>
+</text></p></caption><media xlink:href="pcbi.1003207.s004.tiff"><caption><p><text><SENT sid="602" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="pcbi.1003207.s005"><label>Figure S5</label><caption><p><text><SENT sid="603" pm="."><plain>Global and coarse view of the communication pathways with high content of conserved amino acids. The meta paths computed over those paths holding ≥50% of conserved amino acids are shown. </plain></SENT>
+<SENT sid="604" pm="."><plain>They concern GαGTP WT and GαGTP G38D in their free state (A and B panels, respectively) as well as in ternary complex with both RGS and PDEγ (C and D panels, respectively), colored violet and green respectively. </plain></SENT>
+<SENT sid="605" pm="."><plain>The width of each link is proportional to r, while the sphere diameter is proportional to the average r of the connecting link (see Methods for r definition). </plain></SENT>
+<SENT sid="606" pm="."><plain>The α-helical and Ras-like domains are dark and light gray, respectively, the PDEγ binding site on Gα is aquamarine, RGS is orange and PDEγ is lemon-green. </plain></SENT>
+<SENT sid="607" pm="."><plain>The mutation site is indicated by the red sphere. </plain></SENT>
+</text></p><p><text><SENT sid="608" pm="."><plain>(TIFF) </plain></SENT>
+</text></p></caption><media xlink:href="pcbi.1003207.s005.tiff"><caption><p><text><SENT sid="609" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="pcbi.1003207.s006"><label>Figure S6</label><caption><p><text><SENT sid="610" pm="."><plain>Cα-RMSF profiles and Cα-atom projections. A. The Cα-RMSF profiles from MD trajectories of Gα from GαGTP-RGS-PDEγWT (violet) and Gα from GαGTP-RGS-PDEγG38D (green) are shown. </plain></SENT>
+<SENT sid="611" pm="."><plain>They refer to the 100000 frames constituting the 100 ns trajectory. </plain></SENT>
+<SENT sid="612" pm="."><plain>The secondary structure elements are shown on the abscissa, following the Noel's nomenclature (see [19] in the text). B, C, D, E. The Cα-atom projections along the linear combination of the PCA-derived principal components, which describe the ES of the trajectories of Gα from GαGTP-RGS-PDEγWT (B and C) and of Gα from GαGTP-RGS-PDEγG38D (D and E) are shown. </plain></SENT>
+<SENT sid="613" pm="."><plain>The ES is given by a variable number of eigenvectors that describe 90% of the total variance (sum of eigenvalues). </plain></SENT>
+<SENT sid="614" pm="."><plain>The number of PCs used was 108 for B and C, and 103 for D and E. Cα-atom displacements are highlighted by color ranges from violet to blue or and from green to blue, respectively. </plain></SENT>
+</text></p><p><text><SENT sid="616" pm="."><plain>(TIFF) </plain></SENT>
+</text></p></caption><media xlink:href="pcbi.1003207.s006.tiff"><caption><p><text><SENT sid="617" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="pcbi.1003207.s007"><label>Figure S7</label><caption><p><text><SENT sid="618" pm="."><plain>Cα-RMSF profiles. The Cα-RMSF profiles from MD trajectories of PDEγ (top) and RGS (bottom) from GαGTP-RGS-PDEγWT (violet) and Gα from GαGTP-RGS-PDEγG38D (green) are shown. </plain></SENT>
+<SENT sid="619" pm="."><plain>The secondary structure elements are shown on the abscissa. </plain></SENT>
+</text></p><p><text><SENT sid="620" pm="."><plain>(TIFF) </plain></SENT>
+</text></p></caption><media xlink:href="pcbi.1003207.s007.tiff"><caption><p><text><SENT sid="621" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media></supplementary-material></sec></SecTag></body><back><SecTag type="ACK_FUND"><ack><p><text4fund><text><SENT sid="622" pm="."><plain>We'd like to thank Marie E. Burns for kindly sending us data from electrophysiological recordings that allowed us to compare the outcome of computational and in vitro experiments. </plain></SENT>
+<SENT sid="624" pm="."><plain>We also thank Nikolai O. Artemyev for providing clarifications on the results of in vitro experiments. </plain></SENT>
+</text></text4fund></p></ack></SecTag><SecTag type="REF"><ref-list><title>References</title><ref id="pcbi.1003207-Baylor1"><text><SENT sid="626" pm="."><plain>1 BaylorD (1996) How photons start vision. Proc Natl Acad Sci U S A 93: 560–565.8570595 </plain></SENT>
+</text></ref><ref id="pcbi.1003207-Lamb1"><text><SENT sid="627" pm="."><plain>2 LambTD (1996) Gain and kinetics of activation in the G-protein cascade of phototransduction. Proc Natl Acad Sci U S A 93: 566–570.8570596 </plain></SENT>
+</text></ref><ref id="pcbi.1003207-Fanelli1"><text><SENT sid="628" pm="."><plain>3 FanelliF, De BenedettiPG (2011) Update 1 of: Computational Modeling Approaches to Structure-Function Analysis of G Protein-Coupled Receptors. Chem Rev 111: PR438–535.22165845 </plain></SENT>
+</text></ref><ref id="pcbi.1003207-Palczewski1"><text><SENT sid="629" pm="."><plain>4 PalczewskiK (2006) G protein-coupled receptor rhodopsin. Annu Rev Biochem 75: 743–767.16756510 </plain></SENT>
+</text></ref><ref id="pcbi.1003207-Pugh1"><text><SENT sid="630" pm="."><plain>5Pugh EN, Jr., Lamb TD (2000) Phototransduction in Vertebrate Rods and Cones: Molecular Mechanisms of Amplification, Recovery and Light Adaptation. </plain></SENT>
+<SENT sid="631" pm="."><plain>In: D.G. </plain></SENT>
+<SENT sid="632" pm="."><plain>Stavenga WJdG, E.N. </plain></SENT>
+<SENT sid="633" pm="."><plain>Pugh Jr., editors. </plain></SENT>
+<SENT sid="634" pm="."><plain>Handbook of Biological Physics, Volume 3, Molecular Mechanisms of Visual Transduction. </plain></SENT>
+<SENT sid="635" pm="."><plain>Elsevier Science B.V. . </plain></SENT>
+</text></ref><ref id="pcbi.1003207-DeVries1"><text><SENT sid="636" pm="."><plain>6 De VriesL, Gist FarquharM (1999) RGS proteins: more than just GAPs for heterotrimeric G proteins. Trends Cell Biol 9: 138–144.10203790 </plain></SENT>
+</text></ref><ref id="pcbi.1003207-Dryja1"><text><SENT sid="637" pm="."><plain>7 DryjaTP, HahnLB, ReboulT, ArnaudB (1996) Missense mutation in the gene encoding the alpha subunit of rod transducin in the Nougaret form of congenital stationary night blindness. Nat Genet 13: 358–360.8673138 </plain></SENT>
+</text></ref><ref id="pcbi.1003207-Moussaif1"><text><SENT sid="638" pm="."><plain>8 MoussaifM, RubinWW, KerovV, RehR, ChenD, et al (2006) Phototransduction in a transgenic mouse model of Nougaret night blindness. J Neurosci 26: 6863–6872.16793893 </plain></SENT>
+</text></ref><ref id="pcbi.1003207-Muradov1"><text><SENT sid="639" pm="."><plain>9 MuradovKG, ArtemyevNO (2000) Loss of the effector function in a transducin-alpha mutant associated with Nougaret night blindness. J Biol Chem 275: 6969–6974.10702259 </plain></SENT>
+</text></ref><ref id="pcbi.1003207-Trahey1"><text><SENT sid="640" pm="."><plain>10 TraheyM, MilleyRJ, ColeGE, InnisM, PatersonH, et al (1987) Biochemical and biological properties of the human N-ras p21 protein. Mol Cell Biol 7: 541–544.3550423 </plain></SENT>
+</text></ref><ref id="pcbi.1003207-Raw1"><text><SENT sid="641" pm="."><plain>11 RawAS, ColemanDE, GilmanAG, SprangSR (1997) Structural and biochemical characterization of the GTPgammaS-, GDP.Pi-, and GDP-bound forms of a GTPase-deficient Gly42→Val mutant of Gialpha1. Biochemistry 36: 15660–15669.9398294 </plain></SENT>
+</text></ref><ref id="pcbi.1003207-Casey1"><text><SENT sid="642" pm="."><plain>12 CaseyPJ, FongHK, SimonMI, GilmanAG (1990) Gz, a guanine nucleotide-binding protein with unique biochemical properties. J Biol Chem 265: 2383–2390.2105321 </plain></SENT>
+</text></ref><ref id="pcbi.1003207-Graziano1"><text><SENT sid="643" pm="."><plain>13 GrazianoMP, GilmanAG (1989) Synthesis in Escherichia coli of GTPase-deficient mutants of Gs alpha. J Biol Chem 264: 15475–15482.2549065 </plain></SENT>
+</text></ref><ref id="pcbi.1003207-DellOrco1"><text><SENT sid="644" pm="."><plain>14 Dell'OrcoD, SchmidtH, MarianiS, FanelliF (2009) Network-level analysis of light adaptation in rod cells under normal and altered conditions. Mol Biosyst 5: 1232–1246.19756313 </plain></SENT>
+</text></ref><ref id="pcbi.1003207-DellOrco2"><text><SENT sid="645" pm="."><plain>15 Dell'OrcoD, KochK (2011) A dynamic scaffolding mechanism for rhodopsin and transducin interaction in vertebrate vision. Biochem J 440: 263–271.21843151 </plain></SENT>
+</text></ref><ref id="pcbi.1003207-Slep1"><text><SENT sid="646" pm="."><plain>16 SlepKC, KercherMA, HeW, CowanCW, WenselTG, et al (2001) Structural determinants for regulation of phosphodiesterase by a G protein at 2.0 A. Nature 409: 1071–1077.11234020 </plain></SENT>
+</text></ref><ref id="pcbi.1003207-Tesmer1"><text><SENT sid="647" pm="."><plain>17 TesmerJJ, BermanDM, GilmanAG, SprangSR (1997) Structure of RGS4 bound to AlF4–activated G(i alpha1): stabilization of the transition state for GTP hydrolysis. Cell 89: 251–261.9108480 </plain></SENT>
+</text></ref><ref id="pcbi.1003207-Schmidt1"><text><SENT sid="648" pm="."><plain>18 SchmidtH, JirstrandM (2006) Systems Biology Toolbox for MATLAB: a computational platform for research in systems biology. Bioinformatics 22: 514–515.16317076 </plain></SENT>
+</text></ref><ref id="pcbi.1003207-Noel1"><text><SENT sid="649" pm="."><plain>19 NoelJP, HammHE, SiglerPB (1993) The 2.2 A crystal structure of transducin-alpha complexed with GTP gamma S. Nature 366: 654–663.8259210 </plain></SENT>
+</text></ref><ref id="pcbi.1003207-Raimondi1"><text><SENT sid="650" pm="."><plain>20 RaimondiF, PortellaG, OrozcoM, FanelliF (2011) Nucleotide binding switches the information flow in ras GTPases. PLoS Comput Biol 7: e1001098.21390270 </plain></SENT>
+</text></ref><ref id="pcbi.1003207-Hess1"><text><SENT sid="651" pm="."><plain>21 HessB, KutznerC, Van Der SpoelD, LindahlE (2008) GROMACS 4: Algorithms for Highly Efficient, Load-Balanced, and Scalable Molecular Simulation. J Chem Theory Comput 4: 435–447.26620784 </plain></SENT>
+</text></ref><ref id="pcbi.1003207-Case1"><text><SENT sid="652" pm="."><plain>22 CaseDA, CheathamTE, DardenT, GohlkeH, LuoR, et al (2005) The Amber biomolecular simulation programs. J Comput Chem 26: 1668–1688.16200636 </plain></SENT>
+</text></ref><ref id="pcbi.1003207-Sorin1"><text><SENT sid="653" pm="."><plain>23 SorinEJ, PandeVS (2005) Exploring the helix-coil transition via all-atom equilibrium ensemble simulations. Biophys J 88: 2472–2493.15665128 </plain></SENT>
+</text></ref><ref id="pcbi.1003207-Meagher1"><text><SENT sid="654" pm="."><plain>24 MeagherKL, RedmanLT, CarlsonHA (2003) Development of polyphosphate parameters for use with the AMBER force field. J Comput Chem 24: 1016–1025.12759902 </plain></SENT>
+</text></ref><ref id="pcbi.1003207-Hess2"><text><SENT sid="655" pm="."><plain>25 HessB, BekkerH, BerendsenHJC, FraaijeJGEM (1997) LINCS: A linear constraint solver for molecular simulations. J Comput Chem 18: 1463–1472. </plain></SENT>
+</text></ref><ref id="pcbi.1003207-Bussi1"><text><SENT sid="656" pm="."><plain>26 BussiG, DonadioD, ParrinelloM (2007) Canonical sampling through velocity rescaling. J Chem Phys 126: 014101.17212484 </plain></SENT>
+</text></ref><ref id="pcbi.1003207-Berendsen1"><text><SENT sid="657" pm="."><plain>27 BerendsenHJC, PostmaJPM, VangunsterenWF, DinolaA, HaakJR (1984) Molecular-Dynamics with Coupling to an External Bath. J Chem Phys 81: 3684–3690. </plain></SENT>
+</text></ref><ref id="pcbi.1003207-Seeber1"><text><SENT sid="658" pm="."><plain>28 SeeberM, FellineA, RaimondiF, MuffS, FriedmanR, et al (2011) Wordom: A user-friendly program for the analysis of molecular structures, trajectories, and free energy surfaces. J Comput Chem 32: 1183–1194.21387345 </plain></SENT>
+</text></ref><ref id="pcbi.1003207-Hub1"><text><SENT sid="659" pm="."><plain>29 HubJS, de GrootBL (2009) Detection of functional modes in protein dynamics. PLoS Comput Biol 5: e1000480.19714202 </plain></SENT>
+</text></ref><ref id="pcbi.1003207-Lange1"><text><SENT sid="660" pm="."><plain>30 LangeOF, GrubmullerH (2006) Generalized correlation for biomolecular dynamics. Proteins 62: 1053–1061.16355416 </plain></SENT>
+</text></ref><ref id="pcbi.1003207-Vishveshwara1"><text><SENT sid="661" pm="."><plain>31 VishveshwaraS, GhoshA, HansiaP (2009) Intra and inter-molecular communications through protein structure network. Curr Protein Pept Sci 10: 146–160.19355982 </plain></SENT>
+</text></ref><ref id="pcbi.1003207-Angelova1"><text><SENT sid="662" pm="."><plain>32 AngelovaK, FellineA, LeeM, PatelM, PuettD, et al (2011) Conserved amino acids participate in the structure networks deputed to intramolecular communication in the lutropin receptor. Cell Mol Life Sci 68: 1227–1239.20835841 </plain></SENT>
+</text></ref><ref id="pcbi.1003207-Fanelli2"><text><SENT sid="663" pm="."><plain>33 FanelliF, FellineA (2011) Dimerization and ligand binding affect the structure network of A(2A) adenosine receptor. Biochim Biophys Acta 1808: 1256–1266.20713020 </plain></SENT>
+</text></ref><ref id="pcbi.1003207-Raimondi2"><text><SENT sid="664" pm="."><plain>34 RaimondiF, FellineA, PortellaG, OrozcoM, FanelliF (2012) Light on the structural communication in Ras GTPases. J Biomol Struct Dyn 31: 142–57.22849539 </plain></SENT>
+</text></ref><ref id="pcbi.1003207-Kannan1"><text><SENT sid="665" pm="."><plain>35 KannanN, VishveshwaraS (1999) Identification of side-chain clusters in protein structures by a graph spectral method. J Mol Biol 292: 441–464.10493887 </plain></SENT>
+</text></ref><ref id="pcbi.1003207-Bhattacharyya1"><text><SENT sid="666" pm="."><plain>36 BhattacharyyaM, VishveshwaraS (2011) Probing the allosteric mechanism in pyrrolysyl-tRNA synthetase using energy-weighted network formalism. Biochemistry 50: 6225–6236.21650159 </plain></SENT>
+</text></ref><ref id="pcbi.1003207-Ghosh1"><text><SENT sid="667" pm="."><plain>37 GhoshA, BrindaKV, VishveshwaraS (2007) Dynamics of lysozyme structure network: probing the process of unfolding. Biophys J 92: 2523–2535.17208969 </plain></SENT>
+</text></ref><ref id="pcbi.1003207-Ghosh2"><text><SENT sid="668" pm="."><plain>38 GhoshA, SakaguchiR, LiuC, VishveshwaraS, HouYM (2011) Allosteric communication in cysteinyl tRNA synthetase: a network of direct and indirect readout. J Biol Chem 286: 37721–37731.21890630 </plain></SENT>
+</text></ref><ref id="pcbi.1003207-Dijkstra1"><text><SENT sid="669" pm="."><plain>39 DijkstraEW (1959) A Note on Two Problems in Connexion with Graphs. Numer Math 1: 269–271. </plain></SENT>
+</text></ref></ref-list></SecTag></back></article>

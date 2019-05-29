@@ -1,0 +1,922 @@
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD v1.1 20151215//EN" "JATS-archivearticle1.dtd"> 
+<article xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML" article-type="research-article"><?properties open_access?><?DTDIdentifier.IdentifierValue -//NLM//DTD Journal Publishing DTD v2.3 20031101//EN?><?DTDIdentifier.IdentifierType public?><?SourceDTD.DTDName journalpublishing.dtd?><?SourceDTD.Version 2.3?><?ConverterInfo.XSLTName jp2nlmx2.xsl?><?ConverterInfo.Version 1?><front><journal-meta><journal-id journal-id-type="nlm-ta">PLoS One</journal-id><journal-id journal-id-type="iso-abbrev">PLoS ONE</journal-id><journal-id journal-id-type="publisher-id">plos</journal-id><journal-id journal-id-type="pmc">plosone</journal-id><journal-title-group><journal-title>PLoS ONE</journal-title></journal-title-group><issn pub-type="epub">1932-6203</issn><publisher><publisher-name>Public Library of Science</publisher-name><publisher-loc>San Francisco, USA</publisher-loc></publisher></journal-meta><article-meta><article-id pub-id-type="pmcid">3073932</article-id><article-id pub-id-type="pmid">21494595</article-id><article-id pub-id-type="publisher-id">PONE-D-10-06448</article-id><article-id pub-id-type="doi">10.1371/journal.pone.0018179</article-id><article-categories><subj-group subj-group-type="heading"><subject>Research Article</subject></subj-group><subj-group subj-group-type="Discipline-v2"><subject>Biology</subject><subj-group><subject>Developmental Biology</subject><subj-group><subject>Microbial Growth and Development</subject></subj-group></subj-group><subj-group><subject>Genomics</subject><subj-group><subject>Functional Genomics</subject><subject>Genome Expression Analysis</subject></subj-group></subj-group><subj-group><subject>Proteomics</subject><subj-group><subject>Protein Abundance</subject><subject>Spectrometric Identification of Proteins</subject></subj-group></subj-group></subj-group></article-categories><title-group><article-title><SecTag type="TITLE"><text><SENT sid="0" pm="."><plain>Regulatory Response to Carbon Starvation in Caulobacter crescentus </plain></SENT>
+</text></SecTag></article-title><alt-title alt-title-type="running-head">Bacterial Regulatory Response to Starvation</alt-title></title-group><contrib-group><contrib contrib-type="author"><name><surname>Britos</surname><given-names>Leticia</given-names></name><xref ref-type="aff" rid="aff1">
+<sup>1</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Abeliuk</surname><given-names>Eduardo</given-names></name><xref ref-type="aff" rid="aff1">
+<sup>1</sup>
+</xref><xref ref-type="aff" rid="aff2">
+<sup>2</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Taverner</surname><given-names>Thomas</given-names></name><xref ref-type="aff" rid="aff3">
+<sup>3</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Lipton</surname><given-names>Mary</given-names></name><xref ref-type="aff" rid="aff3">
+<sup>3</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>McAdams</surname><given-names>Harley</given-names></name><xref ref-type="aff" rid="aff1">
+<sup>1</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Shapiro</surname><given-names>Lucy</given-names></name><xref ref-type="aff" rid="aff1">
+<sup>1</sup>
+</xref><xref ref-type="corresp" rid="cor1">
+<sup>*</sup>
+</xref></contrib></contrib-group><aff id="aff1">
+<label>1</label>
+<addr-line>Department of Developmental Biology, Stanford University School of Medicine, Stanford, California, United States of America</addr-line>
+</aff><aff id="aff2">
+<label>2</label>
+<addr-line>Department of Electrical Engineering, Stanford University, Stanford, California, United States of America</addr-line>
+</aff><aff id="aff3">
+<label>3</label>
+<addr-line>Environmental Molecular Sciences Laboratory, Pacific Northwest National Laboratory, Richland, Washington, United States of America</addr-line>
+</aff><contrib-group><contrib contrib-type="editor"><name><surname>Roop</surname><given-names>Roy Martin</given-names><suffix>II</suffix></name><role>Editor</role><xref ref-type="aff" rid="edit1"/></contrib></contrib-group><aff id="edit1">East Carolina University School of Medicine, United States of America</aff><author-notes><corresp id="cor1">* E-mail: <email>shapiro@cmgm.stanford.edu</email></corresp><fn fn-type="con"><p><text><SENT sid="1" pm="."><plain>Conceived and designed the experiments: LB HHM LS. </plain></SENT>
+<SENT sid="2" pm="."><plain>Performed the experiments: LB TT. </plain></SENT>
+<SENT sid="3" pm="."><plain>Analyzed the data: LB EA TT ML. </plain></SENT>
+<SENT sid="4" pm="."><plain>Wrote the paper: LB LS. </plain></SENT>
+</text></p></fn></author-notes><pub-date pub-type="collection"><year>2011</year></pub-date><pub-date pub-type="epub"><day>11</day><month>4</month><year>2011</year></pub-date><volume>6</volume><issue>4</issue><elocation-id>e18179</elocation-id><history><date date-type="received"><day>30</day><month>11</month><year>2010</year></date><date date-type="accepted"><day>22</day><month>2</month><year>2011</year></date></history><permissions><copyright-statement>Britos et al.</copyright-statement><copyright-year>2011</copyright-year><license xlink:href="http://creativecommons.org/licenses/by/4.0/"><license-p>This is an open-access article distributed under the terms of the Creative Commons Attribution License, which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are properly credited.</license-p></license></permissions><abstract><p><SecTag type="ABS"><text><SENT sid="5" pm="."><plain>Bacteria adapt to shifts from rapid to slow growth, and have developed strategies for long-term survival during prolonged starvation and stress conditions. </plain></SENT>
+<SENT sid="6" pm="."><plain>We report the regulatory response of C. crescentus to carbon starvation, based on combined high-throughput proteome and transcriptome analyses. </plain></SENT>
+<SENT sid="7" pm="."><plain>Our results identify cell cycle changes in gene expression in response to carbon starvation that involve the prominent role of the FixK FNR/CAP family transcription factor and the CtrA cell cycle regulator. </plain></SENT>
+<SENT sid="8" pm="."><plain>Notably, the SigT ECF sigma factor mediates the carbon starvation-induced degradation of CtrA, while activating a core set of general starvation-stress genes that respond to carbon starvation, osmotic stress, and exposure to heavy metals. </plain></SENT>
+<SENT sid="9" pm="."><plain>Comparison of the response of swarmer cells and stalked cells to carbon starvation revealed four groups of genes that exhibit different expression profiles. </plain></SENT>
+<SENT sid="10" pm="."><plain>Also, cell pole morphogenesis and initiation of chromosome replication normally occurring at the swarmer-to-stalked cell transition are uncoupled in carbon-starved cells. </plain></SENT>
+</text></SecTag></p></abstract><counts><page-count count="19"/></counts></article-meta></front><body><SecTag type="INTRO"><sec id="s1"><title><text><SENT sid="11" pm="."><plain>Introduction </plain></SENT>
+</text></title><p><text><SENT sid="12" pm="."><plain>Starvation for nutrient and energy sources are common stresses confronted by bacteria in natural environments. </plain></SENT>
+<SENT sid="13" pm="."><plain>Bacteria have limited energy reserves, so they need robust mechanisms to quickly shift between rapid and slow growth, as well as a strategy for long-term survival during periods of prolonged starvation. </plain></SENT>
+<SENT sid="14" pm="."><plain>The response to starvation comprises an initial stage of scavenging and metabolic adaptation. </plain></SENT>
+<SENT sid="15" pm="."><plain>If the missing essential nutrients are not replenished, there is a second stage of physiological adaptation, which includes the inhibition of growth and cell division, in order to retain viability. </plain></SENT>
+</text></p><p><text><SENT sid="16" pm="."><plain>We have used Caulobacter crescentus, a gram-negative oligotrophic bacterium [1], as a model system to study the response to carbon deprivation. C. crescentus has a dimorphic life cycle. </plain></SENT>
+<SENT sid="17" pm="."><plain>Each asymmetric division yields a chemotactically-competent flagellated cell (swarmer cell) and a sessile cell with a polar stalk (stalked cell). </plain></SENT>
+<SENT sid="18" pm="."><plain>The core genetic network that drives cell cycle progression and cell division in C. crescentus is well characterized [2], [3], [4], [5]. </plain></SENT>
+</text></p><p><text><SENT sid="19" pm="."><plain>In Escherichia coli and Bacillus subtilis, the RpoS (σS) and SigB (σB) sigma factors are the master regulators of the general starvation-stress response [6], [7]. C. crescentus lacks orthologs of the rpoS and sigB genes, as do all other α-proteobacteria [8], [9]. </plain></SENT>
+<SENT sid="20" pm="."><plain>An equivalent master regulator has not been identified. </plain></SENT>
+<SENT sid="21" pm="."><plain>We have recently identified two factors involved in the adaptation of C. crescentus to carbon starvation: the SpoT ppGpp synthetase/hydrolase, which contributes to the regulation of the DnaA protein stability and initiation of DNA replication [10], and the CrfA small noncoding regulatory RNA controlling the mRNA stability of 27 transcripts [11]. </plain></SENT>
+</text></p><p><text><SENT sid="22" pm="."><plain>A comparison of gene expression profiles of C. crescentus growing under carbon- and nitrogen-limited continuous flow cultures was recently reported [12]. </plain></SENT>
+<SENT sid="23" pm="."><plain>In these experiments, slow cell growth was supported by a constant supply of nutrients at low concentration, and the gene expression profiling captured the metabolic adaptations to the relative levels of carbon and nitrogen. </plain></SENT>
+<SENT sid="24" pm="."><plain>This study identified genes differentially induced in carbon- versus nitrogen-limited conditions, among which are those predicted to require the alternative sigma factor RpoN for complete induction [12]. </plain></SENT>
+<SENT sid="25" pm="."><plain>Here, we have studied the cells' response to an abrupt loss of carbon source resulting in the inhibition of mass accumulation and cell cycle progression. </plain></SENT>
+<SENT sid="26" pm="."><plain>We performed a global analysis of the differences between growing and carbon-starved C. crescentus cultures, through combined high-throughput proteome and transcriptome assays. </plain></SENT>
+<SENT sid="27" pm="."><plain>By analyzing the response at the protein level, we took into account the fact that C. crescentus uses a complex array of regulatory strategies that include targeted proteolytic events [13]. </plain></SENT>
+<SENT sid="28" pm="."><plain>We identified genetic regulatory pathways that mediate the transduction of carbon starvation signals and found that the SigT ECF sigma factor controls a core set of genes that are activated by carbon depletion, osmotic stress and exposure to heavy metals. </plain></SENT>
+<SENT sid="29" pm="."><plain>We identified gene clusters that are differentially expressed upon carbon starvation at specific stages of the cell cycle. </plain></SENT>
+</text></p></sec></SecTag><SecTag type="RESULTS"><sec id="s2"><title><text><SENT sid="30" pm="."><plain>Results </plain></SENT>
+</text></title><sec id="s2a"><title><text><SENT sid="31" pm="."><plain>The proteome and transcriptome profile of C. crescentus cells starved for carbon </plain></SENT>
+</text></title><p><text><SENT sid="32" pm="."><plain>Transfer of C. crescentus cultures in exponential growth to media lacking a carbon source results in immediate growth arrest. </plain></SENT>
+<SENT sid="33" pm="."><plain>Under prolonged starvation, there is a pronounced loss in viability [10]. </plain></SENT>
+<SENT sid="34" pm="."><plain>In order to identify proteins that participate in the carbon starvation response, we incubated cultures in minimal M2 medium in the absence of glucose, and the respective non-starved controls in the presence of 0.2% glucose, for 30 and 60 minutes, as described in the Methods section. </plain></SENT>
+<SENT sid="35" pm="."><plain>Samples were analyzed by liquid chromatography coupled to tandem mass spectrometry. </plain></SENT>
+<SENT sid="36" pm="."><plain>We identified 2471 distinct proteins across all conditions tested, accounting for 65.6% of 3767 C. crescentus predicted protein-coding genes. </plain></SENT>
+<SENT sid="37" pm="."><plain>This is high coverage for a prokaryotic proteome, lower only than that reported for Mycoplasma mobile (88.6%), which has a genome of one-sixth the size of that of C. crescentus (approx 0.78 Mb) (Table S1). </plain></SENT>
+<SENT sid="38" pm="."><plain>Previous electrophoresis-based proteome studies of C. crescentus identified 81 cell cycle-regulated proteins [14], 39 stalk-specific proteins [15], and 86 membrane-associated proteins [16], [17]. </plain></SENT>
+</text></p><p><text><SENT sid="39" pm="."><plain>The levels of 513 proteins were found to change reproducibly in cells starved for carbon for 30 and/or 60 min (Table S2). Figure 1 shows the upregulated and downregulated proteins by functional categories, according to COG classifications [18]. </plain></SENT>
+<SENT sid="40" pm="."><plain>Those categories with a statistically significant enrichment in either upregulated or downregulated proteins are indicated (see Methods for details on the enrichment analysis). </plain></SENT>
+<SENT sid="41" pm="."><plain>Functional categories comprising transport and metabolism of amino acids (COG E), nucleotides (COG F), carbohydrates (COG G) and cell motility (COG N) were significantly enriched in proteins whose levels decreased upon carbon starvation. </plain></SENT>
+<SENT sid="42" pm="."><plain>On the other hand, the categories comprising energy production and conversion (COG C), inorganic ion transport and metabolism (COG P) and defense mechanisms (COG V) were significantly enriched in proteins whose levels increased upon carbon starvation. </plain></SENT>
+<SENT sid="43" pm="."><plain>Of the 40 COG P proteins that are upregulated upon carbon starvation, 21 belong to the TonB-dependent receptor family, which are highly abundant in the C. crescentus genome, including those controlled by the CrfA small noncoding RNA described by Landt et. al. [11]. </plain></SENT>
+<SENT sid="44" pm="."><plain>These observations are compatible with metabolic adaptation of the cell to carbon starvation. </plain></SENT>
+</text></p><SecTag type="FIG"><fig id="pone-0018179-g001" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0018179.g001</object-id><label>Figure 1</label><caption><title><text><SENT sid="45" pm="."><plain>Proteome profile of C. crescentus subjected to carbon starvation. </plain></SENT>
+</text></title><p><text><SENT sid="46" pm="."><plain>Proteins that change significantly upon 30 and/or 60 minutes of carbon starvation classified by NCBI Clusters of Orthologous Genes (COG). </plain></SENT>
+<SENT sid="47" pm="."><plain>Coverage for all categories of the COG scheme (except for A and B for which no proteins were detected), is indicated as the ratio of the number of detected proteins in each category over the total number of proteins assigned to that category (the corresponding percentage value is indicated in parentheses). </plain></SENT>
+<SENT sid="48" pm="."><plain>Yellow bars represent upregulated proteins and blue bars, downregulated proteins in each COG category. </plain></SENT>
+<SENT sid="49" pm="."><plain>Values that meet a statistically significant enrichment, assuming a hypergeometric distribution, are denoted in red. </plain></SENT>
+<SENT sid="50" pm="."><plain>The proteins within each category are listed in Table S2, along with 43 additional proteins that are not included in the COG classification. </plain></SENT>
+</text></p></caption><graphic xlink:href="pone.0018179.g001"/></fig></SecTag><p><text><SENT sid="51" pm="."><plain>The proteome profile of carbon-starved cells also provided insights into the physiological adaptation associated with stasis. </plain></SENT>
+<SENT sid="52" pm="."><plain>Among the proteins that change significantly, there was notable downregulation of three essential cell cycle regulators (CtrA, DnaA and GcrA), and two proteins (PopZ and ParA) that mediate chromosome segregation [13], [19], [20]. </plain></SENT>
+<SENT sid="53" pm="."><plain>The decrease in the levels of DnaA, an essential protein that serves both as an activator of replication initiation and global transcription factor [21], is consistent with the previously reported starvation-induced ClpP-mediated proteolysis of DnaA [22]. </plain></SENT>
+<SENT sid="54" pm="."><plain>The decrease in DnaA levels prevents the initiation of DNA replication. </plain></SENT>
+<SENT sid="55" pm="."><plain>The CtrA response regulator inhibits DNA replication in the swarmer cell, and acts as a transcription factor regulating the expression of nearly 100 genes. </plain></SENT>
+<SENT sid="56" pm="."><plain>It was previously shown that CtrA is proteolyzed in swarmer cells starved for carbon, but with different kinetics than that observed under normal growth conditions [10], [22]. </plain></SENT>
+<SENT sid="57" pm="."><plain>Given the number of CtrA-regulated genes that change upon carbon starvation, it is clear that, at least in part, an important role of CtrA in the starvation response relies on its function as transcription factor. </plain></SENT>
+<SENT sid="58" pm="."><plain>Additionally, the level of the FtsZ cell division protein, that is essential for cytokinesis, is shown to decrease significantly upon carbon starvation; FtsZ was previously shown to decrease during stationary phase in C. crescentus [23]. </plain></SENT>
+</text></p><p><text><SENT sid="59" pm="."><plain>Total RNA was extracted from samples parallel to those used for the proteome analysis. </plain></SENT>
+<SENT sid="60" pm="."><plain>As described in Methods, cDNA was synthesized, fragmented, labeled and hybridized to the CauloHI1 chip. </plain></SENT>
+<SENT sid="61" pm="."><plain>A minimum two-fold change requirement between the starvation and non-starvation conditions, with a false discovery rate (FDR) below 1%, resulted in upregulation of 607 of the 3767 C. crescentus protein coding genes after 30 min of carbon starvation, and 700 genes after 60 min (553 of these were significantly upregulated at both time points); 725 and 618 genes were downregulated after 30 and 60 min of carbon starvation, respectively; 603 genes were equally downregulated for both time points. </plain></SENT>
+<SENT sid="62" pm="."><plain>All genes that changed significantly are listed in Table S3. </plain></SENT>
+<SENT sid="63" pm="."><plain>16.3% of the 753 genes that were significantly upregulated after either 30 or 60 min of carbon starvation, and 19.9% of the 739 downregulated genes were classified as cell cycle regulated transcripts by Laub et al. [24] (Table S3). </plain></SENT>
+</text></p></sec><sec id="s2b"><title><text><SENT sid="64" pm="."><plain>Carbon starvation transcriptional regulators </plain></SENT>
+</text></title><p><text><SENT sid="65" pm="."><plain>Cell cycle transcription profiles were previously used to identify predicted cell cycle regulons and their conserved promoter motifs. </plain></SENT>
+<SENT sid="66" pm="."><plain>Fourteen conserved promoter motifs were identified, seven of which shared significant similarity with binding motifs for previously characterized regulators [25]. </plain></SENT>
+<SENT sid="67" pm="."><plain>We analyzed these sets of genes to determine if any of them were significantly enriched in genes whose expression was up- or down-regulated upon carbon starvation. </plain></SENT>
+<SENT sid="68" pm="."><plain>As shown in Figure 2A, out of 14 gene sets, each of which shared a distinct promoter motif, six were significantly enriched in genes upregulated upon carbon starvation (sets corresponding to motifs cc_1, cc_2, cc_3, cc_4, cc_7, cc_8), while two were enriched in genes downregulated upon carbon starvation (corresponding to motifs cc_6 and cc_13) (Table S4). </plain></SENT>
+<SENT sid="69" pm="."><plain>Motif cc_6 is the cognate binding motif for the RpoD sigma factor, which drives the expression of biosynthetic and housekeeping genes throughout the cell cycle [26] (Figure 2B); as expected, the great majority of the genes with cc_6 motif (27 out of 34) were down-regulated upon carbon starvation in our experiments. </plain></SENT>
+</text></p><SecTag type="FIG"><fig id="pone-0018179-g002" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0018179.g002</object-id><label>Figure 2</label><caption><title><text><SENT sid="70" pm="."><plain>Putative regulators of the carbon starvation response. </plain></SENT>
+</text></title><p><text><SENT sid="71" pm="."><plain>A. </plain></SENT>
+<SENT sid="72" pm="."><plain>Previously identified clusters of C. crescentus genes that share conserved promoter motifs were analyzed for enrichment in genes that change significantly upon carbon starvation. </plain></SENT>
+<SENT sid="73" pm="."><plain>For each gene set, cc_1 through cc_14 (identified by a shared promoter motif), the number of carbon starvation upregulated genes is indicated in yellow, downregulated genes in blue and genes that don't change in gray. </plain></SENT>
+<SENT sid="74" pm="."><plain>Asterisks denote statistically significant enrichment. </plain></SENT>
+<SENT sid="75" pm="."><plain>Gene numbers correspond to 30 min of carbon starvation, except for motif cc_7, for which gene numbers correspond to 60 min of carbon starvation. </plain></SENT>
+<SENT sid="76" pm="."><plain>Identical results were obtained in terms of significant enrichment for the 30 and 60 min carbon starvation data for most gene sets, except for cc_8, which was only enriched in starvation upregulated genes at 30 min, and cc_7, which was only enriched at 60 min. B. Cell cycle patterns of expression, as previously determined [25], of carbon-starvation enriched gene sets. </plain></SENT>
+<SENT sid="78" pm="."><plain>Yellow indicates enrichment in genes up-regulated upon 30 min of carbon starvation, while blue corresponds to enrichment in genes down-regulated upon 30 min of carbon starvation. </plain></SENT>
+</text></p></caption><graphic xlink:href="pone.0018179.g002"/></fig></SecTag><sec id="s2b1"><title><text><SENT sid="79" pm="."><plain>Carbon starvation FixK regulon </plain></SENT>
+</text></title><p><text><SENT sid="80" pm="."><plain>Genes with motifs cc_1 to cc_4 are expressed in the swarmer cell stage (Figure 2B). </plain></SENT>
+<SENT sid="81" pm="."><plain>A subset of these genes are likely activated by the stress suffered by cells during the synchronization process, and not swarmer cell specific genes, as they were activated equally by carbon starvation in stalked cells. </plain></SENT>
+<SENT sid="82" pm="."><plain>Motif cc_3 corresponds to the DNA binding motif of the FixK transcription factor. </plain></SENT>
+<SENT sid="83" pm="."><plain>Microarray analysis of a C. crescentus fixK knockout strain identified downstream targets whose expression changed in a FixK-dependent manner under hypoxia conditions [27]. </plain></SENT>
+<SENT sid="84" pm="."><plain>We found that five out of eight genes with motif cc_3 were upregulated upon 30 min of carbon starvation. </plain></SENT>
+<SENT sid="85" pm="."><plain>Expression of three of those genes was FixK-dependent under hypoxia conditions [27]. </plain></SENT>
+<SENT sid="86" pm="."><plain>Eleven additional FixK-dependent genes identified by Crosson et al., which lack the cc_3 motif, showed a significant change upon carbon starvation, and are either indirect FixK targets, or are transcribed as part of an operon directly regulated by FixK. </plain></SENT>
+</text></p></sec><sec id="s2b2"><title><text><SENT sid="87" pm="."><plain>Carbon starvation SigT regulon </plain></SENT>
+</text></title><p><text><SENT sid="88" pm="."><plain>Motif cc_7 is the binding motif for the SigT alternative sigma factor, and genes in this cluster have a distinct peak of expression at the swarmer-to-stalked cell transition (Figure 2B). </plain></SENT>
+<SENT sid="89" pm="."><plain>SigT, which belongs to the ECF (extra-cytoplasmic function) sigma factor family, is a regulator of the osmotic and oxidative stress responses in C. crescentus [28]. </plain></SENT>
+<SENT sid="90" pm="."><plain>Of 26 genes with motif cc_7, 7 were upregulated after 30 min of carbon starvation, and an additional 7 genes were upregulated after 60 min. </plain></SENT>
+</text></p><p><text><SENT sid="91" pm="."><plain>In order to characterize the carbon starvation SigT regulon, we performed microarray experiments comparing gene expression profiles of a C. crescentus wild-type strain (LS101) and a sigT null mutant strain (LS3554), in M2 cultures incubated in the absence of glucose for 15 min. </plain></SENT>
+<SENT sid="92" pm="."><plain>Genes showing a greater than two-fold difference in expression between the mutant and the wild type strain under starvation conditions, and meeting statistical significance as defined in the Methods section, were considered to be SigT-dependent upon carbon starvation (Table 1). </plain></SENT>
+<SENT sid="93" pm="."><plain>Thirteen of the 27 SigT-dependent carbon starvation genes have the previously characterized [25], [28] SigT binding motif in their promoters and are presumably direct targets of the regulator. </plain></SENT>
+<SENT sid="94" pm="."><plain>Four additional targets are in close proximity to genes that possess the motif, suggesting they are part of directly regulated operons. </plain></SENT>
+<SENT sid="95" pm="."><plain>Sixteen of the 27 genes whose expression is significantly reduced in the sigT mutant, and the two genes with increased expression in the mutant strain, do not show SigT-dependency under osmotic stress, as reported by Alvarez-Martinez et al. [28]. </plain></SENT>
+</text></p><SecTag type="TABLE"><table-wrap id="pone-0018179-t001" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0018179.t001</object-id><label>Table 1</label><caption><title><text><SENT sid="96" pm="."><plain>SigT-dependent carbon starvation regulon. </plain></SENT>
+</text></title></caption><alternatives><graphic id="pone-0018179-t001-1" xlink:href="pone.0018179.t001"/><table frame="hsides" rules="groups"><colgroup span="1"><col align="left" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/></colgroup><thead><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="97" pm="."><plain>Gene </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="98" pm="."><plain>Annotation </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="99" pm="."><plain>COG </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="100" pm="."><plain>Fold reduction in ΔsigT mutant </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="101" pm="?"><plain>SigT motif? </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="102" pm="?"><plain>Sig-T dependent in osmotic stress? </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="103" pm="?"><plain>Up-regulated by exposure to multiple heavy metals? </plain></SENT>
+</text></td></tr></thead><tbody><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="104" pm="."><plain>CC_0284 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="105" pm="."><plain>Two-component receiver domain protein lovR </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="106" pm="."><plain>K </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="107" pm="."><plain>2.65 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="108" pm="."><plain>Yes </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="109" pm="."><plain>Yes </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="110" pm="."><plain>No </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="111" pm="."><plain>CC_1356 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="112" pm="."><plain>Transcriptional regulator </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="113" pm="."><plain>K </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="114" pm="."><plain>3.29 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="115" pm="."><plain>Yes </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="116" pm="."><plain>Yes </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="117" pm="."><plain>No </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="118" pm="."><plain>CC_2883 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="119" pm="."><plain>RNA polymerase ECF-type sigma factor sigU </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="120" pm="."><plain>K </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="121" pm="."><plain>15.93 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="122" pm="."><plain>Yes </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="123" pm="."><plain>Yes </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="124" pm="."><plain>Yes </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="125" pm="."><plain>CC_3477 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="126" pm="."><plain>Hybrid sigma factor/two-component receiver protein phyR </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="127" pm="."><plain>K </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="128" pm="."><plain>3.10 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="129" pm="."><plain>Yes </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="130" pm="."><plain>No </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="131" pm="."><plain>No </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="132" pm="."><plain>CC_0285 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="133" pm="."><plain>Photosensory histidine protein kinase lovK </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="134" pm="."><plain>T </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="135" pm="."><plain>3.94 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="136" pm="."><plain>No (*) </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="137" pm="."><plain>No </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="138" pm="."><plain>No </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="139" pm="."><plain>CC_2330 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="140" pm="."><plain>HTH transcriptional regulator </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="141" pm="."><plain>K </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="142" pm="."><plain>2.25 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="143" pm="."><plain>No </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="144" pm="."><plain>No </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="145" pm="."><plain>No </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="146" pm="."><plain>CC_3258 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="147" pm="."><plain>chemotaxis receiver domain protein cheYIII </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="148" pm="."><plain>K </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="149" pm="."><plain>2.05 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="150" pm="."><plain>No </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="151" pm="."><plain>No </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="152" pm="."><plain>Yes </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="153" pm="."><plain>CC_2549 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="154" pm="."><plain>Putative heme-binding protein </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="155" pm="."><plain>NC </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="156" pm="."><plain>3.97 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="157" pm="."><plain>Yes </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="158" pm="."><plain>Yes </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="159" pm="."><plain>Yes </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="160" pm="."><plain>CC_1048 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="161" pm="."><plain>Acylamino-acid-releasing enzyme </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="162" pm="."><plain>E </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="163" pm="."><plain>0.42 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="164" pm="."><plain>No </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="165" pm="."><plain>No </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="166" pm="."><plain>No </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="167" pm="."><plain>CC_2318 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="168" pm="."><plain>ABC transporter permease protein </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="169" pm="."><plain>Q </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="170" pm="."><plain>2.15 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="171" pm="."><plain>No </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="172" pm="."><plain>No </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="173" pm="."><plain>No </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="174" pm="."><plain>CC_3001 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="175" pm="."><plain>TonB-dependent receptor </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="176" pm="."><plain>P </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="177" pm="."><plain>2.08 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="178" pm="."><plain>No </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="179" pm="."><plain>No </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="180" pm="."><plain>No </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="181" pm="."><plain>CC_3572 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="182" pm="."><plain>Carbonic anhydrase </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="183" pm="."><plain>P </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="184" pm="."><plain>0.43 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="185" pm="."><plain>No </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="186" pm="."><plain>No </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="187" pm="."><plain>No </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="188" pm="."><plain>CC_0280 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="189" pm="."><plain>Conserved cell surface protein </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="190" pm="."><plain>NC </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="191" pm="."><plain>20.99 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="192" pm="."><plain>Yes </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="193" pm="."><plain>Yes </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="194" pm="."><plain>Yes </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="195" pm="."><plain>CC_0673 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="196" pm="."><plain>Hypothetical protein </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="197" pm="."><plain>NC </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="198" pm="."><plain>3.59 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="199" pm="."><plain>Yes </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="200" pm="."><plain>No </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="201" pm="."><plain>Yes </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="202" pm="."><plain>CC_0717 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="203" pm="."><plain>Hypothetical membrane associated protein </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="204" pm="."><plain>S </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="205" pm="."><plain>2.01 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="206" pm="."><plain>Yes </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="207" pm="."><plain>No </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="208" pm="."><plain>No </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="209" pm="."><plain>CC_1179 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="210" pm="."><plain>hypothetical protein </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="211" pm="."><plain>NC </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="212" pm="."><plain>3.14 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="213" pm="."><plain>Yes </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="214" pm="."><plain>Yes </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="215" pm="."><plain>Yes </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="216" pm="."><plain>CC_0163 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="217" pm="."><plain>Conserved hypothetical protein </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="218" pm="."><plain>S </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="219" pm="."><plain>5.60 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="220" pm="."><plain>No (*) </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="221" pm="."><plain>Yes </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="222" pm="."><plain>No </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="223" pm="."><plain>CC_1178 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="224" pm="."><plain>Hypothetical cytosolic protein </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="225" pm="."><plain>R </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="226" pm="."><plain>2.10 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="227" pm="."><plain>No (*) </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="228" pm="."><plain>Yes </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="229" pm="."><plain>Yes </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="230" pm="."><plain>CC_0557 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="231" pm="."><plain>Hypothetical protein </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="232" pm="."><plain>NC </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="233" pm="."><plain>2.78 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="234" pm="."><plain>No </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="235" pm="."><plain>No </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="236" pm="."><plain>No </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="237" pm="."><plain>CC_1532 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="238" pm="."><plain>Conserved hypothetical protein </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="239" pm="."><plain>S </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="240" pm="."><plain>23.41 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="241" pm="."><plain>No </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="242" pm="."><plain>Yes </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="243" pm="."><plain>Yes </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="244" pm="."><plain>CC_3466 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="245" pm="."><plain>Hypothetical protein </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="246" pm="."><plain>NC </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="247" pm="."><plain>7.67 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="248" pm="."><plain>No </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="249" pm="."><plain>No </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="250" pm="."><plain>Yes </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="251" pm="."><plain>CC_3473 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="252" pm="."><plain>Entericidin B homolog </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="253" pm="."><plain>NC </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="254" pm="."><plain>2.57 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="255" pm="."><plain>Yes </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="256" pm="."><plain>No </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="257" pm="."><plain>Yes </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="258" pm="."><plain>CC_1682 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="259" pm="."><plain>Transglycosylase associated protein </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="260" pm="."><plain>S </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="261" pm="."><plain>2.57 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="262" pm="."><plain>Yes </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="263" pm="."><plain>No </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="264" pm="."><plain>Yes </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="265" pm="."><plain>CC_0201 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="266" pm="."><plain>Outer membrane protein </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="267" pm="."><plain>M </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="268" pm="."><plain>2.11 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="269" pm="."><plain>Yes </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="270" pm="."><plain>Yes </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="271" pm="."><plain>Yes </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="272" pm="."><plain>CC_0428 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="273" pm="."><plain>Methyl-accepting chemotaxis protein </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="274" pm="."><plain>N </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="275" pm="."><plain>2.82 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="276" pm="."><plain>Yes </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="277" pm="."><plain>No </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="278" pm="."><plain>No </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="279" pm="."><plain>CC_0164 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="280" pm="."><plain>Chain length regulator (capsular polysaccharide biosynthesis) </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="281" pm="."><plain>D </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="282" pm="."><plain>2.18 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="283" pm="."><plain>No (*) </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="284" pm="."><plain>No </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="285" pm="."><plain>No </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="286" pm="."><plain>CC_0556 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="287" pm="."><plain>Catalase </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="288" pm="."><plain>NC </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="289" pm="."><plain>2.00 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="290" pm="."><plain>No </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="291" pm="."><plain>No </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="292" pm="."><plain>No </plain></SENT>
+</text></td></tr></tbody></table></alternatives><table-wrap-foot><fn id="nt101"><label/><p><text><SENT sid="293" pm="."><plain>Genes with reduced or increased expression in the ΔsigT strain upon 15 min of carbon starvation, with respect to the NA1000 wild type strain under the same conditions. </plain></SENT>
+<SENT sid="294" pm="."><plain>SigT-dependency under osmotic stress is according to [28]. </plain></SENT>
+<SENT sid="295" pm="."><plain>Upregulation by exposure to multiple heavy metals corresponds to genes upregulated by two or more metals according to [29]. </plain></SENT>
+<SENT sid="296" pm="."><plain>Genes annotated as No(*) in the ‘sigT motif’ column correspond to cases where the sigT motif is found upstream of an adjacent gene as part of a putative operon (CC_0284 and CC_0285; CC_1179 and CC_1178; CC_0162, CC_0163 and CC_0164). </plain></SENT>
+<SENT sid="297" pm="."><plain>COG groups: K = Transcription; T = Signal transduction mechanisms; E = Amino acid transport and metabolism; Q = Secondary metabolites biosynthesis; P = Inorganic ion transport and metabolism; S = Function unknown; R = General function prediction only; M = Cell wall/membrane/envelope biogenesis; N = Cell motility; D = Cell cycle control; NC = Not classified. </plain></SENT>
+</text></p></fn></table-wrap-foot></table-wrap></SecTag><p><text><SENT sid="298" pm="."><plain>The main functional groups represented in the putative SigT carbon starvation regulon are signal transduction and gene regulation (7 genes), and transport and metabolism (5 genes). </plain></SENT>
+<SENT sid="299" pm="."><plain>The gene encoding the SigU ECF sigma factor has a SigT binding motif in its promoter, suggesting it is directly regulated by SigT. </plain></SENT>
+<SENT sid="300" pm="."><plain>SigU is activated by SigT during cell cycle progression [18], upon osmotic stress [25], [28] and upon carbon starvation (this work). </plain></SENT>
+</text></p><p><text><SENT sid="301" pm="."><plain>In order to determine if any of the SigT-dependent genes lacking the conserved SigT promoter binding motif were regulated by a pathway involving SigU, we used microarrays to compare the carbon starvation-induced expression levels in a wild type strain (LS101) and a sigU null mutant strain (LS3547). </plain></SENT>
+<SENT sid="302" pm="."><plain>Only one gene, CC_3466, encoding a hypothetical protein, appeared to be SigU-dependent under carbon starvation. </plain></SENT>
+<SENT sid="303" pm="."><plain>This gene, which was also found to be SigT-dependent, does not have the conserved SigT motif in its promoter, consistent with its SigT dependence being, directly or indirectly through the function of the SigU transcription factor. </plain></SENT>
+<SENT sid="304" pm="."><plain>The CC3466 transcript is cell cycle regulated [24], with a distinct peak at the swarmer-to-stalked cell transition. </plain></SENT>
+<SENT sid="305" pm="."><plain>This pattern was also observed in the cell cycle microarray results of McGrath et al. [25]. </plain></SENT>
+<SENT sid="306" pm="."><plain>CC_3466 is not reported to be SigT-dependent upon osmotic stress [28]. </plain></SENT>
+<SENT sid="307" pm="."><plain>On the other hand, its expression is induced by exposure to chromate and dichromate heavy metals [29], incubation in minimal media vs rich media [30], as well as carbon limitation (compared to nitrogen limitation) [12]. </plain></SENT>
+<SENT sid="308" pm="."><plain>The predicted amino acid sequence of CC_3466 (102 amino acids with a predicted molecular weight of 11 KDa) yielded very few low scoring BLASTP hits outside of the Caulobacter genus. </plain></SENT>
+<SENT sid="309" pm="."><plain>In our proteome analysis, peptide levels for CC_3466 increased significantly after 60 min of carbon starvation. </plain></SENT>
+</text></p></sec><sec id="s2b3"><title><text><SENT sid="310" pm="."><plain>Carbon starvation CtrA regulon </plain></SENT>
+</text></title><p><text><SENT sid="311" pm="."><plain>The gene cluster sharing motif cc_8 was shown to be enriched in genes that were upregulated upon carbon starvation: five out of nine genes with this motif increased significantly upon 30 min of carbon starvation. </plain></SENT>
+<SENT sid="312" pm="."><plain>Motifs cc_08, cc_10 and cc_11 share similarity with the binding motif for the CtrA cell cycle master regulator. </plain></SENT>
+<SENT sid="313" pm="."><plain>While genes with motifs cc_10 and cc_11 showed an expression peak at the predivisional stage, genes with motif cc_8 showed an earlier peak, at the swarmer to stalk cell transition [25]. </plain></SENT>
+<SENT sid="314" pm="."><plain>The CtrA regulon has been characterized by chIP-chip analysis, identifying genomic regions where CtrA binds, and microarray analysis, identifying genes with affected expression in a CtrA temperature sensitive mutant strain [31]. </plain></SENT>
+<SENT sid="315" pm="."><plain>We cross-correlated these results with our carbon starvation microarray dataset and found that the expression of a significant number of both cell-cycle regulated and non cell-cycle regulated CtrA targets was altered upon 30 min of carbon starvation (Table 2). </plain></SENT>
+<SENT sid="316" pm="."><plain>Among these targets was the CC_2644 gene, whose transcript was one of the most strongly upregulated transcripts upon carbon starvation. </plain></SENT>
+<SENT sid="317" pm="."><plain>This gene, which remains uncharacterized in C. crescentus, encodes a protein belonging to the PhoH family. </plain></SENT>
+<SENT sid="318" pm="."><plain>The E. coli phoH gene, which defines the family, was shown to be induced by phosphate starvation and to have ATPase activity [32]. </plain></SENT>
+</text></p><SecTag type="TABLE"><table-wrap id="pone-0018179-t002" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0018179.t002</object-id><label>Table 2</label><caption><title><text><SENT sid="319" pm="."><plain>CtrA targets that change significantly upon carbon starvation. </plain></SENT>
+</text></title></caption><alternatives><graphic id="pone-0018179-t002-2" xlink:href="pone.0018179.t002"/><table frame="hsides" rules="groups"><colgroup span="1"><col align="left" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/></colgroup><thead><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="320" pm="."><plain>Gene </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="321" pm="."><plain>Annotation </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="322" pm="."><plain>Transcript levels carbon starvation/control </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="323" pm="?"><plain>Cell cycle regulated? </plain></SENT>
+</text></td></tr></thead><tbody><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="324" pm="."><plain>CC_2165 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="325" pm="."><plain>division plane positioning ATPase mipZ </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="326" pm="."><plain>5.88 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="327" pm="."><plain>Yes </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="328" pm="."><plain>CC_2540 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="329" pm="."><plain>Cell division protein ftsZ </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="330" pm="."><plain>2.15 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="331" pm="."><plain>Yes </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="332" pm="."><plain>CC_2063 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="333" pm="."><plain>Flagellar basal-body rod protein flgF </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="334" pm="."><plain>2.31 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="335" pm="."><plain>Yes </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="336" pm="."><plain>CC_2316 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="337" pm="."><plain>Transcriptional regulator </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="338" pm="."><plain>2.18 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="339" pm="."><plain>Yes </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="340" pm="."><plain>CC_3219 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="341" pm="."><plain>Two-component sensor histidine kinase </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="342" pm="."><plain>2.54 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="343" pm="."><plain>Yes </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="344" pm="."><plain>CC_2644 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="345" pm="."><plain>phoH protein </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="346" pm="."><plain>44.56 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="347" pm="."><plain>Yes </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="348" pm="."><plain>CC_1396 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="349" pm="."><plain>Lactate 2-monooxygenase </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="350" pm="."><plain>6.28 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="351" pm="."><plain>Yes </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="352" pm="."><plain>CC_1101 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="353" pm="."><plain>Protoporphyrinogen oxidase </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="354" pm="."><plain>2.37 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="355" pm="."><plain>Yes </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="356" pm="."><plain>CC_1307 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="357" pm="."><plain>Aspartyl protease perP </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="358" pm="."><plain>3.05 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="359" pm="."><plain>Yes </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="360" pm="."><plain>CC_1211 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="361" pm="."><plain>Hypothetical protein </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="362" pm="."><plain>2.01 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="363" pm="."><plain>Yes </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="364" pm="."><plain>CC_3291 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="365" pm="."><plain>Hypothetical protein </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="366" pm="."><plain>9.90 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="367" pm="."><plain>Yes </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="368" pm="."><plain>CC_1072 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="369" pm="."><plain>Ribonuclease H </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="370" pm="."><plain>3.35 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="371" pm="."><plain>Yes </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="372" pm="."><plain>CC_3218 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="373" pm="."><plain>Hypothetical protein </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="374" pm="."><plain>2.12 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="375" pm="."><plain>Yes </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="376" pm="."><plain>CC_1872 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="377" pm="."><plain>peptidoglycan-specific endopeptidase, M23 family </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="378" pm="."><plain>0.30 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="379" pm="."><plain>Yes </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="380" pm="."><plain>CC_0484 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="381" pm="."><plain>peptidyl-tRNA hydrolase </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="382" pm="."><plain>0.41 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="383" pm="."><plain>Yes </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="384" pm="."><plain>CC_1923 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="385" pm="."><plain>SSU ribosomal protein S2P </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="386" pm="."><plain>0.05 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="387" pm="."><plain>Yes </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="388" pm="."><plain>CC_3202 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="389" pm="."><plain>SSU ribosomal protein S12P </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="390" pm="."><plain>0.04 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="391" pm="."><plain>Yes </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="392" pm="."><plain>CC_2166 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="393" pm="."><plain>pantoate-beta-alanine ligase </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="394" pm="."><plain>0.37 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="395" pm="."><plain>Yes </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="396" pm="."><plain>CC_0050 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="397" pm="."><plain>S-adenosylmethionine synthetase </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="398" pm="."><plain>0.02 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="399" pm="."><plain>Yes </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="400" pm="."><plain>CC_0350 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="401" pm="."><plain>hypothetical protein with pentapeptide repeats </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="402" pm="."><plain>0.48 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="403" pm="."><plain>Yes </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="404" pm="."><plain>CC_3454 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="405" pm="."><plain>Acyl-CoA dehydrogenase </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="406" pm="."><plain>4.47 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="407" pm="."><plain>No </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="408" pm="."><plain>CC_0651 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="409" pm="."><plain>Conserved hypothetical protein </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="410" pm="."><plain>2.21 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="411" pm="."><plain>No </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="412" pm="."><plain>CC_0696 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="413" pm="."><plain>GumN superfamily protein </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="414" pm="."><plain>4.72 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="415" pm="."><plain>No </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="416" pm="."><plain>CC_1106 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="417" pm="."><plain>Ice nucleation protein </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="418" pm="."><plain>2.30 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="419" pm="."><plain>No </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="420" pm="."><plain>CC_2869 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="421" pm="."><plain>Hypothetical protein </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="422" pm="."><plain>2.32 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="423" pm="."><plain>No </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="424" pm="."><plain>CC_2966 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="425" pm="."><plain>3-oxoacyl-[acyl-carrier protein] reductase </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="426" pm="."><plain>3.45 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="427" pm="."><plain>No </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="428" pm="."><plain>CC_1892 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="429" pm="."><plain>aspartyl-tRNA synthetase </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="430" pm="."><plain>0.09 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="431" pm="."><plain>No </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="432" pm="."><plain>CC_2451 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="433" pm="."><plain>DNA topoisomerase I </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="434" pm="."><plain>0.11 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="435" pm="."><plain>No </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="436" pm="."><plain>CC_3155 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="437" pm="."><plain>chemotaxis receiver domain protein cheYIII </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="438" pm="."><plain>0.39 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="439" pm="."><plain>No </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="440" pm="."><plain>CC_2241 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="441" pm="."><plain>heat shock protein hsp33 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="442" pm="."><plain>0.30 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="443" pm="."><plain>No </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="444" pm="."><plain>CC_1034 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="445" pm="."><plain>GTP-binding protein lepA </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="446" pm="."><plain>0.30 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="447" pm="."><plain>No </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="448" pm="."><plain>CC_0249 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="449" pm="."><plain>SCO1/SenC family protein </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="450" pm="."><plain>0.46 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="451" pm="."><plain>No </plain></SENT>
+</text></td></tr></tbody></table></alternatives><table-wrap-foot><fn id="nt102"><label/><p><text><SENT sid="452" pm="."><plain>Genes that change significantly upon 30 min of carbon starvation, and that are directly regulated by CtrA [31], and are either cell cycle regulated and non cell cycle regulated [24]. </plain></SENT>
+</text></p></fn></table-wrap-foot></table-wrap></SecTag><p><text><SENT sid="453" pm="."><plain>We performed the same enrichment analysis with the motifs identified by McGrath et al. for genes responding to heavy metal stress [25]. </plain></SENT>
+<SENT sid="454" pm="."><plain>Sets sharing motifs m_2 (corresponding to the RpoD binding motif), m_3 (similar to motif cc_13) and m_4 were enriched in genes downregulated upon 30 min of carbon starvation, while sets sharing motifs m_5 (similar to motif cc_1) and m_13 were enriched in genes upregulated upon 30 min of carbon starvation. </plain></SENT>
+<SENT sid="455" pm="."><plain>Since none of the additional sets had a known cognate regulator, this analysis did not identify further pathways related to the carbon starvation response. </plain></SENT>
+</text></p></sec></sec><sec id="s2c"><title><text><SENT sid="456" pm="."><plain>Cell-stage specific response to carbon starvation </plain></SENT>
+</text></title><p><text><SENT sid="457" pm="."><plain>We explored the response to carbon starvation separately in swarmer and stalked cell populations. </plain></SENT>
+<SENT sid="458" pm="."><plain>We isolated swarmer cells and incubated them in M2 medium lacking glucose for 15 min before collecting samples (Figure 3A). </plain></SENT>
+<SENT sid="459" pm="."><plain>To study the stalked cell response to carbon starvation, a population of swarmer cells was allowed to proceed through the cell cycle for 60 min and transition into stalked cells in complete medium, before removing the carbon source and incubating for 15 min in M2 medium. </plain></SENT>
+<SENT sid="460" pm="."><plain>RNA was extracted from starved swarmer cells and starved stalked cells, and hybridized to the CauloHI1 chip. </plain></SENT>
+<SENT sid="461" pm="."><plain>To account for changes in transcript levels normally occurring as the cell cycle progresses, we used the normalized values corresponding to 15 min and 75 min of the cell cycle microarray profiles obtained from the data of McGrath et al. [25], as the non-starved controls for swarmer and stalked cells, respectively. </plain></SENT>
+<SENT sid="462" pm="."><plain>The log-2 values of the expression ratios of the starved and non-starved cells for both stages were used to determine the cell-stage specific responsiveness of each gene, and clustered accordingly (Figure 3B and Table S5). </plain></SENT>
+<SENT sid="463" pm="."><plain>Six clusters were identified. </plain></SENT>
+<SENT sid="464" pm="."><plain>Most of the genes showed a similar expression change in swarmer and stalked cells: out of 667 genes, 165 were upregulated (cluster 3), and 342 genes were downregulated (cluster 6), in both stages. </plain></SENT>
+<SENT sid="465" pm="."><plain>The remaining clusters displayed a stage-differential response to carbon starvation: 27 genes did not change significantly in swarmer cells, but were down-regulated preferentially in stalked cells (cluster 1); 24 genes were upregulated in swarmer cells, but did not change significantly in stalked cells (cluster 2); 71 genes did not change significantly in swarmer cells, but were upregulated in stalked cells (cluster 4); 37 genes were down-regulated in swarmer cells, but did not change significantly in stalked cells (cluster 5). </plain></SENT>
+<SENT sid="466" pm="."><plain>Using MEME motif finder [33], we identified five novel conserved DNA motifs in the upstream regions of genes corresponding to three of the clusters (motif a in cluster 1; b, c and d in cluster 3; and e in cluster 6). </plain></SENT>
+</text></p><SecTag type="FIG"><fig id="pone-0018179-g003" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0018179.g003</object-id><label>Figure 3</label><caption><title><text><SENT sid="467" pm="."><plain>Cell stage-specific carbon starvation response. </plain></SENT>
+</text></title><p><text><SENT sid="468" pm="."><plain>A. </plain></SENT>
+<SENT sid="469" pm="."><plain>Diagram of the experimental design to explore the cell-stage specific response to carbon starvation. </plain></SENT>
+<SENT sid="470" pm="."><plain>Isolated swarmer (SW) cells were subjected to glucose starvation for 15 min. </plain></SENT>
+<SENT sid="471" pm="."><plain>To assess the response at the stalked cell stage (ST), swarmer cells were allowed to differentiate into stalked cells in complete minimal media for 60 min, and then subjected to glucose starvation for 15 minutes. </plain></SENT>
+<SENT sid="472" pm="."><plain>At the indicated times, cell samples were collected and RNA extracted and transcribed to cDNA to hybridize onto Caulobacter microarray chips. </plain></SENT>
+<SENT sid="473" pm="."><plain>PD = predivisional cell. </plain></SENT>
+<SENT sid="474" pm="."><plain>M2 and M2G media are described in the Methods section. B. Hierarchical clustering of the transcriptional response to carbon starvation in swarmer cells and stalked cells. </plain></SENT>
+<SENT sid="476" pm="."><plain>The values plotted are the log2-fold change ratios of the cells subjected to 15 minutes of carbon starvation and the non-starved controls. </plain></SENT>
+<SENT sid="477" pm="."><plain>The promoter regions of the genes in each cluster (from −200 to +50 with respect to the translational start site) were used as input in the search for shared motifs using MEME. </plain></SENT>
+<SENT sid="478" pm="."><plain>The five motifs with significant E-values and information content are shown. </plain></SENT>
+</text></p></caption><graphic xlink:href="pone.0018179.g003"/></fig></SecTag></sec><sec id="s2d"><title><text><SENT sid="479" pm="."><plain>Adaptive changes of swarmer cells subjected to carbon starvation </plain></SENT>
+</text></title><p><text><SENT sid="480" pm="."><plain>In Caulobacter, the chromosomal replication origin is positioned at the cell pole, and upon initiation of replication, a copy of the origin sequence is moved to the opposite cell pole. </plain></SENT>
+<SENT sid="481" pm="."><plain>Therefore, we can follow the onset of DNA replication by following the cellular position of the origin bound to the ParB segregation factor. </plain></SENT>
+<SENT sid="482" pm="."><plain>In order to connect the stage-specific response to carbon starvation observed at the molecular level with cell cycle and differentiation events, we obtained transmission electron microscope images of swarmer cells immediately following their isolation, and then after subjecting them to carbon starvation. </plain></SENT>
+<SENT sid="483" pm="."><plain>We examined the replication and segregation of the chromosomal origin (ori) locus, under the same conditions, using epifluorescence imaging of a strain carrying a fluorescently-tagged version of the ParB centromere-binding protein. </plain></SENT>
+<SENT sid="484" pm="."><plain>65% of the isolated swarmer cells developed short incipient stalks when incubated in the absence of glucose for 2 hs (Figure 4A). </plain></SENT>
+<SENT sid="485" pm="."><plain>After 8 hs of starvation, these stalks failed to elongate. </plain></SENT>
+<SENT sid="486" pm="."><plain>Under the same conditions, only about a tenth of the population had duplicated the chromosomal ori locus (Figure 4B), whereas after 30 min in complete media, 57% of the swarmers showed fully or partially segregated origins (Figure 4C). </plain></SENT>
+<SENT sid="487" pm="."><plain>Thus, for a significant percentage of the population, carbon starvation uncoupled the initiation of stalk biogenesis and the G1-to-S transition, events that occur coincidently when nutrients are sufficient. </plain></SENT>
+</text></p><SecTag type="FIG"><fig id="pone-0018179-g004" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0018179.g004</object-id><label>Figure 4</label><caption><title><text><SENT sid="488" pm="."><plain>Adaptive changes of swarmer cells upon carbon starvation. </plain></SENT>
+</text></title><p><text><SENT sid="489" pm="."><plain>A. </plain></SENT>
+<SENT sid="490" pm="."><plain>Polar morphogenesis of wild type swarmer cells subjected to carbon starvation. </plain></SENT>
+<SENT sid="491" pm="."><plain>Swarmer cells were incubated in M2 medium in the absence of glucose for 0, 2 and 8 hs, and visualized by electron microscopy, as described in Methods. </plain></SENT>
+<SENT sid="492" pm="."><plain>The number of cells with incipient stalks (indicated by arrows and detailed in the inset in middle panel) was tallied for several fields and the corresponding percentage is indicated for each time point. B. Replication initiation in carbon starved swarmer cells was observed in a strain in which the parB gene was replaced with an ecfp-parB fusion, treated as described in A. At the indicated times, a sample was removed from the cultures, transferred unto an agarose pad an imaged. </plain></SENT>
+<SENT sid="495" pm="."><plain>The number of cells with duplicated ECFP-ParB foci was counted for each time point and the percentage is indicated. C. Swarmer cells isolated for the experiment described in B were incubated in complete M2G media and imaged after 30 min. </plain></SENT>
+<SENT sid="497" pm="."><plain>The percentage of cells with duplicated ECFP-ParB foci is indicated. </plain></SENT>
+<SENT sid="498" pm="."><plain>Arrows indicate cells that have completed origin segregation, as evidence by ECFP-ParB foci in opposite poles, while double arrows indicate cells in the process of segregation. </plain></SENT>
+</text></p></caption><graphic xlink:href="pone.0018179.g004"/></fig></SecTag></sec><sec id="s2e"><title><text><SENT sid="499" pm="."><plain>SigT-dependent degradation of CtrA in swarmer cells upon carbon starvation </plain></SENT>
+</text></title><p><text><SENT sid="500" pm="."><plain>The CtrA cell cycle master regulator is a critical element of the core machinery that regulates cell cycle progression. </plain></SENT>
+<SENT sid="501" pm="."><plain>CtrA binds to the chromosomal origin of replication and blocks replication initiation in the swarmer cell [34]. </plain></SENT>
+<SENT sid="502" pm="."><plain>Upon differentiation of the swarmer cell to the stalked cell, CtrA is cleared from the cell by proteolysis, allowing the initiation of DNA replication. </plain></SENT>
+<SENT sid="503" pm="."><plain>CtrA is re-synthesized following replication initiation. </plain></SENT>
+<SENT sid="504" pm="."><plain>Our proteome studies showed a decrease in the protein levels of the CtrA master regulator in a mixed population of Caulobacter cells subjected to carbon starvation: CtrA levels in cells incubated in the absence of glucose for 30 min were half of that of cells incubated in the presence of glucose (Table 2). </plain></SENT>
+<SENT sid="505" pm="."><plain>We observed a similar decrease in the relative levels of CtrA by immunoblot assays of carbon starved mixed cell populations (not shown) and swarmer cells, as previously reported [10]. </plain></SENT>
+<SENT sid="506" pm="."><plain>Swarmer cells incubated for 150 min in the absence of glucose showed low levels of the CtrA protein, while those incubated for 150 min in the presence of glucose had progressed through the cell cycle and reaccumulated CtrA. </plain></SENT>
+<SENT sid="507" pm="."><plain>In contrast, when the same assay was performed with swarmer cells carrying a sigT deletion, a less significant decrease in CtrA levels was observed in the absence of glucose, indicating that SigT contributes to the clearance of CtrA protein in carbon starved swarmer cells (Figure 5A and D). </plain></SENT>
+<SENT sid="508" pm="."><plain>We measured the activity of the CtrA promoter under carbon starvation in a wild type and sigT deletion background, using a transcriptional fusion of the CtrA promoter region to lacZ. </plain></SENT>
+<SENT sid="509" pm="."><plain>We found only a minimal difference in the transcriptional activity of the reporter in both backgrounds (Figure 5B). </plain></SENT>
+<SENT sid="510" pm="."><plain>Further experiments will be carried out to determine if SigT affects the starvation-induced clearance of CtrA at the post-transcriptional level. </plain></SENT>
+</text></p><SecTag type="FIG"><fig id="pone-0018179-g005" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0018179.g005</object-id><label>Figure 5</label><caption><title><text><SENT sid="511" pm="."><plain>SigT-dependent degradation of CtrA upon carbon starvation. </plain></SENT>
+</text></title><p><text><SENT sid="512" pm="."><plain>A. </plain></SENT>
+<SENT sid="513" pm="."><plain>Levels of CtrA protein in swarmer cells in the presence and absence of a carbon source, in wild type cells and cells carrying a sigT deletion. </plain></SENT>
+<SENT sid="514" pm="."><plain>Isolated swarmer cells from both genetic backgrounds were incubated in M2 medium in the absence or presence of 0.2% glucose. </plain></SENT>
+<SENT sid="515" pm="."><plain>After 150 min, samples from these cultures were subjected to immunoblot analysis with an anti-CtrA polyclonal antibody. </plain></SENT>
+<SENT sid="516" pm="."><plain>The band corresponding to CtrA is indicated with an arrow. B. A construct with the complete CtrA promoter region fused to a promoterless lacZ reporter in pRKlac290 was introduced into wild-type and sigT deletion strains. ß-galactosidase activity was measured in swarmer cells starved for carbon for up to 60 min. C. Genomic context of sigT. </plain></SENT>
+<SENT sid="519" pm="."><plain>The coordinates correspond to the C. crescentus NA1000 genome. </plain></SENT>
+<SENT sid="520" pm="."><plain>CC_3474 (HK = Histidine Kinase) corresponds to CCNA_3588 in NA1000; sigT corresponds to CC_3475 (CCNA_3589); nepR corresponds to CC_3476 (CCNA_3590); phyR corresponds to CC_3477 (CCNA_3591). D. Relative levels of the CtrA protein in the presence and absence of carbon, assayed as described in A, are shown for different mutant backgrounds, including deletions of genes in the genomic region of sigT, and of SigT-dependent genes (see Table 1). +G corresponds to M2 medium in the presence of 0.2% glucose; -G corresponds to M2 in the absence of glucose. </plain></SENT>
+<SENT sid="522" pm="."><plain>The sampling times are 150 min after starvation, as in A. The error for the ratios corresponds to the standard deviation of the mean for at least two experiments. </plain></SENT>
+</text></p></caption><graphic xlink:href="pone.0018179.g005"/></fig></SecTag><p><text><SENT sid="524" pm="."><plain>Since SigT is a transcriptional regulator, the simplest explanation for these results is that a downstream target whose expression is SigT-dependent is responsible for the effect on CtrA protein stability. </plain></SENT>
+<SENT sid="525" pm="."><plain>Consequently, we compared the starvation and non-starvation levels of CtrA (as described for Figure 5A) in different deletion mutant backgrounds for selected SigT carbon starvation targets identified in our microarray analysis. </plain></SENT>
+<SENT sid="526" pm="."><plain>We also assayed mutants carrying deletions in genes that are colocated with sigT in the chromosome (Figure 5C) and are presumed regulators of its activity. </plain></SENT>
+<SENT sid="527" pm="."><plain>As shown in Figure 5D, deletions in both ECF Sigma factor sigU and the conserved hypothetical protein CC_1532 showed levels of CtrA stabilization that are similar to those observed for the sigT deletion strain, suggesting they participate in the same pathway that leads to CtrA degradation under starvation. </plain></SENT>
+<SENT sid="528" pm="."><plain>This is also the case for the genes encoding the histidine kinase HK4, and the response regulator PhyR (CC_3473), that was recently postulated to function as an anti-anti-sigma factor for SigT (or homologous sigma factor) in Methylobacterium extorquens [35], Sinorhizobium meliloti [36] and C. crescentus [37]. </plain></SENT>
+<SENT sid="529" pm="."><plain>In this assay, we did not test nepR, the postulated anti-sigma factor for SigT [37]. </plain></SENT>
+</text></p></sec></sec></SecTag><SecTag type="DISCUSS"><sec id="s3"><title><text><SENT sid="530" pm="."><plain>Discussion </plain></SENT>
+</text></title><p><text><SENT sid="531" pm="."><plain>When faced with nutrient limitation, bacterial cells must deploy an array of scavenging systems, adapt their metabolic fluxes to compensate for missing compounds, and limit energy-consuming growth and cell division processes. C. crescentus is an oligotroph whose physiology is adapted for survival in environments characterized by low and fluctuating nutrient levels [1]. </plain></SENT>
+<SENT sid="532" pm="."><plain>Here we have examined the response of C. crescentus to the sudden onset of carbon starvation. </plain></SENT>
+</text></p><sec id="s3a"><title><text><SENT sid="533" pm="."><plain>Carbon starvation uncouples swarmer cell differentiation and the G1-to-S phase transition </plain></SENT>
+</text></title><p><text><SENT sid="534" pm="."><plain>In the presence of adequate nutrient levels, the swarmer-to-stalked-cell transition involves the loss of the polar flagellum, the biogenesis of a stalk in its place, and the concurrent initiation of chromosome replication. </plain></SENT>
+<SENT sid="535" pm="."><plain>It has been shown however, that these processes can be uncoupled. </plain></SENT>
+<SENT sid="536" pm="."><plain>When the DnaA activator of DNA replication is depleted [21], or when CtrA inactivation is prevented [38], swarmer cells undergo polar morphological changes, but fail to initiate chromosome replication. </plain></SENT>
+<SENT sid="537" pm="."><plain>Meanwhile, swarmer cells carrying a deletion in the gene encoding the PleD response regulator replicate their chromosome in the absence of polar morphogenesis [39]. </plain></SENT>
+<SENT sid="538" pm="."><plain>We show here that wild type swarmer cells subjected to abrupt carbon depletion were capable of initiating, but not completing, stalk development (see Figure 4A), while the replication and segregation of the chromosomal origin was inhibited (see Figure 4B, [10]). </plain></SENT>
+<SENT sid="539" pm="."><plain>Because the incipient stalks could not be detected by light microscopy, it was previously postulated that carbon starvation inhibits swarmer differentiation. </plain></SENT>
+<SENT sid="540" pm="."><plain>Furthermore, in these experiments cell populations were starved for carbon prior to isolation of swarmer cells [10]. </plain></SENT>
+<SENT sid="541" pm="."><plain>However, electron microscope images (see Figure 4A) revealed the presence of incipient stalks under these conditions. </plain></SENT>
+<SENT sid="542" pm="."><plain>Thus, the point of commitment to initiate stalk morphogenesis appears to precede that of initiation of chromosomal replication. </plain></SENT>
+<SENT sid="543" pm="."><plain>In the population of swarmer cells obtained by the synchronization procedure, the younger cells that are most recently derived from cell division might block both processes, accounting for the 30% of cells that did not develop an incipient stalk by 8 hs of carbon starvation. </plain></SENT>
+<SENT sid="544" pm="."><plain>On the other hand, the majority of swarmer cells in the population that had already committed to polar morphogenesis, blocked the initiation of chromosome replication. </plain></SENT>
+<SENT sid="545" pm="."><plain>Since the stalk is associated with the ability to scavenge for nutrients [15], the initiation of stalk development upon sustained carbon starvation might prime the cell for quick resumption of cell cycle progression once nutrients become available. </plain></SENT>
+</text></p></sec><sec id="s3b"><title><text><SENT sid="546" pm="."><plain>Transcript and protein changes in the response to carbon starvation </plain></SENT>
+</text></title><p><text><SENT sid="547" pm="."><plain>Transcript profiles as a function of the cell cycle have revealed just-in-time transcriptional activation of distinct functional modules in C. crescentus [24]. </plain></SENT>
+<SENT sid="548" pm="."><plain>However, multiple layers of post-transcriptional regulation are known to be involved in the complex orchestration of cell cycle progression and polar differentiation in this bacterium (see [13], [40] for reviews). </plain></SENT>
+<SENT sid="549" pm="."><plain>For this reason, our global analysis included not only the transcriptome but also the proteome profile of C. crescentus cells subjected to carbon starvation. </plain></SENT>
+</text></p><p><text><SENT sid="550" pm="."><plain>Table 3 shows previously characterized proteins of interest from selected functional groups, that change significantly upon 30 and 60 min of carbon starvation. </plain></SENT>
+<SENT sid="551" pm="."><plain>The levels of FtsZ, essential for cytokinesis in C. crescentus [41], and FtsX, a predicted ABC transporter that is needed for cell division in E. coli [42], decrease significantly upon carbon starvation. </plain></SENT>
+<SENT sid="552" pm="."><plain>This is consistent with the inhibition of cell division that occurs upon carbon starvation. </plain></SENT>
+</text></p><SecTag type="TABLE"><table-wrap id="pone-0018179-t003" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0018179.t003</object-id><label>Table 3</label><caption><title><text><SENT sid="553" pm="."><plain>Proteins of interest in selected functional categories that change upon carbon starvation. </plain></SENT>
+</text></title></caption><alternatives><graphic id="pone-0018179-t003-3" xlink:href="pone.0018179.t003"/><table frame="hsides" rules="groups"><colgroup span="1"><col align="left" span="1"/><col align="center" span="1"/><col align="center" span="1"/></colgroup><thead><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="554" pm="."><plain>Functional category </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="555" pm="."><plain>Upregulated proteins </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="556" pm="."><plain>Downregulated proteins </plain></SENT>
+</text></td></tr></thead><tbody><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="557" pm="."><plain>Cell wall/membrane/envelope biogenesis (COG M) and cell division </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="558" pm="."><plain>TolA, TolB, TolR, TolQ, BamA, BamB, BamE, BamD, DipM, MreC </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="559" pm="."><plain>FtsZ, FtsX </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="560" pm="."><plain>Cell cycle control </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"><text><SENT sid="561" pm="."><plain>CtrA, DnaA, GcrA </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="562" pm="."><plain>Post-translational modification (COG O) </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="563" pm="."><plain>ClpA, FtsH, SppA </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="564" pm="."><plain>DnaJ, Hsp33 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="565" pm="."><plain>Signal transduction and gene regulation </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="566" pm="."><plain>DivL (HK), FixL (HK), CckA (HK-RR) </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="567" pm="."><plain>FlbD (RR), PleD (RR), DivK (RR), McpA, CheAI, CheYI, CheD </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="568" pm="."><plain>Chromosome structure and dynamics </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="569" pm="."><plain>Smc </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="570" pm="."><plain>PopZ, ParA </plain></SENT>
+</text></td></tr></tbody></table></alternatives><table-wrap-foot><fn id="nt103"><label/><p><text><SENT sid="571" pm="."><plain>The classification is based upon COG (NCBI) and the literature. </plain></SENT>
+<SENT sid="572" pm="."><plain>Abbreviations: HK = histidine kinase; RR = response regulator; HK-RR = hybrid histidine kinase-response regulator. </plain></SENT>
+</text></p></fn></table-wrap-foot></table-wrap></SecTag><p><text><SENT sid="573" pm="."><plain>Proteases have traditionally been associated with the response to environmental stress, as cells need to re-engineer the cellular landscape, recycle damaged and unwanted proteins, and selectively target key regulators [43]. </plain></SENT>
+<SENT sid="574" pm="."><plain>The levels of two major proteolysis-related factors increased significantly upon carbon starvation, and could be fulfilling this role in C. crescentus: the FtsH protease, previously characterized as a component of C. crescentus' general stress response [44], and the ClpA chaperone, which normally works in concert with the ClpP protease, and has not been thus far associated with the stress response. </plain></SENT>
+</text></p><p><text><SENT sid="575" pm="."><plain>The level of Smc (CC_0373), a nucleoid-associated protein required for chromosome structure maintenance and segregation in C. crescentus [45], increased significantly upon carbon starvation. </plain></SENT>
+<SENT sid="576" pm="."><plain>This raises the possibility that the nucleoid of growth-arrested cells adopts a different compaction state than that in exponentially growing cells, possibly contributing to the inhibition of DNA replication and segregation, as well as an increased tolerance to stress-related damaging agents. E. coli's nucleoid protein composition has been shown to be growth phase-dependent [46] and a factor in long term survival [47]. </plain></SENT>
+</text></p><p><text><SENT sid="577" pm="."><plain>Respiratory metabolism generates reactive oxygen species that may damage membranes, DNA and proteins. </plain></SENT>
+<SENT sid="578" pm="."><plain>As long as the environment promotes growth and continued de novo synthesis, the oxidized macromolecules are rapidly diluted, but this is not the case during growth-arrest of metabolically active cells. </plain></SENT>
+<SENT sid="579" pm="."><plain>Correlation of our carbon starvation datasets with microarray analysis of C. crescentus' response to metal stress [29], revealed that of 222 genes that were induced by two or more of the four heavy metals tested, 38 were upregulated in our carbon starvation proteomics samples, and 103 were induced after 30 minutes of carbon starvation at the transcript level (Table S6). </plain></SENT>
+<SENT sid="580" pm="."><plain>These results suggest that a subset of the genes that respond to carbon starvation are part of a general stress response. </plain></SENT>
+<SENT sid="581" pm="."><plain>In E. coli and B. subtilis, growth arrest caused by starvation has also been shown to elicit increased synthesis of proteins normally induced by oxidative stress, and starved cells display cross-resistance to these stresses [7], [48], [49]. </plain></SENT>
+</text></p><p><text><SENT sid="582" pm="."><plain>The correlation of the set of transcripts and the set of proteins that change significantly upon starvation revealed interesting insights regarding the levels of regulation that might be operating in the carbon starvation response (Figure 6 and Table S7). </plain></SENT>
+<SENT sid="583" pm="."><plain>Considering the 1364 genes for which proteome data were obtained and there was a significant change upon carbon starvation at either the transcript or protein level, or both, in more than half of the cases, the change was only observed at the transcript level (28.5% of genes were up-regulated and 34.1% were downregulated). </plain></SENT>
+<SENT sid="584" pm="."><plain>Some of these might reflect an inherent greater sensitivity of the microarray technique used for detection of transcript changes, than that of the mass spectrometry method used to probe changes in protein levels. </plain></SENT>
+<SENT sid="585" pm="."><plain>14.8% of the genes showed changes in the same direction at both the transcript and protein level, consistent with transcriptional regulation. </plain></SENT>
+<SENT sid="586" pm="."><plain>For a similar proportion of genes (13.6%), no change was observed at the transcript level, but the corresponding protein was significantly up- or down-regulated. </plain></SENT>
+<SENT sid="587" pm="."><plain>This group contains candidates for post-transcriptional regulation, either at the translation or protein stability levels. </plain></SENT>
+<SENT sid="588" pm="."><plain>For 9.0% of the genes, observed changes at transcript and protein levels occurred in opposite directions. </plain></SENT>
+<SENT sid="589" pm="."><plain>Overall, our observations are in line with a complex interplay of regulatory mechanisms operating in bacteria, and the lack of correlation between mRNA and protein levels observed in E. coli [50], [51]. </plain></SENT>
+</text></p><SecTag type="FIG"><fig id="pone-0018179-g006" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0018179.g006</object-id><label>Figure 6</label><caption><title><text><SENT sid="590" pm="."><plain>Distribution of carbon starvation-induced changes at the transcript and protein levels. </plain></SENT>
+</text></title><p><text><SENT sid="591" pm="."><plain>For the 1364 genes for which we had both microarrays and proteomics valid data, and a significant change had been observed for at least one of the datasets, the intersection and exclusion sets are represented. Table S7 lists the genes that belong to each group in the distribution. </plain></SENT>
+</text></p></caption><graphic xlink:href="pone.0018179.g006"/></fig></SecTag></sec><sec id="s3c"><title><text><SENT sid="592" pm="."><plain>Regulatory networks controlling C. crescentus' response to carbon starvation </plain></SENT>
+</text></title><p><text><SENT sid="593" pm="."><plain>Analysis of transcriptional profiles allowed us to identify regulators and regulatory modules involved in the response to carbon starvation and, more specifically, connections with the regulatory network that controls cell cycle progression. </plain></SENT>
+<SENT sid="594" pm="."><plain>The enrichment analysis based on previously characterized clusters of co-expressed cell cycle genes that share conserved promoter motifs [25], indicated that the RpoD housekeeping sigma factor, the FixK transcription factor, the SigT ECF sigma factor, and the CtrA cell cycle master regulator play significant roles in the response of C. crescentus to carbon starvation. </plain></SENT>
+<SENT sid="595" pm="."><plain>The diagram shown in Figure 7 integrates our transcriptome and proteome datasets of the response to carbon starvation, with regulatory pathways derived from microarray data published for CtrA [31], FixK [27], and LexA [52] (See Tables 2 and S8). </plain></SENT>
+<SENT sid="596" pm="."><plain>The pathways for SigT and SigU under starvation conditions were inferred from data presented in this paper (See Table 1). </plain></SENT>
+<SENT sid="597" pm="."><plain>The proposed transcriptional regulatory interactions were assumed to be direct when the cognate DNA binding motif for the regulator was located in the promoter region of the target gene. </plain></SENT>
+</text></p><SecTag type="FIG"><fig id="pone-0018179-g007" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0018179.g007</object-id><label>Figure 7</label><caption><title><text><SENT sid="598" pm="."><plain>Carbon starvation regulatory pathways. </plain></SENT>
+</text></title><p><text><SENT sid="599" pm="."><plain>Diagram of regulatory pathways involved in the response to carbon starvation, derived from the analysis of proteomic and gene expression profile changes. </plain></SENT>
+<SENT sid="600" pm="."><plain>Ovals represent proteins and rectangles represent genes. </plain></SENT>
+<SENT sid="601" pm="."><plain>Genes and proteins whose levels increase significantly upon starvation are represented in yellow, and downregulated genes and proteins in blue. </plain></SENT>
+<SENT sid="602" pm="."><plain>For example, we indicate that of the 13 genes controlled by CtrA whose transcripts were downregulated in the absence of carbon (blue rectangle), we were able to detect the down-regulation of one of the corresponding protein products (blue oval). </plain></SENT>
+<SENT sid="603" pm="."><plain>The same schematic representation was used for all genes shown. </plain></SENT>
+<SENT sid="604" pm="."><plain>The genes and proteins that change significantly upon carbon starvation are listed in Table S8. </plain></SENT>
+<SENT sid="605" pm="."><plain>Putative direct regulatory interactions are based on the presence of conserved promoter sequences, while an indirect regulation is proposed if there is no evidence of DNA binding or of the presence of a conserved promoter element. </plain></SENT>
+<SENT sid="606" pm="."><plain>For the transcript changes, the 30 min time point was considered, while both the 30 and 60 min time points were considered for the protein changes. </plain></SENT>
+<SENT sid="607" pm="."><plain>The CtrA regulon comprises direct CtrA targets, as previously determined [31], that changed upon 30 min of carbon starvation determined by microarray analysis (listed in Table 2), as well as proteins encoded by direct CtrA targets that changed in the proteomic analysis at 30 and/or 60 min of carbon starvation (while most of those proteins were seen to change at the transcript level as well, SigU and LexA were observed to change only at the protein level). </plain></SENT>
+<SENT sid="608" pm="."><plain>CtrA activation or repression was inferred by the direction of the change observed upon starvation: those genes with increased transcript levels upon starvation were inferred to be negatively regulated by CtrA (and consequently derepressed as CtrA protein levels decrease upon starvation); genes with decreased transcript levels were inferred to be positively regulated by CtrA. </plain></SENT>
+<SENT sid="609" pm="."><plain>The SigT regulon includes the genes that showed a significant difference in transcript levels changes upon 15 min of carbon starvation in the sigT deletion strain with respect to wild type (listed in Table 1). </plain></SENT>
+<SENT sid="610" pm="."><plain>Genes with a SigT binding motif in their promoters are represented as direct targets, while those lacking the motif, as indirect targets. </plain></SENT>
+<SENT sid="611" pm="."><plain>The levels of proteins encoded by a subset of these genes changed significantly upon 30 and/or 60 min of carbon starvation. </plain></SENT>
+<SENT sid="612" pm="."><plain>The SigU-dependent gene, CC_3466, showed reduced transcript levels under carbon starvation in a sigU deletion strain with respect to wild type. </plain></SENT>
+<SENT sid="613" pm="."><plain>The LexA (SOS) regulon comprises those genes belonging to the SOS regulon –as previously determined [52] - that changed significantly after 30 min of carbon starvation. </plain></SENT>
+<SENT sid="614" pm="."><plain>The topology of the FixL-FixJ-FixK pathway is as determined by Crosson et al. [27]. </plain></SENT>
+<SENT sid="615" pm="."><plain>The FixK direct targets are those that have the cc_3 motif in their promoter, while the indirect targets were shown to be FixK-dependent by Crosson et al., but lack the cc_3 motif. </plain></SENT>
+<SENT sid="616" pm="."><plain>The RpoD regulon comprises the genes with the cc_6 promoter motif whose transcripts levels were upregulated or downregulated upon 30 min of carbon starvation. </plain></SENT>
+</text></p></caption><graphic xlink:href="pone.0018179.g007"/></fig></SecTag><sec id="s3c1"><title><text><SENT sid="617" pm="."><plain>RpoD </plain></SENT>
+</text></title><p><text><SENT sid="618" pm="."><plain>The transcript levels of housekeeping sigma factor RpoD and 30 genes identified as RpoD targets by the presence of its cognate DNA motif (cc_6), changed significantly upon carbon starvation, the great majority of them being downregulated. </plain></SENT>
+<SENT sid="619" pm="."><plain>Five of the proteins predicted to be encoded by these genes also changed significantly upon carbon starvation (Figure 7 and Table S8). </plain></SENT>
+<SENT sid="620" pm="."><plain>A decrease in RpoD protein levels was not observed under these conditions, pointing to an alternative mechanism of regulation of its activity that would explain the down-regulation of its target genes, such as the competition from alternative sigma factors induced upon starvation, in binding to the core RNA polymerase. </plain></SENT>
+</text></p></sec><sec id="s3c2"><title><text><SENT sid="621" pm="."><plain>FixK </plain></SENT>
+</text></title><p><text><SENT sid="622" pm="."><plain>The FixL-FixJ-FixK pathway was shown to be a major component of C. crescentus' response to hypoxia by Crosson et al. [27]. </plain></SENT>
+<SENT sid="623" pm="."><plain>Our analysis of the response to carbon starvation revealed that the protein levels of sensor histidine kinase FixL increased, while 16 of the genes directly (bearing the motif cc_3 in their promoter regions) or indirectly regulated by transcriptional regulator FixK, changed significantly upon carbon starvation (Figure 7). </plain></SENT>
+<SENT sid="624" pm="."><plain>Two proteins encoded by these FixK-regulated genes were observed to be up-regulated under the same conditions. </plain></SENT>
+<SENT sid="625" pm="."><plain>Interestingly, only half of the genes that have the cc_3 motif were identified as part of the hypoxia-induced FixK regulon by Crosson et al., suggesting that FixK might activate different sets of genes in response to different environmental stimuli or that additional regulatory pathways or factors are involved in these responses. </plain></SENT>
+</text></p></sec><sec id="s3c3"><title><text><SENT sid="626" pm="."><plain>CtrA </plain></SENT>
+</text></title><p><text><SENT sid="627" pm="."><plain>Out of 55 cell cycle-regulated CtrA target genes, we found that 13 were upregulated and 7 were downregulated after 30 minutes of carbon starvation. </plain></SENT>
+<SENT sid="628" pm="."><plain>Out of 32 non-cell cycle-regulated CtrA target genes, 6 were upregulated and 6 were downregulated after 30 minutes of carbon starvation (Table 2 and Figure 7). </plain></SENT>
+<SENT sid="629" pm="."><plain>Our proteome analysis showed a significant decrease in the protein level of CtrA in response to carbon starvation, consistent with previous analyses [10], [22]. </plain></SENT>
+<SENT sid="630" pm="."><plain>Of the CtrA-regulated cell cycle transcripts [25] that were upregulated upon carbon starvation (Table 2), 11 out of 13 peaked at the stalked or predivisional stage, while the levels of 10 of these 13 transcripts were reported to increase in a strain carrying a temperature sensitive allele of CtrA (CtrAts) incubated at restrictive temperature [31]. </plain></SENT>
+<SENT sid="631" pm="."><plain>These observations are compatible with these genes being de-repressed as CtrA protein levels drop in swarmer cells starved for carbon. </plain></SENT>
+<SENT sid="632" pm="."><plain>Conversely, 5 out of the 7 CtrA cell cycle target genes that are down-regulated in response to carbon starvation, show lower transcript levels at the swarmer stage of the cell cycle, with 2 of them displaying increased levels in the CtrA thermosensitive mutant at the restrictive temperature. </plain></SENT>
+<SENT sid="633" pm="."><plain>These genes are most likely deactivated in carbon starved swarmer cells as CtrA levels drop. </plain></SENT>
+<SENT sid="634" pm="."><plain>The remaining 12 CtrA target genes, whose transcript levels remain constant during cell cycle progression in complete media, point to a novel role for CtrA in activating and repressing genes involved in the response to starvation and other stress signals, in addition to those involved in cell cycle progression. </plain></SENT>
+</text></p></sec><sec id="s3c4"><title><text><SENT sid="635" pm="."><plain>LexA </plain></SENT>
+</text></title><p><text><SENT sid="636" pm="."><plain>Upon carbon starvation, the protein levels of LexA –a CtrA target- were observed to decrease to 60% of the non-starvation levels (although the p-value (0.09) didn't meet the cutoff established for significance (0.05)). </plain></SENT>
+<SENT sid="637" pm="."><plain>The SOS response, the prototypical response to DNA damage in prokaryotes, is controlled by the opposing activities of the LexA repressor and the RecA activator proteins [53]. </plain></SENT>
+<SENT sid="638" pm="."><plain>Genes in the SOS regulon, repressed by LexA under basal conditions, are activated in response to single-stranded DNA regions, often as result of DNA replication inhibition [54]. </plain></SENT>
+<SENT sid="639" pm="."><plain>Activation of the SOS response in E. coli leads to blocked FtsZ ring formation and cell division, via the SulA protein [55]. </plain></SENT>
+<SENT sid="640" pm="."><plain>It is possible that a LexA target interacts with FtsZ in C. crescentus, to mediate the cell division arrest observed upon starvation [10]. </plain></SENT>
+<SENT sid="641" pm="."><plain>Out of the 44 previously characterized direct LexA target genes [52], two were downregulated and nine were upregulated upon 30 min of carbon starvation, consistent with the decrease in LexA protein levels; one of the upregulated genes, encoding the CC_2589 hypothetical protein, was also upregulated at the protein level. </plain></SENT>
+</text></p></sec></sec><sec id="s3d"><title><text><SENT sid="642" pm="."><plain>SigT is a regulator of the starvation-stress response in C. crescentus and is involved in the starvation-induced degradation of the CtrA master regulator </plain></SENT>
+</text></title><p><text><SENT sid="643" pm="."><plain>Alternative sigma factors play key roles in various stress responses and morphological differentiation in bacteria. </plain></SENT>
+<SENT sid="644" pm="."><plain>Upon activation by environmental or internal signals, alternative sigma factors direct RNA polymerase promoter specificity to activate different regulons. </plain></SENT>
+<SENT sid="645" pm="."><plain>In most gram-negative bacteria, the transcriptional response to environmental stresses is dominated by alternative sigma factor RpoS (see [56] for a review). </plain></SENT>
+<SENT sid="646" pm="."><plain>In gram-positive bacteria, that role falls upon the alternative sigma factor SigB (see [57] for a review). </plain></SENT>
+<SENT sid="647" pm="."><plain>However, the α-proteobacteria lack homologues of either of these sigma factors [8], [58]. </plain></SENT>
+</text></p><p><text><SENT sid="648" pm="."><plain>Three of the 13 C. crescentus ECF alternative sigma factors have been implicated in the response to specific stress conditions: SigF mediates the response to oxidative stress in stationary phase [59], SigE mediates the response to cadmium, organic hydroperoxide, singlet oxygen and UV [60], and SigT mediates the response to osmotic and oxidative stress [28]. </plain></SENT>
+<SENT sid="649" pm="."><plain>Our results support a broader role for SigT. </plain></SENT>
+<SENT sid="650" pm="."><plain>The 27 genes that respond to carbon starvation in a SigT-dependent manner comprise the carbon starvation SigT regulon (Table 1 and Figure 7). </plain></SENT>
+<SENT sid="651" pm="."><plain>Some of these genes were also found to change at the protein level, including CC_3466 (Table 1, Table S2), which appears to be regulated through the SigU sigma factor. </plain></SENT>
+<SENT sid="652" pm="."><plain>Moreover, there is an overlap of the SigT carbon starvation regulon with both the SigT osmotic stress regulon [28] (10 genes in common between the two sets), and the set of genes that are activated by exposure to several heavy metals [29] (12 genes in common). </plain></SENT>
+<SENT sid="653" pm="."><plain>These observations suggest that a core set of SigT regulated genes belongs to a general starvation-stress response. </plain></SENT>
+<SENT sid="654" pm="."><plain>Members of SigT's subfamily of ECF sigma factors from Sinorhizobium meliloti and Methylobacterium extorquens have been implicated in the regulation of the general stress response [35], [61]. </plain></SENT>
+<SENT sid="655" pm="."><plain>Interestingly, some of the transcripts encoding regulatory proteins that were shown to be SigT-dependent upon carbon starvation -namely CC_1356, CC_0284 and CC_1178- required RpoN for induction in carbon versus nitrogen-limited conditions [12]. </plain></SENT>
+<SENT sid="656" pm="."><plain>Two of these genes, CC_1356 and CC_0284 were reported to be SigT-dependent under conditions of osmotic stress [28]. </plain></SENT>
+</text></p><p><text><SENT sid="657" pm="."><plain>The sigT gene belongs to the CtrA cell cycle regulon. </plain></SENT>
+<SENT sid="658" pm="."><plain>CtrA is a negative regulator of sigT expression, and sigT transcripts peak when CtrA is cleared from the cell at the swarmer to stalked cell transition [31]. </plain></SENT>
+<SENT sid="659" pm="."><plain>The transcript levels of sigT were not seen to change significantly upon carbon starvation at the sampled times, in either mixed population or isolated swarmer and stalked cells, while the SigT protein level was found to decrease after 60 minutes of carbon starvation. </plain></SENT>
+<SENT sid="660" pm="."><plain>It is likely that SigT is regulated post-translationally. </plain></SENT>
+<SENT sid="661" pm="."><plain>SigT belongs to the ECF sub-family (ECF15 or EcfG-like) that is characterized by a conserved genomic context, which includes the genes encoding the HK4 histidine kinase and the PhyR response regulator (see Fig. 5C), putative candidates to modulate the activity of the sigma factor [62]. </plain></SENT>
+<SENT sid="662" pm="."><plain>A recent report postulates that C. crescentus' sigT is regulated by the anti-sigma factor NepR (CC_3476, cotranscribed with sigT), and the gene encoding PhyR, acting as an anti-anti-sigma factor, that is transcribed divergently from sigT [37]. </plain></SENT>
+</text></p><p><text><SENT sid="663" pm="."><plain>We propose that a SigT-dependent pathway is involved in the degradation of CtrA upon carbon starvation, and that this pathway includes the response regulator PhyR and the HK4 histidine kinase. </plain></SENT>
+<SENT sid="664" pm="."><plain>The ability of the anti-anti-sigma factor PhyR to sequester the anti-sigma factor NepR, releasing this SigT to activate transcription, has been shown to be dependent on PhyR phosphorylation state [37]. </plain></SENT>
+<SENT sid="665" pm="."><plain>It is possible that the HK4 histidine kinase, which possesses a predicted signal peptide that would target it to the membrane, is the protein responsible for sensing environmental cues and inducing a response in the CtrA starvation degradation pathway, via PhyR (Figure 8). </plain></SENT>
+</text></p><SecTag type="FIG"><fig id="pone-0018179-g008" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0018179.g008</object-id><label>Figure 8</label><caption><title><text><SENT sid="666" pm="."><plain>Diagram of the putative HK4-SigT signal transduction pathway. </plain></SENT>
+</text></title><p><text><SENT sid="667" pm="."><plain>Shown is an inferred pathway based on our results, suggesting that SigT, HK4 (CC_3474), PhyR, SigU and CC_1532 contribute to the degradation of CtrA upon carbon starvation. </plain></SENT>
+</text></p></caption><graphic xlink:href="pone.0018179.g008"/></fig></SecTag></sec></sec></SecTag><SecTag type="METHODS"><sec sec-type="materials|methods" id="s4"><title><text><SENT sid="668" pm="."><plain>Materials and Methods </plain></SENT>
+</text></title><sec id="s4a"><title><text><SENT sid="669" pm="."><plain>Bacterial strains and growth conditions </plain></SENT>
+</text></title><p><text><SENT sid="670" pm="."><plain>All strains were derived from wild type C. crescentus (NCBI Taxonomy ID: 155892) strain CB15N (NA1000) [63]. </plain></SENT>
+<SENT sid="671" pm="."><plain>PYE medium (0.2% Bacto Peptone (Difco), 0.1% yeast extract (Difco), 1 mM MgSO4, and 0.5 mM CaCl2) was used to grow strains for cloning purposes. </plain></SENT>
+<SENT sid="672" pm="."><plain>In all other cases, strains were grown in M2 minimal medium (6.1 mM Na2HPO4, 3.9 mM KH2PO4, 9.3 mM NH4Cl, 0.5 mM MgSO4, 10 µM FeSO4 (EDTA chelate; Sigma), 0.5 mM CaCl2) with 0.2% glucose as the sole carbon source (referred to as M2G). </plain></SENT>
+<SENT sid="673" pm="."><plain>All Caulobacter strains were grown at 28°C and were not allowed to reach an OD600 higher than 0.4 at any time, to minimize differences due to physiological adaptation of cultures to stationary phase conditions. Escherichia coli strain TOP10 (Invitrogen) was used for cloning following standard procedures. </plain></SENT>
+</text></p></sec><sec id="s4b"><title><text><SENT sid="674" pm="."><plain>Construction of gene deletion strains </plain></SENT>
+</text></title><p><text><SENT sid="675" pm="."><plain>In frame deletions of sigT (CC_3475), sigU (CC_2883), phyR (CC_3477), HK4 (CC_3474), CC_3466 and CC_1532 were obtained by a two-step sacB counterselection procedure, as previously described [64]. </plain></SENT>
+</text></p></sec><sec id="s4c"><title><text><SENT sid="676" pm="."><plain>Culture synchronization to obtain isolated swarmer and stalked cells </plain></SENT>
+</text></title><p><text><SENT sid="677" pm="."><plain>Swarmer cells were isolated from mixed population cultures using a modified version of the percoll density centrifugation protocol [65]. </plain></SENT>
+<SENT sid="678" pm="."><plain>Isolated colonies from a PYE plate were used to inoculate an M2G culture, grown to an optical density at 600 nm of 0.3. </plain></SENT>
+<SENT sid="679" pm="."><plain>Cultures were cooled on ice, pelleted at 9,000×g at 4°C, and resuspended in 300 µl of ice-cold M2G. </plain></SENT>
+<SENT sid="680" pm="."><plain>After adjusting the volume to 1 ml, one volume of ice-cold Percoll was added and mixed thoroughly. </plain></SENT>
+<SENT sid="681" pm="."><plain>The suspension was centrifuged at 11,000×g for 20 min at 4°C, to separate the swarmer cells (lower band) from the rest of the population (top band). </plain></SENT>
+<SENT sid="682" pm="."><plain>To obtain the stalked cells samples for the experiment in Figure 3, the synchronization procedure was performed as described, swarmers were resuspended in M2G, and allowed to differentiate for 60 min at 28°C. </plain></SENT>
+<SENT sid="683" pm="."><plain>At that point, loss of motility of the majority of the population was confirmed by microscopy. </plain></SENT>
+</text></p></sec><sec id="s4d"><title><text><SENT sid="684" pm="."><plain>Carbon starvation of wild-type swarmers and stalked cells, and of mixed populations of wild-type, ΔsigT and ΔsigU strains </plain></SENT>
+</text></title><p><text><SENT sid="685" pm="."><plain>Cells (swarmers or mixed populations, as indicated in each case) were washed twice in either ice-cold M2G (control samples) or ice-cold M2 (carbon starvation samples), and resuspended in 2 ml of pre-warmed (28°C) M2G or M2 media. </plain></SENT>
+<SENT sid="686" pm="."><plain>Optical density was adjusted to ∼0.3–0.4. </plain></SENT>
+<SENT sid="687" pm="."><plain>After 15 min of incubation at 28°C, cells were pelleted, frozen in liquid nitrogen, and transferred to −80°C. </plain></SENT>
+<SENT sid="688" pm="."><plain>RNA isolation (see below) was always performed within 24 hs of obtaining the samples. </plain></SENT>
+</text></p></sec><sec id="s4e"><title><text><SENT sid="689" pm="."><plain>Carbon starvation of C. crescentus mixed population for proteomics and microarrays assays </plain></SENT>
+</text></title><p><text><SENT sid="690" pm="."><plain>Cells were grown overnight in small cultures in M2G medium (never reaching OD600 nm greater than 0.4). </plain></SENT>
+<SENT sid="691" pm="."><plain>These cultures were used to inoculate 1200 ml cultures, which were incubated at 28°C until they had reached an OD600 nm of 0.3–0.4. </plain></SENT>
+<SENT sid="692" pm="."><plain>Cells were collected by centrifugation (5 min at 9,000×g) and washed twice with a large volume of ice-cold M2 medium, resuspending by gentle pipetting. </plain></SENT>
+<SENT sid="693" pm="."><plain>Control cells were mock-washed with ice-cold M2 with 0.2% glucose. </plain></SENT>
+<SENT sid="694" pm="."><plain>Washed cells were resuspended in pre-warmed M2 or M2G media and incubated at 28°C in a water bath with shaking. </plain></SENT>
+<SENT sid="695" pm="."><plain>Samples were collected at 30 and 60 minutes, frozen in liquid nitrogen and stored at −80°C. </plain></SENT>
+</text></p></sec><sec id="s4f"><title><text><SENT sid="696" pm="."><plain>Liquid chromatography-mass spectrometry analysis </plain></SENT>
+</text></title><p><text><SENT sid="697" pm="."><plain>Cells were pelleted, frozen in liquid nitrogen and stored at −80°C for no more than 2 days. </plain></SENT>
+<SENT sid="698" pm="."><plain>Lysis and protein treatment was done as described previously [66]. </plain></SENT>
+<SENT sid="699" pm="."><plain>Cell were lysed by bead beating. </plain></SENT>
+<SENT sid="700" pm="."><plain>Proteins were denatured, reduced, alkylated, concentrated by solid-phase extraction, and digested with trypsin. </plain></SENT>
+<SENT sid="701" pm="."><plain>For each injection, 1 µL of each sample of resuspended peptides was injected onto a reversed-phase column using an Isco LC system (Teledyne Isco) and eluted into a Thermo LTQ mass spectrometer (ThermoFinnigan, Inc., San Jose, CA). </plain></SENT>
+<SENT sid="702" pm="."><plain>The mass spectrometer was operated in a data-dependent scan mode as previously described [67]. </plain></SENT>
+<SENT sid="703" pm="."><plain>Raw data were analyzed with the Sequest program with an in silico database obtained from simulated tryptic digestion of the C. crescentus genome. </plain></SENT>
+<SENT sid="704" pm="."><plain>Peptides from this analysis meeting our previously-used scoring standards [67] were used for abundance measurements. </plain></SENT>
+<SENT sid="705" pm="."><plain>Peptide abundances were estimated from ion chromatograms using Viper [68]. </plain></SENT>
+<SENT sid="706" pm="."><plain>Data were extracted and tabulated using SQL queries generated by a custom query from in-house databases. </plain></SENT>
+<SENT sid="707" pm="."><plain>Data analysis, following the general normalization and rollup protocol described previously [69], was performed using the in-house quantitative proteomics tool DAnTE [70] and the statistical software package R (r-project.org). </plain></SENT>
+<SENT sid="708" pm="."><plain>Recorded intensities were converted to natural logarithms throughout. </plain></SENT>
+<SENT sid="709" pm="."><plain>Datasets consisted of the raw peptide intensities, reported as ion counts, for all experiments. </plain></SENT>
+<SENT sid="710" pm="."><plain>All data sets were aligned together as a single batch using MultiAlign, and centered to the most complete data set using the C. crescentus accurate mass tag (AMT) database [68]. </plain></SENT>
+<SENT sid="711" pm="."><plain>For subsequent work, peptide intensities were linear regressed to the median value of each experimental replicate data set. </plain></SENT>
+<SENT sid="712" pm="."><plain>Normalized peptide intensities were rolled up into effective intensities for each protein in each experimental replicate using the RRollup algorithm [70]. </plain></SENT>
+<SENT sid="713" pm="."><plain>For the binary comparisons of interest, the mean differential expression was calculated for each protein and the statistical significance of the differential expression was established using a two-sided t-test. </plain></SENT>
+<SENT sid="714" pm="."><plain>Significance was established at p&lt;0.05. </plain></SENT>
+<SENT sid="715" pm="."><plain>To take into account very low abundance proteins, the counts of observed peptides under different treatment conditions were also compared using a standard Fisher's Exact Test on the 5 most abundant peptides. </plain></SENT>
+<SENT sid="716" pm="."><plain>Proteins that showed significantly different peptide counts (p&lt;0.05) were pooled together with the proteins that showed a significant change by intensity analysis, to report the final list of significant changes. </plain></SENT>
+</text></p></sec><sec id="s4g"><title><text><SENT sid="717" pm="."><plain>Transmission electron microscopy </plain></SENT>
+</text></title><p><text><SENT sid="718" pm="."><plain>Cells were collected by centrifugation, fixed for 15 min at room temperature in 4% glutaraldehyde in 100 mM cacodylate-HCl buffer pH 7.4, washed, resuspended in cacodylate buffer, and preserved at 4°C until imaging. </plain></SENT>
+<SENT sid="719" pm="."><plain>Fixed cells were spotted onto glow discharged formvar-carbon coated 300 mesh copper grids (Electron Microscopy Sciences), and allowed to settled for 1 min. </plain></SENT>
+<SENT sid="720" pm="."><plain>Grids were then washed with two drops of mQ water, stained for 15 seconds with 1% uranyl acetate, washed again with two drops of mQ water and air dried. </plain></SENT>
+<SENT sid="721" pm="."><plain>Grids were imaged at 80 kV on a JEOL TEM1230 system. </plain></SENT>
+<SENT sid="722" pm="."><plain>Images were captured with a Gatan 967 slow-scan, cooled CCD camera, using the associated Gatan software. </plain></SENT>
+<SENT sid="723" pm="."><plain>The numbers of cells with or without incipient stalks were counted manually from the exported images. </plain></SENT>
+</text></p></sec><sec id="s4h"><title><text><SENT sid="724" pm="."><plain>Light and fluorescent microscopy </plain></SENT>
+</text></title><p><text><SENT sid="725" pm="."><plain>Swarmer cells from a strain carrying a ecfp-parB fusion in place of the parB gene in the chromosome (MT190) [71] were isolated, washed as described above to remove glucose, and immobilized onto freshly prepared 1% agarose-M2 pads onto microscopy slides, at the indicated times. </plain></SENT>
+<SENT sid="726" pm="."><plain>Microscopy was performed on a DM6000B upright microscope (Leica) fitted with a 100× 1.46 NA HCX Plan APO oil immersion objective (Leica) and a Hamamatsu C9100 EM CCD camera. </plain></SENT>
+<SENT sid="727" pm="."><plain>Phase contrast and fluorescent images (CFP channel, Ex 438/24 nm, Em 483/32 nm) were taken at 40 and 100 ms exposure times, respectively. </plain></SENT>
+<SENT sid="728" pm="."><plain>Images were acquired using KAMS-acquire, a custom software program developed in-house [72], to control the microscope and camera. </plain></SENT>
+<SENT sid="729" pm="."><plain>We used Photoshop CS4 (Adobe) to make false color merges of phase and fluorescent images. </plain></SENT>
+<SENT sid="730" pm="."><plain>In order to tally cells with duplicated and non-duplicated origins, we processed KAMS-acquire files with a Matlab script developed in-house to obtain ordered images of individual cells (S. </plain></SENT>
+<SENT sid="731" pm="."><plain>Hong, unpublished), which were then counted manually. </plain></SENT>
+</text></p></sec><sec id="s4i"><title><text><SENT sid="732" pm="."><plain>Immunoblot analysis </plain></SENT>
+</text></title><p><text><SENT sid="733" pm="."><plain>Cell samples normalized by OD600 were lysed by boiling in 2× sample buffer (4% Sodium Dodecyl Sulphate (SDS), 20% glycerol, 0.01% Bromophenol Blue, 0.125 M Tris-HCl pH 6.8), and loaded in 8–16% Precise polyacrylamide gradient gels (Pierce), followed by electrophoretic transfer to a PVDF membrane (Millipore). </plain></SENT>
+<SENT sid="734" pm="."><plain>Immunoblotting was done using anti-CtrA polyclonal serum (1∶10,000), and horseradish-peroxidase conjugated goat anti-rabbit IgG (1∶20,000). </plain></SENT>
+<SENT sid="735" pm="."><plain>Signal was detected with chemiluminescence reagent (Perkin-Elmer) and BioMax MR film. </plain></SENT>
+<SENT sid="736" pm="."><plain>The developed film was scanned, processed with Photoshop CS4 (Adobe), and band intensities were determined using ImageQuant (Molecular Dynamics). </plain></SENT>
+</text></p></sec><sec id="s4j"><title><text><SENT sid="737" pm="."><plain>β-galactosidase assays </plain></SENT>
+</text></title><p><text><SENT sid="738" pm="."><plain>The β-galactosidase activity of a wild type and a ΔsigT strain carrying the plasmid pCtrA290 [73], with the CtrA promoter region fused to lacZ, was assayed after removal of glucose from the cultures in M2 medium, using o-nitrophenyl-β-D-galactoside (ONPG) [74]. </plain></SENT>
+</text></p></sec><sec id="s4k"><title><text><SENT sid="739" pm="."><plain>RNA Extraction, cDNA synthesis and processing, and microarrays hybridization </plain></SENT>
+</text></title><p><text><SENT sid="740" pm="."><plain>Total RNA was extracted from cells using the Purelink Mini Total RNA Purification System (Invitrogen), according to the manufacturer's instructions for on-column DNAse treatment to remove contaminating DNA. </plain></SENT>
+<SENT sid="741" pm="."><plain>A maximum of 2 ml of culture of OD600 nm between 0.3 and 0.4 was used per ml of Trizol. </plain></SENT>
+<SENT sid="742" pm="."><plain>Integrity of the RNA was confirmed using the RNA 6000 Nano kit (Agilent) on a Agilent 2100 Bioanalyzer, and its concentration was calculated from OD260 nm measurements on a nanodrop. </plain></SENT>
+<SENT sid="743" pm="."><plain>cDNA was synthesized using Super Script II (Invitrogen) with random hexamers, according to the manufacturer's instructions. </plain></SENT>
+<SENT sid="744" pm="."><plain>After reverse transcription, RNA was removed by 30 min NaOH incubation at 65°C and cDNA was purified using MinElute columns (Qiagen). </plain></SENT>
+<SENT sid="745" pm="."><plain>Purified cDNA was fragmented by a 5 min incubation with DNAseI (Invitrogen; 0.6 U/µg cDNA) in a thermocycler, followed by 15 min enzyme inactivation at 98°C. </plain></SENT>
+<SENT sid="746" pm="."><plain>DNAseI activity was previously titrated, and the same batch of enzyme and thermocycler were used with the same settings across all experiments to obtain reproducible fragmentation. </plain></SENT>
+<SENT sid="747" pm="."><plain>RNA 6000 Nano kit (Agilent) on a Agilent 2100 Bioanalyzer was used to control for homogeneous fragmentation (50–200 bp range) of samples. </plain></SENT>
+<SENT sid="748" pm="."><plain>Fragmented cDNA was biotinylated at the 3′ termini with GeneChip DNA Labeling Reagent (Affymetrix) and hybridized onto the CauloHI1 chip (Affymetrix). </plain></SENT>
+<SENT sid="749" pm="."><plain>Hybridization was performed at Stanford's Protein and Nucleic Acid facility, as previously described [25]. </plain></SENT>
+<SENT sid="750" pm="."><plain>All data are MIAME compliant and raw data have been deposited in NCBI Gene Expression Omnibus (<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/geo/">www.ncbi.nlm.nih.gov/geo/</ext-link>, with series accession number GSE25999). </plain></SENT>
+</text></p></sec><sec id="s4l"><title><text><SENT sid="751" pm="."><plain>Gene annotation </plain></SENT>
+</text></title><p><text><SENT sid="752" pm="."><plain>The initial analysis of transcripts and proteins took as a reference the coordinates, ORF prediction and annotation for the C. crescentus reference strain CB15 (GeneBank accession AE005673, RefSeq NC_002696). </plain></SENT>
+<SENT sid="753" pm="."><plain>Upon release of the genomic sequence of the C. crescentus laboratory strain CB15N (also known as NA1000; GeneBank accession CP001340, RefSeq NC_011916), which includes an updated ORF prediction and gene annotation [75], all results were mapped to this new annotation. </plain></SENT>
+<SENT sid="754" pm="."><plain>Supplementary tables include gene IDs corresponding to both genomes nomenclatures. </plain></SENT>
+<SENT sid="755" pm="."><plain>To generate and process diverse gene lists from the microarrays and proteomics results, a Pathways and Genome Database (PGDB) was built using the PathoLogic and Pathway/Genomes Editor software, in the Pathway Tools platform [76]. </plain></SENT>
+<SENT sid="756" pm="."><plain>The C. crescentus NA1000 PGDB was manually curated to incorporate information for diverse published datasets, and is available upon request. </plain></SENT>
+</text></p></sec><sec id="s4m"><title><text><SENT sid="757" pm="."><plain>Statistical analysis of microarray data from carbon starved C. crescentus mixed population </plain></SENT>
+</text></title><p><text><SENT sid="758" pm="."><plain>The RMA statistical algorithm [77], available under the Bioconductor software package of R, was used for background noise removal, normalization and summarization of microarray data corresponding to two independent experiments for each condition (cells starved for carbon for 30 and 60 min, and the respective controls). </plain></SENT>
+<SENT sid="759" pm="."><plain>All data are MIAME compliant, and raw and normalized data files were submitted to NCBI Gene Expression Omnibus (accession number GSE25996). </plain></SENT>
+<SENT sid="760" pm="."><plain>A Significance Analysis of Microarrays (SAM) [78] was applied to the dataset, with the following parameters: unpaired, logged, median centered, T statistic. </plain></SENT>
+<SENT sid="761" pm="."><plain>A 2-fold minimum change was selected as cutoff, and a delta value yielding a false discovery rate lower than 1%. </plain></SENT>
+</text></p></sec><sec id="s4n"><title><text><SENT sid="762" pm="."><plain>Clustering of transcript changes in swarmer and stalked cells, and search for conserved promoter motifs </plain></SENT>
+</text></title><p><text><SENT sid="763" pm="."><plain>Microarray data were normalized and summarized as described in the previous section. </plain></SENT>
+<SENT sid="764" pm="."><plain>All data are MIAME compliant and raw and normalized data has been deposited in NCBI Gene Expression Omnibus (<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/geo/">www.ncbi.nlm.nih.gov/geo/</ext-link>, with accession number GSE25997). </plain></SENT>
+<SENT sid="765" pm="."><plain>For each one of the 3767 genes analyzed, we created a profile vector composed of two values: i) log-ratio between expression values measured for swarmer cells after 15 minutes of carbon starvation and the non-starved control, ii) log-ratio between expression values for stalked cells after 15 minutes of carbon starvation and non-starved control. </plain></SENT>
+<SENT sid="766" pm="."><plain>The non-starved controls values were obtained by linearly interpolating the data from [25], at the corresponding time-points (15 minutes into the cell cycle, as a control for swarmer cells, and 75 minutes for stalked cells). </plain></SENT>
+<SENT sid="767" pm="."><plain>We defined a gene as not responding to carbon starvation if the fold-change in expression was less than 2×. </plain></SENT>
+<SENT sid="768" pm="."><plain>Similarly, we defined a gene as responding to carbon starvation if the fold-change in expression was greater than 3×. </plain></SENT>
+<SENT sid="769" pm="."><plain>We only considered genes that, for both carbon starved swarmer and stalked cells, either responded to carbon starvation or did not (no change: −1&lt;|log-ratio|&lt;1; change: |log-ratio|&gt;1.585). </plain></SENT>
+<SENT sid="770" pm="."><plain>We then clustered the profiles of the genes using a bottom-up hierarchical clustering approach (Bioconductor R package), using the Pearson correlation distance and complete linkage for measuring inter-cluster distances. </plain></SENT>
+<SENT sid="771" pm="."><plain>To search for conserved motifs, we extracted 250 bp of sequence (from −200 to +50 with respect to the translational start site) for the genes in each cluster, and used MEME [79], with the following parameters: distribution of motif occurrences: zero or one per sequence; minimum motif width: 6; maximum motif width: 25. </plain></SENT>
+<SENT sid="772" pm="."><plain>We selected the motifs with an E-value&lt; = 0.2 and average Relative Entropy&gt; = 1bit/bp. </plain></SENT>
+</text></p></sec><sec id="s4o"><title><text><SENT sid="773" pm="."><plain>Functional categories enrichment of gene and protein sets </plain></SENT>
+</text></title><p><text><SENT sid="774" pm="."><plain>In order to identify functional categories that were significantly over or under-represented within the set of transcripts and proteins that changed upon carbon starvation (30 minutes for transcripts and 30 and/or 60 minutes for proteins), we calculated p-values for each COG-category based on hyper-geometric distributions (p-value&lt; = 1%). </plain></SENT>
+<SENT sid="775" pm="."><plain>Similarly, in order to identify known motifs, associated with cell-cycle and metal stress [25], that were significantly over or under-represented in the upstream regions of the set of genes whose expression changed significantly upon 30 minutes of carbon starvation, we calculated p-values based on hyper-geometric distributions (p-value&lt; = 5%). </plain></SENT>
+</text></p></sec><sec id="s4p"><title><text><SENT sid="776" pm="."><plain>Microarray analysis of ΔsigT and ΔsigU strains upon starvation </plain></SENT>
+</text></title><p><text><SENT sid="777" pm="."><plain>For each microarray experiment, expression signals for 3767 genes were analyzed. </plain></SENT>
+<SENT sid="778" pm="."><plain>The RMA statistical algorithm [77], available under the Bioconductor software package of R, was used for background noise removal, normalization and summarization of the microarray data. </plain></SENT>
+<SENT sid="779" pm="."><plain>All data are MIAME compliant, and raw and normalized data files were submitted to NCBI Gene Expression Omnibus (accession number GSE25998). </plain></SENT>
+<SENT sid="780" pm="."><plain>For each gene i, we calculated the difference between sample means and a two-sample t statistic. </plain></SENT>
+<SENT sid="781" pm="."><plain>For each gene and each condition (ΔsigT, ΔsigU and wild-type strains starved for glucose for 15 minutes), we then calculated a p-value derived from the gene-specific t-statistic, as well as the empirical distribution derived from the t-statistics of all genes. </plain></SENT>
+<SENT sid="782" pm="."><plain>A gene was considered to be differentially expressed, if two conditions were met: the difference between the mutant and WT was greater than two-fold, and the p-value derived from the corresponding t-statistics was smaller than 5%. </plain></SENT>
+</text></p></sec></sec></SecTag><SecTag type="SUPPL"><sec sec-type="supplementary-material" id="s5"><title><text><SENT sid="783" pm="."><plain>Supporting Information </plain></SENT>
+</text></title><supplementary-material content-type="local-data" id="pone.0018179.s001"><label>Table S1</label><caption><p><text><SENT sid="784" pm="."><plain>Proteome coverage of bacterial species. The highest proteomic coverages for bacterial organisms are shown with the corresponding reference. </plain></SENT>
+<SENT sid="785" pm="."><plain>The proteomic coverage is expressed in the percentage of annotated genes for which the predicted encoded protein has been detected, as reported by the cited publications. </plain></SENT>
+</text></p><p><text><SENT sid="786" pm="."><plain>(DOC) </plain></SENT>
+</text></p></caption><media xlink:href="pone.0018179.s001.doc"><caption><p><text><SENT sid="787" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="pone.0018179.s002"><label>Table S2</label><caption><p><text><SENT sid="788" pm="."><plain>List of proteins that change significantly upon carbon starvation. Gene ID (for strains CB15 and CB15N), annotation, COG category (if applicable), fold change and corresponding p-value are shown for the proteins that were found to change reproducibly in cells starved for carbon for 30 and/or 60 min. </plain></SENT>
+</text></p><p><text><SENT sid="789" pm="."><plain>(XLS) </plain></SENT>
+</text></p></caption><media xlink:href="pone.0018179.s002.xls"><caption><p><text><SENT sid="790" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="pone.0018179.s003"><label>Table S3</label><caption><p><text><SENT sid="791" pm="."><plain>List of transcripts that change significantly upon carbon starvation. Gene ID (for strains CB15 and CB15N), annotation, COG category (if applicable), average fold change and corresponding standard deviation are shown for the transcripts that were found to change reproducibly in cells starved for carbon for 30 and/or 60 min. </plain></SENT>
+<SENT sid="792" pm="."><plain>For each transcript it is also indicated whether it was previously classified as cell cycle regulated [24]. </plain></SENT>
+</text></p><p><text><SENT sid="793" pm="."><plain>(XLS) </plain></SENT>
+</text></p></caption><media xlink:href="pone.0018179.s003.xls"><caption><p><text><SENT sid="794" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="pone.0018179.s004"><label>Table S4</label><caption><p><text><SENT sid="795" pm="."><plain>List of genes that change significantly upon carbon starvation in the sets represented in  Figure 2  . Gene ID (for strains CB15 and CB15N), annotation, and fold change between starved and non-starved cells at 30 min (except for motif cc_7, for which the values correspond to 60 min) are shown. </plain></SENT>
+</text></p><p><text><SENT sid="796" pm="."><plain>(XLS) </plain></SENT>
+</text></p></caption><media xlink:href="pone.0018179.s004.xls"><caption><p><text><SENT sid="797" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="pone.0018179.s005"><label>Table S5</label><caption><p><text><SENT sid="798" pm="."><plain>List of genes in the clusters represented in  Figure 3B  . Gene ID (for strains CB15 and CB15N), log-2 ratio of transcript levels of starved and non-starved swarmer (SW) and stalked (ST) cells after 15 min, annotation, and COG category (if applicable), are shown for all genes clustered in Figure 3B. </plain></SENT>
+</text></p><p><text><SENT sid="799" pm="."><plain>(XLS) </plain></SENT>
+</text></p></caption><media xlink:href="pone.0018179.s005.xls"><caption><p><text><SENT sid="800" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="pone.0018179.s006"><label>Table S6</label><caption><p><text><SENT sid="801" pm="."><plain>List of proteins and transcripts that are upregulated upon carbon starvation and heavy metal stress. Genes that were induced by two or more heavy metals [29], and were upregulated in carbon starvation at the level of protein or transcript. </plain></SENT>
+</text></p><p><text><SENT sid="802" pm="."><plain>(XLS) </plain></SENT>
+</text></p></caption><media xlink:href="pone.0018179.s006.xls"><caption><p><text><SENT sid="803" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="pone.0018179.s007"><label>Table S7</label><caption><p><text><SENT sid="804" pm="."><plain>Lists of genes represented in   Figure 6  . This spreadsheet contains eight separate tabs with the lists of genes corresponding to the categories in the chart in Figure 6. </plain></SENT>
+<SENT sid="805" pm="."><plain>Each list was obtained from the intersections of the lists of genes and proteins determined to be up- and down-regulated according to the criteria described in Methods, for those 1378 genes for which there was valid data at both the transcript and the protein level, and a significant change in at least one of the datasets (microarrays or proteomics). </plain></SENT>
+</text></p><p><text><SENT sid="806" pm="."><plain>(XLS) </plain></SENT>
+</text></p></caption><media xlink:href="pone.0018179.s007.xls"><caption><p><text><SENT sid="807" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="pone.0018179.s008"><label>Table S8</label><caption><p><text><SENT sid="808" pm="."><plain>Lists of genes represented in  Figure 7  . Genes in the FixK carbon starvation regulon were obtained from the intersection of up- and down-regulated genes after 30 min of carbon starvation with genes with motif cc_3 according to McGrath et. al. [25], and FixK-dependent genes in hypoxia according to Crosson et. al. [27]. </plain></SENT>
+<SENT sid="809" pm="."><plain>Genes in the LexA carbon starvation regulon were obtained from the intersection of up- (1) and down-regulated (2) genes after 30 min of carbon starvation with genes in the SOS regulon [52]. </plain></SENT>
+<SENT sid="810" pm="."><plain>Genes in the RpoD carbon starvation regulon were obtained from the intersection of up- (1) and down-regulated (2) genes after 30 min of carbon starvation with genes with motif cc_6 according to McGrath et. al. [25]. </plain></SENT>
+<SENT sid="811" pm="."><plain>Genes in the SigT carbon starvation regulon are listed in Table 1. </plain></SENT>
+<SENT sid="812" pm="."><plain>The proteins encoded by SigT targets from Table 1 that are upregulated after 30 or 60 min of carbon starvation are listed here. </plain></SENT>
+<SENT sid="813" pm="."><plain>The CtrA regulon was determined by intersecting the list of CtrA targets [24] (Table 2) with the list of genes up- and down-regulated after 30 min of carbon starvation (Table S3), and the list of proteins that are up- or down-regulated after 30 and/or 60 min of carbon starvation (Table S2). </plain></SENT>
+<SENT sid="814" pm="."><plain>Only the genes for which the transcript and protein changed upon starvation (sets 1 and 2) were included in Figure 7. </plain></SENT>
+</text></p><p><text><SENT sid="815" pm="."><plain>(XLS) </plain></SENT>
+</text></p></caption><media xlink:href="pone.0018179.s008.xls"><caption><p><text><SENT sid="816" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media></supplementary-material></sec></SecTag></body><back><SecTag type="ACK_FUND"><ack><p><text4fund><text><SENT sid="817" pm="."><plain>The authors would like to thank Peter Karp, Alexander Shearer and Suzanne Paley (Bioinformatics Research Group, SRI International, Menlo Park, California, United States), for assistance with development of the C. crescentus NA1000 Pathways and Genome Database; John Perrino (Cell Sciences Imaging Facility, Stanford University, Stanford, California, United States), for training in the use of the transmission electron microscope; Elizabeth Zuo and Natalia Kosovilka (Protein and Nucleic Acid Facility, Stanford University, Stanford, California, United States), for microarray samples hybridization; John Coller and Elena Seraia (Stanford Functional Genomics Facility, Stanford University, Stanford, California, United States), for assistance with Bioanalyzer assays; Mike Fero, for development of KAMS image analysis software; Sun-Hae Hong, for image analysis scripts; and Paola Mera (Shapiro Laboratory, Stanford University, Stanford, California, United States), for critical reading of the manuscript. </plain></SENT>
+</text></text4fund></p></ack></SecTag><fn-group><fn fn-type="COI-statement"><p><text><SENT sid="818" pm="."><plain>Competing Interests: The authors have declared that no competing interests exist. </plain></SENT>
+</text></p></fn><SecTag type="ACK_FUND"><fn fn-type="financial-disclosure"><p><text4fund><text><SENT sid="819" pm="."><plain>Funding: This work was supported by National Institutes of Health (NIH - <ext-link ext-link-type="uri" xlink:href="http://nih.gov/">http://nih.gov/</ext-link>) grant GM32506 to LS and by Department of Energy (DOE - <ext-link ext-link-type="uri" xlink:href="http://www.energy.gov/">http://www.energy.gov/</ext-link>) grant DE-FG02ER64136 to LS and HM. </plain></SENT>
+<SENT sid="820" pm="."><plain>Proteomic analyses were performed in the Environmental Molecular Sciences Laboratory, a Department of Energy/Office of Biological and Environmental Research (DOE/BER) national scientific user facility on the Pacific Northwest National Laboratory (PNNL) campus in Richland, Washington. </plain></SENT>
+<SENT sid="821" pm="."><plain>PNNL is a multiprogram national laboratory operated by Battelle for the DOE under Contract DE-AC05-76RL01830. </plain></SENT>
+<SENT sid="822" pm="."><plain>The funders had no role in study design, data collection and analysis, decision to publish, or preparation of the manuscript. </plain></SENT>
+</text></text4fund></p></fn></SecTag></fn-group><SecTag type="REF"><ref-list><title>References</title><ref id="pone.0018179-Poindexter1"><text><SENT sid="823" pm="."><plain>1 PoindexterJS 1964 Biological Properties and Classification of the Caulobacter Group. Bacteriol Rev 28 231 295 14220656 </plain></SENT>
+</text></ref><ref id="pone.0018179-Brown1"><text><SENT sid="824" pm="."><plain>2 BrownPJHardyGGTrimbleMJBrunYV 2009 Complex regulatory pathways coordinate cell-cycle progression and development in Caulobacter crescentus. Adv Microb Physiol 54 1 101 18929067 </plain></SENT>
+</text></ref><ref id="pone.0018179-Goley1"><text><SENT sid="825" pm="."><plain>3 GoleyEDIniestaAAShapiroL 2007 Cell cycle regulation in Caulobacter: location, location, location. J Cell Sci 120 3501 3507 17928306 </plain></SENT>
+</text></ref><ref id="pone.0018179-Holtzendorff1"><text><SENT sid="826" pm="."><plain>4 HoltzendorffJReinhardtJViollierPH 2006 Cell cycle control by oscillating regulatory proteins in Caulobacter crescentus. Bioessays 28 355 361 16547950 </plain></SENT>
+</text></ref><ref id="pone.0018179-JacobsWagner1"><text><SENT sid="827" pm="."><plain>5 Jacobs-WagnerC 2004 Regulatory proteins with a sense of direction: cell cycle signalling network in Caulobacter. Mol Microbiol 51 7 13 14651607 </plain></SENT>
+</text></ref><ref id="pone.0018179-Lange1"><text><SENT sid="828" pm="."><plain>6 LangeRHengge-AronisR 1991 Identification of a central regulator of stationary-phase gene expression in Escherichia coli. Mol Microbiol 5 49 59 1849609 </plain></SENT>
+</text></ref><ref id="pone.0018179-Volker1"><text><SENT sid="829" pm="."><plain>7 VolkerUMaulBHeckerM 1999 Expression of the sigmaB-dependent general stress regulon confers multiple stress resistance in Bacillus subtilis. J Bacteriol 181 3942 3948 10383961 </plain></SENT>
+</text></ref><ref id="pone.0018179-Chiang1"><text><SENT sid="830" pm="."><plain>8 ChiangSMSchellhornHE 2010 Evolution of the RpoS regulon: origin of RpoS and the conservation of RpoS-dependent regulation in bacteria. J Mol Evol 70 557 571 20506020 </plain></SENT>
+</text></ref><ref id="pone.0018179-Hecker1"><text><SENT sid="831" pm="."><plain>9 HeckerMPane-FarreJVolkerU 2007 SigB-dependent general stress response in Bacillus subtilis and related gram-positive bacteria. Annu Rev Microbiol 61 215 236 18035607 </plain></SENT>
+</text></ref><ref id="pone.0018179-Lesley1"><text><SENT sid="832" pm="."><plain>10 LesleyJAShapiroL 2008 SpoT regulates DnaA stability and initiation of DNA replication in carbon-starved Caulobacter crescentus. J Bacteriol 190 6867 6880 18723629 </plain></SENT>
+</text></ref><ref id="pone.0018179-Landt1"><text><SENT sid="833" pm="."><plain>11 LandtSGLesleyJABritosLShapiroL 2010 CrfA, a small noncoding RNA regulator of adaptation to carbon starvation in Caulobacter crescentus. J Bacteriol 192 4763 4775 20601471 </plain></SENT>
+</text></ref><ref id="pone.0018179-England1"><text><SENT sid="834" pm="."><plain>12 EnglandJCPerchukBSLaubMTGoberJW 2010 Global regulation of gene expression and cell differentiation in Caulobacter crescentus in response to nutrient availability. J Bacteriol 192 819 833 19948804 </plain></SENT>
+</text></ref><ref id="pone.0018179-McAdams1"><text><SENT sid="835" pm="."><plain>13 McAdamsHHShapiroL 2009 System-level design of bacterial cell cycle control. FEBS Lett 583 3984 3991 19766635 </plain></SENT>
+</text></ref><ref id="pone.0018179-Grunenfelder1"><text><SENT sid="836" pm="."><plain>14 GrunenfelderBRummelGVohradskyJRoderDLangenH 2001 Proteomic analysis of the bacterial cell cycle. Proc Natl Acad Sci U S A 98 4681 4686 11287652 </plain></SENT>
+</text></ref><ref id="pone.0018179-Ireland1"><text><SENT sid="837" pm="."><plain>15 IrelandMMKartyJAQuardokusEMReillyJPBrunYV 2002 Proteomic analysis of the Caulobacter crescentus stalk indicates competence for nutrient uptake. Mol Microbiol 45 1029 1041 12180922 </plain></SENT>
+</text></ref><ref id="pone.0018179-Molloy1"><text><SENT sid="838" pm="."><plain>16 MolloyMPPhadkeNDChenHTyldesleyRGarfinDE 2002 Profiling the alkaline membrane proteome of Caulobacter crescentus with two-dimensional electrophoresis and mass spectrometry. Proteomics 2 899 910 12124935 </plain></SENT>
+</text></ref><ref id="pone.0018179-Phadke1"><text><SENT sid="839" pm="."><plain>17 PhadkeNDMolloyMPSteinhoffSAUlintzPJAndrewsPC 2001 Analysis of the outer membrane proteome of Caulobacter crescentus by two-dimensional electrophoresis and mass spectrometry. Proteomics 1 705 720 11678040 </plain></SENT>
+</text></ref><ref id="pone.0018179-Tatusov1"><text><SENT sid="840" pm="."><plain>18 TatusovRLNataleDAGarkavtsevIVTatusovaTAShankavaramUT 2001 The COG database: new developments in phylogenetic classification of proteins from complete genomes. Nucleic Acids Res 29 22 28 11125040 </plain></SENT>
+</text></ref><ref id="pone.0018179-Bowman1"><text><SENT sid="841" pm="."><plain>19 BowmanGRComolliLRGaiettaGMFeroMHongSH 2010 Caulobacter PopZ forms a polar subdomain dictating sequential changes in pole composition and function. Mol Microbiol 76 173 189 20149103 </plain></SENT>
+</text></ref><ref id="pone.0018179-Figge1"><text><SENT sid="842" pm="."><plain>20 FiggeRMEasterJGoberJW 2003 Productive interaction between the chromosome partitioning proteins, ParA and ParB, is required for the progression of the cell cycle in Caulobacter crescentus. Mol Microbiol 47 1225 1237 12603730 </plain></SENT>
+</text></ref><ref id="pone.0018179-Hottes1"><text><SENT sid="843" pm="."><plain>21 HottesAKShapiroLMcAdamsHH 2005 DnaA coordinates replication initiation and cell cycle transcription in Caulobacter crescentus. Mol Microbiol 58 1340 1353 16313620 </plain></SENT>
+</text></ref><ref id="pone.0018179-Gorbatyuk1"><text><SENT sid="844" pm="."><plain>22 GorbatyukBMarczynskiGT 2005 Regulated degradation of chromosome replication proteins DnaA and CtrA in Caulobacter crescentus. Mol Microbiol 55 1233 1245 15686567 </plain></SENT>
+</text></ref><ref id="pone.0018179-Wortinger1"><text><SENT sid="845" pm="."><plain>23 WortingerMAQuardokusEMBrunYV 1998 Morphological adaptation and inhibition of cell division during stationary phase in Caulobacter crescentus. Mol Microbiol 29 963 973 9767565 </plain></SENT>
+</text></ref><ref id="pone.0018179-Laub1"><text><SENT sid="846" pm="."><plain>24 LaubMTMcAdamsHHFeldblyumTFraserCMShapiroL 2000 Global analysis of the genetic network controlling a bacterial cell cycle. Science 290 2144 2148 11118148 </plain></SENT>
+</text></ref><ref id="pone.0018179-McGrath1"><text><SENT sid="847" pm="."><plain>25 McGrathPTLeeHZhangLIniestaAAHottesAK 2007 High-throughput identification of transcription start sites, conserved promoter motifs and predicted regulons. Nat Biotechnol 25 584 592 17401361 </plain></SENT>
+</text></ref><ref id="pone.0018179-Malakooti1"><text><SENT sid="848" pm="."><plain>26 MalakootiJWangSPElyB 1995 A consensus promoter sequence for Caulobacter crescentus genes involved in biosynthetic and housekeeping functions. J Bacteriol 177 4372 4376 7543475 </plain></SENT>
+</text></ref><ref id="pone.0018179-Crosson1"><text><SENT sid="849" pm="."><plain>27 CrossonSMcGrathPTStephensCMcAdamsHHShapiroL 2005 Conserved modular design of an oxygen sensory/signaling network with species-specific output. Proc Natl Acad Sci U S A 102 8018 8023 15911751 </plain></SENT>
+</text></ref><ref id="pone.0018179-AlvarezMartinez1"><text><SENT sid="850" pm="."><plain>28 Alvarez-MartinezCELourencoRFBaldiniRLLaubMTGomesSL 2007 The ECF sigma factor sigma(T) is involved in osmotic and oxidative stress responses in Caulobacter crescentus. Mol Microbiol 66 1240 1255 17986185 </plain></SENT>
+</text></ref><ref id="pone.0018179-Hu1"><text><SENT sid="851" pm="."><plain>29 HuPBrodieELSuzukiYMcAdamsHHAndersenGL 2005 Whole-genome transcriptional analysis of heavy metal stresses in Caulobacter crescentus. J Bacteriol 187 8437 8449 16321948 </plain></SENT>
+</text></ref><ref id="pone.0018179-Hottes2"><text><SENT sid="852" pm="."><plain>30 HottesAKMeewanMYangDAranaNRomeroP 2004 Transcriptional profiling of Caulobacter crescentus during growth on complex and minimal media. J Bacteriol 186 1448 1461 14973021 </plain></SENT>
+</text></ref><ref id="pone.0018179-Laub2"><text><SENT sid="853" pm="."><plain>31 LaubMTChenSLShapiroLMcAdamsHH 2002 Genes directly controlled by CtrA, a master regulator of the Caulobacter cell cycle. Proc Natl Acad Sci U S A 99 4632 4637 11930012 </plain></SENT>
+</text></ref><ref id="pone.0018179-Kim1"><text><SENT sid="854" pm="."><plain>32 KimSKMakinoKAmemuraMShinagawaHNakataA 1993 Molecular analysis of the phoH gene, belonging to the phosphate regulon in Escherichia coli. J Bacteriol 175 1316 1324 8444794 </plain></SENT>
+</text></ref><ref id="pone.0018179-Bailey1"><text><SENT sid="855" pm="."><plain>33 BaileyTLElkanC 1994 Fitting a mixture model by expectation maximization to discover motifs in biopolymers. Proc Int Conf Intell Syst Mol Biol 2 28 36 7584402 </plain></SENT>
+</text></ref><ref id="pone.0018179-Quon1"><text><SENT sid="856" pm="."><plain>34 QuonKCYangBDomianIJShapiroLMarczynskiGT 1998 Negative control of bacterial DNA replication by a cell cycle regulatory protein that binds at the chromosome origin. Proc Natl Acad Sci U S A 95 120 125 9419339 </plain></SENT>
+</text></ref><ref id="pone.0018179-FrancezCharlot1"><text><SENT sid="857" pm="."><plain>35 Francez-CharlotAFrunzkeJReichenCEbneterJZGourionB 2009 Sigma factor mimicry involved in regulation of general stress response. Proc Natl Acad Sci U S A 106 3467 3472 19218445 </plain></SENT>
+</text></ref><ref id="pone.0018179-Bastiat1"><text><SENT sid="858" pm="."><plain>36 BastiatBSauviacLBruandC 2010 Dual control of Sinorhizobium meliloti RpoE2 sigma factor activity by two PhyR-type two-component response regulators. J Bacteriol 192 2255 2265 20154128 </plain></SENT>
+</text></ref><ref id="pone.0018179-Herrou1"><text><SENT sid="859" pm="."><plain>37 HerrouJForemanRFiebigACrossonS 2010 A structural model of anti-anti-sigma inhibition by a two-component receiver domain: the PhyR stress response regulator. Mol Microbiol 78 290 304 20735776 </plain></SENT>
+</text></ref><ref id="pone.0018179-Hung1"><text><SENT sid="860" pm="."><plain>38 HungDYShapiroL 2002 A signal transduction protein cues proteolytic events critical to Caulobacter cell cycle progression. Proc Natl Acad Sci U S A 99 13160 13165 12237413 </plain></SENT>
+</text></ref><ref id="pone.0018179-Aldridge1"><text><SENT sid="861" pm="."><plain>39 AldridgePJenalU 1999 Cell cycle-dependent degradation of a flagellar motor component requires a novel-type response regulator. Mol Microbiol 32 379 391 10231493 </plain></SENT>
+</text></ref><ref id="pone.0018179-Curtis1"><text><SENT sid="862" pm="."><plain>40 CurtisPDBrunYV 2010 Getting in the loop: regulation of development in Caulobacter crescentus. Microbiol Mol Biol Rev 74 13 41 20197497 </plain></SENT>
+</text></ref><ref id="pone.0018179-Quardokus1"><text><SENT sid="863" pm="."><plain>41 QuardokusEDinNBrunYV 1996 Cell cycle regulation and cell type-specific localization of the FtsZ division initiation protein in Caulobacter. Proc Natl Acad Sci U S A 93 6314 6319 8692812 </plain></SENT>
+</text></ref><ref id="pone.0018179-Schmidt1"><text><SENT sid="864" pm="."><plain>42 SchmidtKLPetersonNDKustuschRJWisselMCGrahamB 2004 A predicted ABC transporter, FtsEX, is needed for cell division in Escherichia coli. J Bacteriol 186 785 793 14729705 </plain></SENT>
+</text></ref><ref id="pone.0018179-Gottesman1"><text><SENT sid="865" pm="."><plain>43 GottesmanS 2003 Proteolysis in bacterial regulatory circuits. Annu Rev Cell Dev Biol 19 565 587 14570582 </plain></SENT>
+</text></ref><ref id="pone.0018179-Fischer1"><text><SENT sid="866" pm="."><plain>44 FischerBRummelGAldridgePJenalU 2002 The FtsH protease is involved in development, stress response and heat shock control in Caulobacter crescentus. Mol Microbiol 44 461 478 11972783 </plain></SENT>
+</text></ref><ref id="pone.0018179-Jensen1"><text><SENT sid="867" pm="."><plain>45 JensenRBShapiroL 1999 The Caulobacter crescentus smc gene is required for cell cycle progression and chromosome segregation. Proc Natl Acad Sci U S A 96 10661 10666 10485882 </plain></SENT>
+</text></ref><ref id="pone.0018179-AliAzam1"><text><SENT sid="868" pm="."><plain>46 Ali AzamTIwataANishimuraAUedaSIshihamaA 1999 Growth phase-dependent variation in protein composition of the Escherichia coli nucleoid. J Bacteriol 181 6361 6370 10515926 </plain></SENT>
+</text></ref><ref id="pone.0018179-Claret1"><text><SENT sid="869" pm="."><plain>47 ClaretLRouviere-YanivJ 1997 Variation in HU composition during growth of Escherichia coli: the heterodimer is required for long term survival. J Mol Biol 273 93 104 9367749 </plain></SENT>
+</text></ref><ref id="pone.0018179-Jenkins1"><text><SENT sid="870" pm="."><plain>48 JenkinsDEChaissonSAMatinA 1990 Starvation-induced cross protection against osmotic challenge in Escherichia coli. J Bacteriol 172 2779 2781 2185233 </plain></SENT>
+</text></ref><ref id="pone.0018179-Jenkins2"><text><SENT sid="871" pm="."><plain>49 JenkinsDEAugerEAMatinA 1991 Role of RpoH, a heat shock regulator protein, in Escherichia coli carbon starvation protein synthesis and survival. J Bacteriol 173 1992 1996 2002001 </plain></SENT>
+</text></ref><ref id="pone.0018179-Taniguchi1"><text><SENT sid="872" pm="."><plain>50 TaniguchiYChoiPJLiGWChenHBabuM 2010 Quantifying E. coli proteome and transcriptome with single-molecule sensitivity in single cells. Science 329 533 538 20671182 </plain></SENT>
+</text></ref><ref id="pone.0018179-Lee1"><text><SENT sid="873" pm="."><plain>51 LeePSShawLBChoeLHMehraAHatzimanikatisV 2003 Insights into the relation between mrna and protein expression patterns: II. </plain></SENT>
+<SENT sid="874" pm="."><plain>Experimental observations in Escherichia coli. Biotechnol Bioeng 84 834 841 14708124 </plain></SENT>
+</text></ref><ref id="pone.0018179-daRocha1"><text><SENT sid="875" pm="."><plain>52 da RochaRPPaquolaACMarques MdoVMenckCFGalhardoRS 2008 Characterization of the SOS regulon of Caulobacter crescentus. J Bacteriol 190 1209 1218 18083815 </plain></SENT>
+</text></ref><ref id="pone.0018179-Friedberg1"><text><SENT sid="876" pm="."><plain>53 FriedbergECWalkerGCSiedeW 1995 DNA repair and mutagenesis Washington, D.C. ASM Press  </plain></SENT>
+</text></ref><ref id="pone.0018179-Sassanfar1"><text><SENT sid="877" pm="."><plain>54 SassanfarMRobertsJW 1990 Nature of the SOS-inducing signal in Escherichia coli. </plain></SENT>
+<SENT sid="878" pm="."><plain>The involvement of DNA replication. J Mol Biol 212 79 96 2108251 </plain></SENT>
+</text></ref><ref id="pone.0018179-Bi1"><text><SENT sid="879" pm="."><plain>55 BiELutkenhausJ 1993 Cell division inhibitors SulA and MinCD prevent formation of the FtsZ ring. J Bacteriol 175 1118 1125 8432706 </plain></SENT>
+</text></ref><ref id="pone.0018179-HenggeAronis1"><text><SENT sid="880" pm="."><plain>56 Hengge-AronisR 2002 Recent insights into the general stress response regulatory network in Escherichia coli. J Mol Microbiol Biotechnol 4 341 346 11931567 </plain></SENT>
+</text></ref><ref id="pone.0018179-Hecker2"><text><SENT sid="881" pm="."><plain>57 HeckerMVolkerU 2001 General stress response of Bacillus subtilis and other bacteria. Adv Microb Physiol 44 35 91 11407115 </plain></SENT>
+</text></ref><ref id="pone.0018179-Mittenhuber1"><text><SENT sid="882" pm="."><plain>58 MittenhuberG 2002 A phylogenomic study of the general stress response sigma factor sigmaB of Bacillus subtilis and its regulatory proteins. J Mol Microbiol Biotechnol 4 427 452 12125823 </plain></SENT>
+</text></ref><ref id="pone.0018179-AlvarezMartinez2"><text><SENT sid="883" pm="."><plain>59 Alvarez-MartinezCEBaldiniRLGomesSL 2006 A caulobacter crescentus extracytoplasmic function sigma factor mediating the response to oxidative stress in stationary phase. J Bacteriol 188 1835 1846 16484194 </plain></SENT>
+</text></ref><ref id="pone.0018179-Lourenco1"><text><SENT sid="884" pm="."><plain>60 LourencoRFGomesSL 2009 The transcriptional response to cadmium, organic hydroperoxide, singlet oxygen and UV-A mediated by the sigmaE-ChrR system in Caulobacter crescentus. Mol Microbiol 72 1159 1170 19400803 </plain></SENT>
+</text></ref><ref id="pone.0018179-Sauviac1"><text><SENT sid="885" pm="."><plain>61 SauviacLPhilippeHPhokKBruandC 2007 An extracytoplasmic function sigma factor acts as a general stress response regulator in Sinorhizobium meliloti. J Bacteriol 189 4204 4216 17400745 </plain></SENT>
+</text></ref><ref id="pone.0018179-Staron1"><text><SENT sid="886" pm="."><plain>62 StaronASofiaHJDietrichSUlrichLELiesegangH 2009 The third pillar of bacterial signal transduction: classification of the extracytoplasmic function (ECF) sigma factor protein family. Mol Microbiol 74 557 581 19737356 </plain></SENT>
+</text></ref><ref id="pone.0018179-Evinger1"><text><SENT sid="887" pm="."><plain>63 EvingerMAgabianN 1977 Envelope-associated nucleoid from Caulobacter crescentus stalked and swarmer cells. J Bacteriol 132 294 301 334726 </plain></SENT>
+</text></ref><ref id="pone.0018179-Stephens1"><text><SENT sid="888" pm="."><plain>64 StephensCReisenauerAWrightRShapiroL 1996 A cell cycle-regulated bacterial DNA methyltransferase is essential for viability. Proc Natl Acad Sci U S A 93 1210 1214 8577742 </plain></SENT>
+</text></ref><ref id="pone.0018179-Tsai1"><text><SENT sid="889" pm="."><plain>65 TsaiJWAlleyMR 2001 Proteolysis of the Caulobacter McpA chemoreceptor is cell cycle regulated by a ClpX-dependent pathway. J Bacteriol 183 5001 5007 11489852 </plain></SENT>
+</text></ref><ref id="pone.0018179-Shi1"><text><SENT sid="890" pm="."><plain>66 ShiLAdkinsJNColemanJRSchepmoesAADohnkovaA 2006 Proteomic analysis of Salmonella enterica serovar typhimurium isolated from RAW 264.7 macrophages: identification of a novel protein that contributes to the replication of serovar typhimurium inside macrophages. J Biol Chem 281 29131 29140 16893888 </plain></SENT>
+</text></ref><ref id="pone.0018179-Schutzer1"><text><SENT sid="891" pm="."><plain>67 SchutzerSELiuTNatelsonBHAngelTESchepmoesAA 2010 Establishing the proteome of normal human cerebrospinal fluid. PLoS One 5 e10980 20552007 </plain></SENT>
+</text></ref><ref id="pone.0018179-Monroe1"><text><SENT sid="892" pm="."><plain>68 MonroeMETolicNJaitlyNShawJLAdkinsJN 2007 VIPER: an advanced software package to support high-throughput LC-MS peptide identification. Bioinformatics 23 2021 2023 17545182 </plain></SENT>
+</text></ref><ref id="pone.0018179-Du1"><text><SENT sid="893" pm="."><plain>69 DuXCallisterSJManesNPAdkinsJNAlexandridisRA 2008 A computational strategy to analyze label-free temporal bottom-up proteomics data. J Proteome Res 7 2595 2604 18442284 </plain></SENT>
+</text></ref><ref id="pone.0018179-Polpitiya1"><text><SENT sid="894" pm="."><plain>70 PolpitiyaADQianWJJaitlyNPetyukVAAdkinsJN 2008 DAnTE: a statistical tool for quantitative analysis of -omics data. Bioinformatics 24 1556 1558 18453552 </plain></SENT>
+</text></ref><ref id="pone.0018179-Thanbichler1"><text><SENT sid="895" pm="."><plain>71 ThanbichlerMShapiroL 2006 MipZ, a spatial regulator coordinating chromosome segregation with cell division in Caulobacter. Cell 126 147 162 16839883 </plain></SENT>
+</text></ref><ref id="pone.0018179-Christen1"><text><SENT sid="896" pm="."><plain>72 ChristenBFeroMJHillsonNJBowmanGHongSH 2010 High-throughput identification of protein localization dependency networks. Proc Natl Acad Sci U S A 107 4681 4686 20176934 </plain></SENT>
+</text></ref><ref id="pone.0018179-Domian1"><text><SENT sid="897" pm="."><plain>73 DomianIJReisenauerAShapiroL 1999 Feedback control of a master bacterial cell-cycle regulator. Proc Natl Acad Sci U S A 96 6648 6653 10359766 </plain></SENT>
+</text></ref><ref id="pone.0018179-Miller1"><text><SENT sid="898" pm="."><plain>74 MillerJH 1972 Experiments in molecular genetics Cold Spring Harbor, N.Y. Cold Spring Harbor Laboratory xvi, 466  </plain></SENT>
+</text></ref><ref id="pone.0018179-Marks1"><text><SENT sid="899" pm="."><plain>75 MarksMECastro-RojasCMTeilingCDuLKapatralV 2010 The genetic basis of laboratory adaptation in Caulobacter crescentus. J Bacteriol 192 3678 3688 20472802 </plain></SENT>
+</text></ref><ref id="pone.0018179-Karp1"><text><SENT sid="900" pm="."><plain>76 KarpPDPaleySMKrummenackerMLatendresseMDaleJM 2010 Pathway Tools version 13.0: integrated software for pathway/genome informatics and systems biology. Brief Bioinform 11 40 79 19955237 </plain></SENT>
+</text></ref><ref id="pone.0018179-Irizarry1"><text><SENT sid="901" pm="."><plain>77 IrizarryRAHobbsBCollinFBeazer-BarclayYDAntonellisKJ 2003 Exploration, normalization, and summaries of high density oligonucleotide array probe level data. Biostatistics 4 249 264 12925520 </plain></SENT>
+</text></ref><ref id="pone.0018179-Tusher1"><text><SENT sid="902" pm="."><plain>78 TusherVGTibshiraniRChuG 2001 Significance analysis of microarrays applied to the ionizing radiation response. Proc Natl Acad Sci U S A 98 5116 5121 11309499 </plain></SENT>
+</text></ref><ref id="pone.0018179-Bailey2"><text><SENT sid="903" pm="."><plain>79 BaileyTLWilliamsNMislehCLiWW 2006 MEME: discovering and analyzing DNA and protein sequence motifs. Nucleic Acids Res 34 W369 373 16845028 </plain></SENT>
+</text></ref></ref-list></SecTag></back></article>

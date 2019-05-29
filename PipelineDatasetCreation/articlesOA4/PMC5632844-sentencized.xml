@@ -1,0 +1,394 @@
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD v1.1 20151215//EN" "JATS-archivearticle1.dtd"> 
+<article xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML" article-type="research-article"><?properties open_access?><?DTDIdentifier.IdentifierValue -//NLM//DTD Journal Publishing DTD v2.3 20070202//EN?><?DTDIdentifier.IdentifierType public?><?SourceDTD.DTDName journalpublishing.dtd?><?SourceDTD.Version 2.3?><?ConverterInfo.XSLTName jp2nlmx2.xsl?><?ConverterInfo.Version 1?><front><journal-meta><journal-id journal-id-type="nlm-ta">Front Microbiol</journal-id><journal-id journal-id-type="iso-abbrev">Front Microbiol</journal-id><journal-id journal-id-type="publisher-id">Front. Microbiol.</journal-id><journal-title-group><journal-title>Frontiers in Microbiology</journal-title></journal-title-group><issn pub-type="epub">1664-302X</issn><publisher><publisher-name>Frontiers Media S.A.</publisher-name></publisher></journal-meta><article-meta><article-id pub-id-type="pmcid">5632844</article-id><article-id pub-id-type="doi">10.3389/fmicb.2017.01880</article-id><article-categories><subj-group subj-group-type="heading"><subject>Microbiology</subject><subj-group><subject>Original Research</subject></subj-group></subj-group></article-categories><title-group><article-title><SecTag type="TITLE"><text><SENT sid="0" pm="."><plain>Nanopore Long-Read Guided Complete Genome Assembly of Hydrogenophaga intermedia, and Genomic Insights into 4-Aminobenzenesulfonate, p-Aminobenzoic Acid and Hydrogen Metabolism in the Genus Hydrogenophaga </plain></SENT>
+</text></SecTag></article-title></title-group><contrib-group><contrib contrib-type="author"><name><surname>Gan</surname><given-names>Han M.</given-names></name><xref ref-type="aff" rid="aff1"><sup>1</sup></xref><xref ref-type="aff" rid="aff2"><sup>2</sup></xref><xref ref-type="aff" rid="aff3"><sup>3</sup></xref><xref ref-type="author-notes" rid="fn001"><sup>*</sup></xref><uri xlink:type="simple" xlink:href="http://loop.frontiersin.org/people/59566/overview"/></contrib><contrib contrib-type="author"><name><surname>Lee</surname><given-names>Yin P.</given-names></name><xref ref-type="aff" rid="aff2"><sup>2</sup></xref><xref ref-type="aff" rid="aff3"><sup>3</sup></xref><uri xlink:type="simple" xlink:href="http://loop.frontiersin.org/people/470599/overview"/></contrib><contrib contrib-type="author"><name><surname>Austin</surname><given-names>Christopher M.</given-names></name><xref ref-type="aff" rid="aff1"><sup>1</sup></xref><xref ref-type="aff" rid="aff2"><sup>2</sup></xref><xref ref-type="aff" rid="aff3"><sup>3</sup></xref></contrib></contrib-group><aff id="aff1"><sup>1</sup><institution>Centre for Integrative Ecology, School of Life and Environmental Sciences, Deakin University</institution>, <addr-line>Geelong, VIC</addr-line>, <country>Australia</country></aff><aff id="aff2"><sup>2</sup><institution>Genomics Facility, Tropical Medicine and Biology Platform, Monash University Malaysia</institution>, <addr-line>Bandar Sunway</addr-line>, <country>Malaysia</country></aff><aff id="aff3"><sup>3</sup><institution>School of Science, Monash University Malaysia</institution>, <addr-line>Bandar Sunway</addr-line>, <country>Malaysia</country></aff><author-notes><fn fn-type="edited-by"><p><text><SENT sid="1" pm="."><plain>Edited by: John R. </plain></SENT>
+<SENT sid="2" pm="."><plain>Battista, Louisiana State University, United States </plain></SENT>
+</text></p></fn><fn fn-type="edited-by"><p><text><SENT sid="3" pm="."><plain>Reviewed by: Nikolai Ravin, Research Center for Biotechnology (RAS), Russia; Rommel Thiago Juca Ramos, Federal University of Pará, Brazil </plain></SENT>
+</text></p></fn><corresp id="fn001">*Correspondence: <italic>Han M. Gan, <email xlink:type="simple">han.gan@deakin.edu.au</email></italic></corresp><fn fn-type="other" id="fn002"><p><text><SENT sid="4" pm="."><plain>This article was submitted to Evolutionary and Genomic Microbiology, a section of the journal Frontiers in Microbiology </plain></SENT>
+</text></p></fn></author-notes><pub-date pub-type="epub"><day>04</day><month>10</month><year>2017</year></pub-date><pub-date pub-type="collection"><year>2017</year></pub-date><volume>8</volume><elocation-id>1880</elocation-id><history><date date-type="received"><day>12</day><month>7</month><year>2017</year></date><date date-type="accepted"><day>14</day><month>9</month><year>2017</year></date></history><permissions><copyright-statement>Copyright © 2017 Gan, Lee and Austin.</copyright-statement><copyright-year>2017</copyright-year><copyright-holder>Gan, Lee and Austin</copyright-holder><license xlink:href="http://creativecommons.org/licenses/by/4.0/"><license-p>This is an open-access article distributed under the terms of the Creative Commons Attribution License (CC BY). The use, distribution or reproduction in other forums is permitted, provided the original author(s) or licensor are credited and that the original publication in this journal is cited, in accordance with accepted academic practice. No use, distribution or reproduction is permitted which does not comply with these terms.</license-p></license></permissions><abstract><p><SecTag type="ABS"><text><SENT sid="5" pm="."><plain>We improved upon the previously reported draft genome of Hydrogenophaga intermedia strain PBC, a 4-aminobenzenesulfonate-degrading bacterium, by supplementing the assembly with Nanopore long reads which enabled the reconstruction of the genome as a single contig. </plain></SENT>
+<SENT sid="6" pm="."><plain>From the complete genome, major genes responsible for the catabolism of 4-aminobenzenesulfonate in strain PBC are clustered in two distinct genomic regions. </plain></SENT>
+<SENT sid="7" pm="."><plain>Although the catabolic genes for 4-sulfocatechol, the deaminated product of 4-aminobenzenesulfonate, are only found in H. intermedia, the sad operon responsible for the first deamination step of 4-aminobenzenesulfonate is conserved in various Hydrogenophaga strains. </plain></SENT>
+<SENT sid="8" pm="."><plain>The absence of pabB gene in the complete genome of H. intermedia PBC is consistent with its p-aminobenzoic acid (pABA) auxotrophy but surprisingly comparative genomics analysis of 14 Hydrogenophaga genomes indicate that pABA auxotrophy is not an uncommon feature among members of this genus. </plain></SENT>
+<SENT sid="9" pm="."><plain>Of even more interest, several Hydrogenophaga strains do not possess the genomic potential for hydrogen oxidation, calling for a revision to the taxonomic description of Hydrogenophaga as “hydrogen eating bacteria.” </plain></SENT>
+</text></SecTag></p></abstract><SecTag type="KEYWORD"><kwd-group><kwd><italic>Hydrogenophaga</italic></kwd><kwd>Nanopore</kwd><kwd>comparative genomics</kwd><kwd>hydrogen metabolism</kwd><kwd>phylogeny</kwd></kwd-group></SecTag><counts><fig-count count="4"/><table-count count="1"/><equation-count count="0"/><ref-count count="46"/><page-count count="9"/><word-count count="0"/></counts></article-meta></front><body><SecTag type="INTRO"><sec><title><text><SENT sid="10" pm="."><plain>Introduction </plain></SENT>
+</text></title><p><text><SENT sid="11" pm="."><plain>The genus Hydrogenophaga consists of rod-shaped yellow-pigmented gram negative bacteria that are generally considered capable of using hydrogen as an energy source (Willems et al., 1989). </plain></SENT>
+<SENT sid="12" pm="."><plain>Among all currently described species of Hydrogenophaga, Hydrogenophaga intermedia is one of the most studied species due to its distinctive ability to efficiently degrade 4-aminobenzenesulfonate (4-aminobenzenesulfonate), a recalcitrant intermediate compound in the synthesis of colorants (Dangmann et al., 1996). </plain></SENT>
+<SENT sid="13" pm="."><plain>The catabolism of 4-aminobenzenesulfonate in H. intermedia S1 is by far the most well-studied among all described 4-aminobenzenesulfonate degraders (Perei et al., 2001; Wang et al., 2009; Gan et al., 2011b; Yang et al., 2012; Hayase et al., 2016). H. intermedia S1 was isolated from wastewater and could grow on 4-aminobenzenesulfonate as the sole carbon source in a two-species bacterial coculture with Agrobacterium radiobacter S2 (Dangmann et al., 1996). </plain></SENT>
+<SENT sid="14" pm="."><plain>To date, several enzymes associated with the downstream degradation of 4-aminobenzenesulfonate in strain S1 have been identified, cloned, characterized and functionally validated (Contzen et al., 2001; Halak et al., 2006, 2007). </plain></SENT>
+<SENT sid="15" pm="."><plain>However, the first deamination step converting 4-aminobenzenesulfonate to 4-sulfocatechol, which was presumed to be catalyzed by a dioxygenase is yet to be indentified in strain S1 (Contzen et al., 2001; Halak et al., 2006, 2007). </plain></SENT>
+</text></p><p><text><SENT sid="16" pm="."><plain>More than 20 years after the isolation of the S1/S2 mixed culture, a second 4-aminobenzenesulfonate-degrading two-species bacterial culture consisting of Hydrogenophaga sp. </plain></SENT>
+<SENT sid="17" pm="."><plain>PBC and Ralstonia sp. </plain></SENT>
+<SENT sid="18" pm="."><plain>PBA isolated from textile wastewater was reported (Gan et al., 2011b). </plain></SENT>
+<SENT sid="19" pm="."><plain>Transposon mutagenesis of strain PBC led to the identification of the sad operon that is responsible for the initial deamination step of 4-aminobenzenesulfonate to 4-sulfocatechol. </plain></SENT>
+<SENT sid="20" pm="."><plain>The deamination step was presumed to operate similarly H. intermedia strain S1 given its near identical 16S rRNA sequence to strain PBC (Gan et al., 2011a,b, 2012c). </plain></SENT>
+<SENT sid="21" pm="."><plain>In addition, both Hydrogenophaga strains could only be grown in axenic culture with 4-aminobenzenesulfonate as the sole carbon and nitrogen source if they were supplemented with p-aminobenzoate and biotin (Kampfer et al., 2005; Gan et al., 2011a,b), providing insight into the syntrophic relationship between the Hydrogenophaga strains and their helper strains in addition to suggesting that the biosynthesis pathways for these compounds were either missing or non-functional in H. sp. </plain></SENT>
+<SENT sid="22" pm="."><plain>PBC and H. intermedia S1 (Dangmann et al., 1996; Gan et al., 2011b). </plain></SENT>
+</text></p><p><text><SENT sid="23" pm="."><plain>Strain PBC was the first Hydrogenophaga strain to have its genome sequenced (Gan et al., 2012b). </plain></SENT>
+<SENT sid="24" pm="."><plain>However, due to the short read length of Illumina sequencing (2 × 100 bp) at that time and the high genomic GC content of strain PBC, the assembled genome was relatively fragmented. </plain></SENT>
+<SENT sid="25" pm="."><plain>Further, most of the genes coding for 4-aminobenzenesulfonate metabolism were located on different contigs, limiting the analysis of the genomic structure and regulation of this pathway (Hegedüs et al., 2017). </plain></SENT>
+<SENT sid="26" pm="."><plain>Interestingly, genes coding for biosynthesis of biotin and 4-aminobenzoic acid could not be identified in the draft genome of strain PBC, which is consistent with its requirement for these supplementations for growth in axenic culture (Gan et al., 2011b; Kim and Gan, 2017). </plain></SENT>
+<SENT sid="27" pm="."><plain>However, given that gaps exist in the draft genome, it may be possible that these gene regions were not assembled, thus emphasizing the need for a complete genome assembly to verify this observation. </plain></SENT>
+<SENT sid="28" pm="."><plain>As more Hydrogenophaga genomes became available, H. sp. </plain></SENT>
+<SENT sid="29" pm="."><plain>PBC was recently reclassified as H. intermedia PBC based on in silico genome–genome hybridization (Kim and Gan, 2017). </plain></SENT>
+<SENT sid="30" pm="."><plain>Interestingly, despite the availability of various whole genome sequences for the type species of Hydrogenophaga, comparative genomic analyses of Hydrogenophaga currently are limited and most analyses have focused on a single genome (Gan et al., 2011b; Kim and Gan, 2017). </plain></SENT>
+</text></p><p><text><SENT sid="31" pm="."><plain>One of the defining traits of the genus Hydrogenophaga is the ability to grow chemorganotrophically or chemolithoautotrophically by oxidizing hydrogen as an energy source (Willems et al., 1989). </plain></SENT>
+<SENT sid="32" pm="."><plain>A [NiFe]-membrane-bound hydrogenase has been isolated and purified from H. sp. </plain></SENT>
+<SENT sid="33" pm="."><plain>AH-42 providing the first biochemical characterization of hydrogenase and molecular insight into the genetic components responsible for hydrogen oxidation in the genus Hydrogenophaga (Yoon et al., 2008, 2009). </plain></SENT>
+<SENT sid="34" pm="."><plain>However, exceptions to the defining feature of the genus, e.g., inability to oxidize hydrogen under standardized culture condition, have been reported in two Hydrogenophaga type strains namely H. intermedia S1T and H. atypica DSM 15342T (Contzen et al., 2000; Kampfer et al., 2005), naturally inviting a comprehensive genomic survey of hydrogen-oxidizing genes in all sequenced members of the genus Hydrogenophaga. </plain></SENT>
+</text></p><p><text><SENT sid="35" pm="."><plain>To improve the genome assembly of H. intermedia PBC, we used the Nanopore MinION portable long-read sequencer to generate long sequencing reads coupled with a hybrid assembly using the Illumina dataset generated previously by Gan et al. (2012b). </plain></SENT>
+<SENT sid="36" pm="."><plain>We showed that the incorporation of the Nanopore long reads enabled the successful assembly of H. intermedia PBC genome into a single contig. </plain></SENT>
+<SENT sid="37" pm="."><plain>Further, we also provided an updated whole genome-based phylogeny of the family Comamonadaceae in addition to performing comparative genomics analysis of the genus Hydrogenophaga for the first time focusing on the prevalence of genomic potential for hydrogen oxidation, pABA synthesis and 4-aminobenzenesulfonate biodegradation. </plain></SENT>
+</text></p></sec></SecTag><SecTag type="METHODS"><sec sec-type="materials|methods" id="s1"><title><text><SENT sid="38" pm="."><plain>Materials and Methods </plain></SENT>
+</text></title><sec><title><text><SENT sid="39" pm="."><plain>Illumina and Nanopore Whole Genome Sequencing </plain></SENT>
+</text></title><p><text><SENT sid="40" pm="."><plain>Illumina-based whole genome sequencing and assembly of strain PBC has been previously described (Gan et al., 2012b). </plain></SENT>
+<SENT sid="41" pm="."><plain>To generate sequencing data using the MinION device, the gDNA of strain PBC was extracted from a 5-day old culture on nutrient agar using a slightly modified SDS-lysis method (Sokolov, 2000). </plain></SENT>
+<SENT sid="42" pm="."><plain>Five micrograms of gDNA was subsequently used for library construction using the Nanopore sequencing kit SQK-NSK007 (Oxford Nanopore Technologies, Oxford, United Kingdom) according to the manufacturer’s instructions. </plain></SENT>
+<SENT sid="43" pm="."><plain>The library was subsequently loaded onto an R9 MINION flowcell (Oxford Nanopore Technologies, Oxford, United Kingdom) and run for 48 h. </plain></SENT>
+<SENT sid="44" pm="."><plain>2D-basecalling was performed on the cloud-based Metrichor. </plain></SENT>
+<SENT sid="45" pm="."><plain>Fast5 to fasta conversion used Nanocall (David et al., 2016). </plain></SENT>
+</text></p></sec><sec><title><text><SENT sid="46" pm="."><plain>Hybrid Genome Assembly and Genome Annotation </plain></SENT>
+</text></title><p><text><SENT sid="47" pm="."><plain>SPAdes version 3.8.1 (Antipov et al., 2016) was used for an initial hybrid genome assembly incorporating both Illumina and Nanopore reads. </plain></SENT>
+<SENT sid="48" pm="."><plain>Contigs longer than 1,000 bp were then selected for in silico scaffolding and gap-closing using npScarf (Cao et al., 2016). </plain></SENT>
+<SENT sid="49" pm="."><plain>The assembled genome was annotated using the NCBI Prokaryotic annotation pipeline (Tatusova et al., 2016) and manually curated to include annotations for the pcaH2, pcaG2, pcaB2 and 4SLH genes coding for protocatechuate 3,4-dioxygenase alpha subunit type II, protocatechuate 3,4-dioxygenase beta subunit type II, 3-carboxymuconate cycloisomerase type II and 4-sulfomuconolactoe hydrolase, respectively, that were missed by the default annotation setting. </plain></SENT>
+<SENT sid="50" pm="."><plain>The identification and annotation of prophage sequences were performed using the PHASTER web-server (Arndt et al., 2016). </plain></SENT>
+<SENT sid="51" pm="."><plain>Visualization of the complete genome of strain PBC and genomic comparisons with public available Hydrogenophaga genomes (Table 1) were performed using Blast Ring Image Generator (blastN e-value setting of 1e-10) (Alikhan et al., 2011). </plain></SENT>
+<SENT sid="52" pm="."><plain>Mapping of Nanopore reads and Illumina contigs was performed using Minimap21 and subsequently visualized in Integrative Genomics Viewer version 3 (Thorvaldsdóttir et al., 2013). </plain></SENT>
+<SENT sid="53" pm="."><plain>Generation of Illumina contigs was done by assembling Illumina-only reads using SPAdes version 3.8.1 and filtering for contigs with coverage and length of more than 5× and 300 bp, respectively (Antipov et al., 2016). </plain></SENT>
+</text></p><SecTag type="TABLE"><table-wrap id="T1" position="float"><label>Table 1</label><caption><p><text><SENT sid="54" pm="."><plain>Hydrogenophaga strains used for comparative genomics analysis. </plain></SENT>
+</text></p></caption><table frame="hsides" rules="groups" cellspacing="5" cellpadding="5"><thead><tr><th valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="55" pm="."><plain>Organism </plain></SENT>
+</text></th><th valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="56" pm="."><plain>Accession number </plain></SENT>
+</text></th><th valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="57" pm="."><plain>Isolation source </plain></SENT>
+</text></th><th valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="58" pm="."><plain>Reference </plain></SENT>
+</text></th></tr></thead><tbody><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="59" pm="."><plain>Hydrogenophaga intermedia PBC </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="60" pm="."><plain>CP017311 </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="61" pm="."><plain>Textile waste water </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="62" pm="."><plain>This study </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="63" pm="."><plain>Hydrogenophaga intermedia S1 (DSM 5680T) </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="64" pm="."><plain>CCAE01 </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="65" pm="."><plain>Waste water with 4-aminobenzenesulfonate as sole source of carbon </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="66" pm="."><plain>Kim and Gan, 2017 </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="67" pm="."><plain>Hydrogenophaga sp. </plain></SENT>
+<SENT sid="68" pm="."><plain>Root209 </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="69" pm="."><plain>LMIE01 </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="70" pm="."><plain>Root of Arabidopsis thaliana </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="71" pm="."><plain>Bai et al., 2015 </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="72" pm="."><plain>Hydrogenophaga pseudoflava NBRC 102511T </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="73" pm="."><plain>BCWQ01 </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="74" pm="."><plain>River water </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="75" pm="."><plain>unpublished </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="76" pm="."><plain>Hydrogenophaga palleronii NBRC 102513T </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="77" pm="."><plain>BCTJ01 </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="78" pm="."><plain>Water enriched for hydrogen bacteria in an atmosphere containing 6% oxygen </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="79" pm="."><plain>unpublished </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="80" pm="."><plain>Hydrogenophaga taeniospiralis NBRC 102512T </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="81" pm="."><plain>BCWR01 </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="82" pm="."><plain>Soil </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="83" pm="."><plain>unpublished </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="84" pm="."><plain>Hydrogenophaga flava NBRC 102514T </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="85" pm="."><plain>BCTF01 </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="86" pm="."><plain>Mud from ditch </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="87" pm="."><plain>unpublished </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="88" pm="."><plain>Hydrogenophaga sp. </plain></SENT>
+<SENT sid="89" pm="."><plain>RAC07 </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="90" pm="."><plain>CP016449 </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="91" pm="."><plain>Algal phycosphere </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="92" pm="."><plain>Fixen et al., 2016 </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="93" pm="."><plain>Hydrogenophaga sp. </plain></SENT>
+<SENT sid="94" pm="."><plain>LPB0072 </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="95" pm="."><plain>LVWD01 </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="96" pm="."><plain>Pacific oyster (Crassostrea gigas) </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="97" pm="."><plain>Unpublished </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="98" pm="."><plain>Hydrogenophaga sp. </plain></SENT>
+<SENT sid="99" pm="."><plain>PML113 </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="100" pm="."><plain>MIYM01 </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="101" pm="."><plain>Contaminated water </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="102" pm="."><plain>Unpublished </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="103" pm="."><plain>Hydrogenophaga sp. </plain></SENT>
+<SENT sid="104" pm="."><plain>IBVHS2 </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="105" pm="."><plain>NFUT01 </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="106" pm="."><plain>Unknown </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="107" pm="."><plain>Unpublished </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="108" pm="."><plain>Hydrogenophaga sp. </plain></SENT>
+<SENT sid="109" pm="."><plain>IBVHS1 </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="110" pm="."><plain>NFUU01 </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="111" pm="."><plain>Unknown </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="112" pm="."><plain>Unpublished </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="113" pm="."><plain>Hydrogenophaga sp. </plain></SENT>
+<SENT sid="114" pm="."><plain>A37 </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="115" pm="."><plain>MUNZ01 </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="116" pm="."><plain>Fjaler soil </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="117" pm="."><plain>Unpublished </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="118" pm="."><plain>Hydrogenophaga sp. </plain></SENT>
+<SENT sid="119" pm="."><plain>H7 </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="120" pm="."><plain>MCIC01 </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="121" pm="."><plain>Coal mine </plain></SENT>
+</text></td><td valign="top" align="left" rowspan="1" colspan="1"><text><SENT sid="122" pm="."><plain>Unpublished </plain></SENT>
+</text></td></tr><tr><td valign="top" align="left" rowspan="1" colspan="1"/></tr></tbody></table></table-wrap></SecTag></sec><sec><title><text><SENT sid="123" pm="."><plain>In Silico Genome–Genome Hybridization </plain></SENT>
+</text></title><p><text><SENT sid="124" pm="."><plain>Pair-wise average nucleotide identity of strain PBC against the publicly available genome sequences of Hydrogenophaga species were performed using JSpecies V1.2 (ANIm setting) (Richter et al., 2016). </plain></SENT>
+<SENT sid="125" pm="."><plain>Strains exhibiting pair-wise ANI of more than 95% were considered as members of the same genospecies. </plain></SENT>
+<SENT sid="126" pm="."><plain>A heatmap was plotted in R version 3 using the pheatmap library package. </plain></SENT>
+</text></p></sec><sec><title><text><SENT sid="127" pm="."><plain>Whole Genome Phylogeny </plain></SENT>
+</text></title><p><text><SENT sid="128" pm="."><plain>Whole proteome was predicted using Prodigal (-p meta setting) and piped into PhyloPhlan for the identification of conserved proteins (Hyatt et al., 2010; Segata et al., 2013). </plain></SENT>
+<SENT sid="129" pm="."><plain>The concatenated alignment generated by PhyloPhlAN was subsequently trimmed using trimAl version 1.9 (-automated1 setting) and used to construct a maximum likelihood tree using IqTree version 5.15 with 1000 ultrafast bootstraps (Capella-Gutiérrez et al., 2009; Nguyen et al., 2015). </plain></SENT>
+<SENT sid="130" pm="."><plain>Visualization and annotation of trees was performed with MEGA6 (Tamura et al., 2013). </plain></SENT>
+</text></p></sec><sec><title><text><SENT sid="131" pm="."><plain>Comparative Genomics Analysis </plain></SENT>
+</text></title><p><text><SENT sid="132" pm="."><plain>HMMsearch version 3.1b was used for the identification of proteins of interest utilizing either the PFAM (-E 1e-5 setting) or TIGRFAM (-cut_nc or –E 1e-5 setting) HMM profiles (Haft et al., 2003; Eddy, 2011). </plain></SENT>
+<SENT sid="133" pm="."><plain>Protein alignment, trimming, phylogenetic tree construction and visualization were performed using MAFFT-linsi, TrimAl, IqTree and FigTree, respectively (Capella-Gutiérrez et al., 2009; Katoh and Standley, 2013; Nguyen et al., 2015). </plain></SENT>
+<SENT sid="134" pm="."><plain>Visualization of gene neighborhood was conducted using EasyFig (blastN setting) (Sullivan et al., 2011). </plain></SENT>
+</text></p></sec></sec></SecTag><SecTag type="RESULTS,DISCUSS"><sec><title><text><SENT sid="135" pm="."><plain>Results and Discussion </plain></SENT>
+</text></title><sec><title><text><SENT sid="136" pm="."><plain>MinION Output and Hybrid Genome Assembly </plain></SENT>
+</text></title><p><text><SENT sid="137" pm="."><plain>A total of 90,491 1D and 51,630 2D reads were generated from a full 48-h MinION run. </plain></SENT>
+<SENT sid="138" pm="."><plain>After filtering for reads longer than 2,500 bp, 14,404 1D and 12, 959 2D reads were retained for genome assembly. </plain></SENT>
+<SENT sid="139" pm="."><plain>The final data output used for assembly was 173 megabases representing approximately 33× genome coverage of strain PBC. </plain></SENT>
+<SENT sid="140" pm="."><plain>The average read length was 6,350 bp and the longest read generated was 126,959 bp. </plain></SENT>
+<SENT sid="141" pm="."><plain>Initial Spades hybrid assembly using both Illumina and MinION filtered reads generated 5 scaffolds (&gt;10x coverage, &gt;1,000 bp) which were subsequently scaffolded and gap-closed into a single contig using Npscarf. </plain></SENT>
+<SENT sid="142" pm="."><plain>The complete genome of strain PBC is 5,232,477 bp in length with a GC content of 68.4%. </plain></SENT>
+<SENT sid="143" pm="."><plain>Based on NCBI annotation pipeline, the complete genome consists of 4,904 protein-coding genes, 43 tRNA and single-copy 5S, 16S, and 23S rRNA genes. </plain></SENT>
+<SENT sid="144" pm="."><plain>Comparisons of strain PBC and other Hydrogenophaga species revealed two genomic regions (Figure 1A: Regions 3 and 4) uniquely present in strain PBC, that were subsequently identified as prophage in origin by Phaster. </plain></SENT>
+<SENT sid="145" pm="."><plain>Both phage regions were incomplete and only code for two to three major phage components. </plain></SENT>
+<SENT sid="146" pm="."><plain>Phage components 1 and 2 on the contrary are complete, uniquely shared by both H. intermedia strains (Figure 1A) and have the highest number of homologous proteins to Enterobacter phage Arya (NCBI Reference Sequence: NC_0310480) isolated from a termite gut. </plain></SENT>
+</text></p><SecTag type="FIG"><fig id="F1" position="float"><label>FIGURE 1</label><caption><p><text><SENT sid="147" pm="."><plain>(A) Circular genome visualization of Hydrogenophaga intermedia PBC and genomic comparison with 13 additional Hydrogenophaga strains. </plain></SENT>
+<SENT sid="148" pm="."><plain>Colored regions indicate region with nucleotide similarity (E-value &lt; 1e-10) and percentage values next to figure legend indicate protein identity to SadA (WP_009515254.1), SadB (WP_009515256.1), and SadD (WP_009515258.1) of H. intermedia PBC that are involved in the deamination of 4-aminobenzenesulfonate (Gan et al., 2012c). </plain></SENT>
+<SENT sid="149" pm="."><plain>Gray areas located at the most external ring indicate putative prophage regions. </plain></SENT>
+<SENT sid="150" pm="."><plain>Maroon labels indicate genes coding for transposase element. pcaG2, protocatechuate dioxygenase type II alpha subunit; pcaH2, protocatechuate dioxygenase type II beta subunit; SLH, 4-sulfomuconolactone hydrolase; MAR, maleylacetate reductase; sadA, 4-aminobenzenesulfonate 3,4-dioxygenase; sadB, glutamine synthetase; sadC, ferredoxin; IS6, transposase. (B) Genomic regions containing genes associated with 4-sulfocatechol biodegradation (gray box). (C) Mapping of Illumina contigs and Nanopore long reads onto the genomic region containing the genes involved in 4-sulfocatechol metabolism. </plain></SENT>
+<SENT sid="151" pm="."><plain>Blue and red arrows indicate forward and reverse strands respectively. </plain></SENT>
+</text></p></caption><graphic xlink:href="fmicb-08-01880-g001"/></fig></SecTag></sec><sec><title><text><SENT sid="152" pm="."><plain>New Genomic Insight into 4-Aminobenzenesulfonate Biodegradation in Hydrogenophaga </plain></SENT>
+</text></title><p><text><SENT sid="153" pm="."><plain>Genes responsible for the catabolism of 4-aminobenzenesulfonate in strain PBC are clustered in two distinct genomic regions. </plain></SENT>
+<SENT sid="154" pm="."><plain>Interestingly, the sad operon appears to be fairly conserved in all currently reported Hydrogenophaga genomes, suggesting that the ability to deaminate 4-aminobenzenesulfoate may be a defining metabolic trait of Hydrogenophaga strains. </plain></SENT>
+<SENT sid="155" pm="."><plain>However, given the diverse isolation sources of Hydrogenophaga strains (Table 1) and their presumably limited exposure to xenobiotic compounds, it is likely that the original substrate of the 4-aminobenzenesulfonate dioxygenase is a naturally occurring compound with close structural homology to 4-aminobenzenesulfonate. </plain></SENT>
+</text></p><p><text><SENT sid="156" pm="."><plain>In contradistinction, the genomic region containing pcaH2G2, pcaB2 and 4-SLH involved in the conversion of 4-sulfocatechol to maleylacetate is conserved only in the Hydrogenophaga intermedia strains (Figure 1B). </plain></SENT>
+<SENT sid="157" pm="."><plain>In addition, it is also worth noting that this region was identified as a phage region and flanked by genes coding for IS6 transposable elements (Figure 1C), an indication of the mobility of the pcaH2G2, pcaB2 and 4-SLH gene cluster presumably through phage transduction (Hickman et al., 2010). </plain></SENT>
+<SENT sid="158" pm="."><plain>As expected, the presence of multiple transposase genes in this genomic region led to a fragmented initial Illumina read assembly (Figure 1C) due to the inability of short reads to resolve the repetitive regions (Phillippy, 2017). </plain></SENT>
+<SENT sid="159" pm="."><plain>This shortcoming was overcome by integrating Nanopore long reads into the assembly as evidenced by their ability to span repeats in the genome (Figure 1C). </plain></SENT>
+</text></p><p><text><SENT sid="160" pm="."><plain>It is tempting to speculate that the acquisition of this gene cluster may be a key factor leading to complete 4-aminobenzenesulfonate biodegradation in Hydrogenophaga. </plain></SENT>
+<SENT sid="161" pm="."><plain>Recently, the complete genome of Novosphingobium resinovorum SA1, another well-studied 4-aminobenzenesulfonate degrader, has been reported and comparison of this genomic region and that of the homologous region in Novosphingobium resinovorum SA1, revealed a comparable gene organization, e.g., pcaH2-pcaG2-tnp-pcaB2-4SLH-MAR in H. intermedia PBC (Figure 1C) and pcaB2 (scaA)-4SLH (scaB)-MAR(scaC)-oxidoreductase-pcaH2(scaE)-pcaG2(scaF) in Novosphingobium resinovorum SA1 (Hegedüs et al., 2017), suggesting recently shared ancestry of the currently known 4-sulfocatechol biodegradation pathway and possibly inter-class (alphaproteobacteria-betaproteobacteria) horizontal gene transfer of this gene cluster. </plain></SENT>
+</text></p></sec><sec><title><text><SENT sid="162" pm="."><plain>H. pseudoflava and H. flava Belong to Two Genospecies Despite Their High Similarity in Genotypic and Protein Electrophoretic Profiles </plain></SENT>
+</text></title><p><text><SENT sid="163" pm="."><plain>Hydrogenophaga flava was initially designated as the type species of the genus Hydrogenophaga but due to its slow and unreliable growth, H. pseudoflava has been proposed for use as an alternative reference taxon for the genus as it exhibits similar genotypic and protein electrophoretic profiles to that of H. flava (Willems et al., 1989). In silico genome-genome hybridization indicates that although H. flava and H. pseudoflava are closely related to one another, they are clearly two distinct genospecies with a pairwise ANIm of 93% (Figure 2). </plain></SENT>
+<SENT sid="164" pm="."><plain>A more in-depth analysis of the H. flava genome may be useful to identify its additional nutritional requirements for optimal and consistent growth on culture medium. </plain></SENT>
+<SENT sid="165" pm="."><plain>Such a genomic approach has been successfully demonstrated in Clostridium tyrobutyricum and other Clostridia associated with butyric acid fermentation leading to the identification of key vitamins and several amino acids essential for growth (Storari et al., 2016). </plain></SENT>
+<SENT sid="166" pm="."><plain>Furthermore, in silico genome-genome hybridization analysis also indicates that H. sp. </plain></SENT>
+<SENT sid="167" pm="."><plain>H7, which was previously isolated from a coal mine in China (Table 1), could be reclassified to the species H. pseudoflava given its high pairwise ANIm (97%) to H. pseudoflava NBRC 102511T (Figure 2). </plain></SENT>
+</text></p><SecTag type="FIG"><fig id="F2" position="float"><label>FIGURE 2</label><caption><p><text><SENT sid="168" pm="."><plain>Pairwise average nucleotide similarity of Hydrogenophaga strains. </plain></SENT>
+</text></p></caption><graphic xlink:href="fmicb-08-01880-g002"/></fig></SecTag></sec><sec><title><text><SENT sid="169" pm="."><plain>Genome-Based Phylogeny of the Family Comamonadaceae Supports Hydrogenophaga as a Monophyletic Group but Indicates Taxonomic Incongruence in the Genera Acidovorax and Comamonas </plain></SENT>
+</text></title><p><text><SENT sid="170" pm="."><plain>Maximum likelihood tree based on 400 universal conserved proteins provides maximal support for the monophyletic clustering of all currently sequenced Hydrogenophaga strains with H. intermedia strains and H. sp. </plain></SENT>
+<SENT sid="171" pm="."><plain>PML 113 being basal to the rest of Hydrogenophaga (Figure 3). </plain></SENT>
+<SENT sid="172" pm="."><plain>The genus Hydrogenophaga clade shares a sister relationship with a group of highly alkaliphilic hydrogen-utilizing Comamonadacea bacteria isolated from an alkaline serpentinizing springs at The Cedars, California (Suzuki et al., 2014). </plain></SENT>
+<SENT sid="173" pm="."><plain>Beyond the genus Hydrogenophaga, however, considerable taxonomic incongruence was observed in the genera Acidovorax and Comamonas. </plain></SENT>
+<SENT sid="174" pm="."><plain>Some members of the Acidovorax, such as Acidovorax sp. strains 121606, 202149 and 12322-1, could be reclassified as members of the genus Comamonas based on their phylogenetic affinities. </plain></SENT>
+<SENT sid="175" pm="."><plain>Within the genus Comamonas, Comamonas badia DSM 17552T (Suzuki et al., 2014) is peculiar as it does not cluster with a majority of other Comamonas, but instead forms a sister group with members of the genus Alicycliphilus, albeit with moderate bootstrap support. </plain></SENT>
+<SENT sid="176" pm="."><plain>In addition, Comamonas granuli NBRC 101663T appears to be considerably divergent from other Comamonas species given its basal position in the clade containing all currently sequenced Comamonas strains (Suzuki et al., 2014). </plain></SENT>
+<SENT sid="177" pm="."><plain>A more in-depth taxonomic investigation based on the percentage of conserved proteins (POCP) to specifically re-define the genus boundary between Comamonas and Acidovorax should be undertaken (Qin et al., 2014). </plain></SENT>
+</text></p><SecTag type="FIG"><fig id="F3" position="float"><label>FIGURE 3</label><caption><p><text><SENT sid="178" pm="."><plain>Maximum likelihood phylogenomic tree of the family Comamonadaceae. </plain></SENT>
+<SENT sid="179" pm="."><plain>The tree was rooted with members of the genus Burkholderia belonging to the family Burkholderiaceae, as the outgroup. </plain></SENT>
+<SENT sid="180" pm="."><plain>Numbers in brackets indicate the number of branches collapsed. </plain></SENT>
+<SENT sid="181" pm="."><plain>Asterisks indicate the presence of one member with inconsistent taxonomic labeling, e.g., different genus name within the collapsed branch. </plain></SENT>
+<SENT sid="182" pm="."><plain>Numbers above branches indicate ultra-fast bootstrap support values. </plain></SENT>
+<SENT sid="183" pm="."><plain>Table next to the Hydrogenophaga clade show the number of proteins showing significant hits to HMM profiles associated with bacterial hydrogenase system. </plain></SENT>
+</text></p></caption><graphic xlink:href="fmicb-08-01880-g003"/></fig></SecTag></sec><sec><title><text><SENT sid="184" pm="."><plain>Genomic Potential for Hydrogen Oxidation Is Restricted to a Few Members of Hydrogenophaga </plain></SENT>
+</text></title><p><text><SENT sid="185" pm="."><plain>The genus Hydrogenophaga was originally proposed by Willems et al. (1989) to group “yellow-pigmented hydrogen-oxidizing [Pseudomonas] species belonging to the acidovorans rRNA complex.” However, by identifying currently known HMM profiles related to hydrogenase system, genomic potential for hydrogen oxidation was only identified in 7 Hydrogenophaga strains of which 6 strains are closely related as shown by their monophyletic clustering in the phylogenomic tree (Figure 3). </plain></SENT>
+<SENT sid="186" pm="."><plain>The 7 Hydrogenophaga strains include the original strains that were initially used to describe the genus Hydrogenophaga, such as H. palleronii, H. taeniospralis, H. flava and H. pseudoflava, corroborating their previously demonstrated in vitro hydrogen oxidizing ability (Willems et al., 1989; Contzen et al., 2000). </plain></SENT>
+<SENT sid="187" pm="."><plain>The reported inability of H. intermedia S1T and H. atypica DSM 15342T to oxidize hydrogen in vitro (Contzen et al., 2000; Kampfer et al., 2005) correlates with the absence of key genes associated with hydrogen metabolism (Figure 3). </plain></SENT>
+<SENT sid="188" pm="."><plain>However, the absence of genomic potential for hydrogen catabolism in nearly half of the currently sequenced Hydrogenophaga strains is unexpected and indicates that the description genus of Hydrogenophaga as “hydrogen eating bacteria” is not sustainable and warrants revision. </plain></SENT>
+</text></p></sec><sec><title><text><SENT sid="189" pm="."><plain>p-Aminobenzoic Acid Auxotrophy within Hydrogenophaga </plain></SENT>
+</text></title><p><text><SENT sid="190" pm="."><plain>Mapping of Hydrogenophaga genome sequences to the contig of H. palleronii NBRC102513 (BCTJ01000048, 24 kbp) containing pabB revealed that only 8 out of 14 genomes exhibit nucleotide similarity (&gt;40% identity and E-value &lt; 1E-5) to the pabB gene region (Figure 4A). </plain></SENT>
+<SENT sid="191" pm="."><plain>Of the eight genomes, only partial pabB hits were observed for strains H7, NBRC102514, Root209, NBRC102511 and A37, hinting divergence at the nucleotide level. </plain></SENT>
+<SENT sid="192" pm="."><plain>Interestingly, only two proteins belonging to H. palleroni and H. sp. PML113 achieved an HMMscore that is above the domain noise cutoff score for bona fide PabB (TIGR00553) (Supplementary Figure S1). </plain></SENT>
+<SENT sid="193" pm="."><plain>On the contrary, strain IBVHS2 despite exhibiting nucleotide similarity to the pabB gene region, does not code for protein with HMMscore above the TIGR00553 noise cutoff. </plain></SENT>
+<SENT sid="194" pm="."><plain>However, it is worth noting that multiple proteins with HMMscore slightly below the TIGR00553 noise cutoff could be identified from the annotated Hydrogenophaga genomes (Supplementary Figure S1). </plain></SENT>
+<SENT sid="195" pm="."><plain>These proteins appear to be more closely related to PabB than TrpE as evidenced by their extremely low HMMscore to TrpE (TIGR00564) in comparison with other putative TrpE proteins and their phylogenetic affiliation to the PabB clade (Supplementary Figure S2 and Data Sheet 1). </plain></SENT>
+<SENT sid="196" pm="."><plain>TrpE is involved in the synthesis of anthranilate from chorismate and ammonia. </plain></SENT>
+<SENT sid="197" pm="."><plain>Functional characterization of these divergent PabB homologs will be useful to explore their role in pABA synthesis as of them belong to Hydrogenophaga pseudoflava that has been shown to grow on minimal medium without pABA supplementation (Povolo et al., 2013). </plain></SENT>
+</text></p><SecTag type="FIG"><fig id="F4" position="float"><label>FIGURE 4</label><caption><p><text><SENT sid="198" pm="."><plain>Prevalence of pabB among Hydrogenophaga strains based on genomic and phylogenetic analyses. (A) Homology analysis against the pabB-containing genomic region of Hydrogenophaga palleronii (B) Easyfig visualization of homologous genomic regions containing pabB between H. intermedia PBC and H. palleronii. </plain></SENT>
+<SENT sid="199" pm="."><plain>Shaded regions indicate regions with E-value score of less than 1e-5 with the percentage of nucleotide identity expressed along a gray scale. </plain></SENT>
+<SENT sid="200" pm="."><plain>Hypothetical proteins are indicated by arrows containing black circles. </plain></SENT>
+</text></p></caption><graphic xlink:href="fmicb-08-01880-g004"/></fig></SecTag><p><text><SENT sid="201" pm="."><plain>The absence pabB in H. intermedia strains PBC and S1T is consistent with their previously reported reliance on either external nutrient supplementation or helper strain for pABA (Dangmann et al., 1996; Gan et al., 2011b; Kim and Gan, 2017). </plain></SENT>
+<SENT sid="202" pm="."><plain>A recent genomic analysis of Hydrogenophaga intermedia PBC helper strain, Ralstonia sp. </plain></SENT>
+<SENT sid="203" pm="."><plain>PBA, showed the presence of two PabB proteins of which one of them was fused to PabC (Gan et al., 2012a; Kim and Gan, 2017), potentially enabling the overproduction of pABA to sustain the growth of both strains when they were co-cultured in vitamin-free minimal medium containing 4-aminobenzenesulfonate as the sole carbon and nitrogen source. </plain></SENT>
+<SENT sid="204" pm="."><plain>A closer comparison of the genomic region containing genes spatially associated with pabB in H. intermedia PBC and H. palleroni NBRC102513 suggests that pabB may be lost through gene deletion (Figure 4B). </plain></SENT>
+<SENT sid="205" pm="."><plain>Surprisingly, strains LPB0072, RAC07, Root209 and IBVHS1 appear to also lack the genomic potential for pABA synthesis. </plain></SENT>
+<SENT sid="206" pm="."><plain>A future study investigating the ability of these strains to grow on defined medium without pABA supplementation will be necessary to verify their predicted pABA auxotrophy as most Hydrogenophaga strains were isolated on nutrient rich medium, which will contain traced amount of pABA. </plain></SENT>
+<SENT sid="207" pm="."><plain>For example, strains Root209 and RAC07 were maintained on tryptic soy agar and minimal medium with yeast extract supplementation, respectively (Bai et al., 2015; Fixen et al., 2016). </plain></SENT>
+</text></p></sec></sec></SecTag><sec><title><text><SENT sid="208" pm="."><plain>Data Access </plain></SENT>
+</text></title><p><text><SENT sid="209" pm="."><plain>The complete genome of Hydrogenophaga intermedia PBC has been deposited under the accession number <ext-link ext-link-type="DDBJ/EMBL/GenBank" xlink:href="CP017311">CP017311</ext-link>. </plain></SENT>
+<SENT sid="210" pm="."><plain>Raw data for both Illumina and Nanopore data have been placed under the SRA under the SRA project ID SRP092076. </plain></SENT>
+</text></p></sec><SecTag type="AUTH_CONT"><sec><title><text><SENT sid="211" pm="."><plain>Author Contributions </plain></SENT>
+</text></title><p><text><SENT sid="212" pm="."><plain>HG performed gDNA extraction, and bioinformatics analysis and drafted the manuscript. </plain></SENT>
+<SENT sid="213" pm="."><plain>YL performed library preparation and MINION sequencing. </plain></SENT>
+<SENT sid="214" pm="."><plain>CA supervised the study. </plain></SENT>
+</text></p></sec></SecTag><SecTag type="COMP_INT"><sec><title><text><SENT sid="215" pm="."><plain>Conflict of Interest Statement </plain></SENT>
+</text></title><p><text><SENT sid="216" pm="."><plain>The authors declare that the research was conducted in the absence of any commercial or financial relationships that could be construed as a potential conflict of interest. </plain></SENT>
+</text></p></sec></SecTag></body><back><SecTag type="ACK_FUND"><ack><p><text4fund><text><SENT sid="217" pm="."><plain>Funding for this study was provided by the Monash University Malaysia Infrastructure grant awarded to CA. </plain></SENT>
+<SENT sid="218" pm="."><plain>HG and YL were grateful to the Monash University Malaysia Tropical Medicine and Biology Multidisciplinary Platform for financial support. </plain></SENT>
+</text></text4fund></p></ack></SecTag><fn-group><fn id="fn01"><label>1</label><p><text><SENT sid="219" pm="."><plain><ext-link ext-link-type="uri" xlink:href="https://github.com/lh3/minimap2">https://github.com/lh3/minimap2</ext-link> </plain></SENT>
+</text></p></fn></fn-group><SecTag type="SUPPL"><sec sec-type="supplementary material"><title>Supplementary Material</title><p>The Supplementary Material for this article can be found online at: <ext-link ext-link-type="uri" xlink:href="http://journal.frontiersin.org/article/10.3389/fmicb.2017.01880/full#supplementary-material">http://journal.frontiersin.org/article/10.3389/fmicb.2017.01880/full#supplementary-material</ext-link></p><supplementary-material content-type="local-data" id="SM1"><media xlink:href="Image_1.TIF"><caption><p><text><SENT sid="220" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media><p><bold>FIGURE S1 |</bold> Sequence scores of Hydrogenophaga proteins with significant hits (<italic>E</italic>-value &lt; 10<sup>-5</sup>) to TIGR00564 or TIGR00553. Dotted lines represent the TIGRFAM model noise cutoff bit score thresholds.</p></supplementary-material><supplementary-material content-type="local-data" id="S1"><media xlink:href="Image_1.TIF"><caption><p><text><SENT sid="221" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="SM2"><media xlink:href="Image_2.TIF"><caption><p><text><SENT sid="222" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media><p><bold>FIGURE S2 |</bold> Maximum likelihood tree of TrpE and PabB. Node values indicate ultrafast bootstrap support values. Red branches indicate proteins with high sequence scores to TIGR00564 corresponding to bona fide TrpE. Blue and green branches indicate proteins with low scores to TIGR00564 but high scores to TIGR00553 (bona fide PabB). In addition, proteins associated with blue branches exhibit scores that are either higher than or very close to the noise cutoff score of TIGR00553.</p></supplementary-material><supplementary-material content-type="local-data" id="S2"><media xlink:href="Image_2.TIF"><caption><p><text><SENT sid="223" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="SM3"><media xlink:href="Data_Sheet_1.FASTA"><caption><p><text><SENT sid="224" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media><p><bold>DATA SHEET 1 |</bold> Hydrogenophaga protein sequences used for the construction of maximum likelihood tree.</p></supplementary-material><supplementary-material content-type="local-data" id="S3"><media xlink:href="Data_Sheet_1.FASTA"><caption><p><text><SENT sid="225" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media></supplementary-material></sec></SecTag><SecTag type="REF"><ref-list><title>References</title><ref id="B1"><text><SENT sid="226" pm="."><plain>AlikhanN. </plain></SENT>
+<SENT sid="227" pm="."><plain>F.PettyN. </plain></SENT>
+<SENT sid="228" pm="."><plain>K.Ben ZakourN. </plain></SENT>
+<SENT sid="229" pm="."><plain>L.BeatsonS. </plain></SENT>
+<SENT sid="230" pm="."><plain>A. (2011). BLAST ring image generator (BRIG): simple prokaryote genome comparisons. BMC Genomics 12:402 10.1186/1471-2164-12-402 </plain></SENT>
+</text></ref><ref id="B2"><text><SENT sid="231" pm="."><plain>AntipovD.KorobeynikovA.McLeanJ. </plain></SENT>
+<SENT sid="232" pm="."><plain>S.PevznerP. </plain></SENT>
+<SENT sid="233" pm="."><plain>A. (2016). hybridSPAdes: an algorithm for hybrid assembly of short and long reads. Bioinformatics 32 1009–1015. 10.1093/bioinformatics/btv68826589280 </plain></SENT>
+</text></ref><ref id="B3"><text><SENT sid="234" pm="."><plain>ArndtD.GrantJ. </plain></SENT>
+<SENT sid="235" pm="."><plain>R.MarcuA.SajedT.PonA.LiangY. (2016). PHASTER: a better, faster version of the PHAST phage search tool. Nucleic Acids Res. 44 W16–W21. 10.1093/nar/gkw38727141966 </plain></SENT>
+</text></ref><ref id="B4"><text><SENT sid="236" pm="."><plain>BaiY.MullerD. </plain></SENT>
+<SENT sid="237" pm="."><plain>B.SrinivasG.Garrido-OterR.PotthoffE.RottM. (2015). Functional overlap of the Arabidopsis leaf and root microbiota. Nature 528 364–369. 10.1038/nature1619226633631 </plain></SENT>
+</text></ref><ref id="B5"><text><SENT sid="238" pm="."><plain>CaoM. </plain></SENT>
+<SENT sid="239" pm="."><plain>D.GanesamoorthyD.ElliottA. </plain></SENT>
+<SENT sid="240" pm="."><plain>G.ZhangH.CooperM. </plain></SENT>
+<SENT sid="241" pm="."><plain>A.CoinL. </plain></SENT>
+<SENT sid="242" pm="."><plain>J. </plain></SENT>
+<SENT sid="243" pm="."><plain>M. (2016). Streaming algorithms for identification of pathogens and antibiotic resistance potential from real-time MinIONTM sequencing. Gigascience 5 32 10.1186/s13742-016-0137-2 </plain></SENT>
+</text></ref><ref id="B6"><text><SENT sid="244" pm="."><plain>Capella-GutiérrezS.Silla-MartínezJ. </plain></SENT>
+<SENT sid="245" pm="."><plain>M.GabaldónT. (2009). trimAl: a tool for automated alignment trimming in large-scale phylogenetic analyses. Bioinformatics 25 1972–1973. 10.1093/bioinformatics/btp34819505945 </plain></SENT>
+</text></ref><ref id="B7"><text><SENT sid="246" pm="."><plain>ContzenM.BurgerS.StolzA. (2001). Cloning of the genes for a 4-sulphocatechol-oxidizing protocatechuate 3,4-dioxygenase from Hydrogenophaga intermedia S1 and identification of the amino acid residues responsible for the ability to convert 4-sulphocatechol. Mol. </plain></SENT>
+<SENT sid="247" pm="."><plain>Microbiol. 41 199–205. 10.1046/j.1365-2958.2001.02505.x11454212 </plain></SENT>
+</text></ref><ref id="B8"><text><SENT sid="248" pm="."><plain>ContzenM.MooreE. </plain></SENT>
+<SENT sid="249" pm="."><plain>R.BlumelS.StolzA.KampferP. (2000). Hydrogenophaga intermedia sp. nov., a 4-aminobenzenesulfonate degrading organism. Syst. </plain></SENT>
+<SENT sid="250" pm="."><plain>Appl. </plain></SENT>
+<SENT sid="251" pm="."><plain>Microbiol. 23 487–493. 10.1016/S0723-2020(00)80022-311249018 </plain></SENT>
+</text></ref><ref id="B9"><text><SENT sid="252" pm="."><plain>DangmannE.StolzA.KuhmA. </plain></SENT>
+<SENT sid="253" pm="."><plain>E.HammerA.FeigelB.Noisommit-RizziN. (1996). Degradation of 4-aminobenzenesulfonate by a two-species bacterial coculture. </plain></SENT>
+<SENT sid="254" pm="."><plain>Physiological interactions between Hydrogenophaga palleronii S1 and Agrobacterium radiobacter S2. Biodegradation 7 223–229. 10.1007/BF000581818782393 </plain></SENT>
+</text></ref><ref id="B10"><text><SENT sid="255" pm="."><plain>DavidM.DursiL. </plain></SENT>
+<SENT sid="256" pm="."><plain>J.YaoD.BoutrosP. </plain></SENT>
+<SENT sid="257" pm="."><plain>C.SimpsonJ. </plain></SENT>
+<SENT sid="258" pm="."><plain>T. (2016). Nanocall: an open source basecaller for oxford nanopore sequencing data. Bioinformatics 33 49–55. 10.1093/bioinformatics/btw56927614348 </plain></SENT>
+</text></ref><ref id="B11"><text><SENT sid="259" pm="."><plain>EddyS. </plain></SENT>
+<SENT sid="260" pm="."><plain>R. (2011). Accelerated profile HMM searches. PLOS Comput Biol. 7:e1002195 10.1371/journal.pcbi.1002195 </plain></SENT>
+</text></ref><ref id="B12"><text><SENT sid="261" pm="."><plain>FixenK. </plain></SENT>
+<SENT sid="262" pm="."><plain>R.StarkenburgS. </plain></SENT>
+<SENT sid="263" pm="."><plain>R.HovdeB. </plain></SENT>
+<SENT sid="264" pm="."><plain>T.JohnsonS. </plain></SENT>
+<SENT sid="265" pm="."><plain>L.DeodatoC. </plain></SENT>
+<SENT sid="266" pm="."><plain>R.DaligaultH. </plain></SENT>
+<SENT sid="267" pm="."><plain>E. (2016). Genome sequences of eight bacterial species found in coculture with the haptophyte Chrysochromulina tobin. Genome Announc. 4:e01162–16 10.1128/genomeA.01162-16 </plain></SENT>
+</text></ref><ref id="B13"><text><SENT sid="268" pm="."><plain>GanH. </plain></SENT>
+<SENT sid="269" pm="."><plain>M.ChewT. </plain></SENT>
+<SENT sid="270" pm="."><plain>H.TayY.-L.LyeS. </plain></SENT>
+<SENT sid="271" pm="."><plain>F.YahyaA. (2012a). Genome sequence of Ralstonia sp. strain PBA, a bacterium involved in the biodegradation of 4-aminobenzenesulfonate. J. </plain></SENT>
+<SENT sid="272" pm="."><plain>Bacteriol. 194 5139–5140. 10.1128/jb.01165-1222933765 </plain></SENT>
+</text></ref><ref id="B14"><text><SENT sid="273" pm="."><plain>GanH. </plain></SENT>
+<SENT sid="274" pm="."><plain>M.ChewT. </plain></SENT>
+<SENT sid="275" pm="."><plain>H.TayY. </plain></SENT>
+<SENT sid="276" pm="."><plain>L.LyeS. </plain></SENT>
+<SENT sid="277" pm="."><plain>F.YahyaA. (2012b). Genome sequence of Hydrogenophaga sp. strain PBC, a 4-aminobenzenesulfonate-degrading bacterium. J. </plain></SENT>
+<SENT sid="278" pm="."><plain>Bacteriol. 194 4759–4760. 10.1128/JB.00990-1222887664 </plain></SENT>
+</text></ref><ref id="B15"><text><SENT sid="279" pm="."><plain>GanH. </plain></SENT>
+<SENT sid="280" pm="."><plain>M.IbrahimZ.ShahirS.YahyaA. (2011a). Identification of genes involved in the 4-aminobenzenesulfonate degradation pathway of Hydrogenophaga sp. </plain></SENT>
+<SENT sid="281" pm="."><plain>PBC via transposon mutagenesis. FEMS Microbiol. </plain></SENT>
+<SENT sid="282" pm="."><plain>Lett. 318 108–114. 10.1111/j.1574-6968.2011.02245.x21323982 </plain></SENT>
+</text></ref><ref id="B16"><text><SENT sid="283" pm="."><plain>GanH. </plain></SENT>
+<SENT sid="284" pm="."><plain>M.ShahirS.IbrahimZ.YahyaA. (2011b). Biodegradation of 4-aminobenzenesulfonate by Ralstonia sp. </plain></SENT>
+<SENT sid="285" pm="."><plain>PBA and Hydrogenophaga sp. </plain></SENT>
+<SENT sid="286" pm="."><plain>PBC isolated from textile wastewater treatment plant. Chemosphere 82 507–513. 10.1016/j.chemosphere.2010.10.09421094980 </plain></SENT>
+</text></ref><ref id="B17"><text><SENT sid="287" pm="."><plain>GanH. </plain></SENT>
+<SENT sid="288" pm="."><plain>M.ShahirS.YahyaA. (2012c). Cloning and functional analysis of the genes coding for 4-aminobenzenesulfonate 3,4-dioxygenase from Hydrogenophaga sp. </plain></SENT>
+<SENT sid="289" pm="."><plain>PBC. Microbiology 158(Pt 8), 1933–1941. 10.1099/mic.0.059550-022609751 </plain></SENT>
+</text></ref><ref id="B18"><text><SENT sid="290" pm="."><plain>HaftD. </plain></SENT>
+<SENT sid="291" pm="."><plain>H.SelengutJ. </plain></SENT>
+<SENT sid="292" pm="."><plain>D.WhiteO. (2003). The TIGRFAMs database of protein families. Nucleic Acids Res. 31 371–373. 10.1093/nar/gkg12812520025 </plain></SENT>
+</text></ref><ref id="B19"><text><SENT sid="293" pm="."><plain>HalakS.BastaT.BurgerS.ContzenM.StolzA. (2006). Characterization of the genes encoding the 3-carboxy-cis,cis-muconate-lactonizing enzymes from the 4-sulfocatechol degradative pathways of Hydrogenophaga intermedia S1 and Agrobacterium radiobacter S2. Microbiology 152(Pt 11), 3207–3216. 10.1099/mic.0.29136-017074892 </plain></SENT>
+</text></ref><ref id="B20"><text><SENT sid="294" pm="."><plain>HalakS.BastaT.BurgerS.ContzenM.WrayV.PieperD. </plain></SENT>
+<SENT sid="295" pm="."><plain>H. (2007). 4-Sulfomuconolactone hydrolases from Hydrogenophaga intermedia S1 and Agrobacterium radiobacter S2. J. </plain></SENT>
+<SENT sid="296" pm="."><plain>Bacteriol. 189 6998–7006. 10.1128/JB.00611-0717660282 </plain></SENT>
+</text></ref><ref id="B21"><text><SENT sid="297" pm="."><plain>HayaseN.FujikawaY.NakagawaK.UshioK. (2016). Isolation and characterization of Bradyrhizobium sp. </plain></SENT>
+<SENT sid="298" pm="."><plain>224 capable of degrading sulfanilic acid. Biosci. </plain></SENT>
+<SENT sid="299" pm="."><plain>Biotechnol. </plain></SENT>
+<SENT sid="300" pm="."><plain>Biochem. 80 1663–1665. 10.1080/09168451.2016.117652127108596 </plain></SENT>
+</text></ref><ref id="B22"><text><SENT sid="301" pm="."><plain>HegedüsB.KósP. </plain></SENT>
+<SENT sid="302" pm="."><plain>B.BálintB.MarótiG.GanH. </plain></SENT>
+<SENT sid="303" pm="."><plain>M.PereiK. (2017). Complete genome sequence of Novosphingobium resinovorum SA1, a versatile xenobiotic-degrading bacterium capable of utilizing sulfanilic acid. J. </plain></SENT>
+<SENT sid="304" pm="."><plain>Biotechnol. 241 76–80. 10.1016/j.jbiotec.2016.11.01327851894 </plain></SENT>
+</text></ref><ref id="B23"><text><SENT sid="305" pm="."><plain>HickmanA. </plain></SENT>
+<SENT sid="306" pm="."><plain>B.ChandlerM.DydaF. (2010). Integrating prokaryotes and eukaryotes: DNA transposases in light of structure. Crit. </plain></SENT>
+<SENT sid="307" pm="."><plain>Rev. </plain></SENT>
+<SENT sid="308" pm="."><plain>Biochem. </plain></SENT>
+<SENT sid="309" pm="."><plain>Mol. </plain></SENT>
+<SENT sid="310" pm="."><plain>Biol. 45 50–69. 10.3109/1040923090350559620067338 </plain></SENT>
+</text></ref><ref id="B24"><text><SENT sid="311" pm="."><plain>HyattD.ChenG. </plain></SENT>
+<SENT sid="312" pm="."><plain>L.LocascioP. </plain></SENT>
+<SENT sid="313" pm="."><plain>F.LandM. </plain></SENT>
+<SENT sid="314" pm="."><plain>L.LarimerF. </plain></SENT>
+<SENT sid="315" pm="."><plain>W.HauserL. </plain></SENT>
+<SENT sid="316" pm="."><plain>J. (2010). Prodigal: prokaryotic gene recognition and translation initiation site identification. BMC Bioinformatics 11:119 10.1186/1471-2105-11-119 </plain></SENT>
+</text></ref><ref id="B25"><text><SENT sid="317" pm="."><plain>KampferP.SchulzeR.JackelU.MalikK. </plain></SENT>
+<SENT sid="318" pm="."><plain>A.AmannR.SpringS. (2005). Hydrogenophaga defluvii sp. nov. and Hydrogenophaga atypica sp. nov., isolated from activated sludge. Int. </plain></SENT>
+<SENT sid="319" pm="."><plain>J. </plain></SENT>
+<SENT sid="320" pm="."><plain>Syst. </plain></SENT>
+<SENT sid="321" pm="."><plain>Evol. </plain></SENT>
+<SENT sid="322" pm="."><plain>Microbiol. 55(Pt 1), 341–344.15653898 </plain></SENT>
+</text></ref><ref id="B26"><text><SENT sid="323" pm="."><plain>KatohK.StandleyD. </plain></SENT>
+<SENT sid="324" pm="."><plain>M. (2013). MAFFT multiple sequence alignment software version 7: improvements in performance and usability. Mol. </plain></SENT>
+<SENT sid="325" pm="."><plain>Biol. </plain></SENT>
+<SENT sid="326" pm="."><plain>Evol. 30 772–780. 10.1093/molbev/mst01023329690 </plain></SENT>
+</text></ref><ref id="B27"><text><SENT sid="327" pm="."><plain>KimK.GanH. </plain></SENT>
+<SENT sid="328" pm="."><plain>M. (2017). A glimpse into the genetic basis of symbiosis between Hydrogenophaga and their helper strains in the biodegradation of 4-aminobenzenesulfonate. J. </plain></SENT>
+<SENT sid="329" pm="."><plain>Genomics 5 77–82. 10.7150/jgen.2021628775791 </plain></SENT>
+</text></ref><ref id="B28"><text><SENT sid="330" pm="."><plain>NguyenL.-T.SchmidtH. </plain></SENT>
+<SENT sid="331" pm="."><plain>A.von HaeselerA.MinhB. </plain></SENT>
+<SENT sid="332" pm="."><plain>Q. (2015). IQ-TREE: a fast and effective stochastic algorithm for estimating maximum-likelihood phylogenies. Mol. </plain></SENT>
+<SENT sid="333" pm="."><plain>Biol. </plain></SENT>
+<SENT sid="334" pm="."><plain>Evol. 32 268–274. 10.1093/molbev/msu30025371430 </plain></SENT>
+</text></ref><ref id="B29"><text><SENT sid="335" pm="."><plain>PereiK.RákhelyG.KissI.PolyákB.KovácsK. </plain></SENT>
+<SENT sid="336" pm="."><plain>L. (2001). Biodegradation of sulfanilic acid by Pseudomonas paucimobilis. Appl. </plain></SENT>
+<SENT sid="337" pm="."><plain>Microbiol. </plain></SENT>
+<SENT sid="338" pm="."><plain>Biotechnol. 55 101–107. 10.1007/s00253000047411234949 </plain></SENT>
+</text></ref><ref id="B30"><text><SENT sid="339" pm="."><plain>PhillippyA. </plain></SENT>
+<SENT sid="340" pm="."><plain>M. (2017). New advances in sequence assembly. Genome Res. 27 xi–xiii 10.1101/gr.223057.117 </plain></SENT>
+</text></ref><ref id="B31"><text><SENT sid="341" pm="."><plain>PovoloS.RomanelliM. </plain></SENT>
+<SENT sid="342" pm="."><plain>G.BasagliaM.IlievaV. </plain></SENT>
+<SENT sid="343" pm="."><plain>I.CortiA.MorelliA. (2013). Polyhydroxyalkanoate biosynthesis by Hydrogenophaga pseudoflava DSM1034 from structurally unrelated carbon sources. New Biotechnol. 30 629–634. 10.1016/j.nbt.2012.11.019 </plain></SENT>
+</text></ref><ref id="B32"><text><SENT sid="344" pm="."><plain>QinQ.-L.XieB.-B.ZhangX.-Y.ChenX.-L.ZhouB.-C.ZhouJ. (2014). A proposed genus boundary for the prokaryotes based on genomic insights. J. </plain></SENT>
+<SENT sid="345" pm="."><plain>Bacteriol. 196 2210–2215. 10.1128/jb.01688-1424706738 </plain></SENT>
+</text></ref><ref id="B33"><text><SENT sid="346" pm="."><plain>RichterM.Rossello-MoraR.Oliver GlocknerF.PepliesJ. (2016). JSpeciesWS: a web server for prokaryotic species circumscription based on pairwise genome comparison. Bioinformatics 32 929–931. 10.1093/bioinformatics/btv68126576653 </plain></SENT>
+</text></ref><ref id="B34"><text><SENT sid="347" pm="."><plain>SegataN.BörnigenD.MorganX. </plain></SENT>
+<SENT sid="348" pm="."><plain>C.HuttenhowerC. (2013). PhyloPhlAn is a new method for improved phylogenetic and taxonomic placement of microbes. Nat. </plain></SENT>
+<SENT sid="349" pm="."><plain>Commun. 4:2304 10.1038/ncomms3304 </plain></SENT>
+</text></ref><ref id="B35"><text><SENT sid="350" pm="."><plain>SokolovE. </plain></SENT>
+<SENT sid="351" pm="."><plain>P. (2000). An improved method for DNA isolation from mucopolysaccharide-rich molluscan tissues. J. </plain></SENT>
+<SENT sid="352" pm="."><plain>Molluscan Stud. 66 573–575. 10.1093/mollus/66.4.573 </plain></SENT>
+</text></ref><ref id="B36"><text><SENT sid="353" pm="."><plain>StorariM.KulliS.WüthrichD.BruggmannR.BerthoudH.Arias-RothE. (2016). Genomic approach to studying nutritional requirements of Clostridium tyrobutyricum and other Clostridia causing late blowing defects. Food Microbiol. 59 213–223. 10.1016/j.fm.2016.05.01327375262 </plain></SENT>
+</text></ref><ref id="B37"><text><SENT sid="354" pm="."><plain>SullivanM. </plain></SENT>
+<SENT sid="355" pm="."><plain>J.PettyN. </plain></SENT>
+<SENT sid="356" pm="."><plain>K.BeatsonS. </plain></SENT>
+<SENT sid="357" pm="."><plain>A. (2011). Easyfig: a genome comparison visualizer. Bioinformatics 27 1009–1010. 10.1093/bioinformatics/btr03921278367 </plain></SENT>
+</text></ref><ref id="B38"><text><SENT sid="358" pm="."><plain>SuzukiS.KuenenJ. </plain></SENT>
+<SENT sid="359" pm="."><plain>G.SchipperK.van der VeldeS.IshiiS.WuA. (2014). Physiological and genomic features of highly alkaliphilic hydrogen-utilizing Betaproteobacteria from a continental serpentinizing site. Nat. </plain></SENT>
+<SENT sid="360" pm="."><plain>Commun. 5:3900 10.1038/ncomms4900 </plain></SENT>
+</text></ref><ref id="B39"><text><SENT sid="361" pm="."><plain>TamuraK.StecherG.PetersonD.FilipskiA.KumarS. (2013). MEGA6: molecular evolutionary genetics analysis version 6.0. Mol. </plain></SENT>
+<SENT sid="362" pm="."><plain>Biol. </plain></SENT>
+<SENT sid="363" pm="."><plain>Evol. 30 2725–2729. 10.1093/molbev/mst19724132122 </plain></SENT>
+</text></ref><ref id="B40"><text><SENT sid="364" pm="."><plain>TatusovaT.DiCuccioM.BadretdinA.ChetverninV.NawrockiE. </plain></SENT>
+<SENT sid="365" pm="."><plain>P.ZaslavskyL. (2016). NCBI prokaryotic genome annotation pipeline. Nucleic Acids Res. 44 6614–6624. 10.1093/nar/gkw56927342282 </plain></SENT>
+</text></ref><ref id="B41"><text><SENT sid="366" pm="."><plain>ThorvaldsdóttirH.RobinsonJ. </plain></SENT>
+<SENT sid="367" pm="."><plain>T.MesirovJ. </plain></SENT>
+<SENT sid="368" pm="."><plain>P. (2013). Integrative genomics viewer (IGV): high-performance genomics data visualization and exploration. Brief. </plain></SENT>
+<SENT sid="369" pm="."><plain>Bioinform. 14 178–192. 10.1093/bib/bbs01722517427 </plain></SENT>
+</text></ref><ref id="B42"><text><SENT sid="370" pm="."><plain>WangY.-Q.ZhangJ.-S.ZhouJ.-T.ZhangZ.-P. (2009). Biodegradation of 4-aminobenzenesulfonate by a novel Pannonibacter sp. </plain></SENT>
+<SENT sid="371" pm="."><plain>W1 isolated from activated sludge. J. </plain></SENT>
+<SENT sid="372" pm="."><plain>Hazard. </plain></SENT>
+<SENT sid="373" pm="."><plain>Mater. 169 1163–1167. 10.1016/j.jhazmat.2009.04.00219423220 </plain></SENT>
+</text></ref><ref id="B43"><text><SENT sid="374" pm="."><plain>WillemsA.BUsseJ.GoorM.PotB.FalsenE.JantzenE. (1989). Hydrogenophaga, a new genus of hydrogen-oxidizing bacteria that includes Hydrogenophaga flava comb. nov. </plain></SENT>
+<SENT sid="375" pm="."><plain>(formerly Pseudomonas flava), Hydrogenophaga palleronii (formerly Pseudomonas palleronii), Hydrogenophaga pseudoflava (formerly Pseudomonas pseudoflava and “Pseudomonas carboxydoflava”), and Hydrogenophaga taeniospiralis (formerly Pseudomonas taeniospiralis). Int. </plain></SENT>
+<SENT sid="376" pm="."><plain>J. </plain></SENT>
+<SENT sid="377" pm="."><plain>Syst. </plain></SENT>
+<SENT sid="378" pm="."><plain>Evol. </plain></SENT>
+<SENT sid="379" pm="."><plain>Microbiol. 39 319–333. 10.1099/00207713-39-3-319 </plain></SENT>
+</text></ref><ref id="B44"><text><SENT sid="380" pm="."><plain>YangY. </plain></SENT>
+<SENT sid="381" pm="."><plain>Q.WuC.WangL. </plain></SENT>
+<SENT sid="382" pm="."><plain>Y.YangL. (2012). Isolation and characterization of a sulfanilic acid degrading bacterial strain. Appl. </plain></SENT>
+<SENT sid="383" pm="."><plain>Mech. </plain></SENT>
+<SENT sid="384" pm="."><plain>Mater. 148–149, 46–49. </plain></SENT>
+</text></ref><ref id="B45"><text><SENT sid="385" pm="."><plain>YoonK. </plain></SENT>
+<SENT sid="386" pm="."><plain>S.SakaiY.TsukadaN.FujisawaK.NishiharaH. (2009). Purification and biochemical characterization of a membrane-bound [NiFe]-hydrogenase from a hydrogen-oxidizing, lithotrophic bacterium, Hydrogenophaga sp. </plain></SENT>
+<SENT sid="387" pm="."><plain>AH-24. FEMS Microbiol. </plain></SENT>
+<SENT sid="388" pm="."><plain>Lett. 290 114–120. 10.1111/j.1574-6968.2008.01417.x19025569 </plain></SENT>
+</text></ref><ref id="B46"><text><SENT sid="389" pm="."><plain>YoonK.-S.TsukadaN.SakaiY.IshiiM.IgarashiY.NishiharaH. (2008). Isolation and characterization of a new facultatively autotrophic hydrogen-oxidizing Betaproteobacterium, Hydrogenophaga sp. </plain></SENT>
+<SENT sid="390" pm="."><plain>AH-24. FEMS Microbiol. </plain></SENT>
+<SENT sid="391" pm="."><plain>Lett. 278 94–100. 10.1111/j.1574-6968.2007.00983.x18031533 </plain></SENT>
+</text></ref></ref-list></SecTag></back></article>

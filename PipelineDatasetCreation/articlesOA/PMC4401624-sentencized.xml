@@ -1,0 +1,1163 @@
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD v1.1 20151215//EN" "JATS-archivearticle1.dtd"> 
+<article xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML" article-type="research-article"><?properties open_access?><?DTDIdentifier.IdentifierValue -//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD v1.1 20151215//EN?><?DTDIdentifier.IdentifierType public?><?SourceDTD.DTDName JATS-archivearticle1.dtd?><?SourceDTD.Version 1.1?><?ConverterInfo.XSLTName jp2nlmx2.xsl?><?ConverterInfo.Version 1?><front><journal-meta><journal-id journal-id-type="nlm-ta">PLoS One</journal-id><journal-id journal-id-type="iso-abbrev">PLoS ONE</journal-id><journal-id journal-id-type="publisher-id">plos</journal-id><journal-id journal-id-type="pmc">plosone</journal-id><journal-title-group><journal-title>PLoS ONE</journal-title></journal-title-group><issn pub-type="epub">1932-6203</issn><publisher><publisher-name>Public Library of Science</publisher-name><publisher-loc>San Francisco, CA USA</publisher-loc></publisher></journal-meta><article-meta><article-id pub-id-type="pmcid">4401624</article-id><article-id pub-id-type="publisher-id">PONE-D-14-28208</article-id><article-id pub-id-type="doi">10.1371/journal.pone.0121453</article-id><article-categories><subj-group subj-group-type="heading"><subject>Research Article</subject></subj-group></article-categories><title-group><article-title><SecTag type="TITLE"><text><SENT sid="0" pm="."><plain>CoMeta: Classification of Metagenomes Using k-mers </plain></SENT>
+</text></SecTag></article-title><alt-title alt-title-type="running-head">CoMeta: Classification of Metagenomes Using <italic>k</italic>-mers</alt-title></title-group><contrib-group><contrib contrib-type="author"><name><surname>Kawulok</surname><given-names>Jolanta</given-names></name><xref ref-type="corresp" rid="cor001">*</xref><xref ref-type="aff" rid="aff001"/></contrib><contrib contrib-type="author"><name><surname>Deorowicz</surname><given-names>Sebastian</given-names></name><xref ref-type="aff" rid="aff001"/></contrib></contrib-group><aff id="aff001">
+<addr-line>Institute of Informatics, Silesian University of Technology, Gliwice, Poland</addr-line>
+</aff><contrib-group><contrib contrib-type="editor"><name><surname>Golden</surname><given-names>Aaron Alain-Jon</given-names></name><role>Academic Editor</role><xref ref-type="aff" rid="edit1"/></contrib></contrib-group><aff id="edit1">
+<addr-line>Albert Einstein College of Medicine, UNITED STATES</addr-line>
+</aff><author-notes><fn fn-type="COI-statement" id="coi001"><p><text><SENT sid="1" pm="."><plain>Competing Interests: The authors have declared that no competing interests exist. </plain></SENT>
+</text></p></fn><fn fn-type="con" id="contrib001"><p><text><SENT sid="2" pm="."><plain>Conceived and designed the experiments: JK SD. </plain></SENT>
+<SENT sid="3" pm="."><plain>Performed the experiments: JK. </plain></SENT>
+<SENT sid="4" pm="."><plain>Analyzed the data: JK. </plain></SENT>
+<SENT sid="5" pm="."><plain>Contributed reagents/materials/analysis tools: JK SD. </plain></SENT>
+<SENT sid="6" pm="."><plain>Wrote the paper: JK SD. </plain></SENT>
+<SENT sid="7" pm="."><plain>Designed the software: JK SD. </plain></SENT>
+</text></p></fn><corresp id="cor001">* E-mail: <email>jolanta.kawulok@polsl.pl</email></corresp></author-notes><pub-date pub-type="collection"><year>2015</year></pub-date><pub-date pub-type="epub"><day>17</day><month>4</month><year>2015</year></pub-date><volume>10</volume><issue>4</issue><elocation-id>e0121453</elocation-id><history><date date-type="received"><day>24</day><month>6</month><year>2014</year></date><date date-type="accepted"><day>15</day><month>2</month><year>2015</year></date></history><permissions><copyright-statement>© 2015 Kawulok, Deorowicz</copyright-statement><copyright-year>2015</copyright-year><copyright-holder>Kawulok, Deorowicz</copyright-holder><license xlink:href="http://creativecommons.org/licenses/by/4.0/"><license-p>This is an open-access article distributed under the terms of the Creative Commons Attribution License, which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are properly credited.</license-p></license></permissions><self-uri content-type="pdf" xlink:type="simple" xlink:href="pone.0121453.pdf"/><abstract><p><SecTag type="ABS"><text><SENT sid="8" pm="."><plain>Nowadays, the study of environmental samples has been developing rapidly. </plain></SENT>
+<SENT sid="9" pm="."><plain>Characterization of the environment composition broadens the knowledge about the relationship between species composition and environmental conditions. </plain></SENT>
+<SENT sid="10" pm="."><plain>An important element of extracting the knowledge of the sample composition is to compare the extracted fragments of DNA with sequences derived from known organisms. </plain></SENT>
+<SENT sid="11" pm="."><plain>In the presented paper, we introduce an algorithm called CoMeta (Classification of metagenomes), which assigns a query read (a DNA fragment) into one of the groups previously prepared by the user. </plain></SENT>
+<SENT sid="12" pm="."><plain>Typically, this is one of the taxonomic rank (e.g., phylum, genus), however prepared groups may contain sequences having various functions. </plain></SENT>
+<SENT sid="13" pm="."><plain>In CoMeta, we used the exact method for read classification using short subsequences (k-mers) and fast program for indexing large set of k-mers. </plain></SENT>
+<SENT sid="14" pm="."><plain>In contrast to the most popular methods based on BLAST, where the query is compared with each reference sequence, we begin the classification from the top of the taxonomy tree to reduce the number of comparisons. </plain></SENT>
+<SENT sid="15" pm="."><plain>The presented experimental study confirms that CoMeta outperforms other programs used in this context. </plain></SENT>
+<SENT sid="16" pm="."><plain>CoMeta is available at <ext-link ext-link-type="uri" xlink:href="https://github.com/jkawulok/cometa">https://github.com/jkawulok/cometa</ext-link> under a free GNU GPL 2 license. </plain></SENT>
+</text></SecTag></p></abstract><funding-group><funding-statement>This work was supported by the Polish National Science Centre under the project DEC-2012/05/B/ST6/03148 and the European Union from the European Social Fund (grant agreement number: UDA-POKL.04.01.01-00-106/09). The work was performed using the infrastructure supported by POIG.02.03.01-24-099/13 grant: "GeCONiI---Upper Silesian Center for Computational Science and Engineering". This research was supported in part by PL-Grid Infrastructure. The funders had no role in study design, data collection and analysis, decision to publish, or preparation of the manuscript.</funding-statement></funding-group><counts><fig-count count="5"/><table-count count="6"/><page-count count="23"/></counts><custom-meta-group><custom-meta id="data-availability"><meta-name>Data Availability</meta-name><meta-value>The package and documentation of the program are freely available at <ext-link ext-link-type="uri" xlink:href="https://github.com/jkawulok/cometa">https://github.com/jkawulok/cometa</ext-link>, all the data used in this paper are available at <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.7910/DVN/29265">http://dx.doi.org/10.7910/DVN/29265</ext-link>.</meta-value></custom-meta></custom-meta-group></article-meta><notes><title>Data Availability</title><p>The package and documentation of the program are freely available at <ext-link ext-link-type="uri" xlink:href="https://github.com/jkawulok/cometa">https://github.com/jkawulok/cometa</ext-link>, all the data used in this paper are available at <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.7910/DVN/29265">http://dx.doi.org/10.7910/DVN/29265</ext-link>.</p></notes></front><body><SecTag type="INTRO"><sec sec-type="intro" id="sec001"><title><text><SENT sid="17" pm="."><plain>Introduction </plain></SENT>
+</text></title><p><text><SENT sid="18" pm="."><plain>Comprehensive and complete analysis of the microbes’ genomes, performed in their original environment, usually called metagenomics [1] or environmental and community genomics, became a popular field of research in recent years. </plain></SENT>
+<SENT sid="19" pm="."><plain>Its origins can be found in the work of Pace et al.[2], in which the first proposal for cloning the environmental DNA by Polymerase Chain Reaction (PCR) to explore the diversity of ribosomal RNA sequences was formulated. </plain></SENT>
+<SENT sid="20" pm="."><plain>In metagenomics, the isolation and culture of organisms is unnecessary. </plain></SENT>
+<SENT sid="21" pm="."><plain>Therefore, it is possible to investigate the species that previously have been usually neglected due to the lack of laboratory-grown cultures. </plain></SENT>
+<SENT sid="22" pm="."><plain>Moreover, a large number of unknown enzymes and metabolic capabilities are encoded in the genomes of uncultured species. </plain></SENT>
+<SENT sid="23" pm="."><plain>Ultimately, metagenomics allows for discovering thousands of new microorganisms and their potentially useful functions [3, 4]. </plain></SENT>
+</text></p><p><text><SENT sid="24" pm="."><plain>Metagenomic analyzes can help in solving numerous practical challenges in medicine, engineering, agriculture, and ecology [5]. </plain></SENT>
+<SENT sid="25" pm="."><plain>Currently, many projects are carried out which are aimed at understanding biocenosis coming from various environments, such as soil [6, 7], water (i.e., groundwater [8], seawater [9, 10], rivers [11]), or places with extreme conditions, like hot springs and mud holes in solfataric fields [12], glacier ice [13], or Antarctic desert soil [14]. </plain></SENT>
+<SENT sid="26" pm="."><plain>The probes are also collected from other organisms, for example from rumens of buffalo [15] or cow [16]. </plain></SENT>
+</text></p><p><text><SENT sid="27" pm="."><plain>The fact that human organism carries a hundred times more bacterial genes than our inherited human genome was the main reason for growing interests in the microorganisms living in the human body [17–19]. </plain></SENT>
+<SENT sid="28" pm="."><plain>The main aim of the Human Microbiome Project [20], started in 2009, lies in characterizing the human microbiome communities found at several different sites in the human body, including nasal passages, oral cavities, skin, gastrointestinal, and urogenital tracts. </plain></SENT>
+<SENT sid="29" pm="."><plain>Furthermore, the project is aimed at analyzing the role of these microbes in human health and disease. </plain></SENT>
+</text></p><sec id="sec002"><title><text><SENT sid="30" pm="."><plain>Metagenomic processing </plain></SENT>
+</text></title><p><text><SENT sid="31" pm="."><plain>The metagenomic analysis is a multi-stage process [4, 21, 22]. </plain></SENT>
+<SENT sid="32" pm="."><plain>First, the genetic material is isolated from the environmental sample containing a mixture of various types of microorganisms. </plain></SENT>
+<SENT sid="33" pm="."><plain>Subsequently, the DNA material is extracted and sequenced. </plain></SENT>
+<SENT sid="34" pm="."><plain>Finally, the reads (short fragments of genomes obtained in sequencing) are binned and annotated. </plain></SENT>
+</text></p><p><text><SENT sid="35" pm="."><plain>In the recent decade, the DNA sequencing methods were becoming cheaper and faster. </plain></SENT>
+<SENT sid="36" pm="."><plain>The first method for sequencing was invented by Sanger [23] in 1977, and it dominated for almost two subsequent decades. </plain></SENT>
+<SENT sid="37" pm="."><plain>In spite of many improvements proposed to this technique, it is inferior to the recent methods, referred to as Next Generation Sequencing (NGS) [24]. </plain></SENT>
+<SENT sid="38" pm="."><plain>The most popular among them are the 454/Roche and Illumina/Solexa systems, and nowadays they are extensively applied to the analysis of metagenomic samples [21]. </plain></SENT>
+<SENT sid="39" pm="."><plain>For example, the 454 sequencing has been used to study the metagenomes contained in kefir grains [25], waste water [26], whereas the sequences of infant gut [27] or Cystic Fibrosis Lungs [28] metagenomes have been sequenced with Illumina. </plain></SENT>
+<SENT sid="40" pm="."><plain>In a single experiment, the 454/Roche sequencers produce millions of long reads (600–900 bp), while the Illumina/Solexa sequencers deliver hundreds of millions of shorter reads (36–200 bp). </plain></SENT>
+</text></p></sec><sec id="sec003"><title><text><SENT sid="41" pm="."><plain>Classification of metagenomic data </plain></SENT>
+</text></title><p><text><SENT sid="42" pm="."><plain>The sequencing results in obtaining a huge set of reads coming from the genomes of organisms living in the investigated environment. </plain></SENT>
+<SENT sid="43" pm="."><plain>As it was mentioned earlier, an important aim of the metagenomic study is to determine qualitative and quantitative composition of the environmental sample, which is achieved by solving two important tasks, namely binning and annotation. </plain></SENT>
+<SENT sid="44" pm="."><plain>The latter requires classification of the reads to a set of known sequences. </plain></SENT>
+<SENT sid="45" pm="."><plain>The reads may be compared with annotated sequences stored in a number of databases (e.g., GenBank [29]), and associated with a species or a gene function. </plain></SENT>
+<SENT sid="46" pm="."><plain>In general, the questions raised are: “who is there?”, “how much of each?”, and “what are they doing?”. </plain></SENT>
+<SENT sid="47" pm="."><plain>The answers to the first two questions may be obtained relying on taxonomic classification, while the third one can be answered using functional classification. </plain></SENT>
+</text></p><p><text><SENT sid="48" pm="."><plain>During the study of the environmental community, the obtained reads derived from a set of various organisms are assigned to taxa. </plain></SENT>
+<SENT sid="49" pm="."><plain>The assignment may be either independent or dependent on the taxonomy. </plain></SENT>
+<SENT sid="50" pm="."><plain>In the latter case, the reads are directly assigned to taxa on the basis of the reference sequences, where the taxon can range from the superkingdom to the species rank. </plain></SENT>
+<SENT sid="51" pm="."><plain>During the taxonomy independent analysis, the reads are grouped into operational taxonomic units (OTUs) based on their similarity to each other in the sample. </plain></SENT>
+<SENT sid="52" pm="."><plain>OTU is usually delineated with a 3% sequence dissimilarity, which corresponds to the taxonomical rank of species [30, 31]. </plain></SENT>
+<SENT sid="53" pm="."><plain>Obviously, the acceptance threshold may be set to a different value [32]. </plain></SENT>
+<SENT sid="54" pm="."><plain>Using the taxonomy dependent analysis, OTUs can be assigned to taxonomic names. </plain></SENT>
+<SENT sid="55" pm="."><plain>In a single habitat, the organisms belonging to various groups appear together. </plain></SENT>
+<SENT sid="56" pm="."><plain>Even though a microbial probe contains microbial eukaryotes, bacteria, archaea, and also viruses, the metagenomic study is primarily focused on the prokaryotic species. </plain></SENT>
+<SENT sid="57" pm="."><plain>Moreover, sequencing of eukaryotic DNA is unprofitable due to the large genome size and low gene coding densities. </plain></SENT>
+<SENT sid="58" pm="."><plain>Therefore, in some studies, the eukaryotic cells are eliminated by filtering the samples [10]. </plain></SENT>
+</text></p><p><text><SENT sid="59" pm="."><plain>There are several computer programs for read-to-taxa classification. </plain></SENT>
+<SENT sid="60" pm="."><plain>They can be separated into two main groups, namely composition-based and similarity search methods. </plain></SENT>
+<SENT sid="61" pm="."><plain>Using the former, reference sequence features are first extracted and subsequently compared, whilst using the latter, the reads are compared to some reference sequences. </plain></SENT>
+<SENT sid="62" pm="."><plain>The hybrids of these two approaches may also include elements of phylogenetic analysis. </plain></SENT>
+</text></p><p><text><SENT sid="63" pm="."><plain>The composition-based methods follow the three-stage strategy [33–38]: 1) machine learning-based modeling of features extracted from reference sequences (e.g., distribution of short nucleotide subsequences, k-mers); 2) modeling of the unknown set of reads (performed in the same way as for the set of reference sequences); 3) comparison of the reads and reference sequences models to assign taxonomic ranks for each read. </plain></SENT>
+<SENT sid="64" pm="."><plain>Among the machine learning methods, it is worth to mention the interpolated Markov models [34], support vector machines (SVMs) [37, 38], k-nearest neighbors [35] or naive Bayesian classifier [36]. </plain></SENT>
+<SENT sid="65" pm="."><plain>For SVMs, training from large datasets may be problematic, however the training set can be effectively selected using various techniques [39–41]. </plain></SENT>
+</text></p><p><text><SENT sid="66" pm="."><plain>The similarity search methods rely on the sequence homology. </plain></SENT>
+<SENT sid="67" pm="."><plain>They use a database, containing nucleotide or protein reference sequences. </plain></SENT>
+<SENT sid="68" pm="."><plain>For detecting remote homologies, it is better to use the protein sequences, as they are more well-conserved across greater evolutionary distances. </plain></SENT>
+<SENT sid="69" pm="."><plain>However, in order to use the protein database, the reads have to be translated into amino acid sequences. </plain></SENT>
+<SENT sid="70" pm="."><plain>Taking into account all three possible start sites of encoding amino acids on the both strands (the main sequence and its reverse-complement counterpart), each read has to be translated in all six reading frames, which negatively influences the computation time. </plain></SENT>
+<SENT sid="71" pm="."><plain>In addition, the reads with non-coding DNA cannot be processed by such translation-to-protein method. </plain></SENT>
+</text></p><p><text><SENT sid="72" pm="."><plain>In most cases, the similarity search methods employ BLAST to obtain alignments of reads to a reference sequences set. </plain></SENT>
+<SENT sid="73" pm="."><plain>Subsequently, these alignments are used for taxonomic classification. </plain></SENT>
+<SENT sid="74" pm="."><plain>Some programs, like MEGAN [42], MTR [43], SOrt-ITEMS [44], CARMA3 [45], use the lowest common ancestor (LCA) algorithm for assigning the taxonomic labels. </plain></SENT>
+<SENT sid="75" pm="."><plain>After performing the BLAST search for each read, the BLAST hits, whose bit scores are above the threshold, are selected for further analysis. </plain></SENT>
+<SENT sid="76" pm="."><plain>LCA is computed for all species that were reported by best BLAST hits for a read. </plain></SENT>
+<SENT sid="77" pm="."><plain>If BLAST hits are ambiguous (the hits are similar for reference sequences derived from different species), then the read is assigned to a higher taxonomic level. </plain></SENT>
+</text></p><p><text><SENT sid="78" pm="."><plain>Furthermore, the marker genes can also be used to facilitate reads classification. </plain></SENT>
+<SENT sid="79" pm="."><plain>These genes help to identify a particular species, e.g., 16S rRNA occurs in the prokaryote genomes. </plain></SENT>
+<SENT sid="80" pm="."><plain>MG-RAST [46] relies on the chloroplast, mitochondrial, and ACLAME (including mobile genetic elements) databases. </plain></SENT>
+<SENT sid="81" pm="."><plain>MetaPhyler [47] uses 31 phylogenetic marker genes as the taxonomic references. </plain></SENT>
+<SENT sid="82" pm="."><plain>One of CARMA3 variants [45] and Treephyler [48] use hidden Markov models (instead of BLAST) to search for the homologies against the Pfam database—protein domains contained in the Pfam are here used as the markers. </plain></SENT>
+</text></p><p><text><SENT sid="83" pm="."><plain>As discussed earlier, the composition-based classification methods compare the k-mer distribution of a read with those which come from different taxa. </plain></SENT>
+<SENT sid="84" pm="."><plain>In the FACS [49] program, instead of determining the full distribution of k-mers, their appearance in a reference sequence is taken into account (1 if a k-mer from a read appears in a reference sequence, 0 otherwise). </plain></SENT>
+<SENT sid="85" pm="."><plain>FACS can be regarded as a similar search method, because it aligns the reads to the reference sequences, represented by k-mers indexed using the Bloom filters. </plain></SENT>
+<SENT sid="86" pm="."><plain>The original FACS algorithm was implemented in the Perl language, but the latest version has been reimplemented in C (available at <ext-link ext-link-type="uri" xlink:href="https://github.com/SciLifeLab/facs">https://github.com/SciLifeLab/facs</ext-link>). </plain></SENT>
+<SENT sid="87" pm="."><plain>Actually, the new version is not intended for metagenomic data classification, but it checks how many reads might be contaminated in a particular sample. </plain></SENT>
+</text></p><p><text><SENT sid="88" pm="."><plain>The Livermore Metagenomics Analysis Toolkit (LMAT) also maps k-mers without using information about their positions and quantity [50]. </plain></SENT>
+<SENT sid="89" pm="."><plain>When constructing a k-mer database, each canonical k-mer (i.e., the k-mer or its reverse complement, if the latter is lexicographically smaller), derived from the reference sequence, is assigned to a group of reference sequences which contain that k-mer. </plain></SENT>
+<SENT sid="90" pm="."><plain>Hence, the k-mers are grouped together in such a way that each group contains those k-mers which occur in every reference sequence in the group and does not occur in any sequence outside the group. </plain></SENT>
+<SENT sid="91" pm="."><plain>LMAT, like the programs discussed earlier, also computes the LCA—the created groups are linked together in a taxonomic tree. </plain></SENT>
+<SENT sid="92" pm="."><plain>During classification, the canonical k-mers of each read are compared to the k-mers located in every group. </plain></SENT>
+<SENT sid="93" pm="."><plain>The similarity score is increased for each matching k-mer, and cumulated for the whole taxon. </plain></SENT>
+<SENT sid="94" pm="."><plain>Similarly to other LCA-employing methods, in case of conflicts (i.e., situations, in which the scores for several taxa are high and identical) the read is classified to the level above. </plain></SENT>
+<SENT sid="95" pm="."><plain>This helps in selecting the most specific taxonomic label, whose lineage has no conflicts with another taxonomic label. </plain></SENT>
+</text></p><p><text><SENT sid="96" pm="."><plain>Very recently, the Kraken algorithm [51] using the k-mer indexing scheme similar to LMAT, has been proposed. </plain></SENT>
+<SENT sid="97" pm="."><plain>These methods differ, however, in classification and database construction strategy. </plain></SENT>
+<SENT sid="98" pm="."><plain>In the algorithm used in Kraken, each k-mer from a reference sequence stores the taxonomic ID number of the k-mers’ LCA values. </plain></SENT>
+<SENT sid="99" pm="."><plain>Like in LMAT, the Kraken database contains the k-mers in the canonical representation. </plain></SENT>
+<SENT sid="100" pm="."><plain>However, these k-mers are first sorted according to the minimizer, a very popular idea in recent years in bioinformatics [52–54], (i.e., the lexicographically smallest M-mer in each k-mer), and the k-mers containing the same minimizer are sorted in the lexicographical order in the database. </plain></SENT>
+<SENT sid="101" pm="."><plain>This strategy substantially accelerates the queries. </plain></SENT>
+<SENT sid="102" pm="."><plain>A taxonomic node cumulates points for every match of a k-mer extracted from the given read. </plain></SENT>
+<SENT sid="103" pm="."><plain>The read is classified to the node, which has obtained the largest number of points cumulated along the path leading from the root to that node. </plain></SENT>
+</text></p><p><text><SENT sid="104" pm="."><plain>Both LMAT and Kraken do not use the cumulative distribution of k-mers and also they do not exploit the alignment searching. </plain></SENT>
+<SENT sid="105" pm="."><plain>Thus, they can be regarded as the hybrid methods, combining two different strategies—the composition-based and similarity search approach. </plain></SENT>
+</text></p></sec><sec id="sec004"><title><text><SENT sid="106" pm="."><plain>Contribution </plain></SENT>
+</text></title><p><text><SENT sid="107" pm="."><plain>In this paper, we present CoMeta—a new fast and accurate algorithm for classification o metagenomes (metagenomic reads). </plain></SENT>
+<SENT sid="108" pm="."><plain>We determine the similarity (termed the match score) between the query read and a group of the reference sequences by counting the number of nucleotides in those k-mers, which occur both in the read and in the group. </plain></SENT>
+<SENT sid="109" pm="."><plain>The read is classified to that group, for which the match score is the largest. </plain></SENT>
+<SENT sid="110" pm="."><plain>The group is defined as a set of sequences of specific attribution. </plain></SENT>
+<SENT sid="111" pm="."><plain>Typically, this is one of the taxonomic ranks (e.g., phylum, genus). </plain></SENT>
+<SENT sid="112" pm="."><plain>CoMeta employs an efficient k-mer counting and indexing algorithm [55]. </plain></SENT>
+<SENT sid="113" pm="."><plain>Its low memory requirements allows us to create the indexes even at high taxonomy tree levels that embrace large groups of sequences. </plain></SENT>
+<SENT sid="114" pm="."><plain>In this way, after having built the indexes, we can quickly search the tree from the root to the leaves, and find the closest match for a given query read. </plain></SENT>
+<SENT sid="115" pm="."><plain>This classification scheme (i.e., analysis of the taxonomy tree from the top) is in contrast to the existing BLAST-based methods, which require the query read be compared with every reference sequence. </plain></SENT>
+</text></p><p><text><SENT sid="116" pm="."><plain>The main idea of the proposed method is similar to the one used in FACS. </plain></SENT>
+<SENT sid="117" pm="."><plain>However, CoMeta does not impose any restrictions on the size of the data. </plain></SENT>
+<SENT sid="118" pm="."><plain>We are able to classify sequences derived from both bacteria and big eukaryotes. </plain></SENT>
+<SENT sid="119" pm="."><plain>The details of our algorithm are given in Section Methods. </plain></SENT>
+<SENT sid="120" pm="."><plain>Extensive experimental study, whose results are reported in Section Results and Discussion, confirms that our algorithm is competitive, offering high speed and accuracy, compared with the state-of-the-art methods. </plain></SENT>
+</text></p></sec></sec></SecTag><SecTag type="METHODS"><sec sec-type="materials|methods" id="sec005"><title><text><SENT sid="121" pm="."><plain>Methods </plain></SENT>
+</text></title><sec id="sec006"><title><text><SENT sid="122" pm="."><plain>Introduction </plain></SENT>
+</text></title><p><text><SENT sid="123" pm="."><plain>In the following description of our algorithm, several symbols will be used. </plain></SENT>
+<SENT sid="124" pm="."><plain>For clarity, we gathered them in Table 1. </plain></SENT>
+</text></p><SecTag type="TABLE"><table-wrap id="pone.0121453.t001" orientation="portrait" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0121453.t001</object-id><label>Table 1</label><caption><title><text><SENT sid="125" pm="."><plain>Dictionary of symbols and acronyms used in the description of the classification. </plain></SENT>
+</text></title></caption><alternatives><graphic id="pone.0121453.t001g" xlink:href="pone.0121453.t001"/><table frame="box" rules="all" border="0"><colgroup span="1"><col align="left" valign="top" span="1"/><col align="left" valign="top" span="1"/><col align="left" valign="top" span="1"/></colgroup><tbody><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="126" pm="."><plain>ξ </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="127" pm="."><plain>– </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="128" pm="."><plain>match score, similarity between query read and the set of the reference sequences </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="129" pm="."><plain>Ξ </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="130" pm="."><plain>– </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="131" pm="."><plain>match rate score, percentage ratio of the match score to the read length </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="132" pm="."><plain>D i </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="133" pm="."><plain>– </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="134" pm="."><plain>k-mer database for an i-th group </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="135" pm="."><plain>f </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="136" pm="."><plain>– </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="137" pm="."><plain>number of various groups to which the reads were classified </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="138" pm="."><plain>F </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="139" pm="."><plain>– </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="140" pm="."><plain>output files after assignment to the best group </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="141" pm="."><plain>FP </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="142" pm="."><plain>– </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="143" pm="."><plain>number of incorrectly classified reads </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="144" pm="."><plain>G 0 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="145" pm="."><plain>– </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="146" pm="."><plain>set of all reference sequences </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="147" pm="."><plain>Gij </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="148" pm="."><plain>– </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="149" pm="."><plain>set of reference sequences for the i-th group at the j-th level </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="150" pm="."><plain>k </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="151" pm="."><plain>– </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="152" pm="."><plain>subsequence (k-mer) length </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="153" pm="."><plain>M </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="154" pm="."><plain>– </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="155" pm="."><plain>dataset of reads </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="156" pm="."><plain>MC </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="157" pm="."><plain>– </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="158" pm="."><plain>match cut-off value of sequence identity </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="159" pm="."><plain>n j </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="160" pm="."><plain>– </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="161" pm="."><plain>number of various sets (groups) of reference sequences, with whom the query read is compared at the j-th taxonomic rank </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="162" pm="."><plain>NC </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="163" pm="."><plain>– </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="164" pm="."><plain>number of reads not classified to any group </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="165" pm="."><plain>R </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="166" pm="."><plain>– </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="167" pm="."><plain>query read </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="168" pm="."><plain>S </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="169" pm="."><plain>– </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="170" pm="."><plain>reference sequence </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="171" pm="."><plain>TP </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="172" pm="."><plain>– </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="173" pm="."><plain>number of correctly classified reads </plain></SENT>
+</text></td></tr></tbody></table></alternatives></table-wrap></SecTag><p><text><SENT sid="174" pm="."><plain>The proposed method consists of two major stages outlined in Figs 1 and 2. </plain></SENT>
+<SENT sid="175" pm="."><plain>Firstly (in the database construction stage), the indexed k-mer databases of clustered reference sequences are constructed. </plain></SENT>
+<SENT sid="176" pm="."><plain>Subsequently (in the classification stage), the reads are classified to various groups with the use of the databases. </plain></SENT>
+<SENT sid="177" pm="."><plain>The second stage is composed of two steps. </plain></SENT>
+<SENT sid="178" pm="."><plain>In the comparison step, the input reads are scored according to a number of databases ({D i}). </plain></SENT>
+<SENT sid="179" pm="."><plain>In the assignment step, the reads are assigned to the best group. </plain></SENT>
+<SENT sid="180" pm="."><plain>What is important, the classification stage is performed iteratively (for taxonomic classification) to search the taxonomy tree downwards. </plain></SENT>
+</text></p><SecTag type="FIG"><fig id="pone.0121453.g001" orientation="portrait" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0121453.g001</object-id><label>Fig 1</label><caption><title><text><SENT sid="181" pm="."><plain>The processing pipeline for metagenomic reads classification for a single rank. </plain></SENT>
+</text></title><p><text><SENT sid="182" pm="."><plain>In order to avoiding obfuscating the schema, the upper index j is not added to the symbols, indicating the j-th level of taxonomic classifications. </plain></SENT>
+</text></p></caption><graphic xlink:href="pone.0121453.g001"/></fig></SecTag><SecTag type="FIG"><fig id="pone.0121453.g002" orientation="portrait" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0121453.g002</object-id><label>Fig 2</label><caption><title><text><SENT sid="183" pm="."><plain>Taxonomy tree-based classification. </plain></SENT>
+</text></title><p><text><SENT sid="184" pm="."><plain>Iterative execution of stage II (Classification) in Fig 1. </plain></SENT>
+</text></p></caption><graphic xlink:href="pone.0121453.g002"/></fig></SecTag><p><text><SENT sid="185" pm="."><plain>The files with the input reads and reference sequences must be given in the FASTA format. </plain></SENT>
+<SENT sid="186" pm="."><plain>The reference sequences and reads contain sometimes the unknown nucleotides (Ns). </plain></SENT>
+<SENT sid="187" pm="."><plain>The k-mers with such symbols are skipped. </plain></SENT>
+</text></p></sec><sec id="sec007"><title><text><SENT sid="188" pm="."><plain>Database construction </plain></SENT>
+</text></title><p><text><SENT sid="189" pm="."><plain>Before classification, the reference sequences have to be grouped into n categories, with whom we want to compare the metagenomic data. </plain></SENT>
+<SENT sid="190" pm="."><plain>For example, the sequences can be grouped according to a phylum, so that a single group contains all the reference sequences belonging to Actinobacteria, Proteobacteria, Thermotogae, etc. </plain></SENT>
+</text></p><p><text><SENT sid="191" pm="."><plain>In order to classify the reads into a taxon, the nucleotide sequence database (nt data with entries from all traditional divisions of GenBank, EMBL, and DDBJ) has to be downloaded from the NCBI website. </plain></SENT>
+<SENT sid="192" pm="."><plain>After that, the tax number (Taxonomic Identification ID) should be added to each reference sequence using the gi number (Sequence Identification ID). </plain></SENT>
+<SENT sid="193" pm="."><plain>The tax number is necessary to categorize the sequences into groups. </plain></SENT>
+<SENT sid="194" pm="."><plain>Hence, gi_taxid_nucl.dmp file, which contains the links between the gi and tax number, should also be downloaded from the NCBI website. </plain></SENT>
+<SENT sid="195" pm="."><plain>This file is of a huge size, therefore we created an auxiliary program to avoid loading the entire file into RAM. </plain></SENT>
+<SENT sid="196" pm="."><plain>This program splits the input file into smaller ones, then each of them is read sequentially, and finally the program extracts information about the tax number. </plain></SENT>
+<SENT sid="197" pm="."><plain>Detailed support on how to prepare the data is given in <ext-link ext-link-type="uri" xlink:href="https://github.com/jkawulok/CoMeta/blob/master/readme.txt">readme.txt</ext-link> file in the CoMeta package. </plain></SENT>
+</text></p><p><text><SENT sid="198" pm="."><plain>The k-mer database D i for each group G i is created using a parallel disk-based algorithm, which we derived from our earlier k-mer counting software [55]. </plain></SENT>
+<SENT sid="199" pm="."><plain>First, every reference sequence from the group is scanned symbol by symbol to extract all k-mers. </plain></SENT>
+<SENT sid="200" pm="."><plain>Subsequently, the k-mers are collected and sorted lexicographically. </plain></SENT>
+<SENT sid="201" pm="."><plain>This makes it possible to create the set of all k-mers, occurring at least once in the reference sequences (after sorting, the repeating k-mers are at adjacent positions, so we can store only a single copy of each one). </plain></SENT>
+</text></p><p><text><SENT sid="202" pm="."><plain>The database is stored to the disk in a compact way (compact database). </plain></SENT>
+<SENT sid="203" pm="."><plain>Each nucleotide is encoded using 2 bits. </plain></SENT>
+<SENT sid="204" pm="."><plain>Instead of writing whole k-mers to the file, the k-mers sharing a common prefix are broken down into two parts, i.e., a four-nucleotide prefix and a suffix, thus, each suffix is saved on 2(k−4) bits. </plain></SENT>
+<SENT sid="205" pm="."><plain>The prefix is written once, and it is followed by a list of the suffixes with the number of each occurrences. </plain></SENT>
+</text></p><p><text><SENT sid="206" pm="."><plain>For classification purposes, CoMeta uses mainly two lists: 1) a buffer that contains sorted suffixes (stored on 1 byte) after cutting off eight-nucleotide prefix; 2) a list of 65,536 (= 48) elements of information, where the list of suffix for each prefix begins. </plain></SENT>
+<SENT sid="207" pm="."><plain>These lists are built at the beginning of the classification process. </plain></SENT>
+<SENT sid="208" pm="."><plain>However, in order to accelerate the loading of the database during the classification (which is crucial if the same database is used many times), compact database can be converted into a bit larger file (non-compact database), which contains among others the two lists. </plain></SENT>
+<SENT sid="209" pm="."><plain>This file is loaded into the program once, and the size of this file is equal to the size of the memory that the k-mer database occupies during the classification. </plain></SENT>
+</text></p></sec><sec id="sec008"><title><text><SENT sid="210" pm="."><plain>Classification </plain></SENT>
+</text></title><p><text><SENT sid="211" pm="."><plain>As it was mentioned earlier, the classification of the reads at a single level j (e.g., the order) consists of two steps: comparison and assignment. </plain></SENT>
+<SENT sid="212" pm="."><plain>In the following subsections on the taxonomic classification, these steps are described for the j-th taxonomic rank. </plain></SENT>
+<SENT sid="213" pm="."><plain>In order to avoid obfuscating the notation, the upper index j is omitted. </plain></SENT>
+</text></p><sec id="sec009"><title><text><SENT sid="214" pm="."><plain>Comparison step </plain></SENT>
+</text></title><p><text><SENT sid="215" pm="."><plain>In the comparison step, the set of reads M is compared with all n k-mer databases that have been created beforehand. </plain></SENT>
+<SENT sid="216" pm="."><plain>Each database D i is loaded into RAM. </plain></SENT>
+<SENT sid="217" pm="."><plain>When comparing each read from M against G i group (1 ≤ i ≤ n), the match score (ξ) is obtained by cumulating the similarity between the k-mers extracted from the read and from the reference sequences in G i. For a given read R, the successive k-mers are obtained using the 1-base sliding window. </plain></SENT>
+<SENT sid="219" pm="."><plain>All possible subsequent k-mers from R are checked for occurrence in D i. For each j-th k-mer of R found in D i, the match score ξ is increased by ξ j, which is the number of bases in the k-mer that have not yet contributed to the match score (i.e., ξj=k−ob, where ob is the number of overlapping bases between the j-th k-mer and the previous k-mer found in D i). </plain></SENT>
+<SENT sid="221" pm="."><plain>Due to the 1-base sliding window, two subsequent read k-mers have k−1 overlapping bases, and our intention is to prevent from increasing the match score too much, if both exist in D i. The number of the overlapping bases between the p-th and q-th k-mers (p &lt; q) is ob=max(k−q+p,0). </plain></SENT>
+<SENT sid="223" pm="."><plain>An example on how the match score is calculated is presented in Fig 3 for k = 5. </plain></SENT>
+<SENT sid="224" pm="."><plain>For simplicity, we assume that G i group contains only one reference sequence, S. In the “k-mers” column, the k-mers that occur in the query read are sequentially listed. </plain></SENT>
+<SENT sid="226" pm="."><plain>Those k-mers, which are found in D i database, are marked in bold (a sorted list of the k-mers from G i group is shown in the left part of the figure). </plain></SENT>
+<SENT sid="227" pm="."><plain>The final match score for the sample read is 12, and the match rate score (Ξ), which is percentage ratio of the match score to the read length, is 85.7% (Ξ = 12/14⋅100%). </plain></SENT>
+<SENT sid="228" pm="."><plain>For better illustration, the sequence matching is also shown at the top of the figure. </plain></SENT>
+</text></p><SecTag type="FIG"><fig id="pone.0121453.g003" orientation="portrait" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0121453.g003</object-id><label>Fig 3</label><caption><title><text><SENT sid="229" pm="."><plain>An example of comparing the query read with the reference sequence. </plain></SENT>
+</text></title></caption><graphic xlink:href="pone.0121453.g003"/></fig></SecTag><p><text><SENT sid="230" pm="."><plain>In order to quickly decide whether a read can obtain a significant score for each group G i, we perform simple filtering. </plain></SENT>
+<SENT sid="231" pm="."><plain>We use the k′-base offset sliding window to scan the query read (1 &lt; k′ ≤ k, for k′ = 1 this step is skipped). </plain></SENT>
+<SENT sid="232" pm="."><plain>If none of such k-mers exist in D i we resign from scoring it according to D i. R is pre-assigned to the G i group, if it (or its reverse complement) accumulates a match rate score exceeding a chosen match cut-off value (MC). </plain></SENT>
+<SENT sid="233" pm="."><plain>After the comparisons, for each group, we obtain two output files with the preliminary assignments, namely: 1) the match file that contains the reads, which accumulated a sufficient match rate score (Ξ ≥ MC), and 2) the mismatch file which contains the remaining reads. </plain></SENT>
+<SENT sid="234" pm="."><plain>Thus, 2n output intermediary assignment files are obtained after the first step of the classification. </plain></SENT>
+<SENT sid="235" pm="."><plain>These files do not contain the nucleotide sequences, but only the single-line description of each read in the FASTA format, along with the obtained match scores. </plain></SENT>
+<SENT sid="236" pm="."><plain>The corresponding nucleotide sequences are added after completing the classification stage. </plain></SENT>
+</text></p><p><text><SENT sid="237" pm="."><plain>The idea of this step is similar as used in the FACS algorithm. </plain></SENT>
+<SENT sid="238" pm="."><plain>However, in FACS, the Bloom filters, which are of a limited capacity, are used to store the k-mers. </plain></SENT>
+<SENT sid="239" pm="."><plain>For each reference sequence, a separate Bloom filter is created. </plain></SENT>
+<SENT sid="240" pm="."><plain>In addition, long sequences (≳ 200 Mbp) have to be split into a few subsequences, and then Bloom filters are created separately for each of them. </plain></SENT>
+<SENT sid="241" pm="."><plain>Furthermore, usage of the Bloom filters may result in obtaining false k-mer positives. </plain></SENT>
+<SENT sid="242" pm="."><plain>In FACS (the Perl implementation), the reads which have been classified as belonging to some reference sequence, are withdrawn from further querying (the sequences are analyzed in some arbitrary order). </plain></SENT>
+<SENT sid="243" pm="."><plain>This approach may result in classifying the read to an incorrect reference, if its match score is over the cut-off value for more than a single reference sequence, but the correct one does not appear as the first one. </plain></SENT>
+</text></p></sec><sec id="sec010"><title><text><SENT sid="244" pm="."><plain>Assignment to the best group </plain></SENT>
+</text></title><p><text><SENT sid="245" pm="."><plain>The second step of the classification stage consists in the analysis of the intermediary assignment files, and the query read is classified to that group, for which the match score (ξ) is the highest. </plain></SENT>
+<SENT sid="246" pm="."><plain>When multiple groups obtain the same highest match score, the read could be assigned to: 1) all of these groups; 2) any group; 3) random group. </plain></SENT>
+</text></p><p><text><SENT sid="247" pm="."><plain>To increase the sensitiveness of our method, in this step not only match but also mismatch files can be used. </plain></SENT>
+<SENT sid="248" pm="."><plain>Using the latter, larger percentage of reads are classified, but in some cases this is achieved at the expense of precision. </plain></SENT>
+<SENT sid="249" pm="."><plain>When taking into the account the mismatch file, the read is classified to a group with the highest match, even if it is below MC. </plain></SENT>
+<SENT sid="250" pm="."><plain>However, this matching must contain at least one matching k-mer (ξ ≥ k). </plain></SENT>
+</text></p><p><text><SENT sid="251" pm="."><plain>After this step, the classification is completed for a single taxonomic rank, and f+1 output files (F) are obtained. </plain></SENT>
+<SENT sid="252" pm="."><plain>Apart from the classified reads, those reads which have not been assigned to any group, are stored in the additional F nc file. </plain></SENT>
+<SENT sid="253" pm="."><plain>The number f is equal to the number of groups, to which the reads from M were classified. </plain></SENT>
+<SENT sid="254" pm="."><plain>For the groups without any reads preassigned, the files are not generated at all (hence, f ≤ n). </plain></SENT>
+</text></p><p><text><SENT sid="255" pm="."><plain>For classification to a lower rank, classification stage has to be repeated, which is described in the following subsection. </plain></SENT>
+</text></p></sec></sec><sec id="sec011"><title><text><SENT sid="256" pm="."><plain>Taxonomy tree-based classification </plain></SENT>
+</text></title><p><text><SENT sid="257" pm="."><plain>Our taxonomic classification method starts from some high taxonomic rank, and then, if necessary, classifies reads to the lower levels. </plain></SENT>
+<SENT sid="258" pm="."><plain>The search may be started from the superkingdom rank, however, due to very large collections of sequences which contain various groups, we suggest to begin from the phylum. </plain></SENT>
+</text></p><p><text><SENT sid="259" pm="."><plain>For the j-th taxonomic rank, each read is compared to n j groups and it is classified to that group (Gbj), for which the match score is the highest. </plain></SENT>
+<SENT sid="260" pm="."><plain>Next, the read is compared with those groups at a lower rank (j+1), which are subgroups of Gbj (Gij+1⊆Gbj, 1 ≤ i ≤ n j+1). Fig 2 shows the taxonomy tree-based classification scheme with an example of the classification path (solid lines). </plain></SENT>
+<SENT sid="261" pm="."><plain>The gray shade indicates a set of the reference sequences, where a query read was classified (Gbj). </plain></SENT>
+<SENT sid="262" pm="."><plain>In the tree, there are only six basic taxonomic ranks presented, however the process may include other ranks such as subphylum, superclass, etc. </plain></SENT>
+</text></p><p><text><SENT sid="263" pm="."><plain>During the classification of the M j set of reads (at the j-th taxonomic rank), the files {Fij} (i = 1,2,…,f j) are obtained, each of which contains the reads assigned to a particular i-th group. </plain></SENT>
+<SENT sid="264" pm="."><plain>In the classification at the next level (j+1), the output file from the previous step (F i) is used as the input file, i.e., M j+1 = F i. </plain></SENT>
+</text></p></sec></sec></SecTag><SecTag type="RESULTS,DISCUSS"><sec id="sec012"><title><text><SENT sid="265" pm="."><plain>Results and Discussion </plain></SENT>
+</text></title><sec id="sec013"><title><text><SENT sid="266" pm="."><plain>Implementation and test setup </plain></SENT>
+</text></title><p><text><SENT sid="267" pm="."><plain>The algorithms proposed in this paper are implemented in C++ language. </plain></SENT>
+<SENT sid="268" pm="."><plain>The only exception is the tool grouping the reference sequences according to the taxonomic rank, which is implemented in Perl based on Perl module Bio::LITE::Taxonomy::NCBI from the Comprehensive Perl Archive Network. </plain></SENT>
+<SENT sid="269" pm="."><plain>CoMeta package contains programs for the following tasks: Adding the tax number to the single-line description of each reference sequence.Building k-mer databases.Two steps of the classification. The package and documentation are freely available at <ext-link ext-link-type="uri" xlink:href="https://github.com/jkawulok/cometa">https://github.com/jkawulok/cometa</ext-link>, all the data used in this paper are available at <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.7910/DVN/29265">http://dx.doi.org/10.7910/DVN/29265</ext-link>. </plain></SENT>
+</text></p><p><text><SENT sid="270" pm="."><plain>The experiments were conducted on a computer equipped with 12-core Intel Xeon clocked at 2.67 GHz and 96 GB RAM. </plain></SENT>
+</text></p><p><text><SENT sid="271" pm="."><plain>CoMeta is a similarity search method, thus we compare it with four other programs from this category. </plain></SENT>
+<SENT sid="272" pm="."><plain>We also examine LMAT and Kraken, which are hybrids of composition-based and similarity search methods also using k-mers. </plain></SENT>
+</text></p><p><text><SENT sid="273" pm="."><plain>The experiments are divided into two major parts. </plain></SENT>
+<SENT sid="274" pm="."><plain>In the first one, our program was compared to FACS and each read was classified directly to a single reference sequence. </plain></SENT>
+<SENT sid="275" pm="."><plain>This means that each group (c.f. Fig 1) contained only one reference sequence (e.g., group = ‘Escherichia coli str. </plain></SENT>
+<SENT sid="276" pm="."><plain>K-12 substr. </plain></SENT>
+<SENT sid="277" pm="."><plain>DH10B’) and there was only one level. </plain></SENT>
+<SENT sid="278" pm="."><plain>In the second part of our experiments, the reads were classified to the taxonomic ranks, thus the level was taxonomic rank and the group was one of the groups at the taxonomic rank, e.g, level = ‘phylum’ and group=‘proteobacteria’. </plain></SENT>
+<SENT sid="279" pm="."><plain>The classification results for CARMA (command line version 3.0), MEGAN (4.61.5), MG-RAST (3.0), and MetaPhyler (1.13) were taken from Bazinet–Cummings’ paper [56] due to long computation time (in total approximately 34,000 CPU hours). </plain></SENT>
+<SENT sid="280" pm="."><plain>The experiments for LMAT (1.2.1), Kraken (0.10.4b) were made by us. </plain></SENT>
+</text></p><p><text><SENT sid="281" pm="."><plain>We assessed the quality of the read classification taking into account the following criteria:  Time: CPU classification time. Memory: the maximal memory usage during the classification. Classified: the overall percentage of reads that were classified (TP+FPall), where TP and FP are numbers of correctly and incorrectly classified reads, respectively. Sensitivity: the fraction of the correctly classified reads (TPall). Precision: the percentage of correctly classified reads among all classified reads (TPTP+FP). </plain></SENT>
+</text></p></sec><sec id="sec014"><title><text><SENT sid="282" pm="."><plain>Datasets </plain></SENT>
+</text></title><p><text><SENT sid="283" pm="."><plain>The experiments were made for the following datasets:  FACS 269 bp—simulated 454 metagenomic dataset containing 100,000 reads of an average length 269 bp. </plain></SENT>
+<SENT sid="284" pm="."><plain>This dataset was proposed by Stranneheim et al. [49] and we downloaded it from FACS website. </plain></SENT>
+<SENT sid="285" pm="."><plain>The reads are from 17 bacterial genomes (four various phyla rank), three archaeal genomes (two various phyla rank), three viral genomes, and two human chromosomes. </plain></SENT>
+<SENT sid="286" pm="."><plain>After removing reads containing more than 50% of unknown nucleotides, dataset of 93,653 reads was obtained, which we called reduced FACS 269 bp. MetaPhyler 300 bp—simulated metagenomic dataset containing 73,086 reads of length 300 bp. </plain></SENT>
+<SENT sid="287" pm="."><plain>This dataset, proposed by Liu et al. [47], was obtained from 31 phylogenetic marker. </plain></SENT>
+<SENT sid="288" pm="."><plain>Unfortunately, some reads had no information about their origin and it would be impossible to verify whether they were correctly classified or not, so we filtered them out. </plain></SENT>
+<SENT sid="289" pm="."><plain>Finally, 66,841 reads were left and used for our experiments. </plain></SENT>
+<SENT sid="290" pm="."><plain>The reads have been derived from the organisms belonging to 17 various phyla. </plain></SENT>
+<SENT sid="291" pm="."><plain>The majority originate from Proteobacteria (51%) and Firmicutes (21%). CARMA 265 bp—simulated 454 metagenomic dataset containing 25,000 reads of an average length 265 bp. </plain></SENT>
+<SENT sid="292" pm="."><plain>This dataset was proposed by Gerlach and Stoye [45]. </plain></SENT>
+<SENT sid="293" pm="."><plain>We downloaded it from WebCARMA website. </plain></SENT>
+<SENT sid="294" pm="."><plain>The distribution of the reads in the bacterial phyla is: Proteobacteria—73.02%; Firmicutes—12.92%; Cyanobacteria—7.83%; Actinobacteria—5.22%; Chlamydiae—1.01%. PhyloPythia 961 bp—dataset containing 124,941 random reads of an average length 961 bp from 113 isolate microbial genomes, proposed by Patil et al. [37]. </plain></SENT>
+<SENT sid="295" pm="."><plain>Some reads are repeated in this dataset and only 114,457 reads are unique. </plain></SENT>
+<SENT sid="296" pm="."><plain>The majority of them (81%) come from Proteobacteria. </plain></SENT>
+<SENT sid="297" pm="."><plain>These reads were classified to the genus rank (Rhodopseudomonas—21.00%; Bradyrhizobium—20.06%; Xylella—9.16%; the rest—each one below 6%). HiSeq 92 bp—dataset containing 10,000 reads of an average length 92 bp, proposed by Wood and Salzberg [51]. </plain></SENT>
+<SENT sid="298" pm="."><plain>It was built using 20 sets of bacterial whole-genome shotgun reads and generated by Illumina HiSeq sequencing platform. MiSeq 156 bp—dataset containing 10,000 reads of an average length 156 bp, proposed by Wood and Salzberg [51]. </plain></SENT>
+<SENT sid="299" pm="."><plain>It was built using 20 sets of bacterial whole-genome shotgun reads and generated by Illumina MiSeq sequencing platform. </plain></SENT>
+</text></p><p><text><SENT sid="300" pm="."><plain>The 2nd–6th datasets contain reads from bacterial genomes only. </plain></SENT>
+<SENT sid="301" pm="."><plain>Both FACS 269 bp and reduced FACS 269 bp datasets contain also reads from human, viral, and archaeal species. </plain></SENT>
+</text></p></sec><sec id="sec015"><title><text><SENT sid="302" pm="."><plain>Experiment One </plain></SENT>
+</text></title><p><text><SENT sid="303" pm="."><plain>In the first experiment, we compared CoMeta with FACS 2.1 algorithm implemented in Perl [49], and with FACS implemented in C. We tried to reproduce the results reported by Stranneheim et al. [49] (FACS in Perl). </plain></SENT>
+<SENT sid="305" pm="."><plain>Unfortunately, we obtained different scores, despite using their scripts, the same set of parameters, and the same set of 25 reference sequences. </plain></SENT>
+</text></p><p><text><SENT sid="306" pm="."><plain>Stranneheim et al. verified false positives using MEGABLAST for k-mer length equal to 17, 21, 25, and 35. </plain></SENT>
+<SENT sid="307" pm="."><plain>To speed up this process we constructed a homologous map for comparing reads to the reference sequences. </plain></SENT>
+<SENT sid="308" pm="."><plain>Assuming the same criteria as in FACS, if a read obtains 500 hits with E-values &lt; 10−50 using MegaBLAST, then it is considered as a homologue. </plain></SENT>
+<SENT sid="309" pm="."><plain>In this way, the classification results can be quickly checked for large sets of false positives, such as those created for short k-mers. </plain></SENT>
+<SENT sid="310" pm="."><plain>The resulting map contained 17 homologous. </plain></SENT>
+</text></p><p><text><SENT sid="311" pm="."><plain>As discussed in the previous section, FACS 269 bp dataset includes many reads, which consist mostly of unknown nucleotides. </plain></SENT>
+<SENT sid="312" pm="."><plain>Therefore, in order to provide a fair comparison, we removed them and used reduced FACS 269 bp dataset. </plain></SENT>
+<SENT sid="313" pm="."><plain>The comparison was performed using the following variants of FACS and CoMeta:  FACS-P: FACS 2.1 algorithm in Perl. </plain></SENT>
+<SENT sid="314" pm="."><plain>The probability of false positive parameter (p f) in Bloom filter (used by FACS) was set to 0.0005. FACS-C: FACS algorithm in C, whose sources were downloaded on 5th February 2014, from <ext-link ext-link-type="uri" xlink:href="https://github.com/SciLifeLab/facs">https://github.com/SciLifeLab/facs</ext-link>. </plain></SENT>
+<SENT sid="315" pm="."><plain>The reads are classified to each reference sequence to which similarity is highest than MC. </plain></SENT>
+<SENT sid="316" pm="."><plain>The probability of false positive parameter in Bloom filter was set to the same value as for FACS-P. pre-CoMeta: The only comparison step of CoMeta algorithm (without assignment). </plain></SENT>
+<SENT sid="317" pm="."><plain>This is a similar strategy as implemented in FACS-C. CoMeta: The complete proposed classification algorithm of a read (to all reference sequences) using the best solution (presented in Fig 1). </plain></SENT>
+</text></p><p><text><SENT sid="318" pm="."><plain>FACS-P, FACS-C, and pre-CoMeta were ran using various values of k and MC. </plain></SENT>
+<SENT sid="319" pm="."><plain>In CoMeta, we used MC = 30% in the “comparison” step, and then the reads were classified to the reference sequence according to the highest score. </plain></SENT>
+<SENT sid="320" pm="."><plain>When FACS-P classifies a read to some G i-th reference sequence it does not compare the read with any further reference sequence (G i+j, j &gt; 0). </plain></SENT>
+<SENT sid="321" pm="."><plain>Since in FACS-C and pre-CoMeta the reads are compared with each reference sequence, their FP values can be larger than for FACS-P. </plain></SENT>
+</text></p><p><text><SENT sid="322" pm="."><plain>In Table 2, we report the best classification results obtained using the four aforementioned methods. </plain></SENT>
+<SENT sid="323" pm="."><plain>The results for CoMeta are when taking into account the mismatch files. </plain></SENT>
+<SENT sid="324" pm="."><plain>When we stopped the algorithm after the “comparison” step (pre-CoMeta), the sensitivity was the highest, unfortunately, at the expense of a large number of false positives. pre-CoMeta gave slightly better precision score than FACS-C. </plain></SENT>
+<SENT sid="325" pm="."><plain>The precision is high for FACS-P, however the sensitivity is the lowest here. </plain></SENT>
+<SENT sid="326" pm="."><plain>In general, the best results was obtained by CoMeta which was able to classify almost every read and the number of false positives was small. </plain></SENT>
+</text></p><SecTag type="TABLE"><table-wrap id="pone.0121453.t002" orientation="portrait" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0121453.t002</object-id><label>Table 2</label><caption><title><text><SENT sid="327" pm="."><plain>Comparison of FACS algorithms with CoMeta. </plain></SENT>
+</text></title></caption><alternatives><graphic id="pone.0121453.t002g" xlink:href="pone.0121453.t002"/><table frame="box" rules="all" border="0"><colgroup span="1"><col align="left" valign="top" span="1"/><col align="left" valign="top" span="1"/><col align="left" valign="top" span="1"/><col align="left" valign="top" span="1"/><col align="left" valign="top" span="1"/><col align="left" valign="top" span="1"/></colgroup><thead><tr><th align="left" rowspan="1" colspan="1"><text><SENT sid="328" pm="."><plain>k </plain></SENT>
+</text></th><th align="left" rowspan="1" colspan="1"><text><SENT sid="329" pm="."><plain>MC </plain></SENT>
+</text></th><th align="left" rowspan="1" colspan="1"><text><SENT sid="330" pm="."><plain>Sensitivity </plain></SENT>
+</text></th><th align="left" rowspan="1" colspan="1"><text><SENT sid="331" pm="."><plain>Precision </plain></SENT>
+</text></th><th align="left" rowspan="1" colspan="1"><text><SENT sid="332" pm="."><plain>Classified </plain></SENT>
+</text></th><th align="left" rowspan="1" colspan="1"><text><SENT sid="333" pm="."><plain>t </plain></SENT>
+</text></th></tr><tr><th align="left" rowspan="1" colspan="1"/><th align="left" rowspan="1" colspan="1"><text><SENT sid="334" pm="."><plain>[%] </plain></SENT>
+</text></th><th align="left" rowspan="1" colspan="1"><text><SENT sid="335" pm="."><plain>[%] </plain></SENT>
+</text></th><th align="left" rowspan="1" colspan="1"><text><SENT sid="336" pm="."><plain>[%] </plain></SENT>
+</text></th><th align="left" rowspan="1" colspan="1"><text><SENT sid="337" pm="."><plain>[%] </plain></SENT>
+</text></th><th align="left" rowspan="1" colspan="1"><text><SENT sid="338" pm="."><plain>[hh:mm:ss] </plain></SENT>
+</text></th></tr></thead><tbody><tr><td colspan="6" align="left" rowspan="1"><text><SENT sid="339" pm="."><plain>FACS-P </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="340" pm="."><plain>18 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="341" pm="."><plain>80 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="342" pm="."><plain>97.62 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="343" pm="."><plain>97.86 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="344" pm="."><plain>99.76 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="345" pm="."><plain>00:03:14 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="346" pm="."><plain>21 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="347" pm="."><plain>65 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="348" pm="."><plain>97.86 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="349" pm="."><plain>98.08 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="350" pm="."><plain>99.78 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="351" pm="."><plain>00:02:49 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="352" pm="."><plain>21 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="353" pm="."><plain>70 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="354" pm="."><plain>97.82 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="355" pm="."><plain>98.27 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="356" pm="."><plain>99.55 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="357" pm="."><plain>00:02:49 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="358" pm="."><plain>24 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="359" pm="."><plain>55 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="360" pm="."><plain>97.77 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="361" pm="."><plain>98.12 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="362" pm="."><plain>99.64 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="363" pm="."><plain>00:02:36 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="364" pm="."><plain>27 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="365" pm="."><plain>45 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="366" pm="."><plain>97.65 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="367" pm="."><plain>98.07 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="368" pm="."><plain>99.58 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="369" pm="."><plain>00:02:27 </plain></SENT>
+</text></td></tr><tr><td colspan="6" align="left" rowspan="1"><text><SENT sid="370" pm="."><plain>FACS-C </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="371" pm="."><plain>17 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="372" pm="."><plain>30 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="373" pm="."><plain>99.92 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="374" pm="."><plain>90.20 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="375" pm="."><plain>99.93 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="376" pm="."><plain>00:01:08 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="377" pm="."><plain>17 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="378" pm="."><plain>40 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="379" pm="."><plain>98.78 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="380" pm="."><plain>93.25 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="381" pm="."><plain>98.78 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="382" pm="."><plain>00:01:12 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="383" pm="."><plain>19 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="384" pm="."><plain>30 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="385" pm="."><plain>99.48 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="386" pm="."><plain>92.65 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="387" pm="."><plain>99.48 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="388" pm="."><plain>00:00:49 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="389" pm="."><plain>21 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="390" pm="."><plain>30 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="391" pm="."><plain>98.26 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="392" pm="."><plain>94.27 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="393" pm="."><plain>98.27 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="394" pm="."><plain>00:00:43 </plain></SENT>
+</text></td></tr><tr><td colspan="6" align="left" rowspan="1"><text><SENT sid="395" pm="."><plain>pre-CoMeta </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="396" pm="."><plain>15 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="397" pm="."><plain>55 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="398" pm="."><plain>99.30 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="399" pm="."><plain>93.56 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="400" pm="."><plain>99.31 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="401" pm="."><plain>00:01:52 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="402" pm="."><plain>18 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="403" pm="."><plain>45 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="404" pm="."><plain>99.42 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="405" pm="."><plain>93.36 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="406" pm="."><plain>99.43 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="407" pm="."><plain>00:01:21 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="408" pm="."><plain>21 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="409" pm="."><plain>45 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="410" pm="."><plain>99.05 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="411" pm="."><plain>93.93 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="412" pm="."><plain>99.06 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="413" pm="."><plain>00:01:08 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="414" pm="."><plain>25 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="415" pm="."><plain>30 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="416" pm="."><plain>99.56 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="417" pm="."><plain>92.05 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="418" pm="."><plain>99.57 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="419" pm="."><plain>00:01:09 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="420" pm="."><plain>27 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="421" pm="."><plain>35 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="422" pm="."><plain>99.36 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="423" pm="."><plain>93.07 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="424" pm="."><plain>99.37 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="425" pm="."><plain>00:01:16 </plain></SENT>
+</text></td></tr><tr><td colspan="6" align="left" rowspan="1"><text><SENT sid="426" pm="."><plain>CoMeta </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="427" pm="."><plain>18 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="428" pm="."><plain>– </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="429" pm="."><plain>97.91 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="430" pm="."><plain>97.91 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="431" pm="."><plain>100.00 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="432" pm="."><plain>00:01:37 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="433" pm="."><plain>21 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="434" pm="."><plain>– </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="435" pm="."><plain>98.40 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="436" pm="."><plain>98.41 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="437" pm="."><plain>99.99 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="438" pm="."><plain>00:01:36 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="439" pm="."><plain>24 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="440" pm="."><plain>– </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="441" pm="."><plain>98.69 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="442" pm="."><plain>98.75 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="443" pm="."><plain>99.93 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="444" pm="."><plain>00:01:37 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="445" pm="."><plain>27 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="446" pm="."><plain>– </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="447" pm="."><plain>98.71 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="448" pm="."><plain>99.08 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="449" pm="."><plain>99.63 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="450" pm="."><plain>00:01:30 </plain></SENT>
+</text></td></tr></tbody></table></alternatives><table-wrap-foot><fn id="t002fn001"><p><text><SENT sid="451" pm="."><plain>Comparison of the best classification results obtained using four methods (bold values indicate the best score for each column): </plain></SENT>
+</text></p></fn><fn id="t002fn002"><p><text><SENT sid="452" pm="."><plain>FACS-P: the FACS 2.1 program in Perl [49]. </plain></SENT>
+<SENT sid="453" pm="."><plain>When read is classified to some G i-th reference sequence, it does not be compared with any further reference sequence; </plain></SENT>
+</text></p></fn><fn id="t002fn003"><p><text><SENT sid="454" pm="."><plain>FACS-C: the FACS program in C, which was downloaded from <ext-link ext-link-type="uri" xlink:href="https://github.com/SciLifeLab/facs">https://github.com/SciLifeLab/facs</ext-link>. </plain></SENT>
+<SENT sid="455" pm="."><plain>The reads are classified to each reference sequence to which similarity is highest than MC; </plain></SENT>
+</text></p></fn><fn id="t002fn004"><p><text><SENT sid="456" pm="."><plain>pre-CoMeta: the only comparison step of CoMeta algorithm (without assignment). </plain></SENT>
+<SENT sid="457" pm="."><plain>This is a similar strategy as implemented in FACS-C. </plain></SENT>
+</text></p></fn><fn id="t002fn005"><p><text><SENT sid="458" pm="."><plain>CoMeta: the full proposed algorithm, the reads are classified to the reference sequence according to the highest score. </plain></SENT>
+</text></p></fn></table-wrap-foot></table-wrap></SecTag><p><text><SENT sid="459" pm="."><plain>The precisions and sensitivities for CoMeta, depending on k, are shown in Fig 4. </plain></SENT>
+<SENT sid="460" pm="."><plain>The results are presented with and without taking into account the mismatch files (MM). </plain></SENT>
+<SENT sid="461" pm="."><plain>It may be noticed that for growing k up to k = 25 both precision and sensitivity grows, then sensitivity falls down. </plain></SENT>
+<SENT sid="462" pm="."><plain>The reason is that with the increase of k, the number of unclassified sequences also increases. </plain></SENT>
+</text></p><SecTag type="FIG"><fig id="pone.0121453.g004" orientation="portrait" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0121453.g004</object-id><label>Fig 4</label><caption><title><text><SENT sid="463" pm="."><plain>Classification accuracy for CoMeta in Experiment One. </plain></SENT>
+</text></title><p><text><SENT sid="464" pm="."><plain>Accuracy of classification is shown when taking into account only the match files (dotted line with square mark) and when considering additionally the mismatch files (solid line with a circle mark). </plain></SENT>
+<SENT sid="465" pm="."><plain>The performance curve reflects various k-mer lengths. </plain></SENT>
+</text></p></caption><graphic xlink:href="pone.0121453.g004"/></fig></SecTag><p><text><SENT sid="466" pm="."><plain>The sensitivity and precision for FACS-P, FACS-C, and pre-CoMeta for various k are presented in Fig 5A–5C. </plain></SENT>
+<SENT sid="467" pm="."><plain>Each series shows the results for 11 different threshold values, in sequence starting from the left part of each figure: MC = 30,35,40,…,80 [%]. </plain></SENT>
+<SENT sid="468" pm="."><plain>It can be seen from the plot A that only for a small value of k in FACS-P, the sensitivity does not drop with the increasing threshold values, while in other cases, the sensitivity for a large MC declines. </plain></SENT>
+<SENT sid="469" pm="."><plain>The detailed analysis of the impact of the parameters k, MC and p f (for building the Bloom filters) on the accuracy of FACS-P was presented in our earlier study [57]. </plain></SENT>
+</text></p><SecTag type="FIG"><fig id="pone.0121453.g005" orientation="portrait" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0121453.g005</object-id><label>Fig 5</label><caption><title><text><SENT sid="470" pm="."><plain>Classification accuracy for the Experiment One using various k parameter. </plain></SENT>
+</text></title><p><text><SENT sid="471" pm="."><plain>The plot A represents scores after classification using FACS-P, the plot B—using FACS-C, and the plot C—using pre-CoMeta. </plain></SENT>
+<SENT sid="472" pm="."><plain>Each series shows the results for 11 different threshold values, in sequence starting from the left part of each figure: MC = 30,35,40,…,80 [%]. </plain></SENT>
+</text></p></caption><graphic xlink:href="pone.0121453.g005"/></fig></SecTag><p><text><SENT sid="473" pm="."><plain>The processing times of the examined methods are given in Table 2. </plain></SENT>
+<SENT sid="474" pm="."><plain>It can be seen that FACS-C is usually the fastest, however, CoMeta is slower only by a factor two. </plain></SENT>
+</text></p></sec><sec id="sec016"><title><text><SENT sid="475" pm="."><plain>Experiment Two </plain></SENT>
+</text></title><p><text><SENT sid="476" pm="."><plain>The second experiment consisted in classifying reads to the taxonomic groups. </plain></SENT>
+<SENT sid="477" pm="."><plain>We compared our method with all the examined programs except for FACS. </plain></SENT>
+</text></p><p><text><SENT sid="478" pm="."><plain>The programs were evaluated for the 1st–4th metagenomic datasets (from the 454 sequencing). </plain></SENT>
+<SENT sid="479" pm="."><plain>As was said the results for CARMA, MEGA, MG-RAST, and MetaPhyler were taken directly from Bazinet–Cummings’ paper [56]. </plain></SENT>
+<SENT sid="480" pm="."><plain>Bazinet and Cummings classified PhyloPythia 961 bp at the genus rank, FACS 269 bp at the superkingdom rank, and the other two datasets at the phylum rank. </plain></SENT>
+<SENT sid="481" pm="."><plain>When running CoMeta, Kraken, and LMAT we also conducted PhyloPythia 961 bp classification into the genus but the three other datasets into the phyla rank. </plain></SENT>
+</text></p><p><text><SENT sid="482" pm="."><plain>For the Iluimina datasets (HiSeq 92 bp and MiSeq 156 bp) we examined Kraken, LMAT, and CoMeta. </plain></SENT>
+<SENT sid="483" pm="."><plain>The classification level was set to the genus rank here. </plain></SENT>
+</text></p><p><text><SENT sid="484" pm="."><plain>LMAT was tested for two databases downloaded from the LMAT website: “full” k-mer/taxonomy database (kFull) and smaller database built from “marker library” (kML). </plain></SENT>
+<SENT sid="485" pm="."><plain>These databases were constructed from the complete and partial microbial genome sequences from the NCBI genome database from 2011. </plain></SENT>
+<SENT sid="486" pm="."><plain>The kFull database contains 20-mers, while kML — 18-mers. </plain></SENT>
+</text></p><p><text><SENT sid="487" pm="."><plain>Kraken was evaluated using MiniKraken database (the only available) downloaded from the Kraken website. </plain></SENT>
+<SENT sid="488" pm="."><plain>Unfortunately, Kraken failed to construct the database from our set of reference sequences (probably due to huge memory requirements of Jellyfish tool used to collect k-mer statistics). </plain></SENT>
+<SENT sid="489" pm="."><plain>We were also not able to obtain the larger databases from the authors. </plain></SENT>
+</text></p><p><text><SENT sid="490" pm="."><plain>For CoMeta, we built k-mer databases using all reference sequences from the NCBI genome database from 2012. </plain></SENT>
+<SENT sid="491" pm="."><plain>We divided the sequences into several groups, so during classification we could easily select the groups we wanted to classify to. </plain></SENT>
+<SENT sid="492" pm="."><plain>Therefore, in some experiments we used all sequences (allDb database), while in the rest only those from bacteria, viruses, and archaea (micDb database). </plain></SENT>
+<SENT sid="493" pm="."><plain>The databases were constructed using various k-mer lengths (15, 18, 21, 24, 27, and 30). </plain></SENT>
+</text></p><p><text><SENT sid="494" pm="."><plain>We conducted a large number of preliminary experiments for different parameters. </plain></SENT>
+<SENT sid="495" pm="."><plain>Some of them are described in S1 Supporting Information. </plain></SENT>
+<SENT sid="496" pm="."><plain>The most important results of our experiments are summarized in Tables 3 and 4. </plain></SENT>
+<SENT sid="497" pm="."><plain>LMAT results are for “minimum score” (ms) set to 0 (optimal value according to the preliminary experiments). </plain></SENT>
+<SENT sid="498" pm="."><plain>The results for CoMeta allDb were calculated in such a way that if a read was classified to several groups, then it was assigned to all of them. </plain></SENT>
+<SENT sid="499" pm="."><plain>Hence, in some cases, the sum of TP, FP, and NC was higher than the number of all reads in the dataset. </plain></SENT>
+<SENT sid="500" pm="."><plain>For better comparison of CoMeta and Kraken, the results for CoMeta micDb were computed using the same strategy as in Kraken, so if a read was classified to multiple groups we did not assign it to any group. </plain></SENT>
+</text></p><SecTag type="TABLE"><table-wrap id="pone.0121453.t003" orientation="portrait" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0121453.t003</object-id><label>Table 3</label><caption><title><text><SENT sid="501" pm="."><plain>Comparison of programs using 454 reads. </plain></SENT>
+</text></title></caption><alternatives><graphic id="pone.0121453.t003g" xlink:href="pone.0121453.t003"/><table frame="box" rules="all" border="0"><colgroup span="1"><col align="left" valign="top" span="1"/><col align="left" valign="top" span="1"/><col align="left" valign="top" span="1"/><col align="left" valign="top" span="1"/><col align="left" valign="top" span="1"/></colgroup><thead><tr><th align="left" rowspan="1" colspan="1"><text><SENT sid="502" pm="."><plain>Program </plain></SENT>
+</text></th><th align="left" rowspan="1" colspan="1"><text><SENT sid="503" pm="."><plain>FACS 269bp </plain></SENT>
+</text></th><th align="left" rowspan="1" colspan="1"><text><SENT sid="504" pm="."><plain>MetaPhyler 300bp </plain></SENT>
+</text></th><th align="left" rowspan="1" colspan="1"><text><SENT sid="505" pm="."><plain>CARMA 265bp </plain></SENT>
+</text></th><th align="left" rowspan="1" colspan="1"><text><SENT sid="506" pm="."><plain>PhyloPythia 961bp </plain></SENT>
+</text></th></tr></thead><tbody><tr><td colspan="5" align="left" rowspan="1"><text><SENT sid="507" pm="."><plain>Percentage of classified reads </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="508" pm="."><plain>CARMA a  </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="509" pm="."><plain>29.0 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="510" pm="."><plain>93.6 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="511" pm="."><plain>68.7 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="512" pm="."><plain>61.3 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="513" pm="."><plain>MEGAN a  </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="514" pm="."><plain>48.4 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="515" pm="."><plain>88.2 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="516" pm="."><plain>90.5 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="517" pm="."><plain>62.2 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="518" pm="."><plain>MetaPhyler a  </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="519" pm="."><plain>0.2 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="520" pm="."><plain>80.9 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="521" pm="."><plain>0.5 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="522" pm="."><plain>0.6 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="523" pm="."><plain>MG-RAST a  </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="524" pm="."><plain>27.1 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="525" pm="."><plain>29.8 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="526" pm="."><plain>80.2 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="527" pm="."><plain>70.5 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="528" pm="."><plain>LMAT kML </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="529" pm="."><plain>24.7(26.4 b ) </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="530" pm="."><plain>96.5 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="531" pm="."><plain>80.4 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="532" pm="."><plain>98.3 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="533" pm="."><plain>LMAT kFull </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="534" pm="."><plain>92.5(98.8 b ) </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="535" pm="."><plain>99.3 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="536" pm="."><plain>86.0 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="537" pm="."><plain>82.7 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="538" pm="."><plain>MiniKraken </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="539" pm="."><plain>— </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="540" pm="."><plain>100.0 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="541" pm="."><plain>96.7 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="542" pm="."><plain>98.0 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="543" pm="."><plain>CoMeta allDb </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="544" pm="."><plain>93.6(100.0 b ) </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="545" pm="."><plain>100.0 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="546" pm="."><plain>99.9 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="547" pm="."><plain>94.7 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="548" pm="."><plain>CoMeta micDb </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="549" pm="."><plain>— </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="550" pm="."><plain>100.0 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="551" pm="."><plain>98.9 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="552" pm="."><plain>97.4 </plain></SENT>
+</text></td></tr><tr><td colspan="5" align="left" rowspan="1"><text><SENT sid="553" pm="."><plain>Sensitivity (percentage) </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="554" pm="."><plain>CARMA a  </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="555" pm="."><plain>26.7 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="556" pm="."><plain>93.4 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="557" pm="."><plain>68.5 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="558" pm="."><plain>59.8 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="559" pm="."><plain>MEGAN a  </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="560" pm="."><plain>42.5 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="561" pm="."><plain>87.9 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="562" pm="."><plain>90.3 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="563" pm="."><plain>61.0 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="564" pm="."><plain>MetaPhyler a  </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="565" pm="."><plain>0.1 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="566" pm="."><plain>80.7 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="567" pm="."><plain>0.5 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="568" pm="."><plain>0.5 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="569" pm="."><plain>MG-RAST a  </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="570" pm="."><plain>25.0 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="571" pm="."><plain>29.7 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="572" pm="."><plain>80.1 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="573" pm="."><plain>67.2 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="574" pm="."><plain>LMAT kML </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="575" pm="."><plain>24.7(26.3 b ) </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="576" pm="."><plain>95.7 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="577" pm="."><plain>80.4 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="578" pm="."><plain>98.1 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="579" pm="."><plain>LMAT kFull </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="580" pm="."><plain>92.5(98.7 b ) </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="581" pm="."><plain>98.5 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="582" pm="."><plain>86.0 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="583" pm="."><plain>82.5 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="584" pm="."><plain>MiniKraken </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="585" pm="."><plain>— </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="586" pm="."><plain>99.9 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="587" pm="."><plain>96.7 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="588" pm="."><plain>97.7 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="589" pm="."><plain>CoMeta allDb </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="590" pm="."><plain>93.4(99.7 b ) </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="591" pm="."><plain>99.6 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="592" pm="."><plain>99.1 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="593" pm="."><plain>94.1 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="594" pm="."><plain>CoMeta micDb </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="595" pm="."><plain>— </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="596" pm="."><plain>99.8 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="597" pm="."><plain>98.9 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="598" pm="."><plain>96.2 </plain></SENT>
+</text></td></tr><tr><td colspan="5" align="left" rowspan="1"><text><SENT sid="599" pm="."><plain>Precision (percentage) </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="600" pm="."><plain>CARMA a  </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="601" pm="."><plain>92.0 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="602" pm="."><plain>99.7 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="603" pm="."><plain>99.7 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="604" pm="."><plain>97.4 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="605" pm="."><plain>MEGAN a  </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="606" pm="."><plain>78.1 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="607" pm="."><plain>99.7 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="608" pm="."><plain>99.8 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="609" pm="."><plain>98.1 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="610" pm="."><plain>MetaPhyler a  </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="611" pm="."><plain>84.0 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="612" pm="."><plain>99.7 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="613" pm="."><plain>100.0 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="614" pm="."><plain>83.8 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="615" pm="."><plain>MG-RAST a  </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="616" pm="."><plain>92.4 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="617" pm="."><plain>99.8 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="618" pm="."><plain>99.9 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="619" pm="."><plain>95.3 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="620" pm="."><plain>LMAT kML </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="621" pm="."><plain>99.9(99.9 b ) </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="622" pm="."><plain>97.8 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="623" pm="."><plain>100.0 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="624" pm="."><plain>99.8 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="625" pm="."><plain>LMAT kFull </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="626" pm="."><plain>100.0(100.0 b ) </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="627" pm="."><plain>97.8 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="628" pm="."><plain>100.0 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="629" pm="."><plain>99.8 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="630" pm="."><plain>MiniKraken </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="631" pm="."><plain>— </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="632" pm="."><plain>99.9 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="633" pm="."><plain>100.0 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="634" pm="."><plain>99.7 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="635" pm="."><plain>CoMeta allDb </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="636" pm="."><plain>99.8(99.8 b ) </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="637" pm="."><plain>99.6 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="638" pm="."><plain>99.1 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="639" pm="."><plain>99.3 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="640" pm="."><plain>CoMeta micDb </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="641" pm="."><plain>— </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="642" pm="."><plain>99.8 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="643" pm="."><plain>99.9 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="644" pm="."><plain>98.8 </plain></SENT>
+</text></td></tr></tbody></table></alternatives><table-wrap-foot><fn id="t003fn001"><p><text><SENT sid="645" pm="."><plain>a—The results of the program are taken from the Bazinet–Cummings’ paper [56]. </plain></SENT>
+</text></p></fn><fn id="t003fn002"><p><text><SENT sid="646" pm="."><plain>b—The results for FACS 269bp dataset, where reads with more than 50% of unknown nucleotides (Ns) are filtered out. </plain></SENT>
+<SENT sid="647" pm="."><plain>The values outside the brackets are for the whole dataset. </plain></SENT>
+</text></p></fn><fn id="t003fn003"><p><text><SENT sid="648" pm="."><plain>CoMeta allDb parameters: MC = 30%, k = 24. </plain></SENT>
+</text></p></fn><fn id="t003fn004"><p><text><SENT sid="649" pm="."><plain>CoMeta micDb parameters: MC = 5%, k = 30. </plain></SENT>
+</text></p></fn><fn id="t003fn005"><p><text><SENT sid="650" pm="."><plain>LMAT kML and kFull parameter: ms = 0. </plain></SENT>
+</text></p></fn></table-wrap-foot></table-wrap></SecTag><SecTag type="TABLE"><table-wrap id="pone.0121453.t004" orientation="portrait" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0121453.t004</object-id><label>Table 4</label><caption><title><text><SENT sid="651" pm="."><plain>Comparison of programs for various level classification using Illumina reads. </plain></SENT>
+</text></title></caption><alternatives><graphic id="pone.0121453.t004g" xlink:href="pone.0121453.t004"/><table frame="box" rules="all" border="0"><colgroup span="1"><col align="left" valign="top" span="1"/><col align="left" valign="top" span="1"/><col align="left" valign="top" span="1"/><col align="left" valign="top" span="1"/><col align="left" valign="top" span="1"/><col align="left" valign="top" span="1"/><col align="left" valign="top" span="1"/></colgroup><thead><tr><th align="left" rowspan="1" colspan="1"><text><SENT sid="652" pm="."><plain>Programs </plain></SENT>
+</text></th><th colspan="3" align="center" rowspan="1"><text><SENT sid="653" pm="."><plain>HiSeq 92 bp </plain></SENT>
+</text></th><th colspan="3" align="center" rowspan="1"><text><SENT sid="654" pm="."><plain>MiSeq 156 bp </plain></SENT>
+</text></th></tr><tr><th align="left" rowspan="1" colspan="1"/><th align="left" rowspan="1" colspan="1"><text><SENT sid="655" pm="."><plain>Sensitivity </plain></SENT>
+</text></th><th align="left" rowspan="1" colspan="1"><text><SENT sid="656" pm="."><plain>Precision </plain></SENT>
+</text></th><th align="left" rowspan="1" colspan="1"><text><SENT sid="657" pm="."><plain>Classified </plain></SENT>
+</text></th><th align="left" rowspan="1" colspan="1"><text><SENT sid="658" pm="."><plain>Sensitivity </plain></SENT>
+</text></th><th align="left" rowspan="1" colspan="1"><text><SENT sid="659" pm="."><plain>Precision </plain></SENT>
+</text></th><th align="left" rowspan="1" colspan="1"><text><SENT sid="660" pm="."><plain>Classified </plain></SENT>
+</text></th></tr></thead><tbody><tr><td colspan="7" align="left" rowspan="1"><text><SENT sid="661" pm="."><plain>PHYLUM </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="662" pm="."><plain>LMAT kFull </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="663" pm="."><plain>89.89 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="664" pm="."><plain>99.74 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="665" pm="."><plain>90.12 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="666" pm="."><plain>88.23 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="667" pm="."><plain>99.47 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="668" pm="."><plain>88.70 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="669" pm="."><plain>MiniKraken a  </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="670" pm="."><plain>65.34 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="671" pm="."><plain>99.79 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="672" pm="."><plain>65.48 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="673" pm="."><plain>75.88 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="674" pm="."><plain>99.93 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="675" pm="."><plain>75.93 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="676" pm="."><plain>CoMeta micDb </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="677" pm="."><plain>81.64 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="678" pm="."><plain>98.97 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="679" pm="."><plain>82.49 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="680" pm="."><plain>86.71 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="681" pm="."><plain>99.11 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="682" pm="."><plain>87.49 </plain></SENT>
+</text></td></tr><tr><td colspan="7" align="left" rowspan="1"><text><SENT sid="683" pm="."><plain>CLASS </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="684" pm="."><plain>LMAT kFull </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="685" pm="."><plain>88.06 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="686" pm="."><plain>99.66 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="687" pm="."><plain>88.36 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="688" pm="."><plain>85.79 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="689" pm="."><plain>99.65 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="690" pm="."><plain>86.09 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="691" pm="."><plain>MiniKraken a  </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="692" pm="."><plain>65.16 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="693" pm="."><plain>99.65 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="694" pm="."><plain>65.39 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="695" pm="."><plain>75.73 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="696" pm="."><plain>99.91 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="697" pm="."><plain>75.80 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="698" pm="."><plain>CoMeta micDb </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="699" pm="."><plain>80.87 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="700" pm="."><plain>98.14 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="701" pm="."><plain>82.40 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="702" pm="."><plain>86.34 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="703" pm="."><plain>98.83 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="704" pm="."><plain>87.36 </plain></SENT>
+</text></td></tr><tr><td colspan="7" align="left" rowspan="1"><text><SENT sid="705" pm="."><plain>ORDER </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="706" pm="."><plain>LMAT kFull </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="707" pm="."><plain>86.48 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="708" pm="."><plain>99.80 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="709" pm="."><plain>86.65 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="710" pm="."><plain>81.00 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="711" pm="."><plain>99.63 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="712" pm="."><plain>81.30 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="713" pm="."><plain>MiniKraken a  </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="714" pm="."><plain>64.89 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="715" pm="."><plain>99.51 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="716" pm="."><plain>65.21 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="717" pm="."><plain>75.52 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="718" pm="."><plain>99.87 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="719" pm="."><plain>75.62 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="720" pm="."><plain>CoMeta micDb </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="721" pm="."><plain>80.34 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="722" pm="."><plain>97.73 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="723" pm="."><plain>82.21 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="724" pm="."><plain>85.39 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="725" pm="."><plain>98.01 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="726" pm="."><plain>87.12 </plain></SENT>
+</text></td></tr><tr><td colspan="7" align="left" rowspan="1"><text><SENT sid="727" pm="."><plain>FAMILY </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="728" pm="."><plain>LMAT kFull </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="729" pm="."><plain>84.96 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="730" pm="."><plain>99.79 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="731" pm="."><plain>85.14 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="732" pm="."><plain>79.40 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="733" pm="."><plain>99.72 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="734" pm="."><plain>79.62 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="735" pm="."><plain>MiniKraken a  </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="736" pm="."><plain>64.75 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="737" pm="."><plain>99.46 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="738" pm="."><plain>65.10 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="739" pm="."><plain>75.43 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="740" pm="."><plain>99.81 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="741" pm="."><plain>75.57 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="742" pm="."><plain>CoMeta micDb </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="743" pm="."><plain>80.13 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="744" pm="."><plain>97.61 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="745" pm="."><plain>82.09 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="746" pm="."><plain>85.05 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="747" pm="."><plain>97.76 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="748" pm="."><plain>87.00 </plain></SENT>
+</text></td></tr><tr><td colspan="7" align="left" rowspan="1"><text><SENT sid="749" pm="."><plain>GENUS </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="750" pm="."><plain>LMAT kFull </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="751" pm="."><plain>84.74 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="752" pm="."><plain>99.80 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="753" pm="."><plain>84.91 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="754" pm="."><plain>73.75 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="755" pm="."><plain>99.53 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="756" pm="."><plain>74.10 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="757" pm="."><plain>MiniKraken a  </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="758" pm="."><plain>64.54 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="759" pm="."><plain>99.45 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="760" pm="."><plain>64.90 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="761" pm="."><plain>71.95 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="762" pm="."><plain>98.04 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="763" pm="."><plain>73.39 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="764" pm="."><plain>MiniKraken b  </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="765" pm="."><plain>66.12 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="766" pm="."><plain>99.44 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="767" pm="."><plain>— </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="768" pm="."><plain>67.95 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="769" pm="."><plain>97.41 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="770" pm="."><plain>— </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="771" pm="."><plain>Kraken b  </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="772" pm="."><plain>77.15 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="773" pm="."><plain>99.20 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="774" pm="."><plain>— </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="775" pm="."><plain>73.46 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="776" pm="."><plain>94.71 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="777" pm="."><plain>— </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="778" pm="."><plain>Kraken-GB b  </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="779" pm="."><plain>93.75 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="780" pm="."><plain>99.51 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="781" pm="."><plain>— </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="782" pm="."><plain>86.23 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="783" pm="."><plain>98.48 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="784" pm="."><plain>— </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="785" pm="."><plain>CoMeta micDb </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="786" pm="."><plain>79.82 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="787" pm="."><plain>97.44 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="788" pm="."><plain>81.92 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="789" pm="."><plain>77.50 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="790" pm="."><plain>90.83 </plain></SENT>
+</text></td><td align="char" char="." rowspan="1" colspan="1"><text><SENT sid="791" pm="."><plain>85.32 </plain></SENT>
+</text></td></tr></tbody></table></alternatives><table-wrap-foot><fn id="t004fn001"><p><text><SENT sid="792" pm="."><plain>a—The results of the program are counted by ourselves. </plain></SENT>
+</text></p></fn><fn id="t004fn002"><p><text><SENT sid="793" pm="."><plain>b—The results of the program are taken from the Wood–Salzberg’ paper [51]. </plain></SENT>
+</text></p></fn><fn id="t004fn003"><p><text><SENT sid="794" pm="."><plain>CoMeta micDb parameters: MC = 5%, k=24. </plain></SENT>
+<SENT sid="795" pm="."><plain>LMAT kFull parameter: ms = 0. </plain></SENT>
+</text></p></fn></table-wrap-foot></table-wrap></SecTag><p><text><SENT sid="796" pm="."><plain>In both variants of CoMeta (allDb and micDb), the mismatch files were taken into account, when the reads were being assigned to the best groups. </plain></SENT>
+<SENT sid="797" pm="."><plain>Depending on the dataset and database, the best classification results were obtained for different values of k. Using micDb, the best accuracy for the Illumina reads (which are short) was obtained using shorter k-mers (i.e., k ≈ 24). </plain></SENT>
+<SENT sid="799" pm="."><plain>For long reads (after the 454 sequencing) the most accurate classification scores were obtained for k ≈ 30. </plain></SENT>
+<SENT sid="800" pm="."><plain>However, using allDb, where reads were assigned to many groups, the best classification results were obtained for k = 24. </plain></SENT>
+</text></p><p><text><SENT sid="801" pm="."><plain>The difference in the number of reads between the reduced FACS 269 bp and the original dataset is 6,347 (these are the reads containing more than 50% of unknown nucleotides). </plain></SENT>
+<SENT sid="802" pm="."><plain>Differences in the classification results for the original and reduced FACS 269 bp datasets using CoMeta and LMAT were in the number of unclassified reads and equal 6,346 and 6,347 reads, respectively. </plain></SENT>
+<SENT sid="803" pm="."><plain>Obviously, real reads may contain unknown nucleotides, however in our opinion during the validation of the classifiers, ambiguous reads should not be treated equally, as the reads of all known nucleotides. </plain></SENT>
+<SENT sid="804" pm="."><plain>Therefore, the classification results in Table 3 (using CoMeta and LMAT) are given both for the FACS 269 bp and the reduced FACS 269 bp datasets. </plain></SENT>
+</text></p><p><text><SENT sid="805" pm="."><plain>The greatest differences in the classification results between the tested programs were observed for the FACS 269 bp dataset, which includes 72,951 reads derived from a human chromosome. </plain></SENT>
+<SENT sid="806" pm="."><plain>CoMeta allDb and LMAT kML classified the majority of reads, significantly outperforming other programs. </plain></SENT>
+<SENT sid="807" pm="."><plain>The databases used by MetaPhyler, MG-RAST, LMAT kML, as well as CoMeta micDb do not contain human sequences, or contain only specific marker genes, so it is understandable that the results are rather poor. </plain></SENT>
+<SENT sid="808" pm="."><plain>Although the databases in CARMA and MEGAN contain human sequences, the results obtained on these metagenomic datasets were also poor. </plain></SENT>
+<SENT sid="809" pm="."><plain>To investigate this problem, we tried to align a few reads from this dataset using BLASTX (both programs employ it), and BLASTX failed to classify some reads, which explains weak results for CARMA and MEGAN. </plain></SENT>
+<SENT sid="810" pm="."><plain>LMAT kML classified incorrectly fewer reads than CoMeta micDb, but also fewer reads were classified correctly, hence the total number of classified reads was smaller for LMAT than for CoMeta. </plain></SENT>
+</text></p><p><text><SENT sid="811" pm="."><plain>For three other datasets, the results of MetaPhyler, MG-RAST, CARMA, and MEGAN were better than those achieved for FACS 269 bp, however, LMAT, CoMeta, and Kraken were able to classify more reads. </plain></SENT>
+<SENT sid="812" pm="."><plain>MetaPhyler is very fast since it uses only the “marker genes”, however only reads having them are correctly classified. </plain></SENT>
+<SENT sid="813" pm="."><plain>Thus, this algorithm performs well only for the dataset created by the program’s authors. </plain></SENT>
+<SENT sid="814" pm="."><plain>During DNA sequencing, only a certain percentage of reads have the marker genes, therefore in many cases MetaPhyler does not recognize correctly the origin of the reads. </plain></SENT>
+<SENT sid="815" pm="."><plain>The best results for the MetaPhyler 300 bp dataset were obtained by Kraken and CoMeta, which outperformed LMAT. </plain></SENT>
+<SENT sid="816" pm="."><plain>For the CARMA 265 bp dataset the winner was CoMeta. </plain></SENT>
+<SENT sid="817" pm="."><plain>Kraken returned slightly worse scores, and LMAT—much worse. </plain></SENT>
+<SENT sid="818" pm="."><plain>However, for the PhyloPythia 961 bp dataset, it was LMAT kML, which achieved the best score. </plain></SENT>
+<SENT sid="819" pm="."><plain>Nevertheless, it is worth noting that the results of LMAT kFull was significantly worse (comparing only those three programs), whereas for the remaining datasets the classification results were better using kFull than using kML database. </plain></SENT>
+</text></p><p><text><SENT sid="820" pm="."><plain>Table 4 summarizes the evaluation of CoMeta, LMAT, and Kraken for the Illumina reads. </plain></SENT>
+<SENT sid="821" pm="."><plain>Here we showed results for five classification levels: phylum, class, order, family, and genus. </plain></SENT>
+<SENT sid="822" pm="."><plain>As mentioned earlier, we run Kraken using only the MiniKraken database downloaded from the Kraken website, because we have not managed to build the larger database nor to obtain it Kraken’s authors. </plain></SENT>
+<SENT sid="823" pm="."><plain>Therefore, in addition to the results obtained in our experiment, we present also the results quoted from Wood–Salzberg’ paper [51] (that work reports the results only for the genus level). </plain></SENT>
+<SENT sid="824" pm="."><plain>Although we carefully followed the instructions when running Kraken, we obtained different results for two datasets using MiniKraken database, compared with those reported in [51]. </plain></SENT>
+<SENT sid="825" pm="."><plain>The precision values were similar, but the difference in sensitivity was greater. </plain></SENT>
+<SENT sid="826" pm="."><plain>For the HiSeq 92 bp dataset, we obtained the sensitivity 1.58% smaller than reported in [51], and for the MiSeq 156 bp dataset it was 4% higher. </plain></SENT>
+<SENT sid="827" pm="."><plain>The differences in precision could be due to the fact that Kraken’s authors took into account the reads incorrectly classified to the levels above the analyzed rank, whereas we consider such reads unclassified. </plain></SENT>
+<SENT sid="828" pm="."><plain>However, we cannot explain the cause of the difference in the sensitivity values. </plain></SENT>
+<SENT sid="829" pm="."><plain>The best classification results for both datasets at the genus level were obtained using Kraken-GB. </plain></SENT>
+<SENT sid="830" pm="."><plain>This database, according to its authors, contains GenBanks draft and completed genomes for bacteria and archaea. </plain></SENT>
+<SENT sid="831" pm="."><plain>Taking into account the results obtained in our experiments, the HiSeq 92 bp dataset was classified the best by LMAT and by CoMeta. </plain></SENT>
+<SENT sid="832" pm="."><plain>For the MiSeq 156 bp dataset, LMAT was better than CoMeta only at the phylum level, while CoMeta correctly classified much more reads at lower levels. </plain></SENT>
+</text></p><p><text><SENT sid="833" pm="."><plain>In Table 5 we present the classification times and memory usage. </plain></SENT>
+<SENT sid="834" pm="."><plain>It may be seen that the programs which use k-mers databases use a lot of memory. </plain></SENT>
+<SENT sid="835" pm="."><plain>Using all available reference sequences (allDb), CoMeta consumed about 70 GB of RAM. </plain></SENT>
+<SENT sid="836" pm="."><plain>This was reduced to 20 GB, when taking into account only bacteria, viruses, and archaea (micDb). </plain></SENT>
+<SENT sid="837" pm="."><plain>CoMeta allDb is by 1.5–2 times slower than CoMeta micDb. </plain></SENT>
+<SENT sid="838" pm="."><plain>MiniKraken database contains only a fraction of k-mers of the reference sequence complete genomes for bacteria, viruses, and archaea; it consumed between 1.5 GB and 4 GB of RAM. </plain></SENT>
+<SENT sid="839" pm="."><plain>When using the complete database without eukaryotes Kraken needs 74 GB (according to the authors). </plain></SENT>
+</text></p><SecTag type="TABLE"><table-wrap id="pone.0121453.t005" orientation="portrait" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0121453.t005</object-id><label>Table 5</label><caption><title><text><SENT sid="840" pm="."><plain>Comparison of RAM memory usage and CPU times. </plain></SENT>
+</text></title></caption><alternatives><graphic id="pone.0121453.t005g" xlink:href="pone.0121453.t005"/><table frame="box" rules="all" border="0"><colgroup span="1"><col align="left" valign="top" span="1"/><col align="left" valign="top" span="1"/><col align="left" valign="top" span="1"/><col align="left" valign="top" span="1"/><col align="left" valign="top" span="1"/><col align="left" valign="top" span="1"/><col align="left" valign="top" span="1"/></colgroup><thead><tr><th align="left" rowspan="1" colspan="1"><text><SENT sid="841" pm="."><plain>Program </plain></SENT>
+</text></th><th align="left" rowspan="1" colspan="1"><text><SENT sid="842" pm="."><plain>FACS </plain></SENT>
+</text></th><th align="left" rowspan="1" colspan="1"><text><SENT sid="843" pm="."><plain>MetaPhyler </plain></SENT>
+</text></th><th align="left" rowspan="1" colspan="1"><text><SENT sid="844" pm="."><plain>CARMA </plain></SENT>
+</text></th><th align="left" rowspan="1" colspan="1"><text><SENT sid="845" pm="."><plain>PhyloPythia </plain></SENT>
+</text></th><th align="left" rowspan="1" colspan="1"><text><SENT sid="846" pm="."><plain>HiSeq </plain></SENT>
+</text></th><th align="left" rowspan="1" colspan="1"><text><SENT sid="847" pm="."><plain>MiSeq </plain></SENT>
+</text></th></tr><tr><th align="left" rowspan="1" colspan="1"/><th align="left" rowspan="1" colspan="1"><text><SENT sid="848" pm="."><plain>269bp </plain></SENT>
+</text></th><th align="left" rowspan="1" colspan="1"><text><SENT sid="849" pm="."><plain>300bp </plain></SENT>
+</text></th><th align="left" rowspan="1" colspan="1"><text><SENT sid="850" pm="."><plain>265bp </plain></SENT>
+</text></th><th align="left" rowspan="1" colspan="1"><text><SENT sid="851" pm="."><plain>961bp </plain></SENT>
+</text></th><th align="left" rowspan="1" colspan="1"><text><SENT sid="852" pm="."><plain>92bp </plain></SENT>
+</text></th><th align="left" rowspan="1" colspan="1"><text><SENT sid="853" pm="."><plain>156bp </plain></SENT>
+</text></th></tr></thead><tbody><tr><td colspan="7" align="left" rowspan="1"><text><SENT sid="854" pm="."><plain>CPU Runtime (minutes) </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="855" pm="."><plain>CARMA a  </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="856" pm="."><plain>290880 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="857" pm="."><plain>77340 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="858" pm="."><plain>74950 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="859" pm="."><plain>360107 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="860" pm="."><plain>— </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="861" pm="."><plain>— </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="862" pm="."><plain>MEGAN a  </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="863" pm="."><plain>288020 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="864" pm="."><plain>72060 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="865" pm="."><plain>72010 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="866" pm="."><plain>351060 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="867" pm="."><plain>— </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="868" pm="."><plain>— </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="869" pm="."><plain>MetaPhyler a  </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="870" pm="."><plain>10 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="871" pm="."><plain>20 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="872" pm="."><plain>2 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="873" pm="."><plain>28 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="874" pm="."><plain>— </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="875" pm="."><plain>— </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="876" pm="."><plain>MG-RAST a  </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="877" pm="."><plain>60 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="878" pm="."><plain>10080 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="879" pm="."><plain>20160 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="880" pm="."><plain>12960 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="881" pm="."><plain>— </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="882" pm="."><plain>— </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="883" pm="."><plain>LMAT kML </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="884" pm="."><plain>36(60 b ) </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="885" pm="."><plain>58 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="886" pm="."><plain>43 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="887" pm="."><plain>348 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="888" pm="."><plain>— </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="889" pm="."><plain>— </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="890" pm="."><plain>LMAT kFull </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="891" pm="."><plain>54(93 b ) </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="892" pm="."><plain>213 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="893" pm="."><plain>38 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="894" pm="."><plain>772 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="895" pm="."><plain>15 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="896" pm="."><plain>33 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="897" pm="."><plain>MiniKraken </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="898" pm="."><plain>— </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="899" pm="."><plain>1.22 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="900" pm="."><plain>1.07 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="901" pm="."><plain>2.95 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="902" pm="."><plain>1.3 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="903" pm="."><plain>1.2 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="904" pm="."><plain>CoMeta allDb </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="905" pm="."><plain>41(76 b ) </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="906" pm="."><plain>14 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="907" pm="."><plain>28 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="908" pm="."><plain>144 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="909" pm="."><plain>— </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="910" pm="."><plain>— </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="911" pm="."><plain>CoMeta micDb (ph) </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="912" pm="."><plain>— </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="913" pm="."><plain>9 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="914" pm="."><plain>14 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="915" pm="."><plain>35 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="916" pm="."><plain>8 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="917" pm="."><plain>9 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="918" pm="."><plain>CoMeta micDb (ge) </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="919" pm="."><plain>— </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="920" pm="."><plain>— </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="921" pm="."><plain>— </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="922" pm="."><plain>79 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="923" pm="."><plain>42 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="924" pm="."><plain>68 </plain></SENT>
+</text></td></tr><tr><td colspan="7" align="left" rowspan="1"><text><SENT sid="925" pm="."><plain>Memory Usage (Megabytes of RAM) </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="926" pm="."><plain>CARMA a  </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="927" pm="."><plain>100 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="928" pm="."><plain>100 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="929" pm="."><plain>100 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="930" pm="."><plain>120 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="931" pm="."><plain>— </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="932" pm="."><plain>— </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="933" pm="."><plain>MEGAN a  </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="934" pm="."><plain>1024 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="935" pm="."><plain>1024 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="936" pm="."><plain>1024 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="937" pm="."><plain>1410 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="938" pm="."><plain>— </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="939" pm="."><plain>— </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="940" pm="."><plain>MetaPhyler a  </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="941" pm="."><plain>5734 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="942" pm="."><plain>5734 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="943" pm="."><plain>5734 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="944" pm="."><plain>5734 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="945" pm="."><plain>— </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="946" pm="."><plain>— </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="947" pm="."><plain>MG-RAST a  </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="948" pm="."><plain>— </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="949" pm="."><plain>— </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="950" pm="."><plain>— </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="951" pm="."><plain>— </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="952" pm="."><plain>— </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="953" pm="."><plain>— </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="954" pm="."><plain>LMAT kML </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="955" pm="."><plain>17000(17284 b ) </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="956" pm="."><plain>17019 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="957" pm="."><plain>2128 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="958" pm="."><plain>13311 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="959" pm="."><plain>— </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="960" pm="."><plain>— </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="961" pm="."><plain>LMAT kFull </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="962" pm="."><plain>9295(9481 b ) </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="963" pm="."><plain>13247 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="964" pm="."><plain>13286 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="965" pm="."><plain>15092 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="966" pm="."><plain>5807 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="967" pm="."><plain>12392 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="968" pm="."><plain>MiniKraken </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="969" pm="."><plain>— </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="970" pm="."><plain>4098 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="971" pm="."><plain>3210 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="972" pm="."><plain>4100 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="973" pm="."><plain>1317 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="974" pm="."><plain>1449 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="975" pm="."><plain>CoMeta allDb </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="976" pm="."><plain>71260(71903 b ) </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="977" pm="."><plain>70743 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="978" pm="."><plain>71313 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="979" pm="."><plain>69508 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="980" pm="."><plain>— </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="981" pm="."><plain>— </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="982" pm="."><plain>CoMeta micDb </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="983" pm="."><plain>— </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="984" pm="."><plain>19552 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="985" pm="."><plain>19320 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="986" pm="."><plain>19552 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="987" pm="."><plain>10297 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="988" pm="."><plain>17689 </plain></SENT>
+</text></td></tr></tbody></table></alternatives><table-wrap-foot><fn id="t005fn001"><p><text><SENT sid="989" pm="."><plain>a—The results of the program are taken from the Bazinet–Cummings’ paper [56]. </plain></SENT>
+</text></p></fn><fn id="t005fn002"><p><text><SENT sid="990" pm="."><plain>b—The results for FACS 269bp dataset, where reads with more than 50% of unknown nucleotides (Ns) are filtered out. </plain></SENT>
+<SENT sid="991" pm="."><plain>The values outside the brackets are for the whole dataset. </plain></SENT>
+</text></p></fn><fn id="t005fn003"><p><text><SENT sid="992" pm="."><plain>FACS 269 bp, MetaPhyler 300 bp, and CARMA 265 bp datasets were classified to phylum level, whilst PhyloPythia 961 bp, HiSeq 92 bp, and MiSeq 156 bp datasets to genus level. </plain></SENT>
+<SENT sid="993" pm="."><plain>In the table besides the times of classification to the genus level for CoMeta micDb (ge), the times of classification to earlier levels are shown—the phylum levels (ph). </plain></SENT>
+</text></p></fn></table-wrap-foot></table-wrap></SecTag><p><text><SENT sid="994" pm="."><plain>The running time of CoMeta micDb when classifying to the genus level for the PhyloPythia 961 bp dataset, compared with the HiSeq 92 bp dataset, was only twice longer, although both the number of reads and their lengths are about ten times larger (hence, the file size is over 100 times larger). </plain></SENT>
+<SENT sid="995" pm="."><plain>This results from the fact that loading the k-mer database takes much more time than classification of the reads. </plain></SENT>
+<SENT sid="996" pm="."><plain>Kraken is the fastest among the examined programs. </plain></SENT>
+<SENT sid="997" pm="."><plain>Compared to LMAT, CoMeta was faster when classifying to the phylum level. </plain></SENT>
+<SENT sid="998" pm="."><plain>For classification to the genus level, CoMeta was faster only for a big dataset (PhyloPythia 961 bp), while the small datasets with short reads (HiSeq 92 bp and MiSeq 156 bp) were classified faster by LMAT. </plain></SENT>
+</text></p></sec><sec id="sec017"><title><text><SENT sid="999" pm="."><plain>Databases building </plain></SENT>
+</text></title><p><text><SENT sid="1000" pm="."><plain>The k-mer/taxonomy databases consist of all reference sequences downloaded from the NCBI website. </plain></SENT>
+<SENT sid="1001" pm="."><plain>As it has been discussed earlier, we suggest the read classification be started from the phylum rank. </plain></SENT>
+<SENT sid="1002" pm="."><plain>The “raw” genome database used in this study was downloaded on July 2012. </plain></SENT>
+<SENT sid="1003" pm="."><plain>The 13 nt files included: 261,295 sequences from Archaea, 4,036,205 from Bacteria, 10,205,401 from Eukaryota, 3,127 from Viroids, and 1,175,053 from Viruses. </plain></SENT>
+<SENT sid="1004" pm="."><plain>Apart from 15,681,081 sequences of a known origin and defined superkingdom, 509,677 sequences were undefined (for example plasmids, artificial sequences, or environmental samples). </plain></SENT>
+</text></p><p><text><SENT sid="1005" pm="."><plain>Each sequence had Sequence Identification ID (gi), which was used to set Taxonomic Identification ID (tax). </plain></SENT>
+<SENT sid="1006" pm="."><plain>The sequences were divided into groups according to the rank of phylum, plus for group Viruses and Viroids. </plain></SENT>
+<SENT sid="1007" pm="."><plain>Overall, 99 groups were established (c.f. Table 6, row “num groups”). </plain></SENT>
+</text></p><SecTag type="TABLE"><table-wrap id="pone.0121453.t006" orientation="portrait" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0121453.t006</object-id><label>Table 6</label><caption><title><text><SENT sid="1008" pm="."><plain>Compact k-mer database, where the reads are classified into the phylum rank. </plain></SENT>
+</text></title></caption><alternatives><graphic id="pone.0121453.t006g" xlink:href="pone.0121453.t006"/><table frame="box" rules="all" border="0"><colgroup span="1"><col align="left" valign="top" span="1"/><col align="left" valign="top" span="1"/><col align="left" valign="top" span="1"/><col align="left" valign="top" span="1"/><col align="left" valign="top" span="1"/><col align="left" valign="top" span="1"/><col align="left" valign="top" span="1"/></colgroup><thead><tr><th align="left" rowspan="1" colspan="1"/><th align="left" rowspan="1" colspan="1"><text><SENT sid="1009" pm="."><plain>Archaea </plain></SENT>
+</text></th><th align="left" rowspan="1" colspan="1"><text><SENT sid="1010" pm="."><plain>Bacteria </plain></SENT>
+</text></th><th align="left" rowspan="1" colspan="1"><text><SENT sid="1011" pm="."><plain>Eukaryota </plain></SENT>
+</text></th><th align="left" rowspan="1" colspan="1"><text><SENT sid="1012" pm="."><plain>Viroids </plain></SENT>
+</text></th><th align="left" rowspan="1" colspan="1"><text><SENT sid="1013" pm="."><plain>Viruses </plain></SENT>
+</text></th><th align="left" rowspan="1" colspan="1"><text><SENT sid="1014" pm="."><plain>Total </plain></SENT>
+</text></th></tr></thead><tbody><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="1015" pm="."><plain>num groups </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="1016" pm="."><plain>6 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="1017" pm="."><plain>36 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="1018" pm="."><plain>55 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="1019" pm="."><plain>1 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="1020" pm="."><plain>1 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="1021" pm="."><plain>99 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="1022" pm="."><plain>num seq </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="1023" pm="."><plain>261,295 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="1024" pm="."><plain>4,036,205 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="1025" pm="."><plain>10,205,401 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="1026" pm="."><plain>3,127 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="1027" pm="."><plain>1,175,053 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="1028" pm="."><plain>15,681,081 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="1029" pm="."><plain>k = 15 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="1030" pm="."><plain>1.9 GB </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="1031" pm="."><plain>17.0 GB </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="1032" pm="."><plain>29.9 GB </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="1033" pm="."><plain>1.1 MB </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="1034" pm="."><plain>1.1 GB </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="1035" pm="."><plain>49.9 GB </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="1036" pm="."><plain>k = 18 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="1037" pm="."><plain>2.2 GB </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="1038" pm="."><plain>34.4 GB </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="1039" pm="."><plain>93.7 GB </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="1040" pm="."><plain>1.1 MB </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="1041" pm="."><plain>1.4 GB </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="1042" pm="."><plain>131.7 GB </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="1043" pm="."><plain>k = 21 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="1044" pm="."><plain>2.3 GB </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="1045" pm="."><plain>37.6 GB </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="1046" pm="."><plain>111.9 GB </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="1047" pm="."><plain>1.2 MB </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="1048" pm="."><plain>1.5 GB </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="1049" pm="."><plain>153.3 GB </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="1050" pm="."><plain>k = 24 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="1051" pm="."><plain>2.3 GB </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="1052" pm="."><plain>39.0 GB </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="1053" pm="."><plain>117.4 GB </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="1054" pm="."><plain>1.3 MB </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="1055" pm="."><plain>1.6 GB </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="1056" pm="."><plain>160.4 GB </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="1057" pm="."><plain>k = 27 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="1058" pm="."><plain>2.4 GB </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="1059" pm="."><plain>39.3 GB </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="1060" pm="."><plain>120.9 GB </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="1061" pm="."><plain>1.4 MB </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="1062" pm="."><plain>1.7 GB </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="1063" pm="."><plain>164.2 GB </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="1064" pm="."><plain>k = 30 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="1065" pm="."><plain>2.4 GB </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="1066" pm="."><plain>39.6 GB </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="1067" pm="."><plain>123.3 GB </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="1068" pm="."><plain>1.4 MB </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="1069" pm="."><plain>1.8 GB </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="1070" pm="."><plain>167.0 GB </plain></SENT>
+</text></td></tr></tbody></table></alternatives><table-wrap-foot><fn id="t006fn001"><p><text><SENT sid="1071" pm="."><plain>The total size of the compact k-mer databases for groups of the phylum rank at various lengths of k-mer. </plain></SENT>
+<SENT sid="1072" pm="."><plain>The number of groups belonging to the superkingdom is given in the first row, and the number of the sequences is in the second one. </plain></SENT>
+<SENT sid="1073" pm="."><plain>The sizes of each dataset are provided in S1 Supporting Information. </plain></SENT>
+</text></p></fn></table-wrap-foot></table-wrap></SecTag><p><text><SENT sid="1074" pm="."><plain>In the reported experiments, we divided the sequences into overlapping k-mers of different lengths, k = 15,18,21,24,27,30, hence, we obtained six different database setups. </plain></SENT>
+<SENT sid="1075" pm="."><plain>In order to accelerate loading of the database during classification, we used non-compact databases. </plain></SENT>
+<SENT sid="1076" pm="."><plain>The overall sizes of the databases for classification at the phylum rank are presented in Table 6, with the number of groups belonging to the superkingdom. </plain></SENT>
+<SENT sid="1077" pm="."><plain>Sizes for all non-compact databases that are loaded into RAM during the “Comparison” step (c.f. Fig 1), are provided in S1 Supporting Information. </plain></SENT>
+<SENT sid="1078" pm="."><plain>The largest k-mer database is for the “Chordata” phylum (up to 73 GB for k = 30), however in many metagenomic studies, the eukaryotes are not investigated at all. </plain></SENT>
+<SENT sid="1079" pm="."><plain>For bacteria, the Proteobacteria k-mer database is the largest one (almost 20 GB of RAM is necessary). </plain></SENT>
+</text></p><p><text><SENT sid="1080" pm="."><plain>The dependence of the database size on the number of unique k-mers (which appeared at least once in the G i group) is shown in S1 Supporting Information. </plain></SENT>
+<SENT sid="1081" pm="."><plain>Approximately, the relationship between k and the database size is linear. </plain></SENT>
+<SENT sid="1082" pm="."><plain>The size of the non-compact database is approximately equal to the compact one for k = 30. </plain></SENT>
+</text></p></sec></sec></SecTag><SecTag type="CONCL"><sec id="sec018"><title><text><SENT sid="1083" pm="."><plain>Conclusions and future work </plain></SENT>
+</text></title><p><text><SENT sid="1084" pm="."><plain>In this paper, we proposed a new method for classification of reads to the taxonomic rank. </plain></SENT>
+<SENT sid="1085" pm="."><plain>First, the groups of reference sequences (each derived from a single taxon) are divided into overlapping k-mers (short substrings), from which the databases are built. </plain></SENT>
+<SENT sid="1086" pm="."><plain>Each database is subsequently used for checking the similarity between the query read and the group, which this database represents. </plain></SENT>
+<SENT sid="1087" pm="."><plain>We proceed the read classification from the root towards the leaves of the taxonomical tree, which accelerates the program execution, since the read does not have to be compared with each reference sequence. </plain></SENT>
+<SENT sid="1088" pm="."><plain>The presented experimental results proved our approach to be competitive and outperforming many alternative popular programs. </plain></SENT>
+<SENT sid="1089" pm="."><plain>The results also indicate how important it is to properly select the length of k-mers. </plain></SENT>
+<SENT sid="1090" pm="."><plain>For too small k’s, too many reads are misclassified, while too large k’s increase the number of unclassified reads. </plain></SENT>
+<SENT sid="1091" pm="."><plain>The downside of our method is that it needs a lot of RAM, when large k-mer databases are used. </plain></SENT>
+<SENT sid="1092" pm="."><plain>For classification at the phylum level, using the largest set of k-mers for Proteobacteria, about 20 GB are required. </plain></SENT>
+<SENT sid="1093" pm="."><plain>CoMeta is slower than the very recently published Kraken program. </plain></SENT>
+<SENT sid="1094" pm="."><plain>However, CoMeta returns information about all the groups to which the query read was classified if it was classified to several ones, (when the conflict occurred), and not like Kraken and LCAT which cut off the branch and classify the read to a higher level. </plain></SENT>
+</text></p><p><text><SENT sid="1095" pm="."><plain>Our ongoing research includes examining the influence of the length of the reference sequences (derived from one group) on the best value of the k parameter, so that it can be selected automatically. </plain></SENT>
+<SENT sid="1096" pm="."><plain>Furthermore, we intend to take into consideration not only the number of matched nucleotides (match scores), but also the number of deletions and insertions. </plain></SENT>
+</text></p></sec></SecTag><SecTag type="SUPPL"><sec sec-type="supplementary-material" id="sec019"><title><text><SENT sid="1097" pm="."><plain>Supporting Information </plain></SENT>
+</text></title><supplementary-material content-type="local-data" id="pone.0121453.s001"><label>S1 Supporting Information</label><caption><title><text><SENT sid="1098" pm="."><plain>Additional tables and figures of the experiments results. </plain></SENT>
+</text></title><p><text><SENT sid="1099" pm="."><plain>(PDF) </plain></SENT>
+</text></p></caption><media xlink:href="pone.0121453.s001.pdf"><caption><p><text><SENT sid="1100" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media></supplementary-material></sec></SecTag></body><back><SecTag type="REF"><ref-list><title>References</title><ref id="pone.0121453.ref001"><text><SENT sid="1101" pm="."><plain>1 HandelsmanJ, RondonMR, BradySF, ClardyJ, GoodmanRM. Molecular biological access to the chemistry of unknown soil microbes: a new frontier for natural products. Chemistry &amp; biology. 1998;5(10). </plain></SENT>
+</text></ref><ref id="pone.0121453.ref002"><text><SENT sid="1102" pm="."><plain>2 PaceNR, StahlDA, OlsenGJ. Analyzing natural microbial populations by rRNA sequences. ASM News. 1985;51:4–12. </plain></SENT>
+</text></ref><ref id="pone.0121453.ref003"><text><SENT sid="1103" pm="."><plain>3 HandelsmanJ. Metagenomics: application of genomics to uncultured microorganisms. Microbiology and Molecular Biology Reviews. 2004;68(4):669–685. 10.1128/MMBR.68.4.669-685.2004 15590779 </plain></SENT>
+</text></ref><ref id="pone.0121453.ref004"><text><SENT sid="1104" pm="."><plain>4 SimonC, DanielR. Metagenomic Analyses: Past and Future Trends. Applied and Environmental Microbiology. 2011;77(4):1153–1161. 10.1128/AEM.02345-10 21169428 </plain></SENT>
+</text></ref><ref id="pone.0121453.ref005"><text><SENT sid="1105" pm="."><plain>5 Committee on Metagenomics: Challenges and Functional Applications NRC. The New Science of Metagenomics: Revealing the Secrets of Our Microbial Planet. The National Academies Press; 2007. </plain></SENT>
+</text></ref><ref id="pone.0121453.ref006"><text><SENT sid="1106" pm="."><plain>6 RouskJ, BaathE, BrookesPC, LauberCL, LozuponeC, CaporasoJG, et al Soil bacterial and fungal communities across a pH gradient in an arable soil. The ISME Journal. 2010;4:1340–1351. 10.1038/ismej.2010.58 20445636 </plain></SENT>
+</text></ref><ref id="pone.0121453.ref007"><text><SENT sid="1107" pm="."><plain>7 FiererN, LeffJ, AdamsB, NielsenU, BatesS, LauberC, et al Cross-biome metagenomic analyses of soil microbial communities and their functional attributes. Proceedings of the National Academy of Sciences of the United States of America. 2012;109(52). 10.1073/pnas.1215210110  </plain></SENT>
+</text></ref><ref id="pone.0121453.ref008"><text><SENT sid="1108" pm="."><plain>8 AbbaiN, GovenderA, ShaikR, PillayB. Pyrosequence analysis of unamplified and whole genome amplified DNA from hydrocarbon-contaminated groundwater. Mol Biotechnol. 2011;50:39–48. 10.1007/s12033-011-9412-8  </plain></SENT>
+</text></ref><ref id="pone.0121453.ref009"><text><SENT sid="1109" pm="."><plain>9 KennedyJ, O’LearyND, KiranGS, MorrisseyJP, O’GaraF, SelvinJ, et al Functional metagenomic strategies for the discovery of novel enzymes and biosurfactants with biotechnological applications from marine ecosystems. Journal of Applied Microbiology. 2011;111(4):787–799. 10.1111/j.1365-2672.2011.05106.x 21777355 </plain></SENT>
+</text></ref><ref id="pone.0121453.ref010"><text><SENT sid="1110" pm="."><plain>10 GilbertJ, FieldD, HuangY, EdwardsR, LiW, GilnaP, et al Detection of large numbers of novel sequences in the metatranscriptomes of complex marine microbial communities. PLoS ONE. 2008;3(8). 10.1371/journal.pone.0003042  </plain></SENT>
+</text></ref><ref id="pone.0121453.ref011"><text><SENT sid="1111" pm="."><plain>11 YergeauE, LawrenceJR, WaiserMJ, KorberDR, GreerCW. Metatranscriptomic analysis of the response of river biofilms to pharmaceutical products, using anonymous DNA microarrays. Applied and Environmental Microbiology. 2010;76(16):5432–5439. 10.1128/AEM.00873-10 20562274 </plain></SENT>
+</text></ref><ref id="pone.0121453.ref012"><text><SENT sid="1112" pm="."><plain>12 RheeJK, AhnDG, KimYG, OhJW. New thermophilic and thermostable esterase with sequence similarity to the hormone-sensitive lipase family, cloned from a metagenomic library. Applied and Environmental Microbiology. 2005;71(2):817–825. 10.1128/AEM.71.2.817-825.2005 15691936 </plain></SENT>
+</text></ref><ref id="pone.0121453.ref013"><text><SENT sid="1113" pm="."><plain>13 SimonC, WiezerA, StrittmatterAW, DanielR. Phylogenetic diversity and metabolic potential revealed in a glacier ice metagenome. Applied and Environmental Microbiology. 2009;75(23):7519–7526. 10.1128/AEM.00946-09 19801459 </plain></SENT>
+</text></ref><ref id="pone.0121453.ref014"><text><SENT sid="1114" pm="."><plain>14 HeathC, HuXPP, CarySC, CowanD. Identification of a novel alkaliphilic esterase active at low temperatures by screening a metagenomic library from antarctic desert soil. Applied and environmental microbiology. 2009;75(13):4657–4659. 10.1128/AEM.02597-08 19411411 </plain></SENT>
+</text></ref><ref id="pone.0121453.ref015"><text><SENT sid="1115" pm="."><plain>15 NguyenNH, MarusetL, UengwetwanitT, MhuantongW, HarnpicharnchaiP, ChampredaV, et al Identification and characterization of a cellulase-encoding gene from the buffalo rumen metagenomic library. Bioscience, Biotechnology and Biochemistry. 2012;76(6):1075–1084. </plain></SENT>
+</text></ref><ref id="pone.0121453.ref016"><text><SENT sid="1116" pm="."><plain>16 HessM, SczyrbaA, EganR, KimT, ChokhawalaH, SchrothG, et al Metagenomic discovery of biomass-degrading genes and genomes from cow rumen. Science. 2011;331(6016):463–467. 10.1126/science.1200387 21273488 </plain></SENT>
+</text></ref><ref id="pone.0121453.ref017"><text><SENT sid="1117" pm="."><plain>17 QinJ, LiR, RaesJ, ArumugamM, BurgdorfK, ManichanhC, et al A human gut microbial gene catalogue established by metagenomic sequencing. Nature. 2010;464(7285):59–65. 10.1038/nature08821 20203603 </plain></SENT>
+</text></ref><ref id="pone.0121453.ref018"><text><SENT sid="1118" pm="."><plain>18 KuczynskiJ, LauberCL, WaltersWA, ParfreyLW, ClementeJC, GeversD, et al Experimental and analytical tools for studying the human microbiome. Nat Rev Genet. 2012 1;13(1):47–58. 10.1038/nrg3129  </plain></SENT>
+</text></ref><ref id="pone.0121453.ref019"><text><SENT sid="1119" pm="."><plain>19 BrulsT, WeissenbachJ. The human metagenome: our other genome? Human Molecular Genetics. 2011;20:142–148. 10.1093/hmg/ddr353  </plain></SENT>
+</text></ref><ref id="pone.0121453.ref020"><text><SENT sid="1120" pm="."><plain>20 NIH HMP Working Group, PetersonJ, GargesS, GiovanniM, McInnesP, WangL, et al The NIH Human Microbiome Project. Genome Research. 2009;19(12):2317–2323. 10.1101/gr.096651.109 19819907 </plain></SENT>
+</text></ref><ref id="pone.0121453.ref021"><text><SENT sid="1121" pm="."><plain>21 ThomasT, GilbertJ, MeyerF. Metagenomics–a guide from sampling to data analysis. Microbial Informatics and Experimentation. 2012;2(1):3 10.1186/2042-5783-2-3 22587947 </plain></SENT>
+</text></ref><ref id="pone.0121453.ref022"><text><SENT sid="1122" pm="."><plain>22 KuninV, CopelandA, LapidusA, MavromatisK, HugenholtzP. A Bioinformatician’s Guide to Metagenomics. Microbiol Mol Biol Rev. 2008;72(4):557–578. 10.1128/MMBR.00009-08 19052320 </plain></SENT>
+</text></ref><ref id="pone.0121453.ref023"><text><SENT sid="1123" pm="."><plain>23 SangerF, NicklenS, CoulsonAR. DNA sequencing with chain-terminating inhibitors. Proceedings of the National Academy of Sciences of the United States of America. 1977;74(12):5463–5467. 10.1073/pnas.74.12.5463 271968 </plain></SENT>
+</text></ref><ref id="pone.0121453.ref024"><text><SENT sid="1124" pm="."><plain>24 MetzkerML. Sequencing technologies the next generation. Nature Reviews Genetics. 2010;11(1):31–46. 10.1038/nrg2626  </plain></SENT>
+</text></ref><ref id="pone.0121453.ref025"><text><SENT sid="1125" pm="."><plain>25 NalbantogluU, CakarA, DoganH, AbaciN, UstekD, SayoodK, et al Metagenomic analysis of the microbial community in kefir grains. Food Microbiology. 2014;41:42–51. 10.1016/j.fm.2014.01.014 24750812 </plain></SENT>
+</text></ref><ref id="pone.0121453.ref026"><text><SENT sid="1126" pm="."><plain>26 WangZ, YangJ, ZhouJ, ZhangC, SuX, LiT. Composition and structure of bacterial communities in waste water of aquatic products processing factories. Research Journal of Biotechnology. 2014;9(2):65–70. </plain></SENT>
+</text></ref><ref id="pone.0121453.ref027"><text><SENT sid="1127" pm="."><plain>27 ShafquatA, JoiceR, SimmonsSL, HuttenhowerC. Functional and phylogenetic assembly of microbial communities in the human microbiome. Trends in microbiology. 2014;22(5):261266 10.1016/j.tim.2014.01.011  </plain></SENT>
+</text></ref><ref id="pone.0121453.ref028"><text><SENT sid="1128" pm="."><plain>28 HauserPM, BernardT, GreubG, JatonK, PagniM, HafenGM. Microbiota present in cystic fibrosis lungs as revealed by whole genome sequencing. PLoS ONE. 2014;9(3). 10.1371/journal.pone.0090934  </plain></SENT>
+</text></ref><ref id="pone.0121453.ref029"><text><SENT sid="1129" pm="."><plain>29 BensonDA, CavanaughM, ClarkK, Karsch-MizrachiI, LipmanDJ, OstellJ, et al GenBank. Nucleic acids research. 2013;41(D1):D36–D42. 10.1093/nar/gks1195 23193287 </plain></SENT>
+</text></ref><ref id="pone.0121453.ref030"><text><SENT sid="1130" pm="."><plain>30 FiererN, BreitbartM, NultonJ, SalamonP, LozuponeC, JonesR, et al Metagenomic and small-subunit rRNA analyses reveal the genetic diversity of bacteria, archaea, fungi, and viruses in soil. Applied and Environmental Microbiology. 2007;73(21):7059–7066. 10.1128/AEM.00358-07 17827313 </plain></SENT>
+</text></ref><ref id="pone.0121453.ref031"><text><SENT sid="1131" pm="."><plain>31 SimisterR, TaylorMW, TsaiP, FanL, BruxnerTJ, CroweML, et al Thermal stress responses in the bacterial biosphere of the great barrier reef sponge, rhopaloeides odorabile. Environmental microbiology. 2012;14(12):3232–3246. 10.1111/1462-2920.12010 23106937 </plain></SENT>
+</text></ref><ref id="pone.0121453.ref032"><text><SENT sid="1132" pm="."><plain>32 Krogius-KurikkaL, KassinenA, PaulinL, CoranderJ, MakivuokkoH, TuimalaJ, et al Sequence analysis of percent G+C fraction libraries of human faecal bacterial DNA reveals a high number of Actinobacteria. BMC Microbiology. 2009;9 10.1186/1471-2180-9-68  </plain></SENT>
+</text></ref><ref id="pone.0121453.ref033"><text><SENT sid="1133" pm="."><plain>33 WangJ, McLenachanPA, BiggsPJ, WinderLH, SchoenfeldBIK, NarayanVV, et al Environmental bio-monitoring with high-throughput sequencing. Briefings in Bioinformatics. 2013;14(5):575–588. 10.1093/bib/bbt032 23677899 </plain></SENT>
+</text></ref><ref id="pone.0121453.ref034"><text><SENT sid="1134" pm="."><plain>34 BradyA, SalzbergSL. Phymm and PhymmBL: Metagenomic phylogenetic classification with interpolated Markov models. Nature Methods. 2009;6(9):673–676. 10.1038/nmeth.1358 <?supplied-pmid 19648916?>19648916 </plain></SENT>
+</text></ref><ref id="pone.0121453.ref035"><text><SENT sid="1135" pm="."><plain>35 DiazNN, KrauseL, GoesmannA, NiehausK, NattkemperTW. TACOA–Taxonomic classification of environmental genomic fragments using a kernelized nearest neighbor approach. BMC Bioinformatics. 2009;10 10.1186/1471-2105-10-56  </plain></SENT>
+</text></ref><ref id="pone.0121453.ref036"><text><SENT sid="1136" pm="."><plain>36 RosenGL, ReichenbergerER, RosenfeldAM. NBC: The naive Bayes classification tool webserver for taxonomic classification of metagenomic reads. Bioinformatics. 2011;27(1):127–129. 10.1093/bioinformatics/btq619 <?supplied-pmid 21062764?>21062764 </plain></SENT>
+</text></ref><ref id="pone.0121453.ref037"><text><SENT sid="1137" pm="."><plain>37 PatilKR, HaiderP, PopePB, TurnbaughPJ, MorrisonM, SchefferT, et al Taxonomic metagenome sequence assignment with structured output models. Nature Methods. 2011;8(3):191–192. 10.1038/nmeth0311-191 <?supplied-pmid 21358620?>21358620 </plain></SENT>
+</text></ref><ref id="pone.0121453.ref038"><text><SENT sid="1138" pm="."><plain>38 CuiH, ZhangX. Alignment-free supervised classification of metagenomes by recursive SVM. BMC Genomics. 2013;14(1). 10.1186/1471-2164-14-641  </plain></SENT>
+</text></ref><ref id="pone.0121453.ref039"><text><SENT sid="1139" pm="."><plain>39 KawulokM, NalepaJ. Support Vector Machines Training Data Selection Using a Genetic Algorithm In: Gimel’farbG, HancockE, ImiyaA, KuijperA, KudoM, OmachiS, et al, editors. Structural, Syntactic, and Statistical Pattern Recognition. vol. </plain></SENT>
+<SENT sid="1140" pm="."><plain>7626 of Lecture Notes in Computer Science. Springer Berlin Heidelberg; 2012 p. 557–565. </plain></SENT>
+</text></ref><ref id="pone.0121453.ref040"><text><SENT sid="1141" pm="."><plain>40 CyranKA, KawulokJ, KawulokM, StawarzM, MichalakM, PietrowskaM, et al Support Vector Machines in Biomedical and Biometrical Applications In: RamannaS, JainLC, HowlettRJ, editors. Emerging Paradigms in Machine Learning. vol. </plain></SENT>
+<SENT sid="1142" pm="."><plain>13 of Smart Innovation, Systems and Technologies. Springer Berlin Heidelberg; 2013 p. 379–417. </plain></SENT>
+</text></ref><ref id="pone.0121453.ref041"><text><SENT sid="1143" pm="."><plain>41 WangD, ShiL. Selecting valuable training samples for SVMs via data structure analysis. Neurocomputing. 2008;71:2772–2781. </plain></SENT>
+</text></ref><ref id="pone.0121453.ref042"><text><SENT sid="1144" pm="."><plain>42 HusonDH, AuchAF, QiJ, SchusterSC. MEGAN analysis of metagenomic data. Genome Research. 2007;17(3):377–386. 10.1101/gr.5969107 <?supplied-pmid 17255551?>17255551 </plain></SENT>
+</text></ref><ref id="pone.0121453.ref043"><text><SENT sid="1145" pm="."><plain>43 GoriF, FolinoG, JettenMSM, MarchioriE. MTR: Taxonomic annotation of short metagenomic reads using clustering at multiple taxonomic ranks. Bioinformatics. 2011;27(2):196–203. 10.1093/bioinformatics/btq649 <?supplied-pmid 21127032?>21127032 </plain></SENT>
+</text></ref><ref id="pone.0121453.ref044"><text><SENT sid="1146" pm="."><plain>44 Monzoorul HaqueM, GhoshTS, KomanduriD, MandeSS. SOrt-ITEMS: Sequence orthology based approach for improved taxonomic estimation of metagenomic sequences. Bioinformatics. 2009;25(14):1722–1730. 10.1093/bioinformatics/btp317 <?supplied-pmid 19439565?>19439565 </plain></SENT>
+</text></ref><ref id="pone.0121453.ref045"><text><SENT sid="1147" pm="."><plain>45 GerlachW, StoyeJ. Taxonomic classification of metagenomic shotgun sequences with CARMA3. Nucleic acids research. 2011;39(14). 10.1093/nar/gkr225 <?supplied-pmid 21586583?>21586583 </plain></SENT>
+</text></ref><ref id="pone.0121453.ref046"><text><SENT sid="1148" pm="."><plain>46 MeyerF, PaarmannD, D’SouzaM, OlsonR, GlassE, KubalM, et al The metagenomics RAST server–a public resource for the automatic phylogenetic and functional analysis of metagenomes. BMC Bioinformatics. 2008;9(1):386 10.1186/1471-2105-9-386 <?supplied-pmid 18803844?>18803844 </plain></SENT>
+</text></ref><ref id="pone.0121453.ref047"><text><SENT sid="1149" pm="."><plain>47Liu B, Gibbons T, Ghodsi M, Pop M. MetaPhyler: Taxonomic profiling for metagenomic sequences. </plain></SENT>
+<SENT sid="1151" pm="."><plain>In: Proceedings of the 2010 IEEE International Conference on Bioinformatics and Biomedicine, BIBM 2010; 2010. p. 95–100. </plain></SENT>
+</text></ref><ref id="pone.0121453.ref048"><text><SENT sid="1153" pm="."><plain>48 SchreiberF, GumrichP, DanielR, MeinickeP. Treephyler: Fast taxonomic profiling of metagenomes. Bioinformatics. 2010;26(7):960–961. 10.1093/bioinformatics/btq070 <?supplied-pmid 20172941?>20172941 </plain></SENT>
+</text></ref><ref id="pone.0121453.ref049"><text><SENT sid="1154" pm="."><plain>49 StranneheimH, KallerM, AllanderT, AnderssonB, ArvestadL, LundebergJ. Classification of DNA sequences using Bloom filters. Bioinformatics. 2010;26(13):1595–1600. 10.1093/bioinformatics/btq230 <?supplied-pmid 20472541?>20472541 </plain></SENT>
+</text></ref><ref id="pone.0121453.ref050"><text><SENT sid="1155" pm="."><plain>50 AmesS, HysomDA, GardnerSN, LloydGS, GokhaleMB, AllenJE. Scalable metagenomic taxonomy classification using a reference genome database. Bioinformatics. 2013;29(18):2253–2260. 10.1093/bioinformatics/btt389 <?supplied-pmid 23828782?>23828782 </plain></SENT>
+</text></ref><ref id="pone.0121453.ref051"><text><SENT sid="1156" pm="."><plain>51 WoodDE, SalzbergSL. Kraken: Ultrafast metagenomic sequence classification using exact alignments. Genome biology. 2014;15(3). 10.1186/gb-2014-15-3-r46 <?supplied-pmid 24580807?>24580807 </plain></SENT>
+</text></ref><ref id="pone.0121453.ref052"><text><SENT sid="1157" pm="."><plain>52 RobertsM, HayesW, HuntBR, MountSM, YorkeJA. Reducing storage requirements for biological sequence comparison. Bioinformatics. 2004;20(18):3363–3369. 10.1093/bioinformatics/bth408 <?supplied-pmid 15256412?>15256412 </plain></SENT>
+</text></ref><ref id="pone.0121453.ref053"><text><SENT sid="1158" pm="."><plain>53 DeorowiczS, KokotM, GrabowskiS, Debudaj-GrabyszA. KMC 2: Fast and resource-frugal k-mer counting. Bioinformatics. 2015 10.1093/bioinformatics/btv022 <?supplied-pmid 25609798?>25609798 </plain></SENT>
+</text></ref><ref id="pone.0121453.ref054"><text><SENT sid="1159" pm="."><plain>54 MovahediNS, ForouzmandE, ChitsazH. De novo co-assembly of bacterial genomes from multiple single cells. </plain></SENT>
+<SENT sid="1160" pm="."><plain>In: BIBM; 2012 p. 1–5. </plain></SENT>
+</text></ref><ref id="pone.0121453.ref055"><text><SENT sid="1161" pm="."><plain>55 DeorowiczS, Debudaj-GrabyszA, GrabowskiS. Disk-based k-mer counting on a PC. BMC Bioinformatics. 2013;14:160(160) 10.1186/1471-2105-14-160 23679007 </plain></SENT>
+</text></ref><ref id="pone.0121453.ref056"><text><SENT sid="1162" pm="."><plain>56 BazinetAL, CummingsMP. A comparative evaluation of sequence classification programs. BMC Bioinformatics. 2012;13(1):1–13. 10.1186/1471-2105-13-92 22214541 </plain></SENT>
+</text></ref><ref id="pone.0121453.ref057"><text><SENT sid="1163" pm="."><plain>57 KawulokJ, DeorowiczS. An Improved Algorithm for Fast and Accurate Classification of Sequences In: KozielskiS, MrozekD, KasprowskiP, Maysiak-MrozekB, KostrzewaD, editors. Beyond Databases, Architectures, and Structures. vol. </plain></SENT>
+<SENT sid="1164" pm="."><plain>424 of Communications in Computer and Information Science. Springer International Publishing; 2014 p. 335–344. </plain></SENT>
+</text></ref></ref-list></SecTag></back></article>

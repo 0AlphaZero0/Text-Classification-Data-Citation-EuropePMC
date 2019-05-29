@@ -1,0 +1,632 @@
+<!DOCTYPE article PUBLIC "-//NLM//DTD Journal Archiving and Interchange DTD v3.0 20080202//EN" "archivearticle3.dtd"> 
+<article xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML" article-type="research-article"><?properties open_access?><?DTDIdentifier.IdentifierValue -//NLM//DTD Journal Publishing DTD v2.3 20070202//EN?><?DTDIdentifier.IdentifierType public?><?SourceDTD.DTDName journalpublishing.dtd?><?SourceDTD.Version 2.3?><?ConverterInfo.XSLTName jp2nlmx2.xsl?><?ConverterInfo.Version 2?><front><journal-meta><journal-id journal-id-type="nlm-ta">Acta Crystallogr D Biol Crystallogr</journal-id><journal-id journal-id-type="publisher-id">Acta Cryst. D</journal-id><journal-title-group><journal-title>Acta Crystallographica Section D: Biological Crystallography</journal-title></journal-title-group><issn pub-type="ppub">0907-4449</issn><issn pub-type="epub">1399-0047</issn><publisher><publisher-name>International Union of Crystallography</publisher-name></publisher></journal-meta><article-meta><article-id pub-id-type="pmcid">2631639</article-id><article-id pub-id-type="pmid">19171972</article-id><article-id pub-id-type="publisher-id">ba5122</article-id><article-id pub-id-type="doi">10.1107/S0907444908020039</article-id><article-id pub-id-type="coden">ABCRE6</article-id><article-id pub-id-type="pii">S0907444908020039</article-id><article-categories><subj-group subj-group-type="heading"><subject>Research Papers</subject></subj-group></article-categories><title-group><article-title><SecTag type="TITLE"><text><SENT sid="0" pm="."><plain>Prospects for de novo phasing with de novo protein models </plain></SENT>
+</text></SecTag></article-title><alt-title><italic>De novo</italic> phasing</alt-title></title-group><contrib-group><contrib contrib-type="author"><name><surname>Das</surname><given-names>Rhiju</given-names></name><xref ref-type="aff" rid="a">a</xref><xref ref-type="corresp" rid="cor">*</xref></contrib><contrib contrib-type="author"><name><surname>Baker</surname><given-names>David</given-names></name><xref ref-type="aff" rid="a">a</xref><xref ref-type="corresp" rid="cor">*</xref></contrib><aff id="a"><label>a</label>Department of Biochemistry, University of Washington, Seattle, WA 98195, <country>USA</country></aff></contrib-group><author-notes><corresp id="cor">Correspondence e-mail: <email>rhiju@u.washington.edu</email>, <email>dabaker@u.washington.edu</email></corresp></author-notes><pub-date pub-type="ppub"><day>01</day><month>2</month><year>2009</year></pub-date><pub-date pub-type="epub"><day>20</day><month>1</month><year>2009</year></pub-date><pub-date pub-type="pmc-release"><day>20</day><month>1</month><year>2009</year></pub-date><volume>65</volume><issue>Pt 2</issue><issue-id pub-id-type="publisher-id">d090200</issue-id><fpage>169</fpage><lpage>175</lpage><history><date date-type="received"><day>01</day><month>5</month><year>2008</year></date><date date-type="accepted"><day>01</day><month>7</month><year>2008</year></date></history><permissions><copyright-statement>© Das &amp; Baker 2009</copyright-statement><copyright-year>2009</copyright-year><license license-type="open-access" xlink:href="http://creativecommons.org/licenses/by/2.0/uk/"><license-p>This is an open-access article distributed under the terms of the Creative Commons Attribution Licence, which permits unrestricted use, distribution, and reproduction in any medium, provided the original authors and source are cited.</license-p></license></permissions><self-uri xlink:type="simple" xlink:href="http://dx.doi.org/10.1107/S0907444908020039">A full version of this article is available from Crystallography Journals Online.</self-uri><abstract abstract-type="toc"><p><SecTag type="ABS"><text><SENT sid="1" pm="."><plain>In a first systematic exploration of phasing with Rosetta de novo models, it is shown that all-atom refinement of coarse-grained models significantly improves both the model quality and performance in molecular replacement with the Phaser software. </plain></SENT>
+</text></SecTag></p></abstract><abstract><p><SecTag type="ABS"><text><SENT sid="2" pm="."><plain>The prospect of phasing diffraction data sets ‘de novo’ for proteins with previously unseen folds is appealing but largely untested. </plain></SENT>
+<SENT sid="3" pm="."><plain>In a first systematic exploration of phasing with Rosetta de novo models, it is shown that all-atom refinement of coarse-grained models significantly improves both the model quality and performance in molecular replacement with the Phaser software. </plain></SENT>
+<SENT sid="4" pm="."><plain>15 new cases of diffraction data sets that are unambiguously phased with de novo models are presented. </plain></SENT>
+<SENT sid="5" pm="."><plain>These diffraction data sets represent nine space groups and span a large range of solvent contents (33–79%) and asymmetric unit copy numbers (1–4). </plain></SENT>
+<SENT sid="6" pm="."><plain>No correlation is observed between the ease of phasing and the solvent content or asymmetric unit copy number. </plain></SENT>
+<SENT sid="7" pm="."><plain>Instead, a weak correlation is found with the length of the modeled protein: larger proteins required somewhat less accurate models to give successful molecular replacement. </plain></SENT>
+<SENT sid="8" pm="."><plain>Overall, the results of this survey suggest that de novo models can phase diffraction data for approximately one sixth of proteins with sizes of 100 residues or less. </plain></SENT>
+<SENT sid="9" pm="."><plain>However, for many of these cases, ‘de novo phasing with de novo models’ requires significant investment of computational power, much greater than 103 CPU days per target. </plain></SENT>
+<SENT sid="10" pm="."><plain>Improvements in conformational search methods will be necessary if molecular replacement with de novo models is to become a practical tool for targets without homology to previously solved protein structures. </plain></SENT>
+</text></SecTag></p></abstract><SecTag type="KEYWORD"><kwd-group><kwd>structure prediction</kwd><kwd>molecular replacement</kwd><kwd><italic>de novo</italic> phasing</kwd></kwd-group></SecTag><conference><conf-date/><conf-name>Low-resolution structure determination and validation</conf-name><conf-loc/></conference></article-meta></front><body><SecTag type="INTRO"><sec id="sec1" sec-type="introduction"><label>1.</label><title><text><SENT sid="11" pm="."><plain>Introduction </plain></SENT>
+</text></title><p><text><SENT sid="12" pm="."><plain>Molecular replacement has become one of the most widely used tools for solving the crystallographic phase problem for protein diffraction data sets. </plain></SENT>
+<SENT sid="13" pm="."><plain>With widely available software, rapid phasing is possible if models with structural similarity to the crystallized protein are available (Blow &amp; Rossmann, 1961 ▶). </plain></SENT>
+<SENT sid="14" pm="."><plain>As the data bank of solved protein crystal structures continues to expand and as comparative modeling methods become increasingly sophisticated (Schwarzenbacher et al., 2004 ▶; Giorgetti et al., 2005 ▶; Raimondo et al., 2007 ▶; Qian et al., 2007 ▶), the use of molecular replacement is likely to continue to grow. </plain></SENT>
+</text></p><p><text><SENT sid="15" pm="."><plain>In recent years, a new frontier for molecular replacement has come into view. </plain></SENT>
+<SENT sid="16" pm="."><plain>A number of diffraction data sets have now been phased ‘de novo’, i.e. in the absence of evolutionary information from structural homologs or experimental data from methods such as NMR. </plain></SENT>
+<SENT sid="17" pm="."><plain>For a tetrameric coiled coil (Howard et al., 2007 ▶) or a heptameric membrane helix assembly (Strop et al., 2007 ▶), the stereotypical conformation of helices and assumptions regarding the internal symmetry of the complexes have been sufficient to produce successful molecular-replacement templates. </plain></SENT>
+<SENT sid="18" pm="."><plain>[There has also been a long history of phasing nucleic acid crystals with ideal double helices; see, for example, Szep et al. (2003) ▶.] For the more general case of an asymmetric protein, our group, in collaboration with the developers of Phaser (McCoy, 2007 ▶), has recently presented an example in which the diffraction data for target T0283 in the 2006 Critical Assessment of Structure Prediction were phased by a de novo blind model produced with the Rosetta high-resolution prediction methodology (Qian et al., 2007 ▶). </plain></SENT>
+<SENT sid="19" pm="."><plain>These examples suggest that de novo modeling is beginning to pass a quite stringent test for accuracy, as was eloquently anticipated by Petsko eight years ago (Petsko, 2000 ▶). </plain></SENT>
+<SENT sid="20" pm="."><plain>Perhaps more importantly, a template-free approach holds practical promise for assisting crystallographic phasing for the substantial number of targets for which structural homologues or other experimental data are not available. </plain></SENT>
+<SENT sid="21" pm="."><plain>However, the number of existing examples remains anecdotal; a much larger set of successful de novo phasing solutions is required to delineate the current capabilities and limitations of the method. </plain></SENT>
+</text></p><p><text><SENT sid="22" pm="."><plain>In this study, we systematically explore three aspects of this molecular-replacement approach, which we have termed ‘de novo phasing with de novo models’. </plain></SENT>
+<SENT sid="23" pm="."><plain>We first test whether all-atom refinement of initial low-resolution models is critical for successful molecular replacement, carrying out a benchmark on 30 diffraction data sets. </plain></SENT>
+<SENT sid="24" pm="."><plain>Secondly, we test whether bringing to bear a large amount of computational power (well over 1000 CPU days per target) increases the rate of successful phasing with Rosetta de novo models. </plain></SENT>
+<SENT sid="25" pm="."><plain>Finally, we inspect these benchmark results to determine whether particular parameters such as solvent content and the number of copies in the asymmetric unit render diffraction data sets more amenable or more difficult for molecular replacement. </plain></SENT>
+<SENT sid="26" pm="."><plain>With more than a dozen new examples of successful de novo phasing, this study presents a first portrait of what can and cannot be achieved when combining state-of-the-art de novo structure modeling and state-of-the-art molecular-replacement methods. </plain></SENT>
+</text></p></sec></SecTag><sec id="sec2"><label>2.</label><title><text><SENT sid="27" pm="?"><plain>Is all-atom refinement necessary for de novo phasing? </plain></SENT>
+</text></title><p><text><SENT sid="28" pm="."><plain>The critical advance that has enabled blind de novo methods to produce high-resolution predictions (better than 2 Å Cα r.m.s.d. from the crystal structure) has been the refinement of initial coarse-grained models in the context of a physically realistic all-atom force field (Rohl et al., 2004 ▶; Kuhlman et al., 2003 ▶; Bradley et al., 2005 ▶; Das et al., 2007 ▶). </plain></SENT>
+<SENT sid="29" pm="."><plain>[We note here that ‘refinement’ refers to the optimization of model conformations in the absence of experimental data and should not be confused with refinement of coordinates based on diffraction data, as occurs during crystallographic structure determination (Murshudov et al., 1997 ▶).] The Rosetta all-atom refinement method is computationally expensive. </plain></SENT>
+<SENT sid="30" pm="."><plain>The sharp penalties associated with atom–atom steric clashes require the extensive minimization of all the protein degrees of freedom after each exploratory perturbation of the side-chain or backbone con­formation. </plain></SENT>
+<SENT sid="31" pm="."><plain>With current processors, the Rosetta algorithm requires on the order of an hour to refine a protein model with a length of 100 residues, nearly twice as long as the initial low-resolution conformational search (Das et al., 2007 ▶). </plain></SENT>
+</text></p><p><text><SENT sid="32" pm="."><plain>On one hand, this expensive procedure produces very little change in the structure, with the protein backbone typically shifting by less than 2 Å. On the other hand, the final all-atom score is typically far better at discriminating near-native conformations from non-native models than low-resolution force fields and is thus critical for selecting a small number of blind high-resolution predictions from pools of thousands of low-resolution models. </plain></SENT>
+<SENT sid="34" pm="."><plain>For the CASP7 blind trials in 2006, de novo predictions from our group required the use of a distributed network of tens of thousands of volunteer computers, Rosetta@home, to carry out all-atom refinement on the models generated for nearly 100 targets (Das et al., 2007 ▶). </plain></SENT>
+</text></p><p><text><SENT sid="35" pm="."><plain>However, for applications to the crystallographic phase problem such refinement may not be necessary. </plain></SENT>
+<SENT sid="36" pm="."><plain>Automated robust molecular-replacement software packages such as Phaser permit the screening of thousands of models in a single night on current computer clusters. </plain></SENT>
+<SENT sid="37" pm="."><plain>It may be that models containing only the N, Cα, Cβ, C and O heavy atoms produced by the first low-resolution conformational search of Rosetta can be selected based on their performance in likelihood-based molecular replacement, without a computationally expensive Rosetta all-atom refinement occurring in between. </plain></SENT>
+<SENT sid="38" pm="."><plain>For example, while the diffraction data for CASP target T0283 could be phased with a high-resolution blind prediction (Qian et al., 2007 ▶), we subsequently discovered that automated and nearly complete rebuilding of the structure could also be achieved by molecular replacement with a coarse-grained low-resolution model, albeit one selected based on knowledge of the crystal structure (unpublished results). </plain></SENT>
+<SENT sid="39" pm="?"><plain>Can low-resolution computationally inexpensive models be used in general for molecular replacement? </plain></SENT>
+</text></p><p><text><SENT sid="40" pm="."><plain>To investigate this question, we carried out a benchmark of phasing with low-resolution and high-resolution models, focusing on sequences of length ∼100 residues or less from an in-house de novo modeling benchmark. </plain></SENT>
+<SENT sid="41" pm="."><plain>For each of these sequences, the structures of targets and of proteins homologous in sequence or structure were removed from the fragment libraries used to generate the Rosetta models (Bradley et al., 2005 ▶), thus mimicking a real-world trial in which templates would not be available for a new protein target. </plain></SENT>
+<SENT sid="42" pm="."><plain>The set of benchmark sequences was pre-filtered based on small-scale low-resolution modeling runs indicating that Rosetta conformational sampling could produce models within 3 Å Cα r.m.s.d. from experimental structures, with the hope that aggressive sampling and high-resolution refinement would yield structures within the ∼1.5 Å Cα r.m.s.d. accuracy bound that is widely considered to be necessary for accurate molecular replacement (Chen et al., 2000 ▶). </plain></SENT>
+<SENT sid="43" pm="."><plain>(Targets for which Rosetta cannot currently achieve this accuracy were assumed to be beyond the scope of successful molecular replacement and remain challenges for improving Rosetta’s low-resolution conformational sampling.) For 16 of the 32 considered sequences, experimental structure factors were available in the Protein Data Bank for crystals containing the protein sequence of interest and no other macromolecule chains. </plain></SENT>
+<SENT sid="44" pm="."><plain>For several of the sequences, crystals in different space groups were available and the diffraction data with the highest resolution available for each space group were chosen. </plain></SENT>
+<SENT sid="45" pm="."><plain>A total of 30 diffraction data sets were assembled into a final benchmark for de novo phasing (Table 1 ▶). </plain></SENT>
+<SENT sid="46" pm="."><plain>For each sequence, we invested 100 CPU days per target for low-resolution modeling and 100 CPU days per target for high-resolution modeling. </plain></SENT>
+<SENT sid="47" pm="."><plain>This computational effort is on a scale that is feasible with computer clusters available at most research institutions and leads to 1 × 104 to 4 × 104 low-resolution models for each sequence. </plain></SENT>
+<SENT sid="48" pm="."><plain>Fewer high-resolution models (3 × 103 to 1 × 104) are obtained with the same computational power owing to the expense of all-atom refinement. </plain></SENT>
+<SENT sid="49" pm="."><plain>The modeling was carried out on Rosetta@home (v.5.96). </plain></SENT>
+</text></p><p><text><SENT sid="50" pm="."><plain>Molecular-replacement trials were carried out with Phaser 1.3.3, available as part of the CCP4 software suite (McCoy, 2007 ▶), using the default Phaser parameters and inputting a putative Cα r.m.s.d. uncertainty of 1.5 Å for each model. </plain></SENT>
+<SENT sid="51" pm="."><plain>To save on computational expense at this phasing step, we targeted a subset of 200 models filtered with the best energies and as a control a group of 200 randomly chosen models. </plain></SENT>
+</text></p><p><text><SENT sid="52" pm="."><plain>The criteria we used to determine whether the molecular-replacement solution was unambiguous and accurate were twofold. </plain></SENT>
+<SENT sid="53" pm="."><plain>Firstly, the Phaser translation-function Z score (TFZ) of the model was required to be five standard deviations beyond the mean TFZ score seen in the randomly chosen models; a universal absolute cutoff for TFZ did not seem to be appropriate because some diffraction data sets showed uniformly depressed or elevated TFZ values for random models. </plain></SENT>
+<SENT sid="54" pm="."><plain>For the P1 space group, the rotation-function Z score (RFZ) was monitored instead of TFZ. </plain></SENT>
+<SENT sid="55" pm="."><plain>If more than one molecule was present in the asymmetric unit, iterative and automated Phaser searches for all the molecules were carried out using the software’s default settings and the TFZ score for the final model was monitored. </plain></SENT>
+<SENT sid="56" pm="."><plain>Secondly, the rotational orientation of the model needed to be correct; we required that at least half of the Cα atoms in the model were positioned within 2 Å of a Cα atom in the native structure after translating the centers of mass to the origin and applying the different rotation matrices associated with the crystal’s point group. </plain></SENT>
+</text></p><p><text><SENT sid="57" pm="."><plain>The results of this benchmark, given in Table 1 ▶, strongly indicate the importance of all-atom refinement in carrying out molecular replacement with de novo models. </plain></SENT>
+<SENT sid="58" pm="."><plain>Out of 30 data sets, low-resolution models passing these criteria for un­ambiguous phasing were found in only one case. </plain></SENT>
+<SENT sid="59" pm="."><plain>The rate of successful molecular replacement was significantly greater among the smaller but more accurate pools of high-resolution all-atom-refined models, with nine cases giving success. </plain></SENT>
+<SENT sid="60" pm="?"><plain>In the 21 cases in which phasing was not achieved, was success precluded by limits in the applied conformational search or other properties of the protein sequence or the diffraction data set? </plain></SENT>
+<SENT sid="61" pm="."><plain>To derive a broader understanding of the factors that affect the success of de novo phasing, we sought a larger and more diverse set of diffraction data sets phased by de novo models, as described in the following. </plain></SENT>
+</text></p></sec><sec id="sec3"><label>3.</label><title><text><SENT sid="62" pm="."><plain>Large-scale tests </plain></SENT>
+</text></title><p><text><SENT sid="63" pm="."><plain>In de novo modeling, increasing the amount of computational power enables larger scale conformational searches and higher resolution models that can be selected based on their all-atom energies (Das et al., 2007 ▶). </plain></SENT>
+<SENT sid="64" pm="."><plain>For the protein sequences tested here, very large collections of all-atom refined models were already available from previous benchmark studies on Rosetta@home. </plain></SENT>
+<SENT sid="65" pm="."><plain>With 104–105 CPU days invested in each target, which is more than one hundred-fold greater computational power than in the tests above, between 1 × 105 and 5 × 107 models could be generated for each target. </plain></SENT>
+<SENT sid="66" pm="."><plain>As above, to save computational time for molecular replacement (which has not been implemented for distributed computing), Phaser runs were carried out on 200 models with the lowest all-atom energy and 200 randomly chosen models. </plain></SENT>
+</text></p><p><text><SENT sid="67" pm="."><plain>With the application of greatly enhanced computational power, the number of diffraction data sets unambiguously phased by de novo models increased significantly from nine to 15. </plain></SENT>
+<SENT sid="68" pm="."><plain>Examples of these phasing successes are shown in Fig. 1 ▶. Furthermore, for each of the all-atom refined cases, we put the models with the highest Phaser TFZ scores through flex-wARP (Cohen et al., 2008 ▶), the latest version of the automated coordinate-building package ARP/wARP, using default parameters (Perrakis et al., 1999 ▶). </plain></SENT>
+<SENT sid="70" pm="."><plain>This widely used method can produce complete and accurate models if the quality of the beginning molecular-replacement solution was high (Cohen et al., 2008 ▶). </plain></SENT>
+<SENT sid="71" pm="."><plain>In each of the cases investigated, flex-wARP was able to successfully and accurately build and sequence-assign the majority of the protein residues (see Fig. 1 ▶). </plain></SENT>
+<SENT sid="72" pm="."><plain>The data sets that were successfully phased span the full spectrum of crystallographic space groups, from the most common, P212121 (Figs. </plain></SENT>
+<SENT sid="73" pm="."><plain>1 ▶ a and 1 ▶ b), to rarer groups such as H32 (Fig. 1 ▶ g) to groups with fewer symmetry operators such as P1 (Fig. 1 ▶ h). </plain></SENT>
+<SENT sid="74" pm="."><plain>Furthermore, crystals with solvent contents at the lowest end of the probed diffraction data sets (e.g. 33%; see Fig. 1 ▶ a) were phased. </plain></SENT>
+<SENT sid="75" pm="."><plain>Finally, crystals with multiple copies in the asymmetric unit appeared to pose no fundamental barrier to Phaser’s automated multi-copy search (Figs. </plain></SENT>
+<SENT sid="76" pm="."><plain>1g–1i); use of a newer version of Phaser that takes into account noncrystallographic symmetry, which is a frequent property of protein crystals (Kleywegt &amp; Read, 1997 ▶), may even further enhance the success rate. </plain></SENT>
+</text></p><p><text><SENT sid="77" pm="."><plain>Finally, we investigated potential causes for the failure of molecular replacement for the remaining 15 of the 30 diffraction data sets. </plain></SENT>
+<SENT sid="78" pm="."><plain>On one hand, these cases may have been refractory to phasing by de novo models owing to artefacts in the Rosetta all-atom force field, e.g. its tendency to extend surface side chains into solution or its use of ideal bond lengths and bond angles. </plain></SENT>
+<SENT sid="79" pm="."><plain>On the other hand, de novo phasing may have failed simply as a consequence of the unavailability of sufficiently accurate structures in the tested pools of Rosetta models1. </plain></SENT>
+<SENT sid="80" pm="."><plain>To test these hypotheses, we carried out phasing runs on a more native-like set of Rosetta all-atom refined models that had been prepared with the de novo protocol constrained with information derived from the native structure. </plain></SENT>
+<SENT sid="81" pm="."><plain>Additional constraints were imposed to favor the native assignment of each residue’s backbone torsions in coarse regions of the Ramachandran plot (Blum et al., 2007 ▶; D. Kim &amp; D. Baker, manuscript in preparation). </plain></SENT>
+<SENT sid="83" pm="."><plain>From the approximately 50 000 models in each of these sets, a subset of the 40 lowest Cα r.m.s.d. models were subjected to Phaser molecular replacement. </plain></SENT>
+<SENT sid="84" pm="."><plain>With this more native-like population of models, 26 of the 30 diffraction data sets could be phased successfully (Table 1 ▶). </plain></SENT>
+<SENT sid="85" pm="."><plain>The four remaining data sets could be phased by models generated by all-atom refinement of the native protein structure after idealization of bond lengths and bond angles. </plain></SENT>
+<SENT sid="86" pm="."><plain>These results suggest that there are no intrinsic artefacts in the current Rosetta all-atom force field that fundamentally confound molecular replacement, but that improved conformational search methods will be required if molecular replacement with de novo models is to become a practical routine tool. </plain></SENT>
+</text></p><p><text><SENT sid="87" pm="."><plain>Overall, half of the cases tested in this benchmark could be phased de novo using a small set of the lowest energy all-atom models. </plain></SENT>
+<SENT sid="88" pm="."><plain>Because approximately one third of proteins in the tested size range appear to be predictable at high resolution (Bradley et al., 2005 ▶; Das et al., 2007 ▶), we estimate that one sixth of diffraction data sets for proteins with new folds and sizes of 100 residues or less can be phased with existing methods. </plain></SENT>
+<SENT sid="89" pm="."><plain>We emphasize, however, that the presented successful molecular-replacement cases have made use of many thousands of CPU days per target made available through distributed computing. </plain></SENT>
+<SENT sid="90" pm="."><plain>Limiting the computational expense from &gt;10 000 CPU days to 100 CPU days significantly reduced the number of phased data sets (from 15 to nine). </plain></SENT>
+<SENT sid="91" pm="."><plain>Omission of the all-atom refinement step led to an even more significant drop (from nine successes to one success). </plain></SENT>
+<SENT sid="92" pm="."><plain>Additional strategies to explore in the future include the use of alternative measures of phasing success beyond the Phaser TFZ score, such as the reduction in R free upon likelihood-based refinement of the molecular-replacement solution against the diffraction data (Murshudov et al., 1997 ▶), as well as alternative processing of de novo models before phasing, such as incorporating estimates of model uncertainty into the Phaser likelihood calculation. </plain></SENT>
+</text></p></sec><sec id="sec4"><label>4.</label><title><text><SENT sid="93" pm="."><plain>Tentative ‘rules of thumb’ for de novo phasing </plain></SENT>
+</text></title><p><text><SENT sid="94" pm="."><plain>Based on the phasing results presented so far, neither a low solvent content nor the presence of multiple protein copies in the asymmetric unit appears to be an insurmountable barrier for phasing with de novo models. </plain></SENT>
+<SENT sid="95" pm="."><plain>It may be possible, however, that these factors or other properties of the diffraction data set can render the phase problem more difficult or more straight­forward to solve by molecular replacement. </plain></SENT>
+<SENT sid="96" pm="."><plain>With more than 500 Rosetta models tested in Phaser molecular replacement for each of 30 diffraction data sets, this study permits an initial exploration of factors that might correlate with the ease with which de novo models lead to successful molecular replacement. </plain></SENT>
+</text></p><p><text><SENT sid="97" pm="."><plain>We estimated this ease of phasing for each diffraction data set by assessing the minimal model accuracy F 1 Å required to achieve a significant TFZ score and correct orientation of the model in the unit cell (see above). </plain></SENT>
+<SENT sid="98" pm="."><plain>These estimates (Table 1 ▶) are intrinsically noisy, since for many diffraction data sets only a few models were found to give successful Phaser hits. </plain></SENT>
+<SENT sid="99" pm="."><plain>However, these minimal F 1 Å values provide useful initial estimates to search for the strongest (and thus most practically useful) correlations of crystal parameters with the ease of phasing. </plain></SENT>
+</text></p><p><text><SENT sid="100" pm="."><plain>Table 2 ▶ lists the correlations of these minimal F 1 Å values with ten parameters associated with the crystallographic data sets, from the number of reflections available to the resolution of the diffraction data to the solvent content of the data. </plain></SENT>
+<SENT sid="101" pm="."><plain>No correlation was detected between higher solvent content and ease of phasing (Fig. 2 ▶ a). </plain></SENT>
+<SENT sid="102" pm="."><plain>For example, the benchmark includes four diffraction data sets for ubiquitin, in which the same pool of Rosetta models was tested for phasing, and the data set with the lowest solvent content (PDB code <ext-link ext-link-type="uri" xlink:href="http://scripts.iucr.org/cgi-bin/cr.cgi?rm=pdb&amp;pdbId=1ubq">1ubq</ext-link>) was the only one for which a de novo model gave a successful Phaser solution. </plain></SENT>
+<SENT sid="103" pm="."><plain>Further, there was no correlation of ease of phasing with the number of molecules in the asymmetric unit (Fig. 2 ▶ b); as noted above, use of the next-generation Phaser may in fact soon further ease the confident and rapid phasing of crystals with multi-copy asymmetric units. </plain></SENT>
+</text></p><p><text><SENT sid="104" pm="."><plain>Of the other parameters tested (Table 2 ▶), only one, the molecular weight of the monomer, gave a statistically significant correlation (P &lt; 10−1) with minimal F 1 Å values (Fig. 2 ▶ c). </plain></SENT>
+<SENT sid="105" pm="."><plain>Larger macromolecules give crystals that are easier to phase (P &lt; 5.7 × 10−4). </plain></SENT>
+<SENT sid="106" pm="."><plain>As was pointed out by Randy Read (personal communication) in an informal discussion, more low-resolution data are available for each molecule for constraining its rotation and translation in the unit cell. </plain></SENT>
+<SENT sid="107" pm="."><plain>Indeed, the correlation of more straightforward molecular replacement with larger macromolecules is abundantly illustrated by other articles in this issue, with the successful phasing of the ribosome, the fatty-acid synthase complex (Jenni &amp; Ban, 2009 ▶) and other massive complexes with partly accurate low-resolution models. </plain></SENT>
+<SENT sid="108" pm="."><plain>In our case, as the conformational search in de novo modeling becomes (exponentially) more difficult with protein length, it is gratifying that successful molecular replacement may require somewhat less accurate models for longer chains. </plain></SENT>
+</text></p></sec><SecTag type="CONCL"><sec id="sec5"><label>5.</label><title><text><SENT sid="109" pm="."><plain>Summary and prospects </plain></SENT>
+</text></title><p><text><SENT sid="110" pm="."><plain>Molecular replacement with de novo models of protein structures is a potentially useful new tool for phasing diffraction data sets for which experimental phasing has failed and structural homologs cannot be identified from sequence alone. </plain></SENT>
+<SENT sid="111" pm="."><plain>In this study, we have explored the necessity of all-atom refinement of de novo models, the general rate of success of this de novo phasing method and the properties of a diffraction data set that aid or complicate the method. </plain></SENT>
+</text></p><p><text><SENT sid="112" pm="."><plain>Firstly, all-atom refinement of coarse-grained Rosetta models and the application of increasing computational power appear to significantly bolster both model quality and performance in Phaser molecular replacement. </plain></SENT>
+<SENT sid="113" pm="."><plain>Secondly, we have presented 15 new cases of diffraction data sets for a wide range of protein folds that have been phased by de novo models. </plain></SENT>
+<SENT sid="114" pm="."><plain>These results suggest that approximately one sixth of existing diffraction data sets for small-sized proteins of new folds may be phased with current algorithms if a large amount of computational power is available. </plain></SENT>
+<SENT sid="115" pm="."><plain>Finally, the ease of phasing appears to be poorly correlated with the crystal solvent content or the number of molecules in the asymmetric unit, but is correlated with molecular weight: larger proteins require somewhat less accurate models for successful molecular replacement. </plain></SENT>
+<SENT sid="116" pm="."><plain>As the conformational search for Rosetta modeling improves or is aided by limited additional experimental information (from, for example, NMR chemical shifts; see Cavalli et al., 2007 ▶; Shen et al., 2008 ▶), molecular replacement with de novo models can perhaps join molecular replacement with structural homologues as a practical tool for phasing protein diffraction data sets. </plain></SENT>
+</text></p><p><text><SENT sid="117" pm="."><plain>The utility of phasing with de novo models will be best demonstrated by cases in which blind predictions provide molecular-replacement solutions for diffraction data that have not been phased by other means. </plain></SENT>
+<SENT sid="118" pm="."><plain>We are currently collaborating with structural genomics initiatives and traditional biology laboratoriess in an effort to identify and solve such data sets. </plain></SENT>
+<SENT sid="119" pm="."><plain>In the meanwhile, a posteriori crystallographic phasing continues to be a powerful and stringent test of de novo modeling algorithms. </plain></SENT>
+</text></p></sec></SecTag></body><back><fn-group><fn id="fn1"><label>1</label><p><text><SENT sid="120" pm="."><plain>In a further test, we subjected the 50 low-resolution models with lowest Cα r.m.s.d. to the crystal structure from each pool to molecular replacement in order to estimate an upper bound on the number of successes that might be possible if all the available models could be tested. </plain></SENT>
+<SENT sid="121" pm="."><plain>For the low-resolution set, this search increased the number of data sets with unambiguous Phaser solutions from one to four. </plain></SENT>
+<SENT sid="122" pm="."><plain>However, in both the 100 CPU day and large-scale all-atom model sets, the number of successes increased by only one (from nine to ten and from 15 to 16, respectively). </plain></SENT>
+<SENT sid="123" pm="."><plain>These results indicate that for most applications molecular-replacement trials need only to be carried out on a limited set of the best energy models if the energies are assessed by Rosetta all-atom refinement. </plain></SENT>
+</text></p></fn></fn-group><SecTag type="ACK_FUND"><ack><p><text4fund><text><SENT sid="124" pm="."><plain>We thank David Kim for permission to use de novo models generated for another study, Keith Laidig and Chance Reschke for expert administration of computational resources, Randy Read and Vatsan Raman for useful discussions, and members of the Baker group for comments on this study. </plain></SENT>
+<SENT sid="125" pm="."><plain>We thank users of Rosetta@home for allowing rapid benchmarking of de novo modeling. </plain></SENT>
+<SENT sid="126" pm="."><plain>We are greatly indebted to the developers who have contributed to the CCP4 software and to previous proceedings of the CCP4 Study Weekends. </plain></SENT>
+<SENT sid="127" pm="."><plain>We acknowledge the NIH, the Howard Hughes Medical Institute (to DB) and a Jane Coffin Childs Fellowship and a Burroughs-Wellcome Foundation Career Award at the Scientific Interface (to RD) for funding. </plain></SENT>
+</text></text4fund></p></ack></SecTag><SecTag type="REF"><ref-list><title>References</title><ref id="bb1"><text><SENT sid="128" pm="."><plain>Blow, D. M. &amp; Rossmann, M. G. </plain></SENT>
+<SENT sid="131" pm="."><plain>(1961). Acta Cryst.14, 1195–1202. </plain></SENT>
+</text></ref><ref id="bb2"><text><SENT sid="132" pm="."><plain>Blum, B., Jordan, M. I., Kim, D., Das, R., Bradley, P. &amp; Baker, D. (2007). </plain></SENT>
+<SENT sid="135" pm="."><plain>In Advances in Neural Information Processing Systems, Vol. </plain></SENT>
+<SENT sid="136" pm="."><plain>20, edited by J. Platt, D. Koller, Y. Singer &amp; A. McCallum. </plain></SENT>
+<SENT sid="141" pm="."><plain>Cambridge, USA: MIT Press. </plain></SENT>
+</text></ref><ref id="bb3"><text><SENT sid="142" pm="."><plain>Bradley, P., Misura, K. M. &amp; Baker, D. (2005). Science, 309, 1868–1871. </plain></SENT>
+</text></ref><ref id="bb4"><text><SENT sid="145" pm="."><plain>Cavalli, A., Salvatella, X., Dobson, C. M. &amp; Vendruscolo, M. (2007). Proc. </plain></SENT>
+<SENT sid="148" pm="."><plain>Natl Acad. </plain></SENT>
+<SENT sid="149" pm="."><plain>Sci. </plain></SENT>
+<SENT sid="150" pm="."><plain>USA, 104, 9615–9620. </plain></SENT>
+</text></ref><ref id="bb5"><text><SENT sid="151" pm="."><plain>Chen, Y. W., Dodson, E. J. &amp; Kleywegt, G. J. </plain></SENT>
+<SENT sid="155" pm="."><plain>(2000). Structure, 8, R213–R220. </plain></SENT>
+</text></ref><ref id="bb6"><text><SENT sid="156" pm="."><plain>Cohen, S. X., Ben Jelloul, M., Long, F., Vagin, A., Knipscheer, P., Lebbink, J., Sixma, T. K., Lamzin, V. S., Murshudov, G. N. &amp; Perrakis, A. (2008). Acta Cryst. D64, 49–60. </plain></SENT>
+</text></ref><ref id="bb7"><text><SENT sid="162" pm="."><plain>Das, R. et al. (2007). Proteins, 69, 118–128. </plain></SENT>
+</text></ref><ref id="bb8"><text><SENT sid="163" pm="."><plain>Giorgetti, A., Raimondo, D., Miele, A. E. &amp; Tramontano, A. (2005). Bioinformatics, 21, Suppl. 2, ii72–ii76. </plain></SENT>
+</text></ref><ref id="bb9"><text><SENT sid="166" pm="."><plain>Howard, R. J., Clark, K. A., Holton, J. M. &amp; Minor, D. L. </plain></SENT>
+<SENT sid="171" pm="."><plain>Jr (2007). Neuron, 53, 663–675. </plain></SENT>
+</text></ref><ref id="bb23"><text><SENT sid="172" pm="."><plain>Jenni, S. &amp; Ban, N. (2009). Acta Cryst. D65, 101-111. </plain></SENT>
+</text></ref><ref id="bb10"><text><SENT sid="174" pm="."><plain>Kleywegt, G. J. &amp; Read, R. J. </plain></SENT>
+<SENT sid="177" pm="."><plain>(1997). Structure, 5, 1557–1569. </plain></SENT>
+</text></ref><ref id="bb11"><text><SENT sid="178" pm="."><plain>Kuhlman, B., Dantas, G., Ireton, G. C., Varani, G., Stoddard, B. L. &amp; Baker, D. (2003). Science, 302, 1364–1368. </plain></SENT>
+</text></ref><ref id="bb12"><text><SENT sid="182" pm="."><plain>McCoy, A. J. </plain></SENT>
+<SENT sid="184" pm="."><plain>(2007). Acta Cryst. D63, 32–41. </plain></SENT>
+</text></ref><ref id="bb13"><text><SENT sid="185" pm="."><plain>Murshudov, G. N., Vagin, A. A. &amp; Dodson, E. J. </plain></SENT>
+<SENT sid="189" pm="."><plain>(1997). Acta Cryst. D53, 240–255. </plain></SENT>
+</text></ref><ref id="bb14"><text><SENT sid="190" pm="."><plain>Perrakis, A., Morris, R. &amp; Lamzin, V. S. </plain></SENT>
+<SENT sid="192" pm="."><plain>(1999). Nature Struct. </plain></SENT>
+<SENT sid="193" pm="."><plain>Biol.6, 458–463. </plain></SENT>
+</text></ref><ref id="bb15"><text><SENT sid="194" pm="."><plain>Petsko, G. A. </plain></SENT>
+<SENT sid="196" pm="."><plain>(2000). Genome Biol.1, comment 002. </plain></SENT>
+</text></ref><ref id="bb16"><text><SENT sid="197" pm="."><plain>Qian, B., Raman, S., Das, R., Bradley, P., McCoy, A. J., Read, R. J. &amp; Baker, D. (2007). Nature (London), 450, 259–264. </plain></SENT>
+</text></ref><ref id="bb17"><text><SENT sid="201" pm="."><plain>Raimondo, D., Giorgetti, A., Giorgetti, A., Bosi, S. &amp; Tramontano, A. (2007). Proteins, 66, 689–696. </plain></SENT>
+</text></ref><ref id="bb18"><text><SENT sid="203" pm="."><plain>Rohl, C. A., Strauss, C. E., Misura, K. M. &amp; Baker, D. (2004). Methods Enzymol.383, 66–93. </plain></SENT>
+</text></ref><ref id="bb19"><text><SENT sid="208" pm="."><plain>Schwarzenbacher, R., Godzik, A., Grzechnik, S. K. &amp; Jaroszewski, L. (2004). Acta Cryst. D60, 1229–1236. </plain></SENT>
+</text></ref><ref id="bb20"><text><SENT sid="211" pm="."><plain>Shen, Y. et al. (2008). Proc. </plain></SENT>
+<SENT sid="212" pm="."><plain>Natl Acad. </plain></SENT>
+<SENT sid="213" pm="."><plain>Sci. </plain></SENT>
+<SENT sid="214" pm="."><plain>USA, 105, 4685–4690. </plain></SENT>
+</text></ref><ref id="bb21"><text><SENT sid="215" pm="."><plain>Strop, P., Brzustowicz, M. R. &amp; Brunger, A. T. </plain></SENT>
+<SENT sid="218" pm="."><plain>(2007). Acta Cryst. D63, 188–196. </plain></SENT>
+</text></ref><ref id="bb22"><text><SENT sid="219" pm="."><plain>Szep, S., Wang, J. &amp; Moore, P. B. </plain></SENT>
+<SENT sid="221" pm="."><plain>(2003). RNA, 9, 44–51. </plain></SENT>
+</text></ref></ref-list></SecTag></back><floats-group><SecTag type="FIG"><fig id="fig1" position="float"><label>Figure 1</label><caption><p><text><SENT sid="222" pm="."><plain>New examples of successful molecular replacement with Rosetta de novo models. </plain></SENT>
+<SENT sid="223" pm="."><plain>(a)–(c) and (g)–(i) display correlations of Phaser translation-function Z score (TFZ) with model accuracy (the fraction of Cα atoms within 1 Å of the crystal structure). </plain></SENT>
+<SENT sid="224" pm="."><plain>For each target, the displayed subsets are 200 randomly selected all-atom refined models (black) and 200 models with lowest energy from the 100 CPU-day low-resolution set (gray), from the 100 CPU-day all-atom refined set (magenta) and from the large-scale all-atom refined set (red). </plain></SENT>
+<SENT sid="225" pm="."><plain>The solid line and dashed line display the mean TFZ scores and a cutoff value five standard deviations above the mean TFZ, respectively, in the randomly chosen models. </plain></SENT>
+<SENT sid="226" pm="."><plain>Larger open circles indicate Phaser solutions with correct orientations in the unit cell (see text). </plain></SENT>
+<SENT sid="227" pm="."><plain>(d)–(f) and (j)–(l) give overlays corresponding to each plot in (a)–(c) and (g)–(i), respectively, of the least accurate model that passes the TFZ cutoff value (red, partly transparent), nearly complete models built by ARP/wARP after molecular replacement (green) and the crystal structure (blue). </plain></SENT>
+<SENT sid="228" pm="."><plain>In some cases, the modeled sequence did not include terminal segments present in the crystal structures [see red structures in (d)–(f) and (j)–(l)]. </plain></SENT>
+</text></p></caption><graphic xlink:href="d-65-00169-fig1"/></fig></SecTag><SecTag type="FIG"><fig id="fig2" position="float"><label>Figure 2</label><caption><p><text><SENT sid="229" pm="."><plain>Dependence of de novo phasing on crystallographic parameters. </plain></SENT>
+<SENT sid="230" pm="."><plain>The ease of phasing is estimated as the minimal accuracy required for successful molecular replacement (minimum F 1 Å, the fraction of Cα atoms within 1 Å of the crystal structure). </plain></SENT>
+<SENT sid="231" pm="."><plain>No correlation is observed with the crystal solvent content (a) or the number of molecules in each asymmetric unit (b), but a statistically significant correlation is found with the number of residues in the molecular-replacement model (c). </plain></SENT>
+<SENT sid="232" pm="."><plain>See also Table 2 ▶. </plain></SENT>
+</text></p></caption><graphic xlink:href="d-65-00169-fig2"/></fig></SecTag><SecTag type="TABLE"><table-wrap id="table1" position="float"><label>Table 1</label><caption><title>
+                  <italic>De novo</italic> phasing benchmark</title></caption><table frame="hsides" rules="groups"><thead valign="bottom"><tr><th style="" rowspan="1" colspan="1" align="left" valign="bottom"><text><SENT sid="233" pm="."><plain>  </plain></SENT>
+</text></th><th style="" rowspan="1" colspan="1" align="left" valign="bottom"><text><SENT sid="234" pm="."><plain>  </plain></SENT>
+</text></th><th style="" rowspan="1" colspan="1" align="left" valign="bottom"><text><SENT sid="235" pm="."><plain>  </plain></SENT>
+</text></th><th style="" rowspan="1" colspan="1" align="left" valign="bottom"><text><SENT sid="236" pm="."><plain>  </plain></SENT>
+</text></th><th style="" rowspan="1" colspan="1" align="left" valign="bottom"><text><SENT sid="237" pm="."><plain>  </plain></SENT>
+</text></th><th style="" rowspan="1" colspan="1" align="left" valign="bottom"><text><SENT sid="238" pm="."><plain>  </plain></SENT>
+</text></th><th style="" rowspan="1" colspan="1" align="left" valign="bottom"><text><SENT sid="239" pm="."><plain>  </plain></SENT>
+</text></th><th style="" rowspan="1" colspan="1" align="left" valign="bottom"><text><SENT sid="240" pm="."><plain>  </plain></SENT>
+</text></th><th style="border-bottom:1px solid black;" rowspan="1" colspan="5" align="left" valign="bottom"><text><SENT sid="241" pm="."><plain>Minimum F1 Å of an unambiguous Phaser solution† </plain></SENT>
+</text></th></tr><tr><th style="border-bottom:1px solid black;" rowspan="1" colspan="1" align="left" valign="bottom"><text><SENT sid="242" pm="."><plain>Structure factors </plain></SENT>
+</text></th><th style="border-bottom:1px solid black;" rowspan="1" colspan="1" align="left" valign="bottom"><text><SENT sid="243" pm="."><plain>Model sequence‡ </plain></SENT>
+</text></th><th style="border-bottom:1px solid black;" rowspan="1" colspan="1" align="left" valign="bottom"><text><SENT sid="244" pm="."><plain>Space group </plain></SENT>
+</text></th><th style="border-bottom:1px solid black;" rowspan="1" colspan="1" align="left" valign="bottom"><text><SENT sid="245" pm="."><plain>No. of residues in model </plain></SENT>
+</text></th><th style="border-bottom:1px solid black;" rowspan="1" colspan="1" align="left" valign="bottom"><text><SENT sid="246" pm="."><plain>No. of molecules in ASU </plain></SENT>
+</text></th><th style="border-bottom:1px solid black;" rowspan="1" colspan="1" align="left" valign="bottom"><text><SENT sid="247" pm="."><plain>Solvent content (%) </plain></SENT>
+</text></th><th style="border-bottom:1px solid black;" rowspan="1" colspan="1" align="left" valign="bottom"><text><SENT sid="248" pm="."><plain>No. of models, 100 CPU days§ </plain></SENT>
+</text></th><th style="border-bottom:1px solid black;" rowspan="1" colspan="1" align="left" valign="bottom"><text><SENT sid="249" pm="."><plain>No. of models, large-scale¶ </plain></SENT>
+</text></th><th style="border-bottom:1px solid black;" rowspan="1" colspan="1" align="left" valign="bottom"><text><SENT sid="250" pm="."><plain>Low-resolution models, 100 CPU days†† </plain></SENT>
+</text></th><th style="border-bottom:1px solid black;" rowspan="1" colspan="1" align="left" valign="bottom"><text><SENT sid="251" pm="."><plain>All-atom models, 100 CPU days†† </plain></SENT>
+</text></th><th style="border-bottom:1px solid black;" rowspan="1" colspan="1" align="left" valign="bottom"><text><SENT sid="252" pm="."><plain>All-atom models, large-scale†† </plain></SENT>
+</text></th><th style="border-bottom:1px solid black;" rowspan="1" colspan="1" align="left" valign="bottom"><text><SENT sid="253" pm="."><plain>Models, native constraints‡‡ </plain></SENT>
+</text></th><th style="border-bottom:1px solid black;" rowspan="1" colspan="1" align="left" valign="bottom"><text><SENT sid="254" pm="."><plain>Overall§§ </plain></SENT>
+</text></th></tr></thead><tbody valign="top"><tr><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="255" pm="."><plain><ext-link ext-link-type="uri" xlink:href="http://scripts.iucr.org/cgi-bin/cr.cgi?rm=pdb&amp;pdbId=1be7">1be7</ext-link> </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="256" pm="."><plain><ext-link ext-link-type="uri" xlink:href="http://scripts.iucr.org/cgi-bin/cr.cgi?rm=pdb&amp;pdbId=1bq9">1bq9</ext-link> </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="257" pm="."><plain>H3 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="char" char="." charoff="50" valign="top"><text><SENT sid="258" pm="."><plain>51 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="259" pm="."><plain>1 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="260" pm="."><plain>43 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="261" pm="."><plain>3.5 × 105 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="262" pm="."><plain>1.7 × 107 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="263" pm="."><plain>— </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="264" pm="."><plain>— </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="265" pm="."><plain>— </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="266" pm="."><plain>0.882 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="267" pm="."><plain>0.882 </plain></SENT>
+</text></td></tr><tr><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="268" pm="."><plain><ext-link ext-link-type="uri" xlink:href="http://scripts.iucr.org/cgi-bin/cr.cgi?rm=pdb&amp;pdbId=1bq9">1bq9</ext-link> </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="269" pm="."><plain><ext-link ext-link-type="uri" xlink:href="http://scripts.iucr.org/cgi-bin/cr.cgi?rm=pdb&amp;pdbId=1bq9">1bq9</ext-link> </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="270" pm="."><plain>P212121 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="char" char="." charoff="50" valign="top"><text><SENT sid="271" pm="."><plain>51 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="272" pm="."><plain>1 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="273" pm="."><plain>43 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="274" pm="."><plain>3.5 × 105 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="275" pm="."><plain>1.7 × 107 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="276" pm="."><plain>— </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="277" pm="."><plain>— </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="278" pm="."><plain>— </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="279" pm="."><plain>0.627 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="280" pm="."><plain>0.627 </plain></SENT>
+</text></td></tr><tr><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="281" pm="."><plain><ext-link ext-link-type="uri" xlink:href="http://scripts.iucr.org/cgi-bin/cr.cgi?rm=pdb&amp;pdbId=2igd">2igd</ext-link> </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="282" pm="."><plain><ext-link ext-link-type="uri" xlink:href="http://scripts.iucr.org/cgi-bin/cr.cgi?rm=pdb&amp;pdbId=1pgx">1pgx</ext-link> </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="283" pm="."><plain>P212121 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="char" char="." charoff="50" valign="top"><text><SENT sid="284" pm="."><plain>55 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="285" pm="."><plain>1 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="286" pm="."><plain>46 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="287" pm="."><plain>2.7 × 105 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="288" pm="."><plain>4.2 × 105 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="289" pm="."><plain>— </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="290" pm="."><plain>— </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="291" pm="."><plain>0.745 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="292" pm="."><plain>0.891 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="293" pm="."><plain>0.709 </plain></SENT>
+</text></td></tr><tr><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="294" pm="."><plain><ext-link ext-link-type="uri" xlink:href="http://scripts.iucr.org/cgi-bin/cr.cgi?rm=pdb&amp;pdbId=5cro">5cro</ext-link> </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="295" pm="."><plain><ext-link ext-link-type="uri" xlink:href="http://scripts.iucr.org/cgi-bin/cr.cgi?rm=pdb&amp;pdbId=5cro">5cro</ext-link> </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="296" pm="."><plain>H32 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="char" char="." charoff="50" valign="top"><text><SENT sid="297" pm="."><plain>55 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="298" pm="."><plain>4 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="299" pm="."><plain>70 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="300" pm="."><plain>2.6 × 105 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="301" pm="."><plain>7.4 × 105 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="302" pm="."><plain>— </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="303" pm="."><plain>— </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="304" pm="."><plain>0.927 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="305" pm="."><plain>0.982 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="306" pm="."><plain>0.709 </plain></SENT>
+</text></td></tr><tr><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="307" pm="."><plain><ext-link ext-link-type="uri" xlink:href="http://scripts.iucr.org/cgi-bin/cr.cgi?rm=pdb&amp;pdbId=1hz5">1hz5</ext-link> </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="308" pm="."><plain><ext-link ext-link-type="uri" xlink:href="http://scripts.iucr.org/cgi-bin/cr.cgi?rm=pdb&amp;pdbId=1hz6">1hz6</ext-link> </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="309" pm="."><plain>P3221 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="char" char="." charoff="50" valign="top"><text><SENT sid="310" pm="."><plain>61 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="311" pm="."><plain>2 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="312" pm="."><plain>72 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="313" pm="."><plain>2.3 × 105 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="314" pm="."><plain>7.3 × 105 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="315" pm="."><plain>— </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="316" pm="."><plain>0.541 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="317" pm="."><plain>0.656 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="318" pm="."><plain>0.787 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="319" pm="."><plain>0.541 </plain></SENT>
+</text></td></tr><tr><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="320" pm="."><plain><ext-link ext-link-type="uri" xlink:href="http://scripts.iucr.org/cgi-bin/cr.cgi?rm=pdb&amp;pdbId=1hz6">1hz6</ext-link> </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="321" pm="."><plain><ext-link ext-link-type="uri" xlink:href="http://scripts.iucr.org/cgi-bin/cr.cgi?rm=pdb&amp;pdbId=1hz6">1hz6</ext-link> </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="322" pm="."><plain>P212121 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="char" char="." charoff="50" valign="top"><text><SENT sid="323" pm="."><plain>61 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="324" pm="."><plain>3 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="325" pm="."><plain>59 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="326" pm="."><plain>2.3 × 105 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="327" pm="."><plain>7.3 × 105 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="328" pm="."><plain>— </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="329" pm="."><plain>0.672 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="330" pm="."><plain>0.689 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="331" pm="."><plain>0.836 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="332" pm="."><plain>0.639 </plain></SENT>
+</text></td></tr><tr><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="333" pm="."><plain><ext-link ext-link-type="uri" xlink:href="http://scripts.iucr.org/cgi-bin/cr.cgi?rm=pdb&amp;pdbId=1a32">1a32</ext-link> </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="334" pm="."><plain><ext-link ext-link-type="uri" xlink:href="http://scripts.iucr.org/cgi-bin/cr.cgi?rm=pdb&amp;pdbId=1a32">1a32</ext-link> </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="335" pm="."><plain>P212121 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="char" char="." charoff="50" valign="top"><text><SENT sid="336" pm="."><plain>65 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="337" pm="."><plain>1 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="338" pm="."><plain>41 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="339" pm="."><plain>2.8 × 105 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="340" pm="."><plain>2.8 × 105 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="341" pm="."><plain>— </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="342" pm="."><plain>0.754 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="343" pm="."><plain>0.708 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="344" pm="."><plain>0.800 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="345" pm="."><plain>0.677 </plain></SENT>
+</text></td></tr><tr><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="346" pm="."><plain><ext-link ext-link-type="uri" xlink:href="http://scripts.iucr.org/cgi-bin/cr.cgi?rm=pdb&amp;pdbId=1ctf">1ctf</ext-link> </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="347" pm="."><plain><ext-link ext-link-type="uri" xlink:href="http://scripts.iucr.org/cgi-bin/cr.cgi?rm=pdb&amp;pdbId=1ctf">1ctf</ext-link> </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="348" pm="."><plain>P43212 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="char" char="." charoff="50" valign="top"><text><SENT sid="349" pm="."><plain>68 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="350" pm="."><plain>1 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="351" pm="."><plain>47 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="352" pm="."><plain>2.4 × 105 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="353" pm="."><plain>3.2 × 105 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="354" pm="."><plain>— </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="355" pm="."><plain>— </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="356" pm="."><plain>— </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="357" pm="."><plain>0.882 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="358" pm="."><plain>0.515 </plain></SENT>
+</text></td></tr><tr><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="359" pm="."><plain><ext-link ext-link-type="uri" xlink:href="http://scripts.iucr.org/cgi-bin/cr.cgi?rm=pdb&amp;pdbId=1aar">1aar</ext-link> </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="360" pm="."><plain><ext-link ext-link-type="uri" xlink:href="http://scripts.iucr.org/cgi-bin/cr.cgi?rm=pdb&amp;pdbId=1ubi">1ubi</ext-link> </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="361" pm="."><plain>P1 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="char" char="." charoff="50" valign="top"><text><SENT sid="362" pm="."><plain>71 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="363" pm="."><plain>2 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="364" pm="."><plain>35 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="365" pm="."><plain>2.0 × 105 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="366" pm="."><plain>5.4 × 107 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="367" pm="."><plain>— </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="368" pm="."><plain>— </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="369" pm="."><plain>— </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="370" pm="."><plain>— </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="371" pm="."><plain>1.000 </plain></SENT>
+</text></td></tr><tr><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="372" pm="."><plain><ext-link ext-link-type="uri" xlink:href="http://scripts.iucr.org/cgi-bin/cr.cgi?rm=pdb&amp;pdbId=1f9j">1f9j</ext-link> </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="373" pm="."><plain><ext-link ext-link-type="uri" xlink:href="http://scripts.iucr.org/cgi-bin/cr.cgi?rm=pdb&amp;pdbId=1ubi">1ubi</ext-link> </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="374" pm="."><plain>I4122 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="char" char="." charoff="50" valign="top"><text><SENT sid="375" pm="."><plain>71 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="376" pm="."><plain>2 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="377" pm="."><plain>60 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="378" pm="."><plain>2.0 × 105 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="379" pm="."><plain>5.4 × 107 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="380" pm="."><plain>— </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="381" pm="."><plain>— </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="382" pm="."><plain>— </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="383" pm="."><plain>— </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="384" pm="."><plain>0.901 </plain></SENT>
+</text></td></tr><tr><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="385" pm="."><plain><ext-link ext-link-type="uri" xlink:href="http://scripts.iucr.org/cgi-bin/cr.cgi?rm=pdb&amp;pdbId=1ubq">1ubq</ext-link> </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="386" pm="."><plain><ext-link ext-link-type="uri" xlink:href="http://scripts.iucr.org/cgi-bin/cr.cgi?rm=pdb&amp;pdbId=1ubi">1ubi</ext-link> </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="387" pm="."><plain>P212121 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="char" char="." charoff="50" valign="top"><text><SENT sid="388" pm="."><plain>71 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="389" pm="."><plain>1 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="390" pm="."><plain>33 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="391" pm="."><plain>2.0 × 105 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="392" pm="."><plain>5.4 × 107 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="393" pm="."><plain>— </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="394" pm="."><plain>— </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="395" pm="."><plain>0.690 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="396" pm="."><plain>0.662 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="397" pm="."><plain>0.549 </plain></SENT>
+</text></td></tr><tr><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="398" pm="."><plain><ext-link ext-link-type="uri" xlink:href="http://scripts.iucr.org/cgi-bin/cr.cgi?rm=pdb&amp;pdbId=2fcq">2fcq</ext-link> </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="399" pm="."><plain><ext-link ext-link-type="uri" xlink:href="http://scripts.iucr.org/cgi-bin/cr.cgi?rm=pdb&amp;pdbId=1ubi">1ubi</ext-link> </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="400" pm="."><plain>P4332 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="char" char="." charoff="50" valign="top"><text><SENT sid="401" pm="."><plain>71 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="402" pm="."><plain>2 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="403" pm="."><plain>58 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="404" pm="."><plain>2.0 × 105 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="405" pm="."><plain>5.4 × 107 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="406" pm="."><plain>— </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="407" pm="."><plain>— </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="408" pm="."><plain>— </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="409" pm="."><plain>— </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="410" pm="."><plain>0.915 </plain></SENT>
+</text></td></tr><tr><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="411" pm="."><plain><ext-link ext-link-type="uri" xlink:href="http://scripts.iucr.org/cgi-bin/cr.cgi?rm=pdb&amp;pdbId=2ojr">2ojr</ext-link> </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="412" pm="."><plain><ext-link ext-link-type="uri" xlink:href="http://scripts.iucr.org/cgi-bin/cr.cgi?rm=pdb&amp;pdbId=1ubi">1ubi</ext-link> </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="413" pm="."><plain>P3221 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="char" char="." charoff="50" valign="top"><text><SENT sid="414" pm="."><plain>71 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="415" pm="."><plain>1 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="416" pm="."><plain>73 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="417" pm="."><plain>2.0 × 105 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="418" pm="."><plain>5.4 × 107 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="419" pm="."><plain>— </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="420" pm="."><plain>— </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="421" pm="."><plain>— </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="422" pm="."><plain>0.549 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="423" pm="."><plain>0.549 </plain></SENT>
+</text></td></tr><tr><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="424" pm="."><plain><ext-link ext-link-type="uri" xlink:href="http://scripts.iucr.org/cgi-bin/cr.cgi?rm=pdb&amp;pdbId=1dt4">1dt4</ext-link> </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="425" pm="."><plain><ext-link ext-link-type="uri" xlink:href="http://scripts.iucr.org/cgi-bin/cr.cgi?rm=pdb&amp;pdbId=1dtj">1dtj</ext-link> </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="426" pm="."><plain>P42212 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="char" char="." charoff="50" valign="top"><text><SENT sid="427" pm="."><plain>74 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="428" pm="."><plain>1 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="429" pm="."><plain>54 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="430" pm="."><plain>2.8 × 105 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="431" pm="."><plain>4.9 × 105 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="432" pm="."><plain>0.649 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="433" pm="."><plain>0.622 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="434" pm="."><plain>0.500 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="435" pm="."><plain>0.635 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="436" pm="."><plain>0.419 </plain></SENT>
+</text></td></tr><tr><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="437" pm="."><plain><ext-link ext-link-type="uri" xlink:href="http://scripts.iucr.org/cgi-bin/cr.cgi?rm=pdb&amp;pdbId=1dtj">1dtj</ext-link> </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="438" pm="."><plain><ext-link ext-link-type="uri" xlink:href="http://scripts.iucr.org/cgi-bin/cr.cgi?rm=pdb&amp;pdbId=1dtj">1dtj</ext-link> </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="439" pm="."><plain>C2 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="char" char="." charoff="50" valign="top"><text><SENT sid="440" pm="."><plain>74 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="441" pm="."><plain>4 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="442" pm="."><plain>60 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="443" pm="."><plain>2.8 × 105 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="444" pm="."><plain>4.9 × 105 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="445" pm="."><plain>— </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="446" pm="."><plain>0.635 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="447" pm="."><plain>0.716 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="448" pm="."><plain>0.811 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="449" pm="."><plain>0.635 </plain></SENT>
+</text></td></tr><tr><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="450" pm="."><plain><ext-link ext-link-type="uri" xlink:href="http://scripts.iucr.org/cgi-bin/cr.cgi?rm=pdb&amp;pdbId=1ig5">1ig5</ext-link> </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="451" pm="."><plain><ext-link ext-link-type="uri" xlink:href="http://scripts.iucr.org/cgi-bin/cr.cgi?rm=pdb&amp;pdbId=1ig5">1ig5</ext-link> </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="452" pm="."><plain>P43212 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="char" char="." charoff="50" valign="top"><text><SENT sid="453" pm="."><plain>75 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="454" pm="."><plain>1 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="455" pm="."><plain>43 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="456" pm="."><plain>2.3 × 105 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="457" pm="."><plain>8.3 × 106 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="458" pm="."><plain>— </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="459" pm="."><plain>— </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="460" pm="."><plain>— </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="461" pm="."><plain>0.307 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="462" pm="."><plain>0.307 </plain></SENT>
+</text></td></tr><tr><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="463" pm="."><plain><ext-link ext-link-type="uri" xlink:href="http://scripts.iucr.org/cgi-bin/cr.cgi?rm=pdb&amp;pdbId=1cm3">1cm3</ext-link> </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="464" pm="."><plain><ext-link ext-link-type="uri" xlink:href="http://scripts.iucr.org/cgi-bin/cr.cgi?rm=pdb&amp;pdbId=1opd">1opd</ext-link> </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="465" pm="."><plain>P21 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="char" char="." charoff="50" valign="top"><text><SENT sid="466" pm="."><plain>85 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="467" pm="."><plain>1 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="468" pm="."><plain>28 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="469" pm="."><plain>2.3 × 105 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="470" pm="."><plain>8.4 × 106 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="471" pm="."><plain>— </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="472" pm="."><plain>— </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="473" pm="."><plain>— </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="474" pm="."><plain>0.753 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="475" pm="."><plain>0.459 </plain></SENT>
+</text></td></tr><tr><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="476" pm="."><plain><ext-link ext-link-type="uri" xlink:href="http://scripts.iucr.org/cgi-bin/cr.cgi?rm=pdb&amp;pdbId=1opd">1opd</ext-link> </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="477" pm="."><plain><ext-link ext-link-type="uri" xlink:href="http://scripts.iucr.org/cgi-bin/cr.cgi?rm=pdb&amp;pdbId=1opd">1opd</ext-link> </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="478" pm="."><plain>P1 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="char" char="." charoff="50" valign="top"><text><SENT sid="479" pm="."><plain>85 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="480" pm="."><plain>1 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="481" pm="."><plain>33 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="482" pm="."><plain>2.3 × 105 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="483" pm="."><plain>8.4 × 106 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="484" pm="."><plain>— </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="485" pm="."><plain>— </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="486" pm="."><plain>— </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="487" pm="."><plain>0.800 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="488" pm="."><plain>0.800 </plain></SENT>
+</text></td></tr><tr><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="489" pm="."><plain><ext-link ext-link-type="uri" xlink:href="http://scripts.iucr.org/cgi-bin/cr.cgi?rm=pdb&amp;pdbId=1a19">1a19</ext-link> </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="490" pm="."><plain><ext-link ext-link-type="uri" xlink:href="http://scripts.iucr.org/cgi-bin/cr.cgi?rm=pdb&amp;pdbId=1a19">1a19</ext-link> </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="491" pm="."><plain>I41 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="char" char="." charoff="50" valign="top"><text><SENT sid="492" pm="."><plain>89 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="493" pm="."><plain>2 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="494" pm="."><plain>49 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="495" pm="."><plain>1.7 × 105 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="496" pm="."><plain>7.0 × 106 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="497" pm="."><plain>— </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="498" pm="."><plain>— </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="499" pm="."><plain>— </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="500" pm="."><plain>0.494 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="501" pm="."><plain>0.494 </plain></SENT>
+</text></td></tr><tr><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="502" pm="."><plain><ext-link ext-link-type="uri" xlink:href="http://scripts.iucr.org/cgi-bin/cr.cgi?rm=pdb&amp;pdbId=2hxx">2hxx</ext-link> </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="503" pm="."><plain><ext-link ext-link-type="uri" xlink:href="http://scripts.iucr.org/cgi-bin/cr.cgi?rm=pdb&amp;pdbId=1a19">1a19</ext-link> </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="504" pm="."><plain>C2 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="char" char="." charoff="50" valign="top"><text><SENT sid="505" pm="."><plain>89 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="506" pm="."><plain>2 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="507" pm="."><plain>46 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="508" pm="."><plain>1.7 × 105 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="509" pm="."><plain>7.0 × 106 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="510" pm="."><plain>— </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="511" pm="."><plain>— </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="512" pm="."><plain>— </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="513" pm="."><plain>0.674 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="514" pm="."><plain>0.674 </plain></SENT>
+</text></td></tr><tr><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="515" pm="."><plain><ext-link ext-link-type="uri" xlink:href="http://scripts.iucr.org/cgi-bin/cr.cgi?rm=pdb&amp;pdbId=1mb1">1mb1</ext-link> </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="516" pm="."><plain><ext-link ext-link-type="uri" xlink:href="http://scripts.iucr.org/cgi-bin/cr.cgi?rm=pdb&amp;pdbId=1bm8">1bm8</ext-link> </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="517" pm="."><plain>P41212 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="char" char="." charoff="50" valign="top"><text><SENT sid="518" pm="."><plain>99 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="519" pm="."><plain>1 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="520" pm="."><plain>51 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="521" pm="."><plain>1.6 × 105 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="522" pm="."><plain>9.2 × 105 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="523" pm="."><plain>— </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="524" pm="."><plain>— </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="525" pm="."><plain>— </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="526" pm="."><plain>— </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="527" pm="."><plain>0.747 </plain></SENT>
+</text></td></tr><tr><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="528" pm="."><plain><ext-link ext-link-type="uri" xlink:href="http://scripts.iucr.org/cgi-bin/cr.cgi?rm=pdb&amp;pdbId=2hsh">2hsh</ext-link> </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="529" pm="."><plain><ext-link ext-link-type="uri" xlink:href="http://scripts.iucr.org/cgi-bin/cr.cgi?rm=pdb&amp;pdbId=1aiu">1aiu</ext-link> </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="530" pm="."><plain>C2 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="char" char="." charoff="50" valign="top"><text><SENT sid="531" pm="."><plain>105 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="532" pm="."><plain>1 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="533" pm="."><plain>35 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="534" pm="."><plain>1.5 × 105 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="535" pm="."><plain>4.4 × 105 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="536" pm="."><plain>— </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="537" pm="."><plain>— </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="538" pm="."><plain>0.400 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="539" pm="."><plain>0.600 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="540" pm="."><plain>0.400 </plain></SENT>
+</text></td></tr><tr><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="541" pm="."><plain><ext-link ext-link-type="uri" xlink:href="http://scripts.iucr.org/cgi-bin/cr.cgi?rm=pdb&amp;pdbId=1m6t">1m6t</ext-link> </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="542" pm="."><plain><ext-link ext-link-type="uri" xlink:href="http://scripts.iucr.org/cgi-bin/cr.cgi?rm=pdb&amp;pdbId=256b">256b</ext-link> </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="543" pm="."><plain>C2221 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="char" char="." charoff="50" valign="top"><text><SENT sid="544" pm="."><plain>106 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="545" pm="."><plain>1 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="546" pm="."><plain>43 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="547" pm="."><plain>1.8 × 105 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="548" pm="."><plain>1.5 × 105 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="549" pm="."><plain>— </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="550" pm="."><plain>0.453 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="551" pm="."><plain>0.443 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="552" pm="."><plain>0.491 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="553" pm="."><plain>0.283 </plain></SENT>
+</text></td></tr><tr><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="554" pm="."><plain><ext-link ext-link-type="uri" xlink:href="http://scripts.iucr.org/cgi-bin/cr.cgi?rm=pdb&amp;pdbId=256b">256b</ext-link> </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="555" pm="."><plain><ext-link ext-link-type="uri" xlink:href="http://scripts.iucr.org/cgi-bin/cr.cgi?rm=pdb&amp;pdbId=256b">256b</ext-link> </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="556" pm="."><plain>P1 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="char" char="." charoff="50" valign="top"><text><SENT sid="557" pm="."><plain>106 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="558" pm="."><plain>2 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="559" pm="."><plain>45 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="560" pm="."><plain>1.8 × 105 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="561" pm="."><plain>1.5 × 105 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="562" pm="."><plain>— </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="563" pm="."><plain>— </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="564" pm="."><plain>0.660 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="565" pm="."><plain>0.594 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="566" pm="."><plain>0.585 </plain></SENT>
+</text></td></tr><tr><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="567" pm="."><plain><ext-link ext-link-type="uri" xlink:href="http://scripts.iucr.org/cgi-bin/cr.cgi?rm=pdb&amp;pdbId=2bc5">2bc5</ext-link> </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="568" pm="."><plain><ext-link ext-link-type="uri" xlink:href="http://scripts.iucr.org/cgi-bin/cr.cgi?rm=pdb&amp;pdbId=256b">256b</ext-link> </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="569" pm="."><plain>P212121 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="char" char="." charoff="50" valign="top"><text><SENT sid="570" pm="."><plain>106 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="571" pm="."><plain>4 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="572" pm="."><plain>42 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="573" pm="."><plain>1.8 × 105 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="574" pm="."><plain>1.5 × 105 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="575" pm="."><plain>— </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="576" pm="."><plain>0.538 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="577" pm="."><plain>— </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="578" pm="."><plain>0.689 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="579" pm="."><plain>0.538 </plain></SENT>
+</text></td></tr><tr><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="580" pm="."><plain><ext-link ext-link-type="uri" xlink:href="http://scripts.iucr.org/cgi-bin/cr.cgi?rm=pdb&amp;pdbId=1elw">1elw</ext-link> </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="581" pm="."><plain><ext-link ext-link-type="uri" xlink:href="http://scripts.iucr.org/cgi-bin/cr.cgi?rm=pdb&amp;pdbId=1elw">1elw</ext-link> </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="582" pm="."><plain>P41 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="char" char="." charoff="50" valign="top"><text><SENT sid="583" pm="."><plain>117 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="584" pm="."><plain>2 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="585" pm="."><plain>47 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="586" pm="."><plain>1.5 × 105 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="587" pm="."><plain>1.1 × 105 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="588" pm="."><plain>— </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="589" pm="."><plain>0.453 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="590" pm="."><plain>0.521 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="591" pm="."><plain>0.897 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="592" pm="."><plain>0.436 </plain></SENT>
+</text></td></tr><tr><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="593" pm="."><plain><ext-link ext-link-type="uri" xlink:href="http://scripts.iucr.org/cgi-bin/cr.cgi?rm=pdb&amp;pdbId=1ab6">1ab6</ext-link> </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="594" pm="."><plain><ext-link ext-link-type="uri" xlink:href="http://scripts.iucr.org/cgi-bin/cr.cgi?rm=pdb&amp;pdbId=2chf">2chf</ext-link> </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="595" pm="."><plain>P31 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="char" char="." charoff="50" valign="top"><text><SENT sid="596" pm="."><plain>128 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="597" pm="."><plain>2 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="598" pm="."><plain>57 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="599" pm="."><plain>1.2 × 105 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="600" pm="."><plain>3.5 × 106 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="601" pm="."><plain>— </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="602" pm="."><plain>— </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="603" pm="."><plain>0.508 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="604" pm="."><plain>0.398 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="605" pm="."><plain>0.398 </plain></SENT>
+</text></td></tr><tr><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="606" pm="."><plain><ext-link ext-link-type="uri" xlink:href="http://scripts.iucr.org/cgi-bin/cr.cgi?rm=pdb&amp;pdbId=2fka">2fka</ext-link> </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="607" pm="."><plain><ext-link ext-link-type="uri" xlink:href="http://scripts.iucr.org/cgi-bin/cr.cgi?rm=pdb&amp;pdbId=2chf">2chf</ext-link> </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="608" pm="."><plain>F432 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="char" char="." charoff="50" valign="top"><text><SENT sid="609" pm="."><plain>128 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="610" pm="."><plain>1 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="611" pm="."><plain>79 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="612" pm="."><plain>1.2 × 105 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="613" pm="."><plain>3.5 × 106 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="614" pm="."><plain>— </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="615" pm="."><plain>0.430 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="616" pm="."><plain>0.359 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="617" pm="."><plain>0.367 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="618" pm="."><plain>0.313 </plain></SENT>
+</text></td></tr><tr><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="619" pm="."><plain><ext-link ext-link-type="uri" xlink:href="http://scripts.iucr.org/cgi-bin/cr.cgi?rm=pdb&amp;pdbId=3chy">3chy</ext-link> </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="620" pm="."><plain><ext-link ext-link-type="uri" xlink:href="http://scripts.iucr.org/cgi-bin/cr.cgi?rm=pdb&amp;pdbId=2chf">2chf</ext-link> </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="621" pm="."><plain>P212121 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="char" char="." charoff="50" valign="top"><text><SENT sid="622" pm="."><plain>128 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="623" pm="."><plain>1 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="624" pm="."><plain>41 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="625" pm="."><plain>1.2 × 105 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="626" pm="."><plain>3.5 × 106 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="627" pm="."><plain>— </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="628" pm="."><plain>— </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="629" pm="."><plain>— </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="630" pm="."><plain>0.492 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="631" pm="."><plain>0.320 </plain></SENT>
+</text></td></tr><tr><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="632" pm="."><plain><ext-link ext-link-type="uri" xlink:href="http://scripts.iucr.org/cgi-bin/cr.cgi?rm=pdb&amp;pdbId=6chy">6chy</ext-link> </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="633" pm="."><plain><ext-link ext-link-type="uri" xlink:href="http://scripts.iucr.org/cgi-bin/cr.cgi?rm=pdb&amp;pdbId=2chf">2chf</ext-link> </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="634" pm="."><plain>P212121 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="char" char="." charoff="50" valign="top"><text><SENT sid="635" pm="."><plain>128 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="636" pm="."><plain>2 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="637" pm="."><plain>43 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="638" pm="."><plain>1.2 × 105 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="639" pm="."><plain>3.5 × 106 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="640" pm="."><plain>— </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="641" pm="."><plain>— </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="642" pm="."><plain>0.398 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="643" pm="."><plain>0.422 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="644" pm="."><plain>0.398 </plain></SENT>
+</text></td></tr></tbody></table><table-wrap-foot><fn id="tfn1"><label>†</label><p>
+                     <italic>F</italic>
+                     <sub>1 Å</sub> is a measure of model accuracy: the fraction of C<sup>α</sup> atoms within 1 Å of the crystal structure of the modeled sequence. A dash (—) indicates that no models were found within the specified subset that gave an unambiguous <italic>Phaser</italic> solution.</p></fn><fn id="tfn2"><label>‡</label><p>The Rosetta-modeled sequences were taken from an in-house curated benchmark used to test <italic>de novo</italic> modeling; in some cases the sequence does not include terminal segments (typically loops) or particular mutations present in the crystallized sequence.</p></fn><fn id="tfn3"><label>§</label><p>Results of 100 CPU days per target without all-atom refinement, as is typically achievable by a state-of-the-art computer cluster; application of the same computational effort but including all-atom refinement led to pools of approximately one third the size.</p></fn><fn id="tfn4"><label>¶</label><p>Results from 10<sup>4</sup>–10<sup>5</sup> CPU days per target, with all-atom refinement, as is achievable with distributed computing.</p></fn><fn id="tfn5"><label>††</label><p>Out of each pool of <italic>de novo</italic> models, the 200 models with best energies were tested for molecular replacement.</p></fn><fn id="tfn6"><label>‡‡</label><p>Out of pools of approximately 50 000 models produced with the <italic>de novo</italic> method constrained with coarse native information for the backbone torsion angles, 40 models with the lowest C<sup>α</sup> r.m.s.d. were tested for molecular replacement.</p></fn><fn id="tfn7"><label>§§</label><p>Minimum <italic>F</italic>
+                     <sub>1 Å</sub> that led to an unambiguous <italic>Phaser</italic> solution among all models tested in this study, including an additional 50 models with the lowest C<sup>α</sup> r.m.s.d. to the crystal structure for each set (results not separately shown). These values are used as estimates of the ‘ease of phasing’ for each data set (see Table 2<xref ref-type="table" rid="table2"> ▶</xref>).</p></fn></table-wrap-foot></table-wrap></SecTag><SecTag type="TABLE"><table-wrap id="table2" position="float"><label>Table 2</label><caption><title>Correlation of different crystallographic parameters with the minimal accuracy of a <italic>de novo</italic> model required to phase the 30 diffraction data sets in Table 1<xref ref-type="table" rid="table1"> ▶</xref>
+               </title></caption><table frame="hsides" rules="groups"><thead valign="bottom"><tr><th style="border-bottom:1px solid black;" rowspan="1" colspan="1" align="left" valign="bottom"><text><SENT sid="645" pm="."><plain>Crystallographic parameter </plain></SENT>
+</text></th><th style="border-bottom:1px solid black;" rowspan="1" colspan="1" align="left" valign="bottom"><text><SENT sid="646" pm="."><plain>r2 </plain></SENT>
+</text></th><th style="border-bottom:1px solid black;" rowspan="1" colspan="1" align="left" valign="bottom"><text><SENT sid="647" pm="."><plain>P value† </plain></SENT>
+</text></th></tr></thead><tbody valign="top"><tr><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="648" pm="."><plain>No. of modeled residues </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="char" char="." charoff="50" valign="top"><text><SENT sid="649" pm="."><plain>−0.592 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="650" pm="."><plain>5.7 × 10−4 </plain></SENT>
+</text></td></tr><tr><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="651" pm="."><plain>Highest resolution reflection </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="char" char="." charoff="50" valign="top"><text><SENT sid="652" pm="."><plain>0.232 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="653" pm="."><plain>0.22 </plain></SENT>
+</text></td></tr><tr><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="654" pm="."><plain>Lowest resolution reflection </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="char" char="." charoff="50" valign="top"><text><SENT sid="655" pm="."><plain>−0.229 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="656" pm="."><plain>0.22 </plain></SENT>
+</text></td></tr><tr><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="657" pm="."><plain>No. of copies in asymmetric unit </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="char" char="." charoff="50" valign="top"><text><SENT sid="658" pm="."><plain>0.200 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="659" pm="."><plain>0.29 </plain></SENT>
+</text></td></tr><tr><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="660" pm="."><plain>No. of reflections </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="char" char="." charoff="50" valign="top"><text><SENT sid="661" pm="."><plain>−0.146 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="662" pm="."><plain>0.44 </plain></SENT>
+</text></td></tr><tr><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="663" pm="."><plain>Matthews coefficient (VM) </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="char" char="." charoff="50" valign="top"><text><SENT sid="664" pm="."><plain>−0.095 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="665" pm="."><plain>0.62 </plain></SENT>
+</text></td></tr><tr><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="666" pm="."><plain>No. of reflections &gt; 4 Å </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="char" char="." charoff="50" valign="top"><text><SENT sid="667" pm="."><plain>−0.091 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="668" pm="."><plain>0.64 </plain></SENT>
+</text></td></tr><tr><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="669" pm="."><plain>No. of reflections &gt; 6 Å </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="char" char="." charoff="50" valign="top"><text><SENT sid="670" pm="."><plain>−0.079 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="671" pm="."><plain>0.68 </plain></SENT>
+</text></td></tr><tr><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="672" pm="."><plain>No. of residues in asymmetric unit </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="char" char="." charoff="50" valign="top"><text><SENT sid="673" pm="."><plain>−0.038 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="674" pm="."><plain>0.84 </plain></SENT>
+</text></td></tr><tr><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="675" pm="."><plain>Solvent content </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="char" char="." charoff="50" valign="top"><text><SENT sid="676" pm="."><plain>−0.022 </plain></SENT>
+</text></td><td style="" rowspan="1" colspan="1" align="left" valign="top"><text><SENT sid="677" pm="."><plain>0.91 </plain></SENT>
+</text></td></tr></tbody></table><table-wrap-foot><fn id="tfn8"><label>†</label><p>Correlations are to <italic>F</italic>
+                     <sub>1 Å</sub>, the fraction of C<sup>α</sup> atoms within 1 Å of the crystal structure, of the least accurate model that gives an unambiguous <italic>Phaser</italic> hit (see Table 1<xref ref-type="table" rid="table1"> ▶</xref>).</p></fn></table-wrap-foot></table-wrap></SecTag></floats-group></article>

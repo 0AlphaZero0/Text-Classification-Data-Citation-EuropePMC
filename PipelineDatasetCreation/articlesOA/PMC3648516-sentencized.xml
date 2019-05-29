@@ -1,0 +1,816 @@
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD v1.1 20151215//EN" "JATS-archivearticle1.dtd"> 
+<article xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML" article-type="research-article"><?properties open_access?><?DTDIdentifier.IdentifierValue -//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD v1.1 20151215//EN?><?DTDIdentifier.IdentifierType public?><?SourceDTD.DTDName JATS-archivearticle1.dtd?><?SourceDTD.Version 1.1?><?ConverterInfo.XSLTName jp2nlmx2.xsl?><?ConverterInfo.Version 1?><front><journal-meta><journal-id journal-id-type="nlm-ta">PLoS One</journal-id><journal-id journal-id-type="iso-abbrev">PLoS ONE</journal-id><journal-id journal-id-type="publisher-id">plos</journal-id><journal-id journal-id-type="pmc">plosone</journal-id><journal-title-group><journal-title>PLoS ONE</journal-title></journal-title-group><issn pub-type="epub">1932-6203</issn><publisher><publisher-name>Public Library of Science</publisher-name><publisher-loc>San Francisco, USA</publisher-loc></publisher></journal-meta><article-meta><article-id pub-id-type="pmcid">3648516</article-id><article-id pub-id-type="pmid">23667457</article-id><article-id pub-id-type="publisher-id">PONE-D-12-35583</article-id><article-id pub-id-type="doi">10.1371/journal.pone.0062176</article-id><article-categories><subj-group subj-group-type="heading"><subject>Research Article</subject></subj-group><subj-group subj-group-type="Discipline-v2"><subject>Agriculture</subject><subj-group><subject>Pest Control</subject></subj-group></subj-group><subj-group subj-group-type="Discipline-v2"><subject>Biology</subject><subj-group><subject>Computational Biology</subject><subj-group><subject>Genomics</subject><subj-group><subject>Genome Expression Analysis</subject></subj-group></subj-group></subj-group><subj-group><subject>Ecology</subject><subj-group><subject>Ecological Metrics</subject><subj-group><subject>Species Diversity</subject></subj-group></subj-group></subj-group><subj-group><subject>Evolutionary Biology</subject><subj-group><subject>Comparative Genomics</subject><subject>Genomic Evolution</subject></subj-group></subj-group><subj-group><subject>Genetics</subject><subj-group><subject>Gene expression</subject><subj-group><subject>DNA transcription</subject></subj-group></subj-group></subj-group><subj-group><subject>Molecular Cell Biology</subject><subj-group><subject>Gene Expression</subject></subj-group></subj-group><subj-group><subject>Zoology</subject><subj-group><subject>Entomology</subject></subj-group></subj-group></subj-group></article-categories><title-group><article-title><SecTag type="TITLE"><text><SENT sid="0" pm="."><plain>Analysis of the Transcriptional Differences between Indigenous and Invasive Whiteflies Reveals Possible Mechanisms of Whitefly Invasion </plain></SENT>
+</text></SecTag></article-title><alt-title alt-title-type="running-head">Transcriptional Differences between Whiteflies</alt-title></title-group><contrib-group><contrib contrib-type="author"><name><surname>Wang</surname><given-names>Yong-Liang</given-names></name><xref ref-type="aff" rid="aff1"/></contrib><contrib contrib-type="author"><name><surname>Wang</surname><given-names>Yu-Jun</given-names></name><xref ref-type="aff" rid="aff1"/></contrib><contrib contrib-type="author"><name><surname>Luan</surname><given-names>Jun-Bo</given-names></name><xref ref-type="aff" rid="aff1"/></contrib><contrib contrib-type="author"><name><surname>Yan</surname><given-names>Gen-Hong</given-names></name><xref ref-type="aff" rid="aff1"/></contrib><contrib contrib-type="author"><name><surname>Liu</surname><given-names>Shu-Sheng</given-names></name><xref ref-type="aff" rid="aff1"/><xref ref-type="corresp" rid="cor1">
+<sup>*</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Wang</surname><given-names>Xiao-Wei</given-names></name><xref ref-type="aff" rid="aff1"/><xref ref-type="corresp" rid="cor1">
+<sup>*</sup>
+</xref></contrib></contrib-group><aff id="aff1">
+<addr-line>Ministry of Agriculture Key Laboratory of Agricultural Entomology, Institute of Insect Sciences, Zhejiang University, Hangzhou, China</addr-line>
+</aff><contrib-group><contrib contrib-type="editor"><name><surname>Schönbach</surname><given-names>Christian</given-names></name><role>Editor</role><xref ref-type="aff" rid="edit1"/></contrib></contrib-group><aff id="edit1">
+<addr-line>Kyushu Institute of Technology, Japan</addr-line>
+</aff><author-notes><corresp id="cor1">* E-mail: <email>shshliu@zju.edu.cn</email> (SSL); <email>xwwang@zju.edu.cn</email> (XWW)</corresp><fn fn-type="COI-statement"><p><text><SENT sid="1" pm="."><plain>Competing Interests: The authors have declared that no competing interests exist. </plain></SENT>
+</text></p></fn><fn fn-type="con"><p><text><SENT sid="2" pm="."><plain>Conceived and designed the experiments: YLW YJW JBL SSL XWW. </plain></SENT>
+<SENT sid="3" pm="."><plain>Performed the experiments: YLW YJW GHY. </plain></SENT>
+<SENT sid="4" pm="."><plain>Analyzed the data: YLW YJW SSL XWW. </plain></SENT>
+<SENT sid="5" pm="."><plain>Wrote the paper: YLW SSL XWW. </plain></SENT>
+</text></p></fn></author-notes><pub-date pub-type="collection"><year>2013</year></pub-date><pub-date pub-type="epub"><day>8</day><month>5</month><year>2013</year></pub-date><volume>8</volume><issue>5</issue><elocation-id>e62176</elocation-id><history><date date-type="received"><day>8</day><month>11</month><year>2012</year></date><date date-type="accepted"><day>18</day><month>3</month><year>2013</year></date></history><permissions><copyright-statement>© 2013 Wang et al</copyright-statement><copyright-year>2013</copyright-year><copyright-holder>Wang et al</copyright-holder><license xlink:href="http://creativecommons.org/licenses/by/4.0/"><license-p>This is an open-access article distributed under the terms of the Creative Commons Attribution License, which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are properly credited.</license-p></license></permissions><abstract><sec><title><text><SENT sid="6" pm="."><plain>Background </plain></SENT>
+</text></title><p><SecTag type="ABS"><text><SENT sid="7" pm="."><plain>The whitefly Bemisa tabaci is a species complex of more than 31 cryptic species which include some of the most destructive invasive pests of crops worldwide. </plain></SENT>
+<SENT sid="8" pm="."><plain>Among them, Middle East-Asia Minor 1 (MEAM1) and Mediterranean have invaded many countries and displaced the native whitefly species. </plain></SENT>
+<SENT sid="9" pm="."><plain>The successful invasion of the two species is largely due to their wide range of host plants, high resistance to insecticides and remarkable tolerance to environmental stresses. </plain></SENT>
+<SENT sid="10" pm="."><plain>However, the molecular differences between invasive and indigenous whiteflies remain largely unknown. </plain></SENT>
+</text></SecTag></p></sec><sec><title><text><SENT sid="11" pm="."><plain>Methodology/Principal Findings </plain></SENT>
+</text></title><p><SecTag type="ABS"><text><SENT sid="12" pm="."><plain>Here the global transcriptional difference between the two invasive whitefly species (MEAM1, MED) and one indigenous whitefly species (Asia II 3) were analyzed using the Illumina sequencing. </plain></SENT>
+<SENT sid="13" pm="."><plain>Our analysis indicated that 2,422 genes between MEAM1 and MED; 3,073 genes between MEAM1 and Asia II 3; and 3,644 genes between MED and Asia II 3 were differentially expressed. </plain></SENT>
+<SENT sid="14" pm="."><plain>Gene Ontology enrichment analysis revealed that the differently expressed genes between the invasive and indigenous whiteflies were significantly enriched in the term of ‘oxidoreductase activity’. </plain></SENT>
+<SENT sid="15" pm="."><plain>Pathway enrichment analysis showed that carbohydrate, amino acid and glycerolipid metabolisms were more active in MEAM1 and MED than in Asia II 3, which may contribute to their differences in biological characteristics. </plain></SENT>
+<SENT sid="16" pm="."><plain>Our analysis also illustrated that the majority of genes involved in ‘drug metabolic pathway’ were expressed at a higher level in MEAM1 and MED than in Asia II 3. </plain></SENT>
+<SENT sid="17" pm="."><plain>Taken together, these results revealed that the genes related to basic metabolism and detoxification were expressed at an elevated level in the invasive whiteflies, which might be responsible for their higher resistance to insecticides and environmental stresses. </plain></SENT>
+</text></SecTag></p></sec><sec><title><text><SENT sid="18" pm="."><plain>Conclusions/Significance </plain></SENT>
+</text></title><p><SecTag type="ABS"><text><SENT sid="19" pm="."><plain>The extensive comparison of MEAM1, MED and Asia II 3 gene expression may serve as an invaluable resource for revealing the molecular mechanisms underlying their biological differences and the whitefly invasion. </plain></SENT>
+</text></SecTag></p></sec></abstract><funding-group><funding-statement>Financial support for this study was provided by the National Natural Science Foundation of China (Project 31272104, 31171848) and the National Basic Research Program of China (Project 2009CB119203). The funders had no role in study design, data collection and analysis, decision to publish, or preparation of the manuscript.</funding-statement></funding-group><counts><page-count count="13"/></counts></article-meta></front><body><SecTag type="INTRO"><sec id="s1"><title><text><SENT sid="20" pm="."><plain>Introduction </plain></SENT>
+</text></title><p><text><SENT sid="21" pm="."><plain>The whitefly Bemisia tabaci (Gennadius) (Aleyrodidae: Hemiptera) is a species complex consisting of at least 31 genetically diverse but morphologically indistinguishable cryptic species (hereafter species) [1]–[7]. </plain></SENT>
+<SENT sid="22" pm="."><plain>Some members of this species complex are important pests of agricultural, horticultural and ornamental crops, causing extensive damage directly through phloem-feeding and indirectly through transmission of plant pathogenic viruses, primarily begomoviruses [8], [9]. </plain></SENT>
+<SENT sid="23" pm="."><plain>Two species of the complex, Middle East-Asia Minor 1 (MEAM1) and Mediterranean (MED), which have been erroneously referred to as the B and Q ‘biotype’ respectively, have rapidly spread all over the world in the past 20 years [2], [10]–[13]. </plain></SENT>
+</text></p><p><text><SENT sid="24" pm="."><plain>The MEAM1 species was presumed to originate in the Middle East-Asia Minor region and then quickly spread to more than fifty countries in six continents [2], [3], [11], [14]. </plain></SENT>
+<SENT sid="25" pm="."><plain>Its invasive and damaging capacities have earned it a place as one of the world’s top 100 invasive species (<ext-link ext-link-type="uri" xlink:href="http://www.issg.org">http://www.issg.org</ext-link>). </plain></SENT>
+<SENT sid="26" pm="."><plain>The MEAM1 species invaded China in the mid-1990s and were found in nearly all regions of China in 2011 [3], [15]–[17]. </plain></SENT>
+<SENT sid="27" pm="."><plain>In Zhejiang province of eastern China, MEAM1 was first recorded in 2003 [18]. </plain></SENT>
+<SENT sid="28" pm="."><plain>Subsequent field surveys indicated that the MEAM1 whitefly initially appeared in localities with frequent transport of plant materials and then gradually spread to the surrounding areas [13]. </plain></SENT>
+<SENT sid="29" pm="."><plain>In many locations, the rapid spread of MEAM1 has occurred with the concurrent disappearance of the indigenous B. tabaci species [3], [13]. </plain></SENT>
+<SENT sid="30" pm="."><plain>For example, before MEAM1 entered China, an indigenous whitefly Asia II 3 (previously known as ZHJ1) was the major species in many places of Zhejiang [13]. </plain></SENT>
+<SENT sid="31" pm="."><plain>However, from 2004 to 2006, the population of Asia II 3 remarkably decreased and MEAM1 became the dominant species [13]. </plain></SENT>
+<SENT sid="32" pm="."><plain>The same situation also occurred in Australia where the native whitefly species was replaced by MEAM1 [13]. </plain></SENT>
+<SENT sid="33" pm="."><plain>Some efforts have been made to explore the possible factors responsible for the incursion of MEAM1 into new regions and the displacement of its closely related species [19]–[21]. </plain></SENT>
+<SENT sid="34" pm="."><plain>Compared to indigenous species, MEAM1 has a wider range of host plants, higher resistance to insecticides and stronger tolerance to environmental stresses [2], [11], [21]–[24]. </plain></SENT>
+<SENT sid="35" pm="."><plain>In addition, asymmetric mating interactions between MEAM1 and indigenous competitors have been shown to play a major role in the invasion of MEAM1 into China and Australia [13]. </plain></SENT>
+</text></p><p><text><SENT sid="36" pm="."><plain>The MED species probably originated from the Mediterranean region and has been invading from its origin to other parts of the world [2], [25], [26]. </plain></SENT>
+<SENT sid="37" pm="."><plain>It appeared in China in 2003 and its rapid spread in the following 6 years changed the composition of B. tabaci [3]. </plain></SENT>
+<SENT sid="38" pm="."><plain>In some places, the MED species has successfully replaced both the native species and the invasive MEAM1, and become the only or predominant B. tabaci species in the field [3], [27], [28]. </plain></SENT>
+<SENT sid="39" pm="."><plain>The competition between MED and MEAM1 is apparently mediated by many intrinsic and environmental factors [29]. </plain></SENT>
+<SENT sid="40" pm="."><plain>In the last 10 years, MED’s higher level of resistance to neonicotinoid insecticides than MEAM1 has been shown to contribute to its displacement of the latter in China [29], [30]. </plain></SENT>
+<SENT sid="41" pm="."><plain>In addition, MED’s higher level of resistance to pyriproxyfen and neonicotinoids than MEAM1 has also been suggested to be responsible for its relatively higher abundance in many regions in Israel and southern Spain [31], [32]. </plain></SENT>
+<SENT sid="42" pm="."><plain>On the other hand, MEAM1 has a stronger capacity than MED for interspecific reproductive interference, which has been shown to contribute significantly to its displacement of MED in the laboratory [33], [34] and field [35]. </plain></SENT>
+<SENT sid="43" pm="."><plain>These two species also differ in ranges of host plants, and such a difference seemed to have played a role in their competition and displacement as well [29]. </plain></SENT>
+<SENT sid="44" pm="."><plain>However, due to the lack of genomic data, the molecular mechanisms underlying these biological and behavioral differences among the whitefly species remain largely unknown. </plain></SENT>
+<SENT sid="45" pm="."><plain>Furthermore, previous studies have mainly focused on the behavioral and physiological differences of B. tabaci species. </plain></SENT>
+<SENT sid="46" pm="."><plain>An overall description of the genetic factors associated with the competition and displacement between the invasive and indigenous whiteflies is still lacking. </plain></SENT>
+</text></p><p><text><SENT sid="47" pm="."><plain>In order to reveal the molecular mechanism of B. tabaci invasion, we compared the gene expression profiles of the invasive MEAM1, MED and the native Asia II 3 species using the Illumina sequencing technology. </plain></SENT>
+<SENT sid="48" pm="."><plain>As gene expression difference is one of the major reasons leading to the divergence of species [36], studies on the variation of gene expression in different species can help unravel the molecular mechanisms that result in the biological and behavioral differences between species [37], [38]. </plain></SENT>
+<SENT sid="49" pm="."><plain>In this study, we investigated the divergence of gene expression among the three whitefly species (MEAM1, MED and Asia II 3). </plain></SENT>
+<SENT sid="50" pm="."><plain>The identification of differentially expressed genes among MEAM1, MED and Asia II 3 will serve as a valuable resource for future investigation of the molecular mechanisms underlying their biological variations and ability to invade. </plain></SENT>
+</text></p></sec></SecTag><SecTag type="METHODS"><sec sec-type="materials|methods" id="s2"><title><text><SENT sid="51" pm="."><plain>Materials and Methods </plain></SENT>
+</text></title><sec id="s2a"><title><text><SENT sid="52" pm="."><plain>Insect Culture </plain></SENT>
+</text></title><p><text><SENT sid="53" pm="."><plain>The invasive MEAM1 (mtCOI GeneBank accession no. GQ332577), MED (mtCOI GenBank accession no. DQ473394) and the indigenous Asia II 3 (mtCOI GenBank accession no. DQ309076) species of the B. tabaci species complex were collected from Zhejiang, China. </plain></SENT>
+<SENT sid="54" pm="."><plain>No specific permits were required for the described field studies. </plain></SENT>
+<SENT sid="55" pm="."><plain>The locations for sample collection are not privately-owned or protected in any way and the field studies did not involve endangered or protected species. </plain></SENT>
+<SENT sid="56" pm="."><plain>Cultures of the three whitefly species were maintained separately on Gossypium hirsutum (Malvaceae) cv. </plain></SENT>
+<SENT sid="57" pm="."><plain>Zhe-Mian 1793 in climate-controlled chambers at 27±1°C, a photoperiod of 14 h light: 10 h darkness and 70±10% relative humidity. </plain></SENT>
+<SENT sid="58" pm="."><plain>The purity of the whitefly cultures was monitored every 3–5 generations using the random amplified polymorphic DNA polymerase chain reaction technique with the primer H16 (5′-TCTCAGCTGG-3′) than can differentiate B. tabaci genetic groups [39]. </plain></SENT>
+</text></p></sec><sec id="s2b"><title><text><SENT sid="59" pm="."><plain>Sample Preparation and RNA Isolation </plain></SENT>
+</text></title><p><text><SENT sid="60" pm="."><plain>To prepare pure whitefly cultures, a pair of virgin adult whiteflies of MEAM1, MED or Asia II 3 was separately released onto different cotton plants to oviposit. </plain></SENT>
+<SENT sid="61" pm="."><plain>The eggs of each species were used to initiate a colony which was reared for five generations. </plain></SENT>
+<SENT sid="62" pm="."><plain>To prepare whitefly samples, approximately 3,000 newly emerged whiteflies from the pure culture of each species were released onto the leaves of two cotton plants in different cages. </plain></SENT>
+<SENT sid="63" pm="."><plain>After feeding for 24 h, approximately 500 female adults were separately collected for each species. </plain></SENT>
+<SENT sid="64" pm="."><plain>Two biological replicates were collected for each species and processed independently. </plain></SENT>
+<SENT sid="65" pm="."><plain>One replicate was used in the digital gene expression (DGE) [40] analysis and the other for the real-time quantitative PCR (qPCR) analysis. </plain></SENT>
+<SENT sid="66" pm="."><plain>All experiments were conducted in climate-controlled chambers at 27±1°C, a photoperiod of 14 h light: 10 h darkness and 70±10% relative humidity. </plain></SENT>
+<SENT sid="67" pm="."><plain>Total RNA was isolated using SV total RNA isolation system (Promega) according to the manufacturer’s protocol. </plain></SENT>
+<SENT sid="68" pm="."><plain>RNA integrity was confirmed using the 2100 Bioanalyzer (Agilent Technologies) with a minimum RNA integrated number value of 8. </plain></SENT>
+</text></p></sec><sec id="s2c"><title><text><SENT sid="69" pm="."><plain>DGE Library Preparation and Sequencing </plain></SENT>
+</text></title><p><text><SENT sid="70" pm="."><plain>The DGE method, which can generate absolute rather than relative gene expression measurements and avoid many of the inherent limitations of microarray analysis, was used to analyze gene expression variations among whiteflies of MEAM1, MED and Asia II 3 [41]. </plain></SENT>
+<SENT sid="71" pm="."><plain>First, mRNA was purified from 6 µg of total RNA from each sample with magnetic oligobeads. </plain></SENT>
+<SENT sid="72" pm="."><plain>First- and second- strand cDNA were synthesized and bead bound cDNA was subsequently digested with NlaIII, which recognizes the CATG sites. </plain></SENT>
+<SENT sid="73" pm="."><plain>The cDNA fragments with 3′ ends were then purified with magnetic beads, and Illumina adapter 1 was added to their 5′ ends. </plain></SENT>
+<SENT sid="74" pm="."><plain>The junction of Illumina adapter 1 and the CATG site is the recognition site of MmeI, which cuts 17 bp downstream of the CATG site, producing tags with adapter 1. </plain></SENT>
+<SENT sid="75" pm="."><plain>After removing 3′ fragments with magnetic bead precipitation, Illumina adapter 2 was introduced at 3′ ends of tags, acquiring 21 bp tags with different adapters at both ends to form a tag library. </plain></SENT>
+<SENT sid="76" pm="."><plain>Then, the three tag libraries of MEAM1, MED and Asia II 3 were sequenced in parallel using Illumina HiSeq 2000 platform at Beijing Genomics Institute (Shenzhen, China). </plain></SENT>
+</text></p></sec><sec id="s2d"><title><text><SENT sid="77" pm="."><plain>Tag Annotation and Data Normalization for Gene Expression Level </plain></SENT>
+</text></title><p><text><SENT sid="78" pm="."><plain>Raw sequences were transformed into 21 bp clean tags through removing adaptor sequences, low quality sequences, empty reads and tags with a copy number of 1 (probably a sequencing error). </plain></SENT>
+<SENT sid="79" pm="."><plain>Next, lists of all distinct 21 bp tags were generated from the MEAM1, MED and Asia II 3 sequencing results, respectively. </plain></SENT>
+<SENT sid="80" pm="."><plain>As a distinct 21 bp tag corresponds to a unique gene in the transcriptome, the common tags of MEAM1, MED and Asia II 3 represent the orthologous genes among the three species. </plain></SENT>
+<SENT sid="81" pm="."><plain>In order to identify the orthologous genes of MEAM1, MED and Asia II 3 which can be used for comparing the expression variation among the three species, the common tags of MEAM1, MED and Asia II 3 species were selected (Figure 1). </plain></SENT>
+<SENT sid="82" pm="."><plain>Then, three reference databases of all possible CATG +17-nucleotide tag sequences in the transcriptome sequences of MEAM1, MED and Asia II 3 were created, respectively [42]–[44]. </plain></SENT>
+<SENT sid="83" pm="."><plain>Next, the common tags of MEAM1, MED and Asia II 3 species were mapped to these three reference databases, respectively. </plain></SENT>
+<SENT sid="84" pm="."><plain>Tags mapped to multiple reference sequences were filtered out, and the remaining tags were designated as unambiguous tags. </plain></SENT>
+<SENT sid="85" pm="."><plain>Since the gene sequences among MEAM1, MED and Asia II 3 are highly conserved [42]–[44], the common tag mapped genes could be selected as the orthologous genes of MEAM1, MED and Asia II 3. </plain></SENT>
+<SENT sid="86" pm="."><plain>To get the orthologous genes of MEAM1, MED and Asia II 3 from the MED transcriptomic database, all unambiguous common tags were mapped to the transcriptome reference database of MED and allowed no mismatch (Figure 1). </plain></SENT>
+<SENT sid="87" pm="."><plain>As the MED transcriptome is incomplete, the unmatched common tags were then mapped to MEAM1 reference database to obtain more orthologous genes that were present in the MEAM1 transcriptome. </plain></SENT>
+<SENT sid="88" pm="."><plain>If unmatched common tags still existed, we then mapped these tags to the Asia II 3 reference database to get the orthologous genes in Asia II 3 transcriptome (Figure 1). </plain></SENT>
+<SENT sid="89" pm="."><plain>Finally, the orthologous genes from the three steps were put together to acquire the total orthologous genes of MEAM1, MED and Asia II 3 (Figure 1). </plain></SENT>
+<SENT sid="90" pm="."><plain>Orthologous genes were annotated against NCBI nr database using an E-value cut-off of 1.0E−5. </plain></SENT>
+<SENT sid="91" pm="."><plain>Functional annotation by Gene Ontology (GO) terms (<ext-link ext-link-type="uri" xlink:href="http://www.geneontology.org">http://www.geneontology.org</ext-link>) was analyzed by Blast2GO software. </plain></SENT>
+<SENT sid="92" pm="."><plain>The nr blast results in xml format were imported to the software and GO annotation was performed on a local computer (about 3–4 hours). </plain></SENT>
+<SENT sid="93" pm="."><plain>Pathway annotation was performed using Blastall software against the Kyoto Encyclopedia of Genes and Genomes (KEGG) database. </plain></SENT>
+<SENT sid="94" pm="."><plain>For gene expression analysis, the numbers of unambiguous tags for each orthologous gene in the three libraries were calculated respectively and then normalized to the number of transcripts per million tags (TPM). </plain></SENT>
+<SENT sid="95" pm="."><plain>DGE library data sets obtained in this work are available at the NCBI Gene Expression Omnibus under the accession number: GSE41864. </plain></SENT>
+</text></p><SecTag type="FIG"><fig id="pone-0062176-g001" orientation="portrait" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0062176.g001</object-id><label>Figure 1</label><caption><title><text><SENT sid="96" pm="."><plain>Approach used to identify DGEs among MEAM1, MED and Asia II 3 whiteflies. </plain></SENT>
+</text></title><p><text><SENT sid="97" pm="."><plain>Common tags of MEAM1, MED and Asia II 3 species were first selected and mapped to the reference transcriptome database of MED. </plain></SENT>
+<SENT sid="98" pm="."><plain>The unmatched tags were then mapped to the MEAM1 database. </plain></SENT>
+<SENT sid="99" pm="."><plain>If unmatched tags still exist, we then mapped these tags to the Asia II 3 database. </plain></SENT>
+<SENT sid="100" pm="."><plain>A total of 15,103 orthologous genes among MEAM1, MED and Asia II 3 were identified. </plain></SENT>
+<SENT sid="101" pm="."><plain>Differentially expressed genes (DEGs) were identified between: i) MEAM1 and MED, ii) MEAM1 and Asia II 3, iii) MED and Asia II 3 with the threshold of FDR&lt;0.001 and |log2 Ratio| ≥1. </plain></SENT>
+</text></p></caption><graphic xlink:href="pone.0062176.g001"/></fig></SecTag></sec><sec id="s2e"><title><text><SENT sid="102" pm="."><plain>Analysis of Differential Gene Expression </plain></SENT>
+</text></title><p><text><SENT sid="103" pm="."><plain>After knowing the orthologous genes and their expression levels in the three species, a rigorous algorithm was developed to identify differentially expressed genes (DEGs) between i) MEAM1 and MED, ii) MEAM1 and Asia II 3, iii) MED and Asia II 3 (Figure 1) [41]. </plain></SENT>
+<SENT sid="104" pm="."><plain>False discovery rate (FDR) was used to determine the threshold of p value in multiple test and analysis. </plain></SENT>
+<SENT sid="105" pm="."><plain>We used FDR&lt;0.001 and the absolute value of log2 Ratio ≥1 as the threshold to judge the significance of gene expression difference (Figure 1). </plain></SENT>
+<SENT sid="106" pm="."><plain>For an orthologous gene, the ratio means the normalized number of unambiguous tags contained in one species divided by the normalized number of unambiguous tags in another species. </plain></SENT>
+<SENT sid="107" pm="."><plain>A total of three datasets were generated: 1) MEAM1 vs. MED that contains DEGs between MEAM1 and MED whiteflies; 2) MEAM1 vs. Asia II 3 that contains DEGs between MEAM1 and Asia II 3 whiteflies; and 3) MED vs. Asia II 3 that contains DEGs between MED and Asia II 3 whiteflies (Figure 1). </plain></SENT>
+</text></p></sec><sec id="s2f"><title><text><SENT sid="108" pm="."><plain>GO and Pathway Enrichment Analyses </plain></SENT>
+</text></title><p><text><SENT sid="109" pm="."><plain>Pathway and GO enrichment analyses were performed to identify the significantly regulated pathways or GO terms between species. </plain></SENT>
+<SENT sid="110" pm="."><plain>In pathway enrichment analysis, all genes were mapped to terms in the KEGG database and the pathways significantly enriched with DEGs were identified using hypergeometric test of R program. </plain></SENT>
+<SENT sid="111" pm="."><plain>The R program has the function of ‘phyper’, so p = 1-phyper (m, n, N-n, M, lower. tail = TRUE, log. p = FALSE). </plain></SENT>
+<SENT sid="112" pm="."><plain>The formula was defined as follows:where N and n indicate the total numbers of genes and DEGs with KEGG annotations respectively, and M and m are the numbers of genes and DEGs annotated to a certain KEGG term. </plain></SENT>
+<SENT sid="113" pm="."><plain>Pathways with p≤0.05 were deemed to be enriched with DEGs. </plain></SENT>
+<SENT sid="114" pm="."><plain>In GO enrichment analysis, the hypergeometric test was used in a similar way to identify the GO terms enriched with DEGs (p&lt;0.05). </plain></SENT>
+<SENT sid="115" pm="."><plain>To increase the reliability, pathways or GO terms with less than five genes were filtered out. </plain></SENT>
+</text></p></sec><sec id="s2g"><title><text><SENT sid="116" pm="."><plain>Real-time Quantitative PCR (qPCR) Analysis </plain></SENT>
+</text></title><p><text><SENT sid="117" pm="."><plain>To confirm the results of the DGE analysis, the expression of 30 selected genes (10 genes from each of the following three datasets MEAM1 vs. MED; MEAM1 vs. Asia II 3 and MED vs. Asia II 3) were measured using qPCR. </plain></SENT>
+<SENT sid="118" pm="."><plain>Adult whiteflies of MEAM1, MED and Asia II 3 were collected according to the previous descriptions and total RNA was extracted. </plain></SENT>
+<SENT sid="119" pm="."><plain>cDNA was synthesized using the SYBR®PrimeScript™ RT-PCR Kit II (Takara) and qPCRs were conducted on the ABI PRISM 7500 Fast Real-Time PCR System (Applied Biosystems) with SYBR-Green detection. </plain></SENT>
+<SENT sid="120" pm="."><plain>Each gene was analyzed in triplicate and the average threshold cycle (CT) was calculated for each sample [45]. </plain></SENT>
+<SENT sid="121" pm="."><plain>As an endogenous control, the expression of β-actin was measured in parallel. </plain></SENT>
+<SENT sid="122" pm="."><plain>The expression levels of target genes were calculated with the comparative CT method (also known as the 2−ΔΔCT method), in which the gene expression levels is presented relative to the β-actin [46]. </plain></SENT>
+</text></p></sec></sec></SecTag><SecTag type="RESULTS,DISCUSS"><sec id="s3"><title><text><SENT sid="123" pm="."><plain>Results and Discussion </plain></SENT>
+</text></title><sec id="s3a"><title><text><SENT sid="124" pm="."><plain>Summary of DGE Sequencing and Mapping </plain></SENT>
+</text></title><p><text><SENT sid="125" pm="."><plain>Three whitefly DGE libraries (MEAM1, MED and Asia II 3) were sequenced and approximately 6.0 million raw tags were obtained for each library (Table 1). </plain></SENT>
+<SENT sid="126" pm="."><plain>After filtering out the low quality reads, the total number of tags per library ranged from 5.7 to 5.9 million and the number of distinct tags ranged from 111,624 to 143,198, which are available at the NCBI Gene Expression Omnibus under the accession number: GSE41864. </plain></SENT>
+<SENT sid="127" pm="."><plain>Next, frequencies of distinct tags were used to evaluate the normality of DGE data [47]. </plain></SENT>
+<SENT sid="128" pm="."><plain>Among the three samples, similar distributions of tag numbers were found at different categories of tag expression levels, suggesting that little bias exists in the construction of libraries from these three whitefly species (Figure S1). </plain></SENT>
+<SENT sid="129" pm="."><plain>To identify the orthologous genes among the three species, which can be used for comparing gene expression, the 33,393 common distinct tags of MEAM1, MED and Asia II 3 sequencing libraries were filtered out and mapped to the MED, MEAM1 and Asia II 3 transcriptomes sequentially according to the procedures in Figure 1 (see Materials and Methods for details). </plain></SENT>
+<SENT sid="130" pm="."><plain>After mapping, a total of 15,103 genes that represent the orthologous genes among the three species were identified. </plain></SENT>
+<SENT sid="131" pm="."><plain>It is possible that different analytical approach might recover different numbers of orthologous genes. </plain></SENT>
+</text></p><SecTag type="TABLE"><table-wrap id="pone-0062176-t001" orientation="portrait" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0062176.t001</object-id><label>Table 1</label><caption><title><text><SENT sid="132" pm="."><plain>Statistics of digital gene expression sequencing. </plain></SENT>
+</text></title></caption><alternatives><graphic id="pone-0062176-t001-1" xlink:href="pone.0062176.t001"/><table frame="hsides" rules="groups"><colgroup span="1"><col align="left" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/></colgroup><thead><tr><td colspan="2" align="left" rowspan="1"><text><SENT sid="133" pm="."><plain>Category </plain></SENT>
+</text></td><td colspan="2" align="left" rowspan="1"><text><SENT sid="134" pm="."><plain>Parameter </plain></SENT>
+</text></td><td colspan="2" align="left" rowspan="1"><text><SENT sid="135" pm="."><plain>MEAM1 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="136" pm="."><plain>MED </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="137" pm="."><plain>Asia II 3 </plain></SENT>
+</text></td></tr></thead><tbody><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="138" pm="."><plain>Raw tag </plain></SENT>
+</text></td><td colspan="2" align="left" rowspan="1"><text><SENT sid="139" pm="."><plain>Total tag number </plain></SENT>
+</text></td><td colspan="2" align="left" rowspan="1"><text><SENT sid="140" pm="."><plain>595,1527 </plain></SENT>
+</text></td><td colspan="2" align="left" rowspan="1"><text><SENT sid="141" pm="."><plain>606,4401 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="142" pm="."><plain>611,4520 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"/><td colspan="2" align="left" rowspan="1"><text><SENT sid="143" pm="."><plain>Distinct tag number </plain></SENT>
+</text></td><td colspan="2" align="left" rowspan="1"><text><SENT sid="144" pm="."><plain>342,727 </plain></SENT>
+</text></td><td colspan="2" align="left" rowspan="1"><text><SENT sid="145" pm="."><plain>290,999 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="146" pm="."><plain>247,567 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="147" pm="."><plain>Clean Tag </plain></SENT>
+</text></td><td colspan="2" align="left" rowspan="1"><text><SENT sid="148" pm="."><plain>Total tag number </plain></SENT>
+</text></td><td colspan="2" align="left" rowspan="1"><text><SENT sid="149" pm="."><plain>5,734,967 </plain></SENT>
+</text></td><td colspan="2" align="left" rowspan="1"><text><SENT sid="150" pm="."><plain>5,876,814 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="151" pm="."><plain>5,976,544 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"/><td colspan="2" align="left" rowspan="1"><text><SENT sid="152" pm="."><plain>Distinct tag number </plain></SENT>
+</text></td><td colspan="2" align="left" rowspan="1"><text><SENT sid="153" pm="."><plain>143,198 </plain></SENT>
+</text></td><td colspan="2" align="left" rowspan="1"><text><SENT sid="154" pm="."><plain>122,541 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="155" pm="."><plain>111,624 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="156" pm="."><plain>Common tag </plain></SENT>
+</text></td><td colspan="2" align="left" rowspan="1"><text><SENT sid="157" pm="."><plain>Total tag number </plain></SENT>
+</text></td><td colspan="2" align="left" rowspan="1"><text><SENT sid="158" pm="."><plain>4,954,769 </plain></SENT>
+</text></td><td colspan="2" align="left" rowspan="1"><text><SENT sid="159" pm="."><plain>4,772,332 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="160" pm="."><plain>4,542,540 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"/><td colspan="2" align="left" rowspan="1"><text><SENT sid="161" pm="."><plain>Distinct tag number </plain></SENT>
+</text></td><td colspan="2" align="left" rowspan="1"><text><SENT sid="162" pm="."><plain>3,3393 </plain></SENT>
+</text></td><td colspan="2" align="left" rowspan="1"><text><SENT sid="163" pm="."><plain>3,3393 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="164" pm="."><plain>3,3393 </plain></SENT>
+</text></td></tr></tbody></table></alternatives></table-wrap></SecTag></sec><sec id="s3b"><title><text><SENT sid="165" pm="."><plain>Expression Level of the Orthologous Genes among the Three B. tabaci Species </plain></SENT>
+</text></title><p><text><SENT sid="166" pm="."><plain>For each species, the number of tags mapped to each gene was calculated and the expression level of these 15,103 orthologous genes in each species were determined respectively (Table S1). </plain></SENT>
+<SENT sid="167" pm="."><plain>Next, genes were grouped into different categories based on the number of transcripts per million tags (TPM) and the distribution of genes in each category was analyzed (Figure 2). </plain></SENT>
+<SENT sid="168" pm="."><plain>The results showed that, for each species, about 60% of the genes (59.2% in MEAM1, 60.6% in MED and 64.8% in Asia II 3) were expressed at a low level with TPM&lt;5; whereas the genes with high expression level (TPM&gt;50) only constituted a small portion (5.7% in MEAM1, 6.2% in MED and 6.1% in Asia II 3) (Figure 2). </plain></SENT>
+<SENT sid="169" pm="."><plain>Then, the functions of the top 10 highly expressed genes with annotations were analyzed for each species. </plain></SENT>
+<SENT sid="170" pm="."><plain>Many of the genes with very high expression level were involved in ribosome (e.g. 60S ribosomal protein) and energy metabolism (e.g. NADH dehydrogenase and cytochrome c oxidase subunit) (Table S1). </plain></SENT>
+<SENT sid="171" pm="."><plain>This finding is not surprising, as these genes are essential for the survival of an organism. </plain></SENT>
+<SENT sid="172" pm="."><plain>Interestingly, a CuZn superoxide dismutase (CuZnSOD) gene, which has been proved to be an important antioxidant in many insects [48], [49], was identified in the top 10 highly expressed genes of MED species. </plain></SENT>
+<SENT sid="173" pm="."><plain>Interestingly, the expression level of CuZnSOD in MED (TPM = 578) was much higher than that in MEAM1 (TPM = 315) and Asia II 3 (TPM = 116) indicating that this gene may play an important role in MED (Table S1). </plain></SENT>
+</text></p><SecTag type="FIG"><fig id="pone-0062176-g002" orientation="portrait" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0062176.g002</object-id><label>Figure 2</label><caption><title><text><SENT sid="174" pm="."><plain>The distribution of gene expression level in MEAM1, MED and Asia II 3. </plain></SENT>
+</text></title><p><text><SENT sid="175" pm="."><plain>The expression of genes was normalized to the number of transcripts per million tags (TPM). </plain></SENT>
+</text></p></caption><graphic xlink:href="pone.0062176.g002"/></fig></SecTag></sec><sec id="s3c"><title><text><SENT sid="176" pm="."><plain>Overview of the Differentially Expressed Genes (DEGs) Among the Three Species </plain></SENT>
+</text></title><p><text><SENT sid="177" pm="."><plain>Because only the expression level of orthologous genes can be compared between different species, to identify the DEGs among MED, MEAM1 and Asia II 3, three comparisons were performed for the 15,103 orthologous genes: 1) MEAM1 vs. MED; 2) MEAM1 vs. Asia II 3; and 3) MED vs. Asia II 3. </plain></SENT>
+<SENT sid="178" pm="."><plain>In this way, differences among the three species can be identified and compared based on the same dataset. </plain></SENT>
+<SENT sid="179" pm="."><plain>This analysis identified 2,422 DEGs in MEAM1 vs. MED, 3,073 DEGs in MEAM1 vs. Asia II 3 and 3,644 DEGs in MED vs. Asia II 3 (Figure 1 and Table S2 in the supplemental material), which represent 16.0%, 20.3% and 24.1% of the 15,103 orthologous genes, respectively. </plain></SENT>
+<SENT sid="180" pm="."><plain>The minimum number of DEGs between MEAM1 and MED (2,422) and the maximum number of DEGs between MED and Asia II 3 (3,644) were apparently coordinated with the phylogenetic analysis that MED have a relative closer relationship with MEAM1 than with Asia II 3 [1], [2]. </plain></SENT>
+<SENT sid="181" pm="."><plain>Among the DEGs, 1,218 genes were up-regulated and 1,204 genes down-regulated in MEAM1 vs. MED; 1,911 genes were up-regulated and 1,162 genes down-regulated in MEAM1 vs. Asia II 3; and 2,082 genes were induced and 1,562 genes were repressed in MED vs. Asia II 3 (Figure 3A). </plain></SENT>
+<SENT sid="182" pm="."><plain>In the three comparisons, the detected fold changes (log2 Ratio) of gene expression ranged from −11.2 to 9.3 folds (Figure 3B). </plain></SENT>
+<SENT sid="183" pm="."><plain>The majority of DEGs were up- or down-regulated between 1.0- and 5.0- folds, whereas only a small portion of genes were up- or down-regulated more than 5.0- folds (Figure 3B). </plain></SENT>
+<SENT sid="184" pm="."><plain>Interestingly, the number of genes with more than 5.0- folds differences in gene expression was much larger in MED vs. Asia II 3 (396 up- and 122 down-regulated genes) than in MEAM1 vs. MED (134 up- and 31 down-regulated genes) (Figure 3B). </plain></SENT>
+<SENT sid="185" pm="."><plain>This result is also consistent with the phylogenetic analysis that MED is more closely related to MEAM1 than to Asia II 3. </plain></SENT>
+</text></p><SecTag type="FIG"><fig id="pone-0062176-g003" orientation="portrait" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0062176.g003</object-id><label>Figure 3</label><caption><title><text><SENT sid="186" pm="."><plain>Differentially expressed genes among MEAM1, MED and Asia II 3. </plain></SENT>
+</text></title><p><text><SENT sid="187" pm="."><plain>(A) The number of up-regulated and down-regulated genes among MEAM1, MED and Asia II 3. </plain></SENT>
+<SENT sid="188" pm="."><plain>(B) Fold change (log2 Ratio) distribution of differentially expressed genes. </plain></SENT>
+</text></p></caption><graphic xlink:href="pone.0062176.g003"/></fig></SecTag><p><text><SENT sid="189" pm="."><plain>To validate the DGE data, the gene expression was examined using qPCR. </plain></SENT>
+<SENT sid="190" pm="."><plain>From each of these three comparisons (MEAM1 vs. MED, MEAM1 vs. Asia II 3 and MED vs. Asia II 3), 10 DEGs were selected for qPCR analysis. </plain></SENT>
+<SENT sid="191" pm="."><plain>Out of the 30 genes selected, 27 demonstrated a concordant direction of change for both DGE and qPCR (see Table S3 and S4 in the supplemental material). </plain></SENT>
+<SENT sid="192" pm="."><plain>The expression levels of the other 3 genes were inconsistent between DGE and qPCR results. </plain></SENT>
+<SENT sid="193" pm="."><plain>The partial inconsistency may be caused by two reasons. </plain></SENT>
+<SENT sid="194" pm="."><plain>First, due to the lower sensitivity of qPCR, minor differences in gene expression were difficult to be detected with qPCR assays. </plain></SENT>
+<SENT sid="195" pm="."><plain>Second, the RNA samples used for qPCR and DGE were from different batches and the discrepancy might derive from different sample preparations. </plain></SENT>
+<SENT sid="196" pm="."><plain>Nonetheless, the qPCR analysis confirmed that the DGE results were reliable. </plain></SENT>
+<SENT sid="197" pm="."><plain>This result is consistent with a number of previously experiments, which have proved the validation of DGE analysis [45], [47], [50]. </plain></SENT>
+</text></p></sec><sec id="s3d"><title><text><SENT sid="198" pm="."><plain>Gene Ontology (GO) Analysis </plain></SENT>
+</text></title><p><text><SENT sid="199" pm="."><plain>In order to reveal the functions of the DEGs in each of the three comparisons (MEAM1 vs. MED, MEAM1 vs. Asia II 3 and MED vs. Asia II 3), GO terms were assigned to all DEGs. </plain></SENT>
+<SENT sid="200" pm="."><plain>In MEAM1 vs. MED, 278 genes were identified to the category of Biological process, 305 genes to Molecular function, and 261 genes to Cellular component. </plain></SENT>
+<SENT sid="201" pm="."><plain>As for MEAM1 vs. Asia II 3, 278 genes were identified to Biological process, 302 genes to Molecular function, and 244 genes to Cellular component. </plain></SENT>
+<SENT sid="202" pm="."><plain>For MED vs. Asia II 3, 394 genes were identified to Biological process, 412 genes to Molecular function, and 353 genes to Cellular component. Figure 4 showed that the overall GO annotations of DEGs in the three comparisons were very similar. </plain></SENT>
+<SENT sid="203" pm="."><plain>The numbers of DEGs in each GO term are comparable among the three comparisons. </plain></SENT>
+<SENT sid="204" pm="."><plain>Among the DEGs, the most represented GO terms in the category of Biological process are ‘cellular process’ and ‘metabolic process’, whereas ‘binding’ and ‘catalytic activity’ are the two most represented GO terms in the category of Molecular function. </plain></SENT>
+</text></p><SecTag type="FIG"><fig id="pone-0062176-g004" orientation="portrait" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0062176.g004</object-id><label>Figure 4</label><caption><title><text><SENT sid="205" pm="."><plain>Histogram presentations of GO classification of DEGs among MEAM1, MED and Asia II 3. </plain></SENT>
+</text></title><p><text><SENT sid="206" pm="."><plain>The functions of genes identified cover three main categories: Biological process, Cellular component, and Molecular function. </plain></SENT>
+</text></p></caption><graphic xlink:href="pone.0062176.g004"/></fig></SecTag></sec><sec id="s3e"><title><text><SENT sid="207" pm="."><plain>GO Enrichment Analysis </plain></SENT>
+</text></title><p><text><SENT sid="208" pm="."><plain>To gain further insights into the function of DEGs, multilevel GO enrichment analysis was performed. </plain></SENT>
+<SENT sid="209" pm="."><plain>Between MEAM1 and MED, DEGs were significantly enriched in 6 GO terms in the category of Molecular function (p&lt;0.05) (Table 2). </plain></SENT>
+<SENT sid="210" pm="."><plain>These GO terms were about ‘translation factor activity, nucleic acid binding’, ‘peptidase activity’, ‘RNA polymerase activity’, ‘helicase activity’, ‘peptidase activity, acting on L-amino acid peptides’, ‘endopeptidase activity’. </plain></SENT>
+<SENT sid="211" pm="."><plain>Interestingly, three of the enriched GO terms were related to peptidase activity (Table 2) and the majority of DEGs in these GO terms were up-regulated in MEAM1 compared to MED (Figure 5A). </plain></SENT>
+<SENT sid="212" pm="."><plain>It suggests that the peptidase activity might be higher in MEAM1 than in MED. </plain></SENT>
+<SENT sid="213" pm="."><plain>As for MEAM1 vs. Asia II 3, all the enriched GO terms were about oxidoreductase activity and most of genes in those GO terms were up-regulated in MEAM1 compared to Asia II 3 (Table 2, Figure 5B). </plain></SENT>
+<SENT sid="214" pm="."><plain>Regarding MED vs. Asia II 3, a total of 5 GO terms in the category of Molecular function were enriched, such as ‘oxidoreductase activity’, ‘peptidase activity’ and ‘NADH dehydrogenase activity’ (Table 2, Figure 5C). </plain></SENT>
+<SENT sid="215" pm="."><plain>The data above revealed that the expression of genes in ‘peptidase activity’, ‘oxidoreductase activity’ and ‘NADH dehydrogenase activity’ were significantly different among the three species. </plain></SENT>
+<SENT sid="216" pm="."><plain>Most importantly, in both MEAM1 vs. Asia II 3 and MED vs. Asia II 3, the expression of genes in ‘oxidoreductase activity’ were differentially regulated. </plain></SENT>
+<SENT sid="217" pm="."><plain>Oxidoreductases are important factors that engage in various biochemical reactions such as energy generating, immunity and anti-oxidative stresses [51], [52]. </plain></SENT>
+<SENT sid="218" pm="."><plain>The over-expression of genes in ‘oxidoreductase activity’ might be important for the high adaptability and invasion of MEAM1 and MED. </plain></SENT>
+</text></p><SecTag type="FIG"><fig id="pone-0062176-g005" orientation="portrait" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0062176.g005</object-id><label>Figure 5</label><caption><title><text><SENT sid="219" pm="."><plain>Analysis of DEGs in enriched GO terms. </plain></SENT>
+</text></title><p><text><SENT sid="220" pm="."><plain>(A) The number of up-regulated and down-regulated genes in enriched GO terms between MEAM1 and MED. </plain></SENT>
+<SENT sid="221" pm="."><plain>(B) The number of up-regulated and down-regulated genes in enriched GO terms between MEAM1 and Asia II 3. </plain></SENT>
+<SENT sid="222" pm="."><plain>(C) The number of up-regulated and down-regulated genes in enriched GO terms between MED and Asia II 3. </plain></SENT>
+</text></p></caption><graphic xlink:href="pone.0062176.g005"/></fig></SecTag><SecTag type="TABLE"><table-wrap id="pone-0062176-t002" orientation="portrait" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0062176.t002</object-id><label>Table 2</label><caption><title><text><SENT sid="223" pm="."><plain>Statistically enriched Gene Ontology terms among the DEGs in the ‘Molecular function’ category. </plain></SENT>
+</text></title></caption><alternatives><graphic id="pone-0062176-t002-2" xlink:href="pone.0062176.t002"/><table frame="hsides" rules="groups"><colgroup span="1"><col align="left" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/></colgroup><thead><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="224" pm="."><plain>GO ID </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="225" pm="."><plain>Level </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="226" pm="."><plain>GO Ontology </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="227" pm="."><plain>No. of DEGs* </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="228" pm="."><plain>No. of genes** </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="229" pm="."><plain>p-value*** </plain></SENT>
+</text></td></tr></thead><tbody><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="230" pm="."><plain>MEAM1 vs. MED </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="231" pm="."><plain>GO:0008135 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="232" pm="."><plain>4 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="233" pm="."><plain>Translation factor activity, nucleic acid binding </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="234" pm="."><plain>12 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="235" pm="."><plain>45 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="236" pm="."><plain>0.025 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="237" pm="."><plain>GO:0008233 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="238" pm="."><plain>4 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="239" pm="."><plain>Peptidase activity </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="240" pm="."><plain>26 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="241" pm="."><plain>115 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="242" pm="."><plain>0.029 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="243" pm="."><plain>GO:0034062 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="244" pm="."><plain>6 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="245" pm="."><plain>RNA polymerase activity </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="246" pm="."><plain>8 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="247" pm="."><plain>29 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="248" pm="."><plain>0.037 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="249" pm="."><plain>GO:0004386 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="250" pm="."><plain>8 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="251" pm="."><plain>Helicase activity </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="252" pm="."><plain>7 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="253" pm="."><plain>25 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="254" pm="."><plain>0.041 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="255" pm="."><plain>GO:0070011 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="256" pm="."><plain>5 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="257" pm="."><plain>Peptidase activity, acting on L-aminoacid peptides </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="258" pm="."><plain>21 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="259" pm="."><plain>93 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="260" pm="."><plain>0.043 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="261" pm="."><plain>GO:0004175 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="262" pm="."><plain>6 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="263" pm="."><plain>Endopeptidase activity </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="264" pm="."><plain>12 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="265" pm="."><plain>49 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="266" pm="."><plain>0.048 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="267" pm="."><plain>MEAM1 vs. Asia II 3 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="268" pm="."><plain>GO:0016491 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="269" pm="."><plain>3 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="270" pm="."><plain>Oxidoreductase activity </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="271" pm="."><plain>34 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="272" pm="."><plain>154 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="273" pm="."><plain>0.008 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="274" pm="."><plain>GO:0016614 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="275" pm="."><plain>4 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="276" pm="."><plain>Oxidoreductase activity, acting onCH-OH group of donors </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="277" pm="."><plain>9 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="278" pm="."><plain>28 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="279" pm="."><plain>0.010 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="280" pm="."><plain>GO:0016616 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="281" pm="."><plain>5 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="282" pm="."><plain>Oxidoreductase activity, acting on the CH-OHgroup of donors, NAD or NADP as acceptor </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="283" pm="."><plain>8 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="284" pm="."><plain>23 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="285" pm="."><plain>0.023 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="286" pm="."><plain>MED vs. Asia II 3 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1"/></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="287" pm="."><plain>GO:0003954 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="288" pm="."><plain>5 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="289" pm="."><plain>NADH dehydrogenase activity </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="290" pm="."><plain>6 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="291" pm="."><plain>9 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="292" pm="."><plain>0.001 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="293" pm="."><plain>GO:0070011 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="294" pm="."><plain>5 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="295" pm="."><plain>Peptidase activity, acting on L-aminoacid peptides </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="296" pm="."><plain>32 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="297" pm="."><plain>93 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="298" pm="."><plain>0.003 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="299" pm="."><plain>GO:0008233 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="300" pm="."><plain>4 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="301" pm="."><plain>Peptidase activity </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="302" pm="."><plain>36 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="303" pm="."><plain>115 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="304" pm="."><plain>0.009 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="305" pm="."><plain>GO:0016651 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="306" pm="."><plain>4 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="307" pm="."><plain>Oxidoreductase activity, acting on NADHor NADPH </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="308" pm="."><plain>8 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="309" pm="."><plain>19 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="310" pm="."><plain>0.014 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="311" pm="."><plain>GO:0008168 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="312" pm="."><plain>5 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="313" pm="."><plain>Methyltransferase activity </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="314" pm="."><plain>7 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="315" pm="."><plain>18 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="316" pm="."><plain>0.032 </plain></SENT>
+</text></td></tr></tbody></table></alternatives><table-wrap-foot><fn id="nt101"><label>*</label><p><text><SENT sid="317" pm="."><plain>The number of differentially expressed genes (DEGs) in a Gene Ontology (GO) term. </plain></SENT>
+</text></p></fn><fn id="nt102"><label>**</label><p><text><SENT sid="318" pm="."><plain>The total number of orthologous genes in a GO term. </plain></SENT>
+</text></p></fn><fn id="nt103"><label>***</label><p><text><SENT sid="319" pm="."><plain>The significantly enriched GO terms in DEGs were identified using hypergeometric test and pathways with the p≤0.05 were deemed to be enriched in DEGs. </plain></SENT>
+</text></p></fn></table-wrap-foot></table-wrap></SecTag><p><text><SENT sid="320" pm="."><plain>Next, enriched GO terms in the category of Biological process were also investigated (Table S5). </plain></SENT>
+<SENT sid="321" pm="."><plain>The DEGs in MEAM1 vs. MED were enriched in 4 GO terms and the DEGs between MEAM1 and Asia II 3 were enriched in 6 GO terms. </plain></SENT>
+<SENT sid="322" pm="."><plain>Surprisingly, the number of GO terms (26) enriched with DEGs between MED and Asia II 3 was more than 2 times of the total number of enriched GO terms in MEAM1 vs. MED (4) and MEAM1 vs. Asia II 3 (6). </plain></SENT>
+<SENT sid="323" pm="."><plain>This result implied that in the category of Biological process the discrepancies between MED vs. Asia II 3 were much larger than MEAM1 vs. MED or MEAM1 vs. Asia II 3. </plain></SENT>
+</text></p></sec><sec id="s3f"><title><text><SENT sid="324" pm="."><plain>Pathway Enrichment Analysis </plain></SENT>
+</text></title><p><text><SENT sid="325" pm="."><plain>To investigate which biological pathways were significantly regulated among the three species, we mapped their DEGs to KEGG pathways. </plain></SENT>
+<SENT sid="326" pm="."><plain>Among the 2,422 DEGs in MEAM1 vs. MED library, 326 genes were mapped to 183 pathways. </plain></SENT>
+<SENT sid="327" pm="."><plain>In MEAM1 vs. Asia II 3 library, 319 of the 3,073 DEGs were mapped to 189 pathways, and in MED vs. Asia II 3 library, 427 of the 3,644 DEGs were mapped to 205 pathways (Table S6). </plain></SENT>
+<SENT sid="328" pm="."><plain>Enrichment analysis was subsequently conducted to identify the significantly influenced pathways (p&lt;0.05). </plain></SENT>
+<SENT sid="329" pm="."><plain>Between MEAM1 and MED, ten pathways were enriched and most of them were associated with carbohydrate and amino acid metabolisms such as ‘Galactose metabolism’, ‘Tyrosine metabolism’ and ‘Fructose and mannose metabolism’ etc. </plain></SENT>
+<SENT sid="330" pm="."><plain>(Table 3). </plain></SENT>
+<SENT sid="331" pm="."><plain>As for MEAM1 vs. Asia II 3, 11 pathways were enriched with DEGs (Table 4) and 15 pathways were enriched in MED vs. Asia II 3 (Table 5). </plain></SENT>
+</text></p><SecTag type="TABLE"><table-wrap id="pone-0062176-t003" orientation="portrait" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0062176.t003</object-id><label>Table 3</label><caption><title><text><SENT sid="332" pm="."><plain>Statistically enriched pathways among the DEGs between MEAM1 and MED. </plain></SENT>
+</text></title></caption><alternatives><graphic id="pone-0062176-t003-3" xlink:href="pone.0062176.t003"/><table frame="hsides" rules="groups"><colgroup span="1"><col align="left" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/></colgroup><thead><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="333" pm="."><plain>Pathways </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="334" pm="."><plain>No. of DEGs* </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="335" pm="."><plain>No. of genes** </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="336" pm="."><plain>p-value*** </plain></SENT>
+</text></td></tr></thead><tbody><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="337" pm="."><plain>Lysosome </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="338" pm="."><plain>28 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="339" pm="."><plain>83 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="340" pm="."><plain>0.000 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="341" pm="."><plain>Galactose metabolism </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="342" pm="."><plain>12 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="343" pm="."><plain>29 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="344" pm="."><plain>0.001 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="345" pm="."><plain>Tyrosine metabolism </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="346" pm="."><plain>6 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="347" pm="."><plain>16 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="348" pm="."><plain>0.014 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="349" pm="."><plain>Fructose and mannose metabolism </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="350" pm="."><plain>7 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="351" pm="."><plain>20 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="352" pm="."><plain>0.016 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="353" pm="."><plain>Polycyclic aromatic hydrocarbon degradation </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="354" pm="."><plain>6 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="355" pm="."><plain>18 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="356" pm="."><plain>0.028 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="357" pm="."><plain>Glutathione metabolism </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="358" pm="."><plain>9 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="359" pm="."><plain>30 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="360" pm="."><plain>0.029 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="361" pm="."><plain>Pentose and glucuronate interconversions </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="362" pm="."><plain>8 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="363" pm="."><plain>26 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="364" pm="."><plain>0.030 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="365" pm="."><plain>Pyruvate metabolism </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="366" pm="."><plain>8 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="367" pm="."><plain>26 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="368" pm="."><plain>0.030 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="369" pm="."><plain>Glycine, serine and threonine metabolism </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="370" pm="."><plain>5 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="371" pm="."><plain>15 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="372" pm="."><plain>0.036 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="373" pm="."><plain>Glycerolipid metabolism </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="374" pm="."><plain>7 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="375" pm="."><plain>24 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="376" pm="."><plain>0.049 </plain></SENT>
+</text></td></tr></tbody></table></alternatives><table-wrap-foot><fn id="nt104"><label>*</label><p><text><SENT sid="377" pm="."><plain>The number of differentially expressed genes (DEGs) that belong to a KEGG pathway. </plain></SENT>
+</text></p></fn><fn id="nt105"><label>**</label><p><text><SENT sid="378" pm="."><plain>The total number of orthologous genes that belong to a KEGG pathway. </plain></SENT>
+</text></p></fn><fn id="nt106"><label>***</label><p><text><SENT sid="379" pm="."><plain>The significantly enriched pathways in DEGs were identified using hypergeometric test and pathways with the p≤0.05 were deemed to be enriched in DEGs. </plain></SENT>
+</text></p></fn></table-wrap-foot></table-wrap></SecTag><SecTag type="TABLE"><table-wrap id="pone-0062176-t004" orientation="portrait" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0062176.t004</object-id><label>Table 4</label><caption><title><text><SENT sid="380" pm="."><plain>Statistically enriched pathways among the DEGs between MEAM1 and Asia II 3. </plain></SENT>
+</text></title></caption><alternatives><graphic id="pone-0062176-t004-4" xlink:href="pone.0062176.t004"/><table frame="hsides" rules="groups"><colgroup span="1"><col align="left" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/></colgroup><thead><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="381" pm="."><plain>Pathways </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="382" pm="."><plain>No. of DEGs* </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="383" pm="."><plain>No. of genes** </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="384" pm="."><plain>p-value*** </plain></SENT>
+</text></td></tr></thead><tbody><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="385" pm="."><plain>Histidine metabolism </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="386" pm="."><plain>5 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="387" pm="."><plain>11 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="388" pm="."><plain>0.006 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="389" pm="."><plain>beta-Alanine metabolism </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="390" pm="."><plain>6 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="391" pm="."><plain>15 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="392" pm="."><plain>0.008 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="393" pm="."><plain>Pentose and glucuronate interconversions </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="394" pm="."><plain>9 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="395" pm="."><plain>26 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="396" pm="."><plain>0.009 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="397" pm="."><plain>Tyrosine metabolism </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="398" pm="."><plain>6 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="399" pm="."><plain>16 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="400" pm="."><plain>0.013 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="401" pm="."><plain>Ribosome biogenesis in eukaryotes </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="402" pm="."><plain>16 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="403" pm="."><plain>59 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="404" pm="."><plain>0.020 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="405" pm="."><plain>Propanoate metabolism </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="406" pm="."><plain>6 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="407" pm="."><plain>18 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="408" pm="."><plain>0.026 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="409" pm="."><plain>Polycyclic aromatic hydrocarbon degradation </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="410" pm="."><plain>6 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="411" pm="."><plain>18 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="412" pm="."><plain>0.026 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="413" pm="."><plain>Ascorbate and aldarate metabolism </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="414" pm="."><plain>6 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="415" pm="."><plain>18 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="416" pm="."><plain>0.026 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="417" pm="."><plain>Drug metabolism - other enzymes </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="418" pm="."><plain>11 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="419" pm="."><plain>40 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="420" pm="."><plain>0.035 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="421" pm="."><plain>Glycerolipid metabolism </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="422" pm="."><plain>7 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="423" pm="."><plain>24 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="424" pm="."><plain>0.045 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="425" pm="."><plain>Methane metabolism </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="426" pm="."><plain>6 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="427" pm="."><plain>20 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="428" pm="."><plain>0.046 </plain></SENT>
+</text></td></tr></tbody></table></alternatives><table-wrap-foot><fn id="nt107"><label>*</label><p><text><SENT sid="429" pm="."><plain>The number of differentially expressed genes (DEGs) that belong to a KEGG pathway. </plain></SENT>
+</text></p></fn><fn id="nt108"><label>**</label><p><text><SENT sid="430" pm="."><plain>The total number of orthologous genes that belong to a KEGG pathway. </plain></SENT>
+</text></p></fn><fn id="nt109"><label>***</label><p><text><SENT sid="431" pm="."><plain>The significantly enriched pathways were identified using hypergeometric test and pathways with the p≤0.05 were deemed to be enriched in DEGs. </plain></SENT>
+</text></p></fn></table-wrap-foot></table-wrap></SecTag><SecTag type="TABLE"><table-wrap id="pone-0062176-t005" orientation="portrait" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0062176.t005</object-id><label>Table 5</label><caption><title><text><SENT sid="432" pm="."><plain>Statistically enriched pathways among the DEGs between MED and Asia II 3. </plain></SENT>
+</text></title></caption><alternatives><graphic id="pone-0062176-t005-5" xlink:href="pone.0062176.t005"/><table frame="hsides" rules="groups"><colgroup span="1"><col align="left" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/></colgroup><thead><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="433" pm="."><plain>Pathways </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="434" pm="."><plain>No. of DEGs* </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="435" pm="."><plain>No. of genes** </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="436" pm="."><plain>p-value*** </plain></SENT>
+</text></td></tr></thead><tbody><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="437" pm="."><plain>Pentose and glucuronate interconversions </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="438" pm="."><plain>13 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="439" pm="."><plain>26 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="440" pm="."><plain>0.001 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="441" pm="."><plain>Galactose metabolism </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="442" pm="."><plain>14 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="443" pm="."><plain>29 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="444" pm="."><plain>0.001 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="445" pm="."><plain>Drug metabolism - other enzymes </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="446" pm="."><plain>17 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="447" pm="."><plain>40 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="448" pm="."><plain>0.002 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="449" pm="."><plain>Oxidative phosphorylation </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="450" pm="."><plain>28 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="451" pm="."><plain>80 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="452" pm="."><plain>0.005 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="453" pm="."><plain>Starch and sucrose metabolism </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="454" pm="."><plain>18 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="455" pm="."><plain>47 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="456" pm="."><plain>0.006 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="457" pm="."><plain>beta-Alanine metabolism </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="458" pm="."><plain>7 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="459" pm="."><plain>15 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="460" pm="."><plain>0.011 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="461" pm="."><plain>Ascorbate and aldarate metabolism </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="462" pm="."><plain>8 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="463" pm="."><plain>18 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="464" pm="."><plain>0.012 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="465" pm="."><plain>Steroid hormone biosynthesis </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="466" pm="."><plain>12 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="467" pm="."><plain>30 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="468" pm="."><plain>0.012 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="469" pm="."><plain>Other types of O-glycan biosynthesis </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="470" pm="."><plain>8 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="471" pm="."><plain>18 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="472" pm="."><plain>0.012 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="473" pm="."><plain>Glyoxylate and dicarboxylate metabolism </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="474" pm="."><plain>5 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="475" pm="."><plain>10 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="476" pm="."><plain>0.014 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="477" pm="."><plain>Porphyrin and chlorophyll metabolism </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="478" pm="."><plain>11 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="479" pm="."><plain>28 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="480" pm="."><plain>0.017 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="481" pm="."><plain>Fructose and mannose metabolism </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="482" pm="."><plain>8 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="483" pm="."><plain>20 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="484" pm="."><plain>0.026 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="485" pm="."><plain>Long-term depression </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="486" pm="."><plain>5 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="487" pm="."><plain>12 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="488" pm="."><plain>0.039 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="489" pm="."><plain>Retinol metabolism </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="490" pm="."><plain>15 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="491" pm="."><plain>45 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="492" pm="."><plain>0.042 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="493" pm="."><plain>Peroxisome </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="494" pm="."><plain>16 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="495" pm="."><plain>49 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="496" pm="."><plain>0.046 </plain></SENT>
+</text></td></tr></tbody></table></alternatives><table-wrap-foot><fn id="nt110"><label>*</label><p><text><SENT sid="497" pm="."><plain>The number of differentially expressed genes (DEGs) that belong to a KEGG pathway. </plain></SENT>
+</text></p></fn><fn id="nt111"><label>**</label><p><text><SENT sid="498" pm="."><plain>The total number of orthologous genes that belong to a KEGG pathway. </plain></SENT>
+</text></p></fn><fn id="nt112"><label>***</label><p><text><SENT sid="499" pm="."><plain>The significantly enriched pathways were identified using hypergeometric test and pathways with the p≤0.05 were deemed to be enriched in DEGs. </plain></SENT>
+</text></p></fn></table-wrap-foot></table-wrap></SecTag></sec><sec id="s3g"><title><text><SENT sid="500" pm="."><plain>Differently Regulated Pathways between the Two Invasive Species </plain></SENT>
+</text></title><p><text><SENT sid="501" pm="."><plain>When comparing MEAM1 and MED, the DEGs were significantly enriched in three carbohydrate and two amino acid metabolic pathways (‘Pentose and glucuronate interconversions’, ‘Fructose and mannose metabolism’, ‘Galactose metabolism’, ‘Glycine, serine and theronine metabolism’, and ‘Tyrosine metabolism’) (Table 3). </plain></SENT>
+<SENT sid="502" pm="."><plain>The DEGs involved in these pathways were examined and the results showed that more genes were expressed at a higher level in MEAM1 than in MED, which may indicate the MEAM1 species has higher activities in carbohydrate and amino acid metabolism than MED (Figure 6A). </plain></SENT>
+<SENT sid="503" pm="."><plain>Between the DEGs of the two invasive species, the most enriched pathway was ‘lysosome’ pathway. </plain></SENT>
+<SENT sid="504" pm="."><plain>Interestingly, 25 out of the 28 DEGs involved in this pathway were up-regulated in MEAM1 compared to MED (Table S6). </plain></SENT>
+<SENT sid="505" pm="."><plain>In eukaryotic cells, both endogenous and exogenous macromolecules can be delivered to lysosome for degeneration by more than 50 acid-dependent hydrolases contained within its lumen [53]. </plain></SENT>
+<SENT sid="506" pm="."><plain>The data above implied that the MEAM1 species may have higher lysosome activity than the MED species. </plain></SENT>
+</text></p><SecTag type="FIG"><fig id="pone-0062176-g006" orientation="portrait" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0062176.g006</object-id><label>Figure 6</label><caption><title><text><SENT sid="507" pm="."><plain>Analysis of DEGs in the enriched carbohydrate, amino acid, glycerolipid and steroid related metabolic pathways among MEAM1, MED, Asia II 3. </plain></SENT>
+</text></title><p><text><SENT sid="508" pm="."><plain>(A) The number of up-regulated and down-regulated genes in these enriched pathways between MEAM1 and MED. </plain></SENT>
+<SENT sid="509" pm="."><plain>(B) The number of up- and down-regulated genes in these enriched pathways between MEAM1 and Asia II 3. </plain></SENT>
+<SENT sid="510" pm="."><plain>(C) The number of up- and down-regulated genes in these enriched pathways between MED and Asia II 3. </plain></SENT>
+</text></p></caption><graphic xlink:href="pone.0062176.g006"/></fig></SecTag></sec><sec id="s3h"><title><text><SENT sid="511" pm="."><plain>Differentially Regulated Pathways between Invasive and Indigenous Whiteflies </plain></SENT>
+</text></title><p><text><SENT sid="512" pm="."><plain>Regarding MEAM1 vs. Asia II 3, DEGs were significantly enriched in the pathways of carbohydrate and amino acid metabolisms, such as ‘Pentose and glucuronate interconversions’, ‘beta-Alanine metabolism’, ‘Tyrosine metabolism’, ‘Histidine metabolism’ and ‘Glycerolipid metabolism’ (Table 4). </plain></SENT>
+<SENT sid="513" pm="."><plain>For MED vs. Asia II 3, pathways involved in carbohydrate and amino acid metabolisms were significantly enriched with DEGs as well, such as ‘Pentose and glucuronate interconversions’, ‘Fructose and mannose metabolism’, ‘Galactose metabolism’, ‘Starch and sucrose metabolism’, ‘Other types of O-glycan biosynthesis’ and ‘beta-Alanine metabolism’ (Table 5). </plain></SENT>
+<SENT sid="514" pm="."><plain>Among those pathways, the majority of genes were expressed at a higher level in MEAM1 and MED compared to Asia II 3 (Figure 6B, 6C). </plain></SENT>
+<SENT sid="515" pm="."><plain>Carbohydrates, amino acids and glycerolipids are not only the building blocks of insect body, but also essential for various behavioral and physiological processes [54]–[56]. </plain></SENT>
+<SENT sid="516" pm="."><plain>Thus, our data analysis revealed that, on cotton plants, carbohydrate, amino acid and glycerolipid metabolisms might be more active in MEAM1 and MED than in Asia II 3. </plain></SENT>
+<SENT sid="517" pm="."><plain>The diverged expression of metabolism genes in MEAM1, MED and Asia II 3 may contribute to their differences in biological characteristics and adaptability to host plants (Figure 4). </plain></SENT>
+</text></p></sec><sec id="s3i"><title><text><SENT sid="518" pm="."><plain>Up-regulation of Drug Metabolism and Anti-stress Related Genes in MEAM1 and MED </plain></SENT>
+</text></title><p><text><SENT sid="519" pm="."><plain>Between MEAM1 and Asia II 3, the DEGs were significantly enriched in the ‘Drug metabolism - other enzymes’ pathway (p = 0.035), and 9 out of the 11 DEGs were expressed at a higher level in MEAM1 compared to Asia II 3 (Table 6). </plain></SENT>
+<SENT sid="520" pm="."><plain>Among these DEGs, two P450 genes and two UDP-glucuronosyltransferase (UGT) genes were expressed at a higher level in MEAM1 than in Asia II 3 with log2 (MEAM1/Asia II 3) &gt;4.2. </plain></SENT>
+<SENT sid="521" pm="."><plain>As for MED vs. Asia II 3, the DEGs were also significantly enriched in the ‘Drug metabolism - other enzymes’ pathway (p = 0.002), and 12 out of 17 genes were up-regulated in MED compared to Asia II 3. </plain></SENT>
+<SENT sid="522" pm="."><plain>Interestingly, among these DEGs, three P450 genes and three UGT genes were up-regulated in MED compared to Asia II 3 (Table 7). </plain></SENT>
+<SENT sid="523" pm="."><plain>During the interaction between insects and plants, insects have evolved mechanisms to protect themself from plant toxic compounds by a variety of enzymatic detoxification systems. </plain></SENT>
+<SENT sid="524" pm="."><plain>P450s occupy an important position in detoxification processes due to their extraordinary versatility, multiplicity and diversity of substrate recognition sites [57], [58]. </plain></SENT>
+<SENT sid="525" pm="."><plain>In addition, P450s also play a significant role in insecticide resistance [59], [60]. </plain></SENT>
+<SENT sid="526" pm="."><plain>UGTs belong to another family of enzymes involved in insect detoxification of plant allelochemicals and insecticides through glycosylation, which converts lipophilic aglycones into more hydrophilic glycosides, facilitating the excretion or sequestration for further utilization [61], [62]. </plain></SENT>
+<SENT sid="527" pm="."><plain>Both MEAM1 and MED have a wide range of host plant, and MED is also known for its anti-insecticide ability. </plain></SENT>
+<SENT sid="528" pm="."><plain>As P450s and UGTs have those important functions, their high expression in MEAM1 and MED may contribute to the wide host plant range and anti-insecticide ability of both MEAM1 and MED whiteflies [31], [32] and lead to the two species’ invasion and displacement of the indigenous Asia II 3 species. </plain></SENT>
+</text></p><SecTag type="TABLE"><table-wrap id="pone-0062176-t006" orientation="portrait" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0062176.t006</object-id><label>Table 6</label><caption><title><text><SENT sid="529" pm="."><plain>DEGs in ‘Drug metabolism - other enzymes’ pathway in MEAM1 vs. Asia II 3. </plain></SENT>
+</text></title></caption><alternatives><graphic id="pone-0062176-t006-6" xlink:href="pone.0062176.t006"/><table frame="hsides" rules="groups"><colgroup span="1"><col align="left" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/></colgroup><thead><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="530" pm="."><plain>Gene ID </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="531" pm="."><plain>Homologous function* </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="532" pm="."><plain>Species </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="533" pm="."><plain>Accession no. </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="534" pm="."><plain>FC** </plain></SENT>
+</text></td></tr></thead><tbody><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="535" pm="."><plain>BT_B_ZJU_Singletons26640 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="536" pm="."><plain>UDP-glucuronosyltransferase 1–8 precursor, putative </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="537" pm="."><plain>Pediculus humanus corporis </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="538" pm="."><plain>XP_002427365.1 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="539" pm="."><plain>−1.47 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="540" pm="."><plain>BT_Q_ZJU_Singletons12425 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="541" pm="."><plain>Cytochrome P450 6B21 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="542" pm="."><plain>Papilio glaucus </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="543" pm="."><plain>AF280622_1 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="544" pm="."><plain>−1.46 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="545" pm="."><plain>BT_B_ZJU_Singletons74969 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="546" pm="."><plain>UDP glucuronosyltransferase 2B11 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="547" pm="."><plain>Gallus gallus </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="548" pm="."><plain>XP_420613.2 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="549" pm="."><plain>2.96 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="550" pm="."><plain>BT_B_ZJU_Singletons104121 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="551" pm="."><plain>GMP synthase </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="552" pm="."><plain>Tribolium castaneum </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="553" pm="."><plain>XP_001812886.1 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="554" pm="."><plain>3.25 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="555" pm="."><plain>BT_B_ZJU_Singletons103244 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="556" pm="."><plain>Inosine-5'-monophosphate dehydrogenase </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="557" pm="."><plain>Harpegnathos saltator </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="558" pm="."><plain>EFN84850.1 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="559" pm="."><plain>3.32 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="560" pm="."><plain>BT_Q_ZJU_Singletons166670 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="561" pm="."><plain>Glucosyl/glucuronosyl transferases </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="562" pm="."><plain>Tribolium castaneum </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="563" pm="."><plain>XP_967606.2 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="564" pm="."><plain>3.32 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="565" pm="."><plain>BT_B_ZJU_Singletons101287 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="566" pm="."><plain>Dihydropyrimidine dehydrogenase </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="567" pm="."><plain>Camponotus floridanus </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="568" pm="."><plain>EFN63987.1 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="569" pm="."><plain>3.62 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="570" pm="."><plain>BT_B_ZJU_Singletons81386 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="571" pm="."><plain>Cytochrome P450 CYP6CX1v1 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="572" pm="."><plain>Bemisia tabaci </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="573" pm="."><plain>ACT68012.1 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="574" pm="."><plain>4.21 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="575" pm="."><plain>BT_B_ZJU_Singletons21983 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="576" pm="."><plain>Feruloyl esterasee protein, Est4 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="577" pm="."><plain>Reticulitermes flavipes </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="578" pm="."><plain>ACT53739.1 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="579" pm="."><plain>4.95 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="580" pm="."><plain>BT_Q_ZJU_Singletons121366 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="581" pm="."><plain>UDP-glucosyltransferase </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="582" pm="."><plain>Bombyx mori </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="583" pm="."><plain>NP_001182390.1 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="584" pm="."><plain>6.39 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="585" pm="."><plain>BT_B_ZJU_Singletons103451 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="586" pm="."><plain>Cytochrome P450 CYP6CX1v1 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="587" pm="."><plain>Bemisia tabaci </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="588" pm="."><plain>ACT68012.1 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="589" pm="."><plain>6.45 </plain></SENT>
+</text></td></tr></tbody></table></alternatives><table-wrap-foot><fn id="nt113"><label>*</label><p><text><SENT sid="590" pm="."><plain>The function of the homologous gene. </plain></SENT>
+</text></p></fn><fn id="nt114"><label>**</label><p><text><SENT sid="591" pm="."><plain>FC, fold change (log2 MEAM1/Asia II 3) of gene expression. </plain></SENT>
+</text></p></fn></table-wrap-foot></table-wrap></SecTag><SecTag type="TABLE"><table-wrap id="pone-0062176-t007" orientation="portrait" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0062176.t007</object-id><label>Table 7</label><caption><title><text><SENT sid="592" pm="."><plain>DEGs in ‘Drug metabolism - other enzymes pathway’ in MED vs. Asia II 3. </plain></SENT>
+</text></title></caption><alternatives><graphic id="pone-0062176-t007-7" xlink:href="pone.0062176.t007"/><table frame="hsides" rules="groups"><colgroup span="1"><col align="left" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/></colgroup><thead><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="593" pm="."><plain>Gene ID </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="594" pm="."><plain>Homologous function* </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="595" pm="."><plain>Species </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="596" pm="."><plain>Accession no. </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="597" pm="."><plain>FC** </plain></SENT>
+</text></td></tr></thead><tbody><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="598" pm="."><plain>BT_Q_ZJU_Singletons12425 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="599" pm="."><plain>Cytochrome P450 6B21 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="600" pm="."><plain>Papilio glaucus </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="601" pm="."><plain>AF280622_1 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="602" pm="."><plain>−6.26 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="603" pm="."><plain>BT_B_ZJU_Singletons1669 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="604" pm="."><plain>Spermatogonial stem-cell renewal factor </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="605" pm="."><plain>Branchiostoma floridae </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="606" pm="."><plain>XP_002594939.1 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="607" pm="."><plain>−2.71 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="608" pm="."><plain>BT_Q_ZJU_Singletons29450 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="609" pm="."><plain>UDP-glucuronosyltransferase 2A3 isoform 2 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="610" pm="."><plain>Pan troglodytes </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="611" pm="."><plain>XP_526602.2 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="612" pm="."><plain>−1.87 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="613" pm="."><plain>BT_Q_ZJU_Singletons152808 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="614" pm="."><plain>Dihydropyrimidinase, putative </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="615" pm="."><plain>Pediculus humanus corporis </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="616" pm="."><plain>XP_002431143.1 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="617" pm="."><plain>−1.82 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="618" pm="."><plain>BT_B_ZJU_Singletons26640 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="619" pm="."><plain>UDP-glucuronosyltransferase 1–8 precursor, putative </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="620" pm="."><plain>Pediculus humanus corporis </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="621" pm="."><plain>XP_002427365.1 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="622" pm="."><plain>−1.53 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="623" pm="."><plain>BT_Q_ZJU_Singletons34238 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="624" pm="."><plain>Antennal-enriched UDP-glycosyltransferase </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="625" pm="."><plain>Tribolium castaneum </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="626" pm="."><plain>XP_969004.1 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="627" pm="."><plain>1.83 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="628" pm="."><plain>BT_Q_ZJU_Singletons6014 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="629" pm="."><plain>Cytochrome P450 CYP6CX1v2 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="630" pm="."><plain>Bemisia tabaci </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="631" pm="."><plain>ACT78507.2 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="632" pm="."><plain>2.33 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="633" pm="."><plain>BT_B_ZJU_Singletons104121 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="634" pm="."><plain>GMP synthase, putativehypothetical protein </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="635" pm="."><plain>Pediculus humanus corporis </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="636" pm="."><plain>EFA09313.1 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="637" pm="."><plain>2.87 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="638" pm="."><plain>BT_B_ZJU_Singletons74969 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="639" pm="."><plain>UDP-glucuronosyltransferase 2B11 protein </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="640" pm="."><plain>Gallus gallus </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="641" pm="."><plain>XP_420613.2 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="642" pm="."><plain>3.23 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="643" pm="."><plain>BT_ZHJ1_ZJU_Unigene39602 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="644" pm="."><plain>UDP-glucuronosyltransferase 2B7 precursor </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="645" pm="."><plain>Canis familiaris </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="646" pm="."><plain>XP_852203.1 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="647" pm="."><plain>3.65 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="648" pm="."><plain>BT_Q_ZJU_Singletons166670 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="649" pm="."><plain>Glucosyl/glucuronosyl transferases </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="650" pm="."><plain>Tribolium castaneum </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="651" pm="."><plain>XP_967606.2 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="652" pm="."><plain>3.68 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="653" pm="."><plain>BT_B_ZJU_Singletons101287 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="654" pm="."><plain>Dihydropyrimidine dehydrogenase [NADP+] </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="655" pm="."><plain>Camponotus floridanus </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="656" pm="."><plain>EFN63987.1 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="657" pm="."><plain>4.01 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="658" pm="."><plain>BT_B_ZJU_Singletons81386 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="659" pm="."><plain>Cytochrome P450 CYP6CX1v1 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="660" pm="."><plain>Bemisia tabaci </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="661" pm="."><plain>ACT68012.1 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="662" pm="."><plain>4.01 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="663" pm="."><plain>BT_B_ZJU_Singletons21983 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="664" pm="."><plain>Feruloyl esterase-like protein Est4 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="665" pm="."><plain>Reticulitermes flavipes </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="666" pm="."><plain>ACT53739.1 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="667" pm="."><plain>4.40 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="668" pm="."><plain>BT_ZHJ1_ZJU_Unigene25036 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="669" pm="."><plain>Uridine cytidine kinase </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="670" pm="."><plain>Nasonia vitripennis </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="671" pm="."><plain>XP_001605136.1 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="672" pm="."><plain>4.55 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="673" pm="."><plain>BT_B_ZJU_Singletons103451 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="674" pm="."><plain>Cytochrome P450 CYP6CX1v1 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="675" pm="."><plain>Bemisia tabaci </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="676" pm="."><plain>ACT68012.1 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="677" pm="."><plain>5.07 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="678" pm="."><plain>BT_Q_ZJU_Singletons121366 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="679" pm="."><plain>UDP-glucosyltransferase protein 3 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="680" pm="."><plain>Bombyx mori </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="681" pm="."><plain>NP_001161187.1 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="682" pm="."><plain>6.89 </plain></SENT>
+</text></td></tr></tbody></table></alternatives><table-wrap-foot><fn id="nt115"><label>*</label><p><text><SENT sid="683" pm="."><plain>The function of the homologous gene. </plain></SENT>
+</text></p></fn><fn id="nt116"><label>**</label><p><text><SENT sid="684" pm="."><plain>FC, fold change (log2 MED/Asia II 3) of gene expression. </plain></SENT>
+</text></p></fn></table-wrap-foot></table-wrap></SecTag><p><text><SENT sid="685" pm="."><plain>In the ‘Peroxisome’ pathway, a CuZn SOD gene and a catalase gene were found expressed at a higher level in MEAM1 and MED than in Asia II 3 (Table S6). </plain></SENT>
+<SENT sid="686" pm="."><plain>SOD is an important member of antioxidant enzymes capable of detoxifying reactive oxygen species such as superoxide anion (O2 −) and hydrogen peroxide (H2O2), which were produced under various stress conditions [63]. </plain></SENT>
+<SENT sid="687" pm="."><plain>A series of studies have reported that CuZnSOD involved in defense response against many biological stimulators such as heavy metals [64], heat shock [65], infection and pesticide resistance [66], [67]. </plain></SENT>
+<SENT sid="688" pm="."><plain>Catalase is another antioxidant enzyme responsible for the degradation of H2O2 generated under stress conditions [68]–[70]. </plain></SENT>
+<SENT sid="689" pm="."><plain>Compared to Asia II 3, MEAM1 is known for its higher adaptive ability to a number of host plants [21], [71], and MED has its own advantage in insecticide resistance [32]. </plain></SENT>
+<SENT sid="690" pm="."><plain>The results above are particularly interesting and suggest that the higher adaptive capacity observed in MEAM1 species or the stronger anti-insecticide ability of MED might be related to the over-expression of some important genes of detoxification or anti-stress. </plain></SENT>
+</text></p></sec><sec id="s3j"><title><text><SENT sid="691" pm="."><plain>Other Differentially Regulated Pathways between the Invasive and Indigenous Species </plain></SENT>
+</text></title><p><text><SENT sid="692" pm="."><plain>Besides the differently regulated pathways between the invasive and indigenous whiteflies noted above, our analysis also showed that ‘Ribosome biogenesis in eukaryotes’ and ‘Ascorbate and aldarate metabolism’ were enriched with DEGs in MEAM1 vs. Asia II 3. </plain></SENT>
+<SENT sid="693" pm="."><plain>Ribosome biogenesis underlies the cell's capacity to grow as ribosomes synthesize prodigious numbers of proteins, which is required for cell growth and proliferation [72]. </plain></SENT>
+<SENT sid="694" pm="."><plain>The data showed that 11 out of the 16 genes contained in ‘Ribosome biogenesis’ were up-regulated in MEAM1 compared to Asia II 3 indicating the higher ability of MEAM1 in this pathway (Table S6). </plain></SENT>
+<SENT sid="695" pm="."><plain>In MED vs. Asia II 3, ‘Oxidative phosphorylation’ pathway was significantly regulated. </plain></SENT>
+<SENT sid="696" pm="."><plain>From ‘Oxidative phosphorylation’ pathway, organisms not only acquire the energy that is essential for cellular activities, but also provide precursors for the biosynthesis of amino acids and NADH that is used in numerous biochemical reactions [73]. </plain></SENT>
+<SENT sid="697" pm="."><plain>The different regulation of oxidative phosphorylation may be important for the differentiation of MED and Asia II 3 and warrants further investigations. </plain></SENT>
+</text></p><p><text><SENT sid="698" pm="."><plain>In summary, we present, for the first time, an extensive analysis of transcriptional differences of two invasive whitefly species MEAM1, MED and an indigenous whitefly Asia II 3. </plain></SENT>
+<SENT sid="699" pm="."><plain>Our data shows that among the orthologous genes shared by the three species, more DEGs were identified between MED and Asia II 3 than between MED and MEAM1, which corresponds to the results of previous phylogenetic analyses. </plain></SENT>
+<SENT sid="700" pm="."><plain>KEGG enrichment analysis showed that MEAM1, MED and Asia II 3 differ from each other in several pathways related to carbohydrate, amino acid and glycerolipid metabolisms. </plain></SENT>
+<SENT sid="701" pm="."><plain>In addition, most of the drug metabolism and detoxification related genes such as P450s, UGTs, CuZnSOD and catalase were expressed at a higher level in MEAM1 and MED than in Asia II 3. </plain></SENT>
+<SENT sid="702" pm="."><plain>The higher expression of these genes in the invasive MEAM1 and MED species may contribute to their adaptability to a wide range of host plants and detoxification ability. </plain></SENT>
+<SENT sid="703" pm="."><plain>To confirm this observation, the activity of these enzymes should be compared among the invasive and native whitefly species. </plain></SENT>
+<SENT sid="704" pm="."><plain>In addition, we may silence the expression of critical genes and examine whether it will affect the competition between invasive and native whitefly species. </plain></SENT>
+</text></p></sec></sec></SecTag><SecTag type="SUPPL"><sec sec-type="supplementary-material" id="s4"><title><text><SENT sid="705" pm="."><plain>Supporting Information </plain></SENT>
+</text></title><supplementary-material content-type="local-data" id="pone.0062176.s001"><label>Figure S1</label><caption><p><text><SENT sid="706" pm="."><plain>Distribution of distinct tags over different tag abundance categories. Numbers in the square brackets indicate the range of copy numbers for a specific category of tags. </plain></SENT>
+</text></p><p><text><SENT sid="707" pm="."><plain>(PDF) </plain></SENT>
+</text></p></caption><media xlink:href="pone.0062176.s001.pdf"><caption><p><text><SENT sid="708" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="pone.0062176.s002"><label>Table S1</label><caption><p><text><SENT sid="709" pm="."><plain>The expression level of orthologous genes in MEAM1, MED and Asia II 3. </plain></SENT>
+</text></p><p><text><SENT sid="710" pm="."><plain>(XLS) </plain></SENT>
+</text></p></caption><media xlink:href="pone.0062176.s002.xls"><caption><p><text><SENT sid="711" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="pone.0062176.s003"><label>Table S2</label><caption><p><text><SENT sid="712" pm="."><plain>The DEGs among MEAM1, MED and Asia II 3. Orthologous genes with the FDR &lt;0.001 and the absolute value of log2 Ratio ≥1 were judged to be the different expression genes (DEGs) between species. </plain></SENT>
+</text></p><p><text><SENT sid="713" pm="."><plain>(XLS) </plain></SENT>
+</text></p></caption><media xlink:href="pone.0062176.s003.xls"><caption><p><text><SENT sid="714" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="pone.0062176.s004"><label>Table S3</label><caption><p><text><SENT sid="715" pm="."><plain>Primers for qPCR. The primers of the 30 selected genes used for validation of expression level and the reference gene (β-actin) were listed. </plain></SENT>
+</text></p><p><text><SENT sid="716" pm="."><plain>(XLS) </plain></SENT>
+</text></p></caption><media xlink:href="pone.0062176.s004.xls"><caption><p><text><SENT sid="717" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="pone.0062176.s005"><label>Table S4</label><caption><p><text><SENT sid="718" pm="."><plain>Data of qPCR validation. Thirty genes were selected for validation of expression level using qPCR. </plain></SENT>
+<SENT sid="719" pm="."><plain>Log2 Ratio_DGE: fold change (log2 Ratio) of gene expression in DGE analysis; Log2 Ratio_qPCR: fold change (log2 Ratio) of gene expression in qPCR; Concordant up: genes were up-regulated both in DGE and qPCR analyses; Concordant down: genes were down-regulated both in DGE and qPCR analyses; Up DGE, down qPCR: genes up-regulated in DGE analysis were down-regulated in qPCR assay; Down DGE, up qPCR: genes down-regulated in DGE analysis were up-regulated in qPCR assay. </plain></SENT>
+</text></p><p><text><SENT sid="720" pm="."><plain>(XLS) </plain></SENT>
+</text></p></caption><media xlink:href="pone.0062176.s005.xls"><caption><p><text><SENT sid="721" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="pone.0062176.s006"><label>Table S5</label><caption><p><text><SENT sid="722" pm="."><plain>Enriched GO terms in ‘Biological process’ category. No. of DEGs: the number of differentially expressed genes (DEGs) that belong to a KEGG pathway. </plain></SENT>
+<SENT sid="723" pm="."><plain>No. of genes: The total number of orthologous genes that belong to a KEGG pathway. </plain></SENT>
+</text></p><p><text><SENT sid="724" pm="."><plain>(XLS) </plain></SENT>
+</text></p></caption><media xlink:href="pone.0062176.s006.xls"><caption><p><text><SENT sid="725" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="pone.0062176.s007"><label>Table S6</label><caption><p><text><SENT sid="726" pm="."><plain>KEGG annotation of DEGs among the three species. The KEGG annotation of differentially expressed genes in 1) MEAM1 vs. MED, 2) MEAM1 vs. Asia II 3, and 3) MED vs. Asia II 3 were listed. </plain></SENT>
+</text></p><p><text><SENT sid="727" pm="."><plain>(XLS) </plain></SENT>
+</text></p></caption><media xlink:href="pone.0062176.s007.xls"><caption><p><text><SENT sid="728" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media></supplementary-material></sec></SecTag></body><back><SecTag type="REF"><ref-list><title>References</title><ref id="pone.0062176-Dinsdale1"><text><SENT sid="729" pm="."><plain>1 DinsdaleA, CookL, RiginosC, BuckleyYM, De BarroP (2010) Refined global analysis of Bemisia tabaci (Hemiptera: Sternorrhyncha: Aleyrodoidea: Aleyrodidae) mitochondrial cytochrome oxidase 1 to identify species level genetic boundaries. Ann Entomol Soc Am 103: 196–208. </plain></SENT>
+</text></ref><ref id="pone.0062176-DeBarro1"><text><SENT sid="730" pm="."><plain>2 De BarroPJ, LiuSS, BoykinLM, DinsdaleAB (2011)  Bemisia tabaci: a statement of species status. Ann Rev of Entomol 56: 1–19.20690829 </plain></SENT>
+</text></ref><ref id="pone.0062176-Hu1"><text><SENT sid="731" pm="."><plain>3 HuJ, De BarroP, ZhaoH, WangJ, NardiF, et al (2011) An extensivefield survey combined with a phylogenetic analysis reveals rapid and widespread invasion of two alien whiteflies in China. PLoS ONE 6: e16061.21283707 </plain></SENT>
+</text></ref><ref id="pone.0062176-Liu1"><text><SENT sid="732" pm="."><plain>4 LiuSS, ColvinJ, De BarroPJ (2012) Species concepts as applied to the whitefly Bemisia tabaci systematics: how many species are there? Journal of Integrative Agriculture 11: 176–186. </plain></SENT>
+</text></ref><ref id="pone.0062176-Alemandri1"><text><SENT sid="733" pm="."><plain>5 AlemandriV, De BarroP, BejermanN, Argüello CaroEB, DumónAD, et al (2012) Species within the Bemisia tabaci (Hemiptera: Aleyrodidae) complex in soybean and bean crops in Argentina. J Econ Entomol 105: 48–53.22420254 </plain></SENT>
+</text></ref><ref id="pone.0062176-Parrella1"><text><SENT sid="734" pm="."><plain>6 ParrellaG, ScassilloL, GiorginiM (2012) Evidence for a new genetic variant in the Bemisia tabaci species complex and the prevalence of the biotype Q in southern Italy. J Pest Sci 85: 1–12. </plain></SENT>
+</text></ref><ref id="pone.0062176-Boykin1"><text><SENT sid="735" pm="."><plain>7 BoykinLM, ArmstrongKF, KubatkoL, De BarroP (2012) Species delimitation and global biosecurity. Evol Bioinform 8: 1–37. </plain></SENT>
+</text></ref><ref id="pone.0062176-Naranjo1"><text><SENT sid="736" pm="."><plain>8Naranjo SE, Castle SJ, Barro PJ, Liu SS (2010) Population dynamics, demography, dispersal and spread of Bemisia tabaci Bemisia: Bionomics and Management of a Global Pest. </plain></SENT>
+<SENT sid="737" pm="."><plain>Edited by Stansly PA, Naranjo SE. </plain></SENT>
+<SENT sid="738" pm="."><plain>Heidelberg: Springer. </plain></SENT>
+<SENT sid="739" pm="."><plain>185–226. </plain></SENT>
+</text></ref><ref id="pone.0062176-Dalton1"><text><SENT sid="740" pm="."><plain>9 DaltonR (2006) Whitefly infestations: the Christmas invasion. Nature 443: 898–900.17066003 </plain></SENT>
+</text></ref><ref id="pone.0062176-Gao1"><text><SENT sid="741" pm="."><plain>10 GaoXL, LiJM, WangYL, JiuM, YanGH, et al (2013) Cloning, expression and characterization of mitochondrial manganese superoxide dismutase from the whitefly, Bemisia tabaci . Int J Mol Sci 14: 871–887.23296268 </plain></SENT>
+</text></ref><ref id="pone.0062176-Brown1"><text><SENT sid="742" pm="."><plain>11 BrownJ, FrohlichD, RosellR (1995) The sweetpotato or silverleaf whiteflies: biotypes of Bemisia tabaci or a species complex? Ann Rev Entomol 40: 511–534. </plain></SENT>
+</text></ref><ref id="pone.0062176-Boykin2"><text><SENT sid="743" pm="."><plain>12 BoykinLM, ShattersRG, RosellRC, McKenzieCL, BagnallRA, et al (2007) Global relationships of Bemisia tabaci (Hemiptera: Aleyrodidae) revealed using Bayesian analysis of mitochondrial COI DNA sequences. Mol Phylogenet Evol 44: 1306–1319.17627853 </plain></SENT>
+</text></ref><ref id="pone.0062176-Liu2"><text><SENT sid="744" pm="."><plain>13 LiuSS, De BarroP, XuJ, LuanJB, ZangLS, et al (2007) Asymmetric mating interactions drive widespread invasion and displacement in a whitefly. Science 318: 1769–1772.17991828 </plain></SENT>
+</text></ref><ref id="pone.0062176-Oliveira1"><text><SENT sid="745" pm="."><plain>14 OliveiraM, HenneberryT, AndersonP (2001) History, current status, and collaborative research projects for Bemisia tabaci . Crop Prot 20: 709–723. </plain></SENT>
+</text></ref><ref id="pone.0062176-Luo1"><text><SENT sid="746" pm="."><plain>15 LuoC, YaoY, WangRJ, YanFM, HuDX, et al (2002) The use of mitochondrial cytochrome oxidase I (mt CO I.) gene sequences for the identification of biotypes of Bemisia tabaci (Gennadius) in China. Acta Entomol Sin 45: 759–763. </plain></SENT>
+</text></ref><ref id="pone.0062176-Wu1"><text><SENT sid="747" pm="."><plain>16 WuX, LiZ, HuD, ShenZ (2003) Identification of Chinese populations of Bemisia tabaci (Gennadius) by analyzing ribosomal ITS1 sequence. Prog Nat Sci 13: 276–281. </plain></SENT>
+</text></ref><ref id="pone.0062176-Qiu1"><text><SENT sid="748" pm="."><plain>17 QiuBL, RenSX, WenSY, MandourN (2003) Biotype identification of the populations of Bemisia tabaci (Homoptera: Aleyrodidae) in China using RAPD-PCR. Acta Entomol Sin 46: 605–608. </plain></SENT>
+</text></ref><ref id="pone.0062176-Zang1"><text><SENT sid="749" pm="."><plain>18 ZangL, LiuS, LiuY, RuanY, WanF (2005) Competition between the B biotype and a non-B biotype of the whitefly, Bemisia tabaci (Homoptera: Aleyrodidae) in Zhejiang, China. Biodiversity Science 13: 181–187. </plain></SENT>
+</text></ref><ref id="pone.0062176-Jiu1"><text><SENT sid="750" pm="."><plain>19 JiuM, ZhouXP, TongL, XuJ, YangX, et al (2007) Vector-virus mutualism accelerates population increase of an invasive whitefly. PLoS ONE 2: e182.17264884 </plain></SENT>
+</text></ref><ref id="pone.0062176-Liu3"><text><SENT sid="751" pm="."><plain>20 LiuSS, De BarroPJ, XuJ, LuanJB, ZangLS, et al (2007) Asymmetric mating interactions drive widespread invasion and displacement in a whitefly. Science 318: 1769–1772.17991828 </plain></SENT>
+</text></ref><ref id="pone.0062176-Zang2"><text><SENT sid="752" pm="."><plain>21 ZangLS, ChenWQ, LiuSS (2006) Comparison of performance on different host plants between the B biotype and a non-B biotype of Bemisia tabaci from Zhejiang, China. Entomol Exp Appl 121: 221–227. </plain></SENT>
+</text></ref><ref id="pone.0062176-Perring1"><text><SENT sid="753" pm="."><plain>22 PerringTM (2001) The Bemisia tabaci species complex. Crop Prot 20: 725–737. </plain></SENT>
+</text></ref><ref id="pone.0062176-Byrne1"><text><SENT sid="754" pm="."><plain>23 ByrneFJ, CastleS, PrabhakerN, ToscanoNC (2003) Biochemical study of resistance to imidacloprid in B biotype Bemisia tabaci from Guatemala. Pest Manag Sci 59: 347–352.12639053 </plain></SENT>
+</text></ref><ref id="pone.0062176-Cui1"><text><SENT sid="755" pm="."><plain>24 CuiX, WanF, XieM, LiuT (2008) Effects of heat shock on survival and reproduction of two whitefly species, Trialeurodes vaporariorum and Bemisia tabaci biotype B. J Insect Sci. 8: 1–10. </plain></SENT>
+</text></ref><ref id="pone.0062176-Horowitz1"><text><SENT sid="757" pm="."><plain>25 HorowitzA, DenholmI, GormanK, CenisJ, KontsedalovS, et al (2003) Biotype Q of Bemisia tabaci identified in Israel. Phytoparasitica 31: 94–98. </plain></SENT>
+</text></ref><ref id="pone.0062176-McKenzie1"><text><SENT sid="758" pm="."><plain>26 McKenzieCL, BethkeJA, ByrneFJ, ChamberlinJR, DennehyTJ, et al (2012) Distribution of Bemisia tabaci (Hemiptera: Aleyrodidae) biotypes in north America after the Q invasion. J Econ Entomol 105: 753–766.22812110 </plain></SENT>
+</text></ref><ref id="pone.0062176-Chu1"><text><SENT sid="759" pm="."><plain>27 ChuD, WanFH, ZhangYJ, BrownJK (2010) Change in the biotype composition of Bemisia tabaci in Shandong Province of China from 2005 to 2008. Environ Entomol 39: 1028–1036.20550819 </plain></SENT>
+</text></ref><ref id="pone.0062176-Rao1"><text><SENT sid="760" pm="."><plain>28 RaoQ, LuoC, ZhangH, GuoX, DevineG (2011) Distribution and dynamics of Bemisia tabaci invasive biotypes in central China. Bull Entomol Res 101: 81–88.20822556 </plain></SENT>
+</text></ref><ref id="pone.0062176-Sun1"><text><SENT sid="761" pm="."><plain>29 SunDB, LiJ, QinL, XuJ, LiFF, et al (2013) Competitive displacement between two invasive whiteflies: insecticide application and host plant effects. Bull Entomol Res 5: 1–10. </plain></SENT>
+</text></ref><ref id="pone.0062176-Rao2"><text><SENT sid="762" pm="."><plain>30 RaoQ, XuY, LuoC, ZhangH, JonesCM, et al (2012) Characterisation of neonicotinoid and pymetrozine resistance in strains of Bemisia tabaci (Hemiptera: Aleyrodidae) from China. Journal of Integrative Agriculture 11: 321–326. </plain></SENT>
+</text></ref><ref id="pone.0062176-Horowitz2"><text><SENT sid="763" pm="."><plain>31 HorowitzAR, KontsedalovS, KhasdanV, IshaayaI (2005) Biotypes B and Q of Bemisia tabaci and their relevance to neonicotinoid and pyriproxyfen resistance. Arch Insect Biochem Physiol 58: 216–225.15756703 </plain></SENT>
+</text></ref><ref id="pone.0062176-Fernandez1"><text><SENT sid="764" pm="."><plain>32 FernandezE, GravalosC, Javier HaroP, CifuentesD, BielzaP (2009) Insecticide resistance status of Bemisia tabaci Q-biotype in south-eastern Spain. Pest Manag Sci 65: 885–891.19418483 </plain></SENT>
+</text></ref><ref id="pone.0062176-Crowder1"><text><SENT sid="765" pm="."><plain>33 CrowderDW, HorowitzAR, De BarroPJ, LiuSS, ShowalterAM, et al (2010) Mating behaviour, life history and adaptation to insecticides determine species exclusion between whiteflies. J Anim Ecol 79: 563–570.20163491 </plain></SENT>
+</text></ref><ref id="pone.0062176-Crowder2"><text><SENT sid="766" pm="."><plain>34 CrowderDW, SitvarinMI, CarrièreY (2010) Plasticity in mating behaviour drives asymmetric reproductive interference in whiteflies. Anim Behav 79: 579–587. </plain></SENT>
+</text></ref><ref id="pone.0062176-Crowder3"><text><SENT sid="767" pm="."><plain>35 CrowderDW, HorowitzAR, BreslauerH, RippaM, KontsedalovS, et al (2011) Niche partitioning and stochastic processes shape community structure following whitefly invasions. Basic Appl Ecol 12: 685–694. </plain></SENT>
+</text></ref><ref id="pone.0062176-Pavey1"><text><SENT sid="768" pm="."><plain>36 PaveySA, CollinH, NosilP, RogersSM (2010) The role of gene expression in ecological speciation. Ann NY Acad Sci 1206: 110–129.20860685 </plain></SENT>
+</text></ref><ref id="pone.0062176-Hobolth1"><text><SENT sid="769" pm="."><plain>37 HobolthA, ChristensenOF, MailundT, SchierupMH (2007) Genomic relationships and speciation times of human, chimpanzee, and gorilla inferred from a coalescent hidden Markov model. PLoS Genet 3: e7.17319744 </plain></SENT>
+</text></ref><ref id="pone.0062176-Ingersoll1"><text><SENT sid="770" pm="."><plain>38 IngersollMA, SpanbroekR, LottazC, GautierEL, FrankenbergerM, et al (2010) Comparison of gene expression profiles between human and mouse monocyte subsets. Blood 115: e10–e19.19965649 </plain></SENT>
+</text></ref><ref id="pone.0062176-Barro1"><text><SENT sid="771" pm="."><plain>39 BarroP, DriverF (2007) Use of RAPD PCR to distinguish the B biotype from other biotypes of Bemisia tabaci (Gennadius) (Hemiptera: Aleyrodidae). Aust J Entomol 36: 149–152. </plain></SENT>
+</text></ref><ref id="pone.0062176-McKenzie2"><text><SENT sid="772" pm="."><plain>40 McKenzieC, HodgesG, OsborneLS, ByrneFJ, ShattersRG (2009) Distribution of Bemisia tabaci (Hemiptera: Aleyrodidae) biotypes in Florida-investigating the Q invasion. J Econ Entomol 102: 670–676.19449648 </plain></SENT>
+</text></ref><ref id="pone.0062176-Audic1"><text><SENT sid="773" pm="."><plain>41 AudicS, ClaverieJM (1997) The significance of digital gene expression profiles. Genome Res 7: 986–995.9331369 </plain></SENT>
+</text></ref><ref id="pone.0062176-Wang1"><text><SENT sid="774" pm="."><plain>42 WangXW, LuanJB, LiJM, SuYL, XiaJ, et al (2011) Transcriptome analysis and comparison reveal divergence between two invasive whitefly cryptic species. BMC Genomics 12: 458.21939539 </plain></SENT>
+</text></ref><ref id="pone.0062176-Wang2"><text><SENT sid="775" pm="."><plain>43 WangXW, LuanJB, LiJM, BaoYY, ZhangCX, et al (2010)  De novo characterization of a whitefly transcriptome and analysis of its gene expression during development. BMC Genomics 11: 400.20573269 </plain></SENT>
+</text></ref><ref id="pone.0062176-Wang3"><text><SENT sid="776" pm="."><plain>44 WangXW, ZhaoQY, LuanJB, WangYJ, YanGH, et al (2012) Analysis of a native whitefly transcriptome and its sequence divergence with two invasive whitefly species. BMC Genomics 13: 529.23036081 </plain></SENT>
+</text></ref><ref id="pone.0062176-Luan1"><text><SENT sid="777" pm="."><plain>45 LuanJB, LiJM, VarelaN, WangYL, LiFF, et al (2011) Global analysis of the transcriptional response of whitefly to Tomato yellow leaf curl China virus reveals the relationship of coevolved adaptations. J Virol 85: 3330–3340.21270146 </plain></SENT>
+</text></ref><ref id="pone.0062176-Livak1"><text><SENT sid="778" pm="."><plain>46 LivakKJ, SchmittgenTD (2001) Analysis of relative gene expression data using real-time quantitative PCR and the 2−ΔΔCT method. Methods 25: 402–408.11846609 </plain></SENT>
+</text></ref><ref id="pone.0062176-tHoen1"><text><SENT sid="779" pm="."><plain>47 t HoenPAC, AriyurekY, ThygesenHH, VreugdenhilE, VossenR, et al (2008) Deep sequencing-based expression analysis shows major advances in robustness, resolution and inter-lab portability over five microarray platforms. Nucleic Acids Res 36: e141.18927111 </plain></SENT>
+</text></ref><ref id="pone.0062176-Corona1"><text><SENT sid="780" pm="."><plain>48 CoronaM, RobinsonG (2006) Genes of the antioxidant system of the honey bee: annotation and phylogeny. Insect Mol Biol 15: 687–701.17069640 </plain></SENT>
+</text></ref><ref id="pone.0062176-Parker1"><text><SENT sid="781" pm="."><plain>49 ParkerJ, ParkerK, KellerL (2004) Molecular phylogenetic evidence for an extracellular Cu Zn superoxide dismutase gene in insects. Insect Mol Biol 13: 587–594.15606807 </plain></SENT>
+</text></ref><ref id="pone.0062176-Hegedus1"><text><SENT sid="782" pm="."><plain>50 HegedusZ, ZakrzewskaA, AgostonVC, OrdasA, RaczP, et al (2009) Deep sequencing of the zebrafish transcriptome response to mycobacterium infection. Mol Immunol 46: 2918–2930.19631987 </plain></SENT>
+</text></ref><ref id="pone.0062176-Sun2"><text><SENT sid="783" pm="."><plain>51 SunW, ShenYH, YangWJ, CaoYF, XiangZH, et al (2012) Expansion of the silkworm GMC oxidoreductase genes is associated with immunity. Insect Biochem Mol Biol 42: 935–945.23022604 </plain></SENT>
+</text></ref><ref id="pone.0062176-Holmgren1"><text><SENT sid="784" pm="."><plain>52 HolmgrenA (2000) Antioxidant function of thioredoxin and glutaredoxin systems. Antioxid Redox Sign 2: 811–820. </plain></SENT>
+</text></ref><ref id="pone.0062176-Lbke1"><text><SENT sid="785" pm="."><plain>53 LübkeT, LobelP, SleatDE (2009) Proteomics of the lysosome. Biochim Biophys Acta 1793: 625–635.18977398 </plain></SENT>
+</text></ref><ref id="pone.0062176-Beenakkers1"><text><SENT sid="786" pm="."><plain>54 BeenakkersA (1969) Carbohydrate and fat as a fuel for insect flight. </plain></SENT>
+<SENT sid="787" pm="."><plain>A comparative study. J Insect Physiol 15: 353–361.5779251 </plain></SENT>
+</text></ref><ref id="pone.0062176-Marchioro1"><text><SENT sid="788" pm="."><plain>55 MarchioroCA, FoersterLA (2011) Importance of carbohydrate sources to the reproductive output of the wheat armyworm Pseudaletia sequax . Agr Forest Entomol 14: 29–35. </plain></SENT>
+</text></ref><ref id="pone.0062176-Yoshinaga1"><text><SENT sid="789" pm="."><plain>56 YoshinagaN, AlbornHT, NakanishiT, SucklingDM, NishidaR, et al (2010) Fatty acid-amino acid conjugates diversification in lepidopteran caterpillars. J Chem Ecol 36: 319–325.20195891 </plain></SENT>
+</text></ref><ref id="pone.0062176-Denisov1"><text><SENT sid="790" pm="."><plain>57 DenisovIG, MakrisTM, SligarSG, SchlichtingI (2005) Structure and chemistry of cytochrome P450. ChemInform 36: 2253–2277. </plain></SENT>
+</text></ref><ref id="pone.0062176-Anzenbacher1"><text><SENT sid="791" pm="."><plain>58 AnzenbacherP, AnzenbacherovaE (2001) Cytochromes P450 and metabolism of xenobiotics. Cell Mol Life Sci 58: 737–747.11437235 </plain></SENT>
+</text></ref><ref id="pone.0062176-Daborn1"><text><SENT sid="792" pm="."><plain>59 DabornP, YenJ, BogwitzM, Le GoffG, FeilE, et al (2002) A single P450 allele associated with insecticide resistance in Drosophila . Science 297: 2253–2256.12351787 </plain></SENT>
+</text></ref><ref id="pone.0062176-Puinean1"><text><SENT sid="793" pm="."><plain>60 PuineanAM, FosterSP, OliphantL, DenholmI, FieldLM, et al (2010) Amplification of a cytochrome P450 gene is associated with resistance to neonicotinoid insecticides in the aphid Myzus persicae . PLoS Genet 6: e1000999.20585623 </plain></SENT>
+</text></ref><ref id="pone.0062176-Shin1"><text><SENT sid="794" pm="."><plain>61 ShinS, Torres-AcostaJA, HeinenSJ, McCormickS, LemmensM, et al (2012) Transgenic Arabidopsis thaliana expressing a barley UDP-glucosyltransferase exhibit resistance to the mycotoxin deoxynivalenol. J Exp Bot 63: 4731–4740.22922639 </plain></SENT>
+</text></ref><ref id="pone.0062176-Ahn1"><text><SENT sid="795" pm="."><plain>62 AhnSJ, Badenes-PérezFR, ReicheltM, SvatošA (2011) Metabolic detoxification of capsaicin by UDP-glycosyltransferase in three Helicoverpa species. Arch Insect Biochem Physiol 78: 104–118.21928395 </plain></SENT>
+</text></ref><ref id="pone.0062176-Bowler1"><text><SENT sid="796" pm="."><plain>63 BowlerC, MontaguM, InzeD (1992) Superoxide dismutase and stress tolerance. Ann Rev Plant Biol 43: 83–116. </plain></SENT>
+</text></ref><ref id="pone.0062176-Yoo1"><text><SENT sid="797" pm="."><plain>64 YooH, ChangM, RhoH (1999) Heavy metal-mediated activation of the rat Cu/Zn superoxide dismutase gene via a metal-responsive element. Mol Gen Genet 262: 310–313.10517327 </plain></SENT>
+</text></ref><ref id="pone.0062176-Li1"><text><SENT sid="798" pm="."><plain>65 LiJM, SuYL, GaoXL, HeJ, LiuSS, et al (2011) Molecular characterization and oxidative stress response of an intracellular Cu/Zn superoxide dismutase (CuZnSOD) of the whitefly, Bemisia tabaci . Arch Insect Biochem Physiol 77: 118–133.21541989 </plain></SENT>
+</text></ref><ref id="pone.0062176-Bolter1"><text><SENT sid="799" pm="."><plain>66 BolterCJ, ChefurkaW (1990) The effect of phosphine treatment on superoxide dismutase, catalase, and peroxidase in the granary weevil, Sitophilus granarius . Pestic Biochem Physiol 36: 52–60. </plain></SENT>
+</text></ref><ref id="pone.0062176-Neves1"><text><SENT sid="800" pm="."><plain>67 NevesC, SantosE, BainyA (2000) Reduced superoxide dismutase activity in Palaemonetes argentinus (Decapoda, Palemonidae) infected by Probopyrus ringueleti (Isopoda, Bopyridae). Dis Aquat Org 39: 155–158.10715822 </plain></SENT>
+</text></ref><ref id="pone.0062176-Switala1"><text><SENT sid="801" pm="."><plain>68 SwitalaJ, LoewenPC (2002) Diversity of properties among catalases. Arch Biochem Biophys 401: 145–154.12054464 </plain></SENT>
+</text></ref><ref id="pone.0062176-Felton1"><text><SENT sid="802" pm="."><plain>69 FeltonGW, SummersCB (1995) Antioxidant systems in insects. Arch Insect Biochem Physiol 29: 187–197.7606043 </plain></SENT>
+</text></ref><ref id="pone.0062176-Felton2"><text><SENT sid="803" pm="."><plain>70 FeltonGW, DuffeySS (1991) Protective action of midgut catalase in lepidopteran larvae against oxidative plant defenses. J Chem Ecol 17: 1715–1732.24257916 </plain></SENT>
+</text></ref><ref id="pone.0062176-Carabali1"><text><SENT sid="804" pm="."><plain>71 CarabaliA, BellottiAC, Montoya-LermaJ, CuellarME (2005) Adaptation of Bemisia tabaci biotype B (Gennadius) to cassava, Manihot esculenta (Crantz). Crop Prot 24: 643–649. </plain></SENT>
+</text></ref><ref id="pone.0062176-Lempiinen1"><text><SENT sid="805" pm="."><plain>72 Lempi inenH, ShoreD (2009) Growth control and ribosome biogenesis. Curr Opin Cell Biol 21: 855–863.19796927 </plain></SENT>
+</text></ref><ref id="pone.0062176-Lardy1"><text><SENT sid="806" pm="."><plain>73 LardyHA, FergusonSM (1969) Oxidative phosphorylation in mitochondria. Ann Rev Biochem 38: 991–1034.4240951 </plain></SENT>
+</text></ref></ref-list></SecTag></back></article>

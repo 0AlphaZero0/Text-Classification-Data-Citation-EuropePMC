@@ -1,0 +1,560 @@
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD v1.1 20151215//EN" "JATS-archivearticle1.dtd"> 
+<article xmlns:ali="http://www.niso.org/schemas/ali/1.0/" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML" article-type="research-article"><?properties open_access?><?DTDIdentifier.IdentifierValue -//NLM//DTD Journal Publishing DTD v2.3 20070202//EN?><?DTDIdentifier.IdentifierType public?><?SourceDTD.DTDName journalpublishing.dtd?><?SourceDTD.Version 2.3?><?ConverterInfo.XSLTName jp2nlmx2.xsl?><?ConverterInfo.Version 2?><front><journal-meta><journal-id journal-id-type="nlm-ta">Int J Mol Sci</journal-id><journal-id journal-id-type="iso-abbrev">Int J Mol Sci</journal-id><journal-id journal-id-type="publisher-id">ijms</journal-id><journal-title-group><journal-title>International Journal of Molecular Sciences</journal-title></journal-title-group><issn pub-type="epub">1422-0067</issn><publisher><publisher-name>MDPI</publisher-name></publisher></journal-meta><article-meta><article-id pub-id-type="pmcid">4964384</article-id><article-id pub-id-type="doi">10.3390/ijms17071008</article-id><article-id pub-id-type="publisher-id">ijms-17-01008</article-id><article-categories><subj-group subj-group-type="heading"><subject>Communication</subject></subj-group></article-categories><title-group><article-title><SecTag type="TITLE"><text><SENT sid="0" pm="."><plain>Computational Analysis of Single Nucleotide Polymorphisms Associated with Altered Drug Responsiveness in Type 2 Diabetes </plain></SENT>
+</text></SecTag></article-title></title-group><contrib-group><contrib contrib-type="author"><name><surname>Costa</surname><given-names>Valerio</given-names></name><xref ref-type="aff" rid="af1-ijms-17-01008">1</xref></contrib><contrib contrib-type="author"><name><surname>Federico</surname><given-names>Antonio</given-names></name><xref ref-type="aff" rid="af1-ijms-17-01008">1</xref><xref ref-type="aff" rid="af2-ijms-17-01008">2</xref></contrib><contrib contrib-type="author"><name><surname>Pollastro</surname><given-names>Carla</given-names></name><xref ref-type="aff" rid="af1-ijms-17-01008">1</xref><xref ref-type="aff" rid="af2-ijms-17-01008">2</xref></contrib><contrib contrib-type="author"><name><surname>Ziviello</surname><given-names>Carmela</given-names></name><xref ref-type="aff" rid="af1-ijms-17-01008">1</xref></contrib><contrib contrib-type="author"><name><surname>Cataldi</surname><given-names>Simona</given-names></name><xref ref-type="aff" rid="af1-ijms-17-01008">1</xref></contrib><contrib contrib-type="author"><name><surname>Formisano</surname><given-names>Pietro</given-names></name><xref ref-type="aff" rid="af3-ijms-17-01008">3</xref></contrib><contrib contrib-type="author"><name><surname>Ciccodicola</surname><given-names>Alfredo</given-names></name><xref ref-type="aff" rid="af1-ijms-17-01008">1</xref><xref ref-type="aff" rid="af2-ijms-17-01008">2</xref><xref rid="c1-ijms-17-01008" ref-type="corresp">*</xref></contrib></contrib-group><contrib-group><contrib contrib-type="editor"><name><surname>Cai</surname><given-names>Lu</given-names></name><role>Academic Editor</role></contrib></contrib-group><aff id="af1-ijms-17-01008"><label>1</label>Institute of Genetics and Biophysics “Adriano Buzzati-Traverso”, National Research Council, Via Pietro Castellino 111, 80131 Naples, Italy; <email>valerio.costa@igb.cnr.it</email> (V.C.); <email>antonio.federico@igb.cnr.it</email> (A.F.); <email>carla.pollastro@igb.cnr.it</email> (C.P.); <email>ziviello@gmail.com</email> (C.Z.); <email>simona.cataldi@igb.cnr.it</email> (S.C.)</aff><aff id="af2-ijms-17-01008"><label>2</label>DiST, Department of Science and Technology, University of Naples “Parthenope”, 80134 Naples, Italy</aff><aff id="af3-ijms-17-01008"><label>3</label>Department of Translational Medical Sciences, University of Naples “Federico II”, 80131 Naples, Italy; <email>pietro.formisano@unina.it</email></aff><author-notes><corresp id="c1-ijms-17-01008"><label>*</label>Correspondence: <email>alfredo.ciccodicola@igb.cnr.it</email>; Tel.: +39-081-613-2259; Fax: +39-081-613-2617</corresp></author-notes><pub-date pub-type="epub"><day>25</day><month>6</month><year>2016</year></pub-date><pub-date pub-type="collection"><month>7</month><year>2016</year></pub-date><volume>17</volume><issue>7</issue><elocation-id>1008</elocation-id><history><date date-type="received"><day>03</day><month>5</month><year>2016</year></date><date date-type="accepted"><day>14</day><month>6</month><year>2016</year></date></history><permissions><copyright-statement>© 2016 by the authors; licensee MDPI, Basel, Switzerland.</copyright-statement><copyright-year>2016</copyright-year><license><license-p>This article is an open access article distributed under the terms and conditions of the Creative Commons Attribution (CC-BY) license (<ext-link ext-link-type="uri" xlink:href="http://creativecommons.org/licenses/by/4.0/">http://creativecommons.org/licenses/by/4.0/</ext-link>).</license-p></license></permissions><abstract><p><SecTag type="ABS"><text><SENT sid="1" pm="."><plain>Type 2 diabetes (T2D) is one of the most frequent mortality causes in western countries, with rapidly increasing prevalence. </plain></SENT>
+<SENT sid="2" pm="."><plain>Anti-diabetic drugs are the first therapeutic approach, although many patients develop drug resistance. </plain></SENT>
+<SENT sid="3" pm="."><plain>Most drug responsiveness variability can be explained by genetic causes. </plain></SENT>
+<SENT sid="4" pm="."><plain>Inter-individual variability is principally due to single nucleotide polymorphisms, and differential drug responsiveness has been correlated to alteration in genes involved in drug metabolism (CYP2C9) or insulin signaling (IRS1, ABCC8, KCNJ11 and PPARG). </plain></SENT>
+<SENT sid="5" pm="."><plain>However, most genome-wide association studies did not provide clues about the contribution of DNA variations to impaired drug responsiveness. </plain></SENT>
+<SENT sid="6" pm="."><plain>Thus, characterizing T2D drug responsiveness variants is needed to guide clinicians toward tailored therapeutic approaches. </plain></SENT>
+<SENT sid="7" pm="."><plain>Here, we extensively investigated polymorphisms associated with altered drug response in T2D, predicting their effects in silico. </plain></SENT>
+<SENT sid="8" pm="."><plain>Combining different computational approaches, we focused on the expression pattern of genes correlated to drug resistance and inferred evolutionary conservation of polymorphic residues, computationally predicting the biochemical properties of polymorphic proteins. </plain></SENT>
+<SENT sid="9" pm="."><plain>Using RNA-Sequencing followed by targeted validation, we identified and experimentally confirmed that two nucleotide variations in the CAPN10 gene—currently annotated as intronic—fall within two new transcripts in this locus. </plain></SENT>
+<SENT sid="10" pm="."><plain>Additionally, we found that a Single Nucleotide Polymorphism (SNP), currently reported as intergenic, maps to the intron of a new transcript, harboring CAPN10 and GPR35 genes, which undergoes non-sense mediated decay. </plain></SENT>
+<SENT sid="11" pm="."><plain>Finally, we analyzed variants that fall into non-coding regulatory regions of yet underestimated functional significance, predicting that some of them can potentially affect gene expression and/or post-transcriptional regulation of mRNAs affecting the splicing. </plain></SENT>
+</text></SecTag></p></abstract><SecTag type="KEYWORD"><kwd-group><kwd>type 2 diabetes</kwd><kwd>drug responsiveness</kwd><kwd>computational predictions</kwd><kwd>pharmacogenomics</kwd><kwd>personalized medicine</kwd><kwd>RNA-sequencing</kwd></kwd-group></SecTag></article-meta></front><body><SecTag type="INTRO"><sec id="sec1-ijms-17-01008"><title><text><SENT sid="12" pm="."><plain>1. </plain></SENT>
+<SENT sid="13" pm="."><plain>Introduction </plain></SENT>
+</text></title><p><text><SENT sid="14" pm="."><plain>Diabetes is one of the leading causes of mortality in contemporary society [1]. </plain></SENT>
+<SENT sid="15" pm="."><plain>A recent report by the International Diabetes Federation indicated an onset rate of about 8.4% in adults and a total number of 382 million cases of diabetes worldwide. </plain></SENT>
+<SENT sid="16" pm="."><plain>This number is estimated to critically increase to up to 592 million by 2035 [1]. </plain></SENT>
+<SENT sid="17" pm="."><plain>Thus, the World Health Organization (WHO) defines this phenomenon as a “global outbreak” [2]. </plain></SENT>
+<SENT sid="18" pm="."><plain>Type 2 Diabetes (T2D), known as “non insulin-dependent diabetes”, is the most frequent form (with later onset) and occurs because of insulin defective function [3]. </plain></SENT>
+<SENT sid="19" pm="."><plain>T2D affects more than 5% of the population in western countries and its spread is still increasing. </plain></SENT>
+</text></p><p><text><SENT sid="20" pm="."><plain>Diabetes is a chronic disease that over time leads to cardiovascular and blood vessel damage, neuro-, nephro- and retinopathy, with a dramatic impact on health, and high costs for National Health Systems [2]. </plain></SENT>
+<SENT sid="21" pm="."><plain>Intensive programs focused on reducing lifestyle-derived risk factors for T2D have demonstrated substantial efficacy in lowering diabetes incidence in at-risk individuals [4]. </plain></SENT>
+<SENT sid="22" pm="."><plain>The first step in T2D treatment, after the failure of lifestyle interventions, is the assumption of oral anti-diabetic drugs (OAD), such as sulphonylureas, metformin and thiazolidinediones (TZD). </plain></SENT>
+<SENT sid="23" pm="."><plain>Sulphonylureas are insulin secretagogues that bind to an ATP-sensitive potassium channels. </plain></SENT>
+<SENT sid="24" pm="."><plain>The most frequently used sulphonylureas in T2D are glibenclamide, gliclazide, glipizide and glimipiride but, in all cases, on a temporal long-scale of assumption, sulphonylureas decrease their effectiveness. </plain></SENT>
+<SENT sid="25" pm="."><plain>Thus, it is recommended to keep the assumption in mind combined with other drugs such as metformin, decreasing insulin resistance in this way [5]. </plain></SENT>
+<SENT sid="26" pm="."><plain>Metformin is a biguanide used in T2D to decrease hyperglycemia by suppressing glucose production by the liver [6]. </plain></SENT>
+<SENT sid="27" pm="."><plain>Thiazolidinediones act mostly through the PPARs (Peroxisome Proliferator-Activated Receptors), whose endogenous ligands are fatty acids and eicosanoids [7]. </plain></SENT>
+<SENT sid="28" pm="."><plain>Most T2D patients, after a long-term assumption, become less sensitive to drug treatment. </plain></SENT>
+<SENT sid="29" pm="."><plain>Such a phenomenon has recently been associated with individual genomic variability. </plain></SENT>
+<SENT sid="30" pm="."><plain>The introduction and wide diffusion of Genome-Wide Association Studies (GWAS) and of innovative technologies for high-throughput sequencing (Next Generation Sequencing, NGS) has turned pharmacogenetics into pharmacogenomics, shifting the interest from individual candidate genes to a genome-wide scale [8]. </plain></SENT>
+<SENT sid="31" pm="."><plain>Indeed, pharmacogenetics, which focuses on hereditary genetic differences in drug metabolism, has gradually been sided with, and, in most cases, integrated by the pharmacogenomics that take inter- and intra-individual variation in gene expression and gene/proteins interaction networks into account. </plain></SENT>
+<SENT sid="32" pm="."><plain>In this scenario, a growing number of studies have shown the influence of Single Nucleotide Polymorphisms (SNPs) on gene expression variation among populations [9,10], confirming that genome-wide and whole-transcriptome studies by NGS are fundamental to investigate complex traits/diseases, including T2D [11]. </plain></SENT>
+<SENT sid="33" pm="."><plain>Therefore, as pharmacogenomics aims to provide the optimal treatment starting from the genetic and molecular etiology of the disease [12], T2D is an ideal candidate disease [3]. </plain></SENT>
+<SENT sid="34" pm="."><plain>Indeed, it is characterized by the variable response of patients to drugs. </plain></SENT>
+<SENT sid="35" pm="."><plain>Notably, although non-genetic factors—affecting hepatic, renal and intestinal functions—can influence OAD pharmacodynamics, the variable drug responsiveness can be partly explained by genetic factors. </plain></SENT>
+<SENT sid="36" pm="."><plain>Indeed, SNPs in genes that are directly- or indirectly-involved in the metabolism, tropism and activity of drugs are often associated with altered drug responsiveness [12]. </plain></SENT>
+<SENT sid="37" pm="."><plain>Thus, a comprehensive characterization of these genetic variants is crucial for diabetes research to guide clinicians toward better therapeutic approaches [13]. </plain></SENT>
+</text></p><p><text><SENT sid="38" pm="."><plain>In this paper, we describe a systematic analysis of the most common SNPs associated with altered drug responsiveness in T2D, using both in silico and experimental approaches. </plain></SENT>
+<SENT sid="39" pm="."><plain>The former were used to computationally predict the evolutionary conservation of polymorphic sites as well as the biochemical properties of the altered proteins (for SNPs falling in protein coding regions, termed coding SNPs or cSNPs). </plain></SENT>
+<SENT sid="40" pm="."><plain>We also analyzed the genomic context that surrounds all the SNPs, searching for their proximity to CpG islands, transcription factors' binding sites or to other epigenetically relevant regions. </plain></SENT>
+<SENT sid="41" pm="."><plain>We also experimentally addressed using RNA-Seq and targeted validations that some SNPs, previously annotated as intergenic or intronic, map to expressed regions. </plain></SENT>
+<SENT sid="42" pm="."><plain>Our study predicts that some nucleotide variants—associated with reduced drug responsiveness in T2D patients—may affect protein functionality and suggests that some of them may act through still unexplored mechanisms, which arise from their coding potential. </plain></SENT>
+</text></p></sec></SecTag><SecTag type="RESULTS"><sec id="sec2-ijms-17-01008"><title><text><SENT sid="43" pm="."><plain>2. </plain></SENT>
+<SENT sid="44" pm="."><plain>Results </plain></SENT>
+</text></title><p><text><SENT sid="45" pm="."><plain>Several reports have so far described the association of SNPs and altered drug responsiveness in T2D [13]. </plain></SENT>
+<SENT sid="46" pm="."><plain>These SNPs fall within genes with a clear relation to drug transport (SLC22A1 and SLC22A2), metabolism (CYP2C9), activity (PPARG and ABCC8), genes that have a direct role in diabetes onset or progression (KCNJ11, IRS1 and TCF7L2) or that have been frequently associated by GWAS to T2D and drug response (CAPN10), despite the fact that the exact mechanisms are still unclear. </plain></SENT>
+<SENT sid="47" pm="."><plain>Here, a literature-based selection of SNPs in the most commonly associated genes has been performed, and the related SNPs have been analyzed using a combination of in silico and experimental approaches. </plain></SENT>
+<SENT sid="48" pm="."><plain>Protein alignments and evolutionary conservation of polymorphic sites, analysis of protein tertiary structure (if available) and Sorting Intolerant From Tolerant (SIFT)/PolyPhen scores were used to predict the impact of protein-coding SNPs (cSNPs) on protein functionality. </plain></SENT>
+<SENT sid="49" pm="."><plain>The most significant results are shown in the manuscript, and other data are collected in the Figures S1–S9. </plain></SENT>
+<SENT sid="50" pm="."><plain>As many SNPs fall outside the coding regions of genes, we systematically searched CpG islands, transcription factors’ binding sites and relevant epimarks that can potentially be altered by SNPs. </plain></SENT>
+<SENT sid="51" pm="."><plain>Using RNA-Seq on HEK293 cell lines, and taking advantage of a large collection of RNA-Seq datasets from different tissues and cell lines available in our laboratory, we also correlated SNPs to gene expression. </plain></SENT>
+<SENT sid="52" pm="."><plain>Selected SNPs, their genomic localization, the possible alleles at that position, their IDs (according to the database of Single Nucleotide Polymorphisms, dbSNP), as well as the amino acid change (if any), are reported in Table 1. </plain></SENT>
+</text></p><sec id="sec2dot1-ijms-17-01008"><title><text><SENT sid="53" pm="."><plain>2.1. </plain></SENT>
+<SENT sid="54" pm="."><plain>Computational Predictions for Coding SNPs </plain></SENT>
+</text></title><p><text><SENT sid="55" pm="."><plain>For the SLC22A1 gene, which encodes the Oct1 protein, results from the analysis of two cSNPs (rs12208357 and rs34059508) are discussed here. </plain></SENT>
+<SENT sid="56" pm="."><plain>The analysis of rs34130495 is reported in the Figure S1. </plain></SENT>
+<SENT sid="57" pm="."><plain>The rs12208357—a C/T substitution in the first exon of SLC22A1 (Figure 1A)—causes R61C amino acid substitution into an extracellular topological domain of Oct1 protein (organic cation transporter 1; UniProt ID O15245) involved in the binding of the substrate. </plain></SENT>
+<SENT sid="58" pm="."><plain>It leads to a decreased binding affinity to substrates [14]. </plain></SENT>
+<SENT sid="59" pm="."><plain>Notably, the mutated residue is not charged, is smaller and more hydrophobic than the arginine, and it is predicted to alter inter-residual interactions and the correct folding of the ion channel. </plain></SENT>
+<SENT sid="60" pm="."><plain>Protein alignment and analysis of evolutionary conservation revealed that arginine is highly conserved at this position in many species (Figure 1A). </plain></SENT>
+<SENT sid="61" pm="."><plain>SIFT and PolyPhen scores (Table 2) indicate this SNP as damaging to protein functionality. </plain></SENT>
+<SENT sid="62" pm="."><plain>The rs34059508 in exon 9 causes G465R amino acid change. </plain></SENT>
+<SENT sid="63" pm="."><plain>Interestingly, 3D structure analysis of Oct1 protein revealed that G465 is close to the inner surface of the channel (Figure 1B), and the presence of a charged residue (arginine) in that position is likely to affect ion channel functionality. </plain></SENT>
+<SENT sid="64" pm="."><plain>Accordingly, to support this observation, SIFT and PolyPhen scores were 0 and 0.999, respectively, indicating this SNP as “strongly damaging”. </plain></SENT>
+</text></p><p><text><SENT sid="65" pm="."><plain>However, we found at least three protein isoforms of Oct1 in primates that carry this amino acid substitution (Figure 1A), indicating that the polymorphic protein may be evolutionarily conserved. </plain></SENT>
+<SENT sid="66" pm="."><plain>In addition, taking advantage of public human transcriptome data (available at Gene Expression Atlas; [15]) we found that SLC22A1 has high tissue-specific expression, mainly restricted to the liver (Figure S10). </plain></SENT>
+</text></p><p><text><SENT sid="67" pm="."><plain>For the IRS1 gene, we focused on a cSNP (rs1801278) in the exon 1 that causes the G971R change. </plain></SENT>
+<SENT sid="68" pm="."><plain>Notably, it is often referred to as G972R, even though—according to dbSNP and UniProt databases—the exact nomenclature is G971R. </plain></SENT>
+<SENT sid="69" pm="."><plain>Thus, we will refer to it as “G971R”. </plain></SENT>
+<SENT sid="70" pm="."><plain>Protein alignment revealed that several species (reptiles and birds) carry this amino acid substitution (Figure 1C). </plain></SENT>
+<SENT sid="71" pm="."><plain>Despite this substitution being conserved along the evolution, the biochemical properties of the residues are very different, as they differ in size and charge. </plain></SENT>
+<SENT sid="72" pm="."><plain>The steric effect and the presence of a positive charge in the side chain are predicted to affect protein folding locally and/or the binding to other proteins. </plain></SENT>
+</text></p><p><text><SENT sid="73" pm="."><plain>In addition, PolyPhen marked this cSNP as damaging (Table 2). </plain></SENT>
+<SENT sid="74" pm="."><plain>However, the absence of crystallographic data and of homologous proteins as templates did not permit us to determine a reliable 3D model to analyze such predicted damaging changes. </plain></SENT>
+<SENT sid="75" pm="."><plain>Furthermore, analysis of public databases revealed IRS1 to be almost ubiquitously expressed (Figure S10). </plain></SENT>
+<SENT sid="76" pm="."><plain>This is in line with the pleiotropic role of Irs1 protein in the activation of the PI3K/AKT1/GSK3 signaling pathway, and, consequently, in the stimulation of glucose transport and of glycogen synthesis [16]. </plain></SENT>
+</text></p><p><text><SENT sid="77" pm="."><plain>Finally, we analyzed cSNPs (rs1799853 and rs1057910) in the CYP2C9 gene associated with sulphonylureas resistance. </plain></SENT>
+<SENT sid="78" pm="."><plain>The gene encodes for cytochrome P450-2C9, a hepatic enzyme involved in the metabolism of most of sulphonylureas. </plain></SENT>
+<SENT sid="79" pm="."><plain>The rs1799853 is a C/T variation in the exon 3 (R144C; Figure 1C) and is associated with resistance to sulphamethaxazole in T2D patients [17,18]. </plain></SENT>
+<SENT sid="80" pm="."><plain>Although such a change is conserved not only in primates through evolution, the novel residue differs from the canonical for several characteristics. </plain></SENT>
+<SENT sid="81" pm="."><plain>Indeed, the positive charge and the increased steric effect of the wild-type amino acid (arginine) with a neutral and smaller residue (cysteine) are predicted to have structural effects in the core of the protein. </plain></SENT>
+<SENT sid="82" pm="."><plain>Computational prediction performed using the HOPE (Have (y)Our Protein Explained) prediction tool revealed that R144 forms hydrogen bonds with R139, S180 and Q261 (Figure 1C). </plain></SENT>
+<SENT sid="83" pm="."><plain>Conversely, the mutated residue (i.e., C144) does not. </plain></SENT>
+<SENT sid="84" pm="."><plain>Accordingly, both PolyPhen and SIFT scores indicate this cSNP as damaging (Table 2). CYP2C9 gene has a peculiar expression pattern, mostly restricted to the liver, small intestine and duodenum (Figure S10). </plain></SENT>
+<SENT sid="85" pm="."><plain>This is in line with the notion that this enzyme is responsible for sulphonylureas’ metabolism [18]. </plain></SENT>
+</text></p><p><text><SENT sid="86" pm="."><plain>Similar conservation- and modeling-based approaches were also used to analyze SNPs in the coding regions of other genes commonly associated with altered drug response in T2D, such as SLC22A2, KCNJ11, ABCC8 and PPARG genes. </plain></SENT>
+<SENT sid="87" pm="."><plain>We could not in silico find any significant alteration in protein functionality according to the amino acid changes in these genes, or these nucleotide variations are already well characterized. </plain></SENT>
+<SENT sid="88" pm="."><plain>A summary of the results is reported in Figures S1–S9. </plain></SENT>
+</text></p></sec><sec id="sec2dot2-ijms-17-01008"><title><text><SENT sid="89" pm="."><plain>2.2. </plain></SENT>
+<SENT sid="90" pm="."><plain>SNPs Map to Regulatory Regions and Motifs of Transcription Factors </plain></SENT>
+</text></title><p><text><SENT sid="91" pm="."><plain>To address how the above-described SNPs may contribute to drug resistance, we extensively analyzed whether all variants reported in Table 1 map to regulatory sites, including transcription factors’ binding sites (TFBS), CpG islands, ESE/ESS (Exonic Splicing Enhancer/Exonic Splicing Silencer) and ISE/ISS (Intronic Splicing Enhancer/Intronic Splicing Silencer), and other regulatory regions (Figure 2; Table S1). </plain></SENT>
+</text></p><p><text><SENT sid="92" pm="."><plain>Taking advantage of public ChIP-Seq data of the ENCODE Consortium for several transcription factors (TFs) in different cell lines (Methods), we first assessed whether SNPs can disrupt confirmed TF binding sites. </plain></SENT>
+<SENT sid="93" pm="."><plain>Interestingly, as schematized in Figure 2, rs34130495 (in the SLC22A1 gene) disrupts the consensus sequence recognized by Tcf12, Tfap2a, Tfap2c and Max, and the rs35167514 in the same gene alters a binding site for Max, a master transcriptional regulator. </plain></SENT>
+<SENT sid="94" pm="."><plain>The SNP rs1801278 (IRS1 gene) falls within a Pol2a consensus sequence, while the rs3842570 in CAPN10 gene falls within the binding site of Znf263, a negative transcriptional regulator. </plain></SENT>
+</text></p><p><text><SENT sid="95" pm="."><plain>Using a similar approach, we also analyzed whether drug resistance-associated SNPs map to genomic regions hypersensitive to DNAseI digestion, i.e., nucleosome-free transcriptional regulatory regions usually accessible to transcription factors. </plain></SENT>
+<SENT sid="96" pm="."><plain>In line with the previous analysis, the rs34130495 and rs35167514 SNPs in SLC22A1 falls within a strong DNAseI hypersensitive site (DHS), supported by experimental evidence in 80 cell lines. </plain></SENT>
+<SENT sid="97" pm="."><plain>Similarly, the rs1801278 in the IRS1 gene falls in DHS found in more than 90 cell lines. </plain></SENT>
+<SENT sid="98" pm="."><plain>Weaker evidence has been also found for rs5030952 in CAPN10 and rs757110 in ABCC8 genes (DHS reported in 23 and 14 cell lines, respectively). </plain></SENT>
+<SENT sid="99" pm="."><plain>The rs12208357 in SLC22A1 gene falls in a DHS were reported only in hepatocytes and medulloblastoma, while, for the SNP rs3842570, in chorion cells and pancreatic islets. </plain></SENT>
+</text></p><p><text><SENT sid="100" pm="."><plain>Similar analysis was also carried out on computationally predicted consensus for TFBS (Jaspar and TRANSFAC databases). </plain></SENT>
+<SENT sid="101" pm="."><plain>The rs5219 SNP—which causes the K23E substitution in KCNJ11 gene (Figure S3)—maps to the consensus of the nuclear receptor PPARγ, and it is predicted to alter the binding affinity of this TF, a crucial player in glucose and lipid homeostasis and that is associated with metabolic disorders [19]. </plain></SENT>
+<SENT sid="102" pm="."><plain>Notably, the same SNP also falls in a CpG island. </plain></SENT>
+<SENT sid="103" pm="."><plain>Schematic summary of such information for other SNPs are reported in Table S1. </plain></SENT>
+</text></p><p><text><SENT sid="104" pm="."><plain>Finally, we investigated if drug resistance-associated SNPs may possibly affect the splicing extensively searching—in exons and introns—the regulatory splicing sites (ISE/ISS and ESE/ESS). </plain></SENT>
+<SENT sid="105" pm="."><plain>This analysis revealed that only the rs3842570 and the rs12208357 in CAPN10 and SLC22A1 genes are located in an ISE. </plain></SENT>
+<SENT sid="106" pm="."><plain>In particular, these indels were predicted to abrogate two binding sites for the same splicing factor, the Mbnl1 protein (AGCTGGG). </plain></SENT>
+</text></p></sec><sec id="sec2dot3-ijms-17-01008"><title><text><SENT sid="107" pm="."><plain>2.3. </plain></SENT>
+<SENT sid="108" pm="."><plain>RNA-Seq Identifies New Transcripts of the CAPN10 Gene </plain></SENT>
+</text></title><p><text><SENT sid="109" pm="."><plain>As gene annotations are rapidly being updated thanks to high-throughput sequencing, we also searched if these SNPs overlap newly annotated transcripts (both coding and not) and/or Expressed Sequence Tags (ESTs). </plain></SENT>
+<SENT sid="110" pm="."><plain>Details for all analyzed SNPs are provided in the Table S1 and are graphically summarized in Figure 3 and Figure 4. </plain></SENT>
+</text></p><p><text><SENT sid="111" pm="."><plain>We used ab initio transcript reconstruction starting from RNA-Sequencing data, generated from HEK293 cell line sequencing. </plain></SENT>
+<SENT sid="112" pm="."><plain>We found that the rs3842570 in CAPN10—described as intronic—maps within an actively transcribed region (Figure 3). </plain></SENT>
+<SENT sid="113" pm="."><plain>The new transcript reconstructed from RNA-Seq overlaps an AceView [20] gene model (CAPN10 and GPR35.mAug10-unspliced) and EST BF528146. </plain></SENT>
+<SENT sid="114" pm="."><plain>Similarly, the SNP rs3792267—located in the third intron of the same gene—overlaps a new transcribed region—unspliced ESTs (BQ899318, AL703891 and DA094595) from sciatic nerve and cerebellum libraries and a transcript annotated as “retained intron” in Ensembl and GENCODE databases (ENST00000494738). </plain></SENT>
+<SENT sid="115" pm="."><plain>Taking advantage of RNA-Seq transcript reconstruction combined with a RT-PCR assay in RT+ (Reverse Transcriptase) and RT-cDNA from HEK293 cell line (Methods), we could confirm that both of the SNPs map to actively transcribed regions, despite being currently annotated as “intronic” SNPs of the CAPN10 gene. </plain></SENT>
+<SENT sid="116" pm="."><plain>Direct Sanger sequencing validated our findings (Figure 3). </plain></SENT>
+</text></p><p><text><SENT sid="117" pm="."><plain>In addition, RNA-Seq data revealed that the rs5030952, annotated as “intergenic” and associated with CAPN10 gene, maps in the intron of two new transcripts spanning CAPN10 and GPR35 genes. </plain></SENT>
+<SENT sid="118" pm="."><plain>Notably, one of these transcripts (details in Figure 4) is annotated in University of California Santa Cruz Genome Browser (UCSC Genome Browser), Ensembl and GENCODE databases as “non-sense mediated decay” (NMD). </plain></SENT>
+</text></p><p><text><SENT sid="119" pm="."><plain>RT-PCR, upon treatment of HEK293 cells with CHX, confirmed the presence of this new transcript generated by trans-splicing between CAPN10 and GPR35 genes, revealing that it undergoes NMD (Figure 4). </plain></SENT>
+<SENT sid="120" pm="."><plain>We concluded that rs5030952 should be considered an ”intronic” SNP of this new transcript encompassing CAPN10 and GPR35 loci. </plain></SENT>
+</text></p><p><text><SENT sid="121" pm="."><plain>Similarly, we found that the intronic SNPs associated with TCF7L2 (rs12255372 and rs7903146) map to a transcribed region (data not shown) and overlap two unspliced ESTs (details in the Table S1). </plain></SENT>
+</text></p><p><text><SENT sid="122" pm="."><plain>Finally, taking advantage of our recently published—and still unpublished—RNA-Seq datasets, we investigated whether the presence of these SNPs may correlate to gene expression levels. </plain></SENT>
+<SENT sid="123" pm="."><plain>RNA-Seq datasets of two HEK293 replicates, 22 thyroid [21], 2 MCF7 [22], eight heart biopsies (manuscript in preparation) were analyzed in order to find samples homozygous for the wild-type, heterozygous or homozygous for the alternative alleles. </plain></SENT>
+<SENT sid="124" pm="."><plain>However, we could find a significant number of samples for each category only for the KCNJ11, CAPN10 and ABCC8 genes. </plain></SENT>
+<SENT sid="125" pm="."><plain>No significant correlation could be found between SNPs in these genes and the mRNA levels of related genes (Figure S11). </plain></SENT>
+</text></p></sec></sec></SecTag><SecTag type="DISCUSS"><sec id="sec3-ijms-17-01008"><title><text><SENT sid="126" pm="."><plain>3. </plain></SENT>
+<SENT sid="127" pm="."><plain>Discussion </plain></SENT>
+</text></title><p><text><SENT sid="128" pm="."><plain>A comprehensive analysis of the most relevant single nucleotide variants associated with T2D predisposition and/or with altered drug responsiveness is crucial to understanding their potential contribution to the phenotype. </plain></SENT>
+<SENT sid="129" pm="."><plain>Previous studies have highlighted the association between polymorphic variants and the onset of drug responsiveness in T2D patients. </plain></SENT>
+<SENT sid="130" pm="."><plain>In this regard, our work aimed to systematically infer computational predictions about the effects of such common variations on protein functionality or about their potential impact on genomic regulatory sites. </plain></SENT>
+<SENT sid="131" pm="."><plain>The combination of different computational approaches used herein has confirmed that the organic cation transporter family plays a pivotal role in drug responsiveness. </plain></SENT>
+<SENT sid="132" pm="."><plain>Oct1 and Oct2 proteins are involved in the uptake of organic cations (including drugs) from the bloodstream into hepatocytes [23]. </plain></SENT>
+<SENT sid="133" pm="."><plain>SNPs in the Oct1 encoding gene (SLC22A1) can influence drug response because of their ability to alter hepatic drug clearance as well as the uptake and elimination of drugs. </plain></SENT>
+<SENT sid="134" pm="."><plain>This mechanism has been demonstrated for the 1-methy-4-phenyl-1,2,3,6-tetrahydropyridine (MPTP) [24]. </plain></SENT>
+<SENT sid="135" pm="."><plain>Public RNA-Seq data confirmed the liver-specific expression of this gene, and our in silico prediction revealed that two SLC22A1 cSNPs (Figure 1A) can potentially be damaging to protein functionality. </plain></SENT>
+<SENT sid="136" pm="."><plain>These predictions strengthen GWAS data about the relationship between SLC22A1 and metformin resistance in T2D. </plain></SENT>
+<SENT sid="137" pm="."><plain>In addition, our 3D model of the polymorphic Oct1 protein has indicated that G465R amino acid change may influence metformin uptake since it is located in close proximity of the inner surface of Oct1 channel. </plain></SENT>
+<SENT sid="138" pm="."><plain>Regarding the CYP2C9 gene, it has been established that it plays an important role in the pharmacokinetics of sulphonylureas [25]. </plain></SENT>
+<SENT sid="139" pm="."><plain>Arg144Cys substitution in the CYP2C9 gene has been shown to markedly reduce the rates of substrate metabolism [26,27]. </plain></SENT>
+<SENT sid="140" pm="."><plain>Specifically, carriers of polymorphic CYP2C9 variants may have both higher therapeutic response and a higher incidence of hypoglycemic adverse events [28]. </plain></SENT>
+<SENT sid="141" pm="."><plain>We have predicted that the lack of arginine in position 144 affects protein stability as this residue is critical in creating H-bonds that contact serine in position 180 and glutamine in position 261 (Figure 1C). </plain></SENT>
+<SENT sid="142" pm="."><plain>It suggests a potential mechanism for the reduced activity of the mutated enzyme. </plain></SENT>
+</text></p><p><text><SENT sid="143" pm="."><plain>Whereas it is arguable that protein-coding SNPs can affect protein functionality—and then that they can associate to clinical manifestation of the disease—it is quite difficult to explain the contribution of intronic or intergenic SNPs. </plain></SENT>
+<SENT sid="144" pm="."><plain>Indeed, most of analyses reported in literature for T2D have been performed on cSNPs. </plain></SENT>
+<SENT sid="145" pm="."><plain>Here, we have considered nucleotide variations that potentially affect regulatory genomic elements since most of SNPs associated by GWAS to complex traits/diseases fall outside protein-coding regions. </plain></SENT>
+<SENT sid="146" pm="."><plain>Therefore, a large fraction of these may determine the loss (or gain) of regulatory functions. </plain></SENT>
+<SENT sid="147" pm="."><plain>Interestingly, we found that all analyzed SNPs fall within at least one TF binding site or genomic region overlapping a DHS and/or CpG island or a splicing regulatory region, according to public ChIP-Seq data and computational predictions. </plain></SENT>
+<SENT sid="148" pm="."><plain>In particular, since few studies investigated the role of polymorphism rs5219 in the KCNJ11 gene in therapeutic response to sulphonylureas [9] or hypoglycemia risk [29], we inferred that this SNP falls in a PPARγ binding site and within a CpG island located in the gene body, possibly linking such variant to altered KCNJ11 expression. </plain></SENT>
+<SENT sid="149" pm="."><plain>However, although we could not find any statistically significant association between this SNP and mRNA levels in our RNA-Seq datasets, we cannot definitely exclude such a mechanism. </plain></SENT>
+<SENT sid="150" pm="."><plain>More interestingly, we found that SNPs, until now annotated as “intronic” or “intergenic”, are misannotated. </plain></SENT>
+<SENT sid="151" pm="."><plain>Indeed, through ab initio transcriptome reconstruction and experimental validations we have shown they map inside mature mRNAs. </plain></SENT>
+</text></p><p><text><SENT sid="152" pm="."><plain>Two intronic CAPN10 SNPs (rs3842570 and rs3792267) belong to actively transcribed (and spliced) CAPN10 transcripts. </plain></SENT>
+<SENT sid="153" pm="."><plain>Our findings are in line with the gene predictions of AceView database and with ESTs. </plain></SENT>
+<SENT sid="154" pm="."><plain>Notably, the former SNP (a 1 bp deletion) is located in an intron splicing enhancer region, and its presence is predicted to affect the binding of two different splicing factors. </plain></SENT>
+<SENT sid="155" pm="."><plain>We cannot exclude that the presence of this SNP may account for splicing variations that give rise to the new mRNA isoform. </plain></SENT>
+<SENT sid="156" pm="."><plain>Similarly, our data indicate that the “intergenic” rs5030952 falls in the intron of a new transcript, generated by trans-splicing between CAPN10 and GPR35 genes. </plain></SENT>
+</text></p><p><text><SENT sid="157" pm="."><plain>Despite being aware that computational predictions alone cannot prove any causal relation between SNPs and the clinical outcome in patients, we believe that combining different in silico approaches to experimental validations can provide insights to improving the knowledge underlying the SNPs’ effect on complex phenotypes. </plain></SENT>
+<SENT sid="158" pm="."><plain>In particular, growing evidence indicates that determining specific genotypes is crucial to establishing targeted therapeutic strategies. </plain></SENT>
+<SENT sid="159" pm="."><plain>Thus, it would be desirable to have a deeper understanding of the mechanisms by which environmental and epigenetic factors interact with patient genetic milieu [30], and in contrast, how SNPs are likely to modify genomic regions that are involved in the epigenetic regulation of gene expression or directly modify the primary sequence of non-coding RNAs, and potentially their function. </plain></SENT>
+<SENT sid="160" pm="."><plain>In this scenario, our study highlights that even SNPs that do not affect the protein coding ability of a gene can potentially have a functional impact on splicing and/or gene expression, possibly through epigenetic mechanisms, or they may modify the consensus sequence of transcription factors. </plain></SENT>
+<SENT sid="161" pm="."><plain>Functional targeted studies are needed to experimentally demonstrate the impact of such variations mapping in non-coding regions of the genome. </plain></SENT>
+</text></p></sec></SecTag><SecTag type="METHODS"><sec id="sec4-ijms-17-01008"><title><text><SENT sid="162" pm="."><plain>4. </plain></SENT>
+<SENT sid="163" pm="."><plain>Materials and Methods </plain></SENT>
+</text></title><p><text><SENT sid="164" pm="."><plain>By extensive literature and database browsing, we selected 18 SNPs in nine genes commonly associated with altered responsiveness to pharmacotherapy of T2D [13,31,32,33]. </plain></SENT>
+<SENT sid="165" pm="."><plain>SNPs have been categorized as “exonic”, “intronic” or “intergenic” according to RefSeq gene annotation (Table 1) [31]. </plain></SENT>
+</text></p><sec id="sec4dot1-ijms-17-01008"><title><text><SENT sid="166" pm="."><plain>4.1. </plain></SENT>
+<SENT sid="167" pm="."><plain>Computational Predictions of Amino Acid Changes </plain></SENT>
+</text></title><p><text><SENT sid="168" pm="."><plain>Amino acidic sequences and functional protein domains of the annotated proteins were retrieved by the UniProt database [34]. </plain></SENT>
+<SENT sid="169" pm="."><plain>The functional effects of nucleotide variants were evaluated only for cSNPs, using SIFT and PolyPhen scores, through the VEP tool (Variant Effect Predictor) in the Ensembl database [35]. </plain></SENT>
+</text></p><p><text><SENT sid="170" pm="."><plain>The prediction of biochemical and structural effects of amino acidic substitutions was carried out using Project HOPE [36]. </plain></SENT>
+<SENT sid="171" pm="."><plain>For some cSNPs, HOPE was unable to predict structural effects of the substitution, due to the lack of structural information in public databases. </plain></SENT>
+<SENT sid="172" pm="."><plain>In these cases, the prediction of tridimensional structures of the polymorphic proteins was performed applying a homology modeling approach through the web server I-TASSER [37]. </plain></SENT>
+<SENT sid="173" pm="."><plain>Obtained models were finally rendered using the PyMol system [38]. </plain></SENT>
+</text></p><p><text><SENT sid="174" pm="."><plain>Evolutionary analysis of the residue changes induced by cSNPs was inferred using human and other vertebrates species. </plain></SENT>
+<SENT sid="175" pm="."><plain>In particular, the conservation of polymorphic sites was investigated among vertebrates through the alignment of the longest sequence for the human annotated protein (UniProt) and orthologous protein sequences. </plain></SENT>
+<SENT sid="176" pm="."><plain>These alignments were then submitted to the web server ConSurf [39]. </plain></SENT>
+<SENT sid="177" pm="."><plain>Consurf-based analysis was launched using Swiss-Prot as target database (except for ABCC8 for which we selected UniRef90) and running at least three iterations with the PSI-BLAST algorithm. </plain></SENT>
+<SENT sid="178" pm="."><plain>For the remaining parameters, we used the default settings. </plain></SENT>
+</text></p></sec><sec id="sec4dot2-ijms-17-01008"><title><text><SENT sid="179" pm="."><plain>4.2. </plain></SENT>
+<SENT sid="180" pm="."><plain>In Silico Analysis of Epimarks and Regulatory Motifs </plain></SENT>
+</text></title><p><text><SENT sid="181" pm="."><plain>The genomic coordinates and the allelic frequencies of selected SNPs have been downloaded from dbSNP (v138) database [40]. </plain></SENT>
+<SENT sid="182" pm="."><plain>The table browser option of UCSC Genome Browser [41] was used to retrieve custom tracks of interest (ENCODE Transcription Factor ChIP-seq Uniform Peaks, ENCODE DNaseI Hypersensitive Site Master List). </plain></SENT>
+<SENT sid="183" pm="."><plain>To investigate if SNPs may alter splicing sites, or related regulatory regions such as exonic and/or intronic splicing enhancer/silencer (ESE/ESS and ISE/ISS) we used the web tool RegRNA 2.0 [42], as previously described in Scarpato et al. [43]. </plain></SENT>
+<SENT sid="184" pm="."><plain>Briefly, FASTA files of the nucleotide sequences surrounding the polymorphic site (10 bp upstream and 10 bp downstream the SNP) were retrieved by the UCSC Genome Browser and submitted to RegRNA web server. The analysis of correlation between gene expression and SNPs has been carried out using our published [21,22] and unpublished RNA-Seq data. </plain></SENT>
+<SENT sid="186" pm="."><plain>Specifically, such datasets were inspected using the Integrative Genomic Viewer (IGV) [44]. </plain></SENT>
+<SENT sid="187" pm="."><plain>Expression profiles of the genes associated with reduced drug responsiveness has been retrieved from the RNA-Seq samples of 122 human individuals from 32 different tissues (E-MTAB-2836) available on the Gene Expression Atlas website (available at: http://www.ebi.ac.uk/) [45]. </plain></SENT>
+</text></p></sec><sec id="sec4dot3-ijms-17-01008"><title><text><SENT sid="188" pm="."><plain>4.3. </plain></SENT>
+<SENT sid="189" pm="."><plain>RNA-Sequencing: Library Preparation and Data Analysis </plain></SENT>
+</text></title><p><text><SENT sid="190" pm="."><plain>Briefly, RNA has been isolated and quantified from HEK293 cell lines as previously described in [46]. </plain></SENT>
+<SENT sid="191" pm="."><plain>Paired-end libraries were prepared using the TruSeq RNA Sample Preparation Kit (Illumina, San Diego, CA, USA) and sequenced on the Illumina HiSeq2000 platform according to the manufacturer’s instructions. </plain></SENT>
+<SENT sid="192" pm="."><plain>Reads mapping was performed using TopHat v.2.0.7 [47], and ab initio transcriptome reconstruction was carried out with Cufflinks [42], setting GENCODE v19 as reference transcriptome. </plain></SENT>
+<SENT sid="193" pm="."><plain>Coverage files were generated using the genomecoverageBed function of BEDtools [48]. </plain></SENT>
+<SENT sid="194" pm="."><plain>Visual inspection on the UCSC Genome Browser of coverage files revealed the presence of new transcripts overlapping the genomic coordinates of analyzed SNPs. </plain></SENT>
+<SENT sid="195" pm="."><plain>PCR duplicates were removed using Picard tools v1.117 (Broad Institute, Cambridge, MA, USA) (available at: http://broadinstitute.github.io/picard/) and SNP calling was carried out using GATK v3.3 workflow (Broad Institute, Cambridge, MA, USA) optimized for RNA-Seq reads, as described in [49]. </plain></SENT>
+<SENT sid="196" pm="."><plain>Normalization, filtering, data inspection and general data analysis statistics were performed using RNASeqGUI [50]. </plain></SENT>
+</text></p></sec><sec id="sec4dot4-ijms-17-01008"><title><text><SENT sid="197" pm="."><plain>4.4. </plain></SENT>
+<SENT sid="198" pm="."><plain>In Vitro Validations </plain></SENT>
+</text></title><p><text><SENT sid="199" pm="."><plain>The experimental validation for the new transcripts of CAPN10 and for the CAPN10/GPR35 transcript have been performed on the RNA isolated from HEK293 cell line. </plain></SENT>
+<SENT sid="200" pm="."><plain>HEK293 cells were cultured in Dulbecco’s modified Eagle’s medium (DMEM, Life Technologies, Carlsbad, CA, USA) supplemented with 10% fetal bovine serum (FBS), glutamine (2 mmol/L), penicillin (100 units/mL) and streptomycin (100 units/mL) at 37 °C in a humidified atmosphere of 95% air and 5% CO2. </plain></SENT>
+<SENT sid="201" pm="."><plain>Cells were treated with cycloheximide (CHX) at increasing doses (10, 20, 40, 120 µM) or with the vehicle control (DMSO) for 6 h as described in [51]. </plain></SENT>
+<SENT sid="202" pm="."><plain>Total RNA was isolated from treated cells using TRIzol solution (Invitrogen, Waltham, MA, USA) according to the manufacturer’s instructions. </plain></SENT>
+<SENT sid="203" pm="."><plain>RNA obtained by each samples was reverse transcribed using “high-capacity cDNA reverse-transcription kit” (Applied Biosystems, Foster City, CA, USA) and the cDNA were used as template for RT-PCR assays. </plain></SENT>
+<SENT sid="204" pm="."><plain>PCR assays have been performed with MyTaq DNA Polimerase (Bioline Reagents Ltd., London, UK) using these condition: 95 °C for 3 min, followed by 40 cycles at 95 °C for 30 s, 58 °C for 30 s, 72 °C for 70 s, and 72 °C for 7 min. </plain></SENT>
+<SENT sid="205" pm="."><plain>Sanger sequencing to confirm the presence of rs3842570 and rs3792267 in CAPN10 has been carried on PCR amplicons carried out with 2.5U AmpliTaq-Gold (Life Technologies, Carlsbad, CA, USA) according to the manufacturer’s protocol. </plain></SENT>
+<SENT sid="206" pm="."><plain>PCR amplicons were verified through electrophoresis on agarose gel (1.5%). </plain></SENT>
+</text></p></sec></sec></SecTag></body><back><SecTag type="ACK_FUND"><ack><title>Acknowledgments</title><p><text4fund><text><SENT sid="207" pm="."><plain>We acknowledge the Italian Ministry of Education, University and Research (MIUR) Project National Operational Programme for “Research and Competitiveness” 2007–2013 PON01_02460 (DIAGEN) to Alfredo Ciccodicola and Pietro Formisano. </plain></SENT>
+</text></text4fund></p></ack></SecTag><SecTag type="APPENDIX"><app-group><app id="app1-ijms-17-01008"><title>Supplementary Materials</title><p>Supplementary materials can be found at <uri xlink:type="simple" xlink:href="http://www.mdpi.com/1422-0067/17/7/1008/s1">http://www.mdpi.com/1422-0067/17/7/1008/s1</uri>.</p><supplementary-material content-type="local-data" id="ijms-17-01008-s001"><media xlink:href="ijms-17-01008-s001.pdf"><caption><p><text><SENT sid="208" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media></supplementary-material></app></app-group></SecTag><notes><title>Author Contributions</title><p>Valerio Costa and Alfredo Ciccodicola conceived and designed the project; Valerio Costa performed RNA-Seq experiments and Antonio Federico performed computational data analysis; Carla Pollastro, Carmela Ziviello and Simona Cataldi performed the experiments; Alfredo Ciccodicola and Pietro Formisano supervised the experiments; all the authors analyzed data, discussed the results and contributed to the proof-editing of the manuscript; and Valerio Costa wrote the manuscript.</p></notes><notes><title>Conflicts of Interest</title><p>The authors declare no conflict of interest.</p></notes><SecTag type="REF"><ref-list><title>References</title><ref id="B1-ijms-17-01008"><text><SENT sid="209" pm="."><plain>1. ShawJ.E.SicreeR.A.ZimmetP.Z. Global estimates of the prevalence of diabetes for 2010 and 2030 Diabetes Res. </plain></SENT>
+<SENT sid="210" pm="."><plain>Clin. </plain></SENT>
+<SENT sid="211" pm="."><plain>Pract. 2010 87 4 14 10.1016/j.diabres.2009.10.007 <?supplied-pmid 19896746?>19896746 </plain></SENT>
+</text></ref><ref id="B2-ijms-17-01008"><text><SENT sid="212" pm="."><plain>2. World Health Organization (WHO) Diabetes World Health Organization Geneva, Switzerland 2016  </plain></SENT>
+</text></ref><ref id="B3-ijms-17-01008"><text><SENT sid="213" pm="."><plain>3. HattersleyA.BruiningJ.ShieldJ.NjolstadP.DonaghueK.C. The diagnosis and management of monogenic diabetes in children and adolescents Pediatr. </plain></SENT>
+<SENT sid="214" pm="."><plain>Diabetes 2009 10 Suppl. </plain></SENT>
+<SENT sid="215" pm="."><plain>12 33 42 10.1111/j.1399-5448.2009.00571.x <?supplied-pmid 19754616?>19754616 </plain></SENT>
+</text></ref><ref id="B4-ijms-17-01008"><text><SENT sid="216" pm="."><plain>4. ManninoG.C.SestiG. Individualized therapy for type 2 diabetes: Clinical implications of pharmacogenetic data Mol. </plain></SENT>
+<SENT sid="217" pm="."><plain>Diagn. </plain></SENT>
+<SENT sid="218" pm="."><plain>Ther. 2012 16 285 302 10.1007/s40291-012-0002-7 <?supplied-pmid 23018631?>23018631 </plain></SENT>
+</text></ref><ref id="B5-ijms-17-01008"><text><SENT sid="219" pm="."><plain>5. RendellM. The role of sulphonylureas in the management of type 2 diabetes mellitus Drugs 2004 64 1339 1358 10.2165/00003495-200464120-00006 <?supplied-pmid 15200348?>15200348 </plain></SENT>
+</text></ref><ref id="B6-ijms-17-01008"><text><SENT sid="220" pm="."><plain>6. KirpichnikovD.McFarlaneS.I.SowersJ.R. Metformin: An update Ann. </plain></SENT>
+<SENT sid="221" pm="."><plain>Intern. </plain></SENT>
+<SENT sid="222" pm="."><plain>Med. 2002 137 25 33 10.7326/0003-4819-137-1-200207020-00009 <?supplied-pmid 12093242?>12093242 </plain></SENT>
+</text></ref><ref id="B7-ijms-17-01008"><text><SENT sid="223" pm="."><plain>7. HaunerH. The mode of action of thiazolidinediones Diabetes Metab. </plain></SENT>
+<SENT sid="224" pm="."><plain>Res. </plain></SENT>
+<SENT sid="225" pm="."><plain>Rev. 2002 18 Suppl. </plain></SENT>
+<SENT sid="226" pm="."><plain>2 S10 S15 10.1002/dmrr.249 <?supplied-pmid 11921433?>11921433 </plain></SENT>
+</text></ref><ref id="B8-ijms-17-01008"><text><SENT sid="227" pm="."><plain>8. BeckerM.L.PearsonE.R.TkáčI. Pharmacogenetics of oral antidiabetic drugs J. Endocrinol. </plain></SENT>
+<SENT sid="229" pm="."><plain>Diabetes 2013 2013 686315 10.1155/2013/686315 <?supplied-pmid 24324494?>24324494 </plain></SENT>
+</text></ref><ref id="B9-ijms-17-01008"><text><SENT sid="230" pm="."><plain>9. JavorskyM.KlimcakovaL.SchronerZ.ZidzikJ.BabjakovaE.FabianovaM.KozarovaM.TkacovaR.SalagovicJ.TkacI. KCNJ11 gene E23K variant and therapeutic response to sulphonylureas Eur. </plain></SENT>
+<SENT sid="231" pm="."><plain>J. </plain></SENT>
+<SENT sid="232" pm="."><plain>Intern. </plain></SENT>
+<SENT sid="233" pm="."><plain>Med. 2012 23 245 249 10.1016/j.ejim.2011.10.018 <?supplied-pmid 22385882?>22385882 </plain></SENT>
+</text></ref><ref id="B10-ijms-17-01008"><text><SENT sid="234" pm="."><plain>10. HeY.Y.ZhangR.ShaoX.Y.HuC.WangC.R.LuJ.X.BaoY.Q.JiaW.P.XiangK.S. Association of KCNJ11 and ABCC8 genetic polymorphisms with response to repaglinide in Chinese diabetic patients Acta Pharmacol. </plain></SENT>
+<SENT sid="235" pm="."><plain>Sin. 2008 29 983 989 10.1111/j.1745-7254.2008.00840.x <?supplied-pmid 18664331?>18664331 </plain></SENT>
+</text></ref><ref id="B11-ijms-17-01008"><text><SENT sid="236" pm="."><plain>11. MontgomeryS.B.SammethM.Gutierrez-ArcelusM.LachR.P.IngleC.NisbettJ.GuigoR.DermitzakisE.T. Transcriptome genetics using second generation sequencing in a Caucasian population Nature 2010 464 773 777 10.1038/nature08903 <?supplied-pmid 20220756?>20220756 </plain></SENT>
+</text></ref><ref id="B12-ijms-17-01008"><text><SENT sid="237" pm="."><plain>12. EmilienG.PonchonM.CaldasC.IsacsonO.MaloteauxJ.M. Impact of genomics on drug discovery and clinical medicine QJM 2000 93 391 423 10.1093/qjmed/93.7.391 <?supplied-pmid 10874050?>10874050 </plain></SENT>
+</text></ref><ref id="B13-ijms-17-01008"><text><SENT sid="238" pm="."><plain>13. Di StefanoJ.K.WatanabeR.M. Pharmacogenetics of Anti-Diabetes Drugs Pharmaceuticals 2010 3 2610 2646 10.3390/ph3082610 <?supplied-pmid 20936101?>20936101 </plain></SENT>
+</text></ref><ref id="B14-ijms-17-01008"><text><SENT sid="239" pm="."><plain>14. PruittK.D.BrownG.R.HiattS.M.Thibaud-NissenF.AstashynA.ErmolaevaO.FarrellC.M.HartJ.LandrumM.J.McGarveyK.M. RefSeq: An update on mammalian reference sequences Nucleic Acids Res. 2014 42 D756 D763 10.1093/nar/gkt1114 <?supplied-pmid 24259432?>24259432 </plain></SENT>
+</text></ref><ref id="B15-ijms-17-01008"><text><SENT sid="240" pm="."><plain>15. PetryszakR.BurdettT.FiorelliB.FonsecaN.A.Gonzalez-PortaM.HastingsE.HuberW.JuppS.KeaysM.KryvychN. Expression Atlas update—A database of gene and transcript expression from microarray- and sequencing-based functional genomics experiments Nucleic Acids Res. 2014 42 D926 D932 10.1093/nar/gkt1270 <?supplied-pmid 24304889?>24304889 </plain></SENT>
+</text></ref><ref id="B16-ijms-17-01008"><text><SENT sid="241" pm="."><plain>16. AquilanteC.L. Sulfonylurea pharmacogenomics in Type 2 diabetes: The influence of drug target and diabetes risk polymorphisms Expert Rev. </plain></SENT>
+<SENT sid="242" pm="."><plain>Cardiovasc. </plain></SENT>
+<SENT sid="243" pm="."><plain>Ther. 2010 8 359 372 10.1586/erc.09.154 <?supplied-pmid 20222815?>20222815 </plain></SENT>
+</text></ref><ref id="B17-ijms-17-01008"><text><SENT sid="244" pm="."><plain>17. KirchheinerJ.BrockmöllerJ. Clinical consequences of cytochrome P450 2C9 polymorphisms Clin. </plain></SENT>
+<SENT sid="245" pm="."><plain>Pharmacol. </plain></SENT>
+<SENT sid="246" pm="."><plain>Ther. 2005 77 1 16 10.1016/j.clpt.2004.08.009 <?supplied-pmid 15637526?>15637526 </plain></SENT>
+</text></ref><ref id="B18-ijms-17-01008"><text><SENT sid="247" pm="."><plain>18. WenX.WangJ.S.BackmanJ.T.LaitilaJ.NeuvonenP.J. Trimethoprim and sulfamethoxazole are selective inhibitors of CYP2C8 and CYP2C9, respectively Drug Metab. </plain></SENT>
+<SENT sid="248" pm="."><plain>Dispos. 2002 30 631 635 10.1124/dmd.30.6.631 <?supplied-pmid 12019187?>12019187 </plain></SENT>
+</text></ref><ref id="B19-ijms-17-01008"><text><SENT sid="249" pm="."><plain>19. FlorezJ.C.JablonskiK.A.SunM.W.BayleyN.KahnS.E.ShamoonH.HammanR.F.KnowlerW.C.NathanD.M.AltshulerD. Effects of the type 2 diabetes-associated PPARG P12A polymorphism on progression to diabetes and response to troglitazone J. Clin. </plain></SENT>
+<SENT sid="251" pm="."><plain>Endocrinol. </plain></SENT>
+<SENT sid="252" pm="."><plain>Metab. 2007 92 1502 1509 10.1210/jc.2006-2275 <?supplied-pmid 17213274?>17213274 </plain></SENT>
+</text></ref><ref id="B20-ijms-17-01008"><text><SENT sid="253" pm="."><plain>20. Thierry-MiegD.Thierry-MiegJ. AceView: A comprehensive cDNA-supported gene and transcripts annotation Genome Biol. 2006 7 Suppl. </plain></SENT>
+<SENT sid="254" pm="."><plain>1 S12 10.1186/gb-2006-7-s1-s12 <?supplied-pmid 16925834?>16925834 </plain></SENT>
+</text></ref><ref id="B21-ijms-17-01008"><text><SENT sid="255" pm="."><plain>21. CostaV.EspositoR.PallanteP.CiccodicolaA.FuscoA. The “next-generation” knowledge of papillary thyroid carcinoma Cell Cycle 2015 14 2018 2021 10.1080/15384101.2015.1049786 <?supplied-pmid 26030480?>26030480 </plain></SENT>
+</text></ref><ref id="B22-ijms-17-01008"><text><SENT sid="256" pm="."><plain>22. AversaR.SorrentinoA.EspositoR.AmbrosioM.R.AmatoA.ZambelliA.CiccodicolaA.D’ApiceL.CostaV. Alternative Splicing in Adhesion- and Motility-Related Genes in Breast Cancer Int. </plain></SENT>
+<SENT sid="257" pm="."><plain>J. </plain></SENT>
+<SENT sid="258" pm="."><plain>Mol. </plain></SENT>
+<SENT sid="259" pm="."><plain>Sci. 2016 17 121 10.3390/ijms17010121 <?supplied-pmid 26784191?>26784191 </plain></SENT>
+</text></ref><ref id="B23-ijms-17-01008"><text><SENT sid="260" pm="."><plain>23. ShikataE.YamamotoR.TakaneH.ShigemasaC.IkedaT.OtsuboK.IeiriI. Human organic cation transporter (OCT1 and OCT2) gene polymorphisms and therapeutic effects of metformin J. Hum. </plain></SENT>
+<SENT sid="262" pm="."><plain>Genet. 2007 52 117 122 10.1007/s10038-006-0087-0 <?supplied-pmid 17111267?>17111267 </plain></SENT>
+</text></ref><ref id="B24-ijms-17-01008"><text><SENT sid="263" pm="."><plain>24. EkeruoI.A.SolhpourA.TaegtmeyerH. Metformin in Diabetic Patients with Heart Failure: Safe and Effective? Curr. </plain></SENT>
+<SENT sid="264" pm="."><plain>Cardiovasc. </plain></SENT>
+<SENT sid="265" pm="."><plain>Risk Rep. 2013 7 417 422 10.1007/s12170-013-0355-4 <?supplied-pmid 24466358?>24466358 </plain></SENT>
+</text></ref><ref id="B25-ijms-17-01008"><text><SENT sid="266" pm="."><plain>25. KlenJ.DolžanV.JanežA. CYP2C9, KCNJ11 and ABCC8 polymorphisms and the response to sulphonylurea treatment in type 2 diabetes patients Eur. </plain></SENT>
+<SENT sid="267" pm="."><plain>J. </plain></SENT>
+<SENT sid="268" pm="."><plain>Clin. </plain></SENT>
+<SENT sid="269" pm="."><plain>Pharmacol. 2014 70 421 428 24442125 </plain></SENT>
+</text></ref><ref id="B26-ijms-17-01008"><text><SENT sid="270" pm="."><plain>26. WeiL.LocusonC.W.TracyT.S. Polymorphic variants of CYP2C9: Mechanisms involved in reduced catalytic activity Mol. </plain></SENT>
+<SENT sid="271" pm="."><plain>Pharmacol. 2007 72 1280 1288 10.1124/mol.107.036178 <?supplied-pmid 17686967?>17686967 </plain></SENT>
+</text></ref><ref id="B27-ijms-17-01008"><text><SENT sid="272" pm="."><plain>27. CrespiC.L.MillerV.P. The R144C change in the CYP2C9*2 allele alters interaction of the cytochrome P450 with NADPH: Cytochrome P450 oxidoreductase Pharmacogenetics 1997 7 203 210 10.1097/00008571-199706000-00005 <?supplied-pmid 9241660?>9241660 </plain></SENT>
+</text></ref><ref id="B28-ijms-17-01008"><text><SENT sid="273" pm="."><plain>28. BeckerM.L.VisserL.E.TrienekensP.H.HofmanA.van SchaikR.H.StrickerB.H. Cytochrome P450 2C9 *2 and *3 polymorphisms and the dose and effect of sulfonylurea in type II diabetes mellitus Clin. </plain></SENT>
+<SENT sid="274" pm="."><plain>Pharmacol. </plain></SENT>
+<SENT sid="275" pm="."><plain>Ther. 2008 83 288 292 10.1038/sj.clpt.6100273 <?supplied-pmid 17597710?>17597710 </plain></SENT>
+</text></ref><ref id="B29-ijms-17-01008"><text><SENT sid="276" pm="."><plain>29. RagiaG.TavridouA.PetridisI.ManolopoulosV.G. Association of KCNJ11 E23K gene polymorphism with hypoglycemia in sulfonylurea-treated type 2 diabetic patients Diabetes Res. </plain></SENT>
+<SENT sid="277" pm="."><plain>Clin. </plain></SENT>
+<SENT sid="278" pm="."><plain>Pract. 2012 98 119 124 10.1016/j.diabres.2012.04.017 <?supplied-pmid 22591706?>22591706 </plain></SENT>
+</text></ref><ref id="B30-ijms-17-01008"><text><SENT sid="279" pm="."><plain>30. RacitiG.A.NigroC.LongoM.ParrilloL.MieleC.FormisanoP.BéguinotF. Personalized medicine and type 2 diabetes: Lesson from epigenetics Epigenomics 2014 6 229 238 10.2217/epi.14.10 <?supplied-pmid 24811791?>24811791 </plain></SENT>
+</text></ref><ref id="B31-ijms-17-01008"><text><SENT sid="280" pm="."><plain>31. PollastroC.ZivielloC.CostaV.CiccodicolaA. Pharmacogenomics of Drug Response in Type 2 Diabetes: Toward the Definition of Tailored Therapies? PPAR Res. 2015 2015 415149 10.1155/2015/415149 <?supplied-pmid 26161088?>26161088 </plain></SENT>
+</text></ref><ref id="B32-ijms-17-01008"><text><SENT sid="281" pm="."><plain>32. SakamotoY.InoueH.KeshavarzP.MiyawakiK.YamaguchiY.MoritaniM.KunikaK.NakamuraN.YoshikawaT.YasuiN. SNPs in the KCNJ11-ABCC8 gene locus are associated with type 2 diabetes and blood pressure levels in the Japanese population J. Hum. </plain></SENT>
+<SENT sid="283" pm="."><plain>Genet. 2007 52 781 793 10.1007/s10038-007-0190-x <?supplied-pmid 17823772?>17823772 </plain></SENT>
+</text></ref><ref id="B33-ijms-17-01008"><text><SENT sid="284" pm="?"><plain>33. SongY.NiuT.MansonJ.E.KwiatkowskiD.J.LiuS. Are variants in the CAPN10 gene related to risk of type 2 diabetes? </plain></SENT>
+<SENT sid="285" pm="."><plain>A quantitative assessment of population and family-based association studies Am. </plain></SENT>
+<SENT sid="286" pm="."><plain>J. </plain></SENT>
+<SENT sid="287" pm="."><plain>Hum. </plain></SENT>
+<SENT sid="288" pm="."><plain>Genet. 2004 74 208 222 10.1086/381400 <?supplied-pmid 14730479?>14730479 </plain></SENT>
+</text></ref><ref id="B34-ijms-17-01008"><text><SENT sid="289" pm="."><plain>34. The UniProt Database Available online: <ext-link ext-link-type="uri" xlink:href="http://www.uniprot.org">http://www.uniprot.org</ext-link> (accessed on 7 December 2015)  </plain></SENT>
+</text></ref><ref id="B35-ijms-17-01008"><text><SENT sid="290" pm="."><plain>35. McLarenW.PritchardB.RiosD.ChenY.FlicekP.CunninghamF. Deriving the consequences of genomic variants with the Ensembl API and SNP Effect Predictor Bioinformatics 2010 26 2069 2070 10.1093/bioinformatics/btq330 <?supplied-pmid 20562413?>20562413 </plain></SENT>
+</text></ref><ref id="B36-ijms-17-01008"><text><SENT sid="291" pm="."><plain>36. VenselaarH.Te BeekT.A.KuipersR.K.HekkelmanM.L.VriendG. Protein structure analysis of mutations causing inheritable diseases. </plain></SENT>
+<SENT sid="292" pm="."><plain>An e-Science approach with life scientist friendly interfaces BMC Bioinform. 2010 11 1008 10.1186/1471-2105-11-548 <?supplied-pmid 21059217?>21059217 </plain></SENT>
+</text></ref><ref id="B37-ijms-17-01008"><text><SENT sid="293" pm="."><plain>37. ZhangY. I-TASSER server for protein 3D structure prediction BMC Bioinform. 2008 9 1008 10.1186/1471-2105-9-40 <?supplied-pmid 18215316?>18215316 </plain></SENT>
+</text></ref><ref id="B38-ijms-17-01008"><text><SENT sid="294" pm="."><plain>38. The PyMOL Molecular Graphics System, Version 1.8 Schrödinger, LLC Available online: <ext-link ext-link-type="uri" xlink:href="http://www.pymol.org">http://www.pymol.org</ext-link> (accessed on 18 January 2016)  </plain></SENT>
+</text></ref><ref id="B39-ijms-17-01008"><text><SENT sid="295" pm="."><plain>39. CelnikerG.NimrodG.AshkenazyH.GlaserF.MartzE.MayroseI.PupkoT.Ben-TalN. ConSurf: Using Evolutionary Data to Raise Testable Hypotheses about Protein Function Isr. </plain></SENT>
+<SENT sid="296" pm="."><plain>J. </plain></SENT>
+<SENT sid="297" pm="."><plain>Chem. 2013 53 199 206 10.1002/ijch.201200096  </plain></SENT>
+</text></ref><ref id="B40-ijms-17-01008"><text><SENT sid="298" pm="."><plain>40. SherryS.T.WardM.SirotkinK. dbSNP-database for single nucleotide polymorphisms and other classes of minor genetic variation Genome Res. 1999 9 677 679 <?supplied-pmid 10447503?>10447503 </plain></SENT>
+</text></ref><ref id="B41-ijms-17-01008"><text><SENT sid="299" pm="."><plain>41. KentW.J.SugnetC.W.FureyT.S.RoskinK.M.PringleT.H.ZahlerA.M.HausslerD. The human genome browser at UCSC Genome Res. 2002 12 996 1006 12045153 </plain></SENT>
+</text></ref><ref id="B42-ijms-17-01008"><text><SENT sid="300" pm="."><plain>42. ChangT.H.HuangH.Y.HsuJ.B.WengS.L.HorngJ.T.HuangH.D. An enhanced computational platform for investigating the roles of regulatory RNA and for identifying functional RNA motifs BMC Bioinform. 2013 14 Suppl. </plain></SENT>
+<SENT sid="301" pm="."><plain>2 1008 10.1186/1471-2105-14-S2-S4  </plain></SENT>
+</text></ref><ref id="B43-ijms-17-01008"><text><SENT sid="302" pm="."><plain>43. ScarpatoM.EspositoR.EvangelistaD.AprileM.AmbrosioM.R.AngeliniC.CiccodicolaA.CostaV. AnaLysis of Expression on human chromosome 21, ALE-HSA21: A pilot integrated web resource Database 2014 2014 bau009 10.1093/database/bau009 <?supplied-pmid 24573881?>24573881 </plain></SENT>
+</text></ref><ref id="B44-ijms-17-01008"><text><SENT sid="303" pm="."><plain>44. ThorvaldsdóttirH.RobinsonJ.T.MesirovJ.P. Integrative Genomics Viewer (IGV): High-performance genomics data visualization and exploration Brief Bioinform. 2013 14 178 192 10.1093/bib/bbs017 <?supplied-pmid 22517427?>22517427 </plain></SENT>
+</text></ref><ref id="B45-ijms-17-01008"><text><SENT sid="304" pm="."><plain>45. KapusheskyM.EmamI.HollowayE.KurnosovP.ZorinA.MaloneJ.RusticiG.WilliamsE.ParkinsonH.BrazmaA. Gene expression atlas at the European bioinformatics institute Nucleic Acids Res. 2010 38 D690 D698 10.1093/nar/gkp936 <?supplied-pmid 19906730?>19906730 </plain></SENT>
+</text></ref><ref id="B46-ijms-17-01008"><text><SENT sid="305" pm="."><plain>46. CostaV.CasamassimiA.RobertoR.GianfrancescoF.MatarazzoM.R.D’UrsoM.D’EspositoM.RocchiM.CiccodicolaA. DDX11L: A novel transcript family emerging from human subtelomeric regions BMC Genom. 2009 10 1008 10.1186/1471-2164-10-250 <?supplied-pmid 19476624?>19476624 </plain></SENT>
+</text></ref><ref id="B47-ijms-17-01008"><text><SENT sid="306" pm="."><plain>47. TrapnellC.PachterL.SalzbergS.L. TopHat: Discovering splice junctions with RNA-Seq Bioinformatics 2009 25 1105 1111 10.1093/bioinformatics/btp120 <?supplied-pmid 19289445?>19289445 </plain></SENT>
+</text></ref><ref id="B48-ijms-17-01008"><text><SENT sid="307" pm="."><plain>48. QuinlanA.R.HallI.M. BEDTools: A flexible suite of utilities for comparing genomic features Bioinformatics 2010 26 841 842 10.1093/bioinformatics/btq033 <?supplied-pmid 20110278?>20110278 </plain></SENT>
+</text></ref><ref id="B49-ijms-17-01008"><text><SENT sid="308" pm="."><plain>49. CostaV.EspositoR.ZivielloC.SepeR.BimL.V.CacciolaN.A.Decaussin-PetrucciM.PallanteP.FuscoA.CiccodicolaA. New somatic mutations and WNK1-B4GALNT3 gene fusion in papillary thyroid carcinoma Oncotarget 2015 6 11242 11251 10.18632/oncotarget.3593 <?supplied-pmid 25803323?>25803323 </plain></SENT>
+</text></ref><ref id="B50-ijms-17-01008"><text><SENT sid="309" pm="."><plain>50. RussoF.AngeliniC. RNASeqGUI: A GUI for analysing RNA-Seq data Bioinformatics 2014 30 2514 2516 10.1093/bioinformatics/btu308 <?supplied-pmid 24812338?>24812338 </plain></SENT>
+</text></ref><ref id="B51-ijms-17-01008"><text><SENT sid="310" pm="."><plain>51. DedmanA.M.MajeedY.TumovaS.ZengF.KumarB.MunschC.BatesonA.N.WittmannJ.JäckH.M.PorterK.E. TRPC1 transcript variants, inefficient nonsense-mediated decay and low up-frameshift-1 in vascular smooth muscle cells BMC Mol. </plain></SENT>
+<SENT sid="311" pm="."><plain>Biol. 2011 12 1008 10.1186/1471-2199-12-30 <?supplied-pmid 21749700?>21749700 </plain></SENT>
+</text></ref></ref-list></SecTag></back><floats-group><SecTag type="FIG"><fig id="ijms-17-01008-f001" position="float"><label>Figure 1</label><caption><p><text><SENT sid="312" pm="."><plain>SLC22A1 polymorphisms associated with metformin response. </plain></SENT>
+<SENT sid="313" pm="."><plain>In the upper part, are schematically reported the genomic localizations of the SNPs analyzed in SLC22A1, IRS1 and CYP2C9 gene, in the panels (A), (C) and (D), respectively. </plain></SENT>
+<SENT sid="314" pm="."><plain>RefSeq, Ensembl and GENCODE annotations are shown in different colors and are indicated in the Figure. </plain></SENT>
+<SENT sid="315" pm="."><plain>The boxes indicate the exons and numbering is indicated above. </plain></SENT>
+<SENT sid="316" pm="."><plain>The blue arrows indicate the genomic localization of the polymorphisms. </plain></SENT>
+<SENT sid="317" pm="."><plain>In the lower part of panels (A), (C) and (D) are shown the 3D representations of amino acid changes corresponding to these SNPs. </plain></SENT>
+<SENT sid="318" pm="."><plain>The canonical amino acid is reported in green and the mutated residue is shown in red. </plain></SENT>
+<SENT sid="319" pm="."><plain>The evolutionary conservation score for each altered amino acid residue—according to Consurf software—is also shown. </plain></SENT>
+<SENT sid="320" pm="."><plain>The specific amino acid is highlighted by a blue box; (B) on the left part, a schematic representation of the Oct1 protein in the cell membrane is shown. </plain></SENT>
+<SENT sid="321" pm="."><plain>The red asterisk indicates the approximate position of the amino acid 465G, whose alteration is associated with reduced metformin responsiveness. </plain></SENT>
+<SENT sid="322" pm="."><plain>On the right part of panel (B), the 3D protein structure of the entire Oct1 protein is shown. </plain></SENT>
+<SENT sid="323" pm="."><plain>The inner portion of the channel is indicated in blue. </plain></SENT>
+<SENT sid="324" pm="."><plain>Amino acid changes under evaluation are indicated in red (red arrow indicates G465R substitution); (D) on the right, the 3D protein structure of Cyp2c9 is shown, with the canonical R144 residue (in green) and three amino acids that are predicted to interact with it (in orange). </plain></SENT>
+<SENT sid="325" pm="."><plain>Dashed white lines indicate the H-bonds among these residues. </plain></SENT>
+</text></p></caption><graphic xlink:href="ijms-17-01008-g001"/></fig></SecTag><SecTag type="FIG"><fig id="ijms-17-01008-f002" position="float"><label>Figure 2</label><caption><p><text><SENT sid="326" pm="."><plain>SNPs in drug resistance genes map to different regulatory regions. </plain></SENT>
+<SENT sid="327" pm="."><plain>The panel shows a summary of the genomic regulatory elements that surround the SNPs herein analyzed. </plain></SENT>
+<SENT sid="328" pm="."><plain>The cells in light blue indicate the presence of the SNP within a given regulatory element or genomic feature, whereas white cells indicate that the SNP does not fall within any of the analyzed regions. </plain></SENT>
+<SENT sid="329" pm="."><plain>In the light blue cells of Transcription Factors Binding Sites detected by ChIP-Seq (ChIP-Seq TFBS row), the transcription factors are indicated that have binding sites potentially affected by the presence of the SNP (columns); DHS (DNAse Hypersensitive Sites); EST (Expressed Sequence Tag); CDS (Coding Sequences). </plain></SENT>
+</text></p></caption><graphic xlink:href="ijms-17-01008-g002"/></fig></SecTag><SecTag type="FIG"><fig id="ijms-17-01008-f003" position="float"><label>Figure 3</label><caption><p><text><SENT sid="330" pm="."><plain>Schematic representation of the newly identified transcripts within the CAPN10 gene locus. </plain></SENT>
+<SENT sid="331" pm="."><plain>Genomic localization of the SNPs rs3842570 (A) and rs3792267 (B) in the CAPN10 gene are shown. </plain></SENT>
+<SENT sid="332" pm="."><plain>In the upper part of each panel: approximate localization of the SNPs according to RefSeq, Ensembl, Aceview, GENCODE and ESTdb annotations (boxes indicate the exons, whose numbers are shown above). </plain></SENT>
+<SENT sid="333" pm="."><plain>The blue arrows indicate the genomic localization of the polymorphisms. </plain></SENT>
+<SENT sid="334" pm="."><plain>Red peaks on gene annotations represent the reads’ coverage from the RNA-Seq experiment carried out on the HEK293 cell line. </plain></SENT>
+<SENT sid="335" pm="."><plain>Peaks are indicative of active gene transcription. </plain></SENT>
+<SENT sid="336" pm="."><plain>Agarose gel electrophoresis pictures for RT+ (Reverse Transcriptase) and RT-PCR assays in the HEK293 cell line are also reported for each panel. </plain></SENT>
+<SENT sid="337" pm="."><plain>Blue boxes in the electropherograms (Sanger sequencing output) indicate the polymorphic site, which falls within a transcribed region. </plain></SENT>
+</text></p></caption><graphic xlink:href="ijms-17-01008-g003"/></fig></SecTag><SecTag type="FIG"><fig id="ijms-17-01008-f004" position="float"><label>Figure 4</label><caption><p><text><SENT sid="338" pm="."><plain>Schematic localization of CAPN10/GPR35 loci. </plain></SENT>
+<SENT sid="339" pm="."><plain>(A) Genomic organization of CAPN10 (left) and GPR35 (right) genes according to RefSeq and Ensembl annotations. </plain></SENT>
+<SENT sid="340" pm="."><plain>The annotation shown in black represents the ab initio transcriptome of HEK293 cells as reconstructed from RNA-Seq data. </plain></SENT>
+<SENT sid="341" pm="."><plain>Boxes indicate the exons. </plain></SENT>
+<SENT sid="342" pm="."><plain>The blue arrow indicates the genomic localization of the polymorphism. </plain></SENT>
+<SENT sid="343" pm="."><plain>A new transcript, automatically annotated in Ensembl database, links the two genes; (B) agarose gel electrophoresis picture in HEK293 cell line treated (or not) with cycloheximide (CHX) at growing concentrations as indicated above the gel image. </plain></SENT>
+<SENT sid="344" pm="."><plain>The newly described transcript is indicated by the black arrow. PPIA gene, shown below, was used as a housekeeping control gene. </plain></SENT>
+</text></p></caption><graphic xlink:href="ijms-17-01008-g004"/></fig></SecTag><SecTag type="TABLE"><table-wrap id="ijms-17-01008-t001" position="float"><object-id pub-id-type="pii">ijms-17-01008-t001_Table 1</object-id><label>Table 1</label><caption><p><text><SENT sid="345" pm="."><plain>Type 2 diabetes (T2D) drug responsiveness associated Single Nucleotide Polymorphisms (SNPs). </plain></SENT>
+</text></p></caption><table frame="hsides" rules="groups"><thead><tr><th align="center" valign="middle" style="border-top:solid thin;border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="346" pm="."><plain>Chromosome </plain></SENT>
+</text></th><th align="center" valign="middle" style="border-top:solid thin;border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="347" pm="."><plain>Position </plain></SENT>
+</text></th><th align="center" valign="middle" style="border-top:solid thin;border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="348" pm="."><plain>Localization </plain></SENT>
+</text></th><th align="center" valign="middle" style="border-top:solid thin;border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="349" pm="."><plain>Gene </plain></SENT>
+</text></th><th align="center" valign="middle" style="border-top:solid thin;border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="350" pm="."><plain>Alleles </plain></SENT>
+</text></th><th align="center" valign="middle" style="border-top:solid thin;border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="351" pm="."><plain>SNP ID </plain></SENT>
+</text></th><th align="center" valign="middle" style="border-top:solid thin;border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="352" pm="."><plain>Amino Acid Change </plain></SENT>
+</text></th></tr></thead><tbody><tr><td rowspan="4" align="center" valign="middle" style="border-bottom:solid thin" colspan="1"><text><SENT sid="353" pm="."><plain>6 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="354" pm="."><plain>160543148 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="355" pm="."><plain>Exon </plain></SENT>
+</text></td><td rowspan="4" align="center" valign="middle" style="border-bottom:solid thin" colspan="1"><text><SENT sid="356" pm="."><plain>SLC22A1 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="357" pm="."><plain>C/T </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="358" pm="."><plain>rs12208357 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="359" pm="."><plain>R61C </plain></SENT>
+</text></td></tr><tr><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="360" pm="."><plain>160560824 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="361" pm="."><plain>Exon </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="362" pm="."><plain>A/G </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="363" pm="."><plain>rs34130495 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="364" pm="."><plain>G401S </plain></SENT>
+</text></td></tr><tr><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="365" pm="."><plain>160560881 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="366" pm="."><plain>Exon </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="367" pm="."><plain>-/A </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="368" pm="."><plain>rs35167514 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="369" pm="."><plain>420del </plain></SENT>
+</text></td></tr><tr><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="370" pm="."><plain>160575837 </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="371" pm="."><plain>Exon </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="372" pm="."><plain>A/C/G </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="373" pm="."><plain>rs34059508 </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="374" pm="."><plain>G465R </plain></SENT>
+</text></td></tr><tr><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="375" pm="."><plain>6 </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="376" pm="."><plain>160670282 </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="377" pm="."><plain>Exon </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="378" pm="."><plain>SLC22A2 </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="379" pm="."><plain>G/T </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="380" pm="."><plain>rs316019 </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="381" pm="."><plain>S270A </plain></SENT>
+</text></td></tr><tr><td rowspan="2" align="center" valign="middle" style="border-bottom:solid thin" colspan="1"><text><SENT sid="382" pm="."><plain>11 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="383" pm="."><plain>17409572 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="384" pm="."><plain>Exon </plain></SENT>
+</text></td><td rowspan="2" align="center" valign="middle" style="border-bottom:solid thin" colspan="1"><text><SENT sid="385" pm="."><plain>KCNJ11 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="386" pm="."><plain>T/C </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="387" pm="."><plain>rs5219 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="388" pm="."><plain>K23E </plain></SENT>
+</text></td></tr><tr><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="389" pm="."><plain>17408630 </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="390" pm="."><plain>Exon </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="391" pm="."><plain>G/A </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="392" pm="."><plain>rs5215 </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="393" pm="."><plain>V337I </plain></SENT>
+</text></td></tr><tr><td rowspan="2" align="center" valign="middle" style="border-bottom:solid thin" colspan="1"><text><SENT sid="394" pm="."><plain>10 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="395" pm="."><plain>114808902 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="396" pm="."><plain>Intron </plain></SENT>
+</text></td><td rowspan="2" align="center" valign="middle" style="border-bottom:solid thin" colspan="1"><text><SENT sid="397" pm="."><plain>TCF7L2 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="398" pm="."><plain>G/T </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="399" pm="."><plain>rs12255372 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="400" pm="."><plain>- </plain></SENT>
+</text></td></tr><tr><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="401" pm="."><plain>114758349 </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="402" pm="."><plain>Intron </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="403" pm="."><plain>C/T </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="404" pm="."><plain>rs7903146 </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="405" pm="."><plain>- </plain></SENT>
+</text></td></tr><tr><td rowspan="2" align="center" valign="middle" style="border-bottom:solid thin" colspan="1"><text><SENT sid="406" pm="."><plain>10 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="407" pm="."><plain>96702047 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="408" pm="."><plain>Exon </plain></SENT>
+</text></td><td rowspan="2" align="center" valign="middle" style="border-bottom:solid thin" colspan="1"><text><SENT sid="409" pm="."><plain>CYP2C9 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="410" pm="."><plain>C/T </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="411" pm="."><plain>rs1799853 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="412" pm="."><plain>R144C </plain></SENT>
+</text></td></tr><tr><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="413" pm="."><plain>96741053 </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="414" pm="."><plain>Exon </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="415" pm="."><plain>A/C </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="416" pm="."><plain>rs1057910 </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="417" pm="."><plain>I359L </plain></SENT>
+</text></td></tr><tr><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="418" pm="."><plain>11 </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="419" pm="."><plain>17418477 </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="420" pm="."><plain>Exon </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="421" pm="."><plain>ABCC8 </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="422" pm="."><plain>G/T </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="423" pm="."><plain>rs757110 </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="424" pm="."><plain>A1369S </plain></SENT>
+</text></td></tr><tr><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="425" pm="."><plain>3 </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="426" pm="."><plain>12393125 </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="427" pm="."><plain>Exon </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="428" pm="."><plain>PPARG </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="429" pm="."><plain>C/G </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="430" pm="."><plain>rs1801282 </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="431" pm="."><plain>P12A </plain></SENT>
+</text></td></tr><tr><td rowspan="2" align="center" valign="middle" style="border-bottom:solid thin" colspan="1"><text><SENT sid="432" pm="."><plain>2 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="433" pm="."><plain>227093745 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="434" pm="."><plain>Intergenic </plain></SENT>
+</text></td><td rowspan="2" align="center" valign="middle" style="border-bottom:solid thin" colspan="1"><text><SENT sid="435" pm="."><plain>IRS1 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="436" pm="."><plain>C/T </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="437" pm="."><plain>rs2943641 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="438" pm="."><plain>- </plain></SENT>
+</text></td></tr><tr><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="439" pm="."><plain>227660544 </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="440" pm="."><plain>Exon </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="441" pm="."><plain>G/A </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="442" pm="."><plain>rs1801278 </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="443" pm="."><plain>G971R </plain></SENT>
+</text></td></tr><tr><td rowspan="3" align="center" valign="middle" style="border-bottom:solid thin" colspan="1"><text><SENT sid="444" pm="."><plain>2 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="445" pm="."><plain>241534293 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="446" pm="."><plain>Intron </plain></SENT>
+</text></td><td rowspan="3" align="center" valign="middle" style="border-bottom:solid thin" colspan="1"><text><SENT sid="447" pm="."><plain>CAPN10 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="448" pm="."><plain>Indel </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="449" pm="."><plain>rs3842570 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="450" pm="."><plain>- </plain></SENT>
+</text></td></tr><tr><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="451" pm="."><plain>241531174 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="452" pm="."><plain>Intron </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="453" pm="."><plain>A/G </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="454" pm="."><plain>rs3792267 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="455" pm="."><plain>- </plain></SENT>
+</text></td></tr><tr><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="456" pm="."><plain>241542703 </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="457" pm="."><plain>Intron </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="458" pm="."><plain>C/T </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="459" pm="."><plain>rs5030952 </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="460" pm="."><plain>- </plain></SENT>
+</text></td></tr></tbody></table></table-wrap></SecTag><SecTag type="TABLE"><table-wrap id="ijms-17-01008-t002" position="float"><object-id pub-id-type="pii">ijms-17-01008-t002_Table 2</object-id><label>Table 2</label><caption><p><text><SENT sid="461" pm="."><plain>Sorting Intolerant From Tolerant (SIFT) and PolyPhen scores and predictions for coding SNPs (cSNPs). </plain></SENT>
+</text></p></caption><table frame="hsides" rules="groups"><thead><tr><th rowspan="2" align="center" valign="middle" style="border-top:solid thin;border-bottom:solid thin" colspan="1"><text><SENT sid="462" pm="."><plain>Gene </plain></SENT>
+</text></th><th rowspan="2" align="center" valign="middle" style="border-top:solid thin;border-bottom:solid thin" colspan="1"><text><SENT sid="463" pm="."><plain>SNP </plain></SENT>
+</text></th><th rowspan="2" align="center" valign="middle" style="border-top:solid thin;border-bottom:solid thin" colspan="1"><text><SENT sid="464" pm="."><plain>Codon </plain></SENT>
+</text></th><th rowspan="2" align="center" valign="middle" style="border-top:solid thin;border-bottom:solid thin" colspan="1"><text><SENT sid="465" pm="."><plain>Amino Acid </plain></SENT>
+</text></th><th colspan="2" align="center" valign="middle" style="border-top:solid thin;border-bottom:solid thin" rowspan="1"><text><SENT sid="466" pm="."><plain>Score </plain></SENT>
+</text></th><th colspan="2" align="center" valign="middle" style="border-top:solid thin;border-bottom:solid thin" rowspan="1"><text><SENT sid="467" pm="."><plain>Prediction </plain></SENT>
+</text></th></tr><tr><th align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="468" pm="."><plain>SIFT </plain></SENT>
+</text></th><th align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="469" pm="."><plain>PolyPhen </plain></SENT>
+</text></th><th align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="470" pm="."><plain>SIFT </plain></SENT>
+</text></th><th align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="471" pm="."><plain>PolyPhen </plain></SENT>
+</text></th></tr></thead><tbody><tr><td rowspan="4" align="center" valign="middle" style="border-bottom:solid thin" colspan="1"><text><SENT sid="472" pm="."><plain>SLC22A1 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="473" pm="."><plain>rs12208357 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="474" pm="."><plain>CGC/TGC </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="475" pm="."><plain>R61C </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="476" pm="."><plain>0.01 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="477" pm="."><plain>0.954 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="478" pm="."><plain>D </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="479" pm="."><plain>PD </plain></SENT>
+</text></td></tr><tr><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="480" pm="."><plain>rs34130495 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="481" pm="."><plain>GGC/AGC </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="482" pm="."><plain>G401S </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="483" pm="."><plain>0 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="484" pm="."><plain>0.999 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="485" pm="."><plain>D </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="486" pm="."><plain>PD </plain></SENT>
+</text></td></tr><tr><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="487" pm="."><plain>rs35167514 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="488" pm="."><plain>ATG/TG </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="489" pm="."><plain>M420del </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="490" pm="."><plain>- </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="491" pm="."><plain>- </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="492" pm="."><plain>- </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="493" pm="."><plain>- </plain></SENT>
+</text></td></tr><tr><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="494" pm="."><plain>rs34059508 </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="495" pm="."><plain>GGA/AGA </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="496" pm="."><plain>G465R </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="497" pm="."><plain>0 </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="498" pm="."><plain>0.984 </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="499" pm="."><plain>D </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="500" pm="."><plain>PD </plain></SENT>
+</text></td></tr><tr><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="501" pm="."><plain>SLC22A2 </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="502" pm="."><plain>rs316019 </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="503" pm="."><plain>TCT/GCT </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="504" pm="."><plain>S270A </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="505" pm="."><plain>0.01 </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="506" pm="."><plain>0.524 </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="507" pm="."><plain>D </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="508" pm="."><plain>PD </plain></SENT>
+</text></td></tr><tr><td rowspan="2" align="center" valign="middle" style="border-bottom:solid thin" colspan="1"><text><SENT sid="509" pm="."><plain>KCNJ11 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="510" pm="."><plain>rs5215 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="511" pm="."><plain>GTC/ATC </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="512" pm="."><plain>V337I </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="513" pm="."><plain>0.08 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="514" pm="."><plain>0.015 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="515" pm="."><plain>T </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="516" pm="."><plain>B </plain></SENT>
+</text></td></tr><tr><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="517" pm="."><plain>rs5219 </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="518" pm="."><plain>AAG/GAG </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="519" pm="."><plain>K23E </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="520" pm="."><plain>0.17 </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="521" pm="."><plain>0 </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="522" pm="."><plain>T </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="523" pm="."><plain>B </plain></SENT>
+</text></td></tr><tr><td rowspan="2" align="center" valign="middle" style="border-bottom:solid thin" colspan="1"><text><SENT sid="524" pm="."><plain>CYP2C9 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="525" pm="."><plain>rs1799853 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="526" pm="."><plain>CGT/TGT </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="527" pm="."><plain>R144C </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="528" pm="."><plain>0.03 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="529" pm="."><plain>0.978 </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="530" pm="."><plain>D </plain></SENT>
+</text></td><td align="center" valign="middle" rowspan="1" colspan="1"><text><SENT sid="531" pm="."><plain>PD </plain></SENT>
+</text></td></tr><tr><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="532" pm="."><plain>rs1057910 </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="533" pm="."><plain>ATT/CTT </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="534" pm="."><plain>I359L </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="535" pm="."><plain>0.09 </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="536" pm="."><plain>0.45 </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="537" pm="."><plain>T </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="538" pm="."><plain>PD </plain></SENT>
+</text></td></tr><tr><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="539" pm="."><plain>ABCC8 </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="540" pm="."><plain>rs757110 </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="541" pm="."><plain>GCC/TCC </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="542" pm="."><plain>A1369S </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="543" pm="."><plain>0.73 </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="544" pm="."><plain>0 </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="545" pm="."><plain>T </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="546" pm="."><plain>B </plain></SENT>
+</text></td></tr><tr><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="547" pm="."><plain>PPARG </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="548" pm="."><plain>rs1801282 </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="549" pm="."><plain>CCA/GCA </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="550" pm="."><plain>P12A </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="551" pm="."><plain>0 </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="552" pm="."><plain>0 </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="553" pm="."><plain>D </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="554" pm="."><plain>B </plain></SENT>
+</text></td></tr><tr><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="555" pm="."><plain>IRS1 </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="556" pm="."><plain>rs1801278 </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="557" pm="."><plain>GGG/AGG </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="558" pm="."><plain>G971R </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="559" pm="."><plain>0.51 </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="560" pm="."><plain>0.986 </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="561" pm="."><plain>T </plain></SENT>
+</text></td><td align="center" valign="middle" style="border-bottom:solid thin" rowspan="1" colspan="1"><text><SENT sid="562" pm="."><plain>PD </plain></SENT>
+</text></td></tr></tbody></table><table-wrap-foot><fn><p>D = deleterious; T = tolerated; PD = probably damaging; B = Benign.</p></fn></table-wrap-foot></table-wrap></SecTag></floats-group></article>

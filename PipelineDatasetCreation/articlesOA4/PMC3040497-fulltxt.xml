@@ -1,0 +1,199 @@
+<!DOCTYPE article PUBLIC "-//NLM//DTD Journal Archiving and Interchange DTD v3.0 20080202//EN" "archivearticle3.dtd"> 
+<article xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML" article-type="research-article"><?properties open_access?><?DTDIdentifier.IdentifierValue -//NLM//DTD Journal Publishing DTD v2.1 20050630//EN?><?DTDIdentifier.IdentifierType public?><?SourceDTD.DTDName journalpublishing.dtd?><?SourceDTD.Version 2.1?><?ConverterInfo.XSLTName jp2nlmx2.xsl?><?ConverterInfo.Version 2?><front><journal-meta><journal-id journal-id-type="nlm-ta">Bioinformation</journal-id><journal-id journal-id-type="publisher-id">Bioinformation</journal-id><journal-title-group><journal-title>Bioinformation</journal-title></journal-title-group><issn pub-type="epub">0973-2063</issn><publisher><publisher-name>Biomedical Informatics</publisher-name></publisher></journal-meta><article-meta><article-id pub-id-type="pmcid">3040497</article-id><article-id pub-id-type="publisher-id">004100052010</article-id><article-categories><subj-group subj-group-type="heading"><subject>Hypothesis</subject></subj-group></article-categories><title-group><article-title>A comparative analysis of dynamic grids vs. virtual grids using the A3pviGrid framework</article-title></title-group><contrib-group><contrib contrib-type="author"><name><surname>Shankaranarayanan</surname><given-names>Avinas</given-names></name><xref ref-type="aff" rid="A1">1</xref><xref ref-type="corresp" rid="COR1">*</xref></contrib><contrib contrib-type="author"><name><surname>Amaldas</surname><given-names>Christine</given-names></name><xref ref-type="aff" rid="A2">2</xref></contrib><aff id="A1"><label>1</label>School of Chemical and Biotechnology, Sastra University</aff><aff id="A2"><label>2</label>Business Information Systems, Royal Melbourne Institute of Technology</aff></contrib-group><author-notes><corresp id="COR1"><label>*</label>Avinas Shankaranarayanan:<email>avigrid@gmail.com</email></corresp></author-notes><pub-date pub-type="collection"><year>2010</year></pub-date><pub-date pub-type="epub"><day>01</day><month>11</month><year>2010</year></pub-date><volume>5</volume><issue>5</issue><fpage>186</fpage><lpage>190</lpage><history><date date-type="received"><day>26</day><month>7</month><year>2010</year></date><date date-type="accepted"><day>26</day><month>8</month><year>2010</year></date></history><permissions><copyright-statement>&#x000a9; 2010 Biomedical Informatics</copyright-statement><copyright-year>2010</copyright-year><license license-type="open-access"><license-p>This is an open-access article, which permits unrestricted use, distribution, and reproduction in any medium, 		for non-commercial purposes, provided the original author and source are credited.</license-p></license></permissions><abstract><p>With the proliferation of Quad/Multi-core micro-processors in mainstream platforms such as 
+		desktops and workstations; a large number of unused CPU cycles can be utilized for running 
+		virtual machines (VMs) as dynamic nodes in distributed environments. Grid services and its 
+		service oriented business broker now termed cloud computing could deploy image based virtualization 
+		platforms enabling agent based resource management and dynamic fault management. In this paper we 
+		present an efficient way of utilizing heterogeneous virtual machines on idle desktops as an environment 
+		for consumption of high performance grid services. Spurious and exponential increases in the size of the 
+		datasets are constant concerns in medical and pharmaceutical industries due to the constant discovery and 
+		publication of large sequence databases. Traditional algorithms are not modeled at handing large data 
+		sizes under sudden and dynamic changes in the execution environment as previously discussed. This research 
+		was undertaken to compare our previous results with running the same test dataset with that of a virtual 
+		Grid platform using virtual machines (Virtualization). The implemented architecture, A3pviGrid utilizes 
+		game theoretic optimization and agent based team formation (Coalition) algorithms to improve upon 
+		scalability with respect to team formation. Due to the dynamic nature of distributed systems 
+		(as discussed in our previous work) all interactions were made local within a team transparently.  
+		This paper is a proof of concept of an experimental mini-Grid test-bed compared to running the platform 
+		on local virtual machines on a local test cluster. This was done to give every agent its own execution 
+		platform enabling anonymity and better control of the dynamic environmental parameters.  We also analyze 
+		performance and scalability of Blast in a multiple virtual node setup and present our findings. 
+		This paper is an extension of our previous research on improving the BLAST application framework 
+		using dynamic Grids on virtualization platforms such as the virtual box.</p></abstract><kwd-group><kwd>Agents</kwd><kwd>Blast</kwd><kwd>Coalition</kwd><kwd>Grids</kwd><kwd>Virtual Machines and Virtualization</kwd></kwd-group></article-meta></front><body><sec id="s1"><title>Background</title><p>Bioinformatics heavily [<xref ref-type="bibr" rid="R07">7</xref>,
+<xref ref-type="bibr" rid="R08">8</xref>] relies upon statistical and analytical methods of processing 
+biological data. Some of the important biological research aims at studying the evolutionary 
+effects of gene mutation and similarity between gene sequences using computer technology. This 
+aids biologists to find and cure disease causing viruses by applying new and faster methods of drug 
+discovery in the laboratory.  Substantial discoveries of new life forms and drugs takes place on a 
+daily basis leading to biological data being stored into remote databases (resources).  The exponential 
+increase in the size of datasets makes it mandatory for biologists to opt for better methods of computing 
+genomic data. Biologists use different types of sequence comparison tools and software packages to speed 
+up experimental research. The problem of organizing information and sharing knowledge with the scientific 
+community at the gene level isn't being tackled by developing a nomenclature. Instead, computational 
+techniques were applied to improve the organization of information in databases which lead to the era of 
+computational biology. The paper is subdivided into the following sections: Section II will give an 
+overview of current Blast Literature with insights into the distributed systems and Virtual Grids; 
+Section III will talk about the A3pviGrid framework [<xref ref-type="bibr" rid="R04">4</xref>] 
+and how it functions followed by the differences in performances between running our Blast application in our mini-grid test-bed and comparing it to 
+running individual agents on virtual machine work spaces; in Section IV and V we conclude the paper with 
+discussions about the results obtained followed by future enhancements to our research work.</p><sec id="s1a"><title>About Virtual Grids and Bioinformatics Blast</title><p>Virtual grids are described by a virtual grid resource specification that is 
+presented by the application to acquire resources for execution. A virtual grid 
+resource specification captures the desired resources for an application, and its 
+explicit resource structure can be used by the application designer to express parallelism, 
+communication, and other forms of optimization. The primary goal of grid computing platforms 
+is to seamlessly multiplex distributed computational resources with its associated providers 
+and end users across wide area networks [<xref ref-type="bibr" rid="R12">12</xref>]. 
+In traditional computing environments, resources are multiplexed based on typical operating 
+systems confined to limited resources. With the proliferation of Quad/Multi-core 
+micro-processors in mainstream platforms such as desktops and workstations; a large number 
+of unused CPU cycles can be utilized for running virtual machines as dynamic nodes in 
+distributed environments as Grid services and its service oriented business 
+broker now popularized as cloud computing. Numerous advantages such as dynamic sizing of compute 
+nodes and resources are presented here which can be user controlled within a secured environment. 
+Further the deployment of image based virtualization platforms enables resource management and 
+dynamic fault management in a controlled manner. End users of high performance compute nodes always 
+expect to meet some challenges while deploying Grid resources in the form of services. In this paper,
+we propose a new methodology for Grid computing; to use virtual machines as Virtual Grid Environments 
+(VGE) that provides computing resources to Grid users having customized requirements originating from 
+different platforms having varied Quality of Service (QoS) constraints. The ability to share resources 
+is a basic requirement for the deployment of grids while observing the integrity and security of shared 
+resources is of utmost importance. Security models need to address resource providers who enable trust 
+or integrity mechanisms that restrict the application of grids based on mutual trust between resource 
+providers (brokers) and users. </p><p>Virtual machines address three fundamental requirements: support for legacy applications, 
+security against un-trusted program execution and users, and independent resource deployment 
+and administration. Virtual machines can be divided into two main categories 
+[<xref ref-type="bibr" rid="R10">10</xref>]: those that virtualize complete 
+instruction set architecture (ISA-VMs) including both user and system instructions; 
+supports an application binary interface with virtualization of system calls 
+[<xref ref-type="bibr" rid="R02">2</xref>]. An important class of virtual machines 
+[<xref ref-type="bibr" rid="R11">11</xref>,<xref ref-type="bibr" rid="R12">12</xref>,
+<xref ref-type="bibr" rid="R14">14</xref>] consists of ISA-VMs that support 
+same-ISA execution of entire operating systems such as IBM S/390 series 
+[<xref ref-type="bibr" rid="R18">18</xref>] and VMware 
+[<xref ref-type="bibr" rid="R10">10</xref>], and the open-source project Virtual box 
+[<xref ref-type="bibr" rid="R10">10</xref>] used in our test case. Virtual machines 
+can be highly customizable without requiring system restarts. It is possible 
+to specify virtual hardware parameters: memory and disk sizes; system software 
+parameters such as operating system modules [<xref ref-type="bibr" rid="R13">13</xref>,
+<xref ref-type="bibr" rid="R15">15</xref>,<xref ref-type="bibr" rid="R18">18</xref>]
+loading on demand and kernel configuration. We can agree that deploying virtual 
+environments for Grid computing can bring about user enabled compute and resource 
+customization, QoS sharing, data manipulation and easy management. Instead of 
+complicating users with a Grid middleware and Virtualization Engines our 
+existing framework A3pviGrid [<xref ref-type="bibr" rid="R04">4</xref>,
+<xref ref-type="bibr" rid="R06">6</xref>] architecture was utilized for virtualization.</p><p>Biologists often require sequence comparison and alignment applications such as 
+Basic Local Alignment Search Tools or BLAST [<xref ref-type="bibr" rid="R09">9</xref>,
+<xref ref-type="bibr" rid="R13">13</xref>],which are effectively utilized for processing large sets 
+of gene sequences for similarity matching. These tools have been previously extensively 
+investigated [<xref ref-type="bibr" rid="R04">4</xref>] and evaluated. BLAST is a set of 
+programs used for searching sequence databases with that of the input query sequence 
+for similarity matching. BLAST is a heuristic search method which makes assumptions 
+about the data based on experience. This implies that it is not guaranteed to find the 
+best alignment in all possible circumstances. It sacrifices some accuracy for a great 
+increase in speed. The BLAST has similarities to the Smith-Waterman algorithm 
+[<xref ref-type="bibr" rid="R15">15</xref>], which is slow but guaranteed to 
+get the best possible alignments given certain input parameters. BLAST uses a 
+special database format to speed up the search operation. Several pre-packaged 
+databases exists, and the most notable is the &#x0201c;nr&#x0201d; database which is the non-redundant 
+database consisting of all sequences in GenBank. BLAST users can take advantage of low-cost, 
+efficient Linux cluster architectures such as Beowulf. Unfortunately, the efficiency 
+declines when scaled to hundreds of nodes because of serial result-merging and output 
+domination [<xref ref-type="bibr" rid="R10">10</xref>]. A 300-KB query against the 
+5.1-GB uncompressed &#x02018;nt&#x02019; database takes 1346 minutes (or 22.4 hours) 
+on one compute node. The same query was run within 8 minutes on 128 nodes on the 
+Green Destiny supercomputing cluster. A more detailed performance analysis and evaluation 
+can be found in the green destiny paper [<xref ref-type="bibr" rid="R05">5</xref>]. 
+Arun Krishnan in his paper [<xref ref-type="bibr" rid="R01">1</xref>], 
+talks about applying BLAST to the Globus Grid platform [<xref ref-type="bibr" rid="R17">17</xref>] 
+using Perl scripts called GridBLAST on a mini-grid test bed. When looking at the 
+computational aspects of BLAST [<xref ref-type="bibr" rid="R16">16</xref>], typically a full scale BLAST job across whole genomes 
+is highly computationally intensive due to the size of the databases queried upon. The 
+following section will briefly describe our frame work which was deployed on a virtualization 
+platform and compared to our previous results [<xref ref-type="bibr" rid="R04">4</xref>].</p></sec><sec id="s1b"><title>Running the A<sup>3p</sup>viGrid agents on virtual machines</title><p>The ability to invoke a program or workflow say a servlet using a web 
+server can be effectively utilized towards distributed processing of data. 
+This is termed as the &#x0201c;<italic>power server model</italic>&#x0201d; of computing. The advantage is the 
+simplicity of the model where the client connects to a bunch of web servers to 
+enable the consumption of remote services using web pages.A<sup>3p</sup>viGrid works 
+on the principle of the power server model of computing. Each of the clients 
+run the A<sup>3p</sup>viGrid server which is a simplistic http web server running 
+services in the form of CGI/Perl wrapper Scripts. The client side-coding 
+model enables the developer to develop services using the common gateway 
+interface (CGI) and can use any of the languages that support CGI scripting. 
+For the sake of simplicity and rapid development of services we have used 
+Perl as the language of choice due to its availability and portability for 
+most platforms. The A3pviGrid uses a decentralized directory structure 
+(APM) to enable peers to register and de-register peers and their respective services 
+[<xref ref-type="bibr" rid="R04">4</xref>].</p><p>A random set of 10 machines was used for job processing. 
+All the nodes ran A3pviGrid web servers.  The Blast.apm file, a directory 
+structure file that is local to all nodes was downloaded by all the peers as 
+part of the initialization phase. This file contains information such as 
+location information of nearby agents, domain and IP address and other important 
+data. Each of the nodes compute the ideal set of nodes using a basic ping test 
+based on the Blast grid service list. As all the nodes are capable of receiving 
+jobs, one of them was randomly chosen for job execution (Originator). A 
+Fasta formatted Sequence database (human DNA sequence from clone RP11-10K8 on chromosome 1) 
+was used to evaluate the Blast searches. The input query file was obtained, and 
+a set of jobs for job processing was prepared using the optimal coalition list. 
+Based on QoS characteristics namely Latency, Load [<xref ref-type="bibr" rid="R03">3</xref>] 
+and CPU time, the Originator of the job computes the most optimal coalition. 
+Once the coalition list is computed the data files are migrated using the POST 
+method to all the members of the coalition. Each of the coalition members start 
+to search using the input query files and output the results to an output file. </p><p>The output of the Search Phase is appended to a file using POST back to 
+Originator where the results are formatted using the Blast format perl script 
+and stored as a file or displayed in the browser of the originator. Each of the 
+agents ran on a virtual machine test bed having their own execution environments. 
+For the sake of true heterogeneous functionality and testing, four operating 
+environments were deployed namely: Fedora Linux Core, Windows Vista Ultimate, 
+Mac OS Leopard and Sun's Open Solaris 10. Each of the agents were given a 
+resource limit which shared the following specifications: 10 GB disk space; 
+4 GB RAM and Dual 2 GHZ CPU Cores. All VM's were equally created as disk images 
+and were run on 10 networked computers each hosting the four agents 
+(on four core operating environments). The new Gigabyte IRAM modules were installed 
+towards testing the improvements in I/O access to the data file where all VM&#x02019;s 
+were equally loaded using the Virtual Box open source virtualization software. 
+To cater to a heterogeneous environment and make it truly a peer-to-peer model 
+of computing, all nodes were connected over the Internet using DSL or Cisco routers 
+and Cable modem lines. </p><p>The turnaround and compute time were computed as follows: we assume N data 
+distributed over P = 2d tasks, with N an integer multiple of the computation 
+costs which comprise of the initial comparisons performed during the communication 
+phase where d = log P. The former involves a total of P = 2d comparisons, while the 
+latter requires at most (Nd (d+1) /2) comparisons. Because the algorithm is 
+perfectly balanced, we assume that idle time is negligible.  Our results were 
+obtained by running Gridblast code on Linux Clusters (Fedora Core) with 2.0 GHz 
+Duo core CPU's and 4GB RAM. A heterogeneous set of peers (three nodes running 
+Linux Fedora core; four nodes running Windows Vista Ultimate, three nodes running 
+Sun Open Solaris 10) having different configurations were used for running the 
+algorithm as a Grid service using the A<sup>3p</sup>viGrid agents running on their VM's or 
+individual user space. In this project, human DNA sequence (GenBankID: AL611946) 
+has been used as the database of choice. The size of this sequence is 44,921 base pairs (bp).</p></sec></sec><sec id="s2"><title>Results</title><sec id="s2a"><title>Initial Results</title><p>All of the A<sup>3p</sup>viGrid agents initially ran on individual workstations 
+and the initial results were obtained with a mini-grid test-bed of 10 nodes. The 
+results indicate the time of execution taken as the average value of the two experiments 
+with the same settings and parameters in place. (Table 1, 2 see <xref ref-type="supplementary-material" rid="SD1">supplementary material</xref>)</p></sec><sec id="s2b"><title>Results with Agents running on VM's</title><p>The initial data set was stored and written to scratch disks created in 
+RAM along with accessing and storing results on the iRAM installed on the 
+head node (where the initial job was submitted).The results are shown in 
+(Table 3, 4 see <xref ref-type="supplementary-material" rid="SD1">supplementary material</xref>). 
+From the data recorded we can estimate that the initial turnaround time was 
+affected due to an increase in latency posed by the VM's during initialization and 
+data retrieval. As we can observe from table 3 the overall turnaround time almost 
+increases two fold during initial execution as resources are allocated dynamically 
+by the agents during execution. From table 4, the researchers observed that once the 
+data was made available, the execution time was decreased more than half after the 
+agent and its environment were initialized. A two-fold speedup can be observed based 
+on running agents in virtual machines as the input/output data access time is cut by 
+half as resources and data were made available locally to the agents using virtual machines.</p></sec><sec id="s2c"><title>Conclusion and Future directions</title><p>To improve application and agent specific performance, customized 
+Virtual execution environments (Virtual Machines) were created for each of 
+the agents running the A<sup>3p</sup>viGrid service. An increase in performance after 
+initialization and execution of agents on the VM's was observed. A coalition 
+based approach to solving a known problem in bioinformatics was undertaken. 
+The use of RAM based scratch disks proved useful in improving the execution 
+times of the BLAST searches on the Mini-Grid test bed. It was found that the 
+A<sup>3p</sup>viGrid framework fairs well against embarrassingly parallel bioinformatics 
+applications such as Blast. The scalability of the Mini-Grid test bed is based 
+on numerous factors such as the resources available; the operating environments 
+and the speedup observed after virtualization is applied. A query search approach 
+was undertaken and we still need to try and apply query splitting to see how 
+the A<sup>3p</sup>viGrid framework fairs with similar datasets. Future research would be 
+towards this direction.</p></sec></sec><sec sec-type="supplementary-material"><title>Supplementary material</title><supplementary-material content-type="local-data" id="SD1"><caption><title>Data 1</title></caption><media xlink:href="97320630005186S1.pdf" xlink:type="simple" id="d32e287" position="anchor" mimetype="application" mime-subtype="pdf"/></supplementary-material></sec></body><back><ack><p>This project is part of a Masters by Research dissertation at SASTRA 
+University, Thanjavur, India.  We would like to take this opportunity to thank 
+Dr K.N. Somasekaran, Dean, Department of Chemical and Biotechnology, SASTRA 
+University for his valuable comments and feedback.</p></ack><fn-group><fn id="FN1" fn-type="other"><p><bold>Citation:</bold>Shankaranarayanan <italic>etal</italic>; Bioinformation 5(5): 186- 190 (2010)</p></fn></fn-group><ref-list><title>References</title><ref id="R01"><label>1</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Krishnan</surname><given-names>A</given-names></name></person-group><source>Concurrency and Computation: Practice and Experience</source><year>2005</year><volume>17</volume><fpage>1607</fpage></element-citation></ref><ref id="R02"><label>2</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Altschul</surname></name><etal/></person-group><source>Journal of Molecular Biology</source><year>1990</year><volume>215</volume><fpage>403</fpage><pub-id pub-id-type="pmid">2231712</pub-id></element-citation></ref><ref id="R03"><label>3</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Shankar</surname><given-names>A</given-names></name><etal/></person-group><source>PDPTA</source><year>2005</year><volume>27</volume><fpage>30</fpage></element-citation></ref><ref id="R04"><label>4</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Shankaranarayanan</surname></name><etal/></person-group><source>International Journal of GeneticEngineering and Biotechnology</source><year>2010</year><volume>1</volume><fpage>23</fpage></element-citation></ref><ref id="R05"><label>5</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Shankaranarayanan</surname></name><etal/></person-group><source>IEEE Computer Society, CIMCAIAWTIC 06</source><year>2006</year><volume>2</volume><fpage>315</fpage></element-citation></ref><ref id="R06"><label>6</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Darling</surname><given-names>A</given-names></name><etal/></person-group><source>ClusterWorld Conference and Expo</source><year>2003</year><volume>311</volume></element-citation></ref><ref id="R07"><label>7</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Burt</surname><given-names>S</given-names></name><etal/></person-group><source>BMC Bioinformatics</source><year>2005</year><volume>6</volume><fpage>168</fpage><pub-id pub-id-type="pmid">1190154</pub-id></element-citation></ref><ref id="R08"><label>8</label><element-citation publication-type="book"><person-group person-group-type="author"><name><surname>Gibas</surname><given-names>C</given-names></name><etal/></person-group><source>O Reilly and Associates</source><year>2001</year><size units="page"/></element-citation></ref><ref id="R09"><label>9</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Higgins</surname><given-names>DG</given-names></name><etal/></person-group><source>Methods Enzymol</source><year>1996</year><volume>266</volume><fpage>383</fpage><pub-id pub-id-type="pmid">8743695</pub-id></element-citation></ref><ref id="R10"><label>10</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Marshall</surname><given-names>J</given-names></name><etal/></person-group><source>Comput Methods Programs Biomed</source><year>2009</year><volume>93</volume><issue>1</issue><fpage>73</fpage><pub-id pub-id-type="pmid">2665129</pub-id></element-citation></ref><ref id="R11"><label>11</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Foster</surname><given-names>I</given-names></name><etal/></person-group><source>The International Journal of SupercomputerApplications and High Performance Computing</source><year>1997</year><volume>11</volume><issue>2</issue><fpage>115</fpage></element-citation></ref><ref id="R12"><label>12</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Konagaya</surname><given-names>A</given-names></name></person-group><source>BMC Bioinformatics</source><year>2006</year><volume>7</volume><issue>(Suppl 5)</issue><fpage>S10</fpage><pub-id pub-id-type="pmid">17254294</pub-id></element-citation></ref><ref id="R13"><label>13</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Braun</surname><given-names>R</given-names></name><etal/></person-group><source>Future Generation Computer Systems</source><year>2001</year><volume>17</volume><issue>6</issue><fpage>745</fpage></element-citation></ref><ref id="R14"><label>14</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Joseph</surname></name><etal/></person-group><source>Microprocess Microsyst</source><year>2009</year><volume>33</volume><issue>4</issue><fpage>281</fpage><pub-id pub-id-type="pmid">2771927</pub-id></element-citation></ref><ref id="R15"><label>15</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Jacob</surname></name><etal/></person-group><source>ACM Trans Reconfigurable Technol Syst</source><year>2008</year><volume>1</volume><issue>2</issue><fpage>9</fpage><pub-id pub-id-type="pmid">2615407</pub-id></element-citation></ref><ref id="R16"><label>16</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Isaac</surname></name><etal/></person-group><source>BMC Bioinformatics</source><year>2007</year><volume>8</volume><fpage>185</fpage><pub-id pub-id-type="pmid">1896180</pub-id></element-citation></ref><ref id="R17"><label>17</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Paulo</surname></name><etal/></person-group><source>BMC Bioinformatics</source><year>2005</year><volume>6</volume><fpage>197</fpage><pub-id pub-id-type="pmid">1190159</pub-id></element-citation></ref><ref id="R18"><label>18</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Talukdar</surname><given-names>V</given-names></name><etal/></person-group><source>Biotechnol J</source><year>2009</year><volume>4</volume><issue>9</issue><fpage>1244</fpage><pub-id pub-id-type="pmid">2697647</pub-id></element-citation></ref></ref-list></back><floats-group><fig id="F1" position="float"><label>Figure 1</label><caption><p>A <sup>3p</sup> viGrid an Experimental Grid Framework [<xref ref-type="bibr" rid="R04">4</xref>]</p></caption><graphic xlink:href="97320630005186F1"/></fig></floats-group></article>

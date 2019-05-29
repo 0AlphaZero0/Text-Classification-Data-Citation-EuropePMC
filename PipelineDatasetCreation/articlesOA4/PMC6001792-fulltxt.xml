@@ -1,0 +1,1064 @@
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD v1.1 20151215//EN" "JATS-archivearticle1.dtd"> 
+<article xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML" article-type="research-article"><?properties open_access?><?DTDIdentifier.IdentifierValue -//NLM//DTD Journal Archiving and Interchange DTD v3.0 20080202//EN?><?DTDIdentifier.IdentifierType public?><?SourceDTD.DTDName archivearticle3.dtd?><?SourceDTD.Version 3.0?><?ConverterInfo.XSLTName jp2nlmx2.xsl?><?ConverterInfo.Version 1?><front><journal-meta><journal-id journal-id-type="nlm-ta">Magn Reson Chem</journal-id><journal-id journal-id-type="iso-abbrev">Magn Reson Chem</journal-id><journal-id journal-id-type="doi">10.1002/(ISSN)1097-458Xa</journal-id><journal-id journal-id-type="publisher-id">MRC</journal-id><journal-title-group><journal-title>Magnetic Resonance in Chemistry</journal-title></journal-title-group><issn pub-type="ppub">0749-1581</issn><issn pub-type="epub">1097-458X</issn><publisher><publisher-name>John Wiley and Sons Inc.</publisher-name><publisher-loc>Hoboken</publisher-loc></publisher></journal-meta><article-meta><article-id pub-id-type="pmcid">6001792</article-id><article-id pub-id-type="doi">10.1002/mrc.4660</article-id><article-id pub-id-type="publisher-id">MRC4660</article-id><article-id pub-id-type="other">MRC-17-0111.R1</article-id><article-categories><subj-group subj-group-type="overline"><subject>Special Issue Tutorial</subject></subj-group><subj-group subj-group-type="heading"><subject>Special Issue Tutorials</subject></subj-group></article-categories><title-group><article-title>Large&#x02010;scale <styled-content style="fixed-case">NMR</styled-content> simulations in liquid state: A tutorial</article-title><alt-title alt-title-type="left-running-head">Kuprov</alt-title></title-group><contrib-group><contrib id="mrc4660-cr-0001" contrib-type="author" corresp="yes"><name><surname>Kuprov</surname><given-names>Ilya</given-names></name><contrib-id contrib-id-type="orcid">http://orcid.org/0000-0003-0430-2682</contrib-id><address><email>i.kuprov@soton.ac.uk</email></address><xref ref-type="aff" rid="mrc4660-aff-0001">
+<sup>1</sup>
+</xref></contrib></contrib-group><aff id="mrc4660-aff-0001">
+<label><sup>1</sup></label>
+<named-content content-type="organisation-division">School of Chemistry</named-content>
+<institution>University of Southampton</institution>
+<named-content content-type="street">University Road</named-content>
+<named-content content-type="city">Southampton</named-content>
+<named-content content-type="post-code">SO17 1BJ</named-content>
+<country country="GB">UK</country>
+</aff><author-notes><corresp id="correspondenceTo"><label>*</label>
+Correspondence<break/>
+Ilya Kuprov, School of Chemistry, University of Southampton, University Road, Southampton SO17 1BJ, UK.<break/>
+Email: <email>i.kuprov@soton.ac.uk</email><break/></corresp></author-notes><pub-date pub-type="epub"><day>27</day><month>11</month><year>2017</year></pub-date><pub-date pub-type="ppub"><month>6</month><year>2018</year></pub-date><volume>56</volume><issue>6</issue><issue-id pub-id-type="doi">10.1002/mrc.v56.6</issue-id><issue-title content-type="special-issue-title">Software tools and tutorials in liquid state NMR</issue-title><fpage>415</fpage><lpage>437</lpage><history><date date-type="received"><day>10</day><month>7</month><year>2017</year></date><date date-type="rev-recd"><day>20</day><month>8</month><year>2017</year></date><date date-type="accepted"><day>28</day><month>8</month><year>2017</year></date></history><permissions><!--<copyright-statement content-type="issue-copyright"> Copyright &#x000a9; 2018 John Wiley & Sons, Ltd. <copyright-statement>--><copyright-statement content-type="article-copyright">&#x000a9; 2017 The Authors. <italic>Magnetic Resonance in Chemistry</italic> published by John Wiley &#x00026; Sons Ltd.</copyright-statement><license license-type="creativeCommonsBy"><license-p>This is an open access article under the terms of the <ext-link ext-link-type="uri" xlink:href="http://creativecommons.org/licenses/by/4.0/">http://creativecommons.org/licenses/by/4.0/</ext-link> License, which permits use, distribution and reproduction in any medium, provided the original work is properly cited.</license-p></license></permissions><self-uri content-type="pdf" xlink:type="simple" xlink:href="file:MRC-56-415.pdf"/><abstract><p>Liquid state nuclear magnetic resonance is the only class of magnetic resonance experiments for which the simulation problem is solved comprehensively for spin systems of any size. This paper contains a practical walkthrough for one of the many available simulation packages &#x02014; <styled-content style="italic-in-any-context">Spinach</styled-content>. Its unique feature is polynomial complexity scaling: the ability to simulate large spin systems quantum mechanically and with accurate account of relaxation, diffusion, chemical processes, and hydrodynamics. This paper is a gentle introduction written with a PhD student in mind.</p></abstract><kwd-group kwd-group-type="author-generated"><kwd id="mrc4660-kwd-0001">NMR</kwd><kwd id="mrc4660-kwd-0002">simulation</kwd><kwd id="mrc4660-kwd-0003">spin</kwd><kwd id="mrc4660-kwd-0004">spinach</kwd><kwd id="mrc4660-kwd-0005">software</kwd></kwd-group><funding-group><award-group><funding-source>Engineering and Physical Sciences Research Council</funding-source><award-id>EP/F065205/1</award-id><award-id>EP/H003789/1</award-id></award-group></funding-group><counts><fig-count count="8"/><table-count count="7"/><page-count count="23"/><word-count count="8159"/></counts><custom-meta-group><custom-meta><meta-name>source-schema-version-number</meta-name><meta-value>2.0</meta-value></custom-meta><custom-meta><meta-name>component-id</meta-name><meta-value>mrc4660</meta-value></custom-meta><custom-meta><meta-name>cover-date</meta-name><meta-value>June 2018</meta-value></custom-meta><custom-meta><meta-name>details-of-publishers-convertor</meta-name><meta-value>Converter:WILEY_ML3GV2_TO_NLMPMC version:version=5.4.1.1 mode:remove_FC converted:14.06.2018</meta-value></custom-meta></custom-meta-group></article-meta><notes><p content-type="self-citation">
+<mixed-citation publication-type="journal" id="mrc4660-cit-0001">
+<string-name>
+<surname>Kuprov</surname>
+<given-names>I</given-names>
+</string-name>. <article-title>Large&#x02010;scale <styled-content style="fixed-case">NMR</styled-content> simulations in liquid state: A tutorial</article-title>. <source xml:lang="en">Magn Reson Chem</source>. <year>2018</year>;<volume>56</volume>:<fpage>415</fpage>&#x02013;<lpage>437</lpage>. <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1002/mrc.4660">https://doi.org/10.1002/mrc.4660</ext-link>
+<pub-id pub-id-type="pmid">28873503</pub-id></mixed-citation>
+</p></notes></front><body><sec id="mrc4660-sec-0001"><label>1</label><title>INTRODUCTION</title><p>Textbooks and introductory lectures make nuclear magnetic resonance (NMR) simulations look deceptively simple: type in some Pauli matrices, make a Hamiltonian, compute the exponential, and that's ostensibly it &#x02014; their authors have done a wonderful job of making the subject easy to understand.<xref rid="mrc4660-bib-0001" ref-type="ref">1</xref>, <xref rid="mrc4660-bib-0002" ref-type="ref">2</xref>, <xref rid="mrc4660-bib-0003" ref-type="ref">3</xref> The reality is rather more brutal: relaxation theory requires deep knowledge of tensor calculus, interaction specifications and rotation conventions are a veritable minefield, matrix manipulation is a highly technical subject&#x02026; and then there are chemical kinetics, diffusion, flow, spatial encoding, distant dipolar effects, hyperpolarisation, and paramagnetic shifts. With a bit of luck, the simulation would be done by the end of the PhD project&#x02026; or maybe not. Fortunately, there is now an app for that, and it is called <italic>Spinach</italic>.<xref rid="mrc4660-bib-0004" ref-type="ref">4</xref>
+</p><p>This paper is a practical walkthrough &#x02014; it goes through the process of setting up and running liquid state NMR simulations in the order that most people would be doing it in practice. The purpose of <italic>Spinach</italic> in this context is to simplify the process: the program automates all intermediate stages (Hamiltonian generation, relaxation superoperator calculation, time evolution mathematics, <italic>etc.</italic>) and offers many standard pulse sequences as pre&#x02010;programmed modules with detailed examples and documentation. Complicated particulars of the internal mathematics and programming are avoided as much as possible here, with references to the more technical papers.</p><p>At the time of writing, <italic>Spinach</italic> is unique in its ability to simulate, without significant approximations
+<fn id="mrc4660-note-0001"><label>1</label><p>
+<italic>Spinach</italic> drops unpopulated quantum states &#x02014; this reduces the basis set and makes calculations faster but does not influence accuracy of the final answer. Technical details are published in Karabanov et al.<xref rid="mrc4660-bib-0028" ref-type="ref">28</xref>
+</p></fn> and in the time domain, liquid state NMR systems containing hundreds of interacting spins.<xref rid="mrc4660-bib-0005" ref-type="ref">5</xref> Many packages can generate a reasonable likeness of a 1D NMR spectrum for large spin systems, but complicated combinations of multidimensional pulse sequences, advanced relaxation and kinetics treatments, shaped pulses and gradients, diffusion, and flow are only available in <italic>Spinach</italic>. This is the result of very recent theoretical developments, the primary ones being quantum mechanical simulation algorithms<xref rid="mrc4660-bib-0006" ref-type="ref">6</xref>, <xref rid="mrc4660-bib-0007" ref-type="ref">7</xref> that have much lower computational resource requirements than anything previously available, and the Fokker&#x02013;Planck equation for the spatial degrees of freedom.<xref rid="mrc4660-bib-0008" ref-type="ref">8</xref>, <xref rid="mrc4660-bib-0009" ref-type="ref">9</xref>
+</p><p>Spinach is a <italic>Matlab</italic> package, the primary reason being convenience: of all available scientific computing environments, <italic>Matlab</italic> takes the shortest amount of time to get a calculation going. To set <italic>Spinach</italic> up, follow the installation instructions on the website (<ext-link ext-link-type="uri" xlink:href="http://spindynamics.org">http://spindynamics.org</ext-link>). The current public version requires <italic>Matlab R2016b</italic> or later with <italic>Parallel Computing Toolbox</italic> and <italic>Optimisation Toolbo</italic>x installed.</p></sec><sec id="mrc4660-sec-0002"><label>2</label><title>WHAT DOES NMR SIMULATION SOFTWARE DO?</title><p>Time domain NMR simulation packages solve Liouville &#x02010; von Neumann's equation (the equivalent of Schr&#x000f6;dinger's equation for spin ensembles) and calculate the observable magnetisation at each point in time<xref rid="mrc4660-bib-0010" ref-type="ref">10</xref>:
+<disp-formula id="mrc4660-disp-0001"><label>(1)</label><mml:math id="nlm-math-1"><mml:mfrac><mml:mo>&#x02202;</mml:mo><mml:mrow><mml:mo>&#x02202;</mml:mo><mml:mi>t</mml:mi></mml:mrow></mml:mfrac><mml:mover accent="true"><mml:mi>&#x003c1;</mml:mi><mml:mo>&#x0005e;</mml:mo></mml:mover><mml:mfenced open="(" close=")"><mml:mi>t</mml:mi></mml:mfenced><mml:mo>=</mml:mo><mml:mo>&#x02212;</mml:mo><mml:mi>i</mml:mi><mml:mover accent="true"><mml:mover accent="true"><mml:mi>L</mml:mi><mml:mo>&#x0005e;</mml:mo></mml:mover><mml:mo>&#x0005e;</mml:mo></mml:mover><mml:mfenced open="(" close=")"><mml:mi>t</mml:mi></mml:mfenced><mml:mover accent="true"><mml:mi>&#x003c1;</mml:mi><mml:mo>&#x0005e;</mml:mo></mml:mover><mml:mfenced open="(" close=")"><mml:mi>t</mml:mi></mml:mfenced><mml:mspace width="2.5em"/><mml:mi>m</mml:mi><mml:mfenced open="(" close=")"><mml:mi>t</mml:mi></mml:mfenced><mml:mo>=</mml:mo><mml:mfenced open="&#x027e8;" close="&#x027e9;" separators="|"><mml:mover accent="true"><mml:mi>m</mml:mi><mml:mo>&#x0005e;</mml:mo></mml:mover><mml:mrow><mml:mover accent="true"><mml:mi>&#x003c1;</mml:mi><mml:mo>&#x0005e;</mml:mo></mml:mover><mml:mfenced open="(" close=")"><mml:mi>t</mml:mi></mml:mfenced></mml:mrow></mml:mfenced><mml:mo>,</mml:mo></mml:math></disp-formula>where 
+<mml:math id="nlm-math-2"><mml:mover accent="true"><mml:mi>&#x003c1;</mml:mi><mml:mo>&#x0005e;</mml:mo></mml:mover><mml:mfenced open="(" close=")"><mml:mi>t</mml:mi></mml:mfenced></mml:math> is a vector that contains information about spin system state, 
+<mml:math id="nlm-math-3"><mml:mover accent="true"><mml:mover accent="true"><mml:mi>L</mml:mi><mml:mo>&#x0005e;</mml:mo></mml:mover><mml:mo>&#x0005e;</mml:mo></mml:mover></mml:math> is a matrix, called Liouvillian, that depends on things such as <italic>J</italic>&#x02010;couplings and relaxation rates, and 
+<mml:math id="nlm-math-4"><mml:mover accent="true"><mml:mi>m</mml:mi><mml:mo>&#x0005e;</mml:mo></mml:mover></mml:math> is the observable magnetisation projector. To a computer, Equation&#x000a0;<xref rid="mrc4660-disp-0001" ref-type="disp-formula">(1)</xref> looks like standard linear algebra; it is solved by calculating the exponential of 
+<mml:math id="nlm-math-5"><mml:mover accent="true"><mml:mover accent="true"><mml:mi>L</mml:mi><mml:mo>&#x0005e;</mml:mo></mml:mover><mml:mo>&#x0005e;</mml:mo></mml:mover></mml:math>:
+<disp-formula id="mrc4660-disp-0002"><label>(2)</label><mml:math id="nlm-math-6"><mml:mover accent="true"><mml:mi>&#x003c1;</mml:mi><mml:mo>&#x0005e;</mml:mo></mml:mover><mml:mfenced open="(" close=")"><mml:mrow><mml:mi>t</mml:mi><mml:mo>+</mml:mo><mml:mi mathvariant="italic">dt</mml:mi></mml:mrow></mml:mfenced><mml:mo>=</mml:mo><mml:mo>exp</mml:mo><mml:mfenced open="[" close="]"><mml:mrow><mml:mo>&#x02212;</mml:mo><mml:mi>i</mml:mi><mml:mover accent="true"><mml:mover accent="true"><mml:mi>L</mml:mi><mml:mo>&#x0005e;</mml:mo></mml:mover><mml:mo>&#x0005e;</mml:mo></mml:mover><mml:mfenced open="(" close=")"><mml:mi>t</mml:mi></mml:mfenced><mml:mi mathvariant="italic">dt</mml:mi></mml:mrow></mml:mfenced><mml:mover accent="true"><mml:mi>&#x003c1;</mml:mi><mml:mo>&#x0005e;</mml:mo></mml:mover><mml:mfenced open="(" close=")"><mml:mi>t</mml:mi></mml:mfenced><mml:mo>.</mml:mo></mml:math></disp-formula>Technical details may be found in more specialised reviews of magnetic resonance simulation methods.<xref rid="mrc4660-bib-0009" ref-type="ref">9</xref>, <xref rid="mrc4660-bib-0010" ref-type="ref">10</xref>, <xref rid="mrc4660-bib-0011" ref-type="ref">11</xref>, <xref rid="mrc4660-bib-0012" ref-type="ref">12</xref>, <xref rid="mrc4660-bib-0013" ref-type="ref">13</xref>, <xref rid="mrc4660-bib-0014" ref-type="ref">14</xref>
+<italic>Spinach</italic> is designed to automate this process: the user specifies the spin system and the experiment parameters, and receives a free induction decay at the end of the calculation.</p><p>Figure&#x000a0;<xref rid="mrc4660-fig-0001" ref-type="fig">1</xref> shows the general flowchart of a typical liquid state NMR simulation. The job of the user is to say which interactions are active at which time, to specify the molecule, and to choose the pulse sequence. <italic>Spinach</italic> builds and solves Equation&#x000a0;<xref rid="mrc4660-disp-0001" ref-type="disp-formula">(1)</xref>, and returns the answer to the user.</p><fig fig-type="Figure" xml:lang="en" id="mrc4660-fig-0001" orientation="portrait" position="float"><label>Figure 1</label><caption><p>Time&#x02010;domain NMR simulation flowchart. All stages except the first are automated in modern magnetic resonance simulation software</p></caption><graphic id="nlm-graphic-3" xlink:href="MRC-56-415-g001"/></fig></sec><sec id="mrc4660-sec-0003"><label>3</label><title>SPECIFYING THE SYSTEM</title><p>In order to be understood by a simulation package, spin system parameters (chemical shifts, <italic>J</italic>&#x02010;couplings, <italic>etc.</italic>) must be specified in a certain formal way that the program expects. Standard formats are starting to emerge,<xref rid="mrc4660-bib-0015" ref-type="ref">15</xref> but at the moment, every simulation package has its own way of specifying the spin system. <italic>Spinach</italic> uses <italic>Matlab</italic> data structures that are described in this section.</p><p>Any <italic>Spinach</italic> calculation must begin with a specification of three major aspects of the simulation:
+<boxed-text position="anchor" content-type="graphic" orientation="portrait"><graphic xlink:href="MRC-56-415-g009.jpg" position="anchor" id="nlm-graphic-5" orientation="portrait"/></boxed-text>
+<italic>Matlab</italic> uses dots to separate fields in its data structures. Those fields make a convenient hierarchy that is used to supply information to <italic>Spinach</italic>, for example,
+<boxed-text position="anchor" content-type="graphic" orientation="portrait"><graphic xlink:href="MRC-56-415-g010.jpg" position="anchor" id="nlm-graphic-7" orientation="portrait"/></boxed-text> Statements of this kind are described in detail in the manual (<ext-link ext-link-type="uri" xlink:href="http://spindynamics.org/wiki">http://spindynamics.org/wiki</ext-link>). Once the specification is typed in, the three data structures <monospace>sys</monospace>, <monospace>inter,</monospace> and <monospace>bas</monospace> must be supplied to <monospace>create.m</monospace> and <monospace>basis.m</monospace> constructor functions. These functions process spin system and simulation formalism specifications, write some useful diagnostics to <italic>Matlab</italic> console and create the <monospace>spin_system</monospace> object &#x02014; the primary data structure that is used to store spin system information in <italic>Spinach</italic>:
+<boxed-text position="anchor" content-type="graphic" orientation="portrait"><graphic xlink:href="MRC-56-415-g011.jpg" position="anchor" id="nlm-graphic-9" orientation="portrait"/></boxed-text> Once these functions are run, <italic>Spinach</italic> has all the necessary information about the spin system and the formalism. The program performs extensive input validation and will always tell the user if it needs more information. A typical specification for a simple liquid state NMR case looks like the following:
+<boxed-text position="anchor" content-type="graphic" orientation="portrait"><graphic xlink:href="MRC-56-415-g012.jpg" position="anchor" id="nlm-graphic-11" orientation="portrait"/></boxed-text>
+</p><p>It is clear that the specification is human&#x02010;readable &#x02014; a quick way to get going is to modify one of the many standard examples supplied with <italic>Spinach</italic>. <italic>Matlab</italic> has three types of brackets: round brackets are used for function arguments and array indices, square brackets are used for vectors and matrices, and curly brackets are used for arrays that can contain anything &#x02014; those are called cell arrays. This latter type is needed for arrays with flexible structure, for example, rotational correlation times may be different for different chemical species, and each of those species may have a different number of them when rotational diffusion is anisotropic. Further details of the input syntax are given in the sections below. Deeper technicalities are in the online manual.</p><sec id="mrc4660-sec-0004"><label>3.1</label><title>Isotopes and labels</title><p>Spin system composition is specified by giving a list of isotope names, for example,
+<preformat>
+
+
+<monospace>sys.isotopes={'1H','1H','19F','235U'};</monospace>
+
+
+</preformat>
+All known isotopes are supported, including those with spin zero. Optionally, a label for each spin may be specified by giving a list of strings, for example,
+<preformat>
+
+
+<monospace>sys.labels={'CA','CB','HB2','HB3'};</monospace>
+
+
+</preformat>
+Labels are printed next to spin interaction summaries &#x02014; this makes diagnostic output easier to read for large spin systems. Labels are also used by protein NMR spectroscopy modules to identify different types of atoms &#x02014; when a dedicated protein pulse sequence (such as <monospace>hncoca.m</monospace>) is run, these labels must be set to the standard Protein Data Bank (PDB) atom identifiers. PDB and Biological Magnetic Resonance Bank (BMRB) import functions set these labels automatically.</p></sec><sec id="mrc4660-sec-0005"><label>3.2</label><title>Interactions</title><p>There are three broad classes of interactions in NMR &#x02014; between spins and the external magnetic field, between spins and other spins, and inside (or so it looks) a specific spin. Mathematically, all three classes have the same appearance &#x02014; as a product of two spin vectors 
+<mml:math id="nlm-math-7"><mml:msub><mml:mover><mml:mi>s</mml:mi><mml:mo>&#x02192;</mml:mo></mml:mover><mml:mn>1</mml:mn></mml:msub></mml:math> and 
+<mml:math id="nlm-math-8"><mml:msub><mml:mover><mml:mi>s</mml:mi><mml:mo>&#x02192;</mml:mo></mml:mover><mml:mn>2</mml:mn></mml:msub></mml:math> with a matrix <inline-formula><bold>A</bold></inline-formula> in the middle:
+<table-wrap id="nlm-table-wrap-1" xml:lang="en" orientation="portrait" position="anchor"><table frame="hsides" rules="groups"><col align="left" span="1"/><col align="left" span="1"/><col align="left" span="1"/><thead valign="bottom"><tr style="border-bottom:solid 1px #000000"><th align="left" valign="bottom" rowspan="1" colspan="1">Interaction type</th><th align="left" valign="bottom" rowspan="1" colspan="1">Mathematical form</th><th align="left" valign="bottom" rowspan="1" colspan="1">Examples</th></tr></thead><tbody valign="top"><tr><td align="left" valign="top" rowspan="1" colspan="1">Spin&#x02013;field</td><td align="left" valign="top" rowspan="1" colspan="1">
+<mml:math id="nlm-math-9"><mml:msubsup><mml:mrow><mml:mover><mml:mi>s</mml:mi><mml:mo>&#x02192;</mml:mo></mml:mover></mml:mrow><mml:mn>1</mml:mn><mml:mi mathvariant="normal">T</mml:mi></mml:msubsup><mml:mo>&#x022c5;</mml:mo><mml:mi mathvariant="bold">A</mml:mi><mml:mo>&#x022c5;</mml:mo><mml:mover><mml:mi>B</mml:mi><mml:mo stretchy="true">&#x02192;</mml:mo></mml:mover></mml:math>
+</td><td align="left" valign="top" rowspan="1" colspan="1">Chemical shift</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Spin&#x02013;spin</td><td align="left" valign="top" rowspan="1" colspan="1">
+<mml:math id="nlm-math-10"><mml:msubsup><mml:mrow><mml:mover><mml:mi>s</mml:mi><mml:mo stretchy="true">&#x02192;</mml:mo></mml:mover></mml:mrow><mml:mn>1</mml:mn><mml:mi mathvariant="normal">T</mml:mi></mml:msubsup><mml:mo>&#x022c5;</mml:mo><mml:mi mathvariant="bold">A</mml:mi><mml:mo>&#x022c5;</mml:mo><mml:msub><mml:mover><mml:mi>s</mml:mi><mml:mo stretchy="true">&#x02192;</mml:mo></mml:mover><mml:mn>2</mml:mn></mml:msub></mml:math>
+</td><td align="left" valign="top" rowspan="1" colspan="1">Dipolar coupling</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Internal</td><td align="left" valign="top" rowspan="1" colspan="1">
+<mml:math id="nlm-math-11"><mml:msubsup><mml:mrow><mml:mover><mml:mi>s</mml:mi><mml:mo stretchy="true">&#x02192;</mml:mo></mml:mover></mml:mrow><mml:mn>1</mml:mn><mml:mi mathvariant="normal">T</mml:mi></mml:msubsup><mml:mo>&#x022c5;</mml:mo><mml:mi mathvariant="bold">A</mml:mi><mml:mo>&#x022c5;</mml:mo><mml:msub><mml:mover><mml:mi>s</mml:mi><mml:mo stretchy="true">&#x02192;</mml:mo></mml:mover><mml:mn>1</mml:mn></mml:msub></mml:math>
+</td><td align="left" valign="top" rowspan="1" colspan="1">Quadrupolar coupling</td></tr></tbody></table></table-wrap>
+The matrix is called &#x0201c;interaction tensor&#x0201d;. Its orientation&#x02010;independent (&#x0201c;isotropic&#x0201d;) part is responsible for the line pattern in the NMR spectrum, and the part that changes with molecular orientation (&#x0201c;anisotropic&#x0201d;) is responsible for the line width and other relaxation properties.</p><p>For the spin&#x02013;field interactions, <italic>Spinach</italic> needs the primary magnet field in units of Tesla, for example,
+<preformat>
+
+
+<monospace>sys.magnet=14.1;</monospace>
+
+
+</preformat>
+If the system has chemical shifts, they may be specified as scalars, 3&#x000a0;&#x000d7;&#x000a0;3 matrices, or eigenvalues&#x000a0;+&#x000a0;Euler angles (in radians). If multiple specifications are supplied, they are added together.
+<table-wrap id="nlm-table-wrap-2" xml:lang="en" orientation="portrait" position="anchor"><table frame="hsides" rules="groups"><col align="left" span="1"/><col align="left" span="1"/><col align="left" span="1"/><thead valign="bottom"><tr style="border-bottom:solid 1px #000000"><th align="left" valign="bottom" rowspan="1" colspan="1">Variable name</th><th align="left" valign="bottom" rowspan="1" colspan="1">Variable type</th><th align="left" valign="bottom" rowspan="1" colspan="1">Content</th></tr></thead><tbody valign="top"><tr><td align="left" valign="top" rowspan="1" colspan="1">
+<monospace>inter.zeeman.eigs</monospace>
+<break/>
+<monospace>inter.zeeman.euler</monospace>
+</td><td align="left" valign="top" rowspan="1" colspan="1">
+[1&#x000a0;&#x000d7;&#x000a0;nspins] cell array<break/>
+of [1&#x000a0;&#x000d7;&#x000a0;3] row vectors</td><td align="left" valign="top" rowspan="1" colspan="1">Eigenvalues of chemical shift tensors (in ppm) with Euler angles (in radians).</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">
+<monospace>inter.zeeman.matrix</monospace>
+</td><td align="left" valign="top" rowspan="1" colspan="1">
+[1&#x000a0;&#x000d7;&#x000a0;nspins] cell array<break/>
+of [3&#x000a0;&#x000d7;&#x000a0;3] matrices</td><td align="left" valign="top" rowspan="1" colspan="1">Full chemical shift tensors (in ppm) as matrices.</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">
+<monospace>inter.zeeman.scalar</monospace>
+</td><td align="left" valign="top" rowspan="1" colspan="1">
+[1&#x000a0;&#x000d7;&#x000a0;nspins] cell array<break/>
+of real numbers</td><td align="left" valign="top" rowspan="1" colspan="1">Isotropic chemical shifts (in ppm).</td></tr></tbody></table></table-wrap>
+Examples:
+<boxed-text position="anchor" content-type="graphic" orientation="portrait"><graphic xlink:href="MRC-56-415-g013.jpg" position="anchor" id="nlm-graphic-13" orientation="portrait"/></boxed-text> Spin&#x02013;spin couplings may also be specified as scalars, 3&#x000a0;&#x000d7;&#x000a0;3 matrices, or eigenvalues&#x000a0;+&#x000a0;Euler angles. If multiple specifications are supplied, <italic>Spinach</italic> adds them together.
+<table-wrap id="nlm-table-wrap-3" xml:lang="en" orientation="portrait" position="anchor"><table frame="hsides" rules="groups"><col align="left" span="1"/><col align="left" span="1"/><col align="left" span="1"/><thead valign="bottom"><tr style="border-bottom:solid 1px #000000"><th align="left" valign="bottom" rowspan="1" colspan="1">Variable name</th><th align="left" valign="bottom" rowspan="1" colspan="1">Variable type</th><th align="left" valign="bottom" rowspan="1" colspan="1">Content</th></tr></thead><tbody valign="top"><tr><td align="left" valign="top" rowspan="1" colspan="1">
+<monospace>inter.coupling.eigs</monospace>
+<monospace>inter.coupling.euler</monospace>
+</td><td align="left" valign="top" rowspan="1" colspan="1">[nspins&#x000a0;&#x000d7;&#x000a0;nspins] cell array of [1&#x000a0;&#x000d7;&#x000a0;3] matrices</td><td align="left" valign="top" rowspan="1" colspan="1">Eigenvalues of coupling tensors (in Hz) with Euler angles (in radians). Bilinear coupling is introduced by specifying a coupling between two spins. Quadratic coupling (<italic>e.g.</italic> quadrupolar) is introduced by specifying a coupling between a spin and itself.</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">
+<monospace>inter.coupling.matrix</monospace>
+</td><td align="left" valign="top" rowspan="1" colspan="1">[nspins&#x000a0;&#x000d7;&#x000a0;nspins] cell array of [3&#x000a0;&#x000d7;&#x000a0;3] matrices</td><td align="left" valign="top" rowspan="1" colspan="1">Full coupling tensors as matrices (in Hz). Each element of the cell array is accounted for, so the couplings must be divided by two if a symmetric cell array is supplied.</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">
+<monospace>inter.coupling.scalar</monospace>
+</td><td align="left" valign="top" rowspan="1" colspan="1">[nspins&#x000a0;&#x000d7;&#x000a0;nspins] cell array of reals</td><td align="left" valign="top" rowspan="1" colspan="1">Isotropic couplings (in Hz).</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">
+<monospace>inter.coordinates</monospace>
+</td><td align="left" valign="top" rowspan="1" colspan="1">[nspins&#x000a0;&#x000d7;&#x000a0;1] cell array of [1&#x000a0;&#x000d7;&#x000a0;3] row vectors</td><td align="left" valign="top" rowspan="1" colspan="1">Cartesian coordinates of every spin (in Angstroms), used to determine point dipolar interactions. If a cell corresponding to a particular spin is left empty, that spin is assumed to not have any dipolar interactions with the rest of the system.</td></tr></tbody></table></table-wrap>
+Examples:
+<boxed-text position="anchor" content-type="graphic" orientation="portrait"><graphic xlink:href="MRC-56-415-g014.jpg" position="anchor" id="nlm-graphic-15" orientation="portrait"/></boxed-text> Spin&#x02013;spin interactions may be specified in a variety of equivalent ways. The table below provides suggestions on specifying all common NMR interactions. <italic>Spinach</italic> supports most other types of magnetic resonance spectroscopy, but the corresponding interactions are outside the scope of this paper.
+<table-wrap id="nlm-table-wrap-4" xml:lang="en" orientation="portrait" position="anchor"><table frame="hsides" rules="groups"><col align="left" span="1"/><col align="left" span="1"/><thead valign="bottom"><tr style="border-bottom:solid 1px #000000"><th colspan="2" style="border-bottom:solid 1px #000000" align="left" valign="bottom" rowspan="1">Ways of specifying NMR interactions</th></tr></thead><tbody valign="top"><tr><td align="left" valign="top" rowspan="1" colspan="1">Nuclear chemical shift</td><td align="left" valign="top" rowspan="1" colspan="1">Use <monospace>inter.zeeman.scalar</monospace> for isotropic chemical shifts, <monospace>inter.zeeman.matrix</monospace> for anisotropic chemical shift tensors supplied as matrices, or <monospace>inter.zeeman.eigs</monospace> &#x00026; <monospace>inter.zeeman.euler</monospace> for anisotropic chemical shift tensors specified as eigenvalues and Euler angles.</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Inter&#x02010;nuclear <italic>J</italic>&#x02010;coupling</td><td align="left" valign="top" rowspan="1" colspan="1">Use <monospace>inter.coupling.scalar</monospace>; couplings that are specified multiple times, for example, between spins 1 and 2, and then again between spins 2 and 1, will be added together.</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Inter&#x02010;nuclear dipolar coupling</td><td align="left" valign="top" rowspan="1" colspan="1">Use <monospace>inter.coordinates</monospace> if nuclear coordinates are known (they will be converted into a dipolar interaction matrix internally), or <monospace>inter.coupling.matrix</monospace> for dipolar coupling supplied as a matrix, or <monospace>inter.coupling.eigs</monospace> &#x00026; <monospace>inter.coupling.euler</monospace> for dipolar interactions supplied as eigenvalues and Euler angles.</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Nuclear quadrupolar coupling</td><td align="left" valign="top" rowspan="1" colspan="1">Best specified as an &#x0201c;interaction&#x0201d; of the nucleus with itself. Use <monospace>inter.coupling.matrix</monospace> or <monospace>inter.coupling.eigs</monospace> &#x00026; <monospace>inter.coupling.euler</monospace> for quadrupolar interactions specified as eigenvalues and Euler angles.</td></tr></tbody></table></table-wrap>
+</p><p>A word of caution is in order about rotations in general and Euler angles in particular: there is no other subject in magnetic resonance that appears as innocent, and is actually as deadly, as three&#x02010;dimensional rotations. Space agencies have lost a few satellites to Euler angles, and every magnetic resonance theorist has gained a few grey hairs. Always store and publish your interactions as 3&#x000a0;&#x000d7;&#x000a0;3 matrices in Hz or ppm. <italic>Spinach</italic> would help you translate historical conventions &#x02014; see the <italic>Kernel Utilities</italic> section of the online manual.</p><p>For partially oriented systems, the order matrix may be supplied to enable the simulation of orientation residuals of anisotropic interactions, for example,
+<preformat>
+
+
+<monospace>inter.order_matrix=diag([1e&#x02212;3 2e&#x02212;3 &#x02212;3e&#x02212;3]);</monospace>
+
+
+</preformat>
+</p><p>Magnetic interaction parameters and atomic coordinates may also be imported directly into <monospace>sys</monospace> and <monospace>inter</monospace> data structures from <italic>Gaussian</italic>
+<xref rid="mrc4660-bib-0016" ref-type="ref">16</xref> and ORCA<xref rid="mrc4660-bib-0017" ref-type="ref">17</xref> logs. In both cases, the log is first parsed and then the parse data are imported into <italic>Spinach</italic>, for example,
+<preformat>
+
+
+<monospace>% Parse a Gaussian calculation log</monospace>
+
+<monospace>props=gparse('../standard_systems/alanine.log');</monospace>
+
+
+
+<monospace>% Import data into Spinach</monospace>
+
+<monospace>[sys,inter]=g2spinach(props,{{'C','13C'},{'N','15N'}},[182.1 264.5],[]);</monospace>
+
+
+</preformat>
+Further details on the parameters and options for the parser and the import functions are given in the manual. Spin system information may also be read from the <monospace>spinsys{}</monospace> field of SIMPSON<xref rid="mrc4660-bib-0014" ref-type="ref">14</xref> *.in files.</p><p>Protein spin system composition and interaction information may be loaded from a pair of protein database files &#x02014; a PDB file with atomic coordinates and a BMRB file with chemical shifts. The following call, used in the protein example set supplied with <italic>Spinach</italic>
+<preformat>
+
+
+<monospace>% Protein data import</monospace>
+
+<monospace>options.pdb_mol=1;</monospace>
+
+<monospace>options.select='all';</monospace>
+
+<monospace>options.noshift='delete';</monospace>
+
+<monospace>[sys,inter]=protein('1D3Z.pdb','1D3Z.bmrb',options);</monospace>
+
+
+</preformat>
+would automatically create the necessary data structures, estimate all <italic>J</italic>&#x02010;couplings and some backbone chemical shift anisotropy (CSA) tensors. The detailed syntax description may be found in the manual. Nucleic acid data may be imported in a similar way:
+<preformat>
+
+
+<monospace>% Import RNA data</monospace>
+
+<monospace>options.noshift='delete';</monospace>
+
+<monospace>[sys,inter]=nuclacid('example.pdb','example.txt',options);</monospace>
+
+
+</preformat>
+<italic>Spinach</italic> example set contains several examples of protein and nucleic acid NMR simulations; some of the outputs of those calculations are shown in Figure&#x000a0;<xref rid="mrc4660-fig-0002" ref-type="fig">2</xref>. Further details may be found in our recent papers.<xref rid="mrc4660-bib-0005" ref-type="ref">5</xref>, <xref rid="mrc4660-bib-0006" ref-type="ref">6</xref>, <xref rid="mrc4660-bib-0007" ref-type="ref">7</xref>, <xref rid="mrc4660-bib-0018" ref-type="ref">18</xref>
+</p><fig fig-type="Figure" xml:lang="en" id="mrc4660-fig-0002" orientation="portrait" position="float"><label>Figure 2</label><caption><p>Left: fully quantum mechanical time&#x02010;domain Liouville&#x02010;space simulation of ubiquitin NOESY spectrum using full Redfield relaxation superoperator, performed as described in Edwards et al.<xref rid="mrc4660-bib-0005" ref-type="ref">5</xref> Right: the result of a smoothed chirp inversion pulse on a 31&#x02010;spin system with strong nearest&#x02010;neighbour <italic>J</italic>&#x02010;couplings, followed by a homospoil gradient and a hard 90&#x02010;degree pulse. Both calculations are included into the standard example set supplied with <italic>Spinach</italic>
+</p></caption><graphic id="nlm-graphic-17" xlink:href="MRC-56-415-g002"/></fig><p>NMR calculations on ubiquitin&#x02010;size spin systems require 32&#x000a0;GB of RAM for the calculations that do not involve Redfield relaxation superoperator (such as HSQC and HNCOCA), and 128&#x000a0;GB of RAM for the calculations (NOESY and NOESY&#x02010;HSQC) that do.<xref rid="mrc4660-bib-0005" ref-type="ref">5</xref> From about 100 spins onwards, the asymptotic scaling of both RAM requirements and CPU time with the size of the spin system in liquid state NMR simulations is linear.</p></sec></sec><sec id="mrc4660-sec-0006"><label>4</label><title>RELAXATION AND CHEMICAL KINETICS</title><p>
+<italic>Spinach</italic> supports a large variety of relaxation theories, the most commonly used ones being <italic>T</italic>
+<sub>1</sub>/<italic>T</italic>
+<sub>2</sub> approximation and Bloch&#x02013;Redfield&#x02013;Wangsness theory.<xref rid="mrc4660-bib-0019" ref-type="ref">19</xref>, <xref rid="mrc4660-bib-0020" ref-type="ref">20</xref>, <xref rid="mrc4660-bib-0021" ref-type="ref">21</xref> The former simply assigns relaxation times to each spin in the system, and the latter assumes rotational diffusion and obtains relaxation rates from the interactions present in the system and the parameters of the diffusion process. Particulars of other relaxation theories may be found in the online documentation. Relaxation theory module in <italic>Spinach</italic> is uniquely powerful; it is implemented using very numerically efficient methods that can handle relaxation superoperators with dimension in excess of a million.<xref rid="mrc4660-bib-0018" ref-type="ref">18</xref>, <xref rid="mrc4660-bib-0022" ref-type="ref">22</xref>
+</p><p>
+<italic>Spinach</italic> relaxation theory specification is a cell array listing all active relaxation theories, for example,
+<preformat>
+
+
+<monospace>inter.relaxation={'redfield','t1_t2'};</monospace>
+
+
+</preformat>
+requests both Redfield theory and <italic>T</italic>
+<sub>1</sub>/<italic>T</italic>
+<sub>2</sub> theory. Within the <italic>T</italic>
+<sub>1</sub>/<italic>T</italic>
+<sub>2</sub> theory, longitudinal and transverse relaxation rates in Hz should be provided for each spin. For example, in a three&#x02010;spin system:
+<preformat>
+
+
+<monospace>inter.relaxation={'t1_t2'};</monospace>
+
+<monospace>inter.r1_rates=[1.0 2.0 5.0];</monospace>
+
+<monospace>inter.r2_rates=[5.0 7.0 9.0];</monospace>
+
+
+</preformat>
+This would make all longitudinal states of each spin relax with rates <italic>R</italic>
+<sub>1</sub> and all transverse states of each spin with rates <italic>R</italic>
+<sub>2</sub>. Strictly speaking, the <italic>T</italic>
+<sub>1</sub>/<italic>T</italic>
+<sub>2</sub> relaxation model makes no mention of what happens to multi&#x02010;spin orders. <italic>Spinach</italic> therefore takes the liberty of making multi&#x02010;spin orders relax at the sum of the relaxation rates of their constituent operators. This is a reasonable approximation in most cases.</p><p>In order to use Redfield theory, the user must supply anisotropic parts for all relevant interactions, as well as one, two, or three rotational correlation times for each chemical species present in the system. The call with one rotational correlation time, for example,
+<preformat>
+
+
+<monospace>inter.tau_c={1e&#x02212;9};</monospace>
+
+
+</preformat>
+</p><p>would make <italic>Spinach</italic> assume isotropic rotational diffusion of what would be assumed to be a spherical molecule. A call with two rotational correlation times, for example,
+<preformat>
+
+
+<monospace>inter.tau_c={[1e&#x02212;9 2e&#x02212;9]};</monospace>
+
+
+</preformat>
+corresponds to axial rotational diffusion of what would be assumed to be an axially symmetric ellipsoid. The two&#x02010;element vector above gives the rotational correlation time around the symmetry axis of the ellipsoid (first element) and around an axis perpendicular to the symmetry axis (second element). The Z axis of the reference frame used to specify the interactions at the spin system specification stage must coincide with the symmetry axis of the rotational diffusion tensor. A call with three parameters, for example,
+<preformat>
+
+
+<monospace>inter.tau_c={[1e&#x02212;9 2e&#x02212;9 3e&#x02212;9]};</monospace>
+
+
+</preformat>
+is assumed to give the three rotational correlation times of an arbitrary ellipsoid around X, Y, and Z principal axes (in that order) of its rotational diffusion tensor. The reference frame used to specify the interactions at the spin system specification stage must coincide with the eigenframe of the diffusion tensor.</p><p>The state to which the relaxation superoperator should be driving the system must be specified by setting the <monospace>inter.equilibrium</monospace> parameter. It controls the &#x0201c;thermalization&#x0201d; of the relaxation superoperator &#x02014; a numerical correction that makes it drive the spin system to some prescribed thermal equilibrium state. The value of <monospace>'zero'</monospace> causes the system to relax to the all&#x02010;zero state; specifying <monospace>'levante'</monospace> or <monospace>'dibari'</monospace> makes use of Levante&#x02013;Ernst<xref rid="mrc4660-bib-0023" ref-type="ref">23</xref> and DiBari&#x02013;Levitt<xref rid="mrc4660-bib-0024" ref-type="ref">24</xref> equilibrium correction methods, respectively. In that case, the spin temperature in the equilibrium state should also be specified, for example,
+<preformat>
+
+
+<monospace>inter.temperature=298;</monospace>
+
+
+</preformat>
+Not specifying a temperature makes the program use the high&#x02010;temperature approximation. Examples of relaxation theory simulations (available in the standard example set) are given in Figures <xref rid="mrc4660-fig-0003" ref-type="fig">3</xref> and <xref rid="mrc4660-fig-0004" ref-type="fig">4</xref>.</p><fig fig-type="Figure" xml:lang="en" id="mrc4660-fig-0003" orientation="portrait" position="float"><label>Figure 3</label><caption><p>Inversion&#x02010;recovery <sup>19</sup>F NMR spectrum of 1&#x02010;fluoro&#x02010;2,4&#x02010;dinitrobenzene as a function of mixing time, showing the effect of DD&#x02013;CSA cross&#x02010;correlation described in detail by Grace and Kumar.<xref rid="mrc4660-bib-0036" ref-type="ref">36</xref> The calculation is included into the standard example set supplied with <italic>Spinach</italic>
+</p></caption><graphic id="nlm-graphic-19" xlink:href="MRC-56-415-g003"/></fig><fig fig-type="Figure" xml:lang="en" id="mrc4660-fig-0004" orientation="portrait" position="float"><label>Figure 4</label><caption><p>Longitudinal magnetisation as a function of time in a two&#x02010;proton spin system undergoing dipolar cross&#x02010;relaxation. The two spins are placed 2.0&#x000a0;&#x000c5; apart, the rotational correlation time is set to 1.0&#x000a0;ns, the temperature is set to 298&#x000a0;K, the chemical shift difference is 0.01&#x000a0;ppm; the magnet field is 14.1 Tesla. One of the spins is inverted at time zero. Left: no <italic>J</italic>&#x02010;coupling between the spins. Right: zero&#x02010;quantum beats resulting from a 3.0&#x000a0;Hz <italic>J</italic>&#x02010;coupling. The calculations are included into the standard example set supplied with <italic>Spinach</italic>
+</p></caption><graphic id="nlm-graphic-21" xlink:href="MRC-56-415-g004"/></fig><p>Spinach has a very general chemical kinetics module that can handle arbitrary reaction networks, the only restriction being that the corresponding differential equations must be linear and must have the following general form:
+<disp-formula id="mrc4660-disp-0003"><label>(3)</label><mml:math id="nlm-math-12"><mml:mfrac><mml:mi>d</mml:mi><mml:mi mathvariant="italic">dt</mml:mi></mml:mfrac><mml:mfenced open="(" close=")"><mml:mtable columnalign="center"><mml:mtr columnalign="center"><mml:mtd columnalign="center"><mml:mfenced open="[" close="]"><mml:mi mathvariant="normal">A</mml:mi></mml:mfenced></mml:mtd></mml:mtr><mml:mtr columnalign="center"><mml:mtd columnalign="center"><mml:mfenced open="[" close="]"><mml:mi mathvariant="normal">B</mml:mi></mml:mfenced></mml:mtd></mml:mtr><mml:mtr columnalign="center"><mml:mtd columnalign="center"><mml:mfenced open="[" close="]"><mml:mi mathvariant="normal">C</mml:mi></mml:mfenced></mml:mtd></mml:mtr><mml:mtr columnalign="center"><mml:mtd columnalign="center"><mml:mo>&#x022ee;</mml:mo></mml:mtd></mml:mtr></mml:mtable></mml:mfenced><mml:mo>=</mml:mo><mml:mi mathvariant="bold">K</mml:mi><mml:mfenced open="(" close=")"><mml:mtable columnalign="center"><mml:mtr columnalign="center"><mml:mtd columnalign="center"><mml:mfenced open="[" close="]"><mml:mi mathvariant="normal">A</mml:mi></mml:mfenced></mml:mtd></mml:mtr><mml:mtr columnalign="center"><mml:mtd columnalign="center"><mml:mfenced open="[" close="]"><mml:mi mathvariant="normal">B</mml:mi></mml:mfenced></mml:mtd></mml:mtr><mml:mtr columnalign="center"><mml:mtd columnalign="center"><mml:mfenced open="[" close="]"><mml:mi mathvariant="normal">C</mml:mi></mml:mfenced></mml:mtd></mml:mtr><mml:mtr columnalign="center"><mml:mtd columnalign="center"><mml:mo>&#x022ee;</mml:mo></mml:mtd></mml:mtr></mml:mtable></mml:mfenced><mml:mo>,</mml:mo></mml:math></disp-formula>where <bold>K</bold> is the reaction rate matrix. For example,
+<disp-formula id="mrc4660-disp-0004"><label>(4)</label><mml:math id="nlm-math-13"><mml:mtable columnalign="center" displaystyle="true"><mml:mtr columnalign="center"><mml:mtd columnalign="center"><mml:mi mathvariant="normal">A</mml:mi><mml:mspace width="0.25em"/><mml:mover><mml:mo stretchy="true">&#x02192;</mml:mo><mml:msub><mml:mi>k</mml:mi><mml:mrow><mml:mn>1</mml:mn><mml:mo>+</mml:mo></mml:mrow></mml:msub></mml:mover><mml:mi mathvariant="normal">B</mml:mi><mml:munderover><mml:mo>&#x021c6;</mml:mo><mml:mrow><mml:msub><mml:mi>k</mml:mi><mml:mrow><mml:mn>2</mml:mn><mml:mo>+</mml:mo></mml:mrow></mml:msub></mml:mrow><mml:mrow><mml:msub><mml:mi>k</mml:mi><mml:mrow><mml:mn>2</mml:mn><mml:mo>&#x02212;</mml:mo></mml:mrow></mml:msub></mml:mrow></mml:munderover><mml:mi mathvariant="normal">C</mml:mi></mml:mtd></mml:mtr><mml:mtr columnalign="center"><mml:mtd columnalign="center"><mml:mfrac><mml:mi>d</mml:mi><mml:mi mathvariant="italic">dt</mml:mi></mml:mfrac><mml:mfenced open="(" close=")"><mml:mtable columnalign="center"><mml:mtr columnalign="center"><mml:mtd columnalign="center"><mml:mspace width="0.25em"/><mml:mspace width="0em"/><mml:mfenced open="[" close="]"><mml:mrow><mml:mspace width="0em"/><mml:mspace width="0.25em"/><mml:mi mathvariant="normal">A</mml:mi><mml:mspace width="0.25em"/><mml:mspace width="0em"/></mml:mrow></mml:mfenced><mml:mspace width="0em"/><mml:mspace width="0.25em"/></mml:mtd></mml:mtr><mml:mtr columnalign="center"><mml:mtd columnalign="center"><mml:mspace width="0.25em"/><mml:mspace width="0em"/><mml:mfenced open="[" close="]"><mml:mrow><mml:mspace width="0em"/><mml:mspace width="0.25em"/><mml:mi mathvariant="normal">B</mml:mi><mml:mspace width="0.25em"/><mml:mspace width="0em"/></mml:mrow></mml:mfenced><mml:mspace width="0em"/><mml:mspace width="0.25em"/></mml:mtd></mml:mtr><mml:mtr columnalign="center"><mml:mtd columnalign="center"><mml:mspace width="0.25em"/><mml:mspace width="0em"/><mml:mfenced open="[" close="]"><mml:mrow><mml:mspace width="0em"/><mml:mspace width="0.25em"/><mml:mi mathvariant="normal">C</mml:mi><mml:mspace width="0.25em"/><mml:mspace width="0em"/></mml:mrow></mml:mfenced><mml:mspace width="0em"/><mml:mspace width="0.25em"/></mml:mtd></mml:mtr></mml:mtable></mml:mfenced><mml:mo>=</mml:mo><mml:mfenced open="(" close=")"><mml:mtable columnalign="center"><mml:mtr columnalign="center"><mml:mtd columnalign="center"><mml:mo>&#x02212;</mml:mo><mml:msub><mml:mi>k</mml:mi><mml:mrow><mml:mn>1</mml:mn><mml:mo>+</mml:mo></mml:mrow></mml:msub></mml:mtd><mml:mtd columnalign="center"><mml:mn>0</mml:mn></mml:mtd><mml:mtd columnalign="center"><mml:mn>0</mml:mn></mml:mtd></mml:mtr><mml:mtr columnalign="center"><mml:mtd columnalign="center"><mml:msub><mml:mi>k</mml:mi><mml:mrow><mml:mn>1</mml:mn><mml:mo>+</mml:mo></mml:mrow></mml:msub></mml:mtd><mml:mtd columnalign="center"><mml:mo>&#x02212;</mml:mo><mml:msub><mml:mi>k</mml:mi><mml:mrow><mml:mn>2</mml:mn><mml:mo>+</mml:mo></mml:mrow></mml:msub></mml:mtd><mml:mtd columnalign="center"><mml:msub><mml:mi>k</mml:mi><mml:mrow><mml:mn>2</mml:mn><mml:mo>&#x02212;</mml:mo></mml:mrow></mml:msub></mml:mtd></mml:mtr><mml:mtr columnalign="center"><mml:mtd columnalign="center"><mml:mn>0</mml:mn></mml:mtd><mml:mtd columnalign="center"><mml:msub><mml:mi>k</mml:mi><mml:mrow><mml:mn>2</mml:mn><mml:mo>+</mml:mo></mml:mrow></mml:msub></mml:mtd><mml:mtd columnalign="center"><mml:mo>&#x02212;</mml:mo><mml:msub><mml:mi>k</mml:mi><mml:mrow><mml:mn>2</mml:mn><mml:mo>&#x02212;</mml:mo></mml:mrow></mml:msub></mml:mtd></mml:mtr></mml:mtable></mml:mfenced><mml:mfenced open="(" close=")"><mml:mtable columnalign="center"><mml:mtr columnalign="center"><mml:mtd columnalign="center"><mml:mspace width="0.25em"/><mml:mspace width="0em"/><mml:mfenced open="[" close="]"><mml:mrow><mml:mspace width="0em"/><mml:mspace width="0.25em"/><mml:mi mathvariant="normal">A</mml:mi><mml:mspace width="0.25em"/><mml:mspace width="0em"/></mml:mrow></mml:mfenced><mml:mspace width="0em"/><mml:mspace width="0.25em"/></mml:mtd></mml:mtr><mml:mtr columnalign="center"><mml:mtd columnalign="center"><mml:mspace width="0.25em"/><mml:mspace width="0em"/><mml:mfenced open="[" close="]"><mml:mrow><mml:mspace width="0em"/><mml:mspace width="0.25em"/><mml:mi mathvariant="normal">B</mml:mi><mml:mspace width="0.25em"/><mml:mspace width="0em"/></mml:mrow></mml:mfenced><mml:mspace width="0em"/><mml:mspace width="0.25em"/></mml:mtd></mml:mtr><mml:mtr columnalign="center"><mml:mtd columnalign="center"><mml:mspace width="0.25em"/><mml:mspace width="0em"/><mml:mfenced open="[" close="]"><mml:mrow><mml:mspace width="0em"/><mml:mspace width="0.25em"/><mml:mi mathvariant="normal">C</mml:mi><mml:mspace width="0.25em"/><mml:mspace width="0em"/></mml:mrow></mml:mfenced><mml:mspace width="0em"/><mml:mspace width="0.25em"/></mml:mtd></mml:mtr></mml:mtable></mml:mfenced></mml:mtd></mml:mtr></mml:mtable><mml:mo>.</mml:mo></mml:math></disp-formula>
+<italic>Spinach</italic> expects the user to supply this matrix and the initial concentrations of the molecules. All of the molecules should be specified in the same input (simply listing their spins one after the other), and then <italic>Spinach</italic> should be told which spins belong to which molecule using <monospace>inter.chem.parts</monospace> variable, for example,
+<preformat>
+
+
+<monospace>% Isotopes</monospace>
+
+<monospace>sys.isotopes={'1H','13C','15N','1H','13C','15N'};</monospace>
+
+
+
+<monospace>% Chemical shifts</monospace>
+
+<monospace>inter.zeeman.scalar={1.0, 20.0, 15.0, 1.5, 25.0, 16.0};</monospace>
+
+
+
+<monospace>% Spins 1,2,3 are molecule A; spins 4,5,6 are molecule B</monospace>
+
+<monospace>inter.chem.parts={[1 2 3],[4 5 6]};</monospace>
+
+
+
+<monospace>% Kinetic rate matrix (Hz)</monospace>
+
+<monospace>inter.chem.rates=[&#x02212;0.1 0.2; 0.1 &#x02212;0.2];</monospace>
+
+
+
+<monospace>% Initial concentrations (arbitrary units)</monospace>
+
+<monospace>inter.chem.concs=[1.0, 2.0];</monospace>
+
+
+</preformat>
+In the general case, the parameters, supplied at the spin system specification stage, must be
+<table-wrap id="nlm-table-wrap-5" xml:lang="en" orientation="portrait" position="anchor"><table frame="hsides" rules="groups"><col align="left" span="1"/><col align="left" span="1"/><col align="left" span="1"/><thead valign="bottom"><tr style="border-bottom:solid 1px #000000"><th align="left" valign="bottom" rowspan="1" colspan="1">Variable name</th><th align="left" valign="bottom" rowspan="1" colspan="1">Variable type</th><th align="left" valign="bottom" rowspan="1" colspan="1">Content</th></tr></thead><tbody valign="top"><tr><td align="left" valign="top" rowspan="1" colspan="1">
+<monospace>inter.chem.parts</monospace>
+</td><td align="left" valign="top" rowspan="1" colspan="1">A cell array of vectors containing integers</td><td align="left" valign="top" rowspan="1" colspan="1">Individual vectors in the cell array must contain the numbers of spins that belong to each of the molecules in the chemical reaction, for example, {[1 2], [3 4]} indicates that spins 1 and 2 belong to the first molecule and spins 3 and 4 belong to the second molecule.</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">
+<monospace>inter.chem.rates</monospace>
+</td><td align="left" valign="top" rowspan="1" colspan="1">A matrix of real numbers</td><td align="left" valign="top" rowspan="1" colspan="1">Chemical reaction rate matrix between the molecules identified in <monospace>inter.chem.parts</monospace> variable.</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">
+<monospace>inter.chem.concs</monospace>
+</td><td align="left" valign="top" rowspan="1" colspan="1">A vector of non&#x02010;negative real numbers</td><td align="left" valign="top" rowspan="1" colspan="1">Initial concentrations of the molecules identified in <monospace>inter.chem.parts</monospace> variable.</td></tr></tbody></table></table-wrap>
+</p><p>The systems on either side of the reaction arrow must have the same number of spins, must have those spins specified in the same order, and must have the same basis set. Within Bloch&#x02013;Redfield&#x02013;Wangsness relaxation theory, different chemical compartments can have different rotational correlation times.</p></sec><sec id="mrc4660-sec-0007"><label>5</label><title>FORMALISM AND BASIS SET SPECIFICATION</title><p>
+<italic>Spinach</italic> supports three simulation formalisms: the standard <inline-formula>|<italic>&#x003b1;</italic>&#x027e9;</inline-formula> and <inline-formula>|<italic>&#x003b2;</italic>&#x027e9;</inline-formula> Zeeman basis used in most textbooks (colloquially known as &#x0201c;the Hilbert space&#x0201d;), the adjoint representation of the same (known as &#x0201c;the Liouville space&#x0201d;<xref rid="mrc4660-bib-0025" ref-type="ref">25</xref>), and a particularly convenient version of Liouville space that uses irreducible spherical tensor operators as the basis set.<xref rid="mrc4660-bib-0004" ref-type="ref">4</xref> The formalism is chosen using <monospace>bas.formalism</monospace> parameter, for example,
+<preformat>
+
+
+<monospace>bas.formalism='sphten&#x02212;liouv';</monospace>
+
+
+</preformat>
+<table-wrap id="nlm-table-wrap-6" xml:lang="en" orientation="portrait" position="anchor"><table frame="hsides" rules="groups"><col align="left" span="1"/><col align="left" span="1"/><thead valign="bottom"><tr style="border-bottom:solid 1px #000000"><th align="left" valign="bottom" rowspan="1" colspan="1">Formalism keyword</th><th align="left" valign="bottom" rowspan="1" colspan="1">Formalism description</th></tr></thead><tbody valign="top"><tr><td align="left" valign="top" rowspan="1" colspan="1">
+<monospace>'sphten&#x02212;liouv'</monospace>
+</td><td align="left" valign="top" rowspan="1" colspan="1">Liouville space formalism: the fundamental operators from which the basis set is built are single&#x02010;spin irreducible spherical tensors. These operators are ordered with respect to many common transformations and conservation laws encountered in magnetic resonance. Many operations may therefore be performed semi&#x02010;analytically. A lot of <italic>Spinach</italic> functionality either requires this formalism or operates most efficiently within it.</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">
+<monospace>'zeeman&#x02212;liouv'</monospace>
+</td><td align="left" valign="top" rowspan="1" colspan="1">Liouville space formalism: the fundamental operators from which the basis set is built are single transition operators between the projection states onto the Z axis. The state vector coefficients in this formalism are easy to interpret because they correspond to populations of standard textbook spin states. This formalism is essentially a vectorisation of <monospace>'zeeman&#x02212;hilb'</monospace>; it permits only limited state space reduction; most calculations would have exponential complexity scaling if this option is chosen.</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">
+<monospace>'zeeman&#x02212;hilb'</monospace>
+</td><td align="left" valign="top" rowspan="1" colspan="1">Hilbert space formalism: the fundamental states from which the basis set is built are the projection states onto the Z axis. This is the standard density operator formalism described in most magnetic resonance textbooks. Only the core functionality (operators, states, propagators, and evolution) is available. This option is mostly useful for backwards compatibility checks; it cannot support complicated relaxation theories or chemical kinetics. All calculations within this formalism would have exponential complexity scaling.</td></tr></tbody></table></table-wrap>
+</p><p>Basis sets are a highly technical topic &#x02014; this tutorial specifically aims to avoid complicated mathematics. It would suffice to say that <monospace>'zeeman&#x02212;hilb'</monospace> is essentially the textbook route with Pauli matrices,<xref rid="mrc4660-bib-0001" ref-type="ref">1</xref>, <xref rid="mrc4660-bib-0002" ref-type="ref">2</xref>, <xref rid="mrc4660-bib-0003" ref-type="ref">3</xref> and <monospace>'sphten&#x02212;liouv'</monospace> is its modern and very numerically efficient replacement.<xref rid="mrc4660-bib-0005" ref-type="ref">5</xref>, <xref rid="mrc4660-bib-0006" ref-type="ref">6</xref>, <xref rid="mrc4660-bib-0026" ref-type="ref">26</xref>, <xref rid="mrc4660-bib-0027" ref-type="ref">27</xref> The fastest algorithms that use incomplete basis sets<xref rid="mrc4660-bib-0006" ref-type="ref">6</xref>, <xref rid="mrc4660-bib-0007" ref-type="ref">7</xref> and have polynomial complexity scaling are only available within <monospace>'sphten&#x02212;liouv'</monospace> formalism. If the system has more than 20 spins, <monospace>'sphten&#x02212;liouv'</monospace> is the only realistic choice.<xref rid="mrc4660-bib-0005" ref-type="ref">5</xref>
+</p><p>The concept of an <italic>incomplete</italic> basis set is relatively new in magnetic resonance simulations,<xref rid="mrc4660-bib-0006" ref-type="ref">6</xref> and an extended explanation is perhaps warranted. Every quantum state of the spin system may be described by a density matrix, and any matrix may be written as a linear combination of some basis matrices. In the simple case of one spin,
+<disp-formula id="mrc4660-disp-0005"><label>(5)</label><mml:math id="nlm-math-14"><mml:mover accent="true"><mml:mi>&#x003c1;</mml:mi><mml:mo>&#x0005e;</mml:mo></mml:mover><mml:mo>=</mml:mo><mml:mi>a</mml:mi><mml:msub><mml:mover accent="true"><mml:mi>&#x003c3;</mml:mi><mml:mo>&#x0005e;</mml:mo></mml:mover><mml:mi mathvariant="normal">X</mml:mi></mml:msub><mml:mo>+</mml:mo><mml:mi>b</mml:mi><mml:msub><mml:mover accent="true"><mml:mi>&#x003c3;</mml:mi><mml:mo>&#x0005e;</mml:mo></mml:mover><mml:mi mathvariant="normal">Y</mml:mi></mml:msub><mml:mo>+</mml:mo><mml:mi>c</mml:mi><mml:msub><mml:mover accent="true"><mml:mi>&#x003c3;</mml:mi><mml:mo>&#x0005e;</mml:mo></mml:mover><mml:mi mathvariant="normal">Z</mml:mi></mml:msub><mml:mo>,</mml:mo></mml:math></disp-formula>where 
+<mml:math id="nlm-math-15"><mml:mfenced open="{" close="}" separators=",,"><mml:msub><mml:mover accent="true"><mml:mi>&#x003c3;</mml:mi><mml:mo>&#x0005e;</mml:mo></mml:mover><mml:mi mathvariant="normal">X</mml:mi></mml:msub><mml:msub><mml:mover accent="true"><mml:mi>&#x003c3;</mml:mi><mml:mo>&#x0005e;</mml:mo></mml:mover><mml:mi mathvariant="normal">Y</mml:mi></mml:msub><mml:msub><mml:mover accent="true"><mml:mi>&#x003c3;</mml:mi><mml:mo>&#x0005e;</mml:mo></mml:mover><mml:mi mathvariant="normal">Z</mml:mi></mml:msub></mml:mfenced></mml:math> are Pauli matrices and <inline-formula>{<italic>a</italic>,&#x02009;<italic>b</italic>,&#x02009;<italic>c</italic>}</inline-formula> are complex numbers. In this case, the Pauli matrices are the &#x0201c;basis set&#x0201d;, and the complex numbers are the &#x0201c;expansion coefficients&#x0201d;. Systems with multiple spins have many more operators in the basis set: not only single&#x02010;spin operators but also multispin operators (<italic>e.g.</italic>
+<mml:math id="nlm-math-16"><mml:msubsup><mml:mover accent="true"><mml:mi>&#x003c3;</mml:mi><mml:mo>&#x0005e;</mml:mo></mml:mover><mml:mi mathvariant="normal">Z</mml:mi><mml:mfenced open="(" close=")"><mml:mn>1</mml:mn></mml:mfenced></mml:msubsup><mml:mo>&#x02297;</mml:mo><mml:mspace width=".3em"/><mml:msubsup><mml:mover accent="true"><mml:mi>&#x003c3;</mml:mi><mml:mo>&#x0005e;</mml:mo></mml:mover><mml:mi mathvariant="normal">Z</mml:mi><mml:mfenced open="(" close=")"><mml:mn>2</mml:mn></mml:mfenced></mml:msubsup></mml:math>) that describe correlated simultaneous dynamics of multiple spins. It is here that approximations can be made: many such states are not populated for a variety of reasons.<xref rid="mrc4660-bib-0006" ref-type="ref">6</xref>, <xref rid="mrc4660-bib-0007" ref-type="ref">7</xref>, <xref rid="mrc4660-bib-0026" ref-type="ref">26</xref>, <xref rid="mrc4660-bib-0027" ref-type="ref">27</xref> The smaller the basis set, the faster the calculation becomes &#x02014; but a balance must be struck between calculation speed and accuracy.</p><p>To run an <italic>exact</italic> (<italic>i.e.</italic> complete basis set) calculation in any formalism, set
+<preformat>
+
+
+<monospace>bas.approximation='none';</monospace>
+
+
+</preformat>
+This option requests a complete basis set, which is only practical up to about 20 spins in Hilbert space and 10 spins in Liouville space. <italic>Approximate</italic> calculations are those that use an incomplete basis set. The user is expected to provide the information that <italic>Spinach</italic> would use to build the basis set. The following frequently encountered choices are provided with the kernel:
+<table-wrap id="nlm-table-wrap-7" xml:lang="en" orientation="portrait" position="anchor"><table frame="hsides" rules="groups"><col align="left" span="1"/><col align="left" span="1"/><col align="left" span="1"/><thead valign="bottom"><tr style="border-bottom:solid 1px #000000"><th align="left" valign="bottom" rowspan="1" colspan="1">Approximation</th><th align="left" valign="bottom" rowspan="1" colspan="1">Approximation description</th><th align="left" valign="bottom" rowspan="1" colspan="1">Parameters</th></tr></thead><tbody valign="top"><tr><td align="left" valign="top" rowspan="1" colspan="1">
+<monospace>'IK&#x02212;0'</monospace>
+</td><td align="left" valign="top" rowspan="1" colspan="1">Includes all product states between up to (and including) <monospace>bas.level</monospace> spins located anywhere within the system. For example, setting <monospace>bas.level=5</monospace> would generate the basis that contains all spin correlations that involve five spins or fewer. The location of those spins is not taken into account.</td><td align="left" valign="top" rowspan="1" colspan="1">
+<monospace>bas.level</monospace>
+</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">
+<monospace>'IK&#x02212;1'</monospace>
+</td><td align="left" valign="top" rowspan="1" colspan="1">
+Includes all product states between up to (and including) <monospace>bas.level</monospace> directly coupled spins and up to <monospace>bas.space_level</monospace> between spins that are closer together than the proximity cut&#x02010;off radius.<break/>
+&#x000a0;<break/>
+This basis starts from IK&#x02212;0, but then also drops correlations between very remote spins &#x02014; if a pair of spins is not coupled in any way, even the two&#x02010;spin order between them is not actually needed. Here, <monospace>bas.level</monospace> controls the maximum correlation order for spins connected by couplings, and <monospace>bas.space_level</monospace> controls the maximum correlation order for spins that are within the proximity cut&#x02010;off radius.</td><td align="left" valign="top" rowspan="1" colspan="1">
+<monospace>bas.level, bas.space_level</monospace>
+</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">
+<monospace>'IK&#x02212;2'</monospace>
+</td><td align="left" valign="top" rowspan="1" colspan="1">
+Includes, for every spin, all correlations with all directly coupled spins and correlations with up to (and including) <monospace>bas.space_level</monospace> with spins that are closer together than the user&#x02010;specified proximity cut&#x02010;off.<break/>
+&#x000a0;<break/>
+This basis is similar to IK&#x02212;1, except the truncation level around each spin is automatically set to the number of its direct coupling neighbours. This basis set can be quite large, but it is also very accurate.</td><td align="left" valign="top" rowspan="1" colspan="1">
+<monospace>bas.space_level</monospace>
+</td></tr></tbody></table></table-wrap>
+The concept of a basis set in NMR simulations is illustrated in Figure&#x000a0;<xref rid="mrc4660-fig-0005" ref-type="fig">5</xref>. The spin system in question is anti&#x02010;3,4&#x02010;difluoro&#x02010;<italic>n</italic>&#x02010;heptane &#x02014; with 16 spins, it is just outside of what is realistically possible to simulate with conventional time&#x02010;domain tools, even if symmetry and sparse matrix algebra is used. It is clear from the right panel of Figure&#x000a0;<xref rid="mrc4660-fig-0005" ref-type="fig">5</xref> (note the logarithmic scale) that only correlations involving up to eight spins are populated to a significant extent in this system. This is a fundamentally important observation: the dimension of the full Liouville space in this system is in the billions, whereas the dimension of the reduced subspace is only 1,924,374; it is actually reduced further to 360,770 once the various symmetries and conservation laws are taken into account &#x02014; <italic>Spinach</italic> does that automatically. It is instructive to go through the console log, which is reproduced below.</p><fig fig-type="Figure" xml:lang="en" id="mrc4660-fig-0005" orientation="portrait" position="float"><label>Figure 5</label><caption><p>Convergence of the <sup>19</sup>F NMR spectrum of anti&#x02010;3,4&#x02010;difluoro&#x02010;<italic>n</italic>&#x02010;heptane (16&#x02010;spin system) as a function of the basis truncation level. Top left: six&#x02010;spin orders and below. Middle left: seven&#x02010;spin orders and below. Bottom left: eight&#x02010;spin orders and below; this calculation is indistinguishable from the exact simulation to within about 10<sup>&#x02212;3</sup> in relative amplitude. Right: contributions from different orders of spin correlation to the system trajectory. The two traces in the lower part of the figure correspond to 9&#x02010; and 10&#x02010;spin correlations &#x02014; from their negligible magnitude, it is clear that for practical simulation purposes only correlations of up to eight spins need to be kept in the basis</p></caption><graphic id="nlm-graphic-23" xlink:href="MRC-56-415-g005"/></fig><p>
+<boxed-text position="anchor" content-type="graphic" orientation="portrait"><graphic xlink:href="MRC-56-415-g015.jpg" position="anchor" id="nlm-graphic-25" orientation="portrait"/></boxed-text>
+</p><p>
+<italic>Spinach</italic> first applies the state space restriction to eight&#x02010;spin orders or less,<xref rid="mrc4660-bib-0006" ref-type="ref">6</xref> then applies the conservation law with respect to the coherence order (+1 only in pulse&#x02010;acquire simulations with an ideal 90&#x02010;degree pulse), then applies the conservation law with respect to the observer spins (only zero&#x02010;quantum states are expected on protons), then applies the symmetry factorisation for the two methyl groups,<xref rid="mrc4660-bib-0026" ref-type="ref">26</xref> then runs the zero track elimination,<xref rid="mrc4660-bib-0007" ref-type="ref">7</xref> and finally engages the <italic>Tesla K40</italic> GPU that it has found in the system to push the density matrix through its time evolution using the Krylov algorithm.<xref rid="mrc4660-bib-0007" ref-type="ref">7</xref> The whole calculation takes a few minutes. This ability to reduce matrix dimensions on the fly is the strongest side of <italic>Spinach</italic>.</p><p>The simulations producing Figure&#x000a0;<xref rid="mrc4660-fig-0005" ref-type="fig">5</xref> are included into the standard example set supplied with versions 1.10 and later of <italic>Spinach</italic>; more technical information on the basis set specification may be found in the online manual and in the papers cited above &#x02014; this practical tutorial is not the place for eye&#x02010;popping mathematics and computer science. For the purposes of getting started, the advice is quite simple: increase the basis set until the answer stops changing. In most liquid state NMR simulations, IK&#x02212;2 with <monospace>bas.space_level=3</monospace> and a 5&#x000a0;&#x000c5; proximity cut&#x02010;off is sufficient. It is also possible to specify a completely custom basis set &#x02014; see the online manual for further details. A technical discussion of the accuracy considerations when using incomplete basis sets is given in Karabanov et al.<xref rid="mrc4660-bib-0028" ref-type="ref">28</xref>
+</p></sec><sec id="mrc4660-sec-0008"><label>6</label><title>BUILT&#x02010;IN PULSE SEQUENCES</title><p>
+<italic>Spinach</italic> is designed to be extensible &#x02014; our users write their own pulse sequences &#x02014; but the following standard liquid state NMR experiments have been implemented by the <italic>Spinach</italic> team or donated by the users over the years: pulse&#x02010;acquire, inversion&#x02010;recovery, saturation&#x02010;recovery, CLIP&#x02010;HSQC, COSY, DQF&#x02010;COSY, HETCOR, HMQC, HNCO, HNCOCA, HSQC, LCOSY, NOESY, ROESY, TOCSY, and NOESY&#x02010;HSQC. The sequences rely on a common syntax that should be used to provide the relevant parameters, for example (HSQC):
+<boxed-text position="anchor" content-type="graphic" orientation="portrait"><graphic xlink:href="MRC-56-415-g016.jpg" position="anchor" id="nlm-graphic-27" orientation="portrait"/></boxed-text> The list of necessary parameters is given in the documentation page for each pulse sequence. The responsibility for processing the free induction decay rests with the user. It may either be processed in <italic>Matlab</italic> (<italic>Spinach</italic> provides 1D, 2D, and 3D plotting functionality) or exported into a third&#x02010;party NMR processing package using <italic>Matlab's</italic> built&#x02010;in ASCII export functionality.</p></sec><sec id="mrc4660-sec-0009"><label>7</label><title>WRITING CUSTOM PULSE SEQUENCES</title><p>Writing <italic>Spinach</italic> simulations of pulse sequences is easier than writing them for NMR spectrometers because the syntax is sensible (here the instrument manufacturers get a dirty look) and phase cycles are not a problem &#x02014; coherence selection may be performed by simply zeroing unwanted coherences.<xref rid="mrc4660-bib-0026" ref-type="ref">26</xref> The next page shows the complete source code of the current <italic>Spinach</italic> implementation of the NOESY sequence<xref rid="mrc4660-bib-0029" ref-type="ref">29</xref> that simulates anything from aziridine<xref rid="mrc4660-bib-0030" ref-type="ref">30</xref> to ubiquitin,<xref rid="mrc4660-bib-0005" ref-type="ref">5</xref> and also supports chemical kinetics. It is instructive to go through the code line by line.
+<boxed-text position="anchor" content-type="graphic" orientation="portrait"><graphic xlink:href="MRC-56-415-g017.jpg" position="anchor" id="nlm-graphic-29" orientation="portrait"/></boxed-text>
+</p><p>The pulse sequence does not need to worry about either the spin system or any relaxation/kinetics parameters: the corresponding operator or superoperator matrices (<monospace>H</monospace> for the Hamiltonian, <monospace>R</monospace> for the relaxation superoperator, and <monospace>K</monospace> for the kinetics superoperator) will simply be received from <italic>Spinach</italic> kernel &#x02014; hence the argument list in the very first line. The next line puts all three operators together; their sum is called the Liouvillian and denoted <monospace>L</monospace>.</p><p>The next line deals with the evolution time step, which is inversely related to the sweep width that the user has specified in the <monospace>parameters</monospace> structure as illustrated in Section <xref rid="mrc4660-sec-0008" ref-type="sec">6</xref>. The sequence then asks <italic>Spinach</italic> for the detection state (
+<mml:math id="nlm-math-17"><mml:msub><mml:mover accent="true"><mml:mi>L</mml:mi><mml:mo>&#x0005e;</mml:mo></mml:mover><mml:mo>+</mml:mo></mml:msub></mml:math> on all spins specified by the user) and the pulse operators (
+<mml:math id="nlm-math-18"><mml:msub><mml:mover accent="true"><mml:mi>L</mml:mi><mml:mo>&#x0005e;</mml:mo></mml:mover><mml:mi mathvariant="normal">X</mml:mi></mml:msub></mml:math> and 
+<mml:math id="nlm-math-19"><mml:msub><mml:mover accent="true"><mml:mi>L</mml:mi><mml:mo>&#x0005e;</mml:mo></mml:mover><mml:mi mathvariant="normal">Y</mml:mi></mml:msub></mml:math>).</p><p>The sequence then performs the first pulse by taking the initial condition (supplied by the user in <monospace>parameters.rho0</monospace>) and using the <monospace>step</monospace> function. That function uses Krylov propagation<xref rid="mrc4660-bib-0007" ref-type="ref">7</xref>, <xref rid="mrc4660-bib-0031" ref-type="ref">31</xref> and is optimised for one&#x02010;off evolution events. The particulars are rather technical &#x02014; <italic>Spinach</italic> manual contains further information.</p><p>The evolution command in the next line refers to the indirect dimension evolution. The arguments are the Liouvillian (<monospace>L</monospace>), the starting state (<monospace>rho</monospace>), the length of the time step, and the number of steps. Because this evolution period is incremented during the experiment, it makes sense to only run it once and to keep the entire trajectory &#x02014; this is the meaning of the last argument in the function call. The trajectory is returned as a stack of state vectors (<monospace>rho_stack</monospace>), that is, a matrix made of individual column vectors arranged in the order of time from left to right.</p><p>At this point, the simulation splits into four independent batches: the next pulse is applied with four phases to create the components of the States quadrature<xref rid="mrc4660-bib-0032" ref-type="ref">32</xref> and to eliminate the axial peaks in the F2 dimension that result from partial relaxation of the longitudinal magnetisation during the pulse sequence. A homospoil gradient is then applied to all four stacks (any states other than 
+<mml:math id="nlm-math-20"><mml:msub><mml:mover accent="true"><mml:mi>L</mml:mi><mml:mo>&#x0005e;</mml:mo></mml:mover><mml:mi mathvariant="normal">Z</mml:mi></mml:msub></mml:math> are simply zeroed out analytically).</p><p>The system is then sent through the mixing time using the <monospace>evolution.m</monospace> function provided by <italic>Spinach</italic> kernel. Its inner workings are complicated,<xref rid="mrc4660-bib-0007" ref-type="ref">7</xref> but the user only needs to provide the evolution operator (relaxation and kinetics are needed here) and the duration of the evolution period. The mixing time is followed by another homospoil gradient and another pulse, with the same phase on all four batches. Axial peaks are then eliminated by subtracting the simulation pairs that differed in the direction of the second pulse.</p><p>Finally, the direct dimension evolution is run, and the magnetisation is detected on the coil state. The two components of the States quadrature are returned to the user.</p><p>Pulse sequences live in the <monospace>experiments</monospace> folder of <italic>Spinach</italic> distribution. All of them are extensively documented and also contain subroutines (called &#x0201c;grumblers&#x0201d;) that run detailed checks on the parameters supplied (or not supplied, as the case may be) by the user. Following that style is a good idea.</p></sec><sec id="mrc4660-sec-0010"><label>8</label><title>FITTING EXPERIMENTAL DATA</title><p>Once a simulation is set up, converting it into a fitting procedure is quite easy &#x02014; <italic>Matlab</italic> provides the necessary infrastructure. The only technicality is matching the X axis: point position and spacing in the simulation are not necessarily the same as in the experimental data. The experimental spectrum and the simulated one must therefore be interpolated into a common X axis point grid, for example,
+<preformat>
+
+
+<monospace>sim_spec=interp1(sim_axis,sim_spec,exp_axis,'pchip');</monospace>
+
+
+</preformat>
+This is a call to <italic>Matlab's</italic> built&#x02010;in 1D interpolation function that tells the program to take the data set with the ppm values for each point in the simulated spectrum listed in <monospace>sim_axis,</monospace> and values in <monospace>sim_spec</monospace>, and calculate the values of that spectrum at the points specified in <monospace>exp_axis</monospace> (the X axis of the experimental spectrum). The last option specifies a particular interpolation method &#x02014; technical details may be found in <italic>Matlab</italic> documentation. Once the simulated and the experimental spectrum have the same X axis, they may be subtracted and the least squares error may be computed:
+<preformat>
+
+
+<monospace>err=norm(real(expt_data)&#x02212;real(sim_spec))^2;</monospace>
+
+
+</preformat>
+This error is then minimised by <italic>Matlab</italic> as a function of relevant simulation parameters &#x02014; multiple examples of such fitting runs are given in the standard example set supplied with <italic>Spinach</italic> (Figure&#x000a0;<xref rid="mrc4660-fig-0006" ref-type="fig">6</xref>).</p><fig fig-type="Figure" xml:lang="en" id="mrc4660-fig-0006" orientation="portrait" position="float"><label>Figure 6</label><caption><p>The result of the fitting of a 500&#x000a0;MHz <sup>1</sup>H NMR spectrum of anti&#x02010;2,3&#x02010;difluoro&#x02010;<italic>n</italic>&#x02010;butane with respect to chemical shifts, <italic>J</italic>&#x02010;couplings, and line width. Red dots: experimental data. Blue lines: fitted spectrum. This calculation is included into the standard example set supplied with <italic>Spinach</italic>
+</p></caption><graphic id="nlm-graphic-31" xlink:href="MRC-56-415-g006"/></fig><p>Of the many error minimisation algorithms available in <italic>Matlab</italic>, Nelder&#x02013;Mead simplex is recommended for situations when the initial guess is not particularly good,<xref rid="mrc4660-bib-0033" ref-type="ref">33</xref> and LBFGS method for the refinement runs.<xref rid="mrc4660-bib-0034" ref-type="ref">34</xref> Note that NMR fitting is a difficult problem &#x02014; every parameter combination that makes any two lines overlap between the theoretical and the experimental spectrum is a local minimum on the error surface.</p></sec><sec id="mrc4660-sec-0011"><label>9</label><title>CASE STUDY 1&#x02014;COSY45 OF ROTENONE</title><p>As a simple example that is both sufficiently easy to get started and sufficiently difficult to require <italic>Spinach</italic>, consider the simulation of a magnitude&#x02010;mode COSY45 spectrum of rotenone &#x02014; a system with 22 spins and an irregular coupling pattern (Figure <xref rid="mrc4660-fig-0007" ref-type="fig">7</xref>). This example is available in the example set supplied with <italic>Spinach</italic>.</p><fig fig-type="Figure" xml:lang="en" id="mrc4660-fig-0007" orientation="portrait" position="float"><label>Figure 7</label><caption><p>Chemical structure of rotenone</p></caption><graphic id="nlm-graphic-33" xlink:href="MRC-56-415-g007"/></fig><p>The first thing <italic>Spinach</italic> requires is the function declaration:
+<preformat>
+
+
+<monospace>function cosy45_rotenone()</monospace>
+
+
+</preformat>
+This is not strictly necessary, but a good practice because this guarantees that <italic>Matlab</italic> starts the simulation with a clean background where no previously assigned variables exist. The second stage is to specify the isotopes, 22 protons in this case:
+<boxed-text position="anchor" content-type="graphic" orientation="portrait"><graphic xlink:href="MRC-56-415-g018.jpg" position="anchor" id="nlm-graphic-35" orientation="portrait"/></boxed-text> See the spin system specification section of the online manual for technical details on how to specify more complicated spin systems. The next step is to specify the magnet field (in Tesla):
+<preformat>
+
+
+<monospace>sys.magnet=5.9;</monospace>
+
+
+</preformat>
+then chemical shifts, in ppm for all protons:
+<boxed-text position="anchor" content-type="graphic" orientation="portrait"><graphic xlink:href="MRC-56-415-g019.jpg" position="anchor" id="nlm-graphic-37" orientation="portrait"/></boxed-text> then all scalar couplings, in Hz:
+<preformat>
+
+
+<monospace>inter.coupling.scalar{3,4}=12.1;</monospace>
+
+<monospace>inter.coupling.scalar{4,5}=3.1;</monospace>
+
+<monospace>inter.coupling.scalar{3,5}=1.0;</monospace>
+
+<monospace>inter.coupling.scalar{3,8}=1.0;</monospace>
+
+<monospace>inter.coupling.scalar{1,8}=1.0;</monospace>
+
+<monospace>inter.coupling.scalar{6,7}=8.6;</monospace>
+
+<monospace>inter.coupling.scalar{5,8}=4.1;</monospace>
+
+<monospace>inter.coupling.scalar{7,9}=0.7;</monospace>
+
+<monospace>inter.coupling.scalar{7,10}=0.7;</monospace>
+
+<monospace>inter.coupling.scalar{9,10}=15.8;</monospace>
+
+<monospace>inter.coupling.scalar{10,11}=9.8;</monospace>
+
+<monospace>inter.coupling.scalar{9,11}=8.1;</monospace>
+
+<monospace>inter.coupling.scalar{13,14}=1.5;</monospace>
+
+<monospace>inter.coupling.scalar{12,14}=0.9;</monospace>
+
+<monospace>inter.coupling.scalar{22,22}=0;</monospace>
+
+
+</preformat>
+where the last line is necessary to tell <italic>Matlab</italic> that the array is 22 by 22 and all other elements are empty or zero.</p><p>The next stage is basis set specification. The complete basis set for a 22&#x02010;spin system is too large, and we must therefore rely on the restricted state space approximation (see the basis set specification section of the online manual and our recent papers<xref rid="mrc4660-bib-0005" ref-type="ref">5</xref>, <xref rid="mrc4660-bib-0006" ref-type="ref">6</xref>, <xref rid="mrc4660-bib-0007" ref-type="ref">7</xref>, <xref rid="mrc4660-bib-0026" ref-type="ref">26</xref>, <xref rid="mrc4660-bib-0027" ref-type="ref">27</xref> for technical details of the basis set selection process). Here, we will be using the IK&#x02212;2 basis with Liouville space formalism and no spatial proximity analysis because atomic coordinates are not supplied:
+<preformat>
+
+
+<monospace>bas.formalism='sphten&#x02212;liouv';</monospace>
+
+<monospace>bas.approximation='IK&#x02212;2';</monospace>
+
+<monospace>bas.space_level=1;</monospace>
+
+<monospace>bas.connectivity='scalar_couplings';</monospace>
+
+
+</preformat>
+The three methyl groups contain magnetically equivalent protons, and this symmetry may optionally be used to reduce the calculation time:
+<preformat>
+
+
+<monospace>bas.sym_group={'S3','S3','S3'};</monospace>
+
+<monospace>bas.sym_spins={[14 15 16],[17 18 19],[20 21 22]};</monospace>
+
+
+</preformat>
+This completes the basis set specification. The next stage is to specify the pulse sequence parameters. The full list of the parameters that <italic>Spinach</italic> stock pulse sequences require is given in the manual page for each sequence. The specific parameters required by the COSY sequence in this case are:
+<preformat>
+
+
+<monospace>parameters.angle=pi/4;</monospace>
+
+<monospace>parameters.offset=1200;</monospace>
+
+<monospace>parameters.sweep=2000;</monospace>
+
+<monospace>parameters.npoints=[512 512];</monospace>
+
+<monospace>parameters.zerofill=[2048 2048];</monospace>
+
+<monospace>parameters.spins={'1H'};</monospace>
+
+<monospace>parameters.axis_units='ppm';</monospace>
+
+
+</preformat>
+where the field names are intended to be self&#x02010;explanatory. This completes the specification of the spin system, of the basis set, and of the experiment parameters. The next stage is to give all that information to <italic>Spinach</italic>. This is accomplished by running the two housekeeping functions:
+<preformat>
+
+
+<monospace>spin_system=create(sys,inter);</monospace>
+
+<monospace>spin_system=basis(spin_system,bas);</monospace>
+
+
+</preformat>
+Both print copious output to the console. This output should always be inspected carefully because it might contain warning messages. The next stage is simulation, which is carried out in liquid state (hence the <monospace>liquid</monospace> context function) with the assumptions set to <monospace>'nmr'</monospace>, indicating common high&#x02010;field NMR spectroscopy:
+<preformat>
+
+
+<monospace>fid=liquid(spin_system,@cosy,parameters,'nmr');</monospace>
+
+
+</preformat>
+The simulation returns the two&#x02010;dimensional free induction decay that should undergo apodization (cosine bell in both dimensions is a good choice here):
+<preformat>
+
+
+<monospace>fid=apodization(fid,'cosbell&#x02212;2d');</monospace>
+
+
+</preformat>
+and Fourier transform (<monospace>fft2</monospace> performs a two&#x02010;dimensional transform and <monospace>fftshift</monospace> moves the zero frequency to the centre of the spectrum &#x02014; <italic>Matlab</italic>'s default is to have it on the edge):
+<preformat>
+
+
+<monospace>spec=fftshift(fft2(fid,parameters.zerofill(2),parameters.zerofill(1)));</monospace>
+
+
+</preformat>
+Finally, the spectrum is plotted (the many parameters of the plotting function are explained in the online manual):
+<preformat>
+
+
+ <monospace>plot_2d(spin_system,spec,parameters,20,[0.0025 0.05 0.0025 0.05],2,256,6,'positive');</monospace>
+
+
+</preformat>
+The whole simulation should take less than a minute on any modern laptop (Figure&#x000a0;<xref rid="mrc4660-fig-0008" ref-type="fig">8</xref>). Note that <italic>Matlab</italic> auto&#x02010;starts the parallelisation engine when it runs for the first time, that stage only happens once per <italic>Matlab</italic> session.</p><fig fig-type="Figure" xml:lang="en" id="mrc4660-fig-0008" orientation="portrait" position="float"><label>Figure 8</label><caption><p>COSY&#x02010;45 simulation for rotenone, performed as described in the main text</p></caption><graphic id="nlm-graphic-39" xlink:href="MRC-56-415-g008"/></fig></sec><sec id="mrc4660-sec-0012"><label>10</label><title>CASE STUDY 2 &#x02014; NOESY OF UBIQUITIN</title><p>This section describes the stages of setting up a simulation of a simple protein NMR experiment. Multiple examples of such simulations are available in the standard example set supplied with <italic>Spinach</italic>. You would need the following:
+<list list-type="order" id="mrc4660-list-0001"><list-item id="mrc4660-li-0001"><p>A suitably powerful computer. As a guidance, calculations that do not require a relaxation superoperator (HSQC and such) would need 16&#x000a0;GB of RAM to run ubiquitin, and the calculations that do need it (NOESY and such) would require 64&#x000a0;GB.</p></list-item><list-item id="mrc4660-li-0002"><p>A PDB file containing Cartesian coordinates of every atom in the protein, including protons.</p></list-item><list-item id="mrc4660-li-0003"><p>A BMRB file containing chemical shifts for those atoms that have been assigned. Unassigned atoms would either not appear in the simulation or end up with a chemical shift of &#x02212;1&#x000a0;ppm (depending on the options specified, placing them at &#x02212;1&#x000a0;ppm often helps with the subsequent assignment).</p></list-item></list>
+</p><p>
+<italic>Spinach</italic> cross&#x02010;checks the amino acid sequence between the PDB and the BMRB file &#x02014; any mismatch would produce an error message. Use the following command to import data and create <italic>Spinach</italic> input structures:
+<preformat>
+
+
+<monospace>[sys,inter]=protein('pdb_file_name','bmrb_file_name',options);</monospace>
+
+
+</preformat>
+The full list of options and the detailed descriptions of the subfields of <monospace>sys</monospace> and <monospace>inter</monospace> data structures are available in the manual. The protein import function above fills and returns the following fields:
+<preformat>
+
+
+<monospace>sys.isotopes</monospace>
+
+<monospace>sys.labels</monospace>
+
+<monospace>inter.zeeman.scalar</monospace>
+
+<monospace>inter.zeeman.matrix</monospace>
+
+<monospace>inter.coupling.scalar</monospace>
+
+<monospace>inter.coordinates</monospace>
+
+
+</preformat>
+Field names are self&#x02010;explanatory: isotope names are placed into <monospace>sys.isotopes</monospace>, PDB labels of each atom are placed into <monospace>sys.labels</monospace>, chemical shifts are placed into <monospace>inter.zeeman.scalar</monospace>, rough guesses for nitrogen CSAs are placed into <monospace>inter.zeeman.matrix</monospace> (if you have accurate CSA tensors, you need to place them into the corresponding cells of <monospace>inter.zeeman.matrix</monospace> array after the import is complete), reasonable guesses of <italic>J</italic>&#x02010;couplings<xref rid="mrc4660-bib-0005" ref-type="ref">5</xref> are placed into <monospace>inter.coupling.scalar</monospace> (if you have accurate <italic>J</italic>&#x02010;couplings, you would need to overwrite the values in <monospace>inter.coupling.scalar</monospace> after the import is complete); and PDB atom coordinates are placed into <monospace>inter.coordinates</monospace>; nothing else is imported or guessed. The detailed list of everything that happens when protein data are imported into <italic>Spinach</italic> is given in our recent paper<xref rid="mrc4660-bib-0005" ref-type="ref">5</xref> and printed to the console at run time.</p><p>After the import is finished, the resulting <monospace>sys</monospace> and <monospace>inter</monospace> structures may be used by <italic>Spinach</italic>. Dipolar coupling tensors are computed automatically from atomic coordinates. Any additional information (quadrupolar coupling, unpaired electrons and associated interactions, <italic>etc.</italic>) can be added to <monospace>sys</monospace> and <monospace>inter</monospace> structures at this point.</p><p>At the next stage in the input preparation, you need to specify the magnet field and the cut&#x02010;off tolerances for the various interactions (which distances are &#x0201c;too large&#x0201d; for the dipolar coupling, and which <italic>J</italic>&#x02010;couplings are &#x0201c;too small&#x0201d; to be consequential). The top of the <italic>Matlab</italic> file should look similar to the following:
+<preformat>
+
+
+<monospace>% Protein data</monospace>
+
+<monospace>[sys,inter]=protein('1D3Z.pdb','1D3Z.bmrb',options);</monospace>
+
+
+
+<monospace>% Magnet field</monospace>
+
+<monospace>sys.magnet=21.1356;</monospace>
+
+
+
+<monospace>% Tolerances</monospace>
+
+<monospace>sys.tols.prox_cutoff=5.0;</monospace>
+
+<monospace>sys.tols.inter_cutoff=2.0;</monospace>
+
+
+</preformat>
+Cut&#x02010;off tolerance for proximity is specified in Angstrom and cut&#x02010;off for <italic>J</italic>&#x02010;coupling is specified in Hz. In the example above, dipolar couplings would not be taken into account between spins that are further than 5.0&#x000a0;&#x000c5; apart and any <italic>J</italic>&#x02010;coupling smaller than 2.0&#x000a0;Hz would be ignored.</p><p>The next thing to be specified is the relaxation theory. Redfield relaxation theory is a very expensive option from the computational point of view &#x02014; NOESY simulation for a 70&#x02010;residue protein requires about 64&#x000a0;GB of RAM (it was taking a terabyte in some of the early versions of <italic>Spinach</italic>). If you do not require accurate relaxation theory treatment, use something similar to the following:
+<preformat>
+
+
+<monospace>% Relaxation theory</monospace>
+
+<monospace>inter.relaxation='damp';</monospace>
+
+<monospace>inter.damp_rate=5.0;</monospace>
+
+
+</preformat>
+This requests a non&#x02010;selective damping at 5.0&#x000a0;Hz for all states (the relaxation superoperator would be a diagonal matrix with &#x02212;5.0 on the diagonal). Alternatively, <italic>Spinach</italic> supports simple <italic>T</italic>
+<sub>1</sub>/<italic>T</italic>
+<sub>2</sub> and Lindblad relaxation models &#x02014; those are often sufficient; details are in the manual. However, if you do require accurate relaxation treatment (it is strictly necessary for NOESY spectra), the following should be supplied:
+<preformat>
+
+
+<monospace>% Relaxation theory</monospace>
+
+<monospace>inter.relaxation='redfield';</monospace>
+
+<monospace>inter.rlx_keep='kite';</monospace>
+
+<monospace>inter.tau_c=5e&#x02212;9;</monospace>
+
+
+</preformat>
+This requests full Redfield theory: DD, CSA, NQI, and all cross&#x02010;correlations thereof.<xref rid="mrc4660-bib-0018" ref-type="ref">18</xref> Dipolar tensors are computed from atomic coordinates, CSAs and NQIs must be provided as described in Section <xref rid="mrc4660-sec-0003" ref-type="sec">3</xref>. The middle line in the specification above requests the &#x0201c;Redfield kite&#x0201d; &#x02014; cross&#x02010;relaxation is included between longitudinal states only. If you require the treatment of all cross&#x02010;relaxation processes, specify &#x0201c;secular&#x0201d; instead of &#x0201c;kite&#x0201d; &#x02014; note that the simulation time would increase considerably. The last line specifies the rotational correlation time in seconds. It is important that you get this number right because all relaxation rates depend on it. <italic>Spinach</italic> relaxation module supports anisotropic rotational diffusion; further details are given in Section <xref rid="mrc4660-sec-0003" ref-type="sec">3</xref>.</p><p>The next step is to choose a basis set. This is a very complicated topic (see the online manual), but the minimal basis set that produces quantitatively accurate results for proteins in liquid state is the following:
+<preformat>
+
+
+<monospace>% Basis set</monospace>
+
+<monospace>bas.formalism='sphten&#x02212;liouv';</monospace>
+
+<monospace>bas.approximation='IK&#x02212;1';</monospace>
+
+<monospace>bas.connectivity='scalar_couplings';</monospace>
+
+<monospace>bas.level=5; bas.space_level=3;</monospace>
+
+
+</preformat>
+This requests IK&#x02212;1(5,3) connectivity&#x02010;adaptive basis set that includes local correlations of up to five spins on the <italic>J</italic>&#x02010;coupling graph and local correlations of up to three spins on the spatial proximity graph.<xref rid="mrc4660-bib-0005" ref-type="ref">5</xref> In principle, some amino acid side chains (valine and isoleucine) require correlations of more than five spins to be present in the basis set to get their multiplicity absolutely right, but the multiplet structure of the corresponding signals is never actually resolved in protein NMR spectra. An absolutely bulletproof basis here would be IK&#x02212;1(8,3), but in this case, it simply produces the same answer after a much longer calculation.</p><p>The next stage is to call <italic>Spinach</italic> constructor functions and generate the <monospace>spin_system</monospace> data structure that contains all information about the spin system and is required by most high&#x02010;level <italic>Spinach</italic> functions as the first argument:
+<preformat>
+
+
+<monospace>% Create the spin system structure</monospace>
+
+<monospace>spin_system=create(sys,inter);</monospace>
+
+
+
+<monospace>% Kill carbons and nitrogens</monospace>
+
+<monospace>spin_system=kill_spin(spin_system,strcmp('13C',spin_system.comp.isotopes));</monospace>
+
+<monospace>spin_system=kill_spin(spin_system,strcmp('15N',spin_system.comp.isotopes));</monospace>
+
+
+
+<monospace>% Build the basis</monospace>
+
+<monospace>spin_system=basis(spin_system,bas);</monospace>
+
+
+</preformat>
+The two lines in the middle are optional &#x02014; in this case, they request the removal of all carbon and nitrogen spins from the spin system. This is necessary for the NOESY simulation but should not be done for HSQC, HNCO, and other sequences that require the presence of <sup>15</sup>N and <sup>13</sup>C spins.</p><p>The next stage is to specify experiment parameters. In the case of 2D NOESY, the following is a reasonable set:
+<preformat>
+
+
+<monospace>% Sequence parameters</monospace>
+
+<monospace>parameters.tmix=0.065;</monospace>
+
+<monospace>parameters.offset=4250;</monospace>
+
+<monospace>parameters.sweep=10750;</monospace>
+
+<monospace>parameters.npoints=[512 512];</monospace>
+
+<monospace>parameters.zerofill=[2048 2048];</monospace>
+
+<monospace>parameters.spins={'1H'};</monospace>
+
+<monospace>parameters.axis_units='ppm';</monospace>
+
+<monospace>parameters.rho0=state(spin_system,'Lz','1H');</monospace>
+
+
+</preformat>
+As the names of the parameters suggest, this requests a mixing time of 65&#x000a0;ms, frequency offset of 4250&#x000a0;Hz, sweep width of 10750&#x000a0;Hz, 512 points to be acquired in both dimensions, and zerofilled to 2048 points in both dimensions, the sequence is operating on <sup>1</sup>H nuclei, axis units should be ppm, and the initial condition is 
+<mml:math id="nlm-math-21"><mml:msub><mml:mover accent="true"><mml:mi>L</mml:mi><mml:mo>&#x0005e;</mml:mo></mml:mover><mml:mi mathvariant="normal">Z</mml:mi></mml:msub></mml:math> on protons.</p><p>The next stage is the actual simulation. In the case of 2D NOESY, the syntax is
+<preformat>
+
+
+<monospace>% Simulation</monospace>
+
+<monospace>fid=liquid(spin_system,@noesy,parameters,'nmr');</monospace>
+
+
+</preformat>
+The choice of the outer function reflects the fact that we are running a liquid state simulation (<italic>Spinach</italic> supports all other types of magnetic resonance spectroscopy and imaging), <monospace>spin_system</monospace> is the data structure containing the information about the system, <monospace>noesy</monospace> is the name of the pulse sequence we are running (@ symbol is a <italic>Matlab</italic> technicality &#x02014; it denotes a function handle), and the various fields of the parameters argument have all been set above. The result is a 2D free induction decay that is ready for standard NMR data processing. Depending on the pulse sequence, it may be a simple array of complex numbers, or it might contain subfields, such as <monospace>fid.cos</monospace> and <monospace>fid.sin</monospace>, that are used in States quadrature processing of phase&#x02010;sensitive experiments.</p><p>The next stage is apodization, which may be accomplished using any of the window functions available in <italic>Spinach</italic> &#x02014; the complete list is in the manual. In this particular case, we will use Gaussian apodization:
+<preformat>
+
+
+<monospace>% Apodization</monospace>
+
+<monospace>fid.cos=apodization(fid.cos,'gaussian&#x02010;2d',5);</monospace>
+
+<monospace>fid.sin=apodization(fid.sin,'gaussian&#x02010;2d',5);</monospace>
+
+
+</preformat>
+where the last argument is the decay rate (per data set point) of the Gaussian function &#x02014; this parameter should be increased until the sinc wiggles disappear from the spectrum. Good practical advice on spectral apodization was published by Vosegaard and Nielsen.<xref rid="mrc4660-bib-0035" ref-type="ref">35</xref>
+</p><p>The next stage is Fourier transform and quadrature processing. For a 2D NOESY simulation, States quadrature processing is necessary:
+<preformat>
+
+
+<monospace>% F2 Fourier transform</monospace>
+
+<monospace>f1_cos=real(fftshift(fft(fid.cos,parameters.zerofill(2),1),1));</monospace>
+
+<monospace>f1_sin=real(fftshift(fft(fid.sin,parameters.zerofill(2),1),1));</monospace>
+
+
+
+<monospace>% States signal</monospace>
+
+<monospace>f1_states=f1_cos&#x02212;1i*f1_sin;</monospace>
+
+
+
+<monospace>% F1 Fourier transform</monospace>
+
+<monospace>spectrum=fftshift(fft(f1_states,parameters.zerofill(1),2),2);</monospace>
+
+
+</preformat>
+This is standard <italic>Matlab</italic> Fourier transform syntax: <monospace>fft</monospace> is the command that performs the transform and <monospace>fftshift</monospace> performs a cyclic shift that moves the zero frequency to the centre of the spectrum. Finally, the plotting function produces a contour plot:
+<preformat>
+
+
+<monospace>% Plotting</monospace>
+
+<monospace>plot_2d(spin_system,&#x02212;real(spectrum),parameters,20,...</monospace>
+
+<monospace>[0.01 0.05 0.01 0.05],2,256,6,'positive');</monospace>
+
+
+</preformat>
+2D and 3D plotting functions in Spinach have a significant number of adjustable parameters that are described in the manual. The last argument tells the plotter to ignore negative peaks. If those are expected in the spectrum, the argument should be <monospace>'both'</monospace>. The output is shown in Figure&#x000a0;<xref rid="mrc4660-fig-0002" ref-type="fig">2</xref>.</p></sec></body><back><ack id="mrc4660-sec-0013"><title>ACKNOWLEDGEMENTS</title><p>A large number of people have contributed ideas, examples, and good advice to <italic>Spinach</italic> over the last 10&#x000a0;years &#x02014; the current developer team is listed at the website (<ext-link ext-link-type="uri" xlink:href="http://spindynamics.org/wiki/index.php?title=Spinach_developer_team">http://spindynamics.org/wiki/index.php?title=Spinach_developer_team</ext-link>). The people who have specifically contributed to the functionality described in this tutorial are Luke Edwards, Hannah Hogben, Matthew Krzystyniak, Dmitry Savostyanov, and Zenawi Welderufael. The funding came from EPSRC (EP/F065205/1 and EP/H003789/1) and the inspiration from Marina Jay Brassington, Ayn Rand's &#x0201c;Atlas Shrugged&#x0201d; and sound tracks by Jeremy Soule.</p></ack><ref-list id="mrc4660-bibl-0001" content-type="cited-references"><title>REFERENCES</title><ref id="mrc4660-bib-0001"><label>1</label><mixed-citation publication-type="book" id="mrc4660-cit-0002">
+<string-name>
+<given-names>M. H.</given-names>
+<surname>Levitt</surname>
+</string-name>, <source xml:lang="en">Spin dynamics: Basics of nuclear magnetic resonance</source>, <publisher-loc>Falkreath</publisher-loc>: <publisher-name>John Wiley &#x00026; Sons</publisher-name>
+<year>2001</year>.</mixed-citation></ref><ref id="mrc4660-bib-0002"><label>2</label><mixed-citation publication-type="book" id="mrc4660-cit-0003">
+<string-name>
+<given-names>J.</given-names>
+<surname>Keeler</surname>
+</string-name>, <source xml:lang="en">Understanding NMR spectroscopy</source>, <publisher-loc>Falkreath</publisher-loc>: <publisher-name>John Wiley &#x00026; Sons</publisher-name>
+<year>2011</year>.</mixed-citation></ref><ref id="mrc4660-bib-0003"><label>3</label><mixed-citation publication-type="book" id="mrc4660-cit-0004">
+<string-name>
+<given-names>P.</given-names>
+<surname>Hore</surname>
+</string-name>, <string-name>
+<given-names>J.</given-names>
+<surname>Jones</surname>
+</string-name>, <string-name>
+<given-names>S.</given-names>
+<surname>Wimperis</surname>
+</string-name>, <source xml:lang="en">NMR: The toolkit: How pulse sequences work</source>, <publisher-name>Oxford University Press</publisher-name>, <publisher-loc>USA</publisher-loc>
+<year>2015</year>.</mixed-citation></ref><ref id="mrc4660-bib-0004"><label>4</label><mixed-citation publication-type="journal" id="mrc4660-cit-0005">
+<string-name>
+<given-names>H.</given-names>
+<surname>Hogben</surname>
+</string-name>, <string-name>
+<given-names>M.</given-names>
+<surname>Krzystyniak</surname>
+</string-name>, <string-name>
+<given-names>G.</given-names>
+<surname>Charnock</surname>
+</string-name>, <string-name>
+<given-names>P.</given-names>
+<surname>Hore</surname>
+</string-name>, <string-name>
+<given-names>I.</given-names>
+<surname>Kuprov</surname>
+</string-name>, <source xml:lang="en">J. Magn. Reson.</source>
+<year>2011</year>, <volume>208</volume>, <fpage>179</fpage>.<pub-id pub-id-type="pmid">21169043</pub-id></mixed-citation></ref><ref id="mrc4660-bib-0005"><label>5</label><mixed-citation publication-type="journal" id="mrc4660-cit-0006">
+<string-name>
+<given-names>L. J.</given-names>
+<surname>Edwards</surname>
+</string-name>, <string-name>
+<given-names>D.</given-names>
+<surname>Savostyanov</surname>
+</string-name>, <string-name>
+<given-names>Z.</given-names>
+<surname>Welderufael</surname>
+</string-name>, <string-name>
+<given-names>D.</given-names>
+<surname>Lee</surname>
+</string-name>, <string-name>
+<given-names>I.</given-names>
+<surname>Kuprov</surname>
+</string-name>, <source xml:lang="en">J. Magn. Reson.</source>
+<year>2014</year>, <volume>243</volume>, <fpage>107</fpage>.<pub-id pub-id-type="pmid">24792963</pub-id></mixed-citation></ref><ref id="mrc4660-bib-0006"><label>6</label><mixed-citation publication-type="journal" id="mrc4660-cit-0007">
+<string-name>
+<given-names>I.</given-names>
+<surname>Kuprov</surname>
+</string-name>, <string-name>
+<given-names>N.</given-names>
+<surname>Wagner&#x02010;Rundell</surname>
+</string-name>, <string-name>
+<given-names>P.</given-names>
+<surname>Hore</surname>
+</string-name>, <source xml:lang="en">J. Magn. Reson.</source>
+<year>2007</year>, <volume>189</volume>, <fpage>241</fpage>.<pub-id pub-id-type="pmid">17936658</pub-id></mixed-citation></ref><ref id="mrc4660-bib-0007"><label>7</label><mixed-citation publication-type="journal" id="mrc4660-cit-0008">
+<string-name>
+<given-names>I.</given-names>
+<surname>Kuprov</surname>
+</string-name>, <source xml:lang="en">J. Magn. Reson.</source>
+<year>2008</year>, <volume>195</volume>, <fpage>45</fpage>.<pub-id pub-id-type="pmid">18789735</pub-id></mixed-citation></ref><ref id="mrc4660-bib-0008"><label>8</label><mixed-citation publication-type="journal" id="mrc4660-cit-0009">
+<string-name>
+<given-names>I.</given-names>
+<surname>Kuprov</surname>
+</string-name>, <source xml:lang="en">J. Magn. Reson.</source>
+<year>2016</year>, <volume>270</volume>, <fpage>124</fpage>.<pub-id pub-id-type="pmid">27470597</pub-id></mixed-citation></ref><ref id="mrc4660-bib-0009"><label>9</label><mixed-citation publication-type="miscellaneous" id="mrc4660-cit-0010">
+<string-name>
+<given-names>L.</given-names>
+<surname>Guduff</surname>
+</string-name>, <string-name>
+<given-names>A.J.</given-names>
+<surname>Allami</surname>
+</string-name>, <string-name>
+<given-names>C.</given-names>
+<surname>van Heijenoort</surname>
+</string-name>, <string-name>
+<given-names>J.&#x02010;N.</given-names>
+<surname>Dumez</surname>
+</string-name>, <string-name>
+<given-names>I.</given-names>
+<surname>Kuprov</surname>
+</string-name>, (<year>2017</year>).</mixed-citation></ref><ref id="mrc4660-bib-0010"><label>10</label><mixed-citation publication-type="journal" id="mrc4660-cit-0011">
+<string-name>
+<given-names>R. S.</given-names>
+<surname>Dumont</surname>
+</string-name>, <string-name>
+<given-names>S.</given-names>
+<surname>Jain</surname>
+</string-name>, <string-name>
+<given-names>A.</given-names>
+<surname>Bain</surname>
+</string-name>, <source xml:lang="en">J. Chem. Phys.</source>
+<year>1997</year>, <volume>106</volume>, <fpage>5928</fpage>.</mixed-citation></ref><ref id="mrc4660-bib-0011"><label>11</label><mixed-citation publication-type="journal" id="mrc4660-cit-0012">
+<string-name>
+<given-names>T.</given-names>
+<surname>Allman</surname>
+</string-name>, <string-name>
+<given-names>A. D.</given-names>
+<surname>Bain</surname>
+</string-name>, <string-name>
+<given-names>J. R.</given-names>
+<surname>Garbow</surname>
+</string-name>, <source xml:lang="en">J. Magn. Reson. A</source>
+<year>1996</year>, <volume>123</volume>, <fpage>26</fpage>.<pub-id pub-id-type="pmid">8980060</pub-id></mixed-citation></ref><ref id="mrc4660-bib-0012"><label>12</label><mixed-citation publication-type="journal" id="mrc4660-cit-0013">
+<string-name>
+<given-names>P.</given-names>
+<surname>Hodgkinson</surname>
+</string-name>, <string-name>
+<given-names>L.</given-names>
+<surname>Emsley</surname>
+</string-name>, <source xml:lang="en">Prog. Nucl. Magn. Reson. Spectrosc.</source>
+<year>2000</year>, <volume>36</volume>, <fpage>201</fpage>.</mixed-citation></ref><ref id="mrc4660-bib-0013"><label>13</label><mixed-citation publication-type="journal" id="mrc4660-cit-0014">
+<string-name>
+<given-names>M.</given-names>
+<surname>Ed&#x000e9;n</surname>
+</string-name>, <source xml:lang="en">Concepts Magn. Reson. Part A</source>
+<year>2003</year>, <volume>17</volume>, <fpage>117</fpage>.</mixed-citation></ref><ref id="mrc4660-bib-0014"><label>14</label><mixed-citation publication-type="journal" id="mrc4660-cit-0015">
+<string-name>
+<given-names>Z.</given-names>
+<surname>To&#x00161;ner</surname>
+</string-name>, <string-name>
+<given-names>R.</given-names>
+<surname>Andersen</surname>
+</string-name>, <string-name>
+<given-names>B.</given-names>
+<surname>Stevensson</surname>
+</string-name>, <string-name>
+<given-names>M.</given-names>
+<surname>Ed&#x000e9;n</surname>
+</string-name>, <string-name>
+<given-names>N. C.</given-names>
+<surname>Nielsen</surname>
+</string-name>, <string-name>
+<given-names>T.</given-names>
+<surname>Vosegaard</surname>
+</string-name>, <source xml:lang="en">J. Magn. Reson.</source>
+<year>2014</year>, <volume>246</volume>, <fpage>79</fpage>.<pub-id pub-id-type="pmid">25093693</pub-id></mixed-citation></ref><ref id="mrc4660-bib-0015"><label>15</label><mixed-citation publication-type="journal" id="mrc4660-cit-0016">
+<string-name>
+<given-names>A.</given-names>
+<surname>Biternas</surname>
+</string-name>, <string-name>
+<given-names>G.</given-names>
+<surname>Charnock</surname>
+</string-name>, <string-name>
+<given-names>I.</given-names>
+<surname>Kuprov</surname>
+</string-name>, <source xml:lang="en">J. Magn. Reson.</source>
+<year>2014</year>, <volume>240</volume>, <fpage>124</fpage>.<pub-id pub-id-type="pmid">24530265</pub-id></mixed-citation></ref><ref id="mrc4660-bib-0016"><label>16</label><mixed-citation publication-type="miscellaneous" id="mrc4660-cit-0017">
+<string-name>
+<given-names>M.</given-names>
+<surname>Frisch</surname>
+</string-name>, <string-name>
+<given-names>G.</given-names>
+<surname>Trucks</surname>
+</string-name>, <string-name>
+<given-names>H.</given-names>
+<surname>Schlegel</surname>
+</string-name>, <string-name>
+<given-names>G.</given-names>
+<surname>Scuseria</surname>
+</string-name>, <string-name>
+<given-names>M.</given-names>
+<surname>Robb</surname>
+</string-name>, <string-name>
+<given-names>J.</given-names>
+<surname>Cheeseman</surname>
+</string-name>, <string-name>
+<given-names>G.</given-names>
+<surname>Scalmani</surname>
+</string-name>, <string-name>
+<given-names>V.</given-names>
+<surname>Barone</surname>
+</string-name>, <string-name>
+<given-names>B.</given-names>
+<surname>Mennucci</surname>
+</string-name>, <string-name>
+<given-names>G.</given-names>
+<surname>Petersson</surname>
+</string-name>, GAUSSIAN09. Gaussian Inc., Wallingford, CT, USA, in, <year>2009</year>.</mixed-citation></ref><ref id="mrc4660-bib-0017"><label>17</label><mixed-citation publication-type="journal" id="mrc4660-cit-0018">
+<string-name>
+<given-names>F.</given-names>
+<surname>Neese</surname>
+</string-name>, <source xml:lang="en">Wiley Interdiscip. Rev.: Comput. Mol. Sci.</source>
+<year>2012</year>, <volume>2</volume>, <fpage>73</fpage>.</mixed-citation></ref><ref id="mrc4660-bib-0018"><label>18</label><mixed-citation publication-type="journal" id="mrc4660-cit-0019">
+<string-name>
+<given-names>I.</given-names>
+<surname>Kuprov</surname>
+</string-name>, <source xml:lang="en">J. Magn. Reson.</source>
+<year>2011</year>, <volume>209</volume>, <fpage>31</fpage>.<pub-id pub-id-type="pmid">21256061</pub-id></mixed-citation></ref><ref id="mrc4660-bib-0019"><label>19</label><mixed-citation publication-type="journal" id="mrc4660-cit-0020">
+<string-name>
+<given-names>R. K.</given-names>
+<surname>Wangsness</surname>
+</string-name>, <string-name>
+<given-names>F.</given-names>
+<surname>Bloch</surname>
+</string-name>, <source xml:lang="en">Phys. Rev.</source>
+<year>1953</year>, <volume>89</volume>, <fpage>728</fpage>.</mixed-citation></ref><ref id="mrc4660-bib-0020"><label>20</label><mixed-citation publication-type="journal" id="mrc4660-cit-0021">
+<string-name>
+<given-names>A. G.</given-names>
+<surname>Redfield</surname>
+</string-name>, <source xml:lang="en">IBM J. Res. Dev.</source>
+<year>1957</year>, <volume>1</volume>, <fpage>19</fpage>.</mixed-citation></ref><ref id="mrc4660-bib-0021"><label>21</label><mixed-citation publication-type="journal" id="mrc4660-cit-0022">
+<string-name>
+<given-names>M.</given-names>
+<surname>Goldman</surname>
+</string-name>, <source xml:lang="en">J. Magn. Reson.</source>
+<year>2001</year>, <volume>149</volume>, <fpage>160</fpage>.<pub-id pub-id-type="pmid">11318616</pub-id></mixed-citation></ref><ref id="mrc4660-bib-0022"><label>22</label><mixed-citation publication-type="journal" id="mrc4660-cit-0023">
+<string-name>
+<given-names>D.</given-names>
+<surname>Goodwin</surname>
+</string-name>, <string-name>
+<given-names>I.</given-names>
+<surname>Kuprov</surname>
+</string-name>, <source xml:lang="en">J. Chem. Phys.</source>
+<year>2015</year>, <volume>143</volume> 084113.</mixed-citation></ref><ref id="mrc4660-bib-0023"><label>23</label><mixed-citation publication-type="journal" id="mrc4660-cit-0024">
+<string-name>
+<given-names>T. O.</given-names>
+<surname>Levante</surname>
+</string-name>, <string-name>
+<given-names>R. R.</given-names>
+<surname>Ernst</surname>
+</string-name>, <source xml:lang="en">Chem. Phys. Lett.</source>
+<year>1995</year>, <volume>241</volume>, <fpage>73</fpage>.</mixed-citation></ref><ref id="mrc4660-bib-0024"><label>24</label><mixed-citation publication-type="journal" id="mrc4660-cit-0025">
+<string-name>
+<given-names>M. H.</given-names>
+<surname>Levitt</surname>
+</string-name>, <string-name>
+<given-names>L.</given-names>
+<surname>Di Bari</surname>
+</string-name>, <source xml:lang="en">Phys. Rev. Lett.</source>
+<year>1992</year>, <volume>69</volume>, <fpage>3124</fpage>.<pub-id pub-id-type="pmid">10046731</pub-id></mixed-citation></ref><ref id="mrc4660-bib-0025"><label>25</label><mixed-citation publication-type="journal" id="mrc4660-cit-0026">
+<string-name>
+<given-names>A. D.</given-names>
+<surname>Bain</surname>
+</string-name>, <string-name>
+<given-names>J. S.</given-names>
+<surname>Martin</surname>
+</string-name>, <source xml:lang="en">J. Magn. Reson.</source>
+<year>1969</year>, <volume>29</volume>(<issue>1978</issue>), <fpage>125</fpage>.</mixed-citation></ref><ref id="mrc4660-bib-0026"><label>26</label><mixed-citation publication-type="journal" id="mrc4660-cit-0027">
+<string-name>
+<given-names>H.</given-names>
+<surname>Hogben</surname>
+</string-name>, <string-name>
+<given-names>P.</given-names>
+<surname>Hore</surname>
+</string-name>, <string-name>
+<given-names>I.</given-names>
+<surname>Kuprov</surname>
+</string-name>, <source xml:lang="en">J. Chem. Phys.</source>
+<year>2010</year>, <volume>132</volume>, <fpage>174101</fpage>.<pub-id pub-id-type="pmid">20459150</pub-id></mixed-citation></ref><ref id="mrc4660-bib-0027"><label>27</label><mixed-citation publication-type="journal" id="mrc4660-cit-0028">
+<string-name>
+<given-names>M.</given-names>
+<surname>Krzystyniak</surname>
+</string-name>, <string-name>
+<given-names>L. J.</given-names>
+<surname>Edwards</surname>
+</string-name>, <string-name>
+<given-names>I.</given-names>
+<surname>Kuprov</surname>
+</string-name>, <source xml:lang="en">J. Magn. Reson.</source>
+<year>2011</year>, <volume>210</volume>, <fpage>228</fpage>.<pub-id pub-id-type="pmid">21498096</pub-id></mixed-citation></ref><ref id="mrc4660-bib-0028"><label>28</label><mixed-citation publication-type="journal" id="mrc4660-cit-0029">
+<string-name>
+<given-names>A.</given-names>
+<surname>Karabanov</surname>
+</string-name>, <string-name>
+<given-names>I.</given-names>
+<surname>Kuprov</surname>
+</string-name>, <string-name>
+<given-names>G.</given-names>
+<surname>Charnock</surname>
+</string-name>, <string-name>
+<given-names>A.</given-names>
+<surname>van der Drift</surname>
+</string-name>, <string-name>
+<given-names>L. J.</given-names>
+<surname>Edwards</surname>
+</string-name>, <string-name>
+<given-names>W.</given-names>
+<surname>K&#x000f6;ckenberger</surname>
+</string-name>, <source xml:lang="en">J. Chem. Phys.</source>
+<year>2011</year>, <volume>135</volume>, 084106.</mixed-citation></ref><ref id="mrc4660-bib-0029"><label>29</label><mixed-citation publication-type="journal" id="mrc4660-cit-0030">
+<string-name>
+<given-names>A.</given-names>
+<surname>Kumar</surname>
+</string-name>, <string-name>
+<given-names>R.</given-names>
+<surname>Ernst</surname>
+</string-name>, <string-name>
+<given-names>K.</given-names>
+<surname>W&#x000fc;thrich</surname>
+</string-name>, <source xml:lang="en">Biochem. Biophys. Res. Commun.</source>
+<year>1980</year>, <volume>95</volume>, <fpage>1</fpage>.<pub-id pub-id-type="pmid">7417242</pub-id></mixed-citation></ref><ref id="mrc4660-bib-0030"><label>30</label><mixed-citation publication-type="journal" id="mrc4660-cit-0031">
+<string-name>
+<given-names>I.</given-names>
+<surname>Kuprov</surname>
+</string-name>, <string-name>
+<given-names>D. M.</given-names>
+<surname>Hodgson</surname>
+</string-name>, <string-name>
+<given-names>J.</given-names>
+<surname>Kloesges</surname>
+</string-name>, <string-name>
+<given-names>C. I.</given-names>
+<surname>Pearson</surname>
+</string-name>, <string-name>
+<given-names>B.</given-names>
+<surname>Odell</surname>
+</string-name>, <string-name>
+<given-names>T. D.</given-names>
+<surname>Claridge</surname>
+</string-name>, <source xml:lang="en">Angew. Chem.</source>
+<year>2015</year>, <volume>127</volume>, <fpage>3768</fpage>.</mixed-citation></ref><ref id="mrc4660-bib-0031"><label>31</label><mixed-citation publication-type="journal" id="mrc4660-cit-0032">
+<string-name>
+<given-names>R. B.</given-names>
+<surname>Sidje</surname>
+</string-name>, <source xml:lang="en">ACM Trans. Math. Software (TOMS)</source>
+<year>1998</year>, <volume>24</volume>, <fpage>130</fpage>.</mixed-citation></ref><ref id="mrc4660-bib-0032"><label>32</label><mixed-citation publication-type="journal" id="mrc4660-cit-0033">
+<string-name>
+<given-names>D.</given-names>
+<surname>States</surname>
+</string-name>, <string-name>
+<given-names>R.</given-names>
+<surname>Haberkorn</surname>
+</string-name>, <string-name>
+<given-names>D.</given-names>
+<surname>Ruben</surname>
+</string-name>, <source xml:lang="en">J. Magn. Reson.</source>
+<year>1969</year>, <volume>48</volume>(<issue>1982</issue>), <fpage>286</fpage>.</mixed-citation></ref><ref id="mrc4660-bib-0033"><label>33</label><mixed-citation publication-type="journal" id="mrc4660-cit-0034">
+<string-name>
+<given-names>J. A.</given-names>
+<surname>Nelder</surname>
+</string-name>, <string-name>
+<given-names>R.</given-names>
+<surname>Mead</surname>
+</string-name>, <source xml:lang="en">Comput. J.</source>
+<year>1965</year>, <volume>7</volume>, <fpage>308</fpage>.</mixed-citation></ref><ref id="mrc4660-bib-0034"><label>34</label><mixed-citation publication-type="journal" id="mrc4660-cit-0035">
+<string-name>
+<given-names>D. C.</given-names>
+<surname>Liu</surname>
+</string-name>, <string-name>
+<given-names>J.</given-names>
+<surname>Nocedal</surname>
+</string-name>, <source xml:lang="en">Math. Program.</source>
+<year>1989</year>, <volume>45</volume>, <fpage>503</fpage>.</mixed-citation></ref><ref id="mrc4660-bib-0035"><label>35</label><mixed-citation publication-type="journal" id="mrc4660-cit-0036">
+<string-name>
+<given-names>T.</given-names>
+<surname>Vosegaard</surname>
+</string-name>, <string-name>
+<given-names>N. C.</given-names>
+<surname>Nielsen</surname>
+</string-name>, <source xml:lang="en">J. Magn. Reson.</source>
+<year>2009</year>, <volume>199</volume>, <fpage>146</fpage>.<pub-id pub-id-type="pmid">19428277</pub-id></mixed-citation></ref><ref id="mrc4660-bib-0036"><label>36</label><mixed-citation publication-type="journal" id="mrc4660-cit-0037">
+<string-name>
+<given-names>R. C. R.</given-names>
+<surname>Grace</surname>
+</string-name>, <string-name>
+<given-names>A.</given-names>
+<surname>Kumar</surname>
+</string-name>, <source xml:lang="en">J. Magn. Reson. A</source>
+<year>1995</year>, <volume>115</volume>, <fpage>87</fpage>.</mixed-citation></ref></ref-list></back></article>

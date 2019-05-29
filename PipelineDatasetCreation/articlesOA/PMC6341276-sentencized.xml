@@ -1,0 +1,409 @@
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD v1.1 20151215//EN" "JATS-archivearticle1.dtd"> 
+<article xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML" article-type="research-article"><?properties open_access?><?DTDIdentifier.IdentifierValue -//NLM//DTD JATS (Z39.96) Journal Publishing DTD v1.0 20120330//EN?><?DTDIdentifier.IdentifierType public?><?SourceDTD.DTDName JATS-journalpublishing1.dtd?><?SourceDTD.Version 1.0?><?ConverterInfo.XSLTName jp2nlmx2.xsl?><?ConverterInfo.Version 1?><front><journal-meta><journal-id journal-id-type="nlm-ta">Biomed Res Int</journal-id><journal-id journal-id-type="iso-abbrev">Biomed Res Int</journal-id><journal-id journal-id-type="publisher-id">BMRI</journal-id><journal-title-group><journal-title>BioMed Research International</journal-title></journal-title-group><issn pub-type="ppub">2314-6133</issn><issn pub-type="epub">2314-6141</issn><publisher><publisher-name>Hindawi</publisher-name></publisher></journal-meta><article-meta><article-id pub-id-type="pmcid">6341276</article-id><article-id pub-id-type="doi">10.1155/2019/9852897</article-id><article-categories><subj-group subj-group-type="heading"><subject>Research Article</subject></subj-group></article-categories><title-group><article-title><SecTag type="TITLE"><text><SENT sid="0" pm="."><plain>Molecular Dynamics Simulations of A27S and K120A Mutated PTP1B Reveals Selective Binding of the Bidentate Inhibitor </plain></SENT>
+</text></SecTag></article-title></title-group><contrib-group><contrib contrib-type="author"><name><surname>Chen</surname><given-names>Xi</given-names></name><xref ref-type="aff" rid="I1">
+<sup>1</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Liu</surname><given-names>Xia</given-names></name><xref ref-type="aff" rid="I2">
+<sup>2</sup>
+</xref></contrib><contrib contrib-type="author" corresp="yes"><contrib-id contrib-id-type="orcid" authenticated="false">http://orcid.org/0000-0003-2214-2723</contrib-id><name><surname>Gan</surname><given-names>Qiang</given-names></name><email>ganqiang@bit.edu.cn</email><xref ref-type="aff" rid="I1">
+<sup>1</sup>
+</xref></contrib><contrib contrib-type="author" corresp="yes"><contrib-id contrib-id-type="orcid" authenticated="false">http://orcid.org/0000-0003-1265-7213</contrib-id><name><surname>Feng</surname><given-names>Changgen</given-names></name><email>cgfeng@cast.org.cn</email><xref ref-type="aff" rid="I1">
+<sup>1</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Zhang</surname><given-names>Qian</given-names></name><xref ref-type="aff" rid="I1">
+<sup>1</sup>
+</xref></contrib></contrib-group><aff id="I1">
+<sup>1</sup>State Key Laboratory of Explosion Science and Technology, Beijing Institute of Technology, No. 5, Zhongguancun South Street, Haidian District, Beijing 100081, China</aff><aff id="I2">
+<sup>2</sup>College of Science, China Agricultural University, Beijing 100193, China</aff><author-notes><fn fn-type="other"><p><text><SENT sid="1" pm="."><plain>Academic Editor: Stefano Pascarella </plain></SENT>
+</text></p></fn></author-notes><pub-date pub-type="collection"><year>2019</year></pub-date><pub-date pub-type="epub"><day>8</day><month>1</month><year>2019</year></pub-date><volume>2019</volume><elocation-id>9852897</elocation-id><history><date date-type="received"><day>19</day><month>10</month><year>2018</year></date><date date-type="rev-recd"><day>9</day><month>12</month><year>2018</year></date><date date-type="accepted"><day>24</day><month>12</month><year>2018</year></date></history><permissions><copyright-statement>Copyright © 2019 Xi Chen et al.</copyright-statement><copyright-year>2019</copyright-year><license xlink:href="https://creativecommons.org/licenses/by/4.0/"><license-p>This is an open access article distributed under the Creative Commons Attribution License, which permits unrestricted use, distribution, and reproduction in any medium, provided the original work is properly cited.</license-p></license></permissions><abstract><p><SecTag type="ABS"><text><SENT sid="2" pm="."><plain>Protein tyrosine phosphatase 1B (PTP1B) is considered a potential target for the treatment of type II diabetes and obesity due to its critical negative role in the insulin signaling pathway. </plain></SENT>
+<SENT sid="3" pm="."><plain>However, improving the selectivity of PTP1B inhibitors over the most closely related T-cell protein tyrosine phosphatase (TCPTP) remains a major challenge for inhibitor development. </plain></SENT>
+<SENT sid="4" pm="."><plain>Lys120 at the active site and Ser27 at the second pTyr binding site are distinct in PTP1B and TCPTP, which may bring differences in binding affinity. </plain></SENT>
+<SENT sid="5" pm="."><plain>To explore the determinant of selective binding of inhibitor, molecular dynamics simulations with binding free energy calculations were performed on K120A and A27S mutated PTP1B, and the internal changes induced by mutations were investigated. </plain></SENT>
+<SENT sid="6" pm="."><plain>Results reveal that the presence of Lys120 induces a conformational change in the WPD-loop and YRD-motif and has a certain effect on the selective binding at the active site. </plain></SENT>
+<SENT sid="7" pm="."><plain>Ser27 weakens the stability of the inhibitor at the second pTyr binding site by altering the orientation of the Arg24 and Arg254 side chains via hydrogen bonds. </plain></SENT>
+<SENT sid="8" pm="."><plain>Further comparison of alanine scanning demonstrates that the reduction in the energy contribution of Arg254 caused by A27S mutation leads to a different inhibitory activity. </plain></SENT>
+<SENT sid="9" pm="."><plain>These observations provide novel insights into the selective binding mechanism of PTP1B inhibitors to TCPTP. </plain></SENT>
+</text></SecTag></p></abstract></article-meta></front><body><SecTag type="INTRO"><sec id="sec1"><title><text><SENT sid="10" pm="."><plain>1. </plain></SENT>
+<SENT sid="11" pm="."><plain>Introduction </plain></SENT>
+</text></title><p><text><SENT sid="12" pm="."><plain>Protein tyrosine phosphatases (PTPs) are a superfamily of enzymes involved in controlling a variety of cellular response, including cellular growth, differentiation, metabolism, and immunity [1]. </plain></SENT>
+<SENT sid="13" pm="."><plain>Protein tyrosine phosphatase 1B (PTP1B), the most representative member of this superfamily, is identified as a promising target in type II diabetes and obesity [2]. </plain></SENT>
+<SENT sid="14" pm="."><plain>It was the first PTPase to be cloned and purified from human placenta by Tonks et al. [3]. </plain></SENT>
+<SENT sid="15" pm="."><plain>The landmark study of PTP1B knockout mice showed that loss of PTP1B led to an increase in insulin sensitivity and maintenance of blood glucose level in a high-fat diet [4]. </plain></SENT>
+<SENT sid="16" pm="."><plain>Further studies confirmed that PTP1B dephosphorylates both the insulin receptor and the leptin receptor substrate-1 [5, 6]. </plain></SENT>
+<SENT sid="17" pm="."><plain>These results confirm the critical negative regulation of PTP1B in insulin and leptin signaling. </plain></SENT>
+<SENT sid="18" pm="."><plain>In addition, PTP1B is also observed to be overexpressed in breast tumor, which highlights a new treatment for breast cancer [7]. </plain></SENT>
+</text></p><p><text><SENT sid="19" pm="."><plain>Although a variety of PTP1B inhibitors have been successfully discovered, such as pTyr mimetics and natural products [8], the highly conserved catalytic domain of PTP1B makes it difficult to increase the inhibitor selectivity over other PTPs. </plain></SENT>
+<SENT sid="20" pm="."><plain>In particular, T-cell protein tyrosine phosphatase (TCPTP) is the closest cousin of PTP1B, which shares a high sequence homology with PTP1B in the catalytic domain (74% identity) [9]. </plain></SENT>
+<SENT sid="21" pm="."><plain>TCPTP knockout mice died in 3-5 weeks after birth due to reduced bone marrow cells and impaired T-cell and B-cell function, suggesting that TCPTP participate in the regulation of hematopoiesis and the immune system [10]. </plain></SENT>
+<SENT sid="22" pm="."><plain>The study of PTP1B and TCPTP cross-deficient mice demonstrates that the functions of these two enzymes are not redundant in IFN-γ signaling [11]. </plain></SENT>
+<SENT sid="23" pm="."><plain>As the two enzymes are distinct in physiological function, it is necessary for PTP1B inhibitors to have sufficient selectivity over TCPTP. </plain></SENT>
+</text></p><p><text><SENT sid="24" pm="."><plain>The key factor underlying the binding selectivity of PTP1B inhibitor is still debated. </plain></SENT>
+<SENT sid="25" pm="."><plain>One promising strategy for increasing the selectivity is to target both the active site and the adjacent second pTyr binding site (Figure 1(a)). </plain></SENT>
+<SENT sid="26" pm="."><plain>Puius et al. [12] first discovered the second pTyr binding site when they analyzed the crystal structure of PTP1B complexed with bis-(para-phosphopheny) methane. </plain></SENT>
+<SENT sid="27" pm="."><plain>Arg24, Arg254, and Gln262 at this shallow pocket are identified as favorable residues to generate interactions with inhibitors. </plain></SENT>
+<SENT sid="28" pm="."><plain>Although some of the inhibitors in the subsequent studies have succeeded in achieving good selectivity, which was discussed in several reviews [8, 13], further selective optimization targeting this site was not ideal as these residues are highly conserved [14, 15]. </plain></SENT>
+<SENT sid="29" pm="."><plain>Fortunately, the adjacent differential residues bring more possibilities. </plain></SENT>
+<SENT sid="30" pm="."><plain>Ala27/Ser29 (PTP1B/TCPTP) at the second position showed its potential as the selectivity of the inhibitor increased to 7.2-fold when interacting with this residue [16]. </plain></SENT>
+<SENT sid="31" pm="."><plain>Our previous research has found that this difference increases selectivity by affecting the interactions of inhibitors with Arg24 [17]. </plain></SENT>
+<SENT sid="32" pm="."><plain>Besides, Lys120/Lys122 is also considered by some researchers [18–20]. </plain></SENT>
+<SENT sid="33" pm="."><plain>Our previous research also found that the R-loop differs in orientation between PTP1B and TCPTP, as it participates in the binding of inhibitors at the active site in PTP1B, but absent in TCPTP [17], and this conformational difference may affect the binding of PTP1B at the active site. </plain></SENT>
+<SENT sid="34" pm="."><plain>However, the dynamic behavioral differences between Ala27/Ser29 and Lys120/Lys122 are not clear, which undoubtedly limits the development of inhibitors targeting this site. </plain></SENT>
+</text></p><p><text><SENT sid="35" pm="."><plain>In this paper, we aimed to investigate the difference internal behaviors of Ala27/Ser29 and Lys120/Lys122 in selective binding of inhibitors. </plain></SENT>
+<SENT sid="36" pm="."><plain>The internal behaviors of PTP1B-inhibitor complex and mutants at A27S and K120A were investigated by molecular dynamics simulations. </plain></SENT>
+<SENT sid="37" pm="."><plain>The most representative bidentate inhibitor (Figure 1(b)), with the best selectivity (23.77-fold) in all crystal structures of PTP1B complexes [21], was used as a probe to detect the effect of mutations. </plain></SENT>
+<SENT sid="38" pm="."><plain>It is a bidentate inhibitor that binds to both the active site and the second pTyr binding site. </plain></SENT>
+<SENT sid="39" pm="."><plain>The conformational changes and energy differences were analyzed to further explore the key factors affecting binding selectivity. </plain></SENT>
+</text></p></sec></SecTag><SecTag type="METHODS"><sec id="sec2"><title><text><SENT sid="40" pm="."><plain>2. </plain></SENT>
+<SENT sid="41" pm="."><plain>Methods </plain></SENT>
+</text></title><sec id="sec2.1"><title><text><SENT sid="42" pm="."><plain>2.1. </plain></SENT>
+<SENT sid="43" pm="."><plain>System Preparations </plain></SENT>
+</text></title><p><text><SENT sid="44" pm="."><plain>The initial structure of PTP1B was retrieved from the Protein Data Bank (PDB code: 1Q1M) and was then submitted to generating K120A and A27S mutations by UCSF Chimera 1.10.1 software [22]. </plain></SENT>
+<SENT sid="45" pm="."><plain>Receptors were prepared and missing atoms of the terminal residues were fixed by the tLEaP module in Amber 14 [23] and the protonation states were set to pH 7.4 by PROPKA 3.0 [24]. </plain></SENT>
+<SENT sid="46" pm="."><plain>The RESP partial charges of inhibitor were calculated by the Amber antechamber program [25], based on the electrostatic potentials calculated by Gaussian 03 at the (HF)/6-31G∗ level [26]. </plain></SENT>
+<SENT sid="47" pm="."><plain>Each system was solvated by a cubic water box using TIP3P water molecules with a side length of 10 Å, and the net charge was neutralized by sodium ions with ff99SB [27] force field. </plain></SENT>
+</text></p></sec><sec id="sec2.2"><title><text><SENT sid="48" pm="."><plain>2.2. </plain></SENT>
+<SENT sid="49" pm="."><plain>Molecular Dynamic Simulations </plain></SENT>
+</text></title><p><text><SENT sid="50" pm="."><plain>The MD simulations were performed using Amber 14 package, with the force field of Amber ff99SB [27] and general Amber force field (GAFF) [28] for proteins and inhibitor, respectively. </plain></SENT>
+<SENT sid="51" pm="."><plain>We used a protocol similar to our previous study [29]. </plain></SENT>
+<SENT sid="52" pm="."><plain>The systems were first minimized by (1) the 1000 steps of steepest descent and the 1000 steps of the conjugate gradient, under a harmonic constraint of 10.0kcal/(mol·Å2) on heavy atoms; (2) relaxing the entire system by 5000 steps of steepest descent and 15 000 steps of the conjugate gradient. </plain></SENT>
+<SENT sid="53" pm="."><plain>Then, the system was gradually heated to 300 K by a 50 ps NVT simulation and was equilibrated by a 500 ps NPT simulation at 1 atm. </plain></SENT>
+<SENT sid="54" pm="."><plain>The temperature and pressure were kept by the Langevin thermostat and the Berendsen barostat with a relaxation time of 2 ps, respectively. </plain></SENT>
+<SENT sid="55" pm="."><plain>Finally, each system was subjected to a 50 ns NPT simulation without restraint. </plain></SENT>
+<SENT sid="56" pm="."><plain>During simulations, the SHAKE algorithm [30] was applied to all hydrogen atoms with a time step of 2 fs. </plain></SENT>
+</text></p><p><text><SENT sid="57" pm="."><plain>The root-mean-square deviation (RMSD), the root-mean-square fluctuation (RMSF) values, and hydrogen bonds (H-bonds) were calculated by the ptraj module in Amber [31]. </plain></SENT>
+<SENT sid="58" pm="."><plain>RMSF during the equilibrium was calculated with the reference of the time average structure. </plain></SENT>
+<SENT sid="59" pm="."><plain>Clustering analysis using the k-means clustering algorithm was also performed on the equilibrium trajectories by the ptraj module based on RMSD of heavy atoms. </plain></SENT>
+<SENT sid="60" pm="."><plain>The initial frames were selected randomly and the sieve size was set to 10 for the total 5000 frames of trajectories. </plain></SENT>
+<SENT sid="61" pm="."><plain>The residue-residue cross-correlations were calculated by the Bio3D package [32] to determine how mutations affect the internal dynamics of protein conformations. </plain></SENT>
+<SENT sid="62" pm="."><plain>The cross-correlation coefficient of Cα atoms was calculated according to the average structure. </plain></SENT>
+<SENT sid="63" pm="."><plain>The residue interaction networks (RINs) of average structures were analyzed using the Ring web server [33], and the RINs graphs were generated by Cytoscape software [34]. </plain></SENT>
+<SENT sid="64" pm="."><plain>Based on the RINs, important residues were identified and distances between the residue pairs were monitored. </plain></SENT>
+</text></p></sec><sec id="sec2.3"><title><text><SENT sid="65" pm="."><plain>2.3. </plain></SENT>
+<SENT sid="66" pm="."><plain>Binding Free Energy Calculations and Alanine Scanning </plain></SENT>
+</text></title><p><text><SENT sid="67" pm="."><plain>The molecular mechanics Poisson−Boltzmann surface area (MM-PBSA) method [35] was employed. </plain></SENT>
+<SENT sid="68" pm="."><plain>To increase the precision of MM-PBSA calculation, ten independent NPT runs of 250 ps after 50 ns of production were performed for each system, and the average binding free energies were calculated. </plain></SENT>
+<SENT sid="69" pm="."><plain>This method has been confirmed to be effective by Genheden S et al. [36]. </plain></SENT>
+<SENT sid="70" pm="."><plain>The binding free energy ΔGbind was evaluated by (1)ΔGbind=Gcom−Grec+GligΔGbind=ΔEinternal+ΔEele+ΔEvdw+ΔGPB+ΔGSA–ΔTSΔGbind is contributed by the internal energy (ΔEinternal), the electrostatic energy (ΔEele), van der Waals energy (ΔEvdW), the electrostatic solvation energy (ΔGPB), the nonpolar contributions (ΔGSA), and the entropy. </plain></SENT>
+<SENT sid="71" pm="."><plain>The solute dielectric constant of 1 and the exterior dielectric constant of 80 was applied. </plain></SENT>
+<SENT sid="72" pm="."><plain>The ΔGPB term was calculated by using the PB solver in MMPBSA.py module in Amber 14. </plain></SENT>
+<SENT sid="73" pm="."><plain>The nonpolar contribution (ΔGSA) was evaluated by ΔGSA = 0.03780 ×ΔSASA − 0.5692 + Edispersion, where SASA was the solvent accessible surface area and Edispersion was the dispersion term [37]. </plain></SENT>
+<SENT sid="74" pm="."><plain>The molecular surface was determined by sphere probes with a radius of 1.4 Å. The nmode program in Amber was applied to calculate the entropy term. </plain></SENT>
+<SENT sid="76" pm="."><plain>Alanine scanning was performed to determine the energetic contribution of each residue, and the energy difference before and after the mutation was calculated by ΔΔG= ΔGwild – ΔGmutant. </plain></SENT>
+</text></p></sec></sec></SecTag><SecTag type="RESULTS,DISCUSS"><sec id="sec3"><title><text><SENT sid="77" pm="."><plain>3. </plain></SENT>
+<SENT sid="78" pm="."><plain>Results and Discussion </plain></SENT>
+</text></title><p><text><SENT sid="79" pm="."><plain>In this article, we interested in the different roles of Ala27/Ser29 and Lys120/Lys122 in the selective binding of a bidentate inhibitor to the active site and the second pTyr binding site. </plain></SENT>
+<SENT sid="80" pm="."><plain>We focus on how they affect the conformation and interaction networks of the surrounding region, especially WPD-loop, YRD-motif, and loop28-32, which in turn affect binding of the inhibitor. </plain></SENT>
+<SENT sid="81" pm="."><plain>The highly conserved WPD-loop prefers to be in a closed conformation binding with substrates, and Asp181 in this loop act as an essential general acid in the catalyzed reaction [38]. </plain></SENT>
+<SENT sid="82" pm="."><plain>The inhibitors used herein are designed for the closed state of PTP1B, achieving its bidentate binding by forming hydrogen bonds with Arg221, Arg24, Arg254, and Gln262 [21]. </plain></SENT>
+<SENT sid="83" pm="."><plain>Since the WPD-loop of the only crystal structure of TCPTP (1L8K) is in an unfavorable “open” state [9], which requires long-timescale simulations to be in the "closed" state, mutations of A27S and K120A on PTP1B were carried out. </plain></SENT>
+</text></p><sec id="sec3.1"><title><text><SENT sid="84" pm="."><plain>3.1. </plain></SENT>
+<SENT sid="85" pm="."><plain>Stability and Overall Structural Flexibility of WT, A27S, and K120A Systems </plain></SENT>
+</text></title><p><text><SENT sid="86" pm="."><plain>The preliminary calculation of RMSD for the Cα atoms was performed with reference to the initial structure, and the result suggests that the WT and mutant systems reach equilibrium after 10 ns (Figure 2(a)). </plain></SENT>
+<SENT sid="87" pm="."><plain>RMSF was then computed to evaluate the flexibility of each residue. </plain></SENT>
+<SENT sid="88" pm="."><plain>As shown in Figure 2(b), the most obvious difference in fluctuation appears in residues 28-32. </plain></SENT>
+<SENT sid="89" pm="."><plain>The RMSF value of this region in the A27S system is much higher than in the other two systems, indicating that the mutation A27S affects the flexibility of residues 28-32. </plain></SENT>
+<SENT sid="90" pm="."><plain>The fluctuations of loop 110-122 and the WPD-loop present a high degree of similarity in all systems, suggesting that the K120A mutation does not bring specific conformational change for these two loop structures. </plain></SENT>
+<SENT sid="91" pm="."><plain>It is worth noting that mutation K120A obviously reduces the RMSF of YRD-motif (46-48), which suggests that the flexibility of YRD-motif is affected by Lys120. </plain></SENT>
+<SENT sid="92" pm="."><plain>YRD-motif is a charged region closed to the active site as labeled in Figure 1. </plain></SENT>
+<SENT sid="93" pm="."><plain>Together with WPD-loop, it provides π-stacking interactions for the inhibitor [39]. </plain></SENT>
+</text></p><p><text><SENT sid="94" pm="."><plain>To understand the internal dynamic changes caused by mutations, cross-correlation analysis was performed on equilibrium trajectories. </plain></SENT>
+<SENT sid="95" pm="."><plain>Figures 2(c)–2(e) show the results of the three systems, where the high correlated region in red indicates the motion in the same direction and the high anti-correlation region in blue indicates the motion in the opposite direction. </plain></SENT>
+<SENT sid="96" pm="."><plain>Notably, a stronger positive correlation between Arg254 and the loop 28-32 was observed in the A27S system. </plain></SENT>
+<SENT sid="97" pm="."><plain>By analyzing the correlation coefficient of Arg254 to each residue (Figure S1), this correlated motion is confirmed to be enhanced by the mutation A27S. </plain></SENT>
+<SENT sid="98" pm="."><plain>The interaction between Arg254 and Ser27 may lead to conformational changes in Arg254, which in turn affects the binding at the second pTyr binding site. </plain></SENT>
+<SENT sid="99" pm="."><plain>This interaction also affects the conformation of the loop in which Ser27 is located, which explains the greater flexibility of loop28-32 in the A27S system. </plain></SENT>
+<SENT sid="100" pm="."><plain>Additionally, the anticorrelated motion of loop110-122 with YRD-motif was found to be decreased by the mutation K120A, which cause differences in the conformation of YRD-motif. </plain></SENT>
+</text></p><p><text><SENT sid="101" pm="."><plain>Clustering analysis on the equilibrium trajectories was performed to characterize the conformational changes in different systems. </plain></SENT>
+<SENT sid="102" pm="."><plain>The number of clusters was set according to the values of Davies-Bouldin index (DBI) and the pseudo F-statistic (pSF) (Figure S2). </plain></SENT>
+<SENT sid="103" pm="."><plain>The top 10 clusters cover over 70% of conformations (Table S1) and the average structures of each cluster were extracted and superimposed as shown in Figure 3. </plain></SENT>
+<SENT sid="104" pm="."><plain>At the active site, the binding positions of the inhibitor at the active site are relatively concentrated in the WT and A27S systems. </plain></SENT>
+<SENT sid="105" pm="."><plain>Interestingly, the orientations of the side chain of Lys120 in these two systems do not converge in a single direction, but in different directions around the region between WPD-loop and YRD-motif. </plain></SENT>
+<SENT sid="106" pm="."><plain>Besides, under the influence of Lys120, the conformations of YRD-motif of different clusters in WT and A27S systems are less concentrated than that of K120A system. </plain></SENT>
+<SENT sid="107" pm="."><plain>In the K120A system, the positions of inhibitor at the active site are more dispersed, which are closer to the WPD-loop. </plain></SENT>
+<SENT sid="108" pm="."><plain>Phe182 in the K120A system has distinct orientations in different clusters, which results in the inhibitor binding at the active site being inferior to other systems. </plain></SENT>
+<SENT sid="109" pm="."><plain>At the second pTyr binding site, there is a significant difference in the orientation of Arg24 in the A27S system. </plain></SENT>
+<SENT sid="110" pm="."><plain>In addition, the conformations of loop28-32 are more dispersed than the other two systems (Figure S3), which also reflects that its flexibility is greater. </plain></SENT>
+<SENT sid="111" pm="."><plain>However, further analysis of the interaction network and energy calculations is needed to determine whether the interactions between Lys120, YRD-motif, and WPD-loop will affect the binding affinity at the active site and what role Ser27 plays in the second pTyr binding site. </plain></SENT>
+</text></p></sec><sec id="sec3.2"><title><text><SENT sid="112" pm="."><plain>3.2. </plain></SENT>
+<SENT sid="113" pm="."><plain>Residue Interactions at the Active Site </plain></SENT>
+</text></title><p><text><SENT sid="114" pm="."><plain>Then, we focused on the residue interactions at the active site. </plain></SENT>
+<SENT sid="115" pm="."><plain>In order to explore the internal changes caused by mutations, the residue interaction networks of average structures were analyzed. </plain></SENT>
+<SENT sid="116" pm="."><plain>As shown in Figures 4(a)–4(c), Lys120 in both WT and A27S systems participate in the binding of inhibitors by salt bridges. </plain></SENT>
+<SENT sid="117" pm="."><plain>The van der Waals interactions between Lys120/Ala120 and Arg45 were observed in all systems. </plain></SENT>
+<SENT sid="118" pm="."><plain>Considering the larger steric hindrance of Lys120 than Ala, the conformation of YRD-motif is more susceptible to Lys120, which may be responsible for the anticorrelation between YRD-motif and Lys120 in the DCCM analysis. </plain></SENT>
+<SENT sid="119" pm="."><plain>This conformational difference also leads to the fact that Tyr46 and the aromatic rings of the inhibitor in the K120A system are closer to the P-loop than other two systems, as shown in Figure S4. </plain></SENT>
+<SENT sid="120" pm="."><plain>Asp181 at the WPD-loop is observed to form H-bonds with Lys120. </plain></SENT>
+<SENT sid="121" pm="."><plain>Under the binding of a substrate, WPD-loop usually shifts from an open conformation to a closed state [38]. </plain></SENT>
+<SENT sid="122" pm="."><plain>The attractions of Lys120 promote the approach of Asp181 to the active site, thereby strengthening the closure of the WPD-loop. </plain></SENT>
+<SENT sid="123" pm="."><plain>However, we subsequently found that this attraction to Asp181 in the K120A system can be compensated by the salt bridge with Lys116, which explains why the conformational difference of WPD-loop induced by Lys120 is not as large as expected. </plain></SENT>
+</text></p><p><text><SENT sid="124" pm="."><plain>In all three systems, similar binding patterns of the inhibitor at the active site are observed by forming H-bonds with Cys215, Gly220, and Arg221 (Figure S5). </plain></SENT>
+<SENT sid="125" pm="."><plain>The distances between these residues at the active site were monitored. </plain></SENT>
+<SENT sid="126" pm="."><plain>As shown in Figure S6A, the distances between Cys215 and O2 atom of the inhibitor were stable at about 3 Å in all of the three systems, which proves that the inhibitor binds firmly to the active site. </plain></SENT>
+<SENT sid="127" pm="."><plain>However, the fluctuation of the distances between Arg221 and the O1 atom of the inhibitor in K120A system is larger than that in WT and A27S systems (Figure 4(d)). </plain></SENT>
+<SENT sid="128" pm="."><plain>This result provides evidence that the absence of Lys120 affects the binding stability of the inhibitor to the active site. </plain></SENT>
+<SENT sid="129" pm="."><plain>By comparing the changes in distances of Lys120-Asp181 and Lys120-Tyr46 in the WT and A27S systems (Figures 4(e)-4(f)), it is clear that Lys120 swings between WPD-loop and YRD-motif. </plain></SENT>
+<SENT sid="130" pm="."><plain>The steric hindrance between Lys120 and YRD-motif caused the main chain of YRD-motif to move about 1 Å from the active site (Figure S6B), providing more space for Tyr46 to adjust the position. </plain></SENT>
+<SENT sid="131" pm="."><plain>This result is consistent with the analysis of RMSF. </plain></SENT>
+<SENT sid="132" pm="."><plain>Lys120 is found to stabilize the orientation of the side chain of Tyr46 in YRD-motif, as the fluctuation of distance between side chains of Tyr46 and Arg221 in the WT and A27S system were smaller than in K120A system (Figure S6C). </plain></SENT>
+<SENT sid="133" pm="."><plain>Considering the hydrogen bond with Asp181 and van der Waals interaction with Arg45, Lys120 acts as an agent between them through WPD-loop and YRD-motif. </plain></SENT>
+<SENT sid="134" pm="."><plain>This effect of Lys120 is beneficial to the binding of the inhibitor at the active site, due to the π-stacking interaction between Tyr46, Phe182, and the central phenyl ring of the inhibitor. </plain></SENT>
+<SENT sid="135" pm="."><plain>The absence of Lys120 results in a relatively unstable binding site of the inhibitor at the active site, further making the orientation of Phe182 differ significantly in clustering analysis of K120A system. </plain></SENT>
+<SENT sid="136" pm="."><plain>Since the orientation of Lys122 in TCPTP is away from the active site by forming a hydrogen bond with Glu117 [17], it will have less effect on binding of inhibitor at the active site than that in PTP1B. </plain></SENT>
+</text></p></sec><sec id="sec3.3"><title><text><SENT sid="137" pm="."><plain>3.3. </plain></SENT>
+<SENT sid="138" pm="."><plain>Residue Interactions at the Second pTyr Binding Site </plain></SENT>
+</text></title><p><text><SENT sid="139" pm="."><plain>The ligand interaction diagram (Figure S5) indicates that H-bonds with Arg254 and Gln262 are essential for the binding of the inhibitor at the second pTyr binding site. </plain></SENT>
+<SENT sid="140" pm="."><plain>To gain a more detailed insight, the residue interaction networks at the second pTyr binding site were also explored (Figures 5(a)–5(c)). </plain></SENT>
+</text></p><p><text><SENT sid="141" pm="."><plain>For the WT and K120A systems, the residue networks are quite similar. </plain></SENT>
+<SENT sid="142" pm="."><plain>Arg254 in both systems form H-bonds with Leu260 and Ile261 on the Q-loop, thereby stabilizing the orientation of its side chain. </plain></SENT>
+<SENT sid="143" pm="."><plain>Compared to Arg254, Arg24 is more flexible as it mainly interacts with surrounding residues through the backbone, while its side chain is unconstrained. </plain></SENT>
+<SENT sid="144" pm="."><plain>In the A27S system, Ser27 was found to form additional H-bonds with both Arg254 and Arg24, which leads to a conformational difference at the second pTyr binding site. </plain></SENT>
+<SENT sid="145" pm="."><plain>Ser27 in the A27S system was observed to get 1.5 Å closer to Arg254 in A27S system after 20 ns of simulations (Figure 5(d)). </plain></SENT>
+<SENT sid="146" pm="."><plain>This result reveals the reason why the flexibility of loop 28-32 is different from the other two systems in the RMSF analysis. </plain></SENT>
+<SENT sid="147" pm="."><plain>Under the influence of the conformational change of loop 28-32, Arg24 shifts away from the second pTyr binding site, as the fluctuation range of the distance Arg24-Arg254 in the A27S system is 3 Å larger than in other systems (Figure 5(f)). </plain></SENT>
+<SENT sid="148" pm="."><plain>The conformational variation of Arg24 and Arg254 further affects the binding of the inhibitor at the second pTyr binding site. </plain></SENT>
+<SENT sid="149" pm="."><plain>The distance between the O7 atom of the inhibitor in the A27S system and the Nη1 atom of Arg254 is not maintained at 3 Å as in the cases of WT and K120A but fluctuates between 3 and 8 Å (Figure 5(g)). </plain></SENT>
+<SENT sid="150" pm="."><plain>Similar results also appear in the distance between the O6 atom of the inhibitor and the Nη2 atom of Arg254 (Figure S6D). </plain></SENT>
+<SENT sid="151" pm="."><plain>The above results prove that the methyl salicylate of the inhibitor in the A27S system does not form stable H-bonds with Arg254 as in the WT and K120 systems, but gradually moves away from Arg254. </plain></SENT>
+<SENT sid="152" pm="."><plain>It is worth noting that under the H-bond between Gln262 and the O4 atom of the inhibitor (Figure S6E), the methyl salicylate group cannot completely leave the second pTyr binding site. </plain></SENT>
+<SENT sid="153" pm="."><plain>Besides, Arg24 in the A27S system, despite the conformational change, still hinders the departure of the methyl salicylate group, as the O7 atom of the inhibitor gradually approaches Arg24 to 4 Å after being away from Arg254 (Figure 5(h)). </plain></SENT>
+</text></p></sec><sec id="sec3.4"><title><text><SENT sid="154" pm="."><plain>3.4. </plain></SENT>
+<SENT sid="155" pm="."><plain>Binding Free Energy Calculations and Hydrogen Bond Analysis </plain></SENT>
+</text></title><p><text><SENT sid="156" pm="."><plain>The binding free energies for the WT, A27S, and K120A systems were calculated using the MM-PBSA method. </plain></SENT>
+<SENT sid="157" pm="."><plain>As shown in Table 1, the result of the WT system is -8.03 ± 0.3 kcal/mol, consistent with the experimental value of −7.33 kcal/mol [21]. </plain></SENT>
+<SENT sid="158" pm="."><plain>The result of the K120A system is -6.84 ± 0.34 kcal/mol, which is slightly smaller than that of the WT system, indicating that Lys120 brings a difference in binding affinity. </plain></SENT>
+<SENT sid="159" pm="."><plain>In particular, the binding free energy for the A27S system is −4.86 ± 0.33 kcal/mol, which is the lowest among the three and is similar to the experimental value for the inhibitor-TCPTP complex [21]. </plain></SENT>
+<SENT sid="160" pm="."><plain>It is clear that Ser27 has a more significant effect on inhibitor selectivity than Lys120. </plain></SENT>
+<SENT sid="161" pm="."><plain>Individual energetic terms show that electrostatic and van der Waals interactions are the main driving forces of the binding process, whereas polar solvation term presents unfavorable effect. </plain></SENT>
+<SENT sid="162" pm="."><plain>The K120A system has the lowest ΔEele due to the lack of electrostatic interaction between Lys120 and the inhibitor. </plain></SENT>
+<SENT sid="163" pm="."><plain>However, the unfavorable solvation term ΔGsolv caused by Lys120 is also less compensated than other systems. </plain></SENT>
+</text></p><p><text><SENT sid="164" pm="."><plain>Alanine scanning mutagenesis and H-bond analysis were applied to further verify key residues responsible for the selectivity of the bidentate inhibitor. </plain></SENT>
+<SENT sid="165" pm="."><plain>Results are depicted in Figures 6(a) and 6(b) and detailed information is shown in Tables S2-S3. </plain></SENT>
+</text></p><p><text><SENT sid="166" pm="."><plain>In all systems, Arg221 exhibits the largest energy difference among all residues, and the H-bond occupancy is above 85%, which illustrates that Arg221 is the dominant contributor to binding at the active site. </plain></SENT>
+<SENT sid="167" pm="."><plain>Besides, H-bonds between Gly220 and the isoxazole group of inhibitor are observed in each system, with the occupancy of more than 38%. </plain></SENT>
+<SENT sid="168" pm="."><plain>Obvious differences were found in A27S system terms of energy contributions and H-bond interactions. </plain></SENT>
+<SENT sid="169" pm="."><plain>Arg254 contribute the most to the inhibitor selectivity among all residues. </plain></SENT>
+<SENT sid="170" pm="."><plain>The energy difference of Arg254 in the A27S system is -1.22 kcal/mol, which is about 3.6 kcal/mol smaller than in other systems. </plain></SENT>
+<SENT sid="171" pm="."><plain>The H-bond occupancy rate between Arg254 and the inhibitor is also 35% lower than others. </plain></SENT>
+<SENT sid="172" pm="."><plain>In addition, Arg24 contributes to the inhibitor selectivity to a certain extent, as the energy difference in the A27S system is 1 kcal/mol smaller than other systems. </plain></SENT>
+<SENT sid="173" pm="."><plain>Gln262 interacts with inhibitors via H-bonds in all system by basically equal energy contribution. </plain></SENT>
+<SENT sid="174" pm="."><plain>For the K120A system, the energy differences of Tyr46, Asp181, and Phe182 are smaller than WT system, indicating that these residues will provide selectivity for the inhibitor. </plain></SENT>
+<SENT sid="175" pm="."><plain>In addition, the H-bond occupancy rate between Phe182 and the inhibitor is also significantly different from other systems. </plain></SENT>
+<SENT sid="176" pm="."><plain>These results indicate that the difference in Lys120 will affect the binding selectivity. </plain></SENT>
+<SENT sid="177" pm="."><plain>However, this variation is compensated by the energy contributions of Ser216, which causes the selectivity provided by mutation K120A to be less than that of mutation A27S. </plain></SENT>
+</text></p></sec></sec></SecTag><SecTag type="CONCL"><sec id="sec4"><title><text><SENT sid="178" pm="."><plain>4. </plain></SENT>
+<SENT sid="179" pm="."><plain>Conclusion </plain></SENT>
+</text></title><p><text><SENT sid="180" pm="."><plain>Molecular dynamics simulations of A27S, K120A, and WT were performed to explore the key residue that affects the selectivity of bidentate inhibitors. </plain></SENT>
+<SENT sid="181" pm="."><plain>Analysis of RMSF and clustering shows that Lys120 affects the flexibility of YRD-motif. </plain></SENT>
+<SENT sid="182" pm="."><plain>By comparing the profile of distances between Lys120 and other residues in three systems, we found that Lys120 swings between YRD-motif and WPD-loop, acting as an aid to stabilize the orientation of side chains of Tyr46 and WPD-loop through hydrogen bonding with Tyr46 and Asp181, which in turn benefits the binding of the inhibitor. </plain></SENT>
+<SENT sid="183" pm="."><plain>The absence of Lys120 results in a relatively unstable binding of the inhibitor at the active site. </plain></SENT>
+<SENT sid="184" pm="."><plain>Results of binding free energy calculations and alanine scanning confirmed that the difference in binding affinity of the K120A system was mainly due to the contribution of Tyr46, Asp181, and Phe182. </plain></SENT>
+<SENT sid="185" pm="."><plain>The A27S mutation at the second pTyr binding site affects the orientation Arg254 and Arg24 by forming H-bonds, which results in a conformational change in loop28-32. </plain></SENT>
+<SENT sid="186" pm="."><plain>The distances between the inhibitor and the residues at the second pTyr binding site indicate that this effect ultimately leads to an unstable binding between the methyl salicylate of the inhibitor and Arg254. </plain></SENT>
+<SENT sid="187" pm="."><plain>Alanine scanning and the H-bond analysis further determined that the different binding strength between Arg254 and the inhibitor is responsible for the variation of binding free energies. </plain></SENT>
+<SENT sid="188" pm="."><plain>These results together demonstrate that the residue differences of Ala27/Ser29 and Lys120/Lys122 will affect the binding affinity of the inhibitor to some extent and can be applied in increasing the selectivity of the inhibitor to TCPTP. </plain></SENT>
+</text></p></sec></SecTag></body><back><SecTag type="ACK_FUND"><ack><title>Acknowledgments</title><p><text4fund><text><SENT sid="189" pm="."><plain>The author thanks the Supercomputing Center of Chinese Academy of Sciences for the software and facilities support. </plain></SENT>
+</text></text4fund></p></ack></SecTag><sec sec-type="data-availability"><title>Data Availability</title><p>The MD simulations data used to support the findings of this study are included within the article and the supplementary information file.</p></sec><SecTag type="COMP_INT"><sec><title>Conflicts of Interest</title><p>The authors declare that they have no conflicts of interest.</p></sec></SecTag><SecTag type="SUPPL"><sec sec-type="supplementary-material" id="supplementary-material-1"><title>Supplementary Materials</title><supplementary-material content-type="local-data" id="supp-1"><label>Supplementary Materials</label><caption><p><text><SENT sid="190" pm="."><plain>Fig. </plain></SENT>
+<SENT sid="191" pm="."><plain>S1. </plain></SENT>
+<SENT sid="192" pm="."><plain>Comparison of the correlation coefficient between Arg254 and other residues in the WT, A27S, and K120A system. </plain></SENT>
+<SENT sid="193" pm="."><plain>Supplementary Fig. </plain></SENT>
+<SENT sid="194" pm="."><plain>S2. </plain></SENT>
+<SENT sid="195" pm="."><plain>Davies-Bouldin index (DBI) and the pseudo F-statistic (pSF) over the number of clusters for the simulation of WT, K120A, and A27S systems. </plain></SENT>
+<SENT sid="196" pm="."><plain>Supplementary Fig. </plain></SENT>
+<SENT sid="197" pm="."><plain>S3. </plain></SENT>
+<SENT sid="198" pm="."><plain>Average structures of the top 10 clusters of (A)WT, (B)A27S, and (C)K120A systems superimposed at the active site, and average structures of the top 10 clusters of (D)WT, (E)A27S, and (F)K120A systems superimposed at loop28-32. </plain></SENT>
+<SENT sid="199" pm="."><plain>Supplementary Fig. </plain></SENT>
+<SENT sid="200" pm="."><plain>S4. </plain></SENT>
+<SENT sid="201" pm="."><plain>Average structures of the WT, A27S, and K120A systems superimposed at the active site, shown in green, yellow, and blue, respectively. </plain></SENT>
+<SENT sid="202" pm="."><plain>Supplementary Fig. </plain></SENT>
+<SENT sid="203" pm="."><plain>S5. </plain></SENT>
+<SENT sid="204" pm="."><plain>2D protein-ligand interaction diagrams of the average structures for the WT (A), A27S (B), and K120A (C) systems. </plain></SENT>
+<SENT sid="205" pm="."><plain>Supplementary Fig. </plain></SENT>
+<SENT sid="206" pm="."><plain>S6. </plain></SENT>
+<SENT sid="207" pm="."><plain>The distances between (A) the Sγ atom of Cys215 and the O2 atom of the ligand, (B) the Cα atom of Tyr46 and the Cα atom of Asp181, (C) the Oη atom of Tyr46 and the Nη1 atom of Arg221, (D) Nη2 atom of Arg254 and O6 atom of the ligand, and (E) Nε2 atom of Gln262 and O4 atom of the ligand. </plain></SENT>
+<SENT sid="208" pm="."><plain>Supplementary Table S1. </plain></SENT>
+<SENT sid="209" pm="."><plain>The occupancy of each cluster to the total conformations. </plain></SENT>
+<SENT sid="210" pm="."><plain>Supplementary Table S2. </plain></SENT>
+<SENT sid="211" pm="."><plain>Differences in binding free energies (kcal/mol) of WT, A27S, and K120A systems using the MM-PBSA alanine scanning method. </plain></SENT>
+<SENT sid="212" pm="."><plain>Supplementary Table S3. </plain></SENT>
+<SENT sid="213" pm="."><plain>Detailed information of H-bond between proteins and the ligand for WT, A27S, and K120A systems during the MD simulations. </plain></SENT>
+</text></p></caption><media xlink:href="9852897.f1.docx"><caption><p><text><SENT sid="214" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media></supplementary-material></sec></SecTag><SecTag type="REF"><ref-list><ref id="B1"><text><SENT sid="215" pm="."><plain>1ZhangZ.-Y.Protein tyrosine phosphatases: structure and function, substrate specificity, and inhibitor developmentAnnual Review of Pharmacology and Toxicology20024220923410.1146/annurev.pharmtox.42.083001.1446162-s2.0-0036181649 </plain></SENT>
+</text></ref><ref id="B2"><text><SENT sid="216" pm="."><plain>2ZhangZ.-Y.LeeS.-Y.PTP1B inhibitors as potential therapeutics in the treatment of type 2 diabetes and obesityExpert Opinion on Investigational Drugs20031222232332-s2.0-003731748910.1517/13543784.12.2.22310.1517/eoid.12.2.223.21411<?supplied-pmid 12556216?>12556216 </plain></SENT>
+</text></ref><ref id="B3"><text><SENT sid="217" pm="."><plain>3TonksN. </plain></SENT>
+<SENT sid="218" pm="."><plain>K.DiltzC. </plain></SENT>
+<SENT sid="219" pm="."><plain>D.FischerE. </plain></SENT>
+<SENT sid="220" pm="."><plain>H.Purification of the major protein-tyrosine-phosphatases of human placentaThe Journal of Biological Chemistry198826314672267302-s2.0-00239248032834386 </plain></SENT>
+</text></ref><ref id="B4"><text><SENT sid="221" pm="."><plain>4ElcheblyM.PayetteP.MichaliszynE.Increased insulin sensitivity and obesity resistance in mice lacking the protein tyrosine phosphatase-1B geneScience19992835407154415482-s2.0-003352587010.1126/science.283.5407.154410066179 </plain></SENT>
+</text></ref><ref id="B5"><text><SENT sid="222" pm="."><plain>5BandyopadhyayD.KusariA.KennerK. </plain></SENT>
+<SENT sid="223" pm="."><plain>A.Protein-tyrosine phosphatase 1B complexes with the insulin receptor in vivo and is tyrosine-phosphorylated in the presence of insulinThe Journal of Biological Chemistry19972723163916452-s2.0-003103622310.1074/jbc.272.3.1639<?supplied-pmid 8999839?>8999839 </plain></SENT>
+</text></ref><ref id="B6"><text><SENT sid="224" pm="."><plain>6LundI. </plain></SENT>
+<SENT sid="225" pm="."><plain>K.HansenJ. </plain></SENT>
+<SENT sid="226" pm="."><plain>A.AndersenH. </plain></SENT>
+<SENT sid="227" pm="."><plain>S.MøllerN. </plain></SENT>
+<SENT sid="228" pm="."><plain>P. </plain></SENT>
+<SENT sid="229" pm="."><plain>H.BillestrupN.Mechanism of protein tyrosine phosphatase 1B-mediated inhibition of leptic signallingMolecular Endocrinology20053423393512-s2.0-1784441035910.1677/jme.1.01694<?supplied-pmid 15821101?>15821101 </plain></SENT>
+</text></ref><ref id="B7"><text><SENT sid="230" pm="."><plain>7TonksN. </plain></SENT>
+<SENT sid="231" pm="."><plain>K.MuthuswamyS. </plain></SENT>
+<SENT sid="232" pm="."><plain>K.A Brake Becomes an Accelerator: PTP1B-A New Therapeutic Target for Breast CancerCancer Cell20071132142162-s2.0-3384739193810.1016/j.ccr.2007.02.02217349579 </plain></SENT>
+</text></ref><ref id="B8"><text><SENT sid="233" pm="."><plain>8QianS.ZhangM.HeY.WangW.LiuS.Recent advances in the development of protein tyrosine phosphatase 1B inhibitors for Type 2 diabetesFuture Medicinal Chemistry2016811123912582-s2.0-8498291392210.4155/fmc-2016-0064<?supplied-pmid 27357615?>27357615 </plain></SENT>
+</text></ref><ref id="B9"><text><SENT sid="234" pm="."><plain>9IversenL. </plain></SENT>
+<SENT sid="235" pm="."><plain>F.MøllerK. </plain></SENT>
+<SENT sid="236" pm="."><plain>B.PedersenA. </plain></SENT>
+<SENT sid="237" pm="."><plain>K.Structure determination of T cell protein-tyrosine phosphataseThe Journal of Biological Chemistry20022772219982199902-s2.0-003720550410.1074/jbc.M200567200<?supplied-pmid 11907034?>11907034 </plain></SENT>
+</text></ref><ref id="B10"><text><SENT sid="238" pm="."><plain>10You-TenK. </plain></SENT>
+<SENT sid="239" pm="."><plain>E.MuiseE. </plain></SENT>
+<SENT sid="240" pm="."><plain>S.ItiéA.Impaired bone marrow microenvironment and immune function in T cell protein tyrosine phosphatase-deficient miceThe Journal of Experimental Medicine1997186568369310.1084/jem.186.5.6832-s2.0-00307691479271584 </plain></SENT>
+</text></ref><ref id="B11"><text><SENT sid="241" pm="."><plain>11HeinonenK. </plain></SENT>
+<SENT sid="242" pm="."><plain>M.BourdeauA.DoodyK. </plain></SENT>
+<SENT sid="243" pm="."><plain>M.TremblayM. </plain></SENT>
+<SENT sid="244" pm="."><plain>L.Protein tyrosine phosphatases PTP-1B and TC-PTP play nonredundant roles in macrophage development and IFN-γ signalingProceedings of the National Acadamy of Sciences of the United States of America200910623936893722-s2.0-6724913259110.1073/pnas.0812109106<?supplied-pmid 19474293?>19474293 </plain></SENT>
+</text></ref><ref id="B12"><text><SENT sid="245" pm="."><plain>12PuiusY. </plain></SENT>
+<SENT sid="246" pm="."><plain>A.ZhaoY.SullivanM.LawrenceD. </plain></SENT>
+<SENT sid="247" pm="."><plain>S.AlmoS. </plain></SENT>
+<SENT sid="248" pm="."><plain>C.ZhangZ.-Y.Identification of a second aryl phosphate-binding site in protein-tyrosine phosphatase 1B: A paradigm for inhibitor designProceedings of the National Acadamy of Sciences of the United States of America1997942513420134252-s2.0-003145754110.1073/pnas.94.25.13420<?supplied-pmid 9391040?>9391040 </plain></SENT>
+</text></ref><ref id="B13"><text><SENT sid="249" pm="."><plain>13LowJ.-L.ChaiC. </plain></SENT>
+<SENT sid="250" pm="."><plain>L. </plain></SENT>
+<SENT sid="251" pm="."><plain>L.YaoS. </plain></SENT>
+<SENT sid="252" pm="."><plain>Q.Bidentate inhibitors of protein tyrosine phosphatasesAntioxidants &amp; Redox Signaling20142014222522502-s2.0-8489866803310.1089/ars.2013.5710<?supplied-pmid 24206395?>24206395 </plain></SENT>
+</text></ref><ref id="B14"><text><SENT sid="253" pm="."><plain>14MorettoA. </plain></SENT>
+<SENT sid="254" pm="."><plain>F.KirincichS. </plain></SENT>
+<SENT sid="255" pm="."><plain>J.XuW. </plain></SENT>
+<SENT sid="256" pm="."><plain>X.Bicyclic and tricyclic thiophenes as protein tyrosine phosphatase 1B inhibitorsBioorganic &amp; Medicinal Chemistry20061472162217710.1016/j.bmc.2005.11.00516303309 </plain></SENT>
+</text></ref><ref id="B15"><text><SENT sid="257" pm="."><plain>15KlopfensteinS. </plain></SENT>
+<SENT sid="258" pm="."><plain>R.EvdokimovA. </plain></SENT>
+<SENT sid="259" pm="."><plain>G.ColsonA.-O.1,2,3,4-Tetrahydroisoquinolinyl sulfamic acids as phosphatase PTP1B inhibitorsBioorganic &amp; Medicinal Chemistry Letters2006166157415782-s2.0-3204444937810.1016/j.bmcl.2005.12.051<?supplied-pmid 16386905?>16386905 </plain></SENT>
+</text></ref><ref id="B16"><text><SENT sid="260" pm="."><plain>16ScapinG.PatelS. </plain></SENT>
+<SENT sid="261" pm="."><plain>B.BeckerJ. </plain></SENT>
+<SENT sid="262" pm="."><plain>W.The structural basis for the selectivity of benzotriazole inhibitors of PTP1BBiochemistry2003423911451114592-s2.0-014170665110.1021/bi035098j14516196 </plain></SENT>
+</text></ref><ref id="B17"><text><SENT sid="263" pm="."><plain>17ChenX.GanQ.FengC.LiuX.ZhangQ.Investigation of selective binding of inhibitors to PTP1B and TCPTP by accelerated molecular dynamics simulationsJournal of Biomolecular Structure and Dynamics20182631411010.1080/07391102.2018.1526117 </plain></SENT>
+</text></ref><ref id="B18"><text><SENT sid="264" pm="."><plain>18AndersenH. </plain></SENT>
+<SENT sid="265" pm="."><plain>S.OlsenO. </plain></SENT>
+<SENT sid="266" pm="."><plain>H.IversenL. </plain></SENT>
+<SENT sid="267" pm="."><plain>F.Discovery and SAR of a novel selective and orally bioavailable nonpeptide classical competitive inhibitor class of protein-tyrosine phosphatase 1BJournal of Medicinal Chemistry20024520444344592-s2.0-003717963510.1021/jm0209026<?supplied-pmid 12238924?>12238924 </plain></SENT>
+</text></ref><ref id="B19"><text><SENT sid="268" pm="."><plain>19XinZ.LiuG.Abad-ZapateroC.Identification of a monoacid-based, cell permeable, selective inhibitor of protein tyrosine phosphatase 1BBioorganic &amp; Medicinal Chemistry Letters20031322394739502-s2.0-1074423219310.1016/j.bmcl.2003.08.064<?supplied-pmid 14592481?>14592481 </plain></SENT>
+</text></ref><ref id="B20"><text><SENT sid="269" pm="."><plain>20TrushV. </plain></SENT>
+<SENT sid="270" pm="."><plain>V.CherenokS. </plain></SENT>
+<SENT sid="271" pm="."><plain>O.TanchukV. </plain></SENT>
+<SENT sid="272" pm="."><plain>Y.KukharV. </plain></SENT>
+<SENT sid="273" pm="."><plain>P.KalchenkoV. </plain></SENT>
+<SENT sid="274" pm="."><plain>I.VovkA. </plain></SENT>
+<SENT sid="275" pm="."><plain>I.Calix[4]arene methylenebisphosphonic acids as inhibitors of protein tyrosine phosphatase 1BBioorganic &amp; Medicinal Chemistry Letters201323205619562310.1016/j.bmcl.2013.08.0402-s2.0-8488427988524012179 </plain></SENT>
+</text></ref><ref id="B21"><text><SENT sid="276" pm="."><plain>21LiuG.XinZ.PeiZ.Fragment screening and assembly: A highly efficient approach to a selective and cell active protein tyrosine phosphatase 1B inhibitorJournal of Medicinal Chemistry20034620423242352-s2.0-014168085710.1021/jm034122o<?supplied-pmid 13678400?>13678400 </plain></SENT>
+</text></ref><ref id="B22"><text><SENT sid="277" pm="."><plain>22PettersenE. </plain></SENT>
+<SENT sid="278" pm="."><plain>F.GoddardT. </plain></SENT>
+<SENT sid="279" pm="."><plain>D.HuangC. </plain></SENT>
+<SENT sid="280" pm="."><plain>C.UCSF Chimera—a visualization system for exploratory research and analysisJournal of Computational Chemistry200425131605161210.1002/jcc.200842-s2.0-444422156515264254 </plain></SENT>
+</text></ref><ref id="B23"><text><SENT sid="281" pm="."><plain>23CaseD. </plain></SENT>
+<SENT sid="282" pm="."><plain>A.BabinV.BerrymanJ. </plain></SENT>
+<SENT sid="283" pm="."><plain>T.Amber 142014San Francisco, Calif, USAUniversity of California </plain></SENT>
+</text></ref><ref id="B24"><text><SENT sid="284" pm="."><plain>24OlssonM. </plain></SENT>
+<SENT sid="285" pm="."><plain>H. </plain></SENT>
+<SENT sid="286" pm="."><plain>M.SøndergaardC. </plain></SENT>
+<SENT sid="287" pm="."><plain>R.RostkowskiM.JensenJ. </plain></SENT>
+<SENT sid="288" pm="."><plain>H.PROPKA3: Consistent treatment of internal and surface residues in empirical p K a predictionsJournal of Chemical Theory and Computation20117252553710.1021/ct100578z2-s2.0-7995147638726596171 </plain></SENT>
+</text></ref><ref id="B25"><text><SENT sid="289" pm="."><plain>25WangJ.WangW.KollmanP. </plain></SENT>
+<SENT sid="290" pm="."><plain>A.CaseD. </plain></SENT>
+<SENT sid="291" pm="."><plain>A.Automatic atom type and bond type perception in molecular mechanical calculationsJournal of Molecular Graphics and Modelling20062522472602-s2.0-3374853834910.1016/j.jmgm.2005.12.00516458552 </plain></SENT>
+</text></ref><ref id="B26"><text><SENT sid="292" pm="."><plain>26FrischM. </plain></SENT>
+<SENT sid="293" pm="."><plain>J.TrucksG. </plain></SENT>
+<SENT sid="294" pm="."><plain>W.SchlegelH. </plain></SENT>
+<SENT sid="295" pm="."><plain>B.Gaussian 03, Revision C.02; Gaussian, Inc.: Wallingford, Conn, USA2004 </plain></SENT>
+</text></ref><ref id="B27"><text><SENT sid="296" pm="."><plain>27HornakV.AbelR.OkurA.StrockbineB.RoitbergA.SimmerlingC.Comparison of multiple amber force fields and development of improved protein backbone parametersProteins: Structure, Function, and Bioinformatics200665371272510.1002/prot.211232-s2.0-33748518255 </plain></SENT>
+</text></ref><ref id="B28"><text><SENT sid="297" pm="."><plain>28WangJ.WolfR. </plain></SENT>
+<SENT sid="298" pm="."><plain>M.CaldwellJ. </plain></SENT>
+<SENT sid="299" pm="."><plain>W.KollmanP. </plain></SENT>
+<SENT sid="300" pm="."><plain>A.CaseD. </plain></SENT>
+<SENT sid="301" pm="."><plain>A.Development and testing of a general amber force fieldJournal of Computational Chemistry20042591157117410.1002/jcc.200352-s2.0-294253242215116359 </plain></SENT>
+</text></ref><ref id="B29"><text><SENT sid="302" pm="."><plain>29ChenX.GanQ.FengC.LiuX.ZhangQ.Virtual screening of novel and selective inhibitors of protein tyrosine phosphatase 1B over T-cell protein tyrosine phosphatase using a bidentate inhibition strategyJournal of Chemical Information and Modeling201858483784710.1021/acs.jcim.8b0004029608303 </plain></SENT>
+</text></ref><ref id="B30"><text><SENT sid="303" pm="."><plain>30RyckaertJ. </plain></SENT>
+<SENT sid="304" pm="."><plain>P.CiccottiG.BerendsenH. </plain></SENT>
+<SENT sid="305" pm="."><plain>J. </plain></SENT>
+<SENT sid="306" pm="."><plain>C.Numerical integration of the cartesian equations of motion of a system with constraints: molecular dynamics of n-alkanesJournal of Computational Physics197723332734110.1016/0021-9991(77)90098-52-s2.0-33646940952 </plain></SENT>
+</text></ref><ref id="B31"><text><SENT sid="307" pm="."><plain>31RoeD. </plain></SENT>
+<SENT sid="308" pm="."><plain>R.CheathamT. </plain></SENT>
+<SENT sid="309" pm="."><plain>E.PTRAJ and CPPTRAJ: Software for processing and analysis of molecular dynamics trajectory dataJournal of Chemical Theory and Computation201397308430952-s2.0-8488002227310.1021/ct400341p26583988 </plain></SENT>
+</text></ref><ref id="B32"><text><SENT sid="310" pm="."><plain>32GrantB. </plain></SENT>
+<SENT sid="311" pm="."><plain>J.RodriguesA. </plain></SENT>
+<SENT sid="312" pm="."><plain>P. </plain></SENT>
+<SENT sid="313" pm="."><plain>C.ElSawyK. </plain></SENT>
+<SENT sid="314" pm="."><plain>M.McCammonJ. </plain></SENT>
+<SENT sid="315" pm="."><plain>A.CavesL. </plain></SENT>
+<SENT sid="316" pm="."><plain>S. </plain></SENT>
+<SENT sid="317" pm="."><plain>D.Bio3d: an R package for the comparative analysis of protein structuresBioinformatics200622212695269610.1093/bioinformatics/btl4612-s2.0-3375039810316940322 </plain></SENT>
+</text></ref><ref id="B33"><text><SENT sid="318" pm="."><plain>33PiovesanD.MinerviniG.TosattoS. </plain></SENT>
+<SENT sid="319" pm="."><plain>C. </plain></SENT>
+<SENT sid="320" pm="."><plain>E.The RING 2.0 web server for high quality residue interaction networksNucleic Acids Research2016441W367W3742-s2.0-8501417992710.1093/nar/gkw31527198219 </plain></SENT>
+</text></ref><ref id="B34"><text><SENT sid="321" pm="."><plain>34ShannonP.MarkielA.OzierO.Cytoscape: a software Environment for integrated models of biomolecular interaction networksGenome Research200313112498250410.1101/gr.12393032-s2.0-024249078014597658 </plain></SENT>
+</text></ref><ref id="B35"><text><SENT sid="322" pm="."><plain>35MillerB. </plain></SENT>
+<SENT sid="323" pm="."><plain>R.IIIMcGeeT. </plain></SENT>
+<SENT sid="324" pm="."><plain>D.SwailsJ. </plain></SENT>
+<SENT sid="325" pm="."><plain>M.HomeyerN.GohlkeH.RoitbergA. </plain></SENT>
+<SENT sid="326" pm="."><plain>E.MMPBSA.py: An efficient program for end-state free energy calculationsJournal of Chemical Theory and Computation201289331433212-s2.0-8486616781610.1021/ct300418h26605738 </plain></SENT>
+</text></ref><ref id="B36"><text><SENT sid="327" pm="."><plain>36GenhedenS.RydeU.The MM/PBSA and MM/GBSA methods to estimate ligand-binding affinitiesExpert Opinion on Drug Discovery20151054494612-s2.0-8492831333010.1517/17460441.2015.103293625835573 </plain></SENT>
+</text></ref><ref id="B37"><text><SENT sid="328" pm="."><plain>37TanC.TanY.-H.LuoR.Implicit nonpolar solvent modelsThe Journal of Physical Chemistry B20071114212263122742-s2.0-3574898153510.1021/jp073399n17918880 </plain></SENT>
+</text></ref><ref id="B38"><text><SENT sid="329" pm="."><plain>38BarfordD.FlintA. </plain></SENT>
+<SENT sid="330" pm="."><plain>J.TonksN. </plain></SENT>
+<SENT sid="331" pm="."><plain>K.Crystal structure of human protein tyrosine phosphatase 1BScience19942635152139714042-s2.0-002823138810.1126/science.81282198128219 </plain></SENT>
+</text></ref><ref id="B39"><text><SENT sid="332" pm="."><plain>39Asante-AppiahE.BallK.BatemanK.The YRD motif is a major determinant of substrate and inhibitor specificity in T-cell protein-tyrosine phosphataseThe Journal of Biological Chemistry200127628260362604310.1074/jbc.M0116972002-s2.0-003585475011352902 </plain></SENT>
+</text></ref></ref-list></SecTag></back><floats-group><SecTag type="FIG"><fig id="fig1" orientation="portrait" position="float"><label>Figure 1</label><caption><p><text><SENT sid="333" pm="."><plain>(a) Superimposed structures of PTP1B (PDB ID: 1Q1M) and TCPTP (PDB ID: 1L8K) which are shown in blue and red, respectively. </plain></SENT>
+<SENT sid="334" pm="."><plain>The inhibitor is shown by ball-and-stick with a transparent surface. </plain></SENT>
+<SENT sid="335" pm="."><plain>(b) Structure of the inhibitor labeled with oxygen and nitrogen atoms. </plain></SENT>
+</text></p></caption><graphic xlink:href="BMRI2019-9852897.001"/></fig></SecTag><SecTag type="FIG"><fig id="fig2" orientation="portrait" position="float"><label>Figure 2</label><caption><p><text><SENT sid="336" pm="."><plain>Overall conformational changes of WT, A27S and K120A systems in MD simulation. (a) The RMSD profiles for the backbone atoms of the WT, A27S, and K120A system. </plain></SENT>
+<SENT sid="337" pm="."><plain>(b) The RMSD profiles for the side-chain atoms of the WT, A27S, and K120A system obtained from 50 ns MD simulations. </plain></SENT>
+<SENT sid="338" pm="."><plain>The residues 28-32, YRD-motif, and the loop 110-122 were labeled. </plain></SENT>
+<SENT sid="339" pm="."><plain>Dynamic cross-correlation matrices of residue fluctuation from the equilibrated simulations of the (c) WT, (d) A27S, and (e) K120A system. </plain></SENT>
+</text></p></caption><graphic xlink:href="BMRI2019-9852897.002"/></fig></SecTag><SecTag type="FIG"><fig id="fig3" orientation="portrait" position="float"><label>Figure 3</label><caption><p><text><SENT sid="340" pm="."><plain>Average structures of the top 10 clusters of (a) WT, (b) A27S, and (c) K120A systems. The structure is colored from red to blue, representing the cluster from large to small. </plain></SENT>
+<SENT sid="341" pm="."><plain>The inhibitors are represented in the ball-and-stick model. </plain></SENT>
+</text></p></caption><graphic xlink:href="BMRI2019-9852897.003"/></fig></SecTag><SecTag type="FIG"><fig id="fig4" orientation="portrait" position="float"><label>Figure 4</label><caption><p><text><SENT sid="342" pm="."><plain>Residue interactions and conformational changes at the active site. Residue interaction networks for the (a) WT, (b) A27S, and (c) K120A systems showing the interactions at the active site. </plain></SENT>
+<SENT sid="343" pm="."><plain>The blue line represents the H-bond, the gray line represents the van der Waals interaction, the pink solid line represents the salt bridge, and the magenta dotted line represents the generic contact with their closest atom. </plain></SENT>
+<SENT sid="344" pm="."><plain>The distances between (d) the Nη1 atom of Arg221 and the O1 atom of the ligand, and the Nζ atom of Lys120 and the Cγ atom of Asp181 for the (e) WT and (f) A27S systems. </plain></SENT>
+</text></p></caption><graphic xlink:href="BMRI2019-9852897.004"/></fig></SecTag><SecTag type="FIG"><fig id="fig5" orientation="portrait" position="float"><label>Figure 5</label><caption><p><text><SENT sid="345" pm="."><plain>Residue interactions and conformational changes at the second pTyr binding site. Residue interaction networks for the (a) WT, (b) A27S, and (c) K120A systems showing the interactions at the second pTyr binding site. </plain></SENT>
+<SENT sid="346" pm="."><plain>The blue line represents the H-bond, the gray line represents the van der Waals interaction, the pink solid line represents the salt bridge, and the magenta dotted line represents the generic contact with their closest atom. </plain></SENT>
+<SENT sid="347" pm="."><plain>(d) Average structures of the WT, A27S, and K120A systems superimposed at the second pTyr binding site, shown in green, yellow, and blue, respectively. </plain></SENT>
+<SENT sid="348" pm="."><plain>The distances between (e) the Nη2 atom of Arg254 and the O4/Cβ atom of the Ser27/Ala27, (f) the Cζ atom of Arg24 and the Cζ atom of Arg254, (g) the Nη1 atom of Arg254 and the O7 atom of the ligand, and (h) the Nη2 atom of Arg24 and the O7 atom of the ligand. </plain></SENT>
+</text></p></caption><graphic xlink:href="BMRI2019-9852897.005"/></fig></SecTag><SecTag type="FIG"><fig id="fig6" orientation="portrait" position="float"><label>Figure 6</label><caption><p><text><SENT sid="349" pm="."><plain>(a) Differences in binding free energies of important residues calculated by the MM-PBSA alanine scanning method. </plain></SENT>
+<SENT sid="350" pm="."><plain>(b) Comparison of hydrogen bond occupancy of important residues during MD simulations. </plain></SENT>
+</text></p></caption><graphic xlink:href="BMRI2019-9852897.006"/></fig></SecTag><SecTag type="TABLE"><table-wrap id="tab1" orientation="portrait" position="float"><label>Table 1</label><caption><p><text><SENT sid="351" pm="."><plain>Binding free energies (kcal/mol) and the individual energetic terms for the systems of WT, A27S, and K120A using the MM-PBSA method. </plain></SENT>
+</text></p></caption><table frame="hsides" rules="groups"><thead><tr><th align="left" rowspan="1" colspan="1"><text><SENT sid="352" pm="."><plain>Energetic terms </plain></SENT>
+</text></th><th align="center" rowspan="1" colspan="1"><text><SENT sid="353" pm="."><plain>WT </plain></SENT>
+</text></th><th align="center" rowspan="1" colspan="1"><text><SENT sid="354" pm="."><plain>A27S </plain></SENT>
+</text></th><th align="center" rowspan="1" colspan="1"><text><SENT sid="355" pm="."><plain>K120A </plain></SENT>
+</text></th></tr></thead><tbody><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="356" pm="."><plain>ΔEvdW </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="357" pm="."><plain>-47.55 ± 0.27 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="358" pm="."><plain>-43.26 ± 0.21 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="359" pm="."><plain>-46.12 ± 0.21 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="360" pm="."><plain>ΔEele </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="361" pm="."><plain>-87.26 ± 0.19 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="362" pm="."><plain>-82.48 ± 0.54 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="363" pm="."><plain>-70.1 ± 0.22 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="364" pm="."><plain>ΔGPB </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="365" pm="."><plain>78.4 ± 0.23 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="366" pm="."><plain>75.38 ± 0.25 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="367" pm="."><plain>63.45 ± 0.19 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="368" pm="."><plain>ΔGenpolar </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="369" pm="."><plain>-33.23 ± 0.09 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="370" pm="."><plain>-31.73 ± 0.08 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="371" pm="."><plain>-32.61 ± 0.12 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="372" pm="."><plain>ΔGedisper </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="373" pm="."><plain>57.05 ± 0.08 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="374" pm="."><plain>55.07 ± 0.12 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="375" pm="."><plain>55.93 ± 0.09 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="376" pm="."><plain>aΔGsolv </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="377" pm="."><plain>102.22 ± 0.26 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="378" pm="."><plain>98.72 ± 0.29 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="379" pm="."><plain>86.77 ± 0.24 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="380" pm="."><plain>ΔH </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="381" pm="."><plain>-32.6 ± 0.22 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="382" pm="."><plain>-27.03 ± 0.25 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="383" pm="."><plain>-29.45 ± 0.27 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="384" pm="."><plain>-ΔTS </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="385" pm="."><plain>24.57 ± 0.39 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="386" pm="."><plain>22.16 ± 0.39 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="387" pm="."><plain>22.61 ± 0.4 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="388" pm="."><plain>ΔGbinding </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="389" pm="."><plain>-8.03 ± 0.32 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="390" pm="."><plain>-4.86 ± 0.33 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="391" pm="."><plain>-6.84 ± 0.34 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="392" pm="."><plain>bΔGexp </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="393" pm="."><plain>−7.33 </plain></SENT>
+</text></td><td colspan="2" align="center" rowspan="1"><text><SENT sid="394" pm="."><plain>−5.37 (TCPTP) </plain></SENT>
+</text></td></tr></tbody></table><table-wrap-foot><fn><p>
+<sup><italic>a</italic></sup>Δ<italic>G</italic><sub>solv</sub> = Δ<italic>G</italic><sub>PB</sub> + Δ<italic>G</italic><sub>enpolar</sub> + Δ<italic>G</italic><sub>edisper</sub>. <sup><italic>c</italic></sup>experimental binding free energy was calculated by Δ<italic>G</italic><sub>exp</sub> ≈ <italic>RT </italic>ln <italic>K</italic><sub>i</sub>.</p></fn></table-wrap-foot></table-wrap></SecTag></floats-group></article>

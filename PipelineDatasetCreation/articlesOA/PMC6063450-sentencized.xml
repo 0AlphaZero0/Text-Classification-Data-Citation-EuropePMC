@@ -1,0 +1,881 @@
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD v1.1 20151215//EN" "JATS-archivearticle1.dtd"> 
+<article xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML" article-type="research-article"><?properties open_access?><?DTDIdentifier.IdentifierValue -//NLM//DTD JATS (Z39.96) Journal Publishing DTD v1.1d3 20150301//EN?><?DTDIdentifier.IdentifierType public?><?SourceDTD.DTDName JATS-journalpublishing1.dtd?><?SourceDTD.Version 39.96?><?ConverterInfo.XSLTName jp2nlmx2.xsl?><?ConverterInfo.Version 1?><front><journal-meta><journal-id journal-id-type="nlm-ta">PLoS Genet</journal-id><journal-id journal-id-type="iso-abbrev">PLoS Genet</journal-id><journal-id journal-id-type="publisher-id">plos</journal-id><journal-id journal-id-type="pmc">plosgen</journal-id><journal-title-group><journal-title>PLoS Genetics</journal-title></journal-title-group><issn pub-type="ppub">1553-7390</issn><issn pub-type="epub">1553-7404</issn><publisher><publisher-name>Public Library of Science</publisher-name><publisher-loc>San Francisco, CA USA</publisher-loc></publisher></journal-meta><article-meta><article-id pub-id-type="pmcid">6063450</article-id><article-id pub-id-type="pmid">30016313</article-id><article-id pub-id-type="doi">10.1371/journal.pgen.1007452</article-id><article-id pub-id-type="publisher-id">PGENETICS-D-17-01977</article-id><article-categories><subj-group subj-group-type="heading"><subject>Research Article</subject></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Research and Analysis Methods</subject><subj-group><subject>Mathematical and Statistical Techniques</subject><subj-group><subject>Statistical Methods</subject><subj-group><subject>Meta-Analysis</subject></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Physical Sciences</subject><subj-group><subject>Mathematics</subject><subj-group><subject>Statistics (Mathematics)</subject><subj-group><subject>Statistical Methods</subject><subj-group><subject>Meta-Analysis</subject></subj-group></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Research and Analysis Methods</subject><subj-group><subject>Research Assessment</subject><subj-group><subject>Research Errors</subject></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Physical Sciences</subject><subj-group><subject>Mathematics</subject><subj-group><subject>Probability Theory</subject><subj-group><subject>Random Variables</subject><subj-group><subject>Covariance</subject></subj-group></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Biology and Life Sciences</subject><subj-group><subject>Genetics</subject><subj-group><subject>Genetic Loci</subject></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Biology and Life Sciences</subject><subj-group><subject>Computational Biology</subject><subj-group><subject>Genome Analysis</subject><subj-group><subject>Genome-Wide Association Studies</subject></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Biology and Life Sciences</subject><subj-group><subject>Genetics</subject><subj-group><subject>Genomics</subject><subj-group><subject>Genome Analysis</subject><subj-group><subject>Genome-Wide Association Studies</subject></subj-group></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Biology and Life Sciences</subject><subj-group><subject>Genetics</subject><subj-group><subject>Human Genetics</subject><subj-group><subject>Genome-Wide Association Studies</subject></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Biology and Life Sciences</subject><subj-group><subject>Computational Biology</subject><subj-group><subject>Genome Complexity</subject><subj-group><subject>Introns</subject></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Biology and Life Sciences</subject><subj-group><subject>Genetics</subject><subj-group><subject>Genomics</subject><subj-group><subject>Genome Complexity</subject><subj-group><subject>Introns</subject></subj-group></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Biology and Life Sciences</subject><subj-group><subject>Genetics</subject><subj-group><subject>Phenotypes</subject></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3"><subject>Biology and Life Sciences</subject><subj-group><subject>Genetics</subject><subj-group><subject>Heredity</subject><subj-group><subject>Genetic Mapping</subject><subj-group><subject>Variant Genotypes</subject></subj-group></subj-group></subj-group></subj-group></subj-group></article-categories><title-group><article-title><SecTag type="TITLE"><text><SENT sid="0" pm="."><plain>Proper conditional analysis in the presence of missing data: Application to large scale meta-analysis of tobacco use phenotypes </plain></SENT>
+</text></SecTag></article-title><alt-title alt-title-type="running-head">Conditional meta-analysis in the presence of missing summary statistics</alt-title></title-group><contrib-group><contrib contrib-type="author" equal-contrib="yes"><name><surname>Jiang</surname><given-names>Yu</given-names></name><role content-type="http://credit.casrai.org/">Methodology</role><role content-type="http://credit.casrai.org/">Software</role><role content-type="http://credit.casrai.org/">Writing – original draft</role><role content-type="http://credit.casrai.org/">Writing – review &amp; editing</role><xref ref-type="aff" rid="aff001"><sup>1</sup></xref></contrib><contrib contrib-type="author" equal-contrib="yes"><name><surname>Chen</surname><given-names>Sai</given-names></name><role content-type="http://credit.casrai.org/">Data curation</role><role content-type="http://credit.casrai.org/">Formal analysis</role><role content-type="http://credit.casrai.org/">Methodology</role><role content-type="http://credit.casrai.org/">Writing – original draft</role><role content-type="http://credit.casrai.org/">Writing – review &amp; editing</role><xref ref-type="aff" rid="aff002"><sup>2</sup></xref></contrib><contrib contrib-type="author"><contrib-id authenticated="true" contrib-id-type="orcid">http://orcid.org/0000-0002-5964-6610</contrib-id><name><surname>McGuire</surname><given-names>Daniel</given-names></name><role content-type="http://credit.casrai.org/">Formal analysis</role><role content-type="http://credit.casrai.org/">Software</role><role content-type="http://credit.casrai.org/">Writing – review &amp; editing</role><xref ref-type="aff" rid="aff001"><sup>1</sup></xref></contrib><contrib contrib-type="author"><name><surname>Chen</surname><given-names>Fang</given-names></name><role content-type="http://credit.casrai.org/">Software</role><role content-type="http://credit.casrai.org/">Writing – review &amp; editing</role><xref ref-type="aff" rid="aff001"><sup>1</sup></xref></contrib><contrib contrib-type="author"><name><surname>Liu</surname><given-names>Mengzhen</given-names></name><role content-type="http://credit.casrai.org/">Data curation</role><role content-type="http://credit.casrai.org/">Formal analysis</role><role content-type="http://credit.casrai.org/">Methodology</role><role content-type="http://credit.casrai.org/">Resources</role><role content-type="http://credit.casrai.org/">Writing – review &amp; editing</role><xref ref-type="aff" rid="aff003"><sup>3</sup></xref></contrib><contrib contrib-type="author"><name><surname>Iacono</surname><given-names>William G.</given-names></name><role content-type="http://credit.casrai.org/">Data curation</role><role content-type="http://credit.casrai.org/">Formal analysis</role><role content-type="http://credit.casrai.org/">Resources</role><role content-type="http://credit.casrai.org/">Writing – review &amp; editing</role><xref ref-type="aff" rid="aff003"><sup>3</sup></xref></contrib><contrib contrib-type="author"><contrib-id authenticated="true" contrib-id-type="orcid">http://orcid.org/0000-0001-9415-2723</contrib-id><name><surname>Hewitt</surname><given-names>John K.</given-names></name><role content-type="http://credit.casrai.org/">Data curation</role><role content-type="http://credit.casrai.org/">Formal analysis</role><role content-type="http://credit.casrai.org/">Resources</role><role content-type="http://credit.casrai.org/">Writing – review &amp; editing</role><xref ref-type="aff" rid="aff004"><sup>4</sup></xref></contrib><contrib contrib-type="author"><name><surname>Hokanson</surname><given-names>John E.</given-names></name><role content-type="http://credit.casrai.org/">Data curation</role><role content-type="http://credit.casrai.org/">Formal analysis</role><role content-type="http://credit.casrai.org/">Resources</role><role content-type="http://credit.casrai.org/">Writing – review &amp; editing</role><xref ref-type="aff" rid="aff005"><sup>5</sup></xref></contrib><contrib contrib-type="author"><contrib-id authenticated="true" contrib-id-type="orcid">http://orcid.org/0000-0003-4592-5501</contrib-id><name><surname>Krauter</surname><given-names>Kenneth</given-names></name><role content-type="http://credit.casrai.org/">Data curation</role><role content-type="http://credit.casrai.org/">Formal analysis</role><role content-type="http://credit.casrai.org/">Resources</role><role content-type="http://credit.casrai.org/">Writing – review &amp; editing</role><xref ref-type="aff" rid="aff004"><sup>4</sup></xref></contrib><contrib contrib-type="author"><name><surname>Laakso</surname><given-names>Markku</given-names></name><role content-type="http://credit.casrai.org/">Data curation</role><role content-type="http://credit.casrai.org/">Formal analysis</role><role content-type="http://credit.casrai.org/">Resources</role><role content-type="http://credit.casrai.org/">Writing – review &amp; editing</role><xref ref-type="aff" rid="aff006"><sup>6</sup></xref></contrib><contrib contrib-type="author"><name><surname>Li</surname><given-names>Kevin W.</given-names></name><role content-type="http://credit.casrai.org/">Data curation</role><role content-type="http://credit.casrai.org/">Formal analysis</role><role content-type="http://credit.casrai.org/">Resources</role><role content-type="http://credit.casrai.org/">Writing – review &amp; editing</role><xref ref-type="aff" rid="aff002"><sup>2</sup></xref></contrib><contrib contrib-type="author"><name><surname>Lutz</surname><given-names>Sharon M.</given-names></name><role content-type="http://credit.casrai.org/">Data curation</role><role content-type="http://credit.casrai.org/">Formal analysis</role><role content-type="http://credit.casrai.org/">Resources</role><role content-type="http://credit.casrai.org/">Writing – review &amp; editing</role><xref ref-type="aff" rid="aff007"><sup>7</sup></xref></contrib><contrib contrib-type="author"><name><surname>McGue</surname><given-names>Matthew</given-names></name><role content-type="http://credit.casrai.org/">Data curation</role><role content-type="http://credit.casrai.org/">Formal analysis</role><role content-type="http://credit.casrai.org/">Resources</role><role content-type="http://credit.casrai.org/">Writing – review &amp; editing</role><xref ref-type="aff" rid="aff003"><sup>3</sup></xref></contrib><contrib contrib-type="author"><name><surname>Pandit</surname><given-names>Anita</given-names></name><role content-type="http://credit.casrai.org/">Data curation</role><role content-type="http://credit.casrai.org/">Formal analysis</role><role content-type="http://credit.casrai.org/">Resources</role><role content-type="http://credit.casrai.org/">Writing – review &amp; editing</role><xref ref-type="aff" rid="aff002"><sup>2</sup></xref></contrib><contrib contrib-type="author"><contrib-id authenticated="true" contrib-id-type="orcid">http://orcid.org/0000-0001-6411-9666</contrib-id><name><surname>Zajac</surname><given-names>Gregory J. M.</given-names></name><role content-type="http://credit.casrai.org/">Data curation</role><role content-type="http://credit.casrai.org/">Formal analysis</role><role content-type="http://credit.casrai.org/">Resources</role><role content-type="http://credit.casrai.org/">Writing – review &amp; editing</role><xref ref-type="aff" rid="aff002"><sup>2</sup></xref></contrib><contrib contrib-type="author"><name><surname>Boehnke</surname><given-names>Michael</given-names></name><role content-type="http://credit.casrai.org/">Formal analysis</role><role content-type="http://credit.casrai.org/">Resources</role><xref ref-type="aff" rid="aff002"><sup>2</sup></xref></contrib><contrib contrib-type="author"><name><surname>Abecasis</surname><given-names>Goncalo R.</given-names></name><role content-type="http://credit.casrai.org/">Data curation</role><role content-type="http://credit.casrai.org/">Resources</role><xref ref-type="aff" rid="aff002"><sup>2</sup></xref></contrib><contrib contrib-type="author"><name><surname>Vrieze</surname><given-names>Scott I.</given-names></name><role content-type="http://credit.casrai.org/">Data curation</role><role content-type="http://credit.casrai.org/">Formal analysis</role><role content-type="http://credit.casrai.org/">Methodology</role><role content-type="http://credit.casrai.org/">Supervision</role><role content-type="http://credit.casrai.org/">Writing – original draft</role><role content-type="http://credit.casrai.org/">Writing – review &amp; editing</role><xref ref-type="aff" rid="aff003"><sup>3</sup></xref><xref ref-type="author-notes" rid="econtrib001"><sup>‡</sup></xref></contrib><contrib contrib-type="author"><name><surname>Zhan</surname><given-names>Xiaowei</given-names></name><role content-type="http://credit.casrai.org/">Formal analysis</role><role content-type="http://credit.casrai.org/">Software</role><role content-type="http://credit.casrai.org/">Supervision</role><role content-type="http://credit.casrai.org/">Writing – original draft</role><role content-type="http://credit.casrai.org/">Writing – review &amp; editing</role><xref ref-type="aff" rid="aff008"><sup>8</sup></xref><xref ref-type="author-notes" rid="econtrib001"><sup>‡</sup></xref></contrib><contrib contrib-type="author"><name><surname>Jiang</surname><given-names>Bibo</given-names></name><role content-type="http://credit.casrai.org/">Conceptualization</role><role content-type="http://credit.casrai.org/">Methodology</role><role content-type="http://credit.casrai.org/">Project administration</role><role content-type="http://credit.casrai.org/">Software</role><role content-type="http://credit.casrai.org/">Supervision</role><role content-type="http://credit.casrai.org/">Writing – original draft</role><role content-type="http://credit.casrai.org/">Writing – review &amp; editing</role><xref ref-type="aff" rid="aff001"><sup>1</sup></xref><xref ref-type="author-notes" rid="econtrib001"><sup>‡</sup></xref><xref ref-type="corresp" rid="cor001">*</xref></contrib><contrib contrib-type="author"><contrib-id authenticated="true" contrib-id-type="orcid">http://orcid.org/0000-0001-6553-858X</contrib-id><name><surname>Liu</surname><given-names>Dajiang J.</given-names></name><role content-type="http://credit.casrai.org/">Conceptualization</role><role content-type="http://credit.casrai.org/">Formal analysis</role><role content-type="http://credit.casrai.org/">Methodology</role><role content-type="http://credit.casrai.org/">Software</role><role content-type="http://credit.casrai.org/">Supervision</role><role content-type="http://credit.casrai.org/">Writing – original draft</role><role content-type="http://credit.casrai.org/">Writing – review &amp; editing</role><xref ref-type="aff" rid="aff001"><sup>1</sup></xref><xref ref-type="corresp" rid="cor001">*</xref></contrib></contrib-group><aff id="aff001"><label>1</label>
+<addr-line>Department of Public Health Sciences, Penn State College of Medicine, Hershey, Pennsylvania, United States of America</addr-line></aff><aff id="aff002"><label>2</label>
+<addr-line>Center of Statistical Genetics, Department of Biostatistics, University of Michigan, Ann Arbor, Michigan, United States of America</addr-line></aff><aff id="aff003"><label>3</label>
+<addr-line>Department of Psychology, University of Minnesota, Minneapolis, Minnesota, United States of America</addr-line></aff><aff id="aff004"><label>4</label>
+<addr-line>Institute for Behavioral Genetics, University of Colorado Boulder, Boulder, Colorado, United States of America</addr-line></aff><aff id="aff005"><label>5</label>
+<addr-line>Department of Epidemiology, Colorado School of Public Health, University of Colorado Anschutz Medical Campus, Aurora, Colorado, United States of America</addr-line></aff><aff id="aff006"><label>6</label>
+<addr-line>Institute of Clinical Medicine, Internal Medicine, University of Eastern Finland and Kuopio University Hospital, Kuopio, Finland</addr-line></aff><aff id="aff007"><label>7</label>
+<addr-line>Department of Biostatistics and Informatics, University of Colorado, Anschutz Medical Campus, Aurora, Colorado, United States of America</addr-line></aff><aff id="aff008"><label>8</label>
+<addr-line>Department of Clinical Science, Quantitative Biomedical Research Center, University of Texas Southwestern Medical Center, Dallas, Texas, United States of America</addr-line></aff><contrib-group><contrib contrib-type="editor"><name><surname>Cordell</surname><given-names>Heather J.</given-names></name><role>Editor</role><xref ref-type="aff" rid="edit1"/></contrib></contrib-group><aff id="edit1"><addr-line>Newcastle University, UNITED KINGDOM</addr-line></aff><author-notes><fn fn-type="COI-statement" id="coi001"><p><text><SENT sid="1" pm="."><plain>The authors have declared that no competing interests exist. </plain></SENT>
+</text></p></fn><fn fn-type="other" id="econtrib001"><p><text><SENT sid="2" pm="."><plain>‡ These authors jointly supervised the work. </plain></SENT>
+</text></p></fn><corresp id="cor001">* E-mail: <email>dajiang.liu@psu.edu</email> (DJL); <email>bjiang@phs.psu.edu</email> (BJ)</corresp></author-notes><pub-date pub-type="epub"><day>17</day><month>7</month><year>2018</year></pub-date><pub-date pub-type="collection"><month>7</month><year>2018</year></pub-date><volume>14</volume><issue>7</issue><elocation-id>e1007452</elocation-id><history><date date-type="received"><day>11</day><month>11</month><year>2017</year></date><date date-type="accepted"><day>25</day><month>5</month><year>2018</year></date></history><permissions><copyright-statement>© 2018 Jiang et al</copyright-statement><copyright-year>2018</copyright-year><copyright-holder>Jiang et al</copyright-holder><license xlink:href="http://creativecommons.org/licenses/by/4.0/"><license-p>This is an open access article distributed under the terms of the <ext-link ext-link-type="uri" xlink:href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution License</ext-link>, which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited.</license-p></license></permissions><self-uri content-type="pdf" xlink:href="pgen.1007452.pdf"/><abstract><p><SecTag type="ABS"><text><SENT sid="3" pm="."><plain>Meta-analysis of genetic association studies increases sample size and the power for mapping complex traits. </plain></SENT>
+<SENT sid="4" pm="."><plain>Existing methods are mostly developed for datasets without missing values, i.e. the summary association statistics are measured for all variants in contributing studies. </plain></SENT>
+<SENT sid="5" pm="."><plain>In practice, genotype imputation is not always effective. </plain></SENT>
+<SENT sid="6" pm="."><plain>This may be the case when targeted genotyping/sequencing assays are used or when the un-typed genetic variant is rare. </plain></SENT>
+<SENT sid="7" pm="."><plain>Therefore, contributed summary statistics often contain missing values. </plain></SENT>
+<SENT sid="8" pm="."><plain>Existing methods for imputing missing summary association statistics and using imputed values in meta-analysis, approximate conditional analysis, or simple strategies such as complete case analysis all have theoretical limitations. </plain></SENT>
+<SENT sid="9" pm="."><plain>Applying these approaches can bias genetic effect estimates and lead to seriously inflated type-I or type-II errors in conditional analysis, which is a critical tool for identifying independently associated variants. </plain></SENT>
+<SENT sid="10" pm="."><plain>To address this challenge and complement imputation methods, we developed a method to combine summary statistics across participating studies and consistently estimate joint effects, even when the contributed summary statistics contain large amounts of missing values. </plain></SENT>
+<SENT sid="11" pm="."><plain>Based on this estimator, we proposed a score statistic called PCBS (partial correlation based score statistic) for conditional analysis of single-variant and gene-level associations. </plain></SENT>
+<SENT sid="12" pm="."><plain>Through extensive analysis of simulated and real data, we showed that the new method produces well-calibrated type-I errors and is substantially more powerful than existing approaches. </plain></SENT>
+<SENT sid="13" pm="."><plain>We applied the proposed approach to one of the largest meta-analyses to date for the cigarettes-per-day phenotype. </plain></SENT>
+<SENT sid="14" pm="."><plain>Using the new method, we identified multiple novel independently associated variants at known loci for tobacco use, which were otherwise missed by alternative methods. </plain></SENT>
+<SENT sid="15" pm="."><plain>Together, the phenotypic variance explained by these variants was 1.1%, improving that of previously reported associations by 71%. </plain></SENT>
+<SENT sid="16" pm="."><plain>These findings illustrate the extent of locus allelic heterogeneity and can help pinpoint causal variants. </plain></SENT>
+</text></SecTag></p></abstract><abstract abstract-type="summary"><title><text><SENT sid="17" pm="."><plain>Author summary </plain></SENT>
+</text></title><p><SecTag type="ABS"><text><SENT sid="18" pm="."><plain>It is of great interest to estimate the joint effects of multiple variants from large scale meta-analyses, in order to fine-map causal variants and understand the genetic architecture for complex traits. </plain></SENT>
+<SENT sid="19" pm="."><plain>The summary association statistics from participating studies in a meta-analysis often contain missing values at some variant sites, as the imputation methods may not work well and the variants with low imputation quality will be filtered out. </plain></SENT>
+<SENT sid="20" pm="."><plain>Missingness is especially likely when the underlying genetic variant is rare or the participating studies use targeted genotyping array that is not suitable for imputation. </plain></SENT>
+<SENT sid="21" pm="."><plain>Existing methods for conditional meta-analysis do not properly handle missing data, and can incorrectly estimate correlations between score statistics. </plain></SENT>
+<SENT sid="22" pm="."><plain>As a result, they can produce highly inflated type-I errors for conditional analysis, which will result in overestimated phenotypic variance explained and incorrect identification of causal variants. </plain></SENT>
+<SENT sid="23" pm="."><plain>We systematically evaluated this bias and proposed a novel partial correlation based score statistic. </plain></SENT>
+<SENT sid="24" pm="."><plain>The new statistic has valid type-I errors for conditional analysis and much higher power than the existing methods, even when the contributed summary statistics contain a large fraction of missing values. </plain></SENT>
+<SENT sid="25" pm="."><plain>We expect this method to be highly useful in the sequencing age for complex trait genetics. </plain></SENT>
+</text></SecTag></p></abstract><funding-group><funding-statement>DL, DM and YJ were supported by R01HG008983 from the National Institute of Health. MB was supported by R01HG000376 from the National Institute of Health. W.G.I has been supported by DA05147 and DA036216 from the National Institute of Health. SML was supported by K01HL125858 from the National Institute of Health. CADD study has been supported by DA011015 from the National Institute of Health. The COPDGene study (NCT00608764) is supported by National Heart, Lung and Blood Institute NHLBI R01 HL084323 and HL089897 and is also supported by the COPD Foundation through contributions made to an Industry Advisory Board comprised of AstraZeneca, Boehringer Ingelheim, Novartis, Pfizer, GlaxoSmithKline, Siemens, and Sunovion by The COPDGene study (NCT00608764) is supported by NHLBI U01 HL089897 and U01 HL089856 and is also supported by the COPD Foundation through contributions made to an Industry Advisory Committee comprised of AstraZeneca, Boehringer-Ingelheim, GlaxoSmithKline, Novartis, and Sunovion. The funders had no role in study design, data collection and analysis, decision to publish, or preparation of the manuscript.</funding-statement></funding-group><counts><fig-count count="0"/><table-count count="3"/><page-count count="19"/></counts><custom-meta-group><custom-meta><meta-name>PLOS Publication Stage</meta-name><meta-value>vor-update-to-uncorrected-proof</meta-value></custom-meta><custom-meta><meta-name>Publication Update</meta-name><meta-value>2018-07-27</meta-value></custom-meta><custom-meta id="data-availability"><meta-name>Data Availability</meta-name><meta-value>Full association statistics for meta-analysis are available at <ext-link ext-link-type="uri" xlink:href="http://gscan.sph.umich.edu/">http://gscan.sph.umich.edu/</ext-link>.</meta-value></custom-meta></custom-meta-group></article-meta><notes><title>Data Availability</title><p>Full association statistics for meta-analysis are available at <ext-link ext-link-type="uri" xlink:href="http://gscan.sph.umich.edu/">http://gscan.sph.umich.edu/</ext-link>.</p></notes></front><body><SecTag type="INTRO"><sec sec-type="intro" id="sec001"><title><text><SENT sid="26" pm="."><plain>Introduction </plain></SENT>
+</text></title><p><text><SENT sid="27" pm="."><plain>Meta-analysis has become a critical tool for genetic association studies in human genetics. </plain></SENT>
+<SENT sid="28" pm="."><plain>Meta-analysis increases sample sizes, empowers association studies, and has led to many exciting discoveries in the past decade [1–5]. </plain></SENT>
+<SENT sid="29" pm="."><plain>Many of these genetic discoveries have informed new biology, provided novel clinical insights [6, 7], and led to novel therapeutic drug targets [8, 9]. </plain></SENT>
+<SENT sid="30" pm="."><plain>Conditional meta-analysis has been a key component for these studies, which is useful to distinguish novel association signals from shadows of known association signals and to pinpoint causal variants. </plain></SENT>
+</text></p><p><text><SENT sid="31" pm="."><plain>Existing methods for conditional meta-analysis were proposed based upon the assumptions that summary association statistics from all variant sites are measured and shared. </plain></SENT>
+<SENT sid="32" pm="."><plain>Yet, in practice, the score statistics from contributing studies often contain missing values, possibly due to the use of different genotyping arrays, sequencing capture assays, or quality control filters by each participating cohort. </plain></SENT>
+<SENT sid="33" pm="."><plain>While genotype imputation is an effective approach to fill in missing genotype data for participating cohorts, many scenarios may preclude accurate genotype imputation. </plain></SENT>
+<SENT sid="34" pm="."><plain>For example, a targeted genotyping array/sequencing assay (e.g. exome array) may not provide sufficient genome-wide coverage for imputation. </plain></SENT>
+<SENT sid="35" pm="."><plain>In addition, it is challenging to impute low frequency variants even with the highest quality reference panels. </plain></SENT>
+<SENT sid="36" pm="."><plain>Imputed genotypes of low quality are often filtered out based upon the recommendations from the best practices [10], since these variants are more prone to artefacts and can lead to inflated type I errors. </plain></SENT>
+<SENT sid="37" pm="."><plain>Therefore, missing data in meta-analysis of genetic association studies are unavoidable. </plain></SENT>
+<SENT sid="38" pm="."><plain>Some existing meta-analysis strategies can be highly biased in the presence of missing data. </plain></SENT>
+</text></p><p><text><SENT sid="39" pm="."><plain>First, a commonly used method for conditional analysis, COJO, can lead to biased results when contributed summary association statistics from participating studies contain missing values [11]. </plain></SENT>
+<SENT sid="40" pm="."><plain>The COJO method approximates the variance-covariance matrix between association statistics with the linkage disequilibrium (LD) information from a reference panel. </plain></SENT>
+<SENT sid="41" pm="."><plain>When the association statistics from contributed studies are missing at some variant sites, the correlation matrix of the meta-analysis statistics can differ greatly from the LD matrix. </plain></SENT>
+<SENT sid="42" pm="."><plain>Consider the simple example of a meta-analysis of two independent studies, where variant 1 is only measured in study 1 and variant 2 is only measured in study 2. </plain></SENT>
+<SENT sid="43" pm="."><plain>The meta-analysis association statistics for the two variants are independent, which cannot be approximated by the LD. </plain></SENT>
+<SENT sid="44" pm="."><plain>COJO only uses meta-analysis results as input. </plain></SENT>
+<SENT sid="45" pm="."><plain>Therefore, it cannot distinguish the scenario where only study 1 measures both variants (and study 2 measures none), and the scenario where study 1 only measures variant 1 and study 2 only measures variant 2. </plain></SENT>
+<SENT sid="46" pm="."><plain>In the presence of missing data, COJO can be highly biased and lead to inflated type I errors. </plain></SENT>
+</text></p><p><text><SENT sid="47" pm="."><plain>Second, the strategy of imputing missing data from contributed association statistics and using imputed association statistics in meta-analysis can also lead to inflated type I errors in conditional analysis. </plain></SENT>
+<SENT sid="48" pm="."><plain>A simple imputation strategy for marginal (or unconditional) analysis is to replace missing summary statistics with zeros (REPLACE0), which are their expected value under the null hypothesis [2, 3]. </plain></SENT>
+<SENT sid="49" pm="."><plain>This method yields valid type I errors for marginal association analysis. </plain></SENT>
+<SENT sid="50" pm="."><plain>Taking this simple approach for conditional analysis, however, is problematic. </plain></SENT>
+<SENT sid="51" pm="."><plain>The genetic variants at conditioned sites are likely to have non-zero effects. </plain></SENT>
+<SENT sid="52" pm="."><plain>Replacing missing summary data with zeros will bias the genetic effect estimates at conditioned variant sites, and can lead to highly inflated type I errors for conditional analysis (see RESULTS). </plain></SENT>
+<SENT sid="53" pm="."><plain>Similarly, the methods that seek to impute missing summary statistics based upon LD (e.g. impG [12]) may introduce substantial biases to the effects of missing variants. </plain></SENT>
+<SENT sid="54" pm="."><plain>Plugging in the imputed Z-score statistics into conditional analysis (impG+meta) can lead to inflated type I errors. </plain></SENT>
+<SENT sid="55" pm="."><plain>Finally, discarding studies with missing summary statistics (DISCARD, or complete case analysis) will give valid type I errors, but at the cost of reduced power. </plain></SENT>
+</text></p><p><text><SENT sid="56" pm="."><plain>In the statistics literature, synthesis methods have previously been developed to meta-analyze joint effects from different studies, where the participating studies measure different predictors [13, 14]. </plain></SENT>
+<SENT sid="57" pm="."><plain>The scenario is similar to the meta-analysis of genetic association studies with missing data. </plain></SENT>
+<SENT sid="58" pm="."><plain>Yet, in genetic association analysis, usually only marginal effects are reported and joint effects have to be approximated from marginal effects. </plain></SENT>
+<SENT sid="59" pm="."><plain>The synthesis methods also lack an implementation for genetic association studies, which greatly limits their impact. </plain></SENT>
+<SENT sid="60" pm="."><plain>To explore the usefulness of synthesis methods, we proposed and implemented an extension of the synthesis methods termed SYN+, which can be applied in genetic association meta-analysis. </plain></SENT>
+</text></p><p><text><SENT sid="61" pm="."><plain>To overcome these limitations of existing GWAS meta-analysis methods and improve power, we developed an improved conditional meta-analysis method called partial correlation based score statistic (PCBS) that borrows strength across multiple participating studies and consistently estimates the partial variance-covariance matrices between genotypes and phenotypes. </plain></SENT>
+<SENT sid="62" pm="."><plain>We conducted extensive simulations, and showed that our PCBS method has valid type I error and the highest power among all the methods. </plain></SENT>
+<SENT sid="63" pm="."><plain>On the other hand, COJO, impG+meta and REPLACE0 can lead to highly inflated type I errors in the presence of missing data. </plain></SENT>
+<SENT sid="64" pm="."><plain>SYN+, while having valid type I errors, is consistently less powerful than PCBS, especially when the missingness is high or the conditioned variants have larger effects. </plain></SENT>
+<SENT sid="65" pm="."><plain>We also demonstrated the clear advantage of PCBS in the meta-analysis of cigarettes per day phenotype. </plain></SENT>
+<SENT sid="66" pm="."><plain>PCBS identified many more independently associated variants from known loci, compared to alternative approaches. </plain></SENT>
+</text></p><p><text><SENT sid="67" pm="."><plain>We implemented the proposed methods in the open-source software tools RAREMETAL [15] and R package rareMETALS and made them publically available (<ext-link ext-link-type="uri" xlink:href="https://genome.sph.umich.edu/wiki/Rare_Variant_Analysis_and_Meta-Analysis">https://genome.sph.umich.edu/wiki/Rare_Variant_Analysis_and_Meta-Analysis</ext-link>). </plain></SENT>
+<SENT sid="68" pm="."><plain>RAREMETAL and rareMETALS use marginal score statistics and exact variance-covariance matrix as input, which is suitable for rare variant association analysis. </plain></SENT>
+<SENT sid="69" pm="."><plain>We also implemented the same method in rareGWAMA (<ext-link ext-link-type="uri" xlink:href="https://github.com/dajiangliu/rareGWAMA">https://github.com/dajiangliu/rareGWAMA</ext-link>), which conducts meta-analysis using approximate covariance matrix from a reference panel. </plain></SENT>
+<SENT sid="70" pm="."><plain>These methods and tools have been applied and tested in a few large scale meta-analyses. </plain></SENT>
+<SENT sid="71" pm="."><plain>We expect these methods to play an important role in sequence-based genetic studies and lead to important genetic discoveries. </plain></SENT>
+</text></p></sec></SecTag><SecTag type="METHODS"><sec sec-type="materials|methods" id="sec002"><title><text><SENT sid="72" pm="."><plain>Materials and methods </plain></SENT>
+</text></title><p><text><SENT sid="73" pm="."><plain>In this section, we first review the standard meta-analysis methods for single variant and gene-level association tests when analyzing datasets without missing summary statistics from contributing studies. </plain></SENT>
+<SENT sid="74" pm="."><plain>We then illustrated the limitations of the existing methods and described the new method PCBS for valid and powerful conditional analysis in the presence of missing summary statistics from contributing studies. </plain></SENT>
+</text></p><sec id="sec003"><title><text><SENT sid="75" pm="."><plain>Overview of meta-analysis methods </plain></SENT>
+</text></title><p><text><SENT sid="76" pm="."><plain>We denote the genotype for individual i at variant site j in study k as Gijk, which can take values of 0,1 or 2, representing the number of the minor (or alternative) alleles in the locus. </plain></SENT>
+<SENT sid="77" pm="."><plain>When the genotypes are imputed or generated from low pass sequencing studies, genotype dosage can be used in association analysis. </plain></SENT>
+<SENT sid="78" pm="."><plain>In this case, Gijk will be the expected number of minor (or alternative) allele counts. </plain></SENT>
+<SENT sid="79" pm="."><plain>We denote the non-genotype covariates as Zik, which includes a vector of 1’s to incorporate the intercept in the model. </plain></SENT>
+<SENT sid="80" pm="."><plain>Single variant association can be analyzed in a regression model: Yk = Gjkβj + Zkγk + ek. </plain></SENT>
+<SENT sid="81" pm="."><plain>The score statistic for single variant association takes the form: Ujk=1σ^02∑iGijk(Yik−y^ik)(1) where y^ik=Zikγ^k,γ^k is the covariate effect, and σ^0 is the standard deviation of the phenotype residuals estimated under the null model M0 Yk=Zkγk+ek,ek∼MVN(0,σ^02I)(M0) </plain></SENT>
+</text></p><p><text><SENT sid="82" pm="."><plain>Without the loss of generality, we assume that the phenotype residuals are standardized in each study as in commonly done in practice. </plain></SENT>
+<SENT sid="83" pm="."><plain>So σ^0 is often equal 1 in practice. </plain></SENT>
+<SENT sid="84" pm="."><plain>We denote the vector of score statistics in a genetic region as Uk = (U1k,…,UJk). </plain></SENT>
+<SENT sid="85" pm="."><plain>The variance-covariance matrix between scores statistics is equal to Vk=1/σ^02[Gk′Gk−GkTZk(ZkTZk)−1ZkTGk](2) </plain></SENT>
+</text></p><p><text><SENT sid="86" pm="."><plain>For our illustration of the method, we focus on the analysis of continuous outcomes. </plain></SENT>
+<SENT sid="87" pm="."><plain>Yet, the meta-analysis and conditional meta-analysis methods work for both continuous outcomes and binary outcomes. </plain></SENT>
+</text></p><p><text><SENT sid="88" pm="."><plain>The meta-analysis score statistics and their covariance matrices are calculated using the Mantel-Haenszel method, i.e. U = ∑k Uk and V = ∑k Vk. </plain></SENT>
+<SENT sid="89" pm="."><plain>The meta-analysis statistics can be used to estimate the joint effects for variants 1,…,J, i.e. β^=V−1U. </plain></SENT>
+</text></p><p><text><SENT sid="90" pm="."><plain>We denote the score statistics at candidate and conditioned variant sites as U=(UG,UG*), where G and G*represent the genotypes from the candidate and conditioned variants respectively. </plain></SENT>
+<SENT sid="91" pm="."><plain>The variance covariance matrix for U equals to V=(VGVGG*VG*GVG*) </plain></SENT>
+</text></p><p><text><SENT sid="92" pm="."><plain>The conditional score statistic can be calculated by UG|G*=(UG−VGG*VG*−1UG*)σ^02/σ^c2(3) where σ^c2 is the residual variance estimated from the conditional analysis model Yk=Gk*βG*+Zkγk+ek,ek∼MVN(0,σ^c2I)(Mc) </plain></SENT>
+</text></p><p><text><SENT sid="93" pm="."><plain>After conditioning on the genotypes G*, the residual variance equals to σ^c2=σ^02(1−1NUG*′VG*−1UG*). </plain></SENT>
+</text></p><p><text><SENT sid="94" pm="."><plain>It is easy to verify that the variance of the conditional score statistics under Mc is equal to VG|G*=(VG−VGG*VG*−1VG*G)σ^02/σ^c2(4) </plain></SENT>
+</text></p><p><text><SENT sid="95" pm="."><plain>The single variant and gene-level tests in conditional analysis can be calculated based upon the conditional score statistics UG|G* and the covariance matrix VG|G*. </plain></SENT>
+<SENT sid="96" pm="."><plain>Details are provided in S1 Text. </plain></SENT>
+</text></p></sec><sec id="sec004"><title><text><SENT sid="97" pm="."><plain>Partial correlation based score statistics (PCBS) </plain></SENT>
+</text></title><p><text><SENT sid="98" pm="."><plain>Reviewing formulae (3) and (4), we note that the conditional score statistics and their variances only depend on the partial variance-covariance matrix between the phenotypes and the genotypes after the adjustment of covariates. </plain></SENT>
+<SENT sid="99" pm="."><plain>The key idea underlying our approach is to derive a consistent estimator for the partial covariances in the presence of missing summary statistics and to use it for unbiased conditional analysis. </plain></SENT>
+</text></p><p><text><SENT sid="100" pm="."><plain>In statistics, to calculate the partial covariance between random variables Gjk and Yk adjusting for variable Zk, we first regress out covariate Zk from both Gjk and Yk, and then calculate the covariance between the residuals. </plain></SENT>
+<SENT sid="101" pm="."><plain>Specifically, ρ^GjkYk|Zk=1Njkσ^02Gjk′(Yk−Zkγ^)(5) </plain></SENT>
+</text></p><p><text><SENT sid="102" pm="."><plain>For a given study, it is easy to check that the partial covariances are in fact scaled score statistics, i.e. </plain></SENT>
+</text></p><disp-formula id="pgen.1007452.e018"><alternatives><graphic xlink:href="pgen.1007452.e018.jpg" id="pgen.1007452.e018g" mimetype="image" position="anchor" orientation="portrait"/><mml:math id="M18"><mml:msub><mml:mrow><mml:mover accent="true"><mml:mrow><mml:mi>ρ</mml:mi></mml:mrow><mml:mo>^</mml:mo></mml:mover></mml:mrow><mml:mrow><mml:msub><mml:mrow><mml:mi>G</mml:mi></mml:mrow><mml:mrow><mml:mi>j</mml:mi><mml:mi>k</mml:mi></mml:mrow></mml:msub><mml:msub><mml:mrow><mml:mi>Y</mml:mi></mml:mrow><mml:mrow><mml:mi>k</mml:mi></mml:mrow></mml:msub><mml:mo>|</mml:mo><mml:msub><mml:mrow><mml:mi>Z</mml:mi></mml:mrow><mml:mrow><mml:mi>k</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:msub><mml:mo>=</mml:mo><mml:mfrac><mml:mrow><mml:mn>1</mml:mn></mml:mrow><mml:mrow><mml:msub><mml:mrow><mml:mi>N</mml:mi></mml:mrow><mml:mrow><mml:mi>j</mml:mi><mml:mi>k</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:mfrac><mml:msub><mml:mrow><mml:mi>U</mml:mi></mml:mrow><mml:mrow><mml:mi>j</mml:mi><mml:mi>k</mml:mi></mml:mrow></mml:msub></mml:math></alternatives><label>(6)</label></disp-formula><disp-formula id="pgen.1007452.e019"><alternatives><graphic xlink:href="pgen.1007452.e019.jpg" id="pgen.1007452.e019g" mimetype="image" position="anchor" orientation="portrait"/><mml:math id="M19"><mml:msub><mml:mrow><mml:mover accent="true"><mml:mrow><mml:mi>ρ</mml:mi></mml:mrow><mml:mo>^</mml:mo></mml:mover></mml:mrow><mml:mrow><mml:msub><mml:mrow><mml:mi>G</mml:mi></mml:mrow><mml:mrow><mml:msub><mml:mrow><mml:mi>j</mml:mi></mml:mrow><mml:mrow><mml:mn>1</mml:mn></mml:mrow></mml:msub><mml:mi>k</mml:mi></mml:mrow></mml:msub><mml:msub><mml:mrow><mml:mi>G</mml:mi></mml:mrow><mml:mrow><mml:msub><mml:mrow><mml:mi>j</mml:mi></mml:mrow><mml:mrow><mml:mn>2</mml:mn></mml:mrow></mml:msub><mml:mi>k</mml:mi></mml:mrow></mml:msub><mml:mo>|</mml:mo><mml:msub><mml:mrow><mml:mi>Z</mml:mi></mml:mrow><mml:mrow><mml:mi>k</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:msub><mml:mo>=</mml:mo><mml:mfrac><mml:mrow><mml:mn>1</mml:mn></mml:mrow><mml:mrow><mml:msub><mml:mrow><mml:mi>N</mml:mi></mml:mrow><mml:mrow><mml:mi>j</mml:mi><mml:mi>k</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:mfrac><mml:msub><mml:mrow><mml:mi>V</mml:mi></mml:mrow><mml:mrow><mml:msub><mml:mrow><mml:mi>j</mml:mi></mml:mrow><mml:mrow><mml:mn>1</mml:mn></mml:mrow></mml:msub><mml:msub><mml:mrow><mml:mi>j</mml:mi></mml:mrow><mml:mrow><mml:mn>2</mml:mn></mml:mrow></mml:msub><mml:mi>k</mml:mi></mml:mrow></mml:msub></mml:math></alternatives><label>(7)</label></disp-formula><p><text><SENT sid="103" pm="."><plain>Therefore, in meta-analysis, we propose to estimate the partial covariance between genotype Gij, phenotype Yi after adjusting the covariate effect Zi using all available summary statistics: ρ^GY|Z,j=∑k∈{k:Mjk=1}Ujk∑k∈{k:Mjk=1}Njk(8) ρ^GG|Z,j1j2=∑k∈{k:Mj1k=Mj2k=1}Vj1j2k∑k∈{k:Mj1k=Mj2k=1}Njk(9) </plain></SENT>
+</text></p><p><text><SENT sid="104" pm="."><plain>Here Mjk is an indicator variable that takes the value of 1 when the summary statistic at variant site j is measured in study k. For notational convenience, we define the matrices of partial covariance as ρ^GY|Z=(ρ^GY,j)j=1,…,J and ρ^GG|Z=(ρ^GG|Z,j1j2)j1,j2=1,…,J. </plain></SENT>
+<SENT sid="106" pm="."><plain>Under the fixed effect model, we have E(Vk−1Uk)=β for all k. We showed in S1 Text that E(ρ^GG|Z−1ρ^GY|Z)=β. </plain></SENT>
+<SENT sid="108" pm="."><plain>Therefore, the partial covariance matrices can be consistently estimated even in the presence of missing summary statistics. </plain></SENT>
+</text></p><p><text><SENT sid="109" pm="."><plain>We define partial correlation based score statistics as U˜G|G*=ρ^GY|Z−ρ^GG*|Zρ^G*G*|Z−1ρ^G*Y|Z(10) </plain></SENT>
+</text></p><p><text><SENT sid="110" pm="."><plain>The covariances for U˜G|G* are equal to V˜G|G*=cov(ρ^GY|Z)+ρ^GG*|Zρ^G*G*|Z−1cov(ρ^G*Y|Z)ρ^G*G*|Z−1ρ^G*G|Z−ρ^GG*|Zρ^G*G*|Z−1cov(ρ^G*Y|Z,ρ^GY|Z)−cov(ρ^GY|Z,ρ^G*Y|Z)ρ^G*G*|Z−1ρ^G*G|Z(11) </plain></SENT>
+</text></p><p><text><SENT sid="111" pm="."><plain>It is easy to verify that the conditional analysis using the estimator U˜G|G* is equivalent to the standard score statistics when no missing data are present. </plain></SENT>
+<SENT sid="112" pm="."><plain>In the presence of missing data, the partial correlation based statistic U˜G|G* remains consistent. </plain></SENT>
+<SENT sid="113" pm="."><plain>The conditional association analysis can be performed by replacing the standard score statistic with a partial correlation based score statistic. </plain></SENT>
+<SENT sid="114" pm="."><plain>Details for calculating single variant and gene-level conditional association statistics can be found in S1 Text. </plain></SENT>
+</text></p><sec id="sec005"><title><text><SENT sid="115" pm="."><plain>Extensions of PCBS to approximate conditional analysis </plain></SENT>
+</text></title><p><text><SENT sid="116" pm="."><plain>For rare variant association meta-analysis, it is recommended to use exact covariance matrix for conditional analysis and for gene-level association analysis. </plain></SENT>
+<SENT sid="117" pm="."><plain>Using a reference panel to approximate the covariance between association statistics may lead to biases, as shown in Hu et al [16]. </plain></SENT>
+<SENT sid="118" pm="."><plain>Nonetheless, our proposed conditional analysis method can also work with approximate covariance matrix for more common variants using LD information from a reference panel. </plain></SENT>
+<SENT sid="119" pm="."><plain>Specifically the covariance between score statistics Uj1k and Uj2k can be approximated by cov(Uj1k,Uj2k)≈rj1j2Vj1j1kVj2j2k, where rj1j2 is the correlation coefficient between the genotypes of variants j1 and j2 estimated from a reference panel So the approximate covariance matrix for the kth study can be written as V˜k=diag(V1,1,k,…,VJ,J,k)Rdiag(V1,1,k,…,VJ,J,k)withR=(rj1j2)1≤j1,j2≤J. </plain></SENT>
+</text></p><p><text><SENT sid="120" pm="."><plain>The PCBS method can be implemented using the approximate covariance matrices as in (10) and (11). </plain></SENT>
+</text></p></sec></sec><sec id="sec006"><title><text><SENT sid="121" pm="."><plain>Imputation based methods in the presence of missing summary statistics </plain></SENT>
+</text></title><p><text><SENT sid="122" pm="."><plain>When the contributed summary association statistics from participating studies contain missing values, a natural strategy is to replace the missing values using imputation. </plain></SENT>
+<SENT sid="123" pm="."><plain>Several imputation methods were previously developed. </plain></SENT>
+<SENT sid="124" pm="."><plain>One method is REPLACE0, which is to replace the missing values by 0. </plain></SENT>
+<SENT sid="125" pm="."><plain>We denote the resulting statistics as U0 and V0. </plain></SENT>
+<SENT sid="126" pm="."><plain>To mathematically describe this method, we define an indicator variable Mjk, which takes value 1 if the summary statistics at site j in study k is measured and 0 if missing. </plain></SENT>
+<SENT sid="127" pm="."><plain>The meta-analysis score statistic is calculated by Uj0=∑k∈{k:Mjk=1}UjkandVj1j20=∑k∈{k:Mj1k=Mj2k=1}Vj1j2k </plain></SENT>
+</text></p><p><text><SENT sid="128" pm="."><plain>We proved in S1 Text that replacing missing summary association statistics with zero will bias the genetic effect estimate, i.e. E(UG*0)≠VG*0βG*. </plain></SENT>
+<SENT sid="129" pm="."><plain>As a consequence, under the null hypothesis that the candidate variant is not associated with the phenotype, the expectation of the conditional score statistics is not equal to 0, i.e. E(UG|G*)=VGG*βG*−VGG*0(VG*0)−1E(UG*0)≠0. </plain></SENT>
+<SENT sid="130" pm="."><plain>The type I error for conditional analysis can be highly inflated. </plain></SENT>
+</text></p><p><text><SENT sid="131" pm="."><plain>A more sophisticated set of methods is to impute missing summary statistics based upon LD information. </plain></SENT>
+<SENT sid="132" pm="."><plain>Yet, the genetic effect estimates based upon the imputed Z-score statistics are often biased, unless the following condition holds E[Zimp]=Σimp,tagΣtag−1E[Ztag] where Zimp and Ztag are Z-score statistics at the missing and tagSNP sites, Σimp,tag and Σtag are genotype correlation matrices. </plain></SENT>
+<SENT sid="133" pm="."><plain>A special case for this condition is that both the tagSNP and missing variants have null effects. </plain></SENT>
+<SENT sid="134" pm="."><plain>Similar to REPLACE0, applying impG+meta method can lead to inflated type I errors. </plain></SENT>
+</text></p><sec id="sec007"><title><text><SENT sid="135" pm="."><plain>DISCARD method </plain></SENT>
+</text></title><p><text><SENT sid="136" pm="."><plain>An alternative approach we call DISCARD, is to remove studies with missing summary statistics and only use studies with complete data. </plain></SENT>
+<SENT sid="137" pm="."><plain>The meta-analysis score statistics under this analysis strategy are given by: Ujrm=∑k∈{k:Mjk=1,∀j}Ujk,Vj1j2rm=∑k∈{k:Mjk=1,∀j}Vj1j2k </plain></SENT>
+</text></p><p><text><SENT sid="138" pm="."><plain>An obvious limitation of the DISCARD method is that it may result in the removal of a large number of studies and a significant loss of power. </plain></SENT>
+</text></p></sec><sec id="sec008"><title><text><SENT sid="139" pm="."><plain>SYN+ method–Extension of synthesis method to meta-analysis of genetic association studies </plain></SENT>
+</text></title><p><text><SENT sid="140" pm="."><plain>Synthesis methods have been developed in the statistics literature for combining the joint effects of multiple predictors in a meta-analysis [13]. </plain></SENT>
+<SENT sid="141" pm="."><plain>The method can handle the scenario where different studies measure different sets of predictors. </plain></SENT>
+<SENT sid="142" pm="."><plain>The published methods only considered the simplest scenarios where at least one study measures the full set of variables. </plain></SENT>
+<SENT sid="143" pm="."><plain>Additionally, the published synthesis methods lack an implementation that can be applied in genetic association meta-analysis. </plain></SENT>
+</text></p><p><text><SENT sid="144" pm="."><plain>Our extension, the SYN+ method includes the following steps: </plain></SENT>
+</text></p><list list-type="order"><list-item><p><text><SENT sid="145" pm="."><plain>Derive estimating equations using marginal SNP effects </plain></SENT>
+</text></p><p><text><SENT sid="146" pm="."><plain>The joint effect needed by the synthesis method can be obtained using the shared score statistics and their covariance matrices. </plain></SENT>
+<SENT sid="147" pm="."><plain>To facilitate the presentation of the method, we re-write the full model, separating the measured (G{j:Mjk=1}) and unmeasured variants (G{j:Mjk=0}). </plain></SENT>
+<SENT sid="148" pm="."><plain>The full model is given by Yk=G{j:Mjk=1}β{j:Mjk=1}+G{j:Mjk=0}β{j:Mjk=0}+Zkγk+ϵ(Mfull) </plain></SENT>
+</text></p><p><text><SENT sid="149" pm="."><plain>The residual error from Mfull satisfies ϵ∼N(0,σf2). </plain></SENT>
+</text></p><p><text><SENT sid="150" pm="."><plain>The score statistics from the measured variants satisfy E(V{j1,j2:Mj1k=Mj2k=1},k−1U{j:Mjk=1},k)=β{j:Mjk=1}+V{j1,j2:Mj1k=Mj2k=1},k−1V{j1,j2:Mj1k=1,Mj2k=0},kβ{j:Mjk=0}(12) </plain></SENT>
+</text></p><p><text><SENT sid="151" pm="."><plain>The formula (12) can be viewed as an estimating equation for the unknown parameters β. </plain></SENT>
+</text></p></list-item><list-item><p><text><SENT sid="152" pm="."><plain>Estimate covariance matrix between genetic effects: </plain></SENT>
+</text></p><p><text><SENT sid="153" pm="."><plain>To be able to fit the estimating Eq in (12), we need to estimate the covariance matrix between score statistics, from both the measured variants and the unmeasured variants. </plain></SENT>
+<SENT sid="154" pm="."><plain>For exact conditional analysis, the covariance matrix can be estimated using formula (8) and (9). </plain></SENT>
+<SENT sid="155" pm="."><plain>For approximate conditional analysis, the same method can be used with the approximate covariance matrix V˜k </plain></SENT>
+</text></p></list-item><list-item><p><text><SENT sid="156" pm="."><plain>Estimate the joint effects by regression: </plain></SENT>
+</text></p><p><text><SENT sid="157" pm="."><plain>As in the original synthesis method, the joint effects β can be estimated by the estimating Eq in (12). </plain></SENT>
+</text></p><p><text><SENT sid="158" pm="."><plain>The estimating Eq (12) uses the joint effects of the measured variants from each participating study as input. </plain></SENT>
+<SENT sid="159" pm="."><plain>The variance of V{j1,j2:Mj1k=Mj2k=1},k−1U{j:Mjk=1},k is influenced by both the residual variance from model Mfull as well as the phenotypic variance explained by the unmeasured variants in study k. When missing rate is higher or when the unmeasured variants have larger effects, V{j1,j2:Mj1k=Mj2k=1},k−1U{j:Mjk=1},k can be noisier and have larger variance. </plain></SENT>
+<SENT sid="161" pm="."><plain>PCBS, on the other hand, aggregates information from all studies, and jointly models the effects of all variants (including the variants that may be missing from a particular study but measured in others). </plain></SENT>
+<SENT sid="162" pm="."><plain>Therefore, PCBS is statistically more efficient than SYN+, even though the SYN+ method gives unbiased estimates of the joint effect. </plain></SENT>
+<SENT sid="163" pm="."><plain>The power for the SYN+ method can be much lower than PCBS when the missing rate is high or when the conditioned variants explain a larger fraction of the trait variance. </plain></SENT>
+</text></p></list-item></list></sec></sec><sec id="sec009"><title><text><SENT sid="164" pm="."><plain>Simulation study </plain></SENT>
+</text></title><p><text><SENT sid="165" pm="."><plain>We conducted extensive simulations to evaluate the performance of PCBS as well as 5 alternative approaches, including 1) impG+meta; 2) COJO; 3) REPLACE0; 4) DISCARD and 5) SYN+ using simulated data. </plain></SENT>
+<SENT sid="166" pm="."><plain>We simulated genetic data following a coalescent model that we previously used for evaluating rare variant association analysis methods [2]. </plain></SENT>
+<SENT sid="167" pm="."><plain>The model captures an ancient population bottleneck and recent explosive population growth. </plain></SENT>
+<SENT sid="168" pm="."><plain>Model parameters were tuned such that the site frequency spectrum and the fraction of the singletons of the simulated data match that of large scale sequence datasets. </plain></SENT>
+</text></p><p><text><SENT sid="169" pm="."><plain>For quantitative traits, phenotype data from each cohort were simulated according to the linear model: Yi=β0+∑j=1JGijβj+∑j=1JGij*γj+ϵi where Gij and Gij* denote the candidate and conditioned variant genotypes, and βj and γj are their effects respectively. </plain></SENT>
+<SENT sid="170" pm="."><plain>The model assumes that the genetic variants have additive effects on the phenotype. </plain></SENT>
+</text></p><p><text><SENT sid="171" pm="."><plain>The genetic effects for candidate variants follow a mixture normal distribution, which accommodates the possibility that a genetic variant can be causal (with probability c) or non-causal (with probability 1 − c): βj∼(1−c)×I(0)+c×N(0,τβ2). </plain></SENT>
+<SENT sid="172" pm="."><plain>The genetic effects for the conditioned variants follow: γj∼N(0,τγ2). </plain></SENT>
+</text></p><p><text><SENT sid="173" pm="."><plain>To evaluate the influence of missing data, we randomly chose a certain fraction (10% 30% or 50%) of the sites from each study and masked them as missing. </plain></SENT>
+<SENT sid="174" pm="."><plain>We then applied the new method PCBS, along with impG+meta, COJO, DISCARD, REPLACE0 and SYN+ to the data. </plain></SENT>
+<SENT sid="175" pm="."><plain>In our evaluations, we used the exact LD with COJO and impG+meta, in order to remove the influence of approximate LD and focus on the impact of missing summary statistics on the power and type I error. </plain></SENT>
+<SENT sid="176" pm="."><plain>We evaluated the type I errors and power for each approach under a variety of scenarios with different genetic effect sizes, fractions of causal variants in the gene region, and the fractions of missing data. </plain></SENT>
+</text></p></sec><sec id="sec010"><title><text><SENT sid="177" pm="."><plain>Meta-analysis of datasets with cigarettes per day phenotype </plain></SENT>
+</text></title><p><text><SENT sid="178" pm="."><plain>To evaluate the effectiveness of methods in real datasets, we applied our methods to a meta-analysis of seven cohorts with a cigarettes-per-day (CPD) phenotype, a key measurement for studying nicotine dependence. </plain></SENT>
+<SENT sid="179" pm="."><plain>Participating studies were the Minnesota Center for Twin and Family Research (MCTFR) [17–19], SardiNIA[20], METabolic Syndrome In Men (METSIM)[21], Genes for Good [22], COPDGene with samples of European ancestry[23], Center for Antisocial Drug Dependence (CADD) [24], and full UK Biobank. </plain></SENT>
+<SENT sid="180" pm="."><plain>Genotypes were imputed using the Haplotype Reference Consortium panel [25] and the Michigan Imputation Server [26] (with the exception of UK Biobank dataset, which was imputed centrally by the UK Biobank team). </plain></SENT>
+<SENT sid="181" pm="."><plain>Summary association statistics from the seven cohorts were generated using RVTESTS [27], and meta-analysis performed using rareMETALS with the PCBS statistics and other alternative approaches. </plain></SENT>
+<SENT sid="182" pm="."><plain>Detailed descriptions of the cohorts are available in S1 Text section 4, including the methods for association analyses and the adjusted covariates. </plain></SENT>
+</text></p><p><text><SENT sid="183" pm="."><plain>To ensure the validity of our association analysis results, we conducted extensive quality control for the imputed genotype data. </plain></SENT>
+<SENT sid="184" pm="."><plain>We filtered out variant sites with the imputation quality metric R2 &lt; .7, and sites that showed large differences in allele frequencies from the imputation reference panel. </plain></SENT>
+<SENT sid="185" pm="."><plain>Imputation dosages were used in the association analysis. </plain></SENT>
+</text></p><p><text><SENT sid="186" pm="."><plain>For each sentinel SNP with genome-wide significance (α = 5×10−8), we defined the locus as the 1 MB window surrounding it. </plain></SENT>
+<SENT sid="187" pm="."><plain>We applied iterative single variant conditional analysis to identify independently associated variants in each locus. </plain></SENT>
+<SENT sid="188" pm="."><plain>We started by conditioning on the most significant variant from marginal association analysis. </plain></SENT>
+<SENT sid="189" pm="."><plain>After each round of the association analysis, if the top variant remained statistically significant, we added the top variant to the set of conditioned variants, and performed an additional round of association testing. </plain></SENT>
+<SENT sid="190" pm="."><plain>We applied the six methods to analyze the data, including the PCBS statistic, SYN+, impG+meta, REPLACE0, DISCARD and COJO. </plain></SENT>
+<SENT sid="191" pm="."><plain>In order to examine if the low frequency variants in aggregate can be explained by the identified independently associated variants, we also performed gene-level association analysis for rare variants with MAF&lt;1%, conditional on the identified independently associated variants. </plain></SENT>
+</text></p></sec></sec></SecTag><SecTag type="RESULTS"><sec sec-type="results" id="sec011"><title><text><SENT sid="192" pm="."><plain>Results </plain></SENT>
+</text></title><sec id="sec012"><title><text><SENT sid="193" pm="."><plain>Evaluation of type I error </plain></SENT>
+</text></title><p><text><SENT sid="194" pm="."><plain>We evaluated the type I errors for the six conditional analysis methods PCBS, SYN+, COJO (with exact LD), impG+meta, REPLACE0, and DISCARD. </plain></SENT>
+<SENT sid="195" pm="."><plain>Scenarios were considered for different combinations of the fractions of missing data, the genetic effects of the variants in the candidate gene, and the genetic effects of the conditioned variants. </plain></SENT>
+</text></p><p><text><SENT sid="196" pm="."><plain>First, we noted that PCBS, SYN+ and DISCARD are the only three methods that have controlled type I errors across all scenarios, consistent with our theoretical expectation (Table 1). </plain></SENT>
+<SENT sid="197" pm="."><plain>The type I error rate for the other three methods, i.e. impG+meta, REPLACE0 and COJO are inflated in a number of scenarios. </plain></SENT>
+<SENT sid="198" pm="."><plain>The inflation tends to increase with the effect of the conditioned variant(s) and the rate of missingness. </plain></SENT>
+<SENT sid="199" pm="."><plain>In many scenarios, the type I error can be &gt;100X inflated over the significance threshold (α = 5×10−8). </plain></SENT>
+<SENT sid="200" pm="."><plain>For example, when the conditioned variant effect is .04, and the association statistics from 30% of the variant sites are missing, type I errors for impG+meta, COJO and REPLACE0 are .015, .57 and .74 under the significance threshold of α = 0.005. </plain></SENT>
+<SENT sid="201" pm="."><plain>When the missing rate is 50%, and the conditioned variant effects is .08, the type I errors for the three methods become .25, .65, and .60. </plain></SENT>
+</text></p><SecTag type="TABLE"><table-wrap id="pgen.1007452.t001" orientation="portrait" position="float"><object-id pub-id-type="doi">10.1371/journal.pgen.1007452.t001</object-id><label>Table 1</label><caption><title><text><SENT sid="202" pm="."><plain>Power and type I errors of meta-analysis of single variant tests in the presence of missing data for continuous outcomes. </plain></SENT>
+</text></title><p><text><SENT sid="203" pm="."><plain>Datasets were simulated according to the genetic and phenotype model described in METHODS. </plain></SENT>
+<SENT sid="204" pm="."><plain>Meta-analysis was performed to combine 20 cohorts with 1500 individuals each. </plain></SENT>
+<SENT sid="205" pm="."><plain>For each replicate, summary association statistics were generated, and a certain fraction of the generated summary statistics were masked as missing. </plain></SENT>
+<SENT sid="206" pm="."><plain>Scenarios with different combinations of known variant effects, candidate variant effects and fractions of missingness were considered. </plain></SENT>
+<SENT sid="207" pm="."><plain>Six analysis strategies were considered: 1) PCBS; 2) SYN+; 3) ImpG+meta; 4) COJO; 5) DISCARD and 6) REPLACE0. </plain></SENT>
+<SENT sid="208" pm="."><plain>Type I error and power were evaluated using 105 replicates under the significance threshold of α = 0.005. </plain></SENT>
+</text></p></caption><alternatives><graphic id="pgen.1007452.t001g" xlink:href="pgen.1007452.t001"/><table frame="hsides" rules="groups"><colgroup span="1"><col align="left" valign="middle" span="1"/><col align="left" valign="middle" span="1"/><col align="left" valign="middle" span="1"/><col align="left" valign="middle" span="1"/><col align="left" valign="middle" span="1"/><col align="left" valign="middle" span="1"/><col align="left" valign="middle" span="1"/><col align="left" valign="middle" span="1"/><col align="left" valign="middle" span="1"/><col align="left" valign="middle" span="1"/></colgroup><thead><tr><th align="center" rowspan="2" colspan="1"><text><SENT sid="209" pm="."><plain>Conditioned Variant Effect </plain></SENT>
+</text></th><th align="center" rowspan="2" colspan="1"><text><SENT sid="210" pm="."><plain>Candidate Variant Effect </plain></SENT>
+</text></th><th align="center" rowspan="2" colspan="1"><text><SENT sid="211" pm="."><plain>Fraction of Missing Data </plain></SENT>
+</text></th><th align="center" colspan="7" rowspan="1"><text><SENT sid="212" pm="."><plain>Type I Error/Power </plain></SENT>
+</text></th></tr><tr><th align="center" rowspan="1" colspan="1"><text><SENT sid="213" pm="."><plain>PCBS </plain></SENT>
+</text></th><th align="center" rowspan="1" colspan="1"><text><SENT sid="214" pm="."><plain>SYN+ </plain></SENT>
+</text></th><th align="center" rowspan="1" colspan="1"><text><SENT sid="215" pm="."><plain>ImpG+Meta </plain></SENT>
+</text></th><th align="center" rowspan="1" colspan="1"><text><SENT sid="216" pm="."><plain>COJO </plain></SENT>
+</text></th><th align="center" rowspan="1" colspan="1"><text><SENT sid="217" pm="."><plain>DISCARD </plain></SENT>
+</text></th><th align="center" rowspan="1" colspan="1"><text><SENT sid="218" pm="."><plain>REPLACE0 </plain></SENT>
+</text></th><th align="center" rowspan="1" colspan="1"><text><SENT sid="219" pm="."><plain>Analyze the Full Dataset [Gold Standard] </plain></SENT>
+</text></th></tr></thead><tbody><tr><td align="center" rowspan="1" colspan="1"/><td align="center" rowspan="1" colspan="1"/><td align="center" rowspan="1" colspan="1"/><td align="center" colspan="7" rowspan="1"><text><SENT sid="220" pm="."><plain>Type I Error </plain></SENT>
+</text></td></tr><tr><td align="center" rowspan="1" colspan="1"><text><SENT sid="221" pm="."><plain>0.04 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="222" pm="."><plain>0 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="223" pm="."><plain>0.1 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="224" pm="."><plain>5.0 × 10−3 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="225" pm="."><plain>4.4 × 10−3 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="226" pm="."><plain>5.2 × 10−3 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="227" pm="."><plain>0.065 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="228" pm="."><plain>4.1 × 10−3 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="229" pm="."><plain>9.5 × 10−3 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="230" pm="."><plain>4.9 × 10−3 </plain></SENT>
+</text></td></tr><tr><td align="center" rowspan="1" colspan="1"><text><SENT sid="231" pm="."><plain>0.04 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="232" pm="."><plain>0 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="233" pm="."><plain>0.3 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="234" pm="."><plain>5.4 × 10−3 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="235" pm="."><plain>4.0 × 10−3 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="236" pm="."><plain>0.015 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="237" pm="."><plain>0.57 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="238" pm="."><plain>3.8 × 10−3 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="239" pm="."><plain>0.14 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="240" pm="."><plain>5.4 × 10−3 </plain></SENT>
+</text></td></tr><tr><td align="center" rowspan="1" colspan="1"><text><SENT sid="241" pm="."><plain>0.04 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="242" pm="."><plain>0 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="243" pm="."><plain>0.5 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="244" pm="."><plain>5.2 × 10−3 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="245" pm="."><plain>3.5 × 10−3 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="246" pm="."><plain>0.021 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="247" pm="."><plain>0.61 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="248" pm="."><plain>1.8 × 10−3 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="249" pm="."><plain>0.46 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="250" pm="."><plain>5.1 × 10−3 </plain></SENT>
+</text></td></tr><tr><td align="center" rowspan="1" colspan="1"><text><SENT sid="251" pm="."><plain>0.08 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="252" pm="."><plain>0 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="253" pm="."><plain>0.1 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="254" pm="."><plain>5.0 × 10−3 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="255" pm="."><plain>3.0 × 10−3 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="256" pm="."><plain>9.3 × 10−3 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="257" pm="."><plain>0.25 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="258" pm="."><plain>2.0 × 10−3 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="259" pm="."><plain>0.025 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="260" pm="."><plain>4.8 × 10−3 </plain></SENT>
+</text></td></tr><tr><td align="center" rowspan="1" colspan="1"><text><SENT sid="261" pm="."><plain>0.08 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="262" pm="."><plain>0 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="263" pm="."><plain>0.3 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="264" pm="."><plain>5.6 × 10−3 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="265" pm="."><plain>1.7 × 10−3 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="266" pm="."><plain>0.12 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="267" pm="."><plain>0.61 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="268" pm="."><plain>2.0 × 10−3 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="269" pm="."><plain>0.45 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="270" pm="."><plain>4.4 × 10−3 </plain></SENT>
+</text></td></tr><tr><td align="center" rowspan="1" colspan="1"><text><SENT sid="271" pm="."><plain>0.08 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="272" pm="."><plain>0 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="273" pm="."><plain>0.5 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="274" pm="."><plain>5.2 × 10−3 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="275" pm="."><plain>1.3 × 10−3 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="276" pm="."><plain>0.25 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="277" pm="."><plain>0.65 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="278" pm="."><plain>9.3 × 10−4 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="279" pm="."><plain>0.60 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="280" pm="."><plain>4.9 × 10−3 </plain></SENT>
+</text></td></tr><tr><td align="center" rowspan="1" colspan="1"/><td align="center" rowspan="1" colspan="1"/><td align="center" rowspan="1" colspan="1"/><td align="center" colspan="7" rowspan="1"><text><SENT sid="281" pm="."><plain>Power </plain></SENT>
+</text></td></tr><tr><td align="center" rowspan="1" colspan="1"><text><SENT sid="282" pm="."><plain>0.04 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="283" pm="."><plain>0.04 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="284" pm="."><plain>0.1 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="285" pm="."><plain>0.22 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="286" pm="."><plain>0.20 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="287" pm="."><plain>- </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="288" pm="."><plain>- </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="289" pm="."><plain>0.092 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="290" pm="."><plain>- </plain></SENT>
+</text></td><td align="center" rowspan="3" colspan="1"><text><SENT sid="291" pm="."><plain>0.22 </plain></SENT>
+</text></td></tr><tr><td align="center" rowspan="1" colspan="1"><text><SENT sid="292" pm="."><plain>0.04 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="293" pm="."><plain>0.04 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="294" pm="."><plain>0.3 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="295" pm="."><plain>0.21 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="296" pm="."><plain>0.18 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="297" pm="."><plain>- </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="298" pm="."><plain>- </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="299" pm="."><plain>0.021 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="300" pm="."><plain>- </plain></SENT>
+</text></td></tr><tr><td align="center" rowspan="1" colspan="1"><text><SENT sid="301" pm="."><plain>0.04 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="302" pm="."><plain>0.04 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="303" pm="."><plain>0.5 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="304" pm="."><plain>0.20 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="305" pm="."><plain>0.17 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="306" pm="."><plain>- </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="307" pm="."><plain>- </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="308" pm="."><plain>4.5 × 10−3 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="309" pm="."><plain>- </plain></SENT>
+</text></td></tr><tr><td align="center" rowspan="1" colspan="1"><text><SENT sid="310" pm="."><plain>0.08 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="311" pm="."><plain>0.04 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="312" pm="."><plain>0.1 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="313" pm="."><plain>0.21 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="314" pm="."><plain>0.17 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="315" pm="."><plain>- </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="316" pm="."><plain>- </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="317" pm="."><plain>0.063 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="318" pm="."><plain>- </plain></SENT>
+</text></td><td align="center" rowspan="3" colspan="1"><text><SENT sid="319" pm="."><plain>0.21 </plain></SENT>
+</text></td></tr><tr><td align="center" rowspan="1" colspan="1"><text><SENT sid="320" pm="."><plain>0.08 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="321" pm="."><plain>0.04 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="322" pm="."><plain>0.3 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="323" pm="."><plain>0.21 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="324" pm="."><plain>0.12 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="325" pm="."><plain>- </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="326" pm="."><plain>- </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="327" pm="."><plain>0.013 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="328" pm="."><plain>- </plain></SENT>
+</text></td></tr><tr><td align="center" rowspan="1" colspan="1"><text><SENT sid="329" pm="."><plain>0.08 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="330" pm="."><plain>0.04 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="331" pm="."><plain>0.5 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="332" pm="."><plain>0.19 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="333" pm="."><plain>0.11 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="334" pm="."><plain>- </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="335" pm="."><plain>- </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="336" pm="."><plain>3.2 × 10−3 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="337" pm="."><plain>- </plain></SENT>
+</text></td></tr><tr><td align="center" rowspan="1" colspan="1"><text><SENT sid="338" pm="."><plain>0.04 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="339" pm="."><plain>0.08 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="340" pm="."><plain>0.1 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="341" pm="."><plain>0.88 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="342" pm="."><plain>0.87 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="343" pm="."><plain>- </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="344" pm="."><plain>- </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="345" pm="."><plain>0.57 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="346" pm="."><plain>- </plain></SENT>
+</text></td><td align="center" rowspan="3" colspan="1"><text><SENT sid="347" pm="."><plain>0.88 </plain></SENT>
+</text></td></tr><tr><td align="center" rowspan="1" colspan="1"><text><SENT sid="348" pm="."><plain>0.04 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="349" pm="."><plain>0.08 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="350" pm="."><plain>0.3 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="351" pm="."><plain>0.87 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="352" pm="."><plain>0.85 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="353" pm="."><plain>- </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="354" pm="."><plain>- </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="355" pm="."><plain>0.12 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="356" pm="."><plain>- </plain></SENT>
+</text></td></tr><tr><td align="center" rowspan="1" colspan="1"><text><SENT sid="357" pm="."><plain>0.04 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="358" pm="."><plain>0.08 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="359" pm="."><plain>0.5 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="360" pm="."><plain>0.86 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="361" pm="."><plain>0.83 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="362" pm="."><plain>- </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="363" pm="."><plain>- </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="364" pm="."><plain>0.017 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="365" pm="."><plain>- </plain></SENT>
+</text></td></tr><tr><td align="center" rowspan="1" colspan="1"><text><SENT sid="366" pm="."><plain>0.08 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="367" pm="."><plain>0.08 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="368" pm="."><plain>0.1 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="369" pm="."><plain>0.88 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="370" pm="."><plain>0.84 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="371" pm="."><plain>- </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="372" pm="."><plain>- </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="373" pm="."><plain>0.49 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="374" pm="."><plain>- </plain></SENT>
+</text></td><td align="center" rowspan="3" colspan="1"><text><SENT sid="375" pm="."><plain>0.88 </plain></SENT>
+</text></td></tr><tr><td align="center" rowspan="1" colspan="1"><text><SENT sid="376" pm="."><plain>0.08 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="377" pm="."><plain>0.08 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="378" pm="."><plain>0.3 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="379" pm="."><plain>0.86 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="380" pm="."><plain>0.76 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="381" pm="."><plain>- </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="382" pm="."><plain>- </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="383" pm="."><plain>0.083 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="384" pm="."><plain>- </plain></SENT>
+</text></td></tr><tr><td align="center" rowspan="1" colspan="1"><text><SENT sid="385" pm="."><plain>0.08 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="386" pm="."><plain>0.08 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="387" pm="."><plain>0.5 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="388" pm="."><plain>0.83 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="389" pm="."><plain>0.74 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="390" pm="."><plain>- </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="391" pm="."><plain>- </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="392" pm="."><plain>0.011 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="393" pm="."><plain>- </plain></SENT>
+</text></td></tr></tbody></table></alternatives></table-wrap></SecTag><p><text><SENT sid="394" pm="."><plain>Second, among the methods with the controlled type I error rates (i.e. SYN+, PCBS and DISCARD), PCBS is consistently the most powerful method (Table 1). </plain></SENT>
+<SENT sid="395" pm="."><plain>The power advantage of PCBS over the other two approaches increases when 1) the conditioned variant(s) have larger effects or 2) the fraction of missing summary association statistics is larger. </plain></SENT>
+<SENT sid="396" pm="."><plain>For example, when candidate variant effect is .04, the conditioned variant effect is .08, and the missing rate of score statistics is 30%, the power for PCBS is .21, which is 75% higher than the power for SYN+ (.12). </plain></SENT>
+<SENT sid="397" pm="."><plain>When the candidate variant effect is.08, the conditioned variant effect is .08, and score statistics from 50% of the variant sites in each participating study are missing, the power for PCBS and SYN+ are respectively .83 and .74. </plain></SENT>
+</text></p><p><text><SENT sid="398" pm="."><plain>Due to the obvious limitations of complete case analysis, the DISCARD method of discarding the studies with missing data can lead to considerable loss of power (Table 1). </plain></SENT>
+<SENT sid="399" pm="."><plain>The power for DISCARD is substantially lower than PCBS and SYN+. </plain></SENT>
+<SENT sid="400" pm="."><plain>In some scenarios where the missingness is high, the power is barely larger than the significance threshold. </plain></SENT>
+</text></p><p><text><SENT sid="401" pm="."><plain>Interestingly, gene-level association tests are affected by two types of missing data with opposite consequences: Missing values at causal variant sites reduce power but missing values at non-causal variant sites tend to reduce noise and thus improve power (Table 2). </plain></SENT>
+<SENT sid="402" pm="."><plain>When missingness is higher, the power of gene-level tests is lower, but the power loss is small. </plain></SENT>
+<SENT sid="403" pm="."><plain>For instance, when a causal variant in the candidate gene has effects sampled from N(0,0.22), the conditioned variant has effect .1, and 30% of the contributed summary statistics in each study have missing values, the power for burden/SKAT/VT tests are 58%/58%/56%, which are only slightly reduced compared to the power of analyzing the complete datasets (60%/61%/60%). </plain></SENT>
+<SENT sid="404" pm="."><plain>On the other hand, the method that discards studies with missing data has much reduced power (0.011/0.011/8.8×10−3). </plain></SENT>
+</text></p><SecTag type="TABLE"><table-wrap id="pgen.1007452.t002" orientation="portrait" position="float"><object-id pub-id-type="doi">10.1371/journal.pgen.1007452.t002</object-id><label>Table 2</label><caption><title><text><SENT sid="405" pm="."><plain>Power and type I errors of meta-analysis of gene-level tests in the presence of missing data. </plain></SENT>
+</text></title><p><text><SENT sid="406" pm="."><plain>Datasets were simulated according to the genetic and phenotype model described in METHODS. </plain></SENT>
+<SENT sid="407" pm="."><plain>Within the gene region, 20% of the variant sites are deemed causal. </plain></SENT>
+<SENT sid="408" pm="."><plain>Meta-analysis was performed to combine 10 cohorts with 2000 individuals each. </plain></SENT>
+<SENT sid="409" pm="."><plain>For each replicate, summary association statistics were generated, and a certain fraction (10%, 30% or 50%) of the generated summary statistics were masked as missing. </plain></SENT>
+<SENT sid="410" pm="."><plain>Scenarios with different combinations of known variant effect, candidate variant effects and fractions of missingness were considered. </plain></SENT>
+<SENT sid="411" pm="."><plain>To evaluate the power loss due to missing data, we also analyzed the full dataset as a gold standard. </plain></SENT>
+<SENT sid="412" pm="."><plain>Type I errors and power were evaluated for three rare variant tests (simple burden, SKAT and VT) using 1 million replicates under the significance threshold of α = 0.005. </plain></SENT>
+</text></p></caption><alternatives><graphic id="pgen.1007452.t002g" xlink:href="pgen.1007452.t002"/><table frame="hsides" rules="groups"><colgroup span="1"><col align="left" valign="middle" span="1"/><col align="left" valign="middle" span="1"/><col align="left" valign="middle" span="1"/><col align="left" valign="middle" span="1"/><col align="left" valign="middle" span="1"/></colgroup><thead><tr><th align="center" rowspan="2" colspan="1"><text><SENT sid="413" pm="."><plain>Conditioned Variant Effect </plain></SENT>
+</text></th><th align="center" rowspan="2" colspan="1"><text><SENT sid="414" pm="."><plain>Candidate Variant Effect (τβ) </plain></SENT>
+</text></th><th align="center" rowspan="2" colspan="1"><text><SENT sid="415" pm="."><plain>Fraction of Missing Data </plain></SENT>
+</text></th><th align="center" colspan="2" rowspan="1"><text><SENT sid="416" pm="."><plain>Type I Error/Power for Burden/SKAT/VT (α = 0.0005) </plain></SENT>
+</text></th></tr><tr><th align="center" rowspan="1" colspan="1"><text><SENT sid="417" pm="."><plain>PCBS </plain></SENT>
+</text></th><th align="center" rowspan="1" colspan="1"><text><SENT sid="418" pm="."><plain>Analyze the Full Dataset [Gold Standard] </plain></SENT>
+</text></th></tr></thead><tbody><tr><td align="center" colspan="5" rowspan="1"><text><SENT sid="419" pm="."><plain>Type I Error </plain></SENT>
+</text></td></tr><tr><td align="center" rowspan="1" colspan="1"><text><SENT sid="420" pm="."><plain>0.05 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="421" pm="."><plain>0 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="422" pm="."><plain>0.1 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="423" pm="."><plain>4.5 × 10−3/3.1 × 10−3/3.8 × 10−3 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="424" pm="."><plain>4.8 × 10−3/4.1 × 10−3/4.5 × 10−3 </plain></SENT>
+</text></td></tr><tr><td align="center" rowspan="1" colspan="1"><text><SENT sid="425" pm="."><plain>0.05 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="426" pm="."><plain>0 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="427" pm="."><plain>0.3 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="428" pm="."><plain>4.7 × 10−3/4.4 × 10−3/3.4 × 10−3 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="429" pm="."><plain>4.7 × 10−3/4.4 × 10−3/6.0 × 10−3 </plain></SENT>
+</text></td></tr><tr><td align="center" rowspan="1" colspan="1"><text><SENT sid="430" pm="."><plain>0.05 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="431" pm="."><plain>0 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="432" pm="."><plain>0.5 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="433" pm="."><plain>6.4 × 10−3/4.0 × 10−3/3.4 × 10−3 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="434" pm="."><plain>4.7 × 10−3/5.0 × 10−3/4.4 × 10−3 </plain></SENT>
+</text></td></tr><tr><td align="center" rowspan="1" colspan="1"><text><SENT sid="435" pm="."><plain>0.1 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="436" pm="."><plain>0 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="437" pm="."><plain>0.1 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="438" pm="."><plain>3.3 × 10−3/2.6 × 10−3/4.9 × 10−3 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="439" pm="."><plain>5.3 × 10−3/5.9 × 10−3/5.3 × 10−3 </plain></SENT>
+</text></td></tr><tr><td align="center" rowspan="1" colspan="1"><text><SENT sid="440" pm="."><plain>0.1 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="441" pm="."><plain>0 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="442" pm="."><plain>0.3 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="443" pm="."><plain>6.0 × 10−3/4.7 × 10−3/4.1 × 10−3 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="444" pm="."><plain>4.7 × 10−3/5.4 × 10−3/4.1 × 10−3 </plain></SENT>
+</text></td></tr><tr><td align="center" rowspan="1" colspan="1"><text><SENT sid="445" pm="."><plain>0.1 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="446" pm="."><plain>0 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="447" pm="."><plain>0.5 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="448" pm="."><plain>6.3 × 10−3/6.7 × 10−3/6.3 × 10−3 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="449" pm="."><plain>5.8 × 10−3/5.9 × 10−3/4.9 × 10−3 </plain></SENT>
+</text></td></tr><tr><td align="center" colspan="5" rowspan="1"><text><SENT sid="450" pm="."><plain>Power </plain></SENT>
+</text></td></tr><tr><td align="center" rowspan="1" colspan="1"><text><SENT sid="451" pm="."><plain>0.05 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="452" pm="."><plain>0.1 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="453" pm="."><plain>0.1 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="454" pm="."><plain>0.21/0.21/0.19 </plain></SENT>
+</text></td><td align="center" rowspan="6" colspan="1"><text><SENT sid="455" pm="."><plain>0.22/0.23/0.21 </plain></SENT>
+</text></td></tr><tr><td align="center" rowspan="1" colspan="1"><text><SENT sid="456" pm="."><plain>0.05 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="457" pm="."><plain>0.1 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="458" pm="."><plain>0.3 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="459" pm="."><plain>0.19/0.19/0.17 </plain></SENT>
+</text></td></tr><tr><td align="center" rowspan="1" colspan="1"><text><SENT sid="460" pm="."><plain>0.05 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="461" pm="."><plain>0.1 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="462" pm="."><plain>0.5 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="463" pm="."><plain>0.17/0.16/0.14 </plain></SENT>
+</text></td></tr><tr><td align="center" rowspan="1" colspan="1"><text><SENT sid="464" pm="."><plain>0.1 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="465" pm="."><plain>0.1 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="466" pm="."><plain>0.1 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="467" pm="."><plain>0.22/0.22/0.20 </plain></SENT>
+</text></td></tr><tr><td align="center" rowspan="1" colspan="1"><text><SENT sid="468" pm="."><plain>0.1 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="469" pm="."><plain>0.1 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="470" pm="."><plain>0.3 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="471" pm="."><plain>0.20/0.20/0.18 </plain></SENT>
+</text></td></tr><tr><td align="center" rowspan="1" colspan="1"><text><SENT sid="472" pm="."><plain>0.1 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="473" pm="."><plain>0.1 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="474" pm="."><plain>0.5 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="475" pm="."><plain>0.17/0.16/0.14 </plain></SENT>
+</text></td></tr><tr><td align="center" rowspan="1" colspan="1"><text><SENT sid="476" pm="."><plain>0.05 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="477" pm="."><plain>0.2 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="478" pm="."><plain>0.1 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="479" pm="."><plain>0.59/0.60/0.58 </plain></SENT>
+</text></td><td align="center" rowspan="6" colspan="1"><text><SENT sid="480" pm="."><plain>0.60/0.61/0.59 </plain></SENT>
+</text></td></tr><tr><td align="center" rowspan="1" colspan="1"><text><SENT sid="481" pm="."><plain>0.05 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="482" pm="."><plain>0.2 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="483" pm="."><plain>0.3 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="484" pm="."><plain>0.57/0.57/0.55 </plain></SENT>
+</text></td></tr><tr><td align="center" rowspan="1" colspan="1"><text><SENT sid="485" pm="."><plain>0.05 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="486" pm="."><plain>0.2 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="487" pm="."><plain>0.5 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="488" pm="."><plain>0.54/0.53/0.52 </plain></SENT>
+</text></td></tr><tr><td align="center" rowspan="1" colspan="1"><text><SENT sid="489" pm="."><plain>0.1 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="490" pm="."><plain>0.2 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="491" pm="."><plain>0.1 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="492" pm="."><plain>0.59/0.60/0.58 </plain></SENT>
+</text></td></tr><tr><td align="center" rowspan="1" colspan="1"><text><SENT sid="493" pm="."><plain>0.1 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="494" pm="."><plain>0.2 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="495" pm="."><plain>0.3 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="496" pm="."><plain>0.58/0.58/0.56 </plain></SENT>
+</text></td></tr><tr><td align="center" rowspan="1" colspan="1"><text><SENT sid="497" pm="."><plain>0.1 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="498" pm="."><plain>0.2 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="499" pm="."><plain>0.5 </plain></SENT>
+</text></td><td align="center" rowspan="1" colspan="1"><text><SENT sid="500" pm="."><plain>0.54/0.53/0.52 </plain></SENT>
+</text></td></tr></tbody></table></alternatives></table-wrap></SecTag><p><text><SENT sid="501" pm="."><plain>Our method was developed for the fixed effect meta-analysis, where the genetic effects are assumed to be constant across different studies. </plain></SENT>
+<SENT sid="502" pm="."><plain>But since PCBS first aggregates association statistics from across studies and then performs conditional analysis, the impact of genetic effects heterogeneities does not invalidate the test and the type I error remains well controlled. </plain></SENT>
+<SENT sid="503" pm="."><plain>The power is slightly reduced, but the advantages over other methods remain. </plain></SENT>
+<SENT sid="504" pm="."><plain>To confirm this, we performed simulation analysis assuming that the genetic effects across studies are heterogeneous (S1 Table, S2 Table). </plain></SENT>
+<SENT sid="505" pm="."><plain>In our simulations, the genetic effects for a given variant in different studies were simulated from a normal distribution N(μβG*,(μβG*/2)2), allowing for substantial between-study heterogeneities. </plain></SENT>
+<SENT sid="506" pm="."><plain>The power comparison for different methods remains similar to the scenarios where the genetic effects are the same across studies. </plain></SENT>
+</text></p></sec><sec id="sec013"><title><text><SENT sid="507" pm="."><plain>Results for the meta-analysis of cigarettes per day phenotype </plain></SENT>
+</text></title><p><text><SENT sid="508" pm="."><plain>We performed a meta-analysis of CPD phenotype in 7 cohorts. </plain></SENT>
+<SENT sid="509" pm="."><plain>The locus CHRNA5-CHRNB4-CHRNA3 was previously identified as associated with CPD [28]. </plain></SENT>
+<SENT sid="510" pm="."><plain>After careful quality control, 42,669,770 variants were meta-analyzed. </plain></SENT>
+<SENT sid="511" pm="."><plain>A majority (32,796,258) of these variants had minor allele frequencies &lt;1%. </plain></SENT>
+</text></p><p><text><SENT sid="512" pm="."><plain>It is important to note that even with high quality imputation panels, such as the haplotype reference consortium panel [25], there was still considerable missing data in the imputed datasets. </plain></SENT>
+<SENT sid="513" pm="."><plain>A fraction of 76.1% of the variants were missing from at least one participating study post imputation, due to filtering on the imputation quality (R2&gt;.7). </plain></SENT>
+<SENT sid="514" pm="."><plain>Compared to common variants, rare variants were considerably more likely to be missing: 95.3% of the variants with MAF&lt;1% were missing from at least one cohort, compared to the fraction of 20.1% for the common variants with MAF&gt;1%. </plain></SENT>
+</text></p><p><text><SENT sid="515" pm="."><plain>The Quantile-Quantile plot for–log10(p-value) is well calibrated (S1 Fig). </plain></SENT>
+<SENT sid="516" pm="."><plain>The genomic control value is 1.14 for common variants with MAF&gt;0.01, and 1.00 for rare variants with MAF&lt;0.01. </plain></SENT>
+<SENT sid="517" pm="."><plain>The genomic control value is consistent with that of large scale GWAS for highly polygenic traits [29, 30]. </plain></SENT>
+<SENT sid="518" pm="."><plain>The intercept for LD score regression [31] was 1.01, which shows little influence from potential population structure. </plain></SENT>
+<SENT sid="519" pm="."><plain>The meta-analysis of 7 cohorts identifies 9 loci (S2 Fig), including the well-known CPD associated loci, the nicotine receptor genes CHRNB2, CHRNB3-CHRNA6, CHRNA5-CHRNB4-CHRNA3, the gene CYP2A6 that encodes cytochrome P450 protein, the gene PDE1C that encodes Phosphodiesterase 1C, FAM163B-DBH, YTHDF3 and GRM4. </plain></SENT>
+<SENT sid="520" pm="."><plain>Among these loci, CHRNB2 and FAM163B-DBH are associated with CPD at the genome-wide significance threshold for the first time. </plain></SENT>
+</text></p><p><text><SENT sid="521" pm="."><plain>While smoking behaviors are known to be heritable, only the CHRNA5-CHRNB4-CHRNA3 and CYP2A6 loci have been consistently implicated in human GWAS to date. </plain></SENT>
+<SENT sid="522" pm="."><plain>The other nicotine receptor gene CHRNB3-CHRNA6 was first identified with genome-wide significance in an isolated population for associations with nicotine dependence and nicotine use [32]. CHRNB2 was implicated in the nicotine dependence trait, but not at genome-wide significance. </plain></SENT>
+<SENT sid="523" pm="."><plain>To our knowledge, there is no report that this gene is associated with CPD at genome-wide significance [33]. </plain></SENT>
+</text></p><p><text><SENT sid="524" pm="."><plain>In order to understand the allelic architecture of the CPD phenotype and compare different methods on real data, we performed sequential forward selection with the new PCBS method, and identified 5 independently associated variants for the CHRNA5-CHRNB4-CHRNA3 locus and 4 independently associated variants for the CYP2A6 locus at genome-wide significance threshold (with p-values &lt; 5 × 10−8) (Table 3). </plain></SENT>
+<SENT sid="525" pm="."><plain>The other loci do not have additional independently associated variants besides the sentinel variant. </plain></SENT>
+</text></p><SecTag type="TABLE"><table-wrap id="pgen.1007452.t003" orientation="portrait" position="float"><object-id pub-id-type="doi">10.1371/journal.pgen.1007452.t003</object-id><label>Table 3</label><caption><title><text><SENT sid="526" pm="."><plain>Independently associated variants identified using sequential forward selection with PCBS method. </plain></SENT>
+</text></title><p><text><SENT sid="527" pm="."><plain>Sequential conditional analyses for the 9 loci were conducted, where we iteratively performed conditional analysis, conditioning on the top variants from earlier rounds. </plain></SENT>
+<SENT sid="528" pm="."><plain>Top association signals at each iteration are shown. </plain></SENT>
+<SENT sid="529" pm="."><plain>The sequential conditional analysis stops when the top association signal is no longer significant under the genome-wide significance threshold α = 5 × 10−8. </plain></SENT>
+</text></p></caption><alternatives><graphic id="pgen.1007452.t003g" xlink:href="pgen.1007452.t003"/><table frame="hsides" rules="groups"><colgroup span="1"><col align="left" valign="middle" span="1"/><col align="left" valign="middle" span="1"/><col align="left" valign="middle" span="1"/><col align="left" valign="middle" span="1"/><col align="left" valign="middle" span="1"/><col align="left" valign="middle" span="1"/><col align="left" valign="middle" span="1"/><col align="left" valign="middle" span="1"/><col align="left" valign="middle" span="1"/><col align="left" valign="middle" span="1"/><col align="left" valign="middle" span="1"/><col align="left" valign="middle" span="1"/></colgroup><thead><tr><th align="center" rowspan="1" colspan="1"><text><SENT sid="530" pm="."><plain>POS </plain></SENT>
+</text></th><th align="center" rowspan="1" colspan="1"><text><SENT sid="531" pm="."><plain>RS </plain></SENT>
+</text></th><th align="center" rowspan="1" colspan="1"><text><SENT sid="532" pm="."><plain>REF </plain></SENT>
+</text></th><th align="center" rowspan="1" colspan="1"><text><SENT sid="533" pm="."><plain>ALT </plain></SENT>
+</text></th><th align="center" rowspan="1" colspan="1"><text><SENT sid="534" pm="."><plain>AF </plain></SENT>
+</text></th><th align="center" rowspan="1" colspan="1"><text><SENT sid="535" pm="."><plain>PVALUE </plain></SENT>
+</text></th><th align="center" rowspan="1" colspan="1"><text><SENT sid="536" pm="."><plain>BETA </plain></SENT>
+</text></th><th align="center" rowspan="1" colspan="1"><text><SENT sid="537" pm="."><plain>SE </plain></SENT>
+</text></th><th align="center" colspan="2" rowspan="1"><text><SENT sid="538" pm="."><plain>N </plain></SENT>
+</text></th><th align="center" rowspan="1" colspan="1"><text><SENT sid="539" pm="."><plain>ANNO </plain></SENT>
+</text></th><th align="center" rowspan="1" colspan="1"><text><SENT sid="540" pm="."><plain>GENE </plain></SENT>
+</text></th></tr></thead><tbody><tr><td align="center" colspan="12" rowspan="1"><text><SENT sid="541" pm="."><plain>Locus rs2072659 Marginal association analysis </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="542" pm="."><plain>1:154548521 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="543" pm="."><plain>rs2072659 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="544" pm="."><plain>C </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="545" pm="."><plain>G </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="546" pm="."><plain>0.1 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="547" pm="."><plain>1.9 × 10−8 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="548" pm="."><plain>-0.041 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="549" pm="."><plain>7.3 × 10−3 </plain></SENT>
+</text></td><td align="left" colspan="2" rowspan="1"><text><SENT sid="550" pm="."><plain>134862 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="551" pm="."><plain>Utr3 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="552" pm="."><plain>CHRNB2 </plain></SENT>
+</text></td></tr><tr><td align="center" colspan="12" rowspan="1"><text><SENT sid="553" pm="."><plain>Locus rs550432263 Marginal association analysis </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="554" pm="."><plain>5:1385253 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="555" pm="."><plain>rs550432263 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="556" pm="."><plain>G </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="557" pm="."><plain>A </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="558" pm="."><plain>2.8 × 10−6 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="559" pm="."><plain>3.6 × 10−8 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="560" pm="."><plain>71 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="561" pm="."><plain>13 </plain></SENT>
+</text></td><td align="left" colspan="2" rowspan="1"><text><SENT sid="562" pm="."><plain>34858 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="563" pm="."><plain>Intergenic </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="564" pm="."><plain>SLC6A3 </plain></SENT>
+</text></td></tr><tr><td align="center" colspan="12" rowspan="1"><text><SENT sid="565" pm="."><plain>Locus rs9366836 Marginal association analysis </plain></SENT>
+</text></td></tr><tr><td align="center" rowspan="1" colspan="1"><text><SENT sid="566" pm="."><plain>6:34009601 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="567" pm="."><plain>rs9366836 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="568" pm="."><plain>A </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="569" pm="."><plain>G </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="570" pm="."><plain>0.17 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="571" pm="."><plain>3.3 × 10−8 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="572" pm="."><plain>0.028 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="573" pm="."><plain>5.2 × 10−3 </plain></SENT>
+</text></td><td align="left" colspan="2" rowspan="1"><text><SENT sid="574" pm="."><plain>134862 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="575" pm="."><plain>Intron </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="576" pm="."><plain>GRM4 </plain></SENT>
+</text></td></tr><tr><td align="center" colspan="12" rowspan="1"><text><SENT sid="577" pm="."><plain>Locus rs215600 Marginal association analysis </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="578" pm="."><plain>7:32333642 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="579" pm="."><plain>rs215600 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="580" pm="."><plain>G </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="581" pm="."><plain>A </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="582" pm="."><plain>0.64 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="583" pm="."><plain>4.8 × 10−11 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="584" pm="."><plain>-0.027 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="585" pm="."><plain>4.0 × 10−3 </plain></SENT>
+</text></td><td align="left" colspan="2" rowspan="1"><text><SENT sid="586" pm="."><plain>134862 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="587" pm="."><plain>Intron </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="588" pm="."><plain>PDE1C </plain></SENT>
+</text></td></tr><tr><td align="center" colspan="12" rowspan="1"><text><SENT sid="589" pm="."><plain>Locus rs58379124 Marginal association analysis </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="590" pm="."><plain>8:42579203 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="591" pm="."><plain>rs58379124 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="592" pm="."><plain>T </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="593" pm="."><plain>C </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="594" pm="."><plain>0.77 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="595" pm="."><plain>4.4 × 10−14 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="596" pm="."><plain>0.035 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="597" pm="."><plain>4.6 × 10−3 </plain></SENT>
+</text></td><td align="left" colspan="2" rowspan="1"><text><SENT sid="598" pm="."><plain>134862 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="599" pm="."><plain>Intron </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="600" pm="."><plain>CHRNB3 </plain></SENT>
+</text></td></tr><tr><td align="center" colspan="12" rowspan="1"><text><SENT sid="601" pm="."><plain>Locus rs1217106 Marginal association analysis </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="602" pm="."><plain>8:64567670 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="603" pm="."><plain>rs1217106 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="604" pm="."><plain>A </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="605" pm="."><plain>G </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="606" pm="."><plain>0.78 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="607" pm="."><plain>2.2 × 10−9 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="608" pm="."><plain>-0.028 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="609" pm="."><plain>4.4 × 10−3 </plain></SENT>
+</text></td><td align="left" colspan="2" rowspan="1"><text><SENT sid="610" pm="."><plain>134862 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="611" pm="."><plain>Intergenic </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="612" pm="."><plain>YTHDF3 </plain></SENT>
+</text></td></tr><tr><td align="center" colspan="12" rowspan="1"><text><SENT sid="613" pm="."><plain>Locus rs56116178 Marginal association analysis </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="614" pm="."><plain>9:136460224 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="615" pm="."><plain>rs56116178 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="616" pm="."><plain>A </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="617" pm="."><plain>G </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="618" pm="."><plain>0.11 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="619" pm="."><plain>2.5 × 10−9 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="620" pm="."><plain>0.038 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="621" pm="."><plain>6.3 × 10−3 </plain></SENT>
+</text></td><td align="left" colspan="2" rowspan="1"><text><SENT sid="622" pm="."><plain>134862 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="623" pm="."><plain>Intergenic </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="624" pm="."><plain>FAM163B-DBH </plain></SENT>
+</text></td></tr><tr><td align="center" colspan="12" rowspan="1"><text><SENT sid="625" pm="."><plain>Locus rs11852372 Marginal association analysis </plain></SENT>
+</text></td></tr><tr><td align="center" rowspan="1" colspan="1"><text><SENT sid="626" pm="."><plain>15:78801394 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="627" pm="."><plain>rs11852372 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="628" pm="."><plain>A </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="629" pm="."><plain>C </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="630" pm="."><plain>0.34 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="631" pm="."><plain>7.7 × 10−115 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="632" pm="."><plain>0.096 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="633" pm="."><plain>4.2 × 10−3 </plain></SENT>
+</text></td><td align="left" colspan="2" rowspan="1"><text><SENT sid="634" pm="."><plain>128249 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="635" pm="."><plain>Intron </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="636" pm="."><plain>AGPHD1 </plain></SENT>
+</text></td></tr><tr><td align="center" colspan="12" rowspan="1"><text><SENT sid="637" pm="."><plain>Conditional on rs11852372 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="638" pm="."><plain>15:78896129 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="639" pm="."><plain>rs1317286 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="640" pm="."><plain>A </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="641" pm="."><plain>G </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="642" pm="."><plain>0.34 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="643" pm="."><plain>1.7 × 10−22 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="644" pm="."><plain>0.027 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="645" pm="."><plain>2.8 × 10−3 </plain></SENT>
+</text></td><td align="left" colspan="2" rowspan="1"><text><SENT sid="646" pm="."><plain>128249 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="647" pm="."><plain>Intron </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="648" pm="."><plain>CHRNA3 </plain></SENT>
+</text></td></tr><tr><td align="center" colspan="12" rowspan="1"><text><SENT sid="649" pm="."><plain>Conditional on rs11852372 and rs1317286 </plain></SENT>
+</text></td></tr><tr><td align="center" rowspan="1" colspan="1"><text><SENT sid="650" pm="."><plain>15:78814389 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="651" pm="."><plain>rs7181245 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="652" pm="."><plain>C </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="653" pm="."><plain>T </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="654" pm="."><plain>0.21 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="655" pm="."><plain>2.5 × 10−13 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="656" pm="."><plain>-0.032 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="657" pm="."><plain>4.4 × 10−3 </plain></SENT>
+</text></td><td align="left" colspan="2" rowspan="1"><text><SENT sid="658" pm="."><plain>128249 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="659" pm="."><plain>Intron </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="660" pm="."><plain>AGPHD1 </plain></SENT>
+</text></td></tr><tr><td align="center" colspan="12" rowspan="1"><text><SENT sid="661" pm="."><plain>Conditional on rs11852372, rs1317286 and rs7181245 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="662" pm="."><plain>15:78911181 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="663" pm="."><plain>rs8040868 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="664" pm="."><plain>T </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="665" pm="."><plain>C </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="666" pm="."><plain>0.40 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="667" pm="."><plain>2.2 × 10−11 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="668" pm="."><plain>0.020 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="669" pm="."><plain>2.9 × 10−3 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="670" pm="."><plain>128249 </plain></SENT>
+</text></td><td align="left" colspan="2" rowspan="1"><text><SENT sid="671" pm="."><plain>Synonymous </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="672" pm="."><plain>CHRNA3 </plain></SENT>
+</text></td></tr><tr><td align="center" colspan="12" rowspan="1"><text><SENT sid="673" pm="."><plain>Conditional on rs11852372, rs1317286, rs7181245 and rs8040868 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="674" pm="."><plain>15:78739763 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="675" pm="."><plain>rs2089162 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="676" pm="."><plain>A </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="677" pm="."><plain>G </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="678" pm="."><plain>0.33 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="679" pm="."><plain>3.5 × 10−8 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="680" pm="."><plain>0.011 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="681" pm="."><plain>2.0 × 10−3 </plain></SENT>
+</text></td><td align="left" colspan="2" rowspan="1"><text><SENT sid="682" pm="."><plain>128249 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="683" pm="."><plain>Intron </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="684" pm="."><plain>IREB2 </plain></SENT>
+</text></td></tr><tr><td align="center" colspan="12" rowspan="1"><text><SENT sid="685" pm="."><plain>Locus rs56113850 Marginal association analysis </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="686" pm="."><plain>19:41353107 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="687" pm="."><plain>rs56113850 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="688" pm="."><plain>T </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="689" pm="."><plain>C </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="690" pm="."><plain>0.58 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="691" pm="."><plain>6.6 × 10−67 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="692" pm="."><plain>0.070 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="693" pm="."><plain>4.0 × 10−3 </plain></SENT>
+</text></td><td align="left" colspan="2" rowspan="1"><text><SENT sid="694" pm="."><plain>128249 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="695" pm="."><plain>Intron </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="696" pm="."><plain>CYP2A6 </plain></SENT>
+</text></td></tr><tr><td align="center" colspan="12" rowspan="1"><text><SENT sid="697" pm="."><plain>Conditional on rs56113850 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="698" pm="."><plain>19:41371480 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="699" pm="."><plain>rs117824460 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="700" pm="."><plain>A </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="701" pm="."><plain>G </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="702" pm="."><plain>0.029 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="703" pm="."><plain>6.2 × 10−23 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="704" pm="."><plain>-0.13 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="705" pm="."><plain>0.013 </plain></SENT>
+</text></td><td align="left" colspan="2" rowspan="1"><text><SENT sid="706" pm="."><plain>128249 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="707" pm="."><plain>Intergenic </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="708" pm="."><plain>CYP2A6 </plain></SENT>
+</text></td></tr><tr><td align="center" colspan="12" rowspan="1"><text><SENT sid="709" pm="."><plain>Conditional on rs56113850 and rs117824460 </plain></SENT>
+</text></td></tr><tr><td align="left" rowspan="1" colspan="1"><text><SENT sid="710" pm="."><plain>19:41406448 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="711" pm="."><plain>rs117540499 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="712" pm="."><plain>G </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="713" pm="."><plain>A </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="714" pm="."><plain>0.023 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="715" pm="."><plain>2.4 × 10−17 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="716" pm="."><plain>-0.11 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="717" pm="."><plain>0.013 </plain></SENT>
+</text></td><td align="left" colspan="2" rowspan="1"><text><SENT sid="718" pm="."><plain>128249 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="719" pm="."><plain>Intergenic </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="720" pm="."><plain>CYP2A6 </plain></SENT>
+</text></td></tr><tr><td align="center" colspan="12" rowspan="1"><text><SENT sid="721" pm="."><plain>Conditional on rs56113850, rs117824460 and rs117540499 </plain></SENT>
+</text></td></tr><tr><td align="center" rowspan="1" colspan="1"><text><SENT sid="722" pm="."><plain>19:41345395 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="723" pm="."><plain>rs7246742 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="724" pm="."><plain>T </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="725" pm="."><plain>G </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="726" pm="."><plain>0.13 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="727" pm="."><plain>1.9 × 10−8 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="728" pm="."><plain>-0.033 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="729" pm="."><plain>5.9 × 10−3 </plain></SENT>
+</text></td><td align="left" colspan="2" rowspan="1"><text><SENT sid="730" pm="."><plain>128249 </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="731" pm="."><plain>Intergenic </plain></SENT>
+</text></td><td align="left" rowspan="1" colspan="1"><text><SENT sid="732" pm="."><plain>CYP2A6 </plain></SENT>
+</text></td></tr></tbody></table></alternatives></table-wrap></SecTag><p><text><SENT sid="733" pm="."><plain>As a comparison, we also performed sequential forward selection using the five alternative approaches (S3 Table). </plain></SENT>
+<SENT sid="734" pm="."><plain>Using the SYN+ method, fewer independently associated variants are identified. </plain></SENT>
+<SENT sid="735" pm="."><plain>At the CHRNA5-CHRNB4-CHRNA3 locus, 3 independently associated variants are identified, and also at the CYP2A6 locus, only 3 independently associated variants are identified. </plain></SENT>
+<SENT sid="736" pm="."><plain>DISCARD also identifies fewer number of independently associated SNPs. </plain></SENT>
+<SENT sid="737" pm="."><plain>The results from real data analysis is consistent with our simulation study that PCBS has higher power than alternative approaches. </plain></SENT>
+</text></p><p><text><SENT sid="738" pm="."><plain>Among the approaches that have inflated type I errors in simulations, impG+meta identifies a lot of SNPs with very significant p-values. </plain></SENT>
+<SENT sid="739" pm="."><plain>Many of these identified SNPs have substantial missingness among the participating cohorts (e.g. N&lt;50,000). </plain></SENT>
+<SENT sid="740" pm="."><plain>Given the inflated type I errors that we observed in simulations, as well as the small available sample sizes for the top variants, the validity of the results using impG+meta is of concern. </plain></SENT>
+<SENT sid="741" pm="."><plain>Most of the top variants identified by COJO and REPLACE0 have low missingness, so there are not many false positive results. </plain></SENT>
+<SENT sid="742" pm="."><plain>Yet, COJO and REPLACE0 identified fewer independently associated SNPs compared to PCBS and SYN+ (Table 3 and S3 Table). </plain></SENT>
+<SENT sid="743" pm="."><plain>Together, the analysis of real data confirmed our simulation experiments. </plain></SENT>
+</text></p><p><text><SENT sid="744" pm="."><plain>We examined if our independently associated variants explained previously known association signals. </plain></SENT>
+<SENT sid="745" pm="."><plain>To do this, we looked up GWAS catalog [34] using key words “CPD” or “cigarettes per day” and found 11 associated variants in the loci that we identified (S4 Table). </plain></SENT>
+<SENT sid="746" pm="."><plain>We first analyzed these 11 variants conditional on our independently associated variants. </plain></SENT>
+<SENT sid="747" pm="."><plain>All of these variants became insignificant, which indicated that our newly identified independently associated variants can explain previously known association signals. </plain></SENT>
+<SENT sid="748" pm="."><plain>We also performed conditional analysis in the opposite direction to examine if our identified association signal may be explained by the known variants. </plain></SENT>
+<SENT sid="749" pm="."><plain>We found that variants within the CPY2A6 locus remained highly significant and variants within the CHRNA5-CHRNB4-CHRNA3 locus remained marginally significant. </plain></SENT>
+<SENT sid="750" pm="."><plain>Together, our independently associated variants explained 1.1% of the phenotypic variance, which substantially improves the phenotypic variance (.64%) explained by the 11 known signals. </plain></SENT>
+</text></p><p><text><SENT sid="751" pm="."><plain>Finally, in addition to single variant association, we investigated if rare variants within each of the 9 loci were independently associated with the CPD phenotype (S5 Table). </plain></SENT>
+<SENT sid="752" pm="."><plain>27 genes were analyzed using simple burden, SKAT and VT tests under a MAF threshold of 0.01. </plain></SENT>
+<SENT sid="753" pm="."><plain>Only one gene (CHRNA5) has gene-level p-values less than 0.05/27, which is the Bonferroni threshold. </plain></SENT>
+<SENT sid="754" pm="."><plain>None of the genes have exome-wide significant gene-level association p-values. </plain></SENT>
+</text></p></sec></sec></SecTag><SecTag type="DISCUSS"><sec sec-type="conclusions" id="sec014"><title><text><SENT sid="755" pm="."><plain>Discussion </plain></SENT>
+</text></title><p><text><SENT sid="756" pm="."><plain>We proposed a simple yet effective meta-analysis method to estimate joint and conditional effects of rare variants in the presence of missing summary statistics from contributing studies. </plain></SENT>
+<SENT sid="757" pm="."><plain>The method leads to the optimal use of shared summary association statistics. </plain></SENT>
+<SENT sid="758" pm="."><plain>It has well controlled type I error and much higher power than alternative approaches even when a large number of contributing studies contain missing summary statistics. </plain></SENT>
+</text></p><p><text><SENT sid="759" pm="."><plain>Several approaches were previously developed to combine genetic effects across studies when different studies may measure different genetic variants e.g. Verzilli et al [35] and Newcombe et al [36]. </plain></SENT>
+<SENT sid="760" pm="."><plain>These methods have some noticeable limitations. </plain></SENT>
+<SENT sid="761" pm="."><plain>The method by Verzilli et al requires the individual level genotype and phenotype data as input. </plain></SENT>
+<SENT sid="762" pm="."><plain>Also the method focuses on random effects meta-analysis, while our approach focuses on fixed effect meta-analysis. </plain></SENT>
+<SENT sid="763" pm="."><plain>The method by Newcombe et al models the haplotype counts in cases and controls. </plain></SENT>
+<SENT sid="764" pm="."><plain>The method does not allow for the adjustment of covariates, which is a serious limitation. </plain></SENT>
+<SENT sid="765" pm="."><plain>Both methods use MCMC for fitting the model, which may not scale well for contemporary meta-analysis with tens of millions of variants and dozens of studies. </plain></SENT>
+</text></p><p><text><SENT sid="766" pm="."><plain>It is important to note that our method, PCBS is developed for proper conditional and joint analysis when imputation fails to work. </plain></SENT>
+<SENT sid="767" pm="."><plain>As we showed in our meta-analysis of smoking phenotypes, even with the state-of-the-art imputation methods and high quality reference panels, there are still considerable amount of association statistics filtered out from participating studies. </plain></SENT>
+<SENT sid="768" pm="."><plain>The rate of missingness is much higher for rare variant association statistics than for common variant association statistics. </plain></SENT>
+<SENT sid="769" pm="."><plain>PCBS will be particularly useful for the meta-analysis of sequence data, where the measured variants are predominantly low frequency or rare [37]. </plain></SENT>
+</text></p><p><text><SENT sid="770" pm="."><plain>Our method is not developed to replace genotype imputation. </plain></SENT>
+<SENT sid="771" pm="."><plain>Genotype imputation fills in missing genotypes with imputed values, and increases effective sample sizes and power. </plain></SENT>
+<SENT sid="772" pm="."><plain>Our method does not increase the effective sample size for tested variants. </plain></SENT>
+<SENT sid="773" pm="."><plain>In practice, imputation method should first be applied in each participating cohort. </plain></SENT>
+<SENT sid="774" pm="."><plain>Our method should be applied at the meta-analysis stage for valid and powerful conditional meta-analysis, especially when contributed summary statistics from participating cohorts contain missing values. </plain></SENT>
+</text></p><p><text><SENT sid="775" pm="."><plain>Missing data will continue to be a persistent issue in the next generation of large-scale genetic studies. </plain></SENT>
+<SENT sid="776" pm="."><plain>Major biobanks have started to develop their own genotyping arrays and imputation reference panels to incorporate customized content. </plain></SENT>
+<SENT sid="777" pm="."><plain>Combining these newly genotyped studies with existing datasets will result in missing summary statistics. </plain></SENT>
+<SENT sid="778" pm="."><plain>Our method will continue to be useful when analyzing these newly generated datasets. </plain></SENT>
+</text></p><p><text><SENT sid="779" pm="."><plain>Another major application of the proposed method is in the meta-analysis of sequence data. </plain></SENT>
+<SENT sid="780" pm="."><plain>Given the use of targeted sequencing assays and variability in batch processing and quality control across studies, it would be difficult to impute missing genotype data or missing summary statistics. </plain></SENT>
+<SENT sid="781" pm="."><plain>One of the challenges in sequence-based meta-analysis is to properly represent monomorphic sites, as the polymorphic variant sites are not known a priori. </plain></SENT>
+<SENT sid="782" pm="."><plain>Neither un-called variant sites (e.g. due to insufficient coverage or failed quality control) nor monomorphic sites contribute to the single variant meta-analysis statistic. </plain></SENT>
+<SENT sid="783" pm="."><plain>Yet they should be treated differently in joint and conditional meta-analysis. </plain></SENT>
+<SENT sid="784" pm="."><plain>Summary statistics from monomorphic variants should be replaced by zeros. </plain></SENT>
+<SENT sid="785" pm="."><plain>On the other hand, summary statistics from un-called variants should be treated as missing data, and the conditional association analysis can be performed using our partial correlation based score statistics. </plain></SENT>
+</text></p><p><text><SENT sid="786" pm="."><plain>While not the focus of this article, the proposed method is also helpful for downstream analyses that make use of the joint effects of multiple variants, e.g. estimating the phenotypic variance explained by variants in LD or fine mapping causal variants (e.g. using methods such as RIVERA [38], FINEMAP [39], CAVIARBF [40]) The validity of these analyses relies critically on the proper estimates of the joint effects, which are usually obtained from single variant association statistics and the LD information from a reference panel. </plain></SENT>
+<SENT sid="787" pm="."><plain>When summary statistics from contributing studies contain missing data, the correlations between resulting marginal meta-analysis association statistics may not be properly approximated by the LD estimated from a reference panel. </plain></SENT>
+<SENT sid="788" pm="."><plain>In this case, PCBS can be used to obtain valid joint effect estimates, which can potentially lead to better calibrated estimates phenotypic variance explained and more accurate fine mapping analysis. </plain></SENT>
+</text></p><p><text><SENT sid="789" pm="."><plain>Taken together, our partial correlation based score statistic is a simple yet effective method for estimating joint and conditional effects from a meta-analysis. </plain></SENT>
+<SENT sid="790" pm="."><plain>With its efficient implementations in RVTESTS, RAREMETAL and rareGWAMA, this method will have broad application in current array-based meta-analysis, as well as the upcoming imputation-based meta-analysis (e.g. based upon the haplotype reference consortium panel) and sequence-based meta-analysis. </plain></SENT>
+<SENT sid="791" pm="."><plain>Correct inference on the joint and conditional effects using these methods will pave the way for a more accurate characterization and a more complete understanding of the genetic architecture of complex traits. </plain></SENT>
+</text></p></sec></SecTag><SecTag type="SUPPL"><sec sec-type="supplementary-material" id="sec015"><title><text><SENT sid="792" pm="."><plain>Supporting information </plain></SENT>
+</text></title><supplementary-material content-type="local-data" id="pgen.1007452.s001"><label>S1 Text</label><caption><p><text><SENT sid="793" pm="."><plain>(DOCX) </plain></SENT>
+</text></p></caption><media xlink:href="pgen.1007452.s001.docx"><caption><p><text><SENT sid="794" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="pgen.1007452.s002"><label>S1 Fig</label><caption><title><text><SENT sid="795" pm="."><plain>Quantile-quantile plot of–log10(p-value) for the meta-analysis of cigarettes per day phenotype. </plain></SENT>
+</text></title><p><text><SENT sid="796" pm="."><plain>Genomic control values were separately reported for variants with MAF&gt;0.01 and with MAF&lt;0.01. </plain></SENT>
+</text></p><p><text><SENT sid="797" pm="."><plain>(TIFF) </plain></SENT>
+</text></p></caption><media xlink:href="pgen.1007452.s002.tiff"><caption><p><text><SENT sid="798" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="pgen.1007452.s003"><label>S2 Fig</label><caption><title><text><SENT sid="799" pm="."><plain>Manhattan plot for the meta-analysis of cigarettes per day phenotype. </plain></SENT>
+</text></title><p><text><SENT sid="800" pm="."><plain>(TIFF) </plain></SENT>
+</text></p></caption><media xlink:href="pgen.1007452.s003.tiff"><caption><p><text><SENT sid="801" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="pgen.1007452.s004"><label>S1 Table</label><caption><title><text><SENT sid="802" pm="."><plain>Power and type I errors of meta-analysis of single variant tests in the presence of missing data and genetic effect heterogeneity. </plain></SENT>
+</text></title><p><text><SENT sid="803" pm="."><plain>We evaluated the impact of large heterogeneity in the genetic effects on the power and type I errors for the PCBS statistics. </plain></SENT>
+<SENT sid="804" pm="."><plain>The effects of the conditioned variants in each cohort are sampled from the distribution N(μβ2,(μβ2/2)2). </plain></SENT>
+<SENT sid="805" pm="."><plain>All other simulation settings are the same as in Table 1. </plain></SENT>
+</text></p><p><text><SENT sid="806" pm="."><plain>(DOCX) </plain></SENT>
+</text></p></caption><media xlink:href="pgen.1007452.s004.docx"><caption><p><text><SENT sid="807" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="pgen.1007452.s005"><label>S2 Table</label><caption><title><text><SENT sid="808" pm="."><plain>Power and type I errors of meta-analysis of gene-level tests in the presence of missing data and genetic effect heterogeneity. </plain></SENT>
+</text></title><p><text><SENT sid="809" pm="."><plain>We evaluated the impact of large heterogeneity in the genetic effects on the power and type I errors for the PCBS statistics. </plain></SENT>
+<SENT sid="810" pm="."><plain>The genetic effects for the conditioned variants in each cohort are sampled from the distribution N(μβ2,(μβ2/2)2). </plain></SENT>
+<SENT sid="811" pm="."><plain>All other simulation settings are the same as in Table 2. </plain></SENT>
+</text></p><p><text><SENT sid="812" pm="."><plain>(DOCX) </plain></SENT>
+</text></p></caption><media xlink:href="pgen.1007452.s005.docx"><caption><p><text><SENT sid="813" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="pgen.1007452.s006"><label>S3 Table</label><caption><title><text><SENT sid="814" pm="."><plain>Results of sequential forward selection using the alternative methods including SYN+, COJO, impG+meta, REPLACE0, DISCARD. </plain></SENT>
+</text></title><p><text><SENT sid="815" pm="."><plain>(XLSX) </plain></SENT>
+</text></p></caption><media xlink:href="pgen.1007452.s006.xlsx"><caption><p><text><SENT sid="816" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="pgen.1007452.s007"><label>S4 Table</label><caption><title><text><SENT sid="817" pm="."><plain>Two way conditional analysis of independently associated variants and previously reported GWAS hits at CHRNA5-CHRNB4-CHRNA3 locus and the CYP2A6 locus. </plain></SENT>
+</text></title><p><text><SENT sid="818" pm="."><plain>We analyzed independently associated variants from the meta-analysis conditional on the previously known GWAS signals (Panel A). </plain></SENT>
+<SENT sid="819" pm="."><plain>We also performed the conditional analyses in the opposite direction, where we analyzed the previously reported GWAS variants conditional on the identified independently associated variants (Panel B). </plain></SENT>
+</text></p><p><text><SENT sid="820" pm="."><plain>(XLSX) </plain></SENT>
+</text></p></caption><media xlink:href="pgen.1007452.s007.xlsx"><caption><p><text><SENT sid="821" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="pgen.1007452.s008"><label>S5 Table</label><caption><title><text><SENT sid="822" pm="."><plain>Gene-level conditional analysis results. </plain></SENT>
+</text></title><p><text><SENT sid="823" pm="."><plain>We analyzed gene-level association conditional on the independently associated variants in the same loci, which were identified using sequential forward selection. </plain></SENT>
+<SENT sid="824" pm="."><plain>Three gene level association tests were performed, including simple burden tests, SKAT and VT. </plain></SENT>
+<SENT sid="825" pm="."><plain>No significant gene-level associations were identified (with p&lt;0.05/27). </plain></SENT>
+</text></p><p><text><SENT sid="826" pm="."><plain>(XLSX) </plain></SENT>
+</text></p></caption><media xlink:href="pgen.1007452.s008.xlsx"><caption><p><text><SENT sid="827" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media></supplementary-material></sec></SecTag></body><back><SecTag type="ACK_FUND"><ack><p><text4fund><text><SENT sid="828" pm="."><plain>This research has been conducted using the UK Biobank Resource 21237. </plain></SENT>
+</text></text4fund></p></ack></SecTag><SecTag type="REF"><ref-list><title>References</title><ref id="pgen.1007452.ref001"><text><SENT sid="829" pm="."><plain>1LeeS, TeslovichTM, BoehnkeM, LinX. General framework for meta-analysis of rare variants in sequencing association studies. American journal of human genetics. 2013;93(1):42–53. </plain></SENT>
+<SENT sid="830" pm="."><plain>Epub 2013/06/19. 10.1016/j.ajhg.2013.05.010 ; PubMed Central PMCID: PMC3710762.<?supplied-pmid 23768515?>23768515 </plain></SENT>
+</text></ref><ref id="pgen.1007452.ref002"><text><SENT sid="831" pm="."><plain>2LiuDJ, PelosoGM, ZhanX, HolmenOL, ZawistowskiM, FengS, et al Meta-analysis of gene-level tests for rare variant association. Nature genetics. 2014;46(2):200–4. </plain></SENT>
+<SENT sid="832" pm="."><plain>Epub 2013/12/18. 10.1038/ng.2852 .<?supplied-pmid 24336170?>24336170 </plain></SENT>
+</text></ref><ref id="pgen.1007452.ref003"><text><SENT sid="833" pm="."><plain>3TangZZ, LinDY. MASS: meta-analysis of score statistics for sequencing studies. Bioinformatics. 2013;29(14):1803–5. </plain></SENT>
+<SENT sid="834" pm="."><plain>Epub 2013/05/24. 10.1093/bioinformatics/btt280 ; PubMed Central PMCID: PMC3702254.<?supplied-pmid 23698861?>23698861 </plain></SENT>
+</text></ref><ref id="pgen.1007452.ref004"><text><SENT sid="835" pm="."><plain>4TangZZ, LinDY. Meta-analysis of sequencing studies with heterogeneous genetic associations. Genet Epidemiol. 2014;38(5):389–401. 10.1002/gepi.21798 ; PubMed Central PMCID: PMC4157393.<?supplied-pmid 24799183?>24799183 </plain></SENT>
+</text></ref><ref id="pgen.1007452.ref005"><text><SENT sid="836" pm="."><plain>5TangZZ, LinDY. Meta-analysis for Discovering Rare-Variant Associations: Statistical Methods and Software Programs. American journal of human genetics. 2015;97(1):35–53. 10.1016/j.ajhg.2015.05.001 .<?supplied-pmid 26094574?>26094574 </plain></SENT>
+</text></ref><ref id="pgen.1007452.ref006"><text><SENT sid="837" pm="."><plain>6DoR, StitzielNO, WonHH, JorgensenAB, DugaS, Angelica MerliniP, et al Exome sequencing identifies rare LDLR and APOA5 alleles conferring risk for myocardial infarction. Nature. 2015;518(7537):102–6. 10.1038/nature13917 ; PubMed Central PMCID: PMCPMC4319990.<?supplied-pmid 25487149?>25487149 </plain></SENT>
+</text></ref><ref id="pgen.1007452.ref007"><text><SENT sid="838" pm="."><plain>7DoR, WillerCJ, SchmidtEM, SenguptaS, GaoC, PelosoGM, et al Common variants associated with plasma triglycerides and risk for coronary artery disease. Nature genetics. 2013;45(11):1345–52. 10.1038/ng.2795 ; PubMed Central PMCID: PMC3904346.<?supplied-pmid 24097064?>24097064 </plain></SENT>
+</text></ref><ref id="pgen.1007452.ref008"><text><SENT sid="839" pm="."><plain>8Tg, Hdl Working Group of the Exome Sequencing Project NHL, BloodI, CrosbyJ, PelosoGM, AuerPL, et al Loss-of-function mutations in APOC3, triglycerides, and coronary disease. The New England journal of medicine. 2014;371(1):22–31. 10.1056/NEJMoa1307095 ; PubMed Central PMCID: PMC4180269.<?supplied-pmid 24941081?>24941081 </plain></SENT>
+</text></ref><ref id="pgen.1007452.ref009"><text><SENT sid="840" pm="."><plain>9CohenJC, BoerwinkleE, MosleyTHJr., HobbsHH. Sequence variations in PCSK9, low LDL, and protection against coronary heart disease. The New England journal of medicine. 2006;354(12):1264–72. 10.1056/NEJMoa054013 .<?supplied-pmid 16554528?>16554528 </plain></SENT>
+</text></ref><ref id="pgen.1007452.ref010"><text><SENT sid="841" pm="."><plain>10PistisG, PorcuE, VriezeSI, SidoreC, SteriM, DanjouF, et al Rare variant genotype imputation with thousands of study-specific whole-genome sequences: implications for cost-effective study designs. European journal of human genetics: EJHG. 2015;23(7):975–83. 10.1038/ejhg.2014.216 ; PubMed Central PMCID: PMCPMC4463504.<?supplied-pmid 25293720?>25293720 </plain></SENT>
+</text></ref><ref id="pgen.1007452.ref011"><text><SENT sid="842" pm="."><plain>11YangJ, FerreiraT, MorrisAP, MedlandSE, Genetic Investigation ofATC, ReplicationDIG, et al Conditional and joint multiple-SNP analysis of GWAS summary statistics identifies additional variants influencing complex traits. Nature genetics. 2012;44(4):369–75, S1-3. 10.1038/ng.2213 ; PubMed Central PMCID: PMC3593158.<?supplied-pmid 22426310?>22426310 </plain></SENT>
+</text></ref><ref id="pgen.1007452.ref012"><text><SENT sid="843" pm="."><plain>12PasaniucB, ZaitlenN, ShiH, BhatiaG, GusevA, PickrellJ, et al Fast and accurate imputation of summary statistics enhances evidence of functional enrichment. Bioinformatics. 2014 10.1093/bioinformatics/btu416 .<?supplied-pmid 24990607?>24990607 </plain></SENT>
+</text></ref><ref id="pgen.1007452.ref013"><text><SENT sid="844" pm="."><plain>13YoneokaD, HenmiM. Synthesis of linear regression coefficients by recovering the within-study covariance matrix from summary statistics. Res Synth Methods. 2017;8(2):212–9. 10.1002/jrsm.1228 .<?supplied-pmid 27987264?>27987264 </plain></SENT>
+</text></ref><ref id="pgen.1007452.ref014"><text><SENT sid="845" pm="."><plain>14BeckerBJ, WuM-J. The Synthesis of Regression Slopes in Meta-Analysis. Statist Sci. 2007;22(3):414–29. 10.1214/07-STS243 </plain></SENT>
+</text></ref><ref id="pgen.1007452.ref015"><text><SENT sid="846" pm="."><plain>15FengS, LiuD, ZhanX, WingMK, AbecasisGR. RAREMETAL: fast and powerful meta-analysis for rare variants. Bioinformatics. 2014 10.1093/bioinformatics/btu367 .<?supplied-pmid 24894501?>24894501 </plain></SENT>
+</text></ref><ref id="pgen.1007452.ref016"><text><SENT sid="847" pm="."><plain>16HuYJ, BerndtSI, GustafssonS, GannaA, Genetic Investigation ofATC, HirschhornJ, et al Meta-analysis of gene-level associations for rare variants based on single-variant statistics. American journal of human genetics. 2013;93(2):236–48. 10.1016/j.ajhg.2013.06.011 ; PubMed Central PMCID: PMC3738834.<?supplied-pmid 23891470?>23891470 </plain></SENT>
+</text></ref><ref id="pgen.1007452.ref017"><text><SENT sid="848" pm="."><plain>17LiuM, MaloneSM, VaidyanathanU, KellerMC, AbecasisG, McGueM, et al Psychophysiological endophenotypes to characterize mechanisms of known schizophrenia genetic loci. Psychol Med. 2016:1–10. 10.1017/S0033291716003184 .<?supplied-pmid 27995817?>27995817 </plain></SENT>
+</text></ref><ref id="pgen.1007452.ref018"><text><SENT sid="849" pm="."><plain>18MillerMB, BasuS, CunninghamJ, EskinE, MaloneSM, OettingWS, et al The Minnesota Center for Twin and Family Research genome-wide association study. Twin Res Hum Genet. 2012;15(6):767–74. 10.1017/thg.2012.62 ; PubMed Central PMCID: PMCPMC3561927.<?supplied-pmid 23363460?>23363460 </plain></SENT>
+</text></ref><ref id="pgen.1007452.ref019"><text><SENT sid="850" pm="."><plain>19VriezeSI, FengS, MillerMB, HicksBM, PankratzN, AbecasisGR, et al Rare nonsynonymous exonic variants in addiction and behavioral disinhibition. Biological psychiatry. 2014;75(10):783–9. 10.1016/j.biopsych.2013.08.027 ; PubMed Central PMCID: PMC3975816.<?supplied-pmid 24094508?>24094508 </plain></SENT>
+</text></ref><ref id="pgen.1007452.ref020"><text><SENT sid="851" pm="."><plain>20PiliaG, ChenWM, ScuteriA, OrruM, AlbaiG, DeiM, et al Heritability of cardiovascular and personality traits in 6,148 Sardinians. PLoS genetics. 2006;2(8):e132 10.1371/journal.pgen.0020132 ; PubMed Central PMCID: PMCPMC1557782.<?supplied-pmid 16934002?>16934002 </plain></SENT>
+</text></ref><ref id="pgen.1007452.ref021"><text><SENT sid="852" pm="."><plain>21StancakovaA, JavorskyM, KuulasmaaT, HaffnerSM, KuusistoJ, LaaksoM. Changes in insulin sensitivity and insulin release in relation to glycemia and glucose tolerance in 6,414 Finnish men. Diabetes. 2009;58(5):1212–21. 10.2337/db08-1607 ; PubMed Central PMCID: PMCPMC2671053.<?supplied-pmid 19223598?>19223598 </plain></SENT>
+</text></ref><ref id="pgen.1007452.ref022"><text><SENT sid="853" pm="."><plain>22Brieger K, Zajac GJM, Schmidt EM, Clark CP, Yang J, Li K, et al. Genes for Good: engaging the public in genetics research using social media. </plain></SENT>
+<SENT sid="855" pm="."><plain>In preparation. </plain></SENT>
+</text></ref><ref id="pgen.1007452.ref023"><text><SENT sid="856" pm="."><plain>23QiaoD, LangeC, BeatyTH, CrapoJD, BarnesKC, BamshadM, et al Exome Sequencing Analysis in Severe, Early-Onset Chronic Obstructive Pulmonary Disease. Am J Respir Crit Care Med. 2016;193(12):1353–63. 10.1164/rccm.201506-1223OC .<?supplied-pmid 26736064?>26736064 </plain></SENT>
+</text></ref><ref id="pgen.1007452.ref024"><text><SENT sid="857" pm="."><plain>24StallingsMC, CorleyRP, DenneheyB, HewittJK, KrauterKS, LessemJM, et al A genome-wide search for quantitative trait Loci that influence antisocial drug dependence in adolescence. Arch Gen Psychiatry. 2005;62(9):1042–51. 10.1001/archpsyc.62.9.1042 .<?supplied-pmid 16143736?>16143736 </plain></SENT>
+</text></ref><ref id="pgen.1007452.ref025"><text><SENT sid="858" pm="."><plain>25McCarthyS, DasS, KretzschmarW, DelaneauO, WoodAR, TeumerA, et al A reference panel of 64,976 haplotypes for genotype imputation. Nature genetics. 2016;48(10):1279–83. 10.1038/ng.3643 .<?supplied-pmid 27548312?>27548312 </plain></SENT>
+</text></ref><ref id="pgen.1007452.ref026"><text><SENT sid="859" pm="."><plain>26DasS, ForerL, SchonherrS, SidoreC, LockeAE, KwongA, et al Next-generation genotype imputation service and methods. Nature genetics. 2016;48(10):1284–7. 10.1038/ng.3656 ; PubMed Central PMCID: PMCPMC5157836.<?supplied-pmid 27571263?>27571263 </plain></SENT>
+</text></ref><ref id="pgen.1007452.ref027"><text><SENT sid="860" pm="."><plain>27ZhanX, HuY, LiB, AbecasisGR, LiuDJ. RVTESTS: an efficient and comprehensive tool for rare variant association analysis using sequence data. Bioinformatics. 2016;32(9):1423–6. 10.1093/bioinformatics/btw079 ; PubMed Central PMCID: PMCPMC4848408.<?supplied-pmid 27153000?>27153000 </plain></SENT>
+</text></ref><ref id="pgen.1007452.ref028"><text><SENT sid="861" pm="."><plain>28SacconeNL, CulverhouseRC, Schwantes-AnTH, CannonDS, ChenX, CichonS, et al Multiple independent loci at chromosome 15q25.1 affect smoking quantity: a meta-analysis and comparison with lung cancer and COPD. PLoS Genet. 2010;6(8). </plain></SENT>
+<SENT sid="862" pm="."><plain>Epub 2010/08/12. 10.1371/journal.pgen.1001053 ; PubMed Central PMCID: PMC2916847.<?supplied-pmid 20700436?>20700436 </plain></SENT>
+</text></ref><ref id="pgen.1007452.ref029"><text><SENT sid="863" pm="."><plain>29LiuDJ, PelosoGM, YuH, ButterworthAS, WangX, MahajanA, et al Exome-wide association study of plasma lipids in &gt;300,000 individuals. Nature genetics. 2017 Epub 2017/10/31. 10.1038/ng.3977 .<?supplied-pmid 29083408?>29083408 </plain></SENT>
+</text></ref><ref id="pgen.1007452.ref030"><text><SENT sid="864" pm="."><plain>30MarouliE, GraffM, Medina-GomezC, LoKS, WoodAR, KjaerTR, et al Rare and low-frequency coding variants alter human adult height. Nature. 2017 10.1038/nature21039 .<?supplied-pmid 28146470?>28146470 </plain></SENT>
+</text></ref><ref id="pgen.1007452.ref031"><text><SENT sid="865" pm="."><plain>31Bulik-SullivanBK, LohPR, FinucaneHK, RipkeS, YangJ, Schizophrenia Working Group of the Psychiatric Genomics C, et al LD Score regression distinguishes confounding from polygenicity in genome-wide association studies. Nature genetics. 2015;47(3):291–5. 10.1038/ng.3211 ; PubMed Central PMCID: PMCPMC4495769.<?supplied-pmid 25642630?>25642630 </plain></SENT>
+</text></ref><ref id="pgen.1007452.ref032"><text><SENT sid="866" pm="."><plain>32ThorgeirssonTE, GudbjartssonDF, SurakkaI, VinkJM, AminN, GellerF, et al Sequence variants at CHRNB3-CHRNA6 and CYP2A6 affect smoking behavior. Nature genetics. 2010;42(5):448–53. 10.1038/ng.573 ; PubMed Central PMCID: PMCPMC3080600.<?supplied-pmid 20418888?>20418888 </plain></SENT>
+</text></ref><ref id="pgen.1007452.ref033"><text><SENT sid="867" pm="."><plain>33YinX, BizonC, TilsonJ, LinY, GizerIR, EhlersCL, et al Genome-wide meta-analysis identifies a novel susceptibility signal at CACNA2D3 for nicotine dependence. Am J Med Genet B Neuropsychiatr Genet. 2017 10.1002/ajmg.b.32540 ; PubMed Central PMCID: PMCPMC5656555.<?supplied-pmid 28440896?>28440896 </plain></SENT>
+</text></ref><ref id="pgen.1007452.ref034"><text><SENT sid="868" pm="."><plain>34WelterD, MacArthurJ, MoralesJ, BurdettT, HallP, JunkinsH, et al The NHGRI GWAS Catalog, a curated resource of SNP-trait associations. Nucleic acids research. 2014;42(Database issue):D1001–6. 10.1093/nar/gkt1229 ; PubMed Central PMCID: PMC3965119.<?supplied-pmid 24316577?>24316577 </plain></SENT>
+</text></ref><ref id="pgen.1007452.ref035"><text><SENT sid="869" pm="."><plain>35VerzilliC, ShahT, CasasJP, ChapmanJ, SandhuM, DebenhamSL, et al Bayesian meta-analysis of genetic association studies with different sets of markers. American journal of human genetics. 2008;82(4):859–72. 10.1016/j.ajhg.2008.01.016 ; PubMed Central PMCID: PMCPMC2665011.<?supplied-pmid 18394581?>18394581 </plain></SENT>
+</text></ref><ref id="pgen.1007452.ref036"><text><SENT sid="870" pm="."><plain>36NewcombePJ, VerzilliC, CasasJP, HingoraniAD, SmeethL, WhittakerJC. Multilocus Bayesian meta-analysis of gene-disease associations. American journal of human genetics. 2009;84(5):567–80. 10.1016/j.ajhg.2009.04.001 ; PubMed Central PMCID: PMCPMC2680997.<?supplied-pmid 19409523?>19409523 </plain></SENT>
+</text></ref><ref id="pgen.1007452.ref037"><text><SENT sid="871" pm="."><plain>371000 Genomes Project C, AutonA, BrooksLD, DurbinRM, GarrisonEP, KangHM, et al A global reference for human genetic variation. Nature. 2015;526(7571):68–74. 10.1038/nature15393 .<?supplied-pmid 26432245?>26432245 </plain></SENT>
+</text></ref><ref id="pgen.1007452.ref038"><text><SENT sid="872" pm="."><plain>38LiY, KellisM. Joint Bayesian inference of risk variants and tissue-specific epigenomic enrichments across multiple complex human diseases. Nucleic acids research. 2016;44(18):e144 10.1093/nar/gkw627 ; PubMed Central PMCID: PMCPMC5062982.<?supplied-pmid 27407109?>27407109 </plain></SENT>
+</text></ref><ref id="pgen.1007452.ref039"><text><SENT sid="873" pm="."><plain>39BennerC, SpencerCC, HavulinnaAS, SalomaaV, RipattiS, PirinenM. FINEMAP: efficient variable selection using summary data from genome-wide association studies. Bioinformatics. 2016;32(10):1493–501. 10.1093/bioinformatics/btw018 ; PubMed Central PMCID: PMCPMC4866522.<?supplied-pmid 26773131?>26773131 </plain></SENT>
+</text></ref><ref id="pgen.1007452.ref040"><text><SENT sid="874" pm="."><plain>40ChenW, McDonnellSK, ThibodeauSN, TillmansLS, SchaidDJ. Incorporating Functional Annotations for Fine-Mapping Causal Variants in a Bayesian Framework Using Summary Statistics. Genetics. 2016;204(3):933–58. 10.1534/genetics.116.188953 ; PubMed Central PMCID: PMCPMC5105870.<?supplied-pmid 27655946?>27655946 </plain></SENT>
+</text></ref></ref-list></SecTag></back></article>
