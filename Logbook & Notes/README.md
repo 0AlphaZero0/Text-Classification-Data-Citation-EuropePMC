@@ -1177,11 +1177,17 @@ narratives*** Arturo Lopez Pineda et al.
   * Needs to assign clinical codes to patient from diagnoses but it takes a lot of time and result in 60-80% of successfully assign codes.
   
 - :heavy_check_mark: ***Solutions*** : 
-  * Previous studies ( 
-    * Koopman B, Karimi S, Nguyen A, et al. Automatic classification of diseases from free-text death certificates for real-time surveillance. BMC Med Inform Decis Mak 2015;15:53. doi:10.1186/s12911-015-0174-2
-    * Berndorfer S, Henriksson A. Automated Diagnosis Coding with Combined Text Representations. Stud Health Technol Inform 2017;235:201–5.
-    * Anholt RM, Berezowski J, Jamal I, et al. Mining free-text medical records for companion animal enteric syndrome surveillance. Preventive Veterinary Medicine 2014;113:417–22. doi:10.1016/j.prevetmed.2014.01.017
-    * Wang Y, Sohn S, Liu S, et al. A clinical text classification paradigm using weak supervision and deep representation. BMC Med Inform Decis Mak 2019;19:1. doi:10.1186/s12911-018-0723-6 )
+  * Previous studies *Machine Learning* ( 
+    1) Koopman B, Karimi S, Nguyen A, et al. Automatic classification of diseases from free-text death certificates for real-time surveillance. BMC Med Inform Decis Mak 2015;15:53. doi:10.1186/s12911-015-0174-2
+    2) Berndorfer S, Henriksson A. Automated Diagnosis Coding with Combined Text Representations. Stud Health Technol Inform 2017;235:201–5.
+    3) Anholt RM, Berezowski J, Jamal I, et al. Mining free-text medical records for companion animal enteric syndrome surveillance. Preventive Veterinary Medicine 2014;113:417–22. doi:10.1016/j.prevetmed.2014.01.017
+    4) Wang Y, Sohn S, Liu S, et al. A clinical text classification paradigm using weak supervision and deep representation. BMC Med Inform Decis Mak 2019;19:1. doi:10.1186/s12911-018-0723-6)
+    The first three ones show high classification accuracy with ML models for human(1,2) and veterinary(3) text narratives for diseases well represented in training set, the last ones (4) show successfuly classification for clinical narratives with Decision Trees, Random Forests and SVMs.
+    
+   * Previous studies *Deep Learning* (
+    1) Weng W-H, Wagholikar KB, McCray AT, et al. Medical subdomain classification of clinical notes using a machine learning-based natural language processing approach. BMC Med Inform Decis Mak 2017;17:155. doi:10.1186/s12911-017-0556-8 
+    2) See others in the paper)
+
   
 - :triangular_flag_on_post: ***Remaining Problems*** : 
   * 
