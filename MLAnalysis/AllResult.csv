@@ -1,0 +1,52 @@
+f1-score,Precision,Recall,Accuracy,Loss,Method,Combination,Token,Ngram,Lemma,Stem,Embedding,Time (sec)
+71.987,76.364,72.3595,82.17,0.472,CNN,['Tokenization'],True,False,False,False,True,107.956
+71.877,77.22125,71.2125,82.697,0.451,CNN,['Lemmatization'],False,False,True,False,True,122.02
+67.3675,76.37625,65.422,82.239,0.464,CNN,['Stemming'],False,False,False,True,True,125.266
+72.933,79.9225,72.15775,83.293,0.575,Dplearn,['Tokenization'],True,False,False,False,False,199.746
+74.44175,81.996,71.9235,85.004,0.566,Dplearn,['N-gram'],False,True,False,False,False,1478.921
+69.576,76.3195,69.113,80.598,0.623,Dplearn,['Lemmatization'],False,False,True,False,False,182.688
+70.32775,77.325,68.51775,83.028,0.555,Dplearn,['Stemming'],False,False,False,True,False,168.179
+72.99975,83.17575,70.205,85.203,0.534,Dplearn,['N-gram' 'Lemmatization'],False,True,True,False,False,1649.548
+74.45725,84.64075,70.84275,85.662,0.58,Dplearn,['N-gram' 'Stemming'],False,True,False,True,False,1629.145
+57.2415,65.55575,57.11175,73.816,0.672,Embedding,['Tokenization'],True,False,False,False,True,62.957
+49.182,61.22725,51.0595,69.993,0.738,Embedding,['Lemmatization'],False,False,True,False,True,62.457
+52.9645,58.41525,54.976,65.776,0.776,Embedding,['Stemming'],False,False,False,True,True,57.346
+70.008,76.56625,70.689,79.726,0.478,LSTM,['Tokenization'],True,False,False,False,True,542.026
+69.68575,68.0205,74.1155,77.377,0.575,LSTM,['Lemmatization'],False,False,True,False,True,591.007
+67.2725,69.355,70.0375,77.762,0.566,LSTM,['Stemming'],False,False,False,True,True,624.399
+78.027,81.1705,76.704,86.118,NAN,Logistic-Regression,['Tokenization'],True,False,False,False,False,61.401
+63.912,82.38675,61.37975,82.10475,NAN,ComplementNB,['Tokenization'],True,False,False,False,False,3.82
+54.37275,70.84225,50.34175,76.382,NAN,GaussianNB,['Tokenization'],True,False,False,False,False,4.911
+56.91125,84.43475,53.77275,80.19575,NAN,MultinomialNB,['Tokenization'],True,False,False,False,False,3.752
+62.84775,90.82025,61.914,83.686,NAN,Random-Forest,['Tokenization'],True,False,False,False,False,13.629
+75.08025,80.32625,72.666,85.2625,NAN,SVM,['Tokenization'],True,False,False,False,False,14.15
+76.6615,79.25625,76.6855,85.066,NAN,Logistic-Regression,['N-gram'],False,True,False,False,False,534.534
+63.79675,89.632,62.56075,83.55425,NAN,ComplementNB,['N-gram'],False,True,False,False,False,11.814
+61.15375,82.2075,57.71375,81.1855,NAN,GaussianNB,['N-gram'],False,True,False,False,False,22.76
+59.22725,91.25175,57.76375,82.172,NAN,MultinomialNB,['N-gram'],False,True,False,False,False,11.792
+63.44775,89.848,63.55225,84.279,NAN,Random-Forest,['N-gram'],False,True,False,False,False,94.883
+76.242,83.59675,74.00575,86.77975,NAN,SVM,['N-gram'],False,True,False,False,False,58.943
+78.08025,80.8285,76.98175,85.921,NAN,Logistic-Regression,['Lemmatization'],False,False,True,False,False,71.363
+64.96175,82.766,62.14275,82.23525,NAN,ComplementNB,['Lemmatization'],False,False,True,False,False,4.924
+53.772,69.47675,49.825,75.98725,NAN,GaussianNB,['Lemmatization'],False,False,True,False,False,5.841
+57.504,84.82,54.149,80.45975,NAN,MultinomialNB,['Lemmatization'],False,False,True,False,False,7.015
+62.886,90.39475,61.788,83.4895,NAN,Random-Forest,['Lemmatization'],False,False,True,False,False,17.278
+74.45225,80.104,71.972,85.0665,NAN,SVM,['Lemmatization'],False,False,True,False,False,24.794
+78.47125,80.52525,77.6955,86.0535,NAN,Logistic-Regression,['Stemming'],False,False,False,True,False,69.085
+65.403,82.4855,62.703,82.49875,NAN,ComplementNB,['Stemming'],False,False,False,True,False,11.127
+54.055,67.43825,50.32425,75.722,NAN,GaussianNB,['Stemming'],False,False,False,True,False,12.47
+58.9415,86.58375,55.335,80.9195,NAN,MultinomialNB,['Stemming'],False,False,False,True,False,11.87
+62.24425,90.13125,61.09075,83.02725,NAN,Random-Forest,['Stemming'],False,False,False,True,False,19.414
+75.99575,81.69275,73.44175,85.857,NAN,SVM,['Stemming'],False,False,False,True,False,19.892
+78.944,82.13175,77.7785,86.7125,NAN,Logistic-Regression,['N-gram' 'Lemmatization'],False,True,True,False,False,584.187
+62.804,90.4825,60.367,83.09325,NAN,ComplementNB,['N-gram' 'Lemmatization'],False,True,True,False,False,20.085
+59.98625,82.944,56.26525,80.6595,NAN,GaussianNB,['N-gram' 'Lemmatization'],False,True,True,False,False,41.326
+56.97775,91.20125,54.91,81.05325,NAN,MultinomialNB,['N-gram' 'Lemmatization'],False,True,True,False,False,21.688
+62.26325,86.3835,62.588,83.81925,NAN,Random-Forest,['N-gram' 'Lemmatization'],False,True,True,False,False,95.874
+76.086,83.18525,73.152,86.38575,NAN,SVM,['N-gram' 'Lemmatization'],False,True,True,False,False,79.879
+79.126,81.7665,78.1425,86.5825,NAN,Logistic-Regression,['N-gram' 'Stemming'],False,True,False,True,False,637.234
+62.289,90.25025,60.13175,82.9615,NAN,ComplementNB,['N-gram' 'Stemming'],False,True,False,True,False,24.899
+60.1785,81.72825,56.44075,80.726,NAN,GaussianNB,['N-gram' 'Stemming'],False,True,False,True,False,35.363
+57.20575,91.17625,54.94125,81.053,NAN,MultinomialNB,['N-gram' 'Stemming'],False,True,False,True,False,22.04
+63.84575,89.89,63.30925,84.40975,NAN,Random-Forest,['N-gram' 'Stemming'],False,True,False,True,False,151.445
+76.17675,83.0485,73.4785,86.18675,NAN,SVM,['N-gram' 'Stemming'],False,True,False,True,False,82.109
