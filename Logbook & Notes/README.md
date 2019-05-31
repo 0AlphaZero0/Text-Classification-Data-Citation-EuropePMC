@@ -1169,9 +1169,12 @@ In the end we have 800 papers Open Access with data citations (5000 data citatio
 - *Papers & Blogs* :
   * [Deep learning facilitates rapid classification of human and veterinary clinical
 narratives](#Dplearn13) ***Preprint***
+  * [Convolutional neural network : Deep learning-based classification of building quality problems](#CNN13)
+  
 
-***Deep learning facilitates rapid classification of human and veterinary clinical
-narratives*** Arturo Lopez Pineda et al.
+<a name="Dplearn13"></a>
+***[Deep learning facilitates rapid classification of human and veterinary clinical
+narratives](https://www.biorxiv.org/content/10.1101/429720v2)*** Arturo Lopez Pineda et al.
 
 - :interrobang: ***Problems*** : 
   * Needs to assign clinical codes to patient from diagnoses but it takes a lot of time and result in 60-80% of successfully assign codes.
@@ -1185,14 +1188,30 @@ narratives*** Arturo Lopez Pineda et al.
     The first three ones show high classification accuracy with ML models for human(1,2) and veterinary(3) text narratives for diseases well represented in training set, the last ones (4) show successfuly classification for clinical narratives with Decision Trees, Random Forests and SVMs.
     
    * Previous studies *Deep Learning* (
-    1) Weng W-H, Wagholikar KB, McCray AT, et al. Medical subdomain classification of clinical notes using a machine learning-based natural language processing approach. BMC Med Inform Decis Mak 2017;17:155. doi:10.1186/s12911-017-0556-8 
-    2) See others in the paper)
+      1) Weng W-H, Wagholikar KB, McCray AT, et al. Medical subdomain classification of clinical notes using a machine learning-based natural language processing approach. BMC Med Inform Decis Mak 2017;17:155. doi:10.1186/s12911-017-0556-8 
+      2) See others in the paper)
+   * They used LSTM and RNN (using GloVe for word embedding). In the end LSTM gives best results but it with a f1-score (weighted) with a max at 0.76 but a min of 0.28)
 
-  
 - :triangular_flag_on_post: ***Remaining Problems*** : 
-  * 
+  * Not enough data
+  * Not excellent results
 
-https://www.biorxiv.org/content/10.1101/429720v2.abstract
+<a name="CNN13"></a>
+***[Convolutional neural network : Deep learning-based classification of building quality problems](https://www.sciencedirect.com/science/article/pii/S1474034618301538)*** B.Zhong et al.
+  
+- :interrobang: ***Problems*** : 
+  * Classification of building quality complaints(BQCs) result in time consuming and error prone.
+
+- :heavy_check_mark: ***Solutions*** : 
+  * Previous studies *Machine Learning* ( 
+    1) Z.D. Lu, H. Li, Recent progress in deep learning for NLP, in: Conference of the North American Chapter of the Association for Computational Linguistics: Tutorial, 2016, pp. 11–13.
+    2) Y. Kim, Convolutional neural networks for sentence classification, in: Proceedings of the 2014 Conference on Empirical Methods in Natural Language Processing (EMNLP), Eprint Arxiv, 2014, pp. 1746–1751. (Sentence levels with only 1 convolution layer)
+    3) See others in the paper p.47)
+  * Here they use several model to compare the results (CNN, Bayes, SVM) and it seems that CNNs gives the best result following by SVMs and then Bayes models.
+
+- :triangular_flag_on_post: ***Remaining Problems*** : 
+  * They want to explore more features
+  * Improve f1-score (with transfer learning)
 
 [:top::top::top::top::top::top::top::top::top::top::top::top::top::top:Go to the top:top::top::top::top::top::top::top::top::top::top::top::top::top::top::top:](#top)
 
