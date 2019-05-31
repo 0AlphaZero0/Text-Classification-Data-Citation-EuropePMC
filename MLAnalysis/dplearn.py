@@ -32,10 +32,8 @@ from keras.callbacks import TensorBoard
 
 ##################################################    Variables     ###################################################
 
-# Files
 dataset_filename="Dataset23.csv"
-
-epochs=10
+epochs=4
 
 result_outfile="ResultDL"+str(epochs)+"-epochs.csv"
 
@@ -43,11 +41,14 @@ result_outfile="ResultDL"+str(epochs)+"-epochs.csv"
 average="macro" # binary | micro | macro | weighted | samples
 batch_size=20
 class_weight={
-	0 : 15.,
-	1 : 50.,
-	2 : 15.,
-	3 : 10.}
-skf=StratifiedKFold(n_splits=4)
+	0 : 25.,
+	1 : 20.,
+	2 : 10.,}
+	# 3 : 10.}
+k_cross_val=4
+skf=StratifiedKFold(
+	n_splits=k_cross_val,
+	random_state=42)
 input_node_units=1280
 activation_input_node='relu'
 node1_units=128
@@ -144,11 +145,9 @@ data[completeCitation] = data[[PreCitation_str,Citation_str,PostCitation_str]].a
 #
 data["Categories_num"] = data.Categories.map({
 	"Background":0,
-	"Creation":1,
-	"Use":2,})
-	# "Compare":1,
+	"Creation":1,# "Compare":1,
 	# "Creation":2,
-	# "Use":3})
+	"Use":2})# "Use":3})
 #
 data[Figure_num_str] = data.Figure.map({
 	True:0,
@@ -183,14 +182,33 @@ vect_list=[
 	[TfidfVectorizer(ngram_range=ngram_range,tokenizer=lemma_tokenizer),completeCitation,[ngram,lemma]],
 	[TfidfVectorizer(ngram_range=ngram_range,tokenizer=stem_tokenizer),completeCitation,[ngram,stem]]]
 
-output_file=codecs.open(result_outfile,'w',encoding='utf8')
-output_file.write("f1-score\tPrecision\tRecall\tAccuracy\tCross-score\tLoss\tCombination\tToken\tNgram\tLemma\tStem\tTime\n")
+output_file=codecs.open(
+	filename=result_outfile,
+	mode='w',
+	encoding='utf8')
+output_file.write("f1-score\tPrecision\tRecall\tAccuracy\tLoss\tCombination\tToken\tNgram\tLemma\tStem\tTime\n")
 for vect in vect_list:
-	accuracy_list=[]
 	start=time.time()
+	f1_score_list,precision_list,recall_list,accuracy_list=[],[],[],[]
+	val_acc_list,val_loss_list=[],[]
 	for train_index, test_index in skf.split(X,y):
+		f1_score=None
+		model=None
+		precision=None
+		recall=None
+		val_loss=None
+		val_acc=None
+		vect_X_test=None
+		vect_X_train=None
+		X_test=None
+		X_test_dtm=None
+		X_train_dtm=None
+		X_train=None
+		y_test=None
+		y_train=None
+		backend.clear_session()
 		NAME="dplearn-epochs"+str(epochs)+"-"+str(vect[2])+"-{}".format(int(time.time()))
-		tensorboard=TensorBoard(log_dir='./logs/{}'.format(NAME))
+		tensorboard=TensorBoard(log_dir='./logsDLearn/{}'.format(NAME))
 		print(vect[2])
 		X_train,X_test=X.ix[train_index],X.ix[test_index]
 		y_train,y_test=y.ix[train_index],y.ix[test_index]
@@ -215,10 +233,19 @@ for vect in vect_list:
 		X_test_dtm=normalize(X_test_dtm,axis=1)
 
 		model=Sequential([
-			Dense(input_node_units,activation=activation_input_node,input_dim=X_train_dtm[0].shape[1]),
-			Dense(node1_units,activation=activation_node1),
-			Dense(node2_units,activation=activation_node2),
-			Dense(len(target_names),activation=activation_output_node)])
+			Dense(
+				units=input_node_units,
+				activation=activation_input_node,
+				input_dim=X_train_dtm[0].shape[1]),
+			Dense(
+				units=node1_units,
+				activation=activation_node1),
+			Dense(
+				units=node2_units,
+				activation=activation_node2),
+			Dense(
+				units=len(target_names),
+				activation=activation_output_node)])
 
 		model.compile(
 			optimizer="adam",
@@ -236,47 +263,66 @@ for vect in vect_list:
 			callbacks=[tensorboard])
 
 		val_loss,val_acc=model.evaluate(X_test_dtm,y_test)
+		val_loss_list.append(val_loss)
+		val_acc_list.append(val_acc)
 
 		accuracy_list.append(val_acc)
 	
+		result=model.predict(X_test_dtm)
+		
+		y_pred_class=[]
+		for sample in result:
+			y_pred_class.append(np.argmax(sample))
+
+		f1_score=round(metrics.f1_score(y_test,y_pred_class,average=average)*100,3)
+		f1_score_list.append(f1_score)
+		precision=round(metrics.precision_score(y_test,y_pred_class,average=average)*100,3)
+		precision_list.append(precision)
+		recall=round(metrics.recall_score(y_test,y_pred_class,average=average)*100,3)
+		recall_list.append(recall)
+		accuracy=round(metrics.accuracy_score(y_test,y_pred_class)*100,3)
+		accuracy_list.append(accuracy)
+	
 	end=time.time()
 
-	result=model.predict(X_test_dtm)
-	
-	y_pred=[]
-	for sample in result:
-		y_pred.append(np.argmax(sample))
-
-	f1_score=round(metrics.f1_score(y_test,y_pred,average=average)*100,3)
-	precision=round(metrics.precision_score(y_test,y_pred,average=average)*100,3)
-	recall=round(metrics.recall_score(y_test,y_pred,average=average)*100,3)
-	
-	accuracy_mean=0
-	for accuracy in accuracy_list:
-		accuracy_mean=accuracy+accuracy_mean
+	fold=0
+	f1_score_mean,precision_mean,recall_mean,accuracy_mean=0,0,0,0
+	val_acc_mean,val_loss_mean=0,0
+	while fold < len(f1_score_list):
+		f1_score_mean+=f1_score_list[fold]
+		precision_mean+=precision_list[fold]
+		recall_mean+=recall_list[fold]
+		accuracy_mean+=accuracy_list[fold]
+		val_acc_mean+=val_acc_list[fold]
+		val_loss_mean+=val_loss_list[fold]
+		fold+=1
+	f1_score_mean=f1_score_mean/len(f1_score_list)
+	precision_mean=precision_mean/len(precision_list)
+	recall_mean=recall_mean/len(recall_list)
 	accuracy_mean=accuracy_mean/len(accuracy_list)
+	val_acc_mean=val_acc_mean/len(val_acc_list)
+	val_loss_mean=val_loss_mean/len(val_loss_list)
 	
 	print(
-		metrics.classification_report(y_test,y_pred,target_names = target_names),
-		"\nCross validation score : "+str(round(accuracy_mean*100,3)),
-		"\nAccuracy score : "+str(round(metrics.accuracy_score(y_test,y_pred)*100,3)),
-		"\tF1_score : "+str(f1_score),
-		"\tPrecision : "+str(precision),
-		"\tRecall : "+str(recall),
+		metrics.classification_report(y_test,y_pred_class,target_names = target_names),
+		"Method : "+str(vect[2]),
+		"\nF1_score : "+str(f1_score_mean),
+		"\tPrecision : "+str(precision_mean),
+		"\tRecall : "+str(recall_mean),
+		"\tVal_acc : "+str(val_acc_mean),
+		"\tVal_loss : "+str(val_loss_mean),
 		"\tTime : "+str(round(end-start,3))+" sec",
 		"\n#######################################################")
 
-	output_file.write(str(f1_score))
+	output_file.write(str(f1_score_mean))
 	output_file.write("\t")
-	output_file.write(str(precision))
+	output_file.write(str(precision_mean))
 	output_file.write("\t")
-	output_file.write(str(recall))
+	output_file.write(str(recall_mean))
 	output_file.write("\t")
-	output_file.write(str(round(val_acc*100,3)))
+	output_file.write(str(round(val_acc_mean*100,3)))
 	output_file.write("\t")
-	output_file.write(str(round(accuracy_mean*100,3)))
-	output_file.write("\t")
-	output_file.write(str(round(val_loss,3)))
+	output_file.write(str(round(val_loss_mean,3)))
 	output_file.write("\t")
 	output_file.write(str(vect[2]))
 	output_file.write("\t")
@@ -303,19 +349,5 @@ for vect in vect_list:
 	output_file.write(str(round(end-start,3)))
 	output_file.write("\n")
 	# Clean run
-	f1_score=None
-	model=None
-	precision=None
-	recall=None
-	val_loss=None
-	val_acc=None
-	vect_X_test=None
-	vect_X_train=None
-	X_test=None
-	X_test_dtm=None
-	X_train_dtm=None
-	X_train=None
-	y_test=None
-	y_train=None
-	backend.clear_session()
+	
 output_file.close()

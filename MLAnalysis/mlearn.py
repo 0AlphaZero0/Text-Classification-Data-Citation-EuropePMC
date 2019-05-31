@@ -31,12 +31,15 @@ from sklearn.model_selection import StratifiedKFold
 dataset_filename="Dataset23.csv"
 result_outfile="ResultMLparam.csv"
 # Parameters
+k_cross_val=4
 average="macro"
 gamma="auto"
 C=10
 max_iter=10000
 class_weight="balanced"
-skf=StratifiedKFold(n_splits=4)
+skf=StratifiedKFold(
+	n_splits=k_cross_val,
+	random_state=42)
 ngram_range=(1,3)
 # Lemmatizer & Stemmer
 lemmatizer=WordNetLemmatizer()
@@ -148,11 +151,9 @@ data[completeCitation]=data[[PreCitation_str,Citation_str,PostCitation_str]].app
 #
 data["Categories_num"]=data.Categories.map({
 	"Background":0,
-	"Creation":1,
-	"Use":2})
-	# "Compare":1,
+	"Creation":1,# "Compare":1,
 	# "Creation":2,
-	# "Use":3})
+	"Use":2})# "Use":3})
 #
 data[Figure_num_str]=data.Figure.map({
 	True:0,
@@ -198,12 +199,12 @@ vect_list_countvect=[
 # X_train,X_test,y_train,y_test=train_test_split(X,y,random_state=1)
 #
 output_file=codecs.open(result_outfile,'w',encoding='utf8')
-output_file.write("f1-score\tPrecision\tRecall\tAccuracy\tCross-validation-score\tMethod\tCombination\tToken\tNgram\tLemma\tStem\tTime\n")
+output_file.write("f1-score\tPrecision\tRecall\tAccuracy\tMethod\tCombination\tToken\tNgram\tLemma\tStem\tTime\n")
 for index_vect_list in range(len(vect_list)):
 	print(str(index_vect_list)+"/"+str(len(vect_list)))
 	for clf in clfList:
 		start=time.time()
-		accuracy_list=[]
+		f1_score_list,precision_list,recall_list,accuracy_list=[],[],[],[]
 		print(vect_list[index_vect_list][2])
 		for train_index,test_index in skf.split(X,y):
 			X_train,X_test=X.ix[train_index],X.ix[test_index]
@@ -241,35 +242,45 @@ for index_vect_list in range(len(vect_list)):
 				y_pred_class=clf[0].predict(X_test_dtm.toarray())
 
 			f1_score=round(metrics.f1_score(y_test,y_pred_class,average=average)*100,3)
+			f1_score_list.append(f1_score)
 			precision=round(metrics.precision_score(y_test,y_pred_class,average=average)*100,3)
+			precision_list.append(precision)
 			recall=round(metrics.recall_score(y_test,y_pred_class,average=average)*100,3)
+			recall_list.append(recall)
 			accuracy=round(metrics.accuracy_score(y_test,y_pred_class)*100,3)
 			accuracy_list.append(accuracy)
+			print(y_test," : test")
+			print(y_pred_class," : predict")
 		
 		end=time.time()
 
-		accuracy_mean=0
-		for accuracy in accuracy_list:
-			accuracy_mean=accuracy+accuracy_mean
+		fold=0
+		f1_score_mean,precision_mean,recall_mean,accuracy_mean=0,0,0,0
+		while fold < len(f1_score_list):
+			f1_score_mean+=f1_score_list[fold]
+			precision_mean+=precision_list[fold]
+			recall_mean+=recall_list[fold]
+			accuracy_mean+=accuracy_list[fold]
+			fold+=1
+		f1_score_mean=f1_score_mean/len(f1_score_list)
+		precision_mean=precision_mean/len(precision_list)
+		recall_mean=recall_mean/len(recall_list)
 		accuracy_mean=accuracy_mean/len(accuracy_list)
+
 
 		print(
 			metrics.classification_report(y_test,y_pred_class,target_names=target_names),
 			"Method : "+str(clf[1]),
-			"\nCross validation score : "+str(round(accuracy_mean,3)),
-			"\nAccuracy score : " + str(accuracy),
-			"\tF1_score : " + str(f1_score),
+			"\nF1_score : " + str(f1_score),
 			"\tPrecision : " + str(precision),
 			"\tRecall : " + str(recall),
 			"\tTime : "+str(round(end-start,3))+" sec",
 			"\n#######################################################")
-		output_file.write(str(f1_score))
+		output_file.write(str(f1_score_mean))
 		output_file.write("\t")
-		output_file.write(str(precision))
+		output_file.write(str(precision_mean))
 		output_file.write("\t")
-		output_file.write(str(recall))
-		output_file.write("\t")
-		output_file.write(str(accuracy))
+		output_file.write(str(recall_mean))
 		output_file.write("\t")
 		output_file.write(str(accuracy_mean))
 		output_file.write("\t")

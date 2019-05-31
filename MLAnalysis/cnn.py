@@ -14,18 +14,19 @@ from pandas import DataFrame
 from pandas import concat
 import os
 import time
-import re
 
 from sklearn.feature_extraction.text import TfidfVectorizer # Allows transformations of string in number
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.model_selection import train_test_split
 from sklearn.model_selection import StratifiedKFold
+from sklearn.model_selection import cross_val_score
 from sklearn import metrics
 
 from nltk.stem.snowball import SnowballStemmer
 from nltk import word_tokenize
 from nltk.stem import WordNetLemmatizer
 
+from keras.wrappers.scikit_learn import KerasClassifier
 from keras.preprocessing.sequence import pad_sequences
 from keras.preprocessing.text import one_hot
 from keras.preprocessing.text import Tokenizer
@@ -38,30 +39,24 @@ from keras.callbacks import TensorBoard
 
 os.environ['TF_CPP_MIN_LOG_LEVEL']='2'
 
-dataset="Dataset2.csv"
-embedding_dims = 50 # Here 50/100/200/300
-epochs = 2
-k_cross_val=5
+dataset="Dataset23.csv"
+embedding_dims=50 # Here 50/100/200/300
+epochs=4
 
-result_output = "ResultLSTM"+str(embedding_dims)+"d.csv"
-embedding_file = 'glove.6B.'+str(embedding_dims)+'d.txt'
+result_output="ResultCNN"+str(embedding_dims)+"d.csv"
+embedding_file='glove.6B.'+str(embedding_dims)+'d.txt'
 
+vocab_size=500
 average="macro" # binary | micro | macro | weighted | samples
 class_weight={
-	0 : 15.,
-	1 : 50.,
-	2 : 15.,
-	3 : 10.}
-
-skf=StratifiedKFold(n_splits=4,random_state=25)
-activation_input_node='relu'
-node1=128
-activation_node1='relu'
-node2=128
-activation_node2='relu'
-output_node=4
-vocab_size=500
-activation_output_node='softmax'
+	0 : 25.,
+	1 : 20.,
+	2 : 10.,}
+	# 3 : 10.}
+k_cross_val=4
+skf=StratifiedKFold(
+	n_splits=k_cross_val,
+	random_state=42)
 Section_num_str,SubType_num_str,Figure_num_str="Section_num","SubType_num","Figure_num"
 PreCitation_str,Citation_str,PostCitation_str,completeCitation,completeCitationEmbedd="PreCitation","Citation","PostCitation","CompleteCitation","completeCitationEmbedd"
 featuresList=[
@@ -71,7 +66,7 @@ featuresList=[
 	'Categories_num']
 target_names=[
 	"Background",
-	"Compare",
+	# "Compare",
 	"Creation",
 	"Use"]
 # Lemmatizer & Stemmer
@@ -144,15 +139,15 @@ def tokenizer(doc):
 #
 ###################################################    Main     ###################################################
 #
-data=read_csv(dataset,header=0,sep="\t")
+data=read_csv(dataset,header=0,sep=";")
 #
-data[completeCitation]=data[[PreCitation_str,Citation_str,PostCitation_str]].apply(lambda x : '{}{}'.format(x[0],x[1]),axis=1)
+data[completeCitation]=data[[PreCitation_str,Citation_str,PostCitation_str]].apply(lambda x : '{}{}'.format(x[0],x[1]), axis=1)
 #
 data["Categories_num"]=data.Categories.map({
 	"Background":0,
-	"Compare":1,
-	"Creation":2,
-	"Use":3})
+	"Creation":1,# "Compare":1,
+	# "Creation":2,
+	"Use":2})# "Use":3})
 #
 data[Figure_num_str]=data.Figure.map({
 	True:0,
@@ -174,9 +169,6 @@ for subType in data.SubType:
 		index+=1
 data[SubType_num_str]=data.SubType.map(subTypeDict)
 ###########################################################################################
-output_file=codecs.open(result_output,'w',encoding='utf8')
-output_file.write("f1-score\tPrecision\tRecall\tAccuracy\tCross-score("+str(k_cross_val)+")\tLoss\tTime\tApproach\n")
-
 lemma_citation=[]
 stem_citation=[]
 for citation in data[completeCitation]:
@@ -186,126 +178,220 @@ for citation in data[completeCitation]:
 data["lemma_citation"]=lemma_citation
 data["stem_citation"]=stem_citation
 
-approaches=[data[completeCitation],data["lemma_citation"],data["stem_citation"]]	
-for approach in approaches:	
+approaches=[data[completeCitation],data["lemma_citation"],data["stem_citation"]]
+
+output_file=codecs.open(
+	filename=result_output,
+	mode='w',
+	encoding='utf8')
+output_file.write("f1-score\tPrecision\tRecall\tAccuracy\tLoss\tCombination\tToken\tLemma\tStem\tTime\n")
+for approach in approaches:
+
 	tokenizer=Tokenizer(num_words=vocab_size)
 	tokenizer.fit_on_texts(approach)
 	tmp=tokenizer.texts_to_sequences(approach)
+
 	word_index=tokenizer.word_index
-	max_len=len(max(tmp,key=len))
-	tmp=DataFrame(pad_sequences(# complete a sequence of tokenized words to match the length of the longest sentence 
+
+	max_len=len(max(tmp, key=len))
+
+	tmp=DataFrame(pad_sequences(
 		sequences=tmp,
-		maxlen=max_len,
+		maxlen=max_len, 
 		padding='post'))
-	data=concat([data[featuresList],tmp],axis=1)
+
+	data=concat(
+		objs=[data[featuresList],tmp],
+		axis=1)
 	tmp=None
+
 	X=data.drop(['Categories_num'],axis=1)
 	y=data.Categories_num
-	accuracy_list=[]
+
 	start=time.time()
+	f1_score_list,precision_list,recall_list,accuracy_list=[],[],[],[]
+	val_acc_list,val_loss_list=[],[]
 	control=0
 	for train_index,test_index in skf.split(X,y):
-		NAME="LSTM-"+str(embedding_dims)+"D-epochs"+str(epochs)+"-"+str(approach.name)+str(control)+"-{}".format(int(time.time()))
-		tensorboard=TensorBoard(log_dir='./logsLSTM/{}'.format(NAME))	
-		X_train,X_test=[X.ix[train_index],X.ix[test_index]] 
-		y_train,y_test=[y.ix[train_index],y.ix[test_index]]
-		X_train=[X_train.iloc[:,3:],X_train.iloc[:,:3]] #seq_features,other_features
-		X_test=[X_test.iloc[:,3:],X_test.iloc[:,:3]] #seq_features,other_features
+    	
+		NAME="CNN-"+str(embedding_dims)+"D-epochs"+str(epochs)+"-"+str(approach.name)+str(control)+"-{}".format(int(time.time()))
+		tensorboard=TensorBoard(log_dir='./logsEmbedding/{}'.format(NAME))
+
+		X_train, X_test=[X.ix[train_index], X.ix[test_index]] 
+		y_train, y_test=[y.ix[train_index], y.ix[test_index]]
+
+		X_train=[X_train.iloc[:, 3:],X_train.iloc[:, :3]] #seq_features,other_features
+		X_test=[X_test.iloc[:, 3:], X_test.iloc[:, :3]] #seq_features,other_features
+
 		embeddings_index={}
-		f=codecs.open(embedding_file,'r',encoding='utf-8')
-		for line in f:# load pre-trained embedding
+		f=codecs.open(
+			filename=embedding_file,
+			mode='r',
+			encoding='utf-8')
+		for line in f:
 			values=line.split()
 			word=values[0]
-			coefs=asarray(values[1:],dtype='float32')
+			coefs=asarray(
+				a=values[1:],
+				dtype='float32')
 			embeddings_index[word]=coefs
 		f.close()
+
 		not_in_embedding=0
+		# embedding_matrix=zeros((len(word_index),embedding_dims))
 		embedding_matrix=random.uniform(-0.5,0.5,(len(word_index),embedding_dims))
-		for word,i in word_index.items():# building matrix
+		for word,i in word_index.items():
 			embedding_vector=embeddings_index.get(word)
 			if embedding_vector is not None:
+				# words not found in embedding index will be all-zeros.
 				embedding_matrix[i]=embedding_vector
 			else:
 				not_in_embedding+=1
 		print(not_in_embedding,"/",len(word_index))
-		##################  MODEL  ########################
+		###
 		input_layer=layers.Input(
 			shape=(X_train[0].shape[1],))
+
 		embedding=layers.Embedding(
 			input_dim=len(word_index),
 			output_dim=embedding_dims,
 			weights=[embedding_matrix],
 			input_length=X_train[0].shape[1],
-			trainable=True,
-			mask_zero=True)(input_layer)
-		seq_features=layers.LSTM(
-			units=embedding_dims,
-			activation='tanh',
-			go_backwards=True,
-			dropout=0,
-			recurrent_dropout=0)(embedding)
-		model=layers.Dense(
-			units=128,
-			activation='relu')(seq_features)
+			trainable=False)(input_layer)
+
+		conv1=layers.Conv1D(
+			filters=128,
+			kernel_size=5,
+			padding='same',
+			activation='relu')(embedding)
+		
+		pool1=layers.GlobalMaxPooling1D()(conv1)
+		
+		conv2=layers.Conv1D(
+			filters=128,
+			kernel_size=5,
+			padding='same',
+			activation='relu')(pool1)
+		
+		pool2=layers.GlobalMaxPooling1D()(conv2)
+		
+		conv3=layers.Conv1D(
+			filters=128,
+			kernel_size=5,
+			padding='same',
+			activation='relu')(pool2)
+		
+		seq_features=layers.GlobalMaxPooling1D()(conv3)
+
+		###############################
+
+		other_features=layers.Input(
+			shape=(3,))
+
+		model=layers.Concatenate(
+			axis=1)([seq_features,other_features])
+		
 		model=layers.Dropout(
-			rate = .4)(model)
+			rate=.4)(model)
+
 		model=layers.Dense(
-			units=4,
+			units=len(target_names),
 			activation='softmax')(model)
-		model=models.Model(
-			inputs=[input_layer],
-			outputs=model)
+
+		model=models.Model([input_layer,other_features],model)
+
 		model.compile(
 			optimizer="adam",
 			loss="sparse_categorical_crossentropy",
 			metrics=['accuracy'])
+
 		model.fit(
-			X_train[0],
+			X_train,
 			y_train,
 			epochs=epochs,
 			batch_size=20,
 			class_weight=class_weight,
-			validation_data=(X_test[0],y_test),
+			validation_data=(X_test,y_test),
 			callbacks=[tensorboard])
-		##################  MODEL  ########################
-		val_loss,val_acc=model.evaluate(X_test[0],y_test)
-		result=model.predict(X_test[0])
-		y_pred=[]
+
+		val_loss,val_acc=model.evaluate(X_test,y_test)
+		val_loss_list.append(val_loss)
+		val_acc_list.append(val_acc)
+
+		result=model.predict(X_test)
+
+		y_pred_class=[]
 		for sample in result:
-			y_pred.append(argmax(sample))
-		f1_score=round(metrics.f1_score(y_test,y_pred,average=average)*100,3)
-		precision=round(metrics.precision_score(y_test,y_pred,average=average)*100,3)
-		recall=round(metrics.recall_score(y_test,y_pred,average=average)*100,3)
-		accuracy_list.append(val_acc)
+			y_pred_class.append(argmax(sample))
+
+		f1_score=round(metrics.f1_score(y_test,y_pred_class,average=average)*100,3)
+		f1_score_list.append(f1_score)
+		precision=round(metrics.precision_score(y_test,y_pred_class,average=average)*100,3)
+		precision_list.append(precision)
+		recall=round(metrics.recall_score(y_test,y_pred_class,average=average)*100,3)
+		recall_list.append(recall)
+		accuracy=round(metrics.accuracy_score(y_test,y_pred_class)*100,3)
+		accuracy_list.append(accuracy)
 		control+=1
-	accuracy_mean=0
-	for accuracy in accuracy_list:
-			accuracy_mean=float(accuracy_mean)+float(accuracy)
-	accuracy_mean=accuracy_mean/len(accuracy_list)
+	
 	end=time.time()
+
+	fold=0
+	f1_score_mean,precision_mean,recall_mean,accuracy_mean=0,0,0,0
+	val_acc_mean,val_loss_mean=0,0
+	while fold < len(f1_score_list):
+		f1_score_mean+=f1_score_list[fold]
+		precision_mean+=precision_list[fold]
+		recall_mean+=recall_list[fold]
+		accuracy_mean+=accuracy_list[fold]
+		val_acc_mean+=val_acc_list[fold]
+		val_loss_mean+=val_loss_list[fold]
+		fold+=1
+	f1_score_mean=f1_score_mean/len(f1_score_list)
+	precision_mean=precision_mean/len(precision_list)
+	recall_mean=recall_mean/len(recall_list)
+	accuracy_mean=accuracy_mean/len(accuracy_list)
+	val_acc_mean=val_acc_mean/len(val_acc_list)
+	val_loss_mean=val_loss_mean/len(val_loss_list)
+
 	print(
-		metrics.classification_report(y_test,y_pred,target_names=target_names),
-		"Cross validation score ("+str(k_cross_val)+") : "+str(round(accuracy_mean*100,3)),
-		"Accuracy score : "+str(round(metrics.accuracy_score(y_test,y_pred)*100,3)),
-		"\tF1_score : "+str(f1_score),
-		"\tPrecision : "+str(precision),
-		"\tRecall : "+str(recall),
-		"\tTime : "+str(round(end-start,3)),
+		metrics.classification_report(y_test,y_pred_class,target_names=target_names),
+		"Method : "+str(approach.name),
+		"\nF1_score : "+str(f1_score_mean),
+		"\tPrecision : "+str(precision_mean),
+		"\tRecall : "+str(recall_mean),
+		"\tVal_acc : "+str(val_acc_mean),
+		"\tVal_loss : "+str(val_loss_mean),
+		"\tTime : "+str(round(end-start,3))+" sec",
 		"\n#######################################################")
-	output_file.write(str(f1_score))
+
+	output_file.write(str(f1_score_mean))
 	output_file.write("\t")
-	output_file.write(str(precision))
+	output_file.write(str(precision_mean))
 	output_file.write("\t")
-	output_file.write(str(recall))
+	output_file.write(str(recall_mean))
 	output_file.write("\t")
-	output_file.write(str(val_acc*100))
+	output_file.write(str(round(val_acc_mean*100,3)))
 	output_file.write("\t")
-	output_file.write(str(round(accuracy_mean*100,3)))
-	output_file.write("\t")
-	output_file.write(str(val_loss))
-	output_file.write("\t")
-	output_file.write(str(round(end-start,3)))
+	output_file.write(str(round(val_loss_mean,3)))
 	output_file.write("\t")
 	output_file.write(str(approach.name))
+	output_file.write("\t")
+	if completeCitation in str(approach.name):
+		output_file.write("True")
+	else:
+		output_file.write("False")
+	output_file.write("\t")
+	if "lemma" in str(approach.name):
+		output_file.write("True")
+	else:
+		output_file.write("False")
+	output_file.write("\t")
+	if "stem" in str(approach.name):
+		output_file.write("True")
+	else:
+		output_file.write("False")
+	output_file.write("\t")
+	output_file.write(str(round(end-start,3)))
 	output_file.write("\n")
 output_file.close()
