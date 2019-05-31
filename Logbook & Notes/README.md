@@ -1166,6 +1166,26 @@ In the end we have 800 papers Open Access with data citations (5000 data citatio
 <a name="Week13"></a>
 ### :date: Week 13- 28/05-02/06 -  :
 
+- *Papers & Blogs* :
+  * [Deep learning facilitates rapid classification of human and veterinary clinical
+narratives](#Dplearn13) ***Preprint***
+
+***Deep learning facilitates rapid classification of human and veterinary clinical
+narratives*** Arturo Lopez Pineda et al.
+
+- :interrobang: ***Problems*** : 
+  * Needs to assign clinical codes to patient from diagnoses but it takes a lot of time and result in 60-80% of successfully assign codes.
+  
+- :heavy_check_mark: ***Solutions*** : 
+  * Previous studies ( 
+    * Koopman B, Karimi S, Nguyen A, et al. Automatic classification of diseases from free-text death certificates for real-time surveillance. BMC Med Inform Decis Mak 2015;15:53. doi:10.1186/s12911-015-0174-2
+    * Berndorfer S, Henriksson A. Automated Diagnosis Coding with Combined Text Representations. Stud Health Technol Inform 2017;235:201–5.
+    * Anholt RM, Berezowski J, Jamal I, et al. Mining free-text medical records for companion animal enteric syndrome surveillance. Preventive Veterinary Medicine 2014;113:417–22. doi:10.1016/j.prevetmed.2014.01.017
+    * Wang Y, Sohn S, Liu S, et al. A clinical text classification paradigm using weak supervision and deep representation. BMC Med Inform Decis Mak 2019;19:1. doi:10.1186/s12911-018-0723-6 )
+  
+- :triangular_flag_on_post: ***Remaining Problems*** : 
+  * 
+
 https://www.biorxiv.org/content/10.1101/429720v2.abstract
 
 [:top::top::top::top::top::top::top::top::top::top::top::top::top::top:Go to the top:top::top::top::top::top::top::top::top::top::top::top::top::top::top::top:](#top)
