@@ -46,7 +46,8 @@ ______________________________________________________________________
   * [Week 10 - 06/05-12/05 - Embedding& Cross-validation-score](#Week10)
   * [Week 11 - 13/05-19/05 - TensorBoard & LSTM](#Week11)
   * [Week 12 - 20/05-26/05 - LSTM & Embedding & New data extraction](#Week12)
-  * [Week13 - 27/05-02/06 - ](#Week13)
+  * [Week 13 - 27/05-02/06 - Final model building step](#Week13)
+  * [Week 14 - 03/06-09/06 - ](#Week14)
 ______________________________________________________________________
 
 ### :bookmark_tabs: [Bibliography](#bibliography01)
@@ -1164,13 +1165,15 @@ In the end we have 800 papers Open Access with data citations (5000 data citatio
 [:top::top::top::top::top::top::top::top::top::top::top::top::top::top:Go to the top:top::top::top::top::top::top::top::top::top::top::top::top::top::top::top:](#top)
 
 <a name="Week13"></a>
-### :date: Week 13- 28/05-02/06 -  :
+### :date: Week 13- 28/05-02/06 - Final model building step :
 
 - *Papers & Blogs* :
   * [Deep learning facilitates rapid classification of human and veterinary clinical
 narratives](#Dplearn13) ***Preprint***
   * [Convolutional neural network : Deep learning-based classification of building quality problems](#CNN13)
   
+This week we finally reach the end of building model, overpassing all type of errors and checking if results are corrects even if it's not what we expected. We also discover that CNN models gives really good results, indeed regarding the last paper about text classification thanks to machine learning and deep leanring techniques gives us a really good overview of what's going on.
+So it has been proved that today CNNs and SVMs are some of the best models for text classification.  
 
 <a name="Dplearn13"></a>
 ***[Deep learning facilitates rapid classification of human and veterinary clinical
@@ -1215,6 +1218,11 @@ narratives](https://www.biorxiv.org/content/10.1101/429720v2)*** Arturo Lopez Pi
 
 [:top::top::top::top::top::top::top::top::top::top::top::top::top::top:Go to the top:top::top::top::top::top::top::top::top::top::top::top::top::top::top::top:](#top)
 
+
+<a name="Week14"></a>
+### :date: Week 13- 03/06-10/06 - :
+
+[:top::top::top::top::top::top::top::top::top::top::top::top::top::top:Go to the top:top::top::top::top::top::top::top::top::top::top::top::top::top::top::top:](#top)
 
 ______________________________________________________________________
 
