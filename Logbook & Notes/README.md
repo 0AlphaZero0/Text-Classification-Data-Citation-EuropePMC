@@ -1222,6 +1222,19 @@ narratives](https://www.biorxiv.org/content/10.1101/429720v2)*** Arturo Lopez Pi
 <a name="Week14"></a>
 ### :date: Week 13- 03/06-10/06 - :
 
+Looking at the current results I think that the "*Background*" category is really tricky, indeed even for us it's difficult to say that a data citation could be a *Background* one. But I'm conviced that sometimes there is data citation that are made in papers but scientists doesn't really use those data eg.
+
+*A2M is an evolutionarily conserved element of the innate immune system and a non-specific protease inhibitor involved in host defense, and it has been revealed that A2M is relative to immunity in L. vannamei [65]. **The F11 gene (GenBank: AFW98990.1) was reported to play a role in immunity [1]. Recent studies revealed the importance of KLKB1 in shrimp immune response, particularly towards protect animals from the microbial pathogens [66].** Aquatic animals metabolize foreign toxicity of chemicals mainly by oxidation, reduction, hydrolysis and conjugation reactions catalyzed by various enzymes, and the metabolic activation is primarily catalyzed by the cytochrome P450-dependent oxygenase system in the endoplasmic reticulum [67].*
+
+&nbsp;&nbsp;&nbsp;&nbsp;from Discussion of [Transcriptome Analysis of the Hepatopancreas in the Pacific White Shrimp (Litopenaeus vannamei) under Acute Ammonia Stress. (PMID:27760162 PMCID:PMC5070816)](http://europepmc.org/articles/PMC5070816?fromSearch=singleResult&fromQuery=PMC5070816)
+
+Here we couldn't say that authors used the F11 gene, we supposed it as they talk about it but it could be just an hypothesis and not a case where they really use this gene. Here it's a problem of level, indeed we work only on sentence level (1 before citation, *Citation*, 2 after citation) but the information that they use actually this gene in this study could be in another part of the paper, so it could be great to have an overview of the whole paper.
+
+One other possibility is to look at the citation in the paper corresponding to this specific citation, if this citation is a *Background* one but two lines before the authors told they use actually those data so it could consider as a *Use* one. And even if in the beginning or at the end of the paper authors says that they "create" those data so it could be consider as a *Create* one. So my thought is those categories have a sort of "level of priority" *Background* < *Use* < *Creation*.
+
+
+
+
 [:top::top::top::top::top::top::top::top::top::top::top::top::top::top:Go to the top:top::top::top::top::top::top::top::top::top::top::top::top::top::top::top:](#top)
 
 ______________________________________________________________________
