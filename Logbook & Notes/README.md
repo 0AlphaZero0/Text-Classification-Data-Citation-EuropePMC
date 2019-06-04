@@ -1222,7 +1222,7 @@ narratives](https://www.biorxiv.org/content/10.1101/429720v2)*** Arturo Lopez Pi
 <a name="Week14"></a>
 ### :date: Week 13- 03/06-10/06 - :
 
-Looking at the current results I think that the "*Background*" category is really tricky, indeed ven for us it's difficult to say that a data citation could be a *Background* one. But I'm conviced that sometimes there is data citation that are made in papers but scientists doesn't really use those data eg.
+Looking at the current results I think that the "*Background*" category is really tricky, indeed even for us it's difficult to say that a data citation could be a *Background* one. But I'm conviced that sometimes there is data citation that are made in papers but scientists doesn't really use those data eg.
 
 *A2M is an evolutionarily conserved element of the innate immune system and a non-specific protease inhibitor involved in host defense, and it has been revealed that A2M is relative to immunity in L. vannamei [65]. **The F11 gene (GenBank: AFW98990.1) was reported to play a role in immunity [1]. Recent studies revealed the importance of KLKB1 in shrimp immune response, particularly towards protect animals from the microbial pathogens [66].** Aquatic animals metabolize foreign toxicity of chemicals mainly by oxidation, reduction, hydrolysis and conjugation reactions catalyzed by various enzymes, and the metabolic activation is primarily catalyzed by the cytochrome P450-dependent oxygenase system in the endoplasmic reticulum [67].*
 
