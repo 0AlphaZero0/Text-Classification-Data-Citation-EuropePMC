@@ -139,7 +139,10 @@ def tokenizer(doc):
 
 ###################################################    Main     ###################################################
 #
-data=read_csv(dataset_filename,header=0,sep=";")
+data=read_csv(
+	filepath_or_buffer=dataset_filename,
+	header=0,
+	sep=";")
 #
 data[completeCitation] = data[[PreCitation_str,Citation_str,PostCitation_str]].apply(lambda x : '{}{}'.format(x[0],x[1]),axis=1)
 #
@@ -153,16 +156,14 @@ data[Figure_num_str] = data.Figure.map({
 	True:0,
 	False:1})
 #
-sectionDict={}
-index_section=1
+index_section,sectionDict=1,{}
 for section in data.Section:
 	if section not in sectionDict:
 		sectionDict[section]=index_section
 		index_section+=1
 data[Section_num_str]=data.Section.map(sectionDict)
 #
-subTypeDict={}
-index_subtype=1
+index_subtype,subTypeDict=1,{}
 for subType in data.SubType:
 	if subType not in subTypeDict:
 		subTypeDict[subType]=index_subtype
@@ -186,12 +187,15 @@ output_file=codecs.open(
 	filename=result_outfile,
 	mode='w',
 	encoding='utf8')
-output_file.write("f1-score\tPrecision\tRecall\tAccuracy\tLoss\tCombination\tToken\tNgram\tLemma\tStem\tTime\n")
+output_file.write("f1-score\tPrecision\tRecall\tAccuracy\tLoss\tf1-scoreCV\tPrecisionCV\tRecallCV\tAccuracyCV\tLossCV\tCombination\tToken\tNgram\tLemma\tStem\tTime\n")
 for vect in vect_list:
 	start=time.time()
 	f1_score_list,precision_list,recall_list,accuracy_list=[],[],[],[]
 	val_acc_list,val_loss_list=[],[]
-	for train_index, test_index in skf.split(X,y):
+	### !!! ###
+	X_to_train,X_val,y_to_train,y_val=train_test_split(X,y,random_state=42)
+	### !!! ###
+	for train_index, test_index in skf.split(X_to_train,y_to_train):
 		f1_score=None
 		model=None
 		precision=None
@@ -210,8 +214,8 @@ for vect in vect_list:
 		NAME="dplearn-epochs"+str(epochs)+"-"+str(vect[2])+"-{}".format(int(time.time()))
 		tensorboard=TensorBoard(log_dir='./logsDLearn/{}'.format(NAME))
 		print(vect[2])
-		X_train,X_test=X.ix[train_index],X.ix[test_index]
-		y_train,y_test=y.ix[train_index],y.ix[test_index]
+		X_train,X_test=X_to_train.iloc[train_index,],X_to_train.iloc[test_index,]
+		y_train,y_test=y_to_train.iloc[train_index,],y_to_train.iloc[test_index,]
 		
 		vect_X_train,vect_X_test = [], []
 		vect_X_train.append(vect[0].fit_transform(X_train[[vect[1]]].fillna('').values.reshape(-1)).todense())
@@ -284,6 +288,37 @@ for vect in vect_list:
 		accuracy_list.append(accuracy)
 	end=time.time()
 
+	### !!! ###
+	vect_X_val=[]
+	vect_X_val.append(vect[0].transform(X_val[[vect[1]]].fillna('').values.reshape(-1)).todense())
+	vect_X_val.extend((
+			X_val[[Section_num_str]].values,
+			X_val[[SubType_num_str]].values,
+			X_val[[Figure_num_str]].values))
+	X_val_dtm=np.concatenate(vect_X_val,axis=1)
+	X_val_dtm=normalize(X_val_dtm,axis=1)
+	val_loss,val_acc=model.evaluate(X_val_dtm,y_val)
+	result=model.predict(X_val_dtm)
+	y_pred_class_val=[]
+	for sample in result:
+		y_pred_class_val.append(np.argmax(sample))
+	f1_score=round(metrics.f1_score(y_val,y_pred_class_val,average=average)*100,3)
+	precision=round(metrics.precision_score(y_val,y_pred_class_val,average=average)*100,3)
+	recall=round(metrics.recall_score(y_val,y_pred_class_val,average=average)*100,3)
+	accuracy=round(metrics.accuracy_score(y_val,y_pred_class_val)*100,3)
+	print(
+		"\nVALIDATION SET : \n",
+		metrics.classification_report(y_val,y_pred_class_val,target_names=target_names),
+		"Method : "+str(vect[2]),
+		"\nF1_score : "+str(f1_score),
+		"\tPrecision : "+str(precision),
+		"\tRecall : "+str(recall),
+		"\tVal_acc : "+str(round(val_acc*100,3)),
+		"\tVal_loss : "+str(round(val_loss,3)),
+		"\tTime : "+str(round(end-start,3))+" sec",
+		"\n#######################################################")
+	### !!! ###
+
 	fold=0
 	f1_score_mean,precision_mean,recall_mean,accuracy_mean=0,0,0,0
 	val_acc_mean,val_loss_mean=0,0
@@ -299,7 +334,7 @@ for vect in vect_list:
 	precision_mean=round(precision_mean/len(precision_list),3)
 	recall_mean=round(recall_mean/len(recall_list),3)
 	accuracy_mean=round(accuracy_mean/len(accuracy_list),3)
-	val_acc_mean=round(val_acc_mean/len(val_acc_list),3)
+	val_acc_mean=round(val_acc_mean/len(val_acc_list)*100,3)
 	val_loss_mean=round(val_loss_mean/len(val_loss_list),3)
 	
 	print(
@@ -313,6 +348,16 @@ for vect in vect_list:
 		"\tTime : "+str(round(end-start,3))+" sec",
 		"\n#######################################################")
 
+	output_file.write(str(f1_score))
+	output_file.write("\t")
+	output_file.write(str(precision))
+	output_file.write("\t")
+	output_file.write(str(recall))
+	output_file.write("\t")
+	output_file.write(str(round(val_acc*100,3)))
+	output_file.write("\t")
+	output_file.write(str(round(val_loss,3)))
+	output_file.write("\t")
 	output_file.write(str(f1_score_mean))
 	output_file.write("\t")
 	output_file.write(str(precision_mean))

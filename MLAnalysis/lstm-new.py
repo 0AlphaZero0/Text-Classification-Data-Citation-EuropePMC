@@ -182,7 +182,7 @@ output_file=codecs.open(
 	filename=result_output,
 	mode='w',
 	encoding='utf8')
-output_file.write("f1-score\tPrecision\tRecall\tAccuracy\tLoss\tCombination\tToken\tLemma\tStem\tTime\n")
+output_file.write("f1-score\tPrecision\tRecall\tAccuracy\tLoss\tf1-scoreCV\tPrecisionCV\tRecallCV\tAccuracyCV\tLossCV\tCombination\tToken\tLemma\tStem\tTime\n")
 for approach in approaches:
 	tokenizer=Tokenizer(num_words=vocab_size)
 	tokenizer.fit_on_texts(approach)
@@ -204,18 +204,20 @@ for approach in approaches:
 
 	X=data.drop(['Categories_num'],axis=1)
 	y=data.Categories_num
-
+	### !!! ###
+	X_to_train,X_val,y_to_train,y_val=train_test_split(X,y,random_state=42)
+	X_val=[X_val.iloc[:, 3:],X_val.iloc[:, :3]]
+	### !!! ###
 	start=time.time()
 	f1_score_list,precision_list,recall_list,accuracy_list=[],[],[],[]
 	val_acc_list,val_loss_list=[],[]
 	control=0
-	for train_index,test_index in skf.split(X,y):
-
+	for train_index,test_index in skf.split(X_to_train,y_to_train):
 		NAME="LSTM-"+str(embedding_dims)+"D-epochs"+str(epochs)+"-"+str(approach.name)+str(control)+"-{}".format(int(time.time()))
 		tensorboard=TensorBoard(log_dir='./logsLSTM/{}'.format(NAME))	
 
-		X_train,X_test=[X.ix[train_index],X.ix[test_index]] 
-		y_train,y_test=[y.ix[train_index],y.ix[test_index]]
+		X_train,X_test=[X_to_train.iloc[train_index,],X_to_train.iloc[test_index,]] 
+		y_train,y_test=[y_to_train.iloc[train_index,],y_to_train.iloc[test_index,]]
 
 		X_train=[X_train.iloc[:,3:],X_train.iloc[:,:3]] #seq_features,other_features
 		X_test=[X_test.iloc[:,3:],X_test.iloc[:,:3]] #seq_features,other_features
@@ -328,6 +330,29 @@ for approach in approaches:
 	val_acc_mean=round(val_acc_mean/len(val_acc_list),3)
 	val_loss_mean=round(val_loss_mean/len(val_loss_list),3)
 
+	### !!! ### VALIDATION SET
+	val_loss,val_acc=model.evaluate(X_val,y_val)
+	result=model.predict(X_val)
+	y_pred_class_val=[]
+	for sample in result:
+		y_pred_class_val.append(argmax(sample))
+	f1_score=round(metrics.f1_score(y_val,y_pred_class_val,average=average)*100,3)
+	precision=round(metrics.precision_score(y_val,y_pred_class_val,average=average)*100,3)
+	recall=round(metrics.recall_score(y_val,y_pred_class_val,average=average)*100,3)
+	accuracy=round(metrics.accuracy_score(y_val,y_pred_class_val)*100,3)
+	print(
+		"\nVALIDATION SET : \n",
+		metrics.classification_report(y_val,y_pred_class_val,target_names=target_names),
+		"Method : "+str(approach.name),
+		"\nF1_score : "+str(f1_score),
+		"\tPrecision : "+str(precision),
+		"\tRecall : "+str(recall),
+		"\tVal_acc : "+str(round(val_acc*100,3)),
+		"\tVal_loss : "+str(round(val_loss,3)),
+		"\tTime : "+str(round(end-start,3))+" sec",
+		"\n#######################################################")
+	### !!! ###
+
 	print(
 		metrics.classification_report(y_test,y_pred_class,target_names=target_names),
 		"Method : "+str(approach.name),
@@ -339,6 +364,16 @@ for approach in approaches:
 		"\tTime : "+str(round(end-start,3))+" sec",
 		"\n#######################################################")
 
+	output_file.write(str(f1_score))
+	output_file.write("\t")
+	output_file.write(str(precision))
+	output_file.write("\t")
+	output_file.write(str(recall))
+	output_file.write("\t")
+	output_file.write(str(round(val_acc*100,3)))
+	output_file.write("\t")
+	output_file.write(str(round(val_loss,3)))
+	output_file.write("\t")
 	output_file.write(str(f1_score_mean))
 	output_file.write("\t")
 	output_file.write(str(precision_mean))

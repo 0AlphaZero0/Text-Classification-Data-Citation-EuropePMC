@@ -41,7 +41,7 @@ os.environ['TF_CPP_MIN_LOG_LEVEL']='2'
 
 dataset="Dataset23.csv"
 embedding_dims=50 # Here 50/100/200/300
-epochs=4
+epochs=12
 
 result_output="ResultEmbedding"+str(embedding_dims)+"d.csv"
 embedding_file='glove.6B.'+str(embedding_dims)+'d.txt'
@@ -259,22 +259,7 @@ for approach in approaches:
 			input_length=X_train[0].shape[1],
 			trainable=False)(input_layer)
 
-		# seq_features=layers.Flatten()(embedding)
-		###########################
-		conv_layer = layers.Convolution1D(
-			filters=250,
-			kernel_size=3,
-			padding = 'valid',
-			activation = 'relu')(embedding)
-
-		dropout_rate = 0.2 #don't know yet
-
-		dropout_layer = layers.Dropout(
-			rate=0.2)(conv_layer)
-
-		seq_features = layers.GlobalMaxPooling1D()(dropout_layer)
-
-		############################
+		seq_features=layers.Flatten()(embedding)
 
 		other_features=layers.Input(
 			shape=(3,))
@@ -315,13 +300,13 @@ for approach in approaches:
 		for sample in result:
 			y_pred_class.append(argmax(sample))
 
-		f1_score=round(metrics.f1_score(y_test,y_pred_class,average=average)*100,3)
+		f1_score=metrics.f1_score(y_test,y_pred_class,average=average)*100
 		f1_score_list.append(f1_score)
-		precision=round(metrics.precision_score(y_test,y_pred_class,average=average)*100,3)
+		precision=metrics.precision_score(y_test,y_pred_class,average=average)*100
 		precision_list.append(precision)
-		recall=round(metrics.recall_score(y_test,y_pred_class,average=average)*100,3)
+		recall=metrics.recall_score(y_test,y_pred_class,average=average)*100
 		recall_list.append(recall)
-		accuracy=round(metrics.accuracy_score(y_test,y_pred_class)*100,3)
+		accuracy=metrics.accuracy_score(y_test,y_pred_class)*100
 		accuracy_list.append(accuracy)
 		control+=1
 	
@@ -338,12 +323,12 @@ for approach in approaches:
 		val_acc_mean+=val_acc_list[fold]
 		val_loss_mean+=val_loss_list[fold]
 		fold+=1
-	f1_score_mean=f1_score_mean/len(f1_score_list)
-	precision_mean=precision_mean/len(precision_list)
-	recall_mean=recall_mean/len(recall_list)
-	accuracy_mean=accuracy_mean/len(accuracy_list)
-	val_acc_mean=val_acc_mean/len(val_acc_list)
-	val_loss_mean=val_loss_mean/len(val_loss_list)
+	f1_score_mean=round(f1_score_mean/len(f1_score_list),3)
+	precision_mean=round(precision_mean/len(precision_list),3)
+	recall_mean=round(recall_mean/len(recall_list),3)
+	accuracy_mean=round(accuracy_mean/len(accuracy_list),3)
+	val_acc_mean=round(val_acc_mean/len(val_acc_list),3)
+	val_loss_mean=round(val_loss_mean/len(val_loss_list),3)
 
 	print(
 		metrics.classification_report(y_test,y_pred_class,target_names=target_names),
@@ -362,9 +347,9 @@ for approach in approaches:
 	output_file.write("\t")
 	output_file.write(str(recall_mean))
 	output_file.write("\t")
-	output_file.write(str(round(val_acc_mean*100,3)))
+	output_file.write(str(val_acc_mean*100))
 	output_file.write("\t")
-	output_file.write(str(round(val_loss_mean,3)))
+	output_file.write(str(val_loss_mean))
 	output_file.write("\t")
 	output_file.write(str(approach.name))
 	output_file.write("\t")

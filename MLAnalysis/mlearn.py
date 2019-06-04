@@ -196,19 +196,20 @@ vect_list_countvect=[
 	[CountVectorizer(ngram_range=ngram_range,tokenizer=lemma_tokenizer),completeCitation,[ngram,lemma]],
 	[CountVectorizer(ngram_range=ngram_range,tokenizer=stem_tokenizer),completeCitation,[ngram,stem]]]
 #
-# X_train,X_test,y_train,y_test=train_test_split(X,y,random_state=1)
-#
 output_file=codecs.open(result_outfile,'w',encoding='utf8')
-output_file.write("f1-score\tPrecision\tRecall\tAccuracy\tMethod\tCombination\tToken\tNgram\tLemma\tStem\tTime\n")
+output_file.write("f1-score\tPrecision\tRecall\tf1-score\tPrecision\tRecall\tAccuracy\tMethod\tCombination\tToken\tNgram\tLemma\tStem\tTime\n")
 for index_vect_list in range(len(vect_list)):
 	print(str(index_vect_list)+"/"+str(len(vect_list)))
 	for clf in clfList:
 		start=time.time()
 		f1_score_list,precision_list,recall_list,accuracy_list=[],[],[],[]
 		print(vect_list[index_vect_list][2])
-		for train_index,test_index in skf.split(X,y):
-			X_train,X_test=X.ix[train_index],X.ix[test_index]
-			y_train,y_test=y.ix[train_index],y.ix[test_index]
+		### !!! ###
+		X_to_train,X_val,y_to_train,y_val=train_test_split(X,y,random_state=42)
+		### !!! ###
+		for train_index,test_index in skf.split(X_to_train,y_to_train):
+			X_train,X_test=X_to_train.iloc[train_index,],X_to_train.iloc[test_index,]
+			y_train,y_test=y_to_train.iloc[train_index],y_to_train.iloc[test_index,]
 			vect_X_train,vect_X_test=[],[]
 			if clf[1] in countVectorizerList:
 				vect_tmp=vect_list_countvect[index_vect_list][2]
@@ -231,9 +232,6 @@ for index_vect_list in range(len(vect_list)):
 			X_train_dtm=np.concatenate(vect_X_train,axis=1)
 			X_test_dtm=np.concatenate(vect_X_test,axis=1)
 
-			X_train_test=np.concatenate((X_train_dtm,X_test_dtm))
-			y_train_test=np.concatenate((y_train,y_test))
-
 			try:
 				clf[0].fit(X_train_dtm,y_train)
 				y_pred_class=clf[0].predict(X_test_dtm)
@@ -241,18 +239,49 @@ for index_vect_list in range(len(vect_list)):
 				clf[0].fit(X_train_dtm.toarray(),y_train)
 				y_pred_class=clf[0].predict(X_test_dtm.toarray())
 
-			f1_score=round(metrics.f1_score(y_test,y_pred_class,average=average)*100,3)
+			f1_score=metrics.f1_score(y_test,y_pred_class,average=average)*100
 			f1_score_list.append(f1_score)
-			precision=round(metrics.precision_score(y_test,y_pred_class,average=average)*100,3)
+			precision=metrics.precision_score(y_test,y_pred_class,average=average)*100
 			precision_list.append(precision)
-			recall=round(metrics.recall_score(y_test,y_pred_class,average=average)*100,3)
+			recall=metrics.recall_score(y_test,y_pred_class,average=average)*100
 			recall_list.append(recall)
-			accuracy=round(metrics.accuracy_score(y_test,y_pred_class)*100,3)
-			accuracy_list.append(accuracy)
-			print(y_test," : test")
-			print(y_pred_class," : predict")
-		
+			accuracy=metrics.accuracy_score(y_test,y_pred_class)*100
+			accuracy_list.append(accuracy)	
 		end=time.time()
+
+		### !!! ###
+		vect_X_val=[]
+		if clf[1] in countVectorizerList:
+			vect_X_val.append(vect_list_countvect[index_vect_list][0].transform(X_val[[vect_list_countvect[index_vect_list][1]]].fillna('').values.reshape(-1)).todense())
+		else:
+			vect_X_val.append(vect_list[index_vect_list][0].transform(X_val[[vect_list[index_vect_list][1]]].fillna('').values.reshape(-1)).todense())
+		vect_X_val.extend((
+			X_val[[Section_num_str]].values,
+			X_val[[SubType_num_str]].values,
+			X_val[[Figure_num_str]].values))
+		X_val_dtm=np.concatenate(vect_X_val,axis=1)
+		try:
+			result=clf[0].predict(X_val_dtm)
+		except TypeError:
+			result=clf[0].predict(X_val_dtm.toarray())
+		y_pred_class_val=[]
+		for sample in result:
+			y_pred_class_val.append(np.argmax(sample))
+		f1_score=round(metrics.f1_score(y_val,y_pred_class_val,average=average)*100,3)
+		precision=round(metrics.precision_score(y_val,y_pred_class_val,average=average)*100,3)
+		recall=round(metrics.recall_score(y_val,y_pred_class_val,average=average)*100,3)
+		accuracy=round(metrics.accuracy_score(y_val,y_pred_class_val)*100,3)
+		print(
+			"\nVALIDATION SET : \n",
+			metrics.classification_report(y_val,y_pred_class_val,target_names=target_names),
+			"Method : "+str(clf[1]),
+			"\nF1_score : "+str(f1_score),
+			"\tPrecision : "+str(precision),
+			"\tRecall : "+str(recall),
+			"\tAccuracy : "+str(accuracy),
+			"\tTime : "+str(round(end-start,3))+" sec",
+			"\n#######################################################")
+		### !!! ###
 
 		fold=0
 		f1_score_mean,precision_mean,recall_mean,accuracy_mean=0,0,0,0
@@ -267,15 +296,22 @@ for index_vect_list in range(len(vect_list)):
 		recall_mean=recall_mean/len(recall_list)
 		accuracy_mean=accuracy_mean/len(accuracy_list)
 
-
 		print(
 			metrics.classification_report(y_test,y_pred_class,target_names=target_names),
 			"Method : "+str(clf[1]),
-			"\nF1_score : " + str(f1_score),
-			"\tPrecision : " + str(precision),
-			"\tRecall : " + str(recall),
+			"\nF1_score : " + str(f1_score_mean),
+			"\tPrecision : " + str(precision_mean),
+			"\tRecall : " + str(recall_mean),
+			"\t Accuracy : " + str(accuracy_mean),
 			"\tTime : "+str(round(end-start,3))+" sec",
 			"\n#######################################################")
+		
+		output_file.write(str(f1_score))
+		output_file.write("\t")
+		output_file.write(str(precision))
+		output_file.write("\t")
+		output_file.write(str(recall))
+		output_file.write("\t")
 		output_file.write(str(f1_score_mean))
 		output_file.write("\t")
 		output_file.write(str(precision_mean))
