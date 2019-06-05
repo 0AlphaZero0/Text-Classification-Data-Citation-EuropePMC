@@ -335,6 +335,7 @@ for approach in approaches:
 	### !!! ### VALIDATION SET
 	val_loss,val_acc=model.evaluate(X_val,y_val)
 	result=model.predict(X_val)
+	print(result)
 	y_pred_class_val=[]
 	for sample in result:
 		y_pred_class_val.append(argmax(sample))

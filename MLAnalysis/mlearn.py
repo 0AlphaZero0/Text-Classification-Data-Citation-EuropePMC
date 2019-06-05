@@ -25,18 +25,24 @@ from sklearn.naive_bayes import GaussianNB
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.model_selection import StratifiedKFold
 
+from keras.utils import normalize
+
 ################################################    Variables     #################################################
 
 # Files
 dataset_filename="Dataset23.csv"
-result_outfile="ResultMLparam.csv"
+result_outfile="testResultMLparam.csv"
 # Parameters
 k_cross_val=4
 average="macro"
 gamma="auto"
 C=10
 max_iter=10000
-class_weight="balanced"
+class_weight={
+	0 : 25.,
+	1 : 20.,
+	2 : 10.,}
+	# 3 : 10.}
 skf=StratifiedKFold(
 	n_splits=k_cross_val,
 	random_state=42)
@@ -197,9 +203,9 @@ vect_list_countvect=[
 	[CountVectorizer(ngram_range=ngram_range,tokenizer=stem_tokenizer),completeCitation,[ngram,stem]]]
 #
 output_file=codecs.open(result_outfile,'w',encoding='utf8')
-output_file.write("f1-score\tPrecision\tRecall\tf1-score\tPrecision\tRecall\tAccuracy\tMethod\tCombination\tToken\tNgram\tLemma\tStem\tTime\n")
+output_file.write("f1-score\tPrecision\tRecall\tAccuracy\tf1-scoreCV\tPrecisionCV\tRecallCV\tAccuracyCV\tMethod\tCombination\tToken\tNgram\tLemma\tStem\tTime\n")
 for index_vect_list in range(len(vect_list)):
-	print(str(index_vect_list)+"/"+str(len(vect_list)))
+	print(str(index_vect_list+1)+"/"+str(len(vect_list)))
 	for clf in clfList:
 		start=time.time()
 		f1_score_list,precision_list,recall_list,accuracy_list=[],[],[],[]
@@ -260,13 +266,11 @@ for index_vect_list in range(len(vect_list)):
 			X_val[[SubType_num_str]].values,
 			X_val[[Figure_num_str]].values))
 		X_val_dtm=np.concatenate(vect_X_val,axis=1)
-		try:
-			result=clf[0].predict(X_val_dtm)
-		except TypeError:
-			result=clf[0].predict(X_val_dtm.toarray())
-		y_pred_class_val=[]
-		for sample in result:
-			y_pred_class_val.append(np.argmax(sample))
+		y_pred_class_val=clf[0].predict(X_val_dtm)
+		# result=clf[0].predict_proba(X_val_dtm)
+		# y_pred_class_val=[]
+		# for sample in result:
+		# 	y_pred_class_val.append(np.argmax(sample))
 		f1_score=round(metrics.f1_score(y_val,y_pred_class_val,average=average)*100,3)
 		precision=round(metrics.precision_score(y_val,y_pred_class_val,average=average)*100,3)
 		recall=round(metrics.recall_score(y_val,y_pred_class_val,average=average)*100,3)
@@ -299,10 +303,10 @@ for index_vect_list in range(len(vect_list)):
 		print(
 			metrics.classification_report(y_test,y_pred_class,target_names=target_names),
 			"Method : "+str(clf[1]),
-			"\nF1_score : " + str(f1_score_mean),
-			"\tPrecision : " + str(precision_mean),
-			"\tRecall : " + str(recall_mean),
-			"\t Accuracy : " + str(accuracy_mean),
+			"\nF1_score : " + str(round(f1_score_mean,3)),
+			"\tPrecision : " + str(round(precision_mean,3)),
+			"\tRecall : " + str(round(recall_mean,3)),
+			"\t Accuracy : " + str(round(accuracy_mean,3)),
 			"\tTime : "+str(round(end-start,3))+" sec",
 			"\n#######################################################")
 		
@@ -311,6 +315,8 @@ for index_vect_list in range(len(vect_list)):
 		output_file.write(str(precision))
 		output_file.write("\t")
 		output_file.write(str(recall))
+		output_file.write("\t")
+		output_file.write(str(accuracy))
 		output_file.write("\t")
 		output_file.write(str(f1_score_mean))
 		output_file.write("\t")

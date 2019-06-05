@@ -231,10 +231,8 @@ for vect in vect_list:
 			X_test[[Figure_num_str]].values))
 
 		X_train_dtm=np.concatenate(vect_X_train,axis=1)
-		X_train_dtm=normalize(X_train_dtm,axis=1)
 
 		X_test_dtm=np.concatenate(vect_X_test,axis=1)
-		X_test_dtm=normalize(X_test_dtm,axis=1)
 
 		model=Sequential([
 			Dense(
@@ -296,7 +294,6 @@ for vect in vect_list:
 			X_val[[SubType_num_str]].values,
 			X_val[[Figure_num_str]].values))
 	X_val_dtm=np.concatenate(vect_X_val,axis=1)
-	X_val_dtm=normalize(X_val_dtm,axis=1)
 	val_loss,val_acc=model.evaluate(X_val_dtm,y_val)
 	result=model.predict(X_val_dtm)
 	y_pred_class_val=[]
@@ -364,7 +361,7 @@ for vect in vect_list:
 	output_file.write("\t")
 	output_file.write(str(recall_mean))
 	output_file.write("\t")
-	output_file.write(str(val_acc_mean*100))
+	output_file.write(str(val_acc_mean))
 	output_file.write("\t")
 	output_file.write(str(val_loss_mean))
 	output_file.write("\t")

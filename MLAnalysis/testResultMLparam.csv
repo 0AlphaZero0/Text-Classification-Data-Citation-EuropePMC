@@ -1,0 +1,25 @@
+f1-score	Precision	Recall	Accuracy	f1-scoreCV	PrecisionCV	RecallCV	AccuracyCV	Method	Combination	Token	Ngram	Lemma	Stem	Time
+81.34304891390552	85.64654734035402	78.53021209746312	88.24338714164512	LinearSVC(C=10, class_weight={0: 25.0, 1: 20.0, 2: 10.0}, dual=True,
+     fit_intercept=True, intercept_scaling=1, loss='squared_hinge',
+     max_iter=10000, multi_class='ovr', penalty='l2', random_state=None,
+     tol=0.0001, verbose=0)	['Tokenization']	True	False	False	False	18.53
+82.11949684407801	87.52883561622143	79.23234779325298	89.03532963206797	LinearSVC(C=10, class_weight={0: 25.0, 1: 20.0, 2: 10.0}, dual=True,
+     fit_intercept=True, intercept_scaling=1, loss='squared_hinge',
+     max_iter=10000, multi_class='ovr', penalty='l2', random_state=None,
+     tol=0.0001, verbose=0)	['N-gram']	False	True	False	False	58.123
+82.15781412220744	87.18098660811751	78.95929746643003	88.94360581350944	LinearSVC(C=10, class_weight={0: 25.0, 1: 20.0, 2: 10.0}, dual=True,
+     fit_intercept=True, intercept_scaling=1, loss='squared_hinge',
+     max_iter=10000, multi_class='ovr', penalty='l2', random_state=None,
+     tol=0.0001, verbose=0)	['Lemmatization']	False	False	True	False	22.937
+82.69501158430006	86.94141536303124	79.74226257243166	88.85588651526383	LinearSVC(C=10, class_weight={0: 25.0, 1: 20.0, 2: 10.0}, dual=True,
+     fit_intercept=True, intercept_scaling=1, loss='squared_hinge',
+     max_iter=10000, multi_class='ovr', penalty='l2', random_state=None,
+     tol=0.0001, verbose=0)	['Stemming']	False	False	False	True	20.527
+81.732037267273	88.20554612580449	78.24702078453916	88.94607461972176	LinearSVC(C=10, class_weight={0: 25.0, 1: 20.0, 2: 10.0}, dual=True,
+     fit_intercept=True, intercept_scaling=1, loss='squared_hinge',
+     max_iter=10000, multi_class='ovr', penalty='l2', random_state=None,
+     tol=0.0001, verbose=0)	['N-gram', 'Lemmatization']	False	True	True	False	71.68
+82.4614601710959	89.12454842624497	78.82001952585473	89.29664294193576	LinearSVC(C=10, class_weight={0: 25.0, 1: 20.0, 2: 10.0}, dual=True,
+     fit_intercept=True, intercept_scaling=1, loss='squared_hinge',
+     max_iter=10000, multi_class='ovr', penalty='l2', random_state=None,
+     tol=0.0001, verbose=0)	['N-gram', 'Stemming']	False	True	False	True	72.538
