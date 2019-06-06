@@ -70,26 +70,18 @@ target_names=[
 #
 tuned_parameters=[{
 	'tol':[
-		1e-1,
-		1e-2,
-		1e-3,
-		1e-4,
-		1e-5,
-		1e-6],
-	'C':[
-		100,
-		10,
 		1,
 		1e-1,
 		1e-2,
-		1e-3],
-	'random_state':[
-		None,
-		42],
+		1e-3,
+		1e-4],
+	'C':[
+		1000,
+		100,
+		10],
 	'max_iter':[
 		1000,
-		10000,
-		100000]}]
+		10000]}]
 #
 clfSVM=GridSearchCV(svm.LinearSVC(class_weight=class_weight),tuned_parameters,cv=k_cross_val)
 #

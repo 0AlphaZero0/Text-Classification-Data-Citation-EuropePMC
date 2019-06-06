@@ -22,7 +22,9 @@ for index in range(len(pmcid_list)):
     else:
         dico[pmcid_list[index]]={
             "ArrayExpress":0,
+            "BioModels":0,
             "BioProject":0,
+            "BioSamples":0,
             "dbGaP":0,
             "DOI":0,
             "EMDB":0,
