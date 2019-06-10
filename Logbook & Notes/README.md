@@ -47,7 +47,8 @@ ______________________________________________________________________
   * [Week 11 - 13/05-19/05 - TensorBoard & LSTM](#Week11)
   * [Week 12 - 20/05-26/05 - LSTM & Embedding & New data extraction](#Week12)
   * [Week 13 - 27/05-02/06 - Final model building step](#Week13)
-  * [Week 14 - 03/06-09/06 - ](#Week14)
+  * [Week 14 - 03/06-09/06 - Finishing building models & Optimisation](#Week14)
+  * [Week 15 - 10/06-16/06 - ](#Week15)
 ______________________________________________________________________
 
 ### :bookmark_tabs: [Bibliography](#bibliography01)
@@ -1220,7 +1221,7 @@ narratives](https://www.biorxiv.org/content/10.1101/429720v2)*** Arturo Lopez Pi
 
 
 <a name="Week14"></a>
-### :date: Week 13- 03/06-10/06 - :
+### :date: Week 14- 03/06-10/06 - Finishing building models & Optimisation :
 
 Looking at the current results I think that the "*Background*" category is really tricky, indeed even for us it's difficult to say that a data citation could be a *Background* one. But I'm conviced that sometimes there is data citation that are made in papers but scientists doesn't really use those data eg.
 
@@ -1233,6 +1234,13 @@ Here we couldn't say that authors used the F11 gene, we supposed it as they talk
 One other possibility is to look at the citation in the paper corresponding to this specific citation, if this citation is a *Background* one but two lines before the authors told they use actually those data so it could consider as a *Use* one. And even if in the beginning or at the end of the paper authors says that they "create" those data so it could be consider as a *Create* one. So my thought is those categories have a sort of "level of priority" *Background* < *Use* < *Creation*.
 
 After building and running all models we found a classification of all models used until there. It seems that Logistic Regression is the best model for this task followed by SVMs then CNN and after a simple NN. As we can see in this [file](https://github.com/0AlphaZero0/Sentiment-Analysis-Data-Citation-EuropePMC/blob/master/MLAnalysis/AllResult.xlsx) So we decide to keep those to une them and see if there is one that really is great comparing to other selected models.
+
+During this week we optmized thanks to Grid search, 4 models (Logistic Regression, SVM, CNN and also "Dplearn" model) as thos four models were the best during the training part.
+
+[:top::top::top::top::top::top::top::top::top::top::top::top::top::top:Go to the top:top::top::top::top::top::top::top::top::top::top::top::top::top::top::top:](#top)
+
+<a name="Week15"></a>
+### :date: Week 15- 03/06-10/06 - :
 
 
 [:top::top::top::top::top::top::top::top::top::top::top::top::top::top:Go to the top:top::top::top::top::top::top::top::top::top::top::top::top::top::top::top:](#top)
