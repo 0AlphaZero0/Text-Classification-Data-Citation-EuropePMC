@@ -485,7 +485,7 @@ So questions that I want to respond are :
 In fact there is a lack of data to this problem only *"Measuring the Evolution of a Scientific Field through Citation Frames D.Jurgens et al."* proposed a really good dataset [Teufeljson](https://github.com/0AlphaZero0/Sentiment-Analysis-EuropePMC/blob/master/Datasets/teufel-json.tar.gz) thanks to ACL Anthology Network Corpus. But there is some problems here, this dataset is quiet heavy due to information duplication. Also, this dataset isn't annotated with polarity it's only with 6 classes that I described after.
 
 <a name="CitationSentimentCorpus"></a>
-There is also the dataset : [Citation sentiment corpus](https://github.com/0AlphaZero0/Sentiment-Analysis-EuropePMC/blob/master/Datasets/Citation_sentiment_corpus.zip), this one look really good, indeed it use objective/positive/negative classes, but one problem is that citation's contexts are in html files. and aren't annotated directly.
+There is also the dataset : [Citation sentiment corpus](https://github.com/0AlphaZero0/Sentiment-Analysis-EuropePMC/blob/master/Datasets/Citation_sentiment_corpus.zip), this one look really good, indeed it use objective/positive/negative classes, but one problem is that we don't work with positive or negative labels.
 
 
 ***One solution could be to create my own dataset***
@@ -540,7 +540,6 @@ There is some datasets that already exists for sentiment analysis like :
  * [***Multidomain sentiment analysis dataset***](http://www.cs.jhu.edu/~mdredze/datasets/sentiment/), this dataset is a multi domain-one (Amazon reviews), but as I can read in many papers, it's actually quite hard to obtain good results with multi-domain, so we're focusing only in scientific papers.
  * [***Paper Reviews Data Set***](https://archive.ics.uci.edu/ml/datasets/Paper+Reviews), this dataset could be great because it contains scientific papers reviews, but it's only reviews and only focusing on computing and informatic, the goal of this project is to apply sentiment analysis on biomedical scientific papers, so this one is not really adapted for the task.
  * [***Awais Athar - Citation Sentiment Corpus***](http://cl.awaisathar.com/citation-sentiment-corpus/), this dataset that I've find in the thesis of Awais Athar, is quite good but as said [earlier](#CitationSentimentCorpus), it's maybe not the perfect one to use here.
- * [***Teufel-json***](http://jurgens.people.si.umich.edu/citation-function/), like the one before I've discussed about it [before](#Teufeljson) and it may not be the good one to use here.
 
 One of the solution is to ***create our own dataset***, in fact EPMC provides a lot of abstract and full-text biomedical papers and it could be really easy to extract them, thanks to requests with [RESTful API](http://europepmc.org/RestfulWebService). And another really good point of this method is that we obtain these files in XML format and it's acutally really helpfull to investigate for citations.
 
