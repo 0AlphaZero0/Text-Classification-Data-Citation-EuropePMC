@@ -48,7 +48,7 @@ ______________________________________________________________________
   * [Week 12 - 20/05-26/05 - LSTM & Embedding & New data extraction](#Week12)
   * [Week 13 - 27/05-02/06 - Final model building step](#Week13)
   * [Week 14 - 03/06-09/06 - Finishing building models & Optimisation](#Week14)
-  * [Week 15 - 10/06-16/06 - ](#Week15)
+  * [Week 15 - 10/06-16/06 - Redaction & tuning](#Week15)
 ______________________________________________________________________
 
 ### :bookmark_tabs: [Bibliography](#bibliography01)
@@ -1239,8 +1239,13 @@ During this week we optmized thanks to Grid search, 4 models (Logistic Regressio
 [:top::top::top::top::top::top::top::top::top::top::top::top::top::top:Go to the top:top::top::top::top::top::top::top::top::top::top::top::top::top::top::top:](#top)
 
 <a name="Week15"></a>
-### :date: Week 15- 03/06-10/06 - :
+### :date: Week 15- 10/06-16/06 - Redaction & tuning :
 
+This week was about writing the begginning of my report.
+
+But also finishing to tune each selected models.
+
+Then finishing the pipeline dataset extraction.
 
 [:top::top::top::top::top::top::top::top::top::top::top::top::top::top:Go to the top:top::top::top::top::top::top::top::top::top::top::top::top::top::top::top:](#top)
 
