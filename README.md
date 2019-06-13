@@ -8,8 +8,8 @@
   </div>
 </div>
 &nbsp;  &nbsp;  &nbsp;  
-<h1 align="center">Sentiment Analysis on Data Citations in Scientific Papers</h1>
-<p align="center">Sentiment Analysis on Data Citations in Scientific Papers in Europe Pub Med Central</p>
+<h1 align="center">Text Classification on Data Citations in Scientific Papers</h1>
+<p align="center">Text Classification on Data Citations in Scientific Papers in Europe Pub Med Central</p>
 
 ______________________________________________________________________
 
