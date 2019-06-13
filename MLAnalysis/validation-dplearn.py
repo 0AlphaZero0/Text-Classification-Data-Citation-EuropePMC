@@ -35,7 +35,7 @@ from keras.callbacks import TensorBoard
 dataset_filename="Dataset23.csv"
 epochs=2
 
-result_outfile="testResultDL"+str(epochs)+"-epochs.csv"
+result_outfile="ResultDL"+str(epochs)+"-epochs.csv"
 
 # Parameters
 average="macro" # binary | micro | macro | weighted | samples
@@ -44,14 +44,12 @@ class_weight={
 	0 : 25.,
 	1 : 20.,
 	2 : 10.,}
-	# 3 : 10.}
 k_cross_val=4
 skf=StratifiedKFold(
 	n_splits=k_cross_val,
 	random_state=42)
 input_node_units=1280
-activation_input_node='relu'
-units=50 #128
+units=128
 activation='relu'
 activation_output_node='softmax'
 ngram_range=(1,3)
@@ -69,12 +67,11 @@ featuresList=[
 	completeCitation]
 target_names=[
 	"Background",
-	# "Compare",
 	"Creation",
 	"Use"]
 
 ################################################    Functions     #################################################
-
+#
 def lemma_word(word):
 	"""This function take as args word and return its lemma
 	
@@ -85,7 +82,7 @@ def lemma_word(word):
 		- word : (str) a lemma of the word gives in args
 	"""
 	return lemmatizer.lemmatize(word)
-
+#
 def lemma_tokenizer(doc):
 	""" This function take as args a doc that could be lemmatize.
 
@@ -98,7 +95,7 @@ def lemma_tokenizer(doc):
 	tokens = word_tokenize(doc)
 	tokens = [lemma_word(t) for t in tokens]
 	return tokens
-
+#
 def stem_word(word):
 	"""This function take as args word and return its stem
 	
@@ -109,7 +106,7 @@ def stem_word(word):
 		- word : (str) a stem of the word gives in args
 	"""
 	return stemmer.stem(word)
-
+#
 def stem_tokenizer(doc):
 	""" This function take as args a doc that could be stemmed.
 
@@ -122,7 +119,7 @@ def stem_tokenizer(doc):
 	tokens = word_tokenize(doc)
 	tokens = [stem_word(t) for t in tokens]
 	return tokens
-
+#
 def tokenizer(doc):
 	""" This function take as args a doc that could be tokenize.
 
@@ -134,7 +131,7 @@ def tokenizer(doc):
 	"""
 	tokens = word_tokenize(doc)
 	return tokens
-
+#
 ###################################################    Main     ###################################################
 #
 data=read_csv(
@@ -189,9 +186,9 @@ for vect in vect_list:
 	start=time.time()
 	f1_score_list,precision_list,recall_list,accuracy_list=[],[],[],[]
 	val_acc_list,val_loss_list=[],[]
-	### !!! ###
+
 	X_to_train,X_val,y_to_train,y_val=train_test_split(X,y,random_state=42)
-	### !!! ###
+
 	for train_index, test_index in skf.split(X_to_train,y_to_train):
 		f1_score=None
 		model=None
@@ -208,7 +205,7 @@ for vect in vect_list:
 		y_test=None
 		y_train=None
 		backend.clear_session()
-		NAME="TESTdplearn-epochs"+str(epochs)+"-"+str(vect[2])+"-{}".format(int(time.time()))
+		NAME="dplearn-epochs"+str(epochs)+"-"+str(vect[2])+"-{}".format(int(time.time()))
 		tensorboard=TensorBoard(log_dir='./logsDLearn/{}'.format(NAME))
 		print(vect[2])
 		X_train,X_test=X_to_train.iloc[train_index,],X_to_train.iloc[test_index,]
@@ -234,7 +231,7 @@ for vect in vect_list:
 		model=Sequential([
 			Dense(
 				units=input_node_units,
-				activation=activation_input_node,
+				activation=activation,
 				input_dim=X_train_dtm[0].shape[1]),
 			Dense(
 				units=units,
@@ -252,8 +249,8 @@ for vect in vect_list:
 			metrics=['accuracy'])
 
 		model.fit(
-			X_train_dtm,
-			y_train,
+			x=X_train_dtm,
+			y=y_train,
 			epochs=epochs,
 			batch_size=batch_size,
 			validation_data=(X_test_dtm,y_test),
@@ -283,7 +280,7 @@ for vect in vect_list:
 		accuracy_list.append(accuracy)
 	end=time.time()
 
-	### !!! ###
+	### VALIDATION SET #
 	vect_X_val=[]
 	vect_X_val.append(vect[0].transform(X_val[[vect[1]]].fillna('').values.reshape(-1)).todense())
 	vect_X_val.extend((
@@ -311,7 +308,7 @@ for vect in vect_list:
 		"\tVal_loss : "+str(round(val_loss,3)),
 		"\tTime : "+str(round(end-start,3))+" sec",
 		"\n#######################################################")
-	### !!! ###
+	# VALIDATION SET ###
 
 	fold=0
 	f1_score_mean,precision_mean,recall_mean,accuracy_mean=0,0,0,0
@@ -330,7 +327,6 @@ for vect in vect_list:
 	accuracy_mean=round(accuracy_mean/len(accuracy_list),3)
 	val_acc_mean=round(val_acc_mean/len(val_acc_list)*100,3)
 	val_loss_mean=round(val_loss_mean/len(val_loss_list),3)
-	
 	print(
 		metrics.classification_report(y_test,y_pred_class,target_names = target_names),
 		"Method : "+str(vect[2]),

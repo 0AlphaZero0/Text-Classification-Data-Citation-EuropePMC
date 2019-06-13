@@ -36,8 +36,9 @@ result_outfile="testResultMLparam.csv"
 k_cross_val=4
 average="macro"
 gamma="auto"
-C=10
-max_iter=10000
+C=1000
+max_iter=1000
+tol=1
 class_weight={
 	0 : 25.,
 	1 : 20.,
@@ -73,7 +74,7 @@ countVectorizerList=[
 ################################################    Models     #################################################
 #
 clfSVM=svm.LinearSVC(C=C,max_iter=max_iter,class_weight=class_weight)
-clfLR=LogisticRegression(C=C,solver='lbfgs',multi_class='multinomial',max_iter=max_iter,class_weight=class_weight)
+clfLR=LogisticRegression(C=C,solver='lbfgs',multi_class='multinomial',max_iter=max_iter,class_weight=class_weight,tol=tol)
 clfRF=RandomForestClassifier(n_estimators=100,random_state=0) # max_depth=2
 clfComplementNB=ComplementNB()
 clfGaussianNB=GaussianNB()

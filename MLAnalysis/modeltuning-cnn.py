@@ -19,12 +19,15 @@ from sklearn.feature_extraction.text import TfidfVectorizer # Allows transformat
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.model_selection import train_test_split
 from sklearn.model_selection import StratifiedKFold
+from sklearn.model_selection import cross_val_score
 from sklearn import metrics
+from sklearn.model_selection import GridSearchCV
 
 from nltk.stem.snowball import SnowballStemmer
 from nltk import word_tokenize
 from nltk.stem import WordNetLemmatizer
 
+from keras.wrappers.scikit_learn import KerasClassifier
 from keras.preprocessing.sequence import pad_sequences
 from keras.preprocessing.text import one_hot
 from keras.preprocessing.text import Tokenizer
@@ -39,9 +42,9 @@ os.environ['TF_CPP_MIN_LOG_LEVEL']='2'
 
 dataset="Dataset23.csv"
 embedding_dims=50 # Here 50/100/200/300
-epochs=2
+epochs=12
 
-result_output="ResultLSTM"+str(embedding_dims)+"d.csv"
+result_output="ResultCNN"+str(embedding_dims)+"d.csv"
 embedding_file='glove.6B.'+str(embedding_dims)+'d.txt'
 
 vocab_size=500
@@ -139,7 +142,7 @@ def tokenizer(doc):
 #
 data=read_csv(dataset,header=0,sep=";")
 #
-data[completeCitation]=data[[PreCitation_str,Citation_str,PostCitation_str]].apply(lambda x : '{}{}'.format(x[0],x[1]),axis=1)
+data[completeCitation]=data[[PreCitation_str,Citation_str,PostCitation_str]].apply(lambda x : '{}{}'.format(x[0],x[1]), axis=1)
 #
 data["Categories_num"]=data.Categories.map({
 	"Background":0,
@@ -178,11 +181,11 @@ data["stem_citation"]=stem_citation
 
 approaches=[data[completeCitation],data["lemma_citation"],data["stem_citation"]]
 
-output_file=codecs.open(
-	filename=result_output,
-	mode='w',
-	encoding='utf8')
-output_file.write("f1-score\tPrecision\tRecall\tAccuracy\tLoss\tf1-scoreCV\tPrecisionCV\tRecallCV\tAccuracyCV\tLossCV\tCombination\tToken\tLemma\tStem\tTime\n")
+# output_file=codecs.open(
+# 	filename=result_output,
+# 	mode='w',
+# 	encoding='utf8')
+# output_file.write("f1-score\tPrecision\tRecall\tAccuracy\tLoss\tf1-scoreCV\tPrecisionCV\tRecallCV\tAccuracyCV\tLossCV\tCombination\tToken\tLemma\tStem\tTime\n")
 for approach in approaches:
 	tokenizer=Tokenizer(num_words=vocab_size)
 	tokenizer.fit_on_texts(approach)
@@ -190,11 +193,11 @@ for approach in approaches:
 
 	word_index=tokenizer.word_index
 
-	max_len=len(max(tmp,key=len))
+	max_len=len(max(tmp, key=len))
 
 	tmp=DataFrame(pad_sequences(
 		sequences=tmp,
-		maxlen=max_len,
+		maxlen=max_len, 
 		padding='post'))
 
 	data=concat(
@@ -212,15 +215,19 @@ for approach in approaches:
 	f1_score_list,precision_list,recall_list,accuracy_list=[],[],[],[]
 	val_acc_list,val_loss_list=[],[]
 	control=0
+	#for activation in ['tanh','relu','sigmoid','hard_sigmoid','exponential','linear','softsign','softplus']:# relu
+	activation='relu'
+	#for filters in [1,10,20,30,50,60,70,80,90,100,110,120,128,130,140,150]: # 128
+	filters=128
 	for train_index,test_index in skf.split(X_to_train,y_to_train):
-		NAME="LSTM-"+str(embedding_dims)+"D-epochs"+str(epochs)+"-"+str(approach.name)+str(control)+"-{}".format(int(time.time()))
-		tensorboard=TensorBoard(log_dir='./logsLSTM/{}'.format(NAME))	
+		# NAME="CNN-"+str(embedding_dims)+"D-epochs"+str(epochs)+"-"+str(approach.name)+str(control)+"-{}".format(int(time.time()))
+		# tensorboard=TensorBoard(log_dir='./logsCNN/{}'.format(NAME))
 
-		X_train,X_test=[X_to_train.iloc[train_index,],X_to_train.iloc[test_index,]] 
-		y_train,y_test=[y_to_train.iloc[train_index,],y_to_train.iloc[test_index,]]
+		X_train, X_test=[X_to_train.iloc[train_index,], X_to_train.iloc[test_index,]] 
+		y_train, y_test=[y_to_train.iloc[train_index,], y_to_train.iloc[test_index,]]
 
-		X_train=[X_train.iloc[:,3:],X_train.iloc[:,:3]] #seq_features,other_features
-		X_test=[X_test.iloc[:,3:],X_test.iloc[:,:3]] #seq_features,other_features
+		X_train=[X_train.iloc[:, 3:],X_train.iloc[:, :3]] #seq_features,other_features
+		X_test=[X_test.iloc[:, 3:], X_test.iloc[:, :3]] #seq_features,other_features
 
 		embeddings_index={}
 		f=codecs.open(
@@ -256,20 +263,23 @@ for approach in approaches:
 			output_dim=embedding_dims,
 			weights=[embedding_matrix],
 			input_length=X_train[0].shape[1],
-			trainable=True)(input_layer)
+			trainable=False)(input_layer)
 
-		seq_features=layers.LSTM(
-			units=200,
-			go_backwards=True)(embedding)#conv_layer)#embedding)
+		conv=layers.Conv1D(
+			filters=128,
+			kernel_size=(4),
+			activation=activation)(embedding)
+		
+		seq_features=layers.GlobalMaxPooling1D()(conv)
 
 		other_features=layers.Input(
 			shape=(3,))
 
 		model=layers.Concatenate(
 			axis=1)([seq_features,other_features])
-
+		
 		model=layers.Dropout(
-			rate=.2)(model)
+			rate=.4)(model)
 
 		model=layers.Dense(
 			units=len(target_names),
@@ -283,13 +293,12 @@ for approach in approaches:
 			metrics=['accuracy'])
 
 		model.fit(
-			x=X_train,
-			y=y_train,
+			X_train,
+			y_train,
 			epochs=epochs,
 			batch_size=20,
 			class_weight=class_weight,
-			validation_data=(X_test,y_test),
-			callbacks=[tensorboard])
+			validation_data=(X_test,y_test))
 
 		val_loss,val_acc=model.evaluate(X_test,y_test)
 		val_loss_list.append(val_loss)
@@ -330,32 +339,32 @@ for approach in approaches:
 	val_acc_mean=round(val_acc_mean/len(val_acc_list),3)
 	val_loss_mean=round(val_loss_mean/len(val_loss_list),3)
 
-	### !!! ### VALIDATION SET
-	val_loss,val_acc=model.evaluate(X_val,y_val)
-	result=model.predict(X_val)
-	y_pred_class_val=[]
-	for sample in result:
-		y_pred_class_val.append(argmax(sample))
-	f1_score=round(metrics.f1_score(y_val,y_pred_class_val,average=average)*100,3)
-	precision=round(metrics.precision_score(y_val,y_pred_class_val,average=average)*100,3)
-	recall=round(metrics.recall_score(y_val,y_pred_class_val,average=average)*100,3)
-	accuracy=round(metrics.accuracy_score(y_val,y_pred_class_val)*100,3)
-	print(
-		"\nVALIDATION SET : \n",
-		metrics.classification_report(y_val,y_pred_class_val,target_names=target_names),
-		"Method : "+str(approach.name),
-		"\nF1_score : "+str(f1_score),
-		"\tPrecision : "+str(precision),
-		"\tRecall : "+str(recall),
-		"\tVal_acc : "+str(round(val_acc*100,3)),
-		"\tVal_loss : "+str(round(val_loss,3)),
-		"\tTime : "+str(round(end-start,3))+" sec",
-		"\n#######################################################")
-	### !!! ###
+# 	### !!! ### VALIDATION SET
+# 	val_loss,val_acc=model.evaluate(X_val,y_val)
+# 	result=model.predict(X_val)
+# 	y_pred_class_val=[]
+# 	for sample in result:
+# 		y_pred_class_val.append(argmax(sample))
+# 	f1_score=round(metrics.f1_score(y_val,y_pred_class_val,average=average)*100,3)
+# 	precision=round(metrics.precision_score(y_val,y_pred_class_val,average=average)*100,3)
+# 	recall=round(metrics.recall_score(y_val,y_pred_class_val,average=average)*100,3)
+# 	accuracy=round(metrics.accuracy_score(y_val,y_pred_class_val)*100,3)
+# 	print(
+# 		"\nVALIDATION SET : \n",
+# 		metrics.classification_report(y_val,y_pred_class_val,target_names=target_names),
+# 		"Method : "+str(approach.name),
+# 		"\nF1_score : "+str(f1_score),
+# 		"\tPrecision : "+str(precision),
+# 		"\tRecall : "+str(recall),
+# 		"\tVal_acc : "+str(round(val_acc*100,3)),
+# 		"\tVal_loss : "+str(round(val_loss,3)),
+# 		"\tTime : "+str(round(end-start,3))+" sec",
+# 		"\n#######################################################")
+# 	### !!! ###
 
 	print(
 		metrics.classification_report(y_test,y_pred_class,target_names=target_names),
-		"Method : "+str(approach.name),
+		"Method : "+str(approach.name)+" / "+str(activation)+" / "+str(filters),
 		"\nF1_score : "+str(f1_score_mean),
 		"\tPrecision : "+str(precision_mean),
 		"\tRecall : "+str(recall_mean),
@@ -364,43 +373,43 @@ for approach in approaches:
 		"\tTime : "+str(round(end-start,3))+" sec",
 		"\n#######################################################")
 
-	output_file.write(str(f1_score))
-	output_file.write("\t")
-	output_file.write(str(precision))
-	output_file.write("\t")
-	output_file.write(str(recall))
-	output_file.write("\t")
-	output_file.write(str(round(val_acc*100,3)))
-	output_file.write("\t")
-	output_file.write(str(round(val_loss,3)))
-	output_file.write("\t")
-	output_file.write(str(f1_score_mean))
-	output_file.write("\t")
-	output_file.write(str(precision_mean))
-	output_file.write("\t")
-	output_file.write(str(recall_mean))
-	output_file.write("\t")
-	output_file.write(str(val_acc_mean*100))
-	output_file.write("\t")
-	output_file.write(str(val_loss_mean))
-	output_file.write("\t")
-	output_file.write(str(approach.name))
-	output_file.write("\t")
-	if completeCitation in str(approach.name):
-		output_file.write("True")
-	else:
-		output_file.write("False")
-	output_file.write("\t")
-	if "lemma" in str(approach.name):
-		output_file.write("True")
-	else:
-		output_file.write("False")
-	output_file.write("\t")
-	if "stem" in str(approach.name):
-		output_file.write("True")
-	else:
-		output_file.write("False")
-	output_file.write("\t")
-	output_file.write(str(round(end-start,3)))
-	output_file.write("\n")
-output_file.close()
+# 	output_file.write(str(f1_score))
+# 	output_file.write("\t")
+# 	output_file.write(str(precision))
+# 	output_file.write("\t")
+# 	output_file.write(str(recall))
+# 	output_file.write("\t")
+# 	output_file.write(str(round(val_acc*100,3)))
+# 	output_file.write("\t")
+# 	output_file.write(str(round(val_loss,3)))
+# 	output_file.write("\t")
+# 	output_file.write(str(f1_score_mean))
+# 	output_file.write("\t")
+# 	output_file.write(str(precision_mean))
+# 	output_file.write("\t")
+# 	output_file.write(str(recall_mean))
+# 	output_file.write("\t")
+# 	output_file.write(str(val_acc_mean*100))
+# 	output_file.write("\t")
+# 	output_file.write(str(val_loss_mean))
+# 	output_file.write("\t")
+# 	output_file.write(str(approach.name))
+# 	output_file.write("\t")
+# 	if completeCitation in str(approach.name):
+# 		output_file.write("True")
+# 	else:
+# 		output_file.write("False")
+# 	output_file.write("\t")
+# 	if "lemma" in str(approach.name):
+# 		output_file.write("True")
+# 	else:
+# 		output_file.write("False")
+# 	output_file.write("\t")
+# 	if "stem" in str(approach.name):
+# 		output_file.write("True")
+# 	else:
+# 		output_file.write("False")
+# 	output_file.write("\t")
+# 	output_file.write(str(round(end-start,3)))
+# 	output_file.write("\n")
+# output_file.close()
