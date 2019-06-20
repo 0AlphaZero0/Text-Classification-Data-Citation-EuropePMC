@@ -13,43 +13,43 @@ dataset=codecs.open(
 pmcid_list=[]
 section=[]
 for line in dataset.readlines():
-    pmcid_list.append(line.split(";")[0])
-    section.append(line.split(";")[1])
+    pmcid_list.append(line.split("\t")[0])
+    section.append(line.split("\t")[1])
 dico={}
 for index in range(len(pmcid_list)):
     if pmcid_list[index] in dico:
         dico[pmcid_list[index]][section[index].split('\r')[0]]+=1
     else:
         dico[pmcid_list[index]]={
-            "ArrayExpress":0,
-            "BioModels":0,
-            "BioProject":0,
-            "BioSamples":0,
-            "dbGaP":0,
-            "DOI":0,
-            "EMDB":0,
-            "ENA":0,
-            "Ensembl":0,
-            "EUDRACT":0,
-            "GCA":0,
-            "Gene Ontology (GO)":0,
-            "GEO":0,
-            "HPA":0,
-            "IGSR/1000 Genomes":0,
-            "InterPro":0,
-            "OMIM":0,
-            "PDBe":0,
-            "Pfam":0,
-            "PRIDE":0,
-            "RefSeq":0,
-            "RefSNP":0,
-            "RRID":0,
-            "UniProt":0}
+            # "ArrayExpress":0,
+            # "BioModels":0,
+            # "BioProject":0,
+            # "BioSamples":0,
+            # "dbGaP":0,
+            # "DOI":0,
+            # "EMDB":0,
+            # "ENA":0,
+            # "Ensembl":0,
+            # "EUDRACT":0,
+            # "GCA":0,
+            # "Gene Ontology (GO)":0,
+            # "GEO":0,
+            # "HPA":0,
+            # "IGSR/1000 Genomes":0,
+            # "InterPro":0,
+            # "OMIM":0,
+            # "PDBe":0,
+            # "Pfam":0,
+            # "PRIDE":0,
+            # "RefSeq":0,
+            # "RefSNP":0,
+            # "RRID":0,
+            # "UniProt":0}
             ############################
-            # "Use":0,
-            # "Compare":0,
-            # "Background":0,
-            # "Creation":0}
+            "Use":0,
+            "Compare":0,
+            "Background":0,
+            "Creation":0}
             ############################
             # "Abstract":0,
             # "Acknowledgments":0,
@@ -62,6 +62,7 @@ for index in range(len(pmcid_list)):
             # "Methods":0,
             # "Results":0,
             # "Supplementary material":0,
+            # "Table":0,
             # "Title":0}
         dico[pmcid_list[index]][section[index].split('\r')[0]]+=1
 dataset.close()

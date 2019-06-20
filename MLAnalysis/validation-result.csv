@@ -1,0 +1,22 @@
+f1-score	Precision	Recall	Accuracy	f1-scoreCV	PrecisionCV	RecallCV	AccuracyCV	Method	Combination	Token	Ngram	Lemma	Stem	Time (sec)	Loss	LossCV
+73.992	77.231	71.986	85.526	81.312	85.236	78.673	88.155	SVM	['Tokenization']	True	False	False	False	6		
+73.504	80.127	71.503	86.316	82.119	87.529	79.232	89.035	SVM	['N-gram']	False	True	False	False	9		
+74.207	76.589	72.591	85.263	81.851	86.317	78.976	88.681	SVM	['Lemmatization']	False	False	True	False	10		
+73.660	75.685	72.353	85.000	82.217	86.207	79.434	88.592	SVM	['Stemming']	False	False	False	True	9		
+73.466	80.729	70.529	86.053	81.732	88.205	78.247	88.946	SVM	['N-gram', 'Lemmatization']	False	True	True	False	13		
+73.594	79.904	71.015	86.053	82.135	88.690	78.553	89.121	SVM	['N-gram', 'Stemming']	False	True	False	True	17		
+70.295	75.486	68.849	83.947	79.999	84.133	77.823	88.000	CNN	['Tokenization']	True	False	False	False	82	0.408	0.337
+72.299	75.860	72.122	83.421	80.789	84.708	79.074	88.100	CNN	['Lemmatization']	False	False	True	False	88	0.428	0.345
+74.240	80.556	71.133	85.789	80.776	84.167	78.741	87.900	CNN	['Stemming']	False	False	False	True	99	0.391	0.35
+67.271	73.449	63.994	80.000	74.183	83.723	71.913	83.506	Dplearn	['Tokenization']	True	False	False	False	69	0.573	0.492
+73.675	78.929	71.381	85.526	80.300	85.354	77.996	87.807	Dplearn	['N-gram']	False	True	False	False	437	0.482	0.389
+73.926	76.074	72.231	84.211	78.844	81.731	79.187	84.738	Dplearn	['Lemmatization']	False	False	True	False	63	0.424	0.478
+75.423	76.535	74.404	84.474	80.898	83.051	80.839	86.669	Dplearn	['Stemming']	False	False	False	True	61	0.408	0.4
+74.028	79.088	70.640	83.947	77.524	86.961	74.053	86.574	Dplearn	['N-gram', 'Lemmatization']	False	True	True	False	499	0.537	0.485
+71.590	69.935	80.890	75.263	79.284	83.913	79.859	85.516	Dplearn	['N-gram', 'Stemming']	False	True	False	True	496	0.738	0.507
+76.624	78.857	75.373	86.842	82.543	86.767	79.800	88.947	Logistic Regression	['Tokenization']	True	False	False	False	19		
+73.535	78.841	71.988	86.053	81.727	85.948	80.233	88.773	Logistic Regression	['N-gram']	False	True	False	False	81		
+75.162	76.27	74.288	85.263	81.899	85.831	79.492	88.42	Logistic Regression	['Lemmatization']	False	False	True	False	22		
+77.961	79.816	76.822	87.368	83.572	87.179	81.209	89.384	Logistic Regression	['Stemming']	False	False	False	True	23		
+76.017	79.317	74.648	86.579	83.081	87.568	80.45	89.474	Logistic Regression	['N-gram', 'Lemmatization']	False	True	True	False	103		
+75.821	78.958	74.648	86.579	82.410	87.526	79.733	89.121	Logistic Regression	['N-gram', 'Stemming']	False	True	False	True	105		

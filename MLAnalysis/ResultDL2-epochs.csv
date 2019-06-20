@@ -1,0 +1,7 @@
+f1-score	Precision	Recall	Accuracy	Loss	f1-scoreCV	PrecisionCV	RecallCV	AccuracyCV	LossCV	Combination	Token	Ngram	Lemma	Stem	Time
+67.271	73.449	63.994	80.0	0.573	74.183	83.723	71.913	83.506	0.492	['Tokenization']	True	False	False	False	68.546
+73.675	78.929	71.381	85.526	0.482	80.3	85.354	77.996	87.807	0.389	['N-gram']	False	True	False	False	437.047
+73.926	76.074	72.231	84.211	0.424	78.844	81.731	79.187	84.738	0.478	['Lemmatization']	False	False	True	False	63.323
+75.423	76.535	74.404	84.474	0.408	80.898	83.051	80.839	86.669	0.4	['Stemming']	False	False	False	True	61.198
+74.028	79.088	70.64	83.947	0.537	77.524	86.961	74.053	86.574	0.485	['N-gram', 'Lemmatization']	False	True	True	False	498.78
+71.59	69.935	80.89	75.263	0.738	79.284	83.913	79.859	85.516	0.507	['N-gram', 'Stemming']	False	True	False	True	496.13
