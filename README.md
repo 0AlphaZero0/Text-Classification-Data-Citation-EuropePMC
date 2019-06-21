@@ -23,8 +23,6 @@ ______________________________________________________________________
 
 - *[Logbook & Notes](https://github.com/0AlphaZero0/Sentiment-Analysis-EuropePMC/blob/master/Logbook%20%26%20Notes/README.md)*
 
-- *[Bibliography](https://github.com/0AlphaZero0/Sentiment-Analysis-EuropePMC/blob/master/Bibliography/README.md)*
-
 - *[Acknowledgment](#Acknowledgment)*
 
 ______________________________________________________________________
@@ -99,9 +97,6 @@ ______________________________________________________________________
 ### Organisation :
 
 This GitHub is ogranized as follows : 
-
-- [Bibliography](https://github.com/0AlphaZero0/Sentiment-Analysis-Data-Citation-EuropePMC/tree/master/Bibliography) 
-  * It corresponds to all articles I've read. There is a [README.md](https://github.com/0AlphaZero0/Sentiment-Analysis-Data-Citation-EuropePMC/blob/master/Bibliography/README.md) that contain all citations as BibText and link to papers pdf. All papers that I've read are stored in this folder.
   
 - [Datasets](https://github.com/0AlphaZero0/Sentiment-Analysis-Data-Citation-EuropePMC/tree/master/Datasets)
   * There is two folder in this folder, one that contain [existing datasets](https://github.com/0AlphaZero0/Sentiment-Analysis-Data-Citation-EuropePMC/tree/master/Datasets/Existing-Dataset) and a second one that contain [dataset created](https://github.com/0AlphaZero0/Sentiment-Analysis-Data-Citation-EuropePMC/tree/master/Datasets/Dataset-created) for machine learning analysis 
