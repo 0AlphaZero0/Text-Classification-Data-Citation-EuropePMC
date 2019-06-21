@@ -317,7 +317,7 @@ ______________________________________________________________________
  - EXTRACT
  
 <a name="SciLite1"></a>
-#### :diamond_shape_with_a_dot_inside: [SciLite](https://github.com/0AlphaZero0/Sentiment-Analysis-EuropePMC/blob/master/Bibliography/SciLite%20a%20platform%20for%20displaying%20text-mined%20annotations_A.Venkatesan_et_al.pdf) :
+#### :diamond_shape_with_a_dot_inside: [SciLite](https://europepmc.org/abstract/MED/28948232) :
 
 ***SciLite: a platform for displaying text-mined annotations as a means to link research articles with biological data.*** A.Venkatesan et al.
 
@@ -353,7 +353,7 @@ Workflow :
 ![](https://github.com/0AlphaZero0/Sentiment-Analysis-EuropePMC/blob/master/Logbook%20%26%20Notes/EPMC-SciLite.png)
 
 <a name="Database1"></a>
-#### :diamond_shape_with_a_dot_inside: [Database citation in full text biomedical papers](https://github.com/0AlphaZero0/Sentiment-Analysis-EuropePMC/blob/master/Bibliography/Database%20Citation%20in%20Full%20Text%20Biomedical%20Articles_S.Kafkas_et_al.pdf) :
+#### :diamond_shape_with_a_dot_inside: [Database citation in full text biomedical papers](https://europepmc.org/articles/PMC3667078) :
 
 ***Database Citation in Full Text Biomedical Articles*** S.Kafkas et al.
 
@@ -374,7 +374,7 @@ Identification of citation thanks to *WhatizitANA* pipeline
  - other errors from wrong assignation of ID like *GenBank* instead of *UniProt*
 
 <a name="EuropePMC1"></a>
-#### :diamond_shape_with_a_dot_inside: [EuropePMC](http://europepmc.org/) (EPMC/Europe PubMed Central) [PDF](https://github.com/0AlphaZero0/Sentiment-Analysis-EuropePMC/blob/master/Bibliography/Database%20citation%20in%20supplementary%20data%20linked%20to_S.Kafkas_et_al.pdf):
+#### :diamond_shape_with_a_dot_inside: [EuropePMC](https://europepmc.org/abstract/MED/25789152) (EPMC/Europe PubMed Central):
 
 ***Database citation in supplementary data linked to Europe PubMed Central full text biomedical articles*** S.Kafkas et al.
 
@@ -393,7 +393,7 @@ perform with [STATA](https://www.stata.com/) (statistical tool)
 Features : Accession ID; Deposition ID; Deposition Year; First Public Year; PMID publication year; citation year; citation
 
 <a name="Sentiment1"></a>
-#### :diamond_shape_with_a_dot_inside: [Sentiment analysis of scientific citation](https://github.com/0AlphaZero0/Sentiment-Analysis-EuropePMC/blob/master/Bibliography/Sentiment%20analysis%20of%20scientific%20citations_A.Athar_et_al.pdf) :
+#### :diamond_shape_with_a_dot_inside: [Sentiment analysis of scientific citation](https://www.cl.cam.ac.uk/techreports/UCAM-CL-TR-856.pdf) :
 
 ***Sentiment analysis of scientific citation*** A.Athar
 
@@ -492,7 +492,7 @@ There is also the dataset : [Citation sentiment corpus](https://github.com/0Alph
 
 
 <a name="Measuring2"></a>
-#### :diamond_shape_with_a_dot_inside: [Measuring the Evolution of a Scientific Field through Citation Frames](https://github.com/0AlphaZero0/Sentiment-Analysis-EuropePMC/blob/master/Bibliography/Measuring%20the%20Evolution%20of%20a%20Scientific%20Field%20through%20Citation%20Frames_D.Jurgens_et_al.pdf) :
+#### :diamond_shape_with_a_dot_inside: [Measuring the Evolution of a Scientific Field through Citation Frames](https://www.aclweb.org/anthology/Q18-1028) :
 
 ***Measuring the Evolution of a Scientific Field through Citation Frames*** D.Jurgens et al.
 
@@ -584,7 +584,7 @@ In computational linguistics, lemmatisation is the algorithmic process of determ
   There has been much work in handling negation and its scope in the context of sentiment classification (Polanyi and Zaenen, 2006; Moilanen and Pulman, 2007). Detection of both negation and its scope are non-trivial tasks on their own. Das and Chen (2001) use a window-based approach, where they orthographically modify all words within a fixed window which follow a negation word. Councill et al. (2010) use features from a dependency parser in a CRF framework to detect the scope of negation. More recently, Abu Jbara and Radev (2012) propose a similar framework, but with lexical, structural, and syntactic features while solving a shared task for resolving the scope and focus of negation.
   
 <a name="NewFeatures3"></a>
-#### :diamond_shape_with_a_dot_inside: [New Features for Sentiment Analysis: Do Sentences Matter?](https://github.com/0AlphaZero0/Sentiment-Analysis-EuropePMC/blob/master/Bibliography/New%20Features%20for%20Sentiment%20Analysis_G.Gezici_et_al.pdf) :
+#### :diamond_shape_with_a_dot_inside: [New Features for Sentiment Analysis: Do Sentences Matter?](http://ceur-ws.org/Vol-917/SDAD2012_1_Gezici.pdf) :
 
 ***New Features for Sentiment Analysis: Do Sentences Matter?*** G.Gezici et al.
 
@@ -612,7 +612,7 @@ Existing solutions instead of the one here :
 They also use Punctuation but useless in scientific paper.
 
 <a name="AUTOLEX3"></a>
-#### :diamond_shape_with_a_dot_inside: [AUTOLEX: An Automatic Lexicon Builder for Minority Languages Using an Open Corpus](https://github.com/0AlphaZero0/Sentiment-Analysis-EuropePMC/blob/master/Bibliography/AUTOLEX%20An%20Automatic%20Lexicon%20Builder%20for%20Minority%20Languages_E.L.C.Buhay_et_al%20.pdf) :
+#### :diamond_shape_with_a_dot_inside: [AUTOLEX: An Automatic Lexicon Builder for Minority Languages Using an Open Corpus](https://www.aclweb.org/anthology/Y10-1069) :
 
 ***AUTOLEX: An Automatic Lexicon Builder for Minority Languages Using an Open Corpus*** E.L.C.Buhay_et_al.
 
@@ -639,7 +639,7 @@ During this week I've start to create a pipeline that can extract data citations
   *  [Achieving human and machine accessibility of cited data in scholarly publications](#Achieving4)
 
 <a name="Achieving4"></a>
-#### :diamond_shape_with_a_dot_inside: [Achieving human and machine accessibility of cited data in scholarly publications](https://github.com/0AlphaZero0/Sentiment-Analysis-EuropePMC/blob/master/Bibliography/Achieving%20human%20and%20machine%20accessibility%20of%20cited%20data%20in%20scholarly%20publications_J.Starr_et_al%20.pdf) :
+#### :diamond_shape_with_a_dot_inside: [Achieving human and machine accessibility of cited data in scholarly publications](https://peerj.com/articles/cs-1/) :
 
 ***Achieving human and machine accessibility of cited data in scholarly publications*** J.Starr et al.
 
