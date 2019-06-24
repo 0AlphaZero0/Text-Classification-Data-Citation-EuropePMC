@@ -49,6 +49,8 @@ ______________________________________________________________________
   * [Week 13 - 27/05-02/06 - Final model building step](#Week13)
   * [Week 14 - 03/06-09/06 - Finishing building models & Optimisation](#Week14)
   * [Week 15 - 10/06-16/06 - Redaction & tuning](#Week15)
+  * [Week 16 - 17/06-23/06 - Writing report and prepare presentation + future work](#Week16)
+  * [Week 17 - 24/06-30/06 - ](#Week17)
 ______________________________________________________________________
 
 ### :bookmark_tabs: [Bibliography](#bibliography01)
@@ -932,7 +934,7 @@ In the end we have 800 papers Open Access with data citations (5000 data citatio
 [:top::top::top::top::top::top::top::top::top::top::top::top::top::top:Go to the top:top::top::top::top::top::top::top::top::top::top::top::top::top::top::top:](#top)
 
 <a name="Week13"></a>
-### :date: Week 13- 28/05-02/06 - Final model building step :
+### :date: Week 13 - 28/05-02/06 - Final model building step :
 
 - *Papers & Blogs* :
   * [Deep learning facilitates rapid classification of human and veterinary clinical
@@ -987,7 +989,7 @@ narratives](https://www.biorxiv.org/content/10.1101/429720v2)*** Arturo Lopez Pi
 
 
 <a name="Week14"></a>
-### :date: Week 14- 03/06-10/06 - Finishing building models & Optimisation :
+### :date: Week 14 - 03/06-10/06 - Finishing building models & Optimisation :
 
 Looking at the current results I think that the "*Background*" category is really tricky, indeed even for us it's difficult to say that a data citation could be a *Background* one. But I'm conviced that sometimes there is data citation that are made in papers but scientists doesn't really use those data eg.
 
@@ -1006,13 +1008,27 @@ During this week we optmized thanks to Grid search, 4 models (Logistic Regressio
 [:top::top::top::top::top::top::top::top::top::top::top::top::top::top:Go to the top:top::top::top::top::top::top::top::top::top::top::top::top::top::top::top:](#top)
 
 <a name="Week15"></a>
-### :date: Week 15- 10/06-16/06 - Redaction & tuning :
+### :date: Week 15 - 10/06-16/06 - Redaction & tuning :
 
 This week was about writing the begginning of my report.
 
 But also finishing to tune each selected models.
 
 Then finishing the pipeline dataset extraction.
+
+[:top::top::top::top::top::top::top::top::top::top::top::top::top::top:Go to the top:top::top::top::top::top::top::top::top::top::top::top::top::top::top::top:](#top)
+
+<a name="Week16"></a>
+### :date: Week 16 - 17/06-23/06 - Writing report and prepare presentation + future work :
+
+This week was about writing the begginning of my report & thinking about the future work and presentation about my work
+
+I ran the Logistic Regression model training it with the complete dataset 23 and testing on the 2000 data citations extract on the previsou week, and perform a post analysis on results.
+
+[:top::top::top::top::top::top::top::top::top::top::top::top::top::top:Go to the top:top::top::top::top::top::top::top::top::top::top::top::top::top::top::top:](#top)
+
+<a name="Week17"></a>
+### :date: Week 17 - 24/06-30/06 - :
 
 [:top::top::top::top::top::top::top::top::top::top::top::top::top::top:Go to the top:top::top::top::top::top::top::top::top::top::top::top::top::top::top::top:](#top)
 
