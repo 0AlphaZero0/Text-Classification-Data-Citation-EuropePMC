@@ -447,7 +447,7 @@ To say that a paper or sentence or opinion is positive we can :
 
 Citations with no sentiment are considered as OBJECTIVES.
 
-:warning: Content is really important ==> 328% more negative sentences + 100% more positive sentences
+:warning: Context is really important ==> 328% more negative sentences + 100% more positive sentences
 
 ***Classification*** = **SVM with features : "1-3 grams + Dependency features + Window Based Negation"**
 
