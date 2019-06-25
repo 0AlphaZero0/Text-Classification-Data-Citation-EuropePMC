@@ -32,7 +32,7 @@ from keras.utils import normalize
 # Files
 dataset_filename="Dataset23.csv"
 dataset_to_predict="Dataset.csv"
-result_outfile="ResultLRTest.csv"
+result_outfile="ResultLRTest2.csv"
 # Parameters
 k_cross_val=4
 average="macro"
@@ -108,11 +108,12 @@ def tokenizer(doc):
 data=read_csv(
 	filepath_or_buffer=dataset_filename,
 	header=0,
-	sep=";")
+	sep="\t")
 data_to_predict=read_csv(
-    filepath_or_buffer=dataset_to_predict,
+	filepath_or_buffer=dataset_to_predict,
 	header=0,
-	sep=";")
+	sep="\t")
+data_to_predict=data_to_predict.fillna('')
 #
 data[completeCitation]=data[[PreCitation_str,Citation_str,PostCitation_str]].apply(lambda x : '{}{}'.format(x[0],x[1]),axis=1)
 data_to_predict[completeCitation]=data_to_predict[[PreCitation_str,Citation_str,PostCitation_str]].apply(lambda x : '{}{}'.format(x[0],x[1]),axis=1)
@@ -151,63 +152,65 @@ data_to_predict[SubType_num_str]=data_to_predict.SubType.map(subTypeDict)
 ###   TRAIN SET   ###
 X_train=data[featuresList]
 y_train=data.Categories_num
+vectorizer=TfidfVectorizer(tokenizer=stem_tokenizer)
 #
 vect_X_train=[]
-vect_X_train.append(TfidfVectorizer(tokenizer=stem_tokenizer).fit_transform(X_train[[completeCitation]].fillna('').values.reshape(-1)).todense())
+vect_X_train.append(vectorizer.fit_transform(X_train[[completeCitation]].fillna('').values.reshape(-1)).todense())
 vect_X_train.extend((
-    X_train[[Section_num_str]].values,
-    X_train[[SubType_num_str]].values,
-    X_train[[Figure_num_str]].values))
+	X_train[[Section_num_str]].values,
+	X_train[[SubType_num_str]].values,
+	X_train[[Figure_num_str]].values))
 X_train_dtm=np.concatenate(vect_X_train,axis=1)
 ###   TO PREDICT   ###
 X_test=data_to_predict[featuresList]
 #
 vect_X_test=[]
-vect_X_test.append(TfidfVectorizer(tokenizer=stem_tokenizer).transform(X_test[[completeCitation]].fillna('').values.reshape(-1)).todense())
+vect_X_test.append(vectorizer.transform(X_test[[completeCitation]].fillna('').values.reshape(-1)).todense())
 vect_X_test.extend((
-    X_test[[Section_num_str]].values,
-    X_test[[SubType_num_str]].values,
-    X_test[[Figure_num_str]].values))
+	X_test[[Section_num_str]].values,
+	X_test[[SubType_num_str]].values,
+	X_test[[Figure_num_str]].values))
 X_test_dtm=np.concatenate(vect_X_test,axis=1)
+X_test_dtm=np.nan_to_num(X_test_dtm)
 ####    ####
 clfLR.fit(X_train_dtm,y_train)
 result=clfLR.predict_proba(X_test_dtm)
 y_pred_class=[]
 for sample in result:
-    y_pred_class.append(np.argmax(sample))
+	y_pred_class.append(np.argmax(sample))
 ####    ####
 dict_cat_name={
-    0:"Background",
-    1:"Creation",
-    2:"Use"
+	0:"Background",
+	1:"Creation",
+	2:"Use"
 }
 output_file=codecs.open(result_outfile,'w',encoding='utf8')
 output_file.write("PMCID\tAccessionNb\tSection\tSubType\tFigure\tCategories\tPreCitation\tCitation\tPostCitation\tBackground\tCreation\tUse\n")
 for index,row in data_to_predict.iterrows():
-    output_file.write(str(data_to_predict[["PMCID"]]))
-    output_file.write("\t")
-    output_file.write(str(data_to_predict[["AccessionNb"]]))
-    output_file.write("\t")
-    output_file.write(str(data_to_predict[["Section"]]))
-    output_file.write("\t")
-    output_file.write(str(data_to_predict[["SubType"]]))
-    output_file.write("\t")
-    output_file.write(str(data_to_predict[["Figure"]]))
-    output_file.write("\t")
-    output_file.write(str(dict_cat_name[y_pred_class[index]]))
-    output_file.write("\t")
-    output_file.write(str(data_to_predict[["PreCitation"]]))
-    output_file.write("\t")
-    output_file.write(str(data_to_predict[["Citation"]]))
-    output_file.write("\t")
-    output_file.write(str(data_to_predict[["PostCitation"]]))
-    output_file.write("\t")
-    output_file.write(str(result[index][0]))
-    output_file.write("\t")
-    output_file.write(str(result[index][1]))
-    output_file.write("\t")
-    output_file.write(str(result[index][2]))
-    output_file.write("\n")
+	output_file.write(str(row["PMCID"]))
+	output_file.write("\t")
+	output_file.write(str(row["AccessionNb"]))
+	output_file.write("\t")
+	output_file.write(str(row["Section"]))
+	output_file.write("\t")
+	output_file.write(str(row["SubType"]))
+	output_file.write("\t")
+	output_file.write(str(row["Figure"]))
+	output_file.write("\t")
+	output_file.write(str(dict_cat_name[y_pred_class[index]]))
+	output_file.write("\t")
+	output_file.write(str(row["PreCitation"]))
+	output_file.write("\t")
+	output_file.write(str(row["Citation"]))
+	output_file.write("\t")
+	output_file.write(str(row["PostCitation"]))
+	output_file.write("\t")
+	output_file.write(str(result[index][0]))
+	output_file.write("\t")
+	output_file.write(str(result[index][1]))
+	output_file.write("\t")
+	output_file.write(str(result[index][2]))
+	output_file.write("\n")
 output_file.close()
 
 
