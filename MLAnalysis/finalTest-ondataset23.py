@@ -7,6 +7,7 @@ import codecs # Allows to load a file containing UTF-8 characters
 import numpy as np # Allows to manipulate the necessary table for sklearn
 import time # Allows to measure execution time.
 import random
+import pandas
 
 from nltk.stem.snowball import SnowballStemmer
 from nltk import word_tokenize
@@ -112,8 +113,18 @@ data=read_csv(
 	sep="\t")
 #
 x=0
+count=len(data.index)
+data_to_predict=[]
+indext=[]
 while x<0.25*len(data.index):
-    index=random.randint(0,len(data.index))
+	newindex=random.randint(1,count)
+	if newindex not in indext:
+		indext.append(newindex)
+		count-=1
+		x+=1
+data_to_predict=data.iloc[indext]
+data.drop(indext,axis=0,inplace=True)
+data_to_predict=pandas.DataFrame(data_to_predict)
 #
 data[completeCitation]=data[[PreCitation_str,Citation_str,PostCitation_str]].apply(lambda x : '{}{}'.format(x[0],x[1]),axis=1)
 data_to_predict[completeCitation]=data_to_predict[[PreCitation_str,Citation_str,PostCitation_str]].apply(lambda x : '{}{}'.format(x[0],x[1]),axis=1)
@@ -163,7 +174,7 @@ vect_X_train.extend((
 X_train_dtm=np.concatenate(vect_X_train,axis=1)
 ###   TO PREDICT   ###
 X_test=data_to_predict[featuresList]
-
+#
 vect_X_test=[]
 vect_X_test.append(vectorizer.transform(X_test[[completeCitation]].fillna('').values.reshape(-1)).todense())
 vect_X_test.extend((
@@ -173,48 +184,48 @@ vect_X_test.extend((
 X_test_dtm=np.concatenate(vect_X_test,axis=1)
 X_test_dtm=np.nan_to_num(X_test_dtm)
 ####    ####
-
-
-
-# clfLR.fit(X_train_dtm,y_train)
-# result=clfLR.predict_proba(X_test_dtm)
-# y_pred_class=[]
-# for sample in result:
-# 	y_pred_class.append(np.argmax(sample))
-# ####    ####
-# dict_cat_name={
-# 	0:"Background",
-# 	1:"Creation",
-# 	2:"Use"
-# }
-# output_file=codecs.open(result_outfile,'w',encoding='utf8')
-# output_file.write("PMCID\tAccessionNb\tSection\tSubType\tFigure\tCategories\tPreCitation\tCitation\tPostCitation\tBackground\tCreation\tUse\n")
-# for index,row in data_to_predict.iterrows():
-# 	output_file.write(str(row["PMCID"]))
-# 	output_file.write("\t")
-# 	output_file.write(str(row["AccessionNb"]))
-# 	output_file.write("\t")
-# 	output_file.write(str(row["Section"]))
-# 	output_file.write("\t")
-# 	output_file.write(str(row["SubType"]))
-# 	output_file.write("\t")
-# 	output_file.write(str(row["Figure"]))
-# 	output_file.write("\t")
-# 	output_file.write(str(dict_cat_name[y_pred_class[index]]))
-# 	output_file.write("\t")
-# 	output_file.write(str(row["PreCitation"]))
-# 	output_file.write("\t")
-# 	output_file.write(str(row["Citation"]))
-# 	output_file.write("\t")
-# 	output_file.write(str(row["PostCitation"]))
-# 	output_file.write("\t")
-# 	output_file.write(str(result[index][0]))
-# 	output_file.write("\t")
-# 	output_file.write(str(result[index][1]))
-# 	output_file.write("\t")
-# 	output_file.write(str(result[index][2]))
-# 	output_file.write("\n")
-# output_file.close()
+clfLR.fit(X_train_dtm,y_train)
+result=clfLR.predict_proba(X_test_dtm)
+y_pred_class=[]
+for sample in result:
+	y_pred_class.append(np.argmax(sample))
+####    ####
+dict_cat_name={
+	0:"Background",
+	1:"Creation",
+	2:"Use"}
+print(data.shape)
+print(data_to_predict.shape)
+output_file=codecs.open(result_outfile,'w',encoding='utf8')
+output_file.write("PMCID\tAccessionNb\tSection\tSubType\tFigure\tCategories\tPreCitation\tCitation\tPostCitation\tBackground\tCreation\tUse\n")
+x=0
+for index,row in data_to_predict.iterrows():
+	output_file.write(str(row["PMCID"]))
+	output_file.write("\t")
+	output_file.write(str(row["AccessionNb"]))
+	output_file.write("\t")
+	output_file.write(str(row["Section"]))
+	output_file.write("\t")
+	output_file.write(str(row["SubType"]))
+	output_file.write("\t")
+	output_file.write(str(row["Figure"]))
+	output_file.write("\t")
+	output_file.write(str(dict_cat_name[y_pred_class[x]]))
+	output_file.write("\t")
+	output_file.write(str(row["PreCitation"]))
+	output_file.write("\t")
+	output_file.write(str(row["Citation"]))
+	output_file.write("\t")
+	output_file.write(str(row["PostCitation"]))
+	output_file.write("\t")
+	output_file.write(str(result[x][0]))
+	output_file.write("\t")
+	output_file.write(str(result[x][1]))
+	output_file.write("\t")
+	output_file.write(str(result[x][2]))
+	output_file.write("\n")
+	x+=1
+output_file.close()
 
 
 
