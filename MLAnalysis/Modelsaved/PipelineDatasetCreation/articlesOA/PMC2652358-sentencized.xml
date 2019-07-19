@@ -1,0 +1,761 @@
+
+<article xmlns:mml="http://www.w3.org/1998/Math/MathML" article-type="research-article" xml:lang="EN"><?properties open_access?><front><journal-meta><journal-id journal-id-type="nlm-ta">J Med Chem</journal-id><journal-id journal-id-type="publisher-id">jm</journal-id><journal-id journal-id-type="coden">jmcmar</journal-id><journal-title-group><journal-title>Journal of Medicinal Chemistry</journal-title></journal-title-group><issn pub-type="ppub">0022-2623</issn><issn pub-type="epub">1520-4804</issn><publisher><publisher-name>American Chemical Society</publisher-name></publisher></journal-meta><article-meta><article-id pub-id-type="pmcid">2652358</article-id><article-id pub-id-type="doi">10.1021/jm8001197</article-id><article-categories><subj-group><subject>Article</subject></subj-group></article-categories><title-group><article-title><SecTag type="TITLE"><text><SENT sid="0" pm="."><plain>Ensemble-Based Virtual Screening Reveals Potential Novel Antiviral Compounds for Avian Influenza Neuraminidase </plain></SENT>
+</text></SecTag></article-title><alt-title alt-title-type="short">Antiviral Compounds for Avian Influenza Neuraminidase</alt-title></title-group><contrib-group><contrib contrib-type="author" id="ath1"><name><surname>Cheng</surname><given-names>Lily S.</given-names></name><xref rid="afn1" ref-type="author-notes">†</xref><xref rid="afn2" ref-type="author-notes">⊥</xref></contrib><contrib contrib-type="author" corresp="yes" id="ath2"><name><surname>Amaro</surname><given-names>Rommie E.</given-names></name><xref rid="cor1" ref-type="author-notes">*</xref><xref rid="afn3" ref-type="author-notes">‡</xref><xref rid="afn2" ref-type="author-notes">⊥</xref></contrib><contrib contrib-type="author" id="ath3"><name><surname>Xu</surname><given-names>Dong</given-names></name><xref rid="afn1" ref-type="author-notes">†</xref></contrib><contrib contrib-type="author" corresp="yes" id="ath4"><name><surname>Li</surname><given-names>Wilfred W.</given-names></name><xref rid="cor1" ref-type="author-notes">*</xref><xref rid="afn1" ref-type="author-notes">†</xref></contrib><contrib contrib-type="author" id="ath5"><name><surname>Arzberger</surname><given-names>Peter W.</given-names></name><xref rid="afn1" ref-type="author-notes">†</xref></contrib><contrib contrib-type="author" id="ath6"><name><surname>McCammon</surname><given-names>J. Andrew</given-names></name><xref rid="afn1" ref-type="author-notes">†</xref><xref rid="afn3" ref-type="author-notes">‡</xref><xref rid="afn4" ref-type="author-notes">§</xref><xref rid="afn5" ref-type="author-notes">∥</xref></contrib><aff>National Biomedical Computation Resource, University of California, San Diego, La Jolla, California 92093, Department of Chemistry &amp; Biochemistry and NSF Center for Theoretical Biological Physics (CTBP), University of California, San Diego, La Jolla, California 92093-0365, Howard Hughes Medical Institute, University of California, San Diego, La Jolla, California 92093-0365, and Department of Pharmacology, University of California, San Diego, La Jolla, California 92093-0365</aff></contrib-group><author-notes><corresp id="cor1"><label>*</label>
+To whom correspondence should be addressed. Phone: <phone>858-822-0169</phone> (R.E.A.); <phone>858-534-0591</phone> (W.W.L.). Fax: <fax>858-534-4974</fax> (R.E.A.); <fax>858-534-5034</fax> (W.W.L.). E-mail: <email>ramaro@mccammon.ucsd.edu</email> (R.E.A.); <email>wilfred@ucsd.edu</email> (W.W.L.). Address: <addr-line>Department of Chemistry &amp; Biochemistry, University of California San Diego, 9500 Gilman Drive, Mail Code 0365, La Jolla, California 92093-0365</addr-line> (R.E.M.); <addr-line>National Biomedical Computation Resource, University of California, San Diego, 9500 Gilman Drive, Mail Code 0505, La Jolla, California 92093-0505 (W.W.L.)</addr-line>.</corresp><fn id="afn1"><label>†</label><p><text><SENT sid="1" pm="."><plain>National Biomedical Computation Resource, University of California, San Diego. </plain></SENT>
+</text></p></fn><fn id="afn3"><label>‡</label><p><text><SENT sid="2" pm="."><plain>Department of Chemistry &amp; Biochemistry and NSF Center for Theoretical Biological Physics (CTBP), University of California San Diego. </plain></SENT>
+</text></p></fn><fn id="afn4"><label>§</label><p><text><SENT sid="3" pm="."><plain>Howard Hughes Medical Institute, University of California San Diego. </plain></SENT>
+</text></p></fn><fn id="afn5"><label>∥</label><p><text><SENT sid="4" pm="."><plain>Department of Pharmacology, University of California San Diego. </plain></SENT>
+</text></p></fn><fn id="afn2"><label>⊥</label><p><text><SENT sid="5" pm="."><plain>Authors contributed equally to this work. </plain></SENT>
+</text></p></fn></author-notes><pub-date pub-type="epub"><day>18</day><month>06</month><year>2008</year></pub-date><pub-date pub-type="ppub"><day>10</day><month>07</month><year>2008</year></pub-date><volume>51</volume><issue>13</issue><fpage>3878</fpage><lpage>3894</lpage><history><date date-type="issue-pub"><day>10</day><month>07</month><year>2008</year></date><date date-type="asap"><day>18</day><month>06</month><year>2008</year></date><date date-type="received"><day>4</day><month>02</month><year>2008</year></date></history><permissions><copyright-statement>Copyright © 2008 American Chemical Society</copyright-statement><copyright-year>2008</copyright-year><copyright-holder>American Chemical Society</copyright-holder><license xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://pubs.acs.org" license-type="open-access"><license-p>This is an open-access article distributed under the ACS AuthorChoice Terms &amp; Conditions.  Any use of this article, must conform to the terms of that license which are available at <uri xlink:href="http://pubs.acs.org">http://pubs.acs.org</uri>.</license-p></license><license license-type="ccc-price"><license-p>40.75</license-p></license></permissions><abstract><p content-type="toc-graphic"><SecTag type="ABS"><text><SENT sid="6" pm="."><plain> </plain></SENT>
+</text></SecTag></p><p><SecTag type="ABS"><text><SENT sid="7" pm="."><plain>Avian influenza virus subtype H5N1 is a potential pandemic threat with human-adapted strains resistant to antiviral drugs. </plain></SENT>
+<SENT sid="8" pm="."><plain>Although virtual screening (VS) against a crystal or relaxed receptor structure is an established method to identify potential inhibitors, the more dynamic changes within binding sites are neglected. </plain></SENT>
+<SENT sid="9" pm="."><plain>To accommodate full receptor flexibility, we use AutoDock4 to screen the NCI diversity set against representative receptor ensembles extracted from explicitly solvated molecular dynamics simulations of the neuraminidase system. </plain></SENT>
+<SENT sid="10" pm="."><plain>The top hits are redocked to the entire nonredundant receptor ensemble and rescored using the relaxed complex scheme (RCS). </plain></SENT>
+<SENT sid="11" pm="."><plain>Of the 27 top hits reported, half ranked very poorly if only crystal structures are used. </plain></SENT>
+<SENT sid="12" pm="."><plain>These compounds target the catalytic cavity as well as the newly identified 150- and 430-cavities, which exhibit dynamic properties in electrostatic surface and geometric shape. </plain></SENT>
+<SENT sid="13" pm="."><plain>This ensemble-based VS and RCS approach may offer improvement over existing strategies for structure-based drug discovery. </plain></SENT>
+</text></SecTag></p></abstract><funding-group><funding-statement><funding-source>National Institutes of Health, United States</funding-source></funding-statement></funding-group><custom-meta-group><custom-meta><meta-name>document-id-old-9</meta-name><meta-value>jm8001197</meta-value></custom-meta><custom-meta><meta-name>document-id-new-14</meta-name><meta-value>jm-2008-001197</meta-value></custom-meta></custom-meta-group></article-meta></front><body><SecTag type="INTRO"><sec id="sec1"><title><text><SENT sid="14" pm="."><plain>Introduction </plain></SENT>
+</text></title><p><text><SENT sid="15" pm="."><plain>Avian influenza has received worldwide attention due to its rapid global spread via migratory birds and the growing number of human cases. </plain></SENT>
+<SENT sid="16" pm="."><plain>The highly pathogenic avian influenza virus that the World Health Organization fears may cause a pandemic in humans comprises strains from the subtype H5N1 of influenza type A.(1) Subtypes of influenza virus are named based on the observed combinations of two viral surface membrane glycoproteins, hemagglutinin (HA)aaAbbreviations: VS, virtual screening; RCS, relaxed complex scheme; RC, relaxed complex; MD, molecular dynamics; HA, hemagglutinin; NA, neuraminidase; CS-Map, computational solvent mapping; NCIDS, National Cancer Institute diversity set; EVSRCS, ensemble-based virtual screen with relaxed complex scheme; DANA, 2,3-didehydro-2-deoxy-N-acetyl neuraminic acid; SA, sialic acid; RMSD, root-mean-square deviation; NBCR, National Biomedical Computational Resource; PRAGMA, Pacific Rim Application and Grid Middleware Assembly; CSF4, Community Scheduler Framework; APBS, Adaptive Poisson−Boltzmann Solver; NSC, National Service Center; VMD, visual molecular dynamics; NAMD, not another molecular dynamics; SASA, solvent accessible surface area.  and neuraminidase (NA), with 16 and 9 types known to date, respectively.(2) Three historical pandemic flu viruses were caused by H1N1 (1918), H2N2 (1957), and H3N2 (1968). </plain></SENT>
+</text></p><p><text><SENT sid="17" pm="."><plain>HA is involved in the attachment of viral particles to host cell surface glycoproteins, whereas NA plays a role in the release of newly synthesized viral particles (for a recent review, see ref (3)). </plain></SENT>
+<SENT sid="18" pm="."><plain>NA, a membrane-bound homotetrameric enzyme, releases viral paricles by cleaving terminal sialic acid (SA) residues on the host cell surface proteoglycans, bound by HA.(4) As the NA active site is relatively well-conserved, it became a good target for structure-based antiviral drug development.(5) Commercial inhibitors such as zanamivir and oseltamivir are stockpiled by various countries in case of a pandemic outbreak. </plain></SENT>
+<SENT sid="19" pm="."><plain>While both drugs are successful in treating several human cases,(6) drug-resistant strains have quickly emerged due to antigenic drift.7,8 </plain></SENT>
+</text></p><p><text><SENT sid="20" pm="."><plain>In 2006, Russell et al. reported the first crystal structures of a group-1 NA (N1), which revealed the existence of a “150-cavity” that, under various crystallization conditions, closed upon ligand binding to the active site through movement of the 150-loop.(9) To further probe the structure and dynamics of N1, explicitly solvated molecular dynamics (MD) simulations on the tetrameric N1 systems with (holo) or without (apo) oseltamivir bound were performed.(10) The simulations indicated that the flexibility of the 150-loop may be even greater than previously anticipated and that the dynamics of the neighboring 430-loop also influenced the topology of the binding site. </plain></SENT>
+</text></p><p><text><SENT sid="21" pm="."><plain>More recently, representative conformations of the N1 binding site (including the flexible 150- and 430-loop regions), extracted from a clustering analysis of the N1 MD simulations, were used for computational solvent mapping (CS-Map), which assessed the binding affinity of small, solvent-sized probe molecules within these areas.(11) The mapping analyses revealed the presence of novel druggable hot spots in the 150- and 430-loop regions, providing further support for the feasibility of developing high-affinity inhibitors capable of binding these areas. </plain></SENT>
+<SENT sid="22" pm="."><plain>Such inhibitors may be applicable to the group-1 NA’s including N1, N4, N5, and N8, which have nearly identical active site regions,(9) but not necessarily group-2 enzymes (N2, N3, N6, N7, and N9), which appear to lack such well defined cavities. </plain></SENT>
+</text></p><p><text><SENT sid="23" pm="."><plain>Structure-based drug discovery has made significant progress in the past 30 years,(12) benefiting from recent advances in high performance and distributed grid computing.(13) However, the drawbacks are well documented (reviewed in refs (14,17)), and only in the past decade have methods able to treat receptor flexibility been developed.18–25 A related challenge is the identification of drug leads out of large compound libraries through receptor-based virtual screening (VS). </plain></SENT>
+<SENT sid="24" pm="."><plain>VS is a widely used method that has been shown to be successful in a variety of studies, although it also has many shortcomings (reviewed in refs (26) and (27)). </plain></SENT>
+<SENT sid="25" pm="."><plain>The treatment of receptor flexibility within the scope of VS is still in its infancy and a very active area of research, as it is widely accepted that receptor flexibility plays an important role in molecular recognition. </plain></SENT>
+<SENT sid="26" pm="."><plain>The use of multiple experimentally derived protein structures in VS has been shown to effectively improve enrichment factors28,29 and, most recently, aid in the discovery of novel compounds active against the p53 tumor repressor.(30) </plain></SENT>
+</text></p><p><text><SENT sid="27" pm="."><plain>The relaxed complex scheme (RCS), a hybrid computational method that combines the advantages of docking algorithms with dynamic structural information provided by MD simulations, has been successfully applied to a number of systems.22,23,31 Recently, raltegravir became the first FDA approved drug targeting HIV integrase,(32) and the treatment of receptor flexibility with MD simulations played a critical role in understanding the mechanism of action for this new class of inhibitors.(33) During MD simulations of the integrase enzyme in complex with the known inhibitor 5CITEP, a new pocket adjacent to the binding site was revealed, and docking of ligands into this new area indicated favorable binding.(34) The development of compounds capable of binding to both the original binding site and the new cavity, so-called “butterfly” compounds, formed the basis for this new class of integrase inhibitors. </plain></SENT>
+</text></p><p><text><SENT sid="28" pm="."><plain>In this work, we build upon these recent advances and present a novel, systematic, in silico lead identification strategy, with the goal of taking full receptor flexibility into account in the lead identification and scoring stages. </plain></SENT>
+<SENT sid="29" pm="."><plain>VS experiments are carried out against the NCI diversity set (NCIDS) on a set of eight N1 representative receptor structures,(31) consisting of two crystal structures and the three most dominant cluster-representative receptor structures as extracted from the explicitly solvated apo and holo MD simulations.(10) The use of the most dominant MD-generated structures systematically incorporates a broader range of receptor configurations into the hit identification process, in contrast to screening the crystal structures alone. </plain></SENT>
+<SENT sid="30" pm="."><plain>We anticipate that for very flexible receptors, such as N1, the incorporation of this variable structural information may identify new drug leads. </plain></SENT>
+<SENT sid="31" pm="."><plain>Indeed, comparison of the cluster representative structures suggests that the remarkable flexibility of the 150- and 430-loops results in correspondingly different 150-, 430-, and binding site cavities. </plain></SENT>
+</text></p><p><text><SENT sid="32" pm="."><plain>This novel VS approach is further combined with the RCS, a lead validation and refinement technique in which the top N hits are redocked to the entire nonredundant receptor ensemble and rescored. </plain></SENT>
+<SENT sid="33" pm="."><plain>Ultimately, we report 27 experimentally available compounds that are predicted to have a binding affinity equal to or better than four known N1 antivirals. </plain></SENT>
+<SENT sid="34" pm="."><plain>Importantly, half of these compounds would have been neglected based on the crystal structure VS scores alone. </plain></SENT>
+<SENT sid="35" pm="."><plain>Examination of the interactions of these top hits within the NA active site region reveals different classes of compounds with binding preference to the 150-, 430-, and catalytic cavities. </plain></SENT>
+<SENT sid="36" pm="."><plain>Several compounds are predicted to interact with key residues across two cavities and may provide novel bridging compound scaffolds. </plain></SENT>
+<SENT sid="37" pm="."><plain>We anticipate that this ensemble-based virtual screen with relaxed complex scheme (EVSRCS) approach may contribute to better structure-based drug design strategies for very flexible receptors. </plain></SENT>
+</text></p></sec></SecTag><SecTag type="METHODS"><sec sec-type="materials|methods" id="sec2"><title><text><SENT sid="38" pm="."><plain>Materials And Methods </plain></SENT>
+</text></title><sec id="sec2.1"><title><text><SENT sid="39" pm="."><plain>Apo System Setup </plain></SENT>
+</text></title><p><text><SENT sid="40" pm="."><plain>Details of the simulation setup without any ligand bound are as previously described.(10)Briefly, the apo system was built with the avian H5N1 NA crystal structure <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pdb" xlink:href="2HTY">2HTY</ext-link>.(9) Protonation states for histidine residues were defined at an apparent pH 6.5 using the PDB2PQR web server.(35) All crystallographically resolved water oxygen positions were retained in the apo system, as well as Ca2+ ions, which are required for optimal NA function.(36) To mimic experimental inhibition assay conditions, a 150 mM NaCl salt bath was introduced. </plain></SENT>
+<SENT sid="41" pm="."><plain>The simulated system contained 112311 atoms. </plain></SENT>
+</text></p></sec><sec id="sec2.2"><title><text><SENT sid="42" pm="."><plain>Holo System Setup </plain></SENT>
+</text></title><p><text><SENT sid="43" pm="."><plain>Details of the simulation setup with oseltamivir bound are as previously described.(10) Briefly, the <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pdb" xlink:href="2HU0">2HU0</ext-link> structure used for the holo system initially had a single oseltamivir molecule bound in the active site of chain B.(9) To introduce oseltamivir within each of the other chains, chain B was aligned to chain A, C, and D by superimposition of the backbone Cα atoms, and the resulting transformation matrix was applied to the oseltamivir molecule. </plain></SENT>
+<SENT sid="44" pm="."><plain>Amber9 was used to set up the oseltamivir-bound system using an identical protocol to the apo system, with the exception of the additional oseltamivir parameters. </plain></SENT>
+<SENT sid="45" pm="."><plain>The composite tetrameric oseltamivir-bound system, comprising one oseltamivir molecule in each of the four active sites and calcium ions in 150 mM NaCl salt bath, contained 112457 atoms. </plain></SENT>
+</text></p></sec><sec id="sec2.3"><title><text><SENT sid="46" pm="."><plain>Molecular Dynamics Simulations </plain></SENT>
+</text></title><p><text><SENT sid="47" pm="."><plain>The apo and holo systems were energy minimized for 5 × 104 steps using NAMD version 2.6b1 (http://www.ks.uiuc.edu/Research/namd).(37) The MD methods have been previously described in refs 10,11. </plain></SENT>
+<SENT sid="48" pm="."><plain>Free dynamics were subsequently performed using a 2 fs time step for a total of 40 ns for each system. </plain></SENT>
+<SENT sid="49" pm="."><plain>Trajectories were generated on the San Diego Supercomputing Center’s DataStar machine (benchmark time of 0.3 days/ns using 112 parallel processors). </plain></SENT>
+</text></p></sec><sec id="sec2.4"><title><text><SENT sid="50" pm="."><plain>RMSD Clustering to Extract Representative MD Structures </plain></SENT>
+</text></title><p><text><SENT sid="51" pm="."><plain>To generate a reduced, representative set of N1 structures, root-mean-square difference (RMSD) conformational clustering was performed as previously described in ref (11) with the GROMOS++ analysis software,(38) part of the GROMOS05 software for biomolecular simulation (http://www.igc.ethz.ch/GROMOS). </plain></SENT>
+<SENT sid="52" pm="."><plain>Briefly, for the apo and holo simulations, each chain of the tetramer was extracted at 10 ps intervals over the 40 ns simulation. </plain></SENT>
+<SENT sid="53" pm="."><plain>The resulting 1.6 × 104 trajectory structures for each simulation were superimposed using all Cα atoms to remove overall rotation and translation. </plain></SENT>
+<SENT sid="54" pm="."><plain>The RMSD-clustering was performed on the subset of 62 residues that line the entire binding-site area, which we define here as the binding-site residues: 117−119, 133−138, 146−152, 156, 179, 180, 196−200, 223−228, 243−247, 277, 278, 293, 295, 344−347, 368, 401, 402, and 426−441. </plain></SENT>
+<SENT sid="55" pm="."><plain>These residues were clustered into batches of similar configurations using the atom-positional RMSD of all atoms (including side chains and hydrogens) as the similarity criterion. </plain></SENT>
+<SENT sid="56" pm="."><plain>A cutoff of 1.3 Å was chosen after evaluation of the dependence of cluster populations against the total number of clusters found for each simulation using a cutoff in the range 1.0−1.5 Å. </plain></SENT>
+<SENT sid="57" pm="."><plain>The central member cluster structure, the structure within the cluster having the smallest RMSD to all other structures within the cluster (i.e., the centroid), was chosen as the cluster representative structure. </plain></SENT>
+<SENT sid="58" pm="."><plain>Fifty-one clusters were obtained for the apo system, and 27 clusters for the holo system, the three most dominant configurations represented about 21%, 20%, and 19% and 38%, 22%, and 14% of the apo and holo ensembles, respectively.(39) In Figure 2, we indicate the time points that correspond to each of the central member cluster structures. </plain></SENT>
+<SENT sid="59" pm="."><plain>We do not mean to imply that all members of each cluster always form a continuous portion of the trajectory. </plain></SENT>
+<SENT sid="60" pm="."><plain>In fact, although many structures near a similar time point can be found within any given cluster, multiple discontinuous time points are represented in the larger clusters. </plain></SENT>
+<SENT sid="61" pm="."><plain>This indicates that areas of configurational space may be sampled multiple times within a single long trajectory. </plain></SENT>
+</text></p><SecTag type="FIG"><fig id="fig1" position="float"><label>Figure 1</label><caption><p><text><SENT sid="62" pm="."><plain>Three cluster representative structures for the three most dominant clusters from the (A) apo and (B) holo simulations. </plain></SENT>
+<SENT sid="63" pm="."><plain>The structures from the most dominant clusters are colored in pink (Apo-1, Holo-1), the second most dominant in green (Apo-2, Holo-2), and the third most dominant in orange (Apo-3, Holo-3). </plain></SENT>
+<SENT sid="64" pm="."><plain>The apo crystal structure (open 150-loop) is shown in silver, and the holo crystal structure (closed 150-loop) is shown in blue. </plain></SENT>
+<SENT sid="65" pm="."><plain>The 150- and 430-loops are indicated. </plain></SENT>
+</text></p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="jm-2008-001197_0010" id="gr3" position="float"/></fig></SecTag><SecTag type="FIG"><fig id="fig2" position="float"><label>Figure 2</label><caption><p><text><SENT sid="66" pm="."><plain>(A) Binding energy spectra of two known antivirals and the natural sialic acid substrate (SA) from the RC redocking against the 27 holo ensemble cluster representatives. </plain></SENT>
+<SENT sid="67" pm="."><plain>The bar graph shows the percent ensemble population represented by each cluster, ordered by their corresponding MD simulation time step. </plain></SENT>
+<SENT sid="68" pm="."><plain>(B) Binding energy statistics of the five control ligands from the RC redocking. </plain></SENT>
+<SENT sid="69" pm="."><plain>The standard deviation of each RC weighted arithmetic mean of the binding energies is represented by an error bar. </plain></SENT>
+</text></p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="jm-2008-001197_0011" id="gr2" position="float"/></fig></SecTag></sec><sec id="sec2.5"><title><text><SENT sid="70" pm="."><plain>Virtual Screening with AutoDock </plain></SENT>
+</text></title><p><text><SENT sid="71" pm="."><plain>The three most dominant clusters from each of the apo and holo system and the two original crystal structures are used as receptors for virtual screening against the NCIDS library of compounds. </plain></SENT>
+<SENT sid="72" pm="."><plain>AutoDockTools version 1.4.5(40) was used to add polar hydrogens and assign Gasteiger charges(41) to each of the eight NA structures. </plain></SENT>
+<SENT sid="73" pm="."><plain>The PDB2PQR web server (http://nbcr.net/pdb2pqr) was used to simulate a biological assay pH of 6.5.(35) For each of the eight NA structures, AutoGrid version 4.0 was used to create affinity grids centered on the active site. </plain></SENT>
+<SENT sid="74" pm="."><plain>Each grid enclosed an area of 64 Å by 72 Å by 66 Å with 0.375 Å spacing, and affinity grids were calculated for all of the following atom types: A (aromatic carbon), C, F, I, N, NA (hydrogen-bond-accepting N) Cl, O, OA (hydrogen-bond-accepting O), P, S, SA (hydrogen-bond-accepting S), Br, H, and e (electrostatic). </plain></SENT>
+<SENT sid="75" pm="."><plain>All NA structures from simulations were aligned with the closed 150-loop crystal structure (2HU4, chain B) to maintain a consistent grid location. </plain></SENT>
+</text></p><p><text><SENT sid="76" pm="."><plain>The NCIDS is a collection of approximately 2000 compounds that are structurally representative of a wide range of pharmacophores.(42) AutoDockTools version 1.4.5 was used to merge nonpolar hydrogens, add Gasteiger charges to each ligand, and set up rotatable bonds through AutoTors. </plain></SENT>
+<SENT sid="77" pm="."><plain>A number of ligands containing rare earth elements could not be processed and were excluded. </plain></SENT>
+<SENT sid="78" pm="."><plain>A total of 1883 compounds from the NCIDS were included in the screen. </plain></SENT>
+<SENT sid="79" pm="."><plain>Five additional compounds experimentally known to bind avian influenza N1 were also included in the screen: sialic acid (N-acetyl neuraminic acid, aka, NANA or Neu5Ac, SA), 2,3-didehydro-2-deoxy-N-acetyl neuraminic acid (DANA), oseltamivir, zanamivir, and peramivir (an experimental inhibitor in phase II clinical trials(43)). </plain></SENT>
+</text></p><p><text><SENT sid="80" pm="."><plain>AutoDock version 4.0.1 with the Lamarckian genetic algorithm was used to simulate ligand−receptor docking.(44) Docking parameters were optimized for the positive control docking of oseltamivir to the closed 150-loop conformation of NA (<ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pdb" xlink:href="2HU4">2HU4</ext-link>) and were as follows: trials of 100 dockings, population size of 200, random starting position and conformation, translation step ranges of 2.0 Å, rotation step ranges of 50°, elitism of 1, mutation rate of 0.02, crossover rate of 0.8, local search rate of 0.06, and 5 million energy evaluations. </plain></SENT>
+<SENT sid="81" pm="."><plain>A total of 15104 docking jobs were run on the National Biomedical Computation Resource (NBCR, http://nbcr.net) Kryptonite cluster. </plain></SENT>
+<SENT sid="82" pm="."><plain>Docked conformations were clustered using a tolerance of 2.0 Å RMSD using the external clustering script provided with AutoDockTools version 1.4.5. </plain></SENT>
+</text></p><p><text><SENT sid="83" pm="."><plain>Docking results were sorted by the lowest binding energy of the most populated cluster using AutoDockTools version 1.4.5, and the top 30 hits from each of the eight systems were chosen for further analysis. </plain></SENT>
+<SENT sid="84" pm="."><plain>The top hits from each screen were initially filtered for druglikeness by their adherence to Lipinski’s “rule of fives”.(45) It is recommended that compounds should conform to two or more of these rules,(46) and we only considered compounds conforming all rules in this study, i.e., having no more than five hydrogen bond donors, no more than 10 hydrogen bond acceptors, a molecular weight under 500 g/mol, and a partition coefficient (log P) under 5.(45) Compounds were filtered after rather than prior to docking to prevent premature exclusion of compounds that do not meet this criterion. </plain></SENT>
+<SENT sid="85" pm="."><plain>A brief analysis of top binders, however, revealed that most compounds that failed the Lipinski rules were unlikely drug candidates. </plain></SENT>
+<SENT sid="86" pm="."><plain>Although some compounds that failed the Lipsinki rules also had good docking scores, this cutoff criterion was imposed to focus the scope of our search to the more promising compounds. </plain></SENT>
+<SENT sid="87" pm="."><plain>The remaining hits were further filtered based on clustering criteria in AutoDock: we only consider a compound among the top hits if the most populated cluster included at least 25% of all docked conformations. </plain></SENT>
+<SENT sid="88" pm="."><plain>Receptor−ligand interactions, including hydrogen-bonding interactions and molecular surfaces, were calculated in AutoDockTools version 1.4.5.47,48 </plain></SENT>
+</text></p><p><text><SENT sid="89" pm="."><plain>A crucial metric for assessing the performance of high-throughput virtual screening is the extent to which a database of compounds could be enriched such that only a much smaller subset needs to be prepared and assayed to identify leads. </plain></SENT>
+<SENT sid="90" pm="."><plain>The metric is often quantified by the enrichment factor (EF):(19) where D is the total number of compound in the data set and S is a subset (e.g., &lt; 2%) of the data set. </plain></SENT>
+</text></p></sec><sec id="sec2.6"><title><text><SENT sid="91" pm="."><plain>Possible Aggregator Identification </plain></SENT>
+</text></title><p><text><SENT sid="92" pm="."><plain>Top hits were compared to a list of 263 known false positives.(49) These so-called “promiscuous inhibitors” are irregular compounds that inhibit nonspecifically by forming aggregates onto which the protein will adsorb and thus block activity.49,50 A similarity search was performed to identify false-positive aggregators within the 27 top hits, and none were found using the Tanimoto index at 98% cutoff. </plain></SENT>
+</text></p></sec><sec id="sec2.7"><title><text><SENT sid="93" pm="."><plain>Relaxed Complex Scheme </plain></SENT>
+</text></title><p><text><SENT sid="94" pm="."><plain>To validate and refine the virtual screening results, redocking experiments were performed on the combined top 27 hits plus oseltamivir, zanamivir, peramivir, DANA, and SA. </plain></SENT>
+<SENT sid="95" pm="."><plain>Each compound was redocked into the 27 central member cluster structures, which accounts for 100% of the ensemble variance from the holo simulation at 1.3 Å cutoffs. </plain></SENT>
+<SENT sid="96" pm="."><plain>Following the same docking procedure and parameter set described in the previous section, 756 redocking calculations were distributed to the Pacific Rim Application and Grid Middleware Assembly (PRAGMA, http://www.pragma-grid.net) grid using the metascheduler Community Scheduler Framework (CSF4, http://sourceforge.net/projects/gcsf) command line client and the output transferred back to the NBCR kryptonite cluster. </plain></SENT>
+<SENT sid="97" pm="."><plain>The binding free energies were extracted with AutoDockTools 1.4.5 scripts, and the ligand binding spectra were plotted for further analysis. </plain></SENT>
+</text></p><p><text><SENT sid="98" pm="."><plain>For the weight means and standard deviations calculations, the following formula was used.  </plain></SENT>
+</text></p><p><text><SENT sid="99" pm="."><plain>i is the index number of each holo ensemble cluster, whose percent distribution sums up to 100%. </plain></SENT>
+<SENT sid="100" pm="."><plain>The selection criteria are identical to that used in the earlier virtual screening steps. </plain></SENT>
+<SENT sid="101" pm="."><plain>In cases where the AutoDock cluster size does not meet the 25% cluster size cutoff, the lowest binding energy of the most populated cluster is still used for calculation of the weighted mean of binding energies. </plain></SENT>
+</text></p><p><text><SENT sid="102" pm="."><plain>RC weighted harmonic mean is calculated by first converting the binding energies to inhibition constants Ki as follows:  where R is 1.98719 and T is 298.15. </plain></SENT>
+<SENT sid="103" pm="."><plain>The weighted harmonic mean Ki value is then calculated from:  At the end, Ki is converted back to the RC harmonic weighted mean binding energy. </plain></SENT>
+</text></p></sec><sec id="sec2.8"><title><text><SENT sid="104" pm="."><plain>Electrostatic Surface Calculation and Visualization </plain></SENT>
+</text></title><p><text><SENT sid="105" pm="."><plain>Electrostatic potentials were calculated using the Adaptive Poisson−Boltzmann Solver (APBS) and mapped to the reduced molecular surface by Python Molecular Viewer.48,51 </plain></SENT>
+</text></p></sec><sec id="sec2.9"><title><text><SENT sid="106" pm="."><plain>Solvent Accessible Surface Area </plain></SENT>
+</text></title><p><text><SENT sid="107" pm="."><plain>To further quantify the changes in the binding site, the solvent accessible surface area was computed for each of the eight screened structures using VMD 1.8.6(52) with a probe radius of 1.4 Å. </plain></SENT>
+<SENT sid="108" pm="."><plain>To maintain consistency in the comparisons to the crystal structures, the hydrogens were not included for the cluster representative structures. </plain></SENT>
+</text></p></sec></sec></SecTag><SecTag type="RESULTS"><sec id="sec3"><title><text><SENT sid="109" pm="."><plain>Results </plain></SENT>
+</text></title><sec id="sec3.1"><title><text><SENT sid="110" pm="."><plain>Structural Variability of the N1 Active Site </plain></SENT>
+</text></title><p><text><SENT sid="111" pm="."><plain>The two crystal structures of N1, <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pdb" xlink:href="2HTY">2HTY</ext-link> (apo crystal) with the “open 150-loop”, <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pdb" xlink:href="2HU4">2HU4</ext-link> (holo crystal) with the “closed 150-loop”, and the corresponding three most dominant representative cluster members from the MD trajectories of the two structures are examined in parts A and B of Figure 1, respectively. </plain></SENT>
+<SENT sid="112" pm="."><plain>The three most dominant clusters accounted for approximately 60% and 75% of the overall MD ensembles, respectively. </plain></SENT>
+<SENT sid="113" pm="."><plain>Pairwise RMSD’s are presented in Table 1 for all structures over four α carbon subsets: (i) all N1 atoms, (ii) the 62 residues lining the binding site, (iii) the 150-loop residues 146−152, and (iv) the 430-loop residues 430−439. </plain></SENT>
+<SENT sid="114" pm="."><plain>As shown in Table 1B and Figure 1, Apo-1 exhibits the biggest differences in the 430-loop compared to the other structures except for Apo-2. </plain></SENT>
+<SENT sid="115" pm="."><plain>On the other hand, the apo crystal is significantly different from Apo-1, Apo-3, Holo-1, and Holo-3 but more similar to Apo-2 and Holo-1 in the 150-loop; the holo crystal exhibits 3 Å RMSD to all other structures in terms of the 150-loop. </plain></SENT>
+<SENT sid="116" pm="."><plain>Overall, this analysis indicates the areas of greatest structural diversity and similarity among the different structures. </plain></SENT>
+</text></p><SecTag type="TABLE"><table-wrap id="tbl1" position="float"><label>Table 1</label><caption><title><text><SENT sid="117" pm="."><plain>Distance Matricesa </plain></SENT>
+</text></title></caption><table-wrap-foot><fn id="tbl1-fn1"><label>a</label><p><text><SENT sid="118" pm="."><plain>Distance matrices based on pairwise RMSD’s calculated using (A) all N1 atoms (lower triangle) and the 62 residues lining the binding site (upper triangle); (B) the 150-loop residues (lower triangle) and the 430-loop residues (upper triangle). </plain></SENT>
+<SENT sid="119" pm="."><plain>In (B), the RMSD values of the Holo-1 cluster representative to the other structures are shown in grey, with the arrows illustrating the originating holo1 label for the 150-loop (solid arrow) and 430-loop (broken arrow). </plain></SENT>
+<SENT sid="120" pm="."><plain>Bold numbers indicate the smallest RMSD value for a structure and italics indicate the largest value for a structure in comparison to all the other seven structures. </plain></SENT>
+</text></p></fn></table-wrap-foot></table-wrap></SecTag></sec><sec id="sec3.2"><title><text><SENT sid="121" pm="."><plain>Positive Controls </plain></SENT>
+</text></title><p><text><SENT sid="122" pm="."><plain>The docking conditions for VS have been optimized using the oseltamivir-bound holo crystal structure (). </plain></SENT>
+<SENT sid="123" pm="."><plain>Oseltamivir docks to the apo and holo crystal structures in a manner consistent with its crystallized conformation. </plain></SENT>
+<SENT sid="124" pm="."><plain>The overall RMSD (all-atoms) of the predicted binding pose compared to the crystal structure pose is 1.8 Å for the Holo crystal structure and 2.1 Å for the apo crystal structure (). </plain></SENT>
+<SENT sid="125" pm="."><plain>In the redocking of oseltamivir to the closed N1 structure, the differences between docked and crystal poses lie primarily in the orientation of the pentyl ether group, which interacts with the protein through variable hydrophobic interactions. </plain></SENT>
+<SENT sid="126" pm="."><plain>The negatively charged carboxylate group is anchored through electrostatic interactions to the arginine trio (R118, R292, and R371) and its position does not differ significantly between the docked and crystal poses. </plain></SENT>
+<SENT sid="127" pm="."><plain>The successful redocking of oseltamivir confirms that AutoDock 4.0.1 is able to emulate experimental binding with an excellent degree of accuracy and precision, serving as a positive control to validate our virtual screening hits. </plain></SENT>
+</text></p><p><text><SENT sid="128" pm="."><plain>To examine whether the screening conditions offer satisfactory discrimination of known NA inhibitors and to provide positive controls for our larger scale VS analysis, we docked the set of five known inhibitors to the holo crystal (with oseltamivir in the crystal structure removed) as well as the 27 clusters obtained from the MD trajectory clustering analysis (Figure 2). </plain></SENT>
+<SENT sid="129" pm="."><plain>Both weighed harmonic mean and weighted arithmetic mean were used to calculate the binding affinity estimates, and both yield qualitatively similar results for the five control compounds (Figure 2B). </plain></SENT>
+<SENT sid="130" pm="."><plain>In this work, we chose the weighed harmonic mean to rank the top hits because it tends to favor the lower binding energies, which should be given more weight in the evaluation of the overall binding affinity, and its better performance is supported by previous studies.53,54 </plain></SENT>
+</text></p><p><text><SENT sid="131" pm="."><plain>For the control compounds, the binding energy difference fluctuates from 2.5 to 5 kcal/mol for DANA and zanamivir, respectively. </plain></SENT>
+<SENT sid="132" pm="."><plain>For zanamivir, the experimental IC50 is from 0.5−2.5 µM,(55) the range we observed is from 0.05 µM (−10 kcal/mol) to 215 µM (−5 kcal/mol). </plain></SENT>
+<SENT sid="133" pm="."><plain>In agreement with what is known experimentally of the sialic-acid analogs, oseltamivir is predicted to be the best overall binder, followed by zanamivir and DANA. </plain></SENT>
+<SENT sid="134" pm="."><plain>However, peramivir is much more potent than DANA, oseltamivir, and zanamivir, but its average binding profile is closer to that of DANA (Figure 2). </plain></SENT>
+<SENT sid="135" pm="."><plain>As the cluster size represented by each structure used in the redocking varies, as shown in the lower half of the Figure 2B, the weighted harmonic and arithmetic mean binding energies for each compound is calculated and the ranking is consistent with the visual examination described above. </plain></SENT>
+</text></p></sec><sec id="sec3.3"><title><text><SENT sid="136" pm="."><plain>Ensemble-Based Virtual Screens Define Top 27 Hits </plain></SENT>
+</text></title><p><text><SENT sid="137" pm="."><plain>The VS results performed with the two crystal structures and 6 most dominant MD ensemble representative structures are summarized in  Only hits that are in the top 30 and have at least 25% of the total population in their most populated cluster are selected from each set of VS results and indicated in bold. </plain></SENT>
+<SENT sid="138" pm="."><plain>As is evident, the number of structure variants captured different compounds with binding energies ranging from −11.6 to −9.25 kcal/mol. </plain></SENT>
+<SENT sid="139" pm="."><plain>Note that at this cutoff of −9.25 kcal/mol, peramivir and DANA are actually not selected, which will be discussed later. </plain></SENT>
+<SENT sid="140" pm="."><plain>As some hits are ranked among the top 30 in more than one structure or cluster representative, a total of 27 top hits are reported in this work (see Table 3for a preview). </plain></SENT>
+<SENT sid="141" pm="."><plain>Given the size of the screening library employed here (1883 compounds), an enrichment factor of 20 is achieved for the top 2% ranked list and 40 for the top 1% ranked list. </plain></SENT>
+</text></p><SecTag type="TABLE"><table-wrap id="tbl2" position="float"><label>Table 2</label><caption><title><text><SENT sid="142" pm="."><plain>Binding Cavity Residuesa </plain></SENT>
+</text></title></caption><table-wrap-foot><fn id="tbl2-fn1"><label>a</label><p><text><SENT sid="143" pm="."><plain>Italicized residues are those required for catalysis. </plain></SENT>
+<SENT sid="144" pm="."><plain>Bold face identify those highlighted by the CS-Map analysis.(39) Underlined residues participate in interactions in more than one cavity across “cavity boundaries”. </plain></SENT>
+<SENT sid="145" pm="."><plain>An asterisk indicates the residues that are found in the 150-cavity, but line the SA cavity when the 150-loop assumes a closed conformation. </plain></SENT>
+</text></p></fn></table-wrap-foot></table-wrap></SecTag><SecTag type="TABLE"><table-wrap id="tbl3" position="float"><label>Table 3</label><caption><title><text><SENT sid="146" pm="."><plain>Final Set of Recommended Compoundsa </plain></SENT>
+</text></title></caption></table-wrap></SecTag><SecTag type="TABLE"><table-wrap id="tbl3a" position="float"><label>Table 3</label><caption><title><text><SENT sid="147" pm="."><plain>Continued </plain></SENT>
+</text></title></caption></table-wrap></SecTag><SecTag type="TABLE"><table-wrap id="tbl3b" position="float"><label>Table 3</label><caption><title><text><SENT sid="148" pm="."><plain>Continued </plain></SENT>
+</text></title></caption></table-wrap></SecTag><SecTag type="TABLE"><table-wrap id="tbl3c" position="float"><label>Table 3</label><caption><title><text><SENT sid="149" pm="."><plain>Continued </plain></SENT>
+</text></title></caption><table-wrap-foot><fn id="tbl3-fn1"><label>a</label><p><text><SENT sid="150" pm="."><plain>The top 27 recommended compounds ranked by their weighted harmonic mean energy (kcal/mol) from the RCS. </plain></SENT>
+<SENT sid="151" pm="."><plain>The first column lists the final compound rank, which is also each compounds’ identification(42) (Comp ID). </plain></SENT>
+<SENT sid="152" pm="."><plain>Also listed are the predicted Ki (µM) as calculated from the weighted harmonic mean binding energy, the chemical structure, and the predicted binding sites. </plain></SENT>
+<SENT sid="153" pm="."><plain>Experimental IC50 values (nM/L) for oseltamivir, zanamivir, and peramivir are denoted with parenthesis.(55) For comparison, the last two columns indicate the compounds’ relative rank (among all 1883 NCIDS compounds and the five control compounds screened) in the crystal structure screenings. </plain></SENT>
+<SENT sid="154" pm="."><plain>Underlined hits are those identified from the ensemble screens but ranked very poorly in the crystal structure screens. </plain></SENT>
+</text></p></fn></table-wrap-foot></table-wrap></SecTag></sec><sec id="sec3.4"><title><text><SENT sid="155" pm="."><plain>Rescoring Using the Relaxed Complex Scheme </plain></SENT>
+</text></title><p><text><SENT sid="156" pm="."><plain>The selected top hits are redocked into the 27 nonredundant structures representing the entire holo MD ensemble. </plain></SENT>
+<SENT sid="157" pm="."><plain>For each compound, the mean and minimum binding energies of a compound docked to the three most dominant clusters (ensemble mean), all 27 holo-ensemble cluster representative structures (RC mean), as well as the weighted harmonic mean of the binding energies to the full ensemble (RC weighted harmonic mean), are plotted in Figure 3. </plain></SENT>
+<SENT sid="158" pm="."><plain>For most of the compounds, the RC mean and the ensemble mean differ by less than 0.5 kcal/mol. </plain></SENT>
+<SENT sid="159" pm="."><plain>Only three compounds, 3, 4, and 15, had binding energies differing by more than 1 kcal/mol. </plain></SENT>
+<SENT sid="160" pm="."><plain>In addition, when the RC weighted harmonic mean method is used with compounds that may not have met the 25% cluster size cutoff, DANA and peramivir are ranked higher than several of the top 27 hits. </plain></SENT>
+</text></p><SecTag type="FIG"><fig id="fig3" position="float"><label>Figure 3</label><caption><p><text><SENT sid="161" pm="."><plain>Binding energy statistics of the 27 top hits and five control compounds. </plain></SENT>
+<SENT sid="162" pm="."><plain>Ensemble mean and ensemble minimum are the arithmetic mean and minimum of the binding energies obtained from screening against the three most dominant holo-ensemble structures. </plain></SENT>
+<SENT sid="163" pm="."><plain>RC weighted harmonic nean, RC mean and RC minimum are the weighted harmonic mean, arithmetic mean, and minimum of the binding energies obtained from the RC redocking against the 27 holo ensemble cluster representatives. </plain></SENT>
+<SENT sid="164" pm="."><plain>The percentages of the represented ensemble populations are shown in the bar graph scaled by the right axis. </plain></SENT>
+</text></p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="jm-2008-001197_0001" id="gr5" position="float"/></fig></SecTag></sec><sec id="sec3.5"><title><text><SENT sid="165" pm="."><plain>Ligand Binding Cavities in N1 </plain></SENT>
+</text></title><p><text><SENT sid="166" pm="."><plain>The active site of N1 may be best described in three cavities for convenience: (i) the sialic acid (SA) cavity and (ii) the 150-cavity, which have been previously named,4,9 and (iii) the 430-cavity, the presence and size of which is controlled by movement of the 430-loop. </plain></SENT>
+<SENT sid="167" pm="."><plain>An examination of the top 27 hits and their interactions with the crystal structures and the cluster representatives clearly indicates that three cavities are areas of favorable binding (Figures 4 and 5, and Table 3). </plain></SENT>
+<SENT sid="168" pm="."><plain>The residues lining the three binding site cavities, which interact with the identified top hits and known inhibitors, are summarized in Table 2 and are illustrated in  for selected compounds. </plain></SENT>
+<SENT sid="169" pm="."><plain>The specific cavities each ligand interacts with are summarized in Table 3. </plain></SENT>
+</text></p><SecTag type="FIG"><fig id="fig4" position="float"><label>Figure 4</label><caption><p><text><SENT sid="170" pm="."><plain>Selected hits clustered in the (A) apo crystal, (B) Apo-1, (C) Apo-2, and (D) Apo-3 structures. </plain></SENT>
+<SENT sid="171" pm="."><plain>The electrostatic surface maps were generated using APBS and PMV using 85% opacity for the surface (scale shown in panel D). </plain></SENT>
+</text></p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="jm-2008-001197_0002" id="gr6" position="float"/></fig></SecTag><SecTag type="FIG"><fig id="fig5" position="float"><label>Figure 5</label><caption><p><text><SENT sid="172" pm="."><plain>Selected hits clustered in the (A) holo crystal, (B) Holo-1, (C) Holo-2, and (D) Holo-3 structures. </plain></SENT>
+<SENT sid="173" pm="."><plain>The electrostatics surface map was generated using APBS and PMV using 85% opacity for the surface (scale shown in panel D). </plain></SENT>
+</text></p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="jm-2008-001197_0003" id="gr7" position="float"/></fig></SecTag><p><text><SENT sid="174" pm="."><plain>The electrostatic surface maps for these ensemble structures are included to provide an additional perspective of the dynamic properties of these cavities. </plain></SENT>
+<SENT sid="175" pm="."><plain>As shown in Figures 4 and 5, the SA cavity is largely negatively charged, whereas the 430-cavity is relatively positively charged and the 150-cavity remains relatively neutral in our docking conditions. </plain></SENT>
+<SENT sid="176" pm="."><plain>The variations in the electrostatic surfaces are due to the changing surface topology (e.g., exposed residues) between the different structures. </plain></SENT>
+</text></p><p><text><SENT sid="177" pm="."><plain>The solvent accessible surface areas (SASA) of the cavities also vary greatly. </plain></SENT>
+<SENT sid="178" pm="."><plain>To compare the changes in the binding site, the SASAs were computed for the 62 residues lining the binding site and are as follows in decreasing order (in Å2): Apo-1, 6125; Holo-3, 5844; Apo-2, 5812; Apo-3, 5793; Holo-2, 5731; Holo-1, 5658; <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pdb" xlink:href="2HTY">2HTY</ext-link>, 5467; <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pdb" xlink:href="2HU4">2HU4</ext-link>, 5197. </plain></SENT>
+</text></p><p><text><SENT sid="179" pm="."><plain>The apo ensemble representative structures illustrate the large changes in the SASAs during the apo simulation. </plain></SENT>
+<SENT sid="180" pm="."><plain>In Apo-1, the 430-cavity is wide open (Figure 2b); the 430-loop Cα RMSD is almost 4 Å from either of the crystal structures (Table 1), and this is reflected in the largest exhibited SASA. </plain></SENT>
+<SENT sid="181" pm="."><plain>Apo-2, however, with the 150-loop Cα RMSD at 1.14 Å from the Apo crystal structure, has a much larger 3.88 Å RMSD from the holo crystal structure. </plain></SENT>
+<SENT sid="182" pm="."><plain>This shift has an effect of reducing the size of the 150-cavity. </plain></SENT>
+<SENT sid="183" pm="."><plain>Apo-3 exhibits significant outward movement of both the 430-loop and the 150-loop, with the 150 loop Cα RMSD 1.17 Å from the Apo crystal and 3.93 Å from the holo crystal. </plain></SENT>
+</text></p><p><text><SENT sid="184" pm="."><plain>Overall, the holo ensemble generated structures exhibit a tighter range of values for their respective SASAs as compared to the Apo ensemble. </plain></SENT>
+<SENT sid="185" pm="."><plain>Holo-1, which represents 40% of the MD snapshots, is most similar to Apo-2 in the 150-loop Cα RMSD, and with a similar 150-cavity empty with no ligand bound. </plain></SENT>
+<SENT sid="186" pm="."><plain>Holo-2 shows significant movement of the 150-loop, with the 150 cavity smaller, yet allowing a bridging compound to interact in the cavity. </plain></SENT>
+<SENT sid="187" pm="."><plain>Holo-3, which presents the largest SASA of the holo ensemble representative structures and shows significant changes in its electrostatic surface properties, is also capable of binding bridging compounds. </plain></SENT>
+</text></p></sec><sec id="sec3.6"><title><text><SENT sid="188" pm="."><plain>Characteristics of Top Hits </plain></SENT>
+</text></title><p><text><SENT sid="189" pm="."><plain>The two top ranked hits, 1 and 2, both contain a nitrogen-heavy six-membered ring. </plain></SENT>
+<SENT sid="190" pm="."><plain>Compound 2 has a pyrimidinecarbonitrile scaffold and is the parental compound for several existing compounds found in the patent database. </plain></SENT>
+<SENT sid="191" pm="."><plain>It binds consistently in the SA cavity regardless of 150- or 430-loop motion (). </plain></SENT>
+<SENT sid="192" pm="."><plain>In its lowest energy pose docked to Apo-3, it forms hydrogen bonds to framework residues E119 and E227,(56) non-hydrogen bonding interactions with catalytic residues D151, R152, and Y406, and with framework residue W178.(56) Compound 1 has a triazinane scaffold, derivatives of which are also found in the patent database with biological effects (Figure 6a). </plain></SENT>
+<SENT sid="193" pm="."><plain>In the lowest energy conformation docked to the holo crystal structure, its diimino-triazinane functional group forms hydrogen bonds to framework residues E119 and S179 and the hydoxy(oxido)amino functional group forms hydrogen bonds to the catalytic arginine trio (R118, R292, and R371) in the same manner as the carboxylate functional group of oseltamivir.(56) Compound 1 also forms non-hydrogen-bonding interactions with known catalytic residues D151, R224, E276, and Y406 and framework residues R156, W178, E227, and E277.(56) Compound 1 was ranked high when the VS was conducted with the holo crystal alone. </plain></SENT>
+<SENT sid="194" pm="."><plain>However, Compound 2 dropped to no. 212 when the apo crystal is used. </plain></SENT>
+</text></p><SecTag type="FIG"><fig id="fig6" position="float"><label>Figure 6</label><caption><p><text><SENT sid="195" pm="."><plain>(A) The apo crystal structure (<ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pdb" xlink:href="2HTY">2HTY</ext-link>) is shown above in silver with top hits 1 and 21 bound. </plain></SENT>
+<SENT sid="196" pm="."><plain>These two compounds dock similarly in both crystal structures and their overlapping positions in both are pictured above. </plain></SENT>
+<SENT sid="197" pm="."><plain>(B) A large number of hits docked to the wide-open 150-cavity in Apo-1, shown above in pink with compound 27 bound. </plain></SENT>
+</text></p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="jm-2008-001197_0004" id="gr8" position="float"/></fig></SecTag></sec><sec id="sec3.7"><title><text><SENT sid="198" pm="."><plain>Potential 150- and 430-Cavity Binders </plain></SENT>
+</text></title><p><text><SENT sid="199" pm="."><plain>A number of the compounds targeting the 150-cavity would not have been discovered or ranked extremely low (Table 3) based on the crystal structure screens alone. </plain></SENT>
+<SENT sid="200" pm="."><plain>Some of the highest affinity hits to the open and wide-open 150-cavity are steroids such as 5, 23, and 25. </plain></SENT>
+<SENT sid="201" pm="."><plain>These compounds interact with the 150-cavity primarily through hydrophobic interactions, specifically to hydrophobic residues V116, I117, L134, T135, S145, T148, V149, P431, I437, W438, and T439. </plain></SENT>
+<SENT sid="202" pm="."><plain>Several other naphthalene-based compounds also bind with high affinity in the 150-cavity, interacting through hydrophobic interactions to the hydrophobic naphthalene group and through hydrogen-bonding interactions to polar functional groups on the naphthalene base (Table 3). </plain></SENT>
+<SENT sid="203" pm="."><plain>These compounds include compounds 3, 9, 13, and 20. </plain></SENT>
+</text></p><p><text><SENT sid="204" pm="."><plain>Similar to the wide-open 150-cavity, the open 430-cavity is seen only in MD simulations and not observed in the crystal structures. </plain></SENT>
+<SENT sid="205" pm="."><plain>Thirteen hits to the 430-cavity were identified among the top 27 hits (Table 3). </plain></SENT>
+<SENT sid="206" pm="."><plain>The 430-cavity also seems to favor naphthalene-based compounds, namely compounds 9, 13, 7, and 10. </plain></SENT>
+<SENT sid="207" pm="."><plain>These compounds interact through hydrophobic interactions to hydrophobic residues P326, Y347, S370, W403, S404, Y406, I427, G429, P431, I437, W438, and T439 in the 430-cavity. </plain></SENT>
+<SENT sid="208" pm="."><plain>Compound 7 is one example of a naphthalene-based compound that binds with high affinity to the open 430-cavity. </plain></SENT>
+</text></p><p><text><SENT sid="209" pm="."><plain>Other compounds with hydrophobic benzene rings, similar to naphthalene, also bind in the open 430-cavity with high affinity, for example, compounds 4, 11, 16, 21, 22, and 26. </plain></SENT>
+<SENT sid="210" pm="."><plain>Compound 21 is an interesting benzodiazepine that is highly ranked in the crystal structure screens but poorly ranked in the apo- and holo-ensemble screens and the RCS redocking (Table 3). </plain></SENT>
+</text></p></sec><sec id="sec3.8"><title><text><SENT sid="211" pm="."><plain>Potential Bridging Compounds </plain></SENT>
+</text></title><p><text><SENT sid="212" pm="."><plain>Of the top 27 hits, seven hits dock simultaneously to more than one cavity (Table 3). </plain></SENT>
+<SENT sid="213" pm="."><plain>Four hits dock in the SA cavity and either the 150-cavity or the 430-cavity (see  for examples of the apo ensemble). </plain></SENT>
+<SENT sid="214" pm="."><plain>These hits are of particular interest because they may be linked to known inhibitors to form a novel, bridged inhibitor that binds with higher affinity. </plain></SENT>
+</text></p><p><text><SENT sid="215" pm="."><plain>Three hits, compounds 3, 15, and 16, dock primarily with hydrophobic interactions in the 430-cavity and extend a polar functional group into the SA cavity. </plain></SENT>
+<SENT sid="216" pm="."><plain>Compound 18 appears to be a particularly promising cavity-bridging compound. </plain></SENT>
+<SENT sid="217" pm="."><plain>The compound contains a diamino-triazine group that binds in the SA cavity and forms hydrogen bonds to catalytic residue R118 and to framework residues S179 and E277.(56) Of these three residues, S179 and E277 are also predicted to mediate hydrogen-bonding by the CS-Map analysis.(39) It also interacts through nonbonded interactions to catalytic residues D151 and Y406 and framework residues E119, R156, W178, and E227.(56) </plain></SENT>
+</text></p><p><text><SENT sid="218" pm="."><plain>Compound 18 binds simultaneously to the open 150-cavity through hydrophobic contacts to residues I117, T135, Q136 and T439, which are mediated by a methyl-chlorobenzene group on the ligand. </plain></SENT>
+<SENT sid="219" pm="."><plain>Unlike the other three hits that bind in the SA cavity, compound 18 need not be linked to SA. </plain></SENT>
+<SENT sid="220" pm="."><plain>It is predicted to be a compound that will naturally bridge the catalytic residues in the SA cavity to the high-affinity open 150-cavity. </plain></SENT>
+</text></p></sec></sec></SecTag><SecTag type="DISCUSS"><sec id="sec4"><title><text><SENT sid="221" pm="."><plain>Discussion </plain></SENT>
+</text></title><sec id="sec4.1"><title><text><SENT sid="222" pm="."><plain>Ensemble-Based Virtual Screening and Relaxed Complex Scheme </plain></SENT>
+</text></title><p><text><SENT sid="223" pm="."><plain>The development of computational tools for computer-aided drug design depends on the critical compromise between accuracy and computational costs. </plain></SENT>
+<SENT sid="224" pm="."><plain>Ideally, the most reliable prediction of molecular affinity can be obtained through rigorous free energy calculations of the ligand-binding process (ref (57) and references within). </plain></SENT>
+<SENT sid="225" pm="."><plain>Although the theory and methods are well established for calculating free energies, in practice, however, they are still prohibitively expensive to be employed in virtual screening of drug-like databases. </plain></SENT>
+</text></p><sec id="sec4.1.1"><title><text><SENT sid="226" pm="."><plain>Sampling Space for Receptor Flexibility </plain></SENT>
+</text></title><p><text><SENT sid="227" pm="."><plain>To account for receptor flexibility in ligand binding, we have included representative snapshots from the MD clustering analysis as part of the receptor ensemble, in addition to the crystal structures. </plain></SENT>
+<SENT sid="228" pm="."><plain>In total, the four concatenated monomer trajectories (extracted from the tetramer simulation) are equivalent to 160 ns of MD simulation. </plain></SENT>
+<SENT sid="229" pm="."><plain>By choosing the three most dominant clusters from each simulation, the coverage of 60% of the apo simulation and 75% of the holo simulation accounts for a generous sampling of configurational space for N1. </plain></SENT>
+<SENT sid="230" pm="."><plain>Still, the question remains whether the reduced set of cluster representative structures are biologically relevant. </plain></SENT>
+<SENT sid="231" pm="."><plain>We have used the set of known inhibitors to investigate the behavior of the system. </plain></SENT>
+<SENT sid="232" pm="."><plain>As shown in Figure 2, some configurations, e.g., 3.41, 29.68 ns, seem unfavorable to all the inhibitors, with as much as 5 kcal/mol difference observed for zanamivir. </plain></SENT>
+<SENT sid="233" pm="."><plain>It is also evident that the three most dominant clusters, which correspond to 2.65, 5.76, and 22.02 ns, do not always have the lowest binding energy, which is often found in clusters with less than 0.01% of the total population of MD snapshots. </plain></SENT>
+<SENT sid="234" pm="."><plain>However, considering that the dominant configurations are most likely to be encountered by a ligand, we conjecture that the dominant clusters will be good candidates to represent the diversity of configurational space, within the sampling limitations of the MD simulations. </plain></SENT>
+</text></p></sec><sec id="sec4.1.2"><title><text><SENT sid="235" pm="."><plain>Rescoring the Top Hits </plain></SENT>
+</text></title><p><text><SENT sid="236" pm="."><plain>The top compounds were redocked into the entire, nonredundant holo-ensemble. </plain></SENT>
+<SENT sid="237" pm="."><plain>There are several reasons to use the holo-enzyme. </plain></SENT>
+<SENT sid="238" pm="."><plain>First, the oseltamivir-bound holo-ensemble accounts for ligand-induced effects on the binding site. </plain></SENT>
+<SENT sid="239" pm="."><plain>Second, any inhibitors may have to compete for the binding site with a favored natural substrate already bound. </plain></SENT>
+<SENT sid="240" pm="."><plain>Third, the holo ensemble contains oseltamivir, an analogue of the natural substrate SA. </plain></SENT>
+<SENT sid="241" pm="."><plain>In fact, from this study, as shown in Figure 2B, the Apo-1 cluster representative has oseltamivir bound at the 150-cavity, albeit with a higher binding energy (−7.22 kcal/mol) This further suggests that the holo ensemble is more appropriate to use for rescoring the hits. </plain></SENT>
+<SENT sid="242" pm="."><plain>Last, the choice to use a holo-ensemble has also been shown to perform well in other works on the RC methodology(31) and the discovery of inhibitors against an RNA editing ligase in Trypanosoma brucei, the parasite responsible for African sleeping sickness.(58) The latter study used the QR-factorization method to extract a nonredundant ensemble of MD snapshots and the RCS for rescoring of hits from a VS against a single crystal structure. </plain></SENT>
+</text></p><p><text><SENT sid="243" pm="."><plain>A preliminary study using the known set of inhibitors indicated that the weighted harmonic mean method is able to rank the controls relative to one another for three out of the four inhibitors (Figure 3). </plain></SENT>
+<SENT sid="244" pm="."><plain>The natural substrate SA ranks closely to DANA, with oseltamivir and zanamivir correctly ranked with higher affinity. </plain></SENT>
+<SENT sid="245" pm="."><plain>The exception is peramivir, which is ranked lower than what is expected based on its experimental IC50 values. </plain></SENT>
+<SENT sid="246" pm="."><plain>Closer examination of the N8 with peramivir bound (<ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pdb" xlink:href="2HTU">2HTU</ext-link>)(9) and the docking pose of peramivir in <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pdb" xlink:href="2HTY">2HTY</ext-link> revealed no differences in the position and orientation of the ligand (data not shown). </plain></SENT>
+<SENT sid="247" pm="."><plain>It is possible that the current docking condition does not account for stabilizing interactions conferred by the solvent, water molecules, or other potential ligand induced conformational changes. </plain></SENT>
+<SENT sid="248" pm="."><plain>On the other hand, the standard error (−2 kcal/mol) of AutoDock4 may be the limiting factor and the rescoring and reranking would be able to discriminate the true differences between some hits. </plain></SENT>
+<SENT sid="249" pm="."><plain>This is consistent with the general observation that docking programs are good at separating the binders from nonbinders, but poor at ordering the hits based on their affinity.(59) However, by taking into account the different distributions of the cluster size, giving more weight to the clusters with more substantial populations in the calculation of the mean binding energy, the weighted harmonic mean method may be able to improve the rankings, and may offer an interesting area for future methodological development. </plain></SENT>
+</text></p><p><text><SENT sid="250" pm="."><plain>For example, for each compound, we have examined the ensemble minimum binding energy, the lowest value from one of the three most dominant clusters, and the RC minimum binding energy, from the cluster with the lowest binding energy of all the 27 clusters (Figure 3). </plain></SENT>
+<SENT sid="251" pm="."><plain>Eleven out of the 27 compounds had the ensemble minimum in the most abundant cluster, but only one of which, compound 10, had a RC minimum also in an abundant cluster. </plain></SENT>
+<SENT sid="252" pm="."><plain>Overall, six out of 27 compounds had the ensemble minimum and RC minimum occurring in abundant clusters. </plain></SENT>
+<SENT sid="253" pm="."><plain>The co-occurrence of ensemble minimum (lowest binding energy of one of the top three clusters) and the RC minimum (lowest possible observed energy) may indicate that a highly abundant configurational space (i.e., ensemble of substates) is also favored by the ligand for most stable interaction. </plain></SENT>
+<SENT sid="254" pm="."><plain>In fact, four out of the six co-occurrences occurred for compounds ranked within the top 10 hits, and all six ranked within the top 20 hits. </plain></SENT>
+<SENT sid="255" pm="."><plain>In terms of binding energy, four out the six had identical binding energy between the ensemble minimum and RC minimum; the other two had binding energy differing less than 1 kcal/mol. </plain></SENT>
+<SENT sid="256" pm="."><plain>Although the most populated structures may be most relevant to the initiation of binding events, it seems unlikely that they would be truly precatalytic states. </plain></SENT>
+</text></p><p><text><SENT sid="257" pm="."><plain>Some compounds that score poorly in the crystal-structure-only screen score well when MD structures are used, demonstrating the advantages of using MD structures to expand the description of the receptor’s structure. </plain></SENT>
+<SENT sid="258" pm="."><plain>Conversely, other compounds that score well in the crystal-structure-only screen move down the list when the MD structures are included (e.g., compound 21) (Figure 6). </plain></SENT>
+<SENT sid="259" pm="."><plain>This reordering happens for two reasons: first, because other compounds move up the list by producing better binding energies, and second, because some compounds produce a significantly worse binding energy when the MD structures are included. </plain></SENT>
+<SENT sid="260" pm="."><plain>For example, compound 21 appears to move down the list due to a combination of both reasons mentioned above. </plain></SENT>
+<SENT sid="261" pm="."><plain>Other compounds rank better in the MD structures and thus move up the list. </plain></SENT>
+<SENT sid="262" pm="."><plain>Closer examination of compound 21 reveals that its position in the 430-cavity is compromised when the 430-loop opens during the MD simulation; as the loop opens, compound 21 loses contact with several stabilizing residues and thus the affinity is reduced. </plain></SENT>
+<SENT sid="263" pm="."><plain>Therefore, loop motion and the subsequent interactions gained and/or lost is the cause of many compounds’ movements up and/or down the reranked list. </plain></SENT>
+</text></p></sec><sec id="sec4.1.3"><title><text><SENT sid="264" pm="."><plain>Rescoring a Larger List of Hits </plain></SENT>
+</text></title><p><text><SENT sid="265" pm="."><plain>In , we noted that the cutoff of −9.25 kcal/mol meant that peramivir and DANA would not have been selected. </plain></SENT>
+<SENT sid="266" pm="."><plain>On the other hand, when these compounds were rescored together with the other top hits, taking into account all the lowest binding energies regardless of the size of the most populated cluster, peramivir and DANA actually ranked better than some of the top hits. </plain></SENT>
+<SENT sid="267" pm="."><plain>These data suggest that, given the current standard error of 2 kcal/mol for AutoDock4, and the somewhat arbitrary nature of the 25% cutoff, the weighted harmonic mean or some improved knowledge-based heuristics may be applied to rescore an expanded list of hits and potentially recover some lost hits (i.e., false negatives). </plain></SENT>
+</text></p></sec></sec><sec id="sec4.2"><title><text><SENT sid="268" pm="."><plain>Dynamic Nature of N1 Active Site </plain></SENT>
+</text></title><p><text><SENT sid="269" pm="."><plain>The MD simulations offer representative conformations of the protein beyond what is provided by the static crystal structures alone, and they offer a possible description of the energy landscape where ligand−receptor interactions take place. </plain></SENT>
+<SENT sid="270" pm="."><plain>The visual examination of the electrostatic surface maps for the different cavities, the various 150- and 430-loop configurations, and the SASA analyses indicate that at the monomer level, the N1 active site is highly dynamic. </plain></SENT>
+</text></p><sec id="sec4.2.1"><title><text><SENT sid="271" pm="."><plain>Electrostatic Gradient and Substrate Movement </plain></SENT>
+</text></title><p><text><SENT sid="272" pm="."><plain>At the monomeric level, the dynamic opening and closing of the 150- and 430-cavities, with the corresponding change in the electrostatic field, may help target and orient the appropriate substrate to the catalytic site. </plain></SENT>
+<SENT sid="273" pm="."><plain>In Figure 2B, oseltamivir interacts in the 150-cavity of the Apo-1 cluster representative structure, which represents a population size of about 20%. </plain></SENT>
+<SENT sid="274" pm="."><plain>In Figure 3, oseltamivir is very stably found in the SA cavity of the holo clusters. </plain></SENT>
+<SENT sid="275" pm="."><plain>It is possible that the open 150-cavity provides an initial binding site, helping to guide the substrate into contacts with the catalytic residues through further closing motion of the 150-loop. </plain></SENT>
+<SENT sid="276" pm="."><plain>Both crystallographic evidence and the MD simulations indicate that this closed 150-loop is stabilized by oseltamivir in the active site,9,10 primarily through interactions with D151 and R152. </plain></SENT>
+<SENT sid="277" pm="."><plain>Collectively, these observations may suggest that the closed substate is preferred when ligands are bound in the active site. </plain></SENT>
+</text></p><p><text><SENT sid="278" pm="."><plain>Interestingly, on the other side of the 430-cavity is an area known to be a second SA binding site in N9(60) and N2,(61) with hemadsorption activity.62,63 Notably, sialic acid (in the boat, chair, or twist conformation) shows a preference to bind near this alternate site or the 430-cavity in 12 out of 18 docking experiments, albeit with lower energy and, often, lower clustering percentage than the SA cavity (data not shown). </plain></SENT>
+<SENT sid="279" pm="."><plain>Moreover, the electrostatic surface potential maps indicate that this alternate SA binding site may exhibit a weak negative electrostatic potential. </plain></SENT>
+<SENT sid="280" pm="."><plain>Therefore it is possible that this alternate site acts to attract SA or to extend its interactions with the N1 binding site. </plain></SENT>
+<SENT sid="281" pm="."><plain>The comparatively stronger electrostatic potential in the SA cavity may provide an electrostatic gradient to steer SA into the requisite catalytic location. </plain></SENT>
+<SENT sid="282" pm="."><plain>The effect of electrostatics is well-known to play an influential role in controlling the diffusion of substrates into charged active site areas, as shown in the acetylcholinesterase system.64,65 More extensive electrostatic calculations are required to test this hypothesis in the N1 system. </plain></SENT>
+</text></p></sec><sec id="sec4.2.2"><title><text><SENT sid="283" pm="."><plain>Hot Spots for Ligand−Protein Interactions </plain></SENT>
+</text></title><p><text><SENT sid="284" pm="."><plain>Previously, a CS-Map analysis on the N1 cluster representative structures assessed the druggability of the newly defined areas identified in the MD simulations.(11) Using a complementary computational physics-based approach, CS-Map identified suitable sites for potential ligand interactions, which were presented as probe clusters near the 150- and 430-loop regions. </plain></SENT>
+<SENT sid="285" pm="."><plain>The consensus approach adopted in the CS-Map analysis indicates that despite protein motion, the existence of hot spots over the binding site may persist, and that these areas may be relevant for drug discovery and design, as has also been shown through a variety of other methods.18,25,66–70 The work we present here provides support for the CS-Map analysis through the docking of the NCIDS compound library to these novel hot spots (Table 2). </plain></SENT>
+<SENT sid="286" pm="."><plain>Many of the ligands we present make contacts to the residues that were found to mediate a consistent probe contact, such as R152, S153, etc., in the SA cavity, Q136 and S145, etc., in the 150-cavity, and N369, S370 in the 430-cavities, as illustrated in Figure 6 and . </plain></SENT>
+<SENT sid="287" pm="."><plain>The CS-Map analysis also predicted that Q136 and T439 are important mediators of nonbonded interactions and our docking studies support that claim.(39) We anticipate that ligands that make contact to these hot spots are more likely to be biologically relevant. </plain></SENT>
+</text></p></sec></sec><sec id="sec4.3"><title><text><SENT sid="288" pm="."><plain>Hit Identification and Hit to Lead Optimizations </plain></SENT>
+</text></title><p><text><SENT sid="289" pm="."><plain>The computationally derived potential hits as listed in Table 3 are ranked using the RC weighted harmonic means, and their predicted site(s) of interactions are indicated. </plain></SENT>
+<SENT sid="290" pm="."><plain>The names of these compounds are shown in , along with the mean binding energy values shown in Figure 3. </plain></SENT>
+</text></p><sec id="sec4.3.1"><title><text><SENT sid="291" pm="."><plain>Fragment-Based Approach </plain></SENT>
+</text></title><p><text><SENT sid="292" pm="."><plain>The differential preference of binding cavities by the top hits for the apo ensemble of receptors is illustrated in . </plain></SENT>
+<SENT sid="293" pm="."><plain>The individual hits to each cavity may offer good starting points for hit to lead optimization, especially for those interested in using fragment-based approaches. </plain></SENT>
+<SENT sid="294" pm="."><plain>Compounds that are predicted to bridge two cavities simultaneously are especially interesting, particularly those that bridge either the 430- or 150-cavity to the SA cavity. </plain></SENT>
+<SENT sid="295" pm="."><plain>In theory, these compounds should interfere with the binding of SA to the catalytic residues, represented in italics in Table 2, while providing additional selectivity for N1 through binding to the 150- or 430-cavities. </plain></SENT>
+<SENT sid="296" pm="."><plain>Clearly, these compounds will require further optimizations because their current binding energies and predicted Ki’s are not necessarily higher than those compounds that only interact with a single cavity. </plain></SENT>
+<SENT sid="297" pm="."><plain>However, they provide an initial set of experimentally testable predictions regarding the capability of any compounds to bind to these newly identified, druggable areas. </plain></SENT>
+<SENT sid="298" pm="."><plain>Additional fragment-based approaches (either computational or experimental) to bridge known SA cavity binders with 150- and/or 430-cavity binding compounds can easily be envisioned. </plain></SENT>
+</text></p></sec><sec id="sec4.3.2"><title><text><SENT sid="299" pm="."><plain>Drug Resistant Mutations </plain></SENT>
+</text></title><p><text><SENT sid="300" pm="."><plain>The influenza virus undergoes constant antigenic drift with a very high mutation rate yielding many different strains except for the essential catalytic residues that are conserved across species. </plain></SENT>
+<SENT sid="301" pm="."><plain>Therefore, it is important to consider known mutations and avoid compounds that interact with experimentally verified mutational hot spots. </plain></SENT>
+<SENT sid="302" pm="."><plain>One set of the published mutations found in vivo or in vitro for H5N1 was <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pdb" xlink:href="H274Y">H274Y</ext-link> and <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pdb" xlink:href="N294S">N294S</ext-link>.(71)<ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pdb" xlink:href="H274Y">H274Y</ext-link> results in resistance to oseltamivir, but not to zanamivir, whereas <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pdb" xlink:href="N294S">N294S</ext-link> results in low resistance to oseltamivir. </plain></SENT>
+<SENT sid="303" pm="."><plain>None of the 27 top hits are predicted to make contacts to H274. </plain></SENT>
+<SENT sid="304" pm="."><plain>Compound 1 makes a nonbonded contact to N294 in Holo-1; no other hits do. </plain></SENT>
+<SENT sid="305" pm="."><plain>In addition, the E276D mutation has been shown to confer resistance without sacrificing the viability or genetic stability of the virus.(72) E276 is located directly in the sialic acid cavity and illustrates that even a subtle reduction in side chain length can be enough to confer resistance, further underscoring the need to develop new antivirals that target alternate areas such as the 150- and 430-cavities. </plain></SENT>
+<SENT sid="306" pm="."><plain>Other mutations have been identified in group-2 neuraminidases (N2, N9) and influenza type-B viruses, but it is often observed that mutant residues in one group are unrelated to those in another.(73) Furthermore, when mutations from N2 are introduced into H5N1, they result in significantly reduced viral viability.(74) </plain></SENT>
+</text></p><p><text><SENT sid="307" pm="."><plain>Another intriguing consideration is that the inhibitor does not necessarily need to make contact with the mutated residues in order for it to confer resistance. </plain></SENT>
+<SENT sid="308" pm="."><plain>For example, oseltamivir does not make immediate contacts with H274, but the mutation to tyrosine very likely causes tertiary changes in the protein that affect oseltamivir binding. </plain></SENT>
+<SENT sid="309" pm="."><plain>Additionally, it has been shown that changes in the HA glycosylation patterns can confer antiviral resistance in an NA-independent manner.75,76 Although our understanding of the complex interplay of interactions that confer resistance is incomplete, these factors can still be considered in the selection and design of N1 antivirals. </plain></SENT>
+</text></p></sec></sec></sec></SecTag><SecTag type="CONCL"><sec id="sec5"><title><text><SENT sid="310" pm="."><plain>Conclusions </plain></SENT>
+</text></title><p><text><SENT sid="311" pm="."><plain>Through eight different virtual screens of the NCI diversity set, which employed structures taken from crystallographic studies as well as representative structures from apo and holo MD simulations, 27 drug-like ligands have been identified, which are predicted to bind with high affinity to avian influenza N1. </plain></SENT>
+<SENT sid="312" pm="."><plain>Fourteen of these compounds are unique hits that would not have been found based on the crystal structure screens alone, and they include compounds that bind to flexible loop regions unseen in the crystal structures. </plain></SENT>
+<SENT sid="313" pm="."><plain>Importantly, the docking of thousands of compounds to the N1 binding site elucidated specific regions of high ligand-binding affinity in the flexible 150- and 430- cavities. </plain></SENT>
+<SENT sid="314" pm="."><plain>These cavities and the residue contacts observed among the top hits strongly agree with the location of hot spots and residues predicted to mediate receptor−ligand interactions by a recent CS-Map analysis. </plain></SENT>
+<SENT sid="315" pm="."><plain>The top hits are validated and ranked through redocking experiments into a set of structures representing the holo ensemble within the RCS framework. </plain></SENT>
+<SENT sid="316" pm="."><plain>This novel strategy for identifying NA inhibitors may facilitate the design of better drugs in the fight against global pandemic influenza and be applicable in structure-based drug discovery initiatives. </plain></SENT>
+</text></p></sec></SecTag></body><back><SecTag type="ACK_FUND"><ack><title>Acknowledgments</title><p><text4fund><text><SENT sid="317" pm="."><plain>L.S.C, D.X., W.W.L., and P.W.A. are supported by NIH P41 RR08605 (to P.W.A.) and TATRC W81XWH-07-2-0014 (to W.W.L. and P.W.A.). </plain></SENT>
+<SENT sid="318" pm="."><plain>L.S.C. is also supported by NSF INT 0407508 to the PRIME program. </plain></SENT>
+<SENT sid="319" pm="."><plain>R.E.A. is funded in part by NIH F32-GM077729 and MRAC CHE060073N. </plain></SENT>
+<SENT sid="320" pm="."><plain>The work is also funded by NIH GM31749, NSF MCB-0506593, and MCA93S013 (to J.A.M.). </plain></SENT>
+<SENT sid="321" pm="."><plain>Additional support from the Howard Hughes Medical Institute, San Diego Supercomputing Center, Accelrys, Inc., the W.M. </plain></SENT>
+<SENT sid="322" pm="."><plain>Keck Foundation, the National Biomedical Computation Resource, and the Center for Theoretical Biological Physics is gratefully acknowledged. </plain></SENT>
+</text></text4fund></p></ack></SecTag><SecTag type="SUPPL"><notes id="note1" notes-type="si"><title>Supporting Information Available</title><p>Additional tables and figures, including receptor-specific binding energies and detailed docking poses for top hits. This material is available free of charge via the Internet at <uri xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://pubs.acs.org">http://pubs.acs.org</uri>.</p></notes></SecTag><SecTag type="SUPPL"><sec sec-type="supplementary-material"><title>Supplementary Material</title><supplementary-material content-type="local-data" id="si1"><media xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="jm8001197-File002.pdf"><caption><p><text><SENT sid="323" pm="."><plain>jm8001197-File002.pdf </plain></SENT>
+</text></p></caption></media></supplementary-material></sec></SecTag><SecTag type="REF"><ref-list><title>References</title><ref id="ref1"><text><SENT sid="324" pm="."><plain>Abdel-GhafarA. </plain></SENT>
+<SENT sid="325" pm="."><plain>N.; ChotpitayasunondhT.; GaoZ.; HaydenF. </plain></SENT>
+<SENT sid="326" pm="."><plain>G.; NguyenD. </plain></SENT>
+<SENT sid="327" pm="."><plain>H.; de JongM. </plain></SENT>
+<SENT sid="328" pm="."><plain>D.; NaghdaliyevA.; PeirisJ. </plain></SENT>
+<SENT sid="329" pm="."><plain>S.; ShindoN.; SoerosoS.; UyekiT. </plain></SENT>
+<SENT sid="330" pm="."><plain>M. Update on avian influenza A (H5N1) virus infection in humans. N. </plain></SENT>
+<SENT sid="331" pm="."><plain>Engl. </plain></SENT>
+<SENT sid="332" pm="."><plain>J. </plain></SENT>
+<SENT sid="333" pm="."><plain>Med. 2008, 358 (3), 261–273.18199865 </plain></SENT>
+</text></ref><ref id="ref2"><text><SENT sid="334" pm="."><plain>The Influenza (Flu) Viruses; Centers for Disease Control: Atlanta, GA, 2007; http://www.cdc.gov/flu/about/fluviruses.htm(accessed November 19, 2007). </plain></SENT>
+</text></ref><ref id="ref3"><text><SENT sid="335" pm="."><plain>De ClercqE.; NeytsJ. Avian influenza A (H5N1) infection: targets and strategies for chemotherapeutic intervention. Trends Pharmacol. </plain></SENT>
+<SENT sid="336" pm="."><plain>Sci. 2007, 28 (6), 280–285.17481739 </plain></SENT>
+</text></ref><ref id="ref4"><text><SENT sid="337" pm="."><plain>ColmanP., Anti-Influenza Drugs from Neuraminidase Inhibitors. </plain></SENT>
+<SENT sid="338" pm="."><plain>In Structure-Based Drug Discovery: An Overview; HubbardR. </plain></SENT>
+<SENT sid="339" pm="."><plain>E., Ed.; Royal Society of Chemistry: Cambridge,, 2006. </plain></SENT>
+</text></ref><ref id="ref5"><text><SENT sid="340" pm="."><plain>KobasaD.; KodihalliS.; LuoM.; CastrucciM. </plain></SENT>
+<SENT sid="341" pm="."><plain>R.; DonatelliI.; SuzukiY.; SuzukiT.; KawaokaY. Amino acid residues contributing to the substrate specificity of the influenza A virus neuraminidase. J. </plain></SENT>
+<SENT sid="342" pm="."><plain>Virol. 1999, 73 (8), 6743–6751.10400772 </plain></SENT>
+</text></ref><ref id="ref6"><text><SENT sid="343" pm="."><plain>LewW.; ChenX.; KimC. </plain></SENT>
+<SENT sid="344" pm="."><plain>U. Discovery and development of GS 4104 (oseltamivir): an orally active influenza neuraminidase inhibitor. Curr. </plain></SENT>
+<SENT sid="345" pm="."><plain>Med. </plain></SENT>
+<SENT sid="346" pm="."><plain>Chem. 2000, 7 (6), 663–672.10702632 </plain></SENT>
+</text></ref><ref id="ref7"><text><SENT sid="347" pm="."><plain>BeigelJ. </plain></SENT>
+<SENT sid="348" pm="."><plain>H.; FarrarJ.; HanA. </plain></SENT>
+<SENT sid="349" pm="."><plain>M.; HaydenF. </plain></SENT>
+<SENT sid="350" pm="."><plain>G.; HyerR.; de JongM. </plain></SENT>
+<SENT sid="351" pm="."><plain>D.; LochindaratS.; NguyenT. </plain></SENT>
+<SENT sid="352" pm="."><plain>K.; NguyenT. </plain></SENT>
+<SENT sid="353" pm="."><plain>H.; TranT. </plain></SENT>
+<SENT sid="354" pm="."><plain>H.; NicollA.; TouchS.; YuenK. </plain></SENT>
+<SENT sid="355" pm="."><plain>Y. Avian influenza A (H5N1) infection in humans. N. </plain></SENT>
+<SENT sid="356" pm="."><plain>Engl. </plain></SENT>
+<SENT sid="357" pm="."><plain>J. </plain></SENT>
+<SENT sid="358" pm="."><plain>Med. 2005, 353 (13), 1374–1385.16192482 </plain></SENT>
+</text></ref><ref id="ref8"><text><SENT sid="359" pm="."><plain>de JongM. </plain></SENT>
+<SENT sid="360" pm="."><plain>D.; TranT. </plain></SENT>
+<SENT sid="361" pm="."><plain>T.; TruongH. </plain></SENT>
+<SENT sid="362" pm="."><plain>K.; VoM. </plain></SENT>
+<SENT sid="363" pm="."><plain>H.; SmithG. </plain></SENT>
+<SENT sid="364" pm="."><plain>J.; NguyenV. </plain></SENT>
+<SENT sid="365" pm="."><plain>C.; BachV. </plain></SENT>
+<SENT sid="366" pm="."><plain>C.; PhanT. </plain></SENT>
+<SENT sid="367" pm="."><plain>Q.; DoQ. </plain></SENT>
+<SENT sid="368" pm="."><plain>H.; GuanY.; PeirisJ. </plain></SENT>
+<SENT sid="369" pm="."><plain>S.; TranT. </plain></SENT>
+<SENT sid="370" pm="."><plain>H.; FarrarJ. Oseltamivir resistance during treatment of influenza A (H5N1) infection. N. </plain></SENT>
+<SENT sid="371" pm="."><plain>Engl. </plain></SENT>
+<SENT sid="372" pm="."><plain>J. </plain></SENT>
+<SENT sid="373" pm="."><plain>Med. 2005, 353 (25), 2667–2672.16371632 </plain></SENT>
+</text></ref><ref id="ref9"><text><SENT sid="374" pm="."><plain>RussellR. </plain></SENT>
+<SENT sid="375" pm="."><plain>J.; HaireL. </plain></SENT>
+<SENT sid="376" pm="."><plain>F.; StevensD. </plain></SENT>
+<SENT sid="377" pm="."><plain>J.; CollinsP. </plain></SENT>
+<SENT sid="378" pm="."><plain>J.; LinY. </plain></SENT>
+<SENT sid="379" pm="."><plain>P.; BlackburnG. </plain></SENT>
+<SENT sid="380" pm="."><plain>M.; HayA. </plain></SENT>
+<SENT sid="381" pm="."><plain>J.; GamblinS. </plain></SENT>
+<SENT sid="382" pm="."><plain>J.; SkehelJ. </plain></SENT>
+<SENT sid="383" pm="."><plain>J. The structure of H5N1 avian influenza neuraminidase suggests new opportunities for drug design. Nature 2006, 443 (7107), 45–49.16915235 </plain></SENT>
+</text></ref><ref id="ref10"><text><SENT sid="384" pm="."><plain>AmaroR. </plain></SENT>
+<SENT sid="385" pm="."><plain>E.; MinhD. </plain></SENT>
+<SENT sid="386" pm="."><plain>D.; ChengL. </plain></SENT>
+<SENT sid="387" pm="."><plain>S.; LindstromW. </plain></SENT>
+<SENT sid="388" pm="."><plain>M.Jr.; OlsonA. </plain></SENT>
+<SENT sid="389" pm="."><plain>J.; LinJ. </plain></SENT>
+<SENT sid="390" pm="."><plain>H.; LiW. </plain></SENT>
+<SENT sid="391" pm="."><plain>W.; McCammonJ. </plain></SENT>
+<SENT sid="392" pm="."><plain>A. Remarkable loop flexibility in avian influenza N1 and its implications for antiviral drug design. J. </plain></SENT>
+<SENT sid="393" pm="."><plain>Am. </plain></SENT>
+<SENT sid="394" pm="."><plain>Chem. </plain></SENT>
+<SENT sid="395" pm="."><plain>Soc. 2007, 129 (25), 7764–7765.17539643 </plain></SENT>
+</text></ref><ref id="ref11"><text><SENT sid="396" pm="."><plain>LandonM. </plain></SENT>
+<SENT sid="397" pm="."><plain>R.; AmaroR. </plain></SENT>
+<SENT sid="398" pm="."><plain>E.; BaronR.; NganC. </plain></SENT>
+<SENT sid="399" pm="."><plain>H.; OzonoffD.; Andrew McCammonJ.; VajdaS. Novel Druggable Hot Spots in Avian Influenza Neuraminidase H5N1 Revealed by Computational Solvent Mapping of a Reduced and Representative Receptor Ensemble. Chem. </plain></SENT>
+<SENT sid="400" pm="."><plain>Biol. </plain></SENT>
+<SENT sid="401" pm="."><plain>Drug Des. 2008, 71 (2), 106–116.18205727 </plain></SENT>
+</text></ref><ref id="ref12"><text><SENT sid="402" pm="."><plain>HubbardR. </plain></SENT>
+<SENT sid="403" pm="."><plain>E.Structure-Based Drug Discovery: An Overview, 1st ed.; RSC Publishing: Cambridge, 2007; p 261. </plain></SENT>
+</text></ref><ref id="ref13"><text><SENT sid="404" pm="."><plain>FosterI.; KesselmanC., The Grid 2: Blueprint for a New Computing Infrastructure, 2 ed.; Morgan Kaufmann Publishers, Inc.: San Francisco, 2004. </plain></SENT>
+</text></ref><ref id="ref14"><text><SENT sid="405" pm="."><plain>CarlsonH. </plain></SENT>
+<SENT sid="406" pm="."><plain>A. Protein flexibility and drug design: how to hit a moving target. Curr. </plain></SENT>
+<SENT sid="407" pm="."><plain>Opin. </plain></SENT>
+<SENT sid="408" pm="."><plain>Chem. </plain></SENT>
+<SENT sid="409" pm="."><plain>Biol. 2002, 6 (4), 447–452.12133719 </plain></SENT>
+</text></ref><ref id="ref15"><text><SENT sid="410" pm="."><plain>TeagueS. </plain></SENT>
+<SENT sid="411" pm="."><plain>J. Implications of protein flexibility for drug discovery. Nat. </plain></SENT>
+<SENT sid="412" pm="."><plain>Rev. </plain></SENT>
+<SENT sid="413" pm="."><plain>Drug Discovery 2003, 2 (7), 527–541. </plain></SENT>
+</text></ref><ref id="ref16"><text><SENT sid="414" pm="."><plain>TeodoroM. </plain></SENT>
+<SENT sid="415" pm="."><plain>L.; KavrakiL. </plain></SENT>
+<SENT sid="416" pm="."><plain>E. Conformational flexibility models for the receptor in structure based drug design. Curr. </plain></SENT>
+<SENT sid="417" pm="."><plain>Pharm. </plain></SENT>
+<SENT sid="418" pm="."><plain>Des. 2003, 9 (20), 1635–1648.12871062 </plain></SENT>
+</text></ref><ref id="ref17"><text><SENT sid="419" pm="."><plain>WongC. </plain></SENT>
+<SENT sid="420" pm="."><plain>F.; McCammonJ. </plain></SENT>
+<SENT sid="421" pm="."><plain>A. Protein flexibility and computer-aided drug design. Annu. </plain></SENT>
+<SENT sid="422" pm="."><plain>Rev. </plain></SENT>
+<SENT sid="423" pm="."><plain>Pharmacol. </plain></SENT>
+<SENT sid="424" pm="."><plain>Toxicol. 2003, 43, 31–45.12142469 </plain></SENT>
+</text></ref><ref id="ref18"><text><SENT sid="425" pm="."><plain>CarlsonH. </plain></SENT>
+<SENT sid="426" pm="."><plain>A.; MasukawaK. </plain></SENT>
+<SENT sid="427" pm="."><plain>M.; RubinsK.; BushmanF. </plain></SENT>
+<SENT sid="428" pm="."><plain>D.; JorgensenW. </plain></SENT>
+<SENT sid="429" pm="."><plain>L.; LinsR. </plain></SENT>
+<SENT sid="430" pm="."><plain>D.; BriggsJ. </plain></SENT>
+<SENT sid="431" pm="."><plain>M.; McCammonJ. </plain></SENT>
+<SENT sid="432" pm="."><plain>A. Developing a dynamic pharmacophore model for HIV-1 integrase. J. </plain></SENT>
+<SENT sid="433" pm="."><plain>Med. </plain></SENT>
+<SENT sid="434" pm="."><plain>Chem. 2000, 43 (11), 2100–2114.10841789 </plain></SENT>
+</text></ref><ref id="ref19"><text><SENT sid="435" pm="."><plain>CavasottoC. </plain></SENT>
+<SENT sid="436" pm="."><plain>N.; AbagyanR. </plain></SENT>
+<SENT sid="437" pm="."><plain>A. Protein flexibility in ligand docking and virtual screening to protein kinases. J. </plain></SENT>
+<SENT sid="438" pm="."><plain>Mol. </plain></SENT>
+<SENT sid="439" pm="."><plain>Biol. 2004, 337 (1), 209–225.15001363 </plain></SENT>
+</text></ref><ref id="ref20"><text><SENT sid="440" pm="."><plain>CavasottoC. </plain></SENT>
+<SENT sid="441" pm="."><plain>N.; KovacsJ. </plain></SENT>
+<SENT sid="442" pm="."><plain>A.; AbagyanR. </plain></SENT>
+<SENT sid="443" pm="."><plain>A. Representing receptor flexibility in ligand docking through relevant normal modes. J. </plain></SENT>
+<SENT sid="444" pm="."><plain>Am. </plain></SENT>
+<SENT sid="445" pm="."><plain>Chem. </plain></SENT>
+<SENT sid="446" pm="."><plain>Soc. 2005, 127 (26), 9632–9640.15984891 </plain></SENT>
+</text></ref><ref id="ref21"><text><SENT sid="447" pm="."><plain>KuaJ.; ZhangY.; McCammonJ. </plain></SENT>
+<SENT sid="448" pm="."><plain>A. Studying enzyme binding specificity in acetylcholinesterase using a combined molecular dynamics and multiple docking approach. J. </plain></SENT>
+<SENT sid="449" pm="."><plain>Am. </plain></SENT>
+<SENT sid="450" pm="."><plain>Chem. </plain></SENT>
+<SENT sid="451" pm="."><plain>Soc. 2002, 124 (28), 8260–8267.12105904 </plain></SENT>
+</text></ref><ref id="ref22"><text><SENT sid="452" pm="."><plain>LinJ. </plain></SENT>
+<SENT sid="453" pm="."><plain>H.; PerrymanA. </plain></SENT>
+<SENT sid="454" pm="."><plain>L.; SchamesJ. </plain></SENT>
+<SENT sid="455" pm="."><plain>R.; McCammonJ. </plain></SENT>
+<SENT sid="456" pm="."><plain>A. Computational drug design accommodating receptor flexibility: the relaxed complex scheme. J. </plain></SENT>
+<SENT sid="457" pm="."><plain>Am. </plain></SENT>
+<SENT sid="458" pm="."><plain>Chem. </plain></SENT>
+<SENT sid="459" pm="."><plain>Soc. 2002, 124 (20), 5632–5633.12010024 </plain></SENT>
+</text></ref><ref id="ref23"><text><SENT sid="460" pm="."><plain>LinJ. </plain></SENT>
+<SENT sid="461" pm="."><plain>H.; PerrymanA. </plain></SENT>
+<SENT sid="462" pm="."><plain>L.; SchamesJ. </plain></SENT>
+<SENT sid="463" pm="."><plain>R.; McCammonJ. </plain></SENT>
+<SENT sid="464" pm="."><plain>A. The relaxed complex method: Accommodating receptor flexibility for drug design with an improved scoring scheme. Biopolymers 2003, 68 (1), 47–62.12579579 </plain></SENT>
+</text></ref><ref id="ref24"><text><SENT sid="465" pm="."><plain>ShermanW.; DayT.; JacobsonM. </plain></SENT>
+<SENT sid="466" pm="."><plain>P.; FriesnerR. </plain></SENT>
+<SENT sid="467" pm="."><plain>A.; FaridR. Novel procedure for modeling ligand/receptor induced fit effects. J. </plain></SENT>
+<SENT sid="468" pm="."><plain>Med. </plain></SENT>
+<SENT sid="469" pm="."><plain>Chem. 2006, 49 (2), 534–553.16420040 </plain></SENT>
+</text></ref><ref id="ref25"><text><SENT sid="470" pm="."><plain>DammK. </plain></SENT>
+<SENT sid="471" pm="."><plain>L.; CarlsonH. </plain></SENT>
+<SENT sid="472" pm="."><plain>A. Exploring experimental sources of multiple protein conformations in structure-based drug design. J. </plain></SENT>
+<SENT sid="473" pm="."><plain>Am. </plain></SENT>
+<SENT sid="474" pm="."><plain>Chem. </plain></SENT>
+<SENT sid="475" pm="."><plain>Soc. 2007, 129 (26), 8225–8235.17555316 </plain></SENT>
+</text></ref><ref id="ref26"><text><SENT sid="476" pm="."><plain>OpreaT. </plain></SENT>
+<SENT sid="477" pm="."><plain>I.; MatterH. Integrating virtual screening in lead discovery. Curr. </plain></SENT>
+<SENT sid="478" pm="."><plain>Opin. </plain></SENT>
+<SENT sid="479" pm="."><plain>Chem. </plain></SENT>
+<SENT sid="480" pm="."><plain>Biol. 2004, 8 (4), 349–358.15288243 </plain></SENT>
+</text></ref><ref id="ref27"><text><SENT sid="481" pm="."><plain>KitchenD. </plain></SENT>
+<SENT sid="482" pm="."><plain>B.; DecornezH.; FurrJ. </plain></SENT>
+<SENT sid="483" pm="."><plain>R.; BajorathJ. Docking and scoring in virtual screening for drug discovery: methods and applications. Nat. </plain></SENT>
+<SENT sid="484" pm="."><plain>Rev. </plain></SENT>
+<SENT sid="485" pm="."><plain>Drug Discovery 2004, 3 (11), 935–949. </plain></SENT>
+</text></ref><ref id="ref28"><text><SENT sid="486" pm="."><plain>FerrariA. </plain></SENT>
+<SENT sid="487" pm="."><plain>M.; WeiB. </plain></SENT>
+<SENT sid="488" pm="."><plain>Q.; CostantinoL.; ShoichetB. </plain></SENT>
+<SENT sid="489" pm="."><plain>K. Soft docking and multiple receptor conformations in virtual screening. J. </plain></SENT>
+<SENT sid="490" pm="."><plain>Med. </plain></SENT>
+<SENT sid="491" pm="."><plain>Chem. 2004, 47 (21), 5076–5084.15456251 </plain></SENT>
+</text></ref><ref id="ref29"><text><SENT sid="492" pm="."><plain>WeiB. </plain></SENT>
+<SENT sid="493" pm="."><plain>Q.; WeaverL. </plain></SENT>
+<SENT sid="494" pm="."><plain>H.; FerrariA. </plain></SENT>
+<SENT sid="495" pm="."><plain>M.; MatthewsB. </plain></SENT>
+<SENT sid="496" pm="."><plain>W.; ShoichetB. </plain></SENT>
+<SENT sid="497" pm="."><plain>K. Testing a flexible-receptor docking algorithm in a model binding site. J. </plain></SENT>
+<SENT sid="498" pm="."><plain>Mol. </plain></SENT>
+<SENT sid="499" pm="."><plain>Biol. 2004, 337 (5), 1161–1182.15046985 </plain></SENT>
+</text></ref><ref id="ref30"><text><SENT sid="500" pm="."><plain>BowmanA. </plain></SENT>
+<SENT sid="501" pm="."><plain>L.; Nikolovska-ColeskaZ.; ZhongH.; WangS.; CarlsonH. </plain></SENT>
+<SENT sid="502" pm="."><plain>A. Small molecule inhibitors of the MDM2-p53 interaction discovered by ensemble-based receptor models. J. </plain></SENT>
+<SENT sid="503" pm="."><plain>Am. </plain></SENT>
+<SENT sid="504" pm="."><plain>Chem. </plain></SENT>
+<SENT sid="505" pm="."><plain>Soc. 2007, 129 (42), 12809–12814.17902662 </plain></SENT>
+</text></ref><ref id="ref31"><text><SENT sid="506" pm="."><plain>AmaroR. </plain></SENT>
+<SENT sid="507" pm="."><plain>E.; BaronR.; McCammonJ. </plain></SENT>
+<SENT sid="508" pm="."><plain>A.An improved relaxed complex scheme for receptor flexibility in computer-aided drug design. J. </plain></SENT>
+<SENT sid="509" pm="."><plain>Comput.-Aided Mol. </plain></SENT>
+<SENT sid="510" pm="."><plain>Des.2008, 10.1007/s10822-007-9159-2. </plain></SENT>
+</text></ref><ref id="ref32"><text><SENT sid="511" pm="."><plain>MarkowitzM.NguyenB.-Y.GotuzzoF.; MendoF.; RatanasuwanW.; KovacsC.; ZhaoJ.; GildeL.; IsaacsR.; TepplerH.Potent antiviral effect of MK-0518, novel HIV-1 integrase inhibitor, as part of combination ART in treatment-naive HIV-1 infected patients. </plain></SENT>
+<SENT sid="512" pm="."><plain>In XVI International AIDS Conference; 16th International AIDS Conference, Toronto, Canada, August 13−18, 2006, 2006; no. ThLB0214. </plain></SENT>
+</text></ref><ref id="ref33"><text><SENT sid="513" pm="."><plain>HazudaD. </plain></SENT>
+<SENT sid="514" pm="."><plain>J.; AnthonyN. </plain></SENT>
+<SENT sid="515" pm="."><plain>J.; GomezR. </plain></SENT>
+<SENT sid="516" pm="."><plain>P.; JollyS. </plain></SENT>
+<SENT sid="517" pm="."><plain>M.; WaiJ. </plain></SENT>
+<SENT sid="518" pm="."><plain>S.; ZhuangL.; FisherT. </plain></SENT>
+<SENT sid="519" pm="."><plain>E.; EmbreyM.; GuareJ. </plain></SENT>
+<SENT sid="520" pm="."><plain>P.Jr.; EgbertsonM. </plain></SENT>
+<SENT sid="521" pm="."><plain>S.; VaccaJ. </plain></SENT>
+<SENT sid="522" pm="."><plain>P.; HuffJ. </plain></SENT>
+<SENT sid="523" pm="."><plain>R.; FelockP. </plain></SENT>
+<SENT sid="524" pm="."><plain>J.; WitmerM. </plain></SENT>
+<SENT sid="525" pm="."><plain>V.; StillmockK. </plain></SENT>
+<SENT sid="526" pm="."><plain>A.; DanovichR.; GroblerJ.; MillerM. </plain></SENT>
+<SENT sid="527" pm="."><plain>D.; EspesethA. </plain></SENT>
+<SENT sid="528" pm="."><plain>S.; JinL.; ChenI. </plain></SENT>
+<SENT sid="529" pm="."><plain>W.; LinJ. </plain></SENT>
+<SENT sid="530" pm="."><plain>H.; KassahunK.; EllisJ. </plain></SENT>
+<SENT sid="531" pm="."><plain>D.; WongB. </plain></SENT>
+<SENT sid="532" pm="."><plain>K.; XuW.; PearsonP. </plain></SENT>
+<SENT sid="533" pm="."><plain>G.; SchleifW. </plain></SENT>
+<SENT sid="534" pm="."><plain>A.; CorteseR.; EminiE.; SummaV.; HollowayM. </plain></SENT>
+<SENT sid="535" pm="."><plain>K.; YoungS. </plain></SENT>
+<SENT sid="536" pm="."><plain>D. A naphthyridine carboxamide provides evidence for discordant resistance between mechanistically identical inhibitors of HIV-1 integrase. Proc. </plain></SENT>
+<SENT sid="537" pm="."><plain>Natl. </plain></SENT>
+<SENT sid="538" pm="."><plain>Acad. </plain></SENT>
+<SENT sid="539" pm="."><plain>Sci. </plain></SENT>
+<SENT sid="540" pm="."><plain>U.S.A. 2004, 101 (31), 11233–11238.15277684 </plain></SENT>
+</text></ref><ref id="ref34"><text><SENT sid="541" pm="."><plain>SchamesJ. </plain></SENT>
+<SENT sid="542" pm="."><plain>R.; HenchmanR. </plain></SENT>
+<SENT sid="543" pm="."><plain>H.; SiegelJ. </plain></SENT>
+<SENT sid="544" pm="."><plain>S.; SotrifferC. </plain></SENT>
+<SENT sid="545" pm="."><plain>A.; NiH.; McCammonJ. </plain></SENT>
+<SENT sid="546" pm="."><plain>A. Discovery of a novel binding trench in HIV integrase. J. </plain></SENT>
+<SENT sid="547" pm="."><plain>Med. </plain></SENT>
+<SENT sid="548" pm="."><plain>Chem. 2004, 47 (8), 1879–1881.15055986 </plain></SENT>
+</text></ref><ref id="ref35"><text><SENT sid="549" pm="."><plain>DolinskyT. </plain></SENT>
+<SENT sid="550" pm="."><plain>J.; CzodrowskiP.; LiH.; NielsenJ. </plain></SENT>
+<SENT sid="551" pm="."><plain>E.; JensenJ. </plain></SENT>
+<SENT sid="552" pm="."><plain>H.; KlebeG.; BakerN. </plain></SENT>
+<SENT sid="553" pm="."><plain>A. PDB2PQR: expanding and upgrading automated preparation of biomolecular structures for molecular simulations. Nucleic Acids Res. 2007, 35 (Web Server issue), W522-5–.17488841 </plain></SENT>
+</text></ref><ref id="ref36"><text><SENT sid="554" pm="."><plain>ChongA. </plain></SENT>
+<SENT sid="555" pm="."><plain>K.; PeggM. </plain></SENT>
+<SENT sid="556" pm="."><plain>S.; von ItzsteinM. Influenza virus sialidase: effect of calcium on steady-state kinetic parameters. Biochim. </plain></SENT>
+<SENT sid="557" pm="."><plain>Biophys. </plain></SENT>
+<SENT sid="558" pm="."><plain>Acta 1991, 1077 (1), 65–71.2009295 </plain></SENT>
+</text></ref><ref id="ref37"><text><SENT sid="559" pm="."><plain>PhillipsJ. </plain></SENT>
+<SENT sid="560" pm="."><plain>C.; BraunR.; WangW.; GumbartJ.; TajkhorshidE.; VillaE.; ChipotC.; SkeelR. </plain></SENT>
+<SENT sid="561" pm="."><plain>D.; KaleL.; SchultenK. Scalable molecular dynamics with NAMD. J. </plain></SENT>
+<SENT sid="562" pm="."><plain>Comput. </plain></SENT>
+<SENT sid="563" pm="."><plain>Chem. 2005, 26 (16), 1781–1802.16222654 </plain></SENT>
+</text></ref><ref id="ref38"><text><SENT sid="564" pm="."><plain>ChristenM.; HunenbergerP. </plain></SENT>
+<SENT sid="565" pm="."><plain>H.; BakowiesD.; BaronR.; BurgiR.; GeerkeD. </plain></SENT>
+<SENT sid="566" pm="."><plain>P.; HeinzT. </plain></SENT>
+<SENT sid="567" pm="."><plain>N.; KastenholzM. </plain></SENT>
+<SENT sid="568" pm="."><plain>A.; KrautlerV.; OostenbrinkC.; PeterC.; TrzesniakD.; van GunsterenW. </plain></SENT>
+<SENT sid="569" pm="."><plain>F. The GROMOS software for biomolecular simulation: GROMOS05. J. </plain></SENT>
+<SENT sid="570" pm="."><plain>Comput. </plain></SENT>
+<SENT sid="571" pm="."><plain>Chem. 2005, 26 (16), 1719–1751.16211540 </plain></SENT>
+</text></ref><ref id="ref39"><text><SENT sid="572" pm="."><plain>LandonM. </plain></SENT>
+<SENT sid="573" pm="."><plain>R.; AmaroR. </plain></SENT>
+<SENT sid="574" pm="."><plain>E.; BaronR.; NganC. </plain></SENT>
+<SENT sid="575" pm="."><plain>H.; OzonoffD.; McCammonJ. </plain></SENT>
+<SENT sid="576" pm="."><plain>A.; VajdaS. Novel druggable hot spots in avian influenza neuraminidase H5N1 revealed by computational solvent mapping of a non-redundant receptor ensemble. Chem. </plain></SENT>
+<SENT sid="577" pm="."><plain>Biol. </plain></SENT>
+<SENT sid="578" pm="."><plain>Drug Des. 2008, 71, 106–116.18205727 </plain></SENT>
+</text></ref><ref id="ref40"><text><SENT sid="579" pm="."><plain>SannerM. </plain></SENT>
+<SENT sid="580" pm="."><plain>F. A component-based software environment for visualizing large macromolecular assemblies. Structure 2005, 13 (3), 447–462.15766546 </plain></SENT>
+</text></ref><ref id="ref41"><text><SENT sid="581" pm="."><plain>GasteigerJ.; MarsiliM. Iterative partial equalization of orbital electronegativity: a rapid access to atomic charges. Tetrahedron 1980, 36 (22), 3219–3228. </plain></SENT>
+</text></ref><ref id="ref42"><text><SENT sid="582" pm="."><plain>NCIDS Diversity Set Information. http://dtp.nci.nih.gov/branches/dscb/diversity_explanation.html, (accessed November 19, 2007). </plain></SENT>
+</text></ref><ref id="ref43"><text><SENT sid="583" pm="."><plain>BabuY. </plain></SENT>
+<SENT sid="584" pm="."><plain>S.; ChandP.; BantiaS.; KotianP.; DehghaniA.; El-KattanY.; LinT. </plain></SENT>
+<SENT sid="585" pm="."><plain>H.; HutchisonT. </plain></SENT>
+<SENT sid="586" pm="."><plain>L.; ElliottA. </plain></SENT>
+<SENT sid="587" pm="."><plain>J.; ParkerC. </plain></SENT>
+<SENT sid="588" pm="."><plain>D.; AnanthS. </plain></SENT>
+<SENT sid="589" pm="."><plain>L.; HornL. </plain></SENT>
+<SENT sid="590" pm="."><plain>L.; LaverG. </plain></SENT>
+<SENT sid="591" pm="."><plain>W.; MontgomeryJ. </plain></SENT>
+<SENT sid="592" pm="."><plain>A. BCX-1812 (RWJ-270201): discovery of a novel, highly potent, orally active, and selective influenza neuraminidase inhibitor through structure-based drug design. J. </plain></SENT>
+<SENT sid="593" pm="."><plain>Med. </plain></SENT>
+<SENT sid="594" pm="."><plain>Chem. 2000, 43 (19), 3482–3486.11000002 </plain></SENT>
+</text></ref><ref id="ref44"><text><SENT sid="595" pm="."><plain>MorrisG. </plain></SENT>
+<SENT sid="596" pm="."><plain>M. Automated docking using a Lamarckian genetic algorithm and an empirical binding free energy function. J. </plain></SENT>
+<SENT sid="597" pm="."><plain>Comput. </plain></SENT>
+<SENT sid="598" pm="."><plain>Chem. 1998, 19 (14), 1639–1662. </plain></SENT>
+</text></ref><ref id="ref45"><text><SENT sid="599" pm="."><plain>LipinskiC. </plain></SENT>
+<SENT sid="600" pm="."><plain>A.; LombardoF.; DominyB. </plain></SENT>
+<SENT sid="601" pm="."><plain>W.; FeeneyP. </plain></SENT>
+<SENT sid="602" pm="."><plain>J. Experimental and computational approaches to estimate solubility and permeability in drug discovery and development settings. Adv. </plain></SENT>
+<SENT sid="603" pm="."><plain>Drug Delivery Rev. 2001, 46 (1−3), 3–26. </plain></SENT>
+</text></ref><ref id="ref46"><text><SENT sid="604" pm="."><plain>LeachA. </plain></SENT>
+<SENT sid="605" pm="."><plain>R.; HannM. </plain></SENT>
+<SENT sid="606" pm="."><plain>M.; BurrowsJ. </plain></SENT>
+<SENT sid="607" pm="."><plain>N.; GriffenE. </plain></SENT>
+<SENT sid="608" pm="."><plain>J., Fragment screening: an introduction. </plain></SENT>
+<SENT sid="609" pm="."><plain>In Structure-Based Drug Discovery: An Overview; HubbardR. </plain></SENT>
+<SENT sid="610" pm="."><plain>E., Ed.; Royal Society of Chemistry: Cambridge, 2006; Vol. 2, pp 429−446 </plain></SENT>
+</text></ref><ref id="ref47"><text><SENT sid="611" pm="."><plain>SannerM. </plain></SENT>
+<SENT sid="612" pm="."><plain>F. Python: a programming language for software integration and development. J. </plain></SENT>
+<SENT sid="613" pm="."><plain>Mol. </plain></SENT>
+<SENT sid="614" pm="."><plain>Graphics Modell. 1999, 17 (1), 57–61. </plain></SENT>
+</text></ref><ref id="ref48"><text><SENT sid="615" pm="."><plain>SannerM. </plain></SENT>
+<SENT sid="616" pm="."><plain>F.; OlsonA. </plain></SENT>
+<SENT sid="617" pm="."><plain>J.; SpehnerJ. </plain></SENT>
+<SENT sid="618" pm="."><plain>C. Reduced surface: an efficient way to compute molecular surfaces. Biopolymers 1996, 38 (3), 305–320.8906967 </plain></SENT>
+</text></ref><ref id="ref49"><text><SENT sid="619" pm="."><plain>FengB. </plain></SENT>
+<SENT sid="620" pm="."><plain>Y.; SimeonovA.; JadhavA.; BabaogluK.; IngleseJ.; ShoichetB. </plain></SENT>
+<SENT sid="621" pm="."><plain>K.; AustinC. </plain></SENT>
+<SENT sid="622" pm="."><plain>P. A high-throughput screen for aggregation-based inhibition in a large compound library. J. </plain></SENT>
+<SENT sid="623" pm="."><plain>Med. </plain></SENT>
+<SENT sid="624" pm="."><plain>Chem. 2007, 50 (10), 2385–2390.17447748 </plain></SENT>
+</text></ref><ref id="ref50"><text><SENT sid="625" pm="."><plain>FengB. </plain></SENT>
+<SENT sid="626" pm="."><plain>Y.; ShelatA.; DomanT. </plain></SENT>
+<SENT sid="627" pm="."><plain>N.; GuyR. </plain></SENT>
+<SENT sid="628" pm="."><plain>K.; ShoichetB. </plain></SENT>
+<SENT sid="629" pm="."><plain>K. High-throughput assays for promiscuous inhibitors. Nat. </plain></SENT>
+<SENT sid="630" pm="."><plain>Chem. </plain></SENT>
+<SENT sid="631" pm="."><plain>Biol. 2005, 1 (3), 146–148.16408018 </plain></SENT>
+</text></ref><ref id="ref51"><text><SENT sid="632" pm="."><plain>BakerN. </plain></SENT>
+<SENT sid="633" pm="."><plain>A.; SeptD.; JosephS.; HolstM. </plain></SENT>
+<SENT sid="634" pm="."><plain>J.; McCammonJ. </plain></SENT>
+<SENT sid="635" pm="."><plain>A. Electrostatics of nanosystems: application to microtubules and the ribosome. Proc. </plain></SENT>
+<SENT sid="636" pm="."><plain>Natl. </plain></SENT>
+<SENT sid="637" pm="."><plain>Acad. </plain></SENT>
+<SENT sid="638" pm="."><plain>Sci. </plain></SENT>
+<SENT sid="639" pm="."><plain>U.S.A. 2001, 98 (18), 10037–10041.11517324 </plain></SENT>
+</text></ref><ref id="ref52"><text><SENT sid="640" pm="."><plain>HumphreyW.; DalkeA.; SchultenK. VMD: visual molecular dynamics. J. </plain></SENT>
+<SENT sid="641" pm="."><plain>Mol. </plain></SENT>
+<SENT sid="642" pm="."><plain>Graphics 1996, 14 (1), 33–38. </plain></SENT>
+</text></ref><ref id="ref53"><text><SENT sid="643" pm="."><plain>RaffaR. </plain></SENT>
+<SENT sid="644" pm="."><plain>B. Harmonic mean relationship between affinity for wild-type receptors and alanine-scan mutants. J. </plain></SENT>
+<SENT sid="645" pm="."><plain>Theor. </plain></SENT>
+<SENT sid="646" pm="."><plain>Biol. 2002, 218 (2), 207–214.12381293 </plain></SENT>
+</text></ref><ref id="ref54"><text><SENT sid="647" pm="."><plain>ZhangZ. </plain></SENT>
+<SENT sid="648" pm="."><plain>Y.; Thieme-SeflerA. </plain></SENT>
+<SENT sid="649" pm="."><plain>M.; MacleanD.; McNamaraD. </plain></SENT>
+<SENT sid="650" pm="."><plain>J.; DobrusinE. </plain></SENT>
+<SENT sid="651" pm="."><plain>M.; SawyerT. </plain></SENT>
+<SENT sid="652" pm="."><plain>K.; DixonJ. </plain></SENT>
+<SENT sid="653" pm="."><plain>E. Substrate specificity of the protein tyrosine phosphatases. Proc. </plain></SENT>
+<SENT sid="654" pm="."><plain>Natl. </plain></SENT>
+<SENT sid="655" pm="."><plain>Acad. </plain></SENT>
+<SENT sid="656" pm="."><plain>Sci. </plain></SENT>
+<SENT sid="657" pm="."><plain>U.S.A. 1993, 90 (10), 4446–4450.7685104 </plain></SENT>
+</text></ref><ref id="ref55"><text><SENT sid="658" pm="."><plain>GubarevaL. </plain></SENT>
+<SENT sid="659" pm="."><plain>V.; KaiserL.; HaydenF. </plain></SENT>
+<SENT sid="660" pm="."><plain>G. Influenza virus neuraminidase inhibitors. Lancet 2000, 355 (9206), 827–835.10711940 </plain></SENT>
+</text></ref><ref id="ref56"><text><SENT sid="661" pm="."><plain>ColmanP. </plain></SENT>
+<SENT sid="662" pm="."><plain>M. Influenza virus neuraminidase: structure, antibodies, and inhibitors. Protein Sci. 1994, 3 (10), 1687–1696.7849585 </plain></SENT>
+</text></ref><ref id="ref57"><text><SENT sid="663" pm="."><plain>ChipotC.; PohorilleA.Free Energy Calculations. Springer: New York, 2007; Vol. 86. </plain></SENT>
+</text></ref><ref id="ref58"><text><SENT sid="664" pm="."><plain>AmaroR. </plain></SENT>
+<SENT sid="665" pm="."><plain>E.; SchnauferA.InterthalH.HolW.StuartK.McCammonJ. </plain></SENT>
+<SENT sid="666" pm="."><plain>A.Discovery of the first drug-like inhibitors of an essential RNA editing ligase in Trypanosoma brucei. 2008, in preparation. </plain></SENT>
+</text></ref><ref id="ref59"><text><SENT sid="667" pm="."><plain>BarrilX.; SolivaR.Molecular Modeling. </plain></SENT>
+<SENT sid="668" pm="."><plain>In Structure-Based Drug Discovery, 1st ed.; HubbardR. </plain></SENT>
+<SENT sid="669" pm="."><plain>E., Ed.; RCS Publishing: Cambridge, 2007; pp 54−96. </plain></SENT>
+</text></ref><ref id="ref60"><text><SENT sid="670" pm="."><plain>VargheseJ. </plain></SENT>
+<SENT sid="671" pm="."><plain>N.; ColmanP. </plain></SENT>
+<SENT sid="672" pm="."><plain>M.; van DonkelaarA.; BlickT. </plain></SENT>
+<SENT sid="673" pm="."><plain>J.; SahasrabudheA.; McKimm-BreschkinJ. </plain></SENT>
+<SENT sid="674" pm="."><plain>L. Structural evidence for a second sialic acid binding site in avian influenza virus neuraminidases. Proc. </plain></SENT>
+<SENT sid="675" pm="."><plain>Natl. </plain></SENT>
+<SENT sid="676" pm="."><plain>Acad. </plain></SENT>
+<SENT sid="677" pm="."><plain>Sci. </plain></SENT>
+<SENT sid="678" pm="."><plain>U.S.A. 1997, 94 (22), 11808–11812.9342319 </plain></SENT>
+</text></ref><ref id="ref61"><text><SENT sid="679" pm="."><plain>MatrosovichM. </plain></SENT>
+<SENT sid="680" pm="."><plain>N.; KraussS.; WebsterR. </plain></SENT>
+<SENT sid="681" pm="."><plain>G. H9N2 influenza A viruses from poultry in Asia have human virus-like receptor specificity. Virology 2001, 281 (2), 156–162.11277689 </plain></SENT>
+</text></ref><ref id="ref62"><text><SENT sid="682" pm="."><plain>LaverW. </plain></SENT>
+<SENT sid="683" pm="."><plain>G.; ColmanP. </plain></SENT>
+<SENT sid="684" pm="."><plain>M.; WebsterR. </plain></SENT>
+<SENT sid="685" pm="."><plain>G.; HinshawV. </plain></SENT>
+<SENT sid="686" pm="."><plain>S.; AirG. </plain></SENT>
+<SENT sid="687" pm="."><plain>M. Influenza virus neuraminidase with hemagglutinin activity. Virology 1984, 137 (2), 314–323.6485252 </plain></SENT>
+</text></ref><ref id="ref63"><text><SENT sid="688" pm="."><plain>KobasaD.; RodgersM. </plain></SENT>
+<SENT sid="689" pm="."><plain>E.; WellsK.; KawaokaY. Neuraminidase hemadsorption activity, conserved in avian influenza A viruses, does not influence viral replication in ducks. J. </plain></SENT>
+<SENT sid="690" pm="."><plain>Virol. 1997, 71 (9), 6706–6713.9261394 </plain></SENT>
+</text></ref><ref id="ref64"><text><SENT sid="691" pm="."><plain>GilsonM. </plain></SENT>
+<SENT sid="692" pm="."><plain>K.; StraatsmaT. </plain></SENT>
+<SENT sid="693" pm="."><plain>P.; McCammonJ. </plain></SENT>
+<SENT sid="694" pm="."><plain>A.; RipollD. </plain></SENT>
+<SENT sid="695" pm="."><plain>R.; FaermanC. </plain></SENT>
+<SENT sid="696" pm="."><plain>H.; AxelsenP. </plain></SENT>
+<SENT sid="697" pm="."><plain>H.; SilmanI.; SussmanJ. </plain></SENT>
+<SENT sid="698" pm="."><plain>L. Open “back door” in a molecular dynamics simulation of acetylcholinesterase. Science 1994, 263 (5151), 1276–1278.8122110 </plain></SENT>
+</text></ref><ref id="ref65"><text><SENT sid="699" pm="."><plain>RipollD. </plain></SENT>
+<SENT sid="700" pm="."><plain>R.; FaermanC. </plain></SENT>
+<SENT sid="701" pm="."><plain>H.; AxelsenP. </plain></SENT>
+<SENT sid="702" pm="."><plain>H.; SilmanI.; SussmanJ. </plain></SENT>
+<SENT sid="703" pm="."><plain>L. An electrostatic mechanism for substrate guidance down the aromatic gorge of acetylcholinesterase. Proc. </plain></SENT>
+<SENT sid="704" pm="."><plain>Natl. </plain></SENT>
+<SENT sid="705" pm="."><plain>Acad. </plain></SENT>
+<SENT sid="706" pm="."><plain>Sci. </plain></SENT>
+<SENT sid="707" pm="."><plain>U.S.A. 1993, 90 (11), 5128–5132.8506359 </plain></SENT>
+</text></ref><ref id="ref66"><text><SENT sid="708" pm="."><plain>DennisS.; KortvelyesiT.; VajdaS. Computational mapping identifies the binding sites of organic solvents on proteins. Proc. </plain></SENT>
+<SENT sid="709" pm="."><plain>Natl. </plain></SENT>
+<SENT sid="710" pm="."><plain>Acad. </plain></SENT>
+<SENT sid="711" pm="."><plain>Sci. </plain></SENT>
+<SENT sid="712" pm="."><plain>U.S.A. 2002, 99 (7), 4290–4295.11904374 </plain></SENT>
+</text></ref><ref id="ref67"><text><SENT sid="713" pm="."><plain>GoodfordP. </plain></SENT>
+<SENT sid="714" pm="."><plain>J. A computational procedure for determining energetically favorable binding sites on biologically important macromolecules. J. </plain></SENT>
+<SENT sid="715" pm="."><plain>Med. </plain></SENT>
+<SENT sid="716" pm="."><plain>Chem. 1985, 28 (7), 849–857.3892003 </plain></SENT>
+</text></ref><ref id="ref68"><text><SENT sid="717" pm="."><plain>LandonM. </plain></SENT>
+<SENT sid="718" pm="."><plain>R.; LanciaD. </plain></SENT>
+<SENT sid="719" pm="."><plain>R.Jr.; YuJ.; ThielS. </plain></SENT>
+<SENT sid="720" pm="."><plain>C.; VajdaS. Identification of hot spots within druggable binding regions by computational solvent mapping of proteins. J. </plain></SENT>
+<SENT sid="721" pm="."><plain>Med. </plain></SENT>
+<SENT sid="722" pm="."><plain>Chem. 2007, 50 (6), 1231–1240.17305325 </plain></SENT>
+</text></ref><ref id="ref69"><text><SENT sid="723" pm="."><plain>MattosC.; BellamacinaC. </plain></SENT>
+<SENT sid="724" pm="."><plain>R.; PeisachE.; PereiraA.; VitkupD.; PetskoG. </plain></SENT>
+<SENT sid="725" pm="."><plain>A.; RingeD. Multiple solvent crystal structures: probing binding sites, plasticity and hydration. J. </plain></SENT>
+<SENT sid="726" pm="."><plain>Mol. </plain></SENT>
+<SENT sid="727" pm="."><plain>Biol. 2006, 357 (5), 1471–1482.16488429 </plain></SENT>
+</text></ref><ref id="ref70"><text><SENT sid="728" pm="."><plain>MattosC.; RingeD. Locating and characterizing binding sites on proteins. Nat. </plain></SENT>
+<SENT sid="729" pm="."><plain>Biotechnol. 1996, 14 (5), 595–599.9630949 </plain></SENT>
+</text></ref><ref id="ref71"><text><SENT sid="730" pm="."><plain>MosconaA. Neuraminidase inhibitors for influenza. N. </plain></SENT>
+<SENT sid="731" pm="."><plain>Engl. </plain></SENT>
+<SENT sid="732" pm="."><plain>J. </plain></SENT>
+<SENT sid="733" pm="."><plain>Med. 2005, 353 (13), 1363–1373.16192481 </plain></SENT>
+</text></ref><ref id="ref72"><text><SENT sid="734" pm="."><plain>YenH. </plain></SENT>
+<SENT sid="735" pm="."><plain>L.; HoffmannE.; TaylorG.; ScholtissekC.; MontoA. </plain></SENT>
+<SENT sid="736" pm="."><plain>S.; WebsterR. </plain></SENT>
+<SENT sid="737" pm="."><plain>G.; GovorkovaE. </plain></SENT>
+<SENT sid="738" pm="."><plain>A. Importance of neuraminidase active-site residues to the neuraminidase inhibitor resistance of influenza viruses. J. </plain></SENT>
+<SENT sid="739" pm="."><plain>Virol. 2006, 80 (17), 8787–8795.16912325 </plain></SENT>
+</text></ref><ref id="ref73"><text><SENT sid="740" pm="."><plain>FerrarisO.; LinaB. Mutations of neuraminidase implicated in neuraminidase inhibitors resistance. J. </plain></SENT>
+<SENT sid="741" pm="."><plain>Clin. </plain></SENT>
+<SENT sid="742" pm="."><plain>Virol. 2007, 41, 13–19.18055254 </plain></SENT>
+</text></ref><ref id="ref74"><text><SENT sid="743" pm="."><plain>YenH. </plain></SENT>
+<SENT sid="744" pm="."><plain>L.; IlyushinaN. </plain></SENT>
+<SENT sid="745" pm="."><plain>A.; SalomonR.; HoffmannE.; WebsterR. </plain></SENT>
+<SENT sid="746" pm="."><plain>G.; GovorkovaE. </plain></SENT>
+<SENT sid="747" pm="."><plain>A. Neuraminidase inhibitor-resistant recombinant A/Vietnam/1203/04 (H5N1) influenza viruses retain their replication efficiency and pathogenicity in vitro and in vivo. J. </plain></SENT>
+<SENT sid="748" pm="."><plain>Virol. 2007, 81 (22), 12418–12426.17855542 </plain></SENT>
+</text></ref><ref id="ref75"><text><SENT sid="749" pm="."><plain>WagnerR.; MatrosovichM.; KlenkH. </plain></SENT>
+<SENT sid="750" pm="."><plain>D. Functional balance between haemagglutinin and neuraminidase in influenza virus infections. Rev. </plain></SENT>
+<SENT sid="751" pm="."><plain>Med. </plain></SENT>
+<SENT sid="752" pm="."><plain>Virol. 2002, 12 (3), 159–166.11987141 </plain></SENT>
+</text></ref><ref id="ref76"><text><SENT sid="753" pm="."><plain>MishinV. </plain></SENT>
+<SENT sid="754" pm="."><plain>P.; NovikovD.; HaydenF. </plain></SENT>
+<SENT sid="755" pm="."><plain>G.; GubarevaL. </plain></SENT>
+<SENT sid="756" pm="."><plain>V. Effect of hemagglutinin glycosylation on influenza virus susceptibility to neuraminidase inhibitors. J. </plain></SENT>
+<SENT sid="757" pm="."><plain>Virol. 2005, 79 (19), 12416–12424.16160169 </plain></SENT>
+</text></ref></ref-list></SecTag></back></article>

@@ -1,0 +1,248 @@
+<article xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML" article-type="research-article"><?properties open_access?><?DTDIdentifier.IdentifierValue -//NLM//DTD Journal Publishing DTD v2.3 20050630//EN?><?DTDIdentifier.IdentifierType public?><?SourceDTD.DTDName journalpublishing.dtd?><?SourceDTD.Version 2.3?><?ConverterInfo.XSLTName jp2nlmx2.xsl?><?ConverterInfo.Version 1?><front><journal-meta><journal-id journal-id-type="nlm-ta">Bioinformation</journal-id><journal-id journal-id-type="iso-abbrev">Bioinformation</journal-id><journal-id journal-id-type="publisher-id">Bioinformation</journal-id><journal-title-group><journal-title>Bioinformation</journal-title></journal-title-group><issn pub-type="epub">0973-2063</issn><publisher><publisher-name>Biomedical Informatics</publisher-name></publisher></journal-meta><article-meta><article-id pub-id-type="pmcid">5712783</article-id><article-id pub-id-type="publisher-id">97320630013380</article-id><article-id pub-id-type="doi">10.6026/97320630013380</article-id><article-categories><subj-group subj-group-type="heading"><subject>Hypothesis</subject></subj-group></article-categories><title-group><article-title>Insights from the protein-protein interaction network analysis of Mycobacterium tuberculosis toxin-antitoxin systems</article-title></title-group><contrib-group><contrib contrib-type="author"><name><surname>Thakur</surname><given-names>Zoozeal</given-names></name><xref ref-type="aff" rid="A1">1</xref></contrib><contrib contrib-type="author"><name><surname>Dharra</surname><given-names>Renu</given-names></name><xref ref-type="aff" rid="A1">1</xref></contrib><contrib contrib-type="author"><name><surname>Saini</surname><given-names>Vandana</given-names></name><xref ref-type="aff" rid="A2">2</xref></contrib><contrib contrib-type="author"><name><surname>Kumar</surname><given-names>Ajit</given-names></name><xref ref-type="aff" rid="A2">2</xref><xref ref-type="corresp" rid="COR1">*</xref></contrib><contrib contrib-type="author"><name><surname>Mehta</surname><given-names>Promod K.</given-names></name><xref ref-type="aff" rid="A1">1</xref><xref ref-type="corresp" rid="COR1">*</xref></contrib><aff id="A1"><label>1</label>Centre for Biotechnology, Maharshi Dayanand University (MDU), Rohtak-124001 (Haryana), India;</aff><aff id="A2"><label>2</label>Toxicology &amp; Computational Biology Group, Centre for Bioinformatics, Maharshi Dayanand University (MDU), Rohtak-124001 (Haryana), India;</aff></contrib-group><author-notes><corresp id="COR1"><label>*</label>Promod K. Mehta <email>pkmehta3@hotmail.com</email></corresp><corresp id="COR2"><label>*</label>Ajit Kumar <email>akumar.acbt.mdu@gmail.com</email>Telephone No. +91- 9896504193; +91- 9802299176;</corresp></author-notes><pub-date pub-type="collection"><year>2017</year></pub-date><pub-date pub-type="epub"><day>30</day><month>11</month><year>2017</year></pub-date><volume>13</volume><issue>11</issue><fpage>380</fpage><lpage>387</lpage><history><date date-type="received"><day>6</day><month>10</month><year>2017</year></date><date date-type="rev-recd"><day>11</day><month>12</month><year>2017</year></date><date date-type="accepted"><day>11</day><month>12</month><year>2017</year></date></history><permissions><copyright-statement>&#169; 2017 Biomedical Informatics</copyright-statement><copyright-year>2017</copyright-year><license license-type="open-access" xlink:href="http://creativecommons.org/licenses/by/3.0/"><license-p>This is an Open Access article which permits unrestricted use, distribution, 
+and reproduction in any medium, provided the original work is properly credited. This is distributed under the terms of the Creative Commons Attribution License.</license-p></license></permissions><abstract><p>Protein-protein interaction (PPI) network analysis is a powerful strategy to understand M. tuberculosis (Mtb) system level physiology in
+the identification of hub proteins. In the present study, the PPI network of 79 Mtb toxin-antitoxin (TA) systems comprising of 167 nodes
+and 234 edges was investigated. The topological properties of PPI network were examined by 'Network analyzer' a cytoscape plugin
+app and STRING database. The key enriched biological processes and the molecular functions of Mtb TA systems were analyzed by
+STRING. Manual curation of the PPI data identified four proteins (i.e. Rv2762c, VapB14, VapB42 and VapC42) to possess the highest
+number of interacting partners. The top 15% hub proteins were identified in the PPI network by employing two statistical measures, i.e.
+betweenness and radiality by employing cytohubba. Insights gained from the molecular protein models of VapC9 and VapC10 are also
+documented.</p></abstract><kwd-group><kwd>Mycobacterium tuberculosis</kwd><kwd>Toxin-antitoxin</kwd><kwd>STRING</kwd><kwd>Cytoscape</kwd><kwd>Homology Modeling</kwd></kwd-group></article-meta></front><body><sec id="s1"><title>Background</title><p>The ability of Mycobacterium tuberculosis (Mtb) to persist inside the
+host cells under a variety of adverse conditions including
+oxidative stress, nutrient starvation and hypoxia helps to
+understand pathogenesis [<xref rid="R01" ref-type="bibr">1</xref>, <xref rid="R02" ref-type="bibr">2</xref>]. Mtb toxin-antitoxin (TA) systems
+comprising of two component genetic modules - a stable toxin
+and relatively unstable antitoxin, play a significant role for the
+survival of bacteria under stress conditions. Mtb harbors a high
+number of TA systems (79) belonging to various families such as
+VapBC, MazEF, ParDE, higBA, RelBE, and several
+uncharacterized TA systems [<xref rid="R03" ref-type="bibr">3</xref>]. These TA systems are associated
+with antibiotic resistance, biofilm formation and persistence
+inside the host cells [<xref rid="R04" ref-type="bibr">4</xref>]. In response to stress conditions, the labile
+antitoxin is degraded and toxin is released, which in turn halts
+transcription, translation etc. and that leads to growth inhibition
+and even cell death [<xref rid="R03" ref-type="bibr">3</xref>].</p><p>Protein-protein interaction (PPI) is imperative to many cellular
+process including signal transduction, transcriptional regulation,
+post-translational modification, etc. [<xref rid="R05" ref-type="bibr">5</xref>]. PPI network analysis is a
+robust approach to understand the mechanisms associated with
+mycobacterial pathogenesis, functional annotation of genes, etc.
+[<xref rid="R06" ref-type="bibr">6</xref>, <xref rid="R07" ref-type="bibr">7</xref>] PPIs can be detected by computational and experimental
+methods. Experimental methods include yeast two-hybrid
+system, tandem affinity purification and protein microarrays,
+whereas computational methods include interlog-based method
+and prediction based on genetic algorithms. In comparison to
+experimental techniques, computational methods take less time
+and are inexpensive [<xref rid="R08" ref-type="bibr">8</xref>]. In the present study, we report the
+topological and functional enrichment analysis of PPI network of
+79 Mtb TA systems constructed from STRING v10.5 and
+Cytoscape v3.5.0. The molecular models of VapC9 and VapC10
+have also been documented to gain functional insights.</p></sec><sec sec-type="methods" id="s2"><title>Methodology</title><sec id="s2a"><title>Literature mining of Mtb TA system genes</title><p>A total of 79 Mtb H37Rv TA system genes enlisted in Suppl Table
+1 were mined from the literature [<xref rid="R03" ref-type="bibr">3</xref>]. The mined 79 TA systems
+belonged to various TA families including VapBC (50 members),
+MazEF (10 members), HigBA (3), ParDE (2), RelBE (2),
+YefM/YoeB (1) and 11 unclassified TA system genes <xref ref-type="fig" rid="F1">Figure 1</xref>.</p></sec><sec id="s2b"><title>PPI Network construction</title><p>The candidate 79 Mtb TA systems were converted into seed
+sequences to mine PPI data from STRING (Search tool for the
+Retrieval of Interacting Genes/Proteins) v10.5 database
+(http://string-db.org) [<xref rid="R09" ref-type="bibr">9</xref>]. Interaction sources selected for
+generation of PPI network were text mining, experiments,
+databases, co-expression, neighborhood, gene fusion, and cooccurrence.
+PPIs that possessed at least a medium confidence
+score of 0.400 were considered for network generation. Network
+construction and visualization was done by cytoscape v 3.5.1 [<xref rid="R10" ref-type="bibr">10</xref>]
+and STRING v10.5.</p></sec><sec id="s2c"><title>Topological and functional enrichment analysis of PPI
+network</title><p>The topological parameters of PPI network, i.e. number of nodes,
+number of edges, average node degree, etc were evaluated by
+STRING v10.5. The protein-protein association data obtained
+from STRING was further utilized to compute several other
+topological parameters such as average clustering coefficients,
+topological coefficients, and shortest path lengths etc. via
+Network analyzer, a cytoscape plugin app, by treating the 
+network as directed graph. In addition, functional enrichment of
+input seed sequences of Mtb TA systems was carried out by
+STRING to identify significantly enriched GO (Gene Ontology)
+biological processes and molecular functions.</p></sec><sec id="s2d"><title>Identification of Hub proteins</title><p>Cyto-Hubba [<xref rid="R11" ref-type="bibr">11</xref>], a java plugin for Cytoscape software, was
+employed to determine the hub proteins of PPI network of Mtb
+TA systems. In this study, two centrality measurements, i.e.
+betweenness and radiality were applied to mine the top 15% hub
+proteins of the network. In addition, we further mined hub
+proteins, which were commonly identified by both the
+algorithms.</p></sec><sec id="s2e"><title>Sequence analysis of VapC9 and VapC10</title><p>Protein sequence information of VapC9 and VapC10 was
+retrieved from Tuberculist database [<xref rid="R12" ref-type="bibr">12</xref>]. Various domain
+identification tools including InterProScan [<xref rid="R13" ref-type="bibr">13</xref>], Pfam [<xref rid="R14" ref-type="bibr">14</xref>], and
+NCBI CDD (Conserved domain database), [<xref rid="R15" ref-type="bibr">15</xref>] were employed to
+detect the conserved domains present in the protein sequences,
+which in turn carried out sequence similarity search with the
+close orthologus family members. The physical and chemical
+properties such as extinction coefficient, instability index, and
+aliphatic index, GRAVY etc. were determined by Protaparam tool
+of ExPASy [<xref rid="R15" ref-type="bibr">15</xref>, <xref rid="R16" ref-type="bibr">16</xref>].</p></sec><sec id="s2f"><title>Homology modeling of VapC9 and VapC10</title><p>BLASTp search with default parameters was carried out against
+PDB database to identify the suitable templates for construction
+of homology models of VapC9 and VapC10. The search identified
+2FE1 (resolution 2.2 &#197;) and 2H1C (resolution 1.8 &#197;) as the best
+suitable template structures for VapC9 and VapC10, respectively.
+Modeler v9.17 was utilized for the construction of homology
+model of VapC9 and VapC10. The energy minimization of
+constructed 3D models was performed by chimera v1.11.2.</p></sec><sec id="s2g"><title>Model evaluation</title><p>Energy minimized 3D models of VapC9 and VapC10 were
+subjected to various model validation servers to evaluate the
+stereo chemical properties. To determine parameters such as Zscore,
+QMean Score, D-fire Energy and residue by residue
+geometry, energy minimized theoretical models were subjected
+to SWISS-MODEL server [<xref rid="R17" ref-type="bibr">17</xref>]. Various other model evaluation
+tools were also employed, i.e. ERRAT [<xref rid="R18" ref-type="bibr">18</xref>], ProQ [<xref rid="R19" ref-type="bibr">19</xref>], Molprobity
+[<xref rid="R20" ref-type="bibr">20</xref>], RESPROX [<xref rid="R21" ref-type="bibr">21</xref>] and ProSA-web [<xref rid="R22" ref-type="bibr">22</xref>] to determine the model
+quality.</p></sec><sec id="s2h"><title>Active site prediction</title><p>Metapocket 2.0 was employed to determine active site of VapC9
+and VapC10 [<xref rid="R23" ref-type="bibr">23</xref>]. Metapocket uses consensus approach to detect
+ligand-binding sites by employing eight methods:
+LIGSITE, PASS, SURFNET, Fpocket, GHECOM, ConCavity, POC
+ASA and Q-Sitefinder.</p></sec></sec><sec id="s3"><title>Result and Discussion</title><sec id="s3a"><title>PPI network analysis of Mtb TA systems:</title><p>Protein-protein association data of 79 TA systems of Mtb H37Rv
+was extracted from STRING v 10.5. To completely explore the PPI
+data, the search was set to include all the source parameters. The
+mined PPI data was comprised of total 468 PPI's as depicted in
+<xref ref-type="fig" rid="F2">Figure 2</xref>. Manual curation of the PPI data revealed that 63
+proteins out of 468 PPIs possessed &#8805;4 interacting partners in the
+network (Suppl Table 2), whereas 64 proteins were associated
+with only one interacting partner. Two groups of proteins,
+comprising of 20 and 15 proteins were highly connected with
+each member having five and six interacting partners,
+respectively. Notably, two members of VapBC family, i.e.
+antitoxin VapB45 and antitoxin VapB14 were found to possess 8
+interacting partners each. Interestingly, both the toxin and
+antitoxin of VapBC42 were highly connected with each
+possessing 9 interacting partners. Strikingly, antidote HigA1
+possessed the highest number (10) of interacting partners. For 17
+proteins, no PPI information could be extracted from STRING.
+PPI information extracted from STRING v10.5 ranged from
+medium to highest confidence scores. In fact, 84 (~18%) of the
+protein-protein associations fell within highest confidence
+interval (CI, S &gt; 0.9), 176 (37.6%) within high CI (0.7 &#8804; S &lt; 0.9),
+and 208 (44.44%) within medium CI (0.4 &#8804; S &lt; 0.7).</p><p>In addition, topological and functional enrichment analysis of
+input Mtb TA systems was carried out by STRING and 'network
+analyzer' a cytoscape plugin. Network statistics obtained by
+STRING database revealed that the extracted interactome was
+comprised of 167 nodes and 234 edges. The average node degree
+and average local clustering coefficient of the network was
+determined to be 2.8 and 0.628, respectively (<xref ref-type="table" rid="T1">Table 1</xref>). On the
+other hand, 'network analyzer' a cytoscape plugin estimated
+several other topological parameters such as network diameter,
+network radius, shortest path, characteristic path length and
+average number of neighbors (<xref ref-type="table" rid="T1">Table 1</xref>). GO biological process
+and molecular function enrichment analysis of input seed
+sequences was carried out by STRING v10.5. The majority of Mtb
+TA system proteins were significantly enriched in biological
+processes associated with regulation of growth (1.46E-77), nucleic
+acid phosphodiester bond hydrolysis (1.08E-61), RNA
+phosphodiester bond hydrolysis (3.73E-60) and negative
+regulation of growth (2.65e-45, <xref ref-type="table" rid="T2">Table 2</xref>). Furthermore, molecular
+functions of such proteins were primarily related with nuclease
+activity (6.27e-62), ribonuclease activity (7.72e-61), and metal ion
+binding (7.36e-12, <xref ref-type="table" rid="T3">Table 3</xref>). Similar to gene enrichment analysis of
+this study, activation of TA systems leading to growth arrest by
+the toxin partners of VapBC, RelBE, MazEF, and HigBA families
+has also been reported [<xref rid="R03" ref-type="bibr">3</xref>].</p><p>Hub proteins of PPI network represent highly connected nodes
+with special biological properties and are more evolutionary
+conserved than non-hubs. In fact, removal of such hubs can lead
+to network disruption and thus are considered as attractive drug 
+targets [<xref rid="R24" ref-type="bibr">24</xref>, <xref rid="R25" ref-type="bibr">25</xref>]. Identification of hub proteins can be carried out
+by in silico tools such as Hubba, cytohubba, and CHAT etc. [<xref rid="R26" ref-type="bibr">26</xref>, <xref rid="R27" ref-type="bibr">27</xref>]. In the present study, cytohubba was used to explore the hub
+proteins of Mtb TA systems PPI network. The top 15% hub
+proteins were identified on the basis of radiality and betweenness
+algorithms (<xref ref-type="table" rid="T3">Table 3</xref>, <xref ref-type="table" rid="T4">4</xref>). HigA1 and VapB45 antitoxins were
+determined to be the top scorer hub proteins by betweenness and
+radiality method, respectively. Antitoxin HigA1 (Rv1956)
+belonging to HigBA family has been reported among the 10 top
+most upregulated Mtb TA systems of drug tolerant persisters [<xref rid="R03" ref-type="bibr">3</xref>].
+On the other hand, VapB45 (Rv2018) is the antitoxin partner of
+VapC45, but no experimental data is available to elucidate their
+role in Mtb pathogenesis. In addition, we mined the hub proteins
+that were commonly identified by both the algorithms (<xref ref-type="table" rid="T4">Table 4</xref>).
+Notably, majority of the hub proteins identified belonged to the
+VapBC family apart from the members of HigBA and RelBE
+families. VapBC is the largest family of Mtb TA systems
+characterized by the presence of PIN domain and functions
+mostly as ribonucleases [<xref rid="R03" ref-type="bibr">3</xref>, <xref rid="R28" ref-type="bibr">28</xref>]. Interestingly, Rv2762, which was
+not part of input seed proteins, was also detected as a top ranker
+hub protein.</p><p>Antitoxins are reported to be small proteins with less order in
+their structure. Therefore, it is difficult to find druggable pockets
+on their surface that can accommodate small-molecule inhibitors,
+whereas toxins are more stable and ordered in their structure,
+and are also considered as attractive targets for drug-design [<xref rid="R28" ref-type="bibr">28</xref>].
+Therefore, we focused to elucidate the structural insight of toxins
+identified by in silico analysis. It was found that 5 out of 10 top
+ranking hub proteins were antitoxins, i.e. higA1, VapB45,
+VapB14, VapB11 and RelB, whereas three proteins were toxins,
+i.e. VapC1, VapC9 and VapC10. Since the structure of VapBC1 is
+available at PDB, we focused to determine the structural insights
+of VapC9 and VapC10 proteins. Domain identification tools used
+in the study, i.e NCBI CDD, Pfam and InterProscan revealed the
+presence of PIN domain in both VapC9 and VapC10. In fact, PIN
+domains are small protein domains of ~130 amino acids, which
+are characterized by the presence of three invariant amino acid
+residues and fourth lesser-conserved acidic residue [<xref rid="R03" ref-type="bibr">3</xref>, <xref rid="R29" ref-type="bibr">29</xref>].
+Physicochemical properties were computed by protparam tool of
+ExPASy for VapC9 and VapC10 (<xref ref-type="table" rid="T5">Table 5</xref>). Protein BLAST was
+carried out against PDB database to identify homologs with
+resolved 3D structure for structure prediction of VapC9 and
+VapC10. The crystal structure of PAE0151 from Pyrobaculum
+aerophilum (2FE1) was selected as the best suitable template on
+the basis of maximum query coverage (100%) and maximum
+identity (79%) for input VapC9 protein sequence (<xref ref-type="fig" rid="F3">Figure 3</xref>). In a
+similar manner, crystal Structure of Fitacb from Neisseria
+gonorrhoeae (2H1C) was chosen as the best template structure for
+the development of homology model of VapC10 based on
+maximum sequence coverage (81%) and maximum sequence
+identity (32%) (<xref ref-type="fig" rid="F4">Figure 4</xref>). Five theoretical models generated for
+each protein by Modeler v9.17 were assessed on the basis of 
+DOPE score and GA341 score. The model with highest GA341
+score and lowest DOPE score was selected and was further
+subjected to energy minimization by Chimera v1.11.2.</p><p>Theoretical models of VapC9 and VapC10 were subjected to
+various structural validation servers to assess the correctness of
+the models. Ramachandran plot obtained for VapC9 by
+PROCHECK of swiss model server revealed that 93 % of amino
+acid residues were present in most favored regions, 6.1% in
+additionally allowed regions and 0. 9 % in generously allowed
+regions (<xref ref-type="table" rid="T6">Table 6</xref>). On the other hand, Ramachandran plot for
+VapC10 showed that 84.5 % residues were present in the most
+favored region, 12.9 % in additionally allowed region and 2.6 %
+in generously allowed region (<xref ref-type="table" rid="T6">Table 6</xref>). Notably, for both the
+generated models, none of the amino acid residues was observed
+in the disallowed region. Overall G-factor score computed for
+VapC9 and VapC10 by swiss model server fell in the acceptable
+cut-off range. In addition, Z-score, Q-mean score and D-fire score
+were also estimated by swiss model server, which further
+confirmed the reliability of the models generated (<xref ref-type="table" rid="T6">Table 6</xref>). The
+overall quality factor score obtained after ERRAT analysis was
+97.3 % for VapC9 and 93.5 % for VapC10. Prosa web Z score for
+VapC9 and VapC10 was -4.07 and -3.64 respectively, thereby
+suggesting that the structures are of good quality (<xref ref-type="table" rid="T6">Table 6</xref>).
+Predicted resolution by resprox along with LG and Maxsub score
+determined by ProQ also indicated the reliability of 3D models.
+In addition, MOLPROBITY revealed that none of the residue
+possessed bad bonds or &#946; deviations &gt; 0.25A (<xref ref-type="table" rid="T6">Table 6</xref>). The 3D
+models generated in the study were of reliable quality as assessed
+by various structural assessment reports such as PROCHECK of
+swiss model server, ERRAT, ProSA-web, ProQ, MOLPROBITY
+and ResProx. In addition, active site of VapC9 and VapC10 was
+identified by Metapocket v2.0. The generated homology models
+and active site determined by metapocket v2.0 of VapC9 and
+VapC10, respectively are shown (<xref ref-type="fig" rid="F5">Figure 5A, B</xref>, <xref ref-type="fig" rid="F6">Figure 6A, B</xref>). The
+developed models can be used for structure based drug
+designing.</p></sec></sec><sec id="s4"><title>Conclusion</title><p>We reported the construction and extensive analysis of PPI
+network of 79 Mtb TA systems. Our computational analysis
+revealed significantly enriched gene ontology terms for pathways
+and molecular functions of Mtb TA systems and topological
+properties of PPI network. The major contribution is the
+identification of hub proteins of PPI network that can be explored
+as promising drug targets and for vaccine development. In
+addition, homology models of hub proteins VapC9 and VapC10
+provide insights to its molecular functions.</p></sec></body><back><ack><p>ZT acknowledges UGC-BSR for providing senior research
+fellowship. RD acknowledges MD University for providing
+University research scholarship. The work was supported by
+Department of Biotechnology (DBT), Govt. of India, New Delhi
+(BT/PR5641/MED/29/557/2012) and DBT-Bioinformatics
+Facility, MDU, Rohtak.</p></ack><fn-group><fn id="FN" fn-type="other"><p><bold>Citation: </bold>Thakur et al. Bioinformation 13(11) 380-387 (2017)</p></fn></fn-group><ref-list><title>References</title><ref id="R01"><label>1</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Lin</surname><given-names>W</given-names></name><etal/></person-group><source>Infect Immun</source><year>2016</year><volume>84</volume><fpage>2505</fpage><?supplied-pmid 27324481?><pub-id pub-id-type="pmid">27324481</pub-id></element-citation></ref><ref id="R02"><label>2</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Tiwari</surname><given-names>P</given-names></name><etal/></person-group><source>Nat Commun</source><year>2015</year><volume>6</volume><fpage>6059</fpage><?supplied-pmid 25608501?><pub-id pub-id-type="pmid">25608501</pub-id></element-citation></ref><ref id="R03"><label>3</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Sala</surname><given-names>A</given-names></name><etal/></person-group><source>Toxins (Basel)</source><year>2014</year><volume>6</volume><fpage>1002</fpage><?supplied-pmid 24662523?><pub-id pub-id-type="pmid">24662523</pub-id></element-citation></ref><ref id="R04"><label>4</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Kedzierska</surname><given-names>B</given-names></name><name><surname>Hayes</surname><given-names>F</given-names></name></person-group><source>Molecules</source><year>2016</year><volume>21</volume><fpage>E790</fpage><?supplied-pmid 27322231?><pub-id pub-id-type="pmid">27322231</pub-id></element-citation></ref><ref id="R05"><label>5</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Wang</surname><given-names>Y</given-names></name><etal/></person-group><source>J Proteome Res</source><year>2010</year><volume>9</volume><fpage>6665</fpage><?supplied-pmid 20973567?><pub-id pub-id-type="pmid">20973567</pub-id></element-citation></ref><ref id="R06"><label>6</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Nguyen</surname><given-names>CD</given-names></name><etal/></person-group><source>J Biomed Inform</source><year>2011</year><volume>44</volume><fpage>824</fpage><?supplied-pmid 21571095?><pub-id pub-id-type="pmid">21571095</pub-id></element-citation></ref><ref id="R07"><label>7</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Huo</surname><given-names>T</given-names></name><etal/></person-group><source>BMC Bioinformatics</source><year>2015</year><volume>16</volume><fpage>100</fpage><?supplied-pmid 25887594?><pub-id pub-id-type="pmid">25887594</pub-id></element-citation></ref><ref id="R08"><label>8</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Rao</surname><given-names>VS</given-names></name><etal/></person-group><source>Int J Proteomics</source><year>2014</year><volume>2014</volume><fpage>147648</fpage><?supplied-pmid 24693427?><pub-id pub-id-type="pmid">24693427</pub-id></element-citation></ref><ref id="R09"><label>9</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Szklarczyk</surname><given-names>D</given-names></name><etal/></person-group><source>Nucleic Acids Res</source><year>2015</year><volume>43</volume><fpage>D447</fpage><?supplied-pmid 25352553?><pub-id pub-id-type="pmid">25352553</pub-id></element-citation></ref><ref id="R10"><label>10</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Su</surname><given-names>G</given-names></name><etal/></person-group><source>Curr Protoc Bioinforma</source><year>2014</year><?supplied-pmid 25199793?><pub-id pub-id-type="pmid">25199793</pub-id></element-citation></ref><ref id="R11"><label>11</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Chin</surname><given-names>CH</given-names></name><etal/></person-group><source>BMC Syst Biol</source><year>2014</year><volume>8</volume><fpage>S11</fpage><?supplied-pmid 25521941?><pub-id pub-id-type="pmid">25521941</pub-id></element-citation></ref><ref id="R12"><label>12</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Lew</surname><given-names>JM</given-names></name><etal/></person-group><source>Tuberculosis (Edinb)</source><year>2011</year><volume>91</volume><fpage>1</fpage><?supplied-pmid 20980199?><pub-id pub-id-type="pmid">20980199</pub-id></element-citation></ref><ref id="R13"><label>13</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Finn</surname><given-names>RD</given-names></name><etal/></person-group><source>Nucleic Acids Res</source><year>2017</year><volume>45</volume><fpage>D190</fpage><?supplied-pmid 27899635?><pub-id pub-id-type="pmid">27899635</pub-id></element-citation></ref><ref id="R14"><label>14</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Finn</surname><given-names>RD</given-names></name><etal/></person-group><source>Nucleic Acids Res</source><year>2016</year><volume>44</volume><fpage>D279</fpage><?supplied-pmid 26673716?><pub-id pub-id-type="pmid">26673716</pub-id></element-citation></ref><ref id="R15"><label>15</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Marchler-Bauer</surname><given-names>A</given-names></name><etal/></person-group><source>Nucleic Acids Res</source><year>2017</year><volume>45</volume><fpage>D200</fpage><?supplied-pmid 27899674?><pub-id pub-id-type="pmid">27899674</pub-id></element-citation></ref><ref id="R16"><label>16</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Wilkins</surname><given-names>MR</given-names></name><etal/></person-group><source>Methods Mol Biol</source><year>2005</year><volume>112</volume><fpage>531</fpage><?supplied-pmid 10027275?><pub-id pub-id-type="pmid">10027275</pub-id></element-citation></ref><ref id="R17"><label>17</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Arnold</surname><given-names>K</given-names></name><etal/></person-group><source>Bioinformatics</source><year>2006</year><volume>22</volume><fpage>195</fpage><?supplied-pmid 16301204?><pub-id pub-id-type="pmid">16301204</pub-id></element-citation></ref><ref id="R18"><label>18</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Colovos</surname><given-names>C</given-names></name><name><surname>Yeates</surname><given-names>TO</given-names></name></person-group><source>Protein Sci</source><year>1993</year><volume>2</volume><fpage>1511</fpage><?supplied-pmid 8401235?><pub-id pub-id-type="pmid">8401235</pub-id></element-citation></ref><ref id="R19"><label>19</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Wallner</surname><given-names>B</given-names></name><name><surname>Elofsson</surname><given-names>A</given-names></name></person-group><source>Protein Sci</source><year>2003</year><volume>12</volume><fpage>1073</fpage><?supplied-pmid 12717029?><pub-id pub-id-type="pmid">12717029</pub-id></element-citation></ref><ref id="R20"><label>20</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Chen</surname><given-names>VB</given-names></name><etal/></person-group><source>Acta Crystallogr Sect D Biol Crystallogr</source><year>2010</year><volume>66</volume><fpage>12</fpage><?supplied-pmid 20057044?><pub-id pub-id-type="pmid">20057044</pub-id></element-citation></ref><ref id="R21"><label>21</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Berjanskii</surname><given-names>M</given-names></name><etal/></person-group><source>J Biomol NMR</source><year>2012</year><volume>53</volume><fpage>167</fpage><?supplied-pmid 22678091?><pub-id pub-id-type="pmid">22678091</pub-id></element-citation></ref><ref id="R22"><label>22</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Wiederstein</surname><given-names>M</given-names></name><name><surname>Sippl</surname><given-names>MJ</given-names></name></person-group><source>Nucleic Acids Res</source><year>2007</year><volume>35</volume><fpage>W407</fpage><?supplied-pmid 17517781?><pub-id pub-id-type="pmid">17517781</pub-id></element-citation></ref><ref id="R23"><label>23</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Huang</surname><given-names>B</given-names></name></person-group><source>J Integr Biol</source><year>2009</year><volume>13</volume><fpage>325</fpage><?supplied-pmid 19645590?><pub-id pub-id-type="pmid">19645590</pub-id></element-citation></ref><ref id="R24"><label>24</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Vallabhajosyula</surname><given-names>RR</given-names></name><etal/></person-group><source>PLoS One</source><year>2009</year><volume>4</volume><fpage>e5344</fpage><?supplied-pmid 19399170?><pub-id pub-id-type="pmid">19399170</pub-id></element-citation></ref><ref id="R25"><label>25</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Li</surname><given-names>Z</given-names></name><etal/></person-group><source>Nat Commun</source><year>2017</year><volume>8</volume><fpage>14356</fpage><?supplied-pmid 28205554?><pub-id pub-id-type="pmid">28205554</pub-id></element-citation></ref><ref id="R26"><label>26</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Muetze</surname><given-names>T</given-names></name><etal/></person-group><source>F1000 Research</source><year>2016</year><volume>5</volume><fpage>1745</fpage><?supplied-pmid 27853512?><pub-id pub-id-type="pmid">27853512</pub-id></element-citation></ref><ref id="R27"><label>27</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Lin</surname><given-names>CY</given-names></name><etal/></person-group><source>Nucleic Acids Res</source><year>2008</year><volume>36</volume><fpage>W438</fpage><?supplied-pmid 18503085?><pub-id pub-id-type="pmid">18503085</pub-id></element-citation></ref><ref id="R28"><label>28</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Lee</surname><given-names>IG</given-names></name><etal/></person-group><source>Nucleic Acids Res</source><year>2015</year><volume>43</volume><fpage>7624</fpage><?supplied-pmid 26150422?><pub-id pub-id-type="pmid">26150422</pub-id></element-citation></ref><ref id="R29"><label>29</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Arcus</surname><given-names>VL</given-names></name><etal/></person-group><source>Trends Microbiol</source><year>2005</year><volume>13</volume><fpage>360</fpage><?supplied-pmid 15993073?><pub-id pub-id-type="pmid">15993073</pub-id></element-citation></ref></ref-list><glossary><title>Abbreviations</title><def-list id="ABB1"><def-item><term>TA</term><def><p>Toxin-antitoxin</p></def></def-item><def-item><term>Mtb</term><def><p>Mycobacterium tuberculosis</p></def></def-item><def-item><term>GO</term><def><p>Gene ontology</p></def></def-item><def-item><term>PPI</term><def><p>Protein-protein interaction</p></def></def-item></def-list></glossary></back><floats-group><table-wrap id="T1" position="float"><label>Table 1</label><caption><title>Topological parameters of PPI network determined by STRING v10.5 and Network analyzer plugin of cytoscape 3.5.0.</title></caption></table-wrap><table-wrap id="T2" position="float"><label>Table 2</label><caption><title>GO biological pathway enrichment analysis of PPI network for 79 MTb TA systems.</title></caption></table-wrap><table-wrap id="T3" position="float"><label>Table 3</label><caption><title>GO molecular function enrichment of PPI network for 79 MTb TA systems revealed over-representation of 11 GO ontology terms.</title></caption></table-wrap><table-wrap id="T4" position="float"><label>Table 4</label><caption><title>List of top 15% hub proteins identified in PPI network of Mtb TA systems by consensus of betweenness and radiality statistical measures.</title></caption></table-wrap><table-wrap id="T5" position="float"><label>Table 5</label><caption><title>Physico-chemical properties of VapC9 and VapC10. </title></caption></table-wrap><table-wrap id="T6" position="float"><label>Table 6</label><caption><title>Model evaluation scores of VapC9 and VapC10.</title></caption></table-wrap><fig id="F1" position="float"><label>Figure 1</label><caption><p>A flowchart representing the methodology applied in
+the study; arrows represent flow of information and transition
+from one step to another</p></caption><graphic xlink:href="97320630013380F1"/></fig><fig id="F2" position="float"><label>Figure 2</label><caption><p>Protein-protein interaction network obtained and visualized by STRING v10.5 for input 79 Mtb TA systems. Nodes depict
+proteins and PPI are represented by edges in the network; interaction source of the PPI's are represented by various colors.</p></caption><graphic xlink:href="97320630013380F2"/></fig><fig id="F3" position="float"><label>Figure 3</label><caption><p>Sequence alignment of VapC9 with 2FE1_A obtained by PRALINE. Red color represents helix and blue color represents
+strand predicted by DSSP and PSIPRED.</p></caption><graphic xlink:href="97320630013380F3"/></fig><fig id="F4" position="float"><label>Figure 4</label><caption><p>Sequence alignment of VapC10 with 2H1C_A obtained by PRALINE. Red color represents helix and blue color represents
+strand predicted by DSSP and PSIPRED.</p></caption><graphic xlink:href="97320630013380F4"/></fig><fig id="F5" position="float"><label>Figure 5</label><caption><p>(A) 3D model of VapC9 built by Modeler 9.17 and energy optimized by Chimera v1.11.2. (B) Active site of VapC9 determined
+by Metapocket v2.0; active site residues are labeled with amino acid identifier and residue number.</p></caption><graphic xlink:href="97320630013380F5"/></fig><fig id="F6" position="float"><label>Figure 6</label><caption><p>(A) 3D model of VapC10 constructed by Modeller 9.17 and energy optimized by Chimera v1.11.2. (B) Active site of VapC10
+determined by Metapocket v2.0; active site residues are labeled with amino acid identifier and residue number.</p></caption><graphic xlink:href="97320630013380F6"/></fig></floats-group></article>

@@ -1,0 +1,545 @@
+
+<article xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML" article-type="research-article"><?properties open_access?><?DTDIdentifier.IdentifierValue -//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD v1.1 20151215//EN?><?DTDIdentifier.IdentifierType public?><?SourceDTD.DTDName JATS-archivearticle1.dtd?><?SourceDTD.Version 1.1?><?ConverterInfo.XSLTName jp2nlmx2.xsl?><?ConverterInfo.Version 1?><front><journal-meta><journal-id journal-id-type="nlm-ta">PLoS One</journal-id><journal-id journal-id-type="iso-abbrev">PLoS ONE</journal-id><journal-id journal-id-type="publisher-id">plos</journal-id><journal-id journal-id-type="pmc">plosone</journal-id><journal-title-group><journal-title>PLoS ONE</journal-title></journal-title-group><issn pub-type="epub">1932-6203</issn><publisher><publisher-name>Public Library of Science</publisher-name><publisher-loc>San Francisco, USA</publisher-loc></publisher></journal-meta><article-meta><article-id pub-id-type="pmcid">4139341</article-id><article-id pub-id-type="pmid">25141174</article-id><article-id pub-id-type="publisher-id">PONE-D-14-19565</article-id><article-id pub-id-type="doi">10.1371/journal.pone.0105196</article-id><article-categories><subj-group subj-group-type="heading"><subject>Research Article</subject></subj-group><subj-group subj-group-type="Discipline-v2"><subject>Biology and Life Sciences</subject><subj-group><subject>Biochemistry</subject><subj-group><subject>Enzymology</subject><subj-group><subject>Enzyme Kinetics</subject></subj-group></subj-group><subj-group><subject>Biochemical Simulations</subject></subj-group></subj-group><subj-group><subject>Biophysics</subject><subj-group><subject>Biophysical Simulations</subject></subj-group></subj-group><subj-group><subject>Computational Biology</subject></subj-group></subj-group><subj-group subj-group-type="Discipline-v2"><subject>Medicine and Health Sciences</subject><subj-group><subject>Mental Health and Psychiatry</subject><subj-group><subject>Dementia</subject><subj-group><subject>Alzheimer Disease</subject></subj-group></subj-group></subj-group><subj-group><subject>Neurology</subject><subj-group><subject>Neurodegenerative Diseases</subject></subj-group></subj-group></subj-group></article-categories><title-group><article-title><SecTag type="TITLE"><text><SENT sid="0" pm="."><plain>Molecular Investigations of Protriptyline as a Multi-Target Directed Ligand in Alzheimer's Disease </plain></SENT>
+</text></SecTag></article-title><alt-title alt-title-type="running-head">Protriptyline as a MTDL for AD</alt-title></title-group><contrib-group><contrib contrib-type="author"><name><surname>Bansode</surname><given-names>Sneha B.</given-names></name><xref ref-type="aff" rid="aff1">
+<sup>1</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Jana</surname><given-names>Asis K.</given-names></name><xref ref-type="aff" rid="aff2">
+<sup>2</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Batkulwar</surname><given-names>Kedar B.</given-names></name><xref ref-type="aff" rid="aff1">
+<sup>1</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Warkad</surname><given-names>Shrikant D.</given-names></name><xref ref-type="aff" rid="aff1">
+<sup>1</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Joshi</surname><given-names>Rakesh S.</given-names></name><xref ref-type="aff" rid="aff1">
+<sup>1</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Sengupta</surname><given-names>Neelanjana</given-names></name><xref ref-type="aff" rid="aff2">
+<sup>2</sup>
+</xref><xref ref-type="corresp" rid="cor1">
+<sup>*</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Kulkarni</surname><given-names>Mahesh J.</given-names></name><xref ref-type="aff" rid="aff1">
+<sup>1</sup>
+</xref><xref ref-type="corresp" rid="cor1">
+<sup>*</sup>
+</xref></contrib></contrib-group><aff id="aff1">
+<label>1</label>
+<addr-line>Proteomics Facility, Division of Biochemical Sciences, CSIR-National Chemical Laboratory, Pune, India</addr-line>
+</aff><aff id="aff2">
+<label>2</label>
+<addr-line>Physical Chemistry Division, CSIR-National Chemical Laboratory, Pune, India</addr-line>
+</aff><contrib-group><contrib contrib-type="editor"><name><surname>Lakshmana</surname><given-names>Madepalli K.</given-names></name><role>Editor</role><xref ref-type="aff" rid="edit1"/></contrib></contrib-group><aff id="edit1">
+<addr-line>Torrey Pines Institute for Molecular Studies, United States of America</addr-line>
+</aff><author-notes><corresp id="cor1">* E-mail: <email>mj.kulkarni@ncl.res.in</email> (MJK); <email>n.sengupta@ncl.res.in</email> (NS)</corresp><fn fn-type="COI-statement"><p><text><SENT sid="1" pm="."><plain>Competing Interests: The authors have declared that no competing interests exist. </plain></SENT>
+</text></p></fn><fn fn-type="con"><p><text><SENT sid="2" pm="."><plain>Conceived and designed the experiments: SBB MJK NS. </plain></SENT>
+<SENT sid="3" pm="."><plain>Performed the experiments: SBB AKJ KBB SDW RSJ. </plain></SENT>
+<SENT sid="4" pm="."><plain>Analyzed the data: SBB AKS NS MJK. </plain></SENT>
+<SENT sid="5" pm="."><plain>Contributed reagents/materials/analysis tools: MJK NS. </plain></SENT>
+<SENT sid="6" pm="."><plain>Contributed to the writing of the manuscript: SBB NS MJK. </plain></SENT>
+</text></p></fn></author-notes><pub-date pub-type="collection"><year>2014</year></pub-date><pub-date pub-type="epub"><day>20</day><month>8</month><year>2014</year></pub-date><volume>9</volume><issue>8</issue><elocation-id>e105196</elocation-id><history><date date-type="received"><day>1</day><month>5</month><year>2014</year></date><date date-type="accepted"><day>18</day><month>7</month><year>2014</year></date></history><permissions><copyright-statement>© 2014 Bansode et al</copyright-statement><copyright-year>2014</copyright-year><copyright-holder>Bansode et al</copyright-holder><license xlink:href="http://creativecommons.org/licenses/by/4.0/"><license-p>This is an open-access article distributed under the terms of the Creative Commons Attribution License, which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are properly credited.</license-p></license></permissions><abstract><p><SecTag type="ABS"><text><SENT sid="7" pm="."><plain>Alzheimer's disease (AD) is a complex neurodegenerative disorder involving multiple cellular and molecular processes. </plain></SENT>
+<SENT sid="8" pm="."><plain>The discovery of drug molecules capable of targeting multiple factors involved in AD pathogenesis would greatly facilitate in improving therapeutic strategies. </plain></SENT>
+<SENT sid="9" pm="."><plain>The repositioning of existing non-toxic drugs could dramatically reduce the time and costs involved in developmental and clinical trial stages. </plain></SENT>
+<SENT sid="10" pm="."><plain>In this study, preliminary screening of 140 FDA approved nervous system drugs by docking suggested the viability of the tricyclic group of antidepressants against three major AD targets, viz. </plain></SENT>
+<SENT sid="11" pm="."><plain>Acetylcholinesterase (AChE), β-secretase (BACE-1), and amyloid β (Aβ) aggregation, with one member, protriptyline, showing highest inhibitory activity. </plain></SENT>
+<SENT sid="12" pm="."><plain>Detailed biophysical assays, together with isothermal calorimetry, fluorescence quenching experiments, kinetic studies and atomic force microscopy established the strong inhibitory activity of protriptyline against all three major targets. </plain></SENT>
+<SENT sid="13" pm="."><plain>The molecular basis of inhibition was supported with comprehensive molecular dynamics simulations. </plain></SENT>
+<SENT sid="14" pm="."><plain>Further, the drug inhibited glycation induced amyloid aggregation, another important causal factor in AD progression. </plain></SENT>
+<SENT sid="15" pm="."><plain>This study has led to the discovery of protriptyline as a potent multi target directed ligand and established its viability as a promising candidate for AD treatment. </plain></SENT>
+</text></SecTag></p></abstract><funding-group><funding-statement>This work was supported by CSIR Network project, BSC0115. The funders had no role in study design, data collection and analysis, decision to publish, or preparation of the manuscript.</funding-statement></funding-group><counts><page-count count="14"/></counts><custom-meta-group><custom-meta id="data-availability"><meta-name>Data Availability</meta-name><meta-value>The authors confirm that all data underlying the findings are fully available without restriction. All relevant data are within the paper and its Supporting Information files.</meta-value></custom-meta></custom-meta-group></article-meta><notes><title>Data Availability</title><p>The authors confirm that all data underlying the findings are fully available without restriction. All relevant data are within the paper and its Supporting Information files.</p></notes></front><body><SecTag type="INTRO"><sec id="s1"><title><text><SENT sid="16" pm="."><plain>Introduction </plain></SENT>
+</text></title><p><text><SENT sid="17" pm="."><plain>Alzheimer's disease (AD) is the foremost cause of dementia in the ageing population affecting over 35 million people worldwide. </plain></SENT>
+<SENT sid="18" pm="."><plain>According to World Alzheimer Report 2013, this number is expected to increase by two fold in 2030. </plain></SENT>
+<SENT sid="19" pm="."><plain>AD is a progressive neurodegenerative disorder that leads to the irreversible loss of neurons, intellectual abilities and eventually to death within a decade of diagnosis. </plain></SENT>
+<SENT sid="20" pm="."><plain>Although the molecular bases of AD pathogenesis remains incompletely elucidated, the disease has been recognized as a multifactorial syndrome involving various molecular and cellular processes such as protein aggregation, oxidative stress, cell cycle deregulation and neuroinflammation [1]. </plain></SENT>
+</text></p><p><text><SENT sid="21" pm="."><plain>There are currently several plausible hypotheses for AD pathogenesis. </plain></SENT>
+<SENT sid="22" pm="."><plain>Cholinergic hypothesis states that the reduced cholinergic neurotransmission leads to the degeneration of cholinergic neurons and hence synaptic failure and cognitive dysfunction [2]. </plain></SENT>
+<SENT sid="23" pm="."><plain>Following this, Acetylcholinesterase (AChE) was validated as a therapeutic target to reduce the degradation of acetylcholine in the synapse. </plain></SENT>
+<SENT sid="24" pm="."><plain>AChE inhibitors (AChEIs) are effective in temporarily restoring cholinergic function, and constitute the majority of AD drugs currently available in the market [3]. </plain></SENT>
+<SENT sid="25" pm="."><plain>However, they are incapable of delaying or preventing neurodegeneration [4], [5]. </plain></SENT>
+</text></p><p><text><SENT sid="26" pm="."><plain>A variety of biochemical, genetic and pathological studies describe pivotal roles of the Amyloid β (Aβ) peptide in the pathogenesis of AD. “Amyloid hypothesis,” describes the altered synthesis, aggregation and accumulation of Aβ which results in amyloid plaque formation [6]. </plain></SENT>
+<SENT sid="27" pm="."><plain>While extracellular deposits of amyloid plaques are highly neurotoxic, recent studies have also implicated soluble, oligomeric aggregates of Aβ in neurotoxicity [7]. </plain></SENT>
+<SENT sid="28" pm="."><plain>Therefore, a key therapeutic strategy for the treatment of AD involves the development of drugs targeted at inhibiting Aβ production, aggregation, destabilization and clearance of preformed fibrils [8]. </plain></SENT>
+<SENT sid="29" pm="."><plain>A crucial step in Aβ production is the specific N-terminal enzymatic cleavage of the membrane embedded Amyloid Precursor Protein (APP) by the transmembrane aspartyl protease, β-secretase (BACE-1) [9]–[12]. </plain></SENT>
+<SENT sid="30" pm="."><plain>Therefore, inhibiting BACE-1 has been considered as another attractive approach to prevent Aβ neurotoxicity. </plain></SENT>
+<SENT sid="31" pm="."><plain>It is noteworthy that no inhibitors of Aβ aggregation or BACE-1 activity have reached the market yet, despite strong evidence of the causative roles of Aβ in AD. </plain></SENT>
+</text></p><p><text><SENT sid="32" pm="."><plain>We further point out that Aβ is transported through a Receptor for Advanced Glycation End products (RAGE) and cause neuronal damage. </plain></SENT>
+<SENT sid="33" pm="."><plain>Long-lived proteins are preferentially modified to form Advanced Glycation End products (AGE), and the stability of Aβ makes it an ideal substrate for non-enzymatic glycation and formation of AGEs [13]. </plain></SENT>
+<SENT sid="34" pm="."><plain>In a recent study, it has been shown that Aβ-AGE formation may intensify the neurotoxicity whereas inhibition of this process significantly rescued the early cognitive deficit in mice [14]. </plain></SENT>
+<SENT sid="35" pm="."><plain>Therefore, glycated Aβ has been considered as a more suitable ligand for RAGE, as it aggravates neuronal deterioration [14]. </plain></SENT>
+<SENT sid="36" pm="."><plain>Hence inhibiting glycation of Aβ may be a valuable therapeutic strategy for AD. </plain></SENT>
+<SENT sid="37" pm="."><plain>However, there has been no concerted effort to explore the inhibition of Aβ glycation as a therapeutic strategy. </plain></SENT>
+</text></p><p><text><SENT sid="38" pm="."><plain>Efforts to target AChE inhibition [15]; Aβ production [16]; Aβ aggregation [17]; tau phosphorylation and aggregation [18] have been investigated largely in isolation, despite the complex nature of AD etiology. </plain></SENT>
+<SENT sid="39" pm="."><plain>Recently, drug discovery in AD has gradually inclined towards development of “multi-target-directed ligands” (MTDLs) [19]–[22] which are efficient in treating complex diseases because of their ability to target multiple modes of disease pathogenesis. </plain></SENT>
+<SENT sid="40" pm="."><plain>Further, to evaluate MTDLs for the AD treatment, “drug repositioning” seems to be an appealing strategy, as this approach has several advantages, including reduced time and cost necessary for clinical trials23. </plain></SENT>
+<SENT sid="41" pm="."><plain>Priority candidate drugs for hypertension, retinoid therapy, diabetes and antibiotics with sufficient supporting evidences have been considered for repositioning in AD [23]. </plain></SENT>
+<SENT sid="42" pm="."><plain>However, to the best of our knowledge, repositioning drugs for multiple targets in AD is scarce. </plain></SENT>
+<SENT sid="43" pm="."><plain>In this study, an in silico screening of 140 FDA approved drugs for neurological treatment was done against the primary targets of AD therapeutics, namely, acetylcholinesterase, BACE-1, and Aβ aggregation. </plain></SENT>
+<SENT sid="44" pm="."><plain>Further in vitro studies showed that amongst selected molecules, the tricyclic antidepressant protriptyline exhibited significant inhibition of AChE, as well as inhibition of other targets of AD. </plain></SENT>
+<SENT sid="45" pm="."><plain>In addition, protriptyline was also found to inhibit glycation mediated Aβ aggregation. </plain></SENT>
+<SENT sid="46" pm="."><plain>Mechanistic insights into protriptyline binding and inhibition of AChE, Aβ, and BACE-1 activity were described in detail with molecular dynamics simulation studies. </plain></SENT>
+</text></p></sec></SecTag><SecTag type="RESULTS,DISCUSS"><sec id="s2"><title><text><SENT sid="47" pm="."><plain>Results and Discussion </plain></SENT>
+</text></title><sec id="s2a"><title><text><SENT sid="48" pm="."><plain>Tricyclic Antidepressant Drugs Display Strong Binding against Various Targets of AD In silico </plain></SENT>
+</text></title><p><text><SENT sid="49" pm="."><plain>Multi-target-directed ligands (MTDLs) are likely to offer promising approaches for treatment of a disease as complex as AD [19]-[21]. </plain></SENT>
+<SENT sid="50" pm="."><plain>The structures of 140 ligands were docked with the major targets of AD viz. </plain></SENT>
+<SENT sid="51" pm="."><plain>AChE, BACE-1 and Aβ aggregation. </plain></SENT>
+<SENT sid="52" pm="."><plain>Ligands were scored based on electrostatic and hydrophobic contributions to the binding energy [24]. </plain></SENT>
+<SENT sid="53" pm="."><plain>Furthermore, polar interactions were considered by H-bonding interactions analysis. </plain></SENT>
+<SENT sid="54" pm="."><plain>Docking scores were used to rank ligands, depending on presence of number of H-bond donors and acceptors within the active sites [25]. </plain></SENT>
+<SENT sid="55" pm="."><plain>Binding energy scores represented in the Heatmap ( Figure 1A ) displayed variability in interactions of the ligands to the three targets of AD. </plain></SENT>
+<SENT sid="56" pm="."><plain>There were several ligands that showed noteworthy interaction with at least two targets, but only few of them had strong interaction with all the targets. </plain></SENT>
+<SENT sid="57" pm="."><plain>It was observed that five antidepressant drugs protriptyline, amytriptyline, maprotiline, doxepin and nortriptyline, which are tricyclic secondary amines showed strong binding affinity and broad specificity toward multiple targets of AD ( Figure 1B ). </plain></SENT>
+</text></p><SecTag type="FIG"><fig id="pone-0105196-g001" orientation="portrait" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0105196.g001</object-id><label>Figure 1</label><caption><title><text><SENT sid="58" pm="."><plain>Virtual screening by docking. </plain></SENT>
+</text></title><p><text><SENT sid="59" pm="."><plain>A. </plain></SENT>
+<SENT sid="60" pm="."><plain>Heat map analysis of binding constants of 140 FDA approved nervous system drugs screened against Aβ, AChE and β-secretase by Autodock tool 4.2. </plain></SENT>
+<SENT sid="61" pm="."><plain>In the gradient ruler, red colour indicated strong binding (ΔG&lt;−6 kcal/mol), while green colour indicate weak binding (ΔG&gt;−3 kcal/mol) and the five drugs showing higher affinity to all the above mentioned targets were zoomed. B. </plain></SENT>
+<SENT sid="62" pm="."><plain>Chemical structures of the five drugs. </plain></SENT>
+<SENT sid="63" pm="."><plain>All are tricyclic anti-depressant drugs. </plain></SENT>
+</text></p></caption><graphic xlink:href="pone.0105196.g001"/></fig></SecTag></sec><sec id="s2b"><title><text><SENT sid="64" pm="."><plain>Protriptyline Inhibits AChE Activity by Inducing Conformational Change in the Active Site </plain></SENT>
+</text></title><p><text><SENT sid="65" pm="."><plain>AChE currently remains the foremost therapeutic target for AD and the current treatment and management of AD mainly involves use of acetylcholinesterase inhibitors [4], [5]. </plain></SENT>
+<SENT sid="66" pm="."><plain>Therefore, protriptyline, amitryptyline, maprotiline, doxepin and nortriptyline were assessed initially against AChE inhibition. </plain></SENT>
+<SENT sid="67" pm="."><plain>While all the five drugs displayed inhibitory activity against this target ( Figure 2A ), protriptyline displayed highest inhibition, with the least IC50 of about 0.06 mM. </plain></SENT>
+<SENT sid="68" pm="."><plain>In comparison, the other ligands displayed relatively higher IC50 values; the values corresponding to maprotiline, doxepin, nortriptyline and amitriptyline were 0.1 mM, 0.480 mM, 0.135 mM and 0.6 mM, respectively. </plain></SENT>
+<SENT sid="69" pm="."><plain>Hence, the inhibitory activity of protriptyline against the other targets of AD was evaluated in detail in the remaining study. </plain></SENT>
+</text></p><SecTag type="FIG"><fig id="pone-0105196-g002" orientation="portrait" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0105196.g002</object-id><label>Figure 2</label><caption><title><text><SENT sid="70" pm="."><plain>Protriptyline inhibits AChE activity. </plain></SENT>
+</text></title><p><text><SENT sid="71" pm="."><plain>A. </plain></SENT>
+<SENT sid="72" pm="."><plain>Determination of IC50 values of five drugs for AChE by using 0.05–0.8 mM concentration range of all the drugs B. </plain></SENT>
+<SENT sid="73" pm="."><plain>Estimation of the kinetic constants by Lineweaver–Burk analysis. </plain></SENT>
+<SENT sid="74" pm="."><plain>AChE inhibition by protriptyline showed competitive inhibition. C. </plain></SENT>
+<SENT sid="75" pm="."><plain>Isothermal Titration Calorimetric analysis of protriptyline – AChE interactions. </plain></SENT>
+<SENT sid="76" pm="."><plain>The upper panel shows the raw data in the form of heat effect during titration and the lower panel shows corresponding thermogram representing the best fit curve D. </plain></SENT>
+<SENT sid="77" pm="."><plain>Snapshot of drug binding with catalytic subsite of AChE E. snapshot of drug binding with anionic subsite of AChE F. </plain></SENT>
+<SENT sid="78" pm="."><plain>Distribution of Protriptyline –anionic subsite (solid line) and Protriptyline –esteratic subsite (broken line) nonbonded (nonb) interaction energy; data are averaged over last 20 ns G. </plain></SENT>
+<SENT sid="79" pm="."><plain>Fluorescence quenching of AChE by protriptyline H. </plain></SENT>
+<SENT sid="80" pm="."><plain>CD spectra of binding of protriptyline to AChE and I. </plain></SENT>
+<SENT sid="81" pm="."><plain>CD pro analysis to study the conformational change J. </plain></SENT>
+<SENT sid="82" pm="."><plain>Evolution of the backbone RMSD for the Protriptylline bound (solid line) and free (broken line) AChE active sites from MD trajectories K. </plain></SENT>
+<SENT sid="83" pm="."><plain>SASA distributions of active sites for Pro-bound (solid line) and free (broken line) AChE active sites from MD trajectories L. </plain></SENT>
+<SENT sid="84" pm="."><plain>Measurement of AChE activity after treatment of neuro2a cells with 25 µM and 60 µM protriptyline for 15 h. </plain></SENT>
+</text></p></caption><graphic xlink:href="pone.0105196.g002"/></fig></SecTag><p><text><SENT sid="85" pm="."><plain>The assessment of strong inhibitory activity of protriptyline was consolidated by enzyme kinetic studies, which suggested competitive inhibition of AChE by protriptyline. </plain></SENT>
+<SENT sid="86" pm="."><plain>( Figure 2B ). </plain></SENT>
+<SENT sid="87" pm="."><plain>The apparent Km for AChE was determined to be ∼0.025 mM by Lineweaver-Burk plot and it was found to be increased in the presence of protriptyline. </plain></SENT>
+<SENT sid="88" pm="."><plain>The inhibition constant Ki was determined from Cheng-Prusoff's equation and found to be ∼0.001 mM. </plain></SENT>
+<SENT sid="89" pm="."><plain>Thermodynamic studies of protriptyline-AChE interaction was carried out using Isothermal titration calorimetry (ITC) as it is one of the most widely used quantitative technique for direct measurement of the enthalpy change when two species interact, allowing the determination of heat of association, stoichiometry, and binding affinity from a single experiment [26], [27]. </plain></SENT>
+<SENT sid="90" pm="."><plain>The raw data and corresponding thermogram of the binding experiment is depicted in  Figure 2C . </plain></SENT>
+<SENT sid="91" pm="."><plain>Binding was strongly exothermic and showed 1∶1 stoichiometry for AChE and protriptyline. </plain></SENT>
+<SENT sid="92" pm="."><plain>The spontaneity of the process is evidenced by a negative change in the enthalpy, ΔH, and a positive change in the entropy, ΔS. </plain></SENT>
+<SENT sid="93" pm="."><plain>Kinetic and ITC data demonstrated the binding of single molecule of protriptyline to the active site of AChE. </plain></SENT>
+<SENT sid="94" pm="."><plain>The active site of AChE comprises two subsites; the anionic subsite (Trp82, Glu198, Tyr333) and the esteratic subsite (Ser199, Glu330 and His443) [28]. </plain></SENT>
+<SENT sid="95" pm="."><plain>Strong binding propensity of protriptyline to both the subsites of AChE was evidenced via the MD studies ( Figures 2D and E ). </plain></SENT>
+<SENT sid="96" pm="."><plain>The mean interaction strengths of protriptyline with the anionic subsite is −31.3 (±9.1) kcal mol−1 and −19.4 (±5.0) kcal mol−1 with the esteratic subsite ( Figure 2F ). </plain></SENT>
+<SENT sid="97" pm="."><plain>Breakup of the interactions into the non-bonded components showed that electrostatics plays a relatively stronger role than van der Waals interactions in protriptyline binding with active site. </plain></SENT>
+<SENT sid="98" pm="."><plain>The mean interaction strengths of the active site residues with the ligand are provided in Table S1. </plain></SENT>
+</text></p><p><text><SENT sid="99" pm="."><plain>Protriptylline-AChE interaction was also studied by fluorescence spectrometry. </plain></SENT>
+<SENT sid="100" pm="."><plain>A significant shift in the tryptophan fluorescence emission spectra was observed upon protriptyline binding suggested that the drug induces conformational change in AChE, thereby in its functional abilities. </plain></SENT>
+<SENT sid="101" pm="."><plain>The fluorescence intensity of AChE exhibited an emission maximum at a wavelength, λmax, of 325 nm in the unbound state. </plain></SENT>
+<SENT sid="102" pm="."><plain>However, titration of the native enzyme with increasing concentrations of inhibitor resulted in a concentration-dependent quenching of the tryptophanyl fluorescence ( Figure 2G ). </plain></SENT>
+<SENT sid="103" pm="."><plain>A progressive red shift in the emission spectrum with increasing concentration of protriptyline suggested the conformation change in enzyme. </plain></SENT>
+<SENT sid="104" pm="."><plain>Further, the conformational change was confirmed by CD analysis. </plain></SENT>
+<SENT sid="105" pm="."><plain>CD analysis showed that the binding of protriptyline to AChE decreased the minima suggesting protriptyline induces conformational change in AChE. </plain></SENT>
+<SENT sid="106" pm="."><plain>CDPro analysis revealed that binding of protriptyline increased β-sheets and decreased α-helices in AChE. </plain></SENT>
+<SENT sid="107" pm="."><plain>These results are very well in accordance with the fluorescence quenching experiment ( Figure 2H and 2I ). </plain></SENT>
+</text></p><p><text><SENT sid="108" pm="."><plain>The evidence of structural distortion was supported by the MD simulation data. </plain></SENT>
+<SENT sid="109" pm="."><plain>In  Figure 2J , we compare the backbone root mean squared deviation (RMSD) of the active site residues in the free and protriptyline bound state for a sample MD simulation trajectory. </plain></SENT>
+<SENT sid="110" pm="."><plain>The higher RMSD in the latter is a distinct demonstration of the perturbative effect of the ligand on the active site structure. </plain></SENT>
+<SENT sid="111" pm="."><plain>This structural distortion is supported by changes in the inter-residue distances of the active site residues (see Table S2). </plain></SENT>
+<SENT sid="112" pm="."><plain>Distinct increases in several of the inter-residue distances are noted, especially in the distances involving Tyr333 and His443. </plain></SENT>
+<SENT sid="113" pm="."><plain>The sharpest increase in the mean inter-residue distance is found for two residues belong to the esteratic subsite, namely Ser199 and His443 that play critical roles in the hydrolysis of acetylcholine. </plain></SENT>
+<SENT sid="114" pm="."><plain>The increase from 7.8 Å in the free state to 11.5 Å in the bound state strongly suggests that protriptyline binding directly affects the catalytic ability of AChE. </plain></SENT>
+<SENT sid="115" pm="."><plain>Further, we found protriptyline binding at the active site to be commensurate with an increase in its solvent accessibility. </plain></SENT>
+<SENT sid="116" pm="."><plain>The solvent accessible surface area, or SASA, was calculated by running a spherical probe of 1.8 Å radius around the surface and calculating the area covered by the probe / calculated in the standard manner. </plain></SENT>
+<SENT sid="117" pm="."><plain>In  Figure 2K , we have presented histograms of the SASA obtained from the MD trajectories of the free and protriptyline bound AChE. </plain></SENT>
+<SENT sid="118" pm="."><plain>The active site SASA increased from 1533 (±38.9) Å2 to 1623 (±33.0) Å2 upon protriptyline binding. </plain></SENT>
+</text></p><p><text><SENT sid="119" pm="."><plain>Additionally, to confirm the in vitro results, the effect of protriptyline on AChE activity was assayed in neuro2a cell line. </plain></SENT>
+<SENT sid="120" pm="."><plain>Protriptyline treated cells showed concentration dependent decrease in AChE activity ( Figure 2L ). </plain></SENT>
+<SENT sid="121" pm="."><plain>These results demonstrated that the in vitro IC50 of protriptyline for AChE was sufficient to inhibit its activity in cell culture. </plain></SENT>
+<SENT sid="122" pm="."><plain>Thus, this study suggested that protriptyline inhibits AChE activity in vitro as well as in neuro 2a cells, by binding to the active site and causing conformational change. </plain></SENT>
+</text></p></sec><sec id="s2c"><title><text><SENT sid="123" pm="."><plain>Protriptyline Inhibits Aβ Self-Assembly </plain></SENT>
+</text></title><p><text><SENT sid="124" pm="."><plain>Recent studies suggest that the K16LVFF20 segment in the Aβ sequence is crucial for the peptide's oligomeric properties as well as fibrillogenetic behavior [29]–[33]. </plain></SENT>
+<SENT sid="125" pm="."><plain>The sequence HHQKLVFFAE corresponding to Aβ13–22 was used for our in vitro amyloid aggregation inhibition studies. β-sheet rich structures are a common feature of amyloid aggregates [34] and bind to the molecule Thioflavin T (ThT). </plain></SENT>
+<SENT sid="126" pm="."><plain>Therefore, ThT fluorescence assays are frequently used to monitor aggregation of amyloidogenic peptides [35]. </plain></SENT>
+<SENT sid="127" pm="."><plain>In  Figure 3A , we present ThT fluorescence as a function of time for Aβ13–22 in the absence or presence of 10 µM protriptyline. </plain></SENT>
+<SENT sid="128" pm="."><plain>It is observed that the lag time corresponding to the nucleation phase is increased from ∼25 to about ∼50 hours in the presence of protriptyline. </plain></SENT>
+<SENT sid="129" pm="."><plain>The data further shows a dramatic inhibition in the growth phase in the presence of protriptyline. </plain></SENT>
+<SENT sid="130" pm="."><plain>The fluorescence intensity corresponding to the saturation phase was further lowered in the presence of protriptyline, demonstrating the ability of protriptyline to reduce Aβ aggregation. </plain></SENT>
+<SENT sid="131" pm="."><plain>Concentration dependent decrease in Thioflavin T fluorescence was observed in presence of protriptyline at 7th day (Figure S1). </plain></SENT>
+<SENT sid="132" pm="."><plain>Static light scattering experiments were performed to investigate the relative decrease in average molecular mass of Aβ aggregates in the presence of protriptyline ( Figure 3B ). </plain></SENT>
+<SENT sid="133" pm="."><plain>As expected, protriptyline reduced the light scattering in a concentration dependent manner. </plain></SENT>
+<SENT sid="134" pm="."><plain>Furthermore, Far-UV CD spectra of the Aβ13–22 were recorded with and without protriptyline to monitor any possible alterations in secondary structural propensities ( Figure 3C ). </plain></SENT>
+<SENT sid="135" pm="."><plain>CDPro analysis comparing the spectra obtained at the two conditions showed that protriptyline treatment reduced β-sheet formation and increased overall helicity. </plain></SENT>
+<SENT sid="136" pm="."><plain>The reduced β-sheet formation by CD analysis corroborated the Thioflavin T results. </plain></SENT>
+<SENT sid="137" pm="."><plain>We further performed atomic force microscopy (AFM) experiments on the peptide aggregates formed with and without protriptyline treatment. </plain></SENT>
+<SENT sid="138" pm="."><plain>The results of an AFM scans for Aβ13–22 incubated for 7 days with and without protriptyline over scanning areas of 10 µm×10 µm and 20 µm×20 µm are compared in  Figure 3D . </plain></SENT>
+</text></p><SecTag type="FIG"><fig id="pone-0105196-g003" orientation="portrait" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0105196.g003</object-id><label>Figure 3</label><caption><title><text><SENT sid="139" pm="."><plain>Inhibition of Aβ aggregation by protriptyline. </plain></SENT>
+</text></title><p><text><SENT sid="140" pm="."><plain>Aβ13–22 aggregation in the absence and presence of protriptyline was investigated by A. </plain></SENT>
+<SENT sid="141" pm="."><plain>Thioflavin T assay B. </plain></SENT>
+<SENT sid="142" pm="."><plain>Light scattering C. </plain></SENT>
+<SENT sid="143" pm="."><plain>CD analysis D. </plain></SENT>
+<SENT sid="144" pm="."><plain>Atomic Force Microscopy images [i and iv] of aggregated amyloid and Amyloid + protriptyline (0.010 mM) in 10×10 µm2 and 20×20 µm2 surface area respectively. </plain></SENT>
+<SENT sid="145" pm="."><plain>It is also represented in Line profile [ii and v] and 3D images [iii and vi]. </plain></SENT>
+</text></p></caption><graphic xlink:href="pone.0105196.g003"/></fig></SecTag><p><text><SENT sid="146" pm="."><plain>First, the AFM profiles suggested a distinct reduction in the fibrillar density and a high degree of size dispersion resulting from protriptyline treatment. </plain></SENT>
+<SENT sid="147" pm="."><plain>Further, the line profile and 3D AFM images showed that the average height of the Aβ13–22 aggregates was ∼400 nm, with the maximum height reaching ∼600 nm. </plain></SENT>
+<SENT sid="148" pm="."><plain>The height of the aggregates reduced to ∼100 nm in case of protriptyline treated samples. </plain></SENT>
+<SENT sid="149" pm="."><plain>It was quite convincing from the AFM images that the amyloid protein is aggregated and protriptyline treated sample protein showed decreased aggregation. </plain></SENT>
+</text></p><p><text><SENT sid="150" pm="."><plain>For a molecular level insight into the inhibitory action of protriptyline on Aβ self-assembly, we performed MD simulations of Aβ dimerisation in the absence and presence of protriptyline molecules. </plain></SENT>
+<SENT sid="151" pm="."><plain>A β-sheet rich full-length monomer was considered for these studies. </plain></SENT>
+<SENT sid="152" pm="."><plain>A single protriptyline molecule was found to bind to the Aβ monomer with a mean binding strength of −84.0 (±34.0) kcal mol−1 (Figure S2A). </plain></SENT>
+<SENT sid="153" pm="."><plain>The mean monomer-monomer interaction strength obtained at the end of multiple independent trajectories over a combined total simulation time of 60 ns was −249.1 (±87.1) kcal mol−1. </plain></SENT>
+<SENT sid="154" pm="."><plain>In the presence of protriptyline, however, the monomer-monomer interaction weakened significantly, with a mean value of only −69.7 (±31.5) kcal mol−1. </plain></SENT>
+<SENT sid="155" pm="."><plain>In  Figure 4A , we have depicted evolution of monomer-monomer interaction over simulation time for sample simulations in the absence and in the presence of protriptyline; the distributions of these interactions, along with distribution of the protriptyline-dimer interaction is depicted as an inset. </plain></SENT>
+<SENT sid="156" pm="."><plain>The weakening of the inter-monomer interactions due to protriptyline binding results in the formation of complexes that are less compact compared to the pure dimeric forms. </plain></SENT>
+<SENT sid="157" pm="."><plain>In  Figure 4B , we compare distributions of asphericities Iγ, of the pure and protriptyline-bound dimer complexes; Iγ value of 0.0 denotes perfect sphericity while increasing values denote increased asphericity. </plain></SENT>
+<SENT sid="158" pm="."><plain>The protriptyline bound dimer complexes have a wider distribution and a higher mean value of Iγ; the mean asphericity values of the free and protriptyline -bound complexes are 0.2 and 0.5, respectively. </plain></SENT>
+<SENT sid="159" pm="."><plain>Further, the mean radii of gyration (Rg) of these complexes were found to be 13.0 (±0.1) and 16.5 (1.0) Å, respectively. </plain></SENT>
+<SENT sid="160" pm="."><plain>The difference in dimeric compactness upon protriptyline binding is evident from representative snapshots depicted in  Figures 4C and 4D . </plain></SENT>
+<SENT sid="161" pm="."><plain>Additionally, clustering analysis was done to identify the key residues of Aβ interacting with the protriptyline during molecular dynamics simulation. </plain></SENT>
+<SENT sid="162" pm="."><plain>A representative snapshot from most populated cluster is shown in  Figure 4D . </plain></SENT>
+<SENT sid="163" pm="."><plain>In two of the most populated clusters (70% of total snapshots used in the clustering analysis), protriptyline interacts most strongly with the KLVFF region. </plain></SENT>
+</text></p><SecTag type="FIG"><fig id="pone-0105196-g004" orientation="portrait" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0105196.g004</object-id><label>Figure 4</label><caption><title><text><SENT sid="164" pm="."><plain>Destabilization of amyloid dimer by protriptyline. </plain></SENT>
+</text></title><p><text><SENT sid="165" pm="."><plain>A. </plain></SENT>
+<SENT sid="166" pm="."><plain>Evolution of monomer-monomer interaction strength over time for free dimer (broken line) and Protriptylline-bound dimer (solid line). Inset. </plain></SENT>
+<SENT sid="167" pm="."><plain>Distributions of the interactions from multiple trajectories, and the dimer interactions with Protriptylline (in brown) B. </plain></SENT>
+<SENT sid="168" pm="."><plain>Distributions of the asphericity for free (in broken line) and Protriptylline-bound (solid line) dimer C. </plain></SENT>
+<SENT sid="169" pm="."><plain>Representative snapshot of most populated cluster of free, and D. </plain></SENT>
+<SENT sid="170" pm="."><plain>Protriptylline-bound dimer [16–20 region in blue colour with 19–20 showed in line representation; protriptyline in red colour and two Aβ peptides are in cyan and limon colour respectively] E. </plain></SENT>
+<SENT sid="171" pm="."><plain>Residue-residue contact probabilities for free dimer, and F. </plain></SENT>
+<SENT sid="172" pm="."><plain>Protriptylline-bound dimer G. </plain></SENT>
+<SENT sid="173" pm="."><plain>Residue-wise Beta sheet percentages for free dimer (in red) and Protriptylline-bound dimer (in blue) H. </plain></SENT>
+<SENT sid="174" pm="."><plain>Residue-wise helical percentages for free dimer (in red) and Pro-bound dimer (in blue). </plain></SENT>
+</text></p></caption><graphic xlink:href="pone.0105196.g004"/></fig></SecTag><p><text><SENT sid="175" pm="."><plain>In order to evaluate the effects of protriptyline binding on the inter-monomer associations, we have analyzed the nature of inter-residue contacts. </plain></SENT>
+<SENT sid="176" pm="."><plain>The average numbers of inter-residue side-chain cross-contacts were reduced up to 46% upon protriptyline binding. </plain></SENT>
+<SENT sid="177" pm="."><plain>Here, as in previous studies [36], we have defined two residues to be in contact if the maximum separating distance of their side-chains does not exceed 7 Å. </plain></SENT>
+<SENT sid="178" pm="."><plain>In  Figures 4E and 4F , we compare the inter-residue contact probabilities for the free and protriptyline-bound complexes from the MD data. </plain></SENT>
+<SENT sid="179" pm="."><plain>The largest numbers of contacts between the KLVFF regions are lost upon protriptyline binding. </plain></SENT>
+<SENT sid="180" pm="."><plain>However, we note the emergence of a small extent of extraneous contacts, particularly involving the N- and C-terminal regions of the different monomeric units. </plain></SENT>
+</text></p><p><text><SENT sid="181" pm="."><plain>Further the effect on the secondary structural propensities of the Aβ units due to protriptyline binding was investigated. </plain></SENT>
+<SENT sid="182" pm="."><plain>Protriptyline was found to reduce β-sheet and induce higher helical propensities in the monomeric form of Aβ (see Figure S2 B).  Figure 4G and 4H  present residue-wise β-sheet and helical propensities of the free and protriptyline-bound dimeric complexes, respectively, from the MD data. </plain></SENT>
+<SENT sid="183" pm="."><plain>A sharp decrease in β-sheet propensity is found uniformly along the Aβ sequence, including in the residue span H13HQKLVFFAE22. </plain></SENT>
+<SENT sid="184" pm="."><plain>The decrease in β-sheet propensity is accompanied with an overall increase in helical conformations. </plain></SENT>
+<SENT sid="185" pm="."><plain>Sharp increase in helicity was observed near the N-terminal and KLVFF regions. </plain></SENT>
+<SENT sid="186" pm="."><plain>The alterations to secondary structural propensities thus observed from MD analysis are an excellent corroboration of the CD and ThT binding data. </plain></SENT>
+</text></p></sec><sec id="s2d"><title><text><SENT sid="187" pm="."><plain>Protriptyline Inhibits BACE-1 Activity </plain></SENT>
+</text></title><p><text><SENT sid="188" pm="."><plain>BACE-1 is a key enzyme required for Aβ production. </plain></SENT>
+<SENT sid="189" pm="."><plain>Hence, BACE-1 inhibition is an attractive target for countering AD [10]–[12]. </plain></SENT>
+<SENT sid="190" pm="."><plain>BACE-1 assay demonstrated decreased activity with increasing concentrations of protriptyline having IC50 ∼0.025 mM ( Figure 5A ). </plain></SENT>
+<SENT sid="191" pm="."><plain>Protriptyline inhibited BACE-1 by competitive inhibition as depicted by Lineweaver-Burk plot ( Figure 5B ). </plain></SENT>
+<SENT sid="192" pm="."><plain>Apparent Km and Ki of BACE-1 were calculated as mentioned above for AChE and found to be 0.0025 mM and 0.005 mM respectively. </plain></SENT>
+<SENT sid="193" pm="."><plain>Apparent Km of BACE-1 was increased in the presence of protriptyline Competitive inhibition was evidenced by MD simulation analysis that illustrated protriptyline binds strongly at the active site of BACE-1 comprised of Asp32 and Asp228 ( Figure 5C ). </plain></SENT>
+<SENT sid="194" pm="."><plain>The mean binding strength required for protriptyline to bind to the active site is −29.5 (±7.0) kcal mol−1. </plain></SENT>
+<SENT sid="195" pm="."><plain>The center of mass distance between the two residues increases from 5 Å to 8 Å as a result of protriptyline binding ( Figure 5D ). </plain></SENT>
+<SENT sid="196" pm="."><plain>The comparison of the root mean squared deviation (RMSD) of Cα atoms of the active site in the unbound state with the protriptyline bound state indicated structural distortion of the arrangement of the active site (see Figure S3A). </plain></SENT>
+<SENT sid="197" pm="."><plain>The binding was also found to induce significant alterations to the local secondary structural propensity around the active site (see Figure S3B). </plain></SENT>
+<SENT sid="198" pm="."><plain>Therefore, inhibition of BACE-1 by protriptyline is an extra benefit as it prevents Aβ generation. </plain></SENT>
+<SENT sid="199" pm="."><plain>And even if there is some production, protriptyline will obstruct it to get aggregate. </plain></SENT>
+</text></p><SecTag type="FIG"><fig id="pone-0105196-g005" orientation="portrait" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0105196.g005</object-id><label>Figure 5</label><caption><title><text><SENT sid="200" pm="."><plain>BACE-1 inhibition by protriptyline. </plain></SENT>
+</text></title><p><text><SENT sid="201" pm="."><plain>A. </plain></SENT>
+<SENT sid="202" pm="."><plain>Determination of IC50 of BACE-1 by using various concentrations of protriptyline. </plain></SENT>
+<SENT sid="203" pm="."><plain>The sigmoidal curve indicates the best fit for the percentage inhibition data obtained B. </plain></SENT>
+<SENT sid="204" pm="."><plain>Lineweaver-Burk analysis to estimate the kinetic constants. </plain></SENT>
+<SENT sid="205" pm="."><plain>It showed competitive inhibition. C. </plain></SENT>
+<SENT sid="206" pm="."><plain>Snapshot of drug binding with active site of BACE-1. </plain></SENT>
+<SENT sid="207" pm="."><plain>Active site residues in BACE-1 are in line representation. D. </plain></SENT>
+<SENT sid="208" pm="."><plain>Active site of BACE-1. </plain></SENT>
+<SENT sid="209" pm="."><plain>The structures from unbound (green) and ligand bound (orange) simulations are shown after all - atom superimposition. </plain></SENT>
+<SENT sid="210" pm="."><plain>Snapshots are generated using PyMol. </plain></SENT>
+</text></p></caption><graphic xlink:href="pone.0105196.g005"/></fig></SecTag></sec><sec id="s2e"><title><text><SENT sid="211" pm="."><plain>Protriptyline Inhibits Glycation Associated Aggregation of Aβ </plain></SENT>
+</text></title><p><text><SENT sid="212" pm="."><plain>AD is also referred as type III diabetes [37] and its pathogenesis has been correlated with the extent of glycation [38]. </plain></SENT>
+<SENT sid="213" pm="."><plain>Recent studies suggested glycated Aβ is more neurotoxic than native Aβ [13]; therefore the effect of protriptyline on glycation of Aβ was investigated. </plain></SENT>
+<SENT sid="214" pm="."><plain>Glycated proteins emit fluorescence at 440 nm upon excitation at 370 nm. </plain></SENT>
+<SENT sid="215" pm="."><plain>Fluorescence assay illustrated that Aβ undergoes glycation. </plain></SENT>
+<SENT sid="216" pm="."><plain>The increase in glycation associated fluorescence was reduced by protriptyline in a concentration dependent manner ( Figure 6A ). </plain></SENT>
+<SENT sid="217" pm="."><plain>Glycation enhances the aggregation and also alters the secondary structure of proteins. </plain></SENT>
+<SENT sid="218" pm="."><plain>Static light scattering was used to study glycation induced protein aggregation. </plain></SENT>
+<SENT sid="219" pm="."><plain>Concentration dependent decrease in light scattering was observed ( Figure 6B ). </plain></SENT>
+<SENT sid="220" pm="."><plain>Further, it was studied by Thioflavin T fluorescence assay. </plain></SENT>
+<SENT sid="221" pm="."><plain>Kinetics of aggregation displayed increased Thioflavin T fluorescence during glycation reaction. </plain></SENT>
+<SENT sid="222" pm="."><plain>Lag phase for Aβ and glycated Aβ aggregation was increased in the presence of protriptyline with decreased Thioflavin T fluorescence ( Figure 6C ). </plain></SENT>
+<SENT sid="223" pm="."><plain>In addition to inhibition of Aβ glycation, the drug also inhibited glycation of insulin and BSA(Bovine Serum Albumin) evidenced by MALDI, AGE fluorescence and Thioflavin T fluorescence assay (See Figure S4 and S5). </plain></SENT>
+</text></p><SecTag type="FIG"><fig id="pone-0105196-g006" orientation="portrait" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0105196.g006</object-id><label>Figure 6</label><caption><title><text><SENT sid="224" pm="."><plain>Protriptyline inhibits glycation. </plain></SENT>
+</text></title><p><text><SENT sid="225" pm="."><plain>A. Fluorescence emmission of Aβ and glycated Aβ in presence of various concentration of protriptyline B. </plain></SENT>
+<SENT sid="226" pm="."><plain>Light scattering and C. </plain></SENT>
+<SENT sid="227" pm="."><plain>Kinetics of amyloid aggregation by Thioflavin T of Aβ13–22 and glycated Aβ13–22 in the absence and presence of protriptyline. </plain></SENT>
+</text></p></caption><graphic xlink:href="pone.0105196.g006"/></fig></SecTag></sec><sec id="s2f"><title><text><SENT sid="228" pm="."><plain>Protriptyline Does Not Affect Other Proteases </plain></SENT>
+</text></title><p><text><SENT sid="229" pm="."><plain>Protriptyline inhibited multiple targets of AD; therefore we further studied the influence of this drug on other enzymes such as trypsin and α-secretase. </plain></SENT>
+<SENT sid="230" pm="."><plain>It was interesting to observe that it was not able to inhibit trypsin activity even at 0.1 and 0.5 mM ( Figure 7A ). </plain></SENT>
+<SENT sid="231" pm="."><plain>For ADAM 17, protriptyline was found to be a weak inhibitor. </plain></SENT>
+<SENT sid="232" pm="."><plain>It was showing ∼3% inhibition at 0.1 mM and ∼25% inhibition at 0.5 mM ( Figure 7B ). </plain></SENT>
+<SENT sid="233" pm="."><plain>It suggested that protriptyline is not a non-specific inhibitor as it was not able to inhibit other proteases. </plain></SENT>
+</text></p><SecTag type="FIG"><fig id="pone-0105196-g007" orientation="portrait" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0105196.g007</object-id><label>Figure 7</label><caption><title><text><SENT sid="234" pm="."><plain>Protriptyline Does Not Affect Other Proteases. </plain></SENT>
+</text></title><p><text><SENT sid="235" pm="."><plain>Effect of protriptyline on A. </plain></SENT>
+<SENT sid="236" pm="."><plain>Trypsin B. </plain></SENT>
+<SENT sid="237" pm="."><plain>ADAM 17activity. </plain></SENT>
+<SENT sid="238" pm="."><plain>Specific synthetic substrate BApNA and fluorogenic peptide was used for analyzing activity on trypsin and ADAM 17, respectively. </plain></SENT>
+<SENT sid="239" pm="."><plain>Trypsin activity was unaffected, while ADMA 17 showed weak inhibition in presence of protriptyline. </plain></SENT>
+</text></p></caption><graphic xlink:href="pone.0105196.g007"/></fig></SecTag></sec><sec id="s2g"><title><text><SENT sid="240" pm="."><plain>Viability of neuro2a cells in the presence of protriptyline </plain></SENT>
+</text></title><p><text><SENT sid="241" pm="."><plain>The effect of various concentrations of protriptyline (25–500 µM) on cell viability was evaluated by MTT assay in neuro2a neuroblastoma cells. </plain></SENT>
+<SENT sid="242" pm="."><plain>It was observed that there was more than 90% of cells were viable upto 150 µM of protriptyline, and a drastic reduction in cell viability was observed at 200–500 µM protriptyline concentrations ( Figure 8 ). </plain></SENT>
+<SENT sid="243" pm="."><plain>In this study the IC50 of protriptyline for all the three targets AChE, Aβ, BACE1 was less than 150 µM, this concentration was found to be non toxic to cells. </plain></SENT>
+</text></p><SecTag type="FIG"><fig id="pone-0105196-g008" orientation="portrait" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0105196.g008</object-id><label>Figure 8</label><caption><title><text><SENT sid="244" pm="."><plain>Cell viability in neuro2a cells. </plain></SENT>
+</text></title><p><text><SENT sid="245" pm="."><plain>Effect of various concentrations of protriptyline (25–500 µM) on cell viability was assessed by MTT assay. </plain></SENT>
+<SENT sid="246" pm="."><plain>Cells were 90% viable up to 150 µM protriptyline concentration. </plain></SENT>
+</text></p></caption><graphic xlink:href="pone.0105196.g008"/></fig></SecTag></sec></sec></SecTag><SecTag type="CONCL"><sec id="s3"><title><text><SENT sid="247" pm="."><plain>Conclusion </plain></SENT>
+</text></title><p><text><SENT sid="248" pm="."><plain>The multifactorial nature of AD makes its treatment complex and unmanageable. </plain></SENT>
+<SENT sid="249" pm="."><plain>The discovery of molecules that can inhibit multiple pathways of the disease should significantly advance therapeutic strategies. </plain></SENT>
+<SENT sid="250" pm="."><plain>In this study, we investigated the efficacy of the tricyclic antidepressant, protriptyline, against important AD targets. </plain></SENT>
+<SENT sid="251" pm="."><plain>Our in vitro and in silico investigations established the inhibitory effects of the drug on AChE, amyloid aggregation, BACE-1 and glycation ( Figure 9 ). </plain></SENT>
+<SENT sid="252" pm="."><plain>Protriptyline was able to inhibit AChE and β-secretase by binding at the active site and causing conformational changes. </plain></SENT>
+<SENT sid="253" pm="."><plain>In addition, it strongly prevented self-assembly of Aβ and glycated Aβ. </plain></SENT>
+<SENT sid="254" pm="."><plain>It is a FDA approved drug for the treatment of depression, narcolepsy, Attention Deficit Hyperactivity Disorder (ADHD) and headaches and its ability to cross blood brain barrier (BBB) [39] is an additional advantage, which is a crucial requirement of molecules used for intra-cranial diseases. </plain></SENT>
+<SENT sid="255" pm="."><plain>Furthermore, as there is high prevalence rate (30–50%) of AD and depression co-morbidity, the use of antidepressants can be a rational complementary therapy for AD treatment [40]. </plain></SENT>
+<SENT sid="256" pm="."><plain>Therefore, antidepressant activity of this drug could be an added advantage when dealing with AD complications related to depression. </plain></SENT>
+<SENT sid="257" pm="."><plain>To the best of our knowledge, this is the first study in which an anti-depressant drug has been shown to inhibit multiple targets of AD. </plain></SENT>
+<SENT sid="258" pm="."><plain>Our results strongly ratify protriptyline as a promising candidate for AD therapy, and its further evaluation in animal and clinical studies. </plain></SENT>
+</text></p><SecTag type="FIG"><fig id="pone-0105196-g009" orientation="portrait" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0105196.g009</object-id><label>Figure 9</label><caption><title><text><SENT sid="259" pm="."><plain>Protriptyline as MTDL. </plain></SENT>
+</text></title><p><text><SENT sid="260" pm="."><plain>The scheme represents that protriptyline (at the center) is able to inhibit key targets of AD pathogenesis such as AChE, BACE-1, Amyloid aggregation and glycation induced amyloid aggregation. </plain></SENT>
+</text></p></caption><graphic xlink:href="pone.0105196.g009"/></fig></SecTag></sec></SecTag><sec id="s4"><title><text><SENT sid="261" pm="."><plain>Experimental Section </plain></SENT>
+</text></title><sec id="s4a"><title><text><SENT sid="262" pm="."><plain>Materials </plain></SENT>
+</text></title><p><text><SENT sid="263" pm="."><plain>All chemicals were procured from sigma unless and otherwise stated. </plain></SENT>
+</text></p></sec><sec id="s4b"><title><text><SENT sid="264" pm="."><plain>Virtual Screening for Multi-target Drug Ligand for AD </plain></SENT>
+</text></title><p><text><SENT sid="265" pm="."><plain>Structures of 140 FDA approved antiepileptics, psycoleptics, analgesics, psycoanaleptics, anti-Parkinson and other nervous system drugs were obtained from DrugBank (The DrugBank database website. </plain></SENT>
+<SENT sid="266" pm="."><plain>Available: <ext-link ext-link-type="uri" xlink:href="http://www.drugbank.ca/">http://www.drugbank.ca/</ext-link>. </plain></SENT>
+<SENT sid="267" pm="."><plain>Accessed 2013 Feb 19) database and optimized for their 3D coordinates using Marvin Sketch Tool (ChemAxon website. </plain></SENT>
+<SENT sid="268" pm="."><plain>Available: <ext-link ext-link-type="uri" xlink:href="http://www.chemaxon.com">http://www.chemaxon.com</ext-link>. </plain></SENT>
+<SENT sid="269" pm="."><plain>Accessed 2013 Feb 21). </plain></SENT>
+<SENT sid="270" pm="."><plain>Three dimensional structures of Human acetylcholinesterse (PDB ID: 1B41), β-secretase (PDB ID: 2HM1) and Aβ peptide (PDB ID: 1ZOQ) were accessed from RCSB PDB. </plain></SENT>
+<SENT sid="271" pm="."><plain>Protein structures were energy minimized using Swiss PDB viewer (Swiss-PdbViewer application. </plain></SENT>
+<SENT sid="272" pm="."><plain>Available: <ext-link ext-link-type="uri" xlink:href="http://spdbv.vital-it.ch/">http://spdbv.vital-it.ch/</ext-link>. </plain></SENT>
+<SENT sid="273" pm="."><plain>Accessed 2013 Feb 21). </plain></SENT>
+<SENT sid="274" pm="."><plain>AutoDock tool 4.2 [41] was used to convert receptor and ligand from *.pdb to *.pdbqt format and to set other docking parameters. </plain></SENT>
+<SENT sid="275" pm="."><plain>Grid map was set around the active site of acetylcholinesterase (Ser199, Glu330 and His443), β-secretase (Asp32 and Asp228) and KLVFF (residue 17 to 21) region of Aβ protein involved in aggregation. </plain></SENT>
+<SENT sid="276" pm="."><plain>Virtual screening was carried out using AutoDock Vina software and the Lamarckian genetic algorithm as a searching procedure [42]. </plain></SENT>
+<SENT sid="277" pm="."><plain>Binding energy obtained for each complex was represented in heat map format using MeV software packages (MeV: MultiExperiment Viewer. </plain></SENT>
+<SENT sid="278" pm="."><plain>Available: <ext-link ext-link-type="uri" xlink:href="http://www.tm4.org/mev/">http://www.tm4.org/mev/</ext-link>. </plain></SENT>
+<SENT sid="279" pm="."><plain>Accessed 2013 Mar 5) [43]. </plain></SENT>
+<SENT sid="280" pm="."><plain>The gradient ruler is an indicator of interaction strength. </plain></SENT>
+<SENT sid="281" pm="."><plain>Molecules showing strong binding against all the selected targets were selected for further in vitro and molecular simulation studies. </plain></SENT>
+</text></p></sec><sec id="s4c"><title><text><SENT sid="282" pm="."><plain>Acetylcholinesterase Inhibition Assay </plain></SENT>
+</text></title><p><text><SENT sid="283" pm="."><plain>The modified method of Ellman et al. [44] was adopted to measure AChE activity. </plain></SENT>
+<SENT sid="284" pm="."><plain>Briefly, 25 µl (0.3 U/ml) AChE from Electric eel fish (Electrophorus electricus) was incubated with and without different concentrations of drugs selected from Molecular Docking studies. </plain></SENT>
+<SENT sid="285" pm="."><plain>The reaction was carried out for 15 min at 25°C. </plain></SENT>
+<SENT sid="286" pm="."><plain>500 µl of 5, 5-dithiobis (2-nitrobenzioc) acid DTNB (3 mM) was then added and reaction was initiated by the addition of 100 µl substrate acetyl thiocholine iodide (ATCI) (15 mM). </plain></SENT>
+<SENT sid="287" pm="."><plain>Total volume of the reaction was made up to 1 ml by Tris buffer, pH 8.0. </plain></SENT>
+<SENT sid="288" pm="."><plain>ATCI hydrolysis was measured by colored product formation, 5-thio-2-nitrobenzoate anion by reaction between DTNB and thiocholine, a hydrolysis product of ATCI. </plain></SENT>
+<SENT sid="289" pm="."><plain>The formation of the colored product was measured at 405 nm wavelength after 30 min. </plain></SENT>
+<SENT sid="290" pm="."><plain>The background was determined from negative controls (omission of AChE enzyme). </plain></SENT>
+</text></p></sec><sec id="s4d"><title><text><SENT sid="291" pm="."><plain>Isothermal Titration Calorimetry </plain></SENT>
+</text></title><p><text><SENT sid="292" pm="."><plain>ITC was performed using Microcal Auto-iTC instrument (GE Healthcare). </plain></SENT>
+<SENT sid="293" pm="."><plain>40 injections of 2 µl protriptyline (Stock  = 2.2 mM) was titrated against 0.3 U/µl solution of AChE. </plain></SENT>
+<SENT sid="294" pm="."><plain>Experiments were carried out at 25°C in a Tris buffer, pH 8.0. </plain></SENT>
+<SENT sid="295" pm="."><plain>Reference titration was carried out by injecting the same concentration of protriptyline into buffer. </plain></SENT>
+<SENT sid="296" pm="."><plain>Reference titration was subtracted from experimental titration. </plain></SENT>
+<SENT sid="297" pm="."><plain>Origin 6.0 software was used to derive affinity constants (Kd), the molar reaction enthalpy (ΔH) and the stoichiometry of binding (N), by fitting the integrated titration peaks. </plain></SENT>
+</text></p></sec><sec id="s4e"><title><text><SENT sid="298" pm="."><plain>Fluorescence Analysis of AchE-Protriptyline Interaction </plain></SENT>
+</text></title><p><text><SENT sid="299" pm="."><plain>AchE-protriptyline interaction was also studied by measuring tryptophan fluorescence using Varioscan plate reader. </plain></SENT>
+<SENT sid="300" pm="."><plain>AChE was excited at 280 nm and emission was scanned from 300 nm to 500 nm. </plain></SENT>
+<SENT sid="301" pm="."><plain>Titration of enzyme with protriptyline was performed by the addition of different concentrations of inhibitor (10 µM–100 µM) to a fixed concentration (0.2 U/µl) of enzyme solution. </plain></SENT>
+<SENT sid="302" pm="."><plain>Background buffer and inhibitor spectra were subtracted and graphs were smoothed. </plain></SENT>
+</text></p></sec><sec id="s4f"><title><text><SENT sid="303" pm="."><plain>BACE-1 Inhibition Assay </plain></SENT>
+</text></title><p><text><SENT sid="304" pm="."><plain>BACE-1 activity was studied in accordance with the manufacturer's instructions (Sigma). </plain></SENT>
+<SENT sid="305" pm="."><plain>To test the effect of protriptyline on BACE-1 activity, 1.8 U of BACE-1 enzyme and 10 µM of β-secretase specific peptides conjugated to fluorogenic reporter molecules were incubated with or without various concentrations of protriptyline for 2 h at 37°C. </plain></SENT>
+<SENT sid="306" pm="."><plain>Negative control included all the reactants except BACE-1 enzyme. </plain></SENT>
+<SENT sid="307" pm="."><plain>After 2 h, fluorescence emission was measured at 405 nm upon excitation at 320 nm. </plain></SENT>
+</text></p></sec><sec id="s4g"><title><text><SENT sid="308" pm="."><plain>Inhibition Kinetics for AChE and BACE-1 </plain></SENT>
+</text></title><p><text><SENT sid="309" pm="."><plain>Michaelis–Menten constant (Km) was determined by measuring the activities of AChE and BACE-1 using various concentrations of ATCI (100 µM–1000 µM) and BACE-1 substrate (0.25 µM–6 µM) respectively. </plain></SENT>
+<SENT sid="310" pm="."><plain>Lineweaver-Burk double reciprocal plot was plotted in order to determine the Km. </plain></SENT>
+<SENT sid="311" pm="."><plain>The protriptyline inhibition kinetics was analyzed over a range of concentration (50 µM–1500 µM) and (10 µM–150 µM) for AChE and BACE-1 respectively. </plain></SENT>
+<SENT sid="312" pm="."><plain>The IC50 of protriptyline for both the enzymes was calculated by determining the inhibitor concentration at which the enzyme activity is 50% inhibited. </plain></SENT>
+<SENT sid="313" pm="."><plain>The Ki was calculated directly from IC50 value using Cheng-Prussoffs classical equation [45].  </plain></SENT>
+</text></p><p><text><SENT sid="314" pm="."><plain>In order to determine the type of inhibition, AChE and BACE-1 were incubated with 60 µM and 15 µM protriptyline concentrations respectively and assayed at increasing concentrations of AChE substrate (ATCI, 100 µM–1000 µM) and BACE-1 substrate (1 µM–10 µM) respectively. </plain></SENT>
+<SENT sid="315" pm="."><plain>The reciprocals of reaction rate (1/v) for each inhibitor concentration were plotted against the reciprocals of the substrate concentrations (1/S). </plain></SENT>
+<SENT sid="316" pm="."><plain>Mode of inhibition by protriptyline was determined from the graphical representation. </plain></SENT>
+</text></p></sec><sec id="s4h"><title><text><SENT sid="317" pm="."><plain>Inhibition of Aβ Aggregation </plain></SENT>
+</text></title><p><text><SENT sid="318" pm="."><plain>Aβ13–22 peptide (HHQKLVFFAE), the aggregation prone region of Aβ, was synthesized from Thermo Fisher Scientific. </plain></SENT>
+<SENT sid="319" pm="."><plain>Synthetic Aβ13–22 peptide was dissolved in 10% ammonium hydroxide and sonicated for 5 min. </plain></SENT>
+<SENT sid="320" pm="."><plain>It was then diluted in 10 mM PBS, pH 7.0 to a final concentration of 200 µM. </plain></SENT>
+<SENT sid="321" pm="."><plain>100 µM of Aβ13–22 was incubated with and without various concentrations of protriptyline in 10 mM PBS, pH 7.0 at 37°C for a week and these samples were further used for aggregation inhibition assays. </plain></SENT>
+</text></p></sec><sec id="s4i"><title><text><SENT sid="322" pm="."><plain>Glycation Inhibition Assay </plain></SENT>
+</text></title><p><text><SENT sid="323" pm="."><plain>Anti-glycation activity of protriptyline was studied using insulin, BSA and Aβ. </plain></SENT>
+<SENT sid="324" pm="."><plain>The details of insulin and BSA glycation are described in Method S1. </plain></SENT>
+<SENT sid="325" pm="."><plain>In Aβ glycation studies, 100 µM Aβ13–22 and 0.1 M glucose were incubated with and without various concentrations of protriptyline in 10 mM PBS, pH 7.0 for 7 days. </plain></SENT>
+<SENT sid="326" pm="."><plain>These samples were further used to study glycation mediated Aβ aggregation by different assays. </plain></SENT>
+</text></p></sec><sec id="s4j"><title><text><SENT sid="327" pm="."><plain>Thioflavin T Assay </plain></SENT>
+</text></title><p><text><SENT sid="328" pm="."><plain>Thioflavin T assay was performed on 7th day of incubation. </plain></SENT>
+<SENT sid="329" pm="."><plain>50 µl (25 µM) of Aβ13–22 was mixed with 150 µl of Thioflavin T (ThT) stock solution (50 µM ThT in PBS pH 7.0) and placed in 96-well plate (black with flat bottom, Cornings). </plain></SENT>
+<SENT sid="330" pm="."><plain>Fluorescence emission was measured at 460–550 nm upon excitation at 440 nm. </plain></SENT>
+<SENT sid="331" pm="."><plain>To account for background fluorescence, the fluorescence intensity measured from each control solution without Aβ was subtracted from each solution containing Aβ13–22. </plain></SENT>
+<SENT sid="332" pm="."><plain>Similarly, Thoflavin T assay was performed for aggregation kinetics of Aβ13–22 and Aβ13–22 glycation with and without protriptyline. </plain></SENT>
+</text></p></sec><sec id="s4k"><title><text><SENT sid="333" pm="."><plain>Light Scattering Analysis </plain></SENT>
+</text></title><p><text><SENT sid="334" pm="."><plain>Inhibition of aggregation/ glycation mediated aggregation of Aβ was detected by static light scattering method using a Perkin-Elmer Luminescence spectrometer LS50B. </plain></SENT>
+<SENT sid="335" pm="."><plain>Both excitation and emission wavelengths were set at 400 nm. </plain></SENT>
+<SENT sid="336" pm="."><plain>Excitation and emission slit width was set to 10 nm and 2.5 nm, respectively. </plain></SENT>
+<SENT sid="337" pm="."><plain>Scattering was recorded for 60 sec. </plain></SENT>
+</text></p></sec><sec id="s4l"><title><text><SENT sid="338" pm="."><plain>Circular Dichroism Spectroscopy </plain></SENT>
+</text></title><p><text><SENT sid="339" pm="."><plain>The far UV CD spectra (in wavelength range of 190–250 nm) of Aβ13–22 (20 µg/ml) with and without protriptyline was recorded on a Jasco-J815 spectropolarimeter at ambient temperature. </plain></SENT>
+<SENT sid="340" pm="."><plain>In case of AChE, the enzyme was incubated with protriptyline and CD spectra were recorded at 0 min and 30 min. </plain></SENT>
+<SENT sid="341" pm="."><plain>Each CD spectrum was accumulated from three scans at 50 nm/min with cell path length of 0.1 cm. </plain></SENT>
+<SENT sid="342" pm="."><plain>Contribution due to buffer was corrected in all spectra and observed values were converted to mean residual ellipticity (MRE) in deg cm2 dmol−1 defined as  </plain></SENT>
+</text></p><p><text><SENT sid="343" pm="."><plain>Where M is the molecular weight of the protein, θλ is CD in millidegree, d is the path length in cm, c is the protein concentration in mg/ml and r is the number of amino acid residues in the protein. </plain></SENT>
+<SENT sid="344" pm="."><plain>Secondary structure content of the amyloid with and without protriptyline was calculated using the CDPro software (CDPro software package. </plain></SENT>
+<SENT sid="345" pm="."><plain>Available: <ext-link ext-link-type="uri" xlink:href="http://lamar.colostate.edu/~sreeram/CDPro/main.html">http://lamar.colostate.edu/~sreeram/CDPro/main.html</ext-link>. </plain></SENT>
+<SENT sid="346" pm="."><plain>Accessed 2013 Oct 18). </plain></SENT>
+</text></p></sec><sec id="s4m"><title><text><SENT sid="347" pm="."><plain>Atomic Force Microscopy </plain></SENT>
+</text></title><p><text><SENT sid="348" pm="."><plain>For atomic force microscopy (AFM) analysis, 10 µl of each sample was deposited on a piece of freshly cleaved mica disk. </plain></SENT>
+<SENT sid="349" pm="."><plain>The disk was washed with water and dried overnight. </plain></SENT>
+<SENT sid="350" pm="."><plain>The sample was mounted onto a Multimode scanning probe microscope equipped with a Nanoscope IV controller from Veeco Instrument Inc., Santa Barbara, CA. </plain></SENT>
+<SENT sid="351" pm="."><plain>All the AFM measurements were done under ambient conditions using the tapping-mode AFM probes model - Tap190Al purchased from Budget Sensors. </plain></SENT>
+<SENT sid="352" pm="."><plain>The radii of tips used in this study were less than 10 nm, and their height was ∼17 µm. </plain></SENT>
+<SENT sid="353" pm="."><plain>The cantilever used had a resonant frequency of ca. </plain></SENT>
+<SENT sid="354" pm="."><plain>162 kHz and nominal spring constant of ca. </plain></SENT>
+<SENT sid="355" pm="."><plain>48 N/m with a 30 nm thick aluminium reflex coating on the back side of the cantilever of the length 225 µm. </plain></SENT>
+<SENT sid="356" pm="."><plain>For each sample, three locations with a surface area of 20×20 µm2 and 10×10 µm2 for amyloid and protriptyline treated amyloid were imaged with a frequency of 1 Hz and at a resolution of 512×512 dpi. </plain></SENT>
+<SENT sid="357" pm="."><plain>Representative images were selected for comparative studies. </plain></SENT>
+</text></p></sec><sec id="s4n"><title><text><SENT sid="358" pm="."><plain>Measurement of Glycation Associated Fluorescence </plain></SENT>
+</text></title><p><text><SENT sid="359" pm="."><plain>Glycation associated fluorescence of Aβ was measured in amyloid, glycated amyloid treated with or without protryptiline at 370 nm excitation and emission was scanned from 400–550 nm. </plain></SENT>
+</text></p></sec><sec id="s4o"><title><text><SENT sid="360" pm="."><plain>BApNA Assay </plain></SENT>
+</text></title><p><text><SENT sid="361" pm="."><plain>Activity of Bovine trypsin was estimated using enzyme-specific chromogenic substrate BApNA [46]. </plain></SENT>
+<SENT sid="362" pm="."><plain>In brief, 10 µg Bovine trypsin was incubated with and without 100 µM, 200 µM, 500 µM protriptyline at 37°C for 15 min and volume was made upto 150 µl with 0.1 M Tris-HCl pH 7.8. </plain></SENT>
+<SENT sid="363" pm="."><plain>Further, 1 ml BApNA was added to the reaction mixture and incubated for 10 min at 37°C. </plain></SENT>
+<SENT sid="364" pm="."><plain>The reaction was terminated by addition of 200 µl of 30% acetic acid and absorbance was measured at 410 nm. </plain></SENT>
+</text></p></sec><sec id="s4p"><title><text><SENT sid="365" pm="."><plain>ADAM17 Assay </plain></SENT>
+</text></title><p><text><SENT sid="366" pm="."><plain>ADAM17 assay kit (Enzo Life Sciences) was used to study the effect of protriptyline on ADAM17. </plain></SENT>
+<SENT sid="367" pm="."><plain>Briefly, ADAM17 and fluorogenic peptide (substrate) was incubated with and without 100 µM protriptyline at 37°C for 10 min. </plain></SENT>
+<SENT sid="368" pm="."><plain>The negative controls had the reaction mixture without enzyme. </plain></SENT>
+<SENT sid="369" pm="."><plain>Fluorescence was measured at 328 nm and 420 nm for excitation and emission respectively. </plain></SENT>
+</text></p></sec><sec id="s4q"><title><text><SENT sid="370" pm="."><plain>Cell culture </plain></SENT>
+</text></title><p><text><SENT sid="371" pm="."><plain>Murine neuro2a neuroblastoma cells were obtained from National Center for Cell Science, Pune, India. </plain></SENT>
+<SENT sid="372" pm="."><plain>The cells were maintained in Dulbecco's modified Eagle's medium (DMEM) and 10% Fetal Bovine Serum (FBS). </plain></SENT>
+<SENT sid="373" pm="."><plain>Cells were maintained at 37°C in humidified air containing 5% CO2 and were grown in monolayer cultures. </plain></SENT>
+</text></p></sec><sec id="s4r"><title><text><SENT sid="374" pm="."><plain>Determination of AChE inhibition in cultured cells </plain></SENT>
+</text></title><p><text><SENT sid="375" pm="."><plain>Equal numbers of cells were seeded in 25 cm2 flasks (1.5 million). </plain></SENT>
+<SENT sid="376" pm="."><plain>Cells were allowed to adhere and attain their morphology. </plain></SENT>
+<SENT sid="377" pm="."><plain>Cells were serum starved for 24 h and treated with or without 25 µM or 60 µM of protriptyline concentration for 16 h. </plain></SENT>
+<SENT sid="378" pm="."><plain>Cells were trypsinised and given two washes with ice cold PBS. </plain></SENT>
+<SENT sid="379" pm="."><plain>Protein was extracted by sonicating the cells for 20 min. </plain></SENT>
+<SENT sid="380" pm="."><plain>The cell lysate was centrifuged for 60 min at 16000 rpm. </plain></SENT>
+<SENT sid="381" pm="."><plain>Supernatant was collected and protein concentration was determined by Bradford's method. </plain></SENT>
+<SENT sid="382" pm="."><plain>Acetylcholinesterase activity was assayed as described above by Ellman's assay. </plain></SENT>
+</text></p></sec><sec id="s4s"><title><text><SENT sid="383" pm="."><plain>Cell viability </plain></SENT>
+</text></title><p><text><SENT sid="384" pm="."><plain>Cell viability following exposure to protriptyline was measured by MTT reduction assay. </plain></SENT>
+<SENT sid="385" pm="."><plain>Neuro 2a (N2a) neuroblastoma cells were seeded at a cell density of 1×104 cells per well in a 96 well plate. </plain></SENT>
+<SENT sid="386" pm="."><plain>After the cells adhered and attained their morphology, they were serum starved for 24 h prior to treatment with various concentrations (25–500 µM) of protriptyline in triplicate for 15 h. </plain></SENT>
+<SENT sid="387" pm="."><plain>After incubation, cells were given one wash with PBS and 100 µl fresh serum free media was added. </plain></SENT>
+<SENT sid="388" pm="."><plain>20 µl of 5 mg/ml MTT (dissolved in PBS) was added to each well and incubated in dark at 37°C until violet formazan crystals were observed. </plain></SENT>
+<SENT sid="389" pm="."><plain>Media from each well was discarded and crystals were dissolved in 100 µl DMSO. </plain></SENT>
+<SENT sid="390" pm="."><plain>Absorbance was measured at 555 nm using Biorad iMark microplate reader. </plain></SENT>
+</text></p></sec><sec id="s4t"><title><text><SENT sid="391" pm="."><plain>Molecular Dynamics Simulations </plain></SENT>
+</text></title><p><text><SENT sid="392" pm="."><plain>All simulations in this study were carried out with the NAMD2.9 package [47], using the CHARMM22 all-atom force field with CMAP correction for the proteins [48], [49]. </plain></SENT>
+<SENT sid="393" pm="."><plain>Force field parameters for protriptyline were generated using the SwissPARAM tool [50], and refined via electronic structure calculations using Gaussian03. </plain></SENT>
+<SENT sid="394" pm="."><plain>This strategy has been used in several recent studies [51]–[53]. </plain></SENT>
+<SENT sid="395" pm="."><plain>Simulations were carried using a time step of 2 fs in the isothermal-isobaric (NPT) ensemble at a temperature of 310 K and a pressure of 1 atmosphere. </plain></SENT>
+<SENT sid="396" pm="."><plain>Each system was sampled for a total duration of 60 ns with multiple trajectories. </plain></SENT>
+<SENT sid="397" pm="."><plain>The SHAKE algorithm [54] was used to constrain bond lengths involving hydrogen atoms. </plain></SENT>
+<SENT sid="398" pm="."><plain>Constant temperature was maintained with Langevin dynamics with a collision frequency of 1 ps−1, and constant pressure was maintained using the Langevin piston Nose-Hoover method [55]. </plain></SENT>
+<SENT sid="399" pm="."><plain>Three-dimensional orthorhombic periodic boundary conditions were employed and full electrostatics calculated with the particle-mesh Ewald method [56]. </plain></SENT>
+<SENT sid="400" pm="."><plain>A non-bonded cutoff distance of 12 Å was employed, which were smoothened at a distance of 10.5 Å. </plain></SENT>
+<SENT sid="401" pm="."><plain>Details of system setups and trajectory analysis are provided in Method S2. </plain></SENT>
+</text></p></sec><sec id="s4u"><title><text><SENT sid="402" pm="."><plain>Statistical Analysis </plain></SENT>
+</text></title><p><text><SENT sid="403" pm="."><plain>All the experiments performed independently three times. </plain></SENT>
+<SENT sid="404" pm="."><plain>Student's t-test was used for statistical analysis. </plain></SENT>
+<SENT sid="405" pm="."><plain>Data were expressed as mean ±SD. </plain></SENT>
+<SENT sid="406" pm="."><plain>A p-value &lt;0.05 was considered as statistically significant. </plain></SENT>
+</text></p></sec></sec><SecTag type="SUPPL"><sec sec-type="supplementary-material" id="s5"><title><text><SENT sid="407" pm="."><plain>Supporting Information </plain></SENT>
+</text></title><supplementary-material content-type="local-data" id="pone.0105196.s001"><label>Figure S1</label><caption><p><text><SENT sid="408" pm="."><plain>Thioflavin T Assay. Protriptyline causes concentration dependent decrease in Aβ aggregation. </plain></SENT>
+</text></p><p><text><SENT sid="409" pm="."><plain>(DOCX) </plain></SENT>
+</text></p></caption><media xlink:href="pone.0105196.s001.docx"><caption><p><text><SENT sid="410" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="pone.0105196.s002"><label>Figure S2</label><caption><p><text><SENT sid="411" pm="."><plain>A. </plain></SENT>
+<SENT sid="412" pm="."><plain>Snapshot of drug binding with Aβ monomer. Central hydrophobic core are in line representation B. </plain></SENT>
+<SENT sid="413" pm="."><plain>Comparison of residue wise percentage of helix from unbound and ligand bound Aβ monomer simulated trajectory. </plain></SENT>
+</text></p><p><text><SENT sid="414" pm="."><plain>(DOCX) </plain></SENT>
+</text></p></caption><media xlink:href="pone.0105196.s002.docx"><caption><p><text><SENT sid="415" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="pone.0105196.s003"><label>Figure S3</label><caption><p><text><SENT sid="416" pm="."><plain>A. </plain></SENT>
+<SENT sid="417" pm="."><plain>Root mean square deviation (RMSD) of active site regions of β-secretase in unbound (red) and ligand bound (blue) simulated trajectory. </plain></SENT>
+<SENT sid="418" pm="."><plain>B. </plain></SENT>
+<SENT sid="419" pm="."><plain>Comparison of residue wise percentage of beta from unbound (red) and ligand bound (blue) simulated trajectory. </plain></SENT>
+</text></p><p><text><SENT sid="420" pm="."><plain>(DOCX) </plain></SENT>
+</text></p></caption><media xlink:href="pone.0105196.s003.docx"><caption><p><text><SENT sid="421" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="pone.0105196.s004"><label>Figure S4</label><caption><p><text><SENT sid="422" pm="."><plain>A. </plain></SENT>
+<SENT sid="423" pm="."><plain>Control insulin B. </plain></SENT>
+<SENT sid="424" pm="."><plain>Glycated insulin C. glycation inhibition in presence of 500 µM and D. </plain></SENT>
+<SENT sid="425" pm="."><plain>1000 µM protriptyline. These spectra were acquired on a positive reflector mode by MALDI-TOF-MS. </plain></SENT>
+<SENT sid="426" pm="."><plain>Glycated peaks are shown by black arrow. </plain></SENT>
+</text></p><p><text><SENT sid="427" pm="."><plain>(DOCX) </plain></SENT>
+</text></p></caption><media xlink:href="pone.0105196.s004.docx"><caption><p><text><SENT sid="428" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="pone.0105196.s005"><label>Figure S5</label><caption><p><text><SENT sid="429" pm="."><plain>BSA (Bovine Serum Albumin) glycation inhibition assay. Glycation inhibition of BSA was studied by A. </plain></SENT>
+<SENT sid="430" pm="."><plain>Measurement of AGE fluorescence, % glycation inhibition was plotted and B. </plain></SENT>
+<SENT sid="431" pm="."><plain>Thioflavin T fluorescence assay, concentration dependent decrease in thioflavin T fluorescence was observed. </plain></SENT>
+</text></p><p><text><SENT sid="432" pm="."><plain>(DOCX) </plain></SENT>
+</text></p></caption><media xlink:href="pone.0105196.s005.docx"><caption><p><text><SENT sid="433" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="pone.0105196.s006"><label>Table S1</label><caption><p><text><SENT sid="434" pm="."><plain>Acetylcholinesterase-protriptyline interaction energy calculations. Interaction energy of ligand with active site residues averaged over last 20 ns of all simulated trajectories. </plain></SENT>
+<SENT sid="435" pm="."><plain>Interaction strengths are in kcal mol-1 unit. </plain></SENT>
+<SENT sid="436" pm="."><plain>Standard deviations are provided within braces. </plain></SENT>
+</text></p><p><text><SENT sid="437" pm="."><plain>(DOCX) </plain></SENT>
+</text></p></caption><media xlink:href="pone.0105196.s006.docx"><caption><p><text><SENT sid="438" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="pone.0105196.s007"><label>Table S2</label><caption><p><text><SENT sid="439" pm="."><plain>Inter-residue distance between active site of AChE residues averaged over last 20 ns of free (vertical) and ligand bound (horizontal) simulated trajectories. Distances are in Å unit. </plain></SENT>
+<SENT sid="440" pm="."><plain>Standard deviations are provided within braces. </plain></SENT>
+</text></p><p><text><SENT sid="441" pm="."><plain>(DOCX) </plain></SENT>
+</text></p></caption><media xlink:href="pone.0105196.s007.docx"><caption><p><text><SENT sid="442" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="pone.0105196.s008"><label>Method S1</label><caption><p><text><SENT sid="443" pm="."><plain>Inhibition of Insulin and BSA glycation. </plain></SENT>
+</text></p><p><text><SENT sid="444" pm="."><plain>(DOCX) </plain></SENT>
+</text></p></caption><media xlink:href="pone.0105196.s008.docx"><caption><p><text><SENT sid="445" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="pone.0105196.s009"><label>Method S2</label><caption><p><text><SENT sid="446" pm="."><plain>System Setup for Molecular Dynamics Simulation. </plain></SENT>
+</text></p><p><text><SENT sid="447" pm="."><plain>(DOCX) </plain></SENT>
+</text></p></caption><media xlink:href="pone.0105196.s009.docx"><caption><p><text><SENT sid="448" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media></supplementary-material></sec></SecTag></body><back><SecTag type="ACK_FUND"><ack><p><text4fund><text><SENT sid="449" pm="."><plain>This work was supported by CSIR network project BSC0115. </plain></SENT>
+<SENT sid="450" pm="."><plain>SBB, KBB acknowledge CSIR and AKJ, RSJ acknowledge UGC for the research fellowships. </plain></SENT>
+<SENT sid="451" pm="."><plain>We thank Dr. Sourav Pal (Director) and Dr. Vidya Gupta (Head, Biochemical Sciences) for their support. </plain></SENT>
+<SENT sid="452" pm="."><plain>We thank Dr. Amitava Das, Dr. Thulasiram, Dr. Sushama Gaikwad for allowing their lab facility to be used. </plain></SENT>
+<SENT sid="453" pm="."><plain>CSIR-NCL for providing ITC facility. </plain></SENT>
+</text></text4fund></p></ack></SecTag><SecTag type="REF"><ref-list><title>References</title><ref id="pone.0105196-Roberson1"><text><SENT sid="454" pm="."><plain>1 RobersonE, MuckeL (2006) 100 Years and Counting: Prospects for Defeating Alzheimer's Disease. Science 314: 781–784.17082448 </plain></SENT>
+</text></ref><ref id="pone.0105196-Bartus1"><text><SENT sid="455" pm="."><plain>2 BartusRT, Dean IIIRL, BeerB, LippaAS (1982) The Cholinergic Hypothesis of Geriatric Memory Dysfunction. Science 217: 408–414.7046051 </plain></SENT>
+</text></ref><ref id="pone.0105196-Alzheimers1"><text><SENT sid="456" pm="."><plain>3 Alzheimer's Association: FDA-approved treatments for Alzheimers. </plain></SENT>
+<SENT sid="457" pm="."><plain>Available: <ext-link ext-link-type="uri" xlink:href="https://www.alz.org/national/documents/topicsheet_treatments.pdf">https://www.alz.org/national/documents/topicsheet_treatments.pdf</ext-link>  </plain></SENT>
+</text></ref><ref id="pone.0105196-Small1"><text><SENT sid="458" pm="."><plain>4 SmallDH (2005) Acetylcholinesterase inhibitors for the treatment of dementia in Alzheimer's disease: do we need new inhibitors? Expert Opin Emerg Drugs 10: 817–825.16262564 </plain></SENT>
+</text></ref><ref id="pone.0105196-Terry1"><text><SENT sid="459" pm="."><plain>5 TerryAVJr, BuccafuscoJJ (2003) The cholinergic hypothesis of age and Alzheimer's disease-related cognitive deficits: recent challenges and their implications for novel drug development. J Pharmacol Exp Ther 306: 821–827.12805474 </plain></SENT>
+</text></ref><ref id="pone.0105196-Hardy1"><text><SENT sid="460" pm="."><plain>6 HardyJ, SelkoeDJ (2002) The amyloid hypothesis of Alzheimer's dis-ease: progress and problems on the road to therapeutics. Science 297: 353–356.12130773 </plain></SENT>
+</text></ref><ref id="pone.0105196-Haass1"><text><SENT sid="461" pm="."><plain>7 HaassC, SelkoeDJ (2007) Soluble protein oligomers in neurodegeneration: lessons from the Alzheimer's amyloid β-peptide. Nat Rev Mol Cell Biol 8: 101–112.17245412 </plain></SENT>
+</text></ref><ref id="pone.0105196-Golde1"><text><SENT sid="462" pm="."><plain>8 GoldeTE (2006) Disease modifying therapy for AD? J Neurochem 99: 689–707.17076654 </plain></SENT>
+</text></ref><ref id="pone.0105196-Selkoe1"><text><SENT sid="463" pm="."><plain>9 SelkoeDJ (1999) Translating cell biology into therapeutic advances in Alzheimer's disease. Nature 399: A23–A31.10392577 </plain></SENT>
+</text></ref><ref id="pone.0105196-Citron1"><text><SENT sid="464" pm="."><plain>10 CitronM (2002) Beta-secretase as a target for the treatment of Alzheimer's disease. J Neurosci Res 70: 373–379.12391600 </plain></SENT>
+</text></ref><ref id="pone.0105196-Hussain1"><text><SENT sid="465" pm="."><plain>11 HussainI (2004) The potential for BACE-1 inhibitors in the treatment of Alzheimer's disease. IDrugs 7: 653–658.15243867 </plain></SENT>
+</text></ref><ref id="pone.0105196-Hills1"><text><SENT sid="466" pm="."><plain>12 HillsID, VaccaJP (2007) Progress toward a practical BACE-1 inhibitor. Curr Opin Drug Discov Devel 10: 383–91. </plain></SENT>
+</text></ref><ref id="pone.0105196-Vitek1"><text><SENT sid="467" pm="."><plain>13 VitekMP, BhattacharyaK, GlendeningJM, StopaE, VlassaraH, et al (1994) Advanced glycation end products contribute to amyloidosis in Alzheimer disease. Proc Nat Acad Sci USA 91: 4766–4770.8197133 </plain></SENT>
+</text></ref><ref id="pone.0105196-Li1"><text><SENT sid="468" pm="."><plain>14 LiXH, DuLL, ChengXS, JiangX, ZhangY, et al (2013) Glycation exacerbates the neuronal toxicity of β-amyloid. Cell Death and Disease 4: e673.23764854 </plain></SENT>
+</text></ref><ref id="pone.0105196-Anand1"><text><SENT sid="469" pm="."><plain>15 AnandP, SinghB (2013) A review on cholinesterase inhibitors for Alzheimer's disease. Arch Pharm Res 36: 375–99.23435942 </plain></SENT>
+</text></ref><ref id="pone.0105196-Zhang1"><text><SENT sid="470" pm="."><plain>16 ZhangC (2012) Natural compounds that modulate BACE1-processing of amyloid-beta precursor protein in Alzheimer's disease. Discov Med 14: 189–197.23021373 </plain></SENT>
+</text></ref><ref id="pone.0105196-Schenk1"><text><SENT sid="471" pm="."><plain>17 SchenkD, BasiGS, PangalosMN (2012) Treatment strategies targeting amyloid β-protein. Cold Spring Harb Perspect Med 2: a006387.22951439 </plain></SENT>
+</text></ref><ref id="pone.0105196-Gtz1"><text><SENT sid="472" pm="."><plain>18 GötzJ, IttnerA (2012) Tau-targeted treatment strategies in Alzheimer's disease. Br J Pharmacol 165: 1246–1259.22044248 </plain></SENT>
+</text></ref><ref id="pone.0105196-Youdim1"><text><SENT sid="473" pm="."><plain>19 YoudimMB, BuccafuscoJJ (2005) Multi-functional drugs for various CNS targets in the treatment of neurodegenerative disorders. Trends Pharmacol Sci 26: 27–35.15629202 </plain></SENT>
+</text></ref><ref id="pone.0105196-Zhang2"><text><SENT sid="474" pm="."><plain>20 ZhangHY (2005) One-compound-multiple-targets strategy to combat Alzheimer's disease. FEBS Lett 579: 5260–5264.16194540 </plain></SENT>
+</text></ref><ref id="pone.0105196-Cappelli1"><text><SENT sid="475" pm="."><plain>21 CappelliA, GallelliA, ManiniM, AnziniM, MennuniL, et al (2005) Further studies on the interaction of the 5-hydroxytryptamine3 (5-HT3) receptor with arylpiperazine ligands. </plain></SENT>
+<SENT sid="476" pm="."><plain>Development of a new 5-HT3 receptor ligand showing potent acetylcholinesterase inhibitor properties. J Med Chem 48: 3564–3575.15887964 </plain></SENT>
+</text></ref><ref id="pone.0105196-Lee1"><text><SENT sid="477" pm="."><plain>22 LeeS, ZhengX, KrishnamoorthyJ, SavelieffMG, ParkHM, et al (2014) Rational design of a structural framework with potential use to develop chemical reagents that target and modulate multiple facets of Alzheimer's disease. J Am Chem Soc 136(1): 299–310.24397771 </plain></SENT>
+</text></ref><ref id="pone.0105196-Corbett1"><text><SENT sid="478" pm="."><plain>23 CorbettA, PickettJ, BurnsA, CorcoranJ, DunnettSB, et al (2012) Drug repositioning for Alzheimer's disease. Nat Rev Drug Discov 11: 833–846.23123941 </plain></SENT>
+</text></ref><ref id="pone.0105196-Kitchen1"><text><SENT sid="479" pm="."><plain>24 KitchenDB, DecornezH, FurrJR, BajorathJ (2004) Docking and scoring in virtual screening for drug discovery: methods and applications. Nat Rev Drug Discov 3: 935–949.15520816 </plain></SENT>
+</text></ref><ref id="pone.0105196-Kellenberger1"><text><SENT sid="480" pm="."><plain>25 KellenbergerE, RodrigoJ, MullerP, RognanD (2004) Comparative evaluation of eight docking tools for docking and virtual screening accuracy. Proteins 57: 225–242.15340911 </plain></SENT>
+</text></ref><ref id="pone.0105196-Campoy1"><text><SENT sid="481" pm="?"><plain>26 CampoyAV, FreireE (2005) ITC in the post-genomic era…? </plain></SENT>
+<SENT sid="482" pm="."><plain>Priceless. Biophys Chem 115: 115–124.15752592 </plain></SENT>
+</text></ref><ref id="pone.0105196-Shoemaker1"><text><SENT sid="483" pm="."><plain>27 ShoemakerBA, PanchenkoAR (2007) Deciphering Protein–Protein Interactions. </plain></SENT>
+<SENT sid="484" pm="."><plain>Part I. </plain></SENT>
+<SENT sid="485" pm="."><plain>Experimental Techniques and Databases. PLoS Comput Biol 3: 337–344. </plain></SENT>
+</text></ref><ref id="pone.0105196-Tai1"><text><SENT sid="486" pm="."><plain>28 TaiK, ShenT, HenchmanRH, BourneY, MarchotP, et al (2002) Mechanism of Acetylcholinesterase Inhibition by Fasciculin: A 5-ns Molecular Dynamics Simulation. J Am Chem Soc 124: 6153–6161.12022850 </plain></SENT>
+</text></ref><ref id="pone.0105196-Jana1"><text><SENT sid="487" pm="."><plain>29 JanaAK, SenguptaN (2012) Adsorption mechanism and collapse propensities of the full-length, monomeric Aβ (1–42) on the surface of a single-walled carbon nanotube: a molecular dynamics simulation study. Biophys J 102: 1889–1896.22768945 </plain></SENT>
+</text></ref><ref id="pone.0105196-Santini1"><text><SENT sid="488" pm="."><plain>30 SantiniS, WeiG, MousseauN, DerreumauxP (2004) Pathway Complexity of Alzheimer's β-Amyloid Aβ16–22 Peptide Assembly. Structure 12: 1245–1255.15242601 </plain></SENT>
+</text></ref><ref id="pone.0105196-Balbach1"><text><SENT sid="489" pm="."><plain>31 BalbachJJ, IshiiY, AntzutkinON, LeapmanRD, RizzoNW, et al (2000) Amyloid Fibril Formation by Aβ16–22, a Seven-Residue Fragment of the Alzheimer's β-Amyloid Peptide, and Structural Characterization by Solid State NMR. Biochemistry 39: 1374–1375. </plain></SENT>
+</text></ref><ref id="pone.0105196-Bernstein1"><text><SENT sid="490" pm="."><plain>32 BernsteinSL, WyttenbachT, BaumketnerA, SheaJE, BitanG, et al (2005) Amyloid beta-protein: monomer structure and early aggregation states of Abeta42 and its Pro19 alloform. J Am Chem Soc 127(7): 2075–2084.15713083 </plain></SENT>
+</text></ref><ref id="pone.0105196-Tjernberg1"><text><SENT sid="491" pm="."><plain>33 TjernbergLO, NäslundJ, LindqvistF, JohanssonJ, KarlströmAR, et al (1996) Arrest of beta-amyloid fibril formation by a pentapeptide ligand. J Biol Chem 271: 8545–8548.8621479 </plain></SENT>
+</text></ref><ref id="pone.0105196-Chimon1"><text><SENT sid="492" pm="."><plain>34 ChimonS, ShaibatMA, JonesCR, CaleroDC, AizeziB, et al (2007) Evidence of fibril-like β-sheet structures in a neurotoxic amyloid intermediate of Alzheimer's β-amyloid. Nat Struct Mol Biol 14: 1157–1164.18059284 </plain></SENT>
+</text></ref><ref id="pone.0105196-Levine1"><text><SENT sid="493" pm="."><plain>35 LevineH (1993) Thioflavine T interaction with synthetic Alzheimer's disease β-amyloid peptides: Detection of amyloid aggregation in solution. Protein Sci 2: 404–410.8453378 </plain></SENT>
+</text></ref><ref id="pone.0105196-Lee2"><text><SENT sid="494" pm="."><plain>36 LeeC, HamS (2011) Characterizing amyloid-beta protein misfolding from molecular dynamics simulations with explicit water. J Comput Chem 32: 349–355.20734314 </plain></SENT>
+</text></ref><ref id="pone.0105196-Steen1"><text><SENT sid="495" pm="."><plain>37 SteenE, TerryBM, RiveraEJ, CannonJL, NeelyTR, et al (2005) Impaired insulin and insulin-like growth factor expression and signaling mechanisms in Alzheimer's disease-is this type 3 diabetes? J Alzheimers Dis 7: 63–80.15750215 </plain></SENT>
+</text></ref><ref id="pone.0105196-Li2"><text><SENT sid="496" pm="."><plain>38 LiJ, LiuD, SunL, LuY, ZhangZ (2012) Advanced glycation end products and neurodegenerative diseases: mechanisms and perspective. J Neurol Sci 317: 1–5.22410257 </plain></SENT>
+</text></ref><ref id="pone.0105196-Gulyaeva1"><text><SENT sid="497" pm="."><plain>39 GulyaevaN, ZaslavskyA, LechnerP, ChlenovM, McConnellO, et al (2003) Relative hydrophobicity and lipophilicity of drugs measured by aqueous two-phase partitioning, octanol-buffer partitioning and HPLC. </plain></SENT>
+<SENT sid="498" pm="."><plain>A simple model for predicting blood–brain distribution. Eur J Med Chem 38: 391–396.12750026 </plain></SENT>
+</text></ref><ref id="pone.0105196-Aboukhatwa1"><text><SENT sid="499" pm="."><plain>40 AboukhatwaM, DosanjhL, LuoY (2010) Antidepressants are a rational complementary therapy for the treatment of Alzheimer's disease. . Mol Neurodegener 5: 10.20226030 </plain></SENT>
+</text></ref><ref id="pone.0105196-Morris1"><text><SENT sid="500" pm="."><plain>41 MorrisGM, HueyR, LindstromW, SannerMF, BelewRK, et al (2009) AutoDock4 and AutoDockTools4: Automated docking with selective receptor flexibility. J Comput Chem 16: 2785–2791. </plain></SENT>
+</text></ref><ref id="pone.0105196-Trott1"><text><SENT sid="501" pm="."><plain>42 TrottO, OlsonAJ (2010) AutoDock Vina: improving the speed and accuracy of docking with a new scoring function, efficient optimization, and multithreading. J Comput Chem 31: 455–461.19499576 </plain></SENT>
+</text></ref><ref id="pone.0105196-Saeed1"><text><SENT sid="502" pm="."><plain>43 SaeedAI, BhagabatiNK, BraistedJC, LiangW, SharovV, et al (2006) TM4 Microarray Software Suite. Methods Enzymol 411: 134–193.16939790 </plain></SENT>
+</text></ref><ref id="pone.0105196-Ellman1"><text><SENT sid="503" pm="."><plain>44 EllmanGL, CourtneyD, AndresV, FeatherstonRM (1961) A new and rapid colorimetric determination of acetylcholinesterase activity. Biochem Pharmacol 7: 88–95.13726518 </plain></SENT>
+</text></ref><ref id="pone.0105196-Copeland1"><text><SENT sid="504" pm="."><plain>45 CopelandRA, LombardoD, GiannarasJ, DeciccoCP (1995) Estimating ki values for tight binding inhibitors from dose-response plots. Bioorganic &amp; Medicinal Chemistry Letters 5: 1947–1952. </plain></SENT>
+</text></ref><ref id="pone.0105196-Tamhane1"><text><SENT sid="505" pm="."><plain>46 TamhaneVA, ChouguleNP, GiriAP, DixitAR, SainaniMN, et al (2005) In vivo and in vitro effect of Capsicum annum proteinase inhibitors on Helicoverpa armigera guts proteinases. Biochim Biophys Acta 1722: 156–167.15715970 </plain></SENT>
+</text></ref><ref id="pone.0105196-Kale1"><text><SENT sid="506" pm="."><plain>47 KaleL, SkeelR, BhandarkarM, BrunnerR, GursoyA, et al (1999) NAMD2: Greater Scalability for Parallel Molecular Dynamics. Comput Phys 151: 283–312. </plain></SENT>
+</text></ref><ref id="pone.0105196-MacKerell1"><text><SENT sid="507" pm="."><plain>48 MacKerellADJr, BashfordD, BellottM, DunbrackRL, EvanseckJD, et al (1998) All-Atom Empirical Potential for Molecular Modeling and Dynamics Studies of Proteins. J Phys Chem B 102: 3586–3616.24889800 </plain></SENT>
+</text></ref><ref id="pone.0105196-Mackerell1"><text><SENT sid="508" pm="."><plain>49 MackerellADJr, FeigM, BrooksCL3rd (2004) Extending the treatment of backbone energetics in protein force fields: limitations of gas-phase quantum mechanics in reproducing protein conformational distributions in molecular dynamics simulations. J Comput Chem 25: 1400–1415.15185334 </plain></SENT>
+</text></ref><ref id="pone.0105196-Zoete1"><text><SENT sid="509" pm="."><plain>50 ZoeteV, CuendetMA, GrosdidierA, MichielinO (2011) SwissParam: a fast force field generation tool for small organic molecules. J Comput Chem 32: 2359–2368.21541964 </plain></SENT>
+</text></ref><ref id="pone.0105196-Hill1"><text><SENT sid="510" pm="."><plain>51 HillEH, StrattonK, WhittenDG, EvansDG (2012) Molecular dynamics simulation study of the interaction of cationic biocides with lipid bilayers: aggregation effects and bilayer damage. Langmuir 28: 14849–14854.23036095 </plain></SENT>
+</text></ref><ref id="pone.0105196-Mabanglo1"><text><SENT sid="511" pm="."><plain>52 MabangloMF, SerohijosAW, PoulterCD (2012) The Streptomyces-produced antibiotic fosfomycin is a promiscuous substrate for Archaeal isopentenyl phosphate kinase. Biochemistry 51: 917–925.22148590 </plain></SENT>
+</text></ref><ref id="pone.0105196-Caulfield1"><text><SENT sid="512" pm="."><plain>53 CaulfieldT, Medina-FrancoJL (2011) Molecular dynamics simulations of human DNA methyltransferase 3B with selective inhibitor nanaomycin A. </plain></SENT>
+<SENT sid="513" pm="."><plain>J Struct Biol. 176: 185–191. </plain></SENT>
+</text></ref><ref id="pone.0105196-Ryckaert1"><text><SENT sid="514" pm="."><plain>54 RyckaertJP, CiccottiG, BerendsenHJC (1977) Numerical integration of the cartesian equations of motion of a system with constraints: molecular dynamics of n-alkanes. J Comput Phys 23: 327–341. </plain></SENT>
+</text></ref><ref id="pone.0105196-Feller1"><text><SENT sid="515" pm="."><plain>55 FellerSE, ZhangY, PastorRW, BrooksBR (1995) Constant pressure molecular dynamics simulation: The Langevin piston method. J Chem Phys 103: 4613–4621. </plain></SENT>
+</text></ref><ref id="pone.0105196-Essmann1"><text><SENT sid="516" pm="."><plain>56 EssmannU, PereraL, BerkowitzML, DardenT, LeeH, et al (1995) A smooth particle mesh Ewald method. J Chem Phys 103: 8577–8593. </plain></SENT>
+</text></ref></ref-list></SecTag></back></article>

@@ -1,0 +1,156 @@
+
+<article xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML" article-type="research-article"><?properties open_access?><?DTDIdentifier.IdentifierValue -//NLM//DTD Journal Publishing DTD v2.3 20070202//EN?><?DTDIdentifier.IdentifierType public?><?SourceDTD.DTDName journalpublishing.dtd?><?SourceDTD.Version 2.3?><?ConverterInfo.XSLTName jp2nlmx2.xsl?><?ConverterInfo.Version 2?><front><?epub May-22-2009?><journal-meta><journal-id journal-id-type="nlm-ta">Nucleic Acids Res</journal-id><journal-id journal-id-type="iso-abbrev">Nucleic Acids Res</journal-id><journal-id journal-id-type="publisher-id">nar</journal-id><journal-id journal-id-type="hwp">nar</journal-id><journal-title-group><journal-title>Nucleic Acids Research</journal-title></journal-title-group><issn pub-type="ppub">0305-1048</issn><issn pub-type="epub">1362-4962</issn><publisher><publisher-name>Oxford University Press</publisher-name></publisher></journal-meta><article-meta><article-id pub-id-type="pmcid">2703964</article-id><article-id pub-id-type="pmid">19465377</article-id><article-id pub-id-type="doi">10.1093/nar/gkp417</article-id><article-id pub-id-type="publisher-id">gkp417</article-id><article-categories><subj-group subj-group-type="heading"><subject>Articles</subject></subj-group></article-categories><title-group><article-title><SecTag type="TITLE"><text><SENT sid="0" pm="."><plain>SEPPA: a computational server for spatial epitope prediction of protein antigens </plain></SENT>
+</text></SecTag></article-title></title-group><contrib-group><contrib contrib-type="author"><name><surname>Sun</surname><given-names>Jing</given-names></name><xref ref-type="aff" rid="AFF1"><sup>1</sup></xref><xref ref-type="aff" rid="AFF1"><sup>2</sup></xref></contrib><contrib contrib-type="author"><name><surname>Wu</surname><given-names>Di</given-names></name><xref ref-type="aff" rid="AFF1"><sup>1</sup></xref><xref ref-type="aff" rid="AFF1"><sup>2</sup></xref></contrib><contrib contrib-type="author"><name><surname>Xu</surname><given-names>Tianlei</given-names></name><xref ref-type="aff" rid="AFF1"><sup>1</sup></xref><xref ref-type="aff" rid="AFF1"><sup>2</sup></xref></contrib><contrib contrib-type="author"><name><surname>Wang</surname><given-names>Xiaojing</given-names></name><xref ref-type="aff" rid="AFF1"><sup>2</sup></xref><xref ref-type="aff" rid="AFF1"><sup>3</sup></xref></contrib><contrib contrib-type="author"><name><surname>Xu</surname><given-names>Xiaolian</given-names></name><xref ref-type="aff" rid="AFF1"><sup>2</sup></xref></contrib><contrib contrib-type="author"><name><surname>Tao</surname><given-names>Lin</given-names></name><xref ref-type="aff" rid="AFF1"><sup>2</sup></xref></contrib><contrib contrib-type="author"><name><surname>Li</surname><given-names>Y. X.</given-names></name><xref ref-type="aff" rid="AFF1"><sup>2</sup></xref><xref ref-type="aff" rid="AFF1"><sup>3</sup></xref><xref ref-type="corresp" rid="COR1">*</xref></contrib><contrib contrib-type="author"><name><surname>Cao</surname><given-names>Z. W.</given-names></name><xref ref-type="aff" rid="AFF1"><sup>1</sup></xref><xref ref-type="aff" rid="AFF1"><sup>2</sup></xref><xref ref-type="corresp" rid="COR1">*</xref></contrib></contrib-group><aff id="AFF1"><sup>1</sup>Department of Biomedical Engineering, School of Life Sciences and Technology, Tongji University, Shanghai 200092, <sup>2</sup>Shanghai Center for Bioinformation Technology, 100 Qinzhou Road, Shanghai 200235 and <sup>3</sup>Bioinformatics Center, Key Lab of Systems Biology, Shanghai Institutes for Biological Sciences, Chinese Academy of Sciences, Shanghai 200031, China</aff><author-notes><corresp id="COR1">*To whom correspondence should be addressed. Tel: <phone>+86 21 5406 5003</phone>; Fax: <fax>+86 21 5406 5058</fax>; Email: <email>zwcao@tongji.edu.cn</email></corresp><corresp>Correspondence may also be addressed to Y.X. Li. Tel: <phone>+86 21 5406 5001</phone>; Fax: <fax>+86 21 5406 5058</fax>; Email: <email>yxli@scbit.org</email></corresp></author-notes><pub-date pub-type="ppub"><day>1</day><month>7</month><year>2009</year></pub-date><pub-date pub-type="epub"><day>22</day><month>5</month><year>2009</year></pub-date><pub-date pub-type="pmc-release"><day>22</day><month>5</month><year>2009</year></pub-date><volume>37</volume><issue>Web Server issue</issue><fpage>W612</fpage><lpage>W616</lpage><history><date date-type="received"><day>4</day><month>2</month><year>2009</year></date><date date-type="rev-recd"><day>24</day><month>4</month><year>2009</year></date><date date-type="accepted"><day>6</day><month>5</month><year>2009</year></date></history><permissions><copyright-statement>© 2009 The Author(s)</copyright-statement><copyright-year>2009</copyright-year><license license-type="creative-commons" xlink:href="http://creativecommons.org/licenses/by-nc/2.0/uk/"><license-p>This is an Open Access article distributed under the terms of the Creative Commons Attribution Non-Commercial License (<ext-link ext-link-type="uri" xlink:href="http://creativecommons.org/licenses/by-nc/2.0/uk/">http://creativecommons.org/licenses/by-nc/2.0/uk/</ext-link>) which permits unrestricted non-commercial use, distribution, and reproduction in any medium, provided the original work is properly cited.</license-p></license></permissions><abstract><p><SecTag type="ABS"><text><SENT sid="1" pm="."><plain>In recent years, a lot of efforts have been made in conformational epitope prediction as antigen proteins usually bind antibodies with an assembly of sequentially discontinuous and structurally compact surface residues. </plain></SENT>
+<SENT sid="2" pm="."><plain>Currently, only a few methods for spatial epitope prediction are available with focus on single residue propensity scales or continual segments clustering. </plain></SENT>
+<SENT sid="3" pm="."><plain>In the method of SEPPA, a concept of ‘unit patch of residue triangle’ was introduced to better describe the local spatial context in protein surface. </plain></SENT>
+<SENT sid="4" pm="."><plain>Besides that, SEPPA incorporated clustering coefficient to describe the spatial compactness of surface residues. </plain></SENT>
+<SENT sid="5" pm="."><plain>Validated by independent testing datasets, SEPPA gave an average AUC value over 0.742 and produced a successful pick-up rate of 96.64%. </plain></SENT>
+<SENT sid="6" pm="."><plain>Comparing with peers, SEPPA shows significant improvement over other popular methods like CEP, DiscoTope and BEpro. </plain></SENT>
+<SENT sid="7" pm="."><plain>In addition, the threshold scores for certain accuracy, sensitivity and specificity are provided online to give the confidence level of the spatial epitope identification. </plain></SENT>
+<SENT sid="8" pm="."><plain>The web server can be accessed at <ext-link ext-link-type="uri" xlink:href="http://lifecenter.sgst.cn/seppa/index.php">http://lifecenter.sgst.cn/seppa/index.php</ext-link>. </plain></SENT>
+<SENT sid="9" pm="."><plain>Batch query is supported. </plain></SENT>
+</text></SecTag></p></abstract></article-meta></front><body><SecTag type="INTRO"><sec><title><text><SENT sid="10" pm="."><plain>INTRODUCTION </plain></SENT>
+</text></title><p><text><SENT sid="11" pm="."><plain>With growing need of monoclonal antibodies and vaccines, B cell epitope prediction has become more and more desirable especially for new proteins isolated from pathogens. </plain></SENT>
+<SENT sid="12" pm="."><plain>A lot of efforts have been put for this purpose, but primarily on continuous epitopes. </plain></SENT>
+<SENT sid="13" pm="."><plain>However, crystallographic studies have shown that most of the epitopes in protein antigens are discontinuous (1), while only a few methods have been designed for this condition. </plain></SENT>
+<SENT sid="14" pm="."><plain>For instance, the first server CEP was erected in 2005 by introducing ‘accessibility of residues’ based on the 3D nature of the antigen proteins (2). </plain></SENT>
+<SENT sid="15" pm="."><plain>Subsequently, DiscoTope prediction method was designed by combining propensity scale matrixes with the spatial proximity and surface exposure (1). </plain></SENT>
+<SENT sid="16" pm="."><plain>Recently, BEpro improved DiscoTope method by introducing spatial attribute of half sphere exposure (3). </plain></SENT>
+<SENT sid="17" pm="."><plain>While these tools provided a lot of help in designing molecular experiments, benchmark and reviews have shown that the prediction of spatial epitope remained difficult for protein antigens (4,5). </plain></SENT>
+<SENT sid="18" pm="."><plain>As being pointed out, the possible improvement could lie in new features characterizing 3D structures of epitope and better training data (4). </plain></SENT>
+</text></p><p><text><SENT sid="19" pm="."><plain>This article introduces a new computational server, SEPPA, for spatial epitope prediction of protein antigens. </plain></SENT>
+<SENT sid="20" pm="."><plain>In the method of SEPPA, a novel concept of ‘unit patch of residue triangle’ is introduced to better describe local spatial context in protein antigen surface. </plain></SENT>
+<SENT sid="21" pm="."><plain>Typical network parameter of spatial clustering coefficient is also incorporated to reflect the 3D characteristic of epitopes. </plain></SENT>
+<SENT sid="22" pm="."><plain>In addition, comprehensive training data of non-redundant spatial epitopes is curated from PDB database (6) with unique representatives covering the vast diversity of known epitopes. </plain></SENT>
+<SENT sid="23" pm="."><plain>SEPPA was rigorously trained by 82 antigen–antibody protein complexes, which contained 84 unique epitopes. </plain></SENT>
+<SENT sid="24" pm="."><plain>One hundred and nineteen independent spatial epitopes of protein antigens were collected as testing dataset. </plain></SENT>
+<SENT sid="25" pm="."><plain>SEPPA's performance in detecting potential spatial epitopes was evaluated and compared with popular peer methods. </plain></SENT>
+</text></p></sec></SecTag><sec><title><text><SENT sid="26" pm="."><plain>DATASET </plain></SENT>
+</text></title><p><text><SENT sid="27" pm="."><plain>Antigen–antibody complexes were extracted from PDB database dated August 2008. </plain></SENT>
+<SENT sid="28" pm="."><plain>Only those with resolution better than 3.0 Å and protein antigen length with more than 25 residues were retained. </plain></SENT>
+<SENT sid="29" pm="."><plain>Redundant epitopes were removed by 60% similarity. </plain></SENT>
+<SENT sid="30" pm="."><plain>Eighty two structures were finally retained as the training data which included 84 unique epitopes. </plain></SENT>
+</text></p><p><text><SENT sid="31" pm="."><plain>The testing data were collected from the training dataset of DiscoTope (1), databases of IEDB (7) and Epitome (8). </plain></SENT>
+<SENT sid="32" pm="."><plain>A testing dataset of 119 antigens was set up by deducting SEPPA's training data from above testing data. </plain></SENT>
+<SENT sid="33" pm="."><plain>The PDB IDs included in the training and testing datasets can be found in the Supplementary Data (<ext-link ext-link-type="uri" xlink:href="http://nar.oxfordjournals.org/cgi/content/full/gkp417/DC1">Table S1</ext-link>). </plain></SENT>
+</text></p></sec><SecTag type="METHODS"><sec sec-type="methods"><title><text><SENT sid="34" pm="."><plain>METHODS </plain></SENT>
+</text></title><sec><title><text><SENT sid="35" pm="."><plain>Definition for unit patch of residue triangle </plain></SENT>
+</text></title><p><text><SENT sid="36" pm="."><plain>Solvent accessible surface areas (SASA) were calculated (Naccess V2.1.1.) for each residue in antigen proteins. </plain></SENT>
+<SENT sid="37" pm="."><plain>Surface residues were those with more than 1 Å2 SASA, while those with SASA loss in binding of more than 1 Å2 were classified as epitope residues. </plain></SENT>
+<SENT sid="38" pm="."><plain>The unit patch of residue triangle was defined among any three surface residues if the distance for every two of them was within 4 Å atom distance. </plain></SENT>
+<SENT sid="39" pm="."><plain>Based on the training data, unit patches containing more than two epitope residues were termed as epitope unit patches; otherwise were classified as non-epitope unit patches. </plain></SENT>
+</text></p></sec><sec><title><text><SENT sid="40" pm="."><plain>Derivation of propensity indices for unit patches </plain></SENT>
+</text></title><p><text><SENT sid="41" pm="."><plain>Considering that various residues may have similar functional moieties of R-groups in antigen–antibody interaction, the 20 residues were consolidated into 13 functional subgroups according to the conformational epitope research of Erez et al. (9). </plain></SENT>
+<SENT sid="42" pm="."><plain>Four hundred and fifty five combination patterns of subgroups were observed out of 13 × 13 × 13 for unit patches. </plain></SENT>
+<SENT sid="43" pm="."><plain>Propensity index (trii) of the unit patch pattern i is calculated as the ratio of the number of pattern i among all epitope unit patches (fi*/Σi fi*) compared with that ratio in the non-epitope unit patches (fi/Σi fi): 1 where fi* is the number of unit patch pattern i in epitope unit patches, while Σi fi* is the number of all epitope patches. </plain></SENT>
+<SENT sid="44" pm="."><plain>Denominator indicates those for non-epitope unit patches. </plain></SENT>
+</text></p><p><text><SENT sid="45" pm="."><plain>For a certain surface residue r, the propensity score of it (avgr) is predominantly determined by its local neighboring environment. </plain></SENT>
+<SENT sid="46" pm="."><plain>Thus avgr is calculated as the averaged propensity indices of all possible unit patches around residue r: 2 where Σtrii is the sum of propensity indices for neighboring unit patches within certain distance of residue r, and N is the number of these neighboring unit patches. </plain></SENT>
+</text></p></sec><sec><title><text><SENT sid="47" pm="."><plain>Definition of residue neighbor and clustering coefficient </plain></SENT>
+</text></title><p><text><SENT sid="48" pm="."><plain>Clustering coefficient is introduced to describe the compactness of the neighboring residues around one residue. </plain></SENT>
+<SENT sid="49" pm="."><plain>It reflects the probability that the neighbors of residue r are also neighbors with each other (10). </plain></SENT>
+<SENT sid="50" pm="."><plain>For one residue r, all residues within 15 Å of r are defined as residue neighbors of r. kr is the total number of residues neighbors for r. </plain></SENT>
+</text></p><p><text><SENT sid="51" pm="."><plain>Theoretically, the number of all possible links among kr residue neighbors is kr(kr–1)/2. </plain></SENT>
+<SENT sid="52" pm="."><plain>However, as only those links within certain distance can be called residue neighbors of each other, the observed actual number of residue neighbor pairs among kr is recorded as er. </plain></SENT>
+<SENT sid="53" pm="."><plain>The clustering coefficient (ccr) is given below: 3 </plain></SENT>
+</text></p></sec><sec><title><text><SENT sid="54" pm="."><plain>Algorithm of SEPPA </plain></SENT>
+</text></title><p><text><SENT sid="55" pm="."><plain>For each antigen protein from input, SEPPA will: Step 1: Determine all the surface residues in the protein antigen;For each surface residue r:Step 2: Search all possible unit patches within 15 Å atom distance of residue r, map the pre-calculated propensity indices (trii) to above unit patches, and calculate the propensity index avgr using Equation (2);Step 3: Calculate the clustering coefficient (ccr) for residue r using Equation (3);Step 4: Summarize avgr and ccr as the antigenicity score for residue r;Step 5: Give the antigenicity score for each residue, and highlight those residues with scores higher than a threshold. </plain></SENT>
+<SENT sid="56" pm="."><plain>Visualize the subsets of predicted epitope area graphically. </plain></SENT>
+</text></p></sec><sec><title><text><SENT sid="57" pm="."><plain>Performance of SEPPA </plain></SENT>
+</text></title><p><text><SENT sid="58" pm="."><plain>The Area Under the Curve (AUC) value and successful pick-up rate have been introduced to assess the performance of SEPPA. </plain></SENT>
+<SENT sid="59" pm="."><plain>SEPPA achieved the average AUC value of 0.742 on the 119 independent testing dataset (<ext-link ext-link-type="uri" xlink:href="http://nar.oxfordjournals.org/cgi/content/full/gkp417/DC1">Table S2</ext-link>). </plain></SENT>
+<SENT sid="60" pm="."><plain>With default threshold 1.80, a sensitivity of 0.580 and a specificity of 0.707 were got on this testing dataset. </plain></SENT>
+<SENT sid="61" pm="."><plain>The performance of SEPPA was also compared to popular tools of CEP, DiscoTope and BEpro under the 119 testing dataset (<ext-link ext-link-type="uri" xlink:href="http://nar.oxfordjournals.org/cgi/content/full/gkp417/DC1">Table S3</ext-link>). </plain></SENT>
+<SENT sid="62" pm="."><plain>By default thresholds, CEP, DiscoTope and BEpro produced average estimated AUC values (defined as (sensitivity+specificity)/2) of 0.521, 0.601 and 0.563, respectively. </plain></SENT>
+<SENT sid="63" pm="."><plain>In the case of SEPPA, an average estimated AUC value of 0.644 was achieved under its default threshold of 1.80, which was significantly better than those of other tools. </plain></SENT>
+<SENT sid="64" pm="."><plain>It should be reminded that this testing dataset is only new to SEPPA. </plain></SENT>
+<SENT sid="65" pm="."><plain>Hence, this comparison may be biased in favor of other tools. </plain></SENT>
+</text></p><p><text><SENT sid="66" pm="."><plain>On the other hand, it would be worth to compare among the tools the ability of picking up true epitope residues from random surface residues. </plain></SENT>
+<SENT sid="67" pm="."><plain>For SEPPA, DiscoTope and BEpro, unpaired t-tests were done to the prediction scores between the true epitope residues and other non-epitope surface residues. </plain></SENT>
+<SENT sid="68" pm="."><plain>If the mean prediction score for all the true epitope residues in a protein antigen is significantly higher than that of non-epitope surface residues (P &lt; 0.05; unpaired t-test, one-tailed), this prediction will be considered as a successful pick-up. </plain></SENT>
+<SENT sid="69" pm="."><plain>The pick-up rates were compared between the three tools on the 119 testing dataset. </plain></SENT>
+<SENT sid="70" pm="."><plain>SEPPA gave the best performance of 96.64%, while DiscoTope achieved 89.08% and BEpro gave 90.76% (<ext-link ext-link-type="uri" xlink:href="http://nar.oxfordjournals.org/cgi/content/full/gkp417/DC1">Table S4</ext-link>). </plain></SENT>
+<SENT sid="71" pm="."><plain>It is reminded that CEP did not attend this round of evaluation because it produces qualitative patch prediction results instead of antigenicity scores. </plain></SENT>
+</text></p></sec></sec></SecTag><SecTag type="METHODS"><sec><title><text><SENT sid="72" pm="."><plain>IMPLEMENTATION </plain></SENT>
+</text></title><sec><title><text><SENT sid="73" pm="."><plain>Input </plain></SENT>
+</text></title><p><text><SENT sid="74" pm="."><plain>SEPPA requires a 3D protein structure in PDB format as input. </plain></SENT>
+<SENT sid="75" pm="."><plain>Users can submit the query with a released PDB ID or upload a structural file in PDB format. </plain></SENT>
+<SENT sid="76" pm="."><plain>The format of input file is provided as an example. </plain></SENT>
+<SENT sid="77" pm="."><plain>It is recommended to specify the chain(s) ID if not all peptides are antigen proteins to be queried in the structure file. </plain></SENT>
+<SENT sid="78" pm="."><plain>Otherwise, each chain will be assumed as an antigen protein and calculated for antigenicity scores. </plain></SENT>
+</text></p></sec><sec><title><text><SENT sid="79" pm="."><plain>Output </plain></SENT>
+</text></title><p><text><SENT sid="80" pm="."><plain>The results of prediction are displayed in html format. </plain></SENT>
+<SENT sid="81" pm="."><plain>As seen in Figure 1, the predicted epitope of the influenza virus (PDB code 1A14:N) are shown as an example. </plain></SENT>
+<SENT sid="82" pm="."><plain>The sequence of submitted protein antigen is displayed in single letter code in result window. </plain></SENT>
+<SENT sid="83" pm="."><plain>The core residues are shown in lowercase and surface residues in uppercase. </plain></SENT>
+<SENT sid="84" pm="."><plain>The residues predicted as epitope are highlighted with yellow color background (Figure 1a). </plain></SENT>
+<SENT sid="85" pm="."><plain>The scores of prediction are recorded in another file, which lists the antigenicity scores for individual residue as shown in Figure 1b and this file is downloadable. </plain></SENT>
+<SENT sid="86" pm="."><plain>A link to visualize the prediction result is also provided in the result page. </plain></SENT>
+<SENT sid="87" pm="."><plain>The visualization of result is displayed with Jmol (an open-source Java viewer for chemical structures in 3D), as shown in Figure 1c. </plain></SENT>
+<SENT sid="88" pm="."><plain>Tints from blue to red represent a rising propensity for a residue to be in the epitope. Figure 1.A snapshot of predicted spatial epitope and graphical display of influenza virus (PDB code 1A14:N). </plain></SENT>
+<SENT sid="89" pm="."><plain>(a) Result page for epitope prediction of influenza virus. </plain></SENT>
+<SENT sid="90" pm="."><plain>In result box, the query sequence is displayed in single letter code. </plain></SENT>
+<SENT sid="91" pm="."><plain>Core residues are shown in lowercase, and surface residues are shown in uppercase. </plain></SENT>
+<SENT sid="92" pm="."><plain>Predicted epitope residues are highlighted with yellow color. </plain></SENT>
+<SENT sid="93" pm="."><plain>(b) Antigenicity scores predicted for each residue in influenza virus. </plain></SENT>
+<SENT sid="94" pm="."><plain>(c) Visualization of the predicted spatial epitope. </plain></SENT>
+<SENT sid="95" pm="."><plain>Tints from blue to red represent a rising propensity for a residue to be in the epitope. </plain></SENT>
+<SENT sid="96" pm="."><plain>(c) is generated with Jmol, and predicted epitope residues can be highlighted with solid sphere mode and labeled with their information. </plain></SENT>
+</text></p></sec></sec></SecTag><SecTag type="DISCUSS"><sec sec-type="discussion"><title><text><SENT sid="97" pm="."><plain>DISCUSSION </plain></SENT>
+</text></title><p><text><SENT sid="98" pm="."><plain>Generally there are two strategies to define epitope residues from the structures of immune complexes. </plain></SENT>
+<SENT sid="99" pm="."><plain>One adopts the change of SASA between unbound and bound state of antigen structures to define epitope residues, while the other picks up a distance cutoff between antigen and antibody atoms in complexes, e.g. 4 Å in DiscoTope (1). </plain></SENT>
+<SENT sid="100" pm="."><plain>SEPPA took the first strategy; the distance cutoff one was also simulated to inspect the robustness. </plain></SENT>
+<SENT sid="101" pm="."><plain>Results indicated that these two strategies had given similar results to the performance of SEPPA (data is not shown). </plain></SENT>
+</text></p><p><text><SENT sid="102" pm="."><plain>Currently, a parameter of 4 Å was chosen in the definition of unit patch of residue-triangle. </plain></SENT>
+<SENT sid="103" pm="."><plain>Considering that the majority of atom contacts occur at &lt;5 Å (11), different distances of 4, 5 and 6 Å were put under test in our work and 4 Å was found to give the best results. </plain></SENT>
+<SENT sid="104" pm="."><plain>Furthermore, the cutoff for neighborhood was set to be 15 Å because of the following calculation. </plain></SENT>
+<SENT sid="105" pm="."><plain>Cutoff ranges from 5 to 20 Å were scanned according to their impact on prediction. </plain></SENT>
+<SENT sid="106" pm="."><plain>The results showed that the most stable performance was achieved at 15 Å under training data. </plain></SENT>
+<SENT sid="107" pm="."><plain>Thus, this value was selected as the neighborhood cutoff. </plain></SENT>
+</text></p><p><text><SENT sid="108" pm="."><plain>ROC curve is often applied to evaluate the performance of predictive methods. </plain></SENT>
+<SENT sid="109" pm="."><plain>In our case, however, CEP is categorized as a discrete classifier, which does not produce the prediction scores. </plain></SENT>
+<SENT sid="110" pm="."><plain>Thus a ROC curve could not be generated for CEP but the AUC value could be estimated as (sensitivity + specificity)/2 following the method of Julia et al. (4), which is also applicable for other three tools under their respective default thresholds. </plain></SENT>
+<SENT sid="111" pm="."><plain>Since the ROC curve and AUC value are highly correlated, we assume that the estimated AUC value could be an alternative vector to compare the performance of those tools in our work. </plain></SENT>
+</text></p><p><text><SENT sid="112" pm="."><plain>From this work, the concepts of ‘unit patch of residue triangle’ and ‘clustering coefficient’ seem to make major contribution to the effective prediction of spatial epitopes. </plain></SENT>
+<SENT sid="113" pm="."><plain>As being frequently suggested, epitope residues function as a whole on antigen surface during antibody binding. </plain></SENT>
+<SENT sid="114" pm="."><plain>Correspondingly, the concept of ‘unit patch of residue triangle’ just describes the minimum moiety of surface patches which can better reflect the local spatial context on antigen exterior. </plain></SENT>
+<SENT sid="115" pm="."><plain>Thus SEPPA makes prediction based on both the residual context and the spatial compactness of neighboring residues. </plain></SENT>
+<SENT sid="116" pm="."><plain>Since the propensity index is derived from statistics of training data, these data are very important as well to be representative and unique. </plain></SENT>
+<SENT sid="117" pm="."><plain>With more and more structural data accumulated, we believe that SEPPA would be increasingly improved by incorporating further refined features of spatial epitopes. </plain></SENT>
+</text></p></sec></SecTag><SecTag type="SUPPL"><sec><title><text><SENT sid="118" pm="."><plain>SUPPLEMENTARY DATA </plain></SENT>
+</text></title><p><text><SENT sid="119" pm="."><plain><ext-link ext-link-type="uri" xlink:href="http://nar.oxfordjournals.org/cgi/content/full/gkp417/DC1">Supplementary Data</ext-link> are available at NAR Online. </plain></SENT>
+</text></p></sec></SecTag><SecTag type="ACK_FUND"><sec><title><text><SENT sid="120" pm="."><plain>FUNDING </plain></SENT>
+</text></title><p><text4fund><text><SENT sid="121" pm="."><plain>Ministry of Science and Technology China (2004CB720103, 2006AA02312, 2007AA02Z300), National Natural Science Foundation of China (30500107), and Shanghai Municipal Funding (2000236018, 2000236016, 07DZ22901). </plain></SENT>
+<SENT sid="122" pm="."><plain>Funding for open access charge: Ministry of Science and Technology China (2004CB720103). </plain></SENT>
+</text></text4fund></p><p><text4fund><text><SENT sid="123" pm="."><plain>Conflict of interest statement. </plain></SENT>
+<SENT sid="124" pm="."><plain>None declared. </plain></SENT>
+</text></text4fund></p></sec></SecTag>
+<SecTag type="SUPPL"><sec sec-type="supplementary-material">
+<title><text><SENT sid="125" pm="."><plain>Supplementary Material </plain></SENT>
+</text></title>
+<supplementary-material id="PMC_1" content-type="local-data">
+<caption>
+<title><text><SENT sid="126" pm="."><plain>[Supplementary Data] </plain></SENT>
+</text></title>
+</caption>
+<media mimetype="text" mime-subtype="html" xlink:href="gkp417_index.html"/>
+<media xlink:role="associated-file" mimetype="application" mime-subtype="msword" xlink:href="gkp417_nar-00259-web-b-2009-File003.doc"/>
+</supplementary-material>
+</sec></SecTag>
+</body><back><fn-group><fn><p><text><SENT sid="127" pm="."><plain>The authors wish it to be known that, in their opinion, the first two authors should be regarded as joint First Authors. </plain></SENT>
+</text></p></fn></fn-group><SecTag type="REF"><ref-list><title>REFERENCES</title><ref id="B1"><text><SENT sid="128" pm="."><plain>1Haste AndersenPNielsenMLundOPrediction of residues in discontinuous B-cell epitopes using protein 3D structuresProtein Sci.2006152558256717001032 </plain></SENT>
+</text></ref><ref id="B2"><text><SENT sid="129" pm="."><plain>2Kulkarni-KaleUBhosleSKolaskarASCEP: a conformational epitope prediction serverNucleic Acids Res.200533W168W17115980448 </plain></SENT>
+</text></ref><ref id="B3"><text><SENT sid="130" pm="."><plain>3SweredoskiMJBaldiPPEPITO: improved discontinuous B-cell epitope prediction using multiple distance + thresholds and half sphere exposureBioinformatics2008241459146018443018 </plain></SENT>
+</text></ref><ref id="B4"><text><SENT sid="131" pm="."><plain>4PonomarenkoJVBournePEAntibody–protein interactions: benchmark datasets and prediction tools evaluationBMC Struct. </plain></SENT>
+<SENT sid="132" pm="."><plain>Biol.200776417910770 </plain></SENT>
+</text></ref><ref id="B5"><text><SENT sid="133" pm="."><plain>5ReitmaierRReview of immunoinformatic approaches to in-silico B-cell epitope predictionNature Precedings2007Posted 5 Jul 2007, 10.1038/npre.2007.353.1 </plain></SENT>
+</text></ref><ref id="B6"><text><SENT sid="134" pm="."><plain>6BermanHMWestbrookJFengZGillilandGBhatTNWeissigHShindyalovINBournePEThe protein data bankNucleic Acids Res.20002823524210592235 </plain></SENT>
+</text></ref><ref id="B7"><text><SENT sid="135" pm="."><plain>7PetersBSidneyJBournePBuiHHBuusSDohGFleriWKronenbergMKuboRLundOThe immune epitope database and analysis resource: from vision to blueprintPLoS Biol.20053e9115760272 </plain></SENT>
+</text></ref><ref id="B8"><text><SENT sid="136" pm="."><plain>8SchlessingerAOfranYYachdavGRostBEpitome: database of structure-inferred antigenic epitopesNucleic Acids Res.200634D777D78016381978 </plain></SENT>
+</text></ref><ref id="B9"><text><SENT sid="137" pm="."><plain>9BublilEMFreundNTMayroseIPennORoitburd-BermanARubinsteinNDPupkoTGershoniJMStepwise prediction of conformational discontinuous B-cell epitopes using the Mapitope algorithmProteins20076829430417427229 </plain></SENT>
+</text></ref><ref id="B10"><text><SENT sid="138" pm="."><plain>10HuangJKawashimaSKanehisaMNew amino acid indices based on residue network topologyGenome Informatics20071815216118546483 </plain></SENT>
+</text></ref><ref id="B11"><text><SENT sid="139" pm="."><plain>11McConkeyBJSobolevVEdelmanMDiscrimination of native protein structures using atom-atom contact scoringProc. </plain></SENT>
+<SENT sid="140" pm="."><plain>Natl Acad. </plain></SENT>
+<SENT sid="141" pm="."><plain>Sci. </plain></SENT>
+<SENT sid="142" pm="."><plain>USA20031003215322012631702 </plain></SENT>
+</text></ref></ref-list></SecTag></back></article>

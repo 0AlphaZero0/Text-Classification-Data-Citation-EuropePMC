@@ -1,0 +1,353 @@
+
+<article xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML" article-type="research-article"><?properties open_access?><?DTDIdentifier.IdentifierValue -//NLM//DTD Journal Publishing DTD v2.3 20070202//EN?><?DTDIdentifier.IdentifierType public?><?SourceDTD.DTDName journalpublishing.dtd?><?SourceDTD.Version 2.3?><?ConverterInfo.XSLTName jp2nlmx2.xsl?><?ConverterInfo.Version 2?><front><journal-meta><journal-id journal-id-type="nlm-ta">Nutrients</journal-id><journal-id journal-id-type="publisher-id">nutrients</journal-id><journal-title-group><journal-title>Nutrients</journal-title></journal-title-group><issn pub-type="epub">2072-6643</issn><publisher><publisher-name>MDPI</publisher-name></publisher></journal-meta><article-meta><article-id pub-id-type="pmcid">3296995</article-id><article-id pub-id-type="doi">10.3390/nu4020132</article-id><article-id pub-id-type="publisher-id">nutrients-04-00132</article-id><article-categories><subj-group subj-group-type="heading"><subject>Article</subject></subj-group></article-categories><title-group><article-title><SecTag type="TITLE"><text><SENT sid="0" pm="."><plain>Current Challenges in Detecting Food Allergens by Shotgun and Targeted Proteomic Approaches: A Case Study on Traces of Peanut Allergens in Baked Cookies </plain></SENT>
+</text></SecTag></article-title></title-group><contrib-group><contrib contrib-type="author"><name><surname>Pedreschi</surname><given-names>Romina</given-names></name></contrib><contrib contrib-type="author"><name><surname>Nørgaard</surname><given-names>Jørgen</given-names></name></contrib><contrib contrib-type="author"><name><surname>Maquet</surname><given-names>Alain</given-names></name><xref rid="c1-nutrients-04-00132" ref-type="corresp">*</xref></contrib></contrib-group><aff id="af1-nutrients-04-00132">European Commission (EC), DG Joint Research Centre (JRC), Institute for Reference Materials and Measurements (IRMM), Geel 2440, Belgium; Email: <email>romina.pedreschi@ec.europa.eu</email> (R.P.); <email>jorgen.norgaard@ec.europa.eu</email> (J.N.)</aff><author-notes><corresp id="c1-nutrients-04-00132"><label>*</label> Author to whom correspondence should be addressed; Email: <email>alain.maquet@ec.europa.eu</email>; Tel.: +32-0-14-571-817; Fax: +32-0-14-571-787.</corresp></author-notes><pub-date pub-type="epub"><day>21</day><month>2</month><year>2012</year></pub-date><pub-date pub-type="collection"><month>2</month><year>2012</year></pub-date><volume>4</volume><issue>2</issue><fpage>132</fpage><lpage>150</lpage><history><date date-type="received"><day>25</day><month>12</month><year>2011</year></date><date date-type="rev-recd"><day>08</day><month>2</month><year>2012</year></date><date date-type="accepted"><day>13</day><month>2</month><year>2012</year></date></history><permissions><copyright-statement>© 2012 by the authors; licensee MDPI, Basel, Switzerland.</copyright-statement><copyright-year>2012</copyright-year><license license-type="open-access" xlink:href="http://creativecommons.org/licenses/by/3.0/"><license-p>This article is an open-access article distributed under the terms and conditions of the Creative Commons Attribution license (<ext-link ext-link-type="uri" xlink:href="http://creativecommons.org/licenses/by/3.0/">http://creativecommons.org/licenses/by/3.0/</ext-link>).</license-p></license></permissions><abstract><p><SecTag type="ABS"><text><SENT sid="1" pm="."><plain>There is a need for selective and sensitive methods to detect the presence of food allergens at trace levels in highly processed food products. </plain></SENT>
+<SENT sid="2" pm="."><plain>In this work, a combination of non-targeted and targeted proteomics approaches are used to illustrate the difficulties encountered in the detection of the major peanut allergens Ara h 1, Ara h 2 and Ara h 3 from a representative processed food matrix. </plain></SENT>
+<SENT sid="3" pm="."><plain>Shotgun proteomics was employed for selection of the proteotypic peptides for targeted approaches via selective reaction monitoring. </plain></SENT>
+<SENT sid="4" pm="."><plain>Peanut presence through detection of the proteotypic Ara h 3/4 peptides AHVQVVDSNGNR (m/z 432.5, 3+) and SPDIYNPQAGSLK (m/z 695.4, 2+) was confirmed and the developed method was able to detect peanut presence at trace levels (≥10 μg peanut g−1 matrix) in baked cookies. </plain></SENT>
+</text></SecTag></p></abstract><SecTag type="KEYWORD"><kwd-group><kwd>data dependent acquisition</kwd><kwd>peanut</kwd><kwd>food allergens</kwd><kwd>proteomics</kwd><kwd>shotgun</kwd><kwd>selective reaction monitoring</kwd><kwd>targeted</kwd></kwd-group></SecTag></article-meta></front><body><SecTag type="ABBR"><sec><title><text><SENT sid="5" pm="."><plain>Abbreviations </plain></SENT>
+</text></title><p><text><SENT sid="6" pm="."><plain>ACN, acetonitrile; CE, collision energy; CHAPS, 3-[(3-cholamidopropyl)dimethylammonio]-1-propanesulfonate; DDA, data dependent acquisition; DIA, Data independent acquisition; DT, dwell time; DTT, dithiothreitol; MCP, microchannel plate; PBS, phosphate buffered saline; PTP, proteotypic peptide; Q-TOF MS, quadrupole time of flight mass spectrometer; SDS-PAGE, sodium dodecyl sulfate polyacrylamide gel electrophoresis; SRM, selective reaction monitoring; TBS, Tris buffered saline; UPLC, ultra performance liquid chromatography. </plain></SENT>
+</text></p></sec></SecTag><SecTag type="INTRO"><sec><title><text><SENT sid="7" pm="."><plain>1. </plain></SENT>
+<SENT sid="8" pm="."><plain>Introduction </plain></SENT>
+</text></title><p><text><SENT sid="9" pm="."><plain>An increasing incidence of food allergies in Europe and USA [1,2] is being reflected in clinical studies. </plain></SENT>
+<SENT sid="10" pm="."><plain>European legislation recognizes so far 14 major allergenic foods [3] and requires a mandatory declaration when they are part of the ingredients; in cases where the manufacturer cannot exclude their presence as a result of accidental contamination in foodstuffs the label often contains the phrase “may contain”. </plain></SENT>
+<SENT sid="11" pm="."><plain>But so far, there are no established threshold limits below which an allergen poses only a small risk of causing harm to an allergic consumer. </plain></SENT>
+<SENT sid="12" pm="."><plain>Even though commonly accepted trigger levels have not been established yet, there is consensus among the scientific community, that allergen detection methods should be capable of covering the low ppm range (1–10 mg allergenic ingredient kg−1 food product). </plain></SENT>
+</text></p><p><text><SENT sid="13" pm="."><plain>Currently, to detect allergens in food products, enzyme-linked immunosorbent assays (ELISA) and PCR analyses were adopted as methods of choice by the food industry and official food control agencies [2,4]. </plain></SENT>
+<SENT sid="14" pm="."><plain>However, food matrix and processing effects can result in large numbers of false positives and negatives using these methods [5], which lack the precision and rigor needed in cases of liability issues [6]. </plain></SENT>
+<SENT sid="15" pm="."><plain>Mass spectrometry driven approaches on the other hand can be successfully used as a confirmatory platform given the specificity and sensitivity that can be achieved. </plain></SENT>
+<SENT sid="16" pm="."><plain>In addition, multi-allergen detection and quantification is feasible after some stringent considerations are fulfilled [6]. </plain></SENT>
+</text></p><p><text><SENT sid="17" pm="."><plain>The bottom up mass spectrometry approach (reconstruction of the protein based on peptides) either for characterization of the allergenic protein or by a targeted approach for sensitive detection/quantification are being used as platforms for allergen detection with promising outcomes [7,8]. </plain></SENT>
+</text></p><p><text><SENT sid="18" pm="."><plain>The lack of established guidelines addressing different issues during sample preparation for analysis of food allergens makes it difficult to have a generic platform for multi-allergen detection and quantification. </plain></SENT>
+<SENT sid="19" pm="."><plain>Published investigations in many cases lack experimental details and pose question marks relating to critical points of the food allergen detection workflows. </plain></SENT>
+<SENT sid="20" pm="."><plain>It is of urgent necessity that certain aspects of the protocol used are stated: target analyte, source of allergenic food used (e.g., raw, roasted, defatted, etc.), incurred or spiked allergenic food (before or after processing); clear statement of reporting units (mass ratio of allergenic food, total proteins, allergenic protein target), digestion conditions (possible peptide modifications), etc., just to cite a few aspects of the sample preparation phase. </plain></SENT>
+</text></p><p><text><SENT sid="21" pm="."><plain>In this manuscript, we would like to illustrate with peanut serving as an example: (i) the challenges to be faced to detect food allergens at trace levels in complex food matrices (1–10 mg peanuts kg−1 cookie); (ii) the need for improvements in sample preparation and mass spectrometry analytical tools to achieve low levels of detection; and (iii) the awareness on key issues related to the development of a robust multi-allergen and quantitative method for trace analysis of food allergens. </plain></SENT>
+</text></p></sec></SecTag><SecTag type="METHODS"><sec><title><text><SENT sid="22" pm="."><plain>2. </plain></SENT>
+<SENT sid="23" pm="."><plain>Materials and Methods </plain></SENT>
+</text></title><sec><title><text><SENT sid="24" pm="."><plain>2.1. </plain></SENT>
+<SENT sid="25" pm="."><plain>Materials </plain></SENT>
+</text></title><p><text><SENT sid="26" pm="."><plain>Peanut included in the IRMM-481f peanut test material (mixture of five varieties, five different processing conditions) were utilized (Table 1). </plain></SENT>
+<SENT sid="27" pm="."><plain>Wheat flour based cookie containing different amounts of IRMM peanut mixture (0, 10, 100, 1000 and 10,000 μg∙g−1 matrix) were prepared in house. </plain></SENT>
+<SENT sid="28" pm="."><plain>Incurred cookies were baked at 180 °C for 16 min. </plain></SENT>
+<SENT sid="29" pm="."><plain>The wheat flour based cookie recipe used consisted of: wheat flour 49.0%, butter 19.6%, dust sugar 18.4%, skimmed milk powder 5.9%, water 6.6%, sodium chloride 0.3%, sodium hydrogen carbonate 0.1%, ammonium bisulfate 0.1%. </plain></SENT>
+<SENT sid="30" pm="."><plain>Baked cookies were grinded to a particle size &lt;250 μm in liquid nitrogen and stored at −20 °C until use. </plain></SENT>
+<SENT sid="31" pm="."><plain>Cookie dough was incurred with different amounts of peanuts before baking. </plain></SENT>
+<SENT sid="32" pm="."><plain>Homogeneity of the cookie material was tested using ELISA kits. </plain></SENT>
+</text></p><SecTag type="TABLE"><table-wrap id="nutrients-04-00132-t001" position="anchor"><object-id pub-id-type="pii">nutrients-04-00132-t001_Table 1</object-id><label>Table 1</label><caption><p><text><SENT sid="33" pm="."><plain>Detailed information of the IRMM-481 peanut test material used to prepare the incurred cookies. </plain></SENT>
+</text></p></caption></table-wrap></SecTag></sec><sec><title><text><SENT sid="34" pm="."><plain>2.2. </plain></SENT>
+<SENT sid="35" pm="."><plain>Chemicals </plain></SENT>
+</text></title><p><text><SENT sid="36" pm="."><plain>All chemicals used for sample preparation were purchased from VWR International (West Chester, PA, USA) and were at least analytical reagent grade. </plain></SENT>
+<SENT sid="37" pm="."><plain>PlusOne chemicals for gel electrophoresis (Tris, glycine, 3-[(3-cholamidopropyl)dimethylammonio]-1-propanesulfonate (CHAPS), urea, thiourea, dithiothreitol (DTT), dimethylformamide), 2D clean up and 2D quantification kits were purchased from GE Healthcare (Uppsala, Sweden). </plain></SENT>
+<SENT sid="38" pm="."><plain>Mini gels NUPAGE® 12% Bis-Tris (1.0 mm) were obtained from Invitrogen (Carlsbad, CA, USA). </plain></SENT>
+<SENT sid="39" pm="."><plain>Water from a Milli-Q water system (Millipore, Bedford, MA, USA) was used. </plain></SENT>
+<SENT sid="40" pm="."><plain>Trypsin mass spectrometry grade (Cat. # 786-578) was obtained from G Biosciences (St. Louis, MO, USA). </plain></SENT>
+</text></p></sec><sec><title><text><SENT sid="41" pm="."><plain>2.3. </plain></SENT>
+<SENT sid="42" pm="."><plain>Protein Extraction and Quantification </plain></SENT>
+</text></title><p><text><SENT sid="43" pm="."><plain>Tris buffered saline (TBS) extraction as previously described [5] was used. </plain></SENT>
+<SENT sid="44" pm="."><plain>One to five g of cookie sample were extracted in 10 to 20 mL of TBS buffer (20 mM Tris, 150 mM NaCl, pH 7.4) at 4 °C in an ultrasonic bath for 20 min. </plain></SENT>
+<SENT sid="45" pm="."><plain>After centrifugation at 3500 g for 30 min, proteins in the supernatant were quantified with the 2D Quant kit and further purified and precipitated with the 2D clean up kit following the instruction manuals of GE Healthcare (Uppsala, Sweden). </plain></SENT>
+</text></p></sec><sec><title><text><SENT sid="46" pm="."><plain>2.4. </plain></SENT>
+<SENT sid="47" pm="."><plain>Protein Enrichment </plain></SENT>
+</text></title><p><text><SENT sid="48" pm="."><plain>A large and highly diverse bead-based library of combinatorial peptide ligands known as ProteoMiner™ (Biorad, MO, USA) was used for protein enrichment. </plain></SENT>
+<SENT sid="49" pm="."><plain>The large sample loading capacity ProteoMiner™ protein enrichment kit was employed. </plain></SENT>
+<SENT sid="50" pm="."><plain>One to five g of cookie samples incurred with peanuts (0, 10, 100, 1000 and 10,000 μg∙g−1 matrix) were extracted with TBS buffer. </plain></SENT>
+<SENT sid="51" pm="."><plain>After equilibration of the columns as described in the kit, proteins were bound to the ligands for 3 h at room temperature under agitation. </plain></SENT>
+<SENT sid="52" pm="."><plain>Samples were washed with phosphate buffered saline solution (PBS) composed of 150 mM NaCl, 10 mM NaH2PO4 at pH 7.4 following the instructions of the manufacturer. </plain></SENT>
+<SENT sid="53" pm="."><plain>The unbound fraction was collected in a separate tube. </plain></SENT>
+<SENT sid="54" pm="."><plain>The enriched sample was eluted with 8 M urea and 2% CHAPS according to the manufacturer’s instructions. </plain></SENT>
+<SENT sid="55" pm="."><plain>For all cookie samples incurred with peanuts, SDS-PAGE was used to analyze the protein profiles of the initial extract, enriched and unbound fractions. </plain></SENT>
+<SENT sid="56" pm="."><plain>Protein content was normalized to 5 μg per lane to allow comparisons among the different fractions. </plain></SENT>
+<SENT sid="57" pm="."><plain>For mass spectrometry analysis, samples (initial extract, enriched and unbound fractions) were cleaned up and precipitated with the GE Healthcare kit described in the material and method section and further trypsin digested. </plain></SENT>
+</text></p></sec><sec><title><text><SENT sid="58" pm="."><plain>2.5. </plain></SENT>
+<SENT sid="59" pm="."><plain>SDS-PAGE </plain></SENT>
+</text></title><p><text><SENT sid="60" pm="."><plain>Fifteen well mini gels NUPAGE® 12% Bis-Tris (1.0 mm) from Invitrogen were loaded with 5 μg protein sample and run in a NUPAGE® electrophoresis system (Invitrogen). </plain></SENT>
+<SENT sid="61" pm="."><plain>Two gels were run at 200 V for approximately 50 min. </plain></SENT>
+<SENT sid="62" pm="."><plain>Silver stained gels [9] were scanned and evaluated with Labscan software (GE Healthcare). </plain></SENT>
+<SENT sid="63" pm="."><plain>Molecular weight standards of 3.5–260 kDa from Invitrogen and of 8–220 kDa from Sigma-Aldrich (USA) were run in parallel. </plain></SENT>
+</text></p></sec><sec><title><text><SENT sid="64" pm="."><plain>2.6. </plain></SENT>
+<SENT sid="65" pm="."><plain>Gel Free and Gel Based Trypsin Digestion </plain></SENT>
+</text></title><p><text><SENT sid="66" pm="."><plain>Gel free trypsin digestion was performed as follows: Fifty micrograms of protein were dissolved in 50 μL of Rapigest™ (Waters, Manchester, UK) in a 50 mM ammonium bicarbonate solution. </plain></SENT>
+<SENT sid="67" pm="."><plain>Two and a half microlitres of a 50 mM DTT solution in 50 mM ammonium bicarbonate was added and let to stand for 30 min at 60 °C under agitation. </plain></SENT>
+<SENT sid="68" pm="."><plain>Samples were cooled down and 5 μL of a 100 mM iodoacetamide in 50 mM ammonium bicarbonate was added and let to stand for 30 min in darkness. </plain></SENT>
+<SENT sid="69" pm="."><plain>One microlitre of a sequencing grade 1 μg∙μL−1 trypsin solution (1:50, enzyme:protein ratio) was added and let to incubate for 5 h at 37 °C. </plain></SENT>
+<SENT sid="70" pm="."><plain>After incubation, 5 μL of 500 mM HCl solution was added and transferred to a molecular mass cut-off filtration device (3000 MWCO) and centrifuged at 14,000 g for 10 min. </plain></SENT>
+<SENT sid="71" pm="."><plain>The filtrate was recovered for nano UPLC-Q-TOF-MS/MS analysis. </plain></SENT>
+</text></p><p><text><SENT sid="72" pm="."><plain>Gel bands were destained with 15 mM potassium ferrocyanide per 50 mM sodium thiosulfate solution and then reduced with 10 mM DTT in 50 mM ammonium bicarbonate for 30 min. </plain></SENT>
+<SENT sid="73" pm="."><plain>Alkylation was done with 55 mM iodoacetamide in 50 mM ammonium bicarbonate for 30 min. </plain></SENT>
+<SENT sid="74" pm="."><plain>Following, gel plugs were dehydrated with ACN in a vacuum concentrator until dryness and then trypsin (20 ng∙μL−1) was added and let to stand overnight at 37 °C. </plain></SENT>
+<SENT sid="75" pm="."><plain>Peptides were extracted once with 1% formic acid and 2% ACN and twice with 50% ACN. </plain></SENT>
+<SENT sid="76" pm="."><plain>After evaporation until dryness in a vacuum concentrator, peptides were re-suspended in 0.1% formic acid. </plain></SENT>
+</text></p></sec><sec><title><text><SENT sid="77" pm="."><plain>2.7. </plain></SENT>
+<SENT sid="78" pm="."><plain>Nano LC Separation of Peptides </plain></SENT>
+</text></title><p><text><SENT sid="79" pm="."><plain>Separation of peptides was performed on a nano LC reversed phase chromatography system. </plain></SENT>
+<SENT sid="80" pm="."><plain>A 180 μm × 20 mm Symmmetry C18 (5 μm) nano Acquity™ was used as trap column. </plain></SENT>
+<SENT sid="81" pm="."><plain>Separation of peptides was carried out on a 75 μm × 100 mm (1.7 μm) BEH 130 C18 nano Acquity™ column. </plain></SENT>
+<SENT sid="82" pm="."><plain>Eluent A was composed of 0.1% formic acid in water and eluent B was 0.1% formic acid in ACN. </plain></SENT>
+<SENT sid="83" pm="."><plain>A flow rate of 0.4 μL∙min−1 was used. </plain></SENT>
+<SENT sid="84" pm="."><plain>The linear gradient used to achieve separation of peptides was as follows: (initial) 97% A, 3% B; (0.5–80 min) 60% A, 40% B; (80–85 min) 15% A, 85% B; (85–90 min) 15% A, 85% B; (90–95 min) 97% A and 3% B and (95–100 min) 97% A and 3% B. </plain></SENT>
+<SENT sid="85" pm="."><plain>One microlitre of a sample mixture of ~0.8 μg∙μL−1 prepared in Rapigest™ was injected for in liquid digested samples and 5 μL of the same sample mixture for gel digested samples. </plain></SENT>
+</text></p></sec><sec><title><text><SENT sid="86" pm="."><plain>2.8. </plain></SENT>
+<SENT sid="87" pm="."><plain>Nano Electrospray Q-TOF Tandem Mass Spectrometry (Nano-ESI Q-TOF MS/MS) </plain></SENT>
+</text></title><p><text><SENT sid="88" pm="."><plain>MS/MS experiments were carried out in a quadrupole time of flight mass spectrometer (Q-TOF Ultima Global, Waters, Manchester, U.K) equipped with a nano-electrospray Z spray source. </plain></SENT>
+<SENT sid="89" pm="."><plain>The operating conditions of the Q-TOF-MS were: Capillary voltage 3.0 kV, sample cone voltage, 100 V; source temperature, 80 °C. </plain></SENT>
+<SENT sid="90" pm="."><plain>The instrument was operated in positive ion mode. </plain></SENT>
+<SENT sid="91" pm="."><plain>Time of flight was operated in a continuous extraction mode. </plain></SENT>
+<SENT sid="92" pm="."><plain>In the positive linear mode (V mode) an accelerating voltage of 9.10 kV was used for the TOF and the MCP value of the detector was set to 2200 V. </plain></SENT>
+<SENT sid="93" pm="."><plain>A mass calibrant of Glu-Fibrinopeptide B (Sigma Aldrich) at 500 fmol∙μL−1 was utilized in MS/MS mode. </plain></SENT>
+<SENT sid="94" pm="."><plain>Lock spray was utilized during the whole acquisition. </plain></SENT>
+<SENT sid="95" pm="."><plain>Full scans (MS mode) were performed over the 350–1900 m/z range with scan time of 0.9 s and interscan time of 0.1 s. </plain></SENT>
+<SENT sid="96" pm="."><plain>For peptide fragmentation, the instrument was used in a data dependent acquisition MS survey mode (MS/MS). </plain></SENT>
+<SENT sid="97" pm="."><plain>Thus, the fragmentation of an ion is achieved when a minimum intensity (specified value) is detected (simultaneous fragmentation of the three most abundant ions). </plain></SENT>
+<SENT sid="98" pm="."><plain>The collision energy was varied between 5 and 55 V according to the mass and charge state of the respective peptides. </plain></SENT>
+</text></p></sec><sec><title><text><SENT sid="99" pm="."><plain>2.9. </plain></SENT>
+<SENT sid="100" pm="."><plain>Database Searching </plain></SENT>
+</text></title><p><text><SENT sid="101" pm="."><plain>The fragmentation ion spectra obtained from the MS survey mode were processed using Mass Lynx version 4.0 (Waters), a software that converts MS/MS raw data to peak lists. </plain></SENT>
+<SENT sid="102" pm="."><plain>After centroiding and background subtraction, the generated PKL files obtained were used for Mascot (Matrix of science, London, UK) database searching against a customized peanut allergen and Swiss-Prot database. </plain></SENT>
+<SENT sid="103" pm="."><plain>This customized allergen database consisted of Swiss-Prot sequences of: allergen Ara h 1 (P43237, clone P17 precursor), allergen Ara h 1 (P43238, clone P41B precursor), allergen Ara h 2 isoform (Fragment, Q7Y1C0), allergen Ara h 2.02 (Q8GV20), allergen II (Fragment, Q941R0), allergen Ara h 3/Ara h 4 (Q8LKN1), Ara h 3 Glycinin (Fragment, O82580), Ara h 4 Glycinin (Q9SQH7), allergen Ara h 5 Profilin (Q9SQI9), allergen Ara h 6 (Fragment, Q9SQG5), allergen Ara h 7 (Q9SQH1), allergen Ara h 8 (Q6VT83). </plain></SENT>
+<SENT sid="104" pm="."><plain>A maximum of one missed cleavages were allowed. </plain></SENT>
+<SENT sid="105" pm="."><plain>Peptide tolerance and MS/MS tolerance were set to 100 ppm and 0.1 Da respectively. </plain></SENT>
+<SENT sid="106" pm="."><plain>Modifications on cysteine residues by carboxyamidation were set as fixed and a possible modification of methionine by oxidation was set as variable modification. </plain></SENT>
+</text></p></sec><sec><title><text><SENT sid="107" pm="."><plain>2.10. </plain></SENT>
+<SENT sid="108" pm="."><plain>Selective Reaction Monitoring (SRM) </plain></SENT>
+</text></title><p><text><SENT sid="109" pm="."><plain>SRM data were acquired on a Waters Quattro Premier triple quadrupole coupled to a Waters nanoAcquity Ultra Performance system fitted with a Waters Symmetry 5 μm particle diameter C18 180 μm × 20 mm trap column and a 75 μm × 150 mm (1.7 μm) BEH 130 C18 column. </plain></SENT>
+<SENT sid="110" pm="."><plain>Peptides were eluted using a linear gradient of 1–35% B over 50 min at a flow rate of 0.3 μL∙min−1. </plain></SENT>
+<SENT sid="111" pm="."><plain>Solvent A corresponded to 0.1% formic acid in milli-Q water and solvent B to 0.1% formic acid in ACN. </plain></SENT>
+</text></p><p><text><SENT sid="112" pm="."><plain>The mass spectrometer was operated in SRM mode. </plain></SENT>
+<SENT sid="113" pm="."><plain>For ionization, 2.75 kV of capillary voltage, 35 V of cone voltage and 100 °C capillary temperature were used. </plain></SENT>
+<SENT sid="114" pm="."><plain>The collision energy was calculated using the following formulas: CE = 0.044 * (m/z) + 5.5 for doubly charged ions and CE = 0.051 * (m/z) + 0.5 for triply charged ions. </plain></SENT>
+<SENT sid="115" pm="."><plain>Selection of transitions (precursor/fragment combinations) was based on the DDA experimental data generated on an Ultima Global Q-TOF instrument (Waters). </plain></SENT>
+<SENT sid="116" pm="."><plain>The SRM transitions monitored for Ara h 1, Ara h 2 and Ara h 3 are presented in Table 2. </plain></SENT>
+<SENT sid="117" pm="."><plain>A Blast similarity search using the tool [10] was performed confirming the specificity of these peptides. </plain></SENT>
+<SENT sid="118" pm="."><plain>The dwell time (DT) for each transition was 0.05 s. </plain></SENT>
+</text></p><SecTag type="TABLE"><table-wrap id="nutrients-04-00132-t002" position="anchor"><object-id pub-id-type="pii">nutrients-04-00132-t002_Table 2</object-id><label>Table 2</label><caption><p><text><SENT sid="119" pm="."><plain>Selective Reaction Monitoring (SRM) transitions monitored for detection of Ara h 1, Ara h 2 and Ara h 3. </plain></SENT>
+</text></p></caption><table-wrap-foot><fn><p><text><SENT sid="120" pm="."><plain>a CE: collision energy. </plain></SENT>
+<SENT sid="121" pm="."><plain>Dwell time (DT) for each transition was 0.05 s. </plain></SENT>
+</text></p></fn></table-wrap-foot></table-wrap></SecTag></sec></sec></SecTag><SecTag type="RESULTS,DISCUSS"><sec><title><text><SENT sid="122" pm="."><plain>3. </plain></SENT>
+<SENT sid="123" pm="."><plain>Results and Discussion </plain></SENT>
+</text></title><p><text><SENT sid="124" pm="."><plain>Allergen detection methods must be sensitive and selective enough to detect the target proteins at levels as low as 1–10 mg allergenic food kg−1 food matrix. </plain></SENT>
+<SENT sid="125" pm="."><plain>When investigating peanuts as the allergenic food source, given that they are largely incorporated in processed foods and thus a potential cross contact of intended peanut free products cannot be ruled out representing a constant risk to allergenic consumers [11]. </plain></SENT>
+<SENT sid="126" pm="."><plain>In addition, detection of traces of peanut allergens in food products is difficult because they are obscured by the food matrix and processing hinders detection. </plain></SENT>
+</text></p><p><text><SENT sid="127" pm="."><plain>The workflow of Figure 1 is a typical approach followed to detect food allergens. </plain></SENT>
+<SENT sid="128" pm="."><plain>It includes basic steps such as protein extraction, enrichment (if necessary), protein digestion and detection of peptides from the allergenic proteins through mass spectrometry platforms. </plain></SENT>
+<SENT sid="129" pm="."><plain>To date there are eleven allergenic proteins in peanuts identified of which Ara h 1, Ara h 2 and Ara h 3 are recognized as the most abundant and major peanut allergens [12,13,14]. </plain></SENT>
+<SENT sid="130" pm="."><plain>Ara h 1, Ara h 2 and Ara h 3 represent 12−16%, 5.9−9.3% and 21.8−38.5% of the total protein content determined by SDS-PAGE quantitative studies [12]. </plain></SENT>
+<SENT sid="131" pm="."><plain>If the target is to detect 10 ppm of allergenic food kg−1 cookies the question arises, how much is the quantity of the major allergens reaching the detector in the mass spectrometer?Since Ara h 3 is the most abundant peanut allergen across different varieties, all model calculations were done with this target. It can be assumed that the average protein content of peanuts is 20%, and that Ara h 3 represents 30% of total peanut proteins. </plain></SENT>
+<SENT sid="132" pm="."><plain>Five grams of cookies contaminated with 10 μg peanuts g−1 matrix are extracted with 20 mL of TBS buffer giving an average content of Ara h 3 of 2.45 fmol μL−1 solution. </plain></SENT>
+<SENT sid="133" pm="."><plain>For protein digestion, 50 μg of total proteins (from the cookie matrix plus peanuts) are treated and approximately 0.8 μg total protein is loaded on the column which results in an ideal and theoretical content of 480 amol Ara h 3. </plain></SENT>
+<SENT sid="134" pm="."><plain>This is an optimistic scenario, since 100% recovery during protein extraction, complete digestion and 100% ionization efficiency of peptides is assumed. </plain></SENT>
+<SENT sid="135" pm="."><plain>Therefore, detection methods should be capable to detect targeted peptides in the amol-low femtomol range. </plain></SENT>
+</text></p><SecTag type="FIG"><fig id="nutrients-04-00132-f001" position="anchor"><label>Figure 1</label><caption><p><text><SENT sid="136" pm="."><plain>Workflow for sample preparation for mass spectrometry analysis. </plain></SENT>
+<SENT sid="137" pm="."><plain>The different steps involve: protein extraction from the matrix, protein enrichment (optional), enzymatic (e.g., trypsin) digestion and MS analysis of the peptide mix either through shotgun (DDA) or targeted (SRM) proteomic approaches. </plain></SENT>
+</text></p></caption><graphic xlink:href="nutrients-04-00132-g001"/></fig></SecTag><p><text><SENT sid="138" pm="."><plain>To complicate this scenario, the presence of other highly abundant proteins from the matrix (cookie) may hamper detection of the low abundant ones (trace amounts of target allergenic foods) by ion suppression of the target peptides. </plain></SENT>
+<SENT sid="139" pm="."><plain>In this particular case, wheat flour and skimmed milk powder make up 50% and 6% of the cookie composition. </plain></SENT>
+<SENT sid="140" pm="."><plain>Assuming total protein contents of 10% and 36% respectively for wheat flour and skimmed milk powder, we are talking about differences in protein or peptide levels of at least 6 orders of magnitude. A reasonable question would be if current mass spectrometry technology is able to cope with such huge differences? This will be discussed in the coming sections. </plain></SENT>
+</text></p><p><text><SENT sid="141" pm="."><plain>Up to now processing effects are not sufficiently being taken into account. </plain></SENT>
+<SENT sid="142" pm="."><plain>Food processing may induce some unknown protein modifications in the allergen targets [15]. Figure 2 displays a SDS-PAGE protein profile for the IRMM-481f peanut mix used to prepare the incurred cookies and cookies incurred with high amounts of peanuts (100,000 μg∙g−1 matrix). </plain></SENT>
+<SENT sid="143" pm="."><plain>The allergome of peanut is rather complex. </plain></SENT>
+<SENT sid="144" pm="."><plain>Ara h 1 is a 63–68 kDa glycoprotein assembled in di and trimeric complexes. </plain></SENT>
+<SENT sid="145" pm="."><plain>Of the allergen Ara h 2 two isoforms with masses of ca. 16 and 17 KDa have been isolated. </plain></SENT>
+<SENT sid="146" pm="."><plain>Ara h 3 and Ara h 4 are isoallergens and can be designated as the allergen Ara h 3/4. </plain></SENT>
+<SENT sid="147" pm="."><plain>The allergenic protein Ara h 3/4 consists of an acidic and basic subunit which remain covalently linked by an intermolecular disulfide bridge and associate into a very stable hexameric structure. </plain></SENT>
+<SENT sid="148" pm="."><plain>The acidic subunit has a molecular mass in the range of 40–45 kDa, whereas the basic subunit has a mass of ca. 25 kDa. </plain></SENT>
+<SENT sid="149" pm="."><plain>Ara h 3/4 is mainly proteolytically modified (truncation at multiple sites) with possible glycosylation. </plain></SENT>
+<SENT sid="150" pm="."><plain>Proteolytic truncation was observed for the acidic subunit but not for the basic resulting in a series of polypeptides ranging from 13–45 kDa [16]. </plain></SENT>
+<SENT sid="151" pm="."><plain>Ara h 1 and Ara h 3 were clearly identified through mass spectrometry in both samples (bands 1–4; 11 and 14; Table 3). </plain></SENT>
+<SENT sid="152" pm="."><plain>Band 11 identified Ara h 1 but also the presence of alpha-casein which was detected and confirmed by mass spectrometry (Table 3). </plain></SENT>
+<SENT sid="153" pm="."><plain>Co-migration of major allergens with matrix proteins was observed and thus interference with their detection at trace levels is expected. </plain></SENT>
+<SENT sid="154" pm="."><plain>Band 13 was negative for Ara h 3 and identified casein instead, while Ara h 2 (bands 5 and 7) could not be detected in the processed food product even when the concentration of added peanut was very high. </plain></SENT>
+<SENT sid="155" pm="."><plain>Ara h 1 and Ara h 3 are present in higher concentrations than Ara h 2 in the different peanut varieties [12]. </plain></SENT>
+<SENT sid="156" pm="."><plain>IRMM-481f peanut mix presents a low amount of Ara h 2 which limited its qualitative detection by SDS-PAGE and could not be detected even when the matrix contained very high concentrations of peanuts. Is it because of the low abundance of this protein and low sensitivity of the gel based approach or are there any interactions with other matrix components that resulted in protein modification and thus protein migrate differently and consequently was not identified by MS analysis? These are certainly issues that need to be answered. </plain></SENT>
+</text></p><SecTag type="FIG"><fig id="nutrients-04-00132-f002" position="anchor"><label>Figure 2</label><caption><p><text><SENT sid="157" pm="."><plain>SDS-PAGE protein profiles for IRMM-481f peanut mix and 16 min baked cookie incurred with 100,000 μg IRMM-481f peanut mix g−1 matrix. </plain></SENT>
+<SENT sid="158" pm="."><plain>The different band numbers were submitted to trypsin digestion and peptides submitted to nano LC-Q-TOF-MS/MS for protein identification. </plain></SENT>
+<SENT sid="159" pm="."><plain>The list of peptides and identified proteins are presented in Table 3. </plain></SENT>
+<SENT sid="160" pm="."><plain>Five micrograms protein was loaded per lane. </plain></SENT>
+<SENT sid="161" pm="."><plain>A molecular weight standard (MW) of 3.5–260 kDa was run in parallel. </plain></SENT>
+</text></p></caption><graphic xlink:href="nutrients-04-00132-g002"/></fig></SecTag><SecTag type="TABLE"><table-wrap id="nutrients-04-00132-t003" position="anchor"><object-id pub-id-type="pii">nutrients-04-00132-t003_Table 3</object-id><label>Table 3</label><caption><p><text><SENT sid="162" pm="."><plain>Tryptic peptides identified from IRMM peanut mix and 16 min baked cookies incurred with 100,000 μg peanuts g−1 matrix of IRMM peanut mix. </plain></SENT>
+</text></p></caption><table-wrap-foot><fn><p><text><SENT sid="163" pm="."><plain>a Band numbers correspond to those reported in Figure 2. </plain></SENT>
+<SENT sid="164" pm="."><plain>When sufficient amount of sample, three independent replicates were submitted to DDA MS/MS protein identification (three corresponding values for peptides matched, Mascot score and expect value) otherwise one or two samples were used. </plain></SENT>
+<SENT sid="165" pm="."><plain>(−) Stands for a negative hit. </plain></SENT>
+<SENT sid="166" pm="."><plain>The expect value is the probability to obtain a random protein identification. </plain></SENT>
+<SENT sid="167" pm="."><plain>Expect values were in all cases &lt;0.0001 peanuts g−1 matrix. </plain></SENT>
+</text></p></fn></table-wrap-foot></table-wrap></SecTag><sec><title><text><SENT sid="168" pm="."><plain>3.1. </plain></SENT>
+<SENT sid="169" pm="."><plain>Shotgun Proteomics Approach: Nano LC-Q-TOF-MS/MS </plain></SENT>
+</text></title><p><text><SENT sid="170" pm="."><plain>Protein extracts from incurred cookies with 0, 10, 100, 1000 and 100,000 μg peanuts g−1 matrix were digested with trypsin and the peptide mixture was submitted to data dependent acquisition (DDA) with a Q-TOF instrument. </plain></SENT>
+<SENT sid="171" pm="."><plain>Results are presented in Table 4. </plain></SENT>
+<SENT sid="172" pm="."><plain>Ara h 1 was detected in samples containing at least 10,000 μg peanuts g−1 matrix. </plain></SENT>
+<SENT sid="173" pm="."><plain>Ara h 3 was detected in samples containing ≥1000 μg∙g−1. </plain></SENT>
+</text></p><SecTag type="TABLE"><table-wrap id="nutrients-04-00132-t004" position="anchor"><object-id pub-id-type="pii">nutrients-04-00132-t004_Table 4</object-id><label>Table 4</label><caption><p><text><SENT sid="174" pm="."><plain>DDA MS/MS results for 16 min baked cookies incurred with different amounts of peanuts (0–100,000 μg g−1 matrix). </plain></SENT>
+</text></p></caption><table-wrap-foot><fn><p><text><SENT sid="175" pm="."><plain>Peptides were selected based on E-values lower than 0.05. E-value is the probability of a random peptide identification. </plain></SENT>
+<SENT sid="176" pm="."><plain>Results are based on three independent replicates. </plain></SENT>
+</text></p></fn></table-wrap-foot></table-wrap></SecTag><p><text><SENT sid="177" pm="."><plain>Ara h 2 could not be detected even in samples containing 100,000 μg peanuts g−1 matrix. </plain></SENT>
+<SENT sid="178" pm="."><plain>The differences in detectability of the three major allergens in the matrix seem to be related to their initial content in the peanut source. </plain></SENT>
+<SENT sid="179" pm="."><plain>Ara h 3 is the most abundant protein followed by Ara h 1 and Ara h 2 [12]. </plain></SENT>
+<SENT sid="180" pm="."><plain>Baked cookies incurred with trace amount of peanuts are an excellent representation of a processed complex food matrix where huge differences in the content of individual proteins (food allergens vs. bulk proteins from other ingredients) can be expected. </plain></SENT>
+<SENT sid="181" pm="."><plain>In addition, not all proteins generate a sufficient amount of detectable peptides: poor ionization and/or fragmentation behaviour are main issues that prevent peptide detection with the state-of-the-art mass spectrometry technology, which is even more accentuated when very complex matrices are used [15]. </plain></SENT>
+<SENT sid="182" pm="."><plain>A way to circumvent the huge differences in concentration of proteins/peptides in the sample and ion suppression is to enrich the targeted analytes [15,17,18]. </plain></SENT>
+<SENT sid="183" pm="."><plain>There is resilience for the use of enrichment techniques in trace analysis not only because of the expense of time and work but because they might complicate quantitative analysis. </plain></SENT>
+<SENT sid="184" pm="."><plain>However it was the strategy taken in this work, otherwise it was not feasible to attain the required detection limits. </plain></SENT>
+</text></p><p><text><SENT sid="185" pm="."><plain>In the present study, the shotgun approach (data dependent acquisition—DDA) was limited by the required rate to carry out a precursor scan and fragmentation event for a single peptide, which was not fast enough to analyze all peptides. </plain></SENT>
+<SENT sid="186" pm="."><plain>Consequently, bias towards highly abundant peptides was observed. </plain></SENT>
+<SENT sid="187" pm="."><plain>Thus, a simple protein enrichment protocol based on a peptide ligand library known as ProteoMiner™ was evaluated. </plain></SENT>
+<SENT sid="188" pm="."><plain>First, a possible enrichment of the major peanut allergens was confirmed in the peanut material used to prepare the incurred cookies (IRMM-481f peanut mix). </plain></SENT>
+<SENT sid="189" pm="."><plain>Ara h 1 and Ara h 3 were satisfactorily enriched in the IRMM peanut mix sample (Figure 3A). </plain></SENT>
+<SENT sid="190" pm="."><plain>Ara h 2, however, was not satisfactorily enriched and seemed to be washed away (present in the unbound fraction). </plain></SENT>
+<SENT sid="191" pm="."><plain>A different situation was observed when the matrix was incorporated (baked cookie), only enrichment of Ara h 3 could be evidenced through SDS-PAGE and was dependent on the amount of the extracted material (Figure 3B). </plain></SENT>
+<SENT sid="192" pm="."><plain>At least a 10× enrichment for Ara h 3 from cookies was achieved. </plain></SENT>
+<SENT sid="193" pm="."><plain>In cookies incurred with 100 μg peanuts g−1 matrix, Ara h 3 could be detected after enrichment through LC-Q-TOF MS/MS (Table 5). </plain></SENT>
+<SENT sid="194" pm="."><plain>Previous works in allergen detection have made used of enrichment techniques such as ultrafiltration, precipitation, and peptide ligand libraries [12,19,20]. </plain></SENT>
+<SENT sid="195" pm="."><plain>Enrichment can increase the identification rate of the low abundant fraction proteins/peptides but the intrinsic limitation of a shotgun approach will remain [21]. </plain></SENT>
+</text></p><SecTag type="FIG"><fig id="nutrients-04-00132-f003" position="anchor"><label>Figure 3</label><caption><p><text><SENT sid="196" pm="."><plain>Enrichment of major peanut allergens through peptide ligand libraries (ProteoMiner™). </plain></SENT>
+<SENT sid="197" pm="."><plain>(A) IRMM-481f peanut mix sample; (B) 16 min baked cookies incurred with 1000 μg IRMM-481f peanut mix g−1 matrix. </plain></SENT>
+<SENT sid="198" pm="."><plain>Different amounts of starting material were extracted. </plain></SENT>
+<SENT sid="199" pm="."><plain>Protein loaded was normalized to 5 μg per lane to allow comparisons. </plain></SENT>
+<SENT sid="200" pm="."><plain>Initial corresponds to whole protein extract. </plain></SENT>
+</text></p></caption><graphic xlink:href="nutrients-04-00132-g003"/></fig></SecTag><SecTag type="TABLE"><table-wrap id="nutrients-04-00132-t005" position="anchor"><object-id pub-id-type="pii">nutrients-04-00132-t005_Table 5</object-id><label>Table 5</label><caption><p><text><SENT sid="201" pm="."><plain>DDA MS/MS results for 16 min baked cookies incurred with trace amounts of peanuts (0–1000 μg∙g−1 matrix) after protein enrichment via peptide ligand library—ProteoMiner™. </plain></SENT>
+</text></p></caption><table-wrap-foot><fn><p><text><SENT sid="202" pm="."><plain>Peptides were selected based on E-values lower than 0.05. E-value is the probability of a random peptide identification. </plain></SENT>
+<SENT sid="203" pm="."><plain>Results are based on three independent extractions. </plain></SENT>
+</text></p></fn></table-wrap-foot></table-wrap></SecTag><p><text><SENT sid="204" pm="."><plain>It is worth noting the importance of a shotgun approach. </plain></SENT>
+<SENT sid="205" pm="."><plain>Indeed a targeted approach such as selective reaction monitoring (SRM) is developed based on experimental data obtained through a shotgun approach (e.g., data dependent acquisition) for selection of the proteotypic peptides. </plain></SENT>
+<SENT sid="206" pm="."><plain>In addition, a shotgun approach is useful to assess unexpected or known protein/peptide modifications which might be frequently encountered when working with processed foods. </plain></SENT>
+</text></p></sec><sec><title><text><SENT sid="207" pm="."><plain>3.2. </plain></SENT>
+<SENT sid="208" pm="."><plain>Targeted Proteomics Approach: SRM </plain></SENT>
+</text></title><p><text><SENT sid="209" pm="."><plain>SRM is a highly sensitive approach to selectively detect and quantify peptides previously selected and relying on the monitoring of specific ion transitions [22]. </plain></SENT>
+</text></p><p><text><SENT sid="210" pm="."><plain>Selection of SRM transitions to be monitored was based on experimentally obtained data with a DDA approach in an ESI-Q-TOF instrument (Table 2). </plain></SENT>
+<SENT sid="211" pm="."><plain>Peptides highly observable and detectable for Ara h 1, Ara h 2 and Ara h 3 were selected. </plain></SENT>
+<SENT sid="212" pm="."><plain>Fragment ions were selected based on MS/MS spectra of these highly observable precursor ions (Table 2). </plain></SENT>
+<SENT sid="213" pm="."><plain>At least three transitions per peptide were monitored to facilitate reliable identification of the peptide. </plain></SENT>
+<SENT sid="214" pm="."><plain>Previously enriched incurred cookie samples (1, 10 and 100 μg peanuts g−1 matrix) were submitted to SRM. </plain></SENT>
+<SENT sid="215" pm="."><plain>Two proteotypic peptides from Ara h 3 were detected in enriched cookie samples containing ≥10 μg peanuts g−1 matrix. </plain></SENT>
+<SENT sid="216" pm="."><plain>These peptides corresponded to: AHVQVVDSNGNR (m/z 432.5, triply charge ion) from which three out of the three fragment ions were detected and SPDIYNPQAGSLK (m/z 695.4, doubly charged ion, Figure 4) from which 4 out of 7 fragment ions were detected. </plain></SENT>
+<SENT sid="217" pm="."><plain>However, Ara h 1 was only detected in samples containing 100 μg peanuts g−1 matrix (DLAFPGSGEQVEK, m/z 688.8 doubly charged ion) and Ara h 2 peptides were not detected in the enriched samples tested. </plain></SENT>
+<SENT sid="218" pm="."><plain>In the present study, a gain of a factor of ten in the average signal was achieved by fractionation/enrichment techniques previous to SRM analysis as already reported by Picotti et al. analysing yeast samples [23]. </plain></SENT>
+</text></p><SecTag type="FIG"><fig id="nutrients-04-00132-f004" position="anchor"><label>Figure 4</label><caption><p><text><SENT sid="219" pm="."><plain>Selective Reaction Monitoring (SRM) of the Ara h 3 peptide SPDIYNPQAGSLK (m/z 695.4, 2+) in enriched cookie samples incurred with 10 μg peanuts g−1 matrix. </plain></SENT>
+<SENT sid="220" pm="."><plain>SRM analysis was carried out on a Waters Quatro Premier triple quadrupole. </plain></SENT>
+</text></p></caption><graphic xlink:href="nutrients-04-00132-g004"/></fig></SecTag><p><text><SENT sid="221" pm="."><plain>Previous SRM investigations focused on detection of peanut allergens in different food matrices have been reported [7,19,20,24]. </plain></SENT>
+<SENT sid="222" pm="."><plain>However, one should be critical with issues concerning sample preparation and analysis that pose some reasonable questions on achieved detection limits. </plain></SENT>
+<SENT sid="223" pm="."><plain>In the study of Careri et al. [19], for instance, the different food matrices tested (rice crispy and cacao based snacks) were fortified with different amounts of raw peanuts and it was not clearly reported if the different amount of peanut proteins were added before or after processing. </plain></SENT>
+<SENT sid="224" pm="."><plain>Thus, they were dealing with spiked samples and raw peanuts. </plain></SENT>
+<SENT sid="225" pm="."><plain>The effect of food processing on the extractability of Ara h 2 and Ara h 3/4 was not considered. </plain></SENT>
+<SENT sid="226" pm="."><plain>The detection limits of 5 μg protein g−1 matrix for Ara h 2 and 1 μg protein g−1 matrix for Ara h 3/4 might be too optimistic. </plain></SENT>
+<SENT sid="227" pm="."><plain>In addition, limits of detection were expressed as μg protein g−1 matrix which is different than μg peanuts g−1 matrix. </plain></SENT>
+<SENT sid="228" pm="."><plain>In our study, we achieved detection of Ara h 3/4 in incurred cookies with 10 μg peanuts g−1 matrix targeting the same Ara h 3 peptides (i.e., AHVQVVDSNGNR and SPDIYNPQAGSLK) reported by Careri et al. [19]. </plain></SENT>
+<SENT sid="229" pm="."><plain>For Ara h 2, the same peptides reported by Careri et al. [19] CCNELNEFENNQR (m/z 863.8, doubly charged ion) and CMCELQQIMENQSDR (m/z 1006.9, doubly charged ion) were also targeted but unsuccessfully in our study even though an alkylation step was introduced. </plain></SENT>
+<SENT sid="230" pm="."><plain>In our case, to confirm detection of a certain peptide in SRM mode at least three fragment ions needed to be detected as to be considered a true hit while in the case of Careri et al. [19] it was based on one fragment ion which could render confirmation of certain peptide doubtful. </plain></SENT>
+<SENT sid="231" pm="."><plain>At least two fragment ions should be used: one as quantifier and the other as qualifier fragment ions. </plain></SENT>
+<SENT sid="232" pm="."><plain>The ratio quantifier/qualifier must remain constant throughout samples and it is considered as another quality control step in SRM [7,8]. </plain></SENT>
+<SENT sid="233" pm="."><plain>In the study of Shefcheck et al. [20], detection levels of 2 μg protein g−1 matrix (Ara h 1) from dark chocolate with SRM have been reported. </plain></SENT>
+<SENT sid="234" pm="."><plain>The Ara h 1 peptides VLLEENAGGEQEER (m/z 786.9, doubly charged ion) and DLAFPGSGEQVEK (m/z 688.9, doubly charged ion) were targeted detecting three fragment ions per peptide. </plain></SENT>
+<SENT sid="235" pm="."><plain>With this particular matrix, the most important factor affecting the extraction of the target analyte(s) seemed to be the interaction protein-tannins. </plain></SENT>
+<SENT sid="236" pm="."><plain>The range in terms of concentration between the target analyte(s) and matrix proteins do not seem to be the major problem for detection since the sample was dark chocolate (proteins present belong to the cacao matrix). </plain></SENT>
+<SENT sid="237" pm="."><plain>In cookie as food matrix, not only the huge range in terms of protein concentrations but the interaction and processing effects seem to be the limiting factors for detecting at least Ara h 1 and Ara h 2 at lower levels. </plain></SENT>
+</text></p><p><text><SENT sid="238" pm="."><plain>In a recent study conducted by Heick et al. [7,24] targeting seven different allergens from milk, egg, soy, hazelnut, peanut, walnut and almond in flour and bread as food matrices, detection limits of 11 μg∙g−1 matrix have been reported for the allergens from peanuts (Ara h 1 and Ara h 3/4, respectively). </plain></SENT>
+<SENT sid="239" pm="."><plain>However, this detection limit is based on spiking different amounts of semi purified peanut proteins in blank matrix. </plain></SENT>
+<SENT sid="240" pm="."><plain>Unfortunately, the source of peanut material was not described (e.g., raw or processed peanut, one variety or a mix or varieties representative of what is commercially available and used by the food industry) which might explain the differences in the selected proteotypic peptides. </plain></SENT>
+<SENT sid="241" pm="."><plain>With the exception of DLAFPGSGEQVEK (m/z 688.8, doubly charged ion) from Ara h 1, the other three peptides largely differed from the ones selected in the present study. </plain></SENT>
+<SENT sid="242" pm="."><plain>For example, the proteotypic peptide RPFYSNAPQEIFIQQGR (m/z 684.5, triply charged ion) from Ara h 3/4 was reported as the most intense marker [7]. </plain></SENT>
+<SENT sid="243" pm="."><plain>However, in our study, we could only detect this peptide when the amount of peanuts was very high (&gt;10,000 μg g−1 matrix) in the cookie matrix. </plain></SENT>
+<SENT sid="244" pm="."><plain>The reported LOD value of 11 μg∙g−1 matrix might also be very optimistic since the starting material was defatted peanut, and peanut contains approximately 50% fat and the calculated LOD was based on matrix spiked with total peanut proteins. </plain></SENT>
+</text></p><p><text><SENT sid="245" pm="."><plain>There is consensus in the community that SRM is the approach to take for trace level detection of major food allergens, especially as confirmatory method when liability issues are raised. </plain></SENT>
+<SENT sid="246" pm="."><plain>However, still aspects remain that need to be common practice and improved before a solid detection method is developed. </plain></SENT>
+<SENT sid="247" pm="."><plain>Recommendations of the scientific community [6] working on the subject includes but are not limited to: history and description of the allergen food source, nature of the reporting units, quality control of MS data, etc. </plain></SENT>
+</text></p></sec><sec><title><text><SENT sid="248" pm="."><plain>3.3. </plain></SENT>
+<SENT sid="249" pm="."><plain>Perspectives </plain></SENT>
+</text></title><p><text><SENT sid="250" pm="."><plain>Previous evaluations of the reproducibilty of ProteoMiner enrichment opens perspectives for its use in food allergen quantitation [25,26]. </plain></SENT>
+<SENT sid="251" pm="."><plain>The quantitative reproducibility of cytokines per trial and not only in terms of enrichment factor was confirmed by immunodetection and nano LC-MS/MS [25]. </plain></SENT>
+<SENT sid="252" pm="."><plain>A method that incorporated ProteoMiner enrichment has been successfully used for label free quantification of series of cerebrospiral fluid samples processed in parallel [26]. </plain></SENT>
+<SENT sid="253" pm="."><plain>The signal intensity of peptides coming from growing amounts of exogenous spiked proteins in the matrix was evaluated. </plain></SENT>
+</text></p><p><text><SENT sid="254" pm="."><plain>Data independent acquisition (DIA) known as MSE presents itself as a promising approach to detect trace levels of food allergens in complex food matrices due to the higher sensitivity that can be achieved compared to the classical DDA approach. </plain></SENT>
+<SENT sid="255" pm="."><plain>An advantage of MSE is the possibility to account for certain modifications simultaneously, higher sequence coverage, and label free quantification [27]. </plain></SENT>
+<SENT sid="256" pm="."><plain>Wei et al. [28] performed data independent acquisition (DIA) or MSE to analyze Ara h 1 detectable peptides in raw and roasted peanuts. </plain></SENT>
+<SENT sid="257" pm="."><plain>The potential of certain Ara h 1 peptides as markers was based on their presence in both raw and roasted peanuts at relatively high intensities. </plain></SENT>
+<SENT sid="258" pm="."><plain>We detected the same Ara h 1 peptides: DLAFPGSGEQVEK and VLLEENAGGEQEER as the most abundant ones through DDA (Table 3). </plain></SENT>
+<SENT sid="259" pm="."><plain>Wei and co-workers also introduced a matrix (E. coli tryptic digest) in a 1:200 v/v (Ara h 1 matrix) proportion and were able to perform label free Ara h 1 quantification with the introduction of an ADH tryptic digest as internal standard. </plain></SENT>
+<SENT sid="260" pm="."><plain>However, this material does not represent a processed food product. </plain></SENT>
+<SENT sid="261" pm="."><plain>In the present work, a much higher dynamic range was encountered in terms of concentration of proteins besides that a representative matrix (cookie) was incorporated. </plain></SENT>
+<SENT sid="262" pm="."><plain>This MSE approach has been explored by our team, but so far no comparable or better sensitivity has been achieved than the ones achieved with SRM. </plain></SENT>
+</text></p><p><text><SENT sid="263" pm="."><plain>Multi allergen detection and quantification are hot topics nowadays. </plain></SENT>
+<SENT sid="264" pm="."><plain>An LC-MS based method claiming detection of seven different food allergens at trace levels in bread has been recently reported [7]. </plain></SENT>
+<SENT sid="265" pm="."><plain>The LOD values reported need to be considered with caution since the allergen food sources are not fully described and might not be representative of real scenarios, being by far too optimistic. </plain></SENT>
+<SENT sid="266" pm="."><plain>However, it is a first attempt that brings new insights into this possible multi allergen detection. </plain></SENT>
+<SENT sid="267" pm="."><plain>For absolute allergen quantification, the topic is much more sensitive and we should be cautious on how to interpret quantification. </plain></SENT>
+<SENT sid="268" pm="."><plain>Ideally, an isotopically labeled target protein that can be incorporated during the sample preparation workflow or even before processing simulating real processing and extraction conditions should be used. </plain></SENT>
+<SENT sid="269" pm="."><plain>However, so far it is more realistic to use isotopically labeled peptides [6]. </plain></SENT>
+<SENT sid="270" pm="."><plain>The digestion step for quantification of proteins/peptides is a key aspect and requires being reproducible and complete [29]. </plain></SENT>
+<SENT sid="271" pm="."><plain>Assessment of the stability of target peptides (e.g., possible deaminations) during the proteolysis and afterwards is also of key importance for absolute protein quantification. </plain></SENT>
+<SENT sid="272" pm="."><plain>Absolute quantification of milk allergens in a variety of food matrices has been recently reported [8]. </plain></SENT>
+<SENT sid="273" pm="."><plain>Many of the target peptides present Q and N in their sequence. </plain></SENT>
+<SENT sid="274" pm="."><plain>We have experimentally observed with our target peptides that when these amino acids are present they can undergo deamination to a certain degrees. </plain></SENT>
+<SENT sid="275" pm="."><plain>Of course, this issue might be circumvented by accounting for the amidated and de-aminated forms in the SRM method. </plain></SENT>
+<SENT sid="276" pm="."><plain>Given the different physico-chemical properties of the different allergenic proteins to target, the complexity of the different potential food matrices encountered and the diversity of food processing conditions, a generic sample preparation platform might not be realistic. </plain></SENT>
+<SENT sid="277" pm="."><plain>However, it might be feasible to rely on a few number of sample preparation workflows grouping food products sharing similar characteristics (e.g., high protein content, high polyphenol content, etc.). </plain></SENT>
+<SENT sid="278" pm="."><plain>This would certainly help for validation and standardization of food allergen detection methods through SRM targeted approaches. </plain></SENT>
+</text></p></sec></sec></SecTag><SecTag type="CONCL"><sec><title><text><SENT sid="279" pm="."><plain>4. </plain></SENT>
+<SENT sid="280" pm="."><plain>Concluding Remarks </plain></SENT>
+</text></title><p><text><SENT sid="281" pm="."><plain>A well described and representative food allergen source (IRMM-481f), which is a mix of five commercially available different peanut varieties and five different processing conditions, was used contrary to previous reported investigations in which the food allergen source is vague or not representative enough. </plain></SENT>
+<SENT sid="282" pm="."><plain>A representative and highly processed food matrix (cookies) with a high protein content of non target proteins (milk and wheat) was employed. </plain></SENT>
+<SENT sid="283" pm="."><plain>This matrix is representative of what is to be expected when analyzing food samples contaminated with allergens: a wide range in protein concentration and a highly processed sample. </plain></SENT>
+<SENT sid="284" pm="."><plain>This work mainly focused on method development through shotgun proteomics and sample preparation for future targeted confirmatory approaches such as SRM. </plain></SENT>
+<SENT sid="285" pm="."><plain>The SRM approach followed, allowed us to detect Ara h 3 peptides at levels as low as 10 μg peanuts g−1 cookies. </plain></SENT>
+<SENT sid="286" pm="."><plain>The two proteotypic Ara h 3/4 peptides AHVQVVDSNGNR and SPDIYNPQAGSLK were confirmed as markers of peanut presence in cookies containing as low as 10 μg peanuts g−1 cookies. </plain></SENT>
+<SENT sid="287" pm="."><plain>This targeted SRM is being further optimized by our group to allow detection, confirmation and potential quantification of Ara h 3 and Ara h 1 peanut allergens in different food matrices. </plain></SENT>
+</text></p></sec></SecTag></body><back><SecTag type="ACK_FUND"><ack><title>Acknowledgements</title><p><text4fund><text><SENT sid="288" pm="."><plain>Arnoud Groen and Kathryn Lilley from the Cambridge Centre for Proteomics, University of Cambridge are kindly acknowledged for their collaboration with the SRM work. </plain></SENT>
+</text></text4fund></p></ack></SecTag><SecTag type="REF"><ref-list><title>References</title><ref id="B1-nutrients-04-00132"><text><SENT sid="289" pm="."><plain>1. PomsR.E.KleinC.L.AnklamE. Methods for allergen analysis in food: A review. Food Addit. </plain></SENT>
+<SENT sid="290" pm="."><plain>Contam. 2004 21 1 31 14744677 </plain></SENT>
+</text></ref><ref id="B2-nutrients-04-00132"><text><SENT sid="291" pm="."><plain>2. RonaR.J.KeilT.SummersC.GislasonD.ZuidmeerL.SodergrenE.SigurdardottirS.T.LindnerT.GoldhahnK.DahlstromJ. The prevalence of food allergy: A meta-analysis. J. </plain></SENT>
+<SENT sid="292" pm="."><plain>Allergy Clin. </plain></SENT>
+<SENT sid="293" pm="."><plain>Immunol. 2007 120 638 646 17628647 </plain></SENT>
+</text></ref><ref id="B3-nutrients-04-00132"><text><SENT sid="294" pm="."><plain>3. European Commission Directive 2000/13/ec of the European Parliament and of the Council of 20 March 2000 on the Approximation of the Laws of the Member States Relating to the Labelling, Presentation and Advertising of Foodstuffs OJ L 109, 6.5.2000 European Commission Bruxelles, Belgium 2009 29  </plain></SENT>
+</text></ref><ref id="B4-nutrients-04-00132"><text><SENT sid="295" pm="."><plain>4. KerbachS.AlldrickA.J.CrevelR.W.DömötörL.DunnGalvinA.Clare MillsE.PfaffS.PomsR.E.PoppingB.TömösköziS. Managing food allergens in the food supply chain-viewed from different stakeholder perspectives. Qual. </plain></SENT>
+<SENT sid="296" pm="."><plain>Assur. </plain></SENT>
+<SENT sid="297" pm="."><plain>Saf. </plain></SENT>
+<SENT sid="298" pm="."><plain>Crops Foods 2009 1 50 60  </plain></SENT>
+</text></ref><ref id="B5-nutrients-04-00132"><text><SENT sid="299" pm="."><plain>5. ChassaigneH.NørgaardJ.V.van HengelA.J. Proteomics-based approach to detect and identify major allergens in processed peanuts by capillary LC-Q-TOF (MS/MS). J. </plain></SENT>
+<SENT sid="300" pm="."><plain>Agric. </plain></SENT>
+<SENT sid="301" pm="."><plain>Food Chem. 2007 55 4461 4473 17474754 </plain></SENT>
+</text></ref><ref id="B6-nutrients-04-00132"><text><SENT sid="302" pm="."><plain>6. JohnsonP.E.BaumgartnerS.AldickT.BessantC.GiosafattoV.HeickJ.MamoneG.O’ConnorG.PomsR.E.PoppingB. Current perspectives and recommendations for the development of mass spectrometry methods for the determination of allergens in foods. J. </plain></SENT>
+<SENT sid="303" pm="."><plain>AOAC Int. 2011 94 1026 1033 21919335 </plain></SENT>
+</text></ref><ref id="B7-nutrients-04-00132"><text><SENT sid="304" pm="."><plain>7. HeickJ.FischerM.KerbachS.TammU.PoppingB. Application of a liquid chromatography tandem mass spectrometry method for the simultaneous detection of seven allergenic foods in flour and bread and comparison of the method with commercially available Elisa test kits. J. </plain></SENT>
+<SENT sid="305" pm="."><plain>AOAC Int. 2011 94 1060 1068 21919338 </plain></SENT>
+</text></ref><ref id="B8-nutrients-04-00132"><text><SENT sid="306" pm="."><plain>8. LutterP.ParisodV.WeymuthH. Development and validation of a method for the quantification of milk proteins in food products based on liquid chromatography with mass spectrometric detection. J. </plain></SENT>
+<SENT sid="307" pm="."><plain>AOAC Int. 2011 94 1043 1059 21919337 </plain></SENT>
+</text></ref><ref id="B9-nutrients-04-00132"><text><SENT sid="308" pm="."><plain>9. BlumH.BeierH.GrossH.J. Improved silver staining of plant proteins, RNA and DNA in polyacrylamide gels Electrophoresis 1987 8 93 99  </plain></SENT>
+</text></ref><ref id="B10-nutrients-04-00132"><text><SENT sid="309" pm="."><plain>10. Uniprot. </plain></SENT>
+<SENT sid="310" pm="."><plain>Blast tool (accessed on 15 July 2011) Available online:<ext-link ext-link-type="uri" xlink:href="http://www.uniprot.org">http://www.uniprot.org</ext-link>  </plain></SENT>
+</text></ref><ref id="B11-nutrients-04-00132"><text><SENT sid="311" pm="."><plain>11. SchmittD.A.NesbitJ.B.HurlburtB.K.ChengH.MalekiS.J. Processing can alter the properties of peanut extract preparations. J. </plain></SENT>
+<SENT sid="312" pm="."><plain>Agric. </plain></SENT>
+<SENT sid="313" pm="."><plain>Food Chem. 2010 58 1138 1143 20028112 </plain></SENT>
+</text></ref><ref id="B12-nutrients-04-00132"><text><SENT sid="314" pm="."><plain>12. KangI.-H.GalloM.TillmanB.L. Distribution of allergen composition in peanut (Arachis hypogaea L.) and wild progenitor (Arachis) species. Crop Sci. 2007 47 997 1003 10.2135/cropsci2006.07.0467  </plain></SENT>
+</text></ref><ref id="B13-nutrients-04-00132"><text><SENT sid="315" pm="."><plain>13. LiJ.ShefcheckK.CallahanJ.FenselauC. Primary sequence and site-selective hydroxylation of prolines in isoforms of a major peanut allergen protein Ara h 2. Protein Sci. 2010 19 174 182 19937656 </plain></SENT>
+</text></ref><ref id="B14-nutrients-04-00132"><text><SENT sid="316" pm="."><plain>14. PeleM. Peanut allergens. Rom. </plain></SENT>
+<SENT sid="317" pm="."><plain>Biotechnol. </plain></SENT>
+<SENT sid="318" pm="."><plain>Lett. 2010 15 5204 5212  </plain></SENT>
+</text></ref><ref id="B15-nutrients-04-00132"><text><SENT sid="319" pm="."><plain>15. BeckM.ClaassenM.AebersoldR. Comprehensive proteomics. Curr. </plain></SENT>
+<SENT sid="320" pm="."><plain>Opin. </plain></SENT>
+<SENT sid="321" pm="."><plain>Biotechnol. 2011 22 3 8 20888217 </plain></SENT>
+</text></ref><ref id="B16-nutrients-04-00132"><text><SENT sid="322" pm="."><plain>16. ChassaigneH.TrègoatV.NørgaardJ.V.MalekiS.J.van HengelA.J. Resolution and identification of major peanut allergens using a combination of fluorescence two-dimensional differential gel electrophoresis, western blotting and q-tof mass spectrometry J. </plain></SENT>
+<SENT sid="323" pm="."><plain>Proteomics 2009 72 511 526 19223023 </plain></SENT>
+</text></ref><ref id="B17-nutrients-04-00132"><text><SENT sid="324" pm="."><plain>17. GosettiF.MazzuccoE.ZampieriD.GennaroM.C. Signal suppression/enhancement in high-performance liquid chromatography tandem mass spectrometry. J. </plain></SENT>
+<SENT sid="325" pm="."><plain>Chromatogr. </plain></SENT>
+<SENT sid="326" pm="."><plain>A 2010 1217 3929 3937 20004403 </plain></SENT>
+</text></ref><ref id="B18-nutrients-04-00132"><text><SENT sid="327" pm="."><plain>18. LyL.WasingerV.C. Protein and peptide fractionation, enrichment and depletion: Tools for the complex proteome Proteomics 2011 11 513 534 21241016 </plain></SENT>
+</text></ref><ref id="B19-nutrients-04-00132"><text><SENT sid="328" pm="."><plain>19. CareriM.CostaA.ElviriL.LagosJ.B.MangiaA.TerenghiM.CeretiA.GaroffoL. Use of specific peptide biomarkers for quantitative confirmation of hidden allergenic peanut proteins Ara h 2 and Ara h 3/4 for food control by liquid chromatography-tandem mass spectrometry. Anal. </plain></SENT>
+<SENT sid="329" pm="."><plain>Bioanal. </plain></SENT>
+<SENT sid="330" pm="."><plain>Chem. 2007 389 1901 1907 17899033 </plain></SENT>
+</text></ref><ref id="B20-nutrients-04-00132"><text><SENT sid="331" pm="."><plain>20. ShefcheckK.J.CallahanJ.H.MusserS.M. Confirmation of peanut protein using peptide markers in dark chocolate using liquid chromatography-tandem mass spectrometry (LC-MS/MS). J. </plain></SENT>
+<SENT sid="332" pm="."><plain>Agric. </plain></SENT>
+<SENT sid="333" pm="."><plain>Food Chem. 2006 54 7953 7959 17031994 </plain></SENT>
+</text></ref><ref id="B21-nutrients-04-00132"><text><SENT sid="334" pm="."><plain>21. PicottiP.AebersoldR.DomonB. The implications of proteolytic background for shotgun proteomics. Mol. </plain></SENT>
+<SENT sid="335" pm="."><plain>Cell. </plain></SENT>
+<SENT sid="336" pm="."><plain>Proteomics 2007 6 1589 1598 17533221 </plain></SENT>
+</text></ref><ref id="B22-nutrients-04-00132"><text><SENT sid="337" pm="."><plain>22. SherwoodC.A.EasthamA.LeeL.W.RislerJ.MirzaeiH.FalknerJ.A.MartinD.B. Rapid optimization of MRM-MS instrument parameters by subtle alteration of precursor and product m/z targets. J. </plain></SENT>
+<SENT sid="338" pm="."><plain>Proteome Res. 2009 8 3746 3751 19405522 </plain></SENT>
+</text></ref><ref id="B23-nutrients-04-00132"><text><SENT sid="339" pm="."><plain>23. PicottiP.BodenmillerB.MuellerL.N.DomonB.AebersoldR. Full dynamic range proteome analysis of S. cerevisiae by targeted proteomics. Cell 2009 138 795 806 10.1016/j.cell.2009.05.051 19664813 </plain></SENT>
+</text></ref><ref id="B24-nutrients-04-00132"><text><SENT sid="340" pm="."><plain>24. HeickJ.FischerM.PöppingB. First screening method for the simultaneous detection of seven allergens by liquid chromatography mass spectrometry. J. </plain></SENT>
+<SENT sid="341" pm="."><plain>Chromatogr. </plain></SENT>
+<SENT sid="342" pm="."><plain>A 2011 1218 938 943 21227428 </plain></SENT>
+</text></ref><ref id="B25-nutrients-04-00132"><text><SENT sid="343" pm="."><plain>25. LiL.SunC.FreebyS.YeeD.Kieffer-JaquinodS.GuerrierL.BoschettiE.LomasL. Protein sample treatment with peptide ligand library: Coverage and consistency. J. </plain></SENT>
+<SENT sid="344" pm="."><plain>Proteomics Bioinform. 2009 2 485 494  </plain></SENT>
+</text></ref><ref id="B26-nutrients-04-00132"><text><SENT sid="345" pm="."><plain>26. Mouton-BarbosaE.Roux-DalvaiF.BouyssiéD.BergerF.SchmidtE.RighettiP.GuerrierL.BoschettiE.Burlet-SchiltzO.MonsarratB.Gonzalez de PeredoA. In depth exploration of cerebrospinal fluid by combining peptide ligand library treatment and label free protein quantification. Mol. </plain></SENT>
+<SENT sid="346" pm="."><plain>Cell. </plain></SENT>
+<SENT sid="347" pm="."><plain>Proteomics 2010 9 1006 1021 20093276 </plain></SENT>
+</text></ref><ref id="B27-nutrients-04-00132"><text><SENT sid="348" pm="."><plain>27. LevinY.HradetzkyE.BahnS. Quantification of proteins using data-independent analysis (MSE) in simple and complex samples: A systematic evaluation. Proteomics 2011 11 3273 3287 21751355 </plain></SENT>
+</text></ref><ref id="B28-nutrients-04-00132"><text><SENT sid="349" pm="."><plain>28. WeiH.GledhillA.MalekiS. The Analysis of Allergens in Raw and Roasted Peanuts Using Nanoacquity UPLC and Xevo Q-TOF MS. Application Note Waters Beverley, MA, USA 2010 8  </plain></SENT>
+</text></ref><ref id="B29-nutrients-04-00132"><text><SENT sid="350" pm="."><plain>29. BrownridgeP.BeynonR.J. The importance of the digest: Proteolysis and absolute quantification in proteomics. Methods 2011 54 351 360 21683145 </plain></SENT>
+</text></ref></ref-list></SecTag></back></article>

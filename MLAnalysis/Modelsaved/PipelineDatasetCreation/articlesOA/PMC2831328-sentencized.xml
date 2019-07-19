@@ -1,0 +1,535 @@
+
+<article xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML" article-type="research-article"><?properties open_access?><?DTDIdentifier.IdentifierValue -//NLM//DTD Journal Publishing DTD v2.3 20070202//EN?><?DTDIdentifier.IdentifierType public?><?SourceDTD.DTDName journalpublishing.dtd?><?SourceDTD.Version 2.3?><?ConverterInfo.XSLTName jp2nlmx2.xsl?><?ConverterInfo.Version 2?><front><?epub December-6-2009?><journal-meta><journal-id journal-id-type="nlm-ta">Nucleic Acids Res</journal-id><journal-id journal-id-type="iso-abbrev">Nucleic Acids Res</journal-id><journal-id journal-id-type="publisher-id">nar</journal-id><journal-id journal-id-type="hwp">nar</journal-id><journal-title-group><journal-title>Nucleic Acids Research</journal-title></journal-title-group><issn pub-type="ppub">0305-1048</issn><issn pub-type="epub">1362-4962</issn><publisher><publisher-name>Oxford University Press</publisher-name></publisher></journal-meta><article-meta><article-id pub-id-type="pmcid">2831328</article-id><article-id pub-id-type="pmid">19969541</article-id><article-id pub-id-type="doi">10.1093/nar/gkp1118</article-id><article-id pub-id-type="publisher-id">gkp1118</article-id><article-categories><subj-group subj-group-type="heading"><subject>Nucleic Acid Enzymes</subject></subj-group></article-categories><title-group><article-title><SecTag type="TITLE"><text><SENT sid="0" pm="."><plain>Phosphate release contributes to the rate-limiting step for unwinding by an RNA helicase </plain></SENT>
+</text></SecTag></article-title></title-group><contrib-group><contrib contrib-type="author"><name><surname>Wang</surname><given-names>Qixin</given-names></name><xref ref-type="aff" rid="AFF1"><sup>1</sup></xref><xref ref-type="aff" rid="AFF1"><sup>2</sup></xref></contrib><contrib contrib-type="author"><name><surname>Arnold</surname><given-names>Jamie J.</given-names></name><xref ref-type="aff" rid="AFF1"><sup>1</sup></xref></contrib><contrib contrib-type="author"><name><surname>Uchida</surname><given-names>Akira</given-names></name><xref ref-type="aff" rid="AFF1"><sup>1</sup></xref></contrib><contrib contrib-type="author"><name><surname>Raney</surname><given-names>Kevin D.</given-names></name><xref ref-type="aff" rid="AFF1"><sup>3</sup></xref><xref ref-type="aff" rid="AFF1">*</xref></contrib><contrib contrib-type="author"><name><surname>Cameron</surname><given-names>Craig E.</given-names></name><xref ref-type="aff" rid="AFF1"><sup>1</sup></xref><xref ref-type="corresp" rid="COR1">*</xref></contrib></contrib-group><aff id="AFF1"><sup>1</sup>Department of Biochemistry and Molecular Biology, The Pennsylvania State University, University Park, PA 16802, USA, <sup>2</sup>College of Life Sciences, Graduate University of Chinese Academy of Sciences, No. 19A YuQuan Road, 100049, Beijing, China and <sup>3</sup>Department of Biochemistry and Molecular Biology, University of Arkansas for Medical Sciences, Little Rock, AR 72205, USA</aff><author-notes><corresp id="COR1">*To whom correspondence should be addressed. Tel: <phone>+1 814-863-8705</phone>; Fax: +1 814-865-7927; Email: <email>cec9@psu.edu</email> Correspondence may also be addressed to Kevin D. Raney. Tel: +1 501-686-5244; Fax: +1 501-686-8169; Email: <email>raneykevind@uams.edu</email></corresp></author-notes><pub-date pub-type="ppub"><month>3</month><year>2010</year></pub-date><pub-date pub-type="epub"><day>6</day><month>12</month><year>2009</year></pub-date><pub-date pub-type="pmc-release"><day>4</day><month>12</month><year>2009</year></pub-date><volume>38</volume><issue>4</issue><fpage>1312</fpage><lpage>1324</lpage><history><date date-type="received"><day>3</day><month>8</month><year>2009</year></date><date date-type="rev-recd"><day>6</day><month>11</month><year>2009</year></date><date date-type="accepted"><day>12</day><month>11</month><year>2009</year></date></history><permissions><copyright-statement>© The Author(s) 2009. Published by Oxford University Press.</copyright-statement><copyright-year>2009</copyright-year><license license-type="creative-commons" xlink:href="http://creativecommons.org/licenses/by-nc/2.5"><license-p>This is an Open Access article distributed under the terms of the Creative Commons Attribution Non-Commercial License (<ext-link ext-link-type="uri" xlink:href="http://creativecommons.org/licenses/by-nc/2.5">http://creativecommons.org/licenses/by-nc/2.5</ext-link>), which permits unrestricted non-commercial use, distribution, and reproduction in any medium, provided the original work is properly cited.</license-p></license></permissions><abstract><p><SecTag type="ABS"><text><SENT sid="1" pm="."><plain>RNA helicases function in numerous aspects of RNA biology. </plain></SENT>
+<SENT sid="2" pm="."><plain>These enzymes are RNA-stimulated ATPases that translocate on RNA and unwind or remodel structured RNA in an ATP-dependent fashion. </plain></SENT>
+<SENT sid="3" pm="."><plain>How ATP and the ATPase cycle fuel the work performed by helicases is not completely clear. </plain></SENT>
+<SENT sid="4" pm="."><plain>The hepatitis C virus RNA helicase, NS3, is an important model system for this class of enzymes. </plain></SENT>
+<SENT sid="5" pm="."><plain>NS3 binding to a single-/double-strand RNA or DNA junction leads to ATP-independent melting of the duplex and formation of a complex capable of ATP-dependent unwinding by using a spring-loaded mechanism. </plain></SENT>
+<SENT sid="6" pm="."><plain>We have established an RNA substrate for NS3 that can be unwound in a single sub-step. </plain></SENT>
+<SENT sid="7" pm="."><plain>Our studies are consistent with a model in which a single ATP binding and/or hydrolysis event sets the unwinding spring and phosphate dissociation contributes to release of the spring, thereby driving the power stroke used for unwinding. </plain></SENT>
+</text></SecTag></p></abstract></article-meta></front><body><SecTag type="INTRO"><sec><title><text><SENT sid="8" pm="."><plain>INTRODUCTION </plain></SENT>
+</text></title><p><text><SENT sid="9" pm="."><plain>RNA helicases function in myriad aspects of RNA metabolism in the cell, and new functions continue to emerge (1). </plain></SENT>
+<SENT sid="10" pm="."><plain>Viruses also encode RNA helicases (2). </plain></SENT>
+<SENT sid="11" pm="."><plain>The RNA helicase encoded by hepatitis C virus (HCV), non-structural protein 3 (NS3), is a DExH-box protein that belongs to helicase superfamily 2 (SF2) (2). </plain></SENT>
+<SENT sid="12" pm="."><plain>Unlike most DExH-box proteins, NS3 is also a DNA helicase (2). </plain></SENT>
+<SENT sid="13" pm="."><plain>Although HCV NS3 RNA helicase activity is essential for virus viability, the precise role of the RNA helicase activity in the multiplication cycle is not known (2). </plain></SENT>
+</text></p><p><text><SENT sid="14" pm="."><plain>HCV NS3 has emerged as an important model system for studies of the kinetics and mechanism of SF2 RNA helicases (3–9). </plain></SENT>
+<SENT sid="15" pm="."><plain>NS3 binds to its nucleic acid substrate in multiple forms: monomer, dimer, oligomer, depending on the length of the single-stranded overhang used for NS3 loading (10,11). </plain></SENT>
+<SENT sid="16" pm="."><plain>After formation of the NS3-nucleic acid complex, a slow isomerization of this complex occurs that activates the complex for unwinding (12). </plain></SENT>
+<SENT sid="17" pm="."><plain>It has recently been suggested that this isomerization may reflect an ATP-independent, local melting of the duplex region targeted for ATP-dependent unwinding (3). </plain></SENT>
+<SENT sid="18" pm="."><plain>NS3 has been proposed to use both passive (5) and active (3) mechanisms for unwinding. </plain></SENT>
+<SENT sid="19" pm="."><plain>It is possible that a passive mechanism is used prior to formation of the activated complex and an active mechanism used thereafter. </plain></SENT>
+</text></p><p><text><SENT sid="20" pm="."><plain>Addition of ATP to a reaction containing activated complexes leads to multiple cycles of unwinding and pausing (4,9). </plain></SENT>
+<SENT sid="21" pm="."><plain>The number of cycles of unwinding and pausing per binding event is dependent on the NS3 oligomeric state, with monomers being the least processive (4). </plain></SENT>
+<SENT sid="22" pm="."><plain>The kinetic and physical step size for NS3 is 11–18 bp, again depending on the oligomeric state. </plain></SENT>
+<SENT sid="23" pm="."><plain>This ‘super’ step of unwinding occurs in sub-steps of 3 bp (3,4), and each sub-step is thought to occur in three, 1-bp sub-sub-steps (6). </plain></SENT>
+<SENT sid="24" pm="."><plain>Whether or not the ATPase cycle couples to a sub-step or a sub-sub-step needs to be clarified. </plain></SENT>
+</text></p><p><text><SENT sid="25" pm="."><plain>How the ATPase cycle couples to unwinding is not completely clear for any helicase but clearly represents an important frontier for helicase enzymology (13,14). </plain></SENT>
+<SENT sid="26" pm="."><plain>The realization that NS3 employs an active mechanism for unwinding suggested that this system might also be used to address this question. </plain></SENT>
+<SENT sid="27" pm="."><plain>We reasoned that if an unwinding substrate could be produced that required no greater than one, 3-bp sub-step for unwinding to occur, then correlations between the ATPase cycle and unwinding might be possible. </plain></SENT>
+</text></p><p><text><SENT sid="28" pm="."><plain>We show that an RNA substrate containing a 20-nt single-stranded loading strand and a 9-bp duplex can be unwound in a single sub-step. </plain></SENT>
+<SENT sid="29" pm="."><plain>Importantly, the rate constant for unwinding was equivalent to the rate constant for phosphate release during the ATPase cycle. </plain></SENT>
+<SENT sid="30" pm="."><plain>This study provides the first, direct link between a step in the ATPase cycle and unwinding by an RNA helicase, and sets the stage for elucidation of the mechanochemical coupling mechanism employed by RNA helicases. </plain></SENT>
+</text></p></sec></SecTag><SecTag type="METHODS"><sec sec-type="materials|methods"><title><text><SENT sid="31" pm="."><plain>MATERIALS AND METHODS </plain></SENT>
+</text></title><sec sec-type="materials"><title><text><SENT sid="32" pm="."><plain>Materials </plain></SENT>
+</text></title><p><text><SENT sid="33" pm="."><plain>All RNA oligonucleotides were from Dharmacon Research, Inc.; All DNA oligonucleotides were from Integrated DNA Technologies, Inc.; [γ-32P]-ATP (7000 Ci/mmol) was from MP Biomedical; [α-32P]-ATP (3000 Ci/mmol) was from Perkin Elmer; T4 polynucleotide kinase was from USB; ATP was from GE Healthcare; N-[2-(1-Maleimidyl)ethyl]-7-(diethylamino)coumarin-3-carboxamide (MDCC) was from Invitrogen; AMPPNP, 7-methylguanosine and purine nucleoside phosphorylase were from Sigma; all other reagents were of the highest grade available from Sigma, Fisher or VWR. </plain></SENT>
+</text></p></sec><sec><title><text><SENT sid="34" pm="."><plain>Purification and 5′-32P-labeling of RNA oligonucleotides </plain></SENT>
+</text></title><p><text><SENT sid="35" pm="."><plain>RNA oligonucleotides were purified by denaturing polyacrylamide gel electrophoresis (PAGE) and end-labeled by using [γ-32P]ATP and T4 polynucleotide kinase as described earlier (15) and are described in the ‘Materials and Methods’ section provided in <ext-link ext-link-type="uri" xlink:href="http://nar.oxfordjournals.org/cgi/content/full/gkp1118/DC1">Supplementary Data</ext-link>. </plain></SENT>
+<SENT sid="36" pm="."><plain>Concentrations were determined by measuring the absorbance at 260 nm using a Nanodrop spectrophotometer and using the appropriate calculated extinction coefficient. </plain></SENT>
+</text></p></sec><sec><title><text><SENT sid="37" pm="."><plain>Annealing of unwinding substrates </plain></SENT>
+</text></title><p><text><SENT sid="38" pm="."><plain>Oligonucleotides were annealed at 5 µM in 25 mM MOPS, pH 7.0, 50 mM NaCl by using a Progene Thermocycler (Techne). </plain></SENT>
+<SENT sid="39" pm="."><plain>The ratio of loading strand to displaced strand was 1: 1.2. </plain></SENT>
+<SENT sid="40" pm="."><plain>Annealing reactions were heated to 90°C for 1 min and slowly cooled (5°C/min) to 40°C at which point MgCl2 was added to a final concentration of 1 mM. </plain></SENT>
+<SENT sid="41" pm="."><plain>After the addition of MgCl2, the reactions were slowly cooled to 10°C. </plain></SENT>
+</text></p></sec><sec sec-type="cases"><title><text><SENT sid="42" pm="."><plain>Construction, expression and purification of full-length HCV NS3 helicase and Escherichia coli phosphate-binding protein </plain></SENT>
+</text></title><p><text><SENT sid="43" pm="."><plain>We constructed expression constructs for HCV NS3 and phosphate-binding protein (PBP) by using standard recombinant DNA protocols as described in the ‘Materials and Methods’ section provided in <ext-link ext-link-type="uri" xlink:href="http://nar.oxfordjournals.org/cgi/content/full/gkp1118/DC1">Supplementary Data</ext-link>. </plain></SENT>
+<SENT sid="44" pm="."><plain>Briefly, we amplified DNA sequences using the HCV subgenomic replicon 1b con1 strain (16) (Genbank accession number is AJ238799) as template for HCV NS3 and plasmid isolated from ANCC75 cells containing the phoS gene with the A197C mutation (17) (Genbank accession number is AAA24378) as template for PBP by using the polymerase chain reaction. </plain></SENT>
+<SENT sid="45" pm="."><plain>Forward and reverse primers employed for amplification were selected based on the presence of unique restriction sites suitable for subcloning of the mutated DNA fragment into the expression plasmid. </plain></SENT>
+</text></p><p><text><SENT sid="46" pm="."><plain>We used E. coli for expression and purification of HCV NS3 and PBP as described in the ‘Materials and Methods’ section provided in <ext-link ext-link-type="uri" xlink:href="http://nar.oxfordjournals.org/cgi/content/full/gkp1118/DC1">Supplementary Data</ext-link>. </plain></SENT>
+<SENT sid="47" pm="."><plain>Briefly, we transformed cells with the appropriate plasmid and used these cells to produce an inoculum for large-scale growth. </plain></SENT>
+<SENT sid="48" pm="."><plain>We induced gene expression during exponential growth by addition of isopropyl-β-d-thiogalactopyranoside or by using auto-induction media (18). </plain></SENT>
+<SENT sid="49" pm="."><plain>We lysed induced cells in appropriate buffers, and purified the enzymes to apparent homogeneity by using standard column chromatography resins and protocols. </plain></SENT>
+</text></p></sec><sec><title><text><SENT sid="50" pm="."><plain>MDCC-labeling of PBP </plain></SENT>
+</text></title><p><text><SENT sid="51" pm="."><plain>Purified PBP was labeled with MDCC in the presence of a phosphate sponge. </plain></SENT>
+<SENT sid="52" pm="."><plain>The phosphate sponge removes trace Pi from solution by covalently coupling 7-methylguanosine with Pi enzymatically using purine nucleoside phosphorylase. </plain></SENT>
+<SENT sid="53" pm="."><plain>Reactions, typically 1 ml, contained 100 µM A197C PBP, 500 µM MDCC, 200 µM 7-methylguanosine and 0.2 U/ml purine nucleoside phosphorylase in 20 mM Tris–HCl, pH 8.0. </plain></SENT>
+<SENT sid="54" pm="."><plain>Reactions were incubated at room temperature for 4 h, continuously mixing using a rotating mixer. </plain></SENT>
+<SENT sid="55" pm="."><plain>Reactions were briefly centrifuged for 5 min at 6000g in a microcentrifuge, then passed over a 10 ml G25 Sephadex column equilibrated first with 300 µM 7-methylguanosine and 0.05 U/ml purine nucleoside phosphorylase in 10 mM MOPS pH 7.0, 10 mM MgCl2 and then 10 mM Tris–HCl, pH 8.0 and 100 mM NaCl. </plain></SENT>
+<SENT sid="56" pm="."><plain>After loading, the column was subsequently washed with 20 ml of 10 mM Tris–HCl, pH 8.0 and 50 mM NaCl. </plain></SENT>
+<SENT sid="57" pm="."><plain>The pass and wash fractions were collected and the absorbance at 280 and 430 nm were measured by using a Nanodrop. </plain></SENT>
+<SENT sid="58" pm="."><plain>The MDCC labeled PBP concentration was determined after correcting for the absorbance at 280 nM due to MDCC. </plain></SENT>
+<SENT sid="59" pm="."><plain>The molar extinction coefficient of PBP and MDCC at 280 nm is 61 880 M−1 cm−1 and 7675 M−1 cm−1, respectively. </plain></SENT>
+<SENT sid="60" pm="."><plain>The molar extinction coefficient of MDCC at 430 nm is 46 800 M−1 cm−1. </plain></SENT>
+<SENT sid="61" pm="."><plain>The sample was aliquoted and frozen at −80°C until use. </plain></SENT>
+</text></p></sec><sec><title><text><SENT sid="62" pm="."><plain>Nucleic acid binding assay </plain></SENT>
+</text></title><p><text><SENT sid="63" pm="."><plain>Experiments were performed using a Beacon fluorescence polarization system (GE Healthcare). </plain></SENT>
+<SENT sid="64" pm="."><plain>The Beacon system uses a high intensity 100 Watt quartz halogen lamp for 360–900 nm excitation. </plain></SENT>
+<SENT sid="65" pm="."><plain>The filters used for fluorescence excitation and emission were 490 ± 10 and 525 ± 10 nm, respectively. </plain></SENT>
+<SENT sid="66" pm="."><plain>Assays were performed by mixing 0.1 nM 3′-fluorescein-labeled ds9-C20 with increasing concentrations of either WT or D290A HCV NS3 for 10 min in binding buffer (25 mM MOPS, pH 7.0, 2 mM β-mercaptoethanol, 10 mM MgCl2 and 50 mM NaCl) followed by addition of buffer, ATP or AMPPNP (5 mM) and then incubated for an additional 1 or 10 min prior to monitoring the change in fluorescence polarization (mP). </plain></SENT>
+<SENT sid="67" pm="."><plain>NS3 was diluted immediately prior to use in 25 mM MOPS, pH 7.0, 2 mM β-mercaptoethanol, 10 mM MgCl2, 5% glycerol and 200 mM NaCl. </plain></SENT>
+<SENT sid="68" pm="."><plain>The volume of NS3 added to the binding reaction was equal to one–tenth to one–fifth the total volume of the reaction. </plain></SENT>
+<SENT sid="69" pm="."><plain>All steps were performed in reduced light. </plain></SENT>
+<SENT sid="70" pm="."><plain>To determine the apparent dissociation constant (Kd,app), polarization (mP) was plotted as a function of NS3 concentration and the data were fit to a hyperbola: 1 where mP is the polarization measured, mPmax is the maximum polarization, mP0 is the initial polarization in the absence of NS3 and Kd,app is the apparent dissociation constant. </plain></SENT>
+</text></p></sec><sec><title><text><SENT sid="71" pm="."><plain>Nucleotide binding assay </plain></SENT>
+</text></title><p><text><SENT sid="72" pm="."><plain>Experiments were performed by using QuantamasterTM, model QM-1 and RatiomasterTM, model RC-M, fluorescence systems with Felix software (Photon Technology International). </plain></SENT>
+<SENT sid="73" pm="."><plain>Assays were performed by mixing 2 µM NS3 with increasing concentrations of ATP for 1 min in binding buffer (25 mM MOPS, pH 7.0, 2 mM β-mercaptoethanol, 10 mM MgCl2 and 50 mM NaCl) prior to monitoring the change in relative fluorescence of NS3. </plain></SENT>
+<SENT sid="74" pm="."><plain>Where indicated, 20 µM ds9-C20 was present in the binding reaction. </plain></SENT>
+<SENT sid="75" pm="."><plain>The excitation wavelength was 297 nm and the emission wavelength was 333 nm. </plain></SENT>
+<SENT sid="76" pm="."><plain>The slit widths for excitation and emission were 2 and 6 nm, respectively. </plain></SENT>
+<SENT sid="77" pm="."><plain>The inner-filter effect was corrected by using the following equation: 2 where Fcorr was the corrected fluorescence intensity, Fobs was the fluorescence intensity measured, V0 was initial sample volume, Vi was total volume of titrant added and Absex and Absem were absorbance values at the excitation and the emission wavelengths, respectively (19). </plain></SENT>
+</text></p><p><text><SENT sid="78" pm="."><plain>To determine the apparent dissociation constant (Kd,app), the corrected fluorescence intensity was plotted as a function of ATP concentration and the data were fit to a hyperbola: 3 where Fcorr was the corrected fluorescence intensity, Fcorr,0 was the corrected fluorescence intensity in the absence of NS3 and Kd,app is the apparent dissociation constant. </plain></SENT>
+</text></p></sec><sec sec-type="cases"><title><text><SENT sid="79" pm="."><plain>HCV NS3 helicase assay </plain></SENT>
+</text></title><p><text><SENT sid="80" pm="."><plain>Reactions were performed at 25 or 37°C. </plain></SENT>
+<SENT sid="81" pm="."><plain>NS3 (2 µM) was mixed with 2 nM [32P]-labeled unwinding substrate in 25 mM MOPS pH 7.0, 50 mM NaCl and 1 mM EDTA. </plain></SENT>
+<SENT sid="82" pm="."><plain>Reactions were initiated by the addition of 10 mM ATP, 10 mM MgCl2 and 100 nM trapping strand in 25 mM MOPS pH 7.0, 50 mM NaCl. </plain></SENT>
+<SENT sid="83" pm="."><plain>The trapping strand is a 9-mer RNA that is complementary to the displaced strand. </plain></SENT>
+<SENT sid="84" pm="."><plain>Reactions were quenched at various times by addition EDTA to 100 mM and SDS to 0.33%. </plain></SENT>
+<SENT sid="85" pm="."><plain>Specific concentrations of substrate or enzyme, along with any deviations from the above, are indicated in the appropriate figure legend. </plain></SENT>
+<SENT sid="86" pm="."><plain>NS3 was diluted immediately prior to use in 25 mM MOPS pH 7.0 and 20% glycerol. </plain></SENT>
+<SENT sid="87" pm="."><plain>The volume of enzyme added to any reaction was always less than or equal to one–tenth the total volume. </plain></SENT>
+<SENT sid="88" pm="."><plain>Products were resolved by native PAGE. </plain></SENT>
+</text></p></sec><sec><title><text><SENT sid="89" pm="."><plain>HCV NS3 ATPase assay </plain></SENT>
+</text></title><p><text><SENT sid="90" pm="."><plain>Reactions were performed at 37°C. </plain></SENT>
+<SENT sid="91" pm="."><plain>Reactions contained 25 mM MOPS pH 7.0, 50 mM NaCl, 10 mM MgCl2, 200 nM NS3, 10 mM ATP, 0.05 µM [α32P]-ATP and either 0 or 20 µM unwinding substrate. </plain></SENT>
+<SENT sid="92" pm="."><plain>Reactions were initiated by the addition of NS3. </plain></SENT>
+<SENT sid="93" pm="."><plain>Reactions were quenched at various times by addition of EDTA to 100 mM. </plain></SENT>
+<SENT sid="94" pm="."><plain>Specific concentrations of substrate or enzyme, along with any deviations from the above, are indicated in the appropriate figure legend. </plain></SENT>
+<SENT sid="95" pm="."><plain>NS3 was diluted immediately prior to use in 25 mM MOPS, pH 7.0 and 20% glycerol. </plain></SENT>
+<SENT sid="96" pm="."><plain>The volume of enzyme added to any reaction was always less than or equal to one–tenth the total volume. </plain></SENT>
+<SENT sid="97" pm="."><plain>Products were resolved by TLC. </plain></SENT>
+</text></p></sec><sec><title><text><SENT sid="98" pm="."><plain>Rapid chemical-quench-flow experiments </plain></SENT>
+</text></title><p><text><SENT sid="99" pm="."><plain>Rapid mixing/quenching experiments were performed by using a Model RQF-3 chemical-quench-flow apparatus (KinTek Corp., Austin TX, USA). </plain></SENT>
+<SENT sid="100" pm="."><plain>Experiments were performed at 37°C by using a circulating water bath. </plain></SENT>
+<SENT sid="101" pm="."><plain>For the pre-steady-state unwinding assays, 4 µM NS3 was mixed with 2 nM unwinding substrate in 25 mM MOPS pH 7.0, 50 mM NaCl and 1 mM EDTA at 37°C for 10 min to first assemble an activated NS3-unwinding substrate complex. </plain></SENT>
+<SENT sid="102" pm="."><plain>The NS3-unwinding substrate complex was then rapidly mixed with 20 mM ATP, 20 mM MgCl2 and 200 nM trapping strand in 25 mM MOPS pH 7.0, 50 mM NaCl using the chemical-quench flow. </plain></SENT>
+<SENT sid="103" pm="."><plain>After mixing, reactant concentrations were reduced by 50%. </plain></SENT>
+<SENT sid="104" pm="."><plain>Reactions were rapidly quenched by addition of EDTA to 100 mM and SDS to 0.33%. </plain></SENT>
+<SENT sid="105" pm="."><plain>Products were resolved by native PAGE. </plain></SENT>
+<SENT sid="106" pm="."><plain>For the pre-steady-state ATPase assays, 4 µM NS3 in 25 mM MOPS pH 7.0, 50 mM NaCl and 1 mM EDTA was rapidly mixed with 40 µM unwinding substrate and 20 µM [α32P]-ATP in 25 mM MOPS pH 7.0, 50 mM NaCl and 20 mM MgCl2. </plain></SENT>
+<SENT sid="107" pm="."><plain>After mixing, reactant concentrations were reduced by 50%. </plain></SENT>
+<SENT sid="108" pm="."><plain>Reactions were rapidly quenched by addition of EDTA to 100 mM. </plain></SENT>
+<SENT sid="109" pm="."><plain>Products were resolved by TLC. </plain></SENT>
+</text></p></sec><sec><title><text><SENT sid="110" pm="."><plain>Product analysis: native PAGE </plain></SENT>
+</text></title><p><text><SENT sid="111" pm="."><plain>An equal volume of loading buffer, 10 µl, (100 mM EDTA, 0.33% SDS, 10% glycerol, 0.025% bromophenol blue and 0.025% xylene cyanol) was added to 10 µl of the quenched reaction mixtures and 10 µl was loaded on a 20% acrylamide, 0.53% bisacrylamide native polyacrylamide gel containing 1× TBE. </plain></SENT>
+<SENT sid="112" pm="."><plain>Electrophoresis was performed in 1× TBE at 15 mA. </plain></SENT>
+<SENT sid="113" pm="."><plain>Gels were visualized by using a phosphorimager and quantitated by using the ImageQuant software (Molecular Dynamics) to determine the amount of strand separation. </plain></SENT>
+<SENT sid="114" pm="."><plain>The fraction of RNA that had been unwound by the helicase was corrected for the efficiency of the trapping strand in preventing reannealing of products. </plain></SENT>
+<SENT sid="115" pm="."><plain>This correction factor was determined for each experiment by heating a sample of the RNA substrate at 95°C for 1 min then cooled to 10°C at a rate of 5°C/min in the presence of the trapping strand. </plain></SENT>
+<SENT sid="116" pm="."><plain>The quantity of unwinding substrate that was prevented from reannealing was typically ∼98%. </plain></SENT>
+<SENT sid="117" pm="."><plain>The amount of RNA unwound was plotted as a function of time and fit to either a single [Equation (4)] or double [Equation (5)] exponential equation. 4 where A is the maximum amount of unwound RNA product, kobs is the observed rate constant for unwinding, t is the time and C is an offset for the amount of unwound RNA product present at the beginning of the experiment (t=0). 5 where A1 is the amount of unwound RNA product in the first phase, kobs1 is the observed rate constant for unwinding of the first phase, A2 is the amount of unwound RNA product in the second phase, kobs2 is the observed rate constant for unwinding of the second phase, t is the time and C is an offset for the amount of unwound RNA product present at the beginning of the experiment (t=0). </plain></SENT>
+</text></p></sec><sec><title><text><SENT sid="118" pm="."><plain>Product analysis </plain></SENT>
+</text></title><p><text><SENT sid="119" pm="."><plain>TLC—1 µl of the quenched reaction was spotted onto polyethyleneimine-cellulose TLC plates (EM Science). </plain></SENT>
+<SENT sid="120" pm="."><plain>TLC plates were developed in 0.3 M potassium phosphate, pH 7.0, dried and exposed to a PhosphorImager screen. </plain></SENT>
+<SENT sid="121" pm="."><plain>TLC plates were visualized by using a PhosphorImager and quantified by using the ImageQuant software (molecular dynamics) to determine the amount of ATP hydrolyzed to ADP. </plain></SENT>
+<SENT sid="122" pm="."><plain>The amount of ADP was plotted as a function of time and fit to a line or a single exponential followed by a line. 6 where A1 is the amount of ADP product in the first phase, kobs1 is the observed rate constant for ATP hydrolysis of the first phase, kobs2 is the observed rate for ADP hydrolysis of the linear phase, t is the time and C is an offset for the amount of ADP product present at the beginning of the experiment (t=0). </plain></SENT>
+</text></p></sec><sec><title><text><SENT sid="123" pm="."><plain>Phosphate release assay by stopped-flow fluorescence </plain></SENT>
+</text></title><p><text><SENT sid="124" pm="."><plain>Pre-steady-state phosphate release stopped-flow fluorescence experiments were performed using a Model SF-2001 stopped-flow apparatus (Kintek Corp.) equipped with a waterbath. </plain></SENT>
+<SENT sid="125" pm="."><plain>All reactions were performed at 37°C. </plain></SENT>
+<SENT sid="126" pm="."><plain>A phosphate sponge that consisted of 7-methylguanosine and purine nucleoside phosphorylase was present in both syringes to ensure that free Pi was minimal prior to mixing. </plain></SENT>
+<SENT sid="127" pm="."><plain>First, 4 µM NS3 was mixed with 40 µM unwinding substrate, 50 µM 7-methylguanosine and 0.02 U/ml purine nucleoside phosphorylase in 25 mM MOPS pH 7.0, 50 mM NaCl and 10 mM MgCl2 at 37°C for 10 min to assemble the NS3-unwinding substrate complex. </plain></SENT>
+<SENT sid="128" pm="."><plain>The NS3-unwinding substrate complex was then rapidly mixed by using the stopped-flow with 20 mM ATP, 4 µM MDCC-labeled PBP, 250 µM 7-methylguanosine and 0.05 U/ml purine nucleoside phosphorylase in 25 mM MOPS pH 7.0, 50 mM NaCl and 30 mM MgCl2. </plain></SENT>
+<SENT sid="129" pm="."><plain>After mixing, reactant concentrations were reduced by 50%. </plain></SENT>
+<SENT sid="130" pm="."><plain>Fluorescence emission was monitored by using a 460 nm cut-on filter (Chroma technology corp., Rockingham, VT, USA). </plain></SENT>
+<SENT sid="131" pm="."><plain>The excitation wavelength used was 435 nm. </plain></SENT>
+<SENT sid="132" pm="."><plain>For each experiment, at least four fluorescence traces were averaged. </plain></SENT>
+<SENT sid="133" pm="."><plain>The relative fluorescence was plotted as a function of time and fit to a single exponential equation: 7 where F is the relative fluorescence intensity, kobs is the observed rate constant for phosphate release, t is the time and C is an offset. </plain></SENT>
+</text></p></sec><sec><title><text><SENT sid="134" pm="."><plain>Data analysis </plain></SENT>
+</text></title><p><text><SENT sid="135" pm="."><plain>Data were fit by non-linear regression using the program KaleidaGraph (Synergy Software, Reading, PA, USA). </plain></SENT>
+<SENT sid="136" pm="."><plain>All experiments shown are representative, single experiments that have been performed after at least three individual trials to define the concentration or time range shown. </plain></SENT>
+<SENT sid="137" pm="."><plain>In all cases, values for parameters measured during individual trials were within the limits of the error reported for the final experiments. </plain></SENT>
+</text></p></sec></sec></SecTag><SecTag type="RESULTS"><sec sec-type="results"><title><text><SENT sid="138" pm="."><plain>RESULTS </plain></SENT>
+</text></title><sec><title><text><SENT sid="139" pm="."><plain>Design of a minimal substrate (ds9-C20) to study NS3-catalyzed RNA unwinding </plain></SENT>
+</text></title><p><text><SENT sid="140" pm="."><plain>HCV NS3 is a 3′→5′ translocase that requires 10–20 nt of single-stranded nucleic acid for efficient loading (5,10,12,20). </plain></SENT>
+<SENT sid="141" pm="."><plain>A 20-nt loading strand may be sufficient to accommodate binding of an NS3 dimer (21). </plain></SENT>
+<SENT sid="142" pm="."><plain>However, the oligomeric status of NS3 does not alter the transactions occurring at the single-(ss)/double-strand (ds) junction, the site of unwinding, only NS3 processivity (4,20). </plain></SENT>
+<SENT sid="143" pm="."><plain>Both the kinetic and physical step size for unwinding of ds nucleic acid by NS3 ranges from 11 bp for a monomer to 18 bp for a dimer, with the 11–18 bp step being comprised of multiple 3-bp sub-steps (4). </plain></SENT>
+<SENT sid="144" pm="."><plain>After binding, NS3 may melt as many as 5 bp of the duplex region located at the ss/ds junction of a substrate for unwinding in an ATP-independent fashion (3,5,22). </plain></SENT>
+<SENT sid="145" pm="."><plain>Continued unwinding would require ATP consumption. </plain></SENT>
+</text></p><p><text><SENT sid="146" pm="."><plain>Taking all of this information into account, we designed a substrate for NS3 unwinding that could potentially be unwound in a single 3-bp sub-step. </plain></SENT>
+<SENT sid="147" pm="."><plain>This advance would permit ensemble experiments to be used to relate events occurring during the unwinding sub-step to events of the ATPase cycle occurring concurrently. </plain></SENT>
+<SENT sid="148" pm="."><plain>The substrate is shown in Figure 1a. </plain></SENT>
+<SENT sid="149" pm="."><plain>We refer to this substrate as ds9-C20. </plain></SENT>
+<SENT sid="150" pm="."><plain>The substrate contains a 9-bp duplex (ds9) and 20-nt 3′-overhang comprised of 20 cytidylate residues (C20). </plain></SENT>
+<SENT sid="151" pm="."><plain>The 20-nt overhang should permit a monomer or dimer to be accommodated, depending upon the stoichiometry of NS3 to ds9-C20 substrate. </plain></SENT>
+<SENT sid="152" pm="."><plain>Melting of 3 bp of the 9-bp duplex followed by a 3-bp substep would leave 3 bp annealed that should spontaneously melt at 37°C, leading to release of the 9-nt ‘displaced’ strand. Figure 1.A minimal substrate to study unwinding by HCV NS3 helicase. </plain></SENT>
+<SENT sid="153" pm="."><plain>(a) Unwinding substrate (ds9-C20) consists of a 29-nt RNA that is complementary to a 9-nt RNA. </plain></SENT>
+<SENT sid="154" pm="."><plain>The 29-nt RNA is referred to as the loading strand because the 20-nt cytidylate tail is the site of NS3 binding. </plain></SENT>
+<SENT sid="155" pm="."><plain>NS3 translocates in a 3′→5′ direction on the loading strand. </plain></SENT>
+<SENT sid="156" pm="."><plain>The 9-nt RNA is referred to as the displaced strand because it will be released during the unwinding process. </plain></SENT>
+<SENT sid="157" pm="."><plain>The substrate used for binding measurements contains fluorescein covalently linked to the 3′-end of the loading strand. </plain></SENT>
+<SENT sid="158" pm="."><plain>(b) ds9-C20 binds to NS3 with high affinity. </plain></SENT>
+<SENT sid="159" pm="."><plain>Fluorescein-labeled ds9-C20 was titrated with HCV NS3. </plain></SENT>
+<SENT sid="160" pm="."><plain>Binding was measured by monitoring the change in fluorescence polarization (mP). </plain></SENT>
+<SENT sid="161" pm="."><plain>The data were fit to a hyperbola resulting in the Kd value of 50 ± 10 nM. </plain></SENT>
+<SENT sid="162" pm="."><plain>(c) ds9-C20 binding to NS3 is antagonized by ATP and is independent of ATP hydrolysis. </plain></SENT>
+<SENT sid="163" pm="."><plain>Fluorescein-labeled ds9-C20 was incubated with increasing concentrations of either WT or D290A HCV NS3 for 10 min followed by addition of buffer, ATP or AMPPNP (5 mM) and incubation for an additional 1 or 10 min prior to monitoring the change in fluorescence polarization (mP). </plain></SENT>
+<SENT sid="164" pm="."><plain>The data were analyzed as described in panel b. </plain></SENT>
+<SENT sid="165" pm="."><plain>(d) Competitive binding assay for ds9 in the absence and presence of ATP. </plain></SENT>
+<SENT sid="166" pm="."><plain>Fluorescein-labeled C20 (1 nM) and competitor ds9 (0–2000 µM) was incubated with NS3 (100 nM) for 10 min followed by addition of buffer or ATP (5 mM) and incubation for an additional 1 min prior to monitoring the change in fluorescence polarization (mP). </plain></SENT>
+<SENT sid="167" pm="."><plain>Competitive binding for ds9 was measured by monitoring the change in fluorescence polarization (mP). </plain></SENT>
+<SENT sid="168" pm="."><plain>The data were fit to a hyperbola to determine the IC50 value for ds9. </plain></SENT>
+<SENT sid="169" pm="."><plain>The amplitude for ds9 is 60 ± 10 mP in the absence of ATP and 50 ± 10 mP in the presence of ATP. </plain></SENT>
+<SENT sid="170" pm="."><plain>The Kd,i value was determined by using the Cheng–Prusoff equation () (37). </plain></SENT>
+<SENT sid="171" pm="."><plain>The Kd,i value for ds9 is 90 ± 20 nM in the absence of ATP and 7000 ± 2000 nM in the presence of ATP. </plain></SENT>
+<SENT sid="172" pm="."><plain>(e) Complexes of NS3 with ds9 and C20 are more sensitive to the presence of ATP than the NS3·ds9-C20 complex. </plain></SENT>
+<SENT sid="173" pm="."><plain>The Kd values for ds9 were measured by competition assay (panel d). </plain></SENT>
+<SENT sid="174" pm="."><plain>Fluorescein-labeled C20 was titrated with HCV NS3. </plain></SENT>
+<SENT sid="175" pm="."><plain>Binding was measured by monitoring the change in fluorescence polarization (mP). </plain></SENT>
+<SENT sid="176" pm="."><plain>The data were fit to a hyperbola resulting in the Kd values. </plain></SENT>
+</text></p></sec><sec><title><text><SENT sid="177" pm="."><plain>Binding of ds9-C20 to NS3 is tight and is modulated by ATP </plain></SENT>
+</text></title><p><text><SENT sid="178" pm="."><plain>The first question that we asked was how well does the ds9-C20 substrate bind to NS3. </plain></SENT>
+<SENT sid="179" pm="."><plain>This experiment was performed by using fluorescence polarization. </plain></SENT>
+<SENT sid="180" pm="."><plain>A ds9-C20 substrate was prepared that contained a fluorescein (FL) molecule on the 3′ end of the loading strand (Figure 1a). </plain></SENT>
+<SENT sid="181" pm="."><plain>We refer to the FL-labeled substrate as ds9-C20-FL. </plain></SENT>
+<SENT sid="182" pm="."><plain>Placing the FL molecule at any position of the duplex region of the substrate altered binding affinity. </plain></SENT>
+<SENT sid="183" pm="."><plain>We titrated NS3 (at least 0.2–5 Kd) into binding buffer containing ds9-C20-FL (0.1 nM). </plain></SENT>
+<SENT sid="184" pm="."><plain>The change in fluorescence polarization (mP) was plotted as a function of NS3 concentration, and the data were fit to the appropriate model, generally a hyperbola as described in ‘Materials and Methods’ section (Figure 1b). </plain></SENT>
+<SENT sid="185" pm="."><plain>The time of incubation was varied (1 or 10 min) prior to recording the mP values because of reports of a slow assembly of a functional NS3-RNA complex (12). </plain></SENT>
+<SENT sid="186" pm="."><plain>The value for the equilibrium dissociation constant (Kd) of the NS3·ds9-C20 complex was in the 40–50 nM range and was not impacted substantially by the incubation time (Figure 1c). </plain></SENT>
+</text></p><p><text><SENT sid="187" pm="."><plain>It has been shown that ATP weakens the interaction between NS3 and nucleic acid (5,7,23). </plain></SENT>
+<SENT sid="188" pm="."><plain>As shown in Figure 1c, in the presence of 5 mM ATP, the Kd value for the NS3·ds9-C20 complex increased by as much as 7-fold relative to the Kd value determined in the absence of ATP (Figure 1c). </plain></SENT>
+<SENT sid="189" pm="."><plain>During this experiment, the duplex was not unwound (<ext-link ext-link-type="uri" xlink:href="http://nar.oxfordjournals.org/cgi/content/full/gkp1118/DC1">Supplementary Figure S1a</ext-link>); ATP was not completely consumed (<ext-link ext-link-type="uri" xlink:href="http://nar.oxfordjournals.org/cgi/content/full/gkp1118/DC1">Supplementary Figure S1c</ext-link>), and ADP had a modest effect on the Kd value for the NS3·ds9-C20 complex relative to ATP (<ext-link ext-link-type="uri" xlink:href="http://nar.oxfordjournals.org/cgi/content/full/gkp1118/DC1">Supplementary Figure S1b and S1d</ext-link>). </plain></SENT>
+<SENT sid="190" pm="."><plain>The inability to observe ds9-C20 unwinding under these conditions may reflect a small proportion of NS3 being located at the ss/ds junction. </plain></SENT>
+</text></p><p><text><SENT sid="191" pm="."><plain>It was possible that the observed increase in the Kd value for the NS3·ds9-C20 complex was due to ATP hydrolysis. </plain></SENT>
+<SENT sid="192" pm="."><plain>We performed three experiments to test this possibility. </plain></SENT>
+<SENT sid="193" pm="."><plain>First, we used the non-hydrolyzable ATP analogue, AMPPNP. </plain></SENT>
+<SENT sid="194" pm="."><plain>We observed a 5-fold increase in the Kd value for the NS3·ds9-C20 complex, suggesting that ATP binding is sufficient to reduce the affinity of NS3 for ds9-C20 (Figure 1c). </plain></SENT>
+<SENT sid="195" pm="."><plain>Second, we used an NS3 derivative that lacks ATPase activity due to a substitution of alanine for aspartic acid at position 290 (D290A NS3). </plain></SENT>
+<SENT sid="196" pm="."><plain>Asp-290 is located in conserved sequence motif II (DExH) and interacts with the divalent cation cofactor and perhaps the water nucleophile in the triphosphate-binding pocket/catalytic center (14). </plain></SENT>
+<SENT sid="197" pm="."><plain>Again, ATP and AMPPNP increased the Kd value for the NS3-D290A·ds9-C20 complex (Figure 1c). </plain></SENT>
+<SENT sid="198" pm="."><plain>However, the extent of destabilization was 2-fold for NS3-D290A instead of 7-fold as observed for wild-type NS3. </plain></SENT>
+<SENT sid="199" pm="."><plain>Finally, we performed these experiments in the presence of EDTA and observed destabilization of ds9-C20 binding to NS3 by ATP (<ext-link ext-link-type="uri" xlink:href="http://nar.oxfordjournals.org/cgi/content/full/gkp1118/DC1">Supplementary Figure S1b</ext-link>). </plain></SENT>
+<SENT sid="200" pm="."><plain>We conclude that ATP binding to the ATPase catalytic site causes changes in NS3 that lead to the observed destabilization of the NS3·ds9-C20 complex. </plain></SENT>
+</text></p></sec><sec><title><text><SENT sid="201" pm="."><plain>NS3 equilibrates at the ss/ds junction of ds9-C20 in the presence of ATP </plain></SENT>
+</text></title><p><text><SENT sid="202" pm="."><plain>In order to get a sense for where NS3 interacts with the ds9-C20 substrate, we determined the Kd value for NS3 in complex with ds9 or C20. </plain></SENT>
+<SENT sid="203" pm="."><plain>The C20-binding experiment was performed with a FL-labeled oligonucleotide as described earlier. </plain></SENT>
+<SENT sid="204" pm="."><plain>However, the ds9-binding experiment had to be performed by using a competition format (‘Materials and Methods’ section and Figure 1d) because of position-dependent changes in the Kd value measured for different versions of ds9-FL. </plain></SENT>
+</text></p><p><text><SENT sid="205" pm="."><plain>In the absence of ATP, the Kd values for complexes of NS3 with ds9 and C20 were within 2-fold of the value measured for ds9-C20 (Figure 1d). </plain></SENT>
+<SENT sid="206" pm="."><plain>Therefore, the position of NS3 relative to the junction will be heterogeneous under conditions in which ds9-C20 is in excess of NS3. </plain></SENT>
+<SENT sid="207" pm="."><plain>NS3 will completely coat ds9-C20 under conditions in which NS3 is in excess of ds9-C20. </plain></SENT>
+</text></p><p><text><SENT sid="208" pm="."><plain>In contrast, in the presence of ATP, the Kd value for the NS3·ds9 and NS3· C20 complexes increased by 133- and 50-fold, respectively (Figure 1d). </plain></SENT>
+<SENT sid="209" pm="."><plain>Under the same conditions, the NS3·ds9-C20 complex was only destabilized by 7-fold. </plain></SENT>
+<SENT sid="210" pm="."><plain>Therefore, in the presence of ATP, NS3 may bind preferentially to the ss/ds junction. </plain></SENT>
+<SENT sid="211" pm="."><plain>Identical results were observed in the presence of EDTA. </plain></SENT>
+</text></p></sec><sec><title><text><SENT sid="212" pm="."><plain>Binding of ds9-C20 to NS3 weakens ATP binding </plain></SENT>
+</text></title><p><text><SENT sid="213" pm="."><plain>In order to complete the analysis of the thermodynamics of substrate binding to NS3, we evaluated binding of ATP to NS3 by monitoring the quenching of the intrinsic fluorescence of NS3 (‘Materials and Methods’ section). </plain></SENT>
+<SENT sid="214" pm="."><plain>ATP (0.2–5 Kd) was titrated into binding reactions containing NS3 (2 µM) in the absence or presence (20 µM) of the ds9-C20 unwinding substrate. </plain></SENT>
+<SENT sid="215" pm="."><plain>Relative fluorescence intensity was plotted as a function of ATP concentration, and the data were fit to a simple binding model (an hyperbola). </plain></SENT>
+<SENT sid="216" pm="."><plain>In the absence of RNA, the Kd value was 0.9 ± 0.1 mM (Figure 2). </plain></SENT>
+<SENT sid="217" pm="."><plain>In the presence of RNA, the Kd value increased to 7 ± 1 mM (Figure 2). </plain></SENT>
+<SENT sid="218" pm="."><plain>The Kd values measured by using this direct-binding assay were substantially higher than those inferred from kinetic data (4,7). Figure 2.ATP binding to NS3 is antagonized by RNA. </plain></SENT>
+<SENT sid="219" pm="."><plain>NS3 (2 µM) was incubated in the presence or absence of ds9-C20 (20 µM) for 10 min followed by addition of ATP (0–30 mM). </plain></SENT>
+<SENT sid="220" pm="."><plain>Binding was measured by monitoring the change in relative fluorescence of NS3. </plain></SENT>
+<SENT sid="221" pm="."><plain>The excitation wavelength was 295 nm and the emission wavelength was 333 nm. </plain></SENT>
+<SENT sid="222" pm="."><plain>The data were fit to a hyperbola resulting in the Kd value of 0.9 ± 0.1 mM in the absence of RNA and 7 ± 1 mM in the presence of RNA. </plain></SENT>
+</text></p></sec><sec><title><text><SENT sid="223" pm="."><plain>Slow formation of an unwinding-competent NS3·ds9-C20 complex capable of single-step unwinding of the ds9-C20 substrate </plain></SENT>
+</text></title><p><text><SENT sid="224" pm="."><plain>Previous studies have shown that formation of unwinding-competent, NS3-RNA complexes requires incubation on the 15–60 min timescale (12). </plain></SENT>
+<SENT sid="225" pm="."><plain>Although the physical basis for this slow activation is not known, it is possible that this activation reflects melting of basepairs at the ss/ds junction (3,5). </plain></SENT>
+<SENT sid="226" pm="."><plain>Therefore, we evaluated the time and temperature dependence of activation of the NS3·ds9-C20 complex. </plain></SENT>
+<SENT sid="227" pm="."><plain>The experimental design is illustrated in Figure 3a. </plain></SENT>
+<SENT sid="228" pm="."><plain>We mixed NS3 (2 μM) with ds9-C20 (2 nM) for various amounts of time prior to the addition of ATP (10 mM). </plain></SENT>
+<SENT sid="229" pm="."><plain>The incubation continued for 15 s followed by quenching with EDTA (100 mM), SDS (0.33%) and trap RNA (100 nM) to prevent reannealing of the displaced strand. </plain></SENT>
+<SENT sid="230" pm="."><plain>Products were resolved from substrate by using native gel electrophoresis (Figure 3a). </plain></SENT>
+<SENT sid="231" pm="."><plain>We chose an NS3 concentration of 2 μM because this concentration should lead to incorporation of at least 90% of the ds9-C20 RNA into a complex with NS3 (Figure 1c) that is located at the ss/ds junction in the presence of ATP (Figure 1c and d). </plain></SENT>
+<SENT sid="232" pm="."><plain>A 10-min incubation was sufficient to assemble active complexes on the ds9-C20 substrate, suggesting that the kinetics of formation of an unwinding-competent, NS3-RNA complex is dependent on the RNA substrate employed. Figure 3.Unwinding of ds9-C20 by NS3 is rapid. </plain></SENT>
+<SENT sid="233" pm="."><plain>(a) Activation of the NS3·ds9-C20 complex for unwinding is slow and temperature dependent. </plain></SENT>
+<SENT sid="234" pm="."><plain>NS3 (2 µM) was incubated with ds9-C20 (2 nM) at either 25 or 37°C for various amounts of time, unwinding was initiated by addition of ATP (10 mM final), and the reaction was quenched 15 s later by addition of EDTA (100 mM final), SDS (0.33%) and trap RNA (100 nM). </plain></SENT>
+<SENT sid="235" pm="."><plain>Products of the reactions were resolved from substrates by native PAGE and visualized by phosphorimaging; representative phosphorimages are shown. </plain></SENT>
+<SENT sid="236" pm="."><plain>Phosphorimages were quantitated, and the concentration of RNA unwound plotted as a function of incubation time. </plain></SENT>
+<SENT sid="237" pm="."><plain>The data were fit to a single exponential, yielding a rate constant for activation of NS3-RNA complexes of 0.07 ± 0.02 min−1 at 25°C and 0.30 ± 0.05 min−1 at 37°C. </plain></SENT>
+<SENT sid="238" pm="."><plain>The amplitudes were 1.0 ± 0.1 and 1.7 ± 0.1 nM at 25 and 37°C, respectively. </plain></SENT>
+<SENT sid="239" pm="."><plain>(b) Turnover of the activated NS3·ds9-C20 complex. </plain></SENT>
+<SENT sid="240" pm="."><plain>Experiments were performed essentially as described above. </plain></SENT>
+<SENT sid="241" pm="."><plain>NS3 (2 µM) was incubated with ds9-C20 (2 nM) at 37°C for 10 min and prior to mixing the activated complex with ATP. </plain></SENT>
+<SENT sid="242" pm="."><plain>The concentration of RNA unwound was plotted as a function of time and fit to a double exponential, yielding rate constants of 4 ± 1 and 0.1 ± 0.01 s−1. </plain></SENT>
+<SENT sid="243" pm="."><plain>The amplitudes were 1.2 ± 0.2 and 0.6 ± 0.2 nM for the fast and slow phases, respectively. </plain></SENT>
+</text></p><p><text><SENT sid="244" pm="."><plain>We observed a temperature dependence on the rate constant for formation of activated NS3·ds9-C20 complex as well as the amount (amplitude) of activated NS3·ds9-C20 complex (Figure 3a). </plain></SENT>
+<SENT sid="245" pm="."><plain>At 37°C, the half-time for formation of activated NS3·ds9-C20 complex was 2.3 min, with maximally 85% of the ds9-C20 RNA assembling into activated complexes (Figure 3a). </plain></SENT>
+<SENT sid="246" pm="."><plain>At 25°C, the half-time for formation of activated NS3·ds9-C20 complex was 9.9 min, with maximally 50% of the ds9-C20 RNA assembling into activated complexes (Figure 3a). </plain></SENT>
+<SENT sid="247" pm="."><plain>These data show that differences in assembly temperature can impact the extent of unwinding. </plain></SENT>
+</text></p><p><text><SENT sid="248" pm="."><plain>The temperature dependence for activation of the NS3·ds9-C20 complex is consistent with ATP-independent melting of the duplex leading to activation (3,5). </plain></SENT>
+<SENT sid="249" pm="."><plain>However, significant melting of the duplex is unlikely as duplexes 6–8 bp in length are not stable at 37°C (<ext-link ext-link-type="uri" xlink:href="http://nar.oxfordjournals.org/cgi/content/full/gkp1118/DC1">Supplementary Figure S2</ext-link>). </plain></SENT>
+<SENT sid="250" pm="."><plain>We constructed a series of modified ds9-C20 substrates in which one, two or three adenylate residues were added to the 5′-end of the displaced strand (Figure 4a). </plain></SENT>
+<SENT sid="251" pm="."><plain>These ‘tailed’ substrates should mimic a pre-melted duplex and might lead to faster activation and/or a greater yield of activated complexes, both of which might now exhibit temperature independence. </plain></SENT>
+<SENT sid="252" pm="."><plain>The affinity of NS3 for all of these substrates was on par with the ds9-C20 substrate, and the affinity was modulated by ATP (Figure 4b). </plain></SENT>
+<SENT sid="253" pm="."><plain>However, neither the rate constant for activation nor the amount of activated complex was impacted by addition of the adenylate tail (Figure 4c). </plain></SENT>
+<SENT sid="254" pm="."><plain>These data do not rule out melting of the duplex as the phenomenon dictating the temperature- and time-dependent activation of the NS3·ds9-C20 complex. </plain></SENT>
+<SENT sid="255" pm="."><plain>They are consistent with the ‘receptacle’ for the displaced strand accommodating more than 6 nt and a 11–18 bp unwinding super-step (8). Figure 4.The addition of single-stranded tail on the displaced strand does not enhance binding nor unwinding by HCV NS3. </plain></SENT>
+<SENT sid="256" pm="."><plain>(a) Additional substrates tested. </plain></SENT>
+<SENT sid="257" pm="."><plain>The substrates (ds9-A-C20, ds9-AA-C20, ds9-AAA-C20) contain additional adenosine residues on the 5′-end of the displaced strand. </plain></SENT>
+<SENT sid="258" pm="."><plain>The substrate used for binding measurements contains fluorescein covalently linked to the 3′-end of the loading strand. </plain></SENT>
+<SENT sid="259" pm="."><plain>(b) ds9-C20 substrates containing a 5′-adenosine tail bind to NS3 as well as the tailess substrate. </plain></SENT>
+<SENT sid="260" pm="."><plain>Fluorescein-labeled unwinding substrates were incubated with increasing concentrations of NS3 for 1 or 10 min followed by addition of buffer, ATP or AMPNPP (5 mM) and incubation for an additional 1 min prior to monitoring the change in fluorescence polarization (mP). </plain></SENT>
+<SENT sid="261" pm="."><plain>The data were fit to a hyperbola. </plain></SENT>
+<SENT sid="262" pm="."><plain>The Kd values are reported. </plain></SENT>
+<SENT sid="263" pm="."><plain>(c) Kinetics of RNA activation of NS3-tailed-RNA complexes for unwinding is equivalent to tailess substrates. </plain></SENT>
+<SENT sid="264" pm="."><plain>NS3 (2 µM) was incubated with unwinding substrate (2 nM) at 37°C for 10 min, unwinding was initiated by addition of ATP (10 mM) and the reaction was quenched 15 s later by addition of EDTA (100 mM). </plain></SENT>
+<SENT sid="265" pm="."><plain>Products were resolved from substrates by native PAGE and visualized by phosphorimaging. </plain></SENT>
+<SENT sid="266" pm="."><plain>Phosphorimages were quantitated, and the concentration of RNA unwound plotted as a function of incubation time. </plain></SENT>
+<SENT sid="267" pm="."><plain>The data were fit to a double exponential [Equation (5)], yielding rate constants for activation of NS3-RNA complexes. </plain></SENT>
+<SENT sid="268" pm="."><plain>(d) The rate constant for unwinding of tailed RNAs is equivalent to tailess. </plain></SENT>
+<SENT sid="269" pm="."><plain>NS3 (4 µM) was incubated with unwinding substrate (4 nM) at 37°C for 10 min then rapidly mixed with ATP (20 mM) using a chemical quench-flow apparatus. </plain></SENT>
+<SENT sid="270" pm="."><plain>After mixing, reactant concentrations were reduced by 50%. </plain></SENT>
+<SENT sid="271" pm="."><plain>The reaction was quenched at various times by addition of EDTA (100 mM final). </plain></SENT>
+<SENT sid="272" pm="."><plain>Products were resolved from substrates by native PAGE and visualized by phosphorimaging. </plain></SENT>
+<SENT sid="273" pm="."><plain>Phosphorimages were quantitated, and the concentration of RNA unwound plotted as a function of incubation time. </plain></SENT>
+<SENT sid="274" pm="."><plain>The concentration of RNA unwound was plotted as a function of time and fit to a double exponential [Equation (5)]. </plain></SENT>
+</text></p><p><text><SENT sid="275" pm="."><plain>Given that ds9-C20 was the simplest and most efficient of the substrates tested (Figure 4 and <ext-link ext-link-type="uri" xlink:href="http://nar.oxfordjournals.org/cgi/content/full/gkp1118/DC1">Supplementary Figure S3</ext-link>), we moved on to the evaluation of the kinetics of unwinding by the activated NS3·ds9-C20 complex. </plain></SENT>
+<SENT sid="276" pm="."><plain>NS3 (2 μM) was mixed with ds9-C20 (2 nM), incubated for 10 min at 37°C, rapidly mixed with ATP (10 mM) by using a chemical-quench-flow apparatus, and quenched by addition of EDTA (100 mM), SDS (0.33%) and trap RNA (100 nM). </plain></SENT>
+<SENT sid="277" pm="."><plain>Product was again resolved from substrate by using native PAGE (Figure 3b). </plain></SENT>
+</text></p><p><text><SENT sid="278" pm="."><plain>As expected, 90% of the substrate was converted to product over the course of the 15-s experiment (Figure 3b). </plain></SENT>
+<SENT sid="279" pm="."><plain>Notably, the kinetics of unwinding were biphasic (Figure 3b). </plain></SENT>
+<SENT sid="280" pm="."><plain>Seventy percent of the substrate that was competent for unwinding was turned over at a rate constant of 4 ± 1 s−1; the remainder was turned over at a rate constant of 0.1 ± 0.04 s−1 (Figure 3b). </plain></SENT>
+<SENT sid="281" pm="."><plain>The population that was unwound fastest did so without a demonstrable lag, consistent with unwinding occurring in a single sub-step. </plain></SENT>
+<SENT sid="282" pm="."><plain>Multiple sub-steps cannot be ruled out unambiguously, especially if NS3 is capable of limiting the rate of dissociation of the displaced strand. </plain></SENT>
+<SENT sid="283" pm="."><plain>This complex likely has at least one NS3 molecule bound to the ss/ds junction of the ds9-C20 substrate. </plain></SENT>
+</text></p><p><text><SENT sid="284" pm="."><plain>The composition and organization of the population that was unwound the slowest is not clear. </plain></SENT>
+<SENT sid="285" pm="."><plain>This experiment was performed in the presence of 10 mM ATP. </plain></SENT>
+<SENT sid="286" pm="."><plain>Our studies have suggested that the Kd value of ATP is 7 mM for the NS3·ds9-C20 complex (Figure 1e). </plain></SENT>
+<SENT sid="287" pm="."><plain>Therefore, sub-saturating concentrations of ATP may lead to formation of two kinetically distinct populations of NS3·ds9-C20 complex. </plain></SENT>
+<SENT sid="288" pm="."><plain>To test this possibility, we evaluated the ATP concentration dependence of the unwinding kinetics for the activated NS3·ds9-C20 complex. </plain></SENT>
+<SENT sid="289" pm="."><plain>From 10–50 mM ATP, two populations were observed: one unwound ds9-C20 fast (2.4–6.4 s−1); the other unwound ds9-C20 slowly (0.1–0.3 s−1) (<ext-link ext-link-type="uri" xlink:href="http://nar.oxfordjournals.org/cgi/content/full/gkp1118/DC1">Supplementary Figure S3</ext-link>). </plain></SENT>
+<SENT sid="290" pm="."><plain>At 1 mM ATP, only the slow phase was observed (<ext-link ext-link-type="uri" xlink:href="http://nar.oxfordjournals.org/cgi/content/full/gkp1118/DC1">Supplementary Figure S3a</ext-link>). </plain></SENT>
+<SENT sid="291" pm="."><plain>We conclude that under the conditions employed, a value of 10 mM ATP likely exceeds the Km value of ATP for ds9-C20 unwinding. </plain></SENT>
+<SENT sid="292" pm="."><plain>Pre-melted substrates also exhibited biphasic kinetics of unwinding, with the fast phase occurring at a rate constant of 3–4 s−1 (Figure 4d). </plain></SENT>
+</text></p></sec><sec><title><text><SENT sid="293" pm="."><plain>A ds9-C20-dependent burst of ATP hydrolysis in the pre-steady state </plain></SENT>
+</text></title><p><text><SENT sid="294" pm="."><plain>The observation of single-step unwinding of ds9-C20 by NS3 prompted the evaluation of the ATPase cycle. </plain></SENT>
+<SENT sid="295" pm="."><plain>In this experiment, NS3 (2 μM) was mixed with ds9-C20 (20 μM), incubated for 10 min at 37°C, rapidly mixed with ATP (10 μM) and quenched at various times by addition of EDTA (100 mM). </plain></SENT>
+<SENT sid="296" pm="."><plain>The conditions of this experiment differ from those above. </plain></SENT>
+<SENT sid="297" pm="."><plain>First, ds9-C20 is now in excess of NS3, which will favor formation of a NS3·ds9-C20 complex that contains an NS3 monomer. </plain></SENT>
+<SENT sid="298" pm="."><plain>This change was required to ensure that only the ATPase activity of RNA-bound NS3 was monitored. </plain></SENT>
+<SENT sid="299" pm="."><plain>Second, the concentration of ATP was reduced substantially relative to the Kd for binding (Figure 1e) and Km for unwinding (<ext-link ext-link-type="uri" xlink:href="http://nar.oxfordjournals.org/cgi/content/full/gkp1118/DC1">Supplementary Figure S3</ext-link>). </plain></SENT>
+<SENT sid="300" pm="."><plain>This change was required to ensure a signal-to-noise ratio suitable for quantitation. </plain></SENT>
+<SENT sid="301" pm="."><plain>ATP hydrolysis was monitored by using thin-layer chromatography (Figure 5a). </plain></SENT>
+<SENT sid="302" pm="."><plain>This assay is incapable of distinguishing NS3-bound ADP from dissociated ADP and provides no indication of the status of orthophosphate (Pi)—that is, bound or free. Figure 5.Phosphate release is the rate-limiting step for ds9-C20 unwinding by NS3. </plain></SENT>
+<SENT sid="303" pm="."><plain>(a) ds9-C20 activates NS3-catalyzed ATP hydrolysis. </plain></SENT>
+<SENT sid="304" pm="."><plain>NS3 (4 µM) was incubated in the presence (40 µM) or absence of ds9-C20 at 37°C for 10 min and then rapidly mixed with [α32P]-ATP (20 µM) using a chemical quench-flow apparatus. </plain></SENT>
+<SENT sid="305" pm="."><plain>The reaction was quenched at various times by addition of EDTA (100 mM final). </plain></SENT>
+<SENT sid="306" pm="."><plain>Product (ADP) was resolved from substrate (ATP) by TLC, visualized by phosphorimaging, and quantified. </plain></SENT>
+<SENT sid="307" pm="."><plain>The data were fit to a single exponential followed by a steady-state resulting in a rate constant for the burst phase (kb) of 49 ± 12 s−1 with an amplitude of 0.29 ± 0.03 µM, and a rate for the linear phase (vss) of 1.2 ± 0.1 µM s−1. </plain></SENT>
+<SENT sid="308" pm="."><plain>The steady-state rate constant (kss) was 4.0 ± 0.4 s−1 and was calculated by dividing vss by the amplitude. </plain></SENT>
+<SENT sid="309" pm="."><plain>In the absence of RNA, the data were fit to a line, yielding a rate of 1.2 ± 0.1 µM s−1. </plain></SENT>
+<SENT sid="310" pm="."><plain>(b) Phosphate release is slower than ATP hydrolysis for the NS3·ds9-C20 complex. </plain></SENT>
+<SENT sid="311" pm="."><plain>NS3 (4 µM) was incubated with ds9-C20 (40 µM), 7-methylguanosine (50 µM) and purine nucleoside phosphorylase (0.02 unit/ml) and then rapidly mixed with ATP (20 mM), MDCC-labeled PBP (4 µM), 7-methylguanosine (250 µM) and purine nucleoside phosphorylase (0.05 unit/ml) using a stopped-flow apparatus. </plain></SENT>
+<SENT sid="312" pm="."><plain>After mixing, reactant concentrations were reduced by 50%. </plain></SENT>
+<SENT sid="313" pm="."><plain>The release of Pi from the NS·ds9-C20·ADP·Pi complex was monitored by the increase in fluorescence intensity of PBP caused by Pi binding. </plain></SENT>
+<SENT sid="314" pm="."><plain>The data were fit to a single exponential. </plain></SENT>
+<SENT sid="315" pm="."><plain>This experiment was repeated seven different times under a variety of conditions yielding a rate constant of 5.3 ± 0.6 s−1 for phosphate release. </plain></SENT>
+</text></p><p><text><SENT sid="316" pm="."><plain>We observed biphasic kinetics of ATP hydrolysis. </plain></SENT>
+<SENT sid="317" pm="."><plain>There was a burst of ADP formation that occurred at a rate constant of 49 ± 12 s−1 (Figure 5a) followed by a linear accumulation of ADP at a rate of 1.2 ± 0.1 μM/s (Figure 5a). </plain></SENT>
+<SENT sid="318" pm="."><plain>These data suggest that release of ADP and/or Pi is rate limiting in the steady state. </plain></SENT>
+<SENT sid="319" pm="."><plain>Given a burst amplitude of ∼0.3 μM, only 15% of the NS3·ds9-C20 complexes were competent for fast hydrolysis (Figure 5a), which could reflect the fraction of complexes to which ATP was bound at 10 μM ATP. </plain></SENT>
+<SENT sid="320" pm="."><plain>This possibility was ruled out by the observation that a 50% reduction in the concentration of ATP employed failed to reduce the amplitude by 50%, only the observed rate constant for hydrolysis (<ext-link ext-link-type="uri" xlink:href="http://nar.oxfordjournals.org/cgi/content/full/gkp1118/DC1">Supplementary Figure S4</ext-link>). </plain></SENT>
+<SENT sid="321" pm="."><plain>We conclude that the amplitude reflects the concentration of complexes competent for ATP hydrolysis under these conditions. </plain></SENT>
+<SENT sid="322" pm="."><plain>We used this amplitude to calculate a steady-state rate constant; a value of 4 s−1 was obtained. </plain></SENT>
+<SENT sid="323" pm="."><plain>This value is equivalent to that measured for the fast phase of unwinding by NS3 (Figure 3b). </plain></SENT>
+<SENT sid="324" pm="."><plain>Interestingly, the burst of ATP hydrolysis was not observed in the absence of RNA (Figure 5a). </plain></SENT>
+<SENT sid="325" pm="."><plain>The steady-state rate was the same in the presence and absence of RNA (Figure 5a); however, this fact provides no mechanistic insight and could be merely coincidental. </plain></SENT>
+</text></p><p><text><SENT sid="326" pm="."><plain>These data provide a compelling correlation between the rate-limiting step of unwinding and a product-release step of the ATPase cycle. </plain></SENT>
+<SENT sid="327" pm="."><plain>We performed additional experiments in the steady state to show that neither RNA concentration (Figure 6a) nor ATP concentration (Figure 6b) could elevate the steady-state rate constant for ATP hydrolysis into the realm of that observed in the pre-steady state. Figure 6.Steady-state rate constant for ATP hydrolysis is dependent on RNA concentration. </plain></SENT>
+<SENT sid="328" pm="."><plain>(a) Titration of the RNA unwinding substrate. </plain></SENT>
+<SENT sid="329" pm="."><plain>NS3 (200 nM) was incubated with [α32P]-ATP (10 mM) and various concentrations of ds9-C20 at 37°C for 10 min and then quenched by addition of EDTA to 100 mM. </plain></SENT>
+<SENT sid="330" pm="."><plain>Product (ADP) was resolved from substrate (ATP) by TLC and visualized by phosphorimaging. </plain></SENT>
+<SENT sid="331" pm="."><plain>The phosphorimage was quantitated, and the concentration of ADP was determined. </plain></SENT>
+<SENT sid="332" pm="."><plain>Shown is the plot of the rate of ATP hydrolysis as a function of RNA concentration. </plain></SENT>
+<SENT sid="333" pm="."><plain>(b) Steady-state rate constant for ATP hydrolysis is independent of ATP concentration at fixed RNA concentration. </plain></SENT>
+<SENT sid="334" pm="."><plain>NS3 (200 nM) was incubated with ds9-C20 (20 µM) and various concentrations of [α32P]-ATP at 37°C for 10 min and then quenched by addition of EDTA to 100 mM. </plain></SENT>
+<SENT sid="335" pm="."><plain>Product (ADP) was resolved from substrate (ATP) by TLC and visualized by phosphorimaging. </plain></SENT>
+<SENT sid="336" pm="."><plain>The phosphorimage was quantitated, and the concentration of ADP was determined. </plain></SENT>
+<SENT sid="337" pm="."><plain>Shown is the plot of the rate of ATP hydrolysis as a function of ATP concentration. </plain></SENT>
+<SENT sid="338" pm="."><plain>The average rate of hydrolysis of 3.4 ± 1 s−1 is shown as a dotted line. </plain></SENT>
+</text></p></sec><sec><title><text><SENT sid="339" pm="."><plain>Phosphate release limits ATP turnover in the steady state </plain></SENT>
+</text></title><p><text><SENT sid="340" pm="."><plain>In order to determine the extent to which Pi release limited ATP hydrolysis in the steady state, we used the well-established assay for Pi release that is based on Pi binding to PBP from E. coli (17). </plain></SENT>
+<SENT sid="341" pm="."><plain>Pi binding to a PBP modified with a coumarin-based fluorescent probe leads to a fluorescence change, the kinetics of which can be monitored in a stopped-flow apparatus (‘Materials and Methods’ section). </plain></SENT>
+<SENT sid="342" pm="."><plain>The labeled PBP is referred to as MDCC-PBP. </plain></SENT>
+</text></p><p><text><SENT sid="343" pm="."><plain>We combined NS3 (2 μM) with dc9-C20 (20 μM) in a syringe that was maintained at 37°C. </plain></SENT>
+<SENT sid="344" pm="."><plain>In a second syringe, we combined ATP (10 mM) and MDCC-PBP (2 μM). </plain></SENT>
+<SENT sid="345" pm="."><plain>MDCC-PBP preparations generally contained 50% unlabeled protein (‘Materials and Methods’ section). </plain></SENT>
+<SENT sid="346" pm="."><plain>We included 7-methylguanosine and purine nucleoside phosphorylase as a ‘sponge’ for Pi in both syringes to minimize background and maximize the observed fluorescence change. </plain></SENT>
+<SENT sid="347" pm="."><plain>The use of MDCC-PBP at a concentration sub-stoichiometric to NS3 was to ensure that we monitored only one round of Pi release, permitting the rate constant to be determined by a single exponential fit of the data. </plain></SENT>
+<SENT sid="348" pm="."><plain>Upon mixing, an exponential increase in fluorescence was observed that fit nicely to a single exponential rise (Figure 5b). </plain></SENT>
+<SENT sid="349" pm="."><plain>The observed rate constant was 5.3 ± 0.6 s−1, a value within error of both the steady-state rate constant for the ATPase cycle (Figure 5a) and the fast rate constant for ds9-C20 unwinding (Figure 3b). </plain></SENT>
+<SENT sid="350" pm="."><plain>Reduction of the MDCC-PBP concentration to 1 μM did not cause a significant change in the observed rate constant for Pi release. </plain></SENT>
+<SENT sid="351" pm="."><plain>When MDCC-PBP was present in excess, a linear change in fluorescence was observed from which calculation of a rate constant proved too unreliable. </plain></SENT>
+<SENT sid="352" pm="."><plain>We conclude that Pi release is the rate-limiting step for the ATPase cycle of the NS3·ds9-C20 complex. </plain></SENT>
+<SENT sid="353" pm="."><plain>From these experiments, it is clear that ADP release cannot occur slower than Pi release. </plain></SENT>
+<SENT sid="354" pm="."><plain>However, we cannot exclude the possibility that product release is random with both ADP and Pi release occurring at the same rate. </plain></SENT>
+<SENT sid="355" pm="."><plain>Also, we cannot formally exclude the possibility that steps after ADP/Pi dissociation, such as binding of a second ATP molecule, do not contribute to the observed unwinding. </plain></SENT>
+</text></p></sec></sec></SecTag><SecTag type="DISCUSS"><sec sec-type="discussion"><title><text><SENT sid="356" pm="."><plain>DISCUSSION </plain></SENT>
+</text></title><p><text><SENT sid="357" pm="."><plain>RNA helicases use chemical energy stored in the phosphoanhydride bond of ATP to perform mechanical work of RNA unwinding. </plain></SENT>
+<SENT sid="358" pm="."><plain>How this happens is not clear. </plain></SENT>
+<SENT sid="359" pm="."><plain>It is now known that despite an apparent large kinetic and physical step size for the NS3 helicase, unwinding requires sub-steps and perhaps sub-sub-steps (4,6). </plain></SENT>
+<SENT sid="360" pm="."><plain>The smallest step is linked to hydrolysis of a single ATP (4,6). </plain></SENT>
+<SENT sid="361" pm="."><plain>Whether this translates to 1-bp (4) or 3-bp (6) unwound still needs to be clarified. </plain></SENT>
+</text></p><p><text><SENT sid="362" pm="."><plain>This study was initiated at a time when the prevailing thought was that the enzyme translocated in 3-bp sub-steps (6). </plain></SENT>
+<SENT sid="363" pm="."><plain>We therefore assumed that at 37°C, an unwinding substrate of 9-bp might require only a single sub-step for unwinding, especially given the reports of local melting of the duplex occurring after NS3 binding to the unwinding substrate (5). </plain></SENT>
+<SENT sid="364" pm="."><plain>Unwinding of the ds9-C20 substrate employed here seems to function as expected, employing the mechanism shown in Figure 7. Figure 7.Integrating the ATPase cycle into models for RNA unwinding by HCV NS3. </plain></SENT>
+<SENT sid="365" pm="."><plain>This model was adapted from that presented recently by Myong et al. (6). </plain></SENT>
+<SENT sid="366" pm="."><plain>Domains 1 and 2 together constitute the ATP-binding and ATPase sites and are colored blue and green, respectively. </plain></SENT>
+<SENT sid="367" pm="."><plain>The ‘receptacle’ (8) for displaced RNA is colored yellow. </plain></SENT>
+<SENT sid="368" pm="."><plain>NS3 binds to both the ss and ds regions of the unwinding substrate; however, there is a preference for the ss/ds junction. </plain></SENT>
+<SENT sid="369" pm="."><plain>A time- and temperature-dependent activation of the NS3-RNA complex occurs after RNA binding to NS3. </plain></SENT>
+<SENT sid="370" pm="."><plain>This activation may reflect an ATP-independent fraying of the duplex. </plain></SENT>
+<SENT sid="371" pm="."><plain>Binding of ATP, and ATP hydrolysis lead to closing of domains 1 and 2 and translocation by 3 bp on loading strand, creating a high energy NS3-RNA complex. </plain></SENT>
+<SENT sid="372" pm="."><plain>Phosphate dissociation releases the strain by permitting movement of the receptacle and unwinding of the next 3 bp. </plain></SENT>
+<SENT sid="373" pm="."><plain>The system would now be reset for another cycle of unwinding. </plain></SENT>
+<SENT sid="374" pm="."><plain>With the ds9-C20 substrate, one cycle of unwinding is followed by spontaneous melting of the duplex, thus preventing the need for additional rounds of ATP-dependent unwinding. </plain></SENT>
+<SENT sid="375" pm="."><plain>We conclude that Pi release drives the power stroke for unwinding by NS3. </plain></SENT>
+</text></p><p><text><SENT sid="376" pm="."><plain>NS3 binds to the unwinding substrate and slowly transforms into a complex competent for unwinding (Figure 7) (12). </plain></SENT>
+<SENT sid="377" pm="."><plain>This isomerization may lead to local melting of the duplex as the rate constant for activation is temperature dependent (Figure 3a). </plain></SENT>
+<SENT sid="378" pm="."><plain>Whether or not the melting is at the ss/ds junction (5) or within the duplex (3) is not known. </plain></SENT>
+<SENT sid="379" pm="."><plain>However, an unwinding substrate with a pre-frayed end does not exhibit enhanced kinetics of unwinding (Figure 4c). </plain></SENT>
+</text></p><p><text><SENT sid="380" pm="."><plain>Next, ATP binds to the NS3·ds9-C20 complex. </plain></SENT>
+<SENT sid="381" pm="."><plain>Our study suggests that nucleic acid causes an ∼8-fold decrease in the affinity of NS3 for ATP (Figure 2). </plain></SENT>
+<SENT sid="382" pm="."><plain>Reduced affinity for ATP in the presence of nucleic acid has been documented in the past for both full-length and truncated (NS3h) form of NS3 (7,23). </plain></SENT>
+<SENT sid="383" pm="."><plain>However, an increase in affinity has also been reported for full-length NS3 (24). </plain></SENT>
+<SENT sid="384" pm="."><plain>All of these studies inferred affinity from kinetic studies of the ATPase activity. </plain></SENT>
+<SENT sid="385" pm="."><plain>This study employed a direct approach. </plain></SENT>
+<SENT sid="386" pm="."><plain>While NS3-ATP and NS3·ds9-C20-ATP complexes show a change in intrinsic fluorescence relative to NS3 and NS3·ds9-C20, respectively, the same was not true for NS3h (25). </plain></SENT>
+<SENT sid="387" pm="."><plain>Therefore, it is not absolutely clear that the site monitored by our studies represents the ATPase catalytic center. </plain></SENT>
+<SENT sid="388" pm="."><plain>There has been some suggestion that NS3 has two ATP-binding sites, one of which could be remote from the catalytic site (25). </plain></SENT>
+<SENT sid="389" pm="."><plain>The Kd value for ATP reported here is in the 1–7 mM range (Figure 2). </plain></SENT>
+<SENT sid="390" pm="."><plain>Values obtained by others in the presence of RNA were: 25 µM (24), 0.5 mM (7) and 3.4–4.6 mM (23). </plain></SENT>
+</text></p><p><text><SENT sid="391" pm="."><plain>Binding of ATP to NS3 dramatically decreases the affinity of NS3 for RNA (Figure 1). </plain></SENT>
+<SENT sid="392" pm="."><plain>Binding to ss/ds junction is affected less than binding to ds or ss RNA (Figure 1). </plain></SENT>
+<SENT sid="393" pm="?"><plain>This observation raises the important question: how does NS3 bind to RNA in the cell where concentrations of ATP likely exceed that of viral (and cellular) RNA? </plain></SENT>
+<SENT sid="394" pm="."><plain>Binding of NS3 to RNA, especially viral RNA, may be facilitated by interactions with other viral proteins, such as NS5A or NS5B, that bind to viral RNA specifically and independently of ATP (10,26,27). </plain></SENT>
+<SENT sid="395" pm="."><plain>Clearly, binding of NS3 to cellular RNA is not advantageous to the cell as the unwinding activity could lead to RNA remodeling and the ATPase activity could lead to ATP depletion. </plain></SENT>
+<SENT sid="396" pm="."><plain>Our observations of the antagonistic effect of ATP binding on RNA binding and vice versa may explain the observation that expression of NS3 is not toxic to cells (16,28–30). </plain></SENT>
+</text></p><p><text><SENT sid="397" pm="."><plain>Very limited information is available on the kinetics of ATP binding and dissociation. </plain></SENT>
+<SENT sid="398" pm="."><plain>One study of NS3h suggested that the second-order rate constant for ATP binding to NS3h-RNA is 0.4 µM−1 s−1, three orders of magnitude slower than the second-order rate constant for RNA binding to NS3h (7). </plain></SENT>
+<SENT sid="399" pm="."><plain>A study of NS3 suggested that the second-order rate constant for ATP binding to a paused NS3-RNA complex is 9.9 mM−1 s−1 (23). </plain></SENT>
+<SENT sid="400" pm="."><plain>Given the uncertainty and extremes of the values for the rate constants for association and dissociation of ATP, as well as equilibrium dissociation constant for ATP, the ATP concentration employed in any experiment could significantly influence experimental outcome. </plain></SENT>
+<SENT sid="401" pm="."><plain>For example, if the second-order rate constant is 9.9 mM−1 s−1, then at 1 mM, any process occurring faster than 2 s−1 will be attenuated by binding and may not be observed. </plain></SENT>
+</text></p><p><text><SENT sid="402" pm="."><plain>Addition of ATP to the NS3·ds9-C20 complex led to unwinding that was dependent on ATP concentration. </plain></SENT>
+<SENT sid="403" pm="."><plain>At 1 mM ATP, incomplete unwinding was predicted; the observed rate constant was 0.1 s−1 (<ext-link ext-link-type="uri" xlink:href="http://nar.oxfordjournals.org/cgi/content/full/gkp1118/DC1">Figure S3</ext-link>). </plain></SENT>
+<SENT sid="404" pm="."><plain>However, at 10 mM ATP, essentially all of the RNA was unwound. </plain></SENT>
+<SENT sid="405" pm="."><plain>The kinetics of unwinding were biphasic. </plain></SENT>
+<SENT sid="406" pm="."><plain>The rate constant for the first phase (70%) was 4 s−1; the rate constant for the second phase (30%) was 0.1 s−1 (Figure 3b). </plain></SENT>
+<SENT sid="407" pm="."><plain>The rate constant of 4 s−1 correlates to an unwinding rate that is consistent with our previous studies (20). </plain></SENT>
+<SENT sid="408" pm="."><plain>However, displacement rate constants this fast have never been observed in ensemble experiments, only single-molecule experiments (4,6). </plain></SENT>
+</text></p><p><text><SENT sid="409" pm="."><plain>The reasons for the two rate constants observed for unwinding of the ds9-C20 substrate are not clear. </plain></SENT>
+<SENT sid="410" pm="."><plain>It is possible that the organization of the NS3·ds9-C20 complex relative to the junction is different or the extent of activation is different (e.g. extent of duplex melting). </plain></SENT>
+<SENT sid="411" pm="."><plain>Pyle has suggested that the use of a complementary trap for the displaced strand could artificially increase the burst amplitude (and perhaps rate) (8). </plain></SENT>
+<SENT sid="412" pm="."><plain>This effect of trap was not observed in our system (<ext-link ext-link-type="uri" xlink:href="http://nar.oxfordjournals.org/cgi/content/full/gkp1118/DC1">Supplementary Figure S5a</ext-link>), consistent with the observed dependence of the amplitude of unwinding on ATP concentration (<ext-link ext-link-type="uri" xlink:href="http://nar.oxfordjournals.org/cgi/content/full/gkp1118/DC1">Supplementary Figure S3</ext-link>). </plain></SENT>
+</text></p><p><text><SENT sid="413" pm="."><plain>The existence of NS3-RNA complex capable of fast unwinding provides new opportunities for ensemble experiments to contribute to our understanding of helicase mechanism. </plain></SENT>
+<SENT sid="414" pm="."><plain>The kinetics of the fast phase does not exhibit a lag, suggesting that a single step is sufficient for unwinding and that if sub- or sub-sub-steps are involved, then the rate constant(s) must be greater than 40 s−1 for this substrate; rate constants that are substantially faster than predicted by single-molecule experiments (4,6). </plain></SENT>
+</text></p><p><text><SENT sid="415" pm="."><plain>The possibility that one step was sufficient for unwinding encouraged evaluation of the ATPase cycle. </plain></SENT>
+<SENT sid="416" pm="."><plain>Under the conditions employed, the steady-state rate constant for the ATPase cycle of the NS3·ds9-C20 complex was also 4 s−1 (Figures 3b and 6, and <ext-link ext-link-type="uri" xlink:href="http://nar.oxfordjournals.org/cgi/content/full/gkp1118/DC1">Supplementary Figure S4</ext-link>). </plain></SENT>
+<SENT sid="417" pm="."><plain>The pre-steady-state rate constant for ATP hydrolysis by the NS3·ds9-C20 complex was 49 s−1 using 10 µM ATP (Figure 5a). </plain></SENT>
+<SENT sid="418" pm="."><plain>These data suggest that ATP hydrolysis is faster than release of ADP or Pi. </plain></SENT>
+<SENT sid="419" pm="."><plain>The ability to observe a burst at 10 µM ATP would argue that the second order rate constant is &gt;4 µM−1 s−1. </plain></SENT>
+<SENT sid="420" pm="."><plain>It is important to note that very little unwinding is observed under conditions employed for pre-steady-state kinetic analysis of the ATPase cycle. </plain></SENT>
+<SENT sid="421" pm="."><plain>This observation is not explained by the presence of inactive enzyme in our preparations (<ext-link ext-link-type="uri" xlink:href="http://nar.oxfordjournals.org/cgi/content/full/gkp1118/DC1">Supplementary Figure S5b</ext-link>). </plain></SENT>
+<SENT sid="422" pm="."><plain>Caution is clearly warranted in the interpretation of the ATPase cycle relative to the unwinding cycle. </plain></SENT>
+<SENT sid="423" pm="."><plain>However, these data suggested that ATP hydrolysis is unlikely to be the rate-limiting step of the ATPase cycle in the presence of nucleic acid. </plain></SENT>
+</text></p><p><text><SENT sid="424" pm="."><plain>Release of phosphate was measured by using PBP and the rate constant was ∼5 s−1 (Figure 5b). </plain></SENT>
+<SENT sid="425" pm="."><plain>Taken at face value, these data suggest that any reiterative process coupled to the ATPase cycle would be limited by phosphate release. </plain></SENT>
+<SENT sid="426" pm="."><plain>Phosphate release was recently found to limit the ssDNA-stimulated TTPase cycle for the ring-shaped T7 helicase (13). </plain></SENT>
+<SENT sid="427" pm="."><plain>We have reached the same conclusion for the ssRNA-stimulated ATPase cycle of NS3 (Wang et al., in preparation). </plain></SENT>
+<SENT sid="428" pm="."><plain>The data also suggest that our unwinding substrate is unwound in one cycle of ATP hydrolysis. </plain></SENT>
+<SENT sid="429" pm="."><plain>It is unlikely that unwinding 1 bp would be sufficient, so these data are most consistent with a 3-bp sub-step per ATP hydrolyzed, although binding, hydrolysis and phosphate release may act independently to translocate the enzyme through 1-bp sub-sub-steps. </plain></SENT>
+<SENT sid="430" pm="."><plain>Under the conditions used, melting of 3 bp would be sufficient to prevent hybridization at 37°C (<ext-link ext-link-type="uri" xlink:href="http://nar.oxfordjournals.org/cgi/content/full/gkp1118/DC1">Supplementary Figure S2b</ext-link>). </plain></SENT>
+<SENT sid="431" pm="."><plain>DEAD-box proteins can melt multiple basepairs by using a single ATP without the requirement for hydrolysis (31–33). </plain></SENT>
+<SENT sid="432" pm="."><plain>Hydrolysis in this case permits enzyme turnover (32). </plain></SENT>
+</text></p><p><text><SENT sid="433" pm="."><plain>The stoichiometry of ATP bound per bp unwound is, at best, inferred by all experiments performed on NS3 unwinding, including this study. </plain></SENT>
+<SENT sid="434" pm="."><plain>However, phosphate release as a rate-limiting step would predict a pause between every round of ATP hydrolysis as has been observed in single molecule force experiments and ensemble experiments (4,9). </plain></SENT>
+<SENT sid="435" pm="."><plain>Indeed, in these studies, release of the paused NS3-RNA complex depended on a first order rate constant of ∼2–5 s−1 (4,9), which is clearly on the same order of magnitude as the rate constant for phosphate release determined here. </plain></SENT>
+<SENT sid="436" pm="."><plain>Single molecule FRET experiments also suggest that 3-bp steps are limited by a rate constant of ∼1 s−1 (6). </plain></SENT>
+</text></p><p><text><SENT sid="437" pm="."><plain>We propose that phosphate release contributes to the release of the ‘spring’ that moves NS3 by one sub-step. </plain></SENT>
+<SENT sid="438" pm="."><plain>Phosphate release is the signal for conformational changes required for function in a variety of systems, from cytoskeletal motor proteins (34) to translation factors (35). </plain></SENT>
+<SENT sid="439" pm="."><plain>The substrate described here is well suited to explore this possibility more deeply for the NS3 helicase by using ensemble experiments. </plain></SENT>
+<SENT sid="440" pm="."><plain>In addition, the approach described here for NS3 should illuminate mechanisms for other DExH-box RNA helicases and may also permit direct comparison of this class of helicases to the DEAD-box class of enzymes (31–33,36). </plain></SENT>
+</text></p></sec></SecTag><SecTag type="SUPPL"><sec><title><text><SENT sid="441" pm="."><plain>SUPPLEMENTARY DATA </plain></SENT>
+</text></title><p><text><SENT sid="442" pm="."><plain><ext-link ext-link-type="uri" xlink:href="http://nar.oxfordjournals.org/cgi/content/full/gkp1118/DC1">Supplementary Data</ext-link> are available at NAR Online. </plain></SENT>
+</text></p></sec></SecTag><SecTag type="ACK_FUND"><sec><title><text><SENT sid="443" pm="."><plain>FUNDING </plain></SENT>
+</text></title><p><text4fund><text><SENT sid="444" pm="."><plain>National Institutes of Health (AI060563 to K.D.R. and C.E.C.). </plain></SENT>
+<SENT sid="445" pm="."><plain>Funding for open access charge: NIAID/National Institutes of Health (grant AI060563). </plain></SENT>
+</text></text4fund></p><p><text4fund><text><SENT sid="446" pm="."><plain>Conflict of interest statement. </plain></SENT>
+<SENT sid="447" pm="."><plain>None declared. </plain></SENT>
+</text></text4fund></p></sec></SecTag></body><back><SecTag type="ACK_FUND"><ack><title>ACKNOWLEDGEMENTS</title><p><text4fund><text><SENT sid="448" pm="."><plain>We thank Piero Bianco and members of our laboratories comments on the manuscript. </plain></SENT>
+</text></text4fund></p></ack></SecTag><SecTag type="REF"><ref-list><title>REFERENCES</title><ref id="B1"><text><SENT sid="449" pm="."><plain>1BleichertFBasergaSJThe long unwinding road of RNA helicasesMol. </plain></SENT>
+<SENT sid="450" pm="."><plain>Cell20072733935217679086 </plain></SENT>
+</text></ref><ref id="B2"><text><SENT sid="451" pm="."><plain>2KnipeDMHowleyPMGriffinDELambRAMartinMARoizmanBStrausSEField's; Virology2007Philadelphia, PALippincott Williams and Wilkins </plain></SENT>
+</text></ref><ref id="B3"><text><SENT sid="452" pm="."><plain>3ChengWDumontSTinocoIJrBustamanteCNS3 helicase actively separates RNA strands and senses sequence barriers ahead of the opening forkProc. </plain></SENT>
+<SENT sid="453" pm="."><plain>Natl Acad. </plain></SENT>
+<SENT sid="454" pm="."><plain>Sci. </plain></SENT>
+<SENT sid="455" pm="."><plain>USA2007104139541395917709749 </plain></SENT>
+</text></ref><ref id="B4"><text><SENT sid="456" pm="."><plain>4DumontSChengWSerebrovVBeranRKTinocoIJrPyleAMBustamanteCRNA translocation and unwinding mechanism of HCV NS3 helicase and its coordination by ATPNature200643910510816397502 </plain></SENT>
+</text></ref><ref id="B5"><text><SENT sid="457" pm="."><plain>5LevinMKGurjarMPatelSSA Brownian motor mechanism of translocation and strand separation by hepatitis C virus helicaseNat. </plain></SENT>
+<SENT sid="458" pm="."><plain>Struct. </plain></SENT>
+<SENT sid="459" pm="."><plain>Mol. </plain></SENT>
+<SENT sid="460" pm="."><plain>Biol.20051242943515806107 </plain></SENT>
+</text></ref><ref id="B6"><text><SENT sid="461" pm="."><plain>6MyongSBrunoMMPyleAMHaTSpring-loaded mechanism of DNA unwinding by hepatitis C virus NS3 helicaseScience200731751351617656723 </plain></SENT>
+</text></ref><ref id="B7"><text><SENT sid="462" pm="."><plain>7PreugschatFAverettDRClarkeBEPorterDJA steady-state and pre-steady-state kinetic analysis of the NTPase activity associated with the hepatitis C virus NS3 helicase domainJ. </plain></SENT>
+<SENT sid="463" pm="."><plain>Biol. </plain></SENT>
+<SENT sid="464" pm="."><plain>Chem.199627124449244578798703 </plain></SENT>
+</text></ref><ref id="B8"><text><SENT sid="465" pm="."><plain>8SerebrovVBeranRKPyleAMEstablishing a mechanistic basis for the large kinetic steps of the NS3 helicaseJ. </plain></SENT>
+<SENT sid="466" pm="."><plain>Biol. </plain></SENT>
+<SENT sid="467" pm="."><plain>Chem.20092842512252119010782 </plain></SENT>
+</text></ref><ref id="B9"><text><SENT sid="468" pm="."><plain>9SerebrovVPyleAMPeriodic cycles of RNA unwinding and pausing by hepatitis C virus NS3 helicaseNature200443047648015269774 </plain></SENT>
+</text></ref><ref id="B10"><text><SENT sid="469" pm="."><plain>10JenningsTAChenYSikoraDHarrisonMKSikoraBHuangLJankowskyEFairmanMECameronCERaneyKDRNA unwinding activity of the hepatitis C virus NS3 helicase is modulated by the NS5B polymeraseBiochemistry2008471126113518179252 </plain></SENT>
+</text></ref><ref id="B11"><text><SENT sid="470" pm="."><plain>11SikoraBChenYLichtiCFHarrisonMKJenningsTATangYTackettAJJordanJBSakonJCameronCEHepatitis C virus NS3 helicase forms oligomeric structures that exhibit optimal DNA unwinding activity in vitroJ. </plain></SENT>
+<SENT sid="471" pm="."><plain>Biol. </plain></SENT>
+<SENT sid="472" pm="."><plain>Chem.2008283115161152518283103 </plain></SENT>
+</text></ref><ref id="B12"><text><SENT sid="473" pm="."><plain>12PangPSJankowskyEPlanetPJPyleAMThe hepatitis C viral NS3 protein is a processive DNA helicase with cofactor enhanced RNA unwindingEMBO J.2002211168117611867545 </plain></SENT>
+</text></ref><ref id="B13"><text><SENT sid="474" pm="."><plain>13DonmezIPatelSSCoupling of DNA unwinding to nucleotide hydrolysis in a ring-shaped helicaseEMBO J.2008271718172618497749 </plain></SENT>
+</text></ref><ref id="B14"><text><SENT sid="475" pm="."><plain>14PyleAMTranslocation and unwinding mechanisms of RNA and DNA helicasesAnnu. </plain></SENT>
+<SENT sid="476" pm="."><plain>Rev. </plain></SENT>
+<SENT sid="477" pm="."><plain>Biophys.20083731733618573084 </plain></SENT>
+</text></ref><ref id="B15"><text><SENT sid="478" pm="."><plain>15ArnoldJJCameronCEPoliovirus RNA-dependent RNA polymerase (3D(pol)). </plain></SENT>
+<SENT sid="479" pm="."><plain>Assembly of stable, elongation-competent complexes by using a symmetrical primer-template substrate (sym/sub)J. </plain></SENT>
+<SENT sid="480" pm="."><plain>Biol. </plain></SENT>
+<SENT sid="481" pm="."><plain>Chem.20002755329533610681506 </plain></SENT>
+</text></ref><ref id="B16"><text><SENT sid="482" pm="."><plain>16LohmannVKornerFKochJHerianUTheilmannLBartenschlagerRReplication of subgenomic hepatitis C virus RNAs in a hepatoma cell lineScience199928511011310390360 </plain></SENT>
+</text></ref><ref id="B17"><text><SENT sid="483" pm="."><plain>17BruneMHunterJLCorrieJEWebbMRDirect, real-time measurement of rapid inorganic phosphate release using a novel fluorescent probe and its application to actomyosin subfragment 1 ATPaseBiochemistry199433826282718031761 </plain></SENT>
+</text></ref><ref id="B18"><text><SENT sid="484" pm="."><plain>18StudierFWProtein production by auto-induction in high density shaking culturesProtein Expr. </plain></SENT>
+<SENT sid="485" pm="."><plain>Purif.20054120723415915565 </plain></SENT>
+</text></ref><ref id="B19"><text><SENT sid="486" pm="."><plain>19LakowiczJRPrinciples of Fluorescence Spectroscopy1999Plenum PublishersKluwer Academic </plain></SENT>
+</text></ref><ref id="B20"><text><SENT sid="487" pm="."><plain>20TackettAJChenYCameronCERaneyKDMultiple full-length NS3 molecules are required for optimal unwinding of oligonucleotide DNA in vitroJ. </plain></SENT>
+<SENT sid="488" pm="."><plain>Biol. </plain></SENT>
+<SENT sid="489" pm="."><plain>Chem.2005280107971080615634684 </plain></SENT>
+</text></ref><ref id="B21"><text><SENT sid="490" pm="."><plain>21MackintoshSGLuJZJordanJBHarrisonMKSikoraBSharmaSDCameronCERaneyKDSakonJStructural and biological identification of residues on the surface of NS3 helicase required for optimal replication of the hepatitis C virusJ. </plain></SENT>
+<SENT sid="491" pm="."><plain>Biol. </plain></SENT>
+<SENT sid="492" pm="."><plain>Chem.20062813528353516306038 </plain></SENT>
+</text></ref><ref id="B22"><text><SENT sid="493" pm="."><plain>22DonmezIRajagopalVJeongYJPatelSSNucleic acid unwinding by hepatitis C virus and bacteriophage t7 helicases is sensitive to base pair stabilityJ. </plain></SENT>
+<SENT sid="494" pm="."><plain>Biol. </plain></SENT>
+<SENT sid="495" pm="."><plain>Chem.2007282211162112317504766 </plain></SENT>
+</text></ref><ref id="B23"><text><SENT sid="496" pm="."><plain>23FrickDNBanikSRypmaRSRole of divalent metal cations in ATP hydrolysis catalyzed by the hepatitis C virus NS3 helicase: magnesium provides a bridge for ATP to fuel unwindingJ. </plain></SENT>
+<SENT sid="497" pm="."><plain>Mol. </plain></SENT>
+<SENT sid="498" pm="."><plain>Biol.20073651017103217084859 </plain></SENT>
+</text></ref><ref id="B24"><text><SENT sid="499" pm="."><plain>24LocatelliGASpadariSMagaGHepatitis C virus NS3 ATPase/helicase: an ATP switch regulates the cooperativity among the different substrate binding sitesBiochemistry200241103321034212162749 </plain></SENT>
+</text></ref><ref id="B25"><text><SENT sid="500" pm="."><plain>25PorterDJInhibition of the hepatitis C virus helicase-associated ATPase activity by the combination of ADP, NaF, MgCl2, and poly(rU). </plain></SENT>
+<SENT sid="501" pm="."><plain>Two ADP binding sites on the enzyme-nucleic acid complexJ. </plain></SENT>
+<SENT sid="502" pm="."><plain>Biol. </plain></SENT>
+<SENT sid="503" pm="."><plain>Chem.1998273739073969516436 </plain></SENT>
+</text></ref><ref id="B26"><text><SENT sid="504" pm="."><plain>26HuangLHwangJSharmaSDHargittaiMRChenYArnoldJJRaneyKDCameronCEHepatitis C virus nonstructural protein 5A (NS5A) is an RNA-binding proteinJ. </plain></SENT>
+<SENT sid="505" pm="."><plain>Biol. </plain></SENT>
+<SENT sid="506" pm="."><plain>Chem.2005280364173642816126720 </plain></SENT>
+</text></ref><ref id="B27"><text><SENT sid="507" pm="."><plain>27RajagopalVPatelSSSingle strand binding proteins increase the processivity of DNA unwinding by the hepatitis C virus helicaseJ. </plain></SENT>
+<SENT sid="508" pm="."><plain>Mol. </plain></SENT>
+<SENT sid="509" pm="."><plain>Biol.2008376697918155046 </plain></SENT>
+</text></ref><ref id="B28"><text><SENT sid="510" pm="."><plain>28IkedaMYiMLiKLemonSMSelectable subgenomic and genome-length dicistronic RNAs derived from an infectious molecular clone of the HCV-N strain of hepatitis C virus replicate efficiently in cultured Huh7 cellsJ. </plain></SENT>
+<SENT sid="511" pm="."><plain>Virol.2002762997300611861865 </plain></SENT>
+</text></ref><ref id="B29"><text><SENT sid="512" pm="."><plain>29PietschmannTLohmannVRutterGKurpanekKBartenschlagerRCharacterization of cell lines carrying self-replicating hepatitis C virus RNAsJ. </plain></SENT>
+<SENT sid="513" pm="."><plain>Virol.2001751252126411152498 </plain></SENT>
+</text></ref><ref id="B30"><text><SENT sid="514" pm="."><plain>30YiMBodolaFLemonSMSubgenomic hepatitis C virus replicons inducing expression of a secreted enzymatic reporter proteinVirology200230419721012504562 </plain></SENT>
+</text></ref><ref id="B31"><text><SENT sid="515" pm="."><plain>31ChenYPotratzJPTijerinaPDel CampoMLambowitzAMRussellRDEAD-box proteins can completely separate an RNA duplex using a single ATPProc. </plain></SENT>
+<SENT sid="516" pm="."><plain>Natl Acad. </plain></SENT>
+<SENT sid="517" pm="."><plain>Sci. </plain></SENT>
+<SENT sid="518" pm="."><plain>USA2008105202032020819088196 </plain></SENT>
+</text></ref><ref id="B32"><text><SENT sid="519" pm="."><plain>32LiuFPutnamAJankowskyEATP hydrolysis is required for DEAD-box protein recycling but not for duplex unwindingProc. </plain></SENT>
+<SENT sid="520" pm="."><plain>Natl Acad. </plain></SENT>
+<SENT sid="521" pm="."><plain>Sci. </plain></SENT>
+<SENT sid="522" pm="."><plain>USA2008105202092021419088201 </plain></SENT>
+</text></ref><ref id="B33"><text><SENT sid="523" pm="."><plain>33YangQDel CampoMLambowitzAMJankowskyEDEAD-box proteins unwind duplexes by local strand separationMol. </plain></SENT>
+<SENT sid="524" pm="."><plain>Cell20072825326317964264 </plain></SENT>
+</text></ref><ref id="B34"><text><SENT sid="525" pm="."><plain>34GilbertSPWebbMRBruneMJohnsonKAPathway of processive ATP hydrolysis by kinesinNature19953736716767854446 </plain></SENT>
+</text></ref><ref id="B35"><text><SENT sid="526" pm="."><plain>35AlgireMAMaagDLorschJRPi release from eIF2, not GTP hydrolysis, is the step controlled by start-site selection during eukaryotic translation initiationMol. </plain></SENT>
+<SENT sid="527" pm="."><plain>Cell20052025126216246727 </plain></SENT>
+</text></ref><ref id="B36"><text><SENT sid="528" pm="."><plain>36HennACaoWHackneyDDDe La CruzEMThe ATPase cycle mechanism of the DEAD-box rRNA helicase, DbpAJ. </plain></SENT>
+<SENT sid="529" pm="."><plain>Mol. </plain></SENT>
+<SENT sid="530" pm="."><plain>Biol.200837719320518237742 </plain></SENT>
+</text></ref><ref id="B37"><text><SENT sid="531" pm="."><plain>37ChengYPrusoffWHRelationship between the inhibition constant (K1) and the concentration of inhibitor which causes 50 per cent inhibition (I50) of an enzymatic reactionBiochem. </plain></SENT>
+<SENT sid="532" pm="."><plain>Pharmacol.197322309931084202581 </plain></SENT>
+</text></ref></ref-list></SecTag></back></article>

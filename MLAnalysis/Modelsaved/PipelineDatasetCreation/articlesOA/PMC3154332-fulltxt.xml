@@ -1,0 +1,522 @@
+<article xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML" article-type="research-article"><?properties open_access?><?DTDIdentifier.IdentifierValue -//NLM//DTD Journal Publishing DTD v2.3 20031101//EN?><?DTDIdentifier.IdentifierType public?><?SourceDTD.DTDName journalpublishing.dtd?><?SourceDTD.Version 2.3?><?ConverterInfo.XSLTName jp2nlmx2.xsl?><?ConverterInfo.Version 1?><front><journal-meta><journal-id journal-id-type="nlm-ta">PLoS One</journal-id><journal-id journal-id-type="iso-abbrev">PLoS ONE</journal-id><journal-id journal-id-type="publisher-id">plos</journal-id><journal-id journal-id-type="pmc">plosone</journal-id><journal-title-group><journal-title>PLoS ONE</journal-title></journal-title-group><issn pub-type="epub">1932-6203</issn><publisher><publisher-name>Public Library of Science</publisher-name><publisher-loc>San Francisco, USA</publisher-loc></publisher></journal-meta><article-meta><article-id pub-id-type="pmcid">3154332</article-id><article-id pub-id-type="pmid">21853104</article-id><article-id pub-id-type="publisher-id">PONE-D-11-07154</article-id><article-id pub-id-type="doi">10.1371/journal.pone.0023283</article-id><article-categories><subj-group subj-group-type="heading"><subject>Research Article</subject></subj-group><subj-group subj-group-type="Discipline-v2"><subject>Biology</subject><subj-group><subject>Ecology</subject></subj-group><subj-group><subject>Evolutionary Biology</subject></subj-group><subj-group><subject>Genetics</subject><subj-group><subject>Population Genetics</subject><subj-group><subject>Genetic Polymorphism</subject></subj-group></subj-group></subj-group><subj-group><subject>Genomics</subject><subj-group><subject>Genome Sequencing</subject></subj-group></subj-group></subj-group></article-categories><title-group><article-title>A Novel Approach for Mining Polymorphic Microsatellite Markers <italic>In Silico</italic>
+</article-title><alt-title alt-title-type="running-head">Mining Polymorphic Microsatellites <italic>In Silico</italic></alt-title></title-group><contrib-group><contrib contrib-type="author"><name><surname>Hoffman</surname><given-names>Joseph I.</given-names></name><xref ref-type="aff" rid="aff1">
+<sup>1</sup>
+</xref><xref ref-type="corresp" rid="cor1">
+<sup>*</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Nichols</surname><given-names>Hazel J.</given-names></name><xref ref-type="aff" rid="aff2">
+<sup>2</sup>
+</xref></contrib></contrib-group><aff id="aff1">
+<label>1</label>
+<addr-line>Department of Animal Behaviour, University of Bielefeld, Bielefeld, North Rhine-Westphalia, Germany</addr-line>
+</aff><aff id="aff2">
+<label>2</label>
+<addr-line>Department of Zoology, University of Cambridge, Cambridge, Cambridgeshire, United Kingdom</addr-line>
+</aff><contrib-group><contrib contrib-type="editor"><name><surname>Hansson</surname><given-names>Bengt</given-names></name><role>Editor</role><xref ref-type="aff" rid="edit1"/></contrib></contrib-group><aff id="edit1">Lund University, Sweden</aff><author-notes><corresp id="cor1">* E-mail: <email>joseph.hoffman@uni-bielefeld.de</email></corresp><fn fn-type="con"><p>Conceived and designed the experiments: JIH. Performed the experiments: JIH HJN. Analyzed the data: JIH. Contributed reagents/materials/analysis tools: JIH HJN. Wrote the paper: JIH HJN.</p></fn></author-notes><pub-date pub-type="collection"><year>2011</year></pub-date><pub-date pub-type="epub"><day>10</day><month>8</month><year>2011</year></pub-date><volume>6</volume><issue>8</issue><elocation-id>e23283</elocation-id><history><date date-type="received"><day>19</day><month>4</month><year>2011</year></date><date date-type="accepted"><day>12</day><month>7</month><year>2011</year></date></history><permissions><copyright-statement>Hoffman, Nichols.</copyright-statement><copyright-year>2011</copyright-year><license xlink:href="http://creativecommons.org/licenses/by/4.0/"><license-p>This is an open-access article distributed under the terms of the Creative Commons Attribution License, which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are properly credited.</license-p></license></permissions><abstract><p>An important emerging application of high-throughput 454 sequencing is the isolation of molecular markers such as microsatellites from genomic DNA. However, few studies have developed microsatellites from cDNA despite the added potential for targeting candidate genes. Moreover, to develop microsatellites usually requires the evaluation of numerous primer pairs for polymorphism in the focal species. This can be time-consuming and wasteful, particularly for taxa with low genetic diversity where the majority of primers often yield monomorphic polymerase chain reaction (PCR) products. Transcriptome assemblies provide a convenient solution, functional annotation of transcripts allowing markers to be targeted towards candidate genes, while high sequence coverage in principle permits the assessment of variability <italic>in silico</italic>. Consequently, we evaluated fifty primer pairs designed to amplify microsatellites, primarily residing within transcripts related to immunity and growth, identified from an Antarctic fur seal (<italic>Arctocephalus gazella</italic>) transcriptome assembly. <italic>In silico</italic> visualization was used to classify each microsatellite as being either polymorphic or monomorphic and to quantify the number of distinct length variants, each taken to represent a different allele. The majority of loci (<italic>n</italic>&#8202;=&#8202;36, 76.0%) yielded interpretable PCR products, 23 of which were polymorphic in a sample of 24 fur seal individuals. Loci that appeared variable <italic>in silico</italic> were significantly more likely to yield polymorphic PCR products, even after controlling for microsatellite length measured <italic>in silico</italic>. We also found a significant positive relationship between inferred and observed allele number. This study not only demonstrates the feasibility of generating modest panels of microsatellites targeted towards specific classes of gene, but also suggests that <italic>in silico</italic> microsatellite variability may provide a useful proxy for PCR product polymorphism.</p></abstract><counts><page-count count="9"/></counts></article-meta></front><body><sec id="s1"><title>Introduction</title><p>Microsatellites, also known as Short Tandem Repeats (STRs), Simple Sequence Repeats (SSRs) or Variable Number Tandem Repeats (VNTRs) are DNA segments comprising tandemly repeated motifs of 1&#8211;6 nucleotides. They are ubiquitous in eukaryotic and prokaryotic genomes, present in both coding and non-coding regions, and also have a high enough mutation rate (between 10<sup>&#8722;3</sup> and 10<sup>&#8722;4</sup> mutations per gamete per generation) to generate and maintain extensive length polymorphism <xref rid="pone.0023283-Weber1" ref-type="bibr">[1]</xref>, <xref rid="pone.0023283-Tautz1" ref-type="bibr">[2]</xref>. This makes them powerful genetic markers for a variety of applications ranging from the determination of parentage and other genetic relationships to genetic mapping <xref rid="pone.0023283-Jarne1" ref-type="bibr">[3]</xref>, <xref rid="pone.0023283-Bruford1" ref-type="bibr">[4]</xref>. However, a major drawback of microsatellites is that for most species they need to be developed <italic>de novo</italic>, a process that is often costly and protracted <xref rid="pone.0023283-Zane1" ref-type="bibr">[5]</xref>.</p><p>The most commonly used approach for developing microsatellites requires the construction of a partial genomic library enriched for repetitive motifs, cloning, hybridization to detect positive clones, plasmid isolation and Sanger sequencing followed by primer design and evaluation <xref rid="pone.0023283-Zane1" ref-type="bibr">[5]</xref>. Although most of these steps involve relatively straightforward protocols, they can be time-consuming due to the frequent need for troubleshooting. Moreover, established protocols for enrichment and cloning can be highly inefficient. For example, the yield of positive clones typically averages only around 2&#8211;3% but can fall to as little as 0.03% <xref rid="pone.0023283-Zane1" ref-type="bibr">[5]</xref>. This can be particularly problematic when attempting to isolate markers from species with genomes that are relatively depauperate in microsatellites such as many birds <xref rid="pone.0023283-Primmer1" ref-type="bibr">[6]</xref> and fungi <xref rid="pone.0023283-Dutech1" ref-type="bibr">[7]</xref>.</p><p>Fortunately, recently developed next-generation sequencing platforms such as Roche's GS-FLX (454 Life Sciences, Branford, CT, USA) provide novel avenues for isolating microsatellites. A single 454 run is capable of generating around 400 Mb of sequence data, with individual reads long enough (up to 500 bp) to capture individual microsatellites along with enough flanking sequence to design PCR primers. Sequence generation on such a scale bypasses the need for enrichment because even a fraction of a 454 run can yield a sufficiently large number of random sequence reads to contain many thousands of microsatellites by chance <xref rid="pone.0023283-Abdelkrim1" ref-type="bibr">[8]</xref>&#8211;<xref rid="pone.0023283-Csesnics1" ref-type="bibr">[12]</xref>. Moreover, by directing 454 sequencing towards expressed genes (i.e. transcriptome sequencing), the possibility now exists to develop panels of microsatellites that are ideal markers for genes underlying phenotypic variation <xref rid="pone.0023283-Scaglione1" ref-type="bibr">[13]</xref>.</p><p>Given the clear advantages afforded by 454 sequencing, approaches based on this or other emerging hi-throughput technologies will inevitably supercede conventional microsatellite isolation protocols. However, it will continue to be necessary to design primers, optimize each primer pair for PCR and then test these for polymorphism in a sample of individuals of the study species. This is because not all primer pairs generate interpretable PCR products and a proportion of loci that amplify successfully are invariably monomorphic. The latter represent wasted effort, an issue that can be particularly acute in species with low genetic diversity where large numbers of loci often need to be evaluated in order to obtain just a handful of informative markers. An example comes from the endangered Hawaiian monk seal, in which Shultz et al. <xref rid="pone.0023283-Schultz1" ref-type="bibr">[14]</xref> developed 163 microsatellite loci in order to obtain just 17 that were polymorphic. For systems such as this, but also to bring about more general improvements in efficiency, it would therefore be desirable to develop and evaluate potential approaches for pre-screening microsatellites for polymorphism <italic>in silico</italic>.</p><p>Just such an opportunity is provided by a large body of 454 sequence data recently generated for the Antarctic fur seal, <italic>Arctocephalus gazella</italic>
+<xref rid="pone.0023283-Hoffman1" ref-type="bibr">[15]</xref>. A long-term genetic study of this colonially breeding polygynous pinniped species at Bird Island, South Georgia <xref rid="pone.0023283-Hoffman2" ref-type="bibr">[16]</xref> has identified remarkably consistent relationships between heterozygosity measured at 9&#8211;76 microsatellite loci and a variety of important fitness traits, from male reproductive success through body size to attractiveness <xref rid="pone.0023283-Hoffman3" ref-type="bibr">[17]</xref>&#8211;<xref rid="pone.0023283-Hoffman6" ref-type="bibr">[20]</xref>. However, despite several candidate genomic regions being identified through the mapping of individual microsatellites to the dog (<italic>Canis lupis familiaris</italic>) genome (seals and dogs diverged approximately 44 million years ago <xref rid="pone.0023283-Arnason1" ref-type="bibr">[21]</xref> and the canine genome is relatively well annotated), the underlying genes remain elusive <xref rid="pone.0023283-Hoffman5" ref-type="bibr">[19]</xref>. Plausibly, most if not all of these could be immune-related, with reduced parasite loads and disease leading to greater longevity, enhanced growth, behavioural dominance and attractiveness. However, an alternative possibility is that heterozygosity might directly impact an individual's metabolism <xref rid="pone.0023283-Mitton1" ref-type="bibr">[22]</xref>, allowing it to grow more quickly and to attain greater body size. Consequently, we 454 sequenced the skin transcriptome of this species <xref rid="pone.0023283-Hoffman1" ref-type="bibr">[15]</xref>, both to generate a preliminary genomic resource for pinnipeds in general and with a view towards identifying markers within suitable candidate genes.</p><p>Our experimental approach comprised two main stages (see <xref ref-type="sec" rid="s2">Materials and Methods</xref> for further details). First, 454 sequencing was conducted on pooled cDNA from twelve Antarctic fur seal individuals (six adult males, two adult females and four pups) selected to capture much of the allelic diversity present within the population <xref rid="pone.0023283-Hoffman1" ref-type="bibr">[15]</xref>. The resulting reads were then assembled <italic>de novo</italic> into isotigs, each representing a collection of transcripts of a given gene, which were in turn functionally annotated by reference to the dog genome using Gene Ontology (GO) codes. We then used freeware to interrogate all of the isotig sequences for microsatellite repeat motifs. Finally, candidate markers were selected by filtering for a subset of isotigs containing microsatellites and with GO annotation terms related to immunity and growth.</p><p>In the second stage, we attempted to quantify the variability of each locus <italic>in silico</italic> and relate this to observed polymorphism when the locus was PCR amplified in a panel of 24 unrelated fur seals (note that these individuals were different from those used to generate the initial transcriptome assembly). To estimate levels of <italic>in silico</italic> variability, microsatellite-containing isotigs were visualized within the program Tablet <xref rid="pone.0023283-Milne1" ref-type="bibr">[23]</xref>. This provides a graphical representation of each isotig in which the individual reads comprising it are shown aligned against the consensus sequence. Upon visual inspection, certain microsatellites appeared identical across multiple reads whereas others showed evidence of variation in the numbers of repeat units. We therefore quantified for a subset of loci the number of repeat units within each of the reads, allowing derivation of estimates of variability including the number of distinct motif length variants (each of which was taken to represent a different allele) and the number of reads differing from the consensus genotype.</p><p>In this manuscript, we evaluated a total of fifty primer pairs designed to PCR amplify putative microsatellites identified from the Antarctic fur seal transcriptome assembly. Our aims were twofold: (i) to generate a panel of microsatellites functionally linked to either immunity or growth; and (ii) to explore the relationship between <italic>in silico</italic> variability and PCR product polymorphism.</p></sec><sec sec-type="materials|methods" id="s2"><title>Materials and Methods</title><sec id="s2a"><title>Sequence data and bioinformatic analysis</title><p>Library construction, 454 sequencing, assembly, annotation and mapping to the dog genome are described in detail by Hoffman <xref rid="pone.0023283-Hoffman1" ref-type="bibr">[15]</xref>. Briefly, a normalized cDNA library derived from skin samples of twelve Antarctic fur seal individuals was sequenced on a Roche GS-FLX DNA sequencer (Roche Diagnostic), generating 1,443,397 reads of mean length of 286 bp. These were then assembled <italic>de novo</italic> using Roche Newbler assembler version 2.3 into 23,025 isotigs, which in turn clustered into 18,576 isogroups (different isotigs from a given isogroup can be inferred as alternative splice-variants). Mean isotig length was 854 bp and the average depth of coverage was 19.4&#215;. Basic Local Alignment Search Tool (BLAST) similarity searches to the non-redundant database with an e-value threshold of 1e<sup>&#8722;4</sup> produced matches for 10,825 isotig sequences (47.0%), with 76.9% of the top matches being to mammals and these most frequently comprising the dog. Restricting the BLAST search set to canine sequences, the majority of isotigs (<italic>n</italic>&#8202;=&#8202;22,541, 97.9%) were also mapped to unique locations within the dog genome (NCBI Build 2, &#8220;Dog2.0&#8221;, dated 10 May 2005). A final set of BLAST searches against a subset of sequences with known Gene Ontology (GO) annotations recovered a total of 111,446 annotation terms.</p></sec><sec id="s2b"><title>Microsatellite identification and selection</title><p>The program SSRIT <xref rid="pone.0023283-Temnykh1" ref-type="bibr">[24]</xref> was used to identify isotigs containing perfect di-, tri- and tetranucleotide repeats with a minimum length of five repeat units. A total of 2271 loci were identified, 1871 (82.4%) of which comprised dinucleotides, 301 (13.3%) trinucleotides and 99 (4.4%) tetranucleotides (available via Dryad, doi: 10.5061/dryad.8268). These were located within 1939 different isotigs, of which 864 (44.6%) were functionally annotated and 1834 (94.6%) mapped to known regions in the dog genome. To target microsatellites residing within candidate immune or growth-related genes, we used a relational database to filter all of the isotigs for a subset with GO annotation terms containing the strings &#8216;immun&#8217; or &#8216;growth&#8217;, recovering a total of 316 and 1132 isotigs (1.37% and 4.92%) respectively. Of these, 26 (8.23%) and 106 (9.36%) contained repetitive motifs respectively. Oligonucleotide primers were designed to amplify PCR products for a further subset that (i) contained sufficient flanking sequence on both sides of the repetitive motif to allow the design of both forward and reverse primers; (ii) had a minimum of 2&#215; coverage of both the microsatellite and adjacent flanking regions; (iii) were BLAST annotated with respect to the nr database, and (iv) mapped to known regions within the dog genome. To avoid redundancy, we also avoided designing primers for more than one representative of any given isogroup. Primers were designed using the program Primer 3 <xref rid="pone.0023283-Rozen1" ref-type="bibr">[25]</xref> to amplify 100&#8211;250 bp products, to have a melting temperature (T<sub>m</sub>) as close as possible to 60&#176;C and a maximum difference in T<sub>m</sub> between the two primers of 3&#176;C. A total of 50 primer pairs were designed. These comprised 13 and 27 pairs to amplify microsatellites residing within isotigs with immune and growth-related GO codes respectively (Agt1 to Agt13 and Agt14 to Agt40) plus a further 10 pairs developed to amplify loci selected on the basis of appearing highly variable <italic>in silico</italic> (Agt41 to Agt50, see <xref ref-type="supplementary-material" rid="pone.0023283.s001">Tables S1</xref> and <xref ref-type="supplementary-material" rid="pone.0023283.s002">S2</xref> for details).</p></sec><sec id="s2c"><title>
+<italic>In silico</italic> quantification of microsatellite variability</title><p>To derive <italic>in silico</italic> estimates of microsatellite variability, we visualized the sequence assembly within Tablet 1.11.02.18 <xref rid="pone.0023283-Milne1" ref-type="bibr">[23]</xref>. This program can handle multiple input file formats and has several features that make it well-suited to exploring transcriptome assemblies (for an example screenshot showing a polymorphic microsatellite locus, see <xref ref-type="fig" rid="pone-0023283-g001">Figure 1</xref>). The main display window allows a single isotig to be viewed at a time and is navigable by means of scrolling and zooming functions. Within this window, each of the reads is shown aligned against the consensus sequence, with individual bases coloured according to nucleotide type and each read occupying a separate row under the &#8216;stacked format&#8217; option. Pad characters, introduced by Newbler to fill any gaps in the assembly that arise for example where indels or length polymorphisms are present among the reads, are represented by star symbols. This format is amenable to quantifying the number of repeat motifs present within each of multiple reads at a given locus. This was done manually to generate <italic>in silico</italic> measures of variability for each of the microsatellite loci to be tested for PCR amplification, including the number of unique motif length variants (inferred to be different alleles) and the number of reads differing from the most common, consensus genotype.</p><fig id="pone-0023283-g001" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0023283.g001</object-id><label>Figure 1</label><caption><title>Screenshot of a polymorphic trinucleotide-repeat (TTG) microsatellite locus (Agt25) visualised <italic>in silico</italic> using the program Tablet <xref rid="pone.0023283-Milne1" ref-type="bibr">[23]</xref>.</title><p>The upper &#8216;overview window&#8217; shows a scaled-to-fit summary of all of the reads comprising the isotig, while the main &#8216;display window&#8217; shows the microsatellite and its immediate flanking regions visualised under a higher zoom. Within this window, 454 reads are shown aligned against the consensus sequence, with each read occupying a separate row. Individual bases are coloured according to nucleotide type and pad characters, introduced by Newbler to fill any gaps in the assembly, are represented by red star symbols against a light grey background. Two distinct motif length variants can be seen, comprising six and seven repeat units respectively. The same number of alleles was detected when the locus was PCR-amplified in 24 unrelated <italic>A. gazella</italic> individuals.</p></caption><graphic xlink:href="pone.0023283.g001"/></fig></sec><sec id="s2d"><title>Tissue sampling</title><p>Skin biopsy samples were collected from 24 unrelated adult male Antarctic fur seal individuals during the austral summer of 2008/2009 at Bird Island, South Georgia (54&#176;00&#8242;S, 38&#176;02&#8242;W). These were taken using a remote biopsy dart system <xref rid="pone.0023283-Gemmell1" ref-type="bibr">[26]</xref> and stored individually in 96% ethanol at &#8722;20&#176;C. Samples were collected and retained under permits issued by the Department for Environment, Food and Rural Affairs (License number AHZ/2024A/2005/1) and in accordance with the Convention on International Trade in Endangered Species of Wild Fauna and Flora. All field procedures were approved by the British Antarctic Survey (reference number PEA 6).</p></sec><sec id="s2e"><title>DNA extraction and genotyping</title><p>Total genomic DNA was extracted using an adapted Chelex 100 protocol <xref rid="pone.0023283-Walsh1" ref-type="bibr">[27]</xref> followed by phenol-chloroform purification <xref rid="pone.0023283-Sambrook1" ref-type="bibr">[28]</xref>. All 50 selected primer pairs were tested for PCR amplification as described in detail by Hoffman and Amos <xref rid="pone.0023283-Hoffman7" ref-type="bibr">[29]</xref>. The following PCR profile was used: one cycle of 120 s at 94&#176;C, 45 s at 46&#176;C, 50 s at 72&#176;C; ten cycles of 30 s at 94&#176;C, 45 s at 46&#176;C, 50 s at 72&#176;C; 25 cycles of 30 s at 89&#176;C, 45 s at 48&#176;C, 50 s at 72&#176;C; and one final cycle of five minutes at 72&#176;C. Primer pairs that failed to give a clear product under these conditions were also tested at a range of different annealing temperatures. PCR products were resolved by electrophoresis on standard 6% polyacrylamide sequencing gels and detected by autoradiography. Allele sizes were scored manually.</p></sec><sec id="s2f"><title>Data analyses</title><p>Genepop <xref rid="pone.0023283-Raymond1" ref-type="bibr">[30]</xref> was used to calculate observed and expected heterozygosities and to test for deviations from Hardy-Weinberg equilibrium and for linkage disequilibrium. Null allele frequencies were calculated following Chakraborty <xref rid="pone.0023283-Chakraborty1" ref-type="bibr">[31]</xref> using the program Micro-checker <xref rid="pone.0023283-VanOosterhout1" ref-type="bibr">[32]</xref>. To evaluate factors potentially influencing whether or not the observed PCR products were polymorphic, we constructed Generalized Linear Models (GLMs) within R <xref rid="pone.0023283-Team1" ref-type="bibr">[33]</xref>. Polymorphism was initially modeled as a binary response variable (1&#8202;=&#8202;polymorphic, 0&#8202;=&#8202;monomorphic) using a Binomial error structure. Restricting the dataset to loci that generated clearly interpretable polymorphic PCR products, we then constructed a second GLM in which polymorphism was expressed as the number of observed alleles and modeled using a Poisson error structure. The following predictor variables were fitted in both models: microsatellite length (measured as the number of repeat units comprising the shortest allele observed <italic>in silico</italic>), the number of reads differing from the consensus sequence and the total number of alleles observed <italic>in silico</italic> (all of which were fitted as continuous variables), the basis on which the marker was selected (as a factor with three levels: immune-related, growth-related or appearing highly variable) and motif (also as a three level factor: dinucleotide, trinucleotide or tetranucleotide). We additionally fitted <italic>in silico</italic> variability as a binary factor (0&#8202;=&#8202;not variable, 1&#8202;=&#8202;variable) in the first GLM. Using standard deletion-testing procedures <xref rid="pone.0023283-Crawley1" ref-type="bibr">[34]</xref>, each term was progressively dropped from models unless doing so significantly reduced the amount of deviance explained (deviance is analogous to sums of squares in standard regression analysis). The change in deviance between full and reduced models was distributed as &#967;<sup>2</sup> with degrees of freedom equal to the difference in degrees of freedom between the models with and without the term in question. For all models, distributions of standardized residuals about regressions were inspected to verify that they were approximately normally distributed.</p></sec></sec><sec id="s3"><title>Results</title><p>Fifty primer pairs were designed to amplify microsatellites residing within transcripts selected either on the basis of GO codes related to immunity or growth (<italic>n</italic>&#8202;=&#8202;13 and 27 respectively) or for appearing highly variable when visualized <italic>in silico</italic> (<italic>n</italic>&#8202;=&#8202;10, see <xref ref-type="supplementary-material" rid="pone.0023283.s001">Tables S1</xref> and <xref ref-type="supplementary-material" rid="pone.0023283.s002">S2</xref> for details). The majority of primer pairs (<italic>n</italic>&#8202;=&#8202;38, 76.0%) yielded PCR products that could be discriminated as either polymorphic or monomorphic in a sample of 24 unrelated Antarctic fur seal individuals (<xref ref-type="supplementary-material" rid="pone.0023283.s002">Table S2</xref>). Of these, 23 loci (60.5%) were polymorphic, although two could not be reliably scored due to the co-amplification of a second microsatellite. The remaining 21 loci possessed between 2 and 9 alleles each, with observed heterozygosity ranging from 0.042 to 0.917 (<xref ref-type="table" rid="pone-0023283-t001">Table 1</xref>). Two of these loci (Agt5 and Agt49) deviated significantly from Hardy-Weinberg equilibrium (<xref ref-type="table" rid="pone-0023283-t001">Table 1</xref>), although not significantly following Bonferroni correction for multiple tests <xref rid="pone.0023283-Hochberg1" ref-type="bibr">[35]</xref>. Tests for linkage disequilibrium yielded 6 weakly significant <italic>P</italic> values (<italic>P</italic>&lt;0.05) out of 210 pairwise comparisons, none of which remained significant following Bonferroni correction, indicating that the loci are unlikely to be physically linked. This is consistent with these transcript sequences mapping to 17 different chromosomes in the dog, with no more than 3 isotigs locating to any single chromosome (<xref ref-type="supplementary-material" rid="pone.0023283.s001">Table S1</xref>).</p><table-wrap id="pone-0023283-t001" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0023283.t001</object-id><label>Table 1</label><caption><title>Polymorphism characteristics of 21 microsatellite loci that amplified polymorphic and interpretable PCR products in 24 unrelated <italic>Arctocephalus gazella</italic> individuals.</title></caption><alternatives><graphic id="pone-0023283-t001-1" xlink:href="pone.0023283.t001"/></alternatives><table-wrap-foot><fn id="nt101"><label>a</label><p>Observed heterozygosity.</p></fn><fn id="nt102"><label>b</label><p>Expected heterozygosity.</p></fn><fn id="nt103"><label>c</label><p>Negative null allele frequency values are normal using Chakarborty's estimator <xref rid="pone.0023283-Chakraborty1" ref-type="bibr">[31]</xref> when the null allele frequency is close to zero and sample sizes are small <xref rid="pone.0023283-Chapuis1" ref-type="bibr">[64]</xref>.</p></fn><fn id="nt104"><label>d</label><p>Hardy-Weinberg equilibrium <italic>P</italic>-values could not be calculated for loci indicated by &#8216;<sc>na</sc>&#8217; due to only one individual carrying the second allele.</p></fn></table-wrap-foot></table-wrap><sec id="s3a"><title>Null alleles</title><p>A common problem with microsatellites is the presence of non-amplifying alleles, which usually result from a mutation (base substitution, insertion or deletion) in one or both of the primer binding sites <xref rid="pone.0023283-Callen1" ref-type="bibr">[36]</xref>&#8211;<xref rid="pone.0023283-Dakin1" ref-type="bibr">[38]</xref>. Both of the loci that deviated significantly from Hardy-Weinberg equilibrium carried null alleles at high to moderate frequencies (0.626 and 0.186 for Agt5 and Agt49 respectively, <xref ref-type="table" rid="pone-0023283-t001">Table 1</xref>). Consequently, we inspected the primer binding sites of these two microsatellites within the program Tablet <xref rid="pone.0023283-Milne1" ref-type="bibr">[23]</xref> for nucleotide sequence variation. A Single Nucleotide Polymorphism (SNP) was detected in the binding site of the Agt5 reverse primer (T/C, minor allele frequency&#8202;=&#8202;0.143, depth of coverage&#8202;=&#8202;21 reads). SNPs were not found in either of the primer binding sites of locus Agt49, but the minimum depth of sequence coverage was lower for these regions (9&#215; and 4&#215; for the forward and reverse primer sites respectively).</p></sec><sec id="s3b"><title>PCR conversion rates and allelic richness</title><p>The proportion of primer pairs yielding clearly interpretable and polymorphic PCR products was similar for microsatellites residing within immune and growth-related transcripts (30.8%, <italic>n</italic>&#8202;=&#8202;4 and 33.3%, <italic>n</italic>&#8202;=&#8202;9 respectively) but substantially higher for loci selected on the basis of high <italic>in silico</italic> variability (80.0%, <italic>n</italic>&#8202;=&#8202;8). The number of observed alleles was lowest for immune-related transcripts (mean&#8202;=&#8202;2.50&#177;0.29 SE), intermediate for growth-related transcripts (mean&#8202;=&#8202;3.56&#177;0.67 SE) and highest for microsatellites that appeared highly variable <italic>in silico</italic> (mean&#8202;=&#8202;5.25&#177;0.94 SE). However, variation in allele number was not statistically significant overall (one way ANOVA, F<sub>2,20</sub>&#8202;=&#8202;2.53, <italic>P</italic>&#8202;=&#8202;0.11).</p></sec><sec id="s3c"><title>Predictors of PCR product polymorphism</title><p>In over three quarters of cases (29/38), microsatellite loci appearing variable <italic>in silico</italic> generated polymorphic PCR products and vice-versa (Fisher's exact test, <italic>P</italic>&#8202;=&#8202;0.0032, see <xref ref-type="table" rid="pone-0023283-t002">Table 2</xref> for a breakdown). The exceptions were a single locus that was inferred to be monomorphic from the 454 data but which yielded polymorphic PCR products, and eight loci that appeared variable <italic>in silico</italic> but which generated monomorphic products. However, all but two of the latter had only 1&#8211;3 reads differing from the consensus sequence, raising the possibility that these could have been either sequencing errors or genuine but low-frequency alleles.</p><table-wrap id="pone-0023283-t002" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0023283.t002</object-id><label>Table 2</label><caption><title>Table summarizing consistency between <italic>in silico</italic> and PCR product polymorphism across 38 microsatellite loci.</title></caption><alternatives><graphic id="pone-0023283-t002-2" xlink:href="pone.0023283.t002"/></alternatives></table-wrap><p>To formally evaluate factors influencing PCR product polymorphism, we fitted two GLMs (see <xref ref-type="sec" rid="s2">Materials and Methods</xref> for details). In the first of these, PCR product polymorphism was expressed as a binary factor, coded as 1 (polymorphic) or 0 (monomorphic). The minimum number of repeat units and <italic>in silico</italic> variability were both retained as highly significant predictor variables (<italic>P</italic>&lt;0.0001) in the reduced model, which explained 60% of the total deviance (<xref ref-type="table" rid="pone-0023283-t003">Table 3</xref>). This suggests that, even after controlling for a positive relationship between microsatellite length and polymorphism, loci that appear variable <italic>in silico</italic> were more likely to yield polymorphic PCR products. In the second GLM, we expressed PCR product polymorphism as the number of observed alleles and modeled this using a Poisson link function. The minimum number of repeat units and the number of alleles inferred from the 454 data were both retained as significant positive predictors (<xref ref-type="table" rid="pone-0023283-t004">Table 4</xref>, <xref ref-type="fig" rid="pone-0023283-g002">Figure 2</xref>), whereas the number of reads differing from the consensus sequence was negatively correlated with the observed number of alleles. One potential explanation for the latter could be that loci showing many differences from the consensus sequence tend to possess fewer, but higher frequency alleles.</p><fig id="pone-0023283-g002" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0023283.g002</object-id><label>Figure 2</label><caption><title>Relationship between the inferred number of alleles <italic>in silico</italic> and observed allele number for 21 polymorphic microsatellite loci.</title><p>Shown are fitted values from a GLM controlling for the number of repeats and the number of reads differing from the consensus sequence. The solid line shows the regression predicted by the GLM and dashed lines indicate the 95% confidence interval.</p></caption><graphic xlink:href="pone.0023283.g002"/></fig><table-wrap id="pone-0023283-t003" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0023283.t003</object-id><label>Table 3</label><caption><title>Results of Generalized Linear Model (GLMs) of PCR product polymorphism (see <xref ref-type="sec" rid="s2">Materials and Methods</xref> for details).</title></caption><alternatives><graphic id="pone-0023283-t003-3" xlink:href="pone.0023283.t003"/></alternatives><table-wrap-foot><fn id="nt105"><label>a</label><p>Only significant terms remaining in the reduced model are shown.</p></fn><fn id="nt106"><label>b</label><p>Degrees of freedom.</p></fn><fn id="nt107"><label/><p>Total deviance&#8202;=&#8202;50.98; total explained deviance&#8202;=&#8202;59.99%.</p></fn></table-wrap-foot></table-wrap><table-wrap id="pone-0023283-t004" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0023283.t004</object-id><label>Table 4</label><caption><title>Results of the Generalized Linear Model (GLM) of the number of alleles (see <xref ref-type="sec" rid="s2">Materials and Methods</xref> for details).</title></caption><alternatives><graphic id="pone-0023283-t004-4" xlink:href="pone.0023283.t004"/></alternatives><table-wrap-foot><fn id="nt108"><label>a</label><p>Only significant terms remaining in the reduced model are shown.</p></fn><fn id="nt109"><label>b</label><p>Degrees of freedom.</p></fn><fn id="nt110"><label/><p>Total deviance&#8202;=&#8202;24.37; total explained deviance&#8202;=&#8202;57.07%.</p></fn></table-wrap-foot></table-wrap></sec></sec><sec id="s4"><title>Discussion</title><p>Few if any studies have used cDNA to develop panels of candidate-gene targeted microsatellites in non-model organisms, while none to our knowledge have explored the possibility of screening microsatellites for variability <italic>in silico</italic>. Consequently, we used an Antarctic fur seal transcriptome assembly to develop PCR primers to amplify microsatellites residing within transcripts related to immunity and growth, while at the same time looking for a potential relationship between <italic>in silico</italic> variability and PCR product polymorphism. We were successful on both counts, identifying 13 polymorphic microsatellites associated with these two primary classes of candidate gene and also demonstrating a clear link between <italic>in silico</italic> variability and two different measures of PCR product polymorphism.</p><sec id="s4a"><title>Microsatellites within candidate transcripts</title><p>It has long been recognized that microsatellites derived from transcribed sequences, whether these be expressed sequence tags or transcriptome assemblies, can be powerful tools for a variety of applications including linkage and QTL mapping, comparative genomics and studies of genome evolution <xref rid="pone.0023283-Lui1" ref-type="bibr">[39]</xref>. This is largely due to the fact that genes are often highly conserved, increasing the likelihood of primers cross-amplifying and serving as &#8216;anchor points&#8217; for cross-species comparisons <xref rid="pone.0023283-Fulton1" ref-type="bibr">[40]</xref>. Being type I markers (i.e. associated with genes of known function), transcript-associated microsatellites also represent ideal markers for studying the genetic basis of phenotypic trait variation <xref rid="pone.0023283-Scaglione1" ref-type="bibr">[13]</xref>. However, despite several studies having developed panels of candidate-gene targeted microsatellites from the complete genome sequences of humans and their companion species <xref rid="pone.0023283-ObexerRuff1" ref-type="bibr">[41]</xref>&#8211;<xref rid="pone.0023283-Hoffjan1" ref-type="bibr">[43]</xref>, cDNA has not yet been widely exploited for this purpose, particularly in non-model organisms. Our study highlights the eminent feasibility of such an approach, although the numbers of markers obtainable will clearly depend on the relative abundance of various classes of transcript. In this particular case, immune-related transcripts were relatively rare (total <italic>n</italic>&#8202;=&#8202;316), perhaps unsurprisingly given that the transcriptome was developed from fur seal skin plugs <xref rid="pone.0023283-Hoffman1" ref-type="bibr">[15]</xref>. Moreover, only 26 of these transcripts contained microsatellites, of which seven were discarded due to there not being enough flanking sequence to design primers and one because it did not map to the dog genome. Thus, the 13 primer pairs that we evaluated comprised the majority (72.2%) of available immune-related loci. In contrast, we only evaluated around a quarter of the 106 microsatellite-containing growth-related transcripts available to us. It should be possible to overcome the paucity of immune-related transcripts in this species through additional 454 sequencing directed towards other tissues such as the spleen. Alternatively, short read sequencing could be employed to increase the depth of coverage of singletons so far excluded from the assembly, a fraction of which would be expected to be related to immunity.</p><p>Notably, our rates of success in developing polymorphic loci were roughly equal for microsatellites located within immune and growth-related transcripts but higher for markers selected on the basis of <italic>in silico</italic> variability. This trend was also reflected in the allelic diversity of loci that successfully amplified. This is almost certainly due to our having been unbiased in our selection of immune and growth-related microsatellites, attempting to PCR amplify loci irrespective of the number of repeat units or apparent levels of variability. However, with a success rate of 80% for loci selected on the basis of high i<italic>n silico</italic> variability, our study suggests that <italic>in silico</italic> screening could significantly improve the efficiency of future attempts to develop candidate-gene targeted microsatellites (see below).</p></sec><sec id="s4b"><title>Null alleles</title><p>An important drawback of microsatellites is the occurrence of non-amplifying alleles, which can arise when a mutation within one or both of the primer binding sites prevents primer annealing <xref rid="pone.0023283-Callen1" ref-type="bibr">[36]</xref>. Null alleles are found in up to 30% of loci <xref rid="pone.0023283-Callen1" ref-type="bibr">[36]</xref>, <xref rid="pone.0023283-Paetkau1" ref-type="bibr">[44]</xref> and can significantly impact paternity analyses, leading if unrecognized to the false exclusion of true parents and downstream to errors in pedigree reconstruction <xref rid="pone.0023283-Dakin1" ref-type="bibr">[38]</xref>. Consequently, we inspected the primer binding sites of both of the loci that significantly deviated from HWE in the direction of homozygosity excess. We found evidence of a SNP within the binding site of the reverse primer for Agt5, the locus carrying the highest null allele frequency. By implication, 454 sequence alignments might not only be useful for targeting polymorphic microsatellites, but also for designing primers that minimize the risk of null alleles being amplified. The latter could potentially be achieved by selecting only loci with a reasonably high depth of coverage at both of the primer annealing sites and which show no evidence of SNPs within these regions.</p></sec><sec id="s4c"><title>Relationship between <italic>in silico</italic> variability and PCR product polymorphism</title><p>Although the advent of 454 sequencing has allowed much of the microsatellite isolation process to be streamlined, the primer evaluation step has seen few improvements other than the introduction of the M13 tailed system <xref rid="pone.0023283-Schuelke1" ref-type="bibr">[45]</xref>. Unfortunately, very little can be done beyond careful PCR optimization to minimize the wastage of time and materials on loci that fail to amplify. However, we believe that pre-selecting markers for variability <italic>in silico</italic> may help to minimize the number of primer pairs that yield monomorphic PCR products, especially in species with low levels of genetic variability (e.g. <xref rid="pone.0023283-Schultz1" ref-type="bibr">[14]</xref>, <xref rid="pone.0023283-Leclerc1" ref-type="bibr">[46]</xref>, <xref rid="pone.0023283-Habel1" ref-type="bibr">[47]</xref>). Furthermore, even in &#8216;normal&#8217; species, a small improvement in efficiency might bring about significant time and cost savings when attempting to develop large panels of markers for applications such as genetic mapping.</p><p>The concept of sourcing polymorphic genetic markers within sequence assemblies is by no means new, with several studies having previously mined 454 datasets for SNPs <xref rid="pone.0023283-Vera1" ref-type="bibr">[e.g. 48]</xref>, <xref rid="pone.0023283-Weber2" ref-type="bibr">[49]</xref>. However, we are not aware of any studies that have extended the same approach to microsatellites. If anything, the opposite appears to be the case, with most studies having sequenced a single specimen, while others have deliberately filtered out identical reads in order to reduce the risk of developing the same locus more than once <xref rid="pone.0023283-Castoe1" ref-type="bibr">[10]</xref>&#8211;<xref rid="pone.0023283-Csesnics1" ref-type="bibr">[12]</xref>, <xref rid="pone.0023283-Hoffjan1" ref-type="bibr">[43]</xref>. Although these strategies make some sense when genetic variability is high, under normal circumstances including more than one individual in a 454 run is unlikely to be detrimental. On the contrary, the inclusion of multiple individuals should not only capture more of the standing genetic variation within a given population, but may also help to average out any effects arising from differences in template quality among individuals.</p><p>On a related point, some authors have speculated that it should be possible to enrich for polymorphic microsatellites by selectively testing only loci with large numbers of repeat units <xref rid="pone.0023283-Abdelkrim1" ref-type="bibr">[8]</xref>, <xref rid="pone.0023283-Castoe1" ref-type="bibr">[10]</xref>. This is because longer microsatellites tend to be more mutable due to an increased probability of slippage <xref rid="pone.0023283-Ellegren1" ref-type="bibr">[50]</xref>, <xref rid="pone.0023283-Kelkar1" ref-type="bibr">[51]</xref>. However, current Sanger and 454 read length limitations mean that the longer the microsatellite, the less flanking sequence will be available for designing primers <xref rid="pone.0023283-Abdelkrim1" ref-type="bibr">[8]</xref>. Moreover, microsatellites also appear to have an upper size limit, rarely attaining lengths in excess of a few tens of repeat units <xref rid="pone.0023283-Ellegren2" ref-type="bibr">[52]</xref>. Consequently, longer microsatellites may be relatively hard to come by, depending on genome size and the scale of the sequencing effort <xref rid="pone.0023283-Temnykh1" ref-type="bibr">[24]</xref>, <xref rid="pone.0023283-Grover1" ref-type="bibr">[53]</xref>. Our approach may help to mitigate both of these problems. First, assembling multiple 454 reads allows longer tracts of contiguous sequence to be obtained, thereby maximizing the amount of flanking sequence available for primer design. In the case of the fur seal 454 assembly <xref rid="pone.0023283-Hoffman1" ref-type="bibr">[15]</xref>, average isotig length was three times greater than average read length (854 bp versus 286 bp). Second, we were also able to demonstrate a highly significant positive relationship between <italic>in silico</italic> variability and PCR product polymorphism, even after controlling for the number of repeat units. This suggest that pre-screening for microsatellites appearing variable <italic>in silico</italic> could help to increase the yield of informative markers regardless of whether or not these are additionally selected on the basis of length.</p><p>An important caveat to the above is that our approach was only around 75% accurate at predicting whether or not PCR products were polymorphic. However, most of the observed discrepancies appear to be explicable. For example, the locus that did not appear to be variable <italic>in silico</italic> but which generated polymorphic PCR products had a depth of coverage of only 4 reads. With so few reads in total, it is possible that stochastic variation during clonal amplification and sequencing could have resulted in a single allele being preferentially sequenced. Similarly, almost all of the eight loci that were monomorphic despite appearing variable <italic>in silico</italic> were characterized by the &#8216;minor allele&#8217; being of very low frequency (typically only 1&#8211;3 copies). These minority reads could potentially have resulted from sequencing error, consistent with the fact that 454 error rates are somewhat higher than those typically experienced with Sanger sequencing <xref rid="pone.0023283-Margulies1" ref-type="bibr">[54]</xref>. Alternatively, they could represent genuine low-frequency alleles that were by chance present among those individuals comprising the discovery panel but absent from those comprising the genotyping panel. This possibility cannot be dismissed, although all of the individuals originated from the same population and the latter comprised twice as many individuals as the former. Regardless of the exact mechanism, it would seem prudent to focus future efforts primarily upon microsatellites with high coverage and for which several reads differ from the consensus genotype.</p><p>We also extended our approach beyond simply testing whether or not a locus was polymorphic by correlating the number of alleles observed <italic>in silico</italic> with those obtained through PCR. A significant positive relationship was obtained, which was again robust to controlling statistically for microsatellite length. This could be partly due to ascertainment bias, the use of fewer individuals for microsatellite discovery than genotyping potentially having favoured the preferential discovery of common alleles. Nevertheless, selecting for microsatellite loci carrying multiple alleles <italic>in silico</italic> would appear to provide a means of maximizing the average variability of a panel of markers for a given development effort.</p><p>One potential issue relating to the selection of maximally polymorphic markers is that these may derive preferentially from regions of the genome experiencing balancing selection <xref rid="pone.0023283-Santucci1" ref-type="bibr">[55]</xref>, <xref rid="pone.0023283-Huang1" ref-type="bibr">[56]</xref> and could therefore generate misleading results in population genetic analyses. However, the ten markers we selected on the basis of high <italic>in silico</italic> variability showed no obvious pattern either in terms of genomic distribution or functional annotation (<xref ref-type="supplementary-material" rid="pone.0023283.s001">Table S1</xref>). For example, these loci map to 8 different chromosomes in the dog, and none locate to chromosome 12 which carries an obvious candidate for balancing selection, the MHC <xref rid="pone.0023283-Wagner1" ref-type="bibr">[57]</xref>. Clearly, in order to better understand the distribution of microsatellite variability across the genome, it would be desirable to evaluate many more markers. One option in the fur seal would be to screen these across multiple populations to identify <italic>F</italic>
+<sub>st</sub> outliers as potential candidates for loci behaving non-neutrally <xref rid="pone.0023283-Bamshad1" ref-type="bibr">[58]</xref>.</p></sec><sec id="s4d"><title>Wider applicability</title><p>To take full advantage of the high-throughput nature of next-generation sequencing requires fully automated data processing. Automating the <italic>in silico</italic> screening of isotigs for variable microsatellites would be a logical extension to the proof of principle that we present here, and might potentially be achieved by modifying a pre-existing microsatellite search tool, of which there are many <xref rid="pone.0023283-Sharma1" ref-type="bibr">[59]</xref>, <xref rid="pone.0023283-Merkel1" ref-type="bibr">[60]</xref>. Several of these programs are also capable of designing primers or can link up with external primer selection tools such as Primer 3 <xref rid="pone.0023283-Rozen1" ref-type="bibr">[25]</xref> to further streamline marker development. Given a large enough pool of candidate microsatellites, automation might also help to minimize the amount of time spent on manual PCR optimization. For example, loci that fail to amplify under standard conditions could be discarded and other markers drawn from the pool to replace them. This could greatly facilitate the rapid development of polymorphic microsatellites for candidate gene studies or the construction of high-density genetic maps <xref rid="pone.0023283-Sharma1" ref-type="bibr">[59]</xref>.</p><p>Although we have developed <italic>in silico</italic> screening using a transcriptome assembly, it might also be possible to extend the same approach to other situations in which homologous sequence reads are available from more than one individual. This may not apply to whole-genome 454 shotgun sequencing-based approaches due to the probability of sequencing 100 bp of the same genomic sequence almost certainly being too low <xref rid="pone.0023283-Castoe1" ref-type="bibr">[10]</xref>. However, it may prove possible to align multiple homologous sequences from reduced representation libraries. Moreover, 454 technology will continue to improve, with a single GS FLX+ run already being capable of generating 700 Mb of sequence data with an average read length of 700 bp. The potential also exists in the future to exploit increasing numbers of large-scale genomic databases <xref rid="pone.0023283-Sharma1" ref-type="bibr">[59]</xref>, some of which (e.g. the 1000 Genomes project; <ext-link ext-link-type="uri" xlink:href="http://www.1000genomes.org">http://www.1000genomes.org</ext-link>) already incorporate sequence data from multiple individuals.</p><p>Finally, financial and time factors also need to be taken into account. A clear consensus is already emerging that 454 sequencing is more cost-effective, requires less time to be spent in the wet lab and generates many more markers than traditional approaches based on the Sanger sequencing of enriched genomic libraries <xref rid="pone.0023283-Abdelkrim1" ref-type="bibr">[8]</xref>, <xref rid="pone.0023283-Castoe1" ref-type="bibr">[10]</xref>, <xref rid="pone.0023283-Csesnics1" ref-type="bibr">[12]</xref>, <xref rid="pone.0023283-Santana1" ref-type="bibr">[61]</xref>. Our study employed a full 454 run costing around &#163;8000, which lies squarely within the range of commercial fees reported for developing around ten polymorphic loci <xref rid="pone.0023283-Abdelkrim1" ref-type="bibr">[8]</xref>. However, using <italic>in silico</italic> mining, we were able to identify over 2000 microsatellites, many of which were associated with annotated transcripts, at no additional cost and with a negligible time investment <xref rid="pone.0023283-Hoffman1" ref-type="bibr">[15]</xref>. This compares favourably with two previous development efforts in this species, which together generated a total of 53 clone sequences from which primers could be designed <xref rid="pone.0023283-Hoffman8" ref-type="bibr">[62]</xref>, <xref rid="pone.0023283-Hoffman9" ref-type="bibr">[63]</xref> at the cost of several months of laboratory work. Finally, the rate of conversion into polymorphic microsatellites averaged over the two previous studies was 35.8%, significantly lower than the 80% rate obtained here for loci selected on the basis of high <italic>in silico</italic> variability (Fisher's exact test, <italic>P</italic>&#8202;=&#8202;0.014). Consequently, targeting loci that are more likely to successfully convert should bring significant time savings as well as reducing expenditure on oligonucleotides.</p></sec><sec id="s4e"><title>Conclusion</title><p>In this manuscript, we build upon previous studies that have used 454 sequencing to identify microsatellites both by developing markers within specific functional classes of transcript and by demonstrating a positive correlation between <italic>in silico</italic> and observed measures of microsatellite variability. We hope that the latter finding will stimulate further interest in the development and application of <italic>in silico</italic> screening approaches.</p></sec></sec><sec sec-type="supplementary-material" id="s5"><title>Supporting Information</title><supplementary-material content-type="local-data" id="pone.0023283.s001"><label>Table S1</label><caption><p>Details of 50 <italic>Arctocephalus gazella</italic> isotigs containing microsatellite motifs.</p><p>(DOCX)</p></caption><media xlink:href="pone.0023283.s001.docx"><caption><p>Click here for additional data file.</p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="pone.0023283.s002"><label>Table S2</label><caption><p>Details of 50 putative fur seal microsatellite loci tested for PCR amplification in 24 unrelated <italic>Arctocephalus gazella</italic> individuals.</p><p>(DOCX)</p></caption><media xlink:href="pone.0023283.s002.docx"><caption><p>Click here for additional data file.</p></caption></media></supplementary-material></sec></body><back><ack><p>We are grateful to J. Forcada for collecting tissue samples, S. Bridgett for advice and assistance with bioinformatic analysis, and to two anonymous referees whose comments greatly improved the final manuscript. We also acknowledge support for the publication fee by the Deutsche Forschungsgemeinschaft and the Open Access Publication Funds of Bielefeld University.</p></ack><fn-group><fn fn-type="COI-statement"><p><bold>Competing Interests: </bold>The authors have declared that no competing interests exist.</p></fn><fn fn-type="financial-disclosure"><p><bold>Funding: </bold>This work was funded by a FIF grant (Biology Faculty, University of Bielefeld) awarded to JIH. HJN is currently supported by the Natural Environment Research Council. The funders had no role in study design, data collection and analysis, decision to publish, or preparation of the manuscript.</p></fn></fn-group><ref-list><title>References</title><ref id="pone.0023283-Weber1"><label>1</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Weber</surname><given-names>JL</given-names></name><name><surname>Wong</surname><given-names>C</given-names></name></person-group>
+<year>1993</year>
+<article-title>Mutation of human short tandem repeats.</article-title>
+<source>Human Molecular Genetics</source>
+<volume>2</volume>
+<fpage>1123</fpage>
+<lpage>1128</lpage>
+<pub-id pub-id-type="pmid">8401493</pub-id></element-citation></ref><ref id="pone.0023283-Tautz1"><label>2</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Tautz</surname><given-names>D</given-names></name><name><surname>Renz</surname><given-names>M</given-names></name></person-group>
+<year>1984</year>
+<article-title>Simple sequences are ubiquitous repetitive components of eukaryotic genomes.</article-title>
+<source>Nucleic Acids Research</source>
+<volume>12</volume>
+<fpage>4127</fpage>
+<lpage>4138</lpage>
+<pub-id pub-id-type="pmid">6328411</pub-id></element-citation></ref><ref id="pone.0023283-Jarne1"><label>3</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Jarne</surname><given-names>P</given-names></name><name><surname>Lagoda</surname><given-names>PJL</given-names></name></person-group>
+<year>1996</year>
+<article-title>Microsatellites, from molecules to populations and back.</article-title>
+<source>Trends in Ecology and Evolution</source>
+<volume>11</volume>
+<fpage>424</fpage>
+<lpage>429</lpage>
+<pub-id pub-id-type="pmid">21237902</pub-id></element-citation></ref><ref id="pone.0023283-Bruford1"><label>4</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Bruford</surname><given-names>MW</given-names></name><name><surname>Wayne</surname><given-names>RK</given-names></name></person-group>
+<year>1993</year>
+<article-title>Microsatellites and their application to population genetic studies.</article-title>
+<source>Current Opinion in Genetics and Development</source>
+<volume>3</volume>
+<fpage>939</fpage>
+<lpage>943</lpage>
+<pub-id pub-id-type="pmid">8118220</pub-id></element-citation></ref><ref id="pone.0023283-Zane1"><label>5</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Zane</surname><given-names>L</given-names></name><name><surname>Bargelloni</surname><given-names>L</given-names></name><name><surname>Patarnello</surname><given-names>T</given-names></name></person-group>
+<year>2002</year>
+<article-title>Strategies for microsatellite isolation: a review.</article-title>
+<source>Molecular Ecology</source>
+<volume>11</volume>
+<fpage>1</fpage>
+<lpage>16</lpage>
+<pub-id pub-id-type="pmid">11903900</pub-id></element-citation></ref><ref id="pone.0023283-Primmer1"><label>6</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Primmer</surname><given-names>CR</given-names></name><name><surname>Raudsepp</surname><given-names>T</given-names></name><name><surname>Chowdhary</surname><given-names>BP</given-names></name><name><surname>Moller</surname><given-names>AP</given-names></name><name><surname>Ellegren</surname><given-names>H</given-names></name></person-group>
+<year>1997</year>
+<article-title>Low frequency of microsatellites in the avian genome.</article-title>
+<source>Genome Research</source>
+<volume>7</volume>
+<fpage>471</fpage>
+<lpage>482</lpage>
+<pub-id pub-id-type="pmid">9149943</pub-id></element-citation></ref><ref id="pone.0023283-Dutech1"><label>7</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Dutech</surname><given-names>C</given-names></name><name><surname>Enjalbert</surname><given-names>J</given-names></name><name><surname>Fournier</surname><given-names>E</given-names></name><name><surname>Delmotte</surname><given-names>F</given-names></name><name><surname>Barres</surname><given-names>B</given-names></name><etal/></person-group>
+<year>2007</year>
+<article-title>Challenges of microsatellite isolation in fungi.</article-title>
+<source>Fungal Genetics and Biology</source>
+<volume>44</volume>
+<fpage>933</fpage>
+<lpage>949</lpage>
+<pub-id pub-id-type="pmid">17659989</pub-id></element-citation></ref><ref id="pone.0023283-Abdelkrim1"><label>8</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Abdelkrim</surname><given-names>J</given-names></name><name><surname>Robertson</surname><given-names>BC</given-names></name><name><surname>Stanton</surname><given-names>J-AL</given-names></name><name><surname>Gemmell</surname><given-names>NJ</given-names></name></person-group>
+<year>2009</year>
+<article-title>Fast, cost-effective development of species-specific microsatellite markers by genomic sequencing.</article-title>
+<source>Bio Techniques</source>
+<volume>46</volume>
+<fpage>185</fpage>
+<lpage>191</lpage>
+</element-citation></ref><ref id="pone.0023283-Perry1"><label>9</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Perry</surname><given-names>JC</given-names></name><name><surname>Rowe</surname><given-names>L</given-names></name></person-group>
+<year>2010</year>
+<article-title>Rapid microsatellite development for water striders by next-generation sequencing.</article-title>
+<source>Journal of Heredity</source>
+<volume>102</volume>
+<fpage>125</fpage>
+<lpage>129</lpage>
+<pub-id pub-id-type="pmid">20810468</pub-id></element-citation></ref><ref id="pone.0023283-Castoe1"><label>10</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Castoe</surname><given-names>TA</given-names></name><name><surname>Poole</surname><given-names>AW</given-names></name><name><surname>Gu</surname><given-names>W</given-names></name><name><surname>De Konig</surname><given-names>APJ</given-names></name><name><surname>Daza</surname><given-names>JM</given-names></name><etal/></person-group>
+<year>2010</year>
+<article-title>Rapid identification of thousands of copperhead snake (<italic>Agkistrodon contortrix</italic>) microsatellite loci from modest amounts of 454 shotgun genome sequence.</article-title>
+<source>Molecular Ecology Resources</source>
+<volume>10</volume>
+<fpage>341</fpage>
+<lpage>347</lpage>
+<pub-id pub-id-type="pmid">21565030</pub-id></element-citation></ref><ref id="pone.0023283-Saarinen1"><label>11</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Saarinen</surname><given-names>EV</given-names></name><name><surname>Austin</surname><given-names>JD</given-names></name></person-group>
+<year>2010</year>
+<article-title>When technology meets conservation: increased microsatellite marker production using 454 genome sequencing on the endangered Okaloosa darter (<italic>Etheostoma okaloosae</italic>).</article-title>
+<source>Journal of Heredity</source>
+<volume>101</volume>
+<fpage>784</fpage>
+<lpage>788</lpage>
+<pub-id pub-id-type="pmid">20624755</pub-id></element-citation></ref><ref id="pone.0023283-Csesnics1"><label>12</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Csesnics</surname><given-names>D</given-names></name><name><surname>Brodbeck</surname><given-names>S</given-names></name><name><surname>Holderegger</surname><given-names>R</given-names></name></person-group>
+<year>2010</year>
+<article-title>Cost-effective, species-specific microsatellite development for the endangered dwarf bulrush (<italic>Typha minima</italic>) using next-generation sequencing technology.</article-title>
+<source>Journal of Heredity</source>
+<volume>101</volume>
+<fpage>789</fpage>
+<lpage>793</lpage>
+<pub-id pub-id-type="pmid">20562212</pub-id></element-citation></ref><ref id="pone.0023283-Scaglione1"><label>13</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Scaglione</surname><given-names>D</given-names></name><name><surname>Acquadro</surname><given-names>A</given-names></name><name><surname>Portis</surname><given-names>E</given-names></name><name><surname>Taylor</surname><given-names>CA</given-names></name><name><surname>Lanteri</surname><given-names>S</given-names></name><etal/></person-group>
+<year>2009</year>
+<article-title>Ontology and diversity of transcript-associated microsatellites mined from a globe artichoke EST database.</article-title>
+<source>BMC Genomics</source>
+<volume>10</volume>
+<fpage>454</fpage>
+<pub-id pub-id-type="pmid">19785740</pub-id></element-citation></ref><ref id="pone.0023283-Schultz1"><label>14</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Schultz</surname><given-names>JK</given-names></name><name><surname>Marshall</surname><given-names>AJ</given-names></name><name><surname>Pfunder</surname><given-names>M</given-names></name></person-group>
+<year>2010</year>
+<article-title>Genome-wide loss of diversity in the critically endangered Hawaiian monk seal.</article-title>
+<source>Diversity</source>
+<volume>2</volume>
+<fpage>863</fpage>
+<lpage>880</lpage>
+</element-citation></ref><ref id="pone.0023283-Hoffman1"><label>15</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Hoffman</surname><given-names>JI</given-names></name></person-group>
+<year>2011</year>
+<article-title>Gene discovery in the Antarctic fur seal (<italic>Arctocephalus gazella</italic>) skin transcriptome.</article-title>
+<source>Molecular Ecology Resources</source>
+<volume>11</volume>
+<fpage>703</fpage>
+<lpage>710</lpage>
+<pub-id pub-id-type="pmid">21466659</pub-id></element-citation></ref><ref id="pone.0023283-Hoffman2"><label>16</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Hoffman</surname><given-names>JI</given-names></name><name><surname>Boyd</surname><given-names>IL</given-names></name><name><surname>Amos</surname><given-names>W</given-names></name></person-group>
+<year>2003</year>
+<article-title>Male reproductive strategy and the importance of maternal status in the Antarctic fur seal <italic>Arctocephalus gazella</italic>.</article-title>
+<source>Evolution</source>
+<volume>57</volume>
+<fpage>1917</fpage>
+<lpage>1930</lpage>
+<pub-id pub-id-type="pmid">14503632</pub-id></element-citation></ref><ref id="pone.0023283-Hoffman3"><label>17</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Hoffman</surname><given-names>JI</given-names></name><name><surname>Boyd</surname><given-names>IL</given-names></name><name><surname>Amos</surname><given-names>W</given-names></name></person-group>
+<year>2004</year>
+<article-title>Exploring the relationship between parental relatedness and male reproductive success in the Antarctic fur seal <italic>Arctocephalus gazella</italic>.</article-title>
+<source>Evolution</source>
+<volume>58</volume>
+<fpage>2087</fpage>
+<lpage>2099</lpage>
+<pub-id pub-id-type="pmid">15521464</pub-id></element-citation></ref><ref id="pone.0023283-Hoffman4"><label>18</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Hoffman</surname><given-names>JI</given-names></name><name><surname>Forcada</surname><given-names>J</given-names></name><name><surname>Amos</surname><given-names>W</given-names></name></person-group>
+<year>2010</year>
+<article-title>Getting long in the tooth: a strong positive correlation between canine size and heterozygosity in the Antarctic fur seal <italic>Arctocephalus gazella</italic>.</article-title>
+<source>Journal of Heredity</source>
+<volume>101</volume>
+<fpage>527</fpage>
+<lpage>538</lpage>
+<pub-id pub-id-type="pmid">20457622</pub-id></element-citation></ref><ref id="pone.0023283-Hoffman5"><label>19</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Hoffman</surname><given-names>JI</given-names></name><name><surname>Forcada</surname><given-names>J</given-names></name><name><surname>Amos</surname><given-names>W</given-names></name></person-group>
+<year>2010</year>
+<article-title>Exploring the mechanisms underlying a heterozygosity-fitnesss correlation for canine size in the Antarctic fur seal <italic>Arctocephalus gazella</italic>.</article-title>
+<source>Journal of Heredity</source>
+<volume>101</volume>
+<fpage>539</fpage>
+<lpage>552</lpage>
+<pub-id pub-id-type="pmid">20457623</pub-id></element-citation></ref><ref id="pone.0023283-Hoffman6"><label>20</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Hoffman</surname><given-names>JI</given-names></name><name><surname>Forcada</surname><given-names>J</given-names></name><name><surname>Trathan</surname><given-names>PN</given-names></name><name><surname>Amos</surname><given-names>W</given-names></name></person-group>
+<year>2007</year>
+<article-title>Female fur seals show active choice for males that are heterozygous and unrelated.</article-title>
+<source>Nature (London)</source>
+<volume>445</volume>
+<fpage>912</fpage>
+<lpage>914</lpage>
+<pub-id pub-id-type="pmid">17287726</pub-id></element-citation></ref><ref id="pone.0023283-Arnason1"><label>21</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Arnason</surname><given-names>U</given-names></name><name><surname>Gullberg</surname><given-names>A</given-names></name><name><surname>janke</surname><given-names>A</given-names></name><name><surname>Kullberg</surname><given-names>M</given-names></name></person-group>
+<year>2007</year>
+<article-title>Mitogenomic analyses of caniform relationships.</article-title>
+<source>Molecular Phylogenetics and Evolution</source>
+<volume>45</volume>
+<fpage>863</fpage>
+<lpage>874</lpage>
+<pub-id pub-id-type="pmid">17919938</pub-id></element-citation></ref><ref id="pone.0023283-Mitton1"><label>22</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Mitton</surname><given-names>JB</given-names></name><name><surname>Grant</surname><given-names>MC</given-names></name></person-group>
+<year>1984</year>
+<article-title>Associations among protein heterozygosity, growth rate, and developmental homeostasis.</article-title>
+<source>Annual Reviews in Ecology and Systematics</source>
+<volume>15</volume>
+<fpage>479</fpage>
+<lpage>499</lpage>
+</element-citation></ref><ref id="pone.0023283-Milne1"><label>23</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Milne</surname><given-names>I</given-names></name><name><surname>Bayer</surname><given-names>M</given-names></name><name><surname>Cardle</surname><given-names>L</given-names></name><name><surname>Shaw</surname><given-names>P</given-names></name><name><surname>Stephen</surname><given-names>G</given-names></name><etal/></person-group>
+<year>2010</year>
+<article-title>Tablet-next generation sequence assembly visualization.</article-title>
+<source>Bioinformatics</source>
+<volume>26</volume>
+<fpage>401</fpage>
+<lpage>402</lpage>
+<pub-id pub-id-type="pmid">19965881</pub-id></element-citation></ref><ref id="pone.0023283-Temnykh1"><label>24</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Temnykh</surname><given-names>S</given-names></name><name><surname>DeClerck</surname><given-names>G</given-names></name><name><surname>Lukashova</surname><given-names>A</given-names></name><name><surname>Lipovich</surname><given-names>L</given-names></name><name><surname>Cartinhour</surname><given-names>S</given-names></name><etal/></person-group>
+<year>2001</year>
+<article-title>Computational and experimental analysis of microsatellites in rice (<italic>Oryza sativa</italic> L.): frequency, length variation, transposon associations, and genetic marker potential.</article-title>
+<source>Genome Research</source>
+<volume>11</volume>
+<fpage>1441</fpage>
+<lpage>1452</lpage>
+<pub-id pub-id-type="pmid">11483586</pub-id></element-citation></ref><ref id="pone.0023283-Rozen1"><label>25</label><element-citation publication-type="book">
+<person-group person-group-type="author"><name><surname>Rozen</surname><given-names>S</given-names></name><name><surname>Skaletsky</surname><given-names>H</given-names></name></person-group>
+<year>2000</year>
+<article-title>Primer3 on the WWW for general users and for biologist programmers.</article-title>
+<person-group person-group-type="editor"><name><surname>Krawetz</surname><given-names>S</given-names></name><name><surname>Misener</surname><given-names>S</given-names></name></person-group>
+<source>Bioinformatics methods and protocols</source>
+<publisher-loc>Totowa, NJ</publisher-loc>
+<publisher-name>Humana Press</publisher-name>
+</element-citation></ref><ref id="pone.0023283-Gemmell1"><label>26</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Gemmell</surname><given-names>NJ</given-names></name><name><surname>Majluf</surname><given-names>P</given-names></name></person-group>
+<year>1997</year>
+<article-title>Projectile biopsy sampling of fur seals.</article-title>
+<source>Marine Mammal Science</source>
+<volume>13</volume>
+<fpage>512</fpage>
+<lpage>516</lpage>
+</element-citation></ref><ref id="pone.0023283-Walsh1"><label>27</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Walsh</surname><given-names>PS</given-names></name><name><surname>Metzger</surname><given-names>DA</given-names></name><name><surname>Higuchi</surname><given-names>R</given-names></name></person-group>
+<year>1991</year>
+<article-title>Chelex100 as a medium for simple extraction of DNA for PCR-based typing from forensic material.</article-title>
+<source>Biotechniques</source>
+<volume>10</volume>
+<fpage>506</fpage>
+<lpage>513</lpage>
+<pub-id pub-id-type="pmid">1867860</pub-id></element-citation></ref><ref id="pone.0023283-Sambrook1"><label>28</label><element-citation publication-type="book">
+<person-group person-group-type="author"><name><surname>Sambrook</surname><given-names>J</given-names></name><name><surname>Fritsch</surname><given-names>EF</given-names></name><name><surname>Maniatis</surname><given-names>T</given-names></name></person-group>
+<year>1989</year>
+<source>Molecular cloning: a laboratory manual</source>
+<publisher-loc>New York</publisher-loc>
+<publisher-name>Cold Spring Harbour Laboratory Press</publisher-name>
+</element-citation></ref><ref id="pone.0023283-Hoffman7"><label>29</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Hoffman</surname><given-names>JI</given-names></name><name><surname>Amos</surname><given-names>W</given-names></name></person-group>
+<year>2005</year>
+<article-title>Microsatellite genotyping errors: detection approaches, common sources and consequences for paternal exclusion.</article-title>
+<source>Molecular Ecology</source>
+<volume>14</volume>
+<fpage>599</fpage>
+<lpage>612</lpage>
+<pub-id pub-id-type="pmid">15660949</pub-id></element-citation></ref><ref id="pone.0023283-Raymond1"><label>30</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Raymond</surname><given-names>M</given-names></name><name><surname>Rousset</surname><given-names>F</given-names></name></person-group>
+<year>1995</year>
+<article-title>Genepop (Version 1.2) - population genetics software for exact tests of ecumenicism.</article-title>
+<source>Journal of Heredity</source>
+<volume>86</volume>
+<fpage>248</fpage>
+<lpage>249</lpage>
+</element-citation></ref><ref id="pone.0023283-Chakraborty1"><label>31</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Chakraborty</surname><given-names>R</given-names></name><name><surname>De Andrade</surname><given-names>M</given-names></name><name><surname>Daiger</surname><given-names>SP</given-names></name><name><surname>Budowle</surname><given-names>B</given-names></name></person-group>
+<year>1992</year>
+<article-title>Apparent heterozygote deficiencies observed in DNA typing data and their implications in forensic applications.</article-title>
+<source>Annals of Human Genetics</source>
+<volume>56</volume>
+<fpage>45</fpage>
+<lpage>47</lpage>
+<pub-id pub-id-type="pmid">1350188</pub-id></element-citation></ref><ref id="pone.0023283-VanOosterhout1"><label>32</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Van Oosterhout</surname><given-names>C</given-names></name><name><surname>Hutchinson</surname><given-names>WF</given-names></name><name><surname>Wills</surname><given-names>DPM</given-names></name><name><surname>Shipley</surname><given-names>P</given-names></name></person-group>
+<year>2004</year>
+<article-title>MICRO-CHECKER: software for identifying and correcting genotyping errors in microsatellite data.</article-title>
+<source>Molecular Ecology Notes</source>
+<volume>4</volume>
+<fpage>535</fpage>
+<lpage>538</lpage>
+</element-citation></ref><ref id="pone.0023283-Team1"><label>33</label><element-citation publication-type="book">
+<collab>Team RDC</collab>
+<year>2005</year>
+<source>R: a language and environment for statistical computing</source>
+<publisher-loc>Vienna, Austria</publisher-loc>
+<publisher-name>R Foundation for Statistical Computing</publisher-name>
+</element-citation></ref><ref id="pone.0023283-Crawley1"><label>34</label><element-citation publication-type="book">
+<person-group person-group-type="author"><name><surname>Crawley</surname><given-names>MJ</given-names></name></person-group>
+<year>2002</year>
+<source>Statistical computing, an introduction to data analysis using S-plus</source>
+<publisher-loc>Chichester</publisher-loc>
+<publisher-name>John Wiley and Sons Ltd</publisher-name>
+</element-citation></ref><ref id="pone.0023283-Hochberg1"><label>35</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Hochberg</surname><given-names>Y</given-names></name></person-group>
+<year>1988</year>
+<article-title>A sharper Bonferroni procedure for multiple tests of sign.</article-title>
+<source>Biometrika</source>
+<volume>75</volume>
+<fpage>800</fpage>
+<lpage>802</lpage>
+</element-citation></ref><ref id="pone.0023283-Callen1"><label>36</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Callen</surname><given-names>DF</given-names></name><name><surname>Thompson</surname><given-names>AD</given-names></name><name><surname>Shen</surname><given-names>Y</given-names></name><name><surname>Phillips</surname><given-names>HA</given-names></name><name><surname>Richards</surname><given-names>RI</given-names></name><etal/></person-group>
+<year>1993</year>
+<article-title>Incidence and origin of &#8220;null&#8221; alleles in the (AC)n microsatellite markers.</article-title>
+<source>American Journal of Human Genetics</source>
+<volume>52</volume>
+<fpage>922</fpage>
+<lpage>927</lpage>
+<pub-id pub-id-type="pmid">8488841</pub-id></element-citation></ref><ref id="pone.0023283-Pemberton1"><label>37</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Pemberton</surname><given-names>JM</given-names></name><name><surname>Slate</surname><given-names>J</given-names></name><name><surname>Bancroft</surname><given-names>DR</given-names></name><name><surname>Barrett</surname><given-names>JA</given-names></name></person-group>
+<year>1995</year>
+<article-title>Nonamplifying alleles at microsatellite loci: a caution for parentage and population studies.</article-title>
+<source>Molecular Ecology</source>
+<volume>4</volume>
+<fpage>249</fpage>
+<lpage>252</lpage>
+<pub-id pub-id-type="pmid">7735527</pub-id></element-citation></ref><ref id="pone.0023283-Dakin1"><label>38</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Dakin</surname><given-names>EE</given-names></name><name><surname>Avise</surname><given-names>JC</given-names></name></person-group>
+<year>2004</year>
+<article-title>Microsatellite null alleles in parentage analysis.</article-title>
+<source>Heredity</source>
+<volume>93</volume>
+<fpage>504</fpage>
+<lpage>509</lpage>
+<pub-id pub-id-type="pmid">15292911</pub-id></element-citation></ref><ref id="pone.0023283-Lui1"><label>39</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Lui</surname><given-names>ZJ</given-names></name><name><surname>Cordes</surname><given-names>JF</given-names></name></person-group>
+<year>2004</year>
+<article-title>DNA marker technologies and their applications in aquaculture genetics.</article-title>
+<source>Aquaculture</source>
+<volume>238</volume>
+<fpage>1</fpage>
+<lpage>37</lpage>
+</element-citation></ref><ref id="pone.0023283-Fulton1"><label>40</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Fulton</surname><given-names>TM</given-names></name><name><surname>Van der Hoeven</surname><given-names>R</given-names></name><name><surname>Eannetta</surname><given-names>NT</given-names></name><name><surname>Tanksley</surname><given-names>SD</given-names></name></person-group>
+<year>2002</year>
+<article-title>Identification, analysis, and utilization of conserved ortholog set markers for comparative genomics in higher plants.</article-title>
+<source>Plant Cell</source>
+<volume>14</volume>
+<fpage>1457</fpage>
+<lpage>1467</lpage>
+<pub-id pub-id-type="pmid">12119367</pub-id></element-citation></ref><ref id="pone.0023283-ObexerRuff1"><label>41</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Obexer-Ruff</surname><given-names>G</given-names></name><name><surname>Sattler</surname><given-names>U</given-names></name><name><surname>Martinez</surname><given-names>D</given-names></name><name><surname>Maillard</surname><given-names>J-C</given-names></name><name><surname>Chartier</surname><given-names>C</given-names></name><etal/></person-group>
+<year>2003</year>
+<article-title>Association studies using random and &#8220;candidate&#8221; microsatellite loci in two infectious goat diseases.</article-title>
+<source>Genetics Selection Evolution</source>
+<volume>35</volume>
+<fpage>S113</fpage>
+<lpage>S119</lpage>
+</element-citation></ref><ref id="pone.0023283-Luikart1"><label>42</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Luikart</surname><given-names>G</given-names></name><name><surname>Pilgrim</surname><given-names>K</given-names></name><name><surname>visty</surname><given-names>J</given-names></name><name><surname>Ezenwa</surname><given-names>VO</given-names></name><name><surname>Schwartz</surname><given-names>MK</given-names></name></person-group>
+<year>2008</year>
+<article-title>Candidate gene microsatellite variation is associated with parasitism in bighorn sheep.</article-title>
+<source>Biology Letters</source>
+<volume>4</volume>
+<fpage>228</fpage>
+<lpage>231</lpage>
+<pub-id pub-id-type="pmid">18270161</pub-id></element-citation></ref><ref id="pone.0023283-Hoffjan1"><label>43</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Hoffjan</surname><given-names>S</given-names></name><name><surname>Parwez</surname><given-names>Q</given-names></name><name><surname>Petrasch-Parwez</surname><given-names>E</given-names></name><name><surname>Falkenstein</surname><given-names>D</given-names></name><name><surname>Nothnagel</surname><given-names>M</given-names></name><etal/></person-group>
+<year>2006</year>
+<article-title>Association screen for atopic dermatitis candidate gene regions using microsatellite markers in pooled DNA samples.</article-title>
+<source>International Journal of Human Genetics</source>
+<volume>33</volume>
+<fpage>401</fpage>
+<lpage>409</lpage>
+</element-citation></ref><ref id="pone.0023283-Paetkau1"><label>44</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Paetkau</surname><given-names>D</given-names></name><name><surname>Strobeck</surname><given-names>C</given-names></name></person-group>
+<year>1995</year>
+<article-title>The molecular basis and evolutionary history of a microsatellite null allele in bears.</article-title>
+<source>Molecular Ecology</source>
+<volume>4</volume>
+<fpage>519</fpage>
+<lpage>520</lpage>
+<pub-id pub-id-type="pmid">8574449</pub-id></element-citation></ref><ref id="pone.0023283-Schuelke1"><label>45</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Schuelke</surname><given-names>M</given-names></name></person-group>
+<year>2000</year>
+<article-title>An economic method for the fluorescent labelling of PCR fragments.</article-title>
+<source>Nature Biotechnology</source>
+<volume>18</volume>
+<fpage>233</fpage>
+<lpage>234</lpage>
+</element-citation></ref><ref id="pone.0023283-Leclerc1"><label>46</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Leclerc</surname><given-names>MC</given-names></name><name><surname>Durand</surname><given-names>P</given-names></name><name><surname>Gauthier</surname><given-names>C</given-names></name><name><surname>Patot</surname><given-names>S</given-names></name><name><surname>Billotte</surname><given-names>N</given-names></name><etal/></person-group>
+<year>2004</year>
+<article-title>Meager genetic variability of the human malaria agent <italic>Plasmodium vivax</italic>.</article-title>
+<source>Proceedings of the National Acadamy of Sciences of the United States of America</source>
+<volume>101</volume>
+<fpage>14455</fpage>
+<lpage>14460</lpage>
+</element-citation></ref><ref id="pone.0023283-Habel1"><label>47</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Habel</surname><given-names>JC</given-names></name><name><surname>Zachos</surname><given-names>FE</given-names></name><name><surname>Finger</surname><given-names>A</given-names></name><name><surname>Meyer</surname><given-names>M</given-names></name><name><surname>Louy</surname><given-names>D</given-names></name><etal/></person-group>
+<year>2009</year>
+<article-title>Unprecedented long-term genetic monomorphism in an endangered relict butterfly species.</article-title>
+<source>Conservation Genetics</source>
+<volume>10</volume>
+<fpage>1659</fpage>
+<lpage>1665</lpage>
+</element-citation></ref><ref id="pone.0023283-Vera1"><label>48</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Vera</surname><given-names>JC</given-names></name><name><surname>Wheat</surname><given-names>CW</given-names></name><name><surname>Fescemyer</surname><given-names>HW</given-names></name><name><surname>Frilander</surname><given-names>MJ</given-names></name><name><surname>Crawford</surname><given-names>DL</given-names></name><etal/></person-group>
+<year>2008</year>
+<article-title>Rapid transcriptome characterization for a non-model organism using 454 pyrosequencing.</article-title>
+<source>Molecular Ecology</source>
+<volume>17</volume>
+<fpage>1636</fpage>
+<lpage>1647</lpage>
+<pub-id pub-id-type="pmid">18266620</pub-id></element-citation></ref><ref id="pone.0023283-Weber2"><label>49</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Weber</surname><given-names>APM</given-names></name><name><surname>Weber</surname><given-names>KL</given-names></name><name><surname>Carr</surname><given-names>K</given-names></name><name><surname>Wilkerson</surname><given-names>C</given-names></name><name><surname>Ohlrogge</surname><given-names>JB</given-names></name></person-group>
+<year>2007</year>
+<article-title>Sampling the arabidopsis transcriptome with massively parallel pyrosequencing.</article-title>
+<source>Plant Physiology</source>
+<volume>144</volume>
+<fpage>32</fpage>
+<lpage>42</lpage>
+<pub-id pub-id-type="pmid">17351049</pub-id></element-citation></ref><ref id="pone.0023283-Ellegren1"><label>50</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Ellegren</surname><given-names>H</given-names></name></person-group>
+<year>2004</year>
+<article-title>Microsatellites: simple sequences with complex evolution.</article-title>
+<source>Nature Reviews Genetics</source>
+<volume>5</volume>
+<fpage>435</fpage>
+<lpage>445</lpage>
+</element-citation></ref><ref id="pone.0023283-Kelkar1"><label>51</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Kelkar</surname><given-names>YD</given-names></name><name><surname>Tyekucheva</surname><given-names>S</given-names></name><name><surname>Chiaromonte</surname><given-names>F</given-names></name><name><surname>Makova</surname><given-names>KD</given-names></name></person-group>
+<year>2008</year>
+<article-title>The genome-wide determinants of human and chimpanzee microsatellite evolution.</article-title>
+<source>Genome Research</source>
+<volume>18</volume>
+<fpage>30</fpage>
+<lpage>38</lpage>
+<pub-id pub-id-type="pmid">18032720</pub-id></element-citation></ref><ref id="pone.0023283-Ellegren2"><label>52</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Ellegren</surname><given-names>H</given-names></name></person-group>
+<year>2000</year>
+<article-title>Microsatellite mutations in the germline: implications for evolutionary inference.</article-title>
+<source>Trends in Genetics</source>
+<volume>16</volume>
+<fpage>551</fpage>
+<lpage>558</lpage>
+<pub-id pub-id-type="pmid">11102705</pub-id></element-citation></ref><ref id="pone.0023283-Grover1"><label>53</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Grover</surname><given-names>A</given-names></name><name><surname>Aishwarya</surname><given-names>V</given-names></name><name><surname>Sharma</surname><given-names>PC</given-names></name></person-group>
+<year>2007</year>
+<article-title>Biased distribution of microsatellite motifs in the rice genome.</article-title>
+<source>Molecular genetics and Genomics</source>
+<volume>277</volume>
+<fpage>469</fpage>
+<lpage>480</lpage>
+<pub-id pub-id-type="pmid">17237941</pub-id></element-citation></ref><ref id="pone.0023283-Margulies1"><label>54</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Margulies</surname><given-names>M</given-names></name><name><surname>Egholm</surname><given-names>M</given-names></name><name><surname>Altman</surname><given-names>WE</given-names></name><etal/></person-group>
+<year>2005</year>
+<article-title>Genome sequencing in microfabricated high-density picolitre reactors.</article-title>
+<source>Nature</source>
+<volume>437</volume>
+<fpage>376</fpage>
+<lpage>380</lpage>
+<pub-id pub-id-type="pmid">16056220</pub-id></element-citation></ref><ref id="pone.0023283-Santucci1"><label>55</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Santucci</surname><given-names>F</given-names></name><name><surname>Ibrahim</surname><given-names>KM</given-names></name><name><surname>Bruzzone</surname><given-names>A</given-names></name><name><surname>Hewit</surname><given-names>GM</given-names></name></person-group>
+<year>2007</year>
+<article-title>Selection on MHC-linked microsatellite loci in sheep populations.</article-title>
+<source>Heredity</source>
+<volume>99</volume>
+<fpage>340</fpage>
+<lpage>348</lpage>
+<pub-id pub-id-type="pmid">17519962</pub-id></element-citation></ref><ref id="pone.0023283-Huang1"><label>56</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Huang</surname><given-names>SW</given-names></name><name><surname>Yu</surname><given-names>HT</given-names></name></person-group>
+<year>2003</year>
+<article-title>Genetic variation of microsatellite loci in the major histocompatibility complex (MHC) region in the southeast Asian house mouse (<italic>Mus musculus castaneus</italic>).</article-title>
+<source>Genetica</source>
+<volume>119</volume>
+<fpage>201</fpage>
+<lpage>218</lpage>
+<pub-id pub-id-type="pmid">14620960</pub-id></element-citation></ref><ref id="pone.0023283-Wagner1"><label>57</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Wagner</surname><given-names>JL</given-names></name></person-group>
+<year>2003</year>
+<article-title>Molecular Organization of the Canine Major Histocompatibility Complex.</article-title>
+<source>Journal of Heredity</source>
+<volume>94</volume>
+<fpage>23</fpage>
+<lpage>26</lpage>
+<pub-id pub-id-type="pmid">12692158</pub-id></element-citation></ref><ref id="pone.0023283-Bamshad1"><label>58</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Bamshad</surname><given-names>M</given-names></name><name><surname>Wooding</surname><given-names>SP</given-names></name></person-group>
+<year>2003</year>
+<article-title>Signatures of natural selection in the human genome.</article-title>
+<source>Nature Reviews Genetics</source>
+<volume>4</volume>
+<fpage>99</fpage>
+<lpage>111</lpage>
+</element-citation></ref><ref id="pone.0023283-Sharma1"><label>59</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Sharma</surname><given-names>PC</given-names></name><name><surname>Grover</surname><given-names>A</given-names></name><name><surname>Kahl</surname><given-names>G</given-names></name></person-group>
+<year>2007</year>
+<article-title>Mining microsatellites in eukaryotic genomes.</article-title>
+<source>Trends in Biotechnology</source>
+<volume>25</volume>
+<fpage>490</fpage>
+<lpage>498</lpage>
+<pub-id pub-id-type="pmid">17945369</pub-id></element-citation></ref><ref id="pone.0023283-Merkel1"><label>60</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Merkel</surname><given-names>A</given-names></name><name><surname>Gemmell</surname><given-names>N</given-names></name></person-group>
+<year>2008</year>
+<article-title>Detecting short tandem repeats from genome data: opening the software black box.</article-title>
+<source>Briefings in Bioinformatics</source>
+<volume>9</volume>
+<fpage>355</fpage>
+<lpage>366</lpage>
+<pub-id pub-id-type="pmid">18621747</pub-id></element-citation></ref><ref id="pone.0023283-Santana1"><label>61</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Santana</surname><given-names>QC</given-names></name><name><surname>Coetzee</surname><given-names>MPA</given-names></name><name><surname>Steenkamp</surname><given-names>ET</given-names></name><name><surname>Mlonyeni</surname><given-names>OX</given-names></name><name><surname>Hammond</surname><given-names>GNA</given-names></name><etal/></person-group>
+<year>2009</year>
+<article-title>Microsatellite discovery by deep sequencing of enriched genomic libraries.</article-title>
+<source>BioTechniques</source>
+<volume>46</volume>
+<fpage>217</fpage>
+<lpage>223</lpage>
+<pub-id pub-id-type="pmid">19317665</pub-id></element-citation></ref><ref id="pone.0023283-Hoffman8"><label>62</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Hoffman</surname><given-names>JI</given-names></name><name><surname>Dasmahapatra</surname><given-names>KK</given-names></name><name><surname>Nichols</surname><given-names>HJ</given-names></name></person-group>
+<year>2008</year>
+<article-title>Ten novel polymorphic dinucleotide microsatellite loci cloned from the Antarctic fur seal <italic>Arctocephalus gazella</italic>.</article-title>
+<source>Molecular Ecology Resources</source>
+<volume>8</volume>
+<fpage>459</fpage>
+<lpage>461</lpage>
+<pub-id pub-id-type="pmid">21585821</pub-id></element-citation></ref><ref id="pone.0023283-Hoffman9"><label>63</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Hoffman</surname><given-names>JI</given-names></name></person-group>
+<year>2009</year>
+<article-title>A panel of new microsatellite loci for genetic studies of Antarctic fur seals and other otariids.</article-title>
+<source>Conservation Genetics</source>
+<volume>10</volume>
+<fpage>989</fpage>
+<lpage>992</lpage>
+</element-citation></ref><ref id="pone.0023283-Chapuis1"><label>64</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Chapuis</surname><given-names>M-P</given-names></name><name><surname>Estoup</surname><given-names>A</given-names></name></person-group>
+<year>2007</year>
+<article-title>Microsatellite null alleles and estimation of population differentiation.</article-title>
+<source>Molecular Biology and Evolution</source>
+<volume>24</volume>
+<fpage>621</fpage>
+<lpage>631</lpage>
+<pub-id pub-id-type="pmid">17150975</pub-id></element-citation></ref></ref-list></back></article>

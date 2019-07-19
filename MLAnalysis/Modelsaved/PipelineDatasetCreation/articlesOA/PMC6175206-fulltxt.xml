@@ -1,0 +1,909 @@
+<article xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML" article-type="research-article"><?properties open_access?><?DTDIdentifier.IdentifierValue -//NLM//DTD Journal Archiving and Interchange DTD v3.0 20080202//EN?><?DTDIdentifier.IdentifierType public?><?SourceDTD.DTDName archivearticle3.dtd?><?SourceDTD.Version 3.0?><?ConverterInfo.XSLTName jp2nlmx2.xsl?><?ConverterInfo.Version 1?><front><journal-meta><journal-id journal-id-type="nlm-ta">FEBS Lett</journal-id><journal-id journal-id-type="iso-abbrev">FEBS Lett</journal-id><journal-id journal-id-type="doi">10.1002/(ISSN)1873-3468</journal-id><journal-id journal-id-type="publisher-id">FEB2</journal-id><journal-title-group><journal-title>Febs Letters</journal-title></journal-title-group><issn pub-type="ppub">0014-5793</issn><issn pub-type="epub">1873-3468</issn><publisher><publisher-name>John Wiley and Sons Inc.</publisher-name><publisher-loc>Hoboken</publisher-loc></publisher></journal-meta><article-meta><article-id pub-id-type="pmcid">6175206</article-id><article-id pub-id-type="doi">10.1002/1873-3468.13222</article-id><article-id pub-id-type="publisher-id">FEB213222</article-id><article-categories><subj-group subj-group-type="overline"><subject>Research Letter</subject></subj-group><subj-group subj-group-type="heading"><subject>Research Letters</subject><subj-group subj-group-type="heading"><subject>Membrane Biology</subject></subj-group></subj-group></article-categories><title-group><article-title>Plant and algal chlorophyll synthases function in <italic>Synechocystis</italic> and interact with the YidC/Alb3 membrane insertase</article-title><alt-title alt-title-type="left-running-head">M. S. Proctor <italic>et al</italic>.</alt-title></title-group><contrib-group><contrib id="feb213222-cr-0001" contrib-type="author"><name><surname>Proctor</surname><given-names>Matthew S.</given-names></name><xref ref-type="aff" rid="feb213222-aff-0001">
+<sup>1</sup>
+</xref></contrib><contrib id="feb213222-cr-0002" contrib-type="author"><name><surname>Chidgey</surname><given-names>Jack W.</given-names></name><xref ref-type="aff" rid="feb213222-aff-0001">
+<sup>1</sup>
+</xref></contrib><contrib id="feb213222-cr-0003" contrib-type="author"><name><surname>Shukla</surname><given-names>Mahendra K.</given-names></name><xref ref-type="aff" rid="feb213222-aff-0002">
+<sup>2</sup>
+</xref><xref ref-type="aff" rid="feb213222-aff-0003">
+<sup>3</sup>
+</xref></contrib><contrib id="feb213222-cr-0004" contrib-type="author"><name><surname>Jackson</surname><given-names>Philip J.</given-names></name><xref ref-type="aff" rid="feb213222-aff-0001">
+<sup>1</sup>
+</xref><xref ref-type="aff" rid="feb213222-aff-0004">
+<sup>4</sup>
+</xref></contrib><contrib id="feb213222-cr-0005" contrib-type="author"><name><surname>Sobotka</surname><given-names>Roman</given-names></name><xref ref-type="aff" rid="feb213222-aff-0002">
+<sup>2</sup>
+</xref><xref ref-type="aff" rid="feb213222-aff-0003">
+<sup>3</sup>
+</xref></contrib><contrib id="feb213222-cr-0006" contrib-type="author"><name><surname>Hunter</surname><given-names>C. Neil</given-names></name><xref ref-type="aff" rid="feb213222-aff-0001">
+<sup>1</sup>
+</xref></contrib><contrib id="feb213222-cr-0007" contrib-type="author" corresp="yes"><name><surname>Hitchcock</surname><given-names>Andrew</given-names></name><contrib-id contrib-id-type="orcid">http://orcid.org/0000-0001-6572-434X</contrib-id><address><email>a.hitchcock@sheffield.ac.uk</email></address><xref ref-type="aff" rid="feb213222-aff-0001">
+<sup>1</sup>
+</xref></contrib></contrib-group><aff id="feb213222-aff-0001">
+<label><sup>1</sup></label>
+<named-content content-type="organisation-division">Department of Molecular Biology and Biotechnology</named-content>
+<institution>University of Sheffield</institution>
+<country country="GB">UK</country>
+</aff><aff id="feb213222-aff-0002">
+<label><sup>2</sup></label>
+<named-content content-type="organisation-division">Institute of Microbiology</named-content>
+<institution>Czech Academy of Sciences</institution>
+<institution>Center Algatech</institution>
+<named-content content-type="city">T&#345;ebo&#328;</named-content>
+<country country="CZ">Czech Republic</country>
+</aff><aff id="feb213222-aff-0003">
+<label><sup>3</sup></label>
+<named-content content-type="organisation-division">Faculty of Science</named-content>
+<institution>University of South Bohemia</institution>
+<named-content content-type="city">&#268;esk&#233; Bud&#283;jovice</named-content>
+<country country="CZ">Czech Republic</country>
+</aff><aff id="feb213222-aff-0004">
+<label><sup>4</sup></label>
+<named-content content-type="organisation-division">Department of Chemical and Biological Engineering</named-content>
+<named-content content-type="organisation-division">ChELSI Institute</named-content>
+<institution>University of Sheffield</institution>
+<country country="GB">UK</country>
+</aff><author-notes><corresp id="correspondenceTo"><label>*</label><bold>Correspondence</bold><break/>
+A. Hitchcock, Department of Molecular Biology and Biotechnology, University of Sheffield, Sheffield S10 2TN, UK<break/>
+Fax: +44 114 222 2711<break/>
+Tel: +44 114 222 4191<break/>
+E&#8208;mail: <email>a.hitchcock@sheffield.ac.uk</email><break/></corresp></author-notes><pub-date pub-type="epub"><day>06</day><month>9</month><year>2018</year></pub-date><pub-date pub-type="ppub"><month>9</month><year>2018</year></pub-date><volume>592</volume><issue>18</issue><issue-id pub-id-type="doi">10.1002/feb2.2018.592.issue-18</issue-id><fpage>3062</fpage><lpage>3073</lpage><history><date date-type="received"><day>12</day><month>6</month><year>2018</year></date><date date-type="rev-recd"><day>06</day><month>8</month><year>2018</year></date><date date-type="accepted"><day>07</day><month>8</month><year>2018</year></date></history><permissions><!--<copyright-statement content-type="issue-copyright"> &#x000a9; 2018 Federation of European Biochemical Societies <copyright-statement>--><copyright-statement content-type="article-copyright">&#169; 2018 The Authors. <italic>FEBS Letters</italic> published by John Wiley &amp; Sons Ltd on behalf of Federation of European Biochemical Societies.</copyright-statement><license license-type="creativeCommonsBy"><license-p>This is an open access article under the terms of the <ext-link ext-link-type="uri" xlink:href="http://creativecommons.org/licenses/by/4.0/">http://creativecommons.org/licenses/by/4.0/</ext-link> License, which permits use, distribution and reproduction in any medium, provided the original work is properly cited.</license-p></license></permissions><self-uri content-type="pdf" xlink:type="simple" xlink:href="file:FEB2-592-3062.pdf"/><abstract id="feb213222-abs-0001"><p>In the model cyanobacterium <italic>Synechocystis</italic> sp. <styled-content style="fixed-case">PCC</styled-content> 6803, the terminal enzyme of chlorophyll biosynthesis, chlorophyll synthase (ChlG), forms a complex with high light&#8208;inducible proteins, the photosystem <styled-content style="fixed-case">II</styled-content> assembly factor Ycf39 and the YidC/Alb3/OxaI membrane insertase, co&#8208;ordinating chlorophyll delivery with cotranslational insertion of nascent photosystem polypeptides into the membrane. To gain insight into the ubiquity of this assembly complex in higher photosynthetic organisms, we produced functional foreign chlorophyll synthases in a cyanobacterial host. Synthesis of algal and plant chlorophyll synthases allowed deletion of the otherwise essential native cyanobacterial gene. Analysis of purified protein complexes shows that the interaction with YidC is maintained for both eukaryotic enzymes, indicating that a ChlG&#8208;YidC/Alb3 complex may be evolutionarily conserved in algae and plants.</p></abstract><kwd-group kwd-group-type="author-generated"><kwd id="feb213222-kwd-0001"><italic>Arabidopsis</italic></kwd><kwd id="feb213222-kwd-0002">chlorophyll</kwd><kwd id="feb213222-kwd-0003">chlorophyll synthase</kwd><kwd id="feb213222-kwd-0004">cyanobacteria</kwd><kwd id="feb213222-kwd-0005">high light&#8208;inducible proteins</kwd><kwd id="feb213222-kwd-0006">YidC/Alb3/OxaI</kwd></kwd-group><funding-group><award-group><funding-source>Czech Science Foundation</funding-source><award-id>17&#8208;08755S</award-id></award-group><award-group><funding-source>University of Sheffield Faculty
+of Science Studentship</funding-source></award-group><award-group><funding-source>Biotechnology and Biological Sciences Research Council</funding-source><award-id>BB/M000265/1</award-id></award-group><award-group><funding-source>European Research Council</funding-source><award-id>338895</award-id></award-group><award-group><funding-source>Ministry of Education of the Czech Republic</funding-source><award-id>LO1416</award-id></award-group></funding-group><counts><fig-count count="4"/><table-count count="1"/><page-count count="12"/><word-count count="6677"/></counts><custom-meta-group><custom-meta><meta-name>source-schema-version-number</meta-name><meta-value>2.0</meta-value></custom-meta><custom-meta><meta-name>component-id</meta-name><meta-value>feb213222</meta-value></custom-meta><custom-meta><meta-name>cover-date</meta-name><meta-value>September 2018</meta-value></custom-meta><custom-meta><meta-name>details-of-publishers-convertor</meta-name><meta-value>Converter:WILEY_ML3GV2_TO_NLMPMC version:version=5.5.0 mode:remove_FC converted:08.10.2018</meta-value></custom-meta></custom-meta-group></article-meta><notes><fn-group id="feb213222-ntgp-0001"><fn id="feb213222-note-1001"><p>Edited by Richard Cogdell</p></fn></fn-group></notes></front><body><sec id="feb213222-sec-0002"><title>
+<bold>Abbreviations</bold>
+</title><p>
+<bold>&#946;&#8208;DDM</bold>, n&#8208;dodecyl&#8208;&#946;&#8208;D&#8208;maltoside</p><p>
+<bold>ChlG</bold>, chlorophyll synthase</p><p>
+<bold>HliD</bold>, high light&#8208;inducible protein D</p><p>
+<bold>WT</bold>, wild&#8208;type</p></sec><sec id="feb213222-sec-0003"><p>Chlorophyll is the major light&#8208;harvesting pigment in plants, algae and cyanobacteria. Solar energy is absorbed by chlorophyll situated in membrane intrinsic photosystems and used for charge separation, which drives ATP and NADPH production. The structures of these photosystems show chlorophyll molecules in specific arrangements allowing highly efficient light capture and energy transfer <xref rid="feb213222-bib-0001" ref-type="ref">1</xref>, <xref rid="feb213222-bib-0002" ref-type="ref">2</xref>, <xref rid="feb213222-bib-0003" ref-type="ref">3</xref>, <xref rid="feb213222-bib-0004" ref-type="ref">4</xref>. The complexity and hydrophobicity of these protein&#8211;pigment complexes means that their assembly is dependent on numerous auxiliary proteins and that the insertion of chlorophyll and other cofactors must be co&#8208;ordinated with the assembly process <xref rid="feb213222-bib-0005" ref-type="ref">5</xref>, <xref rid="feb213222-bib-0006" ref-type="ref">6</xref>.</p><p>Chlorophyll synthase (ChlG) is the terminal enzyme of the chlorophyll biosynthesis pathway, catalysing the esterification reaction that adds a tetraprenyl tail to the propionate residue at the C17 position on ring D of chlorophyllide (Fig. <xref rid="feb213222-fig-0001" ref-type="fig">1</xref>A). The macrocycle can be esterified with either geranylgeranyl from geranylgeranyl pyrophosphate (GGPP) or phytol from phytyl pyrophosphate (PPP); in the former case the tail is subsequently reduced to phytol by the geranylgeranyl diphosphate reductase, ChlP. In a previous study, Chidgey <italic>et al</italic>. <xref rid="feb213222-bib-0007" ref-type="ref">7</xref> investigated handover of chlorophyll from ChlG to nascent light&#8208;harvesting polypeptides in the model cyanobacterium <italic>Synechocystis</italic> sp. PCC 6803 (hereafter <italic>Synechocystis</italic>). Immunoprecipitation using FLAG&#8208;tagged ChlG retrieved an enzymatically active protein&#8211;pigment complex containing the high light&#8208;inducible protein HliD (Ssr1789), the photosystem II (PSII) assembly factor Ycf39 (Slr0399) and the membrane insertase YidC (Slr1471), as well as chlorophyll, the immediate chlorophyll precursor chlorophyllide and the carotenoids zeaxanthin, &#946;&#8208;carotene and myxoxanthophyll. The pigment binding capabilities of the complex were attributed to the ChlG&#8208;HliD &#8216;core complex&#8217; <xref rid="feb213222-bib-0007" ref-type="ref">7</xref>. HliD belongs to a conserved family of high&#8208;light&#8208;induced proteins (Hlips) <xref rid="feb213222-bib-0008" ref-type="ref">8</xref>, members of which share significant sequence similarity with plant chlorophyll <italic>a</italic>/<italic>b</italic>&#8208;binding proteins and possess a conserved chlorophyll&#8208;binding motif <xref rid="feb213222-bib-0009" ref-type="ref">9</xref>. Stavleva <italic>et al</italic>. <xref rid="feb213222-bib-0010" ref-type="ref">10</xref> found that HliD binds chlorophyll <italic>a</italic> and &#946;&#8208;carotene in a 3 : 1 ratio; the &#946;&#8208;carotene can quench excited chlorophylls <xref rid="feb213222-bib-0011" ref-type="ref">11</xref>, suggesting that HliD has a photoprotective function. The additional carotenoids, zeaxanthin and myxoxanthophyll, may bind at the ChlG/HliD interface <xref rid="feb213222-bib-0011" ref-type="ref">11</xref>.</p><fig fig-type="Figure" xml:lang="en" id="feb213222-fig-0001" orientation="portrait" position="float"><label>Figure 1</label><caption><p>The reaction catalysed by ChlG and protein phylogeny of enzymes from different phototrophic organisms. (A) ChlG catalyses the esterification of chlorophyllide with either <styled-content style="fixed-case">GGPP</styled-content> or <styled-content style="fixed-case">PPP</styled-content> resulting in GG&#8208;chlorophyll <italic>a</italic> or phytylated chlorophyll <italic>a</italic>. Three carbon&#8211;carbon double bonds (shown with grey lines) in the geranylgeranyl tail of <styled-content style="fixed-case">GG</styled-content>&#8208;chlorophyll <italic>a</italic> are sequentially reduced to phytol by the geranylgeranyl reductase ChlP. (B) Protein phylogeny of chlorophyll synthases from representative cyanobacteria, algae and plants. The chlorophyll synthases used in this study are shown in bold. The scale bar indicates the number of amino acid substitutions per site.</p></caption><graphic id="nlm-graphic-3" xlink:href="FEB2-592-3062-g001"/></fig><p>The two other major components of the complex are Ycf39, an atypical short&#8208;chain dehydrogenase with an unknown role in PSII assembly <xref rid="feb213222-bib-0012" ref-type="ref">12</xref>, <xref rid="feb213222-bib-0013" ref-type="ref">13</xref>, and YidC, which belongs to the evolutionarily conserved YidC/Alb3/OxaI family of membrane insertase proteins found in bacteria, mitochondria and chloroplasts. YidC/Alb3/OxaI have a role in the folding and partitioning of transmembrane polypeptides into the phospholipid bilayer <xref rid="feb213222-bib-0014" ref-type="ref">14</xref>, <xref rid="feb213222-bib-0015" ref-type="ref">15</xref>. Thylakoid membrane biogenesis in cyanobacteria and higher photosynthetic organisms is known to be dependent on YidC/Alb3 <xref rid="feb213222-bib-0016" ref-type="ref">16</xref>, <xref rid="feb213222-bib-0017" ref-type="ref">17</xref>, and the study by Chidgey <italic>et al</italic>. <xref rid="feb213222-bib-0007" ref-type="ref">7</xref> established a link between chlorophyll biosynthesis and YidC&#8208;dependent cotranslational insertion of nascent light&#8208;harvesting polypeptides into membranes.</p><p>The high degree of similarity between cyanobacterial photosystems and those of higher photosynthetic organisms raises the possibility of conserved chlorophyll handover systems in the chloroplasts of algae and plants, investigated here by expressing foreign ChlG genes in the model cyanobacterium <italic>Synechocystis</italic>. We demonstrate that under typical laboratory growth conditions the production of the algal and plant chlorophyll synthases allows deletion of the essential native <italic>chlG</italic> without obvious phenotypic consequences. Immunoprecipitations using the tagged heterologous synthases revealed that the ChlG&#8208;YidC complex is maintained in both cases, but that the HliD and Ycf39 components do not interact with the eukaryotic enzymes, which also do not copurify with bound pigments. We additionally show that Ycf39 is lost from the cyanobacterial complex following high light stress, consistent with its proposed role in chlorophyll recycling under photo&#8208;damaging conditions.</p></sec><sec id="feb213222-sec-0004"><title>Materials and methods</title><sec id="feb213222-sec-0005"><title>Bioinformatics</title><p>Sequence alignments were performed using ClustalW <xref rid="feb213222-bib-0018" ref-type="ref">18</xref> and the phylogenetic tree was generated in Geneious version 10.0.2 (<ext-link ext-link-type="uri" xlink:href="http://www.geneious.com">http://www.geneious.com</ext-link>; <xref rid="feb213222-bib-0019" ref-type="ref">19</xref>). NCBI accession numbers of proteins used for both analyses are provided in Table <xref rid="feb213222-sup-0001" ref-type="supplementary-material">S1</xref>.</p></sec><sec id="feb213222-sec-0006"><title>Growth conditions</title><p>
+<italic>Synechocystis</italic> strains were grown at 30 &#176;C in a rotary shaker with moderate light (30&#8211;50 &#956;mol photons&#183;m<sup>&#8722;2</sup>&#183;s<sup>&#8722;1</sup>) in BG11 medium <xref rid="feb213222-bib-0020" ref-type="ref">20</xref> plus 10 m<sc>m</sc> TES (Sigma&#8208;Aldrich, Dorset, UK)&#8208;KOH pH 8.2. For growth on plates, 1.5% (w/v) agar and 0.3% (w/v) sodium thiosulfate were added. Photoheterotrophic growth medium contained 5 m<sc>m</sc> glucose. Zeocin (2.5&#8211;20 &#956;g&#183;mL<sup>&#8722;1</sup>) and kanamycin (5&#8211;40 &#956;g&#183;mL<sup>&#8722;1</sup>) were included where appropriate. For purification of protein complexes, cultures were grown photoautotrophically with ~ 100 &#956;mol photons&#183;m<sup>&#8722;2</sup>&#183;s<sup>&#8722;1</sup> illumination in 8 L vessels bubbled with sterile air and mixed using a magnetic stirrer. To perform light shock experiments, 8 L cultures were grown with 40 &#956;mol photons&#183;m<sup>&#8722;2</sup>&#183;s<sup>&#8722;1</sup> to log phase (optical density at 750 nm (OD<sub>750</sub>) &#8776; 0.7) and 4 L was harvested as a moderate light control. The remaining 4 L was diluted twofold with fresh media to reduce cell shading and irradiated at high light (&#8764;800 &#956;mol photons&#183;m<sup>&#8722;2</sup>&#183;s<sup>&#8722;1</sup>) for 80 min. The 8 L cultures were maintained at 30 &#176;C using a temperature coil connected to a thermostat&#8208;controlled circulating water bath.</p></sec><sec id="feb213222-sec-0007"><title>Construction of <italic>Synechocystis</italic> strains</title><p>See Table <xref rid="feb213222-tbl-0001" ref-type="table">1</xref> for strains of <italic>Synechocystis</italic> used in this study and Tables S2&#8211;S3 for plasmid and primer details. <italic>Escherichia coli</italic> JM109 competent cells (Promega UK, Southampton, UK) were used for cloning. The <italic>Arabidopsis thaliana</italic> (AT3G51820; NCBI accession: AY081481) and <italic>Chlamydomonas reinhardtii</italic> (CHLREDRAFT_5437; NCBI accession: XP_001701588) <italic>chlG</italic> genes lacking the sequence coding for the N&#8208;terminal chloroplast transit peptides (57 or 43 amino acids respectively, according to the ChloroP 1.1 Server <xref rid="feb213222-bib-0021" ref-type="ref">21</xref>) were synthesized with codons optimized for expression in <italic>Synechocystis</italic> (Integrated DNA Technologies, Coralville, IA, USA). The <italic>chlG</italic> gene from <italic>Synechococcus</italic> sp. PCC 7002 (SYNPCC7002_A0548; NCBI accession: ACA98555) was amplified from genomic DNA using Q5 DNA Polymerase (New England Biolabs UK, Hitchin, UK) and primers 7002_G_F and 7002_G_R. The <italic>Rhodobacter (Rba.) sphaeroides</italic> 2.4.1 <italic>bchG</italic> gene (Rsp_0279; NCBI accession: 3719288) was synthesized with codons optimized for expression in <italic>Synechocystis</italic> (Integrated DNA Technologies). The genes were digested and cloned into the <italic>Not</italic>I and <italic>Bgl</italic>II sites of the plasmid pPD&#8208;<italic>N</italic>FLAG such that they were in frame with an N&#8208;terminal 3xFLAG tag; following homologous recombination into the <italic>Synechocystis</italic> genome, the tagged construct replaced the <italic>psbAII</italic> gene so expression is under the control of the <italic>psbAII</italic> promoter <xref rid="feb213222-bib-0022" ref-type="ref">22</xref>. The pPD&#8208;<italic>N</italic>FLAG&#8208;<italic>chlG</italic> plasmid described in <xref rid="feb213222-bib-0007" ref-type="ref">7</xref> was used to replace the <italic>psbAII</italic> gene with the FLAG&#8208;tagged <italic>Synechocystis chlG</italic> gene.</p><table-wrap id="feb213222-tbl-0001" xml:lang="en" orientation="portrait" position="float"><label>Table 1</label><caption><p>Strains of <italic>Synechocystis</italic> sp. PCC 6803 used in this study</p></caption><permissions><copyright-holder>John Wiley &amp; Sons, Ltd</copyright-holder></permissions></table-wrap><p>The sequence&#8208;verified (GATC Biotech, Konstanz, Germany) plasmids were introduced into <italic>Synechocystis</italic>, with transformants selected with 5 &#956;g&#183;mL<sup>&#8722;1</sup> kanamycin and genome copies fully segregated by restreaking on plates with sequentially increased antibiotic up to a concentration of 40 &#956;g&#183;mL<sup>&#8722;1</sup>. The native <italic>Synechocystis chlG</italic> gene (slr0056) was subsequently deleted from the strains containing the tagged genes by replacement of part of the gene with a zeocin resistance cassette using the linear mutagenesis construct described by Chidgey <italic>et al</italic>. <xref rid="feb213222-bib-0007" ref-type="ref">7</xref>. Segregation at the <italic>psbAII</italic> and <italic>chlG</italic> loci was confirmed by PCR with oligonucleotides AH47/AH48 and AH102/AH103, respectively. The sequence of each foreign <italic>chlG</italic> gene was confirmed to be correct and in frame with the FLAG&#8208;tag by PCR amplification from the genome.</p></sec><sec id="feb213222-sec-0008"><title>UV&#8208;visible absorbance spectroscopy</title><p>The UV&#8208;visible absorbance spectra of cells, membranes and protein complexes were measured in a Cary 60 UV&#8208;Vis spectrophotometer (Agilent Technologies LDA UK Ltd, Stockport, UK) at room temperature with appropriate media/buffer baseline correction.</p></sec><sec id="feb213222-sec-0009"><title>Pigment analysis</title><p>Pigments were separated by reverse&#8208;phase HPLC on an Agilent 1200 HPLC system using a Discovery<sup>&#174;</sup> HS C18 5 &#956;m column (column dimensions: 25 cm &#215; 4.6 mm) according to a method slightly modified from <xref rid="feb213222-bib-0023" ref-type="ref">23</xref>. Pigments were extracted in methanol at room temperature and applied to the column equilibrated in acetonitrile/water/trimethylamine (9 : 1 : 0.01, v/v/v). After 2 min a linear gradient of 0&#8211;100% ethyl acetate was applied over 15 min followed by isocratic ethyl acetate for 5 min at a flow rate of 1 mL&#183;min<sup>&#8722;1</sup> at 40 &#176;C. Absorbance was monitored at 450 and 665 nm and chlorophyll and carotenoid species were identified by their absorption spectra and retention time.</p></sec><sec id="feb213222-sec-0010"><title>Quantification of chlorophyll and chlorophyll precursors</title><p>Chlorophyll content was determined spectrophotometrically following extraction from cell pellets (from 1 mL of culture at OD<sub>750</sub> &#8776; 0.4) with 100% methanol according to <xref rid="feb213222-bib-0024" ref-type="ref">24</xref>. To assess the level of chlorophyll precursors, pigments were extracted from cell pellets (from 2 mL of OD<sub>750</sub> &#8776; 0.4) and analysed by HPLC with two fluorescence detectors as described by Piln&#253; <italic>et al</italic>. <xref rid="feb213222-bib-0025" ref-type="ref">25</xref>.</p></sec><sec id="feb213222-sec-0011"><title>Membrane preparation, solubilisation and anti&#8208;FLAG immunoprecipitation</title><p>
+<italic>Synechocystis</italic> cells expressing FLAG&#8208;tagged ChlG were grown to an OD<sub>750</sub> of &#8776; 0.7 and harvested by centrifugation (17 700 <italic><bold>g</bold></italic>, 4 &#176;C, 20 min). The subsequent procedures were performed either in the dark or under dim green light. Pellets (from 4 L of culture) were washed and resuspended in FLAG&#8208;buffer (25 m<sc>m</sc> sodium phosphate pH 7.4, 10 m<sc>m</sc> MgCl<sub>2</sub> and 50 m<sc>m</sc> NaCl, 10% (w/v) glycerol and EDTA&#8208;free Protease Inhibitor (Roche, West Sussex, UK)), mixed with an equal volume of 0.1 mm glass beads (BioSpec, Bartlesville, OK, USA) and broken in a Mini&#8208;Beadbeater&#8208;16 (BioSpec). Soluble and membrane proteins were separated by centrifugation (48 400 <italic><bold>g</bold></italic>, 4 &#176;C, 30 min) and the membrane fraction was resuspended in 10 mL FLAG&#8208;buffer with 2% (w/v) n&#8208;dodecyl&#8208;&#946;&#8208;D&#8208;maltoside (&#946;&#8208;DDM; Anatrace) and solubilised at 4 &#176;C for 1 h with gentle agitation. Insoluble material was pelleted (48 400 <italic><bold>g</bold></italic>, 4 &#176;C, 30 min) and the supernatant was diluted twofold in FLAG&#8208;buffer and applied to a 0.3 mL anti&#8208;FLAG&#8208;M2 agarose (Sigma&#8208;Aldrich) column equilibrated in FLAG&#8208;buffer with 0.04% (w/v) &#946;&#8208;DDM (wash buffer). The resin was washed with 20 resin volumes of wash buffer to remove contaminating proteins and FLAG&#8208;tagged proteins were eluted in 400 &#956;L of the same buffer containing 187.5 &#956;g&#183;mL<sup>&#8722;1</sup> 3xFLAG peptide (Sigma&#8208;Aldrich).</p></sec><sec id="feb213222-sec-0012"><title>SDS/PAGE and immunodetection</title><p>Membrane preparations and FLAG eluates were separated by SDS/PAGE on Invitrogen 12% Bis&#8211;Tris NuPage gels (Thermo Fisher Scientific, Loughborough, UK) and stained with Coomassie Brilliant Blue (Bio&#8208;Rad, Watford, UK) or transferred onto polyvinylidene fluoride membranes (Thermo Fisher Scientific) for immunodetection. Membranes were incubated with specific primary antibodies against the 3xFLAG tag (Sigma&#8208;Aldrich), HliD (Agrisera, V&#228;nn&#228;s, Sweden), Ycf39 <xref rid="feb213222-bib-0007" ref-type="ref">7</xref> and YidC (provided by J&#246;rg Nickelsen, Ludwig&#8208;Maximilians&#8208;University, Munich, Germany) followed by an appropriate secondary antibody (anti&#8208;rat for 3xFLAG, anti&#8208;rabbit for the other primary antibodies) conjugated with horseradish peroxidase (Sigma&#8208;Aldrich) to allow detection using the WESTAR ETA C 2.0 chemiluminescent substrate (Cyanagen, Bologna, Italy) with an Amersham Imager 600 (GE Healthcare, Amersham, UK). For native electrophoresis, isolated complexes were separated on a 4&#8211;12% clear native gel exactly as described previously <xref rid="feb213222-bib-0007" ref-type="ref">7</xref>.</p></sec><sec id="feb213222-sec-0013"><title>Gel filtration chromatography</title><p>The eluate from the FLAG column was adjusted to a &#946;&#8208;DDM concentration of 1% (w/v) prior to fractionation using a Bio&#8208;Sep 3000 gel filtration column (Phenomenex, Macclesfield, UK) on an Agilent&#8208;1200 HPLC system, as described in <xref rid="feb213222-bib-0007" ref-type="ref">7</xref>.</p></sec><sec id="feb213222-sec-0014"><title>Nanoflow liquid chromatography tandem mass spectrometry (LC&#8208;MS/MS)</title><p>The FLAG&#8208;eluted proteins were digested with trypsin and analysed by nanoflow LC&#8208;MS/MS as described previously <xref rid="feb213222-bib-0022" ref-type="ref">22</xref>.</p></sec></sec><sec id="feb213222-sec-0015"><title>Results</title><sec id="feb213222-sec-0016"><title>Algal and plant chlorophyll synthases are functional in <italic>Synechocystis</italic>
+</title><p>To investigate whether ChlG proteins from algae and higher plants are functional in a cyanobacterial system, and if interactions between foreign ChlGs and the cyanobacterial HliD, Ycf39 and YidC proteins are maintained, a collection of mutant strains was generated in which foreign <italic>chlG</italic> genes encoding N&#8208;terminally 3xFLAG&#8208;tagged proteins were added <italic>in trans</italic> to <italic>Synechocystis</italic> (Table <xref rid="feb213222-tbl-0001" ref-type="table">1</xref>). Protein phylogeny shows that the cyanobacterial, algal and plant chlorophyll synthases form separate branches (Fig. <xref rid="feb213222-fig-0001" ref-type="fig">1</xref>B), thus enzymes from another cyanobacterium, <italic>Synechococcus</italic> sp. 7002; the model green alga, <italic>Chlamydomonas reinhardtii</italic>; and the model plant species, <italic>Arabidopsis thaliana</italic>, were chosen. After introduction of foreign <italic>chlG</italic> genes at the <italic>psbAII</italic> locus (Fig. <xref rid="feb213222-fig-0002" ref-type="fig">2</xref>A), the native <italic>chlG</italic> gene was replaced with an antibiotic resistance cassette (Fig. <xref rid="feb213222-fig-0002" ref-type="fig">2</xref>B). Chlorophyll synthase is essential in <italic>Synechocystis</italic>, so complete deletion of the native <italic>chlG</italic> gene is only possible if the introduced foreign gene is active; in a control using the bacteriochlorophllide&#8208;specific bacteriochlorophyll synthase (BchG) from <italic>Rba. sphaeroides</italic>, which cannot esterify chlorophyllide <xref rid="feb213222-bib-0026" ref-type="ref">26</xref>, subsequent deletion of the native <italic>chlG</italic> is not possible (Fig. <xref rid="feb213222-sup-0001" ref-type="supplementary-material">S1</xref>).</p><fig fig-type="Figure" xml:lang="en" id="feb213222-fig-0002" orientation="portrait" position="float"><label>Figure 2</label><caption><p>Generation of <italic>Synechocystis</italic> strains expressing foreign <italic>ChlG</italic> genes. (A) Genes encoding 3x<styled-content style="fixed-case">FLAG</styled-content>&#8208;tagged ChlG from the organisms indicated were inserted in place of the <italic>psb<styled-content style="fixed-case">AII</styled-content></italic> gene in the <italic>Synechocystis</italic> genome. (B) The native <italic>chlG</italic> gene was subsequently deleted from the strains expressing the foreign genes by replacement with a zeocin resistance cassette. (C) Strains producing foreign chlorophyll synthases that lack the native enzyme grow under photohetrotrophic and photoautotrophic conditions. A &#916;<italic>psbB</italic> mutant that cannot grow under photoautotrophic conditions <xref rid="feb213222-bib-0044" ref-type="ref">44</xref> is included as a control. (D) Whole&#8208;cell absorbance spectra of <styled-content style="fixed-case">WT</styled-content> and <styled-content style="fixed-case">FLAG</styled-content>&#8208;ChlG strains. Spectra are normalized to 575 nm and offset to allow individual traces to be distinguished.</p></caption><graphic id="nlm-graphic-5" xlink:href="FEB2-592-3062-g002"/></fig><p>The resulting strains, <italic>psbAII</italic>::3xFLAG&#8208;7002_<italic>chlG</italic>/&#916;<italic>chlG</italic> (FLAG&#8208;7002), <italic>psbAII</italic>::3xFLAG&#8208;Cr_<italic>chlG</italic>/&#916;<italic>chlG</italic> (FLAG&#8208;Cr), <italic>psbAII</italic>::3xFLAG&#8208;At_<italic>chlG</italic>/&#916;<italic>chlG</italic> (FLAG&#8208;At) are capable of photoheterotrophic and photoautotrophic growth (Fig. <xref rid="feb213222-fig-0002" ref-type="fig">2</xref>C) and have similar absorption profiles to the wild&#8208;type (WT) and <italic>psbAII</italic>::3xFLAG&#8208;6803_<italic>chlG</italic>/&#916;<italic>chlG</italic> (FLAG&#8208;6803) strains (Fig. <xref rid="feb213222-fig-0002" ref-type="fig">2</xref>D), indicating that the foreign ChlG proteins are capable of complementing the deletion of the endogenous enzyme under our standard growth conditions. The chlorophyll content and levels of chlorophyll precursors (Table <xref rid="feb213222-sup-0001" ref-type="supplementary-material">S4</xref> and Fig. <xref rid="feb213222-sup-0001" ref-type="supplementary-material">S2</xref>) in each of the FLAG&#8208;tagged ChlG strains were also very similar; pertinently no significant increase in chlorophyllide, the substrate of ChlG, was observed in any strain.</p></sec><sec id="feb213222-sec-0017"><title>The algal and plant chlorophyll synthases copurify with YidC but not HliD or Ycf39</title><p>Solubilised membrane fractions obtained from the FLAG&#8208;6803, FLAG&#8208;7002, FLAG&#8208;Cr and FLAG&#8208;At strains were used for FLAG&#8208;immunoprecipitation experiments. Immunoprecipitations were performed in biological triplicate with consistent results (see the next section for discussion of the unique exception of Ycf39 in FLAG&#8208;7002); for clarity, data from a single representative experiment is presented for each strain. A control immunoprecipitation was carried out using WT <italic>Synechocystis</italic> membranes. None of the interaction partners were observable by immunoblot in the resulting eluate despite a 20&#8208;fold higher loading of the gel; the inability to detect HliD, YidC or Ycf39 rules out nonspecific binding to the anti&#8208;FLAG resin (Fig. <xref rid="feb213222-sup-0001" ref-type="supplementary-material">S3</xref>). Immunoblots of the solubilised membranes from the FLAG&#8208;6803 strain and the flow&#8208;through that did not bind to the anti&#8208;FLAG column confirm that we captured all the FLAG&#8208;tagged bait protein (Fig. <xref rid="feb213222-sup-0001" ref-type="supplementary-material">S4</xref>). The three partner proteins were all present in the flow through but in reduced amounts, consistent with some proportion of each being copurified with the FLAG&#8208;tagged bait protein.</p><p>The presence of similar amounts of the tagged bait protein in the immunoprecipitation eluates was confirmed by SDS/PAGE (Fig. <xref rid="feb213222-fig-0003" ref-type="fig">3</xref>A) and anti&#8208;FLAG immunoblots (Fig. <xref rid="feb213222-fig-0003" ref-type="fig">3</xref>B). The FLAG&#8208;6803 and FLAG&#8208;7002 eluates were both visibly coloured and spectrophotometric analysis shows they contain chlorophyll (436, 674 nm) and carotenoids (487, 515 nm) (Fig. <xref rid="feb213222-fig-0003" ref-type="fig">3</xref>C). HPLC profiles of the extracted pigments confirmed the presence of myxoxanthophyll, zeaxanthin, &#946;&#8208;carotene and chlorophyll in approximately the same ratio in each eluate (Fig. <xref rid="feb213222-sup-0001" ref-type="supplementary-material">S5</xref>). Conversely, the FLAG&#8208;Cr and FLAG&#8208;At eluates appeared colourless to the naked eye and contained negligible levels of pigment when analysed spectroscopically (Fig. <xref rid="feb213222-fig-0003" ref-type="fig">3</xref>C). Consistent with the pigmentation, HliD is present in the cyanobacterial enzyme eluates, visible both on stained gels and by immunodetection, and is absent from both eukaryotic ChlG immunoprecipitations (Fig. <xref rid="feb213222-fig-0003" ref-type="fig">3</xref>A,B). HliD was detected in the membranes of cells producing the eukaryotic enzymes (Fig. <xref rid="feb213222-sup-0001" ref-type="supplementary-material">S6</xref>), ruling out that the absence of HliD in the eukaryotic immunoprecipitations is due to any drastic cellular reduction in the amount of the Hlip. Like HliD, Ycf39 was absent from both eukaryotic enzyme eluates (Fig. <xref rid="feb213222-fig-0003" ref-type="fig">3</xref>B), consistent with the hypothesis that interaction of Ycf39 with the complex is mediated by HliD <xref rid="feb213222-bib-0007" ref-type="ref">7</xref>, <xref rid="feb213222-bib-0010" ref-type="ref">10</xref>. Conversely, YidC was present in all the eluates (Fig. <xref rid="feb213222-fig-0003" ref-type="fig">3</xref>B). Although it was not visible on stained gels, clear immunoblot signals in the eukaryotic enzyme eluates indicate that a ChlG&#8208;YidC/Alb3 interaction may be conserved in higher chlorophyll&#8208;producing organisms.</p><fig fig-type="Figure" xml:lang="en" id="feb213222-fig-0003" orientation="portrait" position="float"><label>Figure 3</label><caption><p>Purification of <styled-content style="fixed-case">FLAG</styled-content>&#8208;ChlG from <italic>Synechocystis</italic> strains and identification of interacting proteins. (A) <styled-content style="fixed-case">FLAG</styled-content>&#8208;immunoprecipitation eluates were separated by <styled-content style="fixed-case">SDS</styled-content>/<styled-content style="fixed-case">PAGE</styled-content> and analysed by staining with Coomassie Brilliant Blue. (B) Immunodetection of <styled-content style="fixed-case">FLAG</styled-content>&#8208;ChlG, YidC, HliD, and Ycf39 in <styled-content style="fixed-case">FLAG</styled-content>&#8208;immunoprecipitation eluates. In (A,B), data from a single experiment are presented but are representative of at least three biological replicates, with the exception of the 7002&#8208;ChlG interaction with Ycf39 (see text and Fig. <xref rid="feb213222-sup-0001" ref-type="supplementary-material">S8</xref> for further explanation). The asterisk (*) in panel (A) indicates a prominent protein band in the eukaryotic enzyme eluates that cross reacts with both anti&#8208;<styled-content style="fixed-case">FLAG</styled-content> and anti&#8208;ChlG antibodies, indicating it is a ChlG dimer. (C) Absorption spectra of <styled-content style="fixed-case">FLAG</styled-content>&#8208;immunoprecipitation eluates. (D) <styled-content style="fixed-case">HPLC</styled-content> gel filtration chromatography separation of purified cyanobacterial and plant <styled-content style="fixed-case">FLAG</styled-content>&#8208;ChlG eluates. Elution of pigment and protein were monitored at 440 (red line) and 280 (black line) nm, respectively. Immunoblot analyses of the <styled-content style="fixed-case">HPLC</styled-content> elution fractions are shown below the traces.</p></caption><graphic id="nlm-graphic-7" xlink:href="FEB2-592-3062-g003"/></fig><p>The eluates from the FLAG&#8208;6803 and FLAG&#8208;At coimmunoprecipitations were further analysed by gel filtration chromatography, which showed that the pigment is predominantly associated with HliD containing subcomplexes in the FLAG&#8208;6803 elution (as reported previously <xref rid="feb213222-bib-0007" ref-type="ref">7</xref>), and confirmed the absence of HliD, Ycf39 and pigments, but the presence of YidC, in the FLAG&#8208;At complex, which eluted as a single major peak (Fig. <xref rid="feb213222-fig-0003" ref-type="fig">3</xref>D). Analysis of the same complexes by clear native (CN)&#8208;PAGE (Fig. <xref rid="feb213222-sup-0001" ref-type="supplementary-material">S7</xref>) shows that the <italic>Arabidopsis</italic> FLAG&#8208;ChlG forms a single complex, predicted to be a dimer, while <italic>Synechocytsis</italic> FLAG&#8208;ChlG forms a number of different sized complexes, consistent with the elution profiles from gel filtration. The lack of high molecular weight complexes and pigments in the FLAG&#8208;At eluate suggests that unlike the <italic>Synechocystis</italic> enzyme, <italic>Arabidopsis</italic> ChlG does not interact with PSI <xref rid="feb213222-bib-0007" ref-type="ref">7</xref>.</p></sec><sec id="feb213222-sec-0018"><title>The interaction between ChlG and Ycf39 is disrupted by high light</title><p>As described above, all immunoprecipitation experiments were repeated a minimum of three times with independently grown cultures. In all cases the results were consistent, with the sole exception of immunodetection of Ycf39 in the FLAG&#8208;7002 eluates. All three eluates contained pigment and were spectrally very similar (Fig. <xref rid="feb213222-sup-0001" ref-type="supplementary-material">S8</xref>), however, only two of the replicates contained Ycf39 when probed with anti&#8208;Ycf39 antibodies. Every attempt was made to keep the growth conditions identical but we hypothesized that small differences between the biological replicate cultures, such as the light intensity, may be responsible for this variation. In order to investigate this, FLAG&#8208;6803 cells were subjected to high light stress and the pre&#8208; and postlight stress samples were used in parallel for FLAG&#8208;immunoprecipitations. Analysis of the resultant eluates by SDS/PAGE, immunoblotting and mass spectrometry shows that the light stress treatment specifically results in the loss of Ycf39 from the ChlG complex, while the HliD and YidC interactions are maintained (Fig. <xref rid="feb213222-fig-0004" ref-type="fig">4</xref>A&#8211;C). Gel filtration of the eluates further demonstrated that the normal light and high light complexes were similar with the exception of the loss of Ycf39 after high light stress (Figs S9&#8211;S10). Therefore, Ycf39 dissociates from the ChlG complex when the cells are exposed to high light, presumably as it is recruited by alternative partner proteins involved in the repair of PSII under such conditions of stress. The ability to prepare ChlG&#8208;HliD&#8208;YidC and ChlG&#8208;YidC subcomplexes lacking Ycf39 may be useful for elucidating the specific role of the individual components of the complex in the future.</p><fig fig-type="Figure" xml:lang="en" id="feb213222-fig-0004" orientation="portrait" position="float"><label>Figure 4</label><caption><p>The interaction between ChlG and Ycf39 is abolished by high light. (A) Analysis of pre&#8208; and postlight&#8208;stressed <styled-content style="fixed-case">FLAG</styled-content>&#8208;6803 ChlG immunoprecipitation eluates by <styled-content style="fixed-case">SDS</styled-content>/<styled-content style="fixed-case">PAGE</styled-content>. (B) Immunoblot analysis of pre&#8208; and postlight&#8208;stressed <styled-content style="fixed-case">FLAG</styled-content>&#8208;6803 ChlG immunoprecipitation eluates confirm the specific loss of Ycf39 following high light stress. (C) Relative intensities of the &#8216;<styled-content style="fixed-case">LAFSEVLASGK</styled-content>&#8217; tryptic peptide representative of Ycf39 as observed by mass spectrometry after tryptic digestion of the eluates.</p></caption><graphic id="nlm-graphic-9" xlink:href="FEB2-592-3062-g004"/></fig></sec></sec><sec id="feb213222-sec-0019"><title>Discussion</title><p>The processes of chlorophyll biosynthesis and photosystem assembly in phototrophic organisms appear to be co&#8208;ordinated, ensuring efficient channelling of newly produced chlorophyll pigments to <italic>de novo</italic> photosystem polypeptides to enable their cotranslational insertion into the thylakoid membrane and assembly into functioning photosystems <xref rid="feb213222-bib-0027" ref-type="ref">27</xref>, <xref rid="feb213222-bib-0028" ref-type="ref">28</xref>. Chidgey <italic>et al</italic>. <xref rid="feb213222-bib-0007" ref-type="ref">7</xref> previously identified the ChlG&#8208;HliD&#8208;Ycf39&#8208;YidC assembly complex in the model cyanobacterium <italic>Synechocystis</italic>. To gain insight into whether similar ChlG complexes may form in higher oxygenic phototrophs, FLAG&#8208;tagged algal and plant chlorophyll synthases were heterologously produced in <italic>Synechocystis</italic>; the enzymes replaced the function of the native cyanobacterial enzyme, allowing subsequent deletion of the normally essential endogenous <italic>chlG</italic> gene resulting in strains that had the same growth rate and pigment composition as the WT and a strain producing the FLAG&#8208;tagged native enzyme.</p><p>Immunoprecipitations of the FLAG&#8208;tagged ChlG proteins showed that only the most closely related ChlG from <italic>Synechococcus</italic> sp. PCC 7002 eluted with HliD and Ycf39. <italic>Synechococcus</italic> sp. PCC 7002 has close homologues of the <italic>Synechocystis</italic> Ycf39 (SYNPCC7002_A0216) and HliD (SYNPCC7002_A0858) and it is very likely that the same ChlG&#8208;Hlip&#8208;Ycf39&#8208;YidC complex is conserved in this and other related cyanobacteria. Conversely, HliD and Ycf39 were absent from the plant and algal complexes, indicating that the eukaryotic chlorophyll synthases do not interact with these cyanobacterial proteins.</p><p>HliD binds &#946;&#8208;carotene and chlorophyll <italic>a</italic> allowing the dissipation of absorbed light energy by chlorophyll to &#946;&#8208;carotene energy transfer <xref rid="feb213222-bib-0005" ref-type="ref">5</xref>, <xref rid="feb213222-bib-0010" ref-type="ref">10</xref>, consistent with the proposed role of Hlips in photoprotection of chlorophyll&#8208;binding proteins <xref rid="feb213222-bib-0029" ref-type="ref">29</xref>, <xref rid="feb213222-bib-0030" ref-type="ref">30</xref>, <xref rid="feb213222-bib-0031" ref-type="ref">31</xref>. It is possible that similar interactions with Hlip&#8208;like proteins occur in algae and plants <xref rid="feb213222-bib-0032" ref-type="ref">32</xref>. <italic>Arabidopsis</italic> one&#8208;helix protein 2 (OHP2), which shows sequence similarity to HliD, associates with YCF244, a homologue of cyanobacterial Ycf39 <xref rid="feb213222-bib-0033" ref-type="ref">33</xref>. There is evidence for a functional similarity between OHP2 and HliD; an OHP2&#8208;YCF244 complex associates with the PSII intermediate RCII <xref rid="feb213222-bib-0033" ref-type="ref">33</xref> essentially as described for the HliD&#8208;Ycf39 complex in cyanobacteria <xref rid="feb213222-bib-0013" ref-type="ref">13</xref>. Light harvesting&#8208;like 3 protein (LIL3) is another Hlip&#8208;like protein that binds pigments and interacts with chlorophyll biosynthesis enzymes (ChlP and protochlorophyllide oxidoreductase) <xref rid="feb213222-bib-0034" ref-type="ref">34</xref>, <xref rid="feb213222-bib-0035" ref-type="ref">35</xref>, <xref rid="feb213222-bib-0036" ref-type="ref">36</xref>, although Hey <italic>et al</italic>. <xref rid="feb213222-bib-0036" ref-type="ref">36</xref> did not find a LIL3&#8211;ChlG interaction in <italic>Arabidopsis</italic>.</p><p>Ycf39 forms a subcomplex with HliD that appears to associate either with ChlG or the early PSII assembly intermediate RCII <xref rid="feb213222-bib-0013" ref-type="ref">13</xref>. The discovery of the ChlG&#8208;HliD&#8208;Ycf39&#8208;YidC complex led to the hypothesis that ChlG associated with HliD and Ycf39 binds the PSII core subunit D1 precursor protein (pD1) as it is being cotranslationally inserted into the membrane by YidC, during which time chlorophyll provided by ChlG can be bound to the polypeptide <xref rid="feb213222-bib-0007" ref-type="ref">7</xref>, <xref rid="feb213222-bib-0013" ref-type="ref">13</xref>. Consistent with this, the <italic>Arabidopsis</italic> Ycf39 homologue HCF244 is important for translational initiation of <italic>psbA</italic> mRNA <xref rid="feb213222-bib-0037" ref-type="ref">37</xref>. The <italic>Synechocystis</italic> strains containing the algal/plant enzymes display no obvious growth or pigmentation phenotype, despite the apparent lack of a ChlG&#8208;HliD/Ycf39 interaction, suggesting that the roles of HliD and Ycf39 within the ChlG complex are not essential to cyanobacteria <italic>in vivo</italic>, at least under the low&#8208;stress conditions used here. This is consistent with the lack of a growth rate or pigment composition defect in <italic>Synechocystis</italic> &#916;<italic>hliD</italic>
+<xref rid="feb213222-bib-0007" ref-type="ref">7</xref> and &#916;<italic>ycf39</italic>
+<xref rid="feb213222-bib-0013" ref-type="ref">13</xref>, <xref rid="feb213222-bib-0038" ref-type="ref">38</xref> mutants.</p><p>We additionally found that Ycf39 is lost from the FLAG&#8208;6803 ChlG complex under high light stress. Photo&#8208;damaging conditions result in the release of chlorophylls from photosystems; these pigments must be recycled back to the membrane. A &#916;<italic>ycf39</italic> mutant is more sensitive to photoinhibition, and there is evidence that the Ycf39&#8208;Hlip complex has a role in chlorophyll recycling and D1 incorporation into PSII during sudden exposure to high irradiance <xref rid="feb213222-bib-0013" ref-type="ref">13</xref>. Whether Ycf39 is lost from the complex under other stress conditions, and the mechanism of its release from the ChlG complex, will require further study.</p><p>Unlike HliD and Ycf39, YidC was detected in the immunoprecipitation eluates for all enzymes, including the nonfunctional BchG. In the phototrophic bacterium <italic>Rba. sphaeroides,</italic> the photosystem assembly factor LhaA was found to comigrate in CN&#8208;PAGE with the integral membrane protease FtsH, BchG and YidC <xref rid="feb213222-bib-0039" ref-type="ref">39</xref>, so (bacterio)chlorophyll synthase&#8208;YidC associations might be widespread in phototrophs. YidC/Alb3 is a member of the evolutionally conserved protein family of membrane insertases <xref rid="feb213222-bib-0014" ref-type="ref">14</xref>, <xref rid="feb213222-bib-0040" ref-type="ref">40</xref> and is essential for thylakoid membrane biogenesis in cyanobacteria, algae and plants <xref rid="feb213222-bib-0016" ref-type="ref">16</xref>, <xref rid="feb213222-bib-0017" ref-type="ref">17</xref>. The discovery of an association between YidC and ChlG led to the hypothesis that YidC fixes chlorophyll&#8208;binding proteins into a configuration that allows for the insertion of newly synthesized chlorophyll molecules from the neighbouring ChlG <xref rid="feb213222-bib-0007" ref-type="ref">7</xref>, <xref rid="feb213222-bib-0041" ref-type="ref">41</xref>. Unlike HliD, which is visible on stained gels, YidC is not observable by Coomassie blue staining, indicating it is present in the complex in a less than 1 : 1 ratio with ChlG/HliD; this could be confirmed by determination of molar quantities of FLAG&#8208;ChlG, HID and YidC by mass spectrometry in future studies. Nonetheless, the observed interaction between algal/plant ChlG proteins and cyanobacterial YidC provides evidence that these proteins may form similar interactions with Alb3 in their native organisms, implying that co&#8208;ordinated delivery of chlorophyll to nascent light&#8208;harvesting polypeptides <italic>via</italic> ChlG&#8208;YidC/Alb3 interactions is conserved among photosynthetic organisms. <italic>Arabidopsis thaliana</italic> contains a paralog of Alb3 called Alb4, which is required for chloroplast biogenesis <xref rid="feb213222-bib-0042" ref-type="ref">42</xref> and thylakoid protein targeting <xref rid="feb213222-bib-0043" ref-type="ref">43</xref>; it is possible the plant ChlG may also interact with this protein. Coimmunoprecipitations with solubilised <italic>Arabidopsis</italic> or spinach thylakoids will allow the <italic>in vivo</italic> partner proteins of the plant enzyme to be confirmed.</p></sec><sec id="feb213222-sec-0021"><title>Author contributions</title><p>CNH and AH conceived the project. JWC, RS, CNH and AH supervised the project and designed the experiments. MSP, JWC, MKS, PJJ, RS and AH performed the experiments and analysed the data. MSP, JWC and AH prepared the manuscript, which was edited by RS and CNH.</p></sec><sec sec-type="supplementary-material"><title>Supporting information</title><supplementary-material content-type="local-data" id="feb213222-sup-0001"><caption><p>
+<bold>Fig. S1.</bold> Production of the <italic>Rhodobacter sphaeroides</italic> 2.4.1 bacteriochlorophyll synthase (BchG) in <italic>Synechocystis</italic> does not allow full deletion of the native <italic>chlG</italic> gene.</p><p>
+<bold>Fig. S2.</bold> Analysis of chlorophyll precursors from strains used in this study.</p><p>
+<bold>Fig. S3</bold>. SDS/PAGE and immunoblot analysis of control FLAG immunoprecipitations from solubilised WT membranes.</p><p>
+<bold>Fig. S4.</bold> Comparison of solubilised FLAG&#8208;6803 membranes applied to anti&#8208;FLAG resin versus the flow through that did not bind.</p><p>
+<bold>Fig. S5</bold>. Analysis of the pigment content of the cyanobacterial FLAG&#8208;ChlG coimmunoprecipitation eluates.</p><p>
+<bold>Fig. S6</bold>. Immunodetection of YidC, Ycf39 and HliD in solubilised membranes of different strains used in this study.</p><p>
+<bold>Fig. S7.</bold> Immunoprecipitation eluates from FLAG&#8208;6803 and FLAG&#8208;At strains separated by 2D CN/SDS/PAGE and stained by SYPRO Orange.</p><p>
+<bold>Fig. S8</bold>. Absorbance spectra of three independent FLAG&#8208;7002 ChlG immunoprecipitation eluates.</p><p>
+<bold>Fig. S9.</bold> Gel filtration chromatography of the pre&#8208; and postlight stress eluates.</p><p>
+<bold>Fig. S10.</bold> Relative distribution of the components of the pre&#8208; and postlight stress eluates separated by gel filtration chromatography.</p><p>
+<bold>Table S1.</bold> NCBI accession numbers of chlorophyll synthases from the indicated species.</p><p>
+<bold>Table S2.</bold> Plasmids used in this study.</p><p>
+<bold>Table S3.</bold> Primers used in this study.</p><p>
+<bold>Table S4.</bold> Chlorophyll content of strains used in this study.</p></caption><media xlink:href="FEB2-592-3062-s001.docx"><caption><p>Click here for additional data file.</p></caption></media></supplementary-material></sec></body><back><ack id="feb213222-sec-0020"><title>Acknowledgements</title><p>MSP was funded by a University of Sheffield Faculty of Science Studentship. JWC, PJJ, CNH and AH acknowledge Advanced Award 338895 from the European Research Council (JWC, PJJ and CNH) and award BB/M000265/1 from the Biotechnology and Biological Sciences Research Council (UK) (CNH and AH). MKS and RS were supported by the Ministry of Education of the Czech Republic (project LO1416) and by the Czech Science Foundation (project 17&#8208;08755S).</p></ack><ref-list content-type="cited-references" id="feb213222-bibl-0001"><title>References</title><ref id="feb213222-bib-0001"><label>1</label><mixed-citation publication-type="journal" id="feb213222-cit-0001">
+<string-name>
+<surname>Jordan</surname>
+<given-names>P</given-names>
+</string-name>, <string-name>
+<surname>Fromme</surname>
+<given-names>P</given-names>
+</string-name>, <string-name>
+<surname>Witt</surname>
+<given-names>HT</given-names>
+</string-name>, <string-name>
+<surname>Klukas</surname>
+<given-names>O</given-names>
+</string-name>, <string-name>
+<surname>Saenger</surname>
+<given-names>W</given-names>
+</string-name> and <string-name>
+<surname>Krausz</surname>
+<given-names>N</given-names>
+</string-name> (<year>2001</year>) <article-title>Three&#8208;dimensional structure of cyanobacterial photosystem I at 2.5 &#197; resolution</article-title>. <source xml:lang="en">Nature</source>
+<volume>411</volume>, <fpage>909</fpage>&#8211;<lpage>917</lpage>.<pub-id pub-id-type="pmid">11418848</pub-id></mixed-citation></ref><ref id="feb213222-bib-0002"><label>2</label><mixed-citation publication-type="journal" id="feb213222-cit-0002">
+<string-name>
+<surname>Umena</surname>
+<given-names>Y</given-names>
+</string-name>, <string-name>
+<surname>Kawakami</surname>
+<given-names>K</given-names>
+</string-name>, <string-name>
+<surname>Shen</surname>
+<given-names>J&#8208;R</given-names>
+</string-name> and <string-name>
+<surname>Kamiya</surname>
+<given-names>N</given-names>
+</string-name> (<year>2011</year>) <article-title>Crystal structure of oxygen&#8208;evolving photosystem II at a resolution of 1.9&#197;</article-title>. <source xml:lang="en">Nature</source>
+<volume>473</volume>, <fpage>55</fpage>&#8211;<lpage>60</lpage>.<pub-id pub-id-type="pmid">21499260</pub-id></mixed-citation></ref><ref id="feb213222-bib-0003"><label>3</label><mixed-citation publication-type="journal" id="feb213222-cit-0003">
+<string-name>
+<surname>Wei</surname>
+<given-names>X</given-names>
+</string-name>, <string-name>
+<surname>Su</surname>
+<given-names>X</given-names>
+</string-name>, <string-name>
+<surname>Cao</surname>
+<given-names>P</given-names>
+</string-name>, <string-name>
+<surname>Liu</surname>
+<given-names>X</given-names>
+</string-name>, <string-name>
+<surname>Chang</surname>
+<given-names>W</given-names>
+</string-name>, <string-name>
+<surname>Li</surname>
+<given-names>M</given-names>
+</string-name>, <string-name>
+<surname>Zhang</surname>
+<given-names>X</given-names>
+</string-name> and <string-name>
+<surname>Liu</surname>
+<given-names>Z</given-names>
+</string-name> (<year>2016</year>) <article-title>Structure of spinach photosystem II&#8208;LHCII supercomplex at 3.2 &#197; resolution</article-title>. <source xml:lang="en">Nature</source>
+<volume>534</volume>, <fpage>69</fpage>&#8211;<lpage>74</lpage>.<pub-id pub-id-type="pmid">27251276</pub-id></mixed-citation></ref><ref id="feb213222-bib-0004"><label>4</label><mixed-citation publication-type="journal" id="feb213222-cit-0004">
+<string-name>
+<surname>Mazor</surname>
+<given-names>Y</given-names>
+</string-name>, <string-name>
+<surname>Borovikova</surname>
+<given-names>A</given-names>
+</string-name>, <string-name>
+<surname>Caspy</surname>
+<given-names>I</given-names>
+</string-name> and <string-name>
+<surname>Nelson</surname>
+<given-names>N</given-names>
+</string-name> (<year>2017</year>) <article-title>Structure of the plant photosystem I supercomplex at 2.6 &#197; resolution</article-title>. <source xml:lang="en">Nat Plants</source>
+<volume>3</volume>, <fpage>17014</fpage>.<pub-id pub-id-type="pmid">28248295</pub-id></mixed-citation></ref><ref id="feb213222-bib-0005"><label>5</label><mixed-citation publication-type="journal" id="feb213222-cit-0005">
+<string-name>
+<surname>Nickelsen</surname>
+<given-names>J</given-names>
+</string-name> and <string-name>
+<surname>Rengstl</surname>
+<given-names>B</given-names>
+</string-name> (<year>2013</year>) <article-title>Photosystem II assembly: from cyanobacteria to plants</article-title>. <source xml:lang="en">Annu Rev Plant Biol</source>
+<volume>64</volume>, <fpage>609</fpage>&#8211;<lpage>635</lpage>.<pub-id pub-id-type="pmid">23451783</pub-id></mixed-citation></ref><ref id="feb213222-bib-0006"><label>6</label><mixed-citation publication-type="journal" id="feb213222-cit-0006">
+<string-name>
+<surname>Yang</surname>
+<given-names>H</given-names>
+</string-name>, <string-name>
+<surname>Liu</surname>
+<given-names>J</given-names>
+</string-name>, <string-name>
+<surname>Wen</surname>
+<given-names>X</given-names>
+</string-name> and <string-name>
+<surname>Lu</surname>
+<given-names>C</given-names>
+</string-name> (<year>2015</year>) <article-title>Molecular mechanism of photosystem I assembly in oxygenic organisms</article-title>. <source xml:lang="en">Biochim Biophys Acta</source>
+<volume>1847</volume>, <fpage>838</fpage>&#8211;<lpage>848</lpage>.<pub-id pub-id-type="pmid">25582571</pub-id></mixed-citation></ref><ref id="feb213222-bib-0007"><label>7</label><mixed-citation publication-type="journal" id="feb213222-cit-0007">
+<string-name>
+<surname>Chidgey</surname>
+<given-names>JW</given-names>
+</string-name>, <string-name>
+<surname>Linhartov&#225;</surname>
+<given-names>M</given-names>
+</string-name>, <string-name>
+<surname>Komenda</surname>
+<given-names>J</given-names>
+</string-name>, <string-name>
+<surname>Jackson</surname>
+<given-names>PJ</given-names>
+</string-name>, <string-name>
+<surname>Dickman</surname>
+<given-names>MJ</given-names>
+</string-name>, <string-name>
+<surname>Canniffe</surname>
+<given-names>DP</given-names>
+</string-name>, <string-name>
+<surname>Kon&#237;k</surname>
+<given-names>P</given-names>
+</string-name>, <string-name>
+<surname>Piln&#253;</surname>
+<given-names>J</given-names>
+</string-name>, <string-name>
+<surname>Hunter</surname>
+<given-names>CN</given-names>
+</string-name> and <string-name>
+<surname>Sobotka</surname>
+<given-names>R</given-names>
+</string-name> (<year>2014</year>) <article-title>A cyanobacterial chlorophyll synthase&#8208;HliD complex associates with the Ycf39 protein and the YidC/Alb3 insertase</article-title>. <source xml:lang="en">Plant Cell</source>
+<volume>26</volume>, <fpage>1267</fpage>&#8211;<lpage>1279</lpage>.<pub-id pub-id-type="pmid">24681617</pub-id></mixed-citation></ref><ref id="feb213222-bib-0008"><label>8</label><mixed-citation publication-type="journal" id="feb213222-cit-0008">
+<string-name>
+<surname>Komenda</surname>
+<given-names>J</given-names>
+</string-name> and <string-name>
+<surname>Sobotka</surname>
+<given-names>R</given-names>
+</string-name> (<year>2016</year>) <article-title>Cyanobacterial high&#8208;light&#8208;inducible proteins &#8208; Protectors of chlorophyll&#8208;protein synthesis and assembly</article-title>. <source xml:lang="en">Biochim Biophys Acta</source>
+<volume>1857</volume>, <fpage>288</fpage>&#8211;<lpage>295</lpage>.<pub-id pub-id-type="pmid">26341017</pub-id></mixed-citation></ref><ref id="feb213222-bib-0009"><label>9</label><mixed-citation publication-type="journal" id="feb213222-cit-0009">
+<string-name>
+<surname>Bhaya</surname>
+<given-names>D</given-names>
+</string-name>, <string-name>
+<surname>Dufresne</surname>
+<given-names>A</given-names>
+</string-name>, <string-name>
+<surname>Vaulot</surname>
+<given-names>D</given-names>
+</string-name> and <string-name>
+<surname>Grossman</surname>
+<given-names>A</given-names>
+</string-name> (<year>2002</year>) <article-title>Analysis of the hli gene family in marine and freshwater cyanobacteria</article-title>. <source xml:lang="en">FEMS Microbiol Lett</source>
+<volume>215</volume>, <fpage>209</fpage>&#8211;<lpage>219</lpage>.<pub-id pub-id-type="pmid">12399037</pub-id></mixed-citation></ref><ref id="feb213222-bib-0010"><label>10</label><mixed-citation publication-type="journal" id="feb213222-cit-0010">
+<string-name>
+<surname>Staleva</surname>
+<given-names>H</given-names>
+</string-name>, <string-name>
+<surname>Komenda</surname>
+<given-names>J</given-names>
+</string-name>, <string-name>
+<surname>Shukla</surname>
+<given-names>MK</given-names>
+</string-name>, <string-name>
+<surname>&#352;louf</surname>
+<given-names>V</given-names>
+</string-name>, <string-name>
+<surname>Ka&#328;a</surname>
+<given-names>R</given-names>
+</string-name>, <string-name>
+<surname>Pol&#237;vka</surname>
+<given-names>T</given-names>
+</string-name> and <string-name>
+<surname>Sobotka</surname>
+<given-names>R</given-names>
+</string-name> (<year>2015</year>) <article-title>Mechanism of photoprotection in the cyanobacterial ancestor of plant antenna proteins</article-title>. <source xml:lang="en">Nat Chem Biol</source>
+<volume>11</volume>, <fpage>287</fpage>&#8211;<lpage>291</lpage>.<pub-id pub-id-type="pmid">25706339</pub-id></mixed-citation></ref><ref id="feb213222-bib-0011"><label>11</label><mixed-citation publication-type="journal" id="feb213222-cit-0011">
+<string-name>
+<surname>Niedzwiedzki</surname>
+<given-names>DM</given-names>
+</string-name>, <string-name>
+<surname>Tronina</surname>
+<given-names>T</given-names>
+</string-name>, <string-name>
+<surname>Liu</surname>
+<given-names>H</given-names>
+</string-name>, <string-name>
+<surname>Staleva</surname>
+<given-names>H</given-names>
+</string-name>, <string-name>
+<surname>Komenda</surname>
+<given-names>J</given-names>
+</string-name>, <string-name>
+<surname>Sobotka</surname>
+<given-names>R</given-names>
+</string-name>, <string-name>
+<surname>Blankenship</surname>
+<given-names>RE</given-names>
+</string-name> and <string-name>
+<surname>Pol&#237;vka</surname>
+<given-names>T</given-names>
+</string-name> (<year>2016</year>) <article-title>Carotenoid&#8208;induced non&#8208;photochemical quenching in the cyanobacterial chlorophyll synthase&#8208;HliC/D complex</article-title>. <source xml:lang="en">Biochim Biophys Acta</source>
+<volume>1857</volume>, <fpage>1430</fpage>&#8211;<lpage>1439</lpage>.<pub-id pub-id-type="pmid">27133505</pub-id></mixed-citation></ref><ref id="feb213222-bib-0012"><label>12</label><mixed-citation publication-type="journal" id="feb213222-cit-0012">
+<string-name>
+<surname>Kallberg</surname>
+<given-names>Y</given-names>
+</string-name>, <string-name>
+<surname>Oppermann</surname>
+<given-names>U</given-names>
+</string-name>, <string-name>
+<surname>J&#246;rnvall</surname>
+<given-names>H</given-names>
+</string-name> and <string-name>
+<surname>Persson</surname>
+<given-names>B</given-names>
+</string-name> (<year>2002</year>) <article-title>Short&#8208;chain dehydrogenases/reductases (SDRs). Coenzyme&#8208;based functional assignments in completed genomes</article-title>. <source xml:lang="en">Eur J Biochem</source>
+<volume>269</volume>, <fpage>4409</fpage>&#8211;<lpage>4417</lpage>.<pub-id pub-id-type="pmid">12230552</pub-id></mixed-citation></ref><ref id="feb213222-bib-0013"><label>13</label><mixed-citation publication-type="journal" id="feb213222-cit-0013">
+<string-name>
+<surname>Knoppov&#225;</surname>
+<given-names>J</given-names>
+</string-name>, <string-name>
+<surname>Sobotka</surname>
+<given-names>R</given-names>
+</string-name>, <string-name>
+<surname>Tich&#253;</surname>
+<given-names>M</given-names>
+</string-name>, <string-name>
+<surname>Yu</surname>
+<given-names>J</given-names>
+</string-name>, <string-name>
+<surname>Konik</surname>
+<given-names>P</given-names>
+</string-name>, <string-name>
+<surname>Halada</surname>
+<given-names>P</given-names>
+</string-name>, <string-name>
+<surname>Nixon</surname>
+<given-names>PJ</given-names>
+</string-name> and <string-name>
+<surname>Komenda</surname>
+<given-names>J</given-names>
+</string-name> (<year>2014</year>) <article-title>Discovery of a chlorophyll binding protein complex involved in the early steps of photosystem II assembly in <italic>Synechocystis</italic>
+</article-title>. <source xml:lang="en">Plant Cell</source>
+<volume>26</volume>, <fpage>1200</fpage>&#8211;<lpage>1212</lpage>.<pub-id pub-id-type="pmid">24681620</pub-id></mixed-citation></ref><ref id="feb213222-bib-0014"><label>14</label><mixed-citation publication-type="journal" id="feb213222-cit-0014">
+<string-name>
+<surname>Beck</surname>
+<given-names>K</given-names>
+</string-name>, <string-name>
+<surname>Eisner</surname>
+<given-names>G</given-names>
+</string-name>, <string-name>
+<surname>Trescher</surname>
+<given-names>D</given-names>
+</string-name>, <string-name>
+<surname>Dalbey</surname>
+<given-names>RE</given-names>
+</string-name>, <string-name>
+<surname>Brunner</surname>
+<given-names>J</given-names>
+</string-name> and <string-name>
+<surname>M&#252;ller</surname>
+<given-names>M</given-names>
+</string-name> (<year>2001</year>) <article-title>YidC, an assembly site for polytopic Escherichia coli membrane proteins located in immediate proximity to the SecYE translocon and lipids</article-title>. <source xml:lang="en">EMBO Rep</source>
+<volume>2</volume>, <fpage>709</fpage>&#8211;<lpage>714</lpage>.<pub-id pub-id-type="pmid">11463745</pub-id></mixed-citation></ref><ref id="feb213222-bib-0015"><label>15</label><mixed-citation publication-type="journal" id="feb213222-cit-0015">
+<string-name>
+<surname>Nagamori</surname>
+<given-names>S</given-names>
+</string-name>, <string-name>
+<surname>Smirnova</surname>
+<given-names>IN</given-names>
+</string-name> and <string-name>
+<surname>Kaback</surname>
+<given-names>HR</given-names>
+</string-name> (<year>2004</year>) <article-title>Role of YidC in folding of polytopic membrane proteins</article-title>. <source xml:lang="en">J Cell Biol</source>
+<volume>165</volume>, <fpage>53</fpage>&#8211;<lpage>62</lpage>.<pub-id pub-id-type="pmid">15067017</pub-id></mixed-citation></ref><ref id="feb213222-bib-0016"><label>16</label><mixed-citation publication-type="journal" id="feb213222-cit-0016">
+<string-name>
+<surname>Spence</surname>
+<given-names>E</given-names>
+</string-name>, <string-name>
+<surname>Bailey</surname>
+<given-names>S</given-names>
+</string-name>, <string-name>
+<surname>Nenninger</surname>
+<given-names>A</given-names>
+</string-name>, <string-name>
+<surname>M&#248;ller</surname>
+<given-names>SG</given-names>
+</string-name> and <string-name>
+<surname>Robinson</surname>
+<given-names>C</given-names>
+</string-name> (<year>2004</year>) <article-title>A homolog of Albino3/OxaI is essential for thylakoid biogenesis in the cyanobacterium <italic>Synechocystis</italic> sp. PCC6803</article-title>. <source xml:lang="en">J Biol Chem</source>
+<volume>279</volume>, <fpage>55792</fpage>&#8211;<lpage>55800</lpage>.<pub-id pub-id-type="pmid">15498761</pub-id></mixed-citation></ref><ref id="feb213222-bib-0017"><label>17</label><mixed-citation publication-type="journal" id="feb213222-cit-0017">
+<string-name>
+<surname>G&#246;hre</surname>
+<given-names>V</given-names>
+</string-name>, <string-name>
+<surname>Ossenb&#252;hl</surname>
+<given-names>F</given-names>
+</string-name>, <string-name>
+<surname>Cr&#232;vecoeur</surname>
+<given-names>M</given-names>
+</string-name>, <string-name>
+<surname>Eichacker</surname>
+<given-names>LA</given-names>
+</string-name> and <string-name>
+<surname>Rochaix</surname>
+<given-names>J&#8208;D</given-names>
+</string-name> (<year>2006</year>) <article-title>One of two Alb3 proteins is essential for the assembly of the photosystems and for cell survival in <italic>Chlamydomonas</italic>
+</article-title>. <source xml:lang="en">Plant Cell</source>
+<volume>18</volume>, <fpage>1454</fpage>&#8211;<lpage>1466</lpage>.<pub-id pub-id-type="pmid">16679460</pub-id></mixed-citation></ref><ref id="feb213222-bib-0018"><label>18</label><mixed-citation publication-type="journal" id="feb213222-cit-0018">
+<string-name>
+<surname>Larkin</surname>
+<given-names>MA</given-names>
+</string-name>, <string-name>
+<surname>Blackshields</surname>
+<given-names>G</given-names>
+</string-name>, <string-name>
+<surname>Brown</surname>
+<given-names>NP</given-names>
+</string-name>, <string-name>
+<surname>Chenna</surname>
+<given-names>R</given-names>
+</string-name>, <string-name>
+<surname>McGettigan</surname>
+<given-names>PA</given-names>
+</string-name>, <string-name>
+<surname>McWilliam</surname>
+<given-names>H</given-names>
+</string-name>, <string-name>
+<surname>Valentin</surname>
+<given-names>F</given-names>
+</string-name>, <string-name>
+<surname>Wallace</surname>
+<given-names>IM</given-names>
+</string-name>, <string-name>
+<surname>Wilm</surname>
+<given-names>A</given-names>
+</string-name>, <string-name>
+<surname>Lopez</surname>
+<given-names>R</given-names>
+</string-name>
+<italic>et al</italic> (<year>2007</year>) <article-title>Clustal W and Clustal X version 2.0</article-title>. <source xml:lang="en">Bioinformatics</source>
+<volume>23</volume>, <fpage>2947</fpage>&#8211;<lpage>2948</lpage>.<pub-id pub-id-type="pmid">17846036</pub-id></mixed-citation></ref><ref id="feb213222-bib-0019"><label>19</label><mixed-citation publication-type="journal" id="feb213222-cit-0019">
+<string-name>
+<surname>Kearse</surname>
+<given-names>M</given-names>
+</string-name>, <string-name>
+<surname>Moir</surname>
+<given-names>R</given-names>
+</string-name>, <string-name>
+<surname>Wilson</surname>
+<given-names>A</given-names>
+</string-name>, <string-name>
+<surname>Stones&#8208;Havas</surname>
+<given-names>S</given-names>
+</string-name>, <string-name>
+<surname>Cheung</surname>
+<given-names>M</given-names>
+</string-name>, <string-name>
+<surname>Sturrock</surname>
+<given-names>S</given-names>
+</string-name>, <string-name>
+<surname>Buxton</surname>
+<given-names>S</given-names>
+</string-name>, <string-name>
+<surname>Cooper</surname>
+<given-names>A</given-names>
+</string-name>, <string-name>
+<surname>Markowitz</surname>
+<given-names>S</given-names>
+</string-name>, <string-name>
+<surname>Duran</surname>
+<given-names>C</given-names>
+</string-name>
+<italic>et al</italic> (<year>2012</year>) <article-title>Geneious basic: an integrated and extendable desktop software platform for the organization and analysis of sequence data</article-title>. <source xml:lang="en">Bioinformatics</source>
+<volume>28</volume>, <fpage>1647</fpage>&#8211;<lpage>1649</lpage>.<pub-id pub-id-type="pmid">22543367</pub-id></mixed-citation></ref><ref id="feb213222-bib-0020"><label>20</label><mixed-citation publication-type="journal" id="feb213222-cit-0020">
+<string-name>
+<surname>Rippka</surname>
+<given-names>R</given-names>
+</string-name>, <string-name>
+<surname>Derueles</surname>
+<given-names>J</given-names>
+</string-name>, <string-name>
+<surname>Waterbury</surname>
+<given-names>JB</given-names>
+</string-name>, <string-name>
+<surname>Herdman</surname>
+<given-names>M</given-names>
+</string-name> and <string-name>
+<surname>Stainer</surname>
+<given-names>RY</given-names>
+</string-name> (<year>1979</year>) <article-title>Generic assignments, strain histories and properties of pure cultures of cyanobacteria</article-title>. <source xml:lang="en">J Gen Microbiol</source>
+<volume>111</volume>, <fpage>1</fpage>&#8211;<lpage>61</lpage>.</mixed-citation></ref><ref id="feb213222-bib-0021"><label>21</label><mixed-citation publication-type="journal" id="feb213222-cit-0021">
+<string-name>
+<surname>Emanuelsson</surname>
+<given-names>O</given-names>
+</string-name>, <string-name>
+<surname>Nielsen</surname>
+<given-names>H</given-names>
+</string-name> and <string-name>
+<surname>von Heijne</surname>
+<given-names>G</given-names>
+</string-name> (<year>1999</year>) <article-title>ChloroP, a neural network&#8208;based method for predicting chloroplast transit peptides and their cleavage sites</article-title>. <source xml:lang="en">Protein Sci</source>
+<volume>8</volume>, <fpage>978</fpage>&#8211;<lpage>984</lpage>.<pub-id pub-id-type="pmid">10338008</pub-id></mixed-citation></ref><ref id="feb213222-bib-0022"><label>22</label><mixed-citation publication-type="journal" id="feb213222-cit-0022">
+<string-name>
+<surname>Hollingshead</surname>
+<given-names>S</given-names>
+</string-name>, <string-name>
+<surname>Kope&#269;n&#225;</surname>
+<given-names>J</given-names>
+</string-name>, <string-name>
+<surname>Jackson</surname>
+<given-names>PJ</given-names>
+</string-name>, <string-name>
+<surname>Canniffe</surname>
+<given-names>DP</given-names>
+</string-name>, <string-name>
+<surname>Davison</surname>
+<given-names>PA</given-names>
+</string-name>, <string-name>
+<surname>Dickman</surname>
+<given-names>MJ</given-names>
+</string-name>, <string-name>
+<surname>Sobotka</surname>
+<given-names>R</given-names>
+</string-name> and <string-name>
+<surname>Hunter</surname>
+<given-names>CN</given-names>
+</string-name> (<year>2012</year>) <article-title>Conserved chloroplast open&#8208;reading frame <italic>ycf54</italic> is required for activity of the magnesium protoporphyrin monomethylester oxidative cyclase in <italic>Synechocystis</italic> PCC 6803</article-title>. <source xml:lang="en">J Biol Chem</source>
+<volume>287</volume>, <fpage>27823</fpage>&#8211;<lpage>27833</lpage>.<pub-id pub-id-type="pmid">22711541</pub-id></mixed-citation></ref><ref id="feb213222-bib-0023"><label>23</label><mixed-citation publication-type="journal" id="feb213222-cit-0023">
+<string-name>
+<surname>Largarde</surname>
+<given-names>D</given-names>
+</string-name> and <string-name>
+<surname>Vermaas</surname>
+<given-names>W</given-names>
+</string-name> (<year>1999</year>) <article-title>The zeaxanthin biosynthesis enzyme beta&#8208;carotene hydroxylase is involved in myxoxanthophyll synthesis in <italic>Synechocystis</italic> sp. PCC 6803</article-title>. <source xml:lang="en">FEBS Lett</source>
+<volume>454</volume>, <fpage>247</fpage>&#8211;<lpage>251</lpage>.<pub-id pub-id-type="pmid">10431816</pub-id></mixed-citation></ref><ref id="feb213222-bib-0024"><label>24</label><mixed-citation publication-type="journal" id="feb213222-cit-0024">
+<string-name>
+<surname>Porra</surname>
+<given-names>RJ</given-names>
+</string-name>, <string-name>
+<surname>Thompson</surname>
+<given-names>WA</given-names>
+</string-name> and <string-name>
+<surname>Kriedemann</surname>
+<given-names>PE</given-names>
+</string-name> (<year>1989</year>) <article-title>Determination of accurate extinction coefficients and simultaneous equations for assaying chlorophylls <italic>a</italic> and <italic>b</italic> extracted with four different solvents: verification of the concentration of chlorophyll standards by atomic absorption spectroscopy</article-title>. <source xml:lang="en">Biochim Biophys Acta</source>
+<volume>975</volume>, <fpage>384</fpage>&#8211;<lpage>394</lpage>.</mixed-citation></ref><ref id="feb213222-bib-0025"><label>25</label><mixed-citation publication-type="journal" id="feb213222-cit-0025">
+<string-name>
+<surname>Piln&#253;</surname>
+<given-names>J</given-names>
+</string-name>, <string-name>
+<surname>Kope&#269;n&#225;</surname>
+<given-names>J</given-names>
+</string-name>, <string-name>
+<surname>Noda</surname>
+<given-names>J</given-names>
+</string-name> and <string-name>
+<surname>Sobotka</surname>
+<given-names>R</given-names>
+</string-name> (<year>2015</year>) <article-title>Detection and quantification of heme and chlorophyll precursors using a high performance liquid chromatography (HPLC) system equipped with two fluorescence detectors</article-title>. <source xml:lang="en">Bio&#8208;Protocol</source>
+<volume>5</volume>, <fpage>e1390</fpage>.</mixed-citation></ref><ref id="feb213222-bib-0026"><label>26</label><mixed-citation publication-type="journal" id="feb213222-cit-0026">
+<string-name>
+<surname>Oster</surname>
+<given-names>U</given-names>
+</string-name>, <string-name>
+<surname>Bauer</surname>
+<given-names>CE</given-names>
+</string-name> and <string-name>
+<surname>R&#252;diger</surname>
+<given-names>W</given-names>
+</string-name> (<year>1997</year>) <article-title>Characterization of chlorophyll a and bacteriochlorophyll a synthases by heterologous expression in <italic>Escherichia coli</italic>
+</article-title>. <source xml:lang="en">J Biol Chem</source>
+<volume>272</volume>, <fpage>9671</fpage>&#8211;<lpage>9676</lpage>&#8211;635.<pub-id pub-id-type="pmid">9092496</pub-id></mixed-citation></ref><ref id="feb213222-bib-0027"><label>27</label><mixed-citation publication-type="journal" id="feb213222-cit-0027">
+<string-name>
+<surname>Kim</surname>
+<given-names>J</given-names>
+</string-name>, <string-name>
+<surname>Klein</surname>
+<given-names>PG</given-names>
+</string-name> and <string-name>
+<surname>Mullet</surname>
+<given-names>JE</given-names>
+</string-name> (<year>1994</year>) <article-title>Synthesis and turnover of photosystem II reaction center protein D1. Ribosome pausing increases during chloroplast development</article-title>. <source xml:lang="en">J Biol Chem</source>
+<volume>269</volume>, <fpage>17918</fpage>&#8211;<lpage>17923</lpage>.<pub-id pub-id-type="pmid">8027048</pub-id></mixed-citation></ref><ref id="feb213222-bib-0028"><label>28</label><mixed-citation publication-type="journal" id="feb213222-cit-0028">
+<string-name>
+<surname>Zhang</surname>
+<given-names>L</given-names>
+</string-name>, <string-name>
+<surname>Paakkarinen</surname>
+<given-names>V</given-names>
+</string-name>, <string-name>
+<surname>van Wijk</surname>
+<given-names>KJ</given-names>
+</string-name> and <string-name>
+<surname>Aro</surname>
+<given-names>E&#8208;M</given-names>
+</string-name> (<year>1999</year>) <article-title>Co&#8208;translational assembly of the D1 protein into photosystem II</article-title>. <source xml:lang="en">J Biol Chem</source>
+<volume>274</volume>, <fpage>16062</fpage>&#8211;<lpage>16067</lpage>.<pub-id pub-id-type="pmid">10347157</pub-id></mixed-citation></ref><ref id="feb213222-bib-0029"><label>29</label><mixed-citation publication-type="journal" id="feb213222-cit-0029">
+<string-name>
+<surname>Funk</surname>
+<given-names>C</given-names>
+</string-name> and <string-name>
+<surname>Vermaas</surname>
+<given-names>W</given-names>
+</string-name> (<year>1999</year>) <article-title>A cyanobacterial gene family coding for single&#8208;helix proteins resembling part of the light&#8208;harvesting proteins from higher plants</article-title>. <source xml:lang="en">Biochemistry</source>
+<volume>38</volume>, <fpage>9397</fpage>&#8211;<lpage>9404</lpage>.<pub-id pub-id-type="pmid">10413515</pub-id></mixed-citation></ref><ref id="feb213222-bib-0030"><label>30</label><mixed-citation publication-type="journal" id="feb213222-cit-0030">
+<string-name>
+<surname>Xu</surname>
+<given-names>H</given-names>
+</string-name>, <string-name>
+<surname>Vavilin</surname>
+<given-names>D</given-names>
+</string-name>, <string-name>
+<surname>Funk</surname>
+<given-names>C</given-names>
+</string-name> and <string-name>
+<surname>Vermaas</surname>
+<given-names>W</given-names>
+</string-name> (<year>2004</year>) <article-title>Multiple deletions of small cab&#8208;like proteins in the cyanobacterium <italic>Synechocystis</italic> sp. PCC 6803. Consequences for pigment biosynthesis and accumulation</article-title>. <source xml:lang="en">J Biol Chem</source>
+<volume>279</volume>, <fpage>27971</fpage>&#8211;<lpage>27979</lpage>.<pub-id pub-id-type="pmid">15107425</pub-id></mixed-citation></ref><ref id="feb213222-bib-0031"><label>31</label><mixed-citation publication-type="journal" id="feb213222-cit-0031">
+<string-name>
+<surname>Sinha</surname>
+<given-names>RK</given-names>
+</string-name>, <string-name>
+<surname>Komenda</surname>
+<given-names>J</given-names>
+</string-name>, <string-name>
+<surname>Knoppov&#225;</surname>
+<given-names>J</given-names>
+</string-name>, <string-name>
+<surname>Sedl&#225;&#345;ov&#225;</surname>
+<given-names>M</given-names>
+</string-name> and <string-name>
+<surname>Posp&#237;&#353;il</surname>
+<given-names>P</given-names>
+</string-name> (<year>2012</year>) <article-title>Small CAB&#8208;like proteins prevent formation of singlet oxygen in the damaged photosystem II complex of the cyanobacterium <italic>Synechocystis</italic> sp. PCC 6803</article-title>. <source xml:lang="en">Plant, Cell Environ</source>
+<volume>35</volume>, <fpage>806</fpage>&#8211;<lpage>818</lpage>.<pub-id pub-id-type="pmid">22070528</pub-id></mixed-citation></ref><ref id="feb213222-bib-0032"><label>32</label><mixed-citation publication-type="journal" id="feb213222-cit-0032">
+<string-name>
+<surname>Beck</surname>
+<given-names>J</given-names>
+</string-name>, <string-name>
+<surname>Lohscheider</surname>
+<given-names>JN</given-names>
+</string-name>, <string-name>
+<surname>Albert</surname>
+<given-names>S</given-names>
+</string-name>, <string-name>
+<surname>Andersson</surname>
+<given-names>U</given-names>
+</string-name>, <string-name>
+<surname>Mendgen</surname>
+<given-names>KW</given-names>
+</string-name>, <string-name>
+<surname>Rojas&#8208;St&#252;tz</surname>
+<given-names>MC</given-names>
+</string-name>, <string-name>
+<surname>Adamska</surname>
+<given-names>I</given-names>
+</string-name> and <string-name>
+<surname>Funck</surname>
+<given-names>D</given-names>
+</string-name> (<year>2017</year>) <article-title>Small one&#8208;helix proteins are essential for photosynthesis in arabidopsis</article-title>. <source xml:lang="en">Front Plant Sci</source>
+<volume>8</volume>, <fpage>1</fpage>&#8211;<lpage>14</lpage>.<pub-id pub-id-type="pmid">28220127</pub-id></mixed-citation></ref><ref id="feb213222-bib-0033"><label>33</label><mixed-citation publication-type="journal" id="feb213222-cit-0033">
+<string-name>
+<surname>Myouga</surname>
+<given-names>F</given-names>
+</string-name>, <string-name>
+<surname>Takahashi</surname>
+<given-names>K</given-names>
+</string-name>, <string-name>
+<surname>Tanaka</surname>
+<given-names>R</given-names>
+</string-name>, <string-name>
+<surname>Nagata</surname>
+<given-names>N</given-names>
+</string-name>, <string-name>
+<surname>Kiss</surname>
+<given-names>AZ</given-names>
+</string-name>, <string-name>
+<surname>Funk</surname>
+<given-names>C</given-names>
+</string-name>, <string-name>
+<surname>Nomura</surname>
+<given-names>Y</given-names>
+</string-name>, <string-name>
+<surname>Nakagami</surname>
+<given-names>H</given-names>
+</string-name>, <string-name>
+<surname>Jansson</surname>
+<given-names>S</given-names>
+</string-name> and <string-name>
+<surname>Shinozaki</surname>
+<given-names>K</given-names>
+</string-name> (<year>2018</year>) <article-title>Stable accumulation of photosystem II requires ONE&#8208;HELIX PROTEIN1 (OHP1) of the light harvesting&#8208;like family</article-title>. <source xml:lang="en">Plant Physiol</source>
+<volume>176</volume>, <fpage>2277</fpage>&#8211;<lpage>2291</lpage>.<pub-id pub-id-type="pmid">29438089</pub-id></mixed-citation></ref><ref id="feb213222-bib-0034"><label>34</label><mixed-citation publication-type="journal" id="feb213222-cit-0034">
+<string-name>
+<surname>Tanaka</surname>
+<given-names>R</given-names>
+</string-name>, <string-name>
+<surname>Rothbart</surname>
+<given-names>M</given-names>
+</string-name>, <string-name>
+<surname>Oka</surname>
+<given-names>S</given-names>
+</string-name>, <string-name>
+<surname>Takabayashi</surname>
+<given-names>A</given-names>
+</string-name>, <string-name>
+<surname>Takahashi</surname>
+<given-names>K</given-names>
+</string-name>, <string-name>
+<surname>Shibata</surname>
+<given-names>M</given-names>
+</string-name>, <string-name>
+<surname>Myouga</surname>
+<given-names>F</given-names>
+</string-name>, <string-name>
+<surname>Motohashi</surname>
+<given-names>R</given-names>
+</string-name>, <string-name>
+<surname>Shinozaki</surname>
+<given-names>K</given-names>
+</string-name>, <string-name>
+<surname>Grimm</surname>
+<given-names>B</given-names>
+</string-name>
+<italic>et al</italic> (<year>2010</year>) <article-title>LIL3, a light&#8208;harvesting&#8208;like protein, plays an essential role in chlorophyll and tocopherol biosynthesis</article-title>. <source xml:lang="en">Proc Natl Acad Sci USA</source>
+<volume>107</volume>, <fpage>16721</fpage>&#8211;<lpage>16725</lpage>.<pub-id pub-id-type="pmid">20823244</pub-id></mixed-citation></ref><ref id="feb213222-bib-0035"><label>35</label><mixed-citation publication-type="journal" id="feb213222-cit-0035">
+<string-name>
+<surname>Mork&#8208;Jansson</surname>
+<given-names>A</given-names>
+</string-name>, <string-name>
+<surname>Bue</surname>
+<given-names>AK</given-names>
+</string-name>, <string-name>
+<surname>Gargano</surname>
+<given-names>D</given-names>
+</string-name>, <string-name>
+<surname>Furnes</surname>
+<given-names>C</given-names>
+</string-name>, <string-name>
+<surname>Reisinger</surname>
+<given-names>V</given-names>
+</string-name>, <string-name>
+<surname>Arnold</surname>
+<given-names>J</given-names>
+</string-name>, <string-name>
+<surname>Kmiec</surname>
+<given-names>K</given-names>
+</string-name> and <string-name>
+<surname>Eichacker</surname>
+<given-names>LA</given-names>
+</string-name> (<year>2015</year>) <article-title>Lil3 assembles with proteins regulating chlorophyll synthesis in barley</article-title>. <source xml:lang="en">PLoS ONE</source>
+<volume>10</volume>, <fpage>e0133145</fpage>.<pub-id pub-id-type="pmid">26172838</pub-id></mixed-citation></ref><ref id="feb213222-bib-0036"><label>36</label><mixed-citation publication-type="journal" id="feb213222-cit-0036">
+<string-name>
+<surname>Hey</surname>
+<given-names>D</given-names>
+</string-name>, <string-name>
+<surname>Rothbart</surname>
+<given-names>M</given-names>
+</string-name>, <string-name>
+<surname>Herbst</surname>
+<given-names>J</given-names>
+</string-name>, <string-name>
+<surname>Wang</surname>
+<given-names>P</given-names>
+</string-name>, <string-name>
+<surname>M&#252;ller</surname>
+<given-names>J</given-names>
+</string-name>, <string-name>
+<surname>Wittmann</surname>
+<given-names>D</given-names>
+</string-name>, <string-name>
+<surname>Gruhl</surname>
+<given-names>K</given-names>
+</string-name> and <string-name>
+<surname>Grimm</surname>
+<given-names>B</given-names>
+</string-name> (<year>2017</year>) <article-title>LIL3, a light&#8208;harvesting complex protein, links terpenoid and tetrapyrrole biosynthesis in <italic>Arabidopsis thaliana</italic>
+</article-title>. <source xml:lang="en">Plant Physiol</source>
+<volume>174</volume>, <fpage>1037</fpage>&#8211;<lpage>1050</lpage>.<pub-id pub-id-type="pmid">28432258</pub-id></mixed-citation></ref><ref id="feb213222-bib-0037"><label>37</label><mixed-citation publication-type="journal" id="feb213222-cit-0037">
+<string-name>
+<surname>Link</surname>
+<given-names>S</given-names>
+</string-name>, <string-name>
+<surname>Engelmann</surname>
+<given-names>K</given-names>
+</string-name>, <string-name>
+<surname>Meierhoff</surname>
+<given-names>K</given-names>
+</string-name> and <string-name>
+<surname>Westhoff</surname>
+<given-names>P</given-names>
+</string-name> (<year>2012</year>) <article-title>The atypical short&#8208;chain dehydrogenases HCF173 and HCF244 are jointly involved in translational initiation of the psbA mRNA of <italic>Arabidopsis</italic>
+</article-title>. <source xml:lang="en">Plant Physiol</source>
+<volume>160</volume>, <fpage>2202</fpage>&#8211;<lpage>2218</lpage>.<pub-id pub-id-type="pmid">23027666</pub-id></mixed-citation></ref><ref id="feb213222-bib-0038"><label>38</label><mixed-citation publication-type="journal" id="feb213222-cit-0038">
+<string-name>
+<surname>Ermakova&#8208;Gerdes</surname>
+<given-names>S</given-names>
+</string-name> and <string-name>
+<surname>Vermaas</surname>
+<given-names>W</given-names>
+</string-name> (<year>1999</year>) <article-title>Inactivation of the open reading frame slr0399 in <italic>Synechocystis</italic> sp. PCC 6803 functionally complements mutations near the Q A niche of photosystem II</article-title>. <source xml:lang="en">J Biol Chem</source>
+<volume>274</volume>, <fpage>30540</fpage>&#8211;<lpage>30549</lpage>.<pub-id pub-id-type="pmid">10521436</pub-id></mixed-citation></ref><ref id="feb213222-bib-0039"><label>39</label><mixed-citation publication-type="journal" id="feb213222-cit-0039">
+<string-name>
+<surname>Mothersole</surname>
+<given-names>DJ</given-names>
+</string-name>, <string-name>
+<surname>Jackson</surname>
+<given-names>PJ</given-names>
+</string-name>, <string-name>
+<surname>Vasilev</surname>
+<given-names>C</given-names>
+</string-name>, <string-name>
+<surname>Tucker</surname>
+<given-names>JD</given-names>
+</string-name>, <string-name>
+<surname>Brindley</surname>
+<given-names>AA</given-names>
+</string-name>, <string-name>
+<surname>Dickman</surname>
+<given-names>MJ</given-names>
+</string-name> and <string-name>
+<surname>Hunter</surname>
+<given-names>CN</given-names>
+</string-name> (<year>2016</year>) <article-title>PucC and LhaA direct efficient assembly of the light&#8208;harvesting complexes in Rhodobacter sphaeroides</article-title>. <source xml:lang="en">Mol Microbiol</source>
+<volume>99</volume>, <fpage>307</fpage>&#8211;<lpage>327</lpage>.<pub-id pub-id-type="pmid">26419219</pub-id></mixed-citation></ref><ref id="feb213222-bib-0040"><label>40</label><mixed-citation publication-type="journal" id="feb213222-cit-0040">
+<string-name>
+<surname>Samuelson</surname>
+<given-names>JC</given-names>
+</string-name>, <string-name>
+<surname>Chen</surname>
+<given-names>M</given-names>
+</string-name>, <string-name>
+<surname>Jiang</surname>
+<given-names>F</given-names>
+</string-name>, <string-name>
+<surname>Moller</surname>
+<given-names>I</given-names>
+</string-name>, <string-name>
+<surname>Wiedmann</surname>
+<given-names>M</given-names>
+</string-name>, <string-name>
+<surname>Kuhn</surname>
+<given-names>A</given-names>
+</string-name>, <string-name>
+<surname>Phillips</surname>
+<given-names>GJ</given-names>
+</string-name> and <string-name>
+<surname>Dalbey</surname>
+<given-names>RE</given-names>
+</string-name> (<year>2000</year>) <article-title>YidC mediates membrane protein insertion in bacteria</article-title>. <source xml:lang="en">Nature</source>
+<volume>406</volume>, <fpage>637</fpage>&#8211;<lpage>641</lpage>.<pub-id pub-id-type="pmid">10949305</pub-id></mixed-citation></ref><ref id="feb213222-bib-0041"><label>41</label><mixed-citation publication-type="journal" id="feb213222-cit-0041">
+<string-name>
+<surname>Sobotka</surname>
+<given-names>R</given-names>
+</string-name> (<year>2014</year>) <article-title>Making proteins green; biosynthesis of chlorophyll&#8208;binding proteins in cyanobacteria</article-title>. <source xml:lang="en">Photosynth Res</source>
+<volume>119</volume>, <fpage>222</fpage>&#8211;<lpage>232</lpage>.</mixed-citation></ref><ref id="feb213222-bib-0042"><label>42</label><mixed-citation publication-type="journal" id="feb213222-cit-0042">
+<string-name>
+<surname>Gerdes</surname>
+<given-names>L</given-names>
+</string-name>, <string-name>
+<surname>Bais</surname>
+<given-names>T</given-names>
+</string-name>, <string-name>
+<surname>Klostermann</surname>
+<given-names>E</given-names>
+</string-name>, <string-name>
+<surname>Karl</surname>
+<given-names>M</given-names>
+</string-name>, <string-name>
+<surname>Phillippar</surname>
+<given-names>K</given-names>
+</string-name>, <string-name>
+<surname>H&#252;nken</surname>
+<given-names>M</given-names>
+</string-name>, <string-name>
+<surname>Soll</surname>
+<given-names>J</given-names>
+</string-name> and <string-name>
+<surname>Sch&#252;nemann</surname>
+<given-names>D</given-names>
+</string-name> (<year>2006</year>) <article-title>A second thylakoid membrane&#8208;localized Alb3/OxaI/YidC homologue is involved in proper chloroplast biogenesis in <italic>Arabidopsis thaliana</italic>
+</article-title>. <source xml:lang="en">J Biol Chem</source>
+<volume>281</volume>, <fpage>16632</fpage>&#8211;<lpage>16642</lpage>.<pub-id pub-id-type="pmid">16595657</pub-id></mixed-citation></ref><ref id="feb213222-bib-0043"><label>43</label><mixed-citation publication-type="journal" id="feb213222-cit-0043">
+<string-name>
+<surname>B&#233;dard</surname>
+<given-names>J</given-names>
+</string-name>, <string-name>
+<surname>Tr&#246;sch</surname>
+<given-names>R</given-names>
+</string-name>, <string-name>
+<surname>Wu</surname>
+<given-names>F</given-names>
+</string-name>, <string-name>
+<surname>Ling</surname>
+<given-names>Q</given-names>
+</string-name>, <string-name>
+<surname>Flores&#8208;P&#233;rez</surname>
+<given-names>U</given-names>
+</string-name>, <string-name>
+<surname>T&#246;pel</surname>
+<given-names>M</given-names>
+</string-name>, <string-name>
+<surname>Nawarz</surname>
+<given-names>F</given-names>
+</string-name> and <string-name>
+<surname>Jarvis</surname>
+<given-names>P</given-names>
+</string-name> (<year>2017</year>) <article-title>Suppressors of the chloroplast protein import mutant tic40 reveal a genetic link between protein import and thylakoid biogenesis</article-title>. <source xml:lang="en">Plant Cell</source>
+<volume>29</volume>, <fpage>1726</fpage>&#8211;<lpage>1747</lpage>.<pub-id pub-id-type="pmid">28684427</pub-id></mixed-citation></ref><ref id="feb213222-bib-0044"><label>44</label><mixed-citation publication-type="journal" id="feb213222-cit-0044">
+<string-name>
+<surname>Williams</surname>
+<given-names>JGK</given-names>
+</string-name> (<year>1988</year>) <article-title>Construction of specific mutations in photosystem II photosynthetic reaction center by genetic engineering methods in <italic>Synechocystis</italic> 6803</article-title>. <source xml:lang="en">Methods Enzymol</source>
+<volume>167</volume>, <fpage>766</fpage>&#8211;<lpage>778</lpage>.</mixed-citation></ref><ref id="feb213222-bib-0045"><label>45</label><mixed-citation publication-type="journal" id="feb213222-cit-0045">
+<string-name>
+<surname>Cereda</surname>
+<given-names>A</given-names>
+</string-name>, <string-name>
+<surname>Hitchcock</surname>
+<given-names>A</given-names>
+</string-name>, <string-name>
+<surname>Symes</surname>
+<given-names>MD</given-names>
+</string-name>, <string-name>
+<surname>Cronin</surname>
+<given-names>L</given-names>
+</string-name>, <string-name>
+<surname>Bibby</surname>
+<given-names>TS</given-names>
+</string-name> and <string-name>
+<surname>Jones</surname>
+<given-names>AK</given-names>
+</string-name> (<year>2014</year>) <article-title>A Bioelectrochemical approach to characterize extracellular electron transfer by <italic>Synechocystis</italic> sp. PCC6803</article-title>. <source xml:lang="en">PLoS ONE</source>
+<volume>9</volume>, <fpage>e91484</fpage>.<pub-id pub-id-type="pmid">24637387</pub-id></mixed-citation></ref></ref-list></back></article>

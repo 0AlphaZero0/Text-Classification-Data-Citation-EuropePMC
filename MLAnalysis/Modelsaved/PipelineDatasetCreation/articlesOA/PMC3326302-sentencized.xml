@@ -1,0 +1,362 @@
+
+<article xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML" article-type="article-commentary"><?properties open_access?><?DTDIdentifier.IdentifierValue -//NLM//DTD Journal Publishing DTD v2.3 20070202//EN?><?DTDIdentifier.IdentifierType public?><?SourceDTD.DTDName journalpublishing.dtd?><?SourceDTD.Version 2.3?><?ConverterInfo.XSLTName jp2nlmx2.xsl?><?ConverterInfo.Version 2?><front><journal-meta><journal-id journal-id-type="nlm-ta">Nucleic Acids Res</journal-id><journal-id journal-id-type="iso-abbrev">Nucleic Acids Res</journal-id><journal-id journal-id-type="publisher-id">nar</journal-id><journal-id journal-id-type="hwp">nar</journal-id><journal-title-group><journal-title>Nucleic Acids Research</journal-title></journal-title-group><issn pub-type="ppub">0305-1048</issn><issn pub-type="epub">1362-4962</issn><publisher><publisher-name>Oxford University Press</publisher-name></publisher></journal-meta><article-meta><article-id pub-id-type="pmcid">3326302</article-id><article-id pub-id-type="doi">10.1093/nar/gkr1138</article-id><article-id pub-id-type="publisher-id">gkr1138</article-id><article-categories><subj-group subj-group-type="heading"><subject>RNA</subject></subj-group></article-categories><title-group><article-title><SecTag type="TITLE"><text><SENT sid="0" pm="?"><plain>Short non-coding RNA fragments accumulating in chloroplasts: footprints of RNA binding proteins? </plain></SENT>
+</text></SecTag></article-title></title-group><contrib-group><contrib contrib-type="author"><name><surname>Ruwe</surname><given-names>Hannes</given-names></name></contrib><contrib contrib-type="author"><name><surname>Schmitz-Linneweber</surname><given-names>Christian</given-names></name><xref ref-type="corresp" rid="gkr1138-COR1">*</xref></contrib></contrib-group><aff>Institute of Biology, Humboldt-University of Berlin, Chausseestr 117, 10115 Berlin, Germany</aff><author-notes><corresp id="gkr1138-COR1">*To whom correspondence should be addressed. Tel: <phone>+49 30 2093 8188</phone>; Fax: <fax>+49 30 2093 8141</fax>; Email: <email>smitzlic@rz.hu-berlin.de</email></corresp></author-notes><pub-date pub-type="collection"><month>4</month><year>2012</year></pub-date><pub-date pub-type="ppub"><month>4</month><year>2012</year></pub-date><pub-date pub-type="epub"><day>1</day><month>12</month><year>2011</year></pub-date><pub-date pub-type="pmc-release"><day>1</day><month>12</month><year>2011</year></pub-date><volume>40</volume><issue>7</issue><fpage>3106</fpage><lpage>3116</lpage><history><date date-type="received"><day>23</day><month>7</month><year>2011</year></date><date date-type="rev-recd"><day>9</day><month>11</month><year>2011</year></date><date date-type="accepted"><day>9</day><month>11</month><year>2011</year></date></history><permissions><copyright-statement>© The Author(s) 2011. Published by Oxford University Press.</copyright-statement><copyright-year>2011</copyright-year><license license-type="creative-commons" xlink:href="http://creativecommons.org/licenses/by-nc/3.0"><license-p>This is an Open Access article distributed under the terms of the Creative Commons Attribution Non-Commercial License (<ext-link ext-link-type="uri" xlink:href="http://creativecommons.org/licenses/by-nc/3.0">http://creativecommons.org/licenses/by-nc/3.0</ext-link>), which permits unrestricted non-commercial use, distribution, and reproduction in any medium, provided the original work is properly cited.</license-p></license></permissions><abstract><p><SecTag type="ABS"><text><SENT sid="1" pm="."><plain>Chloroplast RNA metabolism is controlled and excecuted by hundreds of nuclear-encoded, chloroplast-localized RNA binding proteins. </plain></SENT>
+<SENT sid="2" pm="."><plain>Contrary to the nucleo-cytosolic compartment or bacteria, there is little evidence for non-coding RNAs that play a role as riboregulators of chloroplasts. </plain></SENT>
+<SENT sid="3" pm="."><plain>We mined deep-sequencing datasets to identify short (16–28 nt) RNAs in the chloroplast genome and found 50 abundant small RNAs (sRNAs) represented by multiple, in some cases, thousands of sequencing reads, whereas reads are in general absent from the surrounding sequence space. </plain></SENT>
+<SENT sid="4" pm="."><plain>Other than sRNAs representing the most highly abundant mRNAs, tRNAs and rRNAs, most sRNAs are located in non-coding regions and many are found a short distance upstream of start codons. </plain></SENT>
+<SENT sid="5" pm="."><plain>By transcript end mapping we show that the 5′ and 3′ termini of chloroplast RNAs coincide with the ends of sRNAs. </plain></SENT>
+<SENT sid="6" pm="."><plain>Sequences of sRNAs identified in Arabidopsis are conserved between different angiosperm species and in several cases, we identified putative orthologs in rice deep sequencing datasets. </plain></SENT>
+<SENT sid="7" pm="."><plain>Recently, it was suggested that small chloroplast RNA fragments could result from the protective action of pentatricopeptide repeat (PPR) proteins against exonucleases, i.e. footprints of RNA binding proteins. </plain></SENT>
+<SENT sid="8" pm="."><plain>Our data support this scenario on a transcriptome-wide level and suggest that a large number of sRNAs are in fact remnants of PPR protein targets. </plain></SENT>
+</text></SecTag></p></abstract><counts><page-count count="11"/></counts></article-meta></front><body><p><text><SENT sid="9" pm="."><plain> </plain></SENT>
+</text></p><SecTag type="INTRO"><sec><title><text><SENT sid="10" pm="."><plain>INTRODUCTION </plain></SENT>
+</text></title><p><text><SENT sid="11" pm="."><plain>In the last decade, small non-coding RNAs (ncRNA) have been shown to act as important regulators of gene expression in a broad variety of organisms. </plain></SENT>
+<SENT sid="12" pm="."><plain>Few studies have addressed the presence of ncRNAs specifically in chloroplasts. </plain></SENT>
+<SENT sid="13" pm="."><plain>A first ncRNA candidate called sprA was discovered in tobacco (1). </plain></SENT>
+<SENT sid="14" pm="."><plain>In the same species, a bulk cloning approach of short RNAs led to the identification of 18 chloroplast ncRNAs (2). </plain></SENT>
+<SENT sid="15" pm="."><plain>Recently, deep sequencing of the Chinese cabbage (Brassica rapa ssp. </plain></SENT>
+<SENT sid="16" pm="."><plain>Chinensis) identified hundreds of chloroplast small RNAs (sRNAs) that mostly corresponded to 5′-ends of chloroplast tRNAs and 3′-ends of chloroplast ribosomal RNAs (3). </plain></SENT>
+<SENT sid="17" pm="."><plain>It is at present unclear, whether any of these chloroplast ncRNAs serve a specific function. </plain></SENT>
+<SENT sid="18" pm="."><plain>Recently, a mode for the biogenesis of chloroplast sRNAs was suggested that implies protection from RNA degradation as a major driving force behind the accumulation of specific RNA fragments (4). </plain></SENT>
+<SENT sid="19" pm="."><plain>This proposal was based on current knowledge of a specific class of RNA binding proteins, called pentatricopeptide repeat (PPR) proteins. </plain></SENT>
+<SENT sid="20" pm="."><plain>Hundreds of genes for PPR proteins are found in the nuclear genome of higher plants (5). </plain></SENT>
+<SENT sid="21" pm="."><plain>The proteins are almost exclusively targeted to either mitochondria or chloroplasts (5). </plain></SENT>
+<SENT sid="22" pm="."><plain>The family has no known counterpart in bacteria, and various members have been shown to be essential for specific RNA processing steps, e.g. RNA editing or RNA splicing (6). </plain></SENT>
+<SENT sid="23" pm="."><plain>Where investigated, PPR proteins display exquisitely specific binding to one or few organellar RNAs (6). </plain></SENT>
+<SENT sid="24" pm="."><plain>For example, PPR10 was shown to contact ∼20 nt long RNA elements in two independent inter-cistronic spacers (psaJ–rpl33; atpI–atpH) and acts as a road block against exonucleolytic decay both in 5′-to-3′, as well as in 3′-to-5′ direction (4). </plain></SENT>
+<SENT sid="25" pm="."><plain>The exonucleolytic decay is initiated distal to the PPR10 binding site, probably by an endonucleolytic event, e.g. by chloroplast RNaseE. </plain></SENT>
+<SENT sid="26" pm="."><plain>Eventually, RNA degradation leads to complete elimination of the psaJ–rpl33 and atpI–atpH mRNAs with the exception of the small ∼25 nt stretch protected by PPR10. </plain></SENT>
+<SENT sid="27" pm="."><plain>Such potential footprints have been found in sRNA databases in cereals, among them those attributed to the PPR proteins CRR2 and PPR10 (4,7). </plain></SENT>
+<SENT sid="28" pm="."><plain>Moreover, sRNAs cloned in tobacco (2) and in rice (7) correspond to a site in the psbH–petB intergenic spacers suspected to bind the PPR protein HCF152 (4). </plain></SENT>
+<SENT sid="29" pm="."><plain>We set out to comprehensively identify sRNAs in the chloroplast transcriptome of Arabidopsis and rice and evaluate, whether they could indeed be footprints of RNA binding proteins. </plain></SENT>
+</text></p></sec></SecTag><SecTag type="METHODS"><sec sec-type="materials|methods"><title><text><SENT sid="30" pm="."><plain>MATERIALS AND METHODS </plain></SENT>
+</text></title><sec><title><text><SENT sid="31" pm="."><plain>Alignment of sRNAs to the chloroplast genome </plain></SENT>
+</text></title><p><text><SENT sid="32" pm="."><plain>Arabidopsis thaliana sRNA data from Rajagopalan et al. (8), (available as Platform GPL3968 at <ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/geo">http://www.ncbi.nlm.nih.gov/geo</ext-link>) including reads from four different tissues/developmental stages (seedlings, rosette leaves, flower buds and siliques) were assembled to the chloroplast genome (NC_000932) using the Geneious Pro Software (Version 5.3.6) allowing only perfect matches. </plain></SENT>
+<SENT sid="33" pm="."><plain>The Inverted Repeat B was excluded from the reference sequence. </plain></SENT>
+<SENT sid="34" pm="."><plain>Small chloroplast accumulating RNAs (sRNAs) were extracted by hand. </plain></SENT>
+<SENT sid="35" pm="."><plain>The sRNAs had to be covered by at least three independent sequences, either from different libraries or with slightly different sequences with a minimum of ten reads in total. </plain></SENT>
+</text></p><p><text><SENT sid="36" pm="."><plain>The core sRNA was defined as the sequence element present in at least 50% of the sequences. </plain></SENT>
+</text></p><p><text><SENT sid="37" pm="."><plain>Images were extracted from the alignment files as eps files and modified using Adobe Illustrator. </plain></SENT>
+</text></p><p><text><SENT sid="38" pm="."><plain>Rice sRNA Data were obtained from the Cereal Small RNA Database (CSRDB), (9). </plain></SENT>
+<SENT sid="39" pm="."><plain>Data included in this analysis are run1 and run2, as well as the sRNA derived from three runs for leaf and inflorescence tissues. </plain></SENT>
+<SENT sid="40" pm="."><plain>The sRNA reads were assembled using the rice chloroplast genome (NC_001320) as reference sequence, the same way as for the Arabidopsis reads. </plain></SENT>
+</text></p></sec><sec><title><text><SENT sid="41" pm="."><plain>5′-rapid amplification of cDNA ends </plain></SENT>
+</text></title><p><text><SENT sid="42" pm="."><plain>Total RNA was isolated using TRIzol Reagent (Invitrogen) from 3-week-old Arabidopsis plants (Col-0 ecotype). </plain></SENT>
+<SENT sid="43" pm="."><plain>A quantity of 2 µg RNA was ligated to 4 pmol RNA Oligo 5′-GUGAUCCAACCGACGCGACAAGCUAAUGCAAGANNN-3′ using T4 RNA Ligase I (NEB) at 37°C for 1 h. </plain></SENT>
+<SENT sid="44" pm="."><plain>Reaction was Heat inactivated at 65°C for 15 min and RNA purified by standard phenol/chloroform extraction. </plain></SENT>
+<SENT sid="45" pm="."><plain>The RNA was reverse-transcribed using Superscript III Reverse Transcriptase (Invitrogen) using random Primers (Hexa/Nona-Mix). </plain></SENT>
+<SENT sid="46" pm="."><plain>PCR analysis was performed using Primers Rumsh1 5′-TGATCCAACCGACGCGAC-3′ and gene-specific primers. </plain></SENT>
+<SENT sid="47" pm="."><plain>PCR Products were gel-eluted if necessary, using the JETSORB Gel Extraction Kit (Genomed) and cloned in the pDrive Vector using the PCR Cloning Kit (Qiagen). </plain></SENT>
+<SENT sid="48" pm="."><plain>Clones were sequenced using Sanger Sequencing (SMB Berlin). </plain></SENT>
+</text></p><p><text><SENT sid="49" pm="."><plain>Primers used: </plain></SENT>
+</text></p><p><text><SENT sid="50" pm="."><plain> </plain></SENT>
+</text></p></sec><sec><title><text><SENT sid="51" pm="."><plain>3′-rapid amplification of cDNA ends </plain></SENT>
+</text></title><p><text><SENT sid="52" pm="."><plain>Total RNA was isolated using TRIzol Reagent (Invitrogen) from 3-week-old Col-0 plants. </plain></SENT>
+<SENT sid="53" pm="."><plain>A quantity of 2 µg RNA was ligated to 0.6 µl SRA 3′-Adapter (Illumina) using T4 RNA Ligase I (NEB) at 37°C for 1 h. </plain></SENT>
+<SENT sid="54" pm="."><plain>The reaction was heat inactivated at 65°C for 15 min and RNA purified by standard phenol/chloroform extraction. </plain></SENT>
+<SENT sid="55" pm="."><plain>The RNA was reverse-transcribed using Superscript III Reverse Transcriptase (Invitrogen) using the Primer Adapter RT Primer 5′-CAAGCAGAAGACGGCATA-3′. </plain></SENT>
+<SENT sid="56" pm="."><plain>PCR Analysis was performed using Adapter PCR Primer 5′-CAAGCAGAAGACGGCATACG-3′ and gene-specific primers. </plain></SENT>
+<SENT sid="57" pm="."><plain>PCR Products were gel-eluted if necessary, using the JETSORB Gel Extraction Kit (Genomed) and cloned in the pDrive Vector using the PCR Cloning Kit (Qiagen). </plain></SENT>
+<SENT sid="58" pm="."><plain>Clones were sequenced using Sanger Sequencing (SMB Berlin). </plain></SENT>
+</text></p><p><text><SENT sid="59" pm="."><plain> </plain></SENT>
+</text></p></sec><sec><title><text><SENT sid="60" pm="."><plain>RNase protection </plain></SENT>
+</text></title><p><text><SENT sid="61" pm="."><plain>Seeds of mutant lines hcf7-2 and hcf152-1 were grown on MS-medium supplemented with 3% sucrose for 2 weeks and screened for high chlorophyll fluorescence. </plain></SENT>
+<SENT sid="62" pm="."><plain>RNA was extracted from mutant plants with TRIzol (Invitrogen). </plain></SENT>
+</text></p><p><text><SENT sid="63" pm="."><plain>As a template for radioactive in vitro transcription, two DNA Oligos (hcf152 footprint: TCCTTTTTTTCTGCACCTGTCTC and T7 overlap: TAATACGACTCACTATAGGGAGACAGG) were annealed and double stranded template was created by a ‘fill-in’ reaction using Klenow Exo- (Fermentas). </plain></SENT>
+<SENT sid="64" pm="."><plain>Antisense RNA was synthesized using T7 Polymerase (Fermentas) with radioactive α-32P-UTP (Hartmann Analytic). </plain></SENT>
+<SENT sid="65" pm="."><plain>The reaction was digested with DNase and gel-purified. </plain></SENT>
+</text></p><p><text><SENT sid="66" pm="."><plain>The RNase Protection Assay was performed according to the instructions of the mirVana™ miRNA Detection Kit (Ambion) using 5 -µg RNA. </plain></SENT>
+</text></p></sec><sec><title><text><SENT sid="67" pm="."><plain>Phylogeny of sRNAs </plain></SENT>
+</text></title><p><text><SENT sid="68" pm="."><plain>Intergenic spacers for which sRNAs in Arabidopsis were found were aligned using ClustalW2 algorithm (10) using default settings and visualized using Jalview Software (11). </plain></SENT>
+<SENT sid="69" pm="."><plain>Organellar genome sequences were obtained from NCBI under following accession numbers A. thaliana (NC_000932), Adiantum capillus-veneris (NC_004766), Oryza sativa (NC_001320), Hordeum vulgare (NC_008590), Physcomitrella patens (NC_005087), Nicotiana tabacum (NC_001879), Pinus thunbergii (NC_001631) and Zea mays (NC_001666). </plain></SENT>
+</text></p><p><text><SENT sid="70" pm="."><plain>For comparison of sRNAs between Arabidopsis and rice or of all Arabidopsis sRNAs sequences were aligned using ClustalW2 algorithm and a neighbor joining tree by percentage identity was created using the Jalview Software Package (11). </plain></SENT>
+<SENT sid="71" pm="."><plain>Pairwise alignments of two sequences were perfomed with the same software. </plain></SENT>
+<SENT sid="72" pm="."><plain>Image files were exported as eps files and modified using Adobe Illustrator. </plain></SENT>
+</text></p></sec></sec></SecTag><SecTag type="RESULTS"><sec><title><text><SENT sid="73" pm="."><plain>RESULTS </plain></SENT>
+</text></title><sec><title><text><SENT sid="74" pm="."><plain>Identification of sRNAs within the chloroplast transcriptome by mining Arabidopsis deep-sequencing datasets </plain></SENT>
+</text></title><p><text><SENT sid="75" pm="."><plain>Small regulatory RNAs like miRNAs can be detected by RNA-Seq analysis of gel-fractionated total RNA. </plain></SENT>
+<SENT sid="76" pm="."><plain>Such analyses have also been carried out in Arabidopsis in order to identify nucleo-cytosolic miRNAs. </plain></SENT>
+<SENT sid="77" pm="."><plain>Little attention has so far been paid to sRNAs from mitochondria or chloroplasts that are part of these datasets. </plain></SENT>
+<SENT sid="78" pm="."><plain>We have screened a miRNA deep-sequencing dataset from Arabidopsis generated by the Bartel group (8) for small chloroplast RNAs: The four RNA seq libraries were assembled from RNA samples taken from whole seedlings, rosette leaves, flowers and siliques, harvested at 6 days, 4 weeks, 6 weeks and 2 months after planting, respectively (8). </plain></SENT>
+<SENT sid="79" pm="."><plain>The RNAs were eluted from PAGE gel fragments that represent pools of RNA fragments between 16 and 28 nt in length (8) (<ext-link ext-link-type="uri" xlink:href="http://nar.oxfordjournals.org/cgi/content/full/gkr1138/DC1">Supplementary Figure S1</ext-link>). </plain></SENT>
+<SENT sid="80" pm="."><plain>We identified sequences that match the chloroplast genome with 100% identity using the Geneious software package (<ext-link ext-link-type="uri" xlink:href="http://www.geneious.com">http://www.geneious.com</ext-link>). </plain></SENT>
+<SENT sid="81" pm="."><plain>A sequence is defined as a unique set of identical reads from only a single library. </plain></SENT>
+<SENT sid="82" pm="."><plain>In extreme cases, a sequence can represent hundreds of individual reads, i.e. hundreds of individual sequencing reactions. </plain></SENT>
+<SENT sid="83" pm="."><plain>There are a total of 9750 sequences, which are highly unevenly distributed in the chloroplast genome (Figure 1). </plain></SENT>
+<SENT sid="84" pm="."><plain>Only four protein coding genes exhibited high sequence densities across the entire RNA, two of them known to be highly expressed, namely psbA and rbcL (Figure 1). </plain></SENT>
+<SENT sid="85" pm="."><plain>In addition to mRNAs, the abundant chloroplast rRNAs and tRNAs are covered well by sequences (Figure 1). </plain></SENT>
+<SENT sid="86" pm="."><plain>For the present analysis, we excluded areas of continuous high sequence density. </plain></SENT>
+<SENT sid="87" pm="."><plain>Instead, we focused on isolated peaks of multiple sequences that stood out over the otherwise low background of sequences in coding regions and intergenic spacers (Figure 1). </plain></SENT>
+<SENT sid="88" pm="."><plain>We collected only clusters of minimally three sequences, which represent a combined number of at least 10 reads. </plain></SENT>
+<SENT sid="89" pm="."><plain>We defined the core of each sequence cluster as the nucleotides that are found in 50% of all overlapping sequences. </plain></SENT>
+<SENT sid="90" pm="."><plain>By these benchmarks, we found a total of 50 sRNAs with a median representation of 30 reads per sequence peak (<ext-link ext-link-type="uri" xlink:href="http://nar.oxfordjournals.org/cgi/content/full/gkr1138/DC1">Supplementary Table S1</ext-link>). </plain></SENT>
+<SENT sid="91" pm="."><plain>In the following, we will refer to the core of a sequence cluster as chloroplast sRNA. </plain></SENT>
+<SENT sid="92" pm="."><plain>A special class of sRNAs was identified in the 3′-regions of several chloroplast mRNAs. </plain></SENT>
+<SENT sid="93" pm="."><plain>These RNAs are predicted to fold into a single stem-loop structure with a predicted free energy lower than −20 kcal/mol (<ext-link ext-link-type="uri" xlink:href="http://nar.oxfordjournals.org/cgi/content/full/gkr1138/DC1">Supplementary Table S1</ext-link>). </plain></SENT>
+<SENT sid="94" pm="."><plain>Their connection with secondary structure elements distinguishes them from sRNAs and suggests a different biogenesis. Figure 1.Map of RNA sequencing data onto the chloroplast genome of A. thaliana. </plain></SENT>
+<SENT sid="95" pm="."><plain>Individual RNA sequencing reads were extracted from the sRNA data set generated by Rajagopalan et al. (8) and aligned with the chloroplast chromosome of Arabidopsis (accession no. </plain></SENT>
+<SENT sid="96" pm="."><plain>NC_000932) using the Geneious software package. </plain></SENT>
+<SENT sid="97" pm="."><plain>Only sequences matching 100% with the genome were considered. </plain></SENT>
+<SENT sid="98" pm="."><plain>The bars below the genome map indicate groups of identical reads from a single library. </plain></SENT>
+<SENT sid="99" pm="."><plain>Thus, several bars can represent identical sequence stretches but are from different RNA seq libraries—e.g. two identical bars could indicate a cluster of identical reads from the leaf library and the silique library. </plain></SENT>
+<SENT sid="100" pm="."><plain>Note that abundant RNA species are covered across their entire length by sequencing reads like the rRNAs, whereas reads are sparse for most protein coding genes, e.g. for the psbE operon. </plain></SENT>
+<SENT sid="101" pm="."><plain>In several cases, e.g. for the rRNA operon, the number of reads piled up at certain genomic positions exceeds the space between two rows of the genome map and are thus cut off. </plain></SENT>
+<SENT sid="102" pm="."><plain>Genes are shown as arrows, with arrow points indicating the 3′-end of the open reading frame/mature tRNA or rRNA. </plain></SENT>
+<SENT sid="103" pm="."><plain>Filled arrows = genes for rRNAs or tRNAs; open arrows = protein-coding genes. </plain></SENT>
+<SENT sid="104" pm="."><plain>Small horizontal arrows denote sRNAs and indicate their 5′-to-3′ direction. </plain></SENT>
+<SENT sid="105" pm="."><plain>Small vertical arrows next to schematic stem-loops indicate sequencing reads that are likely accumulating due to the stability of secondary structure elements in the RNA. </plain></SENT>
+<SENT sid="106" pm="."><plain>Gene names are given above the genome map. </plain></SENT>
+<SENT sid="107" pm="."><plain>Numbers indicate the genomic position as given in GenBank entry NC_000932. </plain></SENT>
+<SENT sid="108" pm="."><plain>The second version of the chloroplast inverted repeat (IRA) is not shown here. </plain></SENT>
+</text></p></sec><sec><title><text><SENT sid="109" pm="."><plain>sRNAs in intergenic regions are often found proximal to start codons </plain></SENT>
+</text></title><p><text><SENT sid="110" pm="."><plain>sRNAs are not randomly distributed in the chloroplast transcriptome: sRNAs are concentrated in non-coding regions (46 of 50, <ext-link ext-link-type="uri" xlink:href="http://nar.oxfordjournals.org/cgi/content/full/gkr1138/DC1">Supplementary Table S1</ext-link>). </plain></SENT>
+<SENT sid="111" pm="."><plain>Few sRNAs were found in intronic sequences (6 of 50, <ext-link ext-link-type="uri" xlink:href="http://nar.oxfordjournals.org/cgi/content/full/gkr1138/DC1">Supplementary Table S1</ext-link>) and even less antisense to known chloroplast RNA species (3 of 50, <ext-link ext-link-type="uri" xlink:href="http://nar.oxfordjournals.org/cgi/content/full/gkr1138/DC1">Supplementary Table S1</ext-link>). </plain></SENT>
+<SENT sid="112" pm="."><plain>Of the sRNAs in non-coding regions, 17 are found closer than 50 nt to the next downstream start codon (<ext-link ext-link-type="uri" xlink:href="http://nar.oxfordjournals.org/cgi/content/full/gkr1138/DC1">Supplementary Table S1</ext-link>). </plain></SENT>
+<SENT sid="113" pm="."><plain>Their uneven distribution supports a functional significance for sRNAs and argues against them being the result of randomly stable RNA degradation products or spurious mini-transcription units. </plain></SENT>
+<SENT sid="114" pm="."><plain>Their proximity to start codons might indicate a function related to translation. </plain></SENT>
+<SENT sid="115" pm="."><plain>Four of the 17 sRNAs found in proximity of start codons are special in that they are located inside an upstream ORF: a sRNA 43 nt upstream of the ndhA start codon lies within ndhH, another is 19 nt away from the psbC start codon within psbD and a third 35 nt upstream from rpl2 within rpl23. </plain></SENT>
+<SENT sid="116" pm="."><plain>The corresponding reading frames of psbC/psbD are overlapping by 17 nt, while ndhA and ndhH are spaced by 1 bp and rpl23/rpl2 by 18 bp. </plain></SENT>
+<SENT sid="117" pm="."><plain>Thus, the peculiar location of these four sRNAs might indicate their role for the downstream ORF of these closely-knit di-cistronic transcripts. </plain></SENT>
+<SENT sid="118" pm="."><plain>Noteworthy, psbC possesses an additional promoter serving exclusively its own transcription without an intact upstream psbC reading frame (12). </plain></SENT>
+<SENT sid="119" pm="."><plain>This would locate the corresponding sRNAs in a true UTR region even though it encompasses a partial coding sequence. </plain></SENT>
+<SENT sid="120" pm="."><plain>Whether mono-cistronic forms for the other two ORFs with sRNAs in 5′-adjacent reading frames (rpl2 and ndhA) can also be found is unknown. </plain></SENT>
+<SENT sid="121" pm="."><plain>A fourth sRNA overlaps with the annotated start codon of ndhB—the only such case among all sRNAs identified. </plain></SENT>
+<SENT sid="122" pm="."><plain>However, when comparing alignments of hundreds of ndhB genes using the NCBI protein cluster tool, we found a downstream ATG much more conserved than the one annotated as start codon in Arabidopsis (<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/sutils/prkview.cgi?result=align&amp;cluster=CHL00049">http://www.ncbi.nlm.nih.gov/sutils/prkview.cgi?result=align&amp;cluster=CHL00049</ext-link>). </plain></SENT>
+<SENT sid="123" pm="."><plain>This suggests that the ndhB 5′ sRNA is in fact at position −45 relative to the true start codon (see also Figure 5D). </plain></SENT>
+<SENT sid="124" pm="."><plain>In sum, sRNAs are highly biased toward non-coding regions and many are found a short distance (∼30–70 nt) upstream of start codons. </plain></SENT>
+</text></p></sec><sec><title><text><SENT sid="125" pm="."><plain>A subset of sRNAs is conserved across angiosperms </plain></SENT>
+</text></title><p><text><SENT sid="126" pm="."><plain>If sRNAs are functional and under selection, they should be evolutionarily conserved. </plain></SENT>
+<SENT sid="127" pm="."><plain>We tested this for a number of sRNAs by comparing homologous intergenic regions containing sRNAs in Arabidopsis. </plain></SENT>
+<SENT sid="128" pm="."><plain>An example is shown Figure 2 with an alignment of the clpP–rps12 intergenic spacer. </plain></SENT>
+<SENT sid="129" pm="."><plain>Here, a sRNA 3′ of clpP and a sRNA 5′ of rps12 are found. </plain></SENT>
+<SENT sid="130" pm="."><plain>Both regions exhibit conservation exceeding adjacent non-coding regions (Figure 2). </plain></SENT>
+<SENT sid="131" pm="."><plain>However, the degree of conservation differs between the two sRNAs. </plain></SENT>
+<SENT sid="132" pm="."><plain>The clpP 3′ sRNA is conserved only in angiosperms, including the GATTTC hexamer and a following triple-A stretch. </plain></SENT>
+<SENT sid="133" pm="."><plain>Additional bases are found in most, but not all angiosperms. </plain></SENT>
+<SENT sid="134" pm="."><plain>The sRNA 5′ to the rps12 reading frame is conserved even in the moss P. patens and in the fern A. capillus-veneris with 10 nt being identical between all species in the alignment. </plain></SENT>
+<SENT sid="135" pm="."><plain>Such conservation down to Bryophytes was, however found only one more time among the eight sRNAs we prepared alignments for: the sequence of the psbH–petB intergenic spacers shows conservation of a sRNA in all species analyzed with the exception of A. capillus-veneris (<ext-link ext-link-type="uri" xlink:href="http://nar.oxfordjournals.org/cgi/content/full/gkr1138/DC1">Supplementary Figure S2</ext-link>). </plain></SENT>
+<SENT sid="136" pm="."><plain>In contrast, conservation of sRNAs within angiosperms is more common. </plain></SENT>
+<SENT sid="137" pm="."><plain>Like for the clpP 3′ sRNA, sRNAs in the 5′-region of atpH and petL also show higher identity values than adjacent sequences (<ext-link ext-link-type="uri" xlink:href="http://nar.oxfordjournals.org/cgi/content/full/gkr1138/DC1">Supplementary Figure S2</ext-link>). </plain></SENT>
+<SENT sid="138" pm="."><plain>This suggests that at least some sRNAs are under selective pressure, i.e. are functional. </plain></SENT>
+<SENT sid="139" pm="."><plain>A second group of sRNAs does not exhibit conservation in the set of species analyzed here. </plain></SENT>
+<SENT sid="140" pm="."><plain>For example, sRNAs in the atpH–atpF intergenic spacer, and sRNAs upstream of rps15, ycf3 and rps14 do not stand out in conservation relative to the surrounding sequence (<ext-link ext-link-type="uri" xlink:href="http://nar.oxfordjournals.org/cgi/content/full/gkr1138/DC1">Supplementary Figure S2</ext-link>). </plain></SENT>
+<SENT sid="141" pm="."><plain>Thus, there are highly conserved sRNAs, as well as lineage-specific sRNAs. Figure 2.Alignment of the clpP–rps12 intergenic regions in various embryophtes. </plain></SENT>
+<SENT sid="142" pm="."><plain>The alignment was prepared using ClustalW2 (10) and the Jalview software package for graphical output (11). </plain></SENT>
+<SENT sid="143" pm="."><plain>The two sRNAs in this intergenic spacer are indicated by solid bars above the alignment. </plain></SENT>
+<SENT sid="144" pm="."><plain>A graphical and a sequence consensus are given at the bottom of the alignment. </plain></SENT>
+<SENT sid="145" pm="."><plain>Shading refers to different levels of sequence conservation: dark gray = 7 or 8 of 8 sequences share the same base; intermediate gray = 5 or 6 of 8 share the same base; light gray = 4 of 8 share the same base. </plain></SENT>
+</text></p><p><text><SENT sid="146" pm="."><plain>In order to gain further insights into the evolution of sRNAs, we turned to deep-sequencing datasets available online for rice (9) and compared them with our findings for Arabidopsis. </plain></SENT>
+<SENT sid="147" pm="."><plain>Sequences pooled from different experiments were aligned with the chloroplast genome and evaluated in the same manner as outlined above for Arabidopsis (<ext-link ext-link-type="uri" xlink:href="http://nar.oxfordjournals.org/cgi/content/full/gkr1138/DC1">Supplementary Figure S3</ext-link>). </plain></SENT>
+<SENT sid="148" pm="."><plain>Like for Arabidopsis, we found a bias of sRNAs towards intergenic regions (<ext-link ext-link-type="uri" xlink:href="http://nar.oxfordjournals.org/cgi/content/full/gkr1138/DC1">supplementary Table S2</ext-link>). </plain></SENT>
+<SENT sid="149" pm="."><plain>In total, we found 18 rice sRNAs in regions for which we also identified sRNAs in Arabidopsis (<ext-link ext-link-type="uri" xlink:href="http://nar.oxfordjournals.org/cgi/content/full/gkr1138/DC1">supplementary Table S1</ext-link>). </plain></SENT>
+<SENT sid="150" pm="."><plain>As an initial test for orthology, we aligned all rice and Arabidopsis sRNAs (with the exception of stem-loop sRNAs) and calculated a neighbor-joining tree based on percent identity between sRNAs. </plain></SENT>
+<SENT sid="151" pm="."><plain>In this tree, we found 10 Arabidopsis–rice pairs of sRNAs that are situated in the same intergenic region (<ext-link ext-link-type="uri" xlink:href="http://nar.oxfordjournals.org/cgi/content/full/gkr1138/DC1">Supplementary Figure S4</ext-link>). </plain></SENT>
+<SENT sid="152" pm="."><plain>The similarity between sRNAs with longer identical sequence stretches are favored by this method, whereas short or interrupted homologies are not found as sequence pairs. </plain></SENT>
+<SENT sid="153" pm="."><plain>We therefore expect that the number of orthologous sRNAs between Arabidopsis and rice is higher. </plain></SENT>
+<SENT sid="154" pm="."><plain>Among the pairs identified here, four are in highly conserved regions, namely in the chloroplast inverted repeat (rrn16, rrn23, rps7–ndhB) or within the psbC reading frame. </plain></SENT>
+<SENT sid="155" pm="."><plain>These four pairs each show either perfect or &gt;95% identity, which is however not different from adjacent sequences and is expected for the inverted repeat region. </plain></SENT>
+<SENT sid="156" pm="."><plain>The remaining six sRNAs are found upstream or downstream (ndhJ 3′) of reading frames and show strong sequence conservation with an average of 84% identical bases (Figure 3). </plain></SENT>
+<SENT sid="157" pm="."><plain>The 10 adjacent bases upstream and downstream of these sRNAs were on average only 51 and 54% identical, respectively. </plain></SENT>
+<SENT sid="158" pm="."><plain>Evidently, these sRNAs are under selection and can be considered bona fide orthologs. Figure 3.Alignment of sRNAs conserved between rice and Arabidopsis. </plain></SENT>
+<SENT sid="159" pm="."><plain>Pairs of sRNAs from Arabidopsis and rice with high sequence similarities were identified by phylogenetic analysis (<ext-link ext-link-type="uri" xlink:href="http://nar.oxfordjournals.org/cgi/content/full/gkr1138/DC1">Supplementary Figure S4</ext-link>). </plain></SENT>
+<SENT sid="160" pm="."><plain>Here, only the six pairs situated immediately upstream or downstream of a reading frame are shown. </plain></SENT>
+<SENT sid="161" pm="."><plain>The percentages refer to sequence identities found in sections of the alignments shown: 51 and 54% of all residues shown upstream or downstream of the sRNAs, respectively are identical, whereas 84% of the residues within the region spanned by the sRNAs are identical. </plain></SENT>
+<SENT sid="162" pm="."><plain>Identical bases are shaded in black; At = A. thaliana; Os = O. sativa; black line = sRNA in Arabidopsis; gray line = sRNA in rice. </plain></SENT>
+</text></p><p><text><SENT sid="163" pm="."><plain>sRNAs from chloroplasts have been identified previously from tobacco (2). </plain></SENT>
+<SENT sid="164" pm="."><plain>There are several overlaps with the dataset presented here (<ext-link ext-link-type="uri" xlink:href="http://nar.oxfordjournals.org/cgi/content/full/gkr1138/DC1">Supplementary Table S1</ext-link>). </plain></SENT>
+<SENT sid="165" pm="."><plain>Tobacco Ntc-1, Ntc-2 and Ntc-8 correspond to the Arabidopsis sRNAs psbH–petB, rps7–ndhB and ndhE–psaC. </plain></SENT>
+<SENT sid="166" pm="."><plain>Identity values are in all cases striking: Ntc-1/psbH–petB share 19 of 22 bases; Ntc-2/rps7–ndhB are 100% identical; Ntc-8/ndhE–psaC share a stretch starting from their 5′-end of 17 identical bases with only five mismatches in 28 bases total. </plain></SENT>
+<SENT sid="167" pm="."><plain>Finally, we screened for sRNAs in a taxon only distantly related to the land plants in focus here, the green algae Chlamydomonas reinhardtii. </plain></SENT>
+<SENT sid="168" pm="."><plain>Again, we identified a number of sRNAs in deep sequencing datasets that will be presented in detail elsewhere. </plain></SENT>
+<SENT sid="169" pm="."><plain>Surprisingly, for one sRNA, we could find sequence conservation with angiosperms: the sRNA upstream of psbH is 65 % identical with the corresponding sRNA in Arabidopsis (<ext-link ext-link-type="uri" xlink:href="http://nar.oxfordjournals.org/cgi/content/full/gkr1138/DC1">Supplementary Figure S5</ext-link>). </plain></SENT>
+<SENT sid="170" pm="."><plain>In conclusion, selected sRNAs accumulate not only in Arabidopsis, but also in tobacco and in rice, i.e. are conserved in dicot and monocot angiosperms and are bona fide orthologs. </plain></SENT>
+<SENT sid="171" pm="."><plain>In rare cases, conservation extends even to green algae. </plain></SENT>
+<SENT sid="172" pm="."><plain>This strongly speaks for a selective pressure behind the accumulation of a subset of sRNAs. </plain></SENT>
+</text></p></sec><sec><title><text><SENT sid="173" pm="."><plain>A comparison of all Arabidopsis sRNAs identifies sequence conservation for selected pairs of sRNAs </plain></SENT>
+</text></title><p><text><SENT sid="174" pm="."><plain>It is unclear how sRNAs are generated but if the underlying machinery has any sequence preferences, we might detect intraspecific similarities between sRNAs. </plain></SENT>
+<SENT sid="175" pm="."><plain>To test such sRNA homologies, we aligned all Arabidopsis sRNAs (with the exception of those corresponding to stem-loops) using the ClustalW2 algorithm allowing for alignment gaps and calculated a neighbor-joining distance tree using percent identity (<ext-link ext-link-type="uri" xlink:href="http://nar.oxfordjournals.org/cgi/content/full/gkr1138/DC1">Supplementary Figure S6</ext-link>). </plain></SENT>
+<SENT sid="176" pm="."><plain>The sequence with the least similarity to all other sRNAs was used as outgroup. </plain></SENT>
+<SENT sid="177" pm="."><plain>We found several pairs of sRNAs with remarkable similarity. </plain></SENT>
+<SENT sid="178" pm="."><plain>The four most similar pairs are shown in Figure 4 and are on average, 75% identical. </plain></SENT>
+<SENT sid="179" pm="."><plain>We did, however not find more widespread similarities between sRNAs or any sort of consensus. </plain></SENT>
+<SENT sid="180" pm="."><plain>This speaks for an individual origin of most sRNAs, whereas in a few cases, pairs of sRNAs could be produced by a common mechanism. Figure 4.Top four most similar pairs of Arabidopsis sRNAs. </plain></SENT>
+<SENT sid="181" pm="."><plain>Similarity between sRNAs was identified by cross-comparing all sRNAs identified in Arabidopsis using a distance matrix (<ext-link ext-link-type="uri" xlink:href="http://nar.oxfordjournals.org/cgi/content/full/gkr1138/DC1">Supplementary Figure S6</ext-link>). </plain></SENT>
+<SENT sid="182" pm="."><plain>The top four most similar sequence pairs are displayed here with identical bases shaded in black. </plain></SENT>
+<SENT sid="183" pm="."><plain>The percent identity values for each alignment are given on the right. </plain></SENT>
+</text></p></sec><sec><title><text><SENT sid="184" pm="."><plain>sRNAs correlate with known and newly determined transcript termini </plain></SENT>
+</text></title><p><text><SENT sid="185" pm="."><plain>According to the footprint model, chloroplast sRNAs should co-localize with mRNA ends (4). </plain></SENT>
+<SENT sid="186" pm="."><plain>Therefore, ends in the vicinity of Arabidopsis sRNAs were mapped by a modified rapid amplification of cDNA ends (RACE) protocol. </plain></SENT>
+<SENT sid="187" pm="."><plain>This included sRNAs in seven randomly chosen intergenic regions, clpP–rps12, atpH–atpF, cemA–petA, rpl18–rps20, rps7–ndhB, rps15 5′ and psaI–ycf4. </plain></SENT>
+<SENT sid="188" pm="."><plain>In addition we analyzed the sRNA in the coding region of psbD. </plain></SENT>
+<SENT sid="189" pm="."><plain>As shown in Figure 5, single PCR-products were obtained for the 5′- and 3′-mapping of the rps15 5′ sRNA. </plain></SENT>
+<SENT sid="190" pm="."><plain>Clones obtained for these PCR products do end close to the 5′- and 3′-end of the sRNA. </plain></SENT>
+<SENT sid="191" pm="."><plain>Similarly, 5′-ends detected in the rps7–ndhB intergenic region are all found in the immediate vicinity of an sRNA's 5′-terminus. </plain></SENT>
+<SENT sid="192" pm="."><plain>For the rps7 3′-RACE, two PCR products were obtained and cloned separately. </plain></SENT>
+<SENT sid="193" pm="."><plain>The rps7/ndhB inter-cistronic cleavage has been mapped to this area previously by RNase protection assays (13). </plain></SENT>
+<SENT sid="194" pm="."><plain>Clones from the longer PCR product correspond to RNA 3′-ends coinciding with the sRNA's 3′-end. </plain></SENT>
+<SENT sid="195" pm="."><plain>The location of this sRNA and its conservation in rice and Arabidopsis makes it likely that it is caused by the action of CRR2 as has been pointed out previously (4). </plain></SENT>
+<SENT sid="196" pm="."><plain>Clones from the shorter PCR product map to upstream sites at positions 100–112 nt relative to the rps7 stop codon. </plain></SENT>
+<SENT sid="197" pm="."><plain>These latter transcript ends have been described previously as well (13), but do not match one of the sRNAs. </plain></SENT>
+<SENT sid="198" pm="."><plain>For the psbD–psbC sRNA, a single 5′-RACE PCR product was obtained and again, this identified a transcript terminus in the vicinity of the sRNA's 5′-end. </plain></SENT>
+<SENT sid="199" pm="."><plain>In contrast, we were unable to obtain a PCR product for the 3′-end of the psbD transcript in this region despite usage of two alternative primers for amplification. </plain></SENT>
+<SENT sid="200" pm="."><plain>The same observation was made for psbD–psbC as described in the accompanying manuscript (14). </plain></SENT>
+<SENT sid="201" pm="."><plain>This is in congruence with RNA accumulation data that did not detect a psbD transcript with a length suggestive of a terminus in the proximity of the psbD–psbC sRNA (15). </plain></SENT>
+<SENT sid="202" pm="."><plain>Possibly, degradation of the di-cistronic psbD/psbC mRNA from the 3′-end could be an extremely rare event. Figure 5.Mapping of transcript ends in the vicinity of selected sRNAs (A = rps15 5′; B = rps12 5′; C = psbD-psbC; D = rps7-ndhB). </plain></SENT>
+<SENT sid="203" pm="."><plain>Total Arabidopsis RNA was ligated with RNA oligos selectively either at the 3′- or at the 5′-end, reverse-transcribed and amplified by PCR with combinations of gene-specific and oligo-specific primers.The amplification products were separated on an agarose gel (left side of each panel). </plain></SENT>
+<SENT sid="204" pm="."><plain>PCR products were gel-purified and cloned. </plain></SENT>
+<SENT sid="205" pm="."><plain>Clones were selected and sequenced. </plain></SENT>
+<SENT sid="206" pm="."><plain>The last base before the sequence of the RNA oligo corresponds to the end of the original chloroplast RNA ligated. </plain></SENT>
+<SENT sid="207" pm="."><plain>These ends are indicated by open arrowheads (for 5′-RACE experiments) or by filled arrowheads (for 3′-RACE experiments) above a blowup of a sequence stretch covering parts of the intergenic region containing the sRNAs (upper case) at the center. </plain></SENT>
+<SENT sid="208" pm="."><plain>The numbers above the arrowheads point out numbers of clones that correspond to a particular transcript end. </plain></SENT>
+<SENT sid="209" pm="."><plain>In case of 5′-RACE, the numbers refer to independent clones as evidenced by different bar-codes introduced via randomized nucleotides in the ligated 5′-RNA oligo. </plain></SENT>
+<SENT sid="210" pm="."><plain>Number of clones indicating independent ends outside of the blowup region are indicated above outward-facing arrows at the ends of the sequence shown here. </plain></SENT>
+<SENT sid="211" pm="."><plain>All further symbols and numbers are explained in Figure 1. </plain></SENT>
+</text></p><p><text><SENT sid="212" pm="."><plain>The congruence of ends of transcripts with ends of sRNAs was also found for sRNAs downstream of cemA, rps18 and psaI (<ext-link ext-link-type="uri" xlink:href="http://nar.oxfordjournals.org/cgi/content/full/gkr1138/DC1">Supplementary Figure S7</ext-link>). </plain></SENT>
+</text></p><p><text><SENT sid="213" pm="."><plain>An interesting case is the situation of transcript ends and sRNAs in the clpP–rps12 intergenic spacer. </plain></SENT>
+<SENT sid="214" pm="."><plain>In barley and maize, only a single sRNA was identified that demarks both the 5′-end of the rps12 mRNA, as well as the 3′-end of the clpP mRNA, thus in perfect accordance with most sRNAs delineating overlapping transcript ends. </plain></SENT>
+<SENT sid="215" pm="."><plain>As noted above, this sRNA is highly conserved in land plants including the moss P. patens. </plain></SENT>
+<SENT sid="216" pm="."><plain>In Arabidopsis, two sRNAs are found in the same region, with the one closer to rps12 being orthologous to the conserved barley sRNA. </plain></SENT>
+<SENT sid="217" pm="."><plain>When mapping 5′-and 3′-ends of transcripts in this region, we found a correlation of rps12 5′-ends with the downstream sRNA and a correlation of clpP 3′-ends with the upstream sRNA (Figure 5D). </plain></SENT>
+<SENT sid="218" pm="."><plain>In contrast, no clpP 3′-ends correspond to the second sRNA nor are there 5′-ends of rps12 that would map to the upstream end of the sRNA closer to clpP. </plain></SENT>
+<SENT sid="219" pm="."><plain>Thus, in Arabidopsis, the major ends of the clpP and rps12 transcripts within this intergenic region are generated by independent processes, and likely independent proteins. </plain></SENT>
+<SENT sid="220" pm="."><plain>In any case, clpP–rps12 transcript ends correlate well with ends of sRNAs. </plain></SENT>
+</text></p><p><text><SENT sid="221" pm="."><plain>To support these findings statistically, we analyzed the number of mapped mRNA ends that are found in proximity to sRNA ends. </plain></SENT>
+<SENT sid="222" pm="."><plain>For this, we counted how many of the mRNA ends fall into a window of 31 nt centered on the ends of sRNAs relevant in our RACE experiments. </plain></SENT>
+<SENT sid="223" pm="."><plain>We repeated this analysis with a window of only 7 nt. </plain></SENT>
+<SENT sid="224" pm="."><plain>Of the total 185 mRNA ends, 142 map within the 31-nt window and still 107 ends within the 7-nt window. </plain></SENT>
+<SENT sid="225" pm="."><plain>Thus, we find a strong correlation of mRNA ends and ends of sRNAs. </plain></SENT>
+</text></p><p><text><SENT sid="226" pm="."><plain>In addition to our own data, there are some interesting overlaps with previously identified transcript ends and the position of sRNAs identified here. </plain></SENT>
+<SENT sid="227" pm="."><plain>Most strikingly, the end of the mature, 5′-processed rbcL mRNA determined previously (16) matches exactly the 5′-end of the sRNA we find in this area. </plain></SENT>
+<SENT sid="228" pm="."><plain>This end depends on the presence of the PPR protein MRL1 that is conserved not only in land plants, but even down to green algae (16). </plain></SENT>
+<SENT sid="229" pm="."><plain>In line with conservation on the protein side, we find a highly similar sRNA in rice (Figure 3), although we could not detect a sRNA in the 5′-region of Chlamydomonas rbcL. </plain></SENT>
+<SENT sid="230" pm="."><plain>Another PPR protein with a function in RNA stabilization is PGR3, which has recently been shown to bind the 5′-region of the petL and ndhA mRNAs (17). </plain></SENT>
+<SENT sid="231" pm="."><plain>The sRNA in the petL 5′-region identified here, starts 1 nt downstream of the transcript's 5′-end at −59 (17) and this region is part of the RNA bound by PGR3 in vitro (17). </plain></SENT>
+<SENT sid="232" pm="."><plain>Similarly, a sRNA found in the 5′-region of ndhA is located 4 nt downstream of the mono-cistronic messages’ 5′-end at −66 (17). </plain></SENT>
+<SENT sid="233" pm="."><plain>Again, this region is included in a longer probe bound by PGR3 in vitro and has slight similarities with the corresponding 5′-end of the petL mRNA. </plain></SENT>
+<SENT sid="234" pm="."><plain>More mapping experiments demonstrating correspondence between sRNA termini and mRNA termini are described in the accompanying manuscript in this same issue (14). </plain></SENT>
+</text></p><p><text><SENT sid="235" pm="."><plain>In sum, sRNAs co-localize with transcript ends and potential binding sites of PPR proteins. </plain></SENT>
+<SENT sid="236" pm="."><plain>This is in line with and extends previous data suggesting they are remnants of PPR proteins protecting RNAs against exonucleolytic degradation (4). </plain></SENT>
+</text></p></sec><sec><title><text><SENT sid="237" pm="."><plain>hcf152 mutants fail to accumulate an sRNA corresponding to the HCF152 binding site </plain></SENT>
+</text></title><p><text><SENT sid="238" pm="."><plain>The PPR protein HCF152 binds to a conserved sequence represented by a sRNA in the psbH–petB intergenic region in maize, rice and Arabidopsis (14,18), and is required for the accumulation of processed 5′- and 3′ termini whose ends match those of the sRNA (4,18). </plain></SENT>
+<SENT sid="239" pm="."><plain>To determine whether this sRNA accumulates due to protection by HCF152, we have analyzed the accumulation of this sRNA by RNase protection experiments in a null mutant of HCF152 (18) (Figure 6). </plain></SENT>
+<SENT sid="240" pm="."><plain>As a control, we have also analyzed RNA from mutants of HCF107 (19,20). </plain></SENT>
+<SENT sid="241" pm="."><plain>HCF152 and HCF107 are each required for the accumulation of different RNA segments from the psbB operon and display comparable phenotypic deviations from wild-type, i.e. seedling lethality and high chlorophyll fluorescence (HCF) (18,19,20). </plain></SENT>
+<SENT sid="242" pm="."><plain>The probe used in our RNase Protection assay detects the unprocessed and processed RNAs, as well as the sRNA. </plain></SENT>
+<SENT sid="243" pm="."><plain>The sRNA-precursors are reduced to comparative levels relative to wild-type in both hcf mutants analyzed. </plain></SENT>
+<SENT sid="244" pm="."><plain>In contrast, the sRNA was only detected in hcf107 mutants, but not in hcf152 mutants. </plain></SENT>
+<SENT sid="245" pm="."><plain>This demonstrates that a PPR protein is specifically responsible for the accumulation of the sRNA harboring its binding site. Figure 6.RNase protection experiments identify the absence of a sRNA in hcf152 mutants. </plain></SENT>
+<SENT sid="246" pm="."><plain>Total leaf RNA (5 µg each sample) was analyzed from wild-type (Col-0), and from hcf152 and hcf172 mutant lines. </plain></SENT>
+<SENT sid="247" pm="."><plain>The probe was designed to encompass the sRNA and adjacent sequences that are only detected if hybridization to mRNAs takes place. </plain></SENT>
+<SENT sid="248" pm="."><plain>The probe itself is longer than the maximally protected fragment, because it contains a short, non-chloroplast-encoded sequence stretch. </plain></SENT>
+<SENT sid="249" pm="."><plain>The full-length probe is visualized in the lane designated ‘yeast tRNA’ that was not subject to RNase degradation. </plain></SENT>
+<SENT sid="250" pm="."><plain>The amount of probe loaded here is one-tenth of the amount used in protection experiments shown in the other lanes. </plain></SENT>
+<SENT sid="251" pm="."><plain>When yeast tRNA is incubated together with the probe in the presence of RNase A and RNase T1, almost complete degradation of the radio-labeled probe is found. </plain></SENT>
+<SENT sid="252" pm="."><plain>This demonstrates that signals obtained with protection assays using total plant RNA are specific. </plain></SENT>
+<SENT sid="253" pm="."><plain>The lane designated ‘ssDNA marker’ contained radio-labeled single-stranded DNA of the indicated lengths. </plain></SENT>
+<SENT sid="254" pm="."><plain>Note that ssDNA runs faster than ssRNA molecules and thus only gives a relative estimate of the sizes of bands detected in this assay. </plain></SENT>
+</text></p></sec></sec></SecTag><SecTag type="DISCUSS"><sec><title><text><SENT sid="255" pm="."><plain>DISCUSSION </plain></SENT>
+</text></title><p><text><SENT sid="256" pm="."><plain>We here identified 50 non-coding short chloroplast RNAs. </plain></SENT>
+<SENT sid="257" pm="."><plain>These RNAs are distributed non-randomly in the chloroplast transcriptome and are in particular prevalent in intergenic regions. </plain></SENT>
+</text></p><p><text><SENT sid="258" pm="."><plain>Our data support the previously-proposed model on protection of short RNA segements by PPR proteins (4,21) The positional bias of sRNAs towards intergenic regions of the chloroplast transcriptome is consistent with the position of RNA binding proteins (RBPs), including PPR proteins that use these regions as points of entry to stabilize and translate mRNAs (22,23).The similarities we find for related sRNA pairs (on average 75%) is similar or higher than base identity values found for genetically identified pairs or triplets of binding sites of individual PPR proteins (Table 2 in 24). </plain></SENT>
+<SENT sid="259" pm="."><plain>Also, the two target sites of PPR10 upstream of atpH and rpl33 share 75% of all their residues (4). </plain></SENT>
+<SENT sid="260" pm="."><plain>Thus, similarities uncovered here for pairs of sRNAs are within the range of target sequence divergence tolerated by PPR proteins. </plain></SENT>
+<SENT sid="261" pm="."><plain>As such, we hypothesize that members of such pairs are protected by the same protein.A number of sRNAs show a striking conservation between Arabidopsis, tobacco, Chinese cabbage and rice. </plain></SENT>
+<SENT sid="262" pm="."><plain>The conservation extends to sRNAs found in maize and barley (14). </plain></SENT>
+<SENT sid="263" pm="."><plain>This is mirrored by the amino acid sequence conservation encountered between PPR proteins of land plants, that is exceptionally high when compared with other large plant protein families (25). </plain></SENT>
+<SENT sid="264" pm="."><plain>This suggests that sRNAs are selectively constrained because they serve as target sequences for conserved RNA binding proteins like PPR proteins. </plain></SENT>
+<SENT sid="265" pm="."><plain>PPR proteins are known to be conserved between angiosperms and some even down to bryophytes (25). </plain></SENT>
+<SENT sid="266" pm="."><plain>Thus, ancient PPR proteins could be behind the conserved sequences identified here. </plain></SENT>
+<SENT sid="267" pm="."><plain>Next to conserved sRNAs, a large number of lineage-specific sRNAs was found as well. </plain></SENT>
+<SENT sid="268" pm="."><plain>A non-find of a sRNA in one species versus another could of course always be explained by experimental differences, e.g. choice of tissue, age of material, etc. </plain></SENT>
+<SENT sid="269" pm="."><plain>Alternatively, they could be the result of lineage-specific PPR proteins. </plain></SENT>
+<SENT sid="270" pm="."><plain>For example, despite the overall impressive conservation of PPR proteins between angiosperms, there is also a fraction of PPR proteins that seem to be specific to Arabidopsis and are not found in the rice genome (25). </plain></SENT>
+<SENT sid="271" pm="."><plain>Finally, it is also possible that particular PPR proteins are capable of accommodating divergent RNA sequences and thus, would allow for a more freely evolving target sequence despite conservation of the PPR protein.Support for sRNAs as footprints of PPR proteins comes also from the finding that overlapping chloroplast transcript ends co-localize with ends of sRNAs. </plain></SENT>
+<SENT sid="272" pm="."><plain>Most of the mRNA ends we were able to map correspond to ends of sRNAs. </plain></SENT>
+<SENT sid="273" pm="."><plain>Furthermore, ends of sRNAs map to a number of transcript ends reported previously. </plain></SENT>
+<SENT sid="274" pm="."><plain>Importantly, for several of these ends, functionally-linked RNA binding proteins are known, among them the PPR proteins CRR2, PGR3, MRL1 and of course, PPR10 [and HCF152 as confirmed by Zhelyakova et al. (14)]. </plain></SENT>
+<SENT sid="275" pm="."><plain>That this co-localization of PPR binding sites, transcript ends and sRNA ends were a chance event seems unlikely. </plain></SENT>
+<SENT sid="276" pm="."><plain>Particularly striking are cases, where the sRNA's ends co-localize with the overlapping ends of upstream and downstream messages, i.e. in perfect agreement with the model for PPR proteins as bidirectional roadblocks against exonucleases (4,21). </plain></SENT>
+<SENT sid="277" pm="."><plain>Data presented in the accompanying paper (14) on sRNAs in barley chloroplasts and the interaction of the PPR protein HCF152 with its cognate mRNA extend these previous findings and complement data presented here on Arabidopsis and rice.Finally, we here show that the accumulation of a particular sRNA depends on the presence of its cognate PPR protein, HCF152. </plain></SENT>
+<SENT sid="278" pm="."><plain>A similar link was made for the PPR proteins CRP1 and PPR10 in the accompanying paper (14).Most parsimoniously, loss of these PPR proteins eliminates the direct protection of the sRNAs against exonucleases and thus leads to complete sRNA degradation. </plain></SENT>
+</text></p><sec><title><text><SENT sid="279" pm="."><plain>Footprints by RNA binding proteins other than PPR10-like PPR proteins </plain></SENT>
+</text></title><p><text><SENT sid="280" pm="."><plain>We expect that the number of links between PPR proteins and sRNAs will rise as more PPR proteins will be analyzed biochemically for their exact target location in the chloroplast transcriptome. </plain></SENT>
+<SENT sid="281" pm="."><plain>Given the large number of PPR proteins in chloroplasts (5), and given the evidence provided here and by Zhelyakova et al. (14), we expect PPR proteins to be involved in the generation of most sRNAs found here. </plain></SENT>
+<SENT sid="282" pm="."><plain>However, it cannot be excluded that in a minority of cases, other RNA binding proteins are generating sRNAs as well. </plain></SENT>
+</text></p><p><text><SENT sid="283" pm="."><plain>For instance, the related tetratricopeptide repeat protein HCF107 has been suggested to make contact with the 5′-area of psbH (26), where we found an sRNA conserved between Arabidopsis, rice and Chlamydomonas. </plain></SENT>
+<SENT sid="284" pm="."><plain>The transcript's 5′-end was previously mapped to a position 2 nt upstream of this sRNA (20). </plain></SENT>
+<SENT sid="285" pm="."><plain>Conservation of the sRNA is paralleled by conservation of HCF107, which is orthologous to the Chlamydomonas Mbb1 protein (20). </plain></SENT>
+<SENT sid="286" pm="."><plain>From the class of RNA recognition motif (RRM) proteins, the chloroplast ribonucleoprotein CP31A has been implicated in stabilization of the ndhF message (27) and may be involved in generating the footprint in the 3′-region of ndhF identified here. </plain></SENT>
+<SENT sid="287" pm="."><plain>Identification of minimal binding sites for more of the multitude of chloroplast RNA binding proteins, in particular for PPR proteins, is obviously urgently needed to investigate this. </plain></SENT>
+</text></p></sec><sec><title><text><SENT sid="288" pm="."><plain>Outlook: the use of sRNAs </plain></SENT>
+</text></title><p><text><SENT sid="289" pm="."><plain>If we accept that most sRNAs will be footprints of RBPs, we have to expect that their abundance will change with changes in the abundance of the corresponding proteins. </plain></SENT>
+<SENT sid="290" pm="."><plain>In turn, a change of sRNA abundance will be telling of changes in the stability and translation status of the corresponding mRNA. </plain></SENT>
+<SENT sid="291" pm="."><plain>Indeed, in the deep sequencing dataset on the chloroplast transcriptome of Chinese cabbage, the abundance of selected sRNAs changes in response to heat stress (3). </plain></SENT>
+<SENT sid="292" pm="."><plain>It will be exciting to determine sRNA patterns in the future under different conditions and thus link outside signals with chloroplast RBPs and the chloroplast RNA pool. </plain></SENT>
+<SENT sid="293" pm="."><plain>This has the potential to uncover regulatory roles for chloroplast RBPs—such regulatory functions have been notoriously difficult to nail down so far. </plain></SENT>
+<SENT sid="294" pm="."><plain>Moreover, the question of whether sRNAs are really only footprints or serve a role by themselves is wide open. </plain></SENT>
+<SENT sid="295" pm="."><plain>If sRNAs are really only useless remnants of a degraded 5′-non-coding region, their accumulation could be detrimental, because they would titrate their cognate RBP away from its real job on the mRNA. </plain></SENT>
+<SENT sid="296" pm="?"><plain>So, is each sRNA covered by its cognate RBP? </plain></SENT>
+<SENT sid="297" pm="?"><plain>If not, why are they not degraded down to nucleotides? </plain></SENT>
+<SENT sid="298" pm="."><plain>A quantitative understanding of the relation between the abundance of the mRNA, the RBP and the sRNA will be necessary to answer these problems. </plain></SENT>
+<SENT sid="299" pm="."><plain>In the future, overexpression of sRNAs or expression of antisense sRNAs could probe putative roles for sRNAs as modulators of gene expression. </plain></SENT>
+</text></p></sec></sec></SecTag><SecTag type="SUPPL"><sec><title><text><SENT sid="300" pm="."><plain>SUPPLEMENTARY DATA </plain></SENT>
+</text></title><p><text><SENT sid="301" pm="."><plain><ext-link ext-link-type="uri" xlink:href="http://nar.oxfordjournals.org/cgi/content/full/gkr1138/DC1">Supplementary Data</ext-link> are available at NAR Online: Supplementary Tables 1 and 2, Supplementary Figures 1–7 and Supplementary References [9–11]. </plain></SENT>
+</text></p></sec></SecTag><SecTag type="ACK_FUND"><sec><title><text><SENT sid="302" pm="."><plain>FUNDING </plain></SENT>
+</text></title><p><text4fund><text><SENT sid="303" pm="."><plain>The Deutsche Forschungsgemeinschaft (DFG) (Emmy-Noether stipend SCHM 1698/2-1 to C.S.L.). </plain></SENT>
+<SENT sid="304" pm="."><plain>Funding for open access charge: own funding, DFG. </plain></SENT>
+</text></text4fund></p><p><text4fund><text><SENT sid="305" pm="."><plain>Conflict of interest statement. </plain></SENT>
+<SENT sid="306" pm="."><plain>None declared. </plain></SENT>
+</text></text4fund></p></sec></SecTag>
+<SecTag type="SUPPL"><sec sec-type="supplementary-material">
+<title><text><SENT sid="307" pm="."><plain>Supplementary Material </plain></SENT>
+</text></title>
+<supplementary-material id="PMC_1" content-type="local-data">
+<caption>
+<title><text><SENT sid="308" pm="."><plain>Supplementary Data </plain></SENT>
+</text></title>
+</caption>
+<media mimetype="text" mime-subtype="html" xlink:href="supp_40_7_3106__index.html"/>
+<media xlink:role="associated-file" mimetype="application" mime-subtype="pdf" xlink:href="supp_gkr1138_nar-01729-v-2011-File008.pdf"/>
+<media xlink:role="associated-file" mimetype="application" mime-subtype="vnd.ms-excel" xlink:href="supp_gkr1138_nar-01729-v-2011-File009.xls"/>
+<media xlink:role="associated-file" mimetype="application" mime-subtype="vnd.ms-excel" xlink:href="supp_gkr1138_nar-01729-v-2011-File010.xls"/>
+</supplementary-material>
+</sec></SecTag>
+</body><back><SecTag type="ACK_FUND"><ack><title>ACKNOWLEDGEMENTS</title><p><text4fund><text><SENT sid="309" pm="."><plain>We thank Ian Small and Alice Barkan for critical discussion of the data and Alice Barkan for sharing data prior to publication and comments on this manuscript. </plain></SENT>
+<SENT sid="310" pm="."><plain>We are in particular grateful to Peter Westhoff, Dagmar Lyska and Karin Meierhoff for providing seeds for hcf107 and hcf152 mutant Arabidopsis lines. </plain></SENT>
+</text></text4fund></p></ack></SecTag><SecTag type="REF"><ref-list><title>REFERENCES</title><ref id="gkr1138-B1"><text><SENT sid="311" pm="."><plain>1VeraASugiuraMA novel RNA gene in the tobacco plastid genome: its possible role in the maturation of 16S rRNAEMBO J.199413221122177514532 </plain></SENT>
+</text></ref><ref id="gkr1138-B2"><text><SENT sid="312" pm="."><plain>2LungBZemannAMadejMJSchuelkeMTechritzSRufSBockRHuttenhoferAIdentification of small non-coding RNAs from mitochondria and chloroplastsNucleic Acids Res.2006343842385216899451 </plain></SENT>
+</text></ref><ref id="gkr1138-B3"><text><SENT sid="313" pm="."><plain>3WangLYuXWangHLuYde RuiterMPrinsMHeYA novel class of heat-responsive small RNAs derived from the chloroplast genome of Chinese cabbage (Brassica rapa)BMC Genomics20111228921639890 </plain></SENT>
+</text></ref><ref id="gkr1138-B4"><text><SENT sid="314" pm="."><plain>4PfalzJBayraktarOAPrikrylJBarkanASite-specific binding of a PPR protein defines and stabilizes 5′ and 3′ mRNA termini in chloroplastsEMBO J.2009282042205219424177 </plain></SENT>
+</text></ref><ref id="gkr1138-B5"><text><SENT sid="315" pm="."><plain>5LurinCAndresCAubourgSBellaouiMBittonFBruyereCCabocheMDebastCGualbertoJHoffmannBGenome-wide analysis of Arabidopsis pentatricopeptide repeat proteins reveals their essential role in organelle biogenesisPlant Cell2004162089210315269332 </plain></SENT>
+</text></ref><ref id="gkr1138-B6"><text><SENT sid="316" pm="."><plain>6Schmitz-LinneweberCSmallIPentatricopeptide repeat proteins: a socket set for organelle gene expressionTrends Plant Sci.20081366367019004664 </plain></SENT>
+</text></ref><ref id="gkr1138-B7"><text><SENT sid="317" pm="."><plain>7MorinRDAksayGDolgosheinaEEbhardtHAMagriniVMardisERSahinalpSCUnrauPJComparative analysis of the small RNA transcriptomes of Pinus contorta and Oryza sativaGenome Res.20081857158418323537 </plain></SENT>
+</text></ref><ref id="gkr1138-B8"><text><SENT sid="318" pm="."><plain>8RajagopalanRVaucheretHTrejoJBartelDPA diverse and evolutionarily fluid set of microRNAs in Arabidopsis thalianaGenes Dev.2006203407342517182867 </plain></SENT>
+</text></ref><ref id="gkr1138-B9"><text><SENT sid="319" pm="."><plain>9JohnsonCBowmanLAdaiATVanceVSundaresanVCSRDB: a small RNA integrated database and browser resource for cerealsNucleic Acids Res.200735D829D83317169981 </plain></SENT>
+</text></ref><ref id="gkr1138-B10"><text><SENT sid="320" pm="."><plain>10LarkinMABlackshieldsGBrownNPChennaRMcGettiganPAMcWilliamHValentinFWallaceIMWilmALopezRClustal W and Clustal X version 2.0Bioinformatics2007232947294817846036 </plain></SENT>
+</text></ref><ref id="gkr1138-B11"><text><SENT sid="321" pm="."><plain>11WaterhouseAMProcterJBMartinDMClampMBartonGJJalview Version 2—a multiple sequence alignment editor and analysis workbenchBioinformatics2009251189119119151095 </plain></SENT>
+</text></ref><ref id="gkr1138-B12"><text><SENT sid="322" pm="."><plain>12YaoWBMengBYTanakaMSugiuraMAn additional promoter within the protein-coding region of the psbD-psbC gene cluster in tobacco chloroplast DNANucleic Acids Res.198917958395912481263 </plain></SENT>
+</text></ref><ref id="gkr1138-B13"><text><SENT sid="323" pm="."><plain>13HashimotoMEndoTPeltierGTasakaMShikanaiTA nucleus-encoded factor, CRR2, is essential for the expression of chloroplast ndhB in ArabidopsisPlant J.20033654154914617084 </plain></SENT>
+</text></ref><ref id="gkr1138-B14"><text><SENT sid="324" pm="."><plain>14ZhelyazkovaPHammaniKRojasMVoelkerRVargas-SuarezMBörnerTBarkanAProtein-mediated protection as the predominant mechanism for defining processed mRNA termini in land plant chloroplastsNucleic Acids Res.20124030923105 </plain></SENT>
+</text></ref><ref id="gkr1138-B15"><text><SENT sid="325" pm="."><plain>15MeurerJBergerAWesthoffPA nuclear mutant of Arabidopsis with impaired stability on distinct transcripts of the plastid psbB, psbD/C, ndhH, and ndhC operonsPlant Cell19968119312078768377 </plain></SENT>
+</text></ref><ref id="gkr1138-B16"><text><SENT sid="326" pm="."><plain>16JohnsonXWostrikoffKFinazziGKurasRSchwarzCBujaldonSNickelsenJSternDBWollmanFAVallonOMRL1, a conserved Pentatricopeptide repeat protein, is required for stabilization of rbcL mRNA in Chlamydomonas and ArabidopsisPlant Cell20102223424820097872 </plain></SENT>
+</text></ref><ref id="gkr1138-B17"><text><SENT sid="327" pm="."><plain>17CaiWOkudaKPengLShikanaiTProton Gradient Regulation 3 recognizes multiple targets with limited similarity and mediates translation and RNA stabilization in plastidsPlant J.20116731832721457370 </plain></SENT>
+</text></ref><ref id="gkr1138-B18"><text><SENT sid="328" pm="."><plain>18MeierhoffKFelderSNakamuraTBechtoldNSchusterGHCF152, an Arabidopsis RNA binding pentatricopeptide repeat protein involved in the processing of chloroplast psbB-psbT-psbH-petB-petD RNAsPlant Cell2003151480149512782738 </plain></SENT>
+</text></ref><ref id="gkr1138-B19"><text><SENT sid="329" pm="."><plain>19SaneAPSteinBWesthoffPThe nuclear gene HCF107 encodes a membrane-associated R-TPR (RNA tetratricopeptide repeat)-containing protein involved in expression of the plastidial psbH gene in ArabidopsisPlant J.20054272073015918885 </plain></SENT>
+</text></ref><ref id="gkr1138-B20"><text><SENT sid="330" pm="."><plain>20FelderSMeurerJMeierhoffKKlaffPBechtoldNWesthoffPThe nucleus-encoded HCF107 gene of Arabidopsis provides a link between intercistronic RNA processing and the accumulation of translation-competent psbH transcripts in chloroplastsPlant Cell2001132127214111549768 </plain></SENT>
+</text></ref><ref id="gkr1138-B21"><text><SENT sid="331" pm="."><plain>21PrikrylJRojasMSchusterGBarkanAMechanism of RNA stabilization and translational activation by a pentatricopeptide repeat proteinProc. </plain></SENT>
+<SENT sid="332" pm="."><plain>Natl Acad. </plain></SENT>
+<SENT sid="333" pm="."><plain>Sci. </plain></SENT>
+<SENT sid="334" pm="."><plain>USA201110841542021173259 </plain></SENT>
+</text></ref><ref id="gkr1138-B22"><text><SENT sid="335" pm="."><plain>22Peled-ZehaviHDanonABockRTranslation and translational regulation in chloroplastsCell and Molecular Biology of Plastids2007Vol. </plain></SENT>
+<SENT sid="336" pm="."><plain>19New YorkSpringer249282 </plain></SENT>
+</text></ref><ref id="gkr1138-B23"><text><SENT sid="337" pm="."><plain>23Schmitz-LinneweberCWilliams-CarrierRBarkanARNA immunoprecipitation and microarray analysis show a chloroplast Pentatricopeptide repeat protein to be associated with the 5′ region of mRNAs whose translation it activatesPlant Cell2005172791280416141451 </plain></SENT>
+</text></ref><ref id="gkr1138-B24"><text><SENT sid="338" pm="."><plain>24HammaniKOkudaKTanzSKChateigner-BoutinALShikanaiTSmallIA Study of new Arabidopsis chloroplast RNA editing mutants reveals general features of editing factors and their target sitesPlant Cell2009213686369919934379 </plain></SENT>
+</text></ref><ref id="gkr1138-B25"><text><SENT sid="339" pm="."><plain>25O'TooleNHattoriMAndresCIidaKLurinCSchmitz-LinneweberCSugitaMSmallIOn the expansion of the pentatricopeptide repeat gene family in plantsMol. </plain></SENT>
+<SENT sid="340" pm="."><plain>Biol. </plain></SENT>
+<SENT sid="341" pm="."><plain>Evol.2008251120112818343892 </plain></SENT>
+</text></ref><ref id="gkr1138-B26"><text><SENT sid="342" pm="."><plain>26BarkanAExpression of plastid genes: organelle-specific elaborations on a prokaryotic scaffoldPlant Physiol.20111551520153221346173 </plain></SENT>
+</text></ref><ref id="gkr1138-B27"><text><SENT sid="343" pm="."><plain>27TillichMHardelSLKupschCArmbrusterUDelannoyEGualbertoJMLehwarkPLeisterDSmallIDSchmitz-LinneweberCChloroplast ribonucleoprotein CP31A is required for editing and stability of specific chloroplast mRNAsProc. </plain></SENT>
+<SENT sid="344" pm="."><plain>Natl Acad. </plain></SENT>
+<SENT sid="345" pm="."><plain>Sci. </plain></SENT>
+<SENT sid="346" pm="."><plain>USA20091066002600719297624 </plain></SENT>
+</text></ref></ref-list></SecTag></back></article>

@@ -1,0 +1,495 @@
+
+<article xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML" article-type="research-article"><?properties open_access?><?properties manuscript?><?origin nihpa?><?iso-abbr Nat. Struct. Mol. Biol.?><?submitter-system nihms?><?submitter-canonical-name Nature Publishing Group?><?submitter-canonical-id NATURE-STRUCTUR?><?submitter-userid 1045?><?submitter-authority publisher?><?submitter-login nature-structure?><?submitter-name Nature Publishing Group (obsolete)?><?domain nihpa?><front><journal-meta><journal-id journal-id-type="nlm-journal-id">101186374</journal-id><journal-id journal-id-type="pubmed-jr-id">31761</journal-id><journal-id journal-id-type="nlm-ta">Nat Struct Mol Biol</journal-id><journal-id journal-id-type="iso-abbrev">Nat. Struct. Mol. Biol.</journal-id><journal-title-group><journal-title>Nature structural &amp; molecular biology</journal-title></journal-title-group><issn pub-type="ppub">1545-9993</issn><issn pub-type="epub">1545-9985</issn></journal-meta><article-meta><article-id pub-id-type="pmcid">4318798</article-id><article-id pub-id-type="pmid">25580577</article-id><article-id pub-id-type="doi">10.1038/nsmb.2945</article-id><article-id pub-id-type="manuscript">nihpa647098</article-id><article-categories><subj-group subj-group-type="heading"><subject>Article</subject></subj-group></article-categories><title-group><article-title><SecTag type="TITLE"><text><SENT sid="0" pm="."><plain>Tetrameric Ctp1 coordinates DNA binding and bridging in DNA double strand break repair </plain></SENT>
+</text></SecTag></article-title></title-group><contrib-group><contrib contrib-type="author"><name><surname>Andres</surname><given-names>Sara N.</given-names></name><xref ref-type="aff" rid="A1">1</xref></contrib><contrib contrib-type="author"><name><surname>Appel</surname><given-names>C. Denise</given-names></name><xref ref-type="aff" rid="A1">1</xref></contrib><contrib contrib-type="author"><name><surname>Westmoreland</surname><given-names>Jim</given-names></name><xref ref-type="aff" rid="A1">1</xref></contrib><contrib contrib-type="author"><name><surname>Williams</surname><given-names>Jessica S.</given-names></name><xref ref-type="aff" rid="A1">1</xref></contrib><contrib contrib-type="author"><name><surname>Nguyen</surname><given-names>Yvonne</given-names></name><xref ref-type="aff" rid="A1">1</xref></contrib><contrib contrib-type="author"><name><surname>Robertson</surname><given-names>Patrick D.</given-names></name><xref ref-type="aff" rid="A1">1</xref></contrib><contrib contrib-type="author"><name><surname>Resnick</surname><given-names>Michael A.</given-names></name><xref ref-type="aff" rid="A1">1</xref></contrib><contrib contrib-type="author"><name><surname>Williams</surname><given-names>R. Scott</given-names></name><xref ref-type="aff" rid="A1">1</xref></contrib></contrib-group><aff id="A1"><label>1</label>Genome Integrity and Structural Biology Laboratory, National Institute of Environmental Health Sciences, US National Institutes of Health, Department of Health and Human Services, Research Triangle Park, NC, USA</aff><author-notes><corresp id="cor1">Correspondence: R. Scott Williams, <email>williamsrs@niehs.nih.gov</email></corresp></author-notes><pub-date pub-type="nihms-submitted"><day>9</day><month>12</month><year>2014</year></pub-date><pub-date pub-type="epub"><day>12</day><month>1</month><year>2015</year></pub-date><pub-date pub-type="ppub"><month>2</month><year>2015</year></pub-date><pub-date pub-type="pmc-release"><day>01</day><month>8</month><year>2015</year></pub-date><volume>22</volume><issue>2</issue><fpage>158</fpage><lpage>166</lpage><permissions><license xlink:href="http://www.nature.com/authors/editorial_policies/license.html#terms"><license-p>Users may view, print, copy, and download text and data-mine the content in such documents, for the purposes of academic research, subject always to the full Conditions of use:<ext-link ext-link-type="uri" xlink:href="http://www.nature.com/authors/editorial_policies/license.html#terms">http://www.nature.com/authors/editorial_policies/license.html#terms</ext-link></license-p></license></permissions><abstract><p id="P1"><SecTag type="ABS"><text><SENT sid="1" pm="."><plain>Ctp1 (aka CtIP or Sae2) collaborates with Mre11–Rad50–Nbs1 to initiate repair of DNA double strand breaks (DSBs), but its function(s) remain enigmatic. </plain></SENT>
+<SENT sid="2" pm="."><plain>We report that tetrameric Schizosaccharomyces pombe Ctp1 harbors multivalent DNA-binding and bridging activities. </plain></SENT>
+<SENT sid="3" pm="."><plain>Through structural and biophysical analyses of the Ctp1 tetramer we define the salient features of Ctp1 architecture: an N-terminal interlocking tetrameric helical dimer-of-dimers (THDD) domain and a central intrinsically disordered region (IDR) linked to C-terminal “RHR” DNA interaction motifs. </plain></SENT>
+<SENT sid="4" pm="."><plain>The THDD, IDR and RHR are required for Ctp1 DNA bridging activity in vitro and both the THDD and RHR are required for efficient DSB repair in S. pombe. </plain></SENT>
+<SENT sid="5" pm="."><plain>Our results establish non-nucleolytic roles for Ctp1 in binding and coordination of DSB repair intermediates and suggest that ablation of human CtIP DNA binding by truncating mutations underlie the CTIP-linked Seckel and Jawad syndromes. </plain></SENT>
+</text></SecTag></p></abstract></article-meta></front><body><SecTag type="INTRO"><sec sec-type="intro" id="S1"><title><text><SENT sid="6" pm="."><plain>INTRODUCTION </plain></SENT>
+</text></title><p id="P2"><text><SENT sid="7" pm="."><plain>DNA double strand breaks (DSBs) arising from exposure to DNA damaging agents including ionizing radiation (IR) or DNA break-inducing chemotherapeutic drugs cause genomic instability, chromosome rearrangements and carcinogenesis1,2. </plain></SENT>
+<SENT sid="8" pm="."><plain>Ctp1 (Ctp1 in fission yeast; CtIP in vertebrates and Sae2 in budding yeast) acts in conjunction with the Mre11–Rad50–Nbs1 (MRN) nuclease complex to coordinate the detection, signaling and repair of cytotoxic DSBs3–7. </plain></SENT>
+<SENT sid="9" pm="."><plain>Together, Ctp1 and MRN initiate homologous recombination (HR)-mediated DSB repair to restore genome integrity. </plain></SENT>
+<SENT sid="10" pm="."><plain>Ctp1(CtIP,Sae2)-dependant orchestration of DSB repair processing occurs through cell cycle regulated modulation of Ctp1 transcript levels in fission yeast5 or via phosphorylation of Sae2 (ref. </plain></SENT>
+<SENT sid="11" pm="."><plain>6) or CtIP in mammals8. </plain></SENT>
+<SENT sid="12" pm="."><plain>Mutation of Ctp1(CtIP,Sae2) or MRN subunits in budding yeast (Saccharomyces cerevisiae) and fission yeast (Schizosaccharomyces pombe) causes genotoxin sensitivity and meiotic deficiencies resulting from impaired programmed DSB processing1,9. </plain></SENT>
+<SENT sid="13" pm="."><plain>Critical genome maintenance functions of Ctp1(CtIP,Sae2) are underscored by the facts that CtIP is a tumor suppressor in mice10, and human CtIP mutations are linked to the microcephaly and dwarfism Seckel and Jawad syndromes11. </plain></SENT>
+<SENT sid="14" pm="."><plain>However, the reasons that Ctp1(CtIP,Sae2) deficiencies alter biological responses remain unclear. </plain></SENT>
+</text></p><p id="P3"><text><SENT sid="15" pm="."><plain>An early step in the onset of HR-mediated DSB repair is nucleolytic processing, which generates 3′ single strand DNA (ssDNA) tails to initiate strand invasion. </plain></SENT>
+<SENT sid="16" pm="."><plain>Ctp1(CtIP,Sae2) is required for resection, although there may be differences between “clean” and “dirty” DSBs12–15. </plain></SENT>
+<SENT sid="17" pm="."><plain>Also, Ctp1(CtIP,Sae2) is required for removal of proteins attached to the 5′-end of DSBs16–18, including Topoisomerase 2 DNA–protein conjugates induced by anticancer drugs such as Etoposide18. </plain></SENT>
+<SENT sid="18" pm="."><plain>This is consistent with a reported Mg2+-dependent endonuclease activity of Sae2 (ref. </plain></SENT>
+<SENT sid="19" pm="."><plain>19) and its role in processing hairpin-capped DSBs in vivo20. </plain></SENT>
+<SENT sid="20" pm="."><plain>DSB repair also requires structural DNA scaffolding for coordination of DSB processing intermediates. </plain></SENT>
+<SENT sid="21" pm="."><plain>Intriguingly, Sae2 facilitates coincident “two-ended” DSB resection of IR-induced DSBs13. </plain></SENT>
+<SENT sid="22" pm="."><plain>Thus, Ctp1(CtIP,Sae2) might coordinate DNA intermediates as well. </plain></SENT>
+<SENT sid="23" pm="."><plain>However, Ctp1(CtIP,Sae2) bears no apparent nuclease or DNA interaction domains, and the molecular basis for Ctp1(CtIP,Sae2)-regulated DNA transactions are currently unknown. </plain></SENT>
+</text></p><p id="P4"><text><SENT sid="24" pm="."><plain>We set out to better define Ctp1(CtIP,Sae2) molecular architecture and function as our understanding of Ctp1CtIP/Sae2 structure remains limited. </plain></SENT>
+<SENT sid="25" pm="."><plain>Nbs1 recruits phosphorylated Ctp1 to DSBs via binding of the Nbs1 FHA domain to a Ctp1 SXT motifs (Ctp1 residues 74–94)4,21. </plain></SENT>
+<SENT sid="26" pm="."><plain>The crystal structure of an Nbs1–Ctp1 phosphoprotein recognition element, chromatin immunoprecipitation (ChIP) and biophysical analyses suggested that Ctp1 tethering to a flexible Nbs1 arm restricts Ctp1(CtIP,Sae2) activities to the immediate vicinity of DSBs4. </plain></SENT>
+<SENT sid="27" pm="."><plain>Outside of Nbs1-interacting SXT motifs, additional conserved Ctp1(CtIP,Sae2) regions map to its extreme N- and C-termini4,5. </plain></SENT>
+<SENT sid="28" pm="."><plain>The N-terminal region has a predicted coiled-coil structure and mediates self-interaction in Ctp1 (ref. </plain></SENT>
+<SENT sid="29" pm="."><plain>5) and CtIP22. </plain></SENT>
+<SENT sid="30" pm="."><plain>A third region of high homology is a C-terminal CxxC-RHR motif of poorly understood function. </plain></SENT>
+<SENT sid="31" pm="."><plain>Here, we report an integrated structural, biophysical and genetic study of S. pombe Ctp1. </plain></SENT>
+<SENT sid="32" pm="."><plain>Our collective results illuminates novel functional roles for Ctp1 as a flexible, DNA sensing and scaffolding factor in DSB repair. </plain></SENT>
+</text></p></sec></SecTag><SecTag type="RESULTS"><sec sec-type="results" id="S2"><title><text><SENT sid="33" pm="."><plain>RESULTS </plain></SENT>
+</text></title><sec id="S3"><title><text><SENT sid="34" pm="."><plain>Ctp1 structured domains and regions of intrinsic disorder </plain></SENT>
+</text></title><p id="P5"><text><SENT sid="35" pm="."><plain>To understand Ctp1 protein architecture, we analyzed the Ctp1 protein sequence using predictors of protein order and disorder with Iupred23 and D2P2 (ref. </plain></SENT>
+<SENT sid="36" pm="."><plain>24), which derives a consensus disorder prediction from an array of protein order prediction algorithms (Fig. 1a). </plain></SENT>
+<SENT sid="37" pm="."><plain>Both approaches suggest that Ctp1 harbors a structurally ordered region at its N-terminus (Fig. 1a), but is otherwise comprised of expanded stretches of low complexity, commonly referred to as intrinsically disordered regions (IDRs)25. </plain></SENT>
+<SENT sid="38" pm="."><plain>To validate in silico protein order predictions for Ctp1, we purified recombinant full-length S. pombe Ctp1 (Ctp1) (Fig. 1b) and mapped structured domains with limited trypsin proteolysis (Fig. 1c). </plain></SENT>
+<SENT sid="39" pm="."><plain>Purified recombinant Ctp1 migrated aberrantly in SDS-PAGE (&gt; 38 kDa , predicted MW of 33.1 kDa) (Fig. 1b), a hallmark of intrinsically disordered proteins (IDPs)26. </plain></SENT>
+<SENT sid="40" pm="."><plain>Consistent with protein disorder predictions, Ctp1 was highly susceptible to limited proteolytic cleavage, but contains a trypsin-resilient N-terminal core domain (residues 9–57) (Fig. 1c). </plain></SENT>
+</text></p><p id="P6"><text><SENT sid="41" pm="."><plain>Analysis of Ctp1 molecular mass using size-exclusion chromatography with multi-angle light scattering (SEC-MALS) showed Ctp1 is predominantly tetrameric (SEC-MALS molecular mass = 129.1 kDa, Ctp1 monomer mass = 33.1 kDa) in solution (Fig. 1d, Table 1). </plain></SENT>
+<SENT sid="42" pm="."><plain>Small angle X-ray scattering (SAXS) analysis revealed the Ctp1 tetramer is a highly elongated molecule with a maximum particle dimension (Dmax) of 260 Å (Fig. 1e, Supplementary Fig.1). </plain></SENT>
+<SENT sid="43" pm="."><plain>SAXS and SEC-MALS data are consistent with Ctp1 containing extended regions of low structural complexity. </plain></SENT>
+<SENT sid="44" pm="."><plain>Similarly, circular dichroism (CD) measurements of Ctp1 exhibited low abundance of α or β secondary structure (Fig. 1f and Supplementary Table 1). </plain></SENT>
+<SENT sid="45" pm="."><plain>A Ctp161–294 fragment encompassing the predicted disordered region had limited secondary structure as analyzed by CD. </plain></SENT>
+<SENT sid="46" pm="."><plain>In contrast, an amino-terminal fragment Ctp1–60 has ~89 % alpha-helical content by CD (Fig. 1f, Supplementary Table 1), consistent with predictions that the Ctp1 N-terminus contains coiled-coil structure5,22. </plain></SENT>
+</text></p><p id="P7"><text><SENT sid="47" pm="."><plain>Both Ctp11–60 and its maltose binding protein (MBP) fusion equivalent (MBP-Ctp11–60) are tetrameric, indicating that Ctp11–60 harbors minimal determinants of Ctp1 oligomerization (Fig. 1d, Table 1). </plain></SENT>
+<SENT sid="48" pm="."><plain>However, despite having ~50 % larger MALS molecular mass than Ctp1 (Table 1), MBP-Ctp11–60 migrated as an apparently smaller species in SEC (Fig. 1d) and had a decreased SAXS maximum particle dimension (Dmax= 140 Å) as compared to Ctp1 (Dmax= 260 Å). </plain></SENT>
+<SENT sid="49" pm="."><plain>This data highlights the large hydrodynamic radius of the intrinsically disordered Ctp1 C-terminus. </plain></SENT>
+<SENT sid="50" pm="."><plain>Thus, altogether the SAXS, SEC-MALS, CD, in silico order predictions and limited proteolytic analyses reveal Ctp1 is largely an IDP, but bears a folded tetramerization core domain at its N- terminus. </plain></SENT>
+</text></p></sec><sec id="S4"><title><text><SENT sid="51" pm="."><plain>Structural basis for Ctp1 tetramerization </plain></SENT>
+</text></title><p id="P8"><text><SENT sid="52" pm="."><plain>To establish the molecular basis for Ctp1 tetramerization we crystallized and determined the X-ray crystal structure of Ctp15–60 to 2.20 Å resolution (Table 2, Supplementary Figs. </plain></SENT>
+<SENT sid="53" pm="."><plain>2,3). </plain></SENT>
+<SENT sid="54" pm="."><plain>The structure was phased with a brute force molecular replacement strategy using 16 coiled-coil models as search templates in 1276 molecular replacement trials. </plain></SENT>
+<SENT sid="55" pm="."><plain>Search models included monomer, dimer, trimer and tetrameric coiled-coils (see Online Methods). </plain></SENT>
+</text></p><p id="P9"><text><SENT sid="56" pm="."><plain>The Ctp1 N-terminal domain assembles as an interlocked tetrameric helical dimer of coiled-coil dimers, hereafter referred to as the THDD domain (Fig. 2a). </plain></SENT>
+<SENT sid="57" pm="."><plain>Each Ctp1 monomer participates in a dimeric two-stranded parallel coiled-coil interaction bounded by residues 28–60. </plain></SENT>
+<SENT sid="58" pm="."><plain>Two parallel coiled-coils engage one another via a 4-helix bundle at the Ctp1 N-terminus (residues 10–25). </plain></SENT>
+<SENT sid="59" pm="."><plain>Within the tetramer, each coiled-coil dimer is oriented ~180° relative to the opposing dimer, creating an overall extended scaffold ~ 120 Å long. </plain></SENT>
+</text></p><p id="P10"><text><SENT sid="60" pm="."><plain>The interlocked Ctp1 tetramer is unlike other coiled-coils previously characterized. </plain></SENT>
+<SENT sid="61" pm="."><plain>Residues 27–60 of Ctp1 adopt a canonical coiled-coil heptad repeat with hydrophobic side chains occupying “a” and “d” positions of an “a” → “g” heptad repeat (Fig. 2b, Supplementary Fig. 2b). </plain></SENT>
+<SENT sid="62" pm="."><plain>The exception is the 3rd–4th Ctp1 heptads, which participate in charged “a” → “d” position inter-chain salt bridging networks involving Glu40 and Arg44. </plain></SENT>
+<SENT sid="63" pm="."><plain>At the dimer-to-tetramer transition (Tyr26), the coiled-coil repeat is interrupted by a bulky aromatic substitution at the “d”-position. </plain></SENT>
+<SENT sid="64" pm="."><plain>Here, splaying of the dimeric coiled-coil facilitates tetramerization by an array of hydrophobic side chains at the N-terminus of helix α1. </plain></SENT>
+<SENT sid="65" pm="."><plain>Seven residues (W12, V15, Y16, L19, L22, L23 and Y26) form the core of the N-terminal tetrameric interface, burying ~2900 Å2 of solvent accessible surface area. </plain></SENT>
+<SENT sid="66" pm="."><plain>The four intertwined helices resemble two linked fishhooks with Trp12 and Tyr16 making up the “aromatic-hook”. </plain></SENT>
+<SENT sid="67" pm="."><plain>Glu27 and His11 mediate additional inter-subunit salt-bridging contacts across the interface, thereby reinforcing the tetramer. </plain></SENT>
+</text></p><p id="P11"><text><SENT sid="68" pm="."><plain>To test if the Ctp1 N-terminus is critical for Ctp1 tetramerization, we generated a deletion mutation (ΔN14, Ctp115–60), removing the first helical turn of α1 but retaining the Ctp1 dimeric coiled-coil region (residues 27–57). </plain></SENT>
+<SENT sid="69" pm="."><plain>Consistent with predictions from the X-ray structure, MBP-Ctp115–60 is dimeric (Fig. 1d, Table 1). </plain></SENT>
+<SENT sid="70" pm="."><plain>By comparison, deletion of the N-terminal 60 residues of Ctp1 encompassing the THDD (Ctp161–294) yielded a monomeric protein (Supplementary Fig. 4a). </plain></SENT>
+<SENT sid="71" pm="."><plain>SAXS analysis of MBP-Ctp115–60 further affirmed observations from SEC-MALS, demonstrating the decreased size of MBP-Ctp115–60 (Dmax= 115 Å), compared to MBP-Ctp11–60 (Dmax= 140 Å). </plain></SENT>
+<SENT sid="72" pm="."><plain>To validate roles for the aromatic-hook in mediating Ctp1 oligomerization, we generated a triple mutant (H11A W12A Y16A) that disrupts key inter-subunit tetramer contacts. </plain></SENT>
+<SENT sid="73" pm="."><plain>Ctp1 (H11A W12A Y16A) also exhibited defective oligomerization (Supplementary Fig. 4b). </plain></SENT>
+</text></p><p id="P12"><text><SENT sid="74" pm="."><plain>Thus, structural and mutational studies reveal the Ctp1 N-terminus assembles as a tetrameric helical dimer of dimers. </plain></SENT>
+<SENT sid="75" pm="."><plain>We note two additional interfaces observed in the crystal lattice that may mediate alternative Ctp1 tetramerization interfaces. </plain></SENT>
+<SENT sid="76" pm="."><plain>However, these interfaces do not employ the conserved N-terminal 16 residues of the protein that are required for stable oligomerization, which likely form during crystallization. </plain></SENT>
+</text></p></sec><sec id="S5"><title><text><SENT sid="77" pm="."><plain>Ctp1 is a DNA binding factor </plain></SENT>
+</text></title><p id="P13"><text><SENT sid="78" pm="."><plain>Proteins with extended regions of intrinsic disorder can act as flexible macromolecular interaction hubs25. </plain></SENT>
+<SENT sid="79" pm="."><plain>Such is the case for Nbs1 that binds phosphorylated Ctp1, Mre11 and ATM(Tel1)4,21,27,28. </plain></SENT>
+<SENT sid="80" pm="."><plain>Architecturally, the arrangement of the Ctp1 THDD suggests the tetrameric N-terminal bridge links binding events in the Ctp1 carboxyl-terminus. </plain></SENT>
+<SENT sid="81" pm="."><plain>Given the central role of Ctp1 in HR DSB repair4,5,29, we reasoned that Ctp1 harbors intrinsic DNA binding activities. S. pombe Ctp1 is required for survival of agents causing dirty or random DSBs (e.g. </plain></SENT>
+<SENT sid="82" pm="."><plain>IR) and replication fork stalling or collapse (e.g. </plain></SENT>
+<SENT sid="83" pm="."><plain>Camptothecin, CPT)4,5. </plain></SENT>
+<SENT sid="84" pm="."><plain>Thus, we evaluated the ability of full-length Ctp1 and Ctp1 truncation or deletion mutants to bind to variable DNA structures (Fig. 3a,b, Supplementary Fig. 5a, Supplementary Tables 2,3). </plain></SENT>
+</text></p><p id="P14"><text><SENT sid="85" pm="."><plain>Electrophoretic mobility shift assays (EMSAs) showed Ctp1 binds double-stranded DNA (dsDNA), ssDNA, and ssDNA-dsDNA junction substrates (Fig. 3b). </plain></SENT>
+<SENT sid="86" pm="."><plain>Ctp1 favored binding to DNA forks and exhibited a preference for branched DNAs containing dsDNA-ssDNA junctions over dsDNA or ssDNA alone (Supplementary Fig. 5a). </plain></SENT>
+<SENT sid="87" pm="."><plain>In addition to a preference for DNA secondary structures, Ctp1 displayed a preference for DNA length. </plain></SENT>
+<SENT sid="88" pm="."><plain>Ctp1 titration on a 10 bp ladder revealed stable dsDNA binding for fragments greater than 40–50 bp (Supplementary Fig. 5b) but not for fragments &lt; 20–30 bp. </plain></SENT>
+<SENT sid="89" pm="."><plain>Thus, Ctp1 harbors structure-specific DNA binding. </plain></SENT>
+<SENT sid="90" pm="."><plain>Notably, under conditions where Ctp1 is bound to DNA, in the presence of Mg2+ and ATP we did not observe nucleolytic activity, even at elevated enzyme concentrations (1.0 µM), suggesting that unlike Sae2 (ref. </plain></SENT>
+<SENT sid="91" pm="."><plain>19) purified recombinant S. pombe Ctp1 is not a nuclease, at least under the conditions examined here (Fig. 3c). </plain></SENT>
+</text></p><p id="P15"><text><SENT sid="92" pm="."><plain>To map Ctp1–DNA interaction determinants, we expressed and purified Ctp1 truncations and internal deletions and evaluated their DNA-binding activities (Fig. 3a, Supplementary Fig. 5c). </plain></SENT>
+<SENT sid="93" pm="."><plain>In isolation, the N- and C-terminal Ctp1 halves, (residues 1–150 and 151–294), displayed no appreciable binding to a 39 bp dsDNA substrate, even at 1.0 µM concentration where Ctp1 is &gt; 90% bound (Supplementary Fig. 5d). </plain></SENT>
+<SENT sid="94" pm="."><plain>To evaluate DNA-binding roles for the internal unstructured region of the protein, we engineered a series of internal deletions removing regions of predicted disorder (Fig. 3a, Supplementary Fig. 5e). </plain></SENT>
+<SENT sid="95" pm="."><plain>In contrast to N- and C-terminal deletions, excision of large portions of the Ctp1 central IDR (e.g. </plain></SENT>
+<SENT sid="96" pm="."><plain>Ctp1Δ60–120, Supplementary Fig. 5e, lanes 10–12) did not ablate dsDNA binding in vitro. </plain></SENT>
+</text></p><p id="P16"><text><SENT sid="97" pm="."><plain>We hypothesized that DNA-binding elements localize to the most evolutionary conserved regions of the divergent Ctp1 orthologs, the N-terminal tetramerization (Fig. 2) and C-terminal CxxC-RHR homology regions. </plain></SENT>
+<SENT sid="98" pm="."><plain>Consistent with this hypothesis, we observed weak sub-micromolar DNA binding by the isolated THDD (Ctp11–60), suggesting this region of Ctp1 contributes to Ctp1–DNA binding (Fig. 3d). </plain></SENT>
+<SENT sid="99" pm="."><plain>A monomeric construct (Supplementary Fig. 4a) of the Ctp1 C-terminus encompassing the IDR and conserved CxxC-RHR (amino acids 61–294) region also bound DNA (Kd = 1.4µM dsDNA, 1.0 µM, forked substrate) (Fig. 3e). </plain></SENT>
+<SENT sid="100" pm="."><plain>Given tetramerization of the N-terminal THDD domain scaffold, the N- and C-terminal Ctp1 DNA binding interactions likely contribute to high-affinity DNA interactions through avidity by linking multiple low-affinity DNA binding sites within the intact tetrameric Ctp1. </plain></SENT>
+</text></p></sec><sec id="S6"><title><text><SENT sid="101" pm="."><plain>THDD and C-terminal RHR DNA binding motifs </plain></SENT>
+</text></title><p id="P17"><text><SENT sid="102" pm="."><plain>To further interrogate Ctp1 DNA interactions, we mapped Ctp1 electrostatics and sequence conservation onto the THDD structure (Fig. 4a,b). </plain></SENT>
+<SENT sid="103" pm="."><plain>A prominent positively charged surface marks a region of high sequence conservation (Fig. 4b). </plain></SENT>
+<SENT sid="104" pm="."><plain>This includes a “KKxR” motif (residues 41–44 in S. pombe Ctp1) that is highly conserved between fission yeast Ctp1 and vertebrate CtIP. </plain></SENT>
+<SENT sid="105" pm="."><plain>Arg32 in S. pombe Ctp1 abuts the KKxR and extends this putative electropositive DNA binding surface. </plain></SENT>
+<SENT sid="106" pm="."><plain>Although Arg32 is not conserved in vertebrate CtIP, a conserved lysine residue in vertebrate CtIP (at the position of Gln36 in S. pombe Ctp1) would be located in a topologically related position on the coiled-coil surface. </plain></SENT>
+<SENT sid="107" pm="."><plain>To test functional roles for the Ctp1 coiled-coil surface in DNA binding, we targeted the basic surface patches by mutagenesis either individually (R32A and K41A) or in combination (R32A K41A) and evaluated DNA-binding of purified recombinant Ctp1 mutants (Fig. 4c, Supplementary Figs. </plain></SENT>
+<SENT sid="108" pm="."><plain>6,7). </plain></SENT>
+<SENT sid="109" pm="."><plain>Whilst the single mutants retained DNA-binding activity, an R32A K41A mutation ablated Ctp1–DNA binding in vitro (Fig. 4c). </plain></SENT>
+<SENT sid="110" pm="."><plain>Importantly, the R32A K41A substitution did not disrupt Ctp1 tetramerization (Supplementary Fig. 4a). </plain></SENT>
+<SENT sid="111" pm="."><plain>Thus, collectively our data support a model wherein direct DNA interactions mediated by the THDD are important for Ctp1 DNA-binding function. </plain></SENT>
+</text></p><p id="P18"><text><SENT sid="112" pm="."><plain>Next, to pinpoint determinants of Ctp1 DNA-binding activity in the evolutionary conserved C-terminal CxxC-RHR region (Fig. 4d), we conducted comprehensive alanine scanning mutagenesis of the Ctp1 carboxyl terminus (Fig. 4e, Supplementary Fig. 6). </plain></SENT>
+<SENT sid="113" pm="."><plain>Of 23 mutants evaluated, 5 mutants affecting positively charged residues (K219A, K231A, R273A, R275A, and K276A) ablated Ctp1-binding to a 54 bp dsDNA at a concentration of 200 nM mutant Ctp1. </plain></SENT>
+<SENT sid="114" pm="."><plain>The mutations R273A and R275A directly targeted the “RHR” motif. </plain></SENT>
+<SENT sid="115" pm="."><plain>Alanine substitution of the internal histidine (H274) of the RHR-motif also conferred a weak dsDNA-binding defect (Supplementary Fig. 7 compare lanes 1–7 and 15–21). </plain></SENT>
+<SENT sid="116" pm="."><plain>Thus, we conclude the conserved C-terminal RHR motif is a critical Ctp1 DNA-binding determinant. </plain></SENT>
+</text></p></sec><sec id="S7"><title><text><SENT sid="117" pm="."><plain>Ctp1 is a DNA bridging factor </plain></SENT>
+</text></title><p id="P19"><text><SENT sid="118" pm="."><plain>In the context of a Ctp1 tetramer, our structural and mutagenesis data indicates Ctp1 bears at least eight DNA interaction interfaces. </plain></SENT>
+<SENT sid="119" pm="?"><plain>What functions do multivalent Ctp1–DNA interactions serve? </plain></SENT>
+<SENT sid="120" pm="."><plain>We observed that titration of Ctp1 on dsDNA super-shifts DNA-bound complexes in EMSAs (Fig. 3). </plain></SENT>
+<SENT sid="121" pm="."><plain>These EMSA super-shifts may reflect the assembly of multiple Ctp1 tetramers onto DNA and/or Ctp1-dependant bridging of DNA termini, a property shared with the MRN core complex30–32. </plain></SENT>
+<SENT sid="122" pm="."><plain>Given the roles for Ctp1 in early DSB repair processing, we reasoned that multivalent Ctp1 DNA-binding acts to bridge and coordinate strand break intermediates. </plain></SENT>
+</text></p><p id="P20"><text><SENT sid="123" pm="."><plain>We adapted a magnetic bead DNA bridging assay33 for Ctp1, and evaluated the ability of recombinant Ctp1 variants to bridge different DNA structures to a resin-immobilized 1.0 kb dsDNA target (Fig. 5a, Online methods). </plain></SENT>
+<SENT sid="124" pm="."><plain>Ctp1 bridged linearized 2.7 kb plasmid DNA (Fig. 5b) or 500 bp linear dsDNA (Fig. 5c) based on Ctp1-dependant recovery in a DNA-tethering pull down. </plain></SENT>
+<SENT sid="125" pm="."><plain>Ctp1 also bridged both nicked and relaxed plasmid DNA substrates (Fig. 5b). </plain></SENT>
+<SENT sid="126" pm="."><plain>Given that Ctp1 preferentially binds to abnormal structures at DNA ends (Supplementary Fig. 5a), these combined results indicate that Ctp1 can interact with both DNA ends and intact dsDNA. </plain></SENT>
+<SENT sid="127" pm="."><plain>Neither the Ctp11–60 THDD domain nor the monomeric Ctp161–294 C-terminus alone tethered DNA (Fig. 5c). </plain></SENT>
+<SENT sid="128" pm="."><plain>Similarly, Ctp1 point mutations that impaired DNA binding also lacked tethering abilities (Fig. 5d). </plain></SENT>
+</text></p><p id="P21"><text><SENT sid="129" pm="."><plain>Next, we tested roles for the IDR in facilitating DNA-bridging activity. </plain></SENT>
+<SENT sid="130" pm="."><plain>Neither the 20-residue IDR deletion Ctp1Δ100–120 nor Ctp1Δ60–80, which encompasses the Nbs1-interacting region4, had an impact on bridging. </plain></SENT>
+<SENT sid="131" pm="."><plain>However, the larger 40–60 residue deletion variants, Ctp1Δ60–100, Ctp1Δ80–120 and Ctp1Δ60–120, all impaired tethering of a 500 bp dsDNA to the 1.0 kb resin bound DNA target (Fig. 5e). </plain></SENT>
+<SENT sid="132" pm="."><plain>As the Ctp1Δ60–100, Ctp1Δ80–120, and Ctp1Δ60–120 mutants had comparatively modest effects on dsDNA binding (Supplementary Fig. 5e), an intact IDR appears important for tethering, but not dsDNA binding. </plain></SENT>
+<SENT sid="133" pm="."><plain>Thus, overall Ctp1 architecture appears suitable for orchestrating strand break coordination events (e.g. </plain></SENT>
+<SENT sid="134" pm="."><plain>DNA tethering), and the Ctp1 THDD, IDR and RHR domains are all required for Ctp1 DNA bridging activity in vitro. </plain></SENT>
+<SENT sid="135" pm="."><plain>Based on the requirement for the IDR and RHR for DNA bridging, we hypothesize that Ctp1 coordination of two DNA molecules requires a flexible reach imparted by the IDR, along with direct protein–DNA interactions of both the THDD and RHR. </plain></SENT>
+<SENT sid="136" pm="."><plain>In principal, Ctp1 DNA-bridging interactions may involve any number of combinations of DNA-binding surfaces within a Ctp1 tetramer (Fig. 5f). </plain></SENT>
+</text></p></sec><sec id="S8"><title><text><SENT sid="137" pm="."><plain>THDD and RHR mutations impair DSB Repair </plain></SENT>
+</text></title><p id="P22"><text><SENT sid="138" pm="."><plain>To assess the roles for Ctp1 DNA interaction motifs on DSB repair in vivo, we constructed Ctp1 mutants and monitored cellular growth in the presence or absence of genotoxins (Fig. 6). </plain></SENT>
+<SENT sid="139" pm="."><plain>We replaced the genomic copy of ctp1 with ctp1+, which encodes a C-terminal 5×-Flag epitope-tagged Ctp1 protein (Supplementary Table 4). </plain></SENT>
+<SENT sid="140" pm="."><plain>There was no apparent difference in survival between the ctp1+ and the untagged ctp1 strains. </plain></SENT>
+<SENT sid="141" pm="."><plain>Based on immunoblotting, the mutant proteins were present at levels similar to wild type Ctp1 (Fig. 6c). </plain></SENT>
+</text></p><p id="P23"><text><SENT sid="142" pm="."><plain>Strains with single amino acid substitutions in the Ctp1 THDD DNA-binding interface (R32A or K41A) were insensitive to all genotoxin treatments and exhibited normal growth. </plain></SENT>
+<SENT sid="143" pm="."><plain>In contrast, a complete deletion of the THDD (ctp1-ΔN60) or the THDD double mutation R32A K41A strain mirrored ctp1Δ phenotypes. </plain></SENT>
+<SENT sid="144" pm="."><plain>In the absence of exogenous DNA damage, these phenotypes included elongated cellular morphology, slow growth, and an increased frequency of spontaneous Rad22Rad52 foci (Fig. 6a,b). </plain></SENT>
+<SENT sid="145" pm="."><plain>These phenotypes result from deficient repair of spontaneous DNA damage that leads to DNA damage checkpoint activation and cell death4,5,29. </plain></SENT>
+<SENT sid="146" pm="."><plain>Furthermore, like the ctp1Δ knockout strain, R32A K41A and ctp1-ΔN60 strains were profoundly sensitive to all genotoxins tested (Fig. 6d,f) including 1) UV irradiation, which generates DNA photoproducts that may be converted to DSBs, 2) CPT, a Top1 inhibitor that causes replication fork breakage when the replisome collides with Top1–CPT covalent complexes34,35, 3) the radiomimetic drug phleomycin, which generates DSBs with damaged DNA termini36, and 4) IR. </plain></SENT>
+<SENT sid="147" pm="."><plain>Strains with disruption of the RHR motif (R273A, H274A and R275A) all displayed intermediate phenotypes between ctp1+ and ctp1Δ (Fig. 6e), with R273A displaying the least sensitivity to clastogens. </plain></SENT>
+<SENT sid="148" pm="."><plain>Variability in the RHR motif mutant phenotypes may reflect that additional factors (e.g. DNA binding by the Ctp1 binding partner MRN) differentially compensate for Ctp1 DNA binding defects in cells. </plain></SENT>
+</text></p><p id="P24"><text><SENT sid="149" pm="."><plain>The genotoxin sensitivity suggests that the Ctp1 THDD and RHR motif variants are defective in DNA DSB repair. </plain></SENT>
+<SENT sid="150" pm="."><plain>To directly assess impacts of Ctp1 mutations on chromosomal DSB repair, we exposed cells to 200 Gy IR and returned them to growth in rich medium to monitor repair of IR-induced DSBs by pulse field gel electrophoresis (PFGE) (Fig. 7a). </plain></SENT>
+<SENT sid="151" pm="."><plain>In wildtype (ctp1+) cells, DSB repair resulted in reconstitution of full-length chromosomes within two hours. </plain></SENT>
+<SENT sid="152" pm="."><plain>In stark contrast, no reconstituted chromosomes were detected in ctp1Δ, R32A K41A, or even H274A strains following a 4-hour recovery after IR exposure. </plain></SENT>
+<SENT sid="153" pm="."><plain>Altogether, these results implicate critical roles for Ctp1 DNA–protein interaction interfaces in determining Ctp1 DSB repair functions in S. pombe. </plain></SENT>
+</text></p><p id="P25"><text><SENT sid="154" pm="."><plain>Published work has established that fission yeast Ctp1 is required for HR repair, but not for non-homologous end joining (NHEJ)5. </plain></SENT>
+<SENT sid="155" pm="."><plain>To examine whether the Ctp1 THDD and RHR mutants are defective in 5′ to 3′ resection in HR repair, we genetically tested whether Exo1 can compensate for Ctp1 mutation. </plain></SENT>
+<SENT sid="156" pm="."><plain>Exo1 is a 5′–3′ exonuclease that can partially substitute for the Mre11 nuclease and Ctp1 when relieved of inhibition by the Ku70–Ku80 complex5. </plain></SENT>
+<SENT sid="157" pm="."><plain>The phenotypes of a ctp1Δ strain can be partially suppressed by deletion of the gene encoding Ku80 from the Ku70–Ku80 DNA end-binding complex that promotes NHEJ and protects DNA ends from the 5′ to 3′ resection activity of Exo1 (refs. </plain></SENT>
+<SENT sid="158" pm="."><plain>5,14). </plain></SENT>
+<SENT sid="159" pm="."><plain>Similarly, a pku80Δ mutation suppresses the slow growth phenotypes, IR and phleomycin-sensitivities of all ctp1 mutant cells analyzed here including ctp1Δ, ctp1-R32A K41A, ctp1-R275A, and ctp1-ΔN60 (Fig. 7b). </plain></SENT>
+<SENT sid="160" pm="."><plain>Furthermore, this suppression is dependent on Exo1 as the genotoxin-sensitivity of the triple mutants (ctp1-R32A K41A pku80Δ exo1Δ, ctp1-R275A pku80Δ exo1Δ, ctp1-R32A K41A pku80Δ exo1Δ, and ctp1-ΔN60 pku80Δ exo1Δ) was exacerbated compared to the exo1+ strains. </plain></SENT>
+<SENT sid="161" pm="."><plain>Thus, elimination of Ku80 leads to substantial suppression of Ctp1 THDD and RHR mutants by a mechanism that requires the Exo1 5′–3′ nuclease. </plain></SENT>
+<SENT sid="162" pm="."><plain>From these results, we conclude that the phenotypes of Ctp1 THDD and RHR mutants are largely attributable to an inability to properly resect DSBs. </plain></SENT>
+<SENT sid="163" pm="."><plain>In this context, structure-specific Ctp1 DNA binding may act to promote HR by displacing Ku70–Ku80 from DNA, thereby blocking the Ku70–Ku80 complex from initiating NHEJ14. </plain></SENT>
+<SENT sid="164" pm="."><plain>This idea is consistent with genetic data and ChIP experiments demonstrating that Ctp1 is required for Ku70–Ku80 eviction from DSB ends14. </plain></SENT>
+</text></p></sec></sec></SecTag><SecTag type="DISCUSS"><sec sec-type="discussion" id="S9"><title><text><SENT sid="165" pm="."><plain>DISCUSSION </plain></SENT>
+</text></title><p id="P26"><text><SENT sid="166" pm="."><plain>Our combined structure-function studies of S. pombe Ctp1 establish novel roles for a flexible tetrameric Ctp1 DNA-tethering scaffold in the binding and coordination of DSB repair intermediates. </plain></SENT>
+<SENT sid="167" pm="."><plain>The N-terminal interlocked Ctp1 THDD facilitates these activities and is unlike other coiled-coil interfaces previously identified. </plain></SENT>
+<SENT sid="168" pm="."><plain>Oligomerization appears to be a conserved primordial feature of all characterized Ctp1 homologs22,37,38. </plain></SENT>
+<SENT sid="169" pm="."><plain>Consistent with our structure-activity studies showing that the Ctp1 THDD is essential for DNA interactions and DSB repair, the S. cerevisiae Sae2 variant L25P also impacts the THDD, impairs Sae2 self-interaction, Sae2-dependant hairpin processing and spore viability37. </plain></SENT>
+<SENT sid="170" pm="."><plain>Similarly, mutations within the predicted human CtIP THDD also impair CtIP DSB recruitment and microhomology-mediated DSB repair in U20S cells38. </plain></SENT>
+<SENT sid="171" pm="."><plain>Sae2 has also been reported to cleave hairpin DNA substrates in vitro19, but this activity has recently been disputed39. </plain></SENT>
+<SENT sid="172" pm="."><plain>We do not detect intrinsic nucleolytic activity for S. pombe Ctp1, even at elevated protein concentrations (Fig. 3c). </plain></SENT>
+<SENT sid="173" pm="."><plain>Recombinant human CtIP also lacks nuclease activity7,40. </plain></SENT>
+<SENT sid="174" pm="."><plain>Thus our data are consistent with non-nucleolytic DNA-binding and tethering functions for the Ctp1 tetramer. </plain></SENT>
+</text></p><p id="P27"><text><SENT sid="175" pm="."><plain>The physical attributes of the flexible Ctp1 architecture exhibit hallmarks of a macromolecular interaction hub25, consistent with roles for Ctp1 homologs as integrators of cell cycle signaling to dictate DSB repair pathway choice5,6,8,41. </plain></SENT>
+<SENT sid="176" pm="."><plain>Current data and published work4,21 indicates four features that define Ctp1 molecular structure: 1) an N-terminal DNA-binding THDD tetrameric core (residues 1–60), 2) the Nbs1-binding phosphorylated Ctp1 SXT motifs4,21 (residues 74–94), 3) a central region of low sequence complexity and intrinsic disorder, and 4) the conserved DNA binding carboxyl-terminal CxxC-RHR region (Fig. 8). </plain></SENT>
+<SENT sid="177" pm="."><plain>Establishing that Ctp1 binds and tethers DNA further reconciles roles for Ctp1 in DNA end processing pathways. </plain></SENT>
+<SENT sid="178" pm="."><plain>Rather than acting as a nuclease, Ctp1 DNA binding and bridging may alternatively modulate the intrinsic nucleolytic activity of a flexibly linked MRN–DNA processing complex. </plain></SENT>
+<SENT sid="179" pm="."><plain>In support of this notion, recent data have demonstrated that S. cerevisiae Sae2 promotes dsDNA endonucleolytic cleavage by MRN proximal to DSB ends39, and Sae2 is required for the coordinated DSB resection of IR-generated “dirty” DSBs13. </plain></SENT>
+<SENT sid="180" pm="."><plain>Flexible associations of Ctp1 with both DNA and Nbs1 may coordinate the two DNA substrates undergoing nuclease processing. </plain></SENT>
+<SENT sid="181" pm="."><plain>Notably, it is also well established that Mre11–Rad50 (MR) core complex can also bridge DNA 30–32,42–44. </plain></SENT>
+<SENT sid="182" pm="."><plain>Although the precise roles for alternative DNA tethering activities within the MRN–Ctp1 complex needs to be established in future work , we hypothesize that alternate means for coordinating DNA substrates might be required initially during a DSB sensing event (e.g. MR mediated bridging) and then subsequently to facilitate DSB processing (e.g. Ctp1-mediated tethering). </plain></SENT>
+</text></p><p id="P28"><text><SENT sid="183" pm="."><plain>Ctp1–DNA interactions are multivalent. </plain></SENT>
+<SENT sid="184" pm="."><plain>Altogether our observations indicate that the THDD and RHR DNA-binding regions are both critical for Ctp1 function in DSB repair. </plain></SENT>
+<SENT sid="185" pm="."><plain>Weak individual DNA interaction regions with apparent affinities in the micromolar range dictate the high overall affinity of Ctp1–DNA interactions. </plain></SENT>
+<SENT sid="186" pm="."><plain>Such interactions are well suited for driving rapid structural transitions within the context of the MRN core DNA processing machinery. </plain></SENT>
+<SENT sid="187" pm="."><plain>Indeed, blocking any single one of the Ctp1–DNA interfaces impairs Ctp1–DNA interactions in vitro, and has severe consequences for DSB repair at the organismal level in S. pombe (Figs. </plain></SENT>
+<SENT sid="188" pm="."><plain>6, 7). </plain></SENT>
+<SENT sid="189" pm="."><plain>Intriguingly, two truncating mutations have been mapped in human CtIP that correspond to deletion of the RHR region11. </plain></SENT>
+<SENT sid="190" pm="."><plain>Thus, loss of human CtIP DNA binding activity by nonsense mutation may underlie the CTIP-linked pathology in Seckel and Jawad syndromes11. </plain></SENT>
+</text></p></sec></SecTag><SecTag type="METHODS"><sec sec-type="methods" id="S10"><title><text><SENT sid="191" pm="."><plain>Online Methods </plain></SENT>
+</text></title><sec id="S11"><title><text><SENT sid="192" pm="."><plain>Ctp1 expression and purification </plain></SENT>
+</text></title><p id="P29"><text><SENT sid="193" pm="."><plain>All Ctp1 proteins were expressed at 15°C in Escherichia coli Rosetta2 (DE3) (Novagen). </plain></SENT>
+<SENT sid="194" pm="."><plain>Ctp1 point mutations were introduced with Quikchange Mutagenesis (Agilent Technologies) into pGEX-6P-1-Ctp11–294. </plain></SENT>
+<SENT sid="195" pm="."><plain>Ctp11–294, Ctp11–150, and Ctp11–60 were expressed as GST-tagged proteins from pGEX-6P-1 (GE Healthcare) in Terrific Broth. </plain></SENT>
+<SENT sid="196" pm="."><plain>Following cell lysis by sonication in lysis buffer (20 mM Tris pH 7.5, 0.1% β-mercaptoethanol, 1 M NaCl, 0.1 mg ml−1 lysozyme and EDTA-free Complete protease inhibitor cocktail tablet, Roche), GST-fusion proteins were affinity purified on Glutathione Sepharose 4 Fast Flow resin (GE Healthcare). </plain></SENT>
+<SENT sid="197" pm="."><plain>For GST-Ctp11–150 and GST-Ctp11–294, the GST-tags were removed by on-resin PreScission Protease digestion, whereas Ctp11–60 was eluted with lysis buffer plus 20 mM reduced glutathione, and subsequently cleaved. </plain></SENT>
+</text></p><p id="P30"><text><SENT sid="198" pm="."><plain>Ctp115–294, Ctp161–294, Ctp1151–294 were expressed and purified as 6×His-tagged fusions from pMCSG7 (ref. </plain></SENT>
+<SENT sid="199" pm="."><plain>45). </plain></SENT>
+<SENT sid="200" pm="."><plain>Ctp1 IDR internal deletions were generated as codon optimized synthetic genes (GenScript) and expressed and purified as 6×His-tagged fusions from pMCSG7 (ref. </plain></SENT>
+<SENT sid="201" pm="."><plain>45). </plain></SENT>
+<SENT sid="202" pm="."><plain>Ctp1206–294 was expressed as 6×His-tagged protein from pET-15b (Novagen). </plain></SENT>
+<SENT sid="203" pm="."><plain>All 6×His-tagged proteins were affinity purified on HisPur Ni-NTA resin (Thermo Scientific) and eluted in lysis buffer plus 250 mM imidazole, followed by His-tag removal by TEV protease (pMCSG7 expressed proteins) or Thrombin protease (Sigma-Aldrich) (pET-15b expressed protein) digestion. </plain></SENT>
+</text></p><p id="P31"><text><SENT sid="204" pm="."><plain>MBP-Ctp115–60 and MBP-Ctp11–60 were expressed as MBP-fusions in the pMALX vector. </plain></SENT>
+<SENT sid="205" pm="."><plain>MBP-tagged proteins were affinity purified on amylose resin (New England Biolabs) and eluted in lysis buffer plus 40 mM maltose. </plain></SENT>
+<SENT sid="206" pm="."><plain>For crystallization, a Ctp15–60- L51M mutant was cloned and expressed as a Histidine-MBP-tagged fusion from pMCSG9 (ref. </plain></SENT>
+<SENT sid="207" pm="."><plain>45). </plain></SENT>
+<SENT sid="208" pm="."><plain>This mutation was introduced to enable Se-Met phasing and improved crystal quality. </plain></SENT>
+</text></p><p id="P32"><text><SENT sid="209" pm="."><plain>Following affinity purification (above), Ctp1 proteins were additionally purified by combinations of size-exclusion chromatography on a 16/60 S-200 column (GE Healthcare) in size-exclusion column buffer (50 mM Tris pH 7.5, 0.1% β-mercaptoethanol, and 500 mM NaCl), anion exchange chromatography on a HiTrap Q HP column (GE Healthcare), and fractionation on a HiTrap Heparin HP column (GE Healthcare). </plain></SENT>
+<SENT sid="210" pm="."><plain>All proteins were exchanged into storage buffer (20 mM Tris pH 7.5, 0.1 mM Tris(2-carboxyethyl)phosphine (TCEP), 50 mM NaCl and 10% glycerol). </plain></SENT>
+<SENT sid="211" pm="."><plain>Uncropped gels are available in Supplementary Data Set 1. </plain></SENT>
+</text></p></sec><sec id="S12"><title><text><SENT sid="212" pm="."><plain>Ctp1 Trypsinolysis </plain></SENT>
+</text></title><p id="P33"><text><SENT sid="213" pm="."><plain>Purified Ctp1 was digested with 10 µg ml−1 trypsin for 30 minutes at 4°C, prior to quenching with 1 mM phenylmethylsulfonyl fluoride and analysis by SDS-PAGE. </plain></SENT>
+<SENT sid="214" pm="."><plain>The Protein Microcharacterization Core Facility at NIEHS performed protein identification and mass analysis. </plain></SENT>
+<SENT sid="215" pm="."><plain>Uncropped gels are available in Supplementary Data Set 1. </plain></SENT>
+</text></p></sec><sec id="S13"><title><text><SENT sid="216" pm="."><plain>Circular Dichroism (CD) analysis </plain></SENT>
+</text></title><p id="P34"><text><SENT sid="217" pm="."><plain>For CD analysis 0.1 mg ml−1 Ctp1 variants were buffer exchanged into 20 mM sodium phosphate pH 7.5 and 0.1 mM TCEP. </plain></SENT>
+<SENT sid="218" pm="."><plain>CD data were collected on a Jasco J-810 Spectropolarimeter (Jasco Inc.) at 25°C and analyzed using the Selcon3 algorithm46,47 on the Dichroweb Server48. </plain></SENT>
+</text></p></sec><sec id="S14"><title><text><SENT sid="219" pm="."><plain>Small angle X-ray scattering (SAXS) </plain></SENT>
+</text></title><p id="P35"><text><SENT sid="220" pm="."><plain>SAXS data were collected at SIBYLS beamline 12.3.1 at the Advanced Light Source, Lawrence Berkeley National Laboratory. </plain></SENT>
+<SENT sid="221" pm="."><plain>For SAXS studies, Ctp1 variants were buffer exchanged into SAXS buffer (20 mM Tris pH 7.5, 50 mM NaCl, 1 mM TCEP, 5% glycerol). </plain></SENT>
+<SENT sid="222" pm="."><plain>SAXS data collection was performed at 0.5, 1, and 1.5 mg ml−1 for Ctp1 FL, and 2.5, 5.0 and 10.0 mg ml−1 for MBP-Ctp11–60 and MBP-Ctp115–60. </plain></SENT>
+<SENT sid="223" pm="."><plain>SAXS data were analyzed as described previously4 using the ATSAS suite of SAXS data analysis tools (<ext-link ext-link-type="uri" xlink:href="http://www.embl-hamburg.de/biosaxs/software.html">http://www.embl-hamburg.de/biosaxs/software.html</ext-link>). </plain></SENT>
+</text></p></sec><sec id="S15"><title><text><SENT sid="224" pm="."><plain>Size-exclusion chromatography with multi-angle light scattering (SEC-MALS) </plain></SENT>
+</text></title><p id="P36"><text><SENT sid="225" pm="."><plain>For SEC-MALS analysis, MBP-Ctp11–60 or MBP-Ctp115–60 proteins in buffer A (25 mM Tris pH 7.5, 200 mM NaCl, 5 mM maltose) or Ctp1 and Ctp11–60 proteins in buffer B (50 mM Tris pH 7.5, 500 mM NaCl, 0.1% β-mercaptoethanol) or Ctp161–294 and Ctp1 R32A K41A in buffer C (25 mM Tris pH 7.5, 200 mM NaCl, 0.1% β-mercaptoethanol) at 2–20 mg ml−1, were run on a Superdex 200 10/300 GL column (GE Healthcare) fit inline with a miniDAWN TREOS light scattering diode array and an Optilab rex differential refractive index detector (Wyatt Technology). </plain></SENT>
+<SENT sid="226" pm="."><plain>Data were analyzed with ASTRA 5.3.4.14 (Wyatt Technology). </plain></SENT>
+</text></p></sec><sec id="S16"><title><text><SENT sid="227" pm="."><plain>Crystallization of Ctp1 </plain></SENT>
+</text></title><p id="P37"><text><SENT sid="228" pm="."><plain>For crystallization, a Ctp15–60- L51M mutant was cloned and expressed with a Histidine-MBP fusion in pMCSG9. </plain></SENT>
+<SENT sid="229" pm="."><plain>This mutation was introduced to enable Se-Met phasing and improve crystal quality, however Se-Met phasing was not required due to a successful molecular replacement solution. </plain></SENT>
+<SENT sid="230" pm="."><plain>Ctp15–60-L51M crystals were grown at 20°C by hanging-drop vapor diffusion by mixing 2 µL protein solution (1 mg ml−1 Ctp15–60 in storage buffer), 2 µL precipitant A (0.2 M sodium acetate, 0.1 M Tris pH 8.5, 16% PEG 4000) and 0.4 µL of 0.1 M barium chloride dihydrate. </plain></SENT>
+<SENT sid="231" pm="."><plain>To alter drop equilibration rates, and increase crystal size, 53 µL of 3 M NaCl was added to 800 µL of precipitant A in the well. </plain></SENT>
+<SENT sid="232" pm="."><plain>Cells were cryo-protected by slow soaking in precipitant A supplemented with 25% ethylene glycol. </plain></SENT>
+</text></p></sec><sec id="S17"><title><text><SENT sid="233" pm="."><plain>X-ray diffraction data collection, phasing and refinement </plain></SENT>
+</text></title><p id="P38"><text><SENT sid="234" pm="."><plain>X-ray data (Table 2) was collected at 105 K on beamline 22-ID of the Advanced Photon Source at a wavelength of 1.000 Å. </plain></SENT>
+<SENT sid="235" pm="."><plain>X-ray diffraction data were processed and scaled using the HKL2000 suite49. </plain></SENT>
+<SENT sid="236" pm="."><plain>An array of 2-helix, 3-helix, and 4-helix coiled-coil bundle containing structures were mined from the RCSB Protein Data Bank and used in molecular replacement trials in PHASER50. </plain></SENT>
+<SENT sid="237" pm="."><plain>A successful molecular replacement hit (PHASER TFZ=8.8, LLG=249) was obtained using 3 copies of a 37-residue parallel dimeric coiled-coil of Geminin (PDB entry 1T6F)51. </plain></SENT>
+<SENT sid="238" pm="."><plain>Following refinement of a poly-alanine model of this MR solution, model building was guided by clear sigma-A weighted Fo-Fc and 2Fo-Fc difference electron density (Supplementary Fig. 3) showing positions of missing coil regions and side chains. </plain></SENT>
+<SENT sid="239" pm="."><plain>Iterative model building and refinement in Refmac52,53 and Coot54 yielded difference electron density that allowed for unambiguous fitting of two Ctp1 tetramers (8 chains) in the monoclinic P21 crystallographic asymmetric unit. </plain></SENT>
+<SENT sid="240" pm="."><plain>Phases and experimental electron density maps were improved by density modification in RESOLVE55,56. </plain></SENT>
+<SENT sid="241" pm="."><plain>Subsequent iterative rounds of model building and refinement were carried out with PHENIX55 and Coot54. </plain></SENT>
+<SENT sid="242" pm="."><plain>The final model displays excellent geometry. </plain></SENT>
+<SENT sid="243" pm="."><plain>Ramachandran statistics: 99.0 % favored, 0.0 % outliers. </plain></SENT>
+</text></p></sec><sec id="S18"><title><text><SENT sid="244" pm="."><plain>Preparation of oligonucleotide substrates </plain></SENT>
+</text></title><p id="P39"><text><SENT sid="245" pm="."><plain>Oligonucleotide substrates and construction are summarized in Supplementary Tables 2–3. </plain></SENT>
+<SENT sid="246" pm="."><plain>DNA substrates were purchased from Integrated DNA Technologies, and annealed by heating to 70°C followed by slow cooling to room temperature. </plain></SENT>
+<SENT sid="247" pm="."><plain>Oligo 39bpf was purified by polyacrylamide gel electrophoresis prior to annealing. </plain></SENT>
+<SENT sid="248" pm="."><plain>Oligonucleotides single-stranded, double-stranded, DNA bubble, 3′-overhang, 3′-flap, 5′-flap and fork were purified by analytical size-exclusion chromatography. </plain></SENT>
+</text></p></sec><sec id="S19"><title><text><SENT sid="249" pm="."><plain>DNA binding assays </plain></SENT>
+</text></title><p id="P40"><text><SENT sid="250" pm="."><plain>For assays involving 6-FAM labeled DNA substrates, purified Ctp1 proteins were incubated with 10 nM DNA substrate in 1X reaction buffer (20 mM Tris pH 7.5, 25 mM NaCl, 0.1 mM DTT, 10 µg ml−1 bovine serum albumin, 0.5% glycerol), for 20 minutes at 20°C. </plain></SENT>
+<SENT sid="251" pm="."><plain>Assays examining mutants of the C-terminus (Fig. 4e) used 200 nM protein in each reaction. </plain></SENT>
+<SENT sid="252" pm="."><plain>Reactions were resolved on Native PAGE 4–20% gradient TBE gels (Invitrogen) on ice and imaged using a Typhoon 9000 imager (GE Healthcare). </plain></SENT>
+<SENT sid="253" pm="."><plain>For Ctp1 binding a 10 bp DNA ladder (Supplementary Fig.5b), purified Ctp1 was incubated with 1 µg µl−1 of a 10bp DNA ladder (Invitrogen), in 1X reaction buffer for 20 minutes at room temperature. </plain></SENT>
+<SENT sid="254" pm="."><plain>Reactions were resolved on a 3% TBE agarose gel. </plain></SENT>
+<SENT sid="255" pm="."><plain>Uncropped gels are available in Supplementary Data Set 1. </plain></SENT>
+</text></p><p id="P41"><text><SENT sid="256" pm="."><plain>For quantitative DNA binding studies (Supplementary Fig. 5a), DNA binding and gel electrophoresis were carried out at 4°C. </plain></SENT>
+<SENT sid="257" pm="."><plain>DNA binding experiments (n=3 for each DNA substrate) were analyzed using ImageJ (<ext-link ext-link-type="uri" xlink:href="http://imagej.nih.gov/ij/">http://imagej.nih.gov/ij/</ext-link>). </plain></SENT>
+<SENT sid="258" pm="."><plain>Dissociation constants were calculated using one-site specific binding with hill slope in GraphPad Prism 6.0a (GraphPad Software, Inc.). </plain></SENT>
+</text></p></sec><sec id="S20"><title><text><SENT sid="259" pm="."><plain>DNA nuclease assay </plain></SENT>
+</text></title><p id="P42"><text><SENT sid="260" pm="."><plain>Ctp1 nuclease activity on a hairpin substrate was carried out under the same reaction conditions as the DNA binding assays, with the addition of 0.5 mM ATP and 5 mM MgCl2 to the 1X reaction buffer. </plain></SENT>
+<SENT sid="261" pm="."><plain>Reactions were resolved on a 15% TBE-Urea gel (Invitrogen). </plain></SENT>
+<SENT sid="262" pm="."><plain>Uncropped gels are available in Supplementary Data Set 1. </plain></SENT>
+</text></p></sec><sec id="S21"><title><text><SENT sid="263" pm="."><plain>DNA bridging assays </plain></SENT>
+</text></title><p id="P43"><text><SENT sid="264" pm="."><plain>Biotinylated 1000 bp oligonucleotide substrates for the bridging assays were prepared as previously described33. </plain></SENT>
+<SENT sid="265" pm="."><plain>Nicked plasmid bridging substrate was a modified pUC-19 plasmid (courtesy of Dr. M. </plain></SENT>
+<SENT sid="266" pm="."><plain>Junop), containing an Nb.BbvCI restriction site to generate nicked plasmid. </plain></SENT>
+<SENT sid="267" pm="."><plain>Relaxed circular pHOT-1 plasmid DNA is commercially available (TopoGEN). </plain></SENT>
+<SENT sid="268" pm="."><plain>Supercoiled pHOT-1 was linearized using restriction enzymes indicated in Fig. 5b and gel-purified for bridging assays. </plain></SENT>
+<SENT sid="269" pm="."><plain>For DNA bridging assays, 10 µL of Dynabeads M-280 Streptavidin (Invitrogen) were washed three times in bind buffer (20 mM Tris pH 7.5, 50 mM KCl, 5 mM EDTA, 1 mM DL-Dithiothreitol, 5% glycerol, 40 µg ml−1 bovine serum albumin) prior to incubation with 200 ng of the biotinylated 1000 bp DNA substrate for 15 minutes at room temperature. </plain></SENT>
+<SENT sid="270" pm="."><plain>Beads were collected by magnet for 3 minutes, washed three times with bind buffer and resuspended in 10 µL bind buffer. </plain></SENT>
+<SENT sid="271" pm="."><plain>200 ng of the 500 bp DNA substrate, the indicated amount of Ctp1 protein variants, and bind buffer was added to total 40 µL and incubated for 30 minutes at 20°C. </plain></SENT>
+<SENT sid="272" pm="."><plain>Beads were then collected by magnet for 3 minutes, washed twice with bind buffer and once with bind buffer lacking bovine serum albumin, before resuspension in 20 µL bind buffer minus bovine serum albumin. </plain></SENT>
+<SENT sid="273" pm="."><plain>Ctp1 was removed from the reaction by adding 10 µg µl−1 Proteinase K and 0.5% SDS for 30 minutes at 65°C. </plain></SENT>
+<SENT sid="274" pm="."><plain>Beads were then collected by magnet for 3 minutes and the supernatant removed and resolved by 1% TBE agarose gel electrophoresis. </plain></SENT>
+<SENT sid="275" pm="."><plain>Uncropped gels are available in Supplementary Data Set 1. </plain></SENT>
+</text></p></sec><sec id="S22"><title><text><SENT sid="276" pm="."><plain>Strain construction </plain></SENT>
+</text></title><p id="P44"><text><SENT sid="277" pm="."><plain>Methods and growth media for S. pombe genetics were carried out using standard methods57. </plain></SENT>
+<SENT sid="278" pm="."><plain>All strains used in this study are listed in Supplementary Table 4. </plain></SENT>
+<SENT sid="279" pm="."><plain>Site-directed mutagenesis was performed using Quikchange Mutagenesis (Agilent). </plain></SENT>
+<SENT sid="280" pm="."><plain>Strains were constructed as previously described4,30, except ctp1+ and mutant derivatives were engineered by PCR to have a C-terminal 5×Flag-tag. </plain></SENT>
+<SENT sid="281" pm="."><plain>Gene replacements were confirmed by PCR, and sequencing was used to verify the presence of the correct point mutation(s). </plain></SENT>
+</text></p></sec><sec id="S23"><title><text><SENT sid="282" pm="."><plain>Immunoblotting </plain></SENT>
+</text></title><p id="P45"><text><SENT sid="283" pm="."><plain>Whole-cell extracts were prepared from 10 mL of mid-log phase cells lysed with 6.5% β-mercaptoethanol and 1.9 M sodium hydroxide. </plain></SENT>
+<SENT sid="284" pm="."><plain>After a 10 minute incubation, 175 µL of 100% TCA was added, followed by a second 10 minute cold incubation. </plain></SENT>
+<SENT sid="285" pm="."><plain>Lysate was pelleted, washed twice with acetone and resolved on a NuPAGE 4–12% Bis-Tris gel (Invitrogen). </plain></SENT>
+<SENT sid="286" pm="."><plain>Proteins were transferred to a nitrocellulose membrane, blocked in 1× phosphate-buffered saline, 0.1% Tween-20 and 5% milk powder. </plain></SENT>
+<SENT sid="287" pm="."><plain>The membrane was first probed with monoclonal anti-Flag M2 (mouse) antibody at 1:1000 dilution (Sigma F1804; for validation see Williams et al., 2008)30, followed by probing with peroxidase-affinipure rabbit anti-mouse IgG antibody (Jackson ImmunoResearch Laboratories 315-035-00) at 1:1000 dilution and developed with ECL Plus Western Blotting Kit (GE Life Sciences). </plain></SENT>
+<SENT sid="288" pm="."><plain>The membrane was then stripped before re-probing with monoclonal anti-PSTAIR (mouse) antibody at 1:1000 dilution (Sigma P7962; for validation see <ext-link ext-link-type="uri" xlink:href="https://www.sigmaaldrich.com/content/dam/sigma-aldrich/docs/Sigma/Datasheet/5/p7962dat.pdf">https://www.sigmaaldrich.com/content/dam/sigma-aldrich/docs/Sigma/Datasheet/5/p7962dat.pdf</ext-link> and Tournier et al., 1997)58. </plain></SENT>
+<SENT sid="289" pm="."><plain>Uncropped blots are available in Supplementary Data Set 1. </plain></SENT>
+</text></p></sec><sec id="S24"><title><text><SENT sid="290" pm="."><plain>Clastogen sensitivity assays </plain></SENT>
+</text></title><p id="P46"><text><SENT sid="291" pm="."><plain>Mid-log phase cell cultures grown in YES were serially diluted 10-fold and spotted onto YES agar plates containing clastogens as labeled in Figs. </plain></SENT>
+<SENT sid="292" pm="."><plain>6 and 7 or spotted onto YES agar plates that were then irradiated with IR at 200 Gy or UV at 50 J m−2. </plain></SENT>
+<SENT sid="293" pm="."><plain>Images were taken after 72 hours of growth with an AlphaImager HP imaging system (Alpha Innotech). </plain></SENT>
+</text></p></sec><sec id="S25"><title><text><SENT sid="294" pm="."><plain>Genomic instability measured by Rad22-YFP foci </plain></SENT>
+</text></title><p id="P47"><text><SENT sid="295" pm="."><plain>The experiment was carried out as previously described, with some modifications59. </plain></SENT>
+<SENT sid="296" pm="."><plain>Briefly, Rad22-YFP-expressing strains were grown in YES to mid-log phase. </plain></SENT>
+<SENT sid="297" pm="."><plain>Live cells were photographed using a Leitz Diaplan microscope combined with a Zeiss AxioCam MRm Rev.3 camera and an 89 North PhotoFluor II light source (Chroma Technology Corp.). </plain></SENT>
+<SENT sid="298" pm="."><plain>For each sample, foci were scored in at least 500 cells for n=3 cell culture replicates. </plain></SENT>
+<SENT sid="299" pm="."><plain>Statistical analyses (student t-test, two-tailed) were performed by GraphPad Prism version 6.0a (GraphPad Software, Inc.). </plain></SENT>
+</text></p></sec><sec id="S26"><title><text><SENT sid="300" pm="."><plain>Schizosaccharomyces pombe whole chromosome repair assay </plain></SENT>
+</text></title><p id="P48"><text><SENT sid="301" pm="."><plain>Irradiation (200 Gy) of S. pombe cells and post-irradiation incubation was as described previously13, except that the irradiated cells were resuspended in YES media instead of YPDA. </plain></SENT>
+<SENT sid="302" pm="."><plain>Plugs for PFGE were prepared as previously reported60, except that standard LE agarose (Lonza) was used rather than low melting point agarose. </plain></SENT>
+<SENT sid="303" pm="."><plain>Samples for PFGE were run using a CHEF Mapper XA system (Bio-Rad) and 0.6% SeaKem Gold agarose (Lonza) in 0.5× TAE (20 mM Tris, 10 mM acetic acid, 0.5 mM EDTA), which was also used for the running buffer. </plain></SENT>
+<SENT sid="304" pm="."><plain>Pulses were ramped linearly from 20 to 30 sec for 81 hours at 1.5 V/cm at 14 °C. </plain></SENT>
+</text></p></sec></sec></SecTag><SecTag type="SUPPL"><sec sec-type="supplementary-material" id="SM"><title><text><SENT sid="305" pm="."><plain>Supplementary Material </plain></SENT>
+</text></title><supplementary-material content-type="local-data" id="SD1"><label>1</label><media xlink:href="NIHMS647098-supplement-1.doc" orientation="portrait" xlink:type="simple" id="d37e1513" position="anchor"/></supplementary-material><supplementary-material content-type="local-data" id="SD2"><label>2</label><media xlink:href="NIHMS647098-supplement-2.pdf" orientation="portrait" xlink:type="simple" id="d37e1517" position="anchor"/></supplementary-material><supplementary-material content-type="local-data" id="SD3"><label>3</label><media xlink:href="NIHMS647098-supplement-3.pdf" orientation="portrait" xlink:type="simple" id="d37e1521" position="anchor"/></supplementary-material></sec></SecTag></body><back><fn-group><fn id="FN1"><p id="P49"><text><SENT sid="306" pm="."><plain>Accession codes </plain></SENT>
+</text></p><p id="P50"><text><SENT sid="307" pm="."><plain>Coordinates and structure factors have been deposited in the RCSB Protein Data Bank under accession code 4×01. </plain></SENT>
+</text></p></fn><SecTag type="AUTH_CONT"><fn id="FN2" fn-type="con"><p id="P51"><text><SENT sid="308" pm="."><plain>Author Contributions </plain></SENT>
+</text></p><p id="P52"><text><SENT sid="309" pm="."><plain>S.N.A., R.S.W., M.A.R., J.W., and J.S.W. designed the experiments. </plain></SENT>
+<SENT sid="310" pm="."><plain>S.N.A. and P.D.R. performed crystallization experiments. </plain></SENT>
+<SENT sid="311" pm="."><plain>S.N.A. and R.S.W solved and refined the Ctp1 X-ray structure. </plain></SENT>
+<SENT sid="312" pm="."><plain>S.N.A and R.S.W. carried out SAXS experiments. </plain></SENT>
+<SENT sid="313" pm="."><plain>S.N.A, Y.N. and C.D.A performed biochemical experiments. </plain></SENT>
+<SENT sid="314" pm="."><plain>S.N.A, J.W., C.D.A. and J.S.W performed S. pombe experiments. </plain></SENT>
+<SENT sid="315" pm="."><plain>R.S.W. and S.N.A wrote the manuscript with input from all authors. </plain></SENT>
+<SENT sid="316" pm="."><plain>R.S.W. managed the project. </plain></SENT>
+</text></p></fn></SecTag></fn-group><SecTag type="ACK_FUND"><ack id="S27"><title>Acknowledgements</title><p id="P53"><text4fund><text><SENT sid="317" pm="."><plain>Our studies are supported by the US National Institute of Health Intramural Program: US National Institute of Environmental Health Sciences (NIEHS), 1Z01ES102765 (R.S.W.), and 1Z01ES021016 (M.A.R.). </plain></SENT>
+<SENT sid="318" pm="."><plain>We thank L. </plain></SENT>
+<SENT sid="319" pm="."><plain>Pedersen of the NIEHS Collaborative crystallography group and the Advanced Photon Source (APS) Southeast Regional Collaborative Access Team (SER-CAT) for beamline access. </plain></SENT>
+<SENT sid="320" pm="."><plain>Use of the APS was supported by the U. </plain></SENT>
+<SENT sid="321" pm="."><plain>S. </plain></SENT>
+<SENT sid="322" pm="."><plain>Department of Energy, Office of Science, Office of Basic Energy Sciences, under Contract No. </plain></SENT>
+<SENT sid="323" pm="."><plain>W-31–109-Eng-38. </plain></SENT>
+<SENT sid="324" pm="."><plain>We thank M. </plain></SENT>
+<SENT sid="325" pm="."><plain>Junop (University of Western Ontario) for nicked plasmid substrate, J. </plain></SENT>
+<SENT sid="326" pm="."><plain>Williams of the NIEHS protein microcharacterization core for mass spectrometry analysis, R. </plain></SENT>
+<SENT sid="327" pm="."><plain>Dutcher (NIEHS) for help with MALS analysis, and G. </plain></SENT>
+<SENT sid="328" pm="."><plain>Mueller (NIEHS) and B. </plain></SENT>
+<SENT sid="329" pm="."><plain>Wallace (NIEHS) for comments on the manuscript. </plain></SENT>
+</text></text4fund></p></ack></SecTag><SecTag type="REF"><ref-list><title>References</title><ref id="R1"><text><SENT sid="330" pm="."><plain>1WilliamsRSWilliamsJSTainerJAMre11-Rad50-Nbs1 is a keystone complex connecting DNA repair machinery, double-strand break signaling, and the chromatin templateBiochem. </plain></SENT>
+<SENT sid="331" pm="."><plain>Cell Biol20078550952017713585 </plain></SENT>
+</text></ref><ref id="R2"><text><SENT sid="332" pm="."><plain>2PommierYDrugging topoisomerases: lessons and challengesACS Chem. </plain></SENT>
+<SENT sid="333" pm="."><plain>Biol20138829523259582 </plain></SENT>
+</text></ref><ref id="R3"><text><SENT sid="334" pm="."><plain>3YouZCtIP links DNA double-strand break sensing to resectionMol. </plain></SENT>
+<SENT sid="335" pm="."><plain>Cell20093695496920064462 </plain></SENT>
+</text></ref><ref id="R4"><text><SENT sid="336" pm="."><plain>4WilliamsRSNbs1 flexibly tethers Ctp1 and Mre11-Rad50 to coordinate DNA double-strand break processing and repairCell2009139879919804755 </plain></SENT>
+</text></ref><ref id="R5"><text><SENT sid="337" pm="."><plain>5LimboOCtp1 is a cell-cycle-regulated protein that functions with Mre11 complex to control double-strand break repair by homologous recombinationMol. </plain></SENT>
+<SENT sid="338" pm="."><plain>Cell20072813414617936710 </plain></SENT>
+</text></ref><ref id="R6"><text><SENT sid="339" pm="."><plain>6HuertasPCortes-LedesmaFSartoriAAAguileraAJacksonSPCDK targets Sae2 to control DNA-end resection and homologous recombinationNature200845568969218716619 </plain></SENT>
+</text></ref><ref id="R7"><text><SENT sid="340" pm="."><plain>7SartoriAAHuman CtIP promotes DNA end resectionNature200745050951417965729 </plain></SENT>
+</text></ref><ref id="R8"><text><SENT sid="341" pm="."><plain>8HuertasPJacksonSPHuman CtIP mediates cell cycle control of DNA end resection and double strand break repairJ. </plain></SENT>
+<SENT sid="342" pm="."><plain>Biol. </plain></SENT>
+<SENT sid="343" pm="."><plain>Chem20092849558956519202191 </plain></SENT>
+</text></ref><ref id="R9"><text><SENT sid="344" pm="."><plain>9StrackerTHPetriniJHThe MRE11 complex: starting from the endsNat. </plain></SENT>
+<SENT sid="345" pm="."><plain>Rev. </plain></SENT>
+<SENT sid="346" pm="."><plain>Mol. </plain></SENT>
+<SENT sid="347" pm="."><plain>Cell Biol2011129010321252998 </plain></SENT>
+</text></ref><ref id="R10"><text><SENT sid="348" pm="."><plain>10ChenPLInactivation of CtIP leads to early embryonic lethality mediated by G1 restraint and to tumorigenesis by haploid insufficiencyMol. </plain></SENT>
+<SENT sid="349" pm="."><plain>Cell. </plain></SENT>
+<SENT sid="350" pm="."><plain>Biol2005253535354215831459 </plain></SENT>
+</text></ref><ref id="R11"><text><SENT sid="351" pm="."><plain>11QvistPCtIP Mutations Cause Seckel and Jawad SyndromesPLoS Genet20117e100231021998596 </plain></SENT>
+</text></ref><ref id="R12"><text><SENT sid="352" pm="."><plain>12ZhouYCaronPLegubeGPaullTTQuantitation of DNA double-strand break resection intermediates in human cellsNucleic Acids Res201442e1924362840 </plain></SENT>
+</text></ref><ref id="R13"><text><SENT sid="353" pm="."><plain>13WestmorelandJWResnickMACoincident resection at both ends of random, gamma-induced double-strand breaks requires MRX (MRN), Sae2 (Ctp1), and Mre11-nucleasePLoS Genet20139e100342023555316 </plain></SENT>
+</text></ref><ref id="R14"><text><SENT sid="354" pm="."><plain>14LangerakPMejia-RamirezELimboORussellPRelease of Ku and MRN from DNA ends by Mre11 nuclease activity and Ctp1 is required for homologous recombination repair of double-strand breaksPLoS Genet20117e100227121931565 </plain></SENT>
+</text></ref><ref id="R15"><text><SENT sid="355" pm="."><plain>15MimitouEPSymingtonLSSae2, Exo1 and Sgs1 collaborate in DNA double-strand break processingNature200845577077418806779 </plain></SENT>
+</text></ref><ref id="R16"><text><SENT sid="356" pm="."><plain>16NealeMJPanJKeeneySEndonucleolytic processing of covalent protein-linked DNA double-strand breaksNature20054361053105716107854 </plain></SENT>
+</text></ref><ref id="R17"><text><SENT sid="357" pm="."><plain>17FarahJACromieGASmithGRCtp1 and Exonuclease 1, alternative nucleases regulated by the MRN complex, are required for efficient meiotic recombinationProc. </plain></SENT>
+<SENT sid="358" pm="."><plain>Natl. </plain></SENT>
+<SENT sid="359" pm="."><plain>Acad. </plain></SENT>
+<SENT sid="360" pm="."><plain>Sci. </plain></SENT>
+<SENT sid="361" pm="."><plain>USA20091069356936119470480 </plain></SENT>
+</text></ref><ref id="R18"><text><SENT sid="362" pm="."><plain>18HartsuikerENealeMJCarrAMDistinct requirements for the Rad32(Mre11) nuclease and Ctp1(CtIP) in the removal of covalently bound topoisomerase I and II from DNAMol. </plain></SENT>
+<SENT sid="363" pm="."><plain>Cell20093311712319150433 </plain></SENT>
+</text></ref><ref id="R19"><text><SENT sid="364" pm="."><plain>19LengsfeldBMRattrayAJBhaskaraVGhirlandoRPaullTTSae2 is an endonuclease that processes hairpin DNA cooperatively with the Mre11/Rad50/Xrs2 complexMol. </plain></SENT>
+<SENT sid="365" pm="."><plain>Cell20072863865118042458 </plain></SENT>
+</text></ref><ref id="R20"><text><SENT sid="366" pm="."><plain>20LobachevKSGordeninDAResnickMAThe Mre11 complex is required for repair of hairpin-capped double-strand breaks and prevention of chromosome rearrangementsCell200210818319311832209 </plain></SENT>
+</text></ref><ref id="R21"><text><SENT sid="367" pm="."><plain>21LloydJA supramodular FHA/BRCT-repeat architecture mediates Nbs1 adaptor function in response to DNA damageCell200913910011119804756 </plain></SENT>
+</text></ref><ref id="R22"><text><SENT sid="368" pm="."><plain>22DubinMJDimerization of CtIP, a BRCA1- and CtBP-interacting protein, is mediated by an N-terminal coiled-coil motifJ. </plain></SENT>
+<SENT sid="369" pm="."><plain>Biol. </plain></SENT>
+<SENT sid="370" pm="."><plain>Chem2004279269322693815084581 </plain></SENT>
+</text></ref><ref id="R23"><text><SENT sid="371" pm="."><plain>23DosztanyiZCsizmokVTompaPSimonIIUPred: web server for the prediction of intrinsically unstructured regions of proteins based on estimated energy contentBioinformatics2005213433343415955779 </plain></SENT>
+</text></ref><ref id="R24"><text><SENT sid="372" pm="."><plain>24OatesMED(2)P(2): database of disordered protein predictionsNucleic Acids Res201341D508D51623203878 </plain></SENT>
+</text></ref><ref id="R25"><text><SENT sid="373" pm="."><plain>25BabuMMKriwackiRWPappuRVStructural biology Versatility from protein disorderScience20123371460146122997313 </plain></SENT>
+</text></ref><ref id="R26"><text><SENT sid="374" pm="."><plain>26TompaPIntrinsically unstructured proteinsTrends Biochem. </plain></SENT>
+<SENT sid="375" pm="."><plain>Sci20022752753312368089 </plain></SENT>
+</text></ref><ref id="R27"><text><SENT sid="376" pm="."><plain>27SchillerCBStructure of Mre11-Nbs1 complex yields insights into ataxia-telangiectasia-like disease mutations and DNA damage signalingNat. </plain></SENT>
+<SENT sid="377" pm="."><plain>Struct. </plain></SENT>
+<SENT sid="378" pm="."><plain>Mol. </plain></SENT>
+<SENT sid="379" pm="."><plain>Biol20121969370022705791 </plain></SENT>
+</text></ref><ref id="R28"><text><SENT sid="380" pm="."><plain>28YouZChahwanCBailisJHunterTRussellPATM activation and its recruitment to damaged DNA require binding to the C terminus of Nbs1Mol. </plain></SENT>
+<SENT sid="381" pm="."><plain>Cell. </plain></SENT>
+<SENT sid="382" pm="."><plain>Biol2005255363537915964794 </plain></SENT>
+</text></ref><ref id="R29"><text><SENT sid="383" pm="."><plain>29AkamatsuYMolecular characterization of the role of the Schizosaccharomyces pombe nip1+/ctp1+ gene in DNA double-strand break repair in association with the Mre11-Rad50-Nbs1 complexMol. </plain></SENT>
+<SENT sid="384" pm="."><plain>Cell. </plain></SENT>
+<SENT sid="385" pm="."><plain>Biol2008283639365118378696 </plain></SENT>
+</text></ref><ref id="R30"><text><SENT sid="386" pm="."><plain>30WilliamsRSMre11 dimers coordinate DNA end bridging and nuclease processing in double-strand-break repairCell20081359710918854158 </plain></SENT>
+</text></ref><ref id="R31"><text><SENT sid="387" pm="."><plain>31HopfnerKPThe Rad50 zinc-hook is a structure joining Mre11 complexes in DNA recombination and repairNature200241856256612152085 </plain></SENT>
+</text></ref><ref id="R32"><text><SENT sid="388" pm="."><plain>32DeshpandeRAATP-driven Rad50 conformations regulate DNA tethering, end resection, and ATM checkpoint signalingEMBO J20143348250024493214 </plain></SENT>
+</text></ref><ref id="R33"><text><SENT sid="389" pm="."><plain>33AndresSNA human XRCC4-XLF complex bridges DNANucleic Acids Res2012401868187822287571 </plain></SENT>
+</text></ref><ref id="R34"><text><SENT sid="390" pm="."><plain>34HsiangYHLihouMGLiuLFArrest of replication forks by drug-stabilized topoisomerase I-DNA cleavable complexes as a mechanism of cell killing by camptothecinCancer Res198949507750822548710 </plain></SENT>
+</text></ref><ref id="R35"><text><SENT sid="391" pm="."><plain>35PommierYCherfilsJInterfacial inhibition of macromolecular interactions: nature's paradigm for drug discoveryTrends Pharmacol. </plain></SENT>
+<SENT sid="392" pm="."><plain>Sci20052613814515749159 </plain></SENT>
+</text></ref><ref id="R36"><text><SENT sid="393" pm="."><plain>36PovirkLFProcessing of damaged DNA ends for double-strand break repair in mammalian cellsISRN Mol. </plain></SENT>
+<SENT sid="394" pm="."><plain>Biol20122012 </plain></SENT>
+</text></ref><ref id="R37"><text><SENT sid="395" pm="."><plain>37KimHSFunctional interactions between Sae2 and the Mre11 complexGenetics200817871172318245357 </plain></SENT>
+</text></ref><ref id="R38"><text><SENT sid="396" pm="."><plain>38WangHCtIP protein dimerization is critical for its recruitment to chromosomal DNA double-stranded breaksJ. </plain></SENT>
+<SENT sid="397" pm="."><plain>Biol. </plain></SENT>
+<SENT sid="398" pm="."><plain>Chem2012287214712148022544744 </plain></SENT>
+</text></ref><ref id="R39"><text><SENT sid="399" pm="."><plain>39CannavoECejkaPSae2 promotes dsDNA endonuclease activity within Mre11-Rad50-Xrs2 to resect DNA breaksNature201451412212525231868 </plain></SENT>
+</text></ref><ref id="R40"><text><SENT sid="400" pm="."><plain>40EidWDNA end resection by CtIP and exonuclease 1 prevents genomic instabilityEMBO Rep20101196296821052091 </plain></SENT>
+</text></ref><ref id="R41"><text><SENT sid="401" pm="."><plain>41ZhangYJasinMAn essential role for CtIP in chromosomal translocation formation through an alternative end-joining pathwayNat. </plain></SENT>
+<SENT sid="402" pm="."><plain>Struct. </plain></SENT>
+<SENT sid="403" pm="."><plain>Mol. </plain></SENT>
+<SENT sid="404" pm="."><plain>Biol201118808421131978 </plain></SENT>
+</text></ref><ref id="R42"><text><SENT sid="405" pm="."><plain>42Moreno-HerreroFMesoscale conformational changes in the DNA-repair complex Rad50/Mre11/Nbs1 upon binding DNANature200543744044316163361 </plain></SENT>
+</text></ref><ref id="R43"><text><SENT sid="406" pm="."><plain>43LobachevKVitriolEStempleJResnickMABloomKChromosome fragmentation after induction of a double-strand break is an active process prevented by the RMX repair complexCurr. </plain></SENT>
+<SENT sid="407" pm="."><plain>Biol2004142107211215589152 </plain></SENT>
+</text></ref><ref id="R44"><text><SENT sid="408" pm="."><plain>44ChenLTrujilloKRamosWSungPTomkinsonAEPromotion of Dnl4-catalyzed DNA end-joining by the Rad50/Mre11/Xrs2 and Hdf1/Hdf2 complexesMol. </plain></SENT>
+<SENT sid="409" pm="."><plain>Cell200181105111511741545 </plain></SENT>
+</text></ref></ref-list></SecTag><ref-list><title>Online Methods References</title><ref id="R45"><text><SENT sid="410" pm="."><plain>45StolsLA new vector for high-throughput, ligation-independent cloning encoding a tobacco etch virus protease cleavage siteProtein Expr. </plain></SENT>
+<SENT sid="411" pm="."><plain>Purif20022581512071693 </plain></SENT>
+</text></ref><ref id="R46"><text><SENT sid="412" pm="."><plain>46SreeramaNWoodyRWA self-consistent method for the analysis of protein secondary structure from circular dichroismAnal. </plain></SENT>
+<SENT sid="413" pm="."><plain>Biochem199320932448465960 </plain></SENT>
+</text></ref><ref id="R47"><text><SENT sid="414" pm="."><plain>47SreeramaNVenyaminovSYWoodyRWEstimation of the number of alpha-helical and beta-strand segments in proteins using circular dichroism spectroscopyProtein Sci1999837038010048330 </plain></SENT>
+</text></ref><ref id="R48"><text><SENT sid="415" pm="."><plain>48WhitmoreLWallaceBADICHROWEB, an online server for protein secondary structure analyses from circular dichroism spectroscopic dataNucleic Acids Res200432W668W67315215473 </plain></SENT>
+</text></ref><ref id="R49"><text><SENT sid="416" pm="."><plain>49OtwinowskiZMinorWCarterCWJrSweetRMProcessing of X-ray diffraction data collected in osciallation modeMethods in Enzymology1997276Academic Press307326 </plain></SENT>
+</text></ref><ref id="R50"><text><SENT sid="417" pm="."><plain>50McCoyAJPhaser crystallographic softwareJ. </plain></SENT>
+<SENT sid="418" pm="."><plain>Appl. </plain></SENT>
+<SENT sid="419" pm="."><plain>Crystallogr20074065867419461840 </plain></SENT>
+</text></ref><ref id="R51"><text><SENT sid="420" pm="."><plain>51ThepautMCrystal structure of the coiled-coil dimerization motif of geminin: structural and functional insights on DNA replication regulationJ. </plain></SENT>
+<SENT sid="421" pm="."><plain>Mol. </plain></SENT>
+<SENT sid="422" pm="."><plain>Biol200434227528715313623 </plain></SENT>
+</text></ref><ref id="R52"><text><SENT sid="423" pm="."><plain>52WinnMDOverview of the CCP4 suite and current developmentsActa Crystallogr. </plain></SENT>
+<SENT sid="424" pm="."><plain>D Biol. </plain></SENT>
+<SENT sid="425" pm="."><plain>Crystallogr20116723524221460441 </plain></SENT>
+</text></ref><ref id="R53"><text><SENT sid="426" pm="."><plain>53MurshudovGNVaginAADodsonEJRefinement of macromolecular structures by the maximum-likelihood methodActa Crystallogr. </plain></SENT>
+<SENT sid="427" pm="."><plain>D. </plain></SENT>
+<SENT sid="428" pm="."><plain>Biol. </plain></SENT>
+<SENT sid="429" pm="."><plain>Crystallogr19975324025515299926 </plain></SENT>
+</text></ref><ref id="R54"><text><SENT sid="430" pm="."><plain>54EmsleyPCowtanKCoot: model-building tools for molecular graphicsActa Crystallogr. </plain></SENT>
+<SENT sid="431" pm="."><plain>D. </plain></SENT>
+<SENT sid="432" pm="."><plain>Biol. </plain></SENT>
+<SENT sid="433" pm="."><plain>Crystallogr2004602126213215572765 </plain></SENT>
+</text></ref><ref id="R55"><text><SENT sid="434" pm="."><plain>55AdamsPDPHENIX: a comprehensive Python-based system for macromolecular structure solutionActa Crystallogr. </plain></SENT>
+<SENT sid="435" pm="."><plain>D. </plain></SENT>
+<SENT sid="436" pm="."><plain>Biol. </plain></SENT>
+<SENT sid="437" pm="."><plain>Crystallogr20106621322120124702 </plain></SENT>
+</text></ref><ref id="R56"><text><SENT sid="438" pm="."><plain>56TerwilligerTCMaximum-likelihood density modificationActa Crystallogr. </plain></SENT>
+<SENT sid="439" pm="."><plain>D. </plain></SENT>
+<SENT sid="440" pm="."><plain>Biol. </plain></SENT>
+<SENT sid="441" pm="."><plain>Crystallogr20005696597210944333 </plain></SENT>
+</text></ref><ref id="R57"><text><SENT sid="442" pm="."><plain>57MorenoSKlarANursePMolecular Genetic Analysis of Fission Yeast Schizosaccharomyces pombeMethods in Enzymology1991194Academic Press7958232005825 </plain></SENT>
+</text></ref><ref id="R58"><text><SENT sid="443" pm="."><plain>58TournierSGachetYHyamsJSIdentification and preliminary characterization of p31, a new PSTAIRE-related protein in fission yeastYeast1997137277349219337 </plain></SENT>
+</text></ref><ref id="R59"><text><SENT sid="444" pm="."><plain>59WilliamsJSgammaH2A binds Brc1 to maintain genome integrity during S-phaseEMBO J291136114820094029 </plain></SENT>
+</text></ref><ref id="R60"><text><SENT sid="445" pm="."><plain>60BirrenBLaiEPulsed Field Gel Electrophoresis: A Practical Guide1993San DiegoAcademic Press </plain></SENT>
+</text></ref></ref-list></back><floats-group><SecTag type="FIG"><fig id="F1" orientation="portrait" position="float"><label>Figure 1</label><caption><p id="P54"><text><SENT sid="446" pm="."><plain>Tetrameric Ctp1 is an intrinsically disordered protein (a) Domain structure of Ctp1 with proteolytic mapping and order or disorder predictions. (b) Purified full-length recombinant Ctp1. </plain></SENT>
+<SENT sid="447" pm="."><plain>Monomeric and dimeric Ctp1 species are labeled. (c) Limited trypsin proteolysis of Ctp1. </plain></SENT>
+<SENT sid="448" pm="."><plain>Trypsinolysis produced two stable fragments that mass spectrometry identified as Ctp11–57 and Ctp19–57 (d) SEC-MALS traces of differential refractive index and molar mass for Ctp1, Ctp11–60, N-terminal maltose-binding protein (MBP)-tagged Ctp11–60 and N-terminal MBP-tagged Ctp115–60 (e) Ctp1 SAXS pair distribution functions of Ctp1, MBP-tagged Ctp11–60 and Ctp115–60 (f) Circular dichroism spectra of Ctp1, Ctp1 1–60 and Ctp161–294 . θ, mean residue ellipticity. </plain></SENT>
+<SENT sid="449" pm="."><plain>Original gels can be found in Supplementary Data Set 1. </plain></SENT>
+</text></p></caption><graphic xlink:href="nihms647098f1"/></fig></SecTag><SecTag type="FIG"><fig id="F2" orientation="portrait" position="float"><label>Figure 2</label><caption><p id="P55"><text><SENT sid="450" pm="."><plain>X-ray crystal structure of the Ctp1 N-terminal tetramerization domain (a) Cartoon representation of Ctp1 highlighting the tetrameric 4-helix bundle (gray dotted-line box) and the parallel 2-stranded coiled-coil (gray arrow). (b) The Ctp1 aromatic hooks. </plain></SENT>
+<SENT sid="451" pm="."><plain>His11, Trp12 and Tyr16 interact with opposing helices to stabilize the tetrameric interface. </plain></SENT>
+<SENT sid="452" pm="."><plain>The electrostatic surface representation of Ctp1 illustrates the transition from tetrameric 4-helix bundle to dimeric coiled-coil by the Tyr26 splay. </plain></SENT>
+<SENT sid="453" pm="."><plain>Blue, electropositive surface; red, electronegative surface; white, hydrophobic. </plain></SENT>
+</text></p></caption><graphic xlink:href="nihms647098f2"/></fig></SecTag><SecTag type="FIG"><fig id="F3" orientation="portrait" position="float"><label>Figure 3</label><caption><p id="P56"><text><SENT sid="454" pm="."><plain>Ctp1 binds DNA. (a) Domain organization and schematic of Ctp1 N-terminal, C-terminal and internal deletion constructs. (b) Ctp1 binds assorted DNA substrates. (c) Ctp1 displays no appreciable nuclease activity on a DNA hairpin substrate. (d) Ctp11–60 binding double-stranded and forked DNA. (e) Ctp161–294 binds double-stranded and forked DNA. </plain></SENT>
+<SENT sid="455" pm="."><plain>Ctp1 concentrations expressed in terms of molarity of the Ctp1 tetramer (tet) or monomer (mono) as labeled. </plain></SENT>
+<SENT sid="456" pm="."><plain>Experiments were repeated 3 times for (b), (d), and (e), and 2 times for (c). </plain></SENT>
+<SENT sid="457" pm="."><plain>Original gels can be found in Supplementary Data Set 1. </plain></SENT>
+</text></p></caption><graphic xlink:href="nihms647098f3"/></fig></SecTag><SecTag type="FIG"><fig id="F4" orientation="portrait" position="float"><label>Figure 4</label><caption><p id="P57"><text><SENT sid="458" pm="."><plain>Identifying Ctp1–DNA interaction motifs. (a) Structure-based sequence alignment of the Ctp1 THDD domain. </plain></SENT>
+<SENT sid="459" pm="."><plain>Conserved identical residues are highlighted blue, and similar residues are highlighted purple. </plain></SENT>
+<SENT sid="460" pm="."><plain>Red dots indicate residues targeted for mutagenesis, and the black box outlines the conserved KKxR motif. </plain></SENT>
+<SENT sid="461" pm="."><plain>The position of the Ctp1 coiled-coil “a”→“g” heptad repeat is indicated below the sequence. (b) Electrostatic surface potential (left) and conserved surface mapping (right) of the putative Ctp1 THDD DNA binding interface. </plain></SENT>
+<SENT sid="462" pm="."><plain>Red, electropositive; blue, electronegative; green, conserved identical residues; yellow, conserved similar residues. (c) Ctp1 THDD mutants binding DNA. </plain></SENT>
+<SENT sid="463" pm="."><plain>Ctp1 concentrations expressed in terms of molarity of the Ctp1 tetramer (tet). (d) Sequence alignment of the Ctp1 C-terminal domain. </plain></SENT>
+<SENT sid="464" pm="."><plain>Same coloring as in (a). </plain></SENT>
+<SENT sid="465" pm="."><plain>Red dots designate DNA-binding amino acids. </plain></SENT>
+<SENT sid="466" pm="."><plain>Black boxes outline conserved CxxC and RHR motifs. (e) Alanine scanning mutagenesis to probe DNA binding amino acids in the Ctp1 C-terminal region. </plain></SENT>
+<SENT sid="467" pm="."><plain>Experiments were repeated 3 times for (c), (e). </plain></SENT>
+<SENT sid="468" pm="."><plain>Original gels can be found in Supplementary Data Set 1. </plain></SENT>
+</text></p></caption><graphic xlink:href="nihms647098f4"/></fig></SecTag><SecTag type="FIG"><fig id="F5" orientation="portrait" position="float"><label>Figure 5</label><caption><p id="P58"><text><SENT sid="469" pm="."><plain>Ctp1 bridges DNA (a) Bridging assay schematic. </plain></SENT>
+<SENT sid="470" pm="."><plain>Ctp1 binds a biotinylated 1000 bp DNA substrate linked to magnetic beads and bridges to various substrates. (b) Bridging activity of Ctp1 to plasmid DNA substrates. “1000 bp” denotes biotinylated substrate prior to incubation with protein and DNA bridging targets. (c) DNA bridging activity of Ctp1, Ctp161–294 and Ctp11–60 to a 500bp dsDNA. (d) Bridging activity of Ctp1 C-terminal RHR mutants. </plain></SENT>
+<SENT sid="471" pm="."><plain>WT, wildtype. (e) Bridging activity of Ctp1 internal deletions of the IDR region. (f) Model of Ctp1 binding and bridging a DNA DSB. </plain></SENT>
+<SENT sid="472" pm="."><plain>Three possible Ctp1 DNA bridging architectures are diagrammed. </plain></SENT>
+<SENT sid="473" pm="."><plain>Ctp1 concentrations expressed in terms of molarity of the Ctp1 tetramer (tet) or monomer (mono) as labeled. </plain></SENT>
+<SENT sid="474" pm="."><plain>Experiments were repeated 3 times for (b), (c), (d), and (e), and twice for: EcoRI-linearized in (b), H274A in (d) and Ctp1Δ60–80 in (e). </plain></SENT>
+<SENT sid="475" pm="."><plain>Original gels can be found in Supplementary Data Set 1. </plain></SENT>
+</text></p></caption><graphic xlink:href="nihms647098f5"/></fig></SecTag><SecTag type="FIG"><fig id="F6" orientation="portrait" position="float"><label>Figure 6</label><caption><p id="P59"><text><SENT sid="476" pm="."><plain>Sensitivity of Ctp1 THDD and RHR mutations to DNA damaging agents (a) Representative images from n=3 cell culture replicates of Rad22-YFP foci in ctp1+, ctp1Ä, and ctp1-R32A K41A strains. </plain></SENT>
+<SENT sid="477" pm="."><plain>Scale bars are 20 µm. (b) Levels of spontaneous Rad22-YFP foci in S. pombe harboring THDD and RHR mutations. </plain></SENT>
+<SENT sid="478" pm="."><plain>Mean values shown. </plain></SENT>
+<SENT sid="479" pm="."><plain>Error bars, s.d. </plain></SENT>
+<SENT sid="480" pm="."><plain>(n=3 cell cultures) * P-value &lt; 0.01; ** P-value &lt; 0.001 compared to ctp1+ by two-tailed Student’s t test. ns, not significant. (c) Immunoblot (anti-Flag) of Ctp1-Flag tagged strains used in panels (a), (b), (d)–(f). </plain></SENT>
+<SENT sid="481" pm="."><plain>Anti-PSTAIR is the loading control. (d) Sensitivity of Ctp1 N-terminal DNA binding mutants to DNA damaging agents. </plain></SENT>
+<SENT sid="482" pm="."><plain>Representative images from n=3 technical replicates. (e) Sensitivity of Ctp1 C-terminal RHR mutants to DNA damaging agents. </plain></SENT>
+<SENT sid="483" pm="."><plain>Images are representative of n=3 technical replicates . (f) Ctp1 N-terminal 60 amino acid deletion mutant sensitivity to DNA damaging agents . </plain></SENT>
+<SENT sid="484" pm="."><plain>Representative images from n=3 technical replicates. </plain></SENT>
+<SENT sid="485" pm="."><plain>Original blots can be found in Supplementary Data Set 1. </plain></SENT>
+</text></p></caption><graphic xlink:href="nihms647098f6"/></fig></SecTag><SecTag type="FIG"><fig id="F7" orientation="portrait" position="float"><label>Figure 7</label><caption><p id="P60"><text><SENT sid="486" pm="."><plain>Ctp1 THDD and RHR mutations effects on S. pombe DSB repair. (a) Damage and repair of IR damaged S. pombe chromosomes. –IR, chromosomes prior to treatment with IR; S. cerevisiae chromosomes were used as size marker. </plain></SENT>
+<SENT sid="487" pm="."><plain>Image is representative of n=2 cell culture replicates. (b) Suppression of Ctp1 RHR, THDD, and N-terminal deletion mutants by deleting Ku80, and rescue by Exo1. </plain></SENT>
+<SENT sid="488" pm="."><plain>Representative images from n=3 technical replicates. </plain></SENT>
+<SENT sid="489" pm="."><plain>Original full-size gel shown. </plain></SENT>
+</text></p></caption><graphic xlink:href="nihms647098f7"/></fig></SecTag><SecTag type="FIG"><fig id="F8" orientation="portrait" position="float"><label>Figure 8</label><caption><p id="P61"><text><SENT sid="490" pm="."><plain>Overall model for Ctp1 molecular architecture from X-ray structures, SAXS and biophysical analysis. </plain></SENT>
+</text></p></caption><graphic xlink:href="nihms647098f8"/></fig></SecTag><SecTag type="TABLE"><table-wrap id="T1" position="float" orientation="portrait"><label>Table 1</label><caption><p id="P62"><text><SENT sid="491" pm="."><plain>Oligomeric state of Ctp1 constructs </plain></SENT>
+</text></p></caption><table-wrap-foot><fn id="TFN1"><label>*</label><p id="P63">MW, Molecular weight</p></fn></table-wrap-foot></table-wrap></SecTag><SecTag type="TABLE"><table-wrap id="T2" position="float" orientation="portrait"><label>Table 2</label><caption><p id="P64"><text><SENT sid="492" pm="."><plain>Data collection and refinement statistics (molecular replacement) </plain></SENT>
+</text></p></caption><table-wrap-foot><fn id="TFN2"><label>*</label><p id="P65">Data derived from single crystal</p></fn><fn id="TFN3"><label>**</label><p id="P66">Values in parentheses are for highest-resolution shell.</p></fn></table-wrap-foot></table-wrap></SecTag></floats-group></article>

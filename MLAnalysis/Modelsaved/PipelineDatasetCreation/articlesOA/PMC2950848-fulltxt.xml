@@ -1,0 +1,392 @@
+<article xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML" article-type="research-article"><?properties open_access?><?DTDIdentifier.IdentifierValue -//NLM//DTD Journal Publishing DTD v2.3 20031101//EN?><?DTDIdentifier.IdentifierType public?><?SourceDTD.DTDName journalpublishing.dtd?><?SourceDTD.Version 2.3?><?ConverterInfo.XSLTName jp2nlmx2.xsl?><?ConverterInfo.Version 1?><front><journal-meta><journal-id journal-id-type="nlm-ta">PLoS One</journal-id><journal-id journal-id-type="iso-abbrev">PLoS ONE</journal-id><journal-id journal-id-type="publisher-id">plos</journal-id><journal-id journal-id-type="pmc">plosone</journal-id><journal-title-group><journal-title>PLoS ONE</journal-title></journal-title-group><issn pub-type="epub">1932-6203</issn><publisher><publisher-name>Public Library of Science</publisher-name><publisher-loc>San Francisco, USA</publisher-loc></publisher></journal-meta><article-meta><article-id pub-id-type="pmcid">2950848</article-id><article-id pub-id-type="pmid">20949082</article-id><article-id pub-id-type="publisher-id">10-PONE-RA-19931R1</article-id><article-id pub-id-type="doi">10.1371/journal.pone.0013159</article-id><article-categories><subj-group subj-group-type="heading"><subject>Research Article</subject></subj-group><subj-group subj-group-type="Discipline"><subject>Biochemistry/Bioinformatics</subject><subject>Biochemistry/Molecular Evolution</subject><subject>Computational Biology/Comparative Sequence Analysis</subject><subject>Computational Biology/Sequence Motif Analysis</subject><subject>Evolutionary Biology/Bioinformatics</subject><subject>Evolutionary Biology/Evolutionary and Comparative Genetics</subject><subject>Genetics and Genomics/Bioinformatics</subject><subject>Genetics and Genomics/Gene Function</subject><subject>Marine and Aquatic Sciences/Bioinformatics</subject></subj-group></article-categories><title-group><article-title>Characterization of the Functional Domain of &#946;2-Microglobulin from the Asian Seabass, <italic>Lates calcarifer</italic>
+</article-title><alt-title alt-title-type="running-head"><italic>L. calcarifer</italic> &#946;2-Microglobulin</alt-title></title-group><contrib-group><contrib contrib-type="author"><name><surname>Mohd-Padil</surname><given-names>Hirzahida</given-names></name><xref ref-type="aff" rid="aff1"/></contrib><contrib contrib-type="author"><name><surname>Tajul-Arifin</surname><given-names>Khairina</given-names></name><xref ref-type="aff" rid="aff1"/><xref ref-type="corresp" rid="cor1">
+<sup>*</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Mohd-Adnan</surname><given-names>Adura</given-names></name><xref ref-type="aff" rid="aff1"/></contrib></contrib-group><aff id="aff1">
+<addr-line>School of Biosciences and Biotechnology, Faculty of Science and Technology, Universiti Kebangsaan Malaysia, Bangi, Selangor, Malaysia</addr-line>
+</aff><contrib-group><contrib contrib-type="editor"><name><surname>Brusic</surname><given-names>Vladimir</given-names></name><role>Editor</role><xref ref-type="aff" rid="edit1"/></contrib></contrib-group><aff id="edit1">Dana-Farber Cancer Institute, United States of America</aff><author-notes><corresp id="cor1">* E-mail: <email>kay.tarifin@gmail.com</email></corresp><fn fn-type="con"><p>Conceived and designed the experiments: KTA AMA. Performed the experiments: HMP. Analyzed the data: HMP. Wrote the paper: HMP KTA AMA. Interpreted data: KTA AMA.</p></fn></author-notes><pub-date pub-type="collection"><year>2010</year></pub-date><pub-date pub-type="epub"><day>6</day><month>10</month><year>2010</year></pub-date><volume>5</volume><issue>10</issue><elocation-id>e13159</elocation-id><history><date date-type="received"><day>10</day><month>6</month><year>2010</year></date><date date-type="accepted"><day>2</day><month>9</month><year>2010</year></date></history><permissions><copyright-statement>Mohd-Padil et al.</copyright-statement><copyright-year>2010</copyright-year><license xlink:href="http://creativecommons.org/licenses/by/4.0/"><license-p>This is an open-access article distributed under the terms of the Creative Commons Attribution License, which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are properly credited.</license-p></license></permissions><abstract><sec><title>Background</title><p>&#946;2-Microglobulin (&#946;<sub>2</sub>M) is the light chain of major histocompatibility class I (MHC I) that binds non-covalently with the &#945; heavy chain. Both proteins attach to the antigen peptide, presenting a complex to the T cell to be destroyed via the immune mechanism.</p></sec><sec><title>Methodology/Principal Findings</title><p>In this study, a cDNA sequence encoding &#946;<sub>2</sub>M in the Asian seabass (<italic>Lates calcarifer</italic>) was identified and analyzed using <italic>in silico</italic> approaches to predict and characterize its functional domain. The &#946;<sub>2</sub>M cDNA contains an open reading frame (ORF) of 351 bases with a coding capacity of 116 amino acids. A large portion of the protein consists of the IG constant domain (IGc1), similar to &#946;<sub>2</sub>M sequences from other species studied thus far. Alignment of the IGc1 domains of &#946;<sub>2</sub>M from <italic>L. calcarifer</italic> and other species shows a high degree of overall conservation. Seven amino acids were found to be conserved across taxa whereas conservation between <italic>L. calcarifer</italic> and other fish species was restricted to 14 amino acids at identical conserved positions.</p></sec><sec><title>Conclusion/Significance</title><p>As the <italic>L. calcarifer</italic> &#946;<sub>2</sub>M protein analyzed in this study contains a functional domain similar to that of &#946;<sub>2</sub>M proteins in other species, it can be postulated that the &#946;<sub>2</sub>M proteins from <italic>L. calcarifer</italic> and other organisms are derived from a common ancestor and thus have a similar immune function. Interestingly, fish &#946;<sub>2</sub>M genes could also be classified according to the ecological habitat of the species, i.e. whether it is from a freshwater, marine or euryhaline environment.</p></sec></abstract><counts><page-count count="7"/></counts></article-meta></front><body><sec id="s1"><title>Introduction</title><p>&#946;<sub>2</sub>M is the light chain component of the class I major histocompatibility complex (MHC I) molecule. It consists of about 99 residues with a seven-stranded &#946;-sandwich fold and a central disulfide bond <xref rid="pone.0013159-Bjorkman1" ref-type="bibr">[1]</xref> and belongs to the antibody constant domain-like family of proteins (immunoglobulin superfamily). At the cell surface, the MHC I complex is comprised of three extracellular domains from the &#945; chain (&#945;1, &#945;2 and &#945;3) plus the &#946;<sub>2</sub>M protein domain. &#946;<sub>2</sub>M ensures the proper folding and cell surface display of the MHC I molecule <xref rid="pone.0013159-Coico1" ref-type="bibr">[2]</xref>. The classical MHC I molecule mainly functions as a component that binds antigenic peptides, presenting them to the T-cell receptor to trigger the cellular immune response <xref rid="pone.0013159-Collins1" ref-type="bibr">[3]</xref>.</p><p>It has been reported that there is a high degree of conservation of &#946;<sub>2</sub>M sequences of mammalian species as well as between mammalian and avian species <xref rid="pone.0013159-Ono1" ref-type="bibr">[4]</xref>, <xref rid="pone.0013159-Hui1" ref-type="bibr">[5]</xref>. The teleost &#946;<sub>2</sub>M sequences also exhibit high sequence similarity overall and conserved regions with warm-blooded vertebrates <xref rid="pone.0013159-Criscitiello1" ref-type="bibr">[6]</xref>. Previous phylogenetic analysis revealed the evolutionary diversion of the &#946;<sub>2</sub>M protein in warm-blooded vertebrates and fish <xref rid="pone.0013159-Stewart1" ref-type="bibr">[7]</xref>, <xref rid="pone.0013159-Choi1" ref-type="bibr">[8]</xref>. Meanwhile, another earlier phylogenetic analysis indicated that the freshwater fish &#946;<sub>2</sub>M gene diverged from the common ancestor gene earlier than the seawater fish &#946;<sub>2</sub>M gene <xref rid="pone.0013159-Criscitiello1" ref-type="bibr">[6]</xref>.</p><p>In an effort to improve our understanding of the molecular biology of <italic>L. calcarifer</italic>, several thousand expressed sequence tags (ESTs) have been derived from various cDNA libraries from several tissues <xref rid="pone.0013159-Tan1" ref-type="bibr">[9]</xref>. Analyses of the EST data enabled us to identify novel gene sequences, including those with significant similarity to &#946;<sub>2</sub>M. Using the numerous &#946;<sub>2</sub>M sequences that are available in the public databases, we analyzed the protein sequence in an effort to better understand the immune system of <italic>L. calcarifer</italic>.</p></sec><sec sec-type="materials|methods" id="s2"><title>Materials and Methods</title><p>The cDNA sequence of <italic>L. calcarifer</italic> &#946;<sub>2</sub>M obtained from the spleen EST library was translated into its potential open reading frame (ORF) using the ORF Finder algorithm (<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/gorf/">http://www.ncbi.nlm.nih.gov/gorf/</ext-link>). Domain analyses were carried out using several resources, including Simple Modular Architecture Research Tools (SMART) (<ext-link ext-link-type="uri" xlink:href="http://smart.embl-heidelberg.de/">http://smart.embl-heidelberg.de/</ext-link>) <xref rid="pone.0013159-Schultz1" ref-type="bibr">[10]</xref>, Pfam 20.0 (<ext-link ext-link-type="uri" xlink:href="http://pfam.wustl.edu/">http://pfam.wustl.edu/</ext-link>) <xref rid="pone.0013159-Robert1" ref-type="bibr">[11]</xref> and Prosite 19.36 (<ext-link ext-link-type="uri" xlink:href="http://www.expasy.org/prosite/">http://www.expasy.org/prosite/</ext-link>) <xref rid="pone.0013159-Hulo1" ref-type="bibr">[12]</xref>. The profile of the IGc1 domain obtained from the Pfam domain database was used to search for other homologous proteins using the <italic>hmmsearch</italic> program in HMMER version 2.3.2 (<ext-link ext-link-type="uri" xlink:href="http://hmmer.janelia.org">http://hmmer.janelia.org</ext-link>) <xref rid="pone.0013159-Eddy1" ref-type="bibr">[13]</xref>, <xref rid="pone.0013159-Durbin1" ref-type="bibr">[14]</xref> in both the Swiss-Prot database Release 54 (<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov">http://www.ncbi.nlm.nih.gov</ext-link>) and the fish genomes at Ensembl database Release 49 (<ext-link ext-link-type="uri" xlink:href="http://www.ensembl.org">http://www.ensembl.org</ext-link>). The IGc1 domain sequences of the homologous proteins thus identified were extracted for subsequent analyses.</p><p>The sequence alignment for the IGc1 domains was built using the <italic>hmmalign</italic> program in the HMMER package against the profile of the IGc1 domain obtained from Pfam to enable the pattern of &#946;<sub>2</sub>M protein change across the taxa to be examined. PHYLIP (<ext-link ext-link-type="uri" xlink:href="http://evolution.genetics.washington.edu/phylip">http://evolution.genetics.washington.edu/phylip</ext-link>) <xref rid="pone.0013159-Felsenstein1" ref-type="bibr">[15]</xref> was then used to perform phylogenetic analyses. A neighbor-joining tree was built using the <italic>protdist</italic> and <italic>neighbor</italic> programs with the Jones-Taylor-Thornton substitution model. The robustness of the trees was evaluated by bootstrap analysis of 1000 random iterations using <italic>seqboot</italic>, while <italic>consense</italic> was used to generate the consensus tree. All programs used to construct the phylogenetic trees are contained in PHYLIP packages <xref rid="pone.0013159-Felsenstein1" ref-type="bibr">[15]</xref>. Subsequently, MEGA4 (<ext-link ext-link-type="uri" xlink:href="http://megasoftware.net/">http://megasoftware.net/</ext-link>) <xref rid="pone.0013159-Tamura1" ref-type="bibr">[16]</xref> was utilized to view the resultant phylogenetic trees. The <italic>L. calcarifer</italic> &#946;<sub>2</sub>M sequence analyzed in this study has been deposited in the GenBank database under the accession number FJ200516.</p></sec><sec id="s3"><title>Results</title><sec id="s3a"><title>Analysis of the <italic>L. calcarifer</italic> &#946;<sub>2</sub>M Sequence</title><p>Analyses of the cDNA sequence of <italic>L. calcarifer</italic> &#946;<sub>2</sub>M (clone LSE48F06) from the spleen EST library indicated the most probable ORF codes for a polypeptide of 116 amino acids in length. A domain search revealed that a large portion of the protein sequence matched the immunoglobulin C-type (IGc1) domain in the SMART, Pfam and Prosite databases. Almost half of the amino acid residues of &#946;<sub>2</sub>M form two large &#946; structures, which are linked by a central disulfide bond. Its conformation thus strongly resembles the overall tertiary structure of the Igc1 domain <xref rid="pone.0013159-Becker1" ref-type="bibr">[17]</xref>. In addition, analysis against the Prosite database showed the presence of an immunoglobulin and major histocompatibility complex protein signature, YSCRVTH, located at residues 97&#8211;103 in the <italic>L. calcarifer</italic> &#946;<sub>2</sub>M sequence.</p><p>A total of 81 IGc1 domains contained in &#946;<sub>2</sub>M sequences were obtained by protein search against the Swiss-Prot database (version 14 updated 23 October 2007) and the known proteins of five fish species (medaka, stickleback, zebrafish, pufferfish and spotted green pufferfish) in the Ensembl database (version 49 updated March 2008). Of these 81 domain sequences, only 56 were used to build the multiple sequence alignment (MSA) (see <xref ref-type="table" rid="pone-0013159-t001">Table 1</xref>); the remaining sequences were excluded as they were considered identical, truncated or replicated between the two databases used. As the IGc1 domain is the functional domain in all &#946;<sub>2</sub>M sequences analyzed in this study, subsequent analyses focused on this domain as a representation of the &#946;<sub>2</sub>M protein.</p><table-wrap id="pone-0013159-t001" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0013159.t001</object-id><label>Table 1</label><caption><title>&#946;<sub>2</sub>M sequences used in this analysis.</title></caption><alternatives><graphic id="pone-0013159-t001-1" xlink:href="pone.0013159.t001"/></alternatives><table-wrap-foot><fn id="nt101"><label/><p>The 55 protein sequences used in this study were retrieved from the Swiss-Prot and Refseq databases. Protein ID shows the accession number of the sequence in the database while Protein Name is the protein name designated in this study. Equine, Rodents, Ruminants, Primates and Others are largely grouped as Eutheria.</p></fn></table-wrap-foot></table-wrap></sec><sec id="s3b"><title>Sequence Alignment</title><p>Alignment of the IGc1 domains of &#946;<sub>2</sub>M from <italic>L. calcarifer</italic> and other species showed a high degree of overall conservation across taxa (see <xref ref-type="fig" rid="pone-0013159-g001">Figure 1</xref>). The IGc1 domain of <italic>L. calcarifer</italic> starts with a Ser residue, which is conserved among the taxa, with the exception of domains from the Japanese flounder (Q8AYH8), Chinese hamster (Q9WV24), hispid pocket mouse (Q8CIQ3) and Australian echidna (Q864T6), in which the starting residue is a Thr. The fish sequences, with the exception of Siberian sturgeon (Q9PRF8), are two residues shorter (lacking residue-75 and residue-76) than the human (P61769) sequence. The deletions in the teleost sequences are located in the loop between the anti-parallel beta-strands S6 and S7 <xref rid="pone.0013159-Lundqvist1" ref-type="bibr">[18]</xref>. Seven positions or residues, Asn<sub>11</sub>, Cys<sub>15</sub>, Pro<sub>22</sub>, Asp<sub>44</sub>, Phe<sub>47</sub>, Cys<sub>70</sub> and Val<sub>72</sub> (numbering refers to the position in the MSA) are found to be completely conserved. These residues or regions are believed to be in the active or binding site of the &#946;<sub>2</sub>M protein. A previous study reported that the two cysteine residues (Cys<sub>15</sub> and Cys<sub>70</sub>), which covalently link to form a disulfide bridge (thus connecting the two &#946; sheets), are important elements in protein folding that contribute to stabilization of the MHC class I molecule <xref rid="pone.0013159-Bjorkman1" ref-type="bibr">[1]</xref>.</p><fig id="pone-0013159-g001" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0013159.g001</object-id><label>Figure 1</label><caption><title>Multiple sequence alignment of IGc1 domains.</title><p>The alignment consists of IGc1 domain sequences from organisms of various taxa such as Eutheria, Marsupials, Monotremes, Avians, Chondrichthyes fish and Actinopterygii fishes. Lca is the <italic>L. calcarifer</italic> protein sequence and the conserved residues are marked by (*). S1, S2, S3, S4, S5, S6 and S7 indicate the regions of seven &#946; strands in the IGc1 domain. Numbers at the top indicate amino acid positions. Information on the sequences is given in <xref ref-type="table" rid="pone-0013159-t001">Table 1</xref>.</p></caption><graphic xlink:href="pone.0013159.g001"/></fig></sec><sec id="s3c"><title>Phylogenetic Analysis</title><p>The phylogenetic tree built is an unrooted tree (see <xref ref-type="fig" rid="pone-0013159-g002">Figure 2</xref>) with two distinct clades, the mammalian &#946;<sub>2</sub>M and fish &#946;<sub>2</sub>M. The avian, marsupial and monotreme sequences form an intermediate group between the fish and the mammalian clades. All fish sequences are from the Actinopterygii class with the exception of the clearnose skate (Q8AXA0) <xref rid="pone.0013159-Cannon1" ref-type="bibr">[19]</xref>, which is a cartilaginous fish (class Chondrichthyes). In order to clarify the relationships among the &#946;<sub>2</sub>M molecules of the Actinopterygii fish (Siberian sturgeon, channel catfish (O42197), Japanese medaka (Q90ZJ6), Japanese flounder, zebrafish (Q04475, NP_998291), common carp (Q03422) and Lake Tana barbel (P55076)), an NJ tree consisting of fish sequences only was constructed using the chicken (P21611) &#946;<sub>2</sub>M sequence as an outgroup (see <xref ref-type="fig" rid="pone-0013159-g003">Figure 3</xref>). The &#946;<sub>2</sub>M from <italic>L. calcarifer,</italic> which is a euryhaline and catadromous species, clustered together with Japanese medaka &#946;<sub>2</sub>M, forming a separate clade from the freshwater fishes (common carp, Lake Tana barbel, zebrafish and channel catfish). The phylogenetic trees also reveal a molecular signal of the ecological distinction between marine and freshwater fish. The Siberian sturgeon &#946;<sub>2</sub>M sequence is the most basal lineage, which is placed outside the main cluster of teleosts in the tree (see <xref ref-type="fig" rid="pone-0013159-g003">Figure 3</xref>).</p><fig id="pone-0013159-g002" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0013159.g002</object-id><label>Figure 2</label><caption><title>NJ phylogenetic tree of &#946;<sub>2</sub>M protein sequences representing whole organisms.</title><p>The phylogenetic tree shown is the collapsed tree of 55 sets of sequence data. This tree shows that &#946;<sub>2</sub>M sequences are clustered together according to their taxons. &#946;<sub>2</sub>M sequences from Eutheria are clustered together and consist of sequences from Primates, Equine, Rodents, Ruminants, SscQ07717, OcuP01885 and FcaQ5MGS7. Marsupials, Monotremes and Avians are the intermediate taxons between Eutheria and Fish. Amphibian Xla protein Q9IA97 is clustered together with Actinopterygii fishes while the outgroup in this tree is a cartilaginous fish Reg Q8AXA0. The divergence of fish and mammalian &#946;<sub>2</sub>M received a high bootstrap value (89) to support the reliability of this phylogenetic tree.</p></caption><graphic xlink:href="pone.0013159.g002"/></fig><fig id="pone-0013159-g003" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0013159.g003</object-id><label>Figure 3</label><caption><title>NJ phylogenetic tree of IGc1 domains present in &#946;<sub>2</sub>M protein sequences from fish.</title><p>The phylogenetic tree shows that fish &#946;<sub>2</sub>M proteins are clustered according to the fish's ecological habitat, which may be fresh water, euryhaline or marine. The chicken sequence was used as the outgroup. Information on the sequences is given in <xref ref-type="table" rid="pone-0013159-t001">Table 1</xref>.</p></caption><graphic xlink:href="pone.0013159.g003"/></fig></sec></sec><sec id="s4"><title>Discussion</title><p>Our analysis of the novel <italic>L. calcarifer</italic> &#946;<sub>2</sub>M gene recovered in this study indicates that, overall, fish &#946;<sub>2</sub>M sequences have high sequence similarity and share many conserved features with published sequences from mammals and birds. Using &#946;<sub>2</sub>M as both a phylogenetic marker and a source of information, we confirmed previous studies indicating that the &#946;<sub>2</sub>M proteins of mammals and fish represent clearly distinct evolutionary paths, with fish &#946;<sub>2</sub>M genes more closely related to avian sequences than to those of mammals <xref rid="pone.0013159-Stewart1" ref-type="bibr">[7]</xref>, <xref rid="pone.0013159-Choi1" ref-type="bibr">[8]</xref>. The divergence between fish and mammals is partially a consequence of several unreversed changes in the ORF. For example, at site-14 (S2) in all mammalian &#946;<sub>2</sub>M sequences, the residue is Arg, whereas in Actinopteygii fish &#946;<sub>2</sub>M sequences it is Ile. The Ser residue in mammalian sequences is substituted by Ala at site-45 (S4) in all Actinopterygii fish, whereas Lys at position 55 (S5) in mammalian &#946;<sub>2</sub>M is consistently replaced by Thr in all Actinopterygii fish. Although these changes of amino acids are located within the mature protein region, the residues at those sites are not involved in any important stabilizing interactions of the protein <xref rid="pone.0013159-Benyamini1" ref-type="bibr">[20]</xref>.</p><p>Our analyses of the Actinopterygii fish &#946;<sub>2</sub>M sequences employed sequences representing two subclasses: Neopterygii (teleosts) and Chondrostei. Within the Neopterygii, two superorders are evident: Ostariophsi and Acanthopterygii. The molecular results showed phylogenetic relationships that support those established based on fish morphology <xref rid="pone.0013159-Hurley1" ref-type="bibr">[21]</xref>. Ostariophsi includes two different orders (Cypriniformes and Siluriformes), whereas Acanthopterygii includes three different fish orders (Beloniformes, Perciformes and Pleuronectiformes). With the exception of Siberian sturgeon, our results also showed that fishes included in Ostariophsi are mainly freshwater fishes, whereas those of Acanthopterygii are marine or euryhaline fishes (see <xref ref-type="fig" rid="pone-0013159-g003">Figure 3</xref>). The results reconfirm a previous paper that indicated an evolutionary divergence had occurred between freshwater and marine or euryhaline fish &#946;<sub>2</sub>M sequences <xref rid="pone.0013159-Choi1" ref-type="bibr">[8]</xref>. At the molecular level among the Actinopterygii fishes studied, Asian seabass, Japanese medaka and Japanese flounder sequences share synapomorphic amino acids at three sites: Thr<sub>73,</sub> (S6) Gly<sub>78</sub> (loop between S6 and S7) and Asp<sub>82</sub> (S7). Siberian sturgeon (Chondrost) resolves as the most basal lineage in agreement with other studies <xref rid="pone.0013159-Hurley1" ref-type="bibr">[21]</xref>, <xref rid="pone.0013159-Lundqvist1" ref-type="bibr">[18]</xref>, confirming this fish is the most primitive member of the subclass Actinopterygii. Indeed, a two-codon (residues 75 and 76 in the alignment) deletion is synapomorphic in all teleost &#946;<sub>2</sub>M sequences in contrast to Siberian sturgeon &#946;<sub>2</sub>M.</p><p>Given the preponderance of analytical results and qualitative comparative results, we suggest that the <italic>L. calcarifer</italic> &#946;<sub>2</sub>M gene recovered here is likely to function similarly to previously characterized &#946;<sub>2</sub>M genes, and that the protein it encodes acts as a light chain that binds non-covalently to the heavy chain of the MHC class I molecule. The two proteins would then create a complex with the antigen peptide and present the antigen to T cells to be destroyed by the immune mechanism <xref rid="pone.0013159-Hansen1" ref-type="bibr">[22]</xref>. &#946;<sub>2</sub>M is also involved in stabilizing the MHC class I molecules <xref rid="pone.0013159-Van1" ref-type="bibr">[23]</xref>, <xref rid="pone.0013159-Zijlstra1" ref-type="bibr">[24]</xref>. Since &#946;<sub>2</sub>M is clearly most closely related to the IGc1-type domains of MHC class I and II, its gene must have been linked to that of the MHC at some point of evolution <xref rid="pone.0013159-Stewart1" ref-type="bibr">[7]</xref>. Furthermore, the similarity between the structures of &#946;<sub>2</sub>M and the IGc1-type domains of MHC I and II suggests that they share a common ancestor encoded in MHC genes <xref rid="pone.0013159-Shum1" ref-type="bibr">[25]</xref>. In this study, we have identified the &#946;<sub>2</sub>M gene in <italic>L. calcarifer</italic> and confirm its phylogenetic placement within a group of related fish species. We believe that, as more fish &#946;<sub>2</sub>M sequences become available, reanalysis of the data may be able to better resolve the evolutionary history of the seeming ecological divergence detected among fish sequences and that of the <italic>L. calcarifer</italic> &#946;<sub>2</sub>M gene from the rest of the &#946;<sub>2</sub>M gene tree. Again, the overall utility of our approach in the detection, recovery and delineation of genes within <italic>L. calcarifer</italic> is emphasized by its success in our study of &#946;<sub>2</sub>M.</p></sec></body><back><ack><p>The authors thank Azrol Ridzuan Abd Aziz for providing the &#946;<sub>2</sub>M nucleotide sequence, Dr. Michael R. J. Fortsner for helpful discussion and revision of the manuscript and Mohd. Zulqurnain Abd. Razak for help with the figures.</p></ack><fn-group><fn fn-type="COI-statement"><p><bold>Competing Interests: </bold>The authors have declared that no competing interests exist.</p></fn><fn fn-type="financial-disclosure"><p><bold>Funding: </bold>Ministry of Science, Technology and Innovation (MOSTI), Malaysia under the Top-Down program (Project no. 05-02-02-T002). The funder had no role in study design, data collection and analysis, decision to publish, or preparation of the manuscript.</p></fn></fn-group><ref-list><title>References</title><ref id="pone.0013159-Bjorkman1"><label>1</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Bjorkman</surname><given-names>PJ</given-names></name><name><surname>Saper</surname><given-names>MA</given-names></name><name><surname>Samraoui</surname><given-names>B</given-names></name><name><surname>Bennett</surname><given-names>WS</given-names></name><name><surname>Strominger</surname><given-names>JL</given-names></name><etal/></person-group>
+<year>1987</year>
+<article-title>Structure of the human class I histocompatibility antigen, HLA-A2.</article-title>
+<source>Nature</source>
+<volume>329</volume>
+<fpage>506</fpage>
+<lpage>512</lpage>
+<pub-id pub-id-type="pmid">3309677</pub-id></element-citation></ref><ref id="pone.0013159-Coico1"><label>2</label><element-citation publication-type="book">
+<person-group person-group-type="author"><name><surname>Coico</surname><given-names>R</given-names></name><name><surname>Sunshine</surname><given-names>G</given-names></name><name><surname>Benjamini</surname><given-names>E</given-names></name></person-group>
+<year>2003</year>
+<article-title>Immunology A Short Course.</article-title>
+<publisher-loc>New Jersey</publisher-loc>
+<publisher-name>John Wiley &amp; Son, Inc</publisher-name>
+<size units="page">361</size>
+</element-citation></ref><ref id="pone.0013159-Collins1"><label>3</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Collins</surname><given-names>RW</given-names></name></person-group>
+<year>2004</year>
+<article-title>Human MHC class I chain related (MIC) genes: their biological function and relevance to disease and transplantation.</article-title>
+<source>Eur J Immunogenet</source>
+<volume>31</volume>
+<fpage>105</fpage>
+<lpage>114</lpage>
+<pub-id pub-id-type="pmid">15182323</pub-id></element-citation></ref><ref id="pone.0013159-Ono1"><label>4</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Ono</surname><given-names>H</given-names></name><name><surname>Figueroa</surname><given-names>F</given-names></name><name><surname>O'hUigin</surname><given-names>C</given-names></name><name><surname>Klein</surname><given-names>J</given-names></name></person-group>
+<year>1993</year>
+<article-title>Cloning of the &#946;2-microglobulin gene in the zebrafish.</article-title>
+<source>Immunogenetics</source>
+<volume>38</volume>
+<fpage>1</fpage>
+<lpage>10</lpage>
+<pub-id pub-id-type="pmid">8462988</pub-id></element-citation></ref><ref id="pone.0013159-Hui1"><label>5</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Hui</surname><given-names>FH</given-names></name><name><surname>Tian</surname><given-names>YY</given-names></name><name><surname>Ruo</surname><given-names>QY</given-names></name><name><surname>Feng</surname><given-names>SG</given-names></name><name><surname>Chun</surname><given-names>X</given-names></name></person-group>
+<year>2006</year>
+<article-title>cDNA cloning and genomic structure of grass carp (<italic>Ctenophayngodon idellus</italic>) B2-microglobulin gene.</article-title>
+<source>Fish Shellfish Immmunol</source>
+<volume>20</volume>
+<fpage>118</fpage>
+<lpage>123</lpage>
+</element-citation></ref><ref id="pone.0013159-Criscitiello1"><label>6</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Criscitiello</surname><given-names>MF</given-names></name><name><surname>Benedetto</surname><given-names>R</given-names></name><name><surname>Antao</surname><given-names>A</given-names></name><name><surname>Wilson</surname><given-names>MR</given-names></name><name><surname>Chinchar</surname><given-names>VG</given-names></name><etal/></person-group>
+<year>1998</year>
+<article-title>&#946;2-microglobulin of <italic>Ictalurid</italic> catfishes.</article-title>
+<source>Immunogens</source>
+<volume>48</volume>
+<fpage>339</fpage>
+<lpage>343</lpage>
+</element-citation></ref><ref id="pone.0013159-Stewart1"><label>7</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Stewart</surname><given-names>R</given-names></name><name><surname>Ohta</surname><given-names>Y</given-names></name><name><surname>Minter</surname><given-names>RR</given-names></name><name><surname>Gibbons</surname><given-names>T</given-names></name><name><surname>Horton</surname><given-names>TL</given-names></name><etal/></person-group>
+<year>2005</year>
+<article-title>Cloning and characterization of <italic>Xenopus</italic> &#946;2-microglobulin.</article-title>
+<source>Dev Comp Immunol</source>
+<volume>29</volume>
+<fpage>723</fpage>
+<lpage>732</lpage>
+<pub-id pub-id-type="pmid">15854684</pub-id></element-citation></ref><ref id="pone.0013159-Choi1"><label>8</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Choi</surname><given-names>W</given-names></name><name><surname>Lee</surname><given-names>EY</given-names></name><name><surname>Choi</surname><given-names>TJ</given-names></name></person-group>
+<year>2006</year>
+<article-title>Cloning and sequence analysis of the &#946;2-microglobulin transcript from flounder, <italic>Paralichthys olivaceous.</italic>
+</article-title>
+<source>Mol Immunol</source>
+<volume>43</volume>
+<fpage>1565</fpage>
+<lpage>1572</lpage>
+<pub-id pub-id-type="pmid">16257447</pub-id></element-citation></ref><ref id="pone.0013159-Tan1"><label>9</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Tan</surname><given-names>SL</given-names></name><name><surname>Mohd-Adnan</surname><given-names>A</given-names></name><name><surname>Mohd-Yusof</surname><given-names>NY</given-names></name><name><surname>Forstner</surname><given-names>MRJ</given-names></name><name><surname>Wan</surname><given-names>K-L</given-names></name></person-group>
+<year>2008</year>
+<article-title>Identification and analysis of a prepro-chicken gonadotropin releasing hormone II (preprocGnRH-II) precursor in the Asian seabass, <italic>Lates calcarifer</italic>, based on an EST-based assessment of its brain transcriptome.</article-title>
+<source>Gene</source>
+<volume>411</volume>
+<fpage>77</fpage>
+<lpage>86</lpage>
+<pub-id pub-id-type="pmid">18280674</pub-id></element-citation></ref><ref id="pone.0013159-Schultz1"><label>10</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Schultz</surname><given-names>J</given-names></name><name><surname>Milpetz</surname><given-names>F</given-names></name><name><surname>Bork</surname><given-names>P</given-names></name><name><surname>Ponting</surname><given-names>CP</given-names></name></person-group>
+<year>1998</year>
+<article-title>SMART, a simple modular architecture research tool: identification of signaling domain.</article-title>
+<source>Proc Natl Acad Sci U S A</source>
+<volume>95</volume>
+<fpage>5857</fpage>
+<lpage>5864</lpage>
+<pub-id pub-id-type="pmid">9600884</pub-id></element-citation></ref><ref id="pone.0013159-Robert1"><label>11</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Robert</surname><given-names>DF</given-names></name><name><surname>Jaina</surname><given-names>M</given-names></name><name><surname>Benjamin</surname><given-names>SB</given-names></name><name><surname>Sam</surname><given-names>GJ</given-names></name><name><surname>Volker</surname><given-names>H</given-names></name><etal/></person-group>
+<year>2006</year>
+<article-title>Pfam: clans, web tools and services.</article-title>
+<source>Nucleic Acids Res</source>
+<volume>34</volume>
+<fpage>247</fpage>
+<lpage>251</lpage>
+</element-citation></ref><ref id="pone.0013159-Hulo1"><label>12</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Hulo</surname><given-names>N</given-names></name><name><surname>Bairoch</surname><given-names>A</given-names></name><name><surname>Bulliard</surname><given-names>V</given-names></name><name><surname>Cerutti</surname><given-names>L</given-names></name><name><surname>De Castro</surname><given-names>E</given-names></name><etal/></person-group>
+<year>2006</year>
+<article-title>The Prosite database.</article-title>
+<source>Nucleic Acids Res</source>
+<volume>34</volume>
+<fpage>227</fpage>
+<lpage>230</lpage>
+</element-citation></ref><ref id="pone.0013159-Eddy1"><label>13</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Eddy</surname><given-names>SR</given-names></name></person-group>
+<year>1998</year>
+<article-title>Profile hidden Markov models.</article-title>
+<source>Bioinformatics</source>
+<volume>14</volume>
+<fpage>755</fpage>
+<lpage>763</lpage>
+<pub-id pub-id-type="pmid">9918945</pub-id></element-citation></ref><ref id="pone.0013159-Durbin1"><label>14</label><element-citation publication-type="book">
+<person-group person-group-type="author"><name><surname>Durbin</surname><given-names>R</given-names></name><name><surname>Eddy</surname><given-names>S</given-names></name><name><surname>Krogh</surname><given-names>A</given-names></name><name><surname>Mitchison</surname><given-names>G</given-names></name></person-group>
+<year>1998</year>
+<article-title>Biological sequence analysis: probabilistic models of proteins and nucleic acids.</article-title>
+<publisher-loc>United Kingdom</publisher-loc>
+<publisher-name>Cambridge University Press</publisher-name>
+<size units="page">95</size>
+</element-citation></ref><ref id="pone.0013159-Felsenstein1"><label>15</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Felsenstein</surname><given-names>J</given-names></name></person-group>
+<year>1996</year>
+<article-title>Inferring phylogenies from protein sequences by parsimony, distance, and likelihood methods.</article-title>
+<source>Methods Enzymol</source>
+<volume>266</volume>
+<fpage>418</fpage>
+<lpage>427</lpage>
+<pub-id pub-id-type="pmid">8743697</pub-id></element-citation></ref><ref id="pone.0013159-Tamura1"><label>16</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Tamura</surname><given-names>K</given-names></name><name><surname>Dudley</surname><given-names>J</given-names></name><name><surname>Nei</surname><given-names>M</given-names></name><name><surname>Kumar</surname><given-names>S</given-names></name></person-group>
+<year>2007</year>
+<article-title>MEGA4: Molecular Evolutionary Genetics Analysis (MEGA) software version 4.0.</article-title>
+<source>Mol Biol Evol</source>
+<volume>24</volume>
+<issue>8</issue>
+<fpage>1596</fpage>
+<lpage>1599</lpage>
+<pub-id pub-id-type="pmid">17488738</pub-id></element-citation></ref><ref id="pone.0013159-Becker1"><label>17</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Becker</surname><given-names>JW</given-names></name><name><surname>Reeke</surname><given-names>GN</given-names></name></person-group>
+<year>1985</year>
+<article-title>Three-dimensional structure of &#946;2-microglobulin.</article-title>
+<source>Proc Natl Acad Sci U S A</source>
+<volume>82</volume>
+<fpage>4225</fpage>
+<lpage>4229</lpage>
+<pub-id pub-id-type="pmid">3889925</pub-id></element-citation></ref><ref id="pone.0013159-Lundqvist1"><label>18</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Lundqvist</surname><given-names>ML</given-names></name><name><surname>Appelkvist</surname><given-names>P</given-names></name><name><surname>Hermsen</surname><given-names>T</given-names></name><name><surname>Pilstrom</surname><given-names>L</given-names></name><name><surname>Stet</surname><given-names>RJM</given-names></name></person-group>
+<year>1999</year>
+<article-title>Characterization of beta-2-microglobulin in a primitive fish, the Siberian sturgeon (<italic>Acipenser baeri</italic>).</article-title>
+<source>Immunogenetics</source>
+<volume>50</volume>
+<issue>1-2</issue>
+<fpage>79</fpage>
+<lpage>83</lpage>
+<pub-id pub-id-type="pmid">10541811</pub-id></element-citation></ref><ref id="pone.0013159-Cannon1"><label>19</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Cannon</surname><given-names>JP</given-names></name><name><surname>Haire</surname><given-names>RN</given-names></name><name><surname>Litman</surname><given-names>GW</given-names></name></person-group>
+<year>2002</year>
+<article-title>Identification of diversified genes that contain immunoglobulin-like variable regions in a protochordate.</article-title>
+<source>Nat Immunol</source>
+<volume>3</volume>
+<issue>12</issue>
+<fpage>1200</fpage>
+<lpage>1207</lpage>
+<pub-id pub-id-type="pmid">12415263</pub-id></element-citation></ref><ref id="pone.0013159-Benyamini1"><label>20</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Benyamini</surname><given-names>H</given-names></name><name><surname>Gunasekaran</surname><given-names>K</given-names></name><name><surname>Wolfson</surname><given-names>H</given-names></name><name><surname>Nussinov</surname><given-names>R</given-names></name></person-group>
+<year>2003</year>
+<article-title>&#946;2-Microglobulin amyloidosis: insights from conservation analysis and fibril modeling by protein docking techniques.</article-title>
+<source>J Mol Biol</source>
+<volume>330</volume>
+<fpage>159</fpage>
+<lpage>174</lpage>
+<pub-id pub-id-type="pmid">12818210</pub-id></element-citation></ref><ref id="pone.0013159-Hurley1"><label>21</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Hurley</surname><given-names>IA</given-names></name><name><surname>Mueller</surname><given-names>RL</given-names></name><name><surname>Dunn</surname><given-names>KA</given-names></name><name><surname>Schmidt</surname><given-names>EJ</given-names></name><name><surname>Friedman</surname><given-names>M</given-names></name><etal/></person-group>
+<year>2007</year>
+<article-title>A new time-scale for ray-finned fish evolution.</article-title>
+<source>Proc Biol Sci</source>
+<volume>274</volume>
+<fpage>489</fpage>
+<lpage>498</lpage>
+<pub-id pub-id-type="pmid">17476768</pub-id></element-citation></ref><ref id="pone.0013159-Hansen1"><label>22</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Hansen</surname><given-names>TH</given-names></name><name><surname>Lee</surname><given-names>DR</given-names></name></person-group>
+<year>1997</year>
+<article-title>Mechanism of class I assembly with &#946;2-microglobulin and loading with peptide.</article-title>
+<source>Adv Immunol</source>
+<volume>64</volume>
+<fpage>105</fpage>
+<lpage>137</lpage>
+<pub-id pub-id-type="pmid">9100981</pub-id></element-citation></ref><ref id="pone.0013159-Van1"><label>23</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Van</surname><given-names>KL</given-names></name><name><surname>Ashton</surname><given-names>RPG</given-names></name><name><surname>Ploegh</surname><given-names>HL</given-names></name><name><surname>Tonegawa</surname><given-names>S</given-names></name></person-group>
+<year>1992</year>
+<article-title>TAP1 mutant mice are deficient in antigen presentation, surface class molecules, and CD4-8+ cells.</article-title>
+<source>Cell</source>
+<volume>71</volume>
+<fpage>1205</fpage>
+<lpage>1214</lpage>
+<pub-id pub-id-type="pmid">1473153</pub-id></element-citation></ref><ref id="pone.0013159-Zijlstra1"><label>24</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Zijlstra</surname><given-names>M</given-names></name><name><surname>Bix</surname><given-names>M</given-names></name><name><surname>Simister</surname><given-names>N</given-names></name><name><surname>Loring</surname><given-names>J</given-names></name><name><surname>Raulet</surname><given-names>D</given-names></name><etal/></person-group>
+<year>1990</year>
+<article-title>&#946;2-Microglobulin deficient mice lack CD4-8+ cytolytic T cells.</article-title>
+<source>Nature</source>
+<volume>344</volume>
+<fpage>742</fpage>
+<lpage>746</lpage>
+<pub-id pub-id-type="pmid">2139497</pub-id></element-citation></ref><ref id="pone.0013159-Shum1"><label>25</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Shum</surname><given-names>BP</given-names></name><name><surname>Azumi</surname><given-names>K</given-names></name><name><surname>Zhang</surname><given-names>S</given-names></name><name><surname>Kehrer</surname><given-names>SR</given-names></name><name><surname>Raison</surname><given-names>RL</given-names></name><etal/></person-group>
+<year>1996</year>
+<article-title>Unexpected &#946;2-microglobulin sequence diversity in individual rainbow trout.</article-title>
+<source>Proc Natl Acad Sci U S A</source>
+<volume>93</volume>
+<fpage>2779</fpage>
+<lpage>2784</lpage>
+<pub-id pub-id-type="pmid">8610117</pub-id></element-citation></ref><ref id="pone.0013159-Dixon1"><label>26</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Dixon</surname><given-names>B</given-names></name><name><surname>Nagelkerke</surname><given-names>LA</given-names></name><name><surname>Sibbing</surname><given-names>FA</given-names></name><name><surname>Egberts</surname><given-names>E</given-names></name><name><surname>Stet</surname><given-names>RJ</given-names></name></person-group>
+<year>1996</year>
+<article-title>Evolution of MHC class II beta chain-encoding genes in the Lake Tana barbel species flock (<italic>Barbus intermedius</italic> complex).</article-title>
+<source>Immunogenetics</source>
+<volume>44</volume>
+<issue>6</issue>
+<fpage>419</fpage>
+<lpage>431</lpage>
+<pub-id pub-id-type="pmid">8824153</pub-id></element-citation></ref><ref id="pone.0013159-Dixon2"><label>27</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Dixon</surname><given-names>B</given-names></name><name><surname>Van</surname><given-names>ESHM</given-names></name><name><surname>Rodrigues</surname><given-names>PNS</given-names></name><name><surname>Egberts</surname><given-names>E</given-names></name><name><surname>Stet</surname><given-names>RJM</given-names></name></person-group>
+<year>1993</year>
+<article-title>Fish major histocompatibility complex genes: an expansion.</article-title>
+<source>Dev Comp Immunol</source>
+<volume>19</volume>
+<fpage>109</fpage>
+<lpage>133</lpage>
+</element-citation></ref><ref id="pone.0013159-Naruse1"><label>28</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Naruse</surname><given-names>K</given-names></name><name><surname>Fukamachi</surname><given-names>S</given-names></name><name><surname>Mitani</surname><given-names>H</given-names></name><name><surname>Kondo</surname><given-names>M</given-names></name><name><surname>Matsuoka</surname><given-names>T</given-names></name><etal/></person-group>
+<year>2000</year>
+<article-title>A detailed linkage map of medaka, <italic>Oryzias latipes</italic>: comparative genomics and genome evolution.</article-title>
+<source>Genetics</source>
+<volume>154</volume>
+<issue>4</issue>
+<fpage>1773</fpage>
+<lpage>1784</lpage>
+<pub-id pub-id-type="pmid">10747068</pub-id></element-citation></ref><ref id="pone.0013159-Vihtelic1"><label>29</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Vihtelic</surname><given-names>TS</given-names></name><name><surname>Fadool</surname><given-names>JM</given-names></name><name><surname>Gao</surname><given-names>J</given-names></name><name><surname>Thornton</surname><given-names>KA</given-names></name><name><surname>Hyde</surname><given-names>DR</given-names></name><etal/></person-group>
+<year>2005</year>
+<article-title>Expressed sequence tag analysis of zebrafish eye tissues for NEIBank.</article-title>
+<source>Mol Vis</source>
+<volume>11</volume>
+<fpage>1083</fpage>
+<lpage>1100</lpage>
+<pub-id pub-id-type="pmid">16379021</pub-id></element-citation></ref><ref id="pone.0013159-Miska1"><label>30</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Miska</surname><given-names>KB</given-names></name><name><surname>Hellman</surname><given-names>L</given-names></name><name><surname>Miller</surname><given-names>RD</given-names></name></person-group>
+<year>2003</year>
+<article-title>Characterization of &#946;2-microglobulin coding sequence from three non-placental mammals: the duckbill platypus, the short-beaked echidna, and the grey short-tailed opossum.</article-title>
+<source>Dev Comp Immunol</source>
+<volume>27</volume>
+<issue>3</issue>
+<fpage>247</fpage>
+<lpage>256</lpage>
+<pub-id pub-id-type="pmid">12590975</pub-id></element-citation></ref><ref id="pone.0013159-Riegert1"><label>31</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Riegert</surname><given-names>P</given-names></name><name><surname>Andersen</surname><given-names>R</given-names></name><name><surname>Bumstead</surname><given-names>N</given-names></name><name><surname>Doehring</surname><given-names>C</given-names></name><name><surname>Dominguez-Steglich</surname><given-names>M</given-names></name><etal/></person-group>
+<year>1996</year>
+<article-title>The chicken beta 2-microglobulin gene is located on a non-major histocompatibility complex microchromosome: a small, G+C-rich gene with X and Y boxes in the promoter.</article-title>
+<source>Proc Natl Acad Sci U S A</source>
+<volume>93</volume>
+<issue>3</issue>
+<fpage>1243</fpage>
+<lpage>1248</lpage>
+<pub-id pub-id-type="pmid">8577748</pub-id></element-citation></ref><ref id="pone.0013159-Welinder1"><label>32</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Welinder</surname><given-names>KG</given-names></name><name><surname>Jespersen</surname><given-names>HM</given-names></name><name><surname>Walther-Rasmussen</surname><given-names>J</given-names></name><name><surname>Skjodt</surname><given-names>K</given-names></name></person-group>
+<year>1991</year>
+<article-title>Amino acid sequences and structures of chicken and turkey &#946;2-microglobulin.</article-title>
+<source>Mol Immunol</source>
+<volume>28</volume>
+<issue>1-2</issue>
+<fpage>177</fpage>
+<lpage>182</lpage>
+<pub-id pub-id-type="pmid">2011126</pub-id></element-citation></ref><ref id="pone.0013159-Western1"><label>33</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Western</surname><given-names>AH</given-names></name><name><surname>Eckery</surname><given-names>DC</given-names></name><name><surname>Demmer</surname><given-names>J</given-names></name><name><surname>Juengel</surname><given-names>JL</given-names></name><name><surname>McNatty</surname><given-names>KP</given-names></name><etal/></person-group>
+<year>2003</year>
+<article-title>Expression of the FcRn receptor (and) gene homologues in the intestine of suckling brushtail possum (<italic>Trichosurus vulpecula</italic>) pouch young.</article-title>
+<source>Mol Immunol</source>
+<volume>39</volume>
+<issue>20</issue>
+<fpage>707</fpage>
+<lpage>717</lpage>
+<pub-id pub-id-type="pmid">12531282</pub-id></element-citation></ref><ref id="pone.0013159-Groves1"><label>34</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Groves</surname><given-names>ML</given-names></name><name><surname>Greenberg</surname><given-names>R</given-names></name></person-group>
+<year>1982</year>
+<article-title>Complete amino acid sequence of bovine &#946;2-microglobulin.</article-title>
+<source>J Biol Chem</source>
+<volume>257</volume>
+<issue>5</issue>
+<fpage>2619</fpage>
+<lpage>2626</lpage>
+<pub-id pub-id-type="pmid">6174509</pub-id></element-citation></ref><ref id="pone.0013159-Ellis1"><label>35</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Ellis</surname><given-names>SA</given-names></name><name><surname>Martin</surname><given-names>AJ</given-names></name></person-group>
+<year>1993</year>
+<article-title>Nucleotide sequence of horse &#946;2-microglobulin cDNA.</article-title>
+<source>Immunogenetics</source>
+<volume>38</volume>
+<issue>5</issue>
+<fpage>383</fpage>
+<pub-id pub-id-type="pmid">8344729</pub-id></element-citation></ref><ref id="pone.0013159-Tallmadge1"><label>36</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Tallmadge</surname><given-names>RL</given-names></name><name><surname>Lear</surname><given-names>TL</given-names></name><name><surname>Johnson</surname><given-names>AK</given-names></name><name><surname>Guerin</surname><given-names>G</given-names></name><name><surname>Millon</surname><given-names>LV</given-names></name><etal/></person-group>
+<year>2003</year>
+<article-title>Characterization of the &#946;2-microglobulin gene of the horse.</article-title>
+<source>Immunogenetics</source>
+<volume>54</volume>
+<issue>10</issue>
+<fpage>725</fpage>
+<lpage>733</lpage>
+<pub-id pub-id-type="pmid">12557059</pub-id></element-citation></ref><ref id="pone.0013159-Daniel1"><label>37</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Daniel</surname><given-names>F</given-names></name><name><surname>Morello</surname><given-names>D</given-names></name><name><surname>Le Bail</surname><given-names>O</given-names></name><name><surname>Chambon</surname><given-names>P</given-names></name><name><surname>Cayre</surname><given-names>Y</given-names></name><etal/></person-group>
+<year>1983</year>
+<article-title>Structure and expression of the mouse beta 2-microglobulin gene isolated from somatic and non-expressing teratocarcinoma cells.</article-title>
+<source>EMBO J</source>
+<volume>2</volume>
+<issue>7</issue>
+<fpage>1061</fpage>
+<lpage>1065</lpage>
+<pub-id pub-id-type="pmid">6354707</pub-id></element-citation></ref><ref id="pone.0013159-Cole1"><label>38</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Cole</surname><given-names>T</given-names></name><name><surname>Dickson</surname><given-names>PW</given-names></name><name><surname>Esnard</surname><given-names>F</given-names></name><name><surname>Averill</surname><given-names>S</given-names></name><name><surname>Risbridger</surname><given-names>GP</given-names></name><etal/></person-group>
+<year>1989</year>
+<article-title>The cDNA structure and expression analysis of the genes for the cysteine proteinase inhibitor cystatin C and for &#946;2-microglobulin in rat brain.</article-title>
+<source>Eur J Biochem</source>
+<volume>186</volume>
+<issue>1-2</issue>
+<fpage>35</fpage>
+<lpage>42</lpage>
+<pub-id pub-id-type="pmid">2689174</pub-id></element-citation></ref><ref id="pone.0013159-Gastinel1"><label>39</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Gastinel</surname><given-names>LN</given-names></name><name><surname>Valente</surname><given-names>G</given-names></name><name><surname>Bjorkman</surname><given-names>PJ</given-names></name></person-group>
+<year>1992</year>
+<article-title>cDNA sequence of CHO-KI hamster beta2-microglobulin.</article-title>
+<source>Proc Natl Acad Sci U S A</source>
+<volume>89</volume>
+<issue>2</issue>
+<fpage>638</fpage>
+<lpage>642</lpage>
+<pub-id pub-id-type="pmid">1530991</pub-id></element-citation></ref><ref id="pone.0013159-Wolfe1"><label>40</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Wolfe</surname><given-names>PB</given-names></name><name><surname>Cebra</surname><given-names>JJ</given-names></name></person-group>
+<year>1980</year>
+<article-title>The primary structure of guinea pig &#946;2-microglobulin.</article-title>
+<source>Mol Immunol</source>
+<volume>17</volume>
+<issue>12</issue>
+<fpage>1493</fpage>
+<lpage>1505</lpage>
+<pub-id pub-id-type="pmid">6170877</pub-id></element-citation></ref><ref id="pone.0013159-Canavez1"><label>41</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Canavez</surname><given-names>FC</given-names></name><name><surname>Ladasky</surname><given-names>JJ</given-names></name><name><surname>Muniz</surname><given-names>JA</given-names></name><name><surname>Seuanez</surname><given-names>HN</given-names></name><name><surname>Parham</surname><given-names>P</given-names></name><etal/></person-group>
+<year>1998</year>
+<article-title>&#946;2-Microglobulin in neotropical primates (Platyrrhini).</article-title>
+<source>Immunogenetics</source>
+<volume>48</volume>
+<issue>2</issue>
+<fpage>133</fpage>
+<lpage>140</lpage>
+<pub-id pub-id-type="pmid">9634477</pub-id></element-citation></ref><ref id="pone.0013159-Canavez2"><label>42</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Canavez</surname><given-names>FC</given-names></name><name><surname>Moreira</surname><given-names>MA</given-names></name><name><surname>Simon</surname><given-names>F</given-names></name><name><surname>Parham</surname><given-names>P</given-names></name><name><surname>Seuanez</surname><given-names>HN</given-names></name></person-group>
+<year>1999</year>
+<article-title>Phylogenetic relationships of the Callitrichinae (Platyrrhini, primates) based on &#946;2-microglobulin DNA sequence.</article-title>
+<source>Am J Primatol</source>
+<volume>48</volume>
+<issue>3</issue>
+<fpage>225</fpage>
+<lpage>236</lpage>
+<pub-id pub-id-type="pmid">10380996</pub-id></element-citation></ref><ref id="pone.0013159-York1"><label>43</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>York</surname><given-names>IA</given-names></name><name><surname>Grant</surname><given-names>EP</given-names></name><name><surname>Dahl</surname><given-names>AM</given-names></name><name><surname>Rock</surname><given-names>KL</given-names></name></person-group>
+<year>2005</year>
+<article-title>A mutant cell with a novel defect in MHC class I quality control.</article-title>
+<source>J Immunol</source>
+<volume>174</volume>
+<issue>11</issue>
+<fpage>6839</fpage>
+<lpage>6846</lpage>
+<pub-id pub-id-type="pmid">15905525</pub-id></element-citation></ref><ref id="pone.0013159-Gussow1"><label>44</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Gussow</surname><given-names>D</given-names></name><name><surname>Rein</surname><given-names>R</given-names></name><name><surname>Ginjaar</surname><given-names>I</given-names></name><name><surname>Hochstenbach</surname><given-names>F</given-names></name><name><surname>Seeman</surname><given-names>G</given-names></name><etal/></person-group>
+<year>1987</year>
+<article-title>The human &#946;2-microglobulin gene, primary structure and definition of the transcriptional unit.</article-title>
+<source>J Immunol</source>
+<volume>139</volume>
+<fpage>3132</fpage>
+<lpage>3138</lpage>
+<pub-id pub-id-type="pmid">3312414</pub-id></element-citation></ref><ref id="pone.0013159-Milland1"><label>45</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Milland</surname><given-names>J</given-names></name><name><surname>Loveland</surname><given-names>BE</given-names></name><name><surname>McKenzie</surname><given-names>IF</given-names></name></person-group>
+<year>1993</year>
+<article-title>Isolation of a clone for pig &#946;2-microglobulin cDNA.</article-title>
+<source>Immunogenetics</source>
+<volume>38</volume>
+<issue>6</issue>
+<fpage>464</fpage>
+<pub-id pub-id-type="pmid">8406623</pub-id></element-citation></ref><ref id="pone.0013159-Gates1"><label>46</label><element-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Gates</surname><given-names>FT</given-names></name><name><surname>Coligan</surname><given-names>JE</given-names></name><name><surname>Kindt</surname><given-names>TJ</given-names></name></person-group>
+<year>1979</year>
+<article-title>Complete amino acid sequence of rabbit &#946;2-microglobulin.</article-title>
+<source>Biochemistry</source>
+<volume>18</volume>
+<issue>11</issue>
+<fpage>2267</fpage>
+<lpage>2272</lpage>
+<pub-id pub-id-type="pmid">87220</pub-id></element-citation></ref></ref-list></back></article>

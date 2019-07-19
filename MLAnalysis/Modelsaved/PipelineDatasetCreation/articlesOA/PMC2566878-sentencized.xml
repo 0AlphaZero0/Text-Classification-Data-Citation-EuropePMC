@@ -1,0 +1,336 @@
+
+<article xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML" article-type="research-article"><?properties open_access?><?DTDIdentifier.IdentifierValue -//NLM//DTD Journal Publishing DTD v2.3 20070202//EN?><?DTDIdentifier.IdentifierType public?><?SourceDTD.DTDName journalpublishing.dtd?><?SourceDTD.Version 2.3?><?ConverterInfo.XSLTName jp2nlmx2.xsl?><?ConverterInfo.Version 2?><front><?epub September-27-2008?><journal-meta><journal-id journal-id-type="nlm-ta">Nucleic Acids Res</journal-id><journal-id journal-id-type="iso-abbrev">Nucleic Acids Res</journal-id><journal-id journal-id-type="publisher-id">nar</journal-id><journal-id journal-id-type="hwp">nar</journal-id><journal-title-group><journal-title>Nucleic Acids Research</journal-title></journal-title-group><issn pub-type="ppub">0305-1048</issn><issn pub-type="epub">1362-4962</issn><publisher><publisher-name>Oxford University Press</publisher-name></publisher></journal-meta><article-meta><article-id pub-id-type="pmcid">2566878</article-id><article-id pub-id-type="pmid">18820303</article-id><article-id pub-id-type="doi">10.1093/nar/gkn578</article-id><article-id pub-id-type="publisher-id">gkn578</article-id><article-categories><subj-group subj-group-type="heading"><subject>Computational Biology</subject></subj-group></article-categories><title-group><article-title><SecTag type="TITLE"><text><SENT sid="0" pm="."><plain>KnotInFrame: prediction of −1 ribosomal frameshift events </plain></SENT>
+</text></SecTag></article-title></title-group><contrib-group><contrib contrib-type="author"><name><surname>Theis</surname><given-names>Corinna</given-names></name></contrib><contrib contrib-type="author"><name><surname>Reeder</surname><given-names>Jens</given-names></name></contrib><contrib contrib-type="author"><name><surname>Giegerich</surname><given-names>Robert</given-names></name><xref ref-type="corresp" rid="COR1">*</xref></contrib></contrib-group><aff>Faculty of Technology, Bielefeld University, 33615 Bielefeld, Germany</aff><author-notes><corresp id="COR1">*To whom correspondence should be addressed. Tel: <phone>+49 521 106 2903</phone>; Fax: <fax>+49 521 106 6411</fax>; Email: <email>robert@techfak.uni-bielefeld.de</email></corresp></author-notes><pub-date pub-type="ppub"><month>10</month><year>2008</year></pub-date><pub-date pub-type="epub"><day>27</day><month>9</month><year>2008</year></pub-date><pub-date pub-type="pmc-release"><day>27</day><month>9</month><year>2008</year></pub-date><volume>36</volume><issue>18</issue><fpage>6013</fpage><lpage>6020</lpage><history><date date-type="received"><day>12</day><month>6</month><year>2008</year></date><date date-type="rev-recd"><day>28</day><month>8</month><year>2008</year></date><date date-type="accepted"><day>28</day><month>8</month><year>2008</year></date></history><permissions><copyright-statement>© 2008 The Author(s)</copyright-statement><copyright-year>2008</copyright-year><license license-type="creative-commons" xlink:href="http://creativecommons.org/licenses/by-nc/2.0/uk/"><license-p>This is an Open Access article distributed under the terms of the Creative Commons Attribution Non-Commercial License (<ext-link ext-link-type="uri" xlink:href="http://creativecommons.org/licenses/by-nc/2.0/uk/">http://creativecommons.org/licenses/by-nc/2.0/uk/</ext-link>) which permits unrestricted non-commercial use, distribution, and reproduction in any medium, provided the original work is properly cited.</license-p></license></permissions><abstract><p><SecTag type="ABS"><text><SENT sid="1" pm="."><plain>Programmed −1 ribosomal frameshift (−1 PRF) allows for alternative reading frames within one mRNA. </plain></SENT>
+<SENT sid="2" pm="."><plain>First found in several viruses, it is now believed to exist in all kingdoms of life. </plain></SENT>
+<SENT sid="3" pm="."><plain>Strong stimulators for −1 PRF are a heptameric slippery site and an RNA pseudoknot. </plain></SENT>
+<SENT sid="4" pm="."><plain>Here, we present a new algorithm KnotInFrame, for the automatic detection of −1 PRF signals from genomic sequences. </plain></SENT>
+<SENT sid="5" pm="."><plain>It finds the frameshifting stimulators by means of a specialized RNA-pseudoknot folding program, fast enough for genome-wide analyses. </plain></SENT>
+<SENT sid="6" pm="."><plain>Evaluations on known −1 PRF signals demonstrate a high sensitivity. </plain></SENT>
+</text></SecTag></p></abstract></article-meta></front><body><SecTag type="INTRO"><sec><title><text><SENT sid="7" pm="."><plain>INTRODUCTION </plain></SENT>
+</text></title><p><text><SENT sid="8" pm="."><plain>In the middle of the last century, George Beadle and Edward Tatum (1) proposed the ‘one gene–one enzyme’ theory, stating that one gene holds the genetic information of one enzyme, performing one enzymatic reaction. </plain></SENT>
+<SENT sid="9" pm="."><plain>It was later changed to ‘one gene–one polyprotein’ to account for the discovery of polyproteins. </plain></SENT>
+<SENT sid="10" pm="."><plain>However, today there are several cases which violate this assumption. </plain></SENT>
+<SENT sid="11" pm="."><plain>By alternative splicing several protein variants are made by selecting different sets of exons from one single gene. </plain></SENT>
+<SENT sid="12" pm="."><plain>With trans-splicing, proteins are synthesized from exons of different genes (2). </plain></SENT>
+<SENT sid="13" pm="."><plain>Another way of enhancing the information content of an mRNA are translational recoding events. </plain></SENT>
+<SENT sid="14" pm="."><plain>With codon hopping (bypassing) (3), the ribosome skips over a gap in the open reading frame (ORF) and resumes translation at a downstream codon. </plain></SENT>
+<SENT sid="15" pm="."><plain>In procaryotes, UGA codons followed by a characteristic stem–loop structure are redefined from stop codons to insertion of selenocystein (4). </plain></SENT>
+</text></p><p><text><SENT sid="16" pm="."><plain>Programmed ribosomal frameshift (PRF), examined in this work, alters the reading frame by shifting the ribosome exactly 1 nt to either the +1 or −1 direction. </plain></SENT>
+<SENT sid="17" pm="."><plain>A stop codon in the original reading frame is then bypassed in the shifted reading frame. </plain></SENT>
+<SENT sid="18" pm="."><plain>This way, two different protein products can be obtained from one mRNA. </plain></SENT>
+<SENT sid="19" pm="."><plain>The frequency of frameshifting events at a particular site is used by viruses for a defined ratio between the two proteins. </plain></SENT>
+<SENT sid="20" pm="."><plain>Changes in the ratio can lead to less efficient virus propagation and thus, can be a target for antiviral therapeutics. </plain></SENT>
+<SENT sid="21" pm="."><plain>Recently, a role of −1 PRF in posttranscriptional regulation has been proposed in Saccharomyces cerevisiae (5). </plain></SENT>
+<SENT sid="22" pm="."><plain>The authors propose a model where −1 PRF leads to premature termination targeting the mRNA for rapid degradation via the nonsense-mediated mRNA decay pathway. </plain></SENT>
+</text></p><p><text><SENT sid="23" pm="."><plain>When two cis-acting signals are present, −1 PRF is most effective: a heptameric slippery site and a stable secondary structure. </plain></SENT>
+<SENT sid="24" pm="."><plain>The slippery site is the location of the actual frameshift event having the consensus sequence X XXY YYZ (triplets are shown for the preshifted reading frame). </plain></SENT>
+<SENT sid="25" pm="."><plain>The structural element follows within a few bases and can be a simple stem–loop structure or a pseudoknot. </plain></SENT>
+<SENT sid="26" pm="."><plain>It is believed that the pseudoknot promotes a higher frameshift efficiency, since it is more effective in pausing the ribosome. </plain></SENT>
+<SENT sid="27" pm="."><plain>It is also known that ribosome pausing is a necessary, but not sufficient prerequisite for frameshifting (6). </plain></SENT>
+<SENT sid="28" pm="."><plain>The exact mechanism, by which the ribosome is brought into a different reading frame is still unknown. </plain></SENT>
+<SENT sid="29" pm="."><plain>Two different models were recently proposed in (7) and (8). </plain></SENT>
+</text></p></sec></SecTag><sec><title><text><SENT sid="30" pm="."><plain>PREVIOUS WORK </plain></SENT>
+</text></title><p><text><SENT sid="31" pm="."><plain>Several computational studies, with the general goal of detecting new PRF events, were undertaken in recent years (9–11,5). </plain></SENT>
+<SENT sid="32" pm="."><plain>The first study by Hammell et al. (9) found over 200-putative PRF events in the yeast genome. </plain></SENT>
+<SENT sid="33" pm="."><plain>Their approach relies on a strict pseudoknot structure consensus and requires two overlapping ORFs of at least 50 codons. </plain></SENT>
+<SENT sid="34" pm="."><plain>In (11), a machine learning approach is used to discriminate between strong- and weak-PRF signals. </plain></SENT>
+<SENT sid="35" pm="."><plain>Another approach (10) uses a combinatorial folding routine to identify possible frameshifting pseudoknots next to a slippery sequence. </plain></SENT>
+</text></p><p><text><SENT sid="36" pm="."><plain>The most recent and probably most elaborate study has been used to identify over a 1000 strong and statistically significant −1 PRF signals in the genome of S. cerevisiae (5). </plain></SENT>
+<SENT sid="37" pm="."><plain>It is based on a two-step procedure, where the first step identifies slippery sequences followed by a possible frameshift pseudoknot. </plain></SENT>
+<SENT sid="38" pm="."><plain>In the second step, candidates are analyzed statistically. </plain></SENT>
+<SENT sid="39" pm="."><plain>In more detail, RNAmotif (12) is used in the first step and finds all potential pseudoknots that could be formed according to a descriptor. </plain></SENT>
+<SENT sid="40" pm="."><plain>The descriptor specifies the allowed loop and helix lengths which are extracted from known −1 PRF pseudoknots. </plain></SENT>
+<SENT sid="41" pm="."><plain>All potential pseudoknots are then subjects of statistical analysis in step two. </plain></SENT>
+<SENT sid="42" pm="."><plain>The potential pseudoknots are refolded with pknots (13), a minimum free energy (MFE)-based RNA folding algorithm, capable of predicting a wide class of pseudoknots. </plain></SENT>
+<SENT sid="43" pm="."><plain>The MFE of the folding is compared to folding energies of randomized sequences via z-score analysis. </plain></SENT>
+<SENT sid="44" pm="."><plain>Finally, sequences with a low z-score (&lt;−1.65) are regarded as statistically significant, since they appear to be more stable than expected by random. </plain></SENT>
+</text></p><p><text><SENT sid="45" pm="."><plain>This is the work we build upon. </plain></SENT>
+<SENT sid="46" pm="."><plain>Despite its overall good architecture, there is one shortcoming in the procedure. </plain></SENT>
+<SENT sid="47" pm="."><plain>Sequences are forced to fold into a pseudoknot in the first step but are folded freely in the second step. </plain></SENT>
+<SENT sid="48" pm="."><plain>Thus, the result of the procedure is indeed 2-fold: (i) the final candidates have the theoretical potential to fold a pseudoknot, and (ii) they have a MFE folding which is more stable than expected by random. </plain></SENT>
+<SENT sid="49" pm="."><plain>However, it is not guaranteed that the stable structure which causes the good z-score actually is a pseudoknot. </plain></SENT>
+<SENT sid="50" pm="."><plain>In fact, we found that from 1679 strong candidates only 163 contain a pseudoknot. </plain></SENT>
+<SENT sid="51" pm="."><plain>The pseudoknot, which was folded by RNAmotif in step one, may have an energy similar to the MFE folding, but more likely, it will be less stable and hence, less probable to be formed in equilibrium. </plain></SENT>
+</text></p><p><text><SENT sid="52" pm="."><plain>In the light of these findings, we propose to avoid a purely combinatorial matching step, such as RNAmotif. </plain></SENT>
+<SENT sid="53" pm="."><plain>We develop a specialized RNA-folding program, called pknotsRG-fs, which explicitly folds a given sequence into the most stable structure conforming to the general frameshifting pseudoknot restrictions. </plain></SENT>
+<SENT sid="54" pm="."><plain>The restricted folding energy can then be compared with the unrestricted MFE folding. </plain></SENT>
+<SENT sid="55" pm="."><plain>This already gives a strong indication of whether the frameshift signal is likely to form or not. </plain></SENT>
+</text></p><p><text><SENT sid="56" pm="."><plain>In the following sections, we will first introduce the specialized folding program and show its incorporation into a tool for genome-wide annotation of −1 PRF signals. </plain></SENT>
+<SENT sid="57" pm="."><plain>We conclude with an evaluation and a detailed comparison to the findings of (5). </plain></SENT>
+</text></p></sec><SecTag type="METHODS"><sec sec-type="materials|methods"><title><text><SENT sid="58" pm="."><plain>MATERIALS AND METHODS </plain></SENT>
+</text></title><sec><title><text><SENT sid="59" pm="."><plain>Building a −1 PRF consensus </plain></SENT>
+</text></title><p><text><SENT sid="60" pm="."><plain>The RECODE database (14) is the prime resource for information about translational recoding events. </plain></SENT>
+<SENT sid="61" pm="."><plain>It contains almost a 100 −1 PRF recoding events in total, of which 28 entries are annotated with a 3′-RNA pseudoknot as cis-element. </plain></SENT>
+<SENT sid="62" pm="."><plain>These sequences have been derived from different sources such as eukaryotic viruses, eukaryotes and bacteria. </plain></SENT>
+</text></p><p><text><SENT sid="63" pm="."><plain>We analyzed all available sequence and structure information in order to extract the consensus information displayed in Figure 1. </plain></SENT>
+<SENT sid="64" pm="."><plain>The slippery sequence has the consensus X XXY YYZ, where XXX stands for any three identical nucleotides, YYY for either three As or three T/Us and Z for any nucleotide. </plain></SENT>
+<SENT sid="65" pm="."><plain>The spacer region must contain at least 1 nt and not more than 12 nt. </plain></SENT>
+<SENT sid="66" pm="."><plain>The stem and loop regions are chosen to include all but two examples which have unusually large loop sizes (see <ext-link ext-link-type="uri" xlink:href="http://nar.oxfordjournals.org/cgi/content/full/gkn578/DC1">Supplementary Table</ext-link> S1). </plain></SENT>
+<SENT sid="67" pm="."><plain>It should be noted that loops 2 and 3 are large enough to further fold internally and thus, can have a stabilizing effect on the overall structure. </plain></SENT>
+<SENT sid="68" pm="."><plain>For example, the pseudoknot of the SARS coronavirus frameshift signal contains an additional third stem in loop 3 (15). Figure 1.The consensus −PRF signal derived from the RECODE database. </plain></SENT>
+</text></p></sec><sec><title><text><SENT sid="69" pm="."><plain>pknotsRG-fs: a specialized RNA-folding program </plain></SENT>
+</text></title><p><text><SENT sid="70" pm="."><plain>Following these observations, we need a specialized RNA-folding algorithm, computing the structure of lowest free energy while maintaining the given restrictions. </plain></SENT>
+<SENT sid="71" pm="."><plain>Finding the structure with optimal energy can in general be done with dynamic programming (DP) algorithms, such as Mfold (16) or RNAfold (17) for unknotted structures. </plain></SENT>
+<SENT sid="72" pm="."><plain>However, explicitly formulating the exact recurrences which evaluate the folding space according to the above restrictions is a difficult and error-prone task. </plain></SENT>
+<SENT sid="73" pm="."><plain>A remedy to this is to use a more high-level approach: the RNA-pseudoknot folding program pknotsRG (18,19) describes its search space by means of a grammar. </plain></SENT>
+<SENT sid="74" pm="."><plain>The underlying thermodynamic model (20) (also used by Mfold and RNAfold), upon which optimizations takes place, is encapsulated in an ‘evaluation algebra’. </plain></SENT>
+<SENT sid="75" pm="."><plain>This concept of describing a DP by a grammar and an evaluation algebra has been formalized in the algebraic dynamic programming approach (ADP) (21–23). </plain></SENT>
+</text></p><p><text><SENT sid="76" pm="."><plain>By certain changes to the original pknotsRG grammar, we obtain a new grammar precisely describing frameshift-inducing pseudoknots: we incorporate all explicit length constraints displayed in Figure 1, but leave enough freedom for the loop regions to fold into any further stabilizing structures. </plain></SENT>
+<SENT sid="77" pm="."><plain>Furthermore, the modified grammar requires stem 1 of the pseudoknot to start within 1–12 bases from the head of the sequence; this accommodates the spacer. </plain></SENT>
+<SENT sid="78" pm="."><plain>The underlying thermodynamic model then comes for free—it has already been implemented with pknotsRG and can be re-used. </plain></SENT>
+<SENT sid="79" pm="."><plain>We eventually compile the grammar into a low-level programming language (C) using the ADP compiler (24). </plain></SENT>
+<SENT sid="80" pm="."><plain>This compilation creates and implements the explicit DP recurrences that are traditionally programmed by hand. </plain></SENT>
+</text></p><p><text><SENT sid="81" pm="."><plain>In this way, we obtain a specialized RNA-folding program pknotsRG-fs, which computes for a given input sequence the minimal free energy −1 PRF pseudoknot. </plain></SENT>
+<SENT sid="82" pm="."><plain>Such a program has been called a thermodynamic matcher (TDM) in (18). </plain></SENT>
+<SENT sid="83" pm="."><plain>If a sequence cannot form a pseudoknot with negative energy, the open structure is returned (with energy equal to zero). </plain></SENT>
+<SENT sid="84" pm="."><plain>The compiled code takes less than a second to fold a sequence of length 100. </plain></SENT>
+<SENT sid="85" pm="."><plain>The complete grammar is available at the project website. </plain></SENT>
+<SENT sid="86" pm="."><plain>Readers with alternative ideas about the structure of the −1 PRF signal can use it as a starting point for a faithful implementation of a corresponding TDM. </plain></SENT>
+</text></p><p><text><SENT sid="87" pm="."><plain>We now explain how this program is incorporated in the −1 PRF prediction pipeline KnotInFrame. </plain></SENT>
+</text></p></sec><sec><title><text><SENT sid="88" pm="."><plain>KnotInFrame — a −1 PRF prediction pipeline </plain></SENT>
+</text></title><sec><title><text><SENT sid="89" pm="."><plain>Overview </plain></SENT>
+</text></title><p><text><SENT sid="90" pm="."><plain>The −1 PRF prediction pipeline KnotInFrame is composed of three consecutive steps: In the search phase, we scan the input sequences for occurrences of the consensus slippery site in the correct reading frame. </plain></SENT>
+<SENT sid="91" pm="."><plain>The downstream region of each slippery site is checked for suitability as a frameshift signal. </plain></SENT>
+<SENT sid="92" pm="."><plain>This is done by comparing the minimal free energy of an enforced pseudo-knotted folding with the MFE of a freely folded structure. </plain></SENT>
+<SENT sid="93" pm="."><plain>The former energy is computed by pknotsRG-fs, the latter by RNAfold.In the filtering phase, three criteria based on the energy values of the free and the constrained folding are applied to reduce the number of candidates.In the ranking phase, the candidates passing all filters are ranked by an evaluation function based on the normalized dominance of the pseudoknot. Figure 2 gives an overview of the pipeline. </plain></SENT>
+<SENT sid="94" pm="."><plain>Overall, KnotInFrame expects a set of sequences as input, and returns one or several predicted frameshift sites for each sequence. </plain></SENT>
+<SENT sid="95" pm="."><plain>The predictions can then undergo comparative sequence analysis or experimental validation. Figure 2.A diagram of the prediction pipeline KnotInFrame. </plain></SENT>
+<SENT sid="96" pm="."><plain>In the search phase, a set of input sequences is searched for consensus slippery motifs. </plain></SENT>
+<SENT sid="97" pm="."><plain>Discarding untranslatable sites by means of the first filter ISF and folding the remaining candidates with pknotsRG-fs and RNAfold flows into the filter phase. </plain></SENT>
+<SENT sid="98" pm="."><plain>Three filters (LEF, EDF and NDF) discard further slippery sites based on the candidates' energy values. </plain></SENT>
+<SENT sid="99" pm="."><plain>In a last phase rank the candidates will be ranked according to their normalized energy dominance. </plain></SENT>
+</text></p></sec><sec><title><text><SENT sid="100" pm="."><plain>Definitions </plain></SENT>
+</text></title><p><text><SENT sid="101" pm="."><plain>Let s be a DNA sequence of length n. </plain></SENT>
+<SENT sid="102" pm="."><plain>We require neither a start codon nor frame information. s [i,j] is a substring of s starting at position i and ending at position j, and s[i,n] is called a suffix of s. </plain></SENT>
+</text></p><p><text><SENT sid="103" pm="."><plain>A slippery sequence in s is a substring s[i,i+6] that matches the consensus slippery motif of the form X XXY YYZ, where the spacer marks the zero-frame codons, XXX stands for any three identical nucleotides, YYY for either three As or three T/Us and Z for any nucleotide. </plain></SENT>
+</text></p><p><text><SENT sid="104" pm="."><plain>Given a slippery sequence p in s, a candidate x is a substring of s of the form x = pu, for various lengths of u. </plain></SENT>
+</text></p></sec><sec><title><text><SENT sid="105" pm="."><plain>Scanning for slippery sites </plain></SENT>
+</text></title><p><text><SENT sid="106" pm="."><plain>A forward scan of s yields a set P of putative slippery sites. P may be quite large, as the significance of the slippery motif is moderate—on a sequence with 50% GC content we expect about 8.8 occurrences per kilobase pair. P is reduced by ISF, the inframe stopcodon filter. </plain></SENT>
+<SENT sid="107" pm="."><plain>The reduction of P is realized by scanning backwards from each P, discarding p if an inframe stop codon is found before a start codon has been seen. </plain></SENT>
+<SENT sid="108" pm="."><plain>Also, p is discarded if too close to the end of the sequence to accommodate the pseudoknot. </plain></SENT>
+</text></p></sec><sec><title><text><SENT sid="109" pm="."><plain>Folding of downstream regions with pknotsRG-fs and RNAfold </plain></SENT>
+</text></title><p><text><SENT sid="110" pm="."><plain>For each P, we generate five candidate sequences puk = s[i,i+|p|+ 20*k −1] for 1, 2, 3, 4, 5 and 6. </plain></SENT>
+<SENT sid="111" pm="."><plain>This accounts for the potential pseudoknot sizes, which range in length from 26 to 118 in the RECODE database. </plain></SENT>
+<SENT sid="112" pm="."><plain>For each candidate x = pu, we compute the MFE values for the best pseudoknot consistent with our consensus and the best unconstrained folding by calls of pknotsRG-fs(u) and RNAfold(u). </plain></SENT>
+<SENT sid="113" pm="."><plain>Candidates now take the form x = (pu, pknotsRG fs(u), RNAfold(u)). </plain></SENT>
+</text></p></sec><sec><title><text><SENT sid="114" pm="."><plain>Filtering of unlikely foldings </plain></SENT>
+</text></title><p><text><SENT sid="115" pm="."><plain>Subsequent filtering is based on the candidates' energy values. </plain></SENT>
+<SENT sid="116" pm="."><plain>The low energy filter (LEF) discards candidates x = pu where pknotsRG-fs(u) &gt;α. </plain></SENT>
+<SENT sid="117" pm="."><plain>We choose the threshold α = −7.4 kcal/mol, since all pseudoknots in our test set achieve this or a lower energy value. </plain></SENT>
+<SENT sid="118" pm="."><plain>Next, the energy difference filter (EDF) discards candidates that rather fold into an unknotted structure, i.e. RNAfold(u)+ β &lt; pknotsRG fs(u). </plain></SENT>
+<SENT sid="119" pm="."><plain>The default value for the parameter β is 8.7 kcal/mol, also derived from RECODE analysis. </plain></SENT>
+</text></p><p><text><SENT sid="120" pm="."><plain>The resulting set of candidates may still hold several predictions for the same slippery site. </plain></SENT>
+<SENT sid="121" pm="."><plain>The normalized dominance filter (NDF) computes for each x = pu the length-normalized energy dominance 1 Δ gives an indication of the stability of a structure, i.e. how strong a structure outweighs the other referred to their energy values. </plain></SENT>
+<SENT sid="122" pm="."><plain>A positive Δ says that the pseudoknotted structure is more stable than the free-folded structure. </plain></SENT>
+<SENT sid="123" pm="."><plain>For each p, the NDF retains only the candidate pu which maximizes Δ(u). </plain></SENT>
+</text></p></sec><sec><title><text><SENT sid="124" pm="."><plain>Score computation and ranking </plain></SENT>
+</text></title><p><text><SENT sid="125" pm="."><plain>In the last step of the pipeline, all remaining candidates are ranked in descending order of their Δ(u) values. </plain></SENT>
+<SENT sid="126" pm="."><plain>Usually, we let the program report only the best (say 10) predictions per sequence. </plain></SENT>
+<SENT sid="127" pm="."><plain>The final result of the pipeline is a list of the strongest frameshifting sites, their respective slippery site, the structural element and the free energy values leading to the ranking. </plain></SENT>
+</text></p></sec></sec></sec></SecTag><SecTag type="RESULTS"><sec sec-type="results"><title><text><SENT sid="128" pm="."><plain>RESULTS </plain></SENT>
+</text></title><sec><title><text><SENT sid="129" pm="."><plain>Evaluation on RECODE database </plain></SENT>
+</text></title><p><text><SENT sid="130" pm="."><plain>Here, we report on the evaluation of KnotInFrame on the RECODE DB. </plain></SENT>
+<SENT sid="131" pm="."><plain>Since we built our consensus based on the structures stored in RECODE, this evaluation does not measure the correctness of the specialized folding program (the TDM). </plain></SENT>
+<SENT sid="132" pm="."><plain>In fact, we take the correctness of the TDM for granted, based on our experience with implementing TDMs in ADP. </plain></SENT>
+<SENT sid="133" pm="."><plain>What is really tested in the following is the adequacy of our scoring and ranking criterion—the normalized dominance. </plain></SENT>
+<SENT sid="134" pm="."><plain>Naturally, our score is influenced by the thermodynamic parameters currently used. </plain></SENT>
+<SENT sid="135" pm="."><plain>It might improve further if better thermodynamic measurements will be available for pseudoknotted structures. </plain></SENT>
+</text></p><p><text><SENT sid="136" pm="."><plain>We assume that the −1 PRF sites stored in the RECODE DB are true positives (TPs), which means a frameshift actually happens and the inducing structural element is a pseudoknot. </plain></SENT>
+<SENT sid="137" pm="?"><plain>Now, the questions we strive to answer are: (i) does KnotInFrame predict these TPs at all, (ii) on which rank does KnotInFrame predict the test candidates and (iii) what are the reasons for not finding or low ranking of TPs? </plain></SENT>
+</text></p><p><text><SENT sid="138" pm="."><plain>Table 1 displays the rank of our prediction for the annotated pseudoknots of the RECODE DB. </plain></SENT>
+<SENT sid="139" pm="."><plain>Altogether, our pipeline predicts the real pseudoknots 24 times within the first five ranks: 17 times on rank 1, 4 times on rank 2 and once on rank 3. </plain></SENT>
+<SENT sid="140" pm="."><plain>This demonstrates that KnotInFrame gives strong hints for frameshift sites. Table 1.RECODE rank tableThis table sums up on which rank of our prediction we found the annotated pseudoknot of the RECODE DB that holds 28 −1 PRF entries with a pseudoknot as cis-element.aThe relevant frameshift site could not be predicted by KnotInFrame. </plain></SENT>
+</text></p><p><text><SENT sid="141" pm="."><plain>Next, we have a closer look at the normalized dominance of the annotated pseudoknots and in particular the false negative (FN) cases, where KnotInFrame does not find the annotated positions or assigns to them a low rank. </plain></SENT>
+</text></p><p><text><SENT sid="142" pm="."><plain>From Table 2, one can observe, that 20 of 26 real pseudoknots have a Δ &gt; 0. </plain></SENT>
+<SENT sid="143" pm="."><plain>Sixteen of these 20 have also been predicted with our pipeline on rank 1. </plain></SENT>
+<SENT sid="144" pm="."><plain>This, of course, confirms that a positive Δ is a strong indicator for frameshift sites. </plain></SENT>
+<SENT sid="145" pm="."><plain>From our small RECODE test set it is hard to conclude a definite threshold for a good separation of strong and weak candidates. </plain></SENT>
+<SENT sid="146" pm="."><plain>In Figure 3, we show that in fact true PRF signals tend to have a higher Δ than nonshifting slippery sites. </plain></SENT>
+<SENT sid="147" pm="."><plain>However, the separation of the distributions is by no means sufficient for a clear classification. </plain></SENT>
+<SENT sid="148" pm="."><plain>As a rule of thumb, we can state that candidates with Δ &gt; 0.1 are most likely true signals. </plain></SENT>
+<SENT sid="149" pm="."><plain>With Δ &gt; 0.05, we capture approximately the same number of false positive (FPs) and TPs. </plain></SENT>
+<SENT sid="150" pm="."><plain>Finding the appropriate balance between high sensitivity and selectivity for this problem should therefore be governed by the intended use of the program. </plain></SENT>
+<SENT sid="151" pm="."><plain>We also note that there are annotated pseudoknots with a Δ &lt; 0. </plain></SENT>
+<SENT sid="152" pm="."><plain>These are also the candidates where KnotInFrame failed to rank the true −1 PRF signal on a high position. </plain></SENT>
+<SENT sid="153" pm="."><plain>We examined those FN in more detail and give explanations for their mispredictions: The dominance of is_m_is_is3 is undefined (‘b’ in Table 2) since the slippery site is out of KnotInFrames scope due to the remarkable appearance of the slippery sequence: it has a length of only 4 nt.The −1 PRF signal of pol_m_vir_gill has a total length of 177 nt but the longest substring the pipeline folds is 120 nt. </plain></SENT>
+<SENT sid="154" pm="."><plain>A more detailed look at the annotation, reveals that the classification as a pseudoknot is at least questionable: the −1 PRF pseudoknot signal has been predicted by a hairpin folding via Mfold. </plain></SENT>
+<SENT sid="155" pm="."><plain>Afterwards, the hairpin has been manually extended to a pseudoknot, by looking downstream for a complementary site which is able to pair with the hairpin loop region. </plain></SENT>
+<SENT sid="156" pm="."><plain>This is also the reason for the exceptional length of the structure. </plain></SENT>
+<SENT sid="157" pm="."><plain>An examination of the second stem with RNAduplex from the Vienna RNA package revealed a free energy of only −5.7 kcal/mol. </plain></SENT>
+<SENT sid="158" pm="."><plain>In accordance with the energy models implemented in state-of-the-art pseudoknot folding programs, this energy might be too low to compensate for the destabilizing effects of the pseudoknot loops.A similar consideration holds for the entry of pol_m_vir_hcv. </plain></SENT>
+<SENT sid="159" pm="."><plain>Its annotated pseudoknot is much longer than the maximal length of our consensus model. </plain></SENT>
+<SENT sid="160" pm="."><plain>In this case, our pipeline folds at most the first 120 nt of the whole structure and hence can only find an alternative, suboptimal pseudoknot. </plain></SENT>
+<SENT sid="161" pm="."><plain>Thus, this site is ranked low in our evaluation.A possible reason for predicting the frameshift signal of edr_m_euk_mmus on rank 5 might be that the structural frameshift component is not the pseudoknot reported in the RECODE. </plain></SENT>
+<SENT sid="162" pm="."><plain>In (25) a more complicated pseudoknot with a 3 nt bulge in the first stem is reported. </plain></SENT>
+<SENT sid="163" pm="."><plain>Our consensus model does not account for such pseudoknots and hence an alternative, suboptimal structure is folded. </plain></SENT>
+<SENT sid="164" pm="."><plain>Consequently this structure is then ranked low by KnotInFrame. Figure 3.Histogram of the normalized dominance values (Δ) of 26 annotated pseudoknots in the RECODE database (red) against the normalized dominance of 183 slippery sites in our test set not leading to −1 PRF (blue). Table 2.Detailed analysis of normalized dominance for the RECODE test setThis table shows for 28 entries of RECODE DB, each with a pseudoknot inducing the −1 PRF, the normalized dominance (Δ) of the annotated pseudoknot and in comparison the A of the pseudoknot found on rank 1 with KnotInFrame. </plain></SENT>
+<SENT sid="165" pm="."><plain>Additionally, the last column shows on which rank KnotInFrame predicts the real pseudoknot.aCases where the annotated and the predicted pseudoknot match. </plain></SENT>
+<SENT sid="166" pm="."><plain>One can observe that 20 of 26 real pseudoknots have a Δ ≥ 0.16 of these 20 have been predicted on rank 1 with our pipeline. </plain></SENT>
+<SENT sid="167" pm="."><plain>We conclude that a positive Δ gives a strong hint for a −1 PRF.bThere are no MFE results available, because the appropriate slippery site was not detected by KnotInFrame.cThe annotated structure was not found by KnotInFrame. </plain></SENT>
+</text></p></sec><sec><title><text><SENT sid="168" pm="."><plain>Evaluation on frameshift signals from PseudoBase </plain></SENT>
+</text></title><p><text><SENT sid="169" pm="."><plain>We also tested KnotInFrame on frameshift examples not used for building the consensus, in order to test for any effects of overfitting. </plain></SENT>
+<SENT sid="170" pm="."><plain>Unfortunately, there are only very few collected examples in public databases. </plain></SENT>
+<SENT sid="171" pm="."><plain>However, we found seven −1 PRF signals not covered by RECODE in PseudoBase (26), a database designated to RNA pseudoknots of various biological functions. </plain></SENT>
+<SENT sid="172" pm="."><plain>The corresponding genomic sequences sum up to 79 kb, which we analyzed with KnotInFrame. </plain></SENT>
+</text></p><p><text><SENT sid="173" pm="."><plain>The outcome is similar to the results obtained in the evaluation of RECODE. </plain></SENT>
+<SENT sid="174" pm="."><plain>Five out of seven examples were predicted correctly on rank 1, another one was ranked second. </plain></SENT>
+<SENT sid="175" pm="."><plain>Only one frameshift signal cannot be detected at all, since its slippery sites deviates from our consensus. </plain></SENT>
+</text></p></sec><sec><title><text><SENT sid="176" pm="."><plain>A note on z-score computation </plain></SENT>
+</text></title><p><text><SENT sid="177" pm="."><plain>At this point, the question arises if the true signals will also be ranked at a high position, when more slippery sites in a possibly longer input sequence compete for rank 1. </plain></SENT>
+<SENT sid="178" pm="."><plain>A more detailed look (Figure 3) at the normalized dominance reveals that in fact, true −1 PRF signals have a tendency to have a higher Δ than the 183 slippery sites in our test set not leading to PRF (called FPs in the following). </plain></SENT>
+<SENT sid="179" pm="."><plain>However, the discriminative signal is not strong enough for a clear separation. </plain></SENT>
+</text></p><p><text><SENT sid="180" pm="."><plain>In order to test the hypothesis that structural RNAs have a lower MFE than random sequences, we also performed a z-score analysis for all candidates reported by KnotInFrame. </plain></SENT>
+<SENT sid="181" pm="."><plain>For each candidate, we shuffled 100 randomized sequences with the same dinucleotide content and folded them with pknotsRG-fs. </plain></SENT>
+<SENT sid="182" pm="."><plain>In (27), it has been shown that using a TDM for z-score analysis provides a stronger signal than using a general folding algorithm. </plain></SENT>
+<SENT sid="183" pm="."><plain>However, the outcome for −1 PRF signals is less fruitful than the results of (27) as shown in Figure 4. </plain></SENT>
+<SENT sid="184" pm="."><plain>Most of the FPs have a z-score between 0 and −3. </plain></SENT>
+<SENT sid="185" pm="."><plain>The fact that the z-scores are not centered at 0 is most certainly a result of KnotInFrame discarding unfavorable folds during the filtering phase. </plain></SENT>
+<SENT sid="186" pm="."><plain>This already introduces a bias for more stable structures than expected by random. </plain></SENT>
+<SENT sid="187" pm="."><plain>With a z-score of −3 and lower, the number of TPs equals approximately the number of true negatives (TNs). </plain></SENT>
+<SENT sid="188" pm="."><plain>A small number of TPs is also deeply buried in the cloud of FPs which makes it hard to detect them either by z-score analysis or via the normalized dominance. </plain></SENT>
+<SENT sid="189" pm="."><plain>Altogether, it turns out that with z-score analysis, we have the same difficulties in separating the true PRF signals from the wrong ones. </plain></SENT>
+<SENT sid="190" pm="."><plain>Therefore, we refrain from using the z-score in KnotInFrame, since it would increase the runtime by a factor of 100 (for folding the randomized sequence) without a significant increase in performance. Figure 4.z-scores plotted against normalized dominance. </plain></SENT>
+<SENT sid="191" pm="."><plain>Although only weakly correlated with Δ, the z-score analysis does not provide significant further information for separating −1 PRF signals from the background distribution. </plain></SENT>
+</text></p><p><text><SENT sid="192" pm="."><plain>It seems that with only one sequence at hand, we can do no better. </plain></SENT>
+<SENT sid="193" pm="."><plain>However, the situation changes, if we have a set of homologous sequences. </plain></SENT>
+<SENT sid="194" pm="."><plain>Then, the co-occurrence of a slippery site and a conserved, stable frameshifting pseudoknot could improve the search for −1 PRF signals in a future version of KnotInFrame. </plain></SENT>
+</text></p></sec><sec><title><text><SENT sid="195" pm="."><plain>Comparison with a previous yeast screen </plain></SENT>
+</text></title><p><text><SENT sid="196" pm="."><plain>We compared the predictions of KnotInFrame to the predictions of (5) on the S. cerevisiae genome. </plain></SENT>
+<SENT sid="197" pm="."><plain>This comparison serves several purposes: since the reference set of verified signals in the RECODE DB is rather small, we use the predictions of (5) as extended test set. </plain></SENT>
+<SENT sid="198" pm="."><plain>Of course, it is neither guaranteed nor expected that all of their predictions are in fact real frameshift events. </plain></SENT>
+<SENT sid="199" pm="."><plain>However, a matching prediction of both approaches at a certain location strengthens the plausibility of this site. </plain></SENT>
+<SENT sid="200" pm="."><plain>On the other hand, contradicting predictions may hint at a weak spot of either of the two approaches. </plain></SENT>
+<SENT sid="201" pm="."><plain>We will show and discuss examples of each of these cases. </plain></SENT>
+</text></p><p><text><SENT sid="202" pm="."><plain>We downloaded the yeast genome sequences from NCBI (accessions: NC_001133, …, NC_001148, NC_001224; all versions are dated 24 January 2007) and extracted 6199 annotated ORFs with a total length of 8.76 MB. </plain></SENT>
+<SENT sid="203" pm="."><plain>Each ORF was analyzed by KnotInFrame and for each ORF the five best predictions were stored and used in the comparison. </plain></SENT>
+</text></p><p><text><SENT sid="204" pm="."><plain>In the study of (5), 1679 candidates were classified as strong candidates, due to a good z-score and a low-MFE value. </plain></SENT>
+<SENT sid="205" pm="."><plain>These candidates were made available by the authors in their PRFdb [(28), <ext-link ext-link-type="uri" xlink:href="http://dinmanlab.umd.edu/prfdb/]">http://dinmanlab.umd.edu/prfdb/]</ext-link>. </plain></SENT>
+<SENT sid="206" pm="."><plain>First, we asked what portion of those 1679 candidates were also predicted by our pipeline. </plain></SENT>
+<SENT sid="207" pm="."><plain>On the first glance, the result was astonishing: only 257 sites were confirmed by our analysis, i.e. they were predicted within one of the first five ranks for each ORF. </plain></SENT>
+<SENT sid="208" pm="."><plain>By visual examining of some of the missed candidates the reason was immediately obvious. </plain></SENT>
+<SENT sid="209" pm="."><plain>The predicted structure in the PRFdb often does not resemble the pseudoknot frameshift consensus. </plain></SENT>
+<SENT sid="210" pm="."><plain>Instead, we find virtually all possible other structures, such as a single hairpin, a chain of hairpins, bifurcated structures or complex pseudoknot structures. </plain></SENT>
+<SENT sid="211" pm="."><plain>This supports our main criticism of the approach of Jacobs et al.: the candidate sequences have the base-pairing potential to build a pseudoknot specified by the (RNAmotif) consensus, but for most sequences an alternative structure is more stable. </plain></SENT>
+<SENT sid="212" pm="."><plain>This alternative structure is then used for the z-score computation and stored in the PRFdb. </plain></SENT>
+<SENT sid="213" pm="."><plain>In contrast, our approach explicitly folds the consensus pseudoknot and the alternative structure and assigns to candidates with a more stable alternative structure a negative Δ and consequently a low rank. </plain></SENT>
+<SENT sid="214" pm="."><plain>Therefore, we filtered the list of strong candidates in the PRFdb for structures containing at least one pseudoknot and obtained 163 candidates. </plain></SENT>
+<SENT sid="215" pm="."><plain>Visual inspection revealed that this set still contains lots of structures neither conforming to our nor Jacobs et al.'s consensus. </plain></SENT>
+<SENT sid="216" pm="."><plain>If we further filter out all structures violating the consensus (e.g. a too long spacer, too short helices, a too long loop 1, etc.; examples are provided in the Supplementary Data), we end up with only 74 structures — &lt;5% of the original PRFdb. </plain></SENT>
+<SENT sid="217" pm="."><plain>As expected, the overlap with our predictions is much larger for this set: 19 out of 74 were also predicted by KnotInFrame. </plain></SENT>
+<SENT sid="218" pm="."><plain>In other words, the overlap for this set is around 26%, while for the complete PRFdb it is only 15%. </plain></SENT>
+<SENT sid="219" pm="."><plain>We conclude that KnotInFrame supports the predictions of Jacobs et al. only partially, even if both methods were reduced to structurally similar putative PRF events. </plain></SENT>
+</text></p><p><text><SENT sid="220" pm="."><plain>Next, we tested if our predictions are supported by Jacobs et al. We created a list of our 100 strongest candidates by setting a threshold of Δ &gt; 0.08. </plain></SENT>
+<SENT sid="221" pm="."><plain>Again, only a small portion (13) of these predictions are supported by the PRFdb. </plain></SENT>
+<SENT sid="222" pm="."><plain>The reasons for this are manifold: first, Jacobs et al. are using a more stringent consensus, which allows only 1–3 bases in loop 1. </plain></SENT>
+<SENT sid="223" pm="."><plain>Second, the folding program used in the creation of the PRFdb (pknots) uses an outdated energy model, while KnotInFrame uses the most up to date energy model for nested structures and an adapted model for pseudoknots. </plain></SENT>
+<SENT sid="224" pm="."><plain>In consequence, it happens that a stable structure reported by KnotInFrame is rejected in the PRFdb due to a possibly worse energy reported by pknots. </plain></SENT>
+<SENT sid="225" pm="."><plain>Remarkably, the maintainers of PRFdb started to include another RNA folding algorithm [NUPACK (29)] into the pipeline, which uses an energy model close to ours. </plain></SENT>
+<SENT sid="226" pm="."><plain>Database entries derived from NUPACK analysis seem to be more consistent with our results. </plain></SENT>
+<SENT sid="227" pm="."><plain>However, we cannot quantify the improvement, since the inclusion of NUPACK seems to be work in progress and only parts of the database are currently reprocessed. </plain></SENT>
+</text></p><p><text><SENT sid="228" pm="."><plain>Apparently, the method presented here and the one by Jacobs et al. differ substantially in their results. </plain></SENT>
+<SENT sid="229" pm="."><plain>Various reasons have been given above, e.g. the differences in the structure prediction methods. </plain></SENT>
+<SENT sid="230" pm="."><plain>However, we think the most influencing difference in both methods is the scoring system. </plain></SENT>
+<SENT sid="231" pm="."><plain>While KnotInFrame employs normalized dominance, Jacobs et al. use z-scores and free energy for ranking. </plain></SENT>
+<SENT sid="232" pm="."><plain>The fact that these two criteria are not equivalent can already be concluded from Figure 4, but has also been proven by our yeast screen comparison. </plain></SENT>
+<SENT sid="233" pm="."><plain>In our opinion, normalized dominance is better suited for the task of discriminating true PRF signals from random ones. </plain></SENT>
+<SENT sid="234" pm="."><plain>The z-score measures the evolutionary fitness of a sequence under evaluation against other (random) sequences that could have evolved instead, but were rejected during evolution due to an inferior fitness. </plain></SENT>
+<SENT sid="235" pm="."><plain>In contrast, the normalized dominance makes an exact statement of how likely a given sequence folds into a frameshift inducing structure and not into an alternative one. </plain></SENT>
+<SENT sid="236" pm="."><plain>In this sense, normalized dominance evaluates the ‘fitness’ of the PRF structure against its present competitors—those which exist in the folding space of the given RNA sequence, rather than against those that might exist in the past/future of a mutated sequence. </plain></SENT>
+</text></p></sec><sec><title><text><SENT sid="237" pm="."><plain>Run time analysis of KnotInFrame </plain></SENT>
+</text></title><p><text><SENT sid="238" pm="."><plain>To check the suitability of KnotInFrame for a large-scale application, we analyzed the run time of our tool which is basically effected by two factors: the folding routines and the number of slippery sites. </plain></SENT>
+<SENT sid="239" pm="."><plain>The run time determining factor of the folding steps are the calls to pknotsRG-fs, hence we have to consider the time it needs to fold one sequence, which is on average 0.6 s for a substring of 120 nt. </plain></SENT>
+<SENT sid="240" pm="."><plain>Note that we actually do not have to compute the foldings for the smaller subsequences (40, …, 100) separately. </plain></SENT>
+<SENT sid="241" pm="."><plain>They can simply be backtraced from the dynamic programming matrix of the largest subsequence. </plain></SENT>
+<SENT sid="242" pm="."><plain>Also, the theoretical run time depends on the probability of a slippery sequence to occur in a random sequence, given by:  Hence, the expected run time for an average sized bacterial genome of 5 MB with 5 · 106 × 0.00195 = 9750 slippery sites (and thus 9750 calls of pknotsRG-fs) is ∼0.6 s × 9750 = 1 h 37 min. </plain></SENT>
+<SENT sid="243" pm="."><plain>In practice, the first filter (ISF) already discards a significant amount of slippery sites (42% for the RECODE test set), before the expensive folding step and run time decreases. </plain></SENT>
+<SENT sid="244" pm="."><plain>This effect is somehow balanced by our observation that the real genomic sequences used in our evaluation contain more slippery sites than expected. </plain></SENT>
+</text></p><p><text><SENT sid="245" pm="."><plain>We measured the run time that KnotInFrame requires to analyse the 8.76 MB coding sequence of yeast. </plain></SENT>
+<SENT sid="246" pm="."><plain>The whole computation with 43841 observed slippery sites (expected: 17109) can be performed in ∼4.5 CPU hours, which is a definite improvement over previous approaches. </plain></SENT>
+</text></p></sec></sec></SecTag><SecTag type="CONCL"><sec sec-type="conclusions"><title><text><SENT sid="247" pm="."><plain>CONCLUSIONS </plain></SENT>
+</text></title><p><text><SENT sid="248" pm="."><plain>We presented KnotInFrame, a new and efficient tool for the automated detection of ribosomal −1 frameshift events. KnotInFrame employs a specialized RNA-folding program at its core to distinguish true −1 PRF events from random ones. </plain></SENT>
+<SENT sid="249" pm="."><plain>The complete pipeline is fast enough to analyze complete genome sequences within a few hours. </plain></SENT>
+<SENT sid="250" pm="."><plain>Our evaluation shows a high sensitivity on annotated −1 PRF events from the RECODE database. KnotInFrame clearly outperforms previous approaches in terms of compute resources. </plain></SENT>
+<SENT sid="251" pm="."><plain>With our new method it is now possible to systematically annotate available genome sequences. </plain></SENT>
+<SENT sid="252" pm="."><plain>Positive results of such screens will help to further improve the tool's; accuracy. </plain></SENT>
+</text></p><p><text><SENT sid="253" pm="."><plain>The KnotInFrame pipeline can be seen as a model case of developing a thermodynamic matcher, in our case pknotsRG-fs, and embedding it in a pipeline with further search criteria and filters. </plain></SENT>
+<SENT sid="254" pm="."><plain>Development of thermodynamic matchers is supported by the tool Locomotif (30), which allows to graphically design RNA structures, annotated with sequence information and length restrictions. </plain></SENT>
+<SENT sid="255" pm="."><plain>From such graphics, a thermodynamic matcher is produced automatically, bypassing tedious low-level programming and debugging. </plain></SENT>
+<SENT sid="256" pm="."><plain>In the course of this work, we have also extended the repertoire of structural building blocks in Locomotif by a pseudoknot building block. </plain></SENT>
+<SENT sid="257" pm="."><plain>In this way, it will be easy for workers in the field to construct their own pipelines akin to KnotInFrame, for RNA motifs of moderate size, with and without pseudoknots. </plain></SENT>
+</text></p></sec></SecTag><sec><title><text><SENT sid="258" pm="."><plain>AVAILABILITY </plain></SENT>
+</text></title><p><text><SENT sid="259" pm="."><plain>KnotInFrame is available for online use at the Bielefeld Bioinformatics Server (BiBiServ) at <ext-link ext-link-type="uri" xlink:href="http://bibiserv.techfak.uni-bielefeld.de/knotinframe">http://bibiserv.techfak.uni-bielefeld.de/knotinframe</ext-link>. </plain></SENT>
+<SENT sid="260" pm="."><plain>Also, we provide the underlying grammar of the folding program and detailed results of the yeast screen on the project's; web site on the BiBiServ. </plain></SENT>
+</text></p></sec><sec><title><text><SENT sid="261" pm="."><plain>SUPPLEMENTARTY DATA </plain></SENT>
+</text></title><p><text><SENT sid="262" pm="."><plain><ext-link ext-link-type="uri" xlink:href="http://nar.oxfordjournals.org/cgi/content/full/gkn578/DC1">Supplemantary Data</ext-link> are available at NAR Online. </plain></SENT>
+</text></p></sec><SecTag type="ACK_FUND"><sec><title><text><SENT sid="263" pm="."><plain>FUNDING </plain></SENT>
+</text></title><p><text4fund><text><SENT sid="264" pm="."><plain>Funding for open access charge: Bielefeld University. </plain></SENT>
+</text></text4fund></p><p><text4fund><text><SENT sid="265" pm="."><plain>Conflict of interest statement. None declared. </plain></SENT>
+</text></text4fund></p></sec></SecTag>
+<SecTag type="SUPPL"><sec sec-type="supplementary-material">
+<title><text><SENT sid="266" pm="."><plain>Supplementary Material </plain></SENT>
+</text></title>
+<supplementary-material id="PMC_1" content-type="local-data">
+<caption>
+<title><text><SENT sid="267" pm="."><plain>[Supplementary Data] </plain></SENT>
+</text></title>
+</caption>
+<media mimetype="text" mime-subtype="html" xlink:href="gkn578_index.html"/>
+<media xlink:role="associated-file" mimetype="application" mime-subtype="pdf" xlink:href="gkn578_1.pdf"/>
+</supplementary-material>
+</sec></SecTag>
+</body><back><SecTag type="ACK_FUND"><ack><title>ACKNOWLEDGEMENTS</title><p><text4fund><text><SENT sid="268" pm="."><plain>We thank Thomas Höchsmann for providing us with his z-score calculation scripts. </plain></SENT>
+<SENT sid="269" pm="."><plain>We also want to thank the anonymous reviewer for pointing out to us several references which are not yet reflected by the annotations in RECODE. </plain></SENT>
+</text></text4fund></p></ack></SecTag><SecTag type="REF"><ref-list><title>REFERENCES</title><ref id="B1"><text><SENT sid="270" pm="."><plain>1BeadleGWTatumELGenetic control of biochemical reactions in neurosporaProc. </plain></SENT>
+<SENT sid="271" pm="."><plain>Natl Acad. </plain></SENT>
+<SENT sid="272" pm="."><plain>Sci. </plain></SENT>
+<SENT sid="273" pm="."><plain>USA19412749950616588492 </plain></SENT>
+</text></ref><ref id="B2"><text><SENT sid="274" pm="."><plain>2NilsenTWTrans-splicing of nematode premessenger RNAAnnu. </plain></SENT>
+<SENT sid="275" pm="."><plain>Rev. </plain></SENT>
+<SENT sid="276" pm="."><plain>Microbiol.199347413-440 </plain></SENT>
+</text></ref><ref id="B3"><text><SENT sid="277" pm="."><plain>3HerrAJAtkinsJFGestelandRFCoupling of open reading frames by translational bypassingAnnu. </plain></SENT>
+<SENT sid="278" pm="."><plain>Rev. </plain></SENT>
+<SENT sid="279" pm="."><plain>Biochem.20006934337210966462 </plain></SENT>
+</text></ref><ref id="B4"><text><SENT sid="280" pm="."><plain>4WalczakRWesthofECarbonPKrolAA novel RNA structural motif in the selenocysteine insertion element of eukaryotic selenoprotein mRNAsRNA199623673798634917 </plain></SENT>
+</text></ref><ref id="B5"><text><SENT sid="281" pm="."><plain>5JacobsJLBelewATRakauskaiteRDinmanJDIdentification of functional, endogenous programmed −1 ribosomal frameshift signals in the genome of Saccharomyces cerevisiaeNucleic Acids Res.20073516517417158156 </plain></SENT>
+</text></ref><ref id="B6"><text><SENT sid="282" pm="."><plain>6KontosHNapthineSBrierleyIRibosomal pausing at a frameshifter RNA pseudoknot is sensitive to reading phase but shows little correlation with frameshift efficiencyMol. </plain></SENT>
+<SENT sid="283" pm="."><plain>Cell. </plain></SENT>
+<SENT sid="284" pm="."><plain>Biol.2001218657867011713298 </plain></SENT>
+</text></ref><ref id="B7"><text><SENT sid="285" pm="."><plain>7NamyOMoranSJStuartDIGilbertRJCBrierleyIA mechanical explanation of RNA pseudoknot function in programmed ribosomal frameshiftingNature200644124424716688178 </plain></SENT>
+</text></ref><ref id="B8"><text><SENT sid="286" pm="."><plain>8LegerMDuludeDSteinbergSVBrakier-GingrasLThe three transfer RNAs occupying the A, P and E sites on the ribosome are involved in viral programmed −1 ribosomal frameshiftNucleic Acids Res.2007355581559217704133 </plain></SENT>
+</text></ref><ref id="B9"><text><SENT sid="287" pm="."><plain>9HammellABTaylorRCPeltzSWDinmanJDIdentification of putative programmed −1 ribosomal frameshift signals in large DNA databasesGenome Res.1999941742710330121 </plain></SENT>
+</text></ref><ref id="B10"><text><SENT sid="288" pm="."><plain>10MoonSByunYKimH.-JJeongSHanKPredicting genes expressed via −1 and +1 frameshiftsNucleic Acids Res.2004324884489215371551 </plain></SENT>
+</text></ref><ref id="B11"><text><SENT sid="289" pm="."><plain>11BekaertMBidouLDeniseADuchateau-NguyenGForestJ.-PFroidevauxCHatinIRoussetJ.-PTermierMTowards a computational model for −1 eukaryotic frameshifting sitesBioinformatics20031932733512584117 </plain></SENT>
+</text></ref><ref id="B12"><text><SENT sid="290" pm="."><plain>12MackeTJEckerDJGutellRRGautheretDCaseDASampathRRNAMotif, an RNA secondary structure definition and search algorithmNucleic Acids Res.2001294724473511713323 </plain></SENT>
+</text></ref><ref id="B13"><text><SENT sid="291" pm="."><plain>13RivasEEddySRA dynamic programming algorithm for RNA structure prediction including pseudoknotsJ. </plain></SENT>
+<SENT sid="292" pm="."><plain>Mol. </plain></SENT>
+<SENT sid="293" pm="."><plain>Biol.1999285205320689925784 </plain></SENT>
+</text></ref><ref id="B14"><text><SENT sid="294" pm="."><plain>14BaranovPVGurvichOLHammerAWGestelRFAtkinsJFRECODE 2003Nucleic Acids Res.200331878912519954 </plain></SENT>
+</text></ref><ref id="B15"><text><SENT sid="295" pm="."><plain>15PlantEPPrez-AlvaradoGCJacobsJLMukhopadhyayBHennigMDinmanJDA three-stemmed mRNA pseudoknot in the SARS coronavirus frameshift signalPLoS Biol.20053e17215884978 </plain></SENT>
+</text></ref><ref id="B16"><text><SENT sid="296" pm="."><plain>16ZukerMStieglerPOptimal computer folding of large RNA sequences using thermodynamic and auxiliary informationNucleic Acids Res.198191331486163133 </plain></SENT>
+</text></ref><ref id="B17"><text><SENT sid="297" pm="."><plain>17HofackerIFontanaWStadlerPBonhoefferSTackerMSchusterPFast folding and comparison of RNA secondary structuresMonatsh. </plain></SENT>
+<SENT sid="298" pm="."><plain>Chem.1994125167188 </plain></SENT>
+</text></ref><ref id="B18"><text><SENT sid="299" pm="."><plain>18ReederJGiegerichRDesign, implementation and evaluation of a practical pseudoknot folding algorithm based on thermodynamicsBMC Bioinfo.20045104 </plain></SENT>
+</text></ref><ref id="B19"><text><SENT sid="300" pm="."><plain>19ReederJSteffenPGiegerichRpknotsRG: RNA pseudoknot folding including near-optimal structures and sliding windowsNucleic Acids. </plain></SENT>
+<SENT sid="301" pm="."><plain>Res.200735Suppl. </plain></SENT>
+<SENT sid="302" pm="."><plain>2W320W32417478505 </plain></SENT>
+</text></ref><ref id="B20"><text><SENT sid="303" pm="."><plain>20MathewsDHSabinaJZukerMTurnerDHExpanded sequence dependence of thermodynamic parameters improves prediction of RNA secondary structureJ. </plain></SENT>
+<SENT sid="304" pm="."><plain>Mol. </plain></SENT>
+<SENT sid="305" pm="."><plain>Biol.199928891194010329189 </plain></SENT>
+</text></ref><ref id="B21"><text><SENT sid="306" pm="."><plain>21GiegerichRMeyerCSteffenPA discipline of dynamic programming over sequence dataSci. </plain></SENT>
+<SENT sid="307" pm="."><plain>Comput. </plain></SENT>
+<SENT sid="308" pm="."><plain>Program.200451215263 </plain></SENT>
+</text></ref><ref id="B22"><text><SENT sid="309" pm="."><plain>22SteffenPGiegerichRVersatile and declarative dynamic programming using pair algebrasBMC Bioinfo.20056224 </plain></SENT>
+</text></ref><ref id="B23"><text><SENT sid="310" pm="."><plain>23GiegerichRSteffenPHaddadHMChallenges in the compilation of a domain specific language for dynamic programming.SAC '06: Proceedings of the 2006 ACM symposium on Applied computing2006Dijon, France16031609 </plain></SENT>
+</text></ref><ref id="B24"><text><SENT sid="311" pm="."><plain>24SteffenPCompiling a domain specific language for dynamic programming.PhD thesis2006GermanyUniversity of Bielefeld </plain></SENT>
+</text></ref><ref id="B25"><text><SENT sid="312" pm="."><plain>25ManktelowEShigemotoKBrierleyICharacterization of the frameshift signal of Edr, a mammalian example of programmed −1 ribosomal frameshiftingNucleic Acids Res.2005331553156315767280 </plain></SENT>
+</text></ref><ref id="B26"><text><SENT sid="313" pm="."><plain>26vanBatenburgFHGultyaevAPPleijCWPseudoBase: structural information on RNA pseudoknotsNucleic Acids Res.20012919419511125088 </plain></SENT>
+</text></ref><ref id="B27"><text><SENT sid="314" pm="."><plain>27HöchsmannTHöchsmannMGiegerichRMarksteinPXuYThermodynamic matchers: strengthening the significance of RNA folding energiesComput. </plain></SENT>
+<SENT sid="315" pm="."><plain>Syst. </plain></SENT>
+<SENT sid="316" pm="."><plain>Bioinformatics. </plain></SENT>
+<SENT sid="317" pm="."><plain>Conf.2006111121 </plain></SENT>
+</text></ref><ref id="B28"><text><SENT sid="318" pm="."><plain>28BelewATHeplerNLJacobsJLDinmanJDPRFdb: a database of computationally predicted eukaryotic programmed −1 ribosomal frameshift signalsBMC Genomics2008933918637175 </plain></SENT>
+</text></ref><ref id="B29"><text><SENT sid="319" pm="."><plain>29DirksRPierceNAA partition function algorithm for nucleic acid secondary structure including pseudoknotsJ. </plain></SENT>
+<SENT sid="320" pm="."><plain>Comput. </plain></SENT>
+<SENT sid="321" pm="."><plain>Chem.2003241664167712926009 </plain></SENT>
+</text></ref><ref id="B30"><text><SENT sid="322" pm="."><plain>30ReederJReederJGiegerichRLocomotif: from graphical motif description to RNA motif searchBioinformatics200723i392i40017646322 </plain></SENT>
+</text></ref></ref-list></SecTag></back></article>

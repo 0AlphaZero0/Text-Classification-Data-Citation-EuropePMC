@@ -1,0 +1,626 @@
+
+<article xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML" article-type="research-article"><?properties open_access?><?DTDIdentifier.IdentifierValue -//NLM//DTD Journal Publishing DTD v2.3 20031101//EN?><?DTDIdentifier.IdentifierType public?><?SourceDTD.DTDName journalpublishing.dtd?><?SourceDTD.Version 2.3?><?ConverterInfo.XSLTName jp2nlmx2.xsl?><?ConverterInfo.Version 1?><front><journal-meta><journal-id journal-id-type="nlm-ta">PLoS One</journal-id><journal-id journal-id-type="iso-abbrev">PLoS ONE</journal-id><journal-id journal-id-type="publisher-id">plos</journal-id><journal-id journal-id-type="pmc">plosone</journal-id><journal-title-group><journal-title>PLoS ONE</journal-title></journal-title-group><issn pub-type="epub">1932-6203</issn><publisher><publisher-name>Public Library of Science</publisher-name><publisher-loc>San Francisco, USA</publisher-loc></publisher></journal-meta><article-meta><article-id pub-id-type="pmcid">2916823</article-id><article-id pub-id-type="pmid">20700529</article-id><article-id pub-id-type="publisher-id">10-PONE-RA-15403R1</article-id><article-id pub-id-type="doi">10.1371/journal.pone.0011925</article-id><article-categories><subj-group subj-group-type="heading"><subject>Research Article</subject></subj-group><subj-group subj-group-type="Discipline"><subject>Cell Biology</subject><subject>Cell Biology/Cell Signaling</subject><subject>Cell Biology/Cellular Death and Stress Responses</subject></subj-group></article-categories><title-group><article-title><SecTag type="TITLE"><text><SENT sid="0" pm="."><plain>Calcineurin Interacts with PERK and Dephosphorylates Calnexin to Relieve ER Stress in Mammals and Frogs </plain></SENT>
+</text></SecTag></article-title><alt-title alt-title-type="running-head">Calcineurin, PERK and Stress</alt-title></title-group><contrib-group><contrib contrib-type="author" equal-contrib="yes"><name><surname>Bollo</surname><given-names>Mariana</given-names></name><xref ref-type="aff" rid="aff1">
+<sup>1</sup>
+</xref></contrib><contrib contrib-type="author" equal-contrib="yes"><name><surname>Paredes</surname><given-names>R. Madelaine</given-names></name><xref ref-type="aff" rid="aff2">
+<sup>2</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Holstein</surname><given-names>Deborah</given-names></name><xref ref-type="aff" rid="aff2">
+<sup>2</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Zheleznova</surname><given-names>Nadezhda</given-names></name><xref ref-type="aff" rid="aff3">
+<sup>3</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Camacho</surname><given-names>Patricia</given-names></name><xref ref-type="aff" rid="aff3">
+<sup>3</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Lechleiter</surname><given-names>James D.</given-names></name><xref ref-type="aff" rid="aff2">
+<sup>2</sup>
+</xref><xref ref-type="corresp" rid="cor1">
+<sup>*</sup>
+</xref></contrib></contrib-group><aff id="aff1">
+<label>1</label>
+<addr-line>Instituto de Investigación Médica Mercedes y Martín Ferreyra (INIMEC CONICET), Córdoba, Argentina</addr-line>
+</aff><aff id="aff2">
+<label>2</label>
+<addr-line>Department of Cellular and Structural Biology, University of Texas Health Science Center at San Antonio, San Antonio, Texas, United States of America</addr-line>
+</aff><aff id="aff3">
+<label>3</label>
+<addr-line>Department of Physiology, University of Texas Health Science Center at San Antonio, San Antonio, Texas, United States of America</addr-line>
+</aff><contrib-group><contrib contrib-type="editor"><name><surname>Polymenis</surname><given-names>Michael</given-names></name><role>Editor</role><xref ref-type="aff" rid="edit1"/></contrib></contrib-group><aff id="edit1">Texas A&amp;M University, United States of America</aff><author-notes><corresp id="cor1">* E-mail: <email>Lechleiter@uthscsa.edu</email></corresp><fn fn-type="con"><p><text><SENT sid="1" pm="."><plain>Conceived and designed the experiments: MB RMP PC JL. </plain></SENT>
+<SENT sid="2" pm="."><plain>Performed the experiments: MB RMP DH NZ. </plain></SENT>
+<SENT sid="3" pm="."><plain>Analyzed the data: MB RMP DH NZ JL. </plain></SENT>
+<SENT sid="4" pm="."><plain>Contributed reagents/materials/analysis tools: MB RMP. </plain></SENT>
+<SENT sid="5" pm="."><plain>Wrote the paper: MB PC JL. </plain></SENT>
+<SENT sid="6" pm="."><plain>Edited the manuscript, wrote figure legends, and helped with the outline of the paper: RMP. </plain></SENT>
+</text></p></fn></author-notes><pub-date pub-type="collection"><year>2010</year></pub-date><pub-date pub-type="epub"><day>5</day><month>8</month><year>2010</year></pub-date><volume>5</volume><issue>8</issue><elocation-id>e11925</elocation-id><history><date date-type="received"><day>10</day><month>1</month><year>2010</year></date><date date-type="accepted"><day>17</day><month>6</month><year>2010</year></date></history><permissions><copyright-statement>Bollo et al.</copyright-statement><copyright-year>2010</copyright-year><license xlink:href="http://creativecommons.org/licenses/by/4.0/"><license-p>This is an open-access article distributed under the terms of the Creative Commons Attribution License, which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are properly credited.</license-p></license></permissions><abstract><sec><title><text><SENT sid="7" pm="."><plain>Background </plain></SENT>
+</text></title><p><SecTag type="ABS"><text><SENT sid="8" pm="."><plain>The accumulation of misfolded proteins within the endoplasmic reticulum (ER) triggers a cellular process known as the Unfolded Protein Response (UPR). </plain></SENT>
+<SENT sid="9" pm="."><plain>One of the earliest responses is the attenuation of protein translation. </plain></SENT>
+<SENT sid="10" pm="."><plain>Little is known about the role that Ca2+ mobilization plays in the early UPR. </plain></SENT>
+<SENT sid="11" pm="."><plain>Work from our group has shown that cytosolic phosphorylation of calnexin (CLNX) controls Ca2+ uptake into the ER via the sarco-endoplasmic reticulum Ca2+-ATPase (SERCA) 2b. </plain></SENT>
+</text></SecTag></p></sec><sec><title><text><SENT sid="12" pm="."><plain>Methodology/Principal Findings </plain></SENT>
+</text></title><p><SecTag type="ABS"><text><SENT sid="13" pm="."><plain>Here, we demonstrate that calcineurin (CN), a Ca2+ dependent phosphatase, associates with the (PKR)-like ER kinase (PERK), and promotes PERK auto-phosphorylation. </plain></SENT>
+<SENT sid="14" pm="."><plain>This association, in turn, increases the phosphorylation level of eukaryotic initiation factor-2 α (eIF2-α) and attenuates protein translation. </plain></SENT>
+<SENT sid="15" pm="."><plain>Data supporting these conclusions were obtained from co-immunoprecipitations, pull-down assays, in-vitro kinase assays, siRNA treatments and [35S]-methionine incorporation measurements. </plain></SENT>
+<SENT sid="16" pm="."><plain>The interaction of CN with PERK was facilitated at elevated cytosolic Ca2+ concentrations and involved the cytosolic domain of PERK. </plain></SENT>
+<SENT sid="17" pm="."><plain>CN levels were rapidly increased by ER stressors, which could be blocked by siRNA treatments for CN-Aα in cultured astrocytes. </plain></SENT>
+<SENT sid="18" pm="."><plain>Downregulation of CN blocked subsequent ER-stress-induced increases in phosphorylated elF2-α. </plain></SENT>
+<SENT sid="19" pm="."><plain>CN knockdown in Xenopus oocytes predisposed them to induction of apoptosis. </plain></SENT>
+</text></SecTag></p><p><SecTag type="ABS"><text><SENT sid="20" pm="."><plain>We also found that CLNX was dephosphorylated by CN when Ca2+ increased. </plain></SENT>
+<SENT sid="21" pm="."><plain>These data were obtained from [γ32P]-CLNX immunoprecipitations and Ca2+ imaging measurements. </plain></SENT>
+<SENT sid="22" pm="."><plain>CLNX was dephosphorylated when Xenopus oocytes were treated with ER stressors. </plain></SENT>
+<SENT sid="23" pm="."><plain>Dephosphorylation was pharmacologically blocked by treatment with CN inhibitors. </plain></SENT>
+</text></SecTag></p><p><SecTag type="ABS"><text><SENT sid="24" pm="."><plain>Finally, evidence is presented that PERK phosphorylates CN-A at low resting levels of Ca2+. </plain></SENT>
+<SENT sid="25" pm="."><plain>We further show that phosphorylated CN-A exhibits decreased phosphatase activity, consistent with this regulatory mechanism being shut down as ER homeostasis is re-established. </plain></SENT>
+</text></SecTag></p></sec><sec><title><text><SENT sid="26" pm="."><plain>Conclusions/Significance </plain></SENT>
+</text></title><p><SecTag type="ABS"><text><SENT sid="27" pm="."><plain>Our data suggest two new complementary roles for CN in the regulation of the early UPR. </plain></SENT>
+<SENT sid="28" pm="."><plain>First, CN binding to PERK enhances inhibition of protein translation to allow the cell time to recover. </plain></SENT>
+<SENT sid="29" pm="."><plain>The induction of the early UPR, as indicated by increased P-elF2α, is critically dependent on a translational increase in CN-Aα. </plain></SENT>
+<SENT sid="30" pm="."><plain>Second, CN dephosphorylates CLNX and likely removes inhibition of SERCA2b activity, which would aid the rapid restoration of ER Ca2+ homeostasis. </plain></SENT>
+</text></SecTag></p></sec></abstract><counts><page-count count="14"/></counts></article-meta></front><body><SecTag type="INTRO"><sec id="s1"><title><text><SENT sid="31" pm="."><plain>Introduction </plain></SENT>
+</text></title><p><text><SENT sid="32" pm="."><plain>The ER is a dynamic organelle that plays a critical role in a variety of processes, including Ca2+ storage and release, synthesis and folding of proteins, as well as post-translational protein modification. </plain></SENT>
+<SENT sid="33" pm="."><plain>These processes of signaling and biosynthesis are deeply inter-connected [1], [2], [3], [4], [5]. </plain></SENT>
+</text></p><p><text><SENT sid="34" pm="."><plain>When the load of newly synthesized proteins exceeds the folding and/or processing capacity of the organelle, the ER enters into a stress condition. </plain></SENT>
+<SENT sid="35" pm="."><plain>This activates a signal transduction pathway called the Unfolded Protein Response (UPR) that attempts to restore homeostasis in the ER [6]. </plain></SENT>
+<SENT sid="36" pm="."><plain>An immediate response is the attenuation of protein translation via PERK, which phosphorylates the α subunit of eukaryotic translation initiation factor 2 (eIF2α) [7], [8]. </plain></SENT>
+<SENT sid="37" pm="."><plain>PERK is a type I ER membrane protein with a stress-sensing luminal domain connected by a transmembrane segment to a cytoplasmic-kinase domain. </plain></SENT>
+<SENT sid="38" pm="."><plain>PERK is normally inactive due to the association of its luminal domain with the ER chaperone BiP. </plain></SENT>
+<SENT sid="39" pm="."><plain>During ER stress, BiP is competitively titrated from the luminal domain of PERK by the excess of unfolded proteins [9]. </plain></SENT>
+<SENT sid="40" pm="."><plain>This dissociation causes PERK to undergo homo-oligomerization and trans-autophosphorylation within its cytosolic kinase domain, thereby increasing its activity. </plain></SENT>
+<SENT sid="41" pm="."><plain>Additional changes that promote long-term adaptation are transcriptional up-regulation of ER chaperones and molecules involved in the ER-associated degradation (ERAD). </plain></SENT>
+<SENT sid="42" pm="."><plain>If ER damage is persistent or excessive, an apoptotic response is initiated by either ER specific caspases [10], [11] or by mechanisms related with the mitogen-activated protein kinase JNK or transcriptional activation of C/EBP homologous protein (CHOP) [12], [13]. </plain></SENT>
+</text></p><p><text><SENT sid="43" pm="."><plain>Maintenance of Ca2+ levels in the ER is primarily attained by the activity of SERCAs [14], [15], [16], which pump Ca2+ into the ER. </plain></SENT>
+<SENT sid="44" pm="."><plain>These Ca2+-ATPases counteract the loss of Ca2+ via leaks and the opening of Ca2+ release channels [17], [18], [19]. </plain></SENT>
+<SENT sid="45" pm="."><plain>The free Ca2+ in the ER is a balance between Ca2+ release, uptake and buffering by Ca2+-binding proteins in the lumen. </plain></SENT>
+<SENT sid="46" pm="."><plain>Calreticulin (CRT) and CLNX are Ca2+ -binding chaperones that reside in the ER [20], [21] and play key roles in modulating SERCA 2b activity [3], [4], [22]. </plain></SENT>
+<SENT sid="47" pm="."><plain>CRT is entirely luminal and CLNX is a type I trans-membrane protein. </plain></SENT>
+<SENT sid="48" pm="."><plain>The carboxy-terminus of each protein is luminal and is responsible for interaction of the lectins with the monoglucosylated form of N-linked glycoprotein during protein folding [20], [23]. </plain></SENT>
+<SENT sid="49" pm="."><plain>In the cytosolic domain of CLNX, three phosphorylated residues have been identified [24] that are implicated in the modulation of the interaction of CLNX with the ribosome [25]. </plain></SENT>
+<SENT sid="50" pm="."><plain>Dephosphorylation of CLNX causes dissociation of the chaperone from the ribosome [25]. </plain></SENT>
+<SENT sid="51" pm="."><plain>Our group identified the carboxy-terminal serine residue 562 in the rat isoform of CLNX as a phosphorylation site capable of controlling SERCA 2b activity. </plain></SENT>
+<SENT sid="52" pm="."><plain>Further, we demonstrated that CLNX phosphorylation acted as a cytosolic switch that regulated Ca2+ store refilling [4]. </plain></SENT>
+</text></p><p><text><SENT sid="53" pm="."><plain>Calcineurin is a Ca2+ and calmodulin dependent serine/threonine phosphatase. </plain></SENT>
+<SENT sid="54" pm="."><plain>This heterodimer phosphatase is composed of a catalytic subunit, calcineurin A (CN-A) and a regulatory subunit, calcineurin B (CN-B) [26]. </plain></SENT>
+<SENT sid="55" pm="."><plain>CN-A contains specific domains with regulatory functions, including an amino-terminus domain with catalytic properties, a CN-B binding domain, a calmodulin (CaM) binding domain and finally, an autoinhibitory domain (AI) at the carboxy-terminus [27]. </plain></SENT>
+<SENT sid="56" pm="."><plain>At resting Ca2+ levels, the phosphatase is relatively inactive. </plain></SENT>
+<SENT sid="57" pm="."><plain>An increase in intracellular Ca2+ activates CN-A through Ca2+/CaM binding, which dissociates AI from the catalytic domain [28]. </plain></SENT>
+<SENT sid="58" pm="."><plain>To date, the involvement of Ca2+ signaling in a multitude of cellular pathways has been well documented [17]. </plain></SENT>
+<SENT sid="59" pm="."><plain>However, little is known about the role of Ca2+ signaling in restoring ER homeostasis, once ER stress has been triggered. </plain></SENT>
+<SENT sid="60" pm="."><plain>Here we reveal that CN plays key roles in restoring ER homeostasis during stress. </plain></SENT>
+<SENT sid="61" pm="."><plain>CN activity boosts the refilling of Ca2+ stores so that optimal conditions for protein processing/folding are rapidly reached. </plain></SENT>
+<SENT sid="62" pm="."><plain>CN also directly interacts with PERK to increase its auto-phosphorylation, which helps to attenuate protein translation while homeostasis is being restored. </plain></SENT>
+<SENT sid="63" pm="."><plain>Finally, we show that a knockdown of CN levels in Xenopus oocytes results in a decrease of protein synthesis inhibition and a rapid acceleration of apoptosis. </plain></SENT>
+<SENT sid="64" pm="."><plain>Taken together, these data underscore the importance of CN activity in the rescue of cells from ER stress. </plain></SENT>
+</text></p></sec></SecTag><SecTag type="RESULTS"><sec id="s2"><title><text><SENT sid="65" pm="."><plain>Results </plain></SENT>
+</text></title><sec id="s2a"><title><text><SENT sid="66" pm="."><plain>CLNX is Dephosphorylated during ER Stress by CN </plain></SENT>
+</text></title><p><text><SENT sid="67" pm="."><plain>Thapsigargin (Tg) is an irreversible inhibitor of the ER Ca2+-ATPases [29]. </plain></SENT>
+<SENT sid="68" pm="."><plain>It induces ER stress by depleting Ca2+ stores with a concomitant increase in cytosolic Ca2+, causing accumulation of malfolded proteins within the ER [30]. </plain></SENT>
+<SENT sid="69" pm="."><plain>By site directed mutagenesis, we previously demonstrated that phosphorylation of serine residue 562 in CLNX controlled an interaction with SERCA 2b. </plain></SENT>
+<SENT sid="70" pm="."><plain>Phosphorylation of S562 inhibited Ca2+ store refilling while dephosphorylation increased SERCA 2b activity [4]. </plain></SENT>
+<SENT sid="71" pm="."><plain>Given its ability to regulate SERCA 2b activity, we asked if ER stress altered the phosphorylation state of CLNX. </plain></SENT>
+<SENT sid="72" pm="."><plain>To this end, CLNX mRNA (0.7 µg/µl) was overexpressed in Xenopus oocytes as previously described (Roderick et al. </plain></SENT>
+<SENT sid="73" pm="."><plain>2000). </plain></SENT>
+<SENT sid="74" pm="."><plain>After 3 days of protein expression, oocytes were labelled with [γ32P]ATP for 20 minutes, the microsomal fraction was extracted and an anti-CLNX antibody was used to immunoprecipitate the protein. </plain></SENT>
+<SENT sid="75" pm="."><plain>We observed a significant level of phosphorylation of CLNX under normal resting conditions (Figure 1A, 0 minutes). </plain></SENT>
+<SENT sid="76" pm="."><plain>In a subpopulation, we treated CLNX overexpressing oocytes with Tg (1 µM) for 15, 30 and 60 minutes. </plain></SENT>
+<SENT sid="77" pm="."><plain>When the precipitates were examined with autoradiography, we observed significant (p&lt;0.05) dephosphorylation at all time points tested (Figure 1A). </plain></SENT>
+<SENT sid="78" pm="."><plain>To determine if overexpression of CLNX itself caused ER stress, we measured the levels of ER stress in native and overexpressing CLNX oocytes. </plain></SENT>
+<SENT sid="79" pm="."><plain>This was accomplished by a Western blot probed with an antibody that recognizes the phosphorylated form of eIF2α (anti-phospho eIF2α) and an antibody against BiP, both are widely considered strong indicators of ER stress [8], [30]. </plain></SENT>
+<SENT sid="80" pm="."><plain>Overexpression of CLNX did not affect the level of phosphorylated eIF2α or BiP and hence, did not induce ER stress (Figure 1B). </plain></SENT>
+<SENT sid="81" pm="."><plain>These results show that ER Ca2+ depletion and/or increased cytosolic Ca2+ decreases CLNX phosphorylation. </plain></SENT>
+<SENT sid="82" pm="."><plain>To test whether CN may be mediating the Ca2+ sensitive dephosphorylation of CLNX, we repeated the above series of experiments using the CN inhibitors cyclosporin A (CsA) and FK506. </plain></SENT>
+<SENT sid="83" pm="."><plain>Preincubation of oocytes with these inhibitors completely reversed the dephosphorylation of CLNX in response to Tg (Figure 1C) and treatment consistent with a primary role of CN in this ER stress response. </plain></SENT>
+</text></p><SecTag type="FIG"><fig id="pone-0011925-g001" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0011925.g001</object-id><label>Figure 1</label><caption><title><text><SENT sid="84" pm="."><plain>CLNX is dephosphorylated during ER stress by CN. </plain></SENT>
+</text></title><p><text><SENT sid="85" pm="."><plain>(A) IPs of [γ32P]ATP-labeled CLNX from oocytes in the absence (0 minutes) or presence (15, 30 and 60 minutes) of Tg (1 µM) were performed. </plain></SENT>
+<SENT sid="86" pm="."><plain>The samples were resolved through 12% SDS-PAGE, transferred to nitrocellulose and P-CLNX visualized by autoradiography (top panel). </plain></SENT>
+<SENT sid="87" pm="."><plain>For loading control, a Western blot of CLNX was performed in oocyte microsomal extracts before the IPs (bottom panel). </plain></SENT>
+<SENT sid="88" pm="."><plain>Histogram depicts the relative intensity of each band relative to the corresponding density of the CLNX Western blot. </plain></SENT>
+<SENT sid="89" pm="."><plain>Notice that exogenous CLNX is expressed at higher levels than endogenous CLNX and that its autoradiographic signal is significantly higher than the signal from endogenous levels of phosphorylatioed CLNX (Figure S1). </plain></SENT>
+<SENT sid="90" pm="."><plain>(B) Immunodetection by Western blotting of control oocytes and CLNX overexpressing oocytes. </plain></SENT>
+<SENT sid="91" pm="."><plain>Top panel shows endogenous and exogenous CLNX. </plain></SENT>
+<SENT sid="92" pm="."><plain>Middle panels show phosphorylated eIF2α (P-elF2α) and BiP (Assay Designs cat# SPA-826) in each corresponding cytosolic fraction. </plain></SENT>
+<SENT sid="93" pm="."><plain>Lower panel shows α-actin loading controls. </plain></SENT>
+<SENT sid="94" pm="."><plain>(C) Samples from Tg-treated oocytes that were pre-incubated CsA (200 nM) and FK506 (20 nM) for 16 hours are presented in lane 3. </plain></SENT>
+<SENT sid="95" pm="."><plain>Immunodetection of CLNX by Western blotting was used as a loading control (lower panels). </plain></SENT>
+<SENT sid="96" pm="."><plain>Histogram depicts the mean intensity of each band relative to the corresponding density in the Western blots of overexpressed CLNX. </plain></SENT>
+<SENT sid="97" pm="."><plain>DMSO (0.05% v/v) is used as the vehicle control. </plain></SENT>
+<SENT sid="98" pm="."><plain>Notice that control oocytes injected only with CsA/FK506 do not exhibit increased stress as indicated by Western blot analysis of eIF2α -P or BiP (Figure S2). </plain></SENT>
+<SENT sid="99" pm="."><plain>(D) Samples from Tm-treated oocytes (lanes 2 and 4) that were pre-incubated or not with inhibitors CsA and FK506 as indicated above are shown in lanes 3 and 4. </plain></SENT>
+<SENT sid="100" pm="."><plain>The middle panels show Western blots of CLNX of the oocyte microsomal extracts before IPs. </plain></SENT>
+<SENT sid="101" pm="."><plain>Histogram shows the relative intensities of P-CLNX compared to overexpressed CLNX. </plain></SENT>
+<SENT sid="102" pm="."><plain>Methanol (0.05%v/v) is used as the vehicle control. </plain></SENT>
+<SENT sid="103" pm="."><plain>Data represents 3 independent experiments with 10 oocytes per group. </plain></SENT>
+</text></p></caption><graphic xlink:href="pone.0011925.g001"/></fig></SecTag></sec><sec id="s2b"><title><text><SENT sid="104" pm="."><plain>ER Ca2+ Release is Implicated In CLNX Dephosphorylation by CN after Tunicamicyn Treatment </plain></SENT>
+</text></title><p><text><SENT sid="105" pm="."><plain>Tunicamycin (Tm) has a different mechanism of action than Tg to induce ER stress. </plain></SENT>
+<SENT sid="106" pm="."><plain>It inhibits glycosylation of nascent proteins thereby causing accumulation of malfolded proteins in this organelle [31]. </plain></SENT>
+<SENT sid="107" pm="."><plain>To determine whether this ER stressor also leads to dephosphorylation of CLNX, Xenopus oocytes overexpressing CLNXs and labeled with [γ32P]ATP as described above were used. </plain></SENT>
+<SENT sid="108" pm="."><plain>As with Tg, Tm treatment of overexpressing oocytes significantly (p&lt;0.05) induced dephosphorylation of CLNX. </plain></SENT>
+<SENT sid="109" pm="."><plain>Similarly, CN inhibitors cyclosporin A and FK506 completely reversed this stress induced dephosphorylation (Figure 1D). </plain></SENT>
+</text></p></sec><sec id="s2c"><title><text><SENT sid="110" pm="."><plain>Tm Treatment Increases Cytosolic Ca2+ </plain></SENT>
+</text></title><p><text><SENT sid="111" pm="."><plain>The dependence of CLNX phosphorylation on CN activity suggested that Ca2+ was being released into the cytosol during Tm-induced ER stress. </plain></SENT>
+<SENT sid="112" pm="."><plain>To test this hypothesis, we measured cytosolic Ca2+ in single oocytes using fluorescence microscopy. Xenopus oocytes were injected with the ratiometric Ca2+ indicator dye Fura 2 (50 µM final concentration, Invitrogen-Molecular Probes, Eugene, OR). </plain></SENT>
+<SENT sid="113" pm="."><plain>After a 20–30 minutes, oocytes were imaged. </plain></SENT>
+<SENT sid="114" pm="."><plain>Ca2+ levels were expressed as the ratio of fluorescence for 340 and 380 excitation (R340/380). </plain></SENT>
+<SENT sid="115" pm="."><plain>When Fura-2 loaded oocytes were exposed to Tm (2.5 µg/ml), we observed a slow rise in cytosolic Ca2+ (Figure 2). </plain></SENT>
+<SENT sid="116" pm="."><plain>The average resting Fura-2 ratio was 0.93±0.02 (n = 9 oocytes), which corresponded to 129±6 nM with in vitro calibration. </plain></SENT>
+<SENT sid="117" pm="."><plain>After 15 minutes of Tm bath incubation, the Fura-2 ratio was significantly (p&lt;0.04) increased to 1.09±0.03 corresponding to 174±9 nM Ca2+. </plain></SENT>
+<SENT sid="118" pm="."><plain>In parallel experiments, we also found that treatment with Tg (1 µM) for 15 minutes increased the Fura-2 ratio to 1.01±0.04 (n = 11 oocytes), corresponding to 150±10 nM Ca2+. </plain></SENT>
+<SENT sid="119" pm="."><plain>These data suggest that Tm treatment releases Ca2+ from intracellular stores. </plain></SENT>
+</text></p><SecTag type="FIG"><fig id="pone-0011925-g002" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0011925.g002</object-id><label>Figure 2</label><caption><title><text><SENT sid="120" pm="."><plain>Tm treatment increases cytosolic Ca2+. </plain></SENT>
+</text></title><p><text><SENT sid="121" pm="."><plain>(A) Images of Fura-2 loaded oocytes before (0 minutes) and after (15 minutes) Tm treatment. </plain></SENT>
+<SENT sid="122" pm="."><plain>Ca2+ levels are presented as fura-2 fluorescence ratios of 340 to 380 nm excitation. </plain></SENT>
+<SENT sid="123" pm="."><plain>The intensity scale bar for these images is presented in B and C. </plain></SENT>
+<SENT sid="124" pm="."><plain>(B) Time course of Fura-2 ratio (Ratio340/380) changes in response to Tm treatment (2.5 µg/ml, added at arrow). </plain></SENT>
+<SENT sid="125" pm="."><plain>(C) Histogram of the average Ratio340/380 (n = 9 oocytes, pooled from 3 independent experiments) at rest (0 minutes) and after Tm treatment (15 minutes). </plain></SENT>
+</text></p></caption><graphic xlink:href="pone.0011925.g002"/></fig></SecTag></sec><sec id="s2d"><title><text><SENT sid="126" pm="."><plain>CN Interacts with PERK in a Ca2+ Dependent Manner </plain></SENT>
+</text></title><p><text><SENT sid="127" pm="."><plain>Our data revealed that CN dephosphorylation of CLNX occurred rapidly in response to ER stress. </plain></SENT>
+<SENT sid="128" pm="."><plain>Since PERK is presently considered the most proximal luminal sensor of the UPR [8], we wondered if there was a functional relationship between CN and PERK. </plain></SENT>
+<SENT sid="129" pm="."><plain>To initially address this question, Xenopus oocytes were treated with Tg (1 µM) for either 15, 30 or 60 minutes. </plain></SENT>
+<SENT sid="130" pm="."><plain>A second group of oocytes were initially treated with DTT (1 mM) for 60 minutes and then washed for either 0, 20 or 60 minutes. </plain></SENT>
+<SENT sid="131" pm="."><plain>Like Tg and Tm, DTT is an ER stress inducer, but its effects are reported to be reversible [9], [32]. </plain></SENT>
+<SENT sid="132" pm="."><plain>Protein extracts were prepared from each of the six groups of oocytes along with an untreated, control group. </plain></SENT>
+<SENT sid="133" pm="."><plain>The cytosolic fractions were run on SDS-PAGE and analyzed by Western blot with anti-CN-A antibody (Figure 3A). </plain></SENT>
+<SENT sid="134" pm="."><plain>We observed that the expression level of CN-A increased significantly after 30 and 60 minutes following Tg treatment and also after 1 hour of treatment with DTT (Figure 3A). </plain></SENT>
+<SENT sid="135" pm="."><plain>Partial reversal of the 1 hour exposure of oocytes to DTT was obtained by washing the treated oocytes for another hour before preparing the protein extract. </plain></SENT>
+<SENT sid="136" pm="."><plain>Furthermore, we examined whether endogenous CN could associate with the endogenous PERK by co-immunoprecipitations (Co-IPs) of CN-A with PERK in the same oocytes stressed with either Tg or DTT as presented above (Figure 3B). </plain></SENT>
+<SENT sid="137" pm="."><plain>The respective microsomal fractions were immunoprecipitated with anti-CN-A antibody, run on SDS-PAGE and analyzed by Western blot with anti-PERK antibody, which labeled both phosphorylated and the higher mobile unphosphorylated PERK. </plain></SENT>
+<SENT sid="138" pm="."><plain>First, we found that the largest amount of CN-A that co-immunopurified with P-PERK/PERK occurred at the highest level of ER stress (60 minutes) for both Tg or DTT treatment (Figure 3A and 3B, lanes 4 and 5). </plain></SENT>
+<SENT sid="139" pm="."><plain>Second, the presence of CN-A appeared to increase PERK phosphorylation levels. </plain></SENT>
+<SENT sid="140" pm="."><plain>We note that PERK runs as heterogenous population depending on its level of phosphorylation, since it has been shown to have at least 10 phosphorylation sites [33]. </plain></SENT>
+<SENT sid="141" pm="."><plain>The CN-A/P-PERK/PERK interaction returned to the control levels of unstressed oocytes (Figure 3B, lane 1) after a 60-minutes washout of DTT (Figure 3B, lane 7). </plain></SENT>
+<SENT sid="142" pm="."><plain>We conclude from these data that under ER stress CN-A interacts with PERK and this association appears to increase phosphorylation of PERK. </plain></SENT>
+</text></p><SecTag type="FIG"><fig id="pone-0011925-g003" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0011925.g003</object-id><label>Figure 3</label><caption><title><text><SENT sid="143" pm="."><plain>CN interacts with PERK and is Ca2+ dependent. </plain></SENT>
+</text></title><p><text><SENT sid="144" pm="."><plain>(A) Immunodetection (Western blot) of CN-A in cytosolic extracts obtained from control oocytes (lane 1), oocytes treated with Tg for 15, 30 or 60 minutes (lanes 2, 3 and 4, respectively), or oocytes treated with DTT for 60 minutes and washed for 0, 20 or 60 minutes (lanes 5, 6 and 7, respectively). </plain></SENT>
+<SENT sid="145" pm="."><plain>The samples were resolved through 12% SDS-PAGE and transferred to nitrocellulose (loading 0.2 oocyte equivalents per lane). α-actin loading controls are presented for the corresponding extract in the bottom panel. </plain></SENT>
+<SENT sid="146" pm="."><plain>The samples correspond to the same experiment but were run on two separate gels with equal exposure times. </plain></SENT>
+<SENT sid="147" pm="."><plain>Note also that lane 1 is the untreated control for both Tg and DTT treated oocytes. </plain></SENT>
+<SENT sid="148" pm="."><plain>(B) Co-IP between CN-A and PERK corresponding to the same treatments (lanes) presented in A. </plain></SENT>
+<SENT sid="149" pm="."><plain>The samples were resolved through 7% SDS-PAGE, loading the immunoprecipitate from an input of 20 oocytes per lane and transferred to nitrocellulose. </plain></SENT>
+<SENT sid="150" pm="."><plain>The IP was performed first with anti CN-A antibody and was followed by immunodetection by Western blot with anti-PERK antibody. </plain></SENT>
+<SENT sid="151" pm="."><plain>A line profile (Image J, NIH) of each lane is overlayed to highlight the distribution of the main peaks corresponding to the two variants of PERK (P-PERK is retarded with respect to PERK). </plain></SENT>
+<SENT sid="152" pm="."><plain>Note the increased level of P-PERK in oocytes stressed for 60 minutes with Tg (lane 4) and DTT (lane 5). </plain></SENT>
+<SENT sid="153" pm="."><plain>The level of P-PERK returned to normal levels after 60 minutes of wash (lane 7). </plain></SENT>
+<SENT sid="154" pm="."><plain>The experiment was repeated 4 times. </plain></SENT>
+<SENT sid="155" pm="."><plain>Changes in CN expression and PERK phosphorylation were only observed in response to ER stress when the resting level of CN was low (lane 1), indicative of initially unstressed oocytes. </plain></SENT>
+<SENT sid="156" pm="."><plain>CN-A levels of the IP presented in Figure 3B are showed in Figure S3. </plain></SENT>
+<SENT sid="157" pm="."><plain>We demonstrate the IP efficiency and specificity for PERK, and ruled out non-specific binding of PERK to beads (Figure S4 A, B). </plain></SENT>
+<SENT sid="158" pm="."><plain>Moreover, we generated a new antibody for PERK and we present a characterization of its specificity in Figure S4 C–E. </plain></SENT>
+<SENT sid="159" pm="."><plain>We show that the new antibody, labeled anti-PERKUT, recognizes a protein band around the expected molecular weight of PERK (150 kD) and that the antibody is competed off by incubation with the antigen peptide that was used to generate the antibody. </plain></SENT>
+<SENT sid="160" pm="."><plain>(C) GST pull-down assay between CN-A α/B and GST-cPERK, at low Ca2+ (L = 46 nM) and high Ca2+ (H = 3.2 µM). </plain></SENT>
+<SENT sid="161" pm="."><plain>CN-A pull-down levels are shown for GST alone (lane 1), GST-cPERK in the presence (lanes 2 and 3) and absence (lanes 4 and 5) of CaM for high and low Ca2+, GST-cPERK K/A in high Ca2+ (lane 6), GST-cPERK without CN-A (lane 7) and CN-A without GST-cPERK (lane 8). </plain></SENT>
+<SENT sid="162" pm="."><plain>The proteins were incubated with glutathione sepharose 4B for 1 hour followed by boiling in Laemmli reducing Buffer, resolved through 12% SDS-PAGE followed by Western blotting using a monoclonal mouse anti CN-A. </plain></SENT>
+<SENT sid="163" pm="."><plain>The Western blot on the panel right of lane 8 indicates the CN-A input. </plain></SENT>
+<SENT sid="164" pm="."><plain>We calibrated the loading of GST-cPERK and GST-cPERK K/A using an albumin standard curve (Figure S5). </plain></SENT>
+<SENT sid="165" pm="."><plain>This insured that equal molar amounts of protein were loaded in each lane. </plain></SENT>
+<SENT sid="166" pm="."><plain>Histogram corresponds to densitometric analysis from the average of these experiments. </plain></SENT>
+<SENT sid="167" pm="."><plain>One asterisk corresponds to a statistical significant difference (p&lt;0.05, ANOVA test, n = 4 independent experiments) and two asterisks denote a statistical significant difference of (p&lt;0.001; ANOVA test, n = 11 independent experiments) using Lane 4 as 100% control value. </plain></SENT>
+</text></p></caption><graphic xlink:href="pone.0011925.g003"/></fig></SecTag><p><text><SENT sid="168" pm="."><plain>Given evidence for a functional interaction between CN-A and PERK, we asked if there was a physical interaction between these proteins. </plain></SENT>
+<SENT sid="169" pm="."><plain>We also tested whether Ca2+ and calmodulin (CaM) affected this interaction given the known dependence of this phosphatase on Ca2+ and CaM. </plain></SENT>
+<SENT sid="170" pm="."><plain>To this end, in vitro GST pull-down experiments were performed between PERK and CN-A, using two Ca2+ concentrations that were chosen to mimic high (H, 3.2 µM) and low (L, 30 nM) cytosol levels. </plain></SENT>
+<SENT sid="171" pm="."><plain>A GST fusion protein was created with only the cytosolic domain of PERK (GST-cPERK), which was then used to pull down recombinant human CN-A α and CN-B. </plain></SENT>
+<SENT sid="172" pm="."><plain>We found that the interaction of CN-A with GST-cPERK was significantly (p&lt;0.01) stronger in high Ca2+ concentration (Figure 3C, lane 4 vs lane 5) and that this interaction was decreased by calmodulin (CaM), irrespective of the Ca2+ concentration (Figure 3C, lanes 2 and 3) (p&lt;0.05). </plain></SENT>
+<SENT sid="173" pm="."><plain>CN-A and CaM were used at equimolar concentrations for this experiment and there was no significant binding of CN-A to GST alone or to glutathione-sepharose (Figure 3C, lanes 1 and 8, respectively). </plain></SENT>
+<SENT sid="174" pm="."><plain>We also created a GST fusion construct with an inactive PERK kinase mutant where lysine 618 was mutated to alanine (GST-cPERK K/A) [8]. </plain></SENT>
+<SENT sid="175" pm="."><plain>Interestingly, the inactive PERK mutant lacked significant binding to CN-A (Figure 3C, Lane 6). </plain></SENT>
+<SENT sid="176" pm="."><plain>Together these findings corroborate our previous observation that CN-A specifically binds to purified, fully active, cytosolic PERK. </plain></SENT>
+<SENT sid="177" pm="."><plain>This association does not appear to be mediated by another protein and the interaction is strongest in high Ca2+, conditions that would be expected to occur immediately after ER stress is first induced. </plain></SENT>
+</text></p></sec><sec id="s2e"><title><text><SENT sid="178" pm="."><plain>PERK Auto-Phosphorylation Increases with the Interaction of CN-A and PERK </plain></SENT>
+</text></title><p><text><SENT sid="179" pm="."><plain>To further investigate the CN-A/PERK interaction, we performed in vitro kinase assays. </plain></SENT>
+<SENT sid="180" pm="."><plain>GST-purified proteins were incubated with a phosphorylation reaction mixture containing [γ32P]ATP. </plain></SENT>
+<SENT sid="181" pm="."><plain>From this assay, we uncovered three important findings. </plain></SENT>
+<SENT sid="182" pm="."><plain>First, autophosphorylation of PERK was significantly increased in the presence of CN-A (Figure 4A and B lanes 1–4 vs lane 7). </plain></SENT>
+<SENT sid="183" pm="."><plain>Second, CN-A itself was phosphorylated at low Ca2+ concentrations (Figure 4A and C, lanes 2 and 4 vs lanes 1 and 3). </plain></SENT>
+<SENT sid="184" pm="."><plain>And third, PERK phosphorylation was significantly less in low Ca2+ concentrations, when CN-A was phosphorylated. </plain></SENT>
+<SENT sid="185" pm="."><plain>CN-A was not phosphorylated in the absence of GST-cPERK (Figure 4A, lane 8) or with the kinase mutant GST-cPERK K/A (Figure 4A, lane 6) or with GST alone (Figure 4A, lane 5). </plain></SENT>
+<SENT sid="186" pm="."><plain>In addition, there was no phosphorylation of the 19 kD regulatory subunit of CN-B, which was included in the reaction mixture. </plain></SENT>
+<SENT sid="187" pm="."><plain>These data confirm the results suggested in Figure 3B, that the interaction of CN-A with cPERK increases autophosphorylation of the kinase. </plain></SENT>
+<SENT sid="188" pm="."><plain>They also demonstrate for the first time, to our knowledge, that in vitro CN-A is a PERK substrate at low Ca2+ concentrations and that PERK autophosphorylation is reduced when CN-A is phosphorylated. </plain></SENT>
+</text></p><SecTag type="FIG"><fig id="pone-0011925-g004" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0011925.g004</object-id><label>Figure 4</label><caption><title><text><SENT sid="189" pm="."><plain>PERK auto-phosphorylation and kinase activity increases with the interaction of CN-A and PERK. </plain></SENT>
+</text></title><p><text><SENT sid="190" pm="."><plain>(A) GST-cPERK and CN-Aα/B were incubated with [γ32P]ATP, resolved through 12% SDS-PAGE and visualized by autoradiography as described in Materials and Methods. </plain></SENT>
+<SENT sid="191" pm="."><plain>Phosphorylation levels are shown for GST-cPERK in the presence (lanes 1 and 2) and absence (lanes 3 and 4) of CaM for high (H, 1.2 µM) and low (L, 30 nM) Ca2+, for GST-alone (lane 5), for GST-cPERK K/A in high Ca2+ (lane 6), for GST-cPERK without CN-A (lane 7) and for CN-A α/B without GST-cPERK (lane 8). </plain></SENT>
+<SENT sid="192" pm="."><plain>Histogram corresponding to densitometric analysis of cPERK auto-phosphorylation (B) or CN-A phosphorylation (C) from the average of three independent experiments (n = 3), using as 100% control value lane 1 in B and lane 2 in C, respectively. </plain></SENT>
+<SENT sid="193" pm="."><plain>See the Commassie blue gel for the loading control of the autoradiogram (Figure S6). </plain></SENT>
+<SENT sid="194" pm="."><plain>(D) Kinase assay was performed as described above in the presence of 2 µM Ca2+, but adding increasing amounts of CN-Aα/B and in the presence of eIF2α (50 nM). </plain></SENT>
+<SENT sid="195" pm="."><plain>Histogram corresponding to densitometric analysis of cPERK auto-phosphorylation (E) or CN-A phosphorylation (F) from three independent experiments (n = 3). </plain></SENT>
+<SENT sid="196" pm="."><plain>One asterisk corresponds to a statistical significant difference (p&lt;0.05, ANOVA test) and two asterisks denote a statistical significant difference of (p&lt;0.001; ANOVA test). </plain></SENT>
+</text></p></caption><graphic xlink:href="pone.0011925.g004"/></fig></SecTag><p><text><SENT sid="197" pm="."><plain>We wanted to examine the functional consequences of the promoting cPERK autophosphorylation (Figure 4D). </plain></SENT>
+<SENT sid="198" pm="."><plain>Adding increasing amounts of CN-A α/B increase cPERK autophoshorylation as well as PERK-mediated eIF2α phosphorylation (Figures 4E and 4F). </plain></SENT>
+<SENT sid="199" pm="."><plain>We also wanted to determine if CN-A phosphorylation affected its phosphatase activity. </plain></SENT>
+<SENT sid="200" pm="."><plain>To accomplish this, we setup a spectrophotomeric assay that measured the enzyme activity of recombinant phosphorylated and nonphosphorylated CN-A/B at high (1.4 µM) and low (40 nM) Ca2+ concentrations. </plain></SENT>
+<SENT sid="201" pm="."><plain>Indeed, phosphorylated CN exhibited significantly lower specific activity than unphosphorylated CN (CN-ATP) or CN combined with PERK (CN-PERK) and P-CN enzyme activity was further diminished in low Ca2+ (Figure S7). </plain></SENT>
+<SENT sid="202" pm="."><plain>Finally, the Vmax for phosphorylated and non-phosphorylated CN-A was significantly different at low Ca2+ while the Km did not change (Table S1). </plain></SENT>
+<SENT sid="203" pm="."><plain>We concluded from these experiments that the phosphatase activity of CN-A is significantly diminished by phosphorylation. </plain></SENT>
+<SENT sid="204" pm="."><plain>Together, these data suggest a new feedback loop that would further enhance recovery from ER stress. </plain></SENT>
+<SENT sid="205" pm="."><plain>As Ca2+ levels decrease, CN-A becomes phosphorylated, which further reduces its activity and helps to shutdown ER stress. </plain></SENT>
+</text></p></sec><sec id="s2f"><title><text><SENT sid="206" pm="."><plain>Knock-Down of CN-A Attenuates Protein Synthesis Inhibition during ER Stress </plain></SENT>
+</text></title><p><text><SENT sid="207" pm="."><plain>To assess the physiological significance of the CN/PERK interaction, we compared protein synthesis rates after knocking down CN and treatment with ER stressors. </plain></SENT>
+<SENT sid="208" pm="."><plain>Test oocytes were injected with two different morpholino antisense oligonucleotides specific for Xenopus CN-A mRNA to inhibit the expression of this protein. </plain></SENT>
+<SENT sid="209" pm="."><plain>Morpholino treatments, rather than interference RNA techniques are required to knockdown protein expression in Xenopus oocytes [34], [35]. </plain></SENT>
+<SENT sid="210" pm="."><plain>Oocytes were injected with morpholino oligonucleotides (Morpho CN 1&amp;2) and CN-A expression was analyzed by Western blot. </plain></SENT>
+<SENT sid="211" pm="."><plain>We observed no significant effect on resting levels of CN expression within 2 hours of the initial morpholino injection (Figure 5A). </plain></SENT>
+<SENT sid="212" pm="."><plain>However, when oocytes were treated with the ER stressor Tg (1 µM, 30 minutes), the previously observed increase in CN level (Figure 3A) was blocked. </plain></SENT>
+<SENT sid="213" pm="."><plain>Protein synthesis measured by pulsing cells with [35S]-Methionine-Cysteine showed no significant changes in oocytes injected with either CN morpholinos or standard control oligos as well as uninjected control oocytes. </plain></SENT>
+<SENT sid="214" pm="."><plain>However, we observed an expected reduction after treatment with Tm (Figure 5C) and Tg (Figure S8). </plain></SENT>
+<SENT sid="215" pm="."><plain>This inhibition of protein translation was significantly attenuated by knocking down CN. </plain></SENT>
+<SENT sid="216" pm="."><plain>This experiment establishes a strong correlation between CN-PERK interaction and protein synthesis inhibition under ER stress. </plain></SENT>
+</text></p><SecTag type="FIG"><fig id="pone-0011925-g005" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0011925.g005</object-id><label>Figure 5</label><caption><title><text><SENT sid="217" pm="."><plain>Knockdown of CN-A attenuate the protein synthesis inhibition under ER stress. </plain></SENT>
+</text></title><p><text><SENT sid="218" pm="."><plain>(A) CN-A expression levels are shown for the following conditions: control oocytes (lanes C and C-tg)(Cntrl, lane 1), oocytes injected with standard control morpholinos (lanes S and S-tg) (Std Morpho, lane 2), oocytes injected CN-A morpholinos (lanes M and M-tg) (Morpho CN 1&amp; 2, lane 3). </plain></SENT>
+<SENT sid="219" pm="."><plain>A subgroup of each oocyte pool was also stressed for 30 minutes with Tg (lanes C-tg, S-tg and M-tg 4–6). </plain></SENT>
+<SENT sid="220" pm="."><plain>Note that CN is decreased by the CN-A morpholinos treatment only after ER stress (lane M-tg 6). </plain></SENT>
+<SENT sid="221" pm="."><plain>Expression levels are indicated by Western blot (top panels). </plain></SENT>
+<SENT sid="222" pm="."><plain>Loading controls are presented in the bottom panels. </plain></SENT>
+<SENT sid="223" pm="."><plain>All bands were from the same gel and received the same exposure time. </plain></SENT>
+<SENT sid="224" pm="."><plain>(B) Histogram depicts the mean intensity of each band relative to the corresponding density in the Western blots of CN. </plain></SENT>
+<SENT sid="225" pm="."><plain>Data pooled from three independent experiments (n = 3). </plain></SENT>
+<SENT sid="226" pm="."><plain>(C) Autoradiography of total protein synthesized in control oocytes or injected with morpholinos as was described above, that has been untreated or exposed to Tm before a 45 minutes pulse label with [35S]-Methionine-Cysteine. </plain></SENT>
+<SENT sid="227" pm="."><plain>The two panels are from the same gel and received the same exposure time. </plain></SENT>
+<SENT sid="228" pm="."><plain>(D) Histogram corresponding to densitometric analysis of total protein. </plain></SENT>
+<SENT sid="229" pm="."><plain>Data pooled from three independent experiments (n = 3). </plain></SENT>
+</text></p></caption><graphic xlink:href="pone.0011925.g005"/></fig></SecTag></sec><sec id="s2g"><title><text><SENT sid="230" pm="."><plain>CN-A Levels are Rapidly Increased in Astrocytes During ER Stress and are Required for Stress-Induced Increases in Phosphorylated elF2α </plain></SENT>
+</text></title><p><text><SENT sid="231" pm="."><plain>Data obtained in Xenopus oocytes indicated that stress-induced increases in CN-A levels enhanced PERK autophosphorylation and the subsequent attenuation of protein synthesis inhibition. </plain></SENT>
+<SENT sid="232" pm="."><plain>To determine if CN-A also regulated PERK activity in another model system, we exposed cultured astrocytes to oxygen glucose deprivation (OGD), an in vitro model of ischemia. </plain></SENT>
+<SENT sid="233" pm="."><plain>We observed a significant increase in the levels of CN-A (Figure 6A). </plain></SENT>
+<SENT sid="234" pm="."><plain>Co-immunoprecipitation experiments also revealed that CN-A bound to PERK and that the phosphorylated level of PERK was significantly higher after 30 minutes of OGD (Figure 6B). </plain></SENT>
+</text></p><SecTag type="FIG"><fig id="pone-0011925-g006" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0011925.g006</object-id><label>Figure 6</label><caption><title><text><SENT sid="235" pm="."><plain>Stress-induced increases in CN-Aα levels enhance phosphorylation of PERK and elF2α. </plain></SENT>
+</text></title><p><text><SENT sid="236" pm="."><plain>(A) Western blot analysis of CN-Aα levels before and after 60 minutes of OGD treatment. </plain></SENT>
+<SENT sid="237" pm="."><plain>Astrocyte cytosolic extracts were resolved on a 12% SDS-PAGE, transferred to nitrocellulose and probed with anti CN-A antibody (Assay Designs cat# SPA-610). </plain></SENT>
+<SENT sid="238" pm="."><plain>A densitometry histogram normalized with actin levels is presented below (n = 5, p&lt;0.05). </plain></SENT>
+<SENT sid="239" pm="."><plain>(B) Co-IP between CN-Aα and PERK corresponding to untreated cells (0 minutes) and OGD treated (30 minutes). </plain></SENT>
+<SENT sid="240" pm="."><plain>The samples were resolved on a 7% SDS-PAGE by loading the CN-Aα immunoprecipitate from astrocytes and transferred to nitrocellulose. </plain></SENT>
+<SENT sid="241" pm="."><plain>The IP was performed with the same anti CN-A antibody, followed by a Western blot with anti PERK antibody (ABGENT cat# AP8054b). </plain></SENT>
+<SENT sid="242" pm="."><plain>A sample from the immunoprecipitate was stained with Coomassie as loading control. </plain></SENT>
+<SENT sid="243" pm="."><plain>Densitometry histogram normalized with Commassie (n = 4, p&lt;0.05). </plain></SENT>
+<SENT sid="244" pm="."><plain>(C) Western blot analysis of CN-Aα levels in astrocytes transfected with siRNA or reagents only (mock) and subsequently treated with vehicle (Veh) or thapsigarin (Tg) for 1 hour. </plain></SENT>
+<SENT sid="245" pm="."><plain>Densitometry histogram is normalized with actin (n = 4, p&lt;0.01). </plain></SENT>
+<SENT sid="246" pm="."><plain>(D) Western blots of astrocyte extracts probed with anti P-eIF2α antibody. </plain></SENT>
+<SENT sid="247" pm="."><plain>Densitometry histogram is normalized with actin (n = 4, p&lt;0.01). </plain></SENT>
+</text></p></caption><graphic xlink:href="pone.0011925.g006"/></fig></SecTag><p><text><SENT sid="248" pm="."><plain>To ascertain whether stress-induced increases in CN-Aα were dependent on translation, we treated cultured astrocytes with siRNA specific for CN-Aα for 24 hours. </plain></SENT>
+<SENT sid="249" pm="."><plain>Western blot analysis revealed that CN-Aα levels were significantly reduced by ∼50% (Figure 6C). </plain></SENT>
+<SENT sid="250" pm="."><plain>When these siRNA treated astrocytes were exposed to thapsigargin (Tg) for 1 hour, CN-Aα levels were not significantly affected, whereas control, mock-transfected astrocytes exhibited the normal CN-Aα increase (Figure 6C). </plain></SENT>
+<SENT sid="251" pm="."><plain>We conclude from these data that Tg-induced increases in CN-A levels are likely due to enhanced translation. </plain></SENT>
+</text></p><p><text><SENT sid="252" pm="."><plain>We further tested the impact of Tg-induced increases in CN-Aα on the UPR, as indicated by phosphorylation of elF2α (P-elF2α). </plain></SENT>
+<SENT sid="253" pm="."><plain>siRNA (CN-Aα) treated astrocytes showed no significant increase in P-elF2α in response to Tg treatment. </plain></SENT>
+<SENT sid="254" pm="."><plain>Control astrocytes that were mock-transfected exhibited expected increase in P-elF2α (Figure 6D). </plain></SENT>
+<SENT sid="255" pm="."><plain>We conclude from these data that Tg-induced increases in CN-A levels significantly enhance phosphorylation of elF2α. </plain></SENT>
+<SENT sid="256" pm="."><plain>Together, these data suggest that the early UPR induced by ER stress is critically dependent on a rapid increase in CN-Aα. </plain></SENT>
+</text></p></sec><sec id="s2h"><title><text><SENT sid="257" pm="."><plain>Knock-Down of CN-A Enhances Apoptosis in Xenopus Oocytes </plain></SENT>
+</text></title><p><text><SENT sid="258" pm="."><plain>Given the fact that cells commit to cell death if they are unable to reduce or recover from ER stress, we wanted to test the physiological impact of CN activity on apoptosis. </plain></SENT>
+<SENT sid="259" pm="."><plain>To accomplish this, we took advantage of an assay originally pioneered by Newmeyer and co-workers [36] and modified by our laboratory to work with Xenopus oocytes [37]. </plain></SENT>
+<SENT sid="260" pm="."><plain>We found that oocyte extracts contained all of the molecular machinery necessary to induce apoptotic-like morphological changes in isolated liver nuclei that were added to the mixture. </plain></SENT>
+<SENT sid="261" pm="."><plain>For this assay, immature oocytes were lysed and centrifuged to remove yolk and lipids. </plain></SENT>
+<SENT sid="262" pm="."><plain>The remaining cytosolic extract was mixed with liver nuclei, which were stained with Hoechst dye at 0, 2 or 4 hours to score for apoptotic morphology. </plain></SENT>
+<SENT sid="263" pm="."><plain>The percentage of nuclei exhibiting apoptosis reached a maximum approximately 4 hours after initial exposure to cytosolic extract, whereas no significant changes were observed in buffer treated nuclei (Figures 7A, S9). </plain></SENT>
+<SENT sid="264" pm="."><plain>Cytosolic extract was then prepared from oocytes injected with either CN morpholinos (oligos 1 and 2) or standard control oligos as well as uninjected control oocytes to determine how CN activity affected apoptosis. </plain></SENT>
+<SENT sid="265" pm="."><plain>A subpopulation of oocytes from each group was also treated with Tg (1 µM, 30 minutes). </plain></SENT>
+<SENT sid="266" pm="."><plain>The apoptotic potency of each extract was assayed at 0, 2 and 4 hours. </plain></SENT>
+<SENT sid="267" pm="."><plain>We found that cytosolic extract prepared from Tg-stressed oocytes previously injected with CN morpholino oligos (Morpho + Tg) exhibited a significantly (p&lt;0.01) rapid increase in apoptosis at 2 hours compared to control Tg-stressed oocytes (Cntrl + Tg) or to buffer alone (Figure 7 A–B). </plain></SENT>
+<SENT sid="268" pm="."><plain>We conclude from these results that the rapid expression of CN-A subsequent to ER stress, delays cells from undergoing apoptosis. </plain></SENT>
+<SENT sid="269" pm="."><plain>This suggests that one of the physiological functions of CN immediately post-ER stress is to protect cells, giving them time to recover and restore ER homeostasis. </plain></SENT>
+</text></p><SecTag type="FIG"><fig id="pone-0011925-g007" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0011925.g007</object-id><label>Figure 7</label><caption><title><text><SENT sid="270" pm="."><plain>Knockdown of CN-A increases the appearance of apoptotic nuclei in Xenopus oocyte extracts. </plain></SENT>
+</text></title><p><text><SENT sid="271" pm="."><plain>(A) Apoptotic potency of cytosolic extracts obtained from control oocytes treated with Tg (Cntrl + Tg) or from oocytes injected with CN-A morpholino 1 &amp; 2 treated with Tg (Morpho CN 1&amp;2 + Tg) compared with buffer alone. </plain></SENT>
+<SENT sid="272" pm="."><plain>Images of liver nuclei were obtained at 2 hours. </plain></SENT>
+<SENT sid="273" pm="."><plain>Note the large number apoptotic-like nuclei at 2 hours for Morpho + Tg oocyte extract. </plain></SENT>
+<SENT sid="274" pm="."><plain>(B) Lineplot of the average of the percentage of apoptotic nuclei at 0, 2 and 4 hours for cytosolic extract obtained from control oocytes with and without Tg treatment (Cntrl, Cntrl + Tg), from oocytes injected with standard morpholino with and without Tg treatment (Std Morpho, Std Morpho + Tg) and from oocytes injected with CN-A morpholino oligos 1 &amp; 2 with and without Tg treatment (Morpho CN1&amp;2, Morpho CN1&amp;2+ Tg), compared to nuclei incubated with buffer alone. </plain></SENT>
+<SENT sid="275" pm="."><plain>Data were obtained from 4 independent experiments in which 150 oocytes per group were used for each condition. **p&lt;0.01. </plain></SENT>
+</text></p></caption><graphic xlink:href="pone.0011925.g007"/></fig></SecTag></sec></sec></SecTag><SecTag type="DISCUSS"><sec id="s3"><title><text><SENT sid="276" pm="."><plain>Discussion </plain></SENT>
+</text></title><p><text><SENT sid="277" pm="."><plain>In this study, we have shown that CN works to restore ER homeostasis immediately after ER stress has been initiated. </plain></SENT>
+<SENT sid="278" pm="."><plain>CN performs this important function with the aid of two ER transmembrane proteins: CLNX and PERK. </plain></SENT>
+<SENT sid="279" pm="."><plain>Consequently, CN can now be viewed as an active participant in the UPR by virtue of its ability to couple the cytoplasmic side to the ER lumen in a Ca2+ dependent manner. </plain></SENT>
+<SENT sid="280" pm="."><plain>We previously established that when the ER is optimally loaded with Ca2+, the most favorable condition necessary for protein processing and folding, CLNX is phosphorylated and physically interacts with SERCA 2b to inhibit its activity [4]. </plain></SENT>
+<SENT sid="281" pm="."><plain>We also demonstrated that IP3-mediated Ca2+ release caused a Ca2+ dependent dephosphorylation of serine residue (S562) in the cytosolic domain of CLNX. </plain></SENT>
+<SENT sid="282" pm="."><plain>This removed the functional interaction of CLNX with the pump, removing inhibition and maximizing SERCA 2b-mediated Ca2+ store refilling. </plain></SENT>
+<SENT sid="283" pm="."><plain>CLNX phosphorylation had already been shown to regulate its association with the ribosome, which facilitated the presentation and binding of newly synthesized glycoproteins to the chaperone [25]. </plain></SENT>
+<SENT sid="284" pm="."><plain>Dephosphorylation of the dog CLNX isoform on the homologous serine residue [25] had been shown to dissociate the protein from the ribosome uncoupling the protein synthesis machinery. </plain></SENT>
+<SENT sid="285" pm="."><plain>Here, we demonstrate that CLNX is subject to dephosphorylation by CN under ER stress. </plain></SENT>
+<SENT sid="286" pm="."><plain>This result is in agreement with Michalak's group [38], who recently found that CLNX deficient cells have constitutively active UPR. </plain></SENT>
+<SENT sid="287" pm="."><plain>This has been suggested to represent an acute stress response [39]. </plain></SENT>
+<SENT sid="288" pm="."><plain>We also show that another ER stressor, Tm, induced a small Ca2+ increase in the cytosol. </plain></SENT>
+<SENT sid="289" pm="."><plain>These data are consistent with Tm-induced Ca2+ mobilization in fibroblast and CHO cells [40], [41] and suggest that both Tg and Tm are able to activate CN through a common and well characterized Ca2+/CaM dependent mechanism. </plain></SENT>
+<SENT sid="290" pm="."><plain>We suggest that CN phosphatase activity provides the cell with additional time to restore ER homeostasis while the organelle is being refilled with Ca2+. </plain></SENT>
+</text></p><p><text><SENT sid="291" pm="."><plain>Surprisingly, we discovered that CN-A levels were significantly increased in the cytosol of Xenopus oocytes within 30–60 minutes of being stressed by Tg or DTT. </plain></SENT>
+<SENT sid="292" pm="."><plain>We also found that CN-A interacted with PERK during stress, and that the kinetics of this association were correlated with the increase in CN-A levels. </plain></SENT>
+<SENT sid="293" pm="."><plain>This suggested to us that the rise in CN levels could cause the subsequent interaction and activation of PERK. </plain></SENT>
+<SENT sid="294" pm="."><plain>We confirmed this hypothesis in an independent model system, cultured mouse astrocytes. </plain></SENT>
+<SENT sid="295" pm="."><plain>We found that ER-stress induced by OGD or thapsigargin treatment in cultured astrocytes rapidly increases CN-Aα levels. </plain></SENT>
+<SENT sid="296" pm="."><plain>Because we were able to block this increase by siRNA treatments in astrocytes, it appears that stress-induced increases in CN-Aα are translationally dependent. </plain></SENT>
+<SENT sid="297" pm="."><plain>Remarkably, the induction of the early UPR in astrocytes, as indicated by increased P-elF2α, was critically dependent on this rapid increase in CN-Aα. </plain></SENT>
+<SENT sid="298" pm="."><plain>Specifically, when astrocytes were treated with siRNA specific for CN-Aα, we observed no significant increase in P-elF2α in response to Tg treatment. In vitro experiments with recombinant proteins also support this model. </plain></SENT>
+<SENT sid="299" pm="."><plain>We demonstrated that the presence of CN-Aα/B significantly increased the autophosphorylation of GST-cPERK. </plain></SENT>
+<SENT sid="300" pm="."><plain>A residual level of GST-cPERK phosphorylation in the absence of CN-Aα/B was likely due to dimerization of the GST-portion of GST-cPERK as reported by [42]. </plain></SENT>
+</text></p><p><text><SENT sid="301" pm="."><plain>Another important observation from our pull-down experiments was that CN-A interacted with cPERK in a Ca2+ dependent manner. </plain></SENT>
+<SENT sid="302" pm="."><plain>Association was significantly increased in conditions that mimic high cytosolic Ca2+. </plain></SENT>
+<SENT sid="303" pm="."><plain>The significance of this finding is that this association should occur immediately after ER stress has been triggered when the cytosolic Ca2+ concentration initially increases. </plain></SENT>
+<SENT sid="304" pm="."><plain>It is worth noting that in contrast to the CaM dependence of CN phosphatase activity, the association of CN with PERK appears to be inhibited by CaM. </plain></SENT>
+<SENT sid="305" pm="."><plain>This interaction does not appear to be mediated by another protein, since no other protein was added to the in vitro assay. </plain></SENT>
+<SENT sid="306" pm="."><plain>Moreover, we did not detect an interaction between CN-A and the catalytically inactive mutant GST-cPERK K/A. </plain></SENT>
+<SENT sid="307" pm="."><plain>One explanation for this result is that lysine-618 is a critical residue in the CN binding site of PERK. </plain></SENT>
+<SENT sid="308" pm="."><plain>Alternatively, CN may only be able to interact with PERK after a conformational change occurs in response to autophosphorylation. </plain></SENT>
+<SENT sid="309" pm="."><plain>In this light, lysine 618 is critical to either PERK autophosphorylation and to the subsequent conformational change [8], [43]. </plain></SENT>
+<SENT sid="310" pm="."><plain>In support of this, we and others [43] observe different mobilities for GST-cPERK and GST-cPERKK/A on SDS-PAGE (100 kD, and 85 kD, respectively), consistent with different protein conformations. </plain></SENT>
+<SENT sid="311" pm="."><plain>We suggest that CN associates with PERK only after the kinase has been activated and once bound, stimulates further autophosphorylation of PERK. </plain></SENT>
+</text></p><p><text><SENT sid="312" pm="."><plain>Our model is consistent with the current of view of stress activated PERK. </plain></SENT>
+<SENT sid="313" pm="."><plain>BiP is normally bound to the luminal domain of PERK and acts as negative regulator of activation [44]. </plain></SENT>
+<SENT sid="314" pm="."><plain>In response to ER stress, BiP dissociates from its luminal domain of PERK to assist in luminal protein folding. </plain></SENT>
+<SENT sid="315" pm="."><plain>This allows PERK oligomerization and its subsequent activation [9]. </plain></SENT>
+<SENT sid="316" pm="."><plain>Our data take this stress activation sequence one step further by showing that CN-A binds to PERK and induces additional autophosphorylation at high cytosolic Ca2+. </plain></SENT>
+<SENT sid="317" pm="."><plain>Interestingly, a ligand for PERK with the properties that we have described has been previously sought after [9]. </plain></SENT>
+<SENT sid="318" pm="."><plain>We suggest that CN is a strong candidate for this ligand. </plain></SENT>
+<SENT sid="319" pm="."><plain>Modulation of PERK activity by CN would represent a fine-tuning mechanism for optimal ER stress signaling. </plain></SENT>
+<SENT sid="320" pm="."><plain>Moreover, CN/PERK interaction may constitute an example of at least partial dissociation from stress sensor activation, since ATF6, IRE1α and PERK would not all be activated by the same mechanism of titration from BiP. </plain></SENT>
+<SENT sid="321" pm="."><plain>In this scenario, members of the proapoptotic Bcl-2 family, BAX and BAK [45], have been shown to interact with the cytosolic domain of IRE1α during ER stress [46]. </plain></SENT>
+<SENT sid="322" pm="."><plain>It would appear that both IRE1α and PERK are actively regulated by cytoplasmic signals. </plain></SENT>
+</text></p><p><text><SENT sid="323" pm="."><plain>Another interesting finding was that PERK phosphorylated CN-A at resting concentrations of cytosolic Ca2+. </plain></SENT>
+<SENT sid="324" pm="."><plain>Phosphorylation decreased the Vmax of CN to 70%, without changing its affinity (Km) for substrate (Table S1). </plain></SENT>
+<SENT sid="325" pm="."><plain>It is possible that phosphorylation of CN-A by PERK generates a more pronounced effect when CaM dissociates from CN upon Ca2+ decrease. </plain></SENT>
+<SENT sid="326" pm="."><plain>This event could have more physiological relevance when ER Ca2+ homeostasis is being restored after stress by Ca2+ removal from the cytosol. </plain></SENT>
+<SENT sid="327" pm="."><plain>Phosphorylation of CN has previously been observed in vitro by both CaM Kinase II and PKC [47], [48]. </plain></SENT>
+<SENT sid="328" pm="."><plain>In all cases, phosphorylated CN exhibits less phosphatase activity. </plain></SENT>
+<SENT sid="329" pm="."><plain>Interestingly, PERK phosphorylation was reduced at low Ca2+ concentration, when CN-A was phosphorylated. </plain></SENT>
+<SENT sid="330" pm="."><plain>This appears unlikely to be the result of dephosphorylation by CN, since its phosphatase activity is significantly reduced in both low Ca2+ and when it is phosphorylated. </plain></SENT>
+<SENT sid="331" pm="."><plain>The decrease of PERK phosphorylation is more likely a consequence of CN dissociating from PERK at low Ca2+ concentrations as suggested in Figure 3C. </plain></SENT>
+</text></p><p><text><SENT sid="332" pm="."><plain>Physiologically, we presented evidence suggesting that knock down of early CN levels with morpholinos increased the susceptibility of the Xenopus oocytes to undergo apoptosis. </plain></SENT>
+<SENT sid="333" pm="."><plain>This suggested an important regulatory role of CN in preventing or delaying apoptosis during ER stress. </plain></SENT>
+<SENT sid="334" pm="."><plain>This interpretation is in agreement with other reports suggesting that the susceptibility of cells to undergo apoptosis during stress depends on the amount of releasable Ca2+ from the ER [49], [50]. </plain></SENT>
+<SENT sid="335" pm="."><plain>CN dependent dephosphorylation of CLNX, which increases SERCA 2b activity, is likely to minimize problems with protein folding during acute ER stress by rapidly restoring ER Ca2+ stores. </plain></SENT>
+<SENT sid="336" pm="."><plain>At the same time, the interaction of CN with PERK would be expected to rescue cells from apoptosis by strongly attenuated new protein translation. </plain></SENT>
+</text></p><p><text><SENT sid="337" pm="."><plain>In summary, this study reveals a novel role for CN at the initiation of the ER stress cascade. </plain></SENT>
+<SENT sid="338" pm="."><plain>We have incorporated these mechanistic insights into a comprehensive model (Figure 8) that also accommodates findings related to PERK activation and CLNX-ribosome association as described by others [8], [9], [25]. </plain></SENT>
+<SENT sid="339" pm="."><plain>Our discovery that CN activity plays an important role in the acute phase of ER Stress reveals an additional level of complexity to the UPR. </plain></SENT>
+<SENT sid="340" pm="."><plain>It is important to distinguish this new role of CN during the early UPR from its distinct cell death function during later time points of the UPR. </plain></SENT>
+<SENT sid="341" pm="."><plain>In particular, it has been reported that prolonged exposure of cells to CN inhibitors leads to upregulation of CHOP and subsequent apoptosis [51]. </plain></SENT>
+<SENT sid="342" pm="."><plain>The new function of CN that we uncovered in this manuscript occurs at an earlier step in the UPR, prior to induction of CHOP. </plain></SENT>
+<SENT sid="343" pm="."><plain>UPR has been implicated in a variety of cellular processes such as control of nutritional and differentiation programs [52]. </plain></SENT>
+<SENT sid="344" pm="."><plain>It is also associated with numerous diseases like neurodegenerative disorders [53], cancer [54], viral infection [55] or ischemic injury [56]. </plain></SENT>
+<SENT sid="345" pm="."><plain>Understanding the impact of CN activity in ER stress will yield new insights into the underlying causes of these physiological and pathological processes. </plain></SENT>
+</text></p><SecTag type="FIG"><fig id="pone-0011925-g008" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0011925.g008</object-id><label>Figure 8</label><caption><title><text><SENT sid="346" pm="."><plain>Role of CN in the early phases of ER stress. </plain></SENT>
+</text></title><p><text><SENT sid="347" pm="."><plain>(1) Resting conditions of the ER: CLNX is phosphorylated, interacting with SERCA 2b and inhibiting its activity. </plain></SENT>
+<SENT sid="348" pm="."><plain>CLNX is also interacting with the ribosome, increasing the capacity of protein folding. </plain></SENT>
+<SENT sid="349" pm="."><plain>PERK is associated with BiP, which prevents its autophosphorylation. </plain></SENT>
+<SENT sid="350" pm="."><plain>Protein processing and folding is optimal (depicted by spirals). </plain></SENT>
+<SENT sid="351" pm="."><plain>(2) ER stress: unfolded proteins accumulate in the ER lumen, BiP dissociates from PERK, permitting its dimerization and autophosphorylation, which leads to attenuation of protein synthesis. </plain></SENT>
+<SENT sid="352" pm="."><plain>At the same time, Ca2+ is released, activating CN, inducing dephosphorylation of CLNX, thereby removing pump inhibition. </plain></SENT>
+<SENT sid="353" pm="."><plain>(3) CN levels are increased, leading to the association of CN with pre-activated PERK, which induces further PERK auto-phosphorylation, increasing the phosphorylation level of eIF2α. </plain></SENT>
+<SENT sid="354" pm="."><plain>This emphasizes the protein translation inhibition. </plain></SENT>
+<SENT sid="355" pm="."><plain>If cell Ca2+ levels are restored (1), CN becomes phosphorylated by PERK, decreasing its activity. </plain></SENT>
+<SENT sid="356" pm="."><plain>CN expression also returns to resting levels further reducing its signaling. </plain></SENT>
+<SENT sid="357" pm="."><plain>These steps, in combination with a full Ca2+ store and BiP re-association with PERK, restore normal protein translation and ER homeostasis. </plain></SENT>
+</text></p></caption><graphic xlink:href="pone.0011925.g008"/></fig></SecTag></sec></SecTag><SecTag type="METHODS"><sec sec-type="materials|methods" id="s4"><title><text><SENT sid="358" pm="."><plain>Materials and Methods </plain></SENT>
+</text></title><sec id="s4a"><title><text><SENT sid="359" pm="."><plain>Vectors and Reagents </plain></SENT>
+</text></title><p><text><SENT sid="360" pm="."><plain>The Xenopus expression vectors for rat CLNX have previously been described [4]. </plain></SENT>
+<SENT sid="361" pm="."><plain>The cDNAs encoding mouse PERK and the inactive kinase PERK K/A [32] were subcloned into pHN vector [57]. </plain></SENT>
+<SENT sid="362" pm="."><plain>Fusion proteins corresponding to the cytosolic domain of PERK and PERK K/A in fusion with GST (GST-cPERK and GST-cPERK K/A) were generated by PCR and subcloned into pGEX-4T-2 (Amersham Biosciences, Piscataway, NJ). </plain></SENT>
+<SENT sid="363" pm="."><plain>For GST-cPERK and its mutant, the forward primer was 5′-ACTGGAATTCCCATGCGCAGGCTTTTCCATCCTCAG and the reverse primer was 5′-ACTGCTCGAGCTAGTTGCCAGGCAGTGGGCTGTA using pHNb-PERK or pHNb-PERK K/A as templates. </plain></SENT>
+<SENT sid="364" pm="."><plain>The PCR products were subcloned into EcoRI and XhoI sites. </plain></SENT>
+<SENT sid="365" pm="."><plain>Automatic sequencing of all cDNA constructs was performed at the UTHSCSA core facility. </plain></SENT>
+<SENT sid="366" pm="."><plain>All oligonucleotides and restriction enzymes were purchased from Invitrogen Life Technologies (Carlsbad, CA). </plain></SENT>
+</text></p><p><text><SENT sid="367" pm="."><plain>Unless otherwise specified, all chemicals were purchased from Sigma-Aldrich Corp. </plain></SENT>
+<SENT sid="368" pm="."><plain>(St. Louis, MO). </plain></SENT>
+<SENT sid="369" pm="."><plain>Stock solutions of Tg were resuspended in DMSO (2 mM) and stock solutions of Tm were resuspended in methanol at 45°C (5,000 µg/ml). </plain></SENT>
+</text></p></sec><sec id="s4b"><title><text><SENT sid="370" pm="."><plain>In Vitro Transcription and Oocyte Protocols </plain></SENT>
+</text></title><p><text><SENT sid="371" pm="."><plain>CLNX mRNA was prepared as described previously [57]. </plain></SENT>
+</text></p></sec><sec id="s4c"><title><text><SENT sid="372" pm="."><plain>CN-Aα siRNA knockdown </plain></SENT>
+</text></title><p><text><SENT sid="373" pm="."><plain>C8D1A cells (ATCC; Manassas, VA; cat# CRL-2541) were plated at 1×105 per well in a 6 well format prior to transfection. </plain></SENT>
+<SENT sid="374" pm="."><plain>CN-Aα siRNA (PPP3CA) (Dharmacon; Lafayette, CO) was used at 100 nM and transfected with Dharmafect #4 (Dharmacon, Lafayette, CO; cat# T2004-02). </plain></SENT>
+<SENT sid="375" pm="."><plain>Transfections were carried out following the manufactuers protocol. </plain></SENT>
+<SENT sid="376" pm="."><plain>Astrocytes were transfected for 17 hours and observed 48 hours post transfection. </plain></SENT>
+<SENT sid="377" pm="."><plain>At 48 hrs, astrocytes were subjected to 1 µM final DMSO vehicle or 1 µM thapsigargin treatment for 1 hour at 37°C. </plain></SENT>
+<SENT sid="378" pm="."><plain>Astrocytes were then rinsed twice with PBS and scrapped into 100 µl of SDS sample buffer (62.5 mM Tris-HCl, pH 6.8, 2% w/v SDS, 10% glycerol, 50 mM dithiothreitol) and supplemented with 1 mM sodium orthovanadate (Sigma; St. Louis, MO), 10 units/ml Leupeptin (Sigma; St. Louis, MO), and 10 units/ml aprotinin (Sigma; St. Louis, MO) and used for Western blotting. </plain></SENT>
+</text></p></sec><sec id="s4d"><title><text><SENT sid="379" pm="."><plain>Western blots, Immunoprecipitations and Co-immunoprecipitations </plain></SENT>
+</text></title><p><text><SENT sid="380" pm="."><plain>Oocytes extracts were prepared as described in [57] with the modification that the cytosolic fraction (supernatant) and/or the microsomal fraction (pellet) were separated for analysis. </plain></SENT>
+<SENT sid="381" pm="."><plain>CLNX and CN-A were detected with antibodies from Assay Designs (Ann Arbor, MI, Cat #SPA-860 and Cat # C1956). </plain></SENT>
+<SENT sid="382" pm="."><plain>PERK antibody was from ABGENT (San Diego, CA, Cat# AP8054b). </plain></SENT>
+<SENT sid="383" pm="."><plain>P-eIF2α and BiP were detected with antibodies from Assay Designs (Ann Arbor, MI, Cat # KAP-CP131E and Cat# SPA-826). α-actin antibody was obtained from Santa Cruz Biotechnology, Inc. </plain></SENT>
+<SENT sid="384" pm="."><plain>(Santa Cruz, CA). </plain></SENT>
+<SENT sid="385" pm="."><plain>HRP-conjugated Donkey anti rabbit IgG and anti mouse IgG (Jackson ImmunoResearch Laboratories, Inc., West Grove, PA) were used as secondary antibodies. </plain></SENT>
+<SENT sid="386" pm="."><plain>Oocyte immunoprecipitation (IP) of [γ-32]P-labeled CLNX was performed as described previously [4]. </plain></SENT>
+<SENT sid="387" pm="."><plain>For Co-immunoprecipitations, microsomal pellets were obtained and membrane proteins were extracted as described previously [4]. </plain></SENT>
+</text></p><p><text><SENT sid="388" pm="."><plain>Cultured C8D1A astrocytes (ATCC; Manassas, VA; cat# CRL-2541) were rinsed twice with PBS and scraped down with a rubber policeman in the presence of 100 µl of lysis buffer per 35 mm dish used. </plain></SENT>
+<SENT sid="389" pm="."><plain>Lysis Buffer was prepared as 15 mM Tris HCl, pH 7.6, 150 mM NaCl, 10% Glycerol, 1% TritonX 100, 1 mM EDTA supplemented with phosphatase inhibitors (5 mM NaF, 0.4 mM Na3VO4, 1 mMNaPPi, 0.1 mM ZnCl2, 1 mM NaMOb) and protease inhibitors (0.2 mM AEBSF, 10 µM Leupeptin, 1 uM Pepstatin A and 0.8 mM Benzmaidine. </plain></SENT>
+<SENT sid="390" pm="."><plain>Cell lysis was achieved by passing the astrocyte suspension 10 times through a 1 ml syringe with a 25 G 5/8 needle and collected in an eppendorf tube. </plain></SENT>
+<SENT sid="391" pm="."><plain>Nuclei and cell debri were removed by centrifugation at 1000 g for 10 minutes. </plain></SENT>
+<SENT sid="392" pm="."><plain>Supernatant containing astrocyte cell extract was collected and retained for Western blots or Immunoprecipitations. </plain></SENT>
+<SENT sid="393" pm="."><plain>Calcineurin A and P-eIF2α were detected with antibodies from Assay Designs (Ann Arbor, MI; cat# SPA-610 and cat# KAP-CP131E respectively). </plain></SENT>
+<SENT sid="394" pm="."><plain>Actin was detected with a mouse monoclonal antibody (Millipore; Billerica, MA; cat# MAB 1501). </plain></SENT>
+<SENT sid="395" pm="."><plain>PERK antibody was obtained from ABGENT (San Diego, CA, Catalog# AP8054b). </plain></SENT>
+</text></p></sec><sec id="s4e"><title><text><SENT sid="396" pm="."><plain>Cytosolic Free Ca2+ Concentration Measurements </plain></SENT>
+</text></title><p><text><SENT sid="397" pm="."><plain>Ca2+ changes were measured in individual oocytes by fluorescence microscopy using the Ca2+ indicator Fura-2 (Invitrogen-Molecular Probes, Eugene, OR). </plain></SENT>
+<SENT sid="398" pm="."><plain>Oocytes were injected with 50 nl Fura-2 salt (50 µM final concentration) for 20–30 min at 18°C until equilibration was reached. </plain></SENT>
+<SENT sid="399" pm="."><plain>Measurements were performed in ND96 low Ca2+ (5 mM Hepes, pH 7.5, 96 mM NaCl, 2 mM KCl, 1 m MgCl2) at 18–20°C using a Nikon Eclipse TE 300 microscope with a 20×0.75 NA multi-immersion (water for our experiments) lens. </plain></SENT>
+<SENT sid="400" pm="."><plain>Fura-2 was excited at a wavelength of 340 and 380 nm, and emitted fluorescence was collected via a 510 nm long pass filter, using a ORCA-ER charge-coupled video camera device (Hamamatsu Photonics, Hamamatsu, Japan). </plain></SENT>
+<SENT sid="401" pm="."><plain>Frames were collected every 2 s and the 340/380 ratio was analyzed using Open Lab software (Improvision, Lexington, MA) following background subtraction. </plain></SENT>
+<SENT sid="402" pm="."><plain>Ca2+ calibration of Fura-2 fluorescence was performed in vitro using the Ca2+ calibration Buffer Kit #2 (Invitrogen-Molecular Probes, Eugene, OR). </plain></SENT>
+<SENT sid="403" pm="."><plain>An affinity constant of 200 nM was obtained and used to convert Fura-2 ratios into Ca2+ concentrations according to [58]. </plain></SENT>
+<SENT sid="404" pm="."><plain>Rmax, Rmin and Sb/Sf were measured as 8.0785, 0.40001 and 8.7369, respectively. </plain></SENT>
+</text></p></sec><sec id="s4f"><title><text><SENT sid="405" pm="."><plain>GST Fusion Protein Purification </plain></SENT>
+</text></title><p><text><SENT sid="406" pm="."><plain>The GST fusion protein purification was performed as described in [22]. </plain></SENT>
+<SENT sid="407" pm="."><plain>To avoid the formation of inclusion bodies, bacteria expressing GST- cPERK K/A were incubated at 28°C and rotated at 300 rpm. </plain></SENT>
+<SENT sid="408" pm="."><plain>Elution of bound protein and dialysis were performed according to [22]. </plain></SENT>
+</text></p></sec><sec id="s4g"><title><text><SENT sid="409" pm="."><plain>GST Pull-down Assays </plain></SENT>
+</text></title><p><text><SENT sid="410" pm="."><plain>Binding of human recombinant CN-Aα/B (2 pmoles) (EMD Bioscience, San Diego, CA) to GST-cPERK (0.40 nmoles) was performed at 4°C during 1 hour with over-end rotation. </plain></SENT>
+<SENT sid="411" pm="."><plain>As controls, either GST alone or GST-cPERK K/A (0.40 nmoles), and when indicated CaM (2 pmoles), were used. </plain></SENT>
+<SENT sid="412" pm="."><plain>Proteins were incubated and the washes were performed as previously described [22] with the exception that the buffers were supplemented with the corresponding free Ca2+ concentrations. </plain></SENT>
+<SENT sid="413" pm="."><plain>The proteins were eluted by boiling in reducing Laemmli Buffer and were resolved through 12% SDS-PAGE using a mouse anti CN-A antibody and visualized by enhanced chemiluminescence. </plain></SENT>
+<SENT sid="414" pm="."><plain>Ca2+ concentrations were calculated according to existing algorithms [59]. </plain></SENT>
+</text></p></sec><sec id="s4h"><title><text><SENT sid="415" pm="."><plain>In Vitro Kinase Assay </plain></SENT>
+</text></title><p><text><SENT sid="416" pm="."><plain>CN-Aα/B phosphorylation and autophosphorylation of cPERK were performed as follows. </plain></SENT>
+<SENT sid="417" pm="."><plain>GST-cPERK, GST-cPERK K/A or GST alone (0.1 µM), were incubated for 3 min at 30°C in a 30 µl reaction mixture [20 mM Tris-Cl, pH 7.5, 100 mM NaCl, 10 mM MgCl2, 1.5 mM DTT, 0.5 mM EGTA, 1 mM NaOAc, 6% glycerol and 0.1 mM ATP, 50 µCi [γ32P]ATP (6,000 Ci/mmol, PerkinElmer Life Sciences, Inc., Boston, MA) in the presence of 2 free Ca2+ concentrations (30 nM or 1.4 µM). </plain></SENT>
+<SENT sid="418" pm="."><plain>CaM at 1.6 µM was added as indicated. </plain></SENT>
+<SENT sid="419" pm="."><plain>After 3 min, CN-Aα/B (1.7 µM) was added and incubated for 30 min. </plain></SENT>
+<SENT sid="420" pm="."><plain>The reactions were stopped by boiling in reducing Laemmli Buffer and the proteins were resolved through 10% SDS-PAGE. </plain></SENT>
+<SENT sid="421" pm="."><plain>The gel was fixed, dried, and proteins were visualized by autoradiography. </plain></SENT>
+</text></p></sec><sec id="s4i"><title><text><SENT sid="422" pm="."><plain>Microinjection of Morpholino Antisense Oligos against CN-A </plain></SENT>
+</text></title><p><text><SENT sid="423" pm="."><plain>The morpholino antisense oligos: Morpho oligo1 (5′- TAGAGAAATCTGTGTGGGAAATGTC) and Morpho oligo 2 (5′-AGGCGATCAATTGACAGCTGCTTCT) against CN−A and the standard oligo morpholino were obtained from Gene Tools (Philomath, OR). </plain></SENT>
+<SENT sid="424" pm="."><plain>Morpholinos to Xenopus laevis CN-A sequence were designed from accession #s BC049001, AB037146 and AF019569, dissolved in dH2O and injected into the oocytes at a final concentration of 5 µM. </plain></SENT>
+</text></p></sec><sec id="s4j"><title><text><SENT sid="425" pm="."><plain>Pulse-labeling of Proteins </plain></SENT>
+</text></title><p><text><SENT sid="426" pm="."><plain>Groups of oocytes (10, each) previously injected or not with the corresponding morpholino, were starved for 30 min in a Methionine/Cysteine-free medium RPMI-1640 (diluted 33%, Sigma) and injected with a 50-nl bolus of [35S]Methionine-Cysteine (1175 Ci/mmol, 14 mCi, Perkin Elmer). </plain></SENT>
+<SENT sid="427" pm="."><plain>After a 45 minutes period of incubation, oocytes were instantly frozen on dry ice. </plain></SENT>
+<SENT sid="428" pm="."><plain>The total homogenate prepared as follows: oocytes were resuspended in 200 µl of Lysis Buffer (40 mM Tris-HCl, pH 7.5, 50 mM NaCl, 250 mM sucrose,10 mM MgCl2, 2 mM EDTA, 0.5 mM EGTA) supplemented protease inhibitors (800 µM benzamidine, 200 µM AEBSF, 20 µM Leupeptin, and 1 µM Pepstatin A), homogenized and centrifuged at 100 g. </plain></SENT>
+<SENT sid="429" pm="."><plain>The corresponding supernatants were boiled in reducing Laemmli Buffer. </plain></SENT>
+<SENT sid="430" pm="."><plain>The proteins (30 µl of each supernantant) were resolved through 10% SDS-PAGE. </plain></SENT>
+<SENT sid="431" pm="."><plain>The gel was fixed, dried, and proteins were visualized by autoradiography. </plain></SENT>
+</text></p></sec><sec id="s4k"><title><text><SENT sid="432" pm="."><plain>Cell-free Apoptosis in Xenopus laevis Oocytes Extracts </plain></SENT>
+</text></title><p><text><SENT sid="433" pm="."><plain>The cell-free apoptosis assay was carried out as originally described by [36] and as modified for Xenopus oocytes by Saelim et al. [37]. </plain></SENT>
+</text></p></sec><sec id="s4l"><title><text><SENT sid="434" pm="."><plain>Statistical Analysis </plain></SENT>
+</text></title><p><text><SENT sid="435" pm="."><plain>Statistical significance was determined by Student t-test, one-way ANOVA, or Tukey's Multiple Comparison Test as appropriate. </plain></SENT>
+<SENT sid="436" pm="."><plain>One and two asterisks indicate statistical significance differences at p&lt;0.05 or p&lt;0.001, respectively. </plain></SENT>
+<SENT sid="437" pm="."><plain>Error bars are expressed as SEM. </plain></SENT>
+<SENT sid="438" pm="."><plain>The number (n) refers to the number of experimental, independent replicates. </plain></SENT>
+</text></p></sec></sec></SecTag><SecTag type="SUPPL"><sec sec-type="supplementary-material" id="s5"><title><text><SENT sid="439" pm="."><plain>Supporting Information </plain></SENT>
+</text></title><supplementary-material content-type="local-data" id="pone.0011925.s001"><label>Figure S1</label><caption><p><text><SENT sid="440" pm="."><plain>Overexpressed (exogenous) CLNX exhibits higher levels of phosphorylation compared to endogenous CLNX. </plain></SENT>
+<SENT sid="441" pm="."><plain>CLNX immunoprecipitations showing [γ-32P] ATP-labeled CLNX from Xenopus oocytes extracts (top). </plain></SENT>
+<SENT sid="442" pm="."><plain>Immunoprecipitated proteins from control oocytes (injected with ddH20) (Cntrl) or from oocytes overexpressing CLNX (mRNA CLNX) were resolved through a 10% SDS-PAGE. </plain></SENT>
+<SENT sid="443" pm="."><plain>Phosphorylated CLNX was visualized by autoradiography. </plain></SENT>
+<SENT sid="444" pm="."><plain>Each lane corresponds to immunoprecipitated CLNX from 15 oocytes per group. </plain></SENT>
+<SENT sid="445" pm="."><plain>(bottom) Western blots of CLNX were performed from the same oocyte extracts before IP. </plain></SENT>
+<SENT sid="446" pm="."><plain>Note that endogenous levels of CLNX phosphorylation are relatively minor and obscured by exogenous phosphorylated CLNX. </plain></SENT>
+</text></p><p><text><SENT sid="447" pm="."><plain>(0.07 MB TIF) </plain></SENT>
+</text></p></caption><media xlink:href="pone.0011925.s001.tif"><caption><p><text><SENT sid="448" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="pone.0011925.s002"><label>Figure S2</label><caption><p><text><SENT sid="449" pm="."><plain>Calcineurin inhibitors CsA and FK506 do not induce ER Stress. </plain></SENT>
+<SENT sid="450" pm="."><plain>(A) Western blot showing phosphorylation levels of eIF2α and BiP from vehicle control oocytes (lane 1) or oocytes treated with CsA (200 nM) and FK506 (20 nM) for 16 hours (lane 2). </plain></SENT>
+<SENT sid="451" pm="."><plain>Two oocyte equivalents were loaded per lane and proteins were resolved through 12% SDS-PAGE (P-elF2α) or 7% SDS-PAGE (BiP). </plain></SENT>
+<SENT sid="452" pm="."><plain>P-eIF2α antibody used from Assay Designs (cat# KAP-CP131E). </plain></SENT>
+<SENT sid="453" pm="."><plain>Actin Western blot is shown as loading control. </plain></SENT>
+<SENT sid="454" pm="."><plain>BiP antibody used from Assay Designs (cat# SPA-826).(B) Histograms from 5 independent Western blots pooled from 3 different frogs with n = 15 oocytes per group. </plain></SENT>
+<SENT sid="455" pm="."><plain>Intensity values were normalized with Actin and are represented as the mean ± SEM. ns indicates no statistical significance. </plain></SENT>
+</text></p><p><text><SENT sid="456" pm="."><plain>(0.08 MB TIF) </plain></SENT>
+</text></p></caption><media xlink:href="pone.0011925.s002.tif"><caption><p><text><SENT sid="457" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="pone.0011925.s003"><label>Figure S3</label><caption><p><text><SENT sid="458" pm="."><plain>Levels of PERK and CN-A immunoprecipitated with anti-CN-A from oocyte cell extracts. </plain></SENT>
+<SENT sid="459" pm="."><plain>(A) CN-A immunoprecipitation (IP) followed by PERK Western blot from control oocyte extracts (lane 1) or oocytes treated with 1 uM Tg for 15, 30 or 60 minutes (lanes 2, 3 and 4, respectively), or oocytes treated with DTT for 60 minutes and washed for 0, 20 or 60 minutes (lanes 5, 6 and 7, respectively). </plain></SENT>
+<SENT sid="460" pm="."><plain>Immunoprecipitated proteins were resolved through 7% SDS-PAGE, transferred to nitrocellulose and probed for PERK with an antibody from ABGENT(cat# AP8054b). </plain></SENT>
+<SENT sid="461" pm="."><plain>Note the presence of two dark bands around 150 kD (above and below 150 kD) corresponding possibly to P-PERK and PERK respectively in lanes from ER stress-induced treatment (lanes 2–6). </plain></SENT>
+<SENT sid="462" pm="."><plain>Interestingly, the band corresponding to P-PERK is reduced in control oocyte extracts (lane 1) or in extracts from DTT treated/washed oocytes for 60 minutes (lane 7). </plain></SENT>
+<SENT sid="463" pm="."><plain>(B) Nitrocellulose membrane shown in A was stripped and probed for CN-A with an antibody from Assay Designs (cat# SPA-610). </plain></SENT>
+<SENT sid="464" pm="."><plain>Note the increase in CN immunoreactivity detected in extracts from ER-stress-induced oocytes (lanes 2–6), which is practically undetectable in control oocytes (lane 1) or DTT treated/washed oocytes for 60 minutes (lane 7). </plain></SENT>
+<SENT sid="465" pm="."><plain>The darker band running at around 50 kD corresponds to detection of IgG from the immunoprecipitation. </plain></SENT>
+</text></p><p><text><SENT sid="466" pm="."><plain>(0.27 MB TIF) </plain></SENT>
+</text></p></caption><media xlink:href="pone.0011925.s003.tif"><caption><p><text><SENT sid="467" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="pone.0011925.s004"><label>Figure S4</label><caption><p><text><SENT sid="468" pm="."><plain>Specificity of PERK binding to anti-PERK labeled beads and characterization of anti-PERK antibodies. </plain></SENT>
+<SENT sid="469" pm="."><plain>(A) Commassie blue stained 7% SDS-PAGE gel loaded with Xenopus oocyte extracts that were obtained from a co-imunoprecipitation with an antibody against CN-A from Assay Designs (cat# SPA-610) (lanes 2 and 4) or incubated with protein A/G agarose beads alone (lanes 1 and 3). </plain></SENT>
+<SENT sid="470" pm="."><plain>After Protein A/G agarose pellet was obtained, proteins were resolved through a 7% SDS-PAGE. </plain></SENT>
+<SENT sid="471" pm="."><plain>(B) A fraction of the immunoprecipitated sample was loaded on the gel and transferred to nitrocellulose, probed with PERK antibody (ABGENT cat# AP8054b) and developed by autoradiography. </plain></SENT>
+<SENT sid="472" pm="."><plain>Bands around the molecular weight of PERK (dashed area around 150 kD) were obtained from the immunoprecipitated samples (lanes 2 and 4). </plain></SENT>
+<SENT sid="473" pm="."><plain>These bands are absent in the agarose beads controls (lanes 1 and 3) indicating no specific binding of PERK to the agarose beads. </plain></SENT>
+<SENT sid="474" pm="."><plain>The bottom gel in B shows that protein was loaded in lanes 1 and 3, but did not contain an PERK immunoreactivity. </plain></SENT>
+<SENT sid="475" pm="."><plain>The darker spots in lanes 2 and 4 most likely correspond to the immunoglobulin from the immunoprecipitates. </plain></SENT>
+<SENT sid="476" pm="."><plain>Oo extr 1× and Ooc extr 2× corresponds to extracts from 15 and 30 oocytes, respectively. </plain></SENT>
+<SENT sid="477" pm="."><plain>(C) Western Blot from mouse cultured astrocyte extracts (ATCC catalog # CRL-2541) at rest (Cntrl) or after 60 minutes of ER stress induction by oxygen glucose deprivation (OGD). </plain></SENT>
+<SENT sid="478" pm="."><plain>Protein extracts were run on 7% SDS-PAGE and transferred to nitrocellulose membranes. </plain></SENT>
+<SENT sid="479" pm="."><plain>Membrane on the left panel was probed with a PERK antibody generated in house (anti-PERKUT). </plain></SENT>
+<SENT sid="480" pm="."><plain>Notice the presence of distinct bands around the molecular weight of PERK (dashed area around 150 kD). </plain></SENT>
+<SENT sid="481" pm="."><plain>Right panel corresponds to a similar membrane probed with the anti-PERKUT antibody, in combination with the antigenic peptide used to generate the antibody. </plain></SENT>
+<SENT sid="482" pm="."><plain>Notice the disappearance of bands at the molecular weight of PERK (dashed area around 150 kD) indicating competition of the antigenic peptide for PERK proteins present on the right membrane. </plain></SENT>
+<SENT sid="483" pm="."><plain>The other bands remain unchanged in both membranes on top and bottom panels and are considered non-specific. </plain></SENT>
+<SENT sid="484" pm="."><plain>(D) Western Blot probed with the Pre-immune serum and compared to the anti-PERKUT for primary mouse astrocyte extracts. </plain></SENT>
+<SENT sid="485" pm="."><plain>Proteins were resolved through 7% SDS-PAGE and transferred to nitrocellulose membranes. </plain></SENT>
+<SENT sid="486" pm="."><plain>Membrane probed with rabbit serum before immunization is non-reactive in comparison with middle panel membrane that was probed with anti-PERKUT antibody. </plain></SENT>
+<SENT sid="487" pm="."><plain>Note again that the bands around 150 kD are competed off with the peptide used to immunize the rabbits. </plain></SENT>
+<SENT sid="488" pm="."><plain>(E) Immunoprecipitation from primary mouse astrocytes using different concentrations of the generated anti-PERKUT antibody (lanes 2, 4 and 5) or pre-immune serum (lanes 1 and 3) followed by Western Blot with a commercial antibody from Abgent (cat# AP8054b), anti-PERKCM. </plain></SENT>
+<SENT sid="489" pm="."><plain>Note the top band in the dashed rectangle is darker than the lower band at 150 kD and likely corresponds to P-PERK and PERK, respectively. </plain></SENT>
+<SENT sid="490" pm="."><plain>P-PERK is known to migrate higher than PERK. </plain></SENT>
+<SENT sid="491" pm="."><plain>(F) Western Blot from primary mouse astrocytes using pre immune serum (left panel) or anti-PERKUT antibody (middle panels) or commercial antibody anti-PERKCM (from Cell signaling cat#3179S). </plain></SENT>
+<SENT sid="492" pm="."><plain>Extracts were obtained from cultured astrocytes at rest (lanes 1 and 3, Ctrl) and after 60 minutes OGD were used (lanes 2 and 4). </plain></SENT>
+<SENT sid="493" pm="."><plain>Extracts from astrocytes were also treated with Vehicle (lane 5, Veh) and 300 nM thapsigargin (lane 6, Thap). </plain></SENT>
+<SENT sid="494" pm="."><plain>Note the stress induced increase in PERK-P using the anti-PERKUT, but not the anti-PERKCM antibody. </plain></SENT>
+</text></p><p><text><SENT sid="495" pm="."><plain>(0.42 MB TIF) </plain></SENT>
+</text></p></caption><media xlink:href="pone.0011925.s004.tif"><caption><p><text><SENT sid="496" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="pone.0011925.s005"><label>Figure S5</label><caption><p><text><SENT sid="497" pm="."><plain>Quantification of PERK loading for GST pull-down assay. </plain></SENT>
+<SENT sid="498" pm="."><plain>Molar amounts of protein for GST-pull-down assays were calibrated by loading known volumes of proteins (GST, GST-cPERK and GST-cPERKK/A) side by side on the same gel with known volumes of Albumin (1 µg/µl) as a standard. </plain></SENT>
+<SENT sid="499" pm="."><plain>Proteins were resolved through a 10% SDS-PAGE and stained with Coomassie blue. </plain></SENT>
+<SENT sid="500" pm="."><plain>The concentration of GST, GST-cPERK and GST-cPERK K/A was converted to µmoles using the Albumin standard curve and apparent molecular weight of GST = 25 kD; GST-cPERK = 90 kD and GST-cPERKK/A = 75 kD. </plain></SENT>
+</text></p><p><text><SENT sid="501" pm="."><plain>(0.37 MB TIF) </plain></SENT>
+</text></p></caption><media xlink:href="pone.0011925.s005.tif"><caption><p><text><SENT sid="502" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="pone.0011925.s006"><label>Figure S6</label><caption><p><text><SENT sid="503" pm="."><plain>Coomassie blue stained gel shown as loading control for the kinase assay on Figure 4A. </plain></SENT>
+<SENT sid="504" pm="."><plain>Proteins were resolved through a 12% SDS-PAGE. </plain></SENT>
+<SENT sid="505" pm="."><plain>Notice a distinct band at around 56 kD corresponding to CN-A only in lanes where CN-A/B has been added (lanes 1–6 and 8). </plain></SENT>
+<SENT sid="506" pm="."><plain>Loading of cPERK is almost undetectable by Coomassie staining. </plain></SENT>
+</text></p><p><text><SENT sid="507" pm="."><plain>(0.12 MB TIF) </plain></SENT>
+</text></p></caption><media xlink:href="pone.0011925.s006.tif"><caption><p><text><SENT sid="508" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="pone.0011925.s007"><label>Figure S7</label><caption><p><text><SENT sid="509" pm="."><plain>Phosphatase activity of CN-A. </plain></SENT>
+<SENT sid="510" pm="."><plain>The specific activity of human recombinant CN-A was measured spectrophotometrically (O.D.410 nm) using p-NPP as substrate varying concentrations from 5 to 150 mM. </plain></SENT>
+<SENT sid="511" pm="."><plain>The assay was initiated by addition of p-NPP, incubated at 30°C for 20 min and stopped by addition of 200 µl of 13% K2HPO4 and immediately chilled on ice. </plain></SENT>
+<SENT sid="512" pm="."><plain>Specific activity was based on a pKa of 7.17 obtaining a measured molar extinction coefficient of 17,300 M-1 cm-1 at 410 nm at pH 8.58 for p-NPP. </plain></SENT>
+<SENT sid="513" pm="."><plain>(A) The specific activity of CN-A without ATP (CN w/o ATP), without PERK (CN w/o PERK) compared to phosphorylated CN-A (P-CN) in high (3.2 µM) Ca2+. </plain></SENT>
+<SENT sid="514" pm="."><plain>(B) Specific activity of CN-ATP, CN-PERK and P-CN in low (46 nM) Ca2+. </plain></SENT>
+<SENT sid="515" pm="."><plain>Data are an average of 5 independent experiments. </plain></SENT>
+<SENT sid="516" pm="."><plain>Error bars are within the size of the symbols (see Table S1). </plain></SENT>
+</text></p><p><text><SENT sid="517" pm="."><plain>(0.06 MB TIF) </plain></SENT>
+</text></p></caption><media xlink:href="pone.0011925.s007.tif"><caption><p><text><SENT sid="518" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="pone.0011925.s008"><label>Figure S8</label><caption><p><text><SENT sid="519" pm="."><plain>[35S]-Methionine-Cysteine incorporation in oocytes injected with CN morpholinos and treated with Thapsigargin. </plain></SENT>
+<SENT sid="520" pm="."><plain>(A) Autoradiography of total protein of total protein synthesized in control oocytes or injected with morpholinos as was described Figure 5, that has been untreated or exposed to Tg before a 45 minutes pulse label with [35S]-Methionine-Cysteine. </plain></SENT>
+<SENT sid="521" pm="."><plain>(B) Histogram corresponding to densitometric analysis of total protein. </plain></SENT>
+<SENT sid="522" pm="."><plain>Data are from three independent experiments (n = 3), * p&lt;0.05. </plain></SENT>
+</text></p><p><text><SENT sid="523" pm="."><plain>(0.16 MB TIF) </plain></SENT>
+</text></p></caption><media xlink:href="pone.0011925.s008.tif"><caption><p><text><SENT sid="524" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="pone.0011925.s009"><label>Figure S9</label><caption><p><text><SENT sid="525" pm="."><plain>Temporal progression of apoptotic-like morphology in isolated liver nuclei incubated with oocyte cytosolic extract. </plain></SENT>
+<SENT sid="526" pm="."><plain>The percentage of apoptotic nuclei increases by 2 hours (first panels) and peaks by 4 hours (middle panels) for control extracts. </plain></SENT>
+<SENT sid="527" pm="."><plain>In comparison, no change in the morphology of apoptotic nuclei is observed with buffer alone at 4 hours (right panels). </plain></SENT>
+<SENT sid="528" pm="."><plain>Nuclei are stained with Hoechst dye (100 µg/µl) for visualization. </plain></SENT>
+<SENT sid="529" pm="."><plain>Upper panels are high magnification of lower images for the white-framed regions. </plain></SENT>
+</text></p><p><text><SENT sid="530" pm="."><plain>(0.27 MB TIF) </plain></SENT>
+</text></p></caption><media xlink:href="pone.0011925.s009.tif"><caption><p><text><SENT sid="531" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="pone.0011925.s010"><label>Table S1</label><caption><p><text><SENT sid="532" pm="."><plain>CN-A phosphatase activity. </plain></SENT>
+</text></p><p><text><SENT sid="533" pm="."><plain>(0.03 MB DOC) </plain></SENT>
+</text></p></caption><media xlink:href="pone.0011925.s010.doc"><caption><p><text><SENT sid="534" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media></supplementary-material></sec></SecTag></body><back><SecTag type="ACK_FUND"><ack><p><text4fund><text><SENT sid="535" pm="."><plain>We wish to thank David Ron for the cDNA encoding mouse PERK [PERK(WT)pCDNA] and PERK K/A [PERK(KA)pCDNA] and also to Larry Tjoelker for cDNA enconding rat CLNX (CLNXpRC/CMV). </plain></SENT>
+</text></text4fund></p></ack></SecTag><fn-group><fn fn-type="COI-statement"><p><text><SENT sid="536" pm="."><plain>Competing Interests: The authors have declared that no competing interests exist. </plain></SENT>
+</text></p></fn><SecTag type="ACK_FUND"><fn fn-type="financial-disclosure"><p><text4fund><text><SENT sid="537" pm="."><plain>Funding: This work was funded in part by National Institutes of Health (<ext-link ext-link-type="uri" xlink:href="http://www.nih.gov/">http://www.nih.gov/</ext-link>) R01 GM55372 to Patricia Camacho and NIH PO1 AG19316-06 to Brian Herman. </plain></SENT>
+<SENT sid="538" pm="."><plain>The funders had no role in study design, data collection and analysis, decision to publish, or preparation of the manuscript. </plain></SENT>
+</text></text4fund></p></fn></SecTag></fn-group><SecTag type="REF"><ref-list><title>References</title><ref id="pone.0011925-Trombetta1"><text><SENT sid="539" pm="."><plain>1 TrombettaSEParodiAJ 1992 Purification to apparent homogeneity and partial characterization of rat liver UDP-glucose:glycoprotein glucosyltransferase. J Biol Chem 267 9236 9240 1533626 </plain></SENT>
+</text></ref><ref id="pone.0011925-Lodish1"><text><SENT sid="540" pm="."><plain>2 LodishHFKongNWikstromL 1992 Calcium is required for folding of newly made subunits of the asialoglycoprotein receptor within the endoplasmic reticulum. J Biol Chem 267 12753 12760 1618778 </plain></SENT>
+</text></ref><ref id="pone.0011925-John1"><text><SENT sid="541" pm="."><plain>3 JohnLMLechleiterJDCamachoP 1998 Differential modulation of SERCA2 isoforms by calreticulin. J Cell Biol 142 963 973 9722609 </plain></SENT>
+</text></ref><ref id="pone.0011925-Roderick1"><text><SENT sid="542" pm="."><plain>4 RoderickHLLechleiterJDCamachoP 2000 Cytosolic phosphorylation of calnexin controls intracellular Ca(2+) oscillations via an interaction with SERCA2b. J Cell Biol 149 1235 1248 10851021 </plain></SENT>
+</text></ref><ref id="pone.0011925-Brostrom1"><text><SENT sid="543" pm="."><plain>5 BrostromMABrostromCO 2003 Calcium dynamics and endoplasmic reticular function in the regulation of protein synthesis: implications for cell growth and adaptability. Cell Calcium 34 345 363 12909081 </plain></SENT>
+</text></ref><ref id="pone.0011925-Schroder1"><text><SENT sid="544" pm="."><plain>6 SchroderMKaufmanRJ 2005 ER stress and the unfolded protein response. Mutat Res 569 29 63 15603751 </plain></SENT>
+</text></ref><ref id="pone.0011925-Shi1"><text><SENT sid="545" pm="."><plain>7 ShiYVattemKMSoodRAnJLiangJ 1998 Identification and characterization of pancreatic eukaryotic initiation factor 2 alpha-subunit kinase, PEK, involved in translational control. Mol Cell Biol 18 7499 7509 9819435 </plain></SENT>
+</text></ref><ref id="pone.0011925-Harding1"><text><SENT sid="546" pm="."><plain>8 HardingHPZhangYRonD 1999 Protein translation and folding are coupled by an endoplasmic-reticulum-resident kinase. Nature 397 271 274 9930704 </plain></SENT>
+</text></ref><ref id="pone.0011925-Bertolotti1"><text><SENT sid="547" pm="."><plain>9 BertolottiAZhangYHendershotLMHardingHPRonD 2000 Dynamic interaction of BiP and ER stress transducers in the unfolded-protein response. Nat Cell Biol 2 326 332 10854322 </plain></SENT>
+</text></ref><ref id="pone.0011925-Nakagawa1"><text><SENT sid="548" pm="."><plain>10 NakagawaTZhuHMorishimaNLiEXuJ 2000 Caspase-12 mediates endoplasmic-reticulum-specific apoptosis and cytotoxicity by amyloid-beta. Nature 403 98 103 10638761 </plain></SENT>
+</text></ref><ref id="pone.0011925-Hitomi1"><text><SENT sid="549" pm="."><plain>11 HitomiJKatayamaTEguchiYKudoTTaniguchiM 2004 Involvement of caspase-4 in endoplasmic reticulum stress-induced apoptosis and Abeta-induced cell death. J Cell Biol 165 347 356 15123740 </plain></SENT>
+</text></ref><ref id="pone.0011925-Urano1"><text><SENT sid="550" pm="."><plain>12 UranoFWangXBertolottiAZhangYChungP 2000 Coupling of stress in the ER to activation of JNK protein kinases by transmembrane protein kinase IRE1. Science 287 664 666 10650002 </plain></SENT>
+</text></ref><ref id="pone.0011925-Marciniak1"><text><SENT sid="551" pm="."><plain>13 MarciniakSJYunCYOyadomariSNovoaIZhangY 2004 CHOP induces death by promoting protein synthesis and oxidation in the stressed endoplasmic reticulum. Genes Dev 18 3066 3077 15601821 </plain></SENT>
+</text></ref><ref id="pone.0011925-Lytton1"><text><SENT sid="552" pm="."><plain>14 LyttonJWestlinMBurkSEShullGEMacLennanDH 1992 Functional comparisons between isoforms of the sarcoplasmic or endoplasmic reticulum family of calcium pumps. J Biol Chem 267 14483 14489 1385815 </plain></SENT>
+</text></ref><ref id="pone.0011925-Camacho1"><text><SENT sid="553" pm="."><plain>15 CamachoPLechleiterJD 1993 Increased frequency of calcium waves in Xenopus laevis oocytes that express a calcium-ATPase. Science 260 226 229 8385800 </plain></SENT>
+</text></ref><ref id="pone.0011925-MacLennan1"><text><SENT sid="554" pm="."><plain>16 MacLennanDHRiceWJGreenNM 1997 The mechanism of Ca2+ transport by sarco(endo)plasmic reticulum Ca2+-ATPases. J Biol Chem 272 28815 28818 9360942 </plain></SENT>
+</text></ref><ref id="pone.0011925-Berridge1"><text><SENT sid="555" pm="."><plain>17 BerridgeMJBootmanMDRoderickHL 2003 Calcium signalling: dynamics, homeostasis and remodelling. Nat Rev Mol Cell Biol 4 517 529 12838335 </plain></SENT>
+</text></ref><ref id="pone.0011925-Hofer1"><text><SENT sid="556" pm="."><plain>18 HoferAMCurciSMachenTESchulzI 1996 ATP regulates calcium leak from agonist-sensitive internal calcium stores. Faseb J 10 302 308 8641563 </plain></SENT>
+</text></ref><ref id="pone.0011925-Ehrlich1"><text><SENT sid="557" pm="."><plain>19 EhrlichBE 1995 Functional properties of intracellular calcium-release channels. Curr Opin Neurobiol 5 304 309 7580152 </plain></SENT>
+</text></ref><ref id="pone.0011925-Bergeron1"><text><SENT sid="558" pm="."><plain>20 BergeronJJBrennerMBThomasDYWilliamsDB 1994 Calnexin: a membrane-bound chaperone of the endoplasmic reticulum. Trends Biochem Sci 19 124 128 8203019 </plain></SENT>
+</text></ref><ref id="pone.0011925-Michalak1"><text><SENT sid="559" pm="."><plain>21 MichalakMCorbettEFMesaeliNNakamuraKOpasM 1999 Calreticulin: one protein, one gene, many functions. Biochem J 344 Pt 2 281 292 10567207 </plain></SENT>
+</text></ref><ref id="pone.0011925-Li1"><text><SENT sid="560" pm="."><plain>22 LiYCamachoP 2004 Ca2+-dependent redox modulation of SERCA 2b by ERp57. J Cell Biol 164 35 46 14699087 </plain></SENT>
+</text></ref><ref id="pone.0011925-Wada1"><text><SENT sid="561" pm="."><plain>23 WadaIRindressDCameronPHOuWJDohertyJJ2nd 1991 SSR alpha and associated calnexin are major calcium binding proteins of the endoplasmic reticulum membrane. J Biol Chem 266 19599 19610 1918067 </plain></SENT>
+</text></ref><ref id="pone.0011925-Wong1"><text><SENT sid="562" pm="."><plain>24 WongHNWardMABellAWChevetEBainsS 1998 Conserved in vivo phosphorylation of calnexin at casein kinase II sites as well as a protein kinase C/proline-directed kinase site. J Biol Chem 273 17227 17235 9642293 </plain></SENT>
+</text></ref><ref id="pone.0011925-Chevet1"><text><SENT sid="563" pm="."><plain>25 ChevetEWongHNGerberDCochetCFazelA 1999 Phosphorylation by CK2 and MAPK enhances calnexin association with ribosomes. Embo J 18 3655 3666 10393181 </plain></SENT>
+</text></ref><ref id="pone.0011925-Klee1"><text><SENT sid="564" pm="."><plain>26 KleeCBCrouchTHKrinksMH 1979 Calcineurin: a calcium- and calmodulin-binding protein of the nervous system. Proc Natl Acad Sci U S A 76 6270 6273 293720 </plain></SENT>
+</text></ref><ref id="pone.0011925-Sagoo1"><text><SENT sid="565" pm="."><plain>27 SagooJKFrumanDAWesselborgSWalshCTBiererBE 1996 Competitive inhibition of calcineurin phosphatase activity by its autoinhibitory domain. Biochem J 320 (Pt 3) 879 884 9003375 </plain></SENT>
+</text></ref><ref id="pone.0011925-Perrino1"><text><SENT sid="566" pm="."><plain>28 PerrinoBANgLYSoderlingTR 1995 Calcium regulation of calcineurin phosphatase activity by its B subunit and calmodulin. </plain></SENT>
+<SENT sid="567" pm="."><plain>Role of the autoinhibitory domain. J Biol Chem 270 7012 7896854 </plain></SENT>
+</text></ref><ref id="pone.0011925-Thastrup1"><text><SENT sid="568" pm="."><plain>29 ThastrupOCullenPJDrobakBKHanleyMRDawsonAP 1990 Thapsigargin, a tumor promoter, discharges intracellular Ca2+ stores by specific inhibition of the endoplasmic reticulum Ca2(+)-ATPase. Proc Natl Acad Sci U S A 87 2466 2470 2138778 </plain></SENT>
+</text></ref><ref id="pone.0011925-Prostko1"><text><SENT sid="569" pm="."><plain>30 ProstkoCRBrostromMAMalaraEMBrostromCO 1992 Phosphorylation of eukaryotic initiation factor (eIF) 2 alpha and inhibition of eIF-2B in GH3 pituitary cells by perturbants of early protein processing that induce GRP78. J Biol Chem 267 16751 16754 1512215 </plain></SENT>
+</text></ref><ref id="pone.0011925-Hurtley1"><text><SENT sid="570" pm="."><plain>31 HurtleySMBoleDGHoover-LittyHHeleniusACopelandCS 1989 Interactions of misfolded influenza virus hemagglutinin with binding protein (BiP). J Cell Biol 108 2117 2126 2738090 </plain></SENT>
+</text></ref><ref id="pone.0011925-Harding2"><text><SENT sid="571" pm="."><plain>32 HardingHPZhangYBertolottiAZengHRonD 2000 Perk is essential for translational regulation and cell survival during the unfolded protein response. Mol Cell 5 897 904 10882126 </plain></SENT>
+</text></ref><ref id="pone.0011925-Ma1"><text><SENT sid="572" pm="."><plain>33 MaYLuYZengHRonDMoW 2001 Characterization of phosphopeptides from protein digests using matrix-assisted laser desorption/ionization time-of-flight mass spectrometry and nanoelectrospray quadrupole time-of-flight mass spectrometry. Rapid Commun Mass Spectrom 15 1693 1700 11555868 </plain></SENT>
+</text></ref><ref id="pone.0011925-Dumont1"><text><SENT sid="573" pm="."><plain>34 DumontJUmbhauerMRassinierPHanauerAVerlhacMH 2005 p90Rsk is not involved in cytostatic factor arrest in mouse oocytes. J Cell Biol 169 227 231 15837801 </plain></SENT>
+</text></ref><ref id="pone.0011925-Park1"><text><SENT sid="574" pm="."><plain>35 ParkEKWarnerNMoodKPawsonTDaarIO 2002 Low-molecular-weight protein tyrosine phosphatase is a positive component of the fibroblast growth factor receptor signaling pathway. Mol Cell Biol 22 3404 3414 11971972 </plain></SENT>
+</text></ref><ref id="pone.0011925-vonAhsen1"><text><SENT sid="575" pm="."><plain>36 von AhsenONewmeyerDD 2000 Cell-free apoptosis in Xenopus laevis egg extracts. Methods Enzymol 322 183 198 10914015 </plain></SENT>
+</text></ref><ref id="pone.0011925-Saelim1"><text><SENT sid="576" pm="."><plain>37 SaelimNHolsteinDChocronESCamachoPLechleiterJD 2007 Inhibition of apoptotic potency by ligand stimulated thyroid hormone receptors located in mitochondria. Apoptosis 12 1781 1794 17701361 </plain></SENT>
+</text></ref><ref id="pone.0011925-Coe1"><text><SENT sid="577" pm="."><plain>38 CoeHBedardKGroenendykJJungJMichalakM 2008 Endoplasmic reticulum stress in the absence of calnexin. Cell Stress Chaperones 13 497 507 18528784 </plain></SENT>
+</text></ref><ref id="pone.0011925-Rutkowski1"><text><SENT sid="578" pm="."><plain>39 RutkowskiDTKaufmanRJ 2007 That which does not kill me makes me stronger: adapting to chronic ER stress. Trends Biochem Sci 32 469 476 17920280 </plain></SENT>
+</text></ref><ref id="pone.0011925-Carlberg1"><text><SENT sid="579" pm="."><plain>40 CarlbergMDricuABlegenHKassGEOrreniusS 1996 Short exposures to tunicamycin induce apoptosis in SV40-transformed but not in normal human fibroblasts. Carcinogenesis 17 2589 2596 9006093 </plain></SENT>
+</text></ref><ref id="pone.0011925-Hayashi1"><text><SENT sid="580" pm="."><plain>41 HayashiTSuTP 2007 Sigma-1 receptor chaperones at the ER-mitochondrion interface regulate Ca(2+) signaling and cell survival. Cell 131 596 610 17981125 </plain></SENT>
+</text></ref><ref id="pone.0011925-Welihinda1"><text><SENT sid="581" pm="."><plain>42 WelihindaAAKaufmanRJ 1996 The unfolded protein response pathway in Saccharomyces cerevisiae. </plain></SENT>
+<SENT sid="582" pm="."><plain>Oligomerization and trans-phosphorylation of Ire1p (Ern1p) are required for kinase activation. J Biol Chem 271 18181 18187 8663458 </plain></SENT>
+</text></ref><ref id="pone.0011925-Marciniak2"><text><SENT sid="583" pm="."><plain>43 MarciniakSJGarcia-BonillaLHuJHardingHPRonD 2006 Activation-dependent substrate recruitment by the eukaryotic translation initiation factor 2 kinase PERK. J Cell Biol 172 201 209 16418533 </plain></SENT>
+</text></ref><ref id="pone.0011925-Ma2"><text><SENT sid="584" pm="."><plain>44 MaTSMannDLLeeJHGallinghouseGJ 1999 SR compartment calcium and cell apoptosis in SERCA overexpression. Cell Calcium 26 25 36 10892568 </plain></SENT>
+</text></ref><ref id="pone.0011925-Hetz1"><text><SENT sid="585" pm="."><plain>45 HetzCBernasconiPFisherJLeeAHBassikMC 2006 Proapoptotic BAX and BAK modulate the unfolded protein response by a direct interaction with IRE1alpha. Science 312 572 576 16645094 </plain></SENT>
+</text></ref><ref id="pone.0011925-Calfon1"><text><SENT sid="586" pm="."><plain>46 CalfonMZengHUranoFTillJHHubbardSR 2002 IRE1 couples endoplasmic reticulum load to secretory capacity by processing the XBP-1 mRNA. Nature 415 92 96 11780124 </plain></SENT>
+</text></ref><ref id="pone.0011925-Hashimoto1"><text><SENT sid="587" pm="."><plain>47 HashimotoYSoderlingTR 1989 Regulation of calcineurin by phosphorylation. Identification of the regulatory site phosphorylated by Ca2+/calmodulin-dependent protein kinase II and protein kinase C. </plain></SENT>
+<SENT sid="588" pm="."><plain>J Biol Chem 264 16524 16529 2550447 </plain></SENT>
+</text></ref><ref id="pone.0011925-Hashimoto2"><text><SENT sid="589" pm="."><plain>48 HashimotoYKingMMSoderlingTR 1988 Regulatory interactions of calmodulin-binding proteins: phosphorylation of calcineurin by autophosphorylated Ca2+/calmodulin-dependent protein kinase II. Proc Natl Acad Sci U S A 85 7001 7005 2842800 </plain></SENT>
+</text></ref><ref id="pone.0011925-FoyouziYoussefi1"><text><SENT sid="590" pm="."><plain>49 Foyouzi-YoussefiRArnaudeauSBornerCKelleyWLTschoppJ 2000 Bcl-2 decreases the free Ca2+ concentration within the endoplasmic reticulum. Proc Natl Acad Sci U S A 97 5723 5728 10823933 </plain></SENT>
+</text></ref><ref id="pone.0011925-Pinton1"><text><SENT sid="591" pm="."><plain>50 PintonPFerrariDMagalhaesPSchulze-OsthoffKDi VirgilioF 2000 Reduced loading of intracellular Ca(2+) stores and downregulation of capacitative Ca(2+) influx in Bcl-2-overexpressing cells. J Cell Biol 148 857 862 10704437 </plain></SENT>
+</text></ref><ref id="pone.0011925-Kitamura1"><text><SENT sid="592" pm="."><plain>51 KitamuraM 2010 Induction of the unfolded protein response by calcineurin inhibitors: a double-edged sword in renal transplantation. Nephrol Dial Transplant 25 6 9 19797334 </plain></SENT>
+</text></ref><ref id="pone.0011925-Schroder2"><text><SENT sid="593" pm="."><plain>52 SchroderMChangJSKaufmanRJ 2000 The unfolded protein response represses nitrogen-starvation induced developmental differentiation in yeast. Genes Dev 14 2962 2975 11114886 </plain></SENT>
+</text></ref><ref id="pone.0011925-Forman1"><text><SENT sid="594" pm="."><plain>53 FormanMSLeeVMTrojanowskiJQ 2003 ‘Unfolding’ pathways in neurodegenerative disease. Trends Neurosci 26 407 410 12900170 </plain></SENT>
+</text></ref><ref id="pone.0011925-Koritzinsky1"><text><SENT sid="595" pm="."><plain>54 KoritzinskyMMagagninMGvan den BeuckenTSeigneuricRSavelkoulsK 2006 Gene expression during acute and prolonged hypoxia is regulated by distinct mechanisms of translational control. Embo J 25 1114 1125 16467844 </plain></SENT>
+</text></ref><ref id="pone.0011925-He1"><text><SENT sid="596" pm="."><plain>55 HeB 2006 Viruses, endoplasmic reticulum stress, and interferon responses. Cell Death Differ 13 393 403 16397582 </plain></SENT>
+</text></ref><ref id="pone.0011925-Kumar1"><text><SENT sid="597" pm="."><plain>56 KumarRAzamSSullivanJMOwenCCavenerDR 2001 Brain ischemia and reperfusion activates the eukaryotic initiation factor 2alpha kinase, PERK. J Neurochem 77 1418 1421 11389192 </plain></SENT>
+</text></ref><ref id="pone.0011925-Camacho2"><text><SENT sid="598" pm="."><plain>57 CamachoPLechleiterJD 1995 Calreticulin inhibits repetitive intracellular Ca2+ waves. Cell 82 765 771 7671304 </plain></SENT>
+</text></ref><ref id="pone.0011925-Grynkiewicz1"><text><SENT sid="599" pm="."><plain>58 GrynkiewiczGPoenieMTsienRY 1985 A new generation of Ca2+ indicators with greatly improved fluorescence properties. J Biol Chem 260 3440 3450 3838314 </plain></SENT>
+</text></ref><ref id="pone.0011925-Fabiato1"><text><SENT sid="600" pm="."><plain>59 FabiatoAFabiatoF 1979 Calculator programs for computing the composition of the solutions containing multiple metals and ligands used for experiments in skinned muscle cells. J Physiol (Paris) 75 463 505 533865 </plain></SENT>
+</text></ref></ref-list></SecTag></back></article>

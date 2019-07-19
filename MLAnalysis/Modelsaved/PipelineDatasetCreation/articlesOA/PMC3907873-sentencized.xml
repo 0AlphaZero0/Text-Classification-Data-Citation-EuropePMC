@@ -1,0 +1,329 @@
+
+<article xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML" article-type="review-article"><?properties open_access?><?DTDIdentifier.IdentifierValue -//NLM//DTD Journal Publishing DTD v2.3 20070202//EN?><?DTDIdentifier.IdentifierType public?><?SourceDTD.DTDName journalpublishing.dtd?><?SourceDTD.Version 2.3?><?ConverterInfo.XSLTName jp2nlmx2.xsl?><?ConverterInfo.Version 2?><front><journal-meta><journal-id journal-id-type="nlm-ta">Int J Mol Sci</journal-id><journal-id journal-id-type="iso-abbrev">Int J Mol Sci</journal-id><journal-id journal-id-type="publisher-id">ijms</journal-id><journal-title-group><journal-title>International Journal of Molecular Sciences</journal-title></journal-title-group><issn pub-type="epub">1422-0067</issn><publisher><publisher-name>Molecular Diversity Preservation International (MDPI)</publisher-name></publisher></journal-meta><article-meta><article-id pub-id-type="pmcid">3907873</article-id><article-id pub-id-type="pmid">24447926</article-id><article-id pub-id-type="doi">10.3390/ijms15011358</article-id><article-id pub-id-type="publisher-id">ijms-15-01358</article-id><article-categories><subj-group subj-group-type="heading"><subject>Review</subject></subj-group></article-categories><title-group><article-title><SecTag type="TITLE"><text><SENT sid="0" pm="."><plain>In Silico Discovery of Aminoacyl-tRNA Synthetase Inhibitors </plain></SENT>
+</text></SecTag></article-title></title-group><contrib-group><contrib contrib-type="author"><name><surname>Zhao</surname><given-names>Yaxue</given-names></name><xref ref-type="aff" rid="af1-ijms-15-01358">1</xref><xref ref-type="aff" rid="af2-ijms-15-01358">2</xref></contrib><contrib contrib-type="author"><name><surname>Meng</surname><given-names>Qingqing</given-names></name><xref ref-type="aff" rid="af1-ijms-15-01358">1</xref></contrib><contrib contrib-type="author"><name><surname>Bai</surname><given-names>Linquan</given-names></name><xref ref-type="aff" rid="af2-ijms-15-01358">2</xref></contrib><contrib contrib-type="author"><name><surname>Zhou</surname><given-names>Huchen</given-names></name><xref ref-type="aff" rid="af1-ijms-15-01358">1</xref><xref ref-type="aff" rid="af2-ijms-15-01358">2</xref><xref rid="c1-ijms-15-01358" ref-type="corresp">*</xref></contrib></contrib-group><aff id="af1-ijms-15-01358"><label>1</label>School of Pharmacy, Shanghai Jiao Tong University, 800 Dongchuan Road, Shanghai 200240, China; E-Mails: <email>yaxuezhao@sjtu.edu.cn</email> (Y.Z.); <email>qqmeng@sjtu.edu.cn</email> (Q.M.)</aff><aff id="af2-ijms-15-01358"><label>2</label>State Key Laboratory of Microbial Metabolism, Shanghai Jiao Tong University, 800 Dongchuan Road, Shanghai 200240, China; E-Mail: <email>bailq@sjtu.edu.cn</email></aff><author-notes><corresp id="c1-ijms-15-01358"><label>*</label>Author to whom correspondence should be addressed; E-Mail: <email>hczhou@sjtu.edu.cn</email>; Tel.: +86-21-3420-6721; Fax: +86-21-3420-4457.</corresp></author-notes><pub-date pub-type="collection"><month>1</month><year>2014</year></pub-date><pub-date pub-type="epub"><day>20</day><month>1</month><year>2014</year></pub-date><volume>15</volume><issue>1</issue><fpage>1358</fpage><lpage>1373</lpage><history><date date-type="received"><day>10</day><month>12</month><year>2013</year></date><date date-type="rev-recd"><day>02</day><month>1</month><year>2014</year></date><date date-type="accepted"><day>07</day><month>1</month><year>2014</year></date></history><permissions><copyright-statement>© 2014 by the authors; licensee MDPI, Basel, Switzerland</copyright-statement><copyright-year>2014</copyright-year><license license-type="open-access" xlink:href="http://creativecommons.org/licenses/by/3.0/"><license-p>This article is an open access article distributed under the terms and conditions of the Creative Commons Attribution license (<ext-link ext-link-type="uri" xlink:href="http://creativecommons.org/licenses/by/3.0/">http://creativecommons.org/licenses/by/3.0/</ext-link>).</license-p></license></permissions><abstract><p><SecTag type="ABS"><text><SENT sid="1" pm="."><plain>Aminoacyl-tRNA synthetases (aaRSs) are enzymes that catalyze the transfer of amino acids to their cognate tRNA. </plain></SENT>
+<SENT sid="2" pm="."><plain>They play a pivotal role in protein synthesis and are essential for cell growth and survival. </plain></SENT>
+<SENT sid="3" pm="."><plain>The aaRSs are one of the leading targets for development of antibiotic agents. </plain></SENT>
+<SENT sid="4" pm="."><plain>In this review, we mainly focused on aaRS inhibitor discovery and development using in silico methods including virtual screening and structure-based drug design. </plain></SENT>
+<SENT sid="5" pm="."><plain>These computational methods are relatively fast and cheap, and are proving to be of great benefit for the rational development of more potent aaRS inhibitors and other pharmaceutical agents that may usher in a much needed generation of new antibiotics. </plain></SENT>
+</text></SecTag></p></abstract><SecTag type="KEYWORD"><kwd-group><kwd>aminoacyl-tRNA synthetase</kwd><kwd>inhibitor</kwd><kwd>antibiotics</kwd><kwd>virtual screening</kwd><kwd>structure-based drug design</kwd><kwd>docking</kwd></kwd-group></SecTag></article-meta></front><body><SecTag type="INTRO"><sec><label>1.</label><title><text><SENT sid="6" pm="."><plain>Introduction </plain></SENT>
+</text></title><p><text><SENT sid="7" pm="."><plain>Aminoacyl-tRNA synthetases (aaRSs) play a central role in the process of protein synthesis. </plain></SENT>
+<SENT sid="8" pm="."><plain>They are responsible for catalyzing the attachment of the correct amino acid to its cognate tRNA through an esterification reaction at the 3′ end of tRNA. </plain></SENT>
+<SENT sid="9" pm="."><plain>This highly specific aminoacylation reaction involves two steps: </plain></SENT>
+</text></p><disp-formula id="fd1-ijms-15-01358"><label>(1)</label><mml:math id="m1"><mml:mrow><mml:mtext>aa</mml:mtext><mml:mo>+</mml:mo><mml:mtext>ATP</mml:mtext><mml:mo>+</mml:mo><mml:mtext>aaRS</mml:mtext><mml:mo>⇌</mml:mo><mml:mtext>aaRS</mml:mtext><mml:mo>·</mml:mo><mml:mtext>aa</mml:mtext><mml:mo>-</mml:mo><mml:mtext>AMP</mml:mtext><mml:mo>+</mml:mo><mml:mtext>PPi</mml:mtext></mml:mrow></mml:math></disp-formula><disp-formula id="fd2-ijms-15-01358"><label>(2)</label><mml:math id="m2"><mml:mrow><mml:mtext>aaRS</mml:mtext><mml:mo>·</mml:mo><mml:mtext>aa</mml:mtext><mml:mo>-</mml:mo><mml:mtext>AMP</mml:mtext><mml:mo>+</mml:mo><mml:mtext>tRNA</mml:mtext><mml:mo>⇌</mml:mo><mml:mtext>aaRS</mml:mtext><mml:mo>+</mml:mo><mml:mrow><mml:mtext>aa</mml:mtext><mml:mo>-</mml:mo><mml:mtext>tRNA</mml:mtext></mml:mrow><mml:mo>+</mml:mo><mml:mtext>AMP</mml:mtext></mml:mrow></mml:math></disp-formula><p><text><SENT sid="10" pm="."><plain>where aa is an amino acid. </plain></SENT>
+<SENT sid="11" pm="."><plain>The first step is formation of an aminoacyl-adenylate (aa-AMP) activated intermediate from an amino acid and ATP. </plain></SENT>
+<SENT sid="12" pm="."><plain>During this step, ATP and the amino acid first bind the aaRS active site, and are positioned appropriately to facilitate the α-carboxylate of the amino acid to attack the α-phosphate of ATP via in-line nucleophilic displacement. </plain></SENT>
+<SENT sid="13" pm="."><plain>In the second step, the activated amino acid is transferred from aa-AMP to the tRNA to form the aminoacyl-tRNA (aa-tRNA) via nucleophilic attack by the 2′- or 3′-hydroxyl of the 3′-terminal adenosine of the tRNA on the α-carbonyl of the aa-AMP [1]. </plain></SENT>
+</text></p><p><text><SENT sid="14" pm="."><plain>The aaRSs are divided into two unrelated classes (class I and class II, as shown in Table 1) based on mutually exclusive sets of sequence motifs that reflect distinct active site topologies [2]. </plain></SENT>
+<SENT sid="15" pm="."><plain>The class I synthetase active site adopts a Rossmann-fold domain and binds ATP in an extended conformation. </plain></SENT>
+<SENT sid="16" pm="."><plain>In contrast, class II synthetase active sites are housed on an antiparallel β-fold domain, and bind ATP in a bent conformation [3]. </plain></SENT>
+<SENT sid="17" pm="."><plain>Synthetase enzymes can be arranged into three subclasses within each class, and subclasses group enzymes that are more closely related to each other than to other enzymes in the same class [4]. </plain></SENT>
+<SENT sid="18" pm="."><plain>Subclasses Ic and IIc contain the synthetases for aromatic amino acids, subclasses Ib and IIb comprise the synthetases for amino acids with carboxylate side chains and their amidated derivatives, and subclasses Ia and IIa include synthetases for hydrophobic amino acids. </plain></SENT>
+</text></p><p><text><SENT sid="19" pm="."><plain>Accurate protein synthesis and hence, cell survival, requires aaRSs to discriminate between chemically similar, non-cognate amino acids by a factor of at least 104. </plain></SENT>
+<SENT sid="20" pm="."><plain>This is difficult to achieve in one step, especially for aliphatic and hydrophobic amino acids that lack distinguishable molecular features. </plain></SENT>
+<SENT sid="21" pm="."><plain>For example, the weakness of the additional van der Waals interactions of isoleucine compared with valine in the active site of IleRS was predicted to yield an error rate of up to one in five [5]. </plain></SENT>
+<SENT sid="22" pm="."><plain>To overcome this problem, some aaRSs have a specific editing activity that hydrolyzes misactivated aa-AMPs (pre-transfer editing) and mischarged aa-tRNAs (post-transfer editing). </plain></SENT>
+<SENT sid="23" pm="."><plain>This is known as the double sieve mechanism. </plain></SENT>
+<SENT sid="24" pm="."><plain>The first sieve occurs during classical aminoacylation at the aaRS synthetic active site which binds cognate amino acids but cannot adequately distinguish between amino acids with highly similar (isosteric) or slightly smaller structures. </plain></SENT>
+<SENT sid="25" pm="."><plain>The second sieve occurs at an editing active site which hydrolyzes non-cognate amino acids that are misactivated or mischarged. </plain></SENT>
+<SENT sid="26" pm="."><plain>Synthetases with this additional editing site include IleRS, LeuRS, and ValRS from class I, and ThrRS, AlaRS, PheRS and ProRS from class II enzymes [6–8]. </plain></SENT>
+</text></p><p><text><SENT sid="27" pm="."><plain>The aaRSs have become key targets for antibiotics. </plain></SENT>
+<SENT sid="28" pm="."><plain>Inhibition of aaRSs depletes charged tRNAs, inhibits protein synthesis and leads to arrest of cell growth and ultimately cell death [9]. </plain></SENT>
+<SENT sid="29" pm="."><plain>Inhibitors of aaRSs are being developed as antibacterials, antifungals and anti-parasitic drugs [10–13], and they also possess potent immunosuppressive activity [14]. </plain></SENT>
+<SENT sid="30" pm="."><plain>Both synthetic and editing active sites are targets for inhibition. </plain></SENT>
+<SENT sid="31" pm="."><plain>Mupirocin and AN2690 (Figure 1) are excellent examples of inhibitors that bind to the synthetic and editing active sites, respectively. </plain></SENT>
+</text></p><p><text><SENT sid="32" pm="."><plain>Mupirocin (Bactroban, GSK, London, England), a natural product of Pseudomonas fluorescens, is the only aaRS inhibitor approved by the US Food and Drug Administration to this date [15]. </plain></SENT>
+<SENT sid="33" pm="."><plain>It is a mixture of several pseudomonic acids, with pseudomonic acid A (PA-A) constituting greater than 90%. </plain></SENT>
+<SENT sid="34" pm="."><plain>Mupirocin is primarily active against gram-positive pathogens, such as Staphylococcus aureus and Streptococcus pyogenes, and is used as a topical treatment for bacterial skin infections [16]. </plain></SENT>
+<SENT sid="35" pm="."><plain>Mupirocin is targeted against IleRS. </plain></SENT>
+<SENT sid="36" pm="."><plain>Crystal structures of IleRS bound with mupirocin and Ile-AMP show that mupirocin binding in the IleRS synthetic site is highly similar to Ile-AMP binding [16–18]. </plain></SENT>
+<SENT sid="37" pm="."><plain>Therefore, mupirocin is a competitive inhibitor functioning by displacing endogenous Ile and ATP. </plain></SENT>
+</text></p><p><text><SENT sid="38" pm="."><plain>AN2690 (Tavaborole, Anacor, Palo Alto, CA, USA) is currently in Phase 3 clinical trials for treating onychomycosis. </plain></SENT>
+<SENT sid="39" pm="."><plain>It is a fluorinated benzoxaborole that targets LeuRS [19]. </plain></SENT>
+<SENT sid="40" pm="."><plain>The boron atom in the oxaborole ring of AN2690 binds to both the 2′- and the 3′-hydroxyl groups on the 3′-terminal adenosine. </plain></SENT>
+<SENT sid="41" pm="."><plain>AN2690 occupies the non-cognate amino acid binding pocket in the editing domain of LeuRS. </plain></SENT>
+<SENT sid="42" pm="."><plain>Therefore, by trapping tRNALeu in the editing active site, such inhibitors prevent LeuRS catalytic turnover, inhibiting synthesis of leucyl-tRNALeu and consequently blocking protein synthesis. </plain></SENT>
+</text></p><p><text><SENT sid="43" pm="."><plain>Traditional approaches for inhibitor discovery that have proved successful include serendipity, screening natural products and known active substances to identify the active components, drug metabolites, and observing side effects of existing medicines to identify potential involvement in other pathways. </plain></SENT>
+<SENT sid="44" pm="."><plain>In the early 1990s, combinatorial chemistry was used to synthesize huge libraries of compounds and high-throughput screening of these libraries proved particularly successful [20]. </plain></SENT>
+<SENT sid="45" pm="."><plain>However since 2000, computational methods such as virtual screening and structure-based drug design have become more popular in pharmaceutical research. In silico methods save time and money in the drug discovery process [20]. </plain></SENT>
+<SENT sid="46" pm="."><plain>Virtual screening has been widely applied in the discovery of lead compounds [21–23]. </plain></SENT>
+<SENT sid="47" pm="."><plain>It can be divided into docking-based and pharmacophore-based procedures. </plain></SENT>
+<SENT sid="48" pm="."><plain>A classical docking-based virtual screening approach begins with the three dimensional (3D) structure of the target protein from the Protein Data Bank (PDB) [24] or from homology modeling. </plain></SENT>
+<SENT sid="49" pm="."><plain>Small molecule structures from commercial databases are then docked into the binding pocket of the target protein. </plain></SENT>
+<SENT sid="50" pm="."><plain>Scoring functions are then used to evaluate and rank the binding mode of each small molecule in the target protein binding site. </plain></SENT>
+<SENT sid="51" pm="."><plain>Finally, high scoring molecules are tested for activity in inhibition or binding assays. </plain></SENT>
+<SENT sid="52" pm="."><plain>Currently available docking software packages for virtual screening studies are represented by Glide [25,26], Gold [27], Dock [28], and AutoDock Vina [29]. </plain></SENT>
+</text></p><p><text><SENT sid="53" pm="."><plain>Pharmacophore features are generally represented by points in 3D space. </plain></SENT>
+<SENT sid="54" pm="."><plain>A pharmacophore feature could be comprised of functional groups such as hydrogen bond donors, hydrogen bond acceptors, cations, anions, aromatics and hydrophobic sites [30]. </plain></SENT>
+<SENT sid="55" pm="."><plain>Pharmacophore features can be generated by identifying common chemical features from a set of bioactive compounds, or by observing important shared interactions in protein-ligand complex structures. </plain></SENT>
+<SENT sid="56" pm="."><plain>There are several available programs for automatic generation of pharmacophore models including Catalyst [31], Phase [32] and LigandScout [33]. </plain></SENT>
+<SENT sid="57" pm="."><plain>The generated pharmacophore can be used to screen small molecule databases to identify appropriate compounds. </plain></SENT>
+</text></p><p><text><SENT sid="58" pm="."><plain>Structure-based or rational drug design is now widely applied in most stages of the drug development process, from initial hit identification to lead optimization [34,35]. </plain></SENT>
+<SENT sid="59" pm="."><plain>Several important drugs have been developed using this method, including human immunodeficiency virus-1 protease [36] and neuraminidase [37–39] inhibitors. </plain></SENT>
+<SENT sid="60" pm="."><plain>Central to all structure-based discovery approaches is experimental determination of the 3D structure of the target protein or protein-ligand complex, or construction of a suitably accurate homology model. </plain></SENT>
+</text></p></sec></SecTag><sec><label>2.</label><title><text><SENT sid="61" pm="."><plain>Inhibitor Identification Using Virtual Screening </plain></SENT>
+</text></title><sec><label>2.1.</label><title><text><SENT sid="62" pm="."><plain>Leucyl-tRNA Synthetase Inhibitors </plain></SENT>
+</text></title><p><text><SENT sid="63" pm="."><plain>To discover inhibitors of Trypanosoma brucei LeuRS in order to develop drugs against human African trypanosomiasis, Zhao et al. (2012) constructed a homology model of the synthetic active site based on the crystal structure of Pyrococcus horikoshii LeuRS (1WKB [40]) using the in silico mutation method [41]. </plain></SENT>
+<SENT sid="64" pm="."><plain>By analyzing the interactions of the substrate analog Leu-AMS and T. brucei LeuRS, pharmacophores I and II were generated and used to screen the SPECS database [42] using Catalyst (Figure 2). </plain></SENT>
+<SENT sid="65" pm="."><plain>Hits that matched the pharmacophores well were docked using Glide, and the 2-pyrrolinone compound 3 was identified, and found to be active in vitro, with an IC50 of 170.3 μM (Figure 2). </plain></SENT>
+<SENT sid="66" pm="."><plain>Guided by the docking of compound 4 and the T. brucei LeuRS structure, various substituents at R1, R2, and R3 were designed and synthesized. </plain></SENT>
+<SENT sid="67" pm="."><plain>Structure-activity relationship studies generally corroborated the docking model, which showed that the R2 phenyl group explored a new hydrophobic pocket, and the R3 indolyl group was essential for the favorable interaction with the leucine recognition pocket. </plain></SENT>
+<SENT sid="68" pm="."><plain>Finally, compound 5 was identified as the most potent inhibitor (IC50 = 31.9 μM). </plain></SENT>
+</text></p></sec><sec><label>2.2.</label><title><text><SENT sid="69" pm="."><plain>Tryptophanyl-tRNA Synthetase Inhibitors </plain></SENT>
+</text></title><p><text><SENT sid="70" pm="."><plain>Wu et al. (2007) applied a virtual screening approach to find new lead compounds to target Staphylococcus epidermidis TrpRS [43]. Figure 3 shows their inhibitor identification scheme. </plain></SENT>
+<SENT sid="71" pm="."><plain>They first constructed a homology model of S. epidermidis TrpRS based on the crystal structures of Bacillus stearothermophilus TrpRS (1MAW, 1M83, 1MAU, 1MB2 [44]) using MODELLER (Accelrys, Inc. </plain></SENT>
+<SENT sid="72" pm="."><plain>San Diego, CA, USA). </plain></SENT>
+<SENT sid="73" pm="."><plain>Three compounds were identified as TrpRS inhibitors that arrested S. epidermidis growth from the SPECS database combining virtual screening, in vitro and in vivo experiments. </plain></SENT>
+<SENT sid="74" pm="."><plain>The IC50 values of these compounds were 22.8, 42.2 and 18.3 μM as shown using the Kinase-Glo Luminescent Kinase assay, and these results were consistent with the results of the Pyrophosphate Reagent assay. </plain></SENT>
+<SENT sid="75" pm="."><plain>All three compounds inhibited the growth of both S. epidermidis ATCC 12228 and ATCC 35984 strains with micromolar minimal inhibitory concentrations (MICs) (Table 2), and also exhibited low cytotoxicity with CC50 &gt; 200 μM. </plain></SENT>
+</text></p></sec><sec><label>2.3.</label><title><text><SENT sid="76" pm="."><plain>Asparaginyl-tRNA Synthetase Inhibitors </plain></SENT>
+</text></title><p><text><SENT sid="77" pm="."><plain>Sukuru and co-workers (2006) successfully identified seven diverse compounds that can inhibit the activity of AsnRS with micromolar affinity [45]. </plain></SENT>
+<SENT sid="78" pm="."><plain>A template was generated using SLIDE to represent the active site of B. malayi AsnRS and its interactions with Asn-AMS based on X-ray crystal structure (2XGT [46]) (Figure 4). </plain></SENT>
+<SENT sid="79" pm="."><plain>After screening the Cambridge Structural Database [47] and National Cancer Institute Plated Compounds Database [48] using SLIDE, they selected forty-five compounds for activity assays. </plain></SENT>
+<SENT sid="80" pm="."><plain>NSC363624 is the most potent inhibitor (IC50 = 25 μM, Figure 4) which has a symmetric structure with two substituted triazine rings connected by a phenyl group. </plain></SENT>
+</text></p></sec><sec><label>2.4.</label><title><text><SENT sid="81" pm="."><plain>Methionyl-tRNA Synthetase Inhibitors </plain></SENT>
+</text></title><p><text><SENT sid="82" pm="."><plain>Kim et al. (2006) performed a 2D-database search to discover new MetRS inhibitors [49]. </plain></SENT>
+<SENT sid="83" pm="."><plain>Initially, they constructed a pharmacophore query based on methionyl adenylate (Figure 5) in which R1 has hydrogen bonding characteristics similar to those of a carboxylic acid, amide, and sulfonamide, that may act as the amine or ring nitrogen of the adenine group. </plain></SENT>
+<SENT sid="84" pm="."><plain>R2 is an optionally substituted aryl or heteroaryl ring designed to mimic the lipophilic methionine side chain, and X1 and X2 are linkers. </plain></SENT>
+<SENT sid="85" pm="."><plain>When the query structure was used to search a chemical database consisting of 508,143 commercially available compounds, four novel micromolar inhibitors of Escherichia coli MetRS were identified (Figure 5). </plain></SENT>
+</text></p><p><text><SENT sid="86" pm="."><plain>Bharatham et al. (2007) identified 246 potential MetRS inhibitors, and selected 29 based on structural diversity and wide coverage of the activity range to generate pharmacophore models using CATALYST [50]. </plain></SENT>
+<SENT sid="87" pm="."><plain>The best ranking pharmacophore model contained four chemical features including a hydrogen bond donor, a hydrophobic aliphatic substituent, and two aromatic rings. </plain></SENT>
+<SENT sid="88" pm="."><plain>When used to search the Maybridge database [51], two inhibitors (AW01179 and BTB00521, Figure 6) were identified as the top hits, although inhibition activity was estimated using HypoGen and not tested in vitro or in vivo. </plain></SENT>
+</text></p><p><text><SENT sid="89" pm="."><plain>Finn et al. (2008) also attempted to identify novel MetRS inhibitors using pharmacophore-based virtual screening [52]. </plain></SENT>
+<SENT sid="90" pm="."><plain>By analyzing crystal structures of S. aureus MetRS in complex with known inhibitors [52], a four point pharmacophore was generated using Catalyst which contained two hydrophobic regions, two hydrogen bond donors directed towards the carboxylate oxygens of Asp51, and an excluded volume. </plain></SENT>
+<SENT sid="91" pm="."><plain>When this pharmacophore was used to search the ChemDiv diverse collection database [53], thirty-one compounds were identified. </plain></SENT>
+<SENT sid="92" pm="."><plain>Enzyme assays established that twenty-two out of the thirty-one compounds demonstrated 50% or greater inhibition of S. aureus MetRS at 100 μM. </plain></SENT>
+<SENT sid="93" pm="."><plain>The structures of the four most potent compounds and their IC50 values are shown in Figure 7. </plain></SENT>
+</text></p></sec></sec><SecTag type="METHODS"><sec><label>3.</label><title><text><SENT sid="94" pm="."><plain>Inhibitor Identification Using Structure-Based Drug Design </plain></SENT>
+</text></title><sec><label>3.1.</label><title><text><SENT sid="95" pm="."><plain>Leucyl-tRNA Synthetase Inhibitors </plain></SENT>
+</text></title><p><text><SENT sid="96" pm="."><plain>Ding et al. (2011) and Zhang et al. (2013) investigated T. brucei LeuRS using a structure-based drug design approach [12,54]. </plain></SENT>
+</text></p><p><text><SENT sid="97" pm="."><plain>A 3D structure of the T. brucei LeuRS editing active site was constructed using homology modeling based on the crystal structure of Candida albicans LeuRS (2WFG [10]). </plain></SENT>
+<SENT sid="98" pm="."><plain>The editing domain active site of the model was rather small and hydrophobic, and lined by nonpolar amino acid residues including Pro398, Ala443, Ile468, and Ala464. </plain></SENT>
+<SENT sid="99" pm="."><plain>Compounds with smaller hydrophobic groups at the 6-position (compound 20, IC50 = 22.1 μM; Figure 8) were more potent than those with hydrophilic and larger hydrophobic groups. </plain></SENT>
+<SENT sid="100" pm="."><plain>The highest potency was shown by a compound with an ester at the 6-position (compound 21, IC50 of 1.6 μM; Figure 8). </plain></SENT>
+<SENT sid="101" pm="."><plain>6-amide and 6-ketone derivatives were also developed to improve stability in vivo, and the 6-ketone analogs were comparable in potency to the 6-ester compounds. </plain></SENT>
+</text></p><p><text><SENT sid="102" pm="."><plain>By screening an in-house database of 500 compounds, Zhang et al. [54] identified a T. brucei LeuRS inhibitor with an N-(4-sulfamoylphenyl)thiourea core structure (compound 22, IC50 = 174.5 μM; Figure 9). </plain></SENT>
+<SENT sid="103" pm="."><plain>Computational studies suggested thiourea compounds bind to the synthetic active site rather than the editing active site. </plain></SENT>
+<SENT sid="104" pm="."><plain>In order to capitalize on the intrinsic binding affinity for the leucyl-anchoring pocket, the leucyl group was introduced (compound 23, IC50 = 31.4 μM; Figure 9). </plain></SENT>
+<SENT sid="105" pm="."><plain>Superimposition of the docked pose of compound 23 and Leu-AMS showed a 1,4-substitution geometry at the central phenyl ring that could lead to significant deviation. </plain></SENT>
+<SENT sid="106" pm="."><plain>Accordingly, a 1,3-substituted analog of 23 was designed and tested, and shown to result in a more potent T. brucei LeuRS inhibitor (compound 24, IC50 = 1.1 μM; in Figure 9). </plain></SENT>
+</text></p></sec><sec><label>3.2.</label><title><text><SENT sid="107" pm="."><plain>Isoleucyl-tRNA Synthetase Inhibitors </plain></SENT>
+</text></title><p><text><SENT sid="108" pm="."><plain>As mentioned above, mupirocin is a drug that targets IleRS. </plain></SENT>
+<SENT sid="109" pm="."><plain>Based on the IleRS-PA-A complex crystal structure, together with a detailed understanding of the reaction cycle of IleRS and characterization of the binding mode of the Ile-AMP reaction intermediate, Brown et al. (2000) designed and synthesized a series of novel IleRS inhibitors (Figure 10) [55]. </plain></SENT>
+<SENT sid="110" pm="."><plain>They noticed that the binding site of PA-A overlaps with that of Ile-AMP, such that the dihydroxytetrahydropyran and ribose rings overlap but the epoxide containing group does not occupy the Ile-binding pocket which is lined with two tryptophans. </plain></SENT>
+<SENT sid="111" pm="."><plain>They hypothesized that extra binding energy could be achieved by appropriate introduction of an Ile moiety to improve the potency of inhibitors. </plain></SENT>
+<SENT sid="112" pm="."><plain>Based on this, four pharmacophores (amino acid side chain, linker, monate core and monate side chain) were generated (Figure 10). </plain></SENT>
+<SENT sid="113" pm="."><plain>Through systematic optimization of these pharmacophores, compounds SB-234764 (Kd = 0.012 pM) and SB-236996 (Kd = 0.010 pM) were developed, which were much more potent than the starting compound (Kd = 140 pM). </plain></SENT>
+</text></p></sec><sec><label>3.3.</label><title><text><SENT sid="114" pm="."><plain>Threonyl-tRNA Synthetase Inhibitors </plain></SENT>
+</text></title><p><text><SENT sid="115" pm="."><plain>Teng et al. (2013) developed a series of potent and bacterial-selective ThrRS inhibitors through using crystal structures and structure-based drug design [56]. </plain></SENT>
+<SENT sid="116" pm="."><plain>The crystal structure of the complex containing Thr-AMS (compound 27 in Table 2) bound to E. coli ThrRS was the starting point (1EVL [57]). </plain></SENT>
+<SENT sid="117" pm="."><plain>Computational modeling using Discovery Studio suggested that compound 28 (Table 3) which has an aminoquinazoline fragment would bind to the ThrRS synthetic active site in a similar manner to Thr-AMS. </plain></SENT>
+<SENT sid="118" pm="."><plain>Compound 28 was itself a potent inhibitor of E. coli ThrRS with a Ki of 2.9 nM, and the binding mode was confirmed by crystal structure. </plain></SENT>
+<SENT sid="119" pm="."><plain>However, compound 28 also displayed potent human ThrRS inhibition activity. </plain></SENT>
+<SENT sid="120" pm="."><plain>To explore the opportunity for selective bacterial ThrRS inhibition, compound 29 which lacks the H-bond critical for binding to Ser517 was expected to have weaker potency against human ThrRS. </plain></SENT>
+<SENT sid="121" pm="."><plain>Indeed, 29 turned out to have a selectivity ratio of 270. </plain></SENT>
+<SENT sid="122" pm="."><plain>Crystal structures of 29 in complex with both E. coli and human ThrRS demonstrated that the ATP sites of the two enzymes did bind 29 in two distinct modes. </plain></SENT>
+</text></p></sec><sec><label>3.4.</label><title><text><SENT sid="123" pm="."><plain>Methionyl-tRNA Synthetase Inhibitors </plain></SENT>
+</text></title><p><text><SENT sid="124" pm="."><plain>The Buckner group have carried out extensive work on the discovery of T. brucei MetRS inhibitors [58–61]. </plain></SENT>
+<SENT sid="125" pm="."><plain>Based on the crystal structure of Clostridium difficile MetRS [62], they built a T. brucei MetRS homology model, and docking of compound 30 (Figure 11) was the starting point for inhibitor design [59]. </plain></SENT>
+<SENT sid="126" pm="."><plain>The binding mode of 30 showed that its aminoquinolinone ring forms hydrogen bonds through its NH groups with the carboxylate of Asp287. </plain></SENT>
+<SENT sid="127" pm="."><plain>To capitalize on this interaction, urea- and guanidine-containing analogs (compounds 31 and 32 respectively; Figure 11) were investigated. </plain></SENT>
+<SENT sid="128" pm="."><plain>Compound 31 was chosen as a template for further exploration to develop inhibitors with better permeability properties, due to its tighter binding. </plain></SENT>
+<SENT sid="129" pm="."><plain>By modifying R1, Ar and R2, compound 34 was developed which was significantly more potent (IC50 = 220 nM) and compound 33 had higher cell permeability (Figure 11). </plain></SENT>
+<SENT sid="130" pm="."><plain>Additionally, compound 31 was also found to have high cell permeability and was capable of penetrating the mouse blood-brain barrier. </plain></SENT>
+</text></p></sec></sec></SecTag><SecTag type="CONCL"><sec sec-type="conclusions"><label>4.</label><title><text><SENT sid="131" pm="."><plain>Conclusions </plain></SENT>
+</text></title><p><text><SENT sid="132" pm="."><plain>Aminoacyl-tRNA synthetases play a central role in protein synthesis by catalyzing the transfer of amino acids to their cognate tRNAs. </plain></SENT>
+<SENT sid="133" pm="."><plain>These enzymes are clinically validated drug targets and they have been successfully targeted by anti-bacterial, anti-fungal and anti-parasitic agents. </plain></SENT>
+<SENT sid="134" pm="."><plain>However, only one approved aaRS inhibitor is used clinically to date, illustrating the need for further aaRS inhibitor discovery and development. </plain></SENT>
+</text></p><p><text><SENT sid="135" pm="."><plain>All aaRSs from different species use the same reaction intermediates in the aminoacylation reaction, representing their conservatism in structures. </plain></SENT>
+<SENT sid="136" pm="."><plain>However, some divergence has occurred throughout their evolution. </plain></SENT>
+<SENT sid="137" pm="."><plain>For example, LeuRSs are evolved into bacterial and eukaryal/archaeal subtypes that possess a number of different residues in the active sites. </plain></SENT>
+<SENT sid="138" pm="."><plain>Consequently, it is possible to take advantage of these active site variations to develop species-selective aaRS inhibitors, although it presents a challenge as in the development of any other selective inhibitors. </plain></SENT>
+<SENT sid="139" pm="."><plain>The drug mupirocin which shows an 8000-fold selectivity for pathogenic IleRS over human IleRS is an excellent example of success. </plain></SENT>
+</text></p><p><text><SENT sid="140" pm="."><plain>Computational methods are commonly used in all areas of health science research. </plain></SENT>
+<SENT sid="141" pm="."><plain>Among them, virtual screening and structure-based drug design have become established as powerful methods for identification and optimization of potential small molecule drugs. </plain></SENT>
+<SENT sid="142" pm="."><plain>In this article, we reviewed the application of these approaches in the discovery and development of LeuRS, TrpRS, AsnRS, MetRS, IleRS and ThrRS inhibitors. </plain></SENT>
+<SENT sid="143" pm="."><plain>This review demonstrates the wide use of computational methods for aaRS inhibitor discovery and development, which will surely assist the production of much needed novel antibiotics and other pharmaceutical agents. </plain></SENT>
+</text></p></sec></SecTag></body><back><SecTag type="ACK_FUND"><ack><title>Acknowledgments</title><p><text4fund><text><SENT sid="144" pm="."><plain>We thank National Science Foundation of China (81222042 and 81102313); the Ministry of Science and Technology of China (2009CB918404 and 2012CB518001); China Postdoctoral Science Foundation Grant (2013M541525) and the E-Institutes of Shanghai Universities (EISU) Chemical Biology Division for financial support of this work. </plain></SENT>
+</text></text4fund></p></ack></SecTag><notes><title>Conflicts of Interest</title><p>The authors declare no conflict of interest.</p></notes><SecTag type="REF"><ref-list><title>References</title><ref id="b1-ijms-15-01358"><text><SENT sid="145" pm="."><plain>1.IbbaM.SollD.Aminoacyl-tRNA synthesisAnnu. </plain></SENT>
+<SENT sid="146" pm="."><plain>Rev. </plain></SENT>
+<SENT sid="147" pm="."><plain>Biochem20006961765010966471 </plain></SENT>
+</text></ref><ref id="b2-ijms-15-01358"><text><SENT sid="148" pm="."><plain>2.ErianiG.DelarueM.PochO.GangloffJ.MorasD.Partition of tRNA synthetases into two classes based on mutually exclusive sets of sequence motifsNature19903472032062203971 </plain></SENT>
+</text></ref><ref id="b3-ijms-15-01358"><text><SENT sid="149" pm="."><plain>3.ArnezJ.G.MorasD.Structural and functional considerations of the aminoacylation reactionTrends. </plain></SENT>
+<SENT sid="150" pm="."><plain>Biochem. </plain></SENT>
+<SENT sid="151" pm="."><plain>Sci1997222112169204708 </plain></SENT>
+</text></ref><ref id="b4-ijms-15-01358"><text><SENT sid="152" pm="."><plain>4.SchimmelP.Development of tRNA synthetases and connection to genetic code and diseaseProtein Sci2008171643165218765819 </plain></SENT>
+</text></ref><ref id="b5-ijms-15-01358"><text><SENT sid="153" pm="."><plain>5.LincecumT.L.Jr.TukaloM.YaremchukA.MursinnaR.S.WilliamsA.M.SproatB.S.van den EyndeW.LinkA.van CalenberghS.GrotliM.Structural and mechanistic basis of pre- and posttransfer editing by leucyl-tRNA synthetaseMol. </plain></SENT>
+<SENT sid="154" pm="."><plain>Cell20031195196312718881 </plain></SENT>
+</text></ref><ref id="b6-ijms-15-01358"><text><SENT sid="155" pm="."><plain>6.JakubowskiH.GoldmanE.Editing of errors in selection of amino acids for protein synthesisMicrobiol. </plain></SENT>
+<SENT sid="156" pm="."><plain>Rev1992564124291406490 </plain></SENT>
+</text></ref><ref id="b7-ijms-15-01358"><text><SENT sid="157" pm="."><plain>7.BeuningP.J.Musier-ForsythK.Hydrolytic editing by a class II aminoacyl-tRNA synthetaseProc. </plain></SENT>
+<SENT sid="158" pm="."><plain>Natl. </plain></SENT>
+<SENT sid="159" pm="."><plain>Acad. </plain></SENT>
+<SENT sid="160" pm="."><plain>Sci. </plain></SENT>
+<SENT sid="161" pm="."><plain>USA2000978916892010922054 </plain></SENT>
+</text></ref><ref id="b8-ijms-15-01358"><text><SENT sid="162" pm="."><plain>8.Dock-BregeonA.SankaranarayananR.RombyP.CailletJ.SpringerM.ReesB.FrancklynC.S.EhresmannC.MorasD.Transfer RNA-mediated editing in threonyl-tRNA synthetase. </plain></SENT>
+<SENT sid="163" pm="."><plain>The class II solution to the double discrimination problemCell200010387788411136973 </plain></SENT>
+</text></ref><ref id="b9-ijms-15-01358"><text><SENT sid="164" pm="."><plain>9.BeaulieuD.OhemengK.A.Patents on bacterial tRNA synthetase inhibitors: January 1996 to March 1999Exp. </plain></SENT>
+<SENT sid="165" pm="."><plain>Opin. </plain></SENT>
+<SENT sid="166" pm="."><plain>Ther. </plain></SENT>
+<SENT sid="167" pm="."><plain>Patents1999910211028 </plain></SENT>
+</text></ref><ref id="b10-ijms-15-01358"><text><SENT sid="168" pm="."><plain>10.SeiradakeE.MaoW.HernandezV.BakerS.J.PlattnerJ.J.AlleyM.R.CusackS.Crystal structures of the human and fungal cytosolic Leucyl-tRNA synthetase editing domains: A structural basis for the rational design of antifungal benzoxaborolesJ. </plain></SENT>
+<SENT sid="169" pm="."><plain>Mol. </plain></SENT>
+<SENT sid="170" pm="."><plain>Biol200939019620719426743 </plain></SENT>
+</text></ref><ref id="b11-ijms-15-01358"><text><SENT sid="171" pm="."><plain>11.ZhangY.K.PlattnerJ.J.FreundY.R.EasomE.E.ZhouY.GutJ.RosenthalP.J.WatersonD.GamoF.J.Angulo-BarturenI.Synthesis and structure-activity relationships of novel benzoxaboroles as a new class of antimalarial agentsBioorg. </plain></SENT>
+<SENT sid="172" pm="."><plain>Med. </plain></SENT>
+<SENT sid="173" pm="."><plain>Chem. </plain></SENT>
+<SENT sid="174" pm="."><plain>Lett20112164465121195617 </plain></SENT>
+</text></ref><ref id="b12-ijms-15-01358"><text><SENT sid="175" pm="."><plain>12.DingD.MengQ.GaoG.ZhaoY.WangQ.NareB.JacobsR.RockF.AlleyM.R.PlattnerJ.J.Design, synthesis, and structure-activity relationship of Trypanosoma brucei leucyl-tRNA synthetase inhibitors as antitrypanosomal agentsJ. </plain></SENT>
+<SENT sid="176" pm="."><plain>Med. </plain></SENT>
+<SENT sid="177" pm="."><plain>Chem2011541276128721322634 </plain></SENT>
+</text></ref><ref id="b13-ijms-15-01358"><text><SENT sid="178" pm="."><plain>13.ChopraS.PalenciaA.VirusC.TripathyA.TempleB.R.Velazquez-CampoyA.CusackS.ReaderJ.S.Plant tumour biocontrol agent employs a tRNA-dependent mechanism to inhibit leucyl-tRNA synthetaseNat. </plain></SENT>
+<SENT sid="179" pm="."><plain>Commun20134141723361008 </plain></SENT>
+</text></ref><ref id="b14-ijms-15-01358"><text><SENT sid="180" pm="."><plain>14.Van de VijverP.OstrowskiT.SproatB.GoebelsJ.RutgeertsO.van AerschotA.WaerM.HerdewijnP.Aminoacyl-tRNA synthetase inhibitors as potent and synergistic immunosuppressantsJ. </plain></SENT>
+<SENT sid="181" pm="."><plain>Med. </plain></SENT>
+<SENT sid="182" pm="."><plain>Chem2008513020302918438987 </plain></SENT>
+</text></ref><ref id="b15-ijms-15-01358"><text><SENT sid="183" pm="."><plain>15.AtaideS.F.IbbaM.Small molecules: Big players in the evolution of protein synthesisACS Chem. </plain></SENT>
+<SENT sid="184" pm="."><plain>Biol2006128529717163757 </plain></SENT>
+</text></ref><ref id="b16-ijms-15-01358"><text><SENT sid="185" pm="."><plain>16.HurdleJ.G.O’NeillA.J.ChopraI.Prospects for aminoacyl-tRNA synthetase inhibitors as new antimicrobial agentsAntimicrob. </plain></SENT>
+<SENT sid="186" pm="."><plain>Agents Chemother2005494821483316304142 </plain></SENT>
+</text></ref><ref id="b17-ijms-15-01358"><text><SENT sid="187" pm="."><plain>17.HurdleJ.G.O’NeillA.J.InghamE.FishwickC.ChopraI.Analysis of mupirocin resistance and fitness in Staphylococcus aureus by molecular genetic and structural modeling techniquesAntimicrob. </plain></SENT>
+<SENT sid="188" pm="."><plain>Agents Chemother2004484366437615504866 </plain></SENT>
+</text></ref><ref id="b18-ijms-15-01358"><text><SENT sid="189" pm="."><plain>18.NakamaT.NurekiO.YokoyamaS.Structural basis for the recognition of isoleucyl-adenylate and an antibiotic, mupirocin, by isoleucyl-tRNA synthetaseJ. </plain></SENT>
+<SENT sid="190" pm="."><plain>Biol. </plain></SENT>
+<SENT sid="191" pm="."><plain>Chem2001276473874739311584022 </plain></SENT>
+</text></ref><ref id="b19-ijms-15-01358"><text><SENT sid="192" pm="."><plain>19.RockF.L.MaoW.YaremchukA.TukaloM.CrepinT.ZhouH.ZhangY.K.HernandezV.AkamaT.BakerS.J.An antifungal agent inhibits an aminoacyl-tRNA synthetase by trapping tRNA in the editing siteScience20073161759176117588934 </plain></SENT>
+</text></ref><ref id="b20-ijms-15-01358"><text><SENT sid="193" pm="."><plain>20.LavecchiaA.di GiovanniC.Virtual screening strategies in drug discovery: A critical reviewCurr. </plain></SENT>
+<SENT sid="194" pm="."><plain>Med. </plain></SENT>
+<SENT sid="195" pm="."><plain>Chem2013202839286023651302 </plain></SENT>
+</text></ref><ref id="b21-ijms-15-01358"><text><SENT sid="196" pm="."><plain>21.ShoichetB.K.McGovernS.L.WeiB.IrwinJ.J.Lead discovery using molecular dockingCurr. </plain></SENT>
+<SENT sid="197" pm="."><plain>Opin. </plain></SENT>
+<SENT sid="198" pm="."><plain>Chem. </plain></SENT>
+<SENT sid="199" pm="."><plain>Biol2002643944612133718 </plain></SENT>
+</text></ref><ref id="b22-ijms-15-01358"><text><SENT sid="200" pm="."><plain>22.ReddyA.S.PatiS.P.KumarP.P.PradeepH.N.SastryG.N.Virtual screening in drug discovery—A computational perspectiveCurr. </plain></SENT>
+<SENT sid="201" pm="."><plain>Protein. </plain></SENT>
+<SENT sid="202" pm="."><plain>Pept. </plain></SENT>
+<SENT sid="203" pm="."><plain>Sci2007832935117696867 </plain></SENT>
+</text></ref><ref id="b23-ijms-15-01358"><text><SENT sid="204" pm="."><plain>23.ZoeteV.GrosdidierA.MichielinO.Docking, virtual high throughput screening and in silico fragment-based drug designJ. </plain></SENT>
+<SENT sid="205" pm="."><plain>Cell. </plain></SENT>
+<SENT sid="206" pm="."><plain>Mol. </plain></SENT>
+<SENT sid="207" pm="."><plain>Med20091323824819183238 </plain></SENT>
+</text></ref><ref id="b24-ijms-15-01358"><text><SENT sid="208" pm="."><plain>24.PDBAvailable online: <ext-link ext-link-type="uri" xlink:href="http://www.pdb.org">http://www.pdb.org</ext-link>(accessed on 6 December 2013) </plain></SENT>
+</text></ref><ref id="b25-ijms-15-01358"><text><SENT sid="209" pm="."><plain>25.FriesnerR.A.BanksJ.L.MurphyR.B.HalgrenT.A.KlicicJ.J.MainzD.T.RepaskyM.P.KnollE.H.ShelleyM.PerryJ.K.Glide: A new approach for rapid, accurate docking and scoring. </plain></SENT>
+<SENT sid="210" pm="."><plain>1. </plain></SENT>
+<SENT sid="211" pm="."><plain>Method and assessment of docking accuracyJ. </plain></SENT>
+<SENT sid="212" pm="."><plain>Med. </plain></SENT>
+<SENT sid="213" pm="."><plain>Chem2004471739174915027865 </plain></SENT>
+</text></ref><ref id="b26-ijms-15-01358"><text><SENT sid="214" pm="."><plain>26.HalgrenT.A.MurphyR.B.FriesnerR.A.BeardH.S.FryeL.L.PollardW.T.BanksJ.L.Glide: A new approach for rapid, accurate docking and scoring. </plain></SENT>
+<SENT sid="215" pm="."><plain>2. </plain></SENT>
+<SENT sid="216" pm="."><plain>Enrichment factors in database screeningJ. </plain></SENT>
+<SENT sid="217" pm="."><plain>Med. </plain></SENT>
+<SENT sid="218" pm="."><plain>Chem2004471750175915027866 </plain></SENT>
+</text></ref><ref id="b27-ijms-15-01358"><text><SENT sid="219" pm="."><plain>27.JonesG.WillettP.GlenR.C.LeachA.R.TaylorR.Development and validation of a genetic algorithm for flexible dockingJ. </plain></SENT>
+<SENT sid="220" pm="."><plain>Mol. </plain></SENT>
+<SENT sid="221" pm="."><plain>Biol19972677277489126849 </plain></SENT>
+</text></ref><ref id="b28-ijms-15-01358"><text><SENT sid="222" pm="."><plain>28.MoustakasD.T.LangP.T.PeggS.PettersenE.KuntzI.D.BrooijmansN.RizzoR.C.Development and validation of a modular, extensible docking program: DOCK 5J. </plain></SENT>
+<SENT sid="223" pm="."><plain>Comput. </plain></SENT>
+<SENT sid="224" pm="."><plain>Aided Mol. </plain></SENT>
+<SENT sid="225" pm="."><plain>Des20062060161917149653 </plain></SENT>
+</text></ref><ref id="b29-ijms-15-01358"><text><SENT sid="226" pm="."><plain>29.TrottO.OlsonA.J.AutoDock Vina: Improving the speed and accuracy of docking with a new scoring function, efficient optimization, and multithreadingJ. </plain></SENT>
+<SENT sid="227" pm="."><plain>Comput. </plain></SENT>
+<SENT sid="228" pm="."><plain>Chem20103145546119499576 </plain></SENT>
+</text></ref><ref id="b30-ijms-15-01358"><text><SENT sid="229" pm="."><plain>30.KimK.H.KimN.D.SeongB.L.Pharmacophore-based virtual screening: A review of recent applicationsExpert. </plain></SENT>
+<SENT sid="230" pm="."><plain>Opin. </plain></SENT>
+<SENT sid="231" pm="."><plain>Drug Discov2010520522222823018 </plain></SENT>
+</text></ref><ref id="b31-ijms-15-01358"><text><SENT sid="232" pm="."><plain>31.Discovery StudioAccelrys Inc.San Diego, CA, USA2013 </plain></SENT>
+</text></ref><ref id="b32-ijms-15-01358"><text><SENT sid="233" pm="."><plain>32.PhaseSchrödinger LLCNew York, NY, USA2013 </plain></SENT>
+</text></ref><ref id="b33-ijms-15-01358"><text><SENT sid="234" pm="."><plain>33.WolberG.LangerT.LigandScout: 3-D pharmacophores derived from protein-bound ligands and their use as virtual screening filtersJ. </plain></SENT>
+<SENT sid="235" pm="."><plain>Chem. </plain></SENT>
+<SENT sid="236" pm="."><plain>Inf. </plain></SENT>
+<SENT sid="237" pm="."><plain>Model20054516016915667141 </plain></SENT>
+</text></ref><ref id="b34-ijms-15-01358"><text><SENT sid="238" pm="."><plain>34.KalyaanamoorthyS.ChenY.P.Structure-based drug design to augment hit discoveryDrug Discov. </plain></SENT>
+<SENT sid="239" pm="."><plain>Today20111683183921810482 </plain></SENT>
+</text></ref><ref id="b35-ijms-15-01358"><text><SENT sid="240" pm="."><plain>35.ZurcherM.DiederichF.Structure-based drug design: Exploring the proper filling of apolar pockets at enzyme active sitesJ. </plain></SENT>
+<SENT sid="241" pm="."><plain>Org. </plain></SENT>
+<SENT sid="242" pm="."><plain>Chem2008734345436118510366 </plain></SENT>
+</text></ref><ref id="b36-ijms-15-01358"><text><SENT sid="243" pm="."><plain>36.ReichS.H.MelnickM.DaviesJ.F.AppeltK.LewisK.K.FuhryM.A.PinoM.TrippeA.J.NguyenD.DawsonH.Protein structure-based design of potent orally bioavailable, nonpeptide inhibitors of human immunodeficiency virus proteaseProc. </plain></SENT>
+<SENT sid="244" pm="."><plain>Natl. </plain></SENT>
+<SENT sid="245" pm="."><plain>Acad. </plain></SENT>
+<SENT sid="246" pm="."><plain>Sci. </plain></SENT>
+<SENT sid="247" pm="."><plain>USA199592329833027724556 </plain></SENT>
+</text></ref><ref id="b37-ijms-15-01358"><text><SENT sid="248" pm="."><plain>37.Von ItzsteinM.WuW.Y.KokG.B.PeggM.S.DyasonJ.C.JinB.van PhanT.SmytheM.L.WhiteH.F.OliverS.W.Rational design of potent sialidase-based inhibitors of influenza virus replicationNature19933634184238502295 </plain></SENT>
+</text></ref><ref id="b38-ijms-15-01358"><text><SENT sid="249" pm="."><plain>38.KimC.U.LewW.WilliamsM.A.LiuH.ZhangL.SwaminathanS.BischofbergerN.ChenM.S.MendelD.B.TaiC.Y.Influenza neuraminidase inhibitors possessing a novel hydrophobic interaction in the enzyme active site: Design, synthesis, and structural analysis of carbocyclic sialic acid analogues with potent anti-influenza activityJ. </plain></SENT>
+<SENT sid="250" pm="."><plain>Am. </plain></SENT>
+<SENT sid="251" pm="."><plain>Chem. </plain></SENT>
+<SENT sid="252" pm="."><plain>Soc199711968169016526129 </plain></SENT>
+</text></ref><ref id="b39-ijms-15-01358"><text><SENT sid="253" pm="."><plain>39.KimC.U.LewW.WilliamsM.A.WuH.ZhangL.ChenX.EscarpeP.A.MendelD.B.LaverW.G.StevensR.C.Structure-activity relationship studies of novel carbocyclic influenza neuraminidase inhibitorsJ. </plain></SENT>
+<SENT sid="254" pm="."><plain>Med. </plain></SENT>
+<SENT sid="255" pm="."><plain>Chem199841245124609651151 </plain></SENT>
+</text></ref><ref id="b40-ijms-15-01358"><text><SENT sid="256" pm="."><plain>40.FukunaqaR.YokoyamaS.Crystal structure of leucyl-tRNA synthetase from the archaeon Pyrococcus horikoshii reveals a novel editing domain orientationJ. </plain></SENT>
+<SENT sid="257" pm="."><plain>Mol. </plain></SENT>
+<SENT sid="258" pm="."><plain>Biol2005346577115663927 </plain></SENT>
+</text></ref><ref id="b41-ijms-15-01358"><text><SENT sid="259" pm="."><plain>41.ZhaoY.WangQ.MengQ.DingD.YangH.GaoG.LiD.ZhuW.ZhouH.Identification of Trypanosoma brucei leucyl-tRNA synthetase inhibitors by pharmacophore- and docking-based virtual screening and synthesisBioorg. </plain></SENT>
+<SENT sid="260" pm="."><plain>Med. </plain></SENT>
+<SENT sid="261" pm="."><plain>Chem2012201240125022249121 </plain></SENT>
+</text></ref><ref id="b42-ijms-15-01358"><text><SENT sid="262" pm="."><plain>42.SPECSAvailable online: <ext-link ext-link-type="uri" xlink:href="http://www.specs.net">http://www.specs.net</ext-link>(accessed on 6 December 2013) </plain></SENT>
+</text></ref><ref id="b43-ijms-15-01358"><text><SENT sid="263" pm="."><plain>43.WuY.YuK.XuB.ChenL.ChenX.MaoJ.DanchinA.ShenX.QuD.JiangH.Potent and selective inhibitors of Staphylococcus epidermidis tr yptophanyl-tRNA synthetaseJ. </plain></SENT>
+<SENT sid="264" pm="."><plain>Antimicrob. </plain></SENT>
+<SENT sid="265" pm="."><plain>Chemother20076050250917606484 </plain></SENT>
+</text></ref><ref id="b44-ijms-15-01358"><text><SENT sid="266" pm="."><plain>44.RetailleauP.HuangX.YinY.HuM.WeinrebV.VachetteP.VonrheinC.BricogneG.RoversiP.IlyinV.Interconversion of ATP binding and conformational free energies by tryptophanyl-tRNA synthetase: Structures of ATP bound to open and closed, pre-transition-state conformationsJ. </plain></SENT>
+<SENT sid="267" pm="."><plain>Mol. </plain></SENT>
+<SENT sid="268" pm="."><plain>Biol2003325396312473451 </plain></SENT>
+</text></ref><ref id="b45-ijms-15-01358"><text><SENT sid="269" pm="."><plain>45.SukuruS.C.CrepinT.MilevY.MarshL.C.HillJ.B.AndersonR.J.MorrisJ.C.RohatgiA.O’MahonyG.GrotliM.Discovering new classes of Brugia malayi asparaginyl-tRNA synthetase inhibitors and relating specificity to conformational changeJ. </plain></SENT>
+<SENT sid="270" pm="."><plain>Comput. </plain></SENT>
+<SENT sid="271" pm="."><plain>Aided Mol. </plain></SENT>
+<SENT sid="272" pm="."><plain>Des20062015917816645791 </plain></SENT>
+</text></ref><ref id="b46-ijms-15-01358"><text><SENT sid="273" pm="."><plain>46.CrepinT.PetersonF.HaertleinM.JensenD.WangC.CusackS.KronM.A hybrid structural model of the complete Brugia malayi cytoplasmic asparaginyl-tRNA synthetaseJ. </plain></SENT>
+<SENT sid="274" pm="."><plain>Mol. </plain></SENT>
+<SENT sid="275" pm="."><plain>Biol20114051056106921134380 </plain></SENT>
+</text></ref><ref id="b47-ijms-15-01358"><text><SENT sid="276" pm="."><plain>47.Cambridge Structural DatabaseAvailable online: <ext-link ext-link-type="uri" xlink:href="http://cds.dl.ac.uk/cds/datasets/crys/csd/csd.html">http://cds.dl.ac.uk/cds/datasets/crys/csd/csd.html</ext-link>(accessed on 6 December 2013) </plain></SENT>
+</text></ref><ref id="b48-ijms-15-01358"><text><SENT sid="277" pm="."><plain>48.National Cancer Institute Plated Compounds DatabaseAvailable online: <ext-link ext-link-type="uri" xlink:href="http://cactus.nci.nih.gov/download/nci/">http://cactus.nci.nih.gov/download/nci/</ext-link>(accessed on 6 December 2013) </plain></SENT>
+</text></ref><ref id="b49-ijms-15-01358"><text><SENT sid="278" pm="."><plain>49.KimS.Y.LeeY.S.KangT.KimS.LeeJ.Pharmacophore-based virtual screening: The discovery of novel methionyl-tRNA synthetase inhibitorsBioorg. </plain></SENT>
+<SENT sid="279" pm="."><plain>Med. </plain></SENT>
+<SENT sid="280" pm="."><plain>Chem. </plain></SENT>
+<SENT sid="281" pm="."><plain>Lett2006164898490716824759 </plain></SENT>
+</text></ref><ref id="b50-ijms-15-01358"><text><SENT sid="282" pm="."><plain>50.BharathamN.BharathamK.LeeK.W.Pharmacophore identification and virtual screening for methionyl-tRNA synthetase inhibitorsJ. </plain></SENT>
+<SENT sid="283" pm="."><plain>Mol. </plain></SENT>
+<SENT sid="284" pm="."><plain>Graph. </plain></SENT>
+<SENT sid="285" pm="."><plain>Model20072581382316996282 </plain></SENT>
+</text></ref><ref id="b51-ijms-15-01358"><text><SENT sid="286" pm="."><plain>51.MaybridgeAvailable online: <ext-link ext-link-type="uri" xlink:href="http://www.maybridge.com">http://www.maybridge.com</ext-link>(accessed on 6 December 2013) </plain></SENT>
+</text></ref><ref id="b52-ijms-15-01358"><text><SENT sid="287" pm="."><plain>52.FinnJ.StidhamM.HilgersM.G.C.K.Identification of novel inhibitors of methionyl-tRNA synthetase (MetRS) by virtual screeningBioorg. </plain></SENT>
+<SENT sid="288" pm="."><plain>Med. </plain></SENT>
+<SENT sid="289" pm="."><plain>Chem. </plain></SENT>
+<SENT sid="290" pm="."><plain>Lett2008183932393718590962 </plain></SENT>
+</text></ref><ref id="b53-ijms-15-01358"><text><SENT sid="291" pm="."><plain>53.ChemDivAvailable online: <ext-link ext-link-type="uri" xlink:href="http://eu.chemdiv.com">http://eu.chemdiv.com</ext-link>(accessed on 6 December 2013) </plain></SENT>
+</text></ref><ref id="b54-ijms-15-01358"><text><SENT sid="292" pm="."><plain>54.ZhangF.DuJ.WangQ.HuQ.ZhangJ.DingD.ZhaoY.YangF.WangE.ZhouH.Discovery of N-(4-sulfamoylphenyl)thioureas as Trypanosoma brucei leucyl-tRNA synthetase inhibitorsOrg. </plain></SENT>
+<SENT sid="293" pm="."><plain>Biomol. </plain></SENT>
+<SENT sid="294" pm="."><plain>Chem2013115310532423842857 </plain></SENT>
+</text></ref><ref id="b55-ijms-15-01358"><text><SENT sid="295" pm="."><plain>55.BrownM.J.MensahL.M.DoyleM.L.BroomN.J.OsbourneN.ForrestA.K.RichardsonC.M.O’HanlonP.J.PopeA.J.Rational design of femtomolar inhibitors of isoleucyl tRNA synthetase from a binding model for pseudomonic acid-ABiochemistry2000396003601110821672 </plain></SENT>
+</text></ref><ref id="b56-ijms-15-01358"><text><SENT sid="296" pm="."><plain>56.TengM.HilgersM.T.CunninghamM.L.BorchardtA.LockeJ.B.AbrahamS.HaleyG.KwanB.P.HallC.HoughG.W.Identification of bacteria-selective threonyl-tRNA synthetase substrate inhibitors by structure-based designJ. </plain></SENT>
+<SENT sid="297" pm="."><plain>Med. </plain></SENT>
+<SENT sid="298" pm="."><plain>Chem2013561748176023362938 </plain></SENT>
+</text></ref><ref id="b57-ijms-15-01358"><text><SENT sid="299" pm="."><plain>57.SankaranarayananR.Dock-BregeonA.C.ReesB.BoveeM.CailletJ.RombyP.FrancklynC.S.MorasD.Zinc ion mediated amino acid discrimination by threonyl-tRNA synthetaseNat. </plain></SENT>
+<SENT sid="300" pm="."><plain>Struct. </plain></SENT>
+<SENT sid="301" pm="."><plain>Biol2000746146510881191 </plain></SENT>
+</text></ref><ref id="b58-ijms-15-01358"><text><SENT sid="302" pm="."><plain>58.ShibataS.GillespieJ.R.KelleyA.M.NapuliA.J.ZhangZ.KovzunK.V.PefleyR.M.LamJ.ZuckerF.H.Van VoorhisW.C.Selective inhibitors of methionyl-tRNA synthetase have potent activity against Trypanosoma brucei infection in miceAntimicrob. </plain></SENT>
+<SENT sid="303" pm="."><plain>Agents Chemother2011551982198921282428 </plain></SENT>
+</text></ref><ref id="b59-ijms-15-01358"><text><SENT sid="304" pm="."><plain>59.ShibataS.GillespieJ.R.RanadeR.M.KohC.Y.KimJ.E.LaydbakJ.U.ZuckerF.H.HolW.G.VerlindeC.L.BucknerF.S.Urea-based inhibitors of Trypanosoma brucei methionyl-tRNA synthetase: Selectivity and in vivo characterizationJ. </plain></SENT>
+<SENT sid="305" pm="."><plain>Med. </plain></SENT>
+<SENT sid="306" pm="."><plain>Chem2012556342635122720744 </plain></SENT>
+</text></ref><ref id="b60-ijms-15-01358"><text><SENT sid="307" pm="."><plain>60.KohC.Y.KimJ.E.ShibataS.RanadeR.M.YuM.LiuJ.GillespieJ.R.BucknerF.S.VerlindeC.L.FanE.Distinct states of methionyl-tRNA synthetase indicate inhibitor binding by conformational selectionStructure2012201681169122902861 </plain></SENT>
+</text></ref><ref id="b61-ijms-15-01358"><text><SENT sid="308" pm="."><plain>61.RanadeR.M.GillespieJ.R.ShibataS.VerlindeC.L.FanE.HolW.G.BucknerF.S.Induced resistance to methionyl-tRNA synthetase inhibitors in Trypanosoma brucei is due to overexpression of the targetAntimicrob. </plain></SENT>
+<SENT sid="309" pm="."><plain>Agents Chemother2013573021302823587950 </plain></SENT>
+</text></ref><ref id="b62-ijms-15-01358"><text><SENT sid="310" pm="."><plain>62.EvansR.GreenL.SunX.GuilesJ.LorimerD.BurginA.JanjicN.JarvisT.DaviesD.Co-crystal structure of REP3123 bound to Clostridium difficile methionyl tRNA synthetase, poster F1−2114Abstracts of the 47th Interscience Conference on Antimicrobial Agents and Chemotherapy, Proceedings of the 47th Interscience Conference on Antimicrobial Agents and ChemotherapyChicago, IL, USA17–20 September 2007American Society for MicrobiologyWashington, DC, USA2007 </plain></SENT>
+</text></ref></ref-list></SecTag></back><floats-group><SecTag type="FIG"><fig id="f1-ijms-15-01358" position="float"><label>Figure 1.</label><caption><p><text><SENT sid="311" pm="."><plain>Structures of mupirocin and AN2690. </plain></SENT>
+</text></p></caption><graphic xlink:href="ijms-15-01358f1"/></fig></SecTag><SecTag type="FIG"><fig id="f2-ijms-15-01358" position="float"><label>Figure 2.</label><caption><p><text><SENT sid="312" pm="."><plain>Scheme used in the identification of LeuRS inhibitors. </plain></SENT>
+<SENT sid="313" pm="."><plain>Pharmacophores I and II: the hydrophobic site is colored as orange sphere, hydrogen bond donor is colored as green arrow, hydrogen bond acceptor is colored as red arrow. </plain></SENT>
+</text></p></caption><graphic xlink:href="ijms-15-01358f2"/></fig></SecTag><SecTag type="FIG"><fig id="f3-ijms-15-01358" position="float"><label>Figure 3.</label><caption><p><text><SENT sid="314" pm="."><plain>Inhibitor identification scheme of Wu et al. (2007) for TrpRS [43]. </plain></SENT>
+</text></p></caption><graphic xlink:href="ijms-15-01358f3"/></fig></SecTag><SecTag type="FIG"><fig id="f4-ijms-15-01358" position="float"><label>Figure 4.</label><caption><p><text><SENT sid="315" pm="."><plain>Inhibitor identification scheme of Sukuru et al. (2006) for AsnRS [45]. </plain></SENT>
+</text></p></caption><graphic xlink:href="ijms-15-01358f4"/></fig></SecTag><SecTag type="FIG"><fig id="f5-ijms-15-01358" position="float"><label>Figure 5.</label><caption><p><text><SENT sid="316" pm="."><plain>Inhibitor identification scheme of Kim et al. (2006) for MetRS [49]. </plain></SENT>
+</text></p></caption><graphic xlink:href="ijms-15-01358f5"/></fig></SecTag><SecTag type="FIG"><fig id="f6-ijms-15-01358" position="float"><label>Figure 6.</label><caption><p><text><SENT sid="317" pm="."><plain>Structures of AW01179 and BTB00521. </plain></SENT>
+</text></p></caption><graphic xlink:href="ijms-15-01358f6"/></fig></SecTag><SecTag type="FIG"><fig id="f7-ijms-15-01358" position="float"><label>Figure 7.</label><caption><p><text><SENT sid="318" pm="."><plain>Structures of MetRS inhibitors with IC50 &lt; 10 μM. </plain></SENT>
+</text></p></caption><graphic xlink:href="ijms-15-01358f7"/></fig></SecTag><SecTag type="FIG"><fig id="f8-ijms-15-01358" position="float"><label>Figure 8.</label><caption><p><text><SENT sid="319" pm="."><plain>Inhibitor design scheme of Ding et al. (2011) for LeuRS. </plain></SENT>
+<SENT sid="320" pm="."><plain>LeuRS is in cartoon representation and colored green, while compound 20 is in stick conformation and is colored salmon [12]. </plain></SENT>
+</text></p></caption><graphic xlink:href="ijms-15-01358f8"/></fig></SecTag><SecTag type="FIG"><fig id="f9-ijms-15-01358" position="float"><label>Figure 9.</label><caption><p><text><SENT sid="321" pm="."><plain>Structures of LeuRS inhibitors. </plain></SENT>
+</text></p></caption><graphic xlink:href="ijms-15-01358f9"/></fig></SecTag><SecTag type="FIG"><fig id="f10-ijms-15-01358" position="float"><label>Figure 10.</label><caption><p><text><SENT sid="322" pm="."><plain>Inhibitor design scheme of Brown et al. (2000) for IleRS [55]. </plain></SENT>
+</text></p></caption><graphic xlink:href="ijms-15-01358f10"/></fig></SecTag><SecTag type="FIG"><fig id="f11-ijms-15-01358" position="float"><label>Figure 11.</label><caption><p><text><SENT sid="323" pm="."><plain>Inhibitor design scheme of Shibata et al. (2012) for IleRS [59]. </plain></SENT>
+</text></p></caption><graphic xlink:href="ijms-15-01358f11"/></fig></SecTag><SecTag type="TABLE"><table-wrap id="t1-ijms-15-01358" position="float"><label>Table 1.</label><caption><p><text><SENT sid="324" pm="."><plain>Classes of aminoacyl-tRNA synthetases. </plain></SENT>
+</text></p></caption></table-wrap></SecTag><SecTag type="TABLE"><table-wrap id="t2-ijms-15-01358" position="float"><label>Table 2.</label><caption><p><text><SENT sid="325" pm="."><plain>Micromolar minimal inhibitory concentrations (MICs) of compounds 6, 7 and 8. </plain></SENT>
+</text></p></caption></table-wrap></SecTag><SecTag type="TABLE"><table-wrap id="t3-ijms-15-01358" position="float"><label>Table 3.</label><caption><p><text><SENT sid="326" pm="."><plain>Inhibitors of threonyl-tRNA synthetase. </plain></SENT>
+</text></p></caption></table-wrap></SecTag></floats-group></article>

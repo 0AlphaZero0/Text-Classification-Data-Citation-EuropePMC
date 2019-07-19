@@ -1,0 +1,334 @@
+<article xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML" article-type="research-article"><?properties open_access?><?subarticle report17089?><?DTDIdentifier.IdentifierValue -//NLM//DTD Journal Publishing DTD v3.0 20080202//EN?><?DTDIdentifier.IdentifierType public?><?SourceDTD.DTDName journalpublishing3.dtd?><?SourceDTD.Version 3.0?><?ConverterInfo.XSLTName jp2nlmx2.xsl?><?ConverterInfo.Version 1?><front><journal-meta><journal-id journal-id-type="nlm-ta">F1000Res</journal-id><journal-id journal-id-type="iso-abbrev">F1000Res</journal-id><journal-id journal-id-type="pmc">F1000Research</journal-id><journal-title-group><journal-title>F1000Research</journal-title></journal-title-group><issn pub-type="epub">2046-1402</issn><publisher><publisher-name>F1000Research</publisher-name><publisher-loc>London, UK</publisher-loc></publisher></journal-meta><article-meta><article-id pub-id-type="pmcid">5089144</article-id><article-id pub-id-type="pmid">27853511</article-id><article-id pub-id-type="doi">10.12688/f1000research.9151.2</article-id><article-categories><subj-group subj-group-type="heading"><subject>Research Article</subject></subj-group><subj-group><subject>Articles</subject><subj-group><subject>Protein Chemistry &amp; Proteomics</subject></subj-group><subj-group><subject>Tropical &amp; Travel-Associated Diseases</subject></subj-group></subj-group></article-categories><title-group><article-title>Molecular docking and molecular dynamics simulation study of inositol phosphorylceramide synthase &#8211; inhibitor complex in leishmaniasis: Insight into the structure based drug design</article-title><fn-group content-type="pub-status"><fn><p>[version 2; referees: 2 approved]</p></fn></fn-group></title-group><contrib-group><contrib contrib-type="author"><name><surname>Mandlik</surname><given-names>Vineetha</given-names></name><xref ref-type="aff" rid="a1">1</xref></contrib><contrib contrib-type="author"><name><surname>Singh</surname><given-names>Shailza</given-names></name><xref ref-type="corresp" rid="c1">a</xref><xref ref-type="aff" rid="a1">1</xref></contrib><aff id="a1">
+<label>1</label>National Centre for Cell Science, NCCS Complex, SP Pune University Campus, Pune, India</aff></contrib-group><author-notes><corresp id="c1"><label>a</label><email xlink:href="mailto:shailza_iitd@yahoo.com">shailza_iitd@yahoo.com</email></corresp><fn fn-type="con"><p>SS designed and conceptualized the experiments. VM carried out the experiments. SS and VM wrote the manuscript. All the authors have read and approved the manuscript.</p></fn><fn fn-type="COI-statement"><p>
+<bold>Competing interests: </bold>The authors declare no competing financial interests.</p></fn></author-notes><pub-date pub-type="epub"><day>1</day><month>9</month><year>2016</year></pub-date><pub-date pub-type="collection"><year>2016</year></pub-date><volume>5</volume><elocation-id>1610</elocation-id><history><date date-type="accepted"><day>30</day><month>8</month><year>2016</year></date></history><permissions><copyright-statement>Copyright: &#169; 2016 Mandlik V and Singh S</copyright-statement><copyright-year>2016</copyright-year><license xlink:href="http://creativecommons.org/licenses/by/4.0/"><license-p>This is an open access article distributed under the terms of the Creative Commons Attribution Licence, which permits unrestricted use, distribution, and reproduction in any medium, provided the original work is properly cited.</license-p></license></permissions><self-uri content-type="pdf" xlink:type="simple" xlink:href="f1000research-5-10109.pdf"/><abstract><p>Inositol phosphorylceramide synthase (IPCS) has emerged as an important, interesting and attractive target in the sphingolipid metabolism of
+<italic>Leishmania. </italic>IPCS catalyzes the conversion of ceramide to IPC which forms the most predominant sphingolipid in
+<italic>Leishmania</italic>. IPCS has no mammalian equivalent and also plays an important role in maintaining the infectivity and viability of the parasite. The present study explores the possibility of targeting IPCS; development of suitable inhibitors for the same would serve as a treatment strategy for the infectious disease leishmaniasis. Five coumarin derivatives were developed as inhibitors of IPCS protein. Molecular dynamics simulations of the complexes of IPCS with these inhibitors were performed which provided insights into the binding modes of the inhibitors.
+<italic>In vitro</italic> screening of the top three compounds has resulted in the identification of one of the compounds (compound 3) which shows little cytotoxic effects. This compound therefore represents a good starting point for further
+<italic>in vivo</italic> experimentation and could possibly serve as an important drug candidate for the treatment of leishmaniasis.</p></abstract><kwd-group kwd-group-type="author"><kwd>IPCS (Inositol phosphorylceramide synthase)</kwd><kwd>Sphingolipid metabolism</kwd><kwd>Leishmania</kwd><kwd>Leishmaniasis</kwd><kwd>Drug Inhibitor design</kwd><kwd>Coumarin derivatives</kwd><kwd>Molecular docking</kwd><kwd>Molecular dynamics simulation</kwd></kwd-group><funding-group><award-group id="fund-1"><funding-source>Department of Biotechnology</funding-source><award-id>BT/PR 6037/GBD/27/372/2012</award-id></award-group><funding-statement>The present work is being funded by the Department of Biotechnology (DBT) Project No: BT/PR 6037/GBD/27/372/2012.</funding-statement><funding-statement><italic>The funders had no role in study design, data collection and analysis, decision to publish, or preparation of the manuscript.</italic></funding-statement></funding-group></article-meta><notes notes-type="version-changes"><sec sec-type="version-changes"><label>Revised</label><title>Amendments from Version 1</title><p>List of changes done from the previous version: Details about the structure of IPCS protein have now been included in the manuscript along with its binding site. We also improved Figure 2 from the manuscript as per the suggestions made by the reviewers. The interaction diagrams have now been generated using Ligplot and same have been included in Figure 5.</p></sec></notes></front><body><sec><title>Abbreviations</title><p>IPCS &#8211; Inositol phosphorylceramide synthase, IPC &#8211; Inositol phosphorylceramide, AUR1 &#8211; Aureobasidin 1, DAG &#8211; Diacylglycerol, RMSD &#8211; Root Mean Square Deviation, LINCS &#8211; Linear constraint solver, PME &#8211; Particle Mesh Ewald.</p></sec><sec sec-type="intro"><title>Introduction</title><p>Leishmaniasis is a neglected tropical disease that is caused by the protozoan parasite
+<italic>Leishmania</italic>. Around 12 million people are affected by this disease worldwide. The mechanism of action of most of the anti-leishmanial compounds remains largely unknown. The first line treatment of cutaneous leishmaniasis involves the administration of antimony based compounds. Treatment of
+<italic>L. major</italic> amastigotes with Sb(V) has been found to induce apoptosis by the induction of oxidative-stress and increase in intracellular calcium
+<sup><xref rid="ref-1" ref-type="bibr">1</xref></sup>. Non-antimony based treatments such as miltefosine, topical formulations of paromomycin are cost effective, convenient and less toxic than antimony based compounds. Amphotericin B being a liposomal formulation is expensive, has a low therapeutic index and is difficult to administer
+<sup><xref rid="ref-2" ref-type="bibr">2</xref></sup>. Newer formulations for the treatment of this disease include the administration of miltefosine. Miltefosine (hexadecylphosphocholine), originally an anticancer drug has been reported to induce apoptosis of
+<italic>L. major</italic> amastigotes in the infected macrophages
+<sup><xref rid="ref-3" ref-type="bibr">3</xref></sup>. However the growing problem of drug resistance to the existing chemotherapeutics as well as the quick adaptability of the parasite to the host immune responses has necessitated the development of newer treatment strategies for leishmaniasis
+<sup><xref rid="ref-4" ref-type="bibr">4</xref>&#8211;
+<xref rid="ref-6" ref-type="bibr">6</xref></sup>.</p><p>Sphingolipids like IPC, form an important component of the parasitic membranes
+<sup><xref rid="ref-7" ref-type="bibr">7</xref></sup>. IPCS (inositol phosphorylceramide synthase) is an enzyme involved in the sphingolipid metabolism of protozoans and other fungal species
+<sup><xref rid="ref-8" ref-type="bibr">8</xref></sup>. The relative importance of IPCS in
+<italic>Leishmania</italic> has been identified through biochemical network modeling
+<sup><xref rid="ref-9" ref-type="bibr">9</xref></sup>. IPCS catalyzes the conversion of ceramide to IPC which forms the most predominant sphingolipid of the parasite
+<sup><xref rid="ref-10" ref-type="bibr">10</xref></sup> (
+<xref ref-type="fig" rid="f1">Figure 1</xref>). IPCS also maintains the concentration of DAG and ceramide, both of which serve as secondary messengers in several signal transduction events
+<sup><xref rid="ref-11" ref-type="bibr">11</xref></sup>. IPCS localizes into the lipid rafts of the Golgi complex
+<sup><xref rid="ref-12" ref-type="bibr">12</xref></sup>. Lipid rafts have been proposed to involve in a wide array of events like trafficking of lipid modified proteins in addition to playing an important role in the formation of signal transduction complexes
+<sup><xref rid="ref-13" ref-type="bibr">13</xref></sup>. IPCS has been important for maintaining the viability and the infectivity of several fungal species like
+<italic>Cryptococcus neoformans</italic>,
+<italic>Candida albicans</italic> and pathogens like
+<italic>Leishmania</italic>
+<sup><xref rid="ref-14" ref-type="bibr">14</xref>&#8211;
+<xref rid="ref-17" ref-type="bibr">17</xref></sup>. Interestingly there is no mammalian equivalent of this enzyme and the major sphingolipid in the host is sphingomyelin instead of IPC. Hence IPCS has been considered as a choke point enzyme in the sphingolipid metabolism of
+<italic>Leishmania</italic> thereby serving as a druggable target for the treatment of several fungal and protozoan diseases like leishmaniasis.
+<italic>Lmj</italic>IPCS comprises of 338 amino acids and has 6 transmembrane domains and belongs to the PAP2c family
+<sup><xref rid="ref-9" ref-type="bibr">9</xref></sup>. IPCS is encoded by the AUR1 gene. IPCS protein present in fungi exhibits sensitivity to antifungal agents like galbonolide A, aureobasidin A, macrolidegalbonolide and khafrefungin
+<sup><xref rid="ref-18" ref-type="bibr">18</xref>,
+<xref rid="ref-19" ref-type="bibr">19</xref></sup>. IPCS has been recently discovered in
+<italic>Leishmania</italic> and to the best of our knowledge there are no reports of inhibitor design against this protein. This paper explores the possibility of targeting IPCS for the development of anti-protozoan compounds. An
+<italic>in silico</italic> approach for drug design has led to the development of five novel coumarin derivatives. The refinement and validation of the docked complexes has been done using molecular dynamics simulations to map the protein ligand interactions. Based on the
+<italic>in silico</italic> findings, the promising candidates were considered for further experimental evaluation and validation.</p><fig fig-type="figure" id="f1" orientation="portrait" position="float"><label>Figure 1. </label><caption><title>Role of IPCS in the sphingolipid metabolism of
+<italic>Leishmania</italic>.</title><p>IPCS catalyzes the reaction involving the conversion of ceramide to IPC (Inositolphosphorylceramide). IPC forms the most predominant sphingolipid in
+<italic>Leishmania</italic>. IPCS plays an important role in maintaining the viability of the parasite.</p></caption><graphic xlink:href="f1000research-5-10109-g0000"/></fig></sec><sec sec-type="materials | methods"><title>Materials and methods</title><sec><title>Generation of the lead compounds</title><p>A set of coumarin derivatives were prepared by the assembly of pharmacophoric groups. The 2D structures of the inhibitors were drawn and edited using Chemsketch version 12.01
+<sup><xref rid="ref-20" ref-type="bibr">20</xref></sup> (
+<xref ref-type="fig" rid="f2">Figure 2</xref>). The SMILES format for all the compounds was generated using Open Babel version 2.3.1
+<sup><xref rid="ref-21" ref-type="bibr">21</xref></sup>. Inhibitors were designed and filtered using the &#8220;Lipinski rules of five&#8221;
+<sup><xref rid="ref-22" ref-type="bibr">22</xref></sup> and Veber&#8217;s rules
+<sup><xref rid="ref-23" ref-type="bibr">23</xref></sup> using the Molinspiration Property Calculation Service (
+<ext-link ext-link-type="uri" xlink:href="http://www.molinspiration.com/">www.molinspiration.com</ext-link>).</p><fig fig-type="figure" id="f2" orientation="portrait" position="float"><label>Figure 2. </label><caption><title>2D representation of the IPCS inhibitors.</title><p>The designed inhibitors are Coumarin derivatives. Coumarin increases the phagocytic activity of the macrophages.</p></caption><graphic xlink:href="f1000research-5-10109-g0001"/></fig></sec><sec><title>Pharmacophore generation</title><p>The pharmacophore models describing the inherent chemical features of the inhibitors were generated using the &#8220;Feature mapping protocol&#8221; available in Discovery Studio version 3.0 (
+<ext-link ext-link-type="uri" xlink:href="http://www.accelyrs.com">www.accelyrs.com</ext-link>). Pharmacophore models of the inhibitors indicated that the ligand had at least a maximum of 5 pharmacophoric features i.e. Hydrogen bond acceptors (HBA), Hydrogen bond donors (HBD), positive ionizable groups (PI), Ring aromatic groups (RA) and the Hydrophobic groups (HY) present in the ligand.</p></sec><sec><title>Molecular docking</title><p>IPCS is one of the emerging drug targets for the treatment of leishmaniasis. The crystal structure of the IPCS protein has not been solved and hence the 3D structure for the IPCS protein developed by our group before has been used for the inhibitor design. The model was developed using the I-TASSER server (
+<ext-link ext-link-type="uri" xlink:href="http://zhanglab.ccmb.med.umich.edu/I-TASSER/">http://zhanglab.ccmb.med.umich.edu/I-TASSER/</ext-link>). The predicted model has a total of 338 amino acid residues and has 7 transmembrane helices
+<sup><xref rid="ref-9" ref-type="bibr">9</xref></sup>. Binding site prediction of the IPCS protein was done using MetaPocket version 2.0
+<sup><xref rid="ref-24" ref-type="bibr">24</xref></sup>. The 3D structure of IPCS was energy minimized by the steepest gradient method of energy minimization using the GROMACS 4.0 package
+<sup><xref rid="ref-25" ref-type="bibr">25</xref></sup>. Mol2 file format of the inhibitors was converted to PDBQT format using MGL tools prior to docking. All the water and solvent atoms of the protein were removed prior to docking and the polar hydrogens were added. The protein was kept rigid while the ligand was allowed to rotate and explore more flexible binding pockets. Docking of the inhibitors onto the IPCS protein was performed using Auto Dock 4 version 1.5.6 and Auto Dock vina version 1.1.2. The grid box was centered around the binding pocket. The grid dimensions were adjusted according to the binding site and the default scoring function was used for docking
+<sup><xref rid="ref-26" ref-type="bibr">26</xref>,
+<xref rid="ref-27" ref-type="bibr">27</xref></sup>. Binding modes of the docked complexes were obtained and the amino acid residues present at a distance of 5&#197; were considered as the binding partners of the ligands. The interaction diagrams representing the docked complexes have been generated using Pymol v 1.3.</p></sec><sec><title>Molecular dynamics simulation of the docked complexes</title><p>Molecular dynamics simulation is a computational method that provides information regarding the time dependent behavior of any molecular system by integrating Newton&#8217;s laws of motion. The docked complexes (IPCS-inhibitor complex) were subjected to MD simulation using Desmond version 4.4 (Schodinger Biosuite). MD simulation of both the IPCS protein and IPCS &#8211;ligand complexes were performed for a time period of 10ns by using the OPLS force field. The complex was centered in a cubic box and filled with TIP3P water molecules. The system was neutralized and the initial energy minimization for the system was done using the conjugant gradient algorithm. The Martyna-Tobias-Klein scheme was used for pressure coupling. Electrostatic forces were calculated using the PME algorithm
+<sup><xref rid="ref-28" ref-type="bibr">28</xref></sup>. All runs were performed at 300K at constant volume and temperature (NPT ensemble) under certain periodic boundary conditions. RMSD plots for the backbone atoms for both the protein and ligand bound protein were generated to understand the relative stability of the ligand inside its binding pocket and the IPCS-inhibitor complexes were visualized.</p></sec><sec><title>Flow cytometry</title><p>Macrophage cell population was collected post 24 h treatment with the compound 3, washed and suspended in 1XPBS. Cells were stained with 10&#181;l of 10&#956;g/mL of propidium iodide (PI) dye (Invitrogen) and acquired on FACS. Total macrophage population was gated based on their forward scatter (FSC) and side scatter (SSC) after excluding the cell debris. A minimum of 10,000 events were acquired for each sample on FACS Canto II (Beckon Dickson, San Jose, California) and analyzed using FACS Diva Software (version 6.2.1) (Beckon Dikson, San Jose, California).</p></sec></sec><sec sec-type="results"><title>Results</title><supplementary-material content-type="local-data" id="DS0"><label>Raw data for &#8216;Molecular docking and molecular dynamics simulation study of inositol phosphorylceramide synthase &#8211; inhibitor complex in leishmaniasis: Insight into the structure based drug design&#8217;</label><caption><p>A description of each file is provided in &#8216;Dataset descriptions&#8217;.</p></caption><media xlink:href="f1000research-5-10109-s0000.tgz"><caption><p>Click here for additional data file.</p></caption></media><permissions><copyright-statement>Copyright: &#169; 2016 Mandlik V and Singh S</copyright-statement><copyright-year>2016</copyright-year><license xlink:href="http://creativecommons.org/publicdomain/zero/1.0/"><license-p>Data associated with the article are available under the terms of the Creative Commons Zero "No rights reserved" data waiver (CC0 1.0 Public domain dedication).</license-p></license></permissions></supplementary-material><p>A group of coumarin derivatives were prepared as inhibitors of the IPCS protein belonging to
+<italic>L. major</italic>. Assessment of the drug like properties indicated that all the inhibitors were found to comply with the Lipinski&#8217;s &#8220;Rule of five&#8221; (molecular weight (
+<italic>M</italic>
+<sub>wt</sub>) &#8804; 500, clogP &#8804; 5, H-bond donors (HBD) &#8804; 5, and acceptors (HBA) &#8804; 10) and Verber&#8217;s rules (no. of rotatable bonds &lt; 10, PSA &#8804; 140A
+<sup>2</sup>) (
+<xref ref-type="table" rid="T1">Table 1</xref>).</p><table-wrap id="T1" orientation="portrait" position="anchor"><label>Table 1. </label><caption><title>Molecular descriptors of the lead compounds.</title><p>HBA &#8211; Hydrogen bond acceptor, HBD &#8211; Hydrogen bond donor, HY &#8211; Hydrophobic, RA &#8211; Ring aromatic, MR &#8211; Molar refractivity, NROTB &#8211; No. of rotatable bonds, cLog
+<italic>P</italic> &#8211; log octanol/water partition coefficient, PSA &#8211; Polar surface area, NSC &#8211; No. of stereo centers.</p></caption></table-wrap><sec><title>Molecular docking</title><p>Binding site of the IPCS protein [
+<xref ref-type="fig" rid="f3">Figure 3</xref>], the structure was refined using molecular dynamics simulation. Molecular docking studies reveal the binding modes of the ligand with IPCS protein giving an insight into the crucial amino acid residues that are involved during the binding. A comparison of the binding energies of all the compounds indicates that compound 3 has the least binding energy among all and hence exhibits maximum affinity towards the IPCS protein (
+<xref ref-type="table" rid="T2">Table 2</xref>). The interaction modes of all the IPCS inhibitors post docking along with their pharmacophoric features have been presented [
+<xref ref-type="fig" rid="f4">Figure 4</xref>]. Binding mode analysis reveals that hydrophilic amino acids like Arg299 and His220 were found to be involved in hydrogen or &#960; bonding with most of the ligands (
+<xref ref-type="table" rid="T3">Table 3</xref>). The relative stability of the compounds within the binding site was maintained due to the van der Waal&#8217;s interaction between the hydrophobic amino acids of the IPCS protein and the ligand (
+<xref ref-type="table" rid="T4">Table 4</xref>).</p><fig fig-type="figure" id="f3" orientation="portrait" position="float"><label>Figure 3. </label><caption><title>Binding site of the IPCS protein as predicted by Metapocket has been represented with carbon atoms in green, sulfur in yellow, nitrogen in blue and oxygen in red.</title></caption><graphic xlink:href="f1000research-5-10109-g0002"/></fig><table-wrap id="T2" orientation="portrait" position="anchor"><label>Table 2. </label><caption><title>The approximate free energies of binding (&#916;G
+<sub>b</sub>) of the compounds calculated by Autodock vina.</title></caption></table-wrap><table-wrap id="T3" orientation="portrait" position="anchor"><label>Table 3. </label><caption><title>IPCS &#8211;inhibitor interactions post docking.</title></caption></table-wrap><table-wrap id="T4" orientation="portrait" position="anchor"><label>Table 4. </label><caption><title>Comparison of the interacting residues both pre and post MD simulation.</title></caption></table-wrap><fig fig-type="figure" id="f4" orientation="portrait" position="float"><label>Figure 4. </label><caption><title>Pharmacophore models of the inhibitors.</title><p>The pharmacophoric features such as hydrogen bond acceptors (green), hydrogen bond donors (pink), hydrophobic regions (blue) and the aromatic rings in yellow are shown in the figure.</p></caption><graphic xlink:href="f1000research-5-10109-g0003"/></fig></sec><sec><title>Molecular dynamics simulation of the docked complexes</title><p>Protein backbone RMSD plots indicate the stability of the IPCS-inhibitor complex. The drug backbone RMSD plots indicate that compounds 2 and 3 maintained their interactions with the IPCS protein (
+<xref ref-type="fig" rid="f5">Figure 5</xref>). Binding modes of compounds 1 to 5 post MD simulation have been shown in
+<xref ref-type="fig" rid="f6">Figure 6a&#8211;e</xref>.</p><fig fig-type="figure" id="f5" orientation="portrait" position="float"><label>Figure 5. </label><caption><title>RMSD of the IPCS-ligand complexes.</title><p>Backbone RMSD of
+<bold>a</bold>) Compound 1 and
+<bold>b</bold>) Compound 2
+<bold>c</bold>) Compound 3
+<bold>d</bold>) Compound 4
+<bold>e</bold>) Compound 5 is shown in the figure. Compound 1, 2 and 3 appear to maintain their stability within the binding pocket as they show lower RMSD fluctuations.</p></caption><graphic xlink:href="f1000research-5-10109-g0004"/></fig><fig fig-type="figure" id="f6" orientation="portrait" position="float"><label>Figure 6a&#8211;e. </label><caption><title>Binding modes of IPCS-ligand complexes.</title><p>The interaction of the ligand within the IPCS inhibitor complex post MD simulation is shown the figure
+<bold>a</bold>) IPCS - compound 1 complex
+<bold>b</bold>) IPCS - compound 2 complex
+<bold>c</bold>) IPCS - compound 3 complex
+<bold>d</bold>) IPCS - compound 4 complex and
+<bold>e</bold>) IPCS - compound 5 complex. MD simulation was performed for a time period of 10ns. Interacting residues are represented in red.</p></caption><graphic xlink:href="f1000research-5-10109-g0005"/></fig></sec><sec><title>Cytotoxicity of the proposed inhibitors</title><p>The cytotoxicity profile of compound 3 was checked over the macrophage cell line. Of all five compounds, compound 3 had the highest viability. The viability of C3 treated macrophages (67.3%) was slightly lesser than the control (73.5%) (
+<xref ref-type="fig" rid="f7">Figure 7</xref>).</p><fig fig-type="figure" id="f7" orientation="portrait" position="float"><label>Figure 7. </label><caption><title> FACS analysis for measuring macrophage cell viability.</title><p>Macrophages were treated with compound 3 for 24h.
+<bold>a</bold>) Control cell population displayed a percentage viability of 73.5%
+<bold>b</bold>) Compound 3 (1mg/ml) treated macrophages displayed a viability of 67.3% post 24hr treatment.</p></caption><graphic xlink:href="f1000research-5-10109-g0006"/></fig></sec></sec><sec sec-type="discussion"><title>Discussion</title><p>IPCS (Inositol phosphorylceramide synthase) has been identified as an important drug target in the sphingolipid metabolism of several organisms like fungi, yeast and protozoans like
+<italic>Leishmania</italic> and
+<italic>Trypanosoma</italic>
+<sup><xref rid="ref-29" ref-type="bibr">29</xref></sup>. Systems biology has played a major role in defining the relative importance of IPCS in the sphingolipid metabolism of
+<italic>Leishmania</italic>, a protozoan responsible for causing an infectious disease leishmaniasis. The quest for developing new inhibitors for any target protein relies mainly on
+<italic>in silico</italic> approaches like computer based docking which involves the generation of a comprehensive set of ligand conformations that are eventually scored and ranked according to their stability and affinity for the protein. Coumarin has been shown to simulate the macrophages, enhancing their phagocytic ability
+<sup><xref rid="ref-30" ref-type="bibr">30</xref></sup>. A total of five ligands were developed as inhibitors for the IPCS protein. Molecular docking of the inhibitors with the IPCS protein revealed the binding modes of inhibitors. To account for the flexibility of the protein and ligand and to determine the binding affinity of the inhibitors with the IPCS protein, a 10 ns molecular dynamics simulation of the docked complexes was carried out. Binding mode analysis revealed that the binding modes obtained after MD simulation were more or less similar to that obtained post docking (
+<xref ref-type="table" rid="T4">Table 4</xref>). The presence of a large number of H bond acceptors, H bond donors as well as hydrophobic groups in the ligands account for the stability of the ligand inside the binding pocket of IPCS. Based on the RMSD of the ligand-protein complex, it was observed that compounds 1, 2 and 3 maintained their interaction with the protein with lower RMSD fluctuations. Out of these, compound 3 showed the highest binding affinity and its cytotoxicity was assessed using flow cytometry. Cytotoxicity of compound 3 was lesser as compared to other compound. A comparison of the compound 3 treated macrophages along with the untreated macrophages has been made in
+<xref ref-type="fig" rid="f6">Figure 6</xref>.</p></sec><sec sec-type="conclusions"><title>Conclusion</title><p>There is an urgent need to design and develop novel anti-leishmanial compounds due to various problems associated with the current chemotherapeutics for the treatment of this disease. IPCS has been proposed to be a probable drug target in the sphingolipid pathway of
+<italic>Leishmania</italic>. We have designed a few novel coumarin derivatives using
+<italic>in silico</italic> approaches. MD simulation post docking studies reveal the interactions between the IPCS protein and ligands. Binding modes obtained after docking and after MD simulation reveal almost identical binding modes which is suggestive of the selectivity and selectivity of the ligand towards the active site of the IPCS protein.</p></sec><sec><title>Data availability</title><p>The data referenced by this article are under copyright with the following copyright statement: Copyright: &#169; 2016 Mandlik V and Singh S</p><p>Data associated with the article are available under the terms of the Creative Commons Zero "No rights reserved" data waiver (CC0 1.0 Public domain dedication).
+<ext-link ext-link-type="uri" xlink:href="http://creativecommons.org/publicdomain/zero/1.0/"/>
+</p><p>
+<italic>F1000Research</italic>: Dataset 1. Raw data for &#8216;Molecular docking and molecular dynamics simulation study of inositol phosphorylceramide synthase &#8211; inhibitor complex in leishmaniasis: Insight into the structure based drug design&#8217;,
+<ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.5256/f1000research.9151.d128337">10.5256/f1000research.9151.d128337</ext-link>
+<sup><xref rid="ref-31" ref-type="bibr">31</xref></sup>
+</p></sec></body><back><ack><title>Acknowledgement</title><p>The authors would like to thank the Director, National Center for Cell Science (NCCS) for supporting the Bioinformatics and High Performance Computing Facility (BHPCF) at NCCS, Pune, India.</p></ack><ref-list><ref id="ref-1"><label>1</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Haldar</surname><given-names>AK</given-names></name><name><surname>Sen</surname><given-names>P</given-names></name><name><surname>Roy</surname><given-names>S</given-names></name></person-group>:
+<article-title>Use of antimony in the treatment of leishmaniasis: current status and future directions.</article-title>
+<source><italic>Mol Biol Int.</italic></source>
+<year>2011</year>;<volume>2011</volume>:<fpage>23</fpage>, 571242.
+<pub-id pub-id-type="doi">10.4061/2011/571242</pub-id>
+<!--<pub-id pub-id-type="pmcid">3196053</pub-id>-->
+<?supplied-pmid 22091408?><pub-id pub-id-type="pmid">22091408</pub-id></mixed-citation></ref><ref id="ref-2"><label>2</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Yardley</surname><given-names>V</given-names></name><name><surname>Croft</surname><given-names>SL</given-names></name></person-group>:
+<article-title>Activity of liposomal amphotericin B against experimental cutaneous leishmaniasis.</article-title>
+<source><italic>Antimicrob Agents Chemother.</italic></source>
+<year>1997</year>;<volume>41</volume>(<issue>4</issue>):<fpage>752</fpage>&#8211;<lpage>756</lpage>.
+<!--<pub-id pub-id-type="pmcid">163788</pub-id>-->
+<?supplied-pmid 9087483?><pub-id pub-id-type="pmid">9087483</pub-id></mixed-citation></ref><ref id="ref-3"><label>3</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Khademvatan</surname><given-names>S</given-names></name><name><surname>Gharavi</surname><given-names>MJ</given-names></name><name><surname>Rahim</surname><given-names>F</given-names></name><etal/></person-group>:
+<article-title>Miltefosine-induced apoptotic cell death on
+<italic>Leishmania major</italic> and
+<italic>L. tropica</italic> strains.</article-title>
+<source><italic>Korean J Parasitol.</italic></source>
+<year>2011</year>;<volume>49</volume>(<issue>1</issue>):<fpage>17</fpage>&#8211;<lpage>23</lpage>.
+<pub-id pub-id-type="doi">10.3347/kjp.2011.49.1.17</pub-id>
+<!--<pub-id pub-id-type="pmcid">3063921</pub-id>-->
+<?supplied-pmid 21461264?><pub-id pub-id-type="pmid">21461264</pub-id></mixed-citation></ref><ref id="ref-4"><label>4</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Hadighi</surname><given-names>R</given-names></name><name><surname>Mohebali</surname><given-names>M</given-names></name><name><surname>Boucher</surname><given-names>P</given-names></name><etal/></person-group>:
+<article-title>Unresponsiveness to Glucantime treatment in Iranian cutaneous leishmaniasis due to drug-resistant
+<italic>Leishmania tropica</italic> parasites.</article-title>
+<source><italic>PLoS Med.</italic></source>
+<year>2006</year>;<volume>3</volume>(<issue>5</issue>):<fpage>e162</fpage>.
+<pub-id pub-id-type="doi">10.1371/journal.pmed.0030162</pub-id>
+<!--<pub-id pub-id-type="pmcid">1435779</pub-id>-->
+<?supplied-pmid 16605301?><pub-id pub-id-type="pmid">16605301</pub-id></mixed-citation></ref><ref id="ref-5"><label>5</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Mishra</surname><given-names>BB</given-names></name><name><surname>Kale</surname><given-names>RR</given-names></name><name><surname>Singh</surname><given-names>RK</given-names></name><etal/></person-group>:
+<article-title>Alkaloids: future prospective to combat leishmaniasis.</article-title>
+<source><italic>Fitoterapia.</italic></source>
+<year>2009</year>;<volume>80</volume>(<issue>2</issue>):<fpage>81</fpage>&#8211;<lpage>90</lpage>.
+<pub-id pub-id-type="doi">10.1016/j.fitote.2008.10.009</pub-id>
+<?supplied-pmid 19015012?><pub-id pub-id-type="pmid">19015012</pub-id></mixed-citation></ref><ref id="ref-6"><label>6</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Croft</surname><given-names>SL</given-names></name><name><surname>Barrett</surname><given-names>MP</given-names></name><name><surname>Urbina</surname><given-names>JA</given-names></name></person-group>:
+<article-title>Chemotherapy of trypanosomiases and leishmaniasis.</article-title>
+<source><italic>Trends Parasitol.</italic></source>
+<year>2005</year>;<volume>21</volume>(<issue>11</issue>):<fpage>508</fpage>&#8211;<lpage>512</lpage>.
+<pub-id pub-id-type="doi">10.1016/j.pt.2005.08.026</pub-id>
+<?supplied-pmid 16150644?><pub-id pub-id-type="pmid">16150644</pub-id></mixed-citation></ref><ref id="ref-7"><label>7</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Heung</surname><given-names>LJ</given-names></name><name><surname>Luberto</surname><given-names>C</given-names></name><name><surname>Del Poeta</surname><given-names>M</given-names></name></person-group>:
+<article-title>Role of sphingolipids in microbial pathogenesis.</article-title>
+<source><italic>Infect Immun.</italic></source>
+<year>2006</year>;<volume>74</volume>(<issue>1</issue>):<fpage>28</fpage>&#8211;<lpage>39</lpage>.
+<pub-id pub-id-type="doi">10.1128/IAI.74.1.28-39.2006</pub-id>
+<!--<pub-id pub-id-type="pmcid">1346627</pub-id>-->
+<?supplied-pmid 16368954?><pub-id pub-id-type="pmid">16368954</pub-id></mixed-citation></ref><ref id="ref-8"><label>8</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Lester</surname><given-names>RL</given-names></name><name><surname>Dickson</surname><given-names>RC</given-names></name></person-group>:
+<article-title>Sphingolipids with inositolphosphate-containing head groups.</article-title>
+<source><italic>Adv Lipid Res.</italic></source>
+<year>1993</year>;<volume>26</volume>:<fpage>253</fpage>&#8211;<lpage>274</lpage>.
+<?supplied-pmid 8379454?><pub-id pub-id-type="pmid">8379454</pub-id></mixed-citation></ref><ref id="ref-9"><label>9</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Mandlik</surname><given-names>V</given-names></name><name><surname>Shinde</surname><given-names>S</given-names></name><name><surname>Chaudhary</surname><given-names>A</given-names></name><etal/></person-group>:
+<article-title>Biological network modeling identifies IPCS in
+<italic>Leishmania</italic> as a therapeutic target.</article-title>
+<source><italic>Integr Biol (Camb).</italic></source>
+<year>2012</year>;<volume>4</volume>(<issue>9</issue>):<fpage>1130</fpage>&#8211;<lpage>1142</lpage>.
+<pub-id pub-id-type="doi">10.1039/C2IB20037F</pub-id>
+<?supplied-pmid 22842708?><pub-id pub-id-type="pmid">22842708</pub-id></mixed-citation></ref><ref id="ref-10"><label>10</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Dickson</surname><given-names>RC</given-names></name></person-group>:
+<article-title>Sphingolipid functions in
+<italic>Saccharomyces cerevisiae</italic>: comparison to mammals.</article-title>
+<source><italic>Annu Rev Biochem.</italic></source>
+<year>1998</year>;<volume>67</volume>:<fpage>27</fpage>&#8211;<lpage>48</lpage>.
+<pub-id pub-id-type="doi">10.1146/annurev.biochem.67.1.27</pub-id>
+<?supplied-pmid 9759481?><pub-id pub-id-type="pmid">9759481</pub-id></mixed-citation></ref><ref id="ref-11"><label>11</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Cerb&#243;n</surname><given-names>J</given-names></name><name><surname>Falcon</surname><given-names>A</given-names></name><name><surname>Hern&#225;ndez-Luna</surname><given-names>C</given-names></name><etal/></person-group>:
+<article-title>Inositol phosphoceramide synthase is a regulator of intracellular levels of diacylglycerol and ceramide during the G
+<sub>1</sub> to S transition in
+<italic>Saccharomyces cerevisiae</italic>.</article-title>
+<source><italic>Biochem J.</italic></source>
+<year>2005</year>;<volume>388</volume>(<issue>Pt 1</issue>):<fpage>169</fpage>&#8211;<lpage>176</lpage>.
+<pub-id pub-id-type="doi">10.1042/BJ20040475</pub-id>
+<!--<pub-id pub-id-type="pmcid">1186705</pub-id>-->
+<?supplied-pmid 15560753?><pub-id pub-id-type="pmid">15560753</pub-id></mixed-citation></ref><ref id="ref-12"><label>12</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Denny</surname><given-names>PW</given-names></name><name><surname>Shams-Eldin</surname><given-names>H</given-names></name><name><surname>Price</surname><given-names>HP</given-names></name><etal/></person-group>:
+<article-title>The protozoan inositol phosphorylceramide synthase: a novel drug target that defines a new class of sphingolipid synthase.</article-title>
+<source><italic>J Biol Chem.</italic></source>
+<year>2006</year>;<volume>281</volume>(<issue>38</issue>):<fpage>28200</fpage>&#8211;<lpage>28209</lpage>.
+<pub-id pub-id-type="doi">10.1074/jbc.M600796200</pub-id>
+<!--<pub-id pub-id-type="pmcid">1817671</pub-id>-->
+<?supplied-pmid 16861742?><pub-id pub-id-type="pmid">16861742</pub-id></mixed-citation></ref><ref id="ref-13"><label>13</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Simons</surname><given-names>K</given-names></name><name><surname>Sampaio</surname><given-names>JL</given-names></name></person-group>:
+<article-title>Membrane organization and lipid rafts.</article-title>
+<source><italic>Cold Spring Harb Perspect Biol.</italic></source>
+<year>2011</year>;<volume>3</volume>(<issue>10</issue>):<fpage>a004697</fpage>.
+<pub-id pub-id-type="doi">10.1101/cshperspect.a004697</pub-id>
+<!--<pub-id pub-id-type="pmcid">3179338</pub-id>-->
+<?supplied-pmid 21628426?><pub-id pub-id-type="pmid">21628426</pub-id></mixed-citation></ref><ref id="ref-14"><label>14</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Henry</surname><given-names>J</given-names></name><name><surname>Guillotte</surname><given-names>A</given-names></name><name><surname>Luberto</surname><given-names>C</given-names></name><etal/></person-group>:
+<article-title>Characterization of inositol phospho-sphingolipid-phospholipase C 1 (Isc1) in
+<italic>Cryptococcus neoformans</italic> reveals unique biochemical features.</article-title>
+<source><italic>FEBS Lett.</italic></source>
+<year>2011</year>;<volume>585</volume>(<issue>4</issue>):<fpage>635</fpage>&#8211;<lpage>640</lpage>.
+<pub-id pub-id-type="doi">10.1016/j.febslet.2011.01.015</pub-id>
+<!--<pub-id pub-id-type="pmcid">3045780</pub-id>-->
+<?supplied-pmid 21256847?><pub-id pub-id-type="pmid">21256847</pub-id></mixed-citation></ref><ref id="ref-15"><label>15</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Wells</surname><given-names>GB</given-names></name><name><surname>Dickson</surname><given-names>RC</given-names></name><name><surname>Lester</surname><given-names>RL</given-names></name></person-group>:
+<article-title>Isolation and composition of inositolphosphorylceramide-type sphingolipids of hyphal forms of
+<italic>Candida albicans</italic>.</article-title>
+<source><italic>J Bacteriol.</italic></source>
+<year>1996</year>;<volume>178</volume>(<issue>21</issue>):<fpage>6223</fpage>&#8211;<lpage>6226</lpage>.
+<!--<pub-id pub-id-type="pmcid">178493</pub-id>-->
+<?supplied-pmid 8892822?><pub-id pub-id-type="pmid">8892822</pub-id></mixed-citation></ref><ref id="ref-16"><label>16</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Levine</surname><given-names>TP</given-names></name><name><surname>Wiggins</surname><given-names>CA</given-names></name><name><surname>Munro</surname><given-names>S</given-names></name></person-group>:
+<article-title>Inositol phosphorylceramide synthase is located in the Golgi apparatus of
+<italic>Saccharomyces cerevisiae</italic>.</article-title>
+<source><italic>Mol Biol Cell.</italic></source>
+<year>2000</year>;<volume>11</volume>(<issue>7</issue>):<fpage>2267</fpage>&#8211;<lpage>2281</lpage>.
+<pub-id pub-id-type="doi">10.1091/mbc.11.7.2267</pub-id>
+<!--<pub-id pub-id-type="pmcid">14918</pub-id>-->
+<?supplied-pmid 10888667?><pub-id pub-id-type="pmid">10888667</pub-id></mixed-citation></ref><ref id="ref-17"><label>17</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>G&#252;ther</surname><given-names>ML</given-names></name><name><surname>Lee</surname><given-names>S</given-names></name><name><surname>Tetley</surname><given-names>L</given-names></name><etal/></person-group>:
+<article-title>GPI-anchored proteins and free GPI glycolipids of procyclic form
+<italic>Trypanosoma brucei</italic> are nonessential for growth, are required for colonization of the tsetse fly, and are not the only components of the surface coat.</article-title>
+<source><italic>Mol Biol Cell.</italic></source>
+<year>2006</year>;<volume>17</volume>(<issue>12</issue>):<fpage>5265</fpage>&#8211;<lpage>5274</lpage>.
+<pub-id pub-id-type="doi">10.1091/mbc.E06-08-0702</pub-id>
+<!--<pub-id pub-id-type="pmcid">1679689</pub-id>-->
+<?supplied-pmid 17035628?><pub-id pub-id-type="pmid">17035628</pub-id></mixed-citation></ref><ref id="ref-18"><label>18</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Nagiec</surname><given-names>MM</given-names></name><name><surname>Nagiec</surname><given-names>EE</given-names></name><name><surname>Baltisberger</surname><given-names>JA</given-names></name><etal/></person-group>:
+<article-title>Sphingolipid synthesis as a target for antifungal drugs. Complementation of the inositol phosphorylceramide synthase defect in a mutant strain of
+<italic>Saccharomyces cerevisiae</italic> by the
+<italic>AUR1</italic> gene.</article-title>
+<source><italic>J Biol Chem.</italic></source>
+<year>1997</year>;<volume>272</volume>(<issue>15</issue>):<fpage>9809</fpage>&#8211;<lpage>9817</lpage>.
+<pub-id pub-id-type="doi">10.1074/jbc.272.15.9809</pub-id>
+<?supplied-pmid 9092515?><pub-id pub-id-type="pmid">9092515</pub-id></mixed-citation></ref><ref id="ref-19"><label>19</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Yano</surname><given-names>T</given-names></name><name><surname>Aoyagi</surname><given-names>A</given-names></name><name><surname>Kozuma</surname><given-names>S</given-names></name><etal/></person-group>:
+<article-title>Pleofungins, novel inositol phosphorylceramide synthase inhibitors, from
+<italic>Phoma</italic> sp. SANK 13899. I. Taxonomy, fermentation, isolation, and biological activities.</article-title>
+<source><italic>J Antibiot (Tokyo).</italic></source>
+<year>2007</year>;<volume>60</volume>:<fpage>136</fpage>&#8211;<lpage>142</lpage>.
+<pub-id pub-id-type="doi">10.1038/ja.2007.13</pub-id>
+<?supplied-pmid 17420564?><pub-id pub-id-type="pmid">17420564</pub-id></mixed-citation></ref><ref id="ref-20"><label>20</label><mixed-citation publication-type="book">
+<article-title>ACD/Chemsketch, version 5.12</article-title>. Advanced Chemistry Development, Inc., Toronto, ON, Canada.
+<ext-link ext-link-type="uri" xlink:href="http://www.acdlabs.com">Reference Source</ext-link>
+</mixed-citation></ref><ref id="ref-21"><label>21</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>O'Boyle</surname><given-names>NM</given-names></name><name><surname>Banck</surname><given-names>M</given-names></name><name><surname>James</surname><given-names>CA</given-names></name><etal/></person-group>:
+<article-title>Open Babel: An open chemical toolbox.</article-title>
+<source><italic>J Cheminform.</italic></source>
+<year>2011</year>;<volume>3</volume>:<fpage>33</fpage>.
+<pub-id pub-id-type="doi">10.1186/1758-2946-3-33</pub-id>
+<!--<pub-id pub-id-type="pmcid">3198950</pub-id>-->
+<?supplied-pmid 21982300?><pub-id pub-id-type="pmid">21982300</pub-id></mixed-citation></ref><ref id="ref-22"><label>22</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Lipinski</surname><given-names>CA</given-names></name><name><surname>Lombardo</surname><given-names>F</given-names></name><name><surname>Dominy</surname><given-names>BW</given-names></name><etal/></person-group>:
+<article-title>Experimental and computational approaches to estimate solubility and permeability in drug discovery and development settings.</article-title>
+<source><italic>Adv Drug Deliv Rev.</italic></source>
+<year>1997</year>;<volume>23</volume>(<issue>1-3</issue>):<fpage>3</fpage>&#8211;<lpage>25</lpage>.
+<pub-id pub-id-type="doi">10.1016/S0169-409X(96)00423-1</pub-id>
+<?supplied-pmid 11259830?><pub-id pub-id-type="pmid">11259830</pub-id></mixed-citation></ref><ref id="ref-23"><label>23</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Veber</surname><given-names>DF</given-names></name><name><surname>Johnson</surname><given-names>SR</given-names></name><name><surname>Cheng</surname><given-names>HY</given-names></name><etal/></person-group>:
+<article-title>Molecular properties that Influence the oral bioavailability of drug candidates.</article-title>
+<source><italic>J Med Chem.</italic></source>
+<year>2002</year>;<volume>45</volume>(<issue>12</issue>):<fpage>2615</fpage>&#8211;<lpage>2623</lpage>.
+<pub-id pub-id-type="doi">10.1021/jm020017n</pub-id>
+<?supplied-pmid 12036371?><pub-id pub-id-type="pmid">12036371</pub-id></mixed-citation></ref><ref id="ref-24"><label>24</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Huang</surname><given-names>B</given-names></name></person-group>:
+<article-title>MetaPocket: a meta approach to improve protein ligand binding site prediction.</article-title>
+<source><italic>OMICS.</italic></source>
+<year>2009</year>;<volume>13</volume>(<issue>4</issue>):<fpage>325</fpage>&#8211;<lpage>330</lpage>.
+<pub-id pub-id-type="doi">10.1089/omi.2009.0045</pub-id>
+<?supplied-pmid 19645590?><pub-id pub-id-type="pmid">19645590</pub-id></mixed-citation></ref><ref id="ref-25"><label>25</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Berendsen</surname><given-names>HJ</given-names></name><name><surname>van der Spoel</surname><given-names>D</given-names></name><name><surname>van Drunen</surname><given-names>R</given-names></name></person-group>:
+<article-title>GROMACS: a message-passing parallel molecular dynamics implementation.</article-title>
+<source><italic>Comp Phys Comm.</italic></source>
+<year>1995</year>;<volume>91</volume>(<issue>1&#8211;3</issue>):<fpage>43</fpage>&#8211;<lpage>56</lpage>.
+<pub-id pub-id-type="doi">10.1016/0010-4655(95)00042-e</pub-id>
+</mixed-citation></ref><ref id="ref-26"><label>26</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Morris</surname><given-names>GM</given-names></name><name><surname>Goodsell</surname><given-names>DS</given-names></name><name><surname>Halliday</surname><given-names>RS</given-names></name><etal/></person-group>:
+<article-title>Automated docking using a Lamarckian genetic algorithm and an empirical binding free energy function.</article-title>
+<source><italic>J Computational Chemistry.</italic></source>
+<year>1998</year>;<volume>19</volume>(<issue>14</issue>):<fpage>1639</fpage>&#8211;<lpage>1662</lpage>.
+<pub-id pub-id-type="doi">10.1002/(SICI)1096-987X(19981115)19:14&lt;1639::AID-JCC10&gt;3.0.CO;2-B</pub-id>
+</mixed-citation></ref><ref id="ref-27"><label>27</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Trott</surname><given-names>O</given-names></name><name><surname>Olson</surname><given-names>AJ</given-names></name></person-group>:
+<article-title>AutoDock Vina: improving the speed and accuracy of docking with a new scoring function, efficient optimization, and multithreading.</article-title>
+<source><italic>J Comput Chem.</italic></source>
+<year>2010</year>;<volume>31</volume>(<issue>2</issue>):<fpage>455</fpage>&#8211;<lpage>461</lpage>.
+<pub-id pub-id-type="doi">10.1002/jcc.21334</pub-id>
+<!--<pub-id pub-id-type="pmcid">3041641</pub-id>-->
+<?supplied-pmid 19499576?><pub-id pub-id-type="pmid">19499576</pub-id></mixed-citation></ref><ref id="ref-28"><label>28</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Darden</surname><given-names>T</given-names></name><name><surname>York</surname><given-names>D</given-names></name><name><surname>Pedersen</surname><given-names>L</given-names></name></person-group>:
+<article-title>Particle mesh Ewald: an
+<italic>N</italic>-log(
+<italic>N</italic>) method for Ewald sums in large systems.</article-title>
+<source><italic>J Chem Phys.</italic></source>
+<year>1993</year>;<volume>98</volume>(<issue>12</issue>):<fpage>10089</fpage>&#8211;<lpage>10092</lpage>.
+<pub-id pub-id-type="doi">10.1063/1.464397</pub-id>
+</mixed-citation></ref><ref id="ref-29"><label>29</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Zhang</surname><given-names>K</given-names></name><name><surname>Beverley</surname><given-names>SM</given-names></name></person-group>:
+<article-title>Phospholipid and sphingolipid metabolism in
+<italic>Leishmania</italic>.</article-title>
+<source><italic>Mol Biochem Parasitol.</italic></source>
+<year>2010</year>;<volume>170</volume>(<issue>2</issue>):<fpage>55</fpage>&#8211;<lpage>64</lpage>.
+<pub-id pub-id-type="doi">10.1016/j.molbiopara.2009.12.004</pub-id>
+<!--<pub-id pub-id-type="pmcid">2815228</pub-id>-->
+<?supplied-pmid 20026359?><pub-id pub-id-type="pmid">20026359</pub-id></mixed-citation></ref><ref id="ref-30"><label>30</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Piller</surname><given-names>NB</given-names></name></person-group>:
+<article-title>A morphological assessment of the stimulatory effect of coumarin on macrophages.</article-title>
+<source><italic>Br J Exp Pathol.</italic></source>
+<year>1978</year>;<volume>59</volume>(<issue>1</issue>):<fpage>93</fpage>&#8211;<lpage>96</lpage>.
+<!--<pub-id pub-id-type="pmcid">2041321</pub-id>-->
+<?supplied-pmid 638035?><pub-id pub-id-type="pmid">638035</pub-id></mixed-citation></ref><ref id="ref-31"><label>31</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Mandlik</surname><given-names>V</given-names></name><name><surname>Singh</surname><given-names>S</given-names></name></person-group>:
+<article-title>Dataset 1 in: Molecular docking and molecular dynamics simulation study of inositol phosphorylceramide synthase &#8211; inhibitor complex in leishmaniasis: Insight into the structure based drug design.</article-title>
+<source><italic>F1000Research.</italic></source>
+<year>2016</year>
+<ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.5256/f1000research.9151.d128337">Data Source</ext-link>
+</mixed-citation></ref></ref-list></back><sub-article id="report17089" article-type="peer-review"><front-stub><article-id pub-id-type="doi">10.5256/f1000research.10109.r17089</article-id><title-group><article-title>Referee response for version 2</article-title></title-group><contrib-group><contrib contrib-type="author"><name><surname>Namasivayam</surname><given-names>Vigneshwaran</given-names></name><xref ref-type="aff" rid="r17089a1">1</xref><role>Referee</role></contrib><aff id="r17089a1">
+<label>1</label>PharmaCenter Bonn, Pharmaceutical Institute, Pharmaceutical Chemistry I, University of Bonn, Bonn, Germany</aff></contrib-group><author-notes><fn fn-type="COI-statement"><p>
+<bold>Competing interests: </bold>No competing interests were disclosed.</p></fn></author-notes><pub-date pub-type="epub"><day>25</day><month>10</month><year>2016</year></pub-date><related-article id="d35e2552" related-article-type="peer-reviewed-article" ext-link-type="doi" xlink:href="10.12688/f1000research.9151.2">Version 2</related-article><custom-meta-group><custom-meta><meta-name>recommendation</meta-name><meta-value>approve</meta-value></custom-meta></custom-meta-group></front-stub><body><p>Mandlik and Singh have applied the pharmcophore model and physicochemical properties to select five coumarin derivatives as a starting point as inhibitors targeting inositol phosphorylceramide synthase a target selected to study sphingolipid metabolism of Leishmania. IPCS is an important target because there is no mammalian equivalent of this enzyme. The authors have utilized the state-of-the art computational techniques molecular docking and molecular dynamics to confirm the binding mode and its interaction with the enzyme. The analysis explain that the high number of H-bond acceptors, donors and hydrophobic groups introduce strong interactions of the ligand within the binding site of the enzyme. The cytotoxicity profile of the selected inhibitors provides additional information about the coumarin derivatives. Thus, this study is a good starting point for focusing coumarin derivatives as inhibitors targeting against Leishmania. In the future study, it can be extended to modify these molecules to further enhance the interaction with IPCS and other experimental studies to confirm the binding affinity.</p><p>I have read this submission. I believe that I have an appropriate level of expertise to confirm that it is of an acceptable scientific standard.</p></body></sub-article><sub-article id="report16005" article-type="peer-review"><front-stub><article-id pub-id-type="doi">10.5256/f1000research.10109.r16005</article-id><title-group><article-title>Referee response for version 2</article-title></title-group><contrib-group><contrib contrib-type="author"><name><surname>Ferron</surname><given-names>Fran&#231;ois</given-names></name><xref ref-type="aff" rid="r16005a1">1</xref><role>Referee</role></contrib><aff id="r16005a1">
+<label>1</label>UMR 7257, Architecture and Functions of Biological Macromolecules Laboratory, CNRS-Aix-Marseille University, Marseille, France</aff></contrib-group><author-notes><fn fn-type="COI-statement"><p>
+<bold>Competing interests: </bold>No competing interests were disclosed.</p></fn></author-notes><pub-date pub-type="epub"><day>26</day><month>9</month><year>2016</year></pub-date><related-article id="d35e2601" related-article-type="peer-reviewed-article" ext-link-type="doi" xlink:href="10.12688/f1000research.9151.2">Version 2</related-article><custom-meta-group><custom-meta><meta-name>recommendation</meta-name><meta-value>approve</meta-value></custom-meta></custom-meta-group></front-stub><body><p>Authors have answered the Referee comments and improved the paper enough to be indexed.</p><p>I have read this submission. I believe that I have an appropriate level of expertise to confirm that it is of an acceptable scientific standard.</p></body></sub-article><sub-article id="report14858" article-type="peer-review"><front-stub><article-id pub-id-type="doi">10.5256/f1000research.9848.r14858</article-id><title-group><article-title>Referee response for version 1</article-title></title-group><contrib-group><contrib contrib-type="author"><name><surname>Ferron</surname><given-names>Fran&#231;ois</given-names></name><xref ref-type="aff" rid="r14858a1">1</xref><role>Referee</role></contrib><aff id="r14858a1">
+<label>1</label>UMR 7257, Architecture and Functions of Biological Macromolecules Laboratory, CNRS-Aix-Marseille University, Marseille, France</aff></contrib-group><author-notes><fn fn-type="COI-statement"><p>
+<bold>Competing interests: </bold>No competing interests were disclosed.</p></fn></author-notes><pub-date pub-type="epub"><day>20</day><month>7</month><year>2016</year></pub-date><related-article id="d35e2650" related-article-type="peer-reviewed-article" ext-link-type="doi" xlink:href="10.12688/f1000research.9151.1">Version 1</related-article><custom-meta-group><custom-meta><meta-name>recommendation</meta-name><meta-value>approve-with-reservations</meta-value></custom-meta></custom-meta-group></front-stub><body><p>Mandlik and Singh are presenting a very interesting study against
+<italic>Leishmania.</italic>&#160;Using
+<italic>in silico</italic>&#160;methods they have identified promising compounds.</p><p> They chose with great reason IPCS as a target for its uniqueness to the pathogens the study very interesting yet the manuscript needs some clarifications.
+<list list-type="order"><list-item><p>As there is no structure the authors have done a model, the model should be presented here and I feel a previous reference from 2012&#160;won't do. The reader needs to be introduced to it and at least to have a clear understanding of the catalytic site and docking site.</p></list-item><list-item><p>In the material and methods it would be appreciated to have an idea where is the center of the grid (may be with a figure).</p></list-item><list-item><p>Can you explain why you chose a grid with large dimensions?</p></list-item><list-item><p>The analysis of the viability raises a question. Why the surface p1 is not the same between control and compound? To compare the stats it should be the same size here it is half. Also from fig 6 compound 3 it seems that a lot of data were excluded from P1 area? Can you explain?</p></list-item><list-item><p>As perspective are you planning on testing
+<italic>in vitro</italic> the efficiency of compound 3 and have an idea of binding affinity?</p></list-item></list> Minor comment on figure 2: structures of compounds are distorted and could you put all the compound in same orientation 1 (and 2 are upside down). It will help to compare the geometry and differences between molecules.</p><p> Figure 5: description of interactions could be better &#160;represented ma be with LigPlot, as it is it is not clear.</p><p>I have read this submission. I believe that I have an appropriate level of expertise to confirm that it is of an acceptable scientific standard, however I have significant reservations, as outlined above.</p></body><sub-article id="comment2120" article-type="response"><front-stub><contrib-group><contrib contrib-type="author"><name><surname>Singh</surname><given-names>Shailza</given-names></name><aff>National Centre for Cell Science, India</aff></contrib></contrib-group><author-notes><fn fn-type="COI-statement"><p>
+<bold>Competing interests: </bold>No competing interests</p></fn></author-notes><pub-date pub-type="epub"><day>1</day><month>8</month><year>2016</year></pub-date></front-stub><body><p>
+<list list-type="order"><list-item><p>
+<italic>As there is no structure the authors have done a model, the model should be presented here and I feel a previous reference from 2012&#160;won't do. The reader needs to be introduced to it and at least to have a clear understanding of the catalytic site and docking site.</italic>
+</p><p> Author&#8217;s response: The authors have accepted the suggestion made and have now included a figure showing the binding cavity that was predicted for the IPCS protein around which the grid box was centered during docking.</p></list-item><list-item><p>
+<italic>In the material and methods it would be appreciated to have an idea where the center of the grid is (may be with a figure).</italic>
+</p><p> Author&#8217;s response: Figure 3 has been included keeping in mind the suggestion made.</p></list-item><list-item><p>
+<italic>Can you explain why you chose a grid with large dimensions?</italic>
+</p><p> Author&#8217;s response: The inhibitors designed have not yet been reported. As there are no studies indicating the exact binding site in the IPCS protein, we have made binding site prediction and the grid box dimensions have been adjusted to incorporate most of the amino acids that fall in the binding site.</p></list-item><list-item><p>
+<italic>The analysis of the viability raises a question. Why the surface p1 is not the same between control and compound? To compare the stats it should be the same size here it is half. Also from fig 6 compound 3 it seems that a lot of data were excluded from P1 area? Can you explain?</italic>
+</p><p> Author&#8217;s response:&#160; The P1 area has been demarcated as per the untreated macrophages (control). As was a decrease in granularity of macrophages post treatment, the cells had lower SSC, however the viability of the cells has not decreased. As per the author&#8217;s knowledge about flow cytometry, the P1 area has to remain the same both for the control and treated samples.</p></list-item><list-item><p>
+<italic>As perspective are you planning on testing in vitro the efficiency of compound 3 and have an idea of binding affinity?</italic>
+</p><p> Author&#8217;s response:&#160; At present, the authors don&#8217;t have idea of the binding affinity of compound 3. Such studies can be done in future.</p></list-item><list-item><p>
+<italic>Minor comment on figure 2: structures of compounds are distorted and could you put all the compound in same orientation 1 (and 2 are upside down). It will help to compare the geometry and differences between molecules.</italic>
+</p><p> Author&#8217;s response:&#160; Changes suggested have been made in the Figure 2.</p></list-item><list-item><p>
+<italic>&#160;Figure 5: description of interactions could be better represented maybe with LigPlot, as it is it is not clear.</italic>
+</p><p> Author&#8217;s response:&#160; Changes suggested have been made in the Figure 6.</p></list-item></list> We thank the reviewer for his valuable suggestions which went a long way in improving the said manuscript.</p></body></sub-article></sub-article></article>

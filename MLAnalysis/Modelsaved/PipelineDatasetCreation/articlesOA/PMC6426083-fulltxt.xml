@@ -1,0 +1,718 @@
+<article xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML" article-type="methods-article"><?properties open_access?><?subarticle report44975?><?DTDIdentifier.IdentifierValue -//NLM//DTD Journal Publishing DTD v3.0 20080202//EN?><?DTDIdentifier.IdentifierType public?><?SourceDTD.DTDName journalpublishing3.dtd?><?SourceDTD.Version 3.0?><?ConverterInfo.XSLTName jp2nlmx2.xsl?><?ConverterInfo.Version 1?><front><journal-meta><journal-id journal-id-type="nlm-ta">F1000Res</journal-id><journal-id journal-id-type="iso-abbrev">F1000Res</journal-id><journal-id journal-id-type="pmc">F1000Research</journal-id><journal-title-group><journal-title>F1000Research</journal-title></journal-title-group><issn pub-type="epub">2046-1402</issn><publisher><publisher-name>F1000 Research Limited</publisher-name><publisher-loc>London, UK</publisher-loc></publisher></journal-meta><article-meta><article-id pub-id-type="pmcid">6426083</article-id><article-id pub-id-type="doi">10.12688/f1000research.17916.1</article-id><article-categories><subj-group subj-group-type="heading"><subject>Method Article</subject></subj-group><subj-group><subject>Articles</subject></subj-group></article-categories><title-group><article-title>Relative Abundance of Transcripts (
+<italic>RATs</italic>): Identifying differential isoform abundance from RNA-seq</article-title><fn-group content-type="pub-status"><fn><p>[version 1; referees: 1 approved</p></fn></fn-group></title-group><contrib-group><contrib contrib-type="author"><name><surname>Froussios</surname><given-names>Kimon</given-names></name><role content-type="http://credit.casrai.org/">Investigation</role><role content-type="http://credit.casrai.org/">Methodology</role><role content-type="http://credit.casrai.org/">Project Administration</role><role content-type="http://credit.casrai.org/">Software</role><role content-type="http://credit.casrai.org/">Validation</role><role content-type="http://credit.casrai.org/">Visualization</role><role content-type="http://credit.casrai.org/">Writing &#8211; Original Draft Preparation</role><xref ref-type="aff" rid="a1">1</xref></contrib><contrib contrib-type="author"><name><surname>Mour&#227;o</surname><given-names>Kira</given-names></name><role content-type="http://credit.casrai.org/">Investigation</role><role content-type="http://credit.casrai.org/">Methodology</role><role content-type="http://credit.casrai.org/">Software</role><role content-type="http://credit.casrai.org/">Validation</role><role content-type="http://credit.casrai.org/">Visualization</role><role content-type="http://credit.casrai.org/">Writing &#8211; Review &amp; Editing</role><xref ref-type="aff" rid="a1">1</xref></contrib><contrib contrib-type="author"><name><surname>Simpson</surname><given-names>Gordon</given-names></name><role content-type="http://credit.casrai.org/">Funding Acquisition</role><role content-type="http://credit.casrai.org/">Project Administration</role><role content-type="http://credit.casrai.org/">Resources</role><role content-type="http://credit.casrai.org/">Writing &#8211; Review &amp; Editing</role><xref ref-type="aff" rid="a2">2</xref><xref ref-type="aff" rid="a3">3</xref><xref ref-type="aff" rid="a4">4</xref></contrib><contrib contrib-type="author"><name><surname>Barton</surname><given-names>Geoff</given-names></name><role content-type="http://credit.casrai.org/">Funding Acquisition</role><role content-type="http://credit.casrai.org/">Project Administration</role><role content-type="http://credit.casrai.org/">Resources</role><role content-type="http://credit.casrai.org/">Supervision</role><role content-type="http://credit.casrai.org/">Writing &#8211; Review &amp; Editing</role><contrib-id contrib-id-type="orcid">https://orcid.org/0000-0002-9014-5355</contrib-id><xref ref-type="aff" rid="a1">1</xref></contrib><contrib contrib-type="author"><name><surname>Schurch</surname><given-names>Nicholas</given-names></name><role content-type="http://credit.casrai.org/">Conceptualization</role><role content-type="http://credit.casrai.org/">Methodology</role><role content-type="http://credit.casrai.org/">Project Administration</role><role content-type="http://credit.casrai.org/">Software</role><role content-type="http://credit.casrai.org/">Supervision</role><role content-type="http://credit.casrai.org/">Writing &#8211; Review &amp; Editing</role><contrib-id contrib-id-type="orcid">https://orcid.org/0000-0001-9068-9654</contrib-id><xref ref-type="corresp" rid="c1">a</xref><xref ref-type="aff" rid="a1">1</xref></contrib><aff id="a1">
+<label>1</label>Division of Computational Biology, School of Life Sciences, University of Dundee, Dundee, DD1 5EH, UK</aff><aff id="a2">
+<label>2</label>Centre for Gene Regulation &amp; Expression, School of Life Sciences, University of Dundee, Dundee, DD1 5EH, UK</aff><aff id="a3">
+<label>3</label>Division of Plant Sciences, School of Life Sciences, University of Dundee, Dundee, DD1 5EH, UK</aff><aff id="a4">
+<label>4</label>The James Hutton Institute, Invergowrie, Dundee, DD2 4DA, UK</aff></contrib-group><author-notes><corresp id="c1"><label>a</label><email xlink:href="mailto:n.schurch@dundee.ac.uk">n.schurch@dundee.ac.uk</email></corresp><fn fn-type="COI-statement"><p>No competing interests were disclosed.</p></fn></author-notes><pub-date pub-type="epub"><day>24</day><month>2</month><year>2019</year></pub-date><pub-date pub-type="collection"><year>2019</year></pub-date><volume>8</volume><elocation-id>213</elocation-id><history><date date-type="accepted"><day>8</day><month>2</month><year>2019</year></date></history><permissions><copyright-statement>Copyright: &#169; 2019 Froussios K et al.</copyright-statement><copyright-year>2019</copyright-year><license xlink:href="http://creativecommons.org/licenses/by/4.0/"><license-p>This is an open access article distributed under the terms of the Creative Commons Attribution Licence, which permits unrestricted use, distribution, and reproduction in any medium, provided the original work is properly cited.</license-p></license></permissions><self-uri content-type="pdf" xlink:type="simple" xlink:href="f1000research-8-19594.pdf"/><abstract><p>The biological importance of changes in RNA expression is reflected by the wide variety of tools available to characterise these changes from RNA-seq data. Several tools exist for detecting differential transcript isoform usage (DTU) from aligned or assembled RNA-seq data, but few exist for DTU detection from alignment-free RNA-seq quantifications. We present the
+<italic>RATs, </italic>an R package that identifies DTU transcriptome-wide directly from transcript abundance estimates.
+<italic>RATs</italic> is unique in applying bootstrapping to estimate the reliability of detected DTU events and shows good performance at all replication levels (median false positive fraction &lt; 0.05). We compare
+<italic>RATs</italic> to two existing DTU tools,
+<italic>DRIM-Seq</italic> &amp;
+<italic>SUPPA2,</italic> using two publicly available simulated RNA-seq datasets and a published human RNA-seq dataset, in which 248 genes have been previously identified as displaying significant DTU. RATs with default threshold values on the simulated Human data has a sensitivity of 0.55, a Matthews correlation coefficient of 0.71 and a false discovery rate (FDR) of 0.04, outperforming both other tools. Applying the same thresholds for
+<italic>SUPPA2</italic> results in a higher sensitivity (0.61) but poorer FDR performance (0.33). RATs and DRIM-seq use different methods for measuring DTU effect-sizes complicating the comparison of results between these tools, however, for a likelihood-ratio threshold of 30,
+<italic>DRIM-Seq</italic> has similar FDR performance to
+<italic>RATs</italic> (0.06), but worse sensitivity (0.47). These differences persist for the simulated drosophila dataset. On the published human RNA-seq dataset the greatest agreement between the tools tested is 53%, observed between
+<italic>RATs</italic> and
+<italic>SUPPA2</italic>. The bootstrapping quality filter in
+<italic>RATs</italic> is responsible for removing the majority of DTU events called by
+<italic>SUPPA2</italic> that are not reported by
+<italic>RATs</italic>. All methods, including the previously published qRT-PCR of three of the 248 detected DTU events, were found to be sensitive to annotation differences between Ensembl v60 and v87.</p></abstract><kwd-group kwd-group-type="author"><kwd>Transcriptomics</kwd><kwd>Differential Isoform Usage</kwd><kwd>Transcriptional regulation</kwd><kwd>Gene regulation</kwd><kwd>Feature selection</kwd><kwd>Algorithms</kwd><kwd>Visualization</kwd></kwd-group><funding-group><award-group id="fund-1"><funding-source>Biotechnology and Biological Sciences Research Council</funding-source><award-id>BB/H002286/1;BB/J00247X/1;BB/M010066/1;BB/M004155/1</award-id></award-group><award-group id="fund-2" xlink:href="http://dx.doi.org/10.13039/100004440"><funding-source>Wellcome Trust</funding-source><award-id>098439/Z/12/Z</award-id><award-id>WT097945</award-id></award-group><funding-statement>This work has been supported by the Biotechnology and Biological Sciences Research Council grants [BB/H002286/1; BB/J00247X/1; BB/M010066/1; BB/M004155/1] and the Wellcome Trust Strategic Awards [098439/Z/12/Z and WT097945].</funding-statement><funding-statement><italic>The funders had no role in study design, data collection and analysis, decision to publish, or preparation of the manuscript.</italic></funding-statement></funding-group></article-meta></front><body><sec sec-type="intro"><title>Introduction</title><p>High-throughput gene regulation studies have focused primarily on quantifying gene expression and calculating differential gene expression (DGE) between samples in different groups, conditions, treatments, or time-points. However, in higher eukaryotes, alternative splicing of multi-exon genes and/or alternative transcript start and end sites leads to multiple transcript isoforms originating from each gene. Since transcripts represent the executive form of genetic information, analysis of differential transcript expression (DTE) is preferable to DGE. Unfortunately, isoform-level transcriptome analysis is more complex and expensive since, in order to achieve similar statistical power in a DTE study, higher sequencing depth is required to compensate for the expression of each gene being split among its component isoforms. In addition, isoforms of a gene share high sequence similarity and this complicates the attribution of reads among them. Despite these challenges, several studies have shown that isoforms have distinct functions
+<sup><xref rid="ref-1" ref-type="bibr">1</xref>&#8211;
+<xref rid="ref-3" ref-type="bibr">3</xref></sup> and that shifts in individual isoform expression represent a real level of gene regulation
+<sup><xref rid="ref-4" ref-type="bibr">4</xref>&#8211;
+<xref rid="ref-7" ref-type="bibr">7</xref></sup>, suggesting there is little justification for choosing DGE over DTE in the study of complex transcriptomes.</p><p>It is possible to find significant DTE among the isoforms of a gene, even when the gene shows no significant DGE. This introduces the concept of differential transcript usage (DTU), where the abundances of individual isoforms of a gene can change relative to one another, with the most pronounced examples resulting in a change of the dominant isoform (isoform switching). The definitions of DGE, DTE and DTU are illustrated in
+<xref ref-type="fig" rid="f1">Figure 1</xref>.</p><fig fig-type="figure" id="f1" orientation="portrait" position="anchor"><label>Figure 1. </label><caption><title>Illustrative definitions of the three types of differential expression analysis (DGE, DTE and DTU).</title><p>The expression of two genes (Gene A and Gene B), with 3 and 2 isoforms respectively, is compared across two conditions (Condition 1 and Condition 2). The horizontal width of each coloured box represents the abundance of the relevant gene or transcript. A negative differential expression result (red cross-mark) for a given entity in any one of the three analysis types does not exclude that same entity from having a positive result (green tick-mark) in one of the other two analysis types. The relative isoform abundances in [
+<bold>iii</bold>] are scaled to the absolute isoform abundances in [
+<bold>ii</bold>], which in turn are scaled to the gene expressions in [
+<bold>i</bold>]. Gene A is differentially expressed, but only two of its three isoforms are differentially expressed (A.2 and A.3). Proportionally, Gene A&#8217;s primary isoform (A.3) remains the same, but the ratios of the two less abundant isoforms change. Gene B is not differentially expressed, but both its isoforms are differentially expressed, and demonstrate an example of isoform switching. DGE: Differential gene expression, DTE: Differential transcript expression, DTU: Differential transcript usage.</p></caption><graphic xlink:href="f1000research-8-19594-g0000"/></fig><p>To quantify the isoforms and assess changes in their abundance, most existing tools for DTE and DTU analysis (e.g.
+<italic>Cufflinks</italic>
+<sup><xref rid="ref-8" ref-type="bibr">8</xref></sup>,
+<italic>DEXSeq</italic>
+<sup><xref rid="ref-9" ref-type="bibr">9</xref></sup>,
+<italic>LeafCutter</italic>
+<sup><xref rid="ref-10" ref-type="bibr">10</xref></sup>) rely on reads that either span splice-junctions or align to unique exons. However, with the newest generation of transcript quantification tools (
+<italic>Kallisto</italic>
+<sup><xref rid="ref-11" ref-type="bibr">11</xref>,
+<xref rid="ref-12" ref-type="bibr">12</xref></sup>,
+<italic>Sailfish</italic>
+<sup><xref rid="ref-13" ref-type="bibr">13</xref></sup>,
+<italic>Salmon</italic>
+<sup><xref rid="ref-14" ref-type="bibr">14</xref></sup>), reads are aligned to neither the transcriptome nor the genome. Instead, these tools combine a pseudo-mapping of the k-mers present within each read to the k-mer distributions from the transcriptome annotation with an expectation maximization algorithm, to infer the expression of each transcript model directly. Such alignment-free methods are much faster than the traditional alignment-based methods (
+<italic>RSEM</italic>
+<sup><xref rid="ref-15" ref-type="bibr">15</xref></sup>,
+<italic>TopHat2</italic>
+<sup><xref rid="ref-16" ref-type="bibr">16</xref></sup>,
+<italic>STAR</italic>
+<sup><xref rid="ref-17" ref-type="bibr">17</xref></sup>) or assembly-based methods (
+<italic>Cufflinks</italic>
+<sup><xref rid="ref-8" ref-type="bibr">8</xref></sup>,
+<italic>Trinity</italic>
+<sup><xref rid="ref-18" ref-type="bibr">18</xref></sup>), making it feasible to repeat the process many times on iterative subsets of the read data and, thus, quantify the technical variance in the transcript abundance estimates. However, the lack of alignments prevents these new methods from being compatible with differential expression methods such as
+<italic>Cufflinks</italic>,
+<italic>DEXSeq</italic> and
+<italic>Leafcutter</italic>. Instead,
+<italic>Sleuth</italic>
+<sup><xref rid="ref-19" ref-type="bibr">19</xref></sup> is a tool that handles DTE analysis from alignment-free transcript quantifications. DTU analysis is currently less straight-forward.
+<italic>SwitchSeq</italic>
+<sup><xref rid="ref-20" ref-type="bibr">20</xref></sup> focuses on a particular subset of DTU analysis from alignment-free data, namely isoform switching, whereas
+<italic>iso-kTSP</italic>
+<sup><xref rid="ref-6" ref-type="bibr">6</xref></sup> identifies both DTU and isoform switching, but focuses on the highest-ranking pair of change-exhibiting isoforms per gene.
+<italic>SUPPA</italic>
+<sup><xref rid="ref-21" ref-type="bibr">21</xref>,
+<xref rid="ref-22" ref-type="bibr">22</xref></sup>, on the other hand, primarily identifies differential splicing events at the junction level, with recent developmental versions having added isoform-level capability. Finally,
+<italic>DRIM-Seq</italic>
+<sup><xref rid="ref-23" ref-type="bibr">23</xref></sup> identifies DTU directly from quantification data, but defines the effect size as a fold change which may not be the most appropriate way to compare proportions.</p><p>In this paper, we present
+<italic>RATs</italic> (Relative Abundance of Transcripts), an R package for identifying DTU directly from isoform quantifications. It is designed to use alignment-free abundance data and is the only tool that exploits bootstrapping to assess the robustness of the DTU calls.
+<italic>RATs</italic> provides raw, summary and graphical results, allowing for ease of use as well as for advanced custom queries, and the R language is the environment of choice for many widely-used DGE and DTE tools, allowing for easy integration of
+<italic>RATs</italic> in existing workflows. We assess the accuracy of
+<italic>RATs</italic> in comparison to
+<italic>SUPPA2</italic> and
+<italic>DRIM-Seq</italic> and find
+<italic>RATs</italic> to perform at as well as or better than its competitors. Finally, we demonstrate that the results of both RNA-seq based and qRT-PCR based analyses are sensitive to the annotation used for transcript quantification and primer design, respectively.</p></sec><sec sec-type="methods"><title>Methods</title><sec><title>DTU calling</title><p>
+<italic>RATs</italic> identifies DTU independently at both the gene and transcript levels using an efficient implementation of the G-test of independence
+<sup><xref rid="ref-24" ref-type="bibr">24</xref></sup>, without continuity corrections. The criteria
+<italic>RATs</italic> uses to identify DTU are described in detail below.</p></sec><sec><title>Pre-filtering</title><p>Prior to statistical testing by either method,
+<italic>RATs</italic> first filters the input isoform abundance data to reduce both the number of low quality calls and the number of tests carried out. Specifically: (i) isoform ratio changes can only be defined for genes that are expressed in both conditions, with at least two isoforms detected, and (ii) transcript abundances must exceed an optional minimum abundance threshold. Transcripts with abundances below the threshold are considered as not detected.</p></sec><sec><title>Statistical significance</title><p>Significant changes in relative transcript abundance are detected using two separate approaches: one at the gene level and the other at the transcript level. At the gene level,
+<italic>RATs</italic> compares the set of each gene&#8217;s isoform abundances between the two conditions to identify if the abundance ratios have changed. At the transcript level,
+<italic>RATs</italic> compares the abundance of each individual transcript against the pooled abundance of its sibling isoforms to identify changes in the proportion of the gene&#8217;s expression attributable to that specific transcript. Both methods include the Benjamini-Hochberg false discovery rate correction for multiple testing
+<sup><xref rid="ref-25" ref-type="bibr">25</xref></sup>. These tests are performed on the summed abundance of each isoform across the replicates.</p></sec><sec><title>Effect size</title><p>Transcripts whose absolute difference in isoform proportion is below a set threshold are rejected, even if the difference is statistically significant.</p></sec><sec><title>Reproducibility</title><p>
+<italic>RATs</italic> provides the option to use the bootstrapped abundance estimates obtainable from alignment-free quantification tools to apply a reproducibility constraint on the DTU calls, by randomly selecting individual quantification iterations from each replicate and measuring the fraction of these iterations that result in a positive DTU classification. Typically, each sample is represented by the mean abundance of each transcript, calculated across the quantification iterations. However, this loses the variance information of the quantification. By referring back to the quantification iterations,
+<italic>RATs</italic> highlights cases where the quantification was unreliable due to high variability and therefore the DTU result should also be considered unreliable. Similarly,
+<italic>RATs</italic> optionally also measures the reproducibility of the DTU results relative to the inter-replicate variation by iteratively sub-setting the samples pool.</p></sec><sec><title>Implementation</title><p>
+<italic>RATs</italic> is implemented in
+<ext-link ext-link-type="uri" xlink:href="https://r-project.org/">R</ext-link>
+<sup><xref rid="ref-26" ref-type="bibr">26</xref></sup> and has been freely distributed through
+<ext-link ext-link-type="uri" xlink:href="https://github.com/bartongroup/RATs">Github</ext-link> as an R source package since August 2016.
+<italic>RATs</italic> accepts as input either a set of R tables with abundances (with or without bootstrap information), or a set of
+<italic>Salmon</italic>
+<sup><xref rid="ref-14" ref-type="bibr">14</xref></sup> or
+<italic>Kallisto</italic>
+<sup><xref rid="ref-11" ref-type="bibr">11</xref></sup> output files. An annotation table mapping the correspondence between transcript and gene identifiers is also required, either provided directly or inferred from a GTF file. Results are returned in the form of R
+<italic>data.table</italic> objects
+<sup><xref rid="ref-27" ref-type="bibr">27</xref></sup>. Along with the DTU calls per transcript and gene, the tables record the full provenance of the results. Convenience functions are provided for summary tallies of DTU and isoform-switching results, for ID retrieval, and for visualization of the results via
+<ext-link ext-link-type="uri" xlink:href="https://cran.r-project.org/web/packages/ggplot2/index.html">ggplot2</ext-link> (v2.2.1)
+<sup><xref rid="ref-28" ref-type="bibr">28</xref></sup>. Details on these are available through the user manual of the package. Once created, all plots produced by
+<italic>RATs</italic> remain customisable via standard ggplot2 operations.</p></sec><sec><title>Performance</title><p>The performance was assessed in two ways. Firstly, the false positives (FP) performance of
+<italic>RATs</italic> (v0.6.2) for detection of DTU between two groups relative to the level of experimental replication was measured on groups generated by random selection without replacement from a pool of 16 high-quality wild-type Colombia-0
+<italic>Arabidopsis thaliana</italic> replicates
+<sup><xref rid="ref-29" ref-type="bibr">29</xref></sup>
+<sup><xref ref-type="other" rid="FN1">1</xref></sup>. This was iterated 100 times for each replication level in the range 3 &#8804; n &#8804; 8. As the two groups are drawn from the same condition, any positive DTU calls must be considered to be false positives. For each iteration, we recorded the fraction of genes and transcripts that were reported as DTU, relative to the total number of genes or transcripts tested in that iteration. The commands and scripts used are from the
+<ext-link ext-link-type="uri" xlink:href="https://github.com/bartongroup/RATS/tree/master/extras/F1000_manuscript">RATs Github repository</ext-link>.</p><p>Secondly, two simulated datasets
+<sup><xref rid="ref-30" ref-type="bibr">30</xref></sup> were used to benchmark the sensitivity (
+<italic>s</italic>, the fraction of the 1000 DTU events actually detected), false discovery rate (FDR, the fraction of reported DTU events that is not part of the 1000 &#8220;real&#8221; events) and Matthews correlation coefficient (MCC) of
+<italic>RATs</italic>,
+<italic>SUPPA2</italic> and
+<italic>DRIM-Seq</italic>. The datasets were made of simulated RNA-seq reads based on the transcriptome annotation and to match realistic RNA-seq transcript expression values. To create the second condition, the abundance values of the two most abundant transcript isoforms originating from a gene locus were swapped for 1000 well-expressed coding gene loci. The transcriptome annotation used for both Human and fly comprised only annotated protein coding genes (13937 in the Drosophila, 20410 in the human) leaving a number of other classifications of gene unaccounted for (1745 in the Drosophila, 41483 in the human). These genes constitute a convenient negative set for simulation and should have no expression, save for any reads misallocated to them by the quantification tools. The simulated datasets were obtained from ArrayExpress
+<sup><xref ref-type="other" rid="FN2">2</xref></sup> and quantified with both
+<italic><ext-link ext-link-type="uri" xlink:href="https://pachterlab.github.io/kallisto/">Kallisto</ext-link></italic> (v0.44;
+<sup><xref rid="ref-11" ref-type="bibr">11</xref></sup> and
+<italic><ext-link ext-link-type="uri" xlink:href="https://github.com/COMBINE-lab/salmon">Salmon</ext-link></italic> (v0.9.1;
+<sup><xref rid="ref-14" ref-type="bibr">14</xref></sup> using the respective complete annotations that match the simulation of the datasets (Ensembl v70 for the Drosophila and Ensembl v71 for the human;
+<sup><xref rid="ref-30" ref-type="bibr">30</xref></sup>). The sensitivity, FDR and MCC were measured for a range of comparable parameters between
+<italic>RATs</italic> (v0.6.4),
+<italic><ext-link ext-link-type="uri" xlink:href="https://github.com/comprna/SUPPA/releases/tag/v2.3">SUPPA2 (v2.3)</ext-link></italic> and
+<italic><ext-link ext-link-type="uri" xlink:href="http://bioconductor.org/packages/release/bioc/html/DRIMSeq.html">DRIM-Seq</ext-link> (
+<ext-link ext-link-type="uri" xlink:href="https://bioconductor.org/packages/3.6/bioc/html/DRIMSeq.html">v1.6</ext-link>,
+<ext-link ext-link-type="uri" xlink:href="https://bioconductor.org/packages/3.6/BiocViews.html">Bioconductor v3.6</ext-link>,
+<ext-link ext-link-type="uri" xlink:href="https://r-project.org/">R</ext-link> v3.4)</italic>. No transcript abundance pre-filter was imposed on any of the three DTU tools, and the significance level was set to 0.05 for all runs. For
+<italic>RATs</italic> and
+<italic>SUPPA2</italic>, three thresholds for the effect size (difference in proportion) were tested; the
+<italic>RATs</italic>&#8217; current default of 0.2, and more permissive values 0.1 &amp; 0.05. For
+<italic>DRIM-Seq</italic>, threshold values of the likelihood ratio were explored from 0-30. Finally,
+<italic>RATs</italic> reproducibility thresholds were explored in the range of 0.8-0.95 for the quantification reproducibility and 0.55-0.85 for the inter-replicate reproducibility. The tool performance was measured using annotations comprised of all annotated genes and only protein coding genes.</p></sec><sec><title>Comparison on a real 2-condition dataset</title><p>To test the ability of
+<italic>RATs</italic> to identify known instances of DTU, we compared it against validated instances of DTU from publicly available RNA-seq data. We took read data from Deng
+<italic>et al.</italic> (2013,
+<xref rid="ref-31" ref-type="bibr">31</xref>), who identified non-DGE changes in the isoform levels of genes between three human patients with idiopathic pulmonary fibrosis (IPF) and three lung cancer patients used as controls. The dataset contains 25 million 54-base long single-end Illumina reads per lung tissue sample. As in the original at study, we used Ensembl v60
+<sup><xref rid="ref-32" ref-type="bibr">32</xref></sup> as the source of the reference human genome and its annotation, in which each of the three discussed genes features two isoforms. Unlike the original study, we used
+<italic>Salmon</italic> (v0.7.1, with sequence bias correction enabled, 100 bootstrap iterations and default values for the remaining parameters, using k=21 for the index) to quantify the isoform abundances. DTU was identified by
+<italic>RATs</italic> v0.6.2. For comparison, we repeated the quantification and DTU analysis of the data with the same tool versions and parameters, but using the annotation and assembly from Ensembl v87, the current version at the time of this study.</p><p>We also submitted the quantification data to
+<italic>SUPPA2</italic>, in its
+<italic>psiPerIsoform</italic> mode, and to
+<italic>DRIM-Seq</italic>. For a fair comparison, we tried to minimize variability in the parameters and data type used by the three tools. As
+<italic>SUPPA2</italic> offered no abundance pre-filtering,
+<italic>RATs</italic> and
+<italic>DRIM-Seq</italic> were run with abundance threshold values of 0. The p-value cut-off was set at 0.05 for all three tools, using the corrected p-values where available. For the difference in isoform proportion (
+<italic>SUPPA2</italic> and
+<italic>RATs</italic>) the threshold was set at 0.20. No threshold was set for the fold-changes in
+<italic>DRIM-Seq</italic>.
+<italic>SUPPA2</italic> required and was provided with TPM abundances. For consistency in the use of abundances normalised for transcript length,
+<italic>RATs</italic> and
+<italic>DRIM-Seq</italic> were also provided with TPM, but the values were scaled up to the average library size of 25M reads, as their testing methods expect counts and would be under-powered if used directly with TPMs. Again, the commands and scripts used are available from the
+<ext-link ext-link-type="uri" xlink:href="https://github.com/bartongroup/RATS/tree/master/extras/F1000_manuscript">RATs Github repository</ext-link>.</p></sec></sec><sec sec-type="results"><title>Results</title><sec><title>False positives performance</title><p>Both the gene-level and transcript-level approaches to identifying DTU implemented in
+<italic>RATs</italic> achieved a median FP fraction &lt;0.05 on our
+<italic>A. thaliana</italic> dataset, even with only three replicates per condition (
+<xref ref-type="fig" rid="f2">Figure 2A</xref>). Higher replication results in both a reduction in the number of false positives and restricts the false positives to smaller effect sizes (
+<xref ref-type="fig" rid="f2">Figure 2B</xref>). The gene-level and transcript-level approaches, however, have different strengths and weaknesses. Simultaneously utilizing the expression information across all the isoforms in a gene makes the gene-level test sensitive to smaller changes in relative expression, compared to testing transcripts individually, but it also makes the gene-level test more prone to false positives.
+<xref ref-type="fig" rid="f2">Figure 2</xref> shows that the gene-level test has a higher FP fraction than the transcript-level test, irrespective of replication level or effect size, although the two methods converge for highly replicated experiments or large effect sizes. Furthermore, the gene-level test only identifies the presence of a shift in the ratios of the isoforms belonging to the gene, without identifying which specific isoforms are affected. The transcript-level test, in contrast, directly identifies the specific isoforms whose proportions are changing and has fewer false positives than the gene-level test. However, considering each isoform independently requires a larger number of tests to be performed, thus resulting in a greater multiple testing penalty.</p><fig fig-type="figure" id="f2" orientation="portrait" position="anchor"><label>Figure 2. </label><caption><title>False positives (FP) performance of
+<italic>RATs</italic> as a function of replication level.</title><p>False positive fraction measured over 100 permutation iterations of randomly selected (without replacement) replicates from a pool of 16 high-quality wild-type Colombia-0
+<italic>Arabidopsis thaliana</italic> replicates from Froussios
+<italic>et al.</italic> (2017,
+<sup><xref rid="ref-29" ref-type="bibr">29</xref></sup>). [
+<bold>A</bold>] FP fraction of each bootstrap iteration, for default values of all
+<italic>RATs</italic> parameters (v0.6.2), across a range of replication levels, separately for the gene-level test (red) and transcript level test (blue). [
+<bold>B</bold>] Mean FP fraction by replication level, as a function of the effect size threshold (effect size = difference between conditions of an isoform&#8217;s proportion). For a gene, the effect size is defined as the largest proportion difference observed among that gene&#8217;s isoforms. In every iteration, the FP fraction was calculated against the number of genes or transcripts that were eligible for testing each time (a number which remains very stable across iterations and replication levels &#8211; see Extended data 1
+<sup><xref rid="ref-33" ref-type="bibr">33</xref></sup>).</p></caption><graphic xlink:href="f1000research-8-19594-g0001"/></fig></sec><sec><title>Comparative performance on simulated DTU</title><p>The sensitivity, FDR and MCC performance of
+<italic>RATs</italic>,
+<italic>SUPPA2</italic> and
+<italic>DRIM-Seq</italic> using
+<italic>Salmon</italic> transcript quantifications of annotated protein coding gene isoforms are summarised in
+<xref ref-type="fig" rid="f3">Figure 3</xref>. Tested with the simulated Human dataset, the parameter defaults for
+<italic>RATs</italic> (quantification reproducibility &gt;95%, inter-replicate reproducibility &gt;85% &amp; effect-size &gt;0.2) result in a sensitivity of
+<italic>s</italic> = 0.55, MCC = 0.71 and FDR = 0.04, outperforming both other tools. With the same thresholds,
+<italic>SUPPA2</italic> has a higher sensitivity (
+<italic>s</italic> = 0.61) but poorer FDR performance (FDR = 0.33). Direct comparison with
+<italic>DRIM-Seq</italic> is complicated by different methods for measuring DTU effect-sizes between the tools, however for a likelihood-ratio threshold of 30,
+<italic>DRIM-Seq</italic> has similar FDR performance to
+<italic>RATs</italic> (FDR = 0.06), but worse sensitivity (
+<italic>s</italic> = 0.47). These differences persist for the simulated drosophila dataset.
+<italic>DRIM-Seq</italic> consistently shows the lowest sensitivity (&#8804;0.65), while maintaining a FDR &#8804;0.2 in any of the tried parameter sets.
+<italic>SUPPA2</italic> is the most sensitive of the three tools (0.6 &#8804;
+<italic>s</italic> &#8804; 0.9), but also has the highest FDR (0.35 &#8804; FDR &#8804; 0.65 in human, 0.10 &#8804; FDR &#8804; 0.25 in Drosophila).
+<italic>RATs</italic> can match the sensitivity of
+<italic>SUPPA2</italic> while maintaining a lower FDR than
+<italic>SUPPA2</italic> by relaxing its quantification reproducibility (
+<italic>Qrep)</italic> and inter-replicate reproducibility (
+<italic>Rrep)</italic> thresholds. At the highest effect-size thresholds (Dprop
+<sub><italic>RATs</italic></sub> = 0.2 and
+<italic>lr
+<sub>DRIM-Seq</sub></italic> = 0.3)
+<italic>DRIM-Seq</italic> has a comparable FDR to that of
+<italic>RATs</italic>. Surprisingly, the sensitivity, MCC and FDR of
+<italic>DRIM-Seq</italic> is not strongly sensitive to variations in the likelihood ratio effect-size threshold. Consequentially, RATs has worse FDR performance, but better sensitivity than
+<italic>DRIM-Seq</italic> at lower effect-size thresholds. Across all the simulated dataset and parameter combinations the gene-level test implemented in
+<italic>RATs</italic> shows higher sensitivity and higher FDR compared with the results from the transcript-level test. Extending the test to isoforms from the full set of annotated genes, rather than only those from protein coding genes, adds a considerable number of additional true negatives (Drosophila: 1745, human: 4148, see Section: Performance) resulting in a small increase of FDR and slight reduction of MCC for all tools in both datasets (Extended data 2
+<sup><xref rid="ref-33" ref-type="bibr">33</xref></sup>). Similarly, using
+<italic>Kallisto</italic> isoform expression quantifications in place of the quantifications from
+<italic>Salmon</italic> does not strongly affect the results (Extended data 2
+<sup><xref rid="ref-33" ref-type="bibr">33</xref></sup>). The performance results of RATs on these simulated datasets are in good agreement with those presented in Love
+<italic>et al.</italic> (2018,
+<sup><xref rid="ref-34" ref-type="bibr">34</xref></sup>), which also demonstrates that the performance of RATs is similar to, or exceeds, the performace of other DTU tools , including DRIM-seq, SUPPA2 or DEX-Seq.</p><fig fig-type="figure" id="f3" orientation="portrait" position="anchor"><label>Figure 3. </label><caption><title>Performance comparison between
+<italic>RATs</italic>,
+<italic>SUPPA2</italic> and
+<italic>DRIM-Seq</italic>.</title><p>The performance was assessed on the human [
+<bold>A</bold>] and Drosophila [
+<bold>B</bold>] simulated datasets from ArrayExpress E-MTAB-3766
+<sup><xref rid="ref-30" ref-type="bibr">30</xref></sup>, over a range of threshold values for the effect size (
+<italic>RATs</italic> -
+<italic>Dprop</italic>,
+<italic>SUPPA2</italic> -
+<italic>dPSI</italic>,
+<italic>DRIM-Seq</italic> likelihood ratio -
+<italic>lr</italic>) and confidence in the result (
+<italic>RATs</italic> quantification reproducibility &#8211;
+<italic>Qrep</italic>,
+<italic>RATs</italic> inter-replicate reproducibility -
+<italic>Rrep</italic>). The statistical significance cut-off was at 0.05 for all cases. The measures of performance are the sensitivity, false discovery rate (FDR) and Matthews correlation coefficient (MCC). The datasets were quantified using
+<italic>Salmon</italic> 0.9.2 and the metrics were calculated accounting only for the genes strictly listed in the &#8220;truth&#8221; sets. The results using
+<italic>Kallisto</italic> for the quantification are practically identical (see Extended data 2
+<sup><xref rid="ref-33" ref-type="bibr">33</xref></sup>).</p></caption><graphic xlink:href="f1000research-8-19594-g0002"/></fig></sec><sec><title>Recapitulating published validated examples of DTU</title><p>After pre-filtering, Deng
+<italic>et al.</italic> (2013,
+<xref rid="ref-31" ref-type="bibr">31</xref>) tested 3098 Ensembl v60 genes for DTU by quantifying their isoform proportions with RAEM
+<sup><xref rid="ref-35" ref-type="bibr">35</xref></sup> and using Pearsons Chi-squared test of independence with a FDR threshold of 5%. They identified 248 genes that were not differentially expressed but displayed significant DTU. Subsequently, they confirmed three of them with qRT-PCR: TOM1L1 (ENSG00000141198), CMTM4 (ENSG00000183723), and PEX11B (ENSG00000131779).
+<xref rid="T1" ref-type="table">Table 1</xref> shows the fraction of the 248 DTU genes identified in this study that were also called by
+<italic>RATs</italic>,
+<italic>SUPPA2</italic> and
+<italic>DRIM-Seq</italic>, as well as each tool&#8217;s verdict on each of the three validated genes. The genes reported as DTU by
+<italic>RATs</italic> are listed in Extended data 3 &amp; 4
+<sup><xref rid="ref-33" ref-type="bibr">33</xref></sup> respectively, based on the Ensembl v60 and v87 human annotations.</p><table-wrap id="T1" orientation="portrait" position="anchor"><label>Table 1. </label><caption><title>comparison of the results by Deng
+<italic>et al.</italic> (2013,
+<xref rid="ref-31" ref-type="bibr">31</xref>) against the results of
+<italic>RATs</italic>,
+<italic>SUPPA2</italic> and
+<italic>DRIM-Seq</italic>, using the same data and annotation (Ensembl v60).</title><p> The first column shows the fraction of the 248 genes that was recaptured by each method. For methods reporting at the transcript level, results were aggregated to the respective genes. The last three columns show whether the verdicts for each of the validated genes (DTU Yes/No). DTU: Differential transcript usage.</p></caption></table-wrap><p>None of the three tools recapitulated the reported 248 genes well, with the highest fraction of 26% achieved by
+<italic>DRIM-Seq</italic> possibly due to a tendency to over-predict (see next section). Of the three validated genes, only CMTM4 is reported by all methods, and only
+<italic>SUPPA2</italic> reports all three genes. Although the rejection of TOM1L1 and PEX11B by
+<italic>DRIM-Seq</italic> was due to poor statistical significance,
+<italic>RATs</italic> reported that the changes found were both statistically significant and of sufficient effect size. Instead,
+<italic>RATs</italic> rejected the genes on the grounds of poor reproducibility (see Section: DTU Calling).</p><p>There have been extensive changes in the human transcriptome annotation since Ensembl v60. We hypothesized that these changes could have a significant impact on the set of genes identified in Deng
+<italic>et al.</italic> (2013,
+<xref rid="ref-31" ref-type="bibr">31</xref>).
+<xref rid="T2" ref-type="table">Table 2</xref> shows that in addition to the new genome assembly, the human transcriptome complexity has increased significantly from Ensembl v60 to the more recent v87. Changing the version of the human annotation from Ensembl v60 to v87 removes 10,253 gene IDs and adds 15,839 new ones. Re-quantifying the RNA-seq data with the updated annotation and re-calling DTU resulted in similarly poor overlap between the tools&#8217; results and the original report (see Extended data 5
+<sup><xref rid="ref-33" ref-type="bibr">33</xref></sup>). Of the three validated genes, TOM1L1 was unanimously rejected by all methods, CMTM4 remained unanimously reported as DTU, and PEX11B was reported as DTU by
+<italic>RATs</italic> and
+<italic>SUPPA2</italic>, but not by
+<italic>DRIM-Seq</italic>.</p><table-wrap id="T2" orientation="portrait" position="anchor"><label>Table 2. </label><caption><title>Expansion of the human annotation between Ensembl v60 and v87.</title><p>In total, the later annotation contains 25% more transcript models. The three genes identified by Deng
+<italic>et al.</italic> (2013,
+<xref rid="ref-31" ref-type="bibr">31</xref>), TOM1L1, CMTM4 and PEX11B, have all acquired additional isoform models.</p></caption></table-wrap><p>The isoform abundances in
+<xref ref-type="fig" rid="f4">Figure 4</xref> reveal that all three genes showed plausible shifts in relative isoform abundance with the Ensembl v60 quantifications, but only PEX11B showed the same shift with Ensembl v87. Instead, TOM1L1 showed no significant changes in any of its 23 isoforms and the primary isoform in the Control samples changed from isoform 2 (ENST00000445275) to isoform 1 (ENST00000348161). CMTM4 shows a similar abundance shift with v87 as it did with v60, but the isoforms implicated changed from isoforms 1 (ENST00000330687) and 2 (ENST00000394106) to isoforms 1 and 5 (ENST00000581487). These changes of context raised questions about the qRT-PCR validation performed in the original analysis of the data
+<sup><xref rid="ref-31" ref-type="bibr">31</xref></sup>. Indeed, when the reported qRT-PCR primers were aligned to the Ensembl v87 sequence and annotation (see Extended data 6
+<sup><xref rid="ref-33" ref-type="bibr">33</xref></sup>), only the primers for PEX11B yielded the same conclusion as with Ensembl v60. For TOM1L1, the primers intended for ENST00000445275 no longer matched that isoform, but matched two other isoforms instead (ENST00000570371 and ENST00000575882). Additionally, the primers intended to quantify the gene as a whole failed to match half of the gene&#8217;s new isoforms, and the two sets of captured isoforms did not overlap completely and were thus incomparable in any meaningful way. As a consequence, the qRT-PCR intensities measured in the original study are actually impossible to interpret in the context of the updated annotation and the originally reported conclusion is likely wrong. For CMTM4 the primers reported matched multiple but not all isoforms, casting doubt on the interpretation of the qRT-PCR measurements for this gene as well. Only for PEX11B did the primers target the isoforms in a way that would give interpretable results and indeed lead to the same conclusion as originally reported
+<sup><xref rid="ref-31" ref-type="bibr">31</xref></sup>.</p><fig fig-type="figure" id="f4" orientation="portrait" position="anchor"><label>Figure 4. </label><caption><title>Relative abundance of isoforms for the three validated genes from
+<xref rid="ref-31" ref-type="bibr">31</xref>, as re-quantified with
+<italic>Salmon</italic> 0.7.1
+<sup><xref rid="ref-14" ref-type="bibr">14</xref></sup> using two versions of the Ensembl annotation.</title><p>Isoform IDs on the
+<italic>x</italic> axis were replaced with simple numbers to minimize clutter, but the mapping of number to ID is maintained between the two annotations. The
+<italic>y</italic> axis represents the relative abundance of each isoform. In red are the quantifications from the three replicates of the Control condition, and in blue are those from the IPF condition. The full version of the plots by
+<italic>RATs</italic>, including the full isoform IDs, is available in Extended data 5
+<sup><xref rid="ref-33" ref-type="bibr">33</xref></sup>.</p></caption><graphic xlink:href="f1000research-8-19594-g0003"/></fig></sec><sec><title>Comparison of DTU methods against Deng
+<italic>et al.</italic> (2013,
+<xref rid="ref-31" ref-type="bibr">31</xref>)</title><p>
+<xref rid="T3" ref-type="table">Table 3</xref> summarises the results obtained by
+<italic>RATs</italic>,
+<italic>SUPPA2</italic> and
+<italic>DRIM-Seq</italic> for the Deng
+<italic>et al.</italic> (2013,
+<xref rid="ref-31" ref-type="bibr">31</xref>) dataset using Ensembl v60 (same as the original study) and Ensembl v87 (current version at time of the present work). With either annotation,
+<italic>DRIM-Seq</italic> reported the most DTU genes &#8211; almost 1000 with v60 and almost 1700 with v87. The
+<italic>RATs</italic> gene-level method reported fewer genes by a factor of 1.5 and 2 respectively compared to
+<italic>DRIM-Seq</italic> with each annotation.
+<italic>SUPPA2</italic> reported several hundred transcripts more than
+<italic>RATs</italic>, but at the gene level the numbers were comparable.
+<italic>RATs</italic> and
+<italic>DRIM-Seq</italic> reported more genes and transcripts with v87 of the annotation than with v60, whereas
+<italic>SUPPA2</italic> reported slightly fewer with v87. Despite overall similar volume of results between the two versions of the annotation, it is evident from
+<xref rid="T3" ref-type="table">Table 3</xref> that the overlap of the results between annotations is poor for all methods. For
+<italic>RATs</italic> and
+<italic>SUPPA2</italic>, only 30&#8211;40% of the genes reported with Ensembl v60 were also reported with v87. For
+<italic>DRIM-Seq</italic> this overlap was 55% of its Ensembl v60 results.</p><table-wrap id="T3" orientation="portrait" position="anchor"><label>Table 3. </label><caption><title>Summary of DTU features (genes or transcripts) detected by each method.</title><p>
+<italic>DRIM-Seq</italic> reports DTU only at the gene level.
+<italic>SUPPA2</italic> reports DTU only at the individual transcript level.
+<italic>RATs</italic> reports at both the transcript and the gene levels, using its respective test implementations. For
+<italic>SUPPA2</italic> and the transcript-level approach in
+<italic>RATs</italic>, gene-level results can be inferred from the reported transcripts; these are included in the table, enclosed in parentheses. The last two columns show the reproducibility of the results between annotation versions. DTU: Differential transcript usage.</p></caption></table-wrap><p>The overlap of results between different methods is similar to the overlap of results between annotations, as shown in
+<xref rid="T4" ref-type="table">Table 4</xref>. 97% of the genes reported by gene-level method in
+<italic>RATs</italic> are also identified as DTU by the transcript-level method. Among all the pairwise comparisons of
+<italic>RATs</italic>,
+<italic>SUPPA2</italic> and
+<italic>DRIM-Seq</italic>, however, the highest level of agreement at both transcript and gene level is between
+<italic>SUPPA2</italic> and
+<italic>RATs</italic>.
+<italic>SUPPA2</italic> identifies DTU in 53% of the transcripts that are called as DTU by the transcript-level method in
+<italic>RATs</italic>, however
+<italic>RATs</italic> calls DTU for only 35% of the transcripts identified as DTU by
+<italic>SUPPA2</italic>.
+<italic>DRIM-Seq</italic> consistently reports a higher number of DTU identifications than either
+<italic>RATs</italic> or
+<italic>SUPPA2</italic>, but still only manages at most 43% agreement with the other two tools.</p><table-wrap id="T4" orientation="portrait" position="anchor"><label>Table 4. </label><caption><title>Overlap between the DTU results from
+<italic>RATs</italic>,
+<italic>SUPPA2</italic> and
+<italic>DRIM-Seq</italic>, for quantification of the Deng
+<italic>et al.</italic> (2013,
+<xref rid="ref-31" ref-type="bibr">31</xref>) dataset based on Ensembl v87.</title><p>The overlaps are shown as the proportion of the results from the methods on the columns captured by the methods on the rows.</p></caption></table-wrap><p>
+<italic>RATs</italic> and
+<italic>SUPPA2</italic> are more similar than implied by the level of agreement presented in
+<xref rid="T4" ref-type="table">Table 4</xref>.
+<xref ref-type="fig" rid="f5">Figure 5</xref> shows that the novel reproducibility testing feature in
+<italic>RATs</italic>, which discounts DTU identification from highly variable quantifications (see Section: DTU Calling), is responsible for rejecting 43% of the
+<italic>SUPPA2</italic> DTU transcripts and 28% of the
+<italic>DRIM-Seq</italic> DTU genes that pass the significance and effect size filtering criteria. 53% of the
+<italic>DRIM-Seq</italic> results and, perplexingly, 18% of the
+<italic>SUPPA2</italic> results are rejected due to the effect size filter (after passing the significance testing, but prior to the reproducibility filter), despite all the tools operating on the same input isoform quantifications.</p><fig fig-type="figure" id="f5" orientation="portrait" position="anchor"><label>Figure 5. </label><caption><title>Causes of rejection by
+<italic>RATs</italic> of results reported by
+<italic>SUPPA2</italic> or
+<italic>DRIM-Seq</italic>, expressed as proportion of the total DTU identifications reported by
+<italic>SUPPA2</italic> (1252 transcripts) or
+<italic>DRIM-Seq</italic> (1680 genes).</title><p>The colours represent the different criteria imposed by
+<italic>RATs</italic>. Since no abundance pre-filtering was enabled for any of the tools, there are no rejections caused by the transcript abundance and the effective number of expressed isoforms. DTU: Differential transcript usage.</p></caption><graphic xlink:href="f1000research-8-19594-g0004"/></fig></sec><sec><title>Hardware requirements and run times</title><p>
+<italic>RATs</italic>&#8217; runtime and memory consumption depend on the size of the annotation and the number of bootstraps iterations. Where multiple processing cores are available,
+<italic>RATs</italic> can be instructed to take advantage of them. The runtime and maximum memory usage for the two simulated datasets from our benchmarks, running on a high-specification laptop, are shown in
+<xref rid="T5" ref-type="table">Table 5</xref>.</p><table-wrap id="T5" orientation="portrait" position="anchor"><label>Table 5. </label><caption><title>Runtime and maximum RAM usage for the Drosophila and human simulated datasets, running on a hyper-threaded quad-core 15&#8221; 2015 Macbook Pro with SSD and 16GB RAM.</title><p>Measured via the
+<italic>peakRAM</italic> package
+<sup><xref rid="ref-36" ref-type="bibr">36</xref></sup>. For the bootstrapped runs, 100 iterations were used for the quantification reproducibility and 9 for the cross-replicate reproducibility, representing all the pairwise combinations of the 3 replicates per condition.</p></caption></table-wrap></sec></sec><sec sec-type="discussion"><title>Discussion</title><p>Reliable identification of differential isoform usage depends critically on i) the accuracy of the upstream isoform expression quantifications, and ii) on the accuracy of the annotation they use.
+<italic>RATs</italic> is the first differential isoform usage tool to include the reproducibility of the upstream isoform expression quantifications to refine its DTU identifications, directly addressing the accuracy of the upstream isoform expression quantifications. Leveraging the bootstrapped isoform expression quantifications from fast modern alignment-free isoform expression quantification tools (such as
+<italic>Kallisto</italic> and
+<italic>Salmon</italic>) allows
+<italic>RATs</italic> to reject those cases of DTU that are based on highly uncertain isoform quantifications. Existing tools rely on the mean isoform abundances, which can hide a large degree of variability, and are thus insensitive to this reproducibility criterion. We recommend running
+<italic>RATs, and the underlying</italic> alignment-free isoform expression quantification tools that generate the data it operates on, with at least 100 bootstrap iterations.</p><p>We evaluated
+<italic>RATs</italic> on both simulated data and on a high-quality experimental dataset from Deng
+<italic>et al.</italic> (2013,
+<xref rid="ref-31" ref-type="bibr">31</xref>) and show that it outperforms both
+<italic>DRIM-Seq</italic> and
+<italic>SUPPA</italic>2. On the simulated data with stringent effect-size, reproducibility and statistical significance threshold, both the gene-level and transcript-level methods in
+<italic>RATs</italic> have a lower FDR than the other two tools, for a comparable sensitivity and comparable or superior Matthews correlation coefficient. This makes
+<italic>RATs</italic> particularly useful for data from organisms with large transcriptomes where the risk of false positives is higher. Relaxing these stringent thresholds increases the FDR for all the tools and for the lowest tested effect-size thresholds all the tools struggle to control their FDR adequately leaving little room for optimism regarding the identification of DTU with small effect sizes, particularly in low expression genes. The choice of alignment-free transcript quantification tool did not strongly affect the performance of the DTU tools within the examined parameter space, although in the simulated datasets
+<italic>Kallisto</italic> appears more prone to overestimating the expression of non-protein-coding genes that in the design of the simulation are not expressed (see Extended data 2
+<sup><xref rid="ref-33" ref-type="bibr">33</xref></sup>). Comparing the DTU classifications of the three tools against the instances of DTU identified in the Deng
+<italic>et al.</italic> (2013,
+<xref rid="ref-31" ref-type="bibr">31</xref>) dataset, we found pairwise overlaps between the tools of at most 53%. The low level of agreement between the three tools reflects their different methodological choices, such as the very different definitions of effect size. Both
+<italic>SUPPA2</italic> and
+<italic>RATs</italic> use the difference in relative isoform abundance as their measure of the DTU effect size, however
+<italic>RATs</italic> tests this difference directly whereas
+<italic>SUPPA2</italic> extrapolates it from the differential inclusion of splice sites. This comparison also highlights the dependence of DTU identification methods on the accuracy of the underlying transcriptome annotation, (a limitation common to all biological tools that use an annotation as guide
+<sup><xref rid="ref-37" ref-type="bibr">37</xref></sup>). Running
+<italic>RATs</italic>,
+<italic>SUPPA2</italic>, and
+<italic>DRIM-Seq</italic> on the Deng
+<italic>et al.</italic> (2013,
+<xref rid="ref-31" ref-type="bibr">31</xref>) datasets with two different versions of the ensembl
+<italic>H. sapiens</italic> transcriptome annotation separated by six years produces dramatic differences in the DTU identification results. All three validated DTU genes from the original Deng
+<italic>et al.</italic> study contained additional isoforms in the newer annotation and only one of these genes displayed the same isoform abundance shifts using both annotations. With the newer annotation, the DTU of one validated gene was attributable to different isoforms depending on the annotation version, while another showed no significant DTU with the newer annotation. qRT-PCR has long considered the
+<italic>de facto</italic> standard for orthogonal confirmation of high-throughput transcriptomic results however it too is subject to the same limitation, illustrated by multiple matches of the specific primer sequences used for validation in the Deng
+<italic>et al.</italic> (2013,
+<xref rid="ref-31" ref-type="bibr">31</xref>) study in the newer annotation. Annotation of the transcriptomes remains a work in progress even for model organisms and the extensive sequence overlap between isoforms together with the ongoing discovery of additional isoforms suggests that qRT-PCR may not be a suitable method for the validation of transcript abundance changes. For hybridization-based methods like qRT-PCR to serve as a reliable validation method for RNA quantification, the suitability of the primers should first be validated by sequencing the captured amplicons. Soneson
+<italic>et al.</italic> (2016,
+<sup><xref rid="ref-30" ref-type="bibr">30</xref></sup>) show that pre-filtering annotations can improve quantification performance and this approach may also be helpful in qRT-PCR primer design.</p><p>In the future, experiment-specific transcriptome annotations could be obtained by including a parallel set of full-length isoform RNA-seq data in the experimental design, such as via
+<ext-link ext-link-type="uri" xlink:href="http://www.pacb.com/">PacBio sequencing</ext-link> or
+<ext-link ext-link-type="uri" xlink:href="https://nanoporetech.com/">Oxford Nanopore Direct RNA-seq</ext-link>. An advantage of this approach is that it would better define the transcriptome for the specific experiment
+<sup><xref rid="ref-38" ref-type="bibr">38</xref>&#8211;
+<xref rid="ref-41" ref-type="bibr">41</xref></sup>. This may be of importance for experiments focusing on specific tissues or developmental stages of an organism, where the active transcriptome is likely to be only a subset of the global reference transcriptome of the organism.</p></sec><sec sec-type="data-availability"><title>Data availability</title><sec><title>Underlying data</title><p>The
+<italic>Arabidopsis thaliana</italic> RNA-sequencing data used in this study is available from ArrayExpress under the study
+<ext-link ext-link-type="uri" xlink:href="https://www.ebi.ac.uk/arrayexpress/experiments/E-MTAB-5446/">E-MTAB-5446</ext-link>. The simulated
+<italic>Homo sapiens</italic> and
+<italic>Drosophila Melanogaster</italic> datasets are available from ArrayExpress under the study
+<ext-link ext-link-type="uri" xlink:href="https://www.ebi.ac.uk/arrayexpress/experiments/E-MTAB-3766/">E-MTAB-3766</ext-link>. The Deng
+<italic>et al.</italic> (2013,
+<xref rid="ref-31" ref-type="bibr">31</xref>) data are available from the European Nucleotide Archive, or the Short Read Archive, under the study
+<ext-link ext-link-type="uri" xlink:href="https://www.ncbi.nlm.nih.gov/sra/?term=SRA048904">SRA048904</ext-link>.</p></sec><sec><title>Extended data</title><p>Extended data are available along with the source code from GitHub and archived with Zenodo</p><p>Zenodo: Extended data. bartongroup/RATS: RATs 0.6.5 - R source package,
+<ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.5281/zenodo.2556564">http://doi.org/10.5281/zenodo.2556564</ext-link>
+<sup><xref rid="ref-33" ref-type="bibr">33</xref></sup>
+</p><p>Licence:
+<ext-link ext-link-type="uri" xlink:href="https://opensource.org/licenses/MIT">MIT</ext-link>
+</p></sec><sec><title>Software availability</title><p>The RATs R package is open source and available through Github</p><p>Source code:
+<ext-link ext-link-type="uri" xlink:href="https://github.com/bartongroup/Rats">https://github.com/bartongroup/
+<italic>RATs</italic></ext-link>.</p><p>Archived source code:
+<ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.5281/zenodo.2556564">http://doi.org/10.5281/zenodo.2556564</ext-link>
+<sup><xref rid="ref-33" ref-type="bibr">33</xref></sup>
+</p><p>Licence:
+<ext-link ext-link-type="uri" xlink:href="https://opensource.org/licenses/MIT">MIT</ext-link>
+</p></sec></sec></body><back><fn-group><fn id="FN1"><label>1</label><p>
+<ext-link ext-link-type="uri" xlink:href="https://www.ebi.ac.uk/arrayexpress/experiments/E-MTAB-5446/">https://www.ebi.ac.uk/arrayexpress/experiments/E-MTAB-5446/</ext-link>
+</p></fn><fn id="FN2"><label>2</label><p>
+<ext-link ext-link-type="uri" xlink:href="https://www.ebi.ac.uk/arrayexpress/experiments/E-MTAB-3766/">https://www.ebi.ac.uk/arrayexpress/experiments/E-MTAB-3766/</ext-link>
+</p></fn></fn-group><ref-list><ref id="ref-1"><label>1</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Carvalho</surname><given-names>RF</given-names></name><name><surname>Feij&#227;o</surname><given-names>CV</given-names></name><name><surname>Duque</surname><given-names>P</given-names></name></person-group>:
+<article-title>On the physiological significance of alternative splicing events in higher plants.</article-title>
+<source><italic>Protoplasma.</italic></source>
+<year>2013</year>;<volume>250</volume>(<issue>3</issue>):<fpage>639</fpage>&#8211;<lpage>50</lpage>.
+<pub-id pub-id-type="doi">10.1007/s00709-012-0448-9</pub-id>
+<?supplied-pmid 22961303?><pub-id pub-id-type="pmid">22961303</pub-id></mixed-citation></ref><ref id="ref-2"><label>2</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Lee</surname><given-names>Y</given-names></name><name><surname>Rio</surname><given-names>DC</given-names></name></person-group>:
+<article-title>Mechanisms and Regulation of Alternative Pre-mRNA Splicing.</article-title>
+<source><italic>Annu Rev Biochem.</italic></source>
+<year>2015</year>;<volume>84</volume>(<issue>1</issue>):<fpage>291</fpage>&#8211;<lpage>323</lpage>.
+<pub-id pub-id-type="doi">10.1146/annurev-biochem-060614-034316</pub-id>
+<!--<pub-id pub-id-type="pmcid">4526142</pub-id>-->
+<?supplied-pmid 25784052?><pub-id pub-id-type="pmid">25784052</pub-id></mixed-citation></ref><ref id="ref-3"><label>3</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Baralle</surname><given-names>FE</given-names></name><name><surname>Giudice</surname><given-names>J</given-names></name></person-group>:
+<article-title>Alternative splicing as a regulator of development and tissue identity.</article-title>
+<source><italic>Nat Rev Mol Cell Biol.</italic></source>
+<year>2017</year>;<volume>18</volume>(<issue>7</issue>):<fpage>437</fpage>&#8211;<lpage>451</lpage>.
+<pub-id pub-id-type="doi">10.1038/nrm.2017.27</pub-id>
+<?supplied-pmid 28488700?><pub-id pub-id-type="pmid">28488700</pub-id></mixed-citation></ref><ref id="ref-4"><label>4</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Aanes</surname><given-names>H</given-names></name><name><surname>&#216;strup</surname><given-names>O</given-names></name><name><surname>Andersen</surname><given-names>IS</given-names></name><etal/></person-group>:
+<article-title>Differential transcript isoform usage pre- and post-zygotic genome activation in zebrafish.</article-title>
+<source><italic>BMC Genomics.</italic></source>
+<year>2013</year>;<volume>14</volume>:<fpage>331</fpage>.
+<pub-id pub-id-type="doi">10.1186/1471-2164-14-331</pub-id>
+<!--<pub-id pub-id-type="pmcid">3747860</pub-id>-->
+<?supplied-pmid 23676078?><pub-id pub-id-type="pmid">23676078</pub-id></mixed-citation></ref><ref id="ref-5"><label>5</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Hong</surname><given-names>SE</given-names></name><name><surname>Song</surname><given-names>HK</given-names></name><name><surname>Kim</surname><given-names>DH</given-names></name></person-group>:
+<article-title>Identification of tissue-enriched novel transcripts and novel exons in mice.</article-title>
+<source><italic>BMC Genomics.</italic></source>
+<year>2014</year>;<volume>15</volume>(<issue>1</issue>):<fpage>592</fpage>.
+<pub-id pub-id-type="doi">10.1186/1471-2164-15-592</pub-id>
+<!--<pub-id pub-id-type="pmcid">4111849</pub-id>-->
+<?supplied-pmid 25017872?><pub-id pub-id-type="pmid">25017872</pub-id></mixed-citation></ref><ref id="ref-6"><label>6</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Sebesty&#233;n</surname><given-names>E</given-names></name><name><surname>Zawisza</surname><given-names>M</given-names></name><name><surname>Eyras</surname><given-names>E</given-names></name></person-group>:
+<article-title>Detection of recurrent alternative splicing switches in tumor samples reveals novel signatures of cancer.</article-title>
+<source><italic>Nucleic Acids Res.</italic></source>
+<year>2015</year>;<volume>43</volume>(<issue>3</issue>):<fpage>1345</fpage>&#8211;<lpage>56</lpage>.
+<pub-id pub-id-type="doi">10.1093/nar/gku1392</pub-id>
+<!--<pub-id pub-id-type="pmcid">4330360</pub-id>-->
+<?supplied-pmid 25578962?><pub-id pub-id-type="pmid">25578962</pub-id></mixed-citation></ref><ref id="ref-7"><label>7</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Zhao</surname><given-names>W</given-names></name><name><surname>Hoadley</surname><given-names>KA</given-names></name><name><surname>Parker</surname><given-names>JS</given-names></name><etal/></person-group>:
+<article-title>Identification of mRNA isoform switching in breast cancer.</article-title>
+<source><italic>BMC Genomics.</italic></source>
+<year>2016</year>;<volume>17</volume>:<fpage>181</fpage>.
+<pub-id pub-id-type="doi">10.1186/s12864-016-2521-9</pub-id>
+<!--<pub-id pub-id-type="pmcid">4778320</pub-id>-->
+<?supplied-pmid 26939613?><pub-id pub-id-type="pmid">26939613</pub-id></mixed-citation></ref><ref id="ref-8"><label>8</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Trapnell</surname><given-names>C</given-names></name><name><surname>Roberts</surname><given-names>A</given-names></name><name><surname>Goff</surname><given-names>L</given-names></name><etal/></person-group>:
+<article-title>Differential gene and transcript expression analysis of RNA-seq experiments with TopHat and Cufflinks.</article-title>
+<source><italic>Nat Protoc.</italic></source>
+<year>2012</year>;<volume>7</volume>(<issue>3</issue>):<fpage>562</fpage>&#8211;<lpage>78</lpage>.
+<pub-id pub-id-type="doi">10.1038/nprot.2012.016</pub-id>
+<!--<pub-id pub-id-type="pmcid">3334321</pub-id>-->
+<?supplied-pmid 22383036?><pub-id pub-id-type="pmid">22383036</pub-id></mixed-citation></ref><ref id="ref-9"><label>9</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Anders</surname><given-names>S</given-names></name><name><surname>Reyes</surname><given-names>A</given-names></name><name><surname>Huber</surname><given-names>W</given-names></name></person-group>:
+<article-title>Detecting differential usage of exons from RNA-seq data.</article-title>
+<source><italic>Genome Res.</italic></source>
+<year>2012</year>;<volume>22</volume>(<issue>10</issue>):<fpage>2008</fpage>&#8211;<lpage>17</lpage>.
+<pub-id pub-id-type="doi">10.1101/gr.133744.111</pub-id>
+<!--<pub-id pub-id-type="pmcid">3460195</pub-id>-->
+<?supplied-pmid 22722343?><pub-id pub-id-type="pmid">22722343</pub-id></mixed-citation></ref><ref id="ref-10"><label>10</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Li</surname><given-names>YI</given-names></name><name><surname>Knowles</surname><given-names>DA</given-names></name><name><surname>Humphrey</surname><given-names>J</given-names></name><etal/></person-group>:
+<article-title>Annotation-free quantification of RNA splicing using LeafCutter.</article-title>
+<source><italic>Nat Genet.</italic></source>
+<year>2018</year>;<volume>50</volume>(<issue>1</issue>):<fpage>151</fpage>&#8211;<lpage>158</lpage>.
+<pub-id pub-id-type="doi">10.1038/s41588-017-0004-9</pub-id>
+<!--<pub-id pub-id-type="pmcid">5742080</pub-id>-->
+<?supplied-pmid 29229983?><pub-id pub-id-type="pmid">29229983</pub-id></mixed-citation></ref><ref id="ref-11"><label>11</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Bray</surname><given-names>NL</given-names></name><name><surname>Pimentel</surname><given-names>H</given-names></name><name><surname>Melsted</surname><given-names>P</given-names></name><etal/></person-group>:
+<article-title>Near-optimal probabilistic RNA-seq quantification.</article-title>
+<source><italic>Nat Biotechnol.</italic></source>
+<year>2016</year>;<volume>34</volume>(<issue>5</issue>):<fpage>525</fpage>&#8211;<lpage>7</lpage>.
+<pub-id pub-id-type="doi">10.1038/nbt.3519</pub-id>
+<?supplied-pmid 27043002?><pub-id pub-id-type="pmid">27043002</pub-id></mixed-citation></ref><ref id="ref-12"><label>12</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Bray</surname><given-names>NL</given-names></name><name><surname>Pimentel</surname><given-names>H</given-names></name><name><surname>Melsted</surname><given-names>P</given-names></name><etal/></person-group>:
+<article-title>Erratum: Near-optimal probabilistic RNA-seq quantification.</article-title>
+<source><italic>Nat Biotechnol.</italic></source>
+<year>2016</year>;<volume>34</volume>(<issue>8</issue>):<fpage>888</fpage>.
+<pub-id pub-id-type="doi">10.1038/nbt0816-888d</pub-id>
+<?supplied-pmid 27504780?><pub-id pub-id-type="pmid">27504780</pub-id></mixed-citation></ref><ref id="ref-13"><label>13</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Patro</surname><given-names>R</given-names></name><name><surname>Mount</surname><given-names>SM</given-names></name><name><surname>Kingsford</surname><given-names>C</given-names></name></person-group>:
+<article-title>Sailfish enables alignment-free isoform quantification from RNA-seq reads using lightweight algorithms.</article-title>
+<source><italic>Nat Biotechnol.</italic></source>
+<year>2014</year>;<volume>32</volume>(<issue>5</issue>):<fpage>462</fpage>&#8211;<lpage>4</lpage>.
+<pub-id pub-id-type="doi">10.1038/nbt.2862</pub-id>
+<!--<pub-id pub-id-type="pmcid">4077321</pub-id>-->
+<?supplied-pmid 24752080?><pub-id pub-id-type="pmid">24752080</pub-id></mixed-citation></ref><ref id="ref-14"><label>14</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Patro</surname><given-names>R</given-names></name><name><surname>Duggal</surname><given-names>G</given-names></name><name><surname>Love</surname><given-names>MI</given-names></name><etal/></person-group>:
+<article-title>Salmon provides fast and bias-aware quantification of transcript expression.</article-title>
+<source><italic>Nat Methods.</italic></source>
+<year>2017</year>;<volume>14</volume>(<issue>4</issue>):<fpage>417</fpage>&#8211;<lpage>419</lpage>.
+<pub-id pub-id-type="doi">10.1038/nmeth.4197</pub-id>
+<!--<pub-id pub-id-type="pmcid">5600148</pub-id>-->
+<?supplied-pmid 28263959?><pub-id pub-id-type="pmid">28263959</pub-id></mixed-citation></ref><ref id="ref-15"><label>15</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Li</surname><given-names>B</given-names></name><name><surname>Dewey</surname><given-names>CN</given-names></name></person-group>:
+<article-title>RSEM: accurate transcript quantification from RNA-Seq data with or without a reference genome.</article-title>
+<source><italic>BMC Bioinformatics.</italic></source>
+<year>2011</year>;<volume>12</volume>(<issue>1</issue>):<fpage>323</fpage>.
+<pub-id pub-id-type="doi">10.1186/1471-2105-12-323</pub-id>
+<!--<pub-id pub-id-type="pmcid">3163565</pub-id>-->
+<?supplied-pmid 21816040?><pub-id pub-id-type="pmid">21816040</pub-id></mixed-citation></ref><ref id="ref-16"><label>16</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Kim</surname><given-names>D</given-names></name><name><surname>Pertea</surname><given-names>G</given-names></name><name><surname>Trapnell</surname><given-names>C</given-names></name><etal/></person-group>:
+<article-title>TopHat2: accurate alignment of transcriptomes in the presence of insertions, deletions and gene fusions.</article-title>
+<source><italic>Genome Biol.</italic></source>
+<year>2013</year>;<volume>14</volume>(<issue>4</issue>):<fpage>R36</fpage>.
+<pub-id pub-id-type="doi">10.1186/gb-2013-14-4-r36</pub-id>
+<!--<pub-id pub-id-type="pmcid">4053844</pub-id>-->
+<?supplied-pmid 23618408?><pub-id pub-id-type="pmid">23618408</pub-id></mixed-citation></ref><ref id="ref-17"><label>17</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Dobin</surname><given-names>A</given-names></name><name><surname>Davis</surname><given-names>CA</given-names></name><name><surname>Schlesinger</surname><given-names>F</given-names></name><etal/></person-group>:
+<article-title>STAR: ultrafast universal RNA-seq aligner.</article-title>
+<source><italic>Bioinformatics.</italic></source>
+<year>2013</year>;<volume>29</volume>(<issue>1</issue>):<fpage>15</fpage>&#8211;<lpage>21</lpage>.
+<pub-id pub-id-type="doi">10.1093/bioinformatics/bts635</pub-id>
+<!--<pub-id pub-id-type="pmcid">3530905</pub-id>-->
+<?supplied-pmid 23104886?><pub-id pub-id-type="pmid">23104886</pub-id></mixed-citation></ref><ref id="ref-18"><label>18</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Grabherr</surname><given-names>MG</given-names></name><name><surname>Haas</surname><given-names>BJ</given-names></name><name><surname>Yassour</surname><given-names>M</given-names></name><etal/></person-group>:
+<article-title>Full-length transcriptome assembly from RNA-Seq data without a reference genome.</article-title>
+<source><italic>Nat Biotechnol.</italic></source>
+<year>2011</year>;<volume>29</volume>(<issue>7</issue>):<fpage>644</fpage>&#8211;<lpage>52</lpage>.
+<pub-id pub-id-type="doi">10.1038/nbt.1883</pub-id>
+<!--<pub-id pub-id-type="pmcid">3571712</pub-id>-->
+<?supplied-pmid 21572440?><pub-id pub-id-type="pmid">21572440</pub-id></mixed-citation></ref><ref id="ref-19"><label>19</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Pimentel</surname><given-names>H</given-names></name><name><surname>Bray</surname><given-names>NL</given-names></name><name><surname>Puente</surname><given-names>S</given-names></name><etal/></person-group>:
+<article-title>Differential analysis of RNA-seq incorporating quantification uncertainty.</article-title>
+<source><italic>Nat Methods.</italic></source>
+<year>2017</year>;<volume>14</volume>(<issue>7</issue>):<fpage>687</fpage>&#8211;<lpage>690</lpage>.
+<pub-id pub-id-type="doi">10.1038/nmeth.4324</pub-id>
+<?supplied-pmid 28581496?><pub-id pub-id-type="pmid">28581496</pub-id></mixed-citation></ref><ref id="ref-20"><label>20</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Gonz&#224;lez-Porta</surname><given-names>M</given-names></name><name><surname>Brazma</surname><given-names>A</given-names></name></person-group>:
+<article-title>Identification, annotation and visualisation of extreme changes in splicing from RNA-seq experiments with SwitchSeq.</article-title>
+<source><italic>bioRxiv.</italic></source>
+<year>2014</year>;<fpage>005967</fpage>
+<pub-id pub-id-type="doi">10.1101/005967</pub-id>
+</mixed-citation></ref><ref id="ref-21"><label>21</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Alamancos</surname><given-names>GP</given-names></name><name><surname>Pag&#232;s</surname><given-names>A</given-names></name><name><surname>Trincado</surname><given-names>JL</given-names></name><etal/></person-group>:
+<article-title>Leveraging transcript quantification for fast computation of alternative splicing profiles.</article-title>
+<source><italic>RNA.</italic></source>
+<year>2015</year>;<volume>21</volume>(<issue>9</issue>):<fpage>1521</fpage>&#8211;<lpage>31</lpage>.
+<pub-id pub-id-type="doi">10.1261/rna.051557.115</pub-id>
+<!--<pub-id pub-id-type="pmcid">4536314</pub-id>-->
+<?supplied-pmid 26179515?><pub-id pub-id-type="pmid">26179515</pub-id></mixed-citation></ref><ref id="ref-22"><label>22</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Trincado</surname><given-names>JL</given-names></name><name><surname>Entizne</surname><given-names>JC</given-names></name><name><surname>Hysenaj</surname><given-names>G</given-names></name><etal/></person-group>:
+<article-title>SUPPA2: fast, accurate, and uncertainty-aware differential splicing analysis across multiple conditions.</article-title>
+<source><italic>Genome Biol.</italic></source>
+<year>2018</year>;<volume>19</volume>(<issue>1</issue>):<fpage>40</fpage>.
+<pub-id pub-id-type="doi">10.1186/s13059-018-1417-1</pub-id>
+<!--<pub-id pub-id-type="pmcid">5866513</pub-id>-->
+<?supplied-pmid 29571299?><pub-id pub-id-type="pmid">29571299</pub-id></mixed-citation></ref><ref id="ref-23"><label>23</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Nowicka</surname><given-names>M</given-names></name><name><surname>Robinson</surname><given-names>M</given-names></name></person-group>:
+<article-title>DRIMSeq: a Dirichlet-multinomial framework for multivariate count outcomes in genomics [version 2; referees: 2 approved].</article-title>
+<source><italic>F1000Res.</italic></source>
+<year>2016</year>;<volume>5</volume>:<fpage>1356</fpage>.
+<pub-id pub-id-type="doi">10.12688/f1000research.8900.2</pub-id>
+<!--<pub-id pub-id-type="pmcid">5200948</pub-id>-->
+<?supplied-pmid 28105305?><pub-id pub-id-type="pmid">28105305</pub-id></mixed-citation></ref><ref id="ref-24"><label>24</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Sokal</surname><given-names>RR</given-names></name><name><surname>Rohlf</surname><given-names>FJ</given-names></name></person-group>:
+<article-title>Biometry: The Principles and Practice of Statistics in Biological Research.</article-title>W. H. Freeman.<year>1995</year>
+<ext-link ext-link-type="uri" xlink:href="https://books.google.co.in/books/about/Biometry.html?id=_yZmmgEACAAJ&amp;redir_esc=y">Reference Source</ext-link>
+</mixed-citation></ref><ref id="ref-25"><label>25</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Benjamini</surname><given-names>Y</given-names></name><name><surname>Hochberg</surname><given-names>Y</given-names></name></person-group>:
+<article-title>Controlling the False Discovery Rate: A Practical and Powerful Approach to Multiple Testing.</article-title>
+<source><italic>J Roy Stat Soc B Met.</italic></source>
+<year>1995</year>;<volume>57</volume>(<issue>1</issue>):<fpage>289</fpage>&#8211;<lpage>300</lpage>.
+<ext-link ext-link-type="uri" xlink:href="http://engr.case.edu/ray_soumya/mlrg/controlling_fdr_benjamini95.pdf">Reference Source</ext-link>
+</mixed-citation></ref><ref id="ref-26"><label>26</label><mixed-citation publication-type="journal">
+<collab>R Development Core Team</collab>:
+<article-title>R: A Language and Environment for Statistical Computing</article-title>. 
+Vienna, Austria: The R Foundation for Statistical Computing.<year>2011</year>
+<ext-link ext-link-type="uri" xlink:href="https://www.researchgate.net/publication/312455832_R_A_Language_and_Environment_for_Statistical_Computing">Reference Source</ext-link>
+</mixed-citation></ref><ref id="ref-27"><label>27</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Dowle</surname><given-names>MSA</given-names></name><name><surname>Short</surname><given-names>T</given-names></name><name><surname>Lianoglou</surname><given-names>S</given-names></name><etal/></person-group>:
+<article-title>Data.table: Extension of Data.frame</article-title>.<year>2015</year>.</mixed-citation></ref><ref id="ref-28"><label>28</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Wickham</surname><given-names>H</given-names></name></person-group>:
+<article-title>ggplot2: Elegant Graphics for Data Analysis</article-title>. Springer International Publishing.<year>2016</year>
+<pub-id pub-id-type="doi">10.1007/978-3-319-24277-4</pub-id>
+</mixed-citation></ref><ref id="ref-29"><label>29</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Froussios</surname><given-names>K</given-names></name><name><surname>Schurch</surname><given-names>NJ</given-names></name><name><surname>Mackinnon</surname><given-names>K</given-names></name><etal/></person-group>:
+<article-title>How well do RNA-Seq differential gene expression tools perform in a eukaryote with a complex transcriptome?</article-title>
+<source><italic>bioRxiv.</italic></source>
+<year>2017</year>
+<pub-id pub-id-type="doi">10.1101/090753</pub-id>
+</mixed-citation></ref><ref id="ref-30"><label>30</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Soneson</surname><given-names>C</given-names></name><name><surname>Matthes</surname><given-names>KL</given-names></name><name><surname>Nowicka</surname><given-names>M</given-names></name><etal/></person-group>:
+<article-title>Isoform prefiltering improves performance of count-based methods for analysis of differential transcript usage.</article-title>
+<source><italic>Genome Biol.</italic></source>
+<year>2016</year>;<volume>17</volume>:<fpage>12</fpage>.
+<pub-id pub-id-type="doi">10.1186/s13059-015-0862-3</pub-id>
+<!--<pub-id pub-id-type="pmcid">4729156</pub-id>-->
+<?supplied-pmid 26813113?><pub-id pub-id-type="pmid">26813113</pub-id></mixed-citation></ref><ref id="ref-31"><label>31</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Deng</surname><given-names>N</given-names></name><name><surname>Sanchez</surname><given-names>CG</given-names></name><name><surname>Lasky</surname><given-names>JA</given-names></name><etal/></person-group>:
+<article-title>Detecting splicing variants in idiopathic pulmonary fibrosis from non-differentially expressed genes.</article-title>
+<source><italic>PLoS One.</italic></source>
+<year>2013</year>;<volume>8</volume>(<issue>7</issue>):<fpage>e68352</fpage>.
+<pub-id pub-id-type="doi">10.1371/journal.pone.0068352</pub-id>
+<!--<pub-id pub-id-type="pmcid">3699530</pub-id>-->
+<?supplied-pmid 23844188?><pub-id pub-id-type="pmid">23844188</pub-id></mixed-citation></ref><ref id="ref-32"><label>32</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Zerbino</surname><given-names>DR</given-names></name><name><surname>Achuthan</surname><given-names>P</given-names></name><name><surname>Akanni</surname><given-names>W</given-names></name><etal/></person-group>:
+<article-title>Ensembl 2018.</article-title>
+<source><italic>Nucleic Acids Res.</italic></source>
+<year>2018</year>;<volume>46</volume>(<issue>D1</issue>):<fpage>D754</fpage>&#8211;<lpage>D761</lpage>.
+<pub-id pub-id-type="doi">10.1093/nar/gkx1098</pub-id>
+<!--<pub-id pub-id-type="pmcid">5753206</pub-id>-->
+<?supplied-pmid 29155950?><pub-id pub-id-type="pmid">29155950</pub-id></mixed-citation></ref><ref id="ref-33"><label>33</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Froussios</surname><given-names>K</given-names></name><name><surname>Schurch</surname><given-names>N</given-names></name></person-group>:
+<article-title>bartongroup/RATS: RATs 0.6.5 - R source package (Version 0.6.5).</article-title>
+<source><italic>Zenodo.</italic></source>
+<year>2019</year>
+<pub-id pub-id-type="doi">10.5281/zenodo.2556564</pub-id>
+</mixed-citation></ref><ref id="ref-34"><label>34</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Love</surname><given-names>MI</given-names></name><name><surname>Soneson</surname><given-names>C</given-names></name><name><surname>Patro</surname><given-names>R</given-names></name></person-group>:
+<article-title>Swimming downstream: statistical analysis of differential transcript usage following Salmon quantification [version 3; referees: 3 approved].</article-title>
+<source><italic>F1000Res.</italic></source>
+<year>2018</year>;<volume>7</volume>:<fpage>952</fpage>.
+<pub-id pub-id-type="doi">10.12688/f1000research.15398.3</pub-id>
+<!--<pub-id pub-id-type="pmcid">6178912</pub-id>-->
+<?supplied-pmid 30356428?><pub-id pub-id-type="pmid">30356428</pub-id></mixed-citation></ref><ref id="ref-35"><label>35</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Deng</surname><given-names>N</given-names></name><name><surname>Puetter</surname><given-names>A</given-names></name><name><surname>Zhang</surname><given-names>K</given-names></name><etal/></person-group>:
+<article-title>Isoform-level microRNA-155 target prediction using RNA-seq.</article-title>
+<source><italic>Nucleic Acids Res.</italic></source>
+<year>2011</year>;<volume>39</volume>(<issue>9</issue>):<fpage>e61</fpage>.
+<pub-id pub-id-type="doi">10.1093/nar/gkr042</pub-id>
+<!--<pub-id pub-id-type="pmcid">3089486</pub-id>-->
+<?supplied-pmid 21317189?><pub-id pub-id-type="pmid">21317189</pub-id></mixed-citation></ref><ref id="ref-36"><label>36</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Quinn</surname><given-names>T</given-names></name></person-group>:
+<article-title>peakRAM: Monitor the total and peak RAM used by an expression or function. </article-title>
+<year>2017</year>
+<ext-link ext-link-type="uri" xlink:href="https://cran.r-project.org/web/packages/peakRAM/peakRAM.pdf">Reference Source</ext-link>
+</mixed-citation></ref><ref id="ref-37"><label>37</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Wu</surname><given-names>PY</given-names></name><name><surname>Phan</surname><given-names>JH</given-names></name><name><surname>Wang</surname><given-names>MD</given-names></name></person-group>:
+<article-title>Assessing the impact of human genome annotation choice on RNA-seq expression estimates.</article-title>
+<source><italic>BMC Bioinformatics.</italic></source>
+<year>2013</year>;<volume>14 Suppl 11</volume>:<fpage>S8</fpage>.
+<pub-id pub-id-type="doi">10.1186/1471-2105-14-S11-S8</pub-id>
+<!--<pub-id pub-id-type="pmcid">3816316</pub-id>-->
+<?supplied-pmid 24564364?><pub-id pub-id-type="pmid">24564364</pub-id></mixed-citation></ref><ref id="ref-38"><label>38</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Garalde</surname><given-names>DR</given-names></name><name><surname>Snell</surname><given-names>EA</given-names></name><name><surname>Jachimowicz</surname><given-names>D</given-names></name><etal/></person-group>:
+<article-title>Highly parallel direct RNA sequencing on an array of nanopores.</article-title>
+<source><italic>Nat Methods.</italic></source>
+<year>2018</year>;<volume>15</volume>(<issue>3</issue>):<fpage>201</fpage>&#8211;<lpage>206</lpage>.
+<pub-id pub-id-type="doi">10.1038/nmeth.4577</pub-id>
+<?supplied-pmid 29334379?><pub-id pub-id-type="pmid">29334379</pub-id></mixed-citation></ref><ref id="ref-39"><label>39</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Lagarde</surname><given-names>J</given-names></name><name><surname>Uszczynska-Ratajczak</surname><given-names>B</given-names></name><name><surname>Carbonell</surname><given-names>S</given-names></name><etal/></person-group>:
+<article-title>High-throughput annotation of full-length long noncoding RNAs with capture long-read sequencing.</article-title>
+<source><italic>Nat Genet.</italic></source>
+<year>2017</year>;<volume>49</volume>(<issue>12</issue>):<fpage>1731</fpage>&#8211;<lpage>1740</lpage>.
+<pub-id pub-id-type="doi">10.1038/ng.3988</pub-id>
+<!--<pub-id pub-id-type="pmcid">5709232</pub-id>-->
+<?supplied-pmid 29106417?><pub-id pub-id-type="pmid">29106417</pub-id></mixed-citation></ref><ref id="ref-40"><label>40</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Love</surname><given-names>KR</given-names></name><name><surname>Shah</surname><given-names>KA</given-names></name><name><surname>Whittaker</surname><given-names>CA</given-names></name><etal/></person-group>:
+<article-title>Comparative genomics and transcriptomics of
+<italic>Pichia pastoris</italic>.</article-title>
+<source><italic>BMC Genomics.</italic></source>
+<year>2016</year>;<volume>17</volume>:<fpage>550</fpage>.
+<pub-id pub-id-type="doi">10.1186/s12864-016-2876-y</pub-id>
+<!--<pub-id pub-id-type="pmcid">4974788</pub-id>-->
+<?supplied-pmid 27495311?><pub-id pub-id-type="pmid">27495311</pub-id></mixed-citation></ref><ref id="ref-41"><label>41</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Wang</surname><given-names>B</given-names></name><name><surname>Tseng</surname><given-names>E</given-names></name><name><surname>Regulski</surname><given-names>M</given-names></name><etal/></person-group>:
+<article-title>Unveiling the complexity of the maize transcriptome by single-molecule long-read sequencing.</article-title>
+<source><italic>Nat Commun.</italic></source>
+<year>2016</year>;<volume>7</volume>: 11708.
+<pub-id pub-id-type="doi">10.1038/ncomms11708</pub-id>
+<!--<pub-id pub-id-type="pmcid">4931018</pub-id>-->
+<?supplied-pmid 27339440?><pub-id pub-id-type="pmid">27339440</pub-id></mixed-citation></ref></ref-list></back><sub-article id="report44975" article-type="peer-review"><front-stub><article-id pub-id-type="doi">10.5256/f1000research.19594.r44975</article-id><title-group><article-title>Reviewer response for version 1</article-title></title-group><contrib-group><contrib contrib-type="author"><name><surname>Love</surname><given-names>Michael I.</given-names></name><xref ref-type="aff" rid="r44975a1">1</xref><role>Referee</role><contrib-id contrib-id-type="orcid">https://orcid.org/0000-0001-8401-0545</contrib-id></contrib><aff id="r44975a1">
+<label>1</label>Department of Biostatistics, University of North Carolina-Chapel Hill, Chapel Hill, NC, USA</aff></contrib-group><author-notes><fn fn-type="COI-statement"><p>
+<bold>Competing interests: </bold>No competing interests were disclosed.</p></fn></author-notes><pub-date pub-type="epub"><day>18</day><month>3</month><year>2019</year></pub-date><related-article related-article-type="peer-reviewed-article" id="d35e4041" ext-link-type="doi" xlink:href="10.12688/f1000research.17916.1">Version 1</related-article><custom-meta-group><custom-meta><meta-name>recommendation</meta-name><meta-value>approve-with-reservations</meta-value></custom-meta></custom-meta-group></front-stub><body><p>The authors present a new method for detection of&#160;DTU from RNA-seq data, which uniquely leverages quantification uncertainty in the form of inferential replicates. I am not aware of other methods specifically designed to detect DTU as opposed to change in total expression level of the gene, which take into account quantification uncertainty. It is therefore a useful contribution to the methods literature. The authors have taken some length to assess their method against other popular methods on real and simulated datasets, and investigating individual genes with qRT-PCR validation in detail.</p><p> I have some concerns about the conclusions from the evidence provided in the article, and additionally have requests for further details about the methods, which should be presented in the article itself.</p><p>
+<bold>Major comments:</bold>
+</p><p>
+<bold>1)</bold> The methods are not sufficiently described, I have the following questions:
+<list list-type="bullet"><list-item><p>What is the input to RATs? Is it TPM or counts or scaledTPM? Should the library size differences be removed prior to providing to RATs or does RATs take care of library size differences internally?</p></list-item><list-item><p>Can the methods described all analyze the same type of experiment, are they all restricted to two-group analyses? Can any of them control for batch effects?</p></list-item><list-item><p>What are the default pre-filtering and post-filtering settings? What is the default minimum abundance threshold or proportion threshold for an isoform to be considered expressed? What is the default effect size cutoff, and how is it implemented per isoform, per gene? What is the default fraction for determining that evidence of DTU is not substantiated across inferential replicates? Likewise, what default fraction for biological replicate variation?</p></list-item></list>
+<bold>2) </bold>I didn't understand why abundance thresholds were not used, as described here, "
+<italic>No transcript abundance pre-filter was imposed on any of the three DTU tools</italic>," and also "
+<italic>As&#160;SUPPA2&#160;offered no abundance pre-filtering,&#160;RATs&#160;and&#160;DRIM-Seq&#160;were run with abundance threshold values of 0.</italic>"&#160;</p><p> As shown in Soneson
+<italic>et al.</italic> (2016
+<sup><xref rid="rep-ref-44975-1" ref-type="bibr">1</xref></sup>) and Love
+<italic>et al.</italic> (2018
+<sup><xref rid="rep-ref-44975-2" ref-type="bibr">2</xref></sup>), performance of a number of DTU methods is greatly improved by filtering out lowly expressed transcripts. It can be inferred from the title of the former paper:&#160;"
+<italic>Isoform prefiltering improves performance of count-based methods for analysis of differential transcript usage</italic>".&#160;</p><p> SUPPA2 does have an abundance pre-filtering option, which was used in Love
+<italic>et al.</italic> (2018
+<sup><xref rid="rep-ref-44975-2" ref-type="bibr">2</xref></sup>):</p><p> "
+<italic>We enabled a filter to remove transcripts with less than 1 TPM. TPM filtering is a command-line option available during the&#160;diffSplice&#160;step of&#160;SUPPA2&#160;and this greatly improved the running time without loss of sensitivity</italic>".</p><p> From the SUPPA2 manual: "
+<italic>-th&#160;|&#160;--tpm-threshold: Minimum expression (calculated as average TPM value within-replicates and between-conditions) to be included in the analysis. (Default: 0).</italic>"</p><p> Given that all the methods have abundance and/or proportion filters available, that filters are recommended by at least two of the three methods in their documentation (DRIMSeq and RATs), and at least two independent review papers (not introducing methods) have shown that abundance and/or proportion filtering improves performance of methods, I can't see why the choice was made to not use filters.</p><p>
+<bold>3)</bold> It is mentioned in the false positive analysis that the median FP fraction was less than 0.05 and a horizontal line is drawn on Fig 2A and B. This is misleading, as the adjusted p-values are being thresholded at 0.05 (I assume), and in a null comparison the rate of false positives from an adjusted p-values should be 0, not 0.05. Drawing or mentioning a 0.05 cutoff would be relevant for the p-values (uncorrected), but has no bearing on the adjusted p-values. This may confuse&#160;readers.</p><p>
+<bold>4)</bold> The authors repeatedly refer to the reported effect size in DRIMSeq being an issue for comparison across methods, e.g. "
+<italic>Direct comparison with DRIM-Seq is complicated by different methods for measuring DTU effect-sizes between the tools</italic>", but this is only an issue to the extent that the authors wish to perform post-hoc filtering on effect size. It is not an issue for null hypothesis testing without post-hoc filtering, because all methods are testing against the null that the underlying proportion of expression across isoforms has the same distribution for control samples and treated samples. However, I agree that for post-hoc filtering, one may want to filter the methods in a similar manner. It should be easy to filter the DRIMSeq results directly on absolute difference in isoform proportion, for example in Love
+<italic>et al.</italic> (2018
+<sup><xref rid="rep-ref-44975-2" ref-type="bibr">2</xref></sup>) we performed post-hoc&#160;filtering for DRIMSeq on the SD of proportions across all samples using a 6-line R function.</p><p> As the likelihood ratio statistic should be 1-1 and monotonic&#160;with the p-value for DRIMSeq (if the degrees of freedom is constant across genes or transcripts), then I would not compare effect size filtering with likelihood ratio filtering, as the latter is simply filtering the p-value at a lower threshold.</p><p>
+<bold>Minor comments:</bold>
+<list list-type="bullet"><list-item><p>In the Introduction, the authors state "
+<italic>there is little justification for choosing DGE over DTE in the study of complex transcriptomes</italic>". The authors imply that gene-level and transcript-level analysis are mutually exclusive analyses, when they are not, and so I would suggest to reword or reconsider this statement.&#160;I and others have encouraged assessment of total changes in gene expression (DGE) as well as changes in isoform proportion (DTU), as both may be present in an experiment and both may be of biological importance to the system being studied. DGE has&#160;the property that the majority of inferential uncertainty which exists in an&#160;RNA-seq sample is removed (because it occurs across isoforms within genes), leaving&#160;inferential uncertainty from reads mapping across gene loci, but this property of reduced uncertainty does not preclude&#160;a transcript-level analysis. While DTE has advantages, the above sentence claiming that DGE has none overstates a more complex situation in my opinion.</p></list-item><list-item><p>Throughout the paper, the authors refer to "DRIMSeq" as "DRIM-Seq" which is minor but different than the software and publication.</p></list-item><list-item><p>For what it's worth, the transcript-level test is similar conceptually to the current implementation of testForDEU() in DEXSeq which compares the expression of each feature&#160;to the sum of expression from all other features of the gene (this is also different from the test described in the original DEXSeq publication). Running DEXSeq on transcript estimated counts with testForDEU() was tested on simulated data in Soneson
+<italic>et al.</italic> (2016
+<sup><xref rid="rep-ref-44975-1" ref-type="bibr">1</xref></sup>) and Love
+<italic>et al.</italic> (2018
+<sup><xref rid="rep-ref-44975-2" ref-type="bibr">2</xref></sup>), and so such an approach has some evidence of working well for detection of isoform changes within a gene.</p></list-item><list-item><p>I didn't understand what was meant by the following: "
+<italic>the tables record the full provenance of the results</italic>".</p></list-item><list-item><p>It is stated that, "
+<italic>The performance results of RATs on these simulated datasets are in good agreement with those presented in Love et al (2018)</italic>". However, this seems to be not clearly the case, which may be due to differences in the simulated data in the two articles, or some other reason. In the present article, DRIMSeq is reported as having lower sensitivity with lower achieved FDR than other methods, SUPPA2 has higher sensitivity and higher FDR, and RATs with various filter thresholds falls in between. In Love
+<italic>et al.</italic> (2018
+<sup><xref rid="rep-ref-44975-2" ref-type="bibr">2</xref></sup>), DRIMSeq had the opposite performance: higher sensitivity but higher FDR relative to SUPPA2 and RATs run with default filters. However interpretation is made difficult by all the filtering options in Figure 3. It would be easier to compare perhaps if an additional supplementary plot to Figure 3 was made with only the default filter thresholds instead of the filter threshold ranges for all methods. The main commonality across the two benchmarks seems to be that RATs can achieve higher sensitivity than SUPPA2 while maintaining the same precision, for the 5% nominal FDR threshold.</p></list-item><list-item><p>This sentence needs to be made more specific, or else it could be misleading: "
+<italic>As a consequence, the qRT-PCR intensities measured in the original study are actually impossible to interpret in the context of the updated annotation and the originally reported conclusion is likely wrong.</italic>" Specifically which conclusion is likely wrong? From the analysis, it seemed like there is not a problem with the original qRT-PCR intensities and interpretation for at least one of the three genes.</p></list-item><list-item><p>Why is it perplexing that "
+<italic>18% of the SUPPA2 results are rejected due to the effect size filter</italic>". I didn't follow the authors in that statement.</p></list-item><list-item><p>It is stated, "
+<italic>Existing tools rely on the mean isoform abundances</italic>...". This implies that the mean of inferential replicates is used for statistical testing. It's perhaps subtly different, other methods are typically using the maximum likelihood estimate, which may be different than the mean of the bootstrap distribution, and different than the mean of the Gibbs sampling distribution. I would just say that other tools do not make use of inferential replication.</p></list-item></list>
+</p><p>I have read this submission. I believe that I have an appropriate level of expertise to confirm that it is of an acceptable scientific standard, however I have significant reservations, as outlined above.</p></body><back><ref-list><title>References</title><ref id="rep-ref-44975-1"><label>1</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Soneson</surname><given-names>C</given-names></name><name><surname>Matthes</surname><given-names>KL</given-names></name><name><surname>Nowicka</surname><given-names>M</given-names></name><name><surname>Law</surname><given-names>CW</given-names></name><name><surname>Robinson</surname><given-names>MD</given-names></name></person-group>:
+<article-title>Isoform prefiltering improves performance of count-based methods for analysis of differential transcript usage.</article-title>
+<source><italic>Genome Biol</italic></source>.<year>2016</year>;<volume>17</volume>:
+<elocation-id>10.1186/s13059-015-0862-3</elocation-id>
+<fpage>12</fpage>
+<pub-id pub-id-type="doi">10.1186/s13059-015-0862-3</pub-id>
+<?supplied-pmid 26813113?><pub-id pub-id-type="pmid">26813233</pub-id></mixed-citation></ref><ref id="rep-ref-44975-2"><label>2</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Love</surname><given-names>MI</given-names></name><name><surname>Soneson</surname><given-names>C</given-names></name><name><surname>Patro</surname><given-names>R</given-names></name></person-group>:
+<article-title>Swimming downstream: statistical analysis of differential transcript usage following Salmon quantification.</article-title>
+<source><italic>F1000Res</italic></source>.<year>2018</year>;<volume>7</volume>:
+<elocation-id>10.12688/f1000research.15398.3</elocation-id>
+<fpage>952</fpage>
+<pub-id pub-id-type="doi">10.12688/f1000research.15398.3</pub-id>
+<?supplied-pmid 30356428?><pub-id pub-id-type="pmid">30356428</pub-id></mixed-citation></ref></ref-list></back></sub-article><sub-article id="report44977" article-type="peer-review"><front-stub><article-id pub-id-type="doi">10.5256/f1000research.19594.r44977</article-id><title-group><article-title>Reviewer response for version 1</article-title></title-group><contrib-group><contrib contrib-type="author"><name><surname>Lloyd</surname><given-names>James P. B.</given-names></name><xref ref-type="aff" rid="r44977a1">1</xref><role>Referee</role><contrib-id contrib-id-type="orcid">https://orcid.org/0000-0002-4492-1368</contrib-id></contrib><aff id="r44977a1">
+<label>1</label>ARC Centre of Excellence in Plant Energy Biology, University of Western Australia, Perth, WA, Australia</aff></contrib-group><author-notes><fn fn-type="COI-statement"><p>
+<bold>Competing interests: </bold>No competing interests were disclosed.</p></fn></author-notes><pub-date pub-type="epub"><day>4</day><month>3</month><year>2019</year></pub-date><related-article related-article-type="peer-reviewed-article" id="d35e4400" ext-link-type="doi" xlink:href="10.12688/f1000research.17916.1">Version 1</related-article><custom-meta-group><custom-meta><meta-name>recommendation</meta-name><meta-value>approve</meta-value></custom-meta></custom-meta-group></front-stub><body><p>&#8216;RATs&#8217; is addressing an important problem: how to quantify changes in transcript isoform usage. Other tools, like &#8216;Sleuth&#8217;, address a related problem, which is differential transcript expression. Both RATs and Sleuth take advantage of the bootstrapping data that tools like &#8216;kallisto&#8217; and &#8216;Salmon&#8217; generate when quantifying transcript isoform abundance. By taking advantage of bootstrapping, such tools can estimate the technical variation within the data, to better look for differential changes. Transcript isoform usage is often linked to changes in alternative splicing or isoform specific decay rates (e.g. from NMD). Therefore, having a tool to accurately find changes in isoform usage is vital to our ability to address a range of biological problems.&#160;</p><p> I have tried a version of RATs. I found that it was easy to install and easy to use. Being able to install bioinformatics software is no guarantee (Mangul
+<italic>et al.</italic>, 2018
+<sup><xref rid="rep-ref-44977-1" ref-type="bibr">1</xref></sup>). A bonus of RATs is that several figures can be generated from the data within the tool. This was simple to do, but allowed for you to visualize your data in a straightforward but powerful way. This is one of the rare tools that just works and was relatively intuitive and well-documented.&#160;</p><p> The paper uses sensible approaches to compare RATs to other tools, including &#8216;SUPPA&#8217; and &#8216;DRIMSeq&#8217; and the authors found that RATs performed at a similar or better level than the other tools.&#160;</p><p> One minor point that could be better explained is how RATs uses the bootstrapping data. Does it use it to simply throw out highly variable genes (decreasing FP rate) or does it help get closer to the true rate of biological variation, thus increasing the true positive rate?&#160;</p><p> In the methods, it would be good to see more explanation on how RATs does its pre-filtering. For example, if a transcript has zero expression in one treatment but a modest to high expression in the other treatment, would RATs keep this transcript or discard it? This would be of interest to people working on RNA decay pathways, such as NMD.&#160;</p><p> One thing that I would love to see is a comparison of RATs to the DEXSeq/DRIMSeq approach used to address differentiation transcript isoform usage (Love
+<italic>et al.</italic>, 2018
+<sup><xref rid="rep-ref-44977-2" ref-type="bibr">2</xref></sup>). This tool appeared to also perform well in the&#160;publication of this approach, where they used sim data. Therefore I think a comparison to RATs here, using sim and real data (human) would be appropriate.</p><p>I have read this submission. I believe that I have an appropriate level of expertise to confirm that it is of an acceptable scientific standard.</p></body><back><ref-list><title>References</title><ref id="rep-ref-44977-1"><label>1</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Mangul</surname><given-names>S</given-names></name><name><surname>Mosqueiro</surname><given-names>T</given-names></name><name><surname>Duong</surname><given-names>D</given-names></name><name><surname>Mitchell</surname><given-names>K</given-names></name><name><surname>Sarwal</surname><given-names>V</given-names></name><name><surname>Hill</surname><given-names>B</given-names></name><name><surname>Brito</surname><given-names>J</given-names></name><name><surname>Littman</surname><given-names>R</given-names></name><name><surname>Statz</surname><given-names>B</given-names></name><name><surname>Lam</surname><given-names>A</given-names></name><name><surname>Dayama</surname><given-names>G</given-names></name><name><surname>Grieneisen</surname><given-names>L</given-names></name><name><surname>Martin</surname><given-names>L</given-names></name><name><surname>Flint</surname><given-names>J</given-names></name><name><surname>Eskin</surname><given-names>E</given-names></name><name><surname>Blekhman</surname><given-names>R</given-names></name></person-group>:
+<article-title>A comprehensive analysis of the usability and archival stability of omics computational tools and resources</article-title>.
+<source><italic>bioRxiv</italic></source>.<year>2018</year>;
+<elocation-id>10.1101/452532</elocation-id>
+<pub-id pub-id-type="doi">10.1101/452532</pub-id>
+</mixed-citation></ref><ref id="rep-ref-44977-2"><label>2</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Love</surname><given-names>MI</given-names></name><name><surname>Soneson</surname><given-names>C</given-names></name><name><surname>Patro</surname><given-names>R</given-names></name></person-group>:
+<article-title>Swimming downstream: statistical analysis of differential transcript usage following Salmon quantification.</article-title>
+<source><italic>F1000Res</italic></source>.<year>2018</year>;<volume>7</volume>:
+<elocation-id>10.12688/f1000research.15398.3</elocation-id>
+<fpage>952</fpage>
+<pub-id pub-id-type="doi">10.12688/f1000research.15398.3</pub-id>
+<?supplied-pmid 30356428?><pub-id pub-id-type="pmid">30356428</pub-id></mixed-citation></ref></ref-list></back></sub-article><sub-article id="report44979" article-type="peer-review"><front-stub><article-id pub-id-type="doi">10.5256/f1000research.19594.r44979</article-id><title-group><article-title>Reviewer response for version 1</article-title></title-group><contrib-group><contrib contrib-type="author"><name><surname>Shaw</surname><given-names>Sophie</given-names></name><xref ref-type="aff" rid="r44979a1">1</xref><role>Referee</role><contrib-id contrib-id-type="orcid">https://orcid.org/0000-0003-2367-2670</contrib-id></contrib><aff id="r44979a1">
+<label>1</label>Centre for Genome Enabled Biology and Medicine, University of Aberdeen, Aberdeen, UK</aff></contrib-group><author-notes><fn fn-type="COI-statement"><p>
+<bold>Competing interests: </bold>No competing interests were disclosed.</p></fn></author-notes><pub-date pub-type="epub"><day>28</day><month>2</month><year>2019</year></pub-date><related-article related-article-type="peer-reviewed-article" id="d35e4643" ext-link-type="doi" xlink:href="10.12688/f1000research.17916.1">Version 1</related-article><custom-meta-group><custom-meta><meta-name>recommendation</meta-name><meta-value>approve-with-reservations</meta-value></custom-meta></custom-meta-group></front-stub><body><p>Froussios&#160;
+<italic>et al.&#160;</italic>have presented here a new tool, RATS, for the identification of differential transcript usage from transcript abundance estimates. RATs&#160;was benchmarked and compared to the existing tools DRIM-Seq and SUPPA2 across four different datasets.&#160;False positive rate, false negative rate, sensitivity and Matthews correlation coefficient were all measured. When considered as a whole, RATs was found to outperform the other tools. Differing results due to the version of the reference genome used are also discussed. This is a nicely presented manuscript, with well thought out comparisons. The tool will make a good addition to existing RNA sequencing analysis pipelines, especially as the field moves towards alignment free methods.&#160;</p><p> The rationale for the development of this tool&#160;is clearly stated, as there are only a few tools which carry out DTU detection from alignment-free RNA-seq quantifications. The majority of existing tools for DTE and DTU are designed for use with alignment- and assembly-based methods. Of the existing tools described, each has specific uses, and RATs has been presented as a broad "differential transcript usage" identification tool.&#160;</p><p> The methods of the analysis have been described well, and overall are technically sound. I would like to see an expansion on the description of the statistical method underpinning RATs. Although G-test of independence is cited, a brief description of what this entails and how it differs from existing tools would aid in the understanding of how the tool functions.&#160;</p><p> However, I have some suggestions concerning the comparison of tools and the datasets selected. With regards to the selection of tools for comparison, SwitchSeq and iso-KTSP are mentioned within the introduction as being able to use transcript abundance estimates, however are not compared to. I assume that this is because they are too specialist in their identification of differential transcript usage and/or isoform switching, but I think the decision to not compare to these tools should be more explicit. The authors have not mentioned&#160;the recent pre-print from Cmero et al. (2019)
+<sup><xref rid="rep-ref-44979-1" ref-type="bibr">1</xref></sup>
+<sup>&#160;</sup>which discusses the development of methods for DTU detection from alignment-free datasets using equivalence classes. The paper uses the same simulated datasets for benchmarking of the tool, and should be considered as another tool to compare to RATs. If this is not deemed as an equivalent method, it should at least be discussed in this manuscript.&#160;</p><p> With regards to the datasets tested, the published human data set which is&#160;shown here is not directly confirming the accuracy of RATs, as the authors show that the qPCR validation within the original study may be inaccurate, and underlying issues are present due to the reference genome version. Although the dataset is being used to compare RATs to SUPPA and DRIM-Seq, it is not validating the tool. I think that this manuscript would benefit from comparison of the three tools using another "real-life" dataset, which has been validated in some way, to support that RATs is detecting&#160;known DTU.&#160;</p><p> Methods for tool development and testing are clearly described, apart from with false positive testing with
+<italic>A. thaliana</italic> dataset. The authors should include details on how the transcript abundances were produced for this (using Kallisto or Salmon? Any other pre-processing?).&#160;All datasets used are&#160;publicly available with accession numbers given. Additional data is provided within published links; however, these would benefit from a simple readme file, which explains the contents of each extended data file so the reader doesn't need to search through them.&#160;</p><p> Within the results, it would be nice to see more discussion on the impact of the bootstrapping information used&#160;by RATs. I think that this is a really beneficial part of this tool and this has not been demonstrated enough. It should also be made clearer if this bootstrapping information is obtained solely from Salmon/Kallisto or if RATs implements it's own bootstrapping.&#160;</p><p> Although the testing of the simulated datasets does show that RATs outperforms DRIM-Seq and SUPPA2, I don't feel that as it stands you can conclude that the analysis of the published dataset shows this. When comparing to the published findings, SUPPA2 shows better results with confirmation of the qPCR results. As I've mentioned above, I would find another "real-life" dataset for comparison, or simply re-word the conclusion so that this isn't overstated.</p><p>I have read this submission. I believe that I have an appropriate level of expertise to confirm that it is of an acceptable scientific standard, however I have significant reservations, as outlined above.</p></body><back><ref-list><title>References</title><ref id="rep-ref-44979-1"><label>1</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Cmero</surname><given-names>M</given-names></name><name><surname>Davidson</surname><given-names>N</given-names></name><name><surname>Oshlack</surname><given-names>A</given-names></name></person-group>:
+<article-title>Fast and accurate differential transcript usage by testing equivalence class counts: Supplementary figures and tables</article-title>.
+<source><italic>bioRxiv</italic></source>.<year>2018</year>;
+<elocation-id>10.1101/501106</elocation-id>
+<pub-id pub-id-type="doi">10.1101/501106</pub-id>
+</mixed-citation></ref></ref-list></back></sub-article></article>

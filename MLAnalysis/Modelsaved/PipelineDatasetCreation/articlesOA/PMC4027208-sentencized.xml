@@ -1,0 +1,442 @@
+
+<article xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML" article-type="research-article"><?properties open_access?><?DTDIdentifier.IdentifierValue -//NLM//DTD Journal Publishing DTD v2.3 20070202//EN?><?DTDIdentifier.IdentifierType public?><?SourceDTD.DTDName journalpublishing.dtd?><?SourceDTD.Version 2.3?><?ConverterInfo.XSLTName jp2nlmx2.xsl?><?ConverterInfo.Version 2?><front><?epub April-21-2014?><journal-meta><journal-id journal-id-type="nlm-ta">Nucleic Acids Res</journal-id><journal-id journal-id-type="iso-abbrev">Nucleic Acids Res</journal-id><journal-id journal-id-type="hwp">nar</journal-id><journal-id journal-id-type="publisher-id">nar</journal-id><journal-title-group><journal-title>Nucleic Acids Research</journal-title></journal-title-group><issn pub-type="ppub">0305-1048</issn><issn pub-type="epub">1362-4962</issn><publisher><publisher-name>Oxford University Press</publisher-name></publisher></journal-meta><article-meta><article-id pub-id-type="pmcid">4027208</article-id><article-id pub-id-type="doi">10.1093/nar/gku247</article-id><article-categories><subj-group subj-group-type="heading"><subject>Computational Biology</subject></subj-group></article-categories><title-group><article-title><SecTag type="TITLE"><text><SENT sid="0" pm="."><plain>Mechanistic insight into ligand binding to G-quadruplex DNA </plain></SENT>
+</text></SecTag></article-title></title-group><contrib-group><contrib contrib-type="author"><name><surname>Di Leva</surname><given-names>Francesco Saverio</given-names></name><xref ref-type="aff" rid="AFF1"><sup>1</sup></xref></contrib><contrib contrib-type="author"><name><surname>Novellino</surname><given-names>Ettore</given-names></name><xref ref-type="aff" rid="AFF2"><sup>2</sup></xref></contrib><contrib contrib-type="author"><name><surname>Cavalli</surname><given-names>Andrea</given-names></name><xref ref-type="aff" rid="AFF1"><sup>1</sup></xref><xref ref-type="aff" rid="AFF3"><sup>3</sup></xref></contrib><contrib contrib-type="author"><name><surname>Parrinello</surname><given-names>Michele</given-names></name><xref ref-type="aff" rid="AFF4"><sup>4</sup></xref></contrib><contrib contrib-type="author"><name><surname>Limongelli</surname><given-names>Vittorio</given-names></name><xref ref-type="aff" rid="AFF2"><sup>2</sup></xref><xref ref-type="corresp" rid="COR1">*</xref></contrib><aff id="AFF1"><label>1</label>Department of Drug Discovery and Development, Istituto Italiano di Tecnologia, via Morego, 30, I-16163 Genoa, Italy</aff><aff id="AFF2"><label>2</label>Department of Pharmacy, University of Naples “Federico II”, via D. Montesano, 49, I-80131 Naples, Italy</aff><aff id="AFF3"><label>3</label>Department of Pharmacy and Biotechnology, Alma Mater Studiorum, University of Bologna, via Belmeloro, 6, I-40126 Bologna, Italy</aff><aff id="AFF4"><label>4</label>Department of Chemistry and Applied Biosciences, ETH Zurich, and Facoltà di Informatica, Istituto di Scienze Computazionali, Università della Svizzera Italiana, via G. Buffi, 13, CH-6900 Lugano, Switzerland</aff></contrib-group><author-notes><corresp id="COR1"><label>*</label>To whom correspondence should be addressed. Tel: +39 081 678 641; Fax: +39 081 678 107; Email: <email>vittoriolimongelli@gmail.com</email></corresp></author-notes><pub-date pub-type="ppub"><day>01</day><month>5</month><year>2014</year></pub-date><pub-date pub-type="epub"><day>21</day><month>4</month><year>2014</year></pub-date><pub-date pub-type="pmc-release"><day>21</day><month>4</month><year>2014</year></pub-date><volume>42</volume><issue>9</issue><fpage>5447</fpage><lpage>5455</lpage><history><date date-type="accepted"><day>13</day><month>3</month><year>2014</year></date><date date-type="rev-recd"><day>10</day><month>3</month><year>2014</year></date><date date-type="received"><day>22</day><month>12</month><year>2013</year></date></history><permissions><copyright-statement>© The Author(s) 2014. Published by Oxford University Press on behalf of Nucleic Acids Research.</copyright-statement><copyright-year>2014</copyright-year><license license-type="creative-commons" xlink:href="http://creativecommons.org/licenses/by/3.0/"><license-p>This is an Open Access article distributed under the terms of the Creative Commons Attribution License (<ext-link ext-link-type="uri" xlink:href="http://creativecommons.org/licenses/by/3.0/">http://creativecommons.org/licenses/by/3.0/</ext-link>), which permits unrestricted reuse, distribution, and reproduction in any medium, provided the original work is properly cited.</license-p></license></permissions><self-uri xlink:title="pdf" xlink:type="simple" xlink:href="gku247.pdf"/><abstract><p><SecTag type="ABS"><text><SENT sid="1" pm="."><plain>Specific guanine-rich regions in human genome can form higher-order DNA structures called G-quadruplexes, which regulate many relevant biological processes. </plain></SENT>
+<SENT sid="2" pm="."><plain>For instance, the formation of G-quadruplex at telomeres can alter cellular functions, inducing apoptosis. </plain></SENT>
+<SENT sid="3" pm="."><plain>Thus, developing small molecules that are able to bind and stabilize the telomeric G-quadruplexes represents an attractive strategy for antitumor therapy. </plain></SENT>
+<SENT sid="4" pm="."><plain>An example is 3-(benzo[d]thiazol-2-yl)-7-hydroxy-8-((4-(2-hydroxyethyl)piperazin-1-yl)methyl)-2H-chromen-2-one (compound 1), recently identified as potent ligand of the G-quadruplex [d(TGGGGT)]4 with promising in vitro antitumor activity. </plain></SENT>
+<SENT sid="5" pm="."><plain>The experimental observations are suggestive of a complex binding mechanism that, despite efforts, has defied full characterization. </plain></SENT>
+<SENT sid="6" pm="."><plain>Here, we provide through metadynamics simulations a comprehensive understanding of the binding mechanism of 1 to the G-quadruplex [d(TGGGGT)]4. </plain></SENT>
+<SENT sid="7" pm="."><plain>In our calculations, the ligand explores all the available binding sites on the DNA structure and the free-energy landscape of the whole binding process is computed. </plain></SENT>
+<SENT sid="8" pm="."><plain>We have thus disclosed a peculiar hopping binding mechanism whereas 1 is able to bind both to the groove and to the 3’ end of the G-quadruplex. </plain></SENT>
+<SENT sid="9" pm="."><plain>Our results fully explain the available experimental data, rendering our approach of great value for further ligand/DNA studies. </plain></SENT>
+</text></SecTag></p></abstract><counts><page-count count="9"/></counts><custom-meta-group><custom-meta><meta-name>cover-date</meta-name><meta-value>2014</meta-value></custom-meta></custom-meta-group></article-meta></front><body><SecTag type="INTRO"><sec sec-type="intro" id="SEC1"><title><text><SENT sid="10" pm="."><plain>INTRODUCTION </plain></SENT>
+</text></title><p><text><SENT sid="11" pm="."><plain>Nucleic acids contain the genetic information essential for life. </plain></SENT>
+<SENT sid="12" pm="."><plain>In particular, their sequence encodes vital instructions for the cell, such as replication and transcription. </plain></SENT>
+<SENT sid="13" pm="."><plain>The deoxyribonucleic acid (DNA) usually assumes a standard double helix conformation (1). </plain></SENT>
+<SENT sid="14" pm="."><plain>However, in the last decades, DNA has been found to adopt several alternative conformations having specific roles during cell life. </plain></SENT>
+<SENT sid="15" pm="."><plain>Among these are G-quadruplexes (2), that are stacks of G-quartets, also known as G-tetrads, formed by four guanines hydrogen bonded to each other (Figure 1A) (3). </plain></SENT>
+<SENT sid="16" pm="."><plain>These structures are found in important guanine-rich regions of the human genome, such as gene promoters and telomeres (4–9). </plain></SENT>
+<SENT sid="17" pm="."><plain>In particular, telomeres are ensembles of proteins and noncoding DNA that protect chromosomes termini from unwanted events, such as recombination, degradation, and end-to-end fusion. </plain></SENT>
+<SENT sid="18" pm="."><plain>Furthermore, they prevent chromosomes termini to be recognized as DNA double strand breaks (10,11). </plain></SENT>
+<SENT sid="19" pm="."><plain>Thus, they are crucial for cell lifespan. </plain></SENT>
+<SENT sid="20" pm="."><plain>In normal cells, telomeric DNA shortens at each cell cycle and this eventually leads to senescence or apoptotic cell death (12). </plain></SENT>
+<SENT sid="21" pm="."><plain>In tumor cells instead, telomere length is maintained thanks either to a finely tuned mechanism involving the telomerase enzyme (13) or through recombination events between telomeres, a phenomenon known as the alternative lengthening of telomeres (ALT) mechanism (14). </plain></SENT>
+</text></p><SecTag type="FIG"><fig id="F1" position="float"><label>Figure 1.</label><caption><p><text><SENT sid="22" pm="."><plain>(A) Top and (B) side view of the crystal structure of the tetrameric G-quadruplex [d(TGGGGT)]4 (PDB code 1s45). </plain></SENT>
+<SENT sid="23" pm="."><plain>Nucleotides are shown as sticks colored by atom type and backbone as gray cartoon. </plain></SENT>
+<SENT sid="24" pm="."><plain>K+ ions are depicted as purple spheres. </plain></SENT>
+<SENT sid="25" pm="."><plain>Hydrogen bonds are represented as dashed black lines. </plain></SENT>
+<SENT sid="26" pm="."><plain>(C) Chemical structure of compound 1 at physiological pH 7.4 (see ‘Materials and Methods’). </plain></SENT>
+</text></p></caption><graphic xlink:href="gku247fig1"/></fig></SecTag><p><text><SENT sid="27" pm="."><plain>In 1991, Zahler et al. found that folding of telomeric DNA into a G-quadruplex structure inhibits in vitro telomerase activity (15), and more recently also the ALT cells have been found to be particularly sensitive to the presence of G-quadruplexes (14). </plain></SENT>
+<SENT sid="28" pm="."><plain>Furthermore, in the last few years, the formation of G-quadruplex structures at telomeres has been found to activate the fast DNA-damage response pathway, inducing rapid apoptosis (16,17). </plain></SENT>
+<SENT sid="29" pm="."><plain>Consequently, molecules able to bind and stabilize G-quadruplex structures can selectively alter telomeric functions in cancer cells, thus leading to a marked inhibition of tumor growth (18,19). </plain></SENT>
+</text></p><p><text><SENT sid="30" pm="."><plain>To date, many G-quadruplex selective ligands with potential antitumor activity have been developed (20–27). </plain></SENT>
+<SENT sid="31" pm="."><plain>Most of them, called end-stackers, are usually polyaromatic molecules that bind to the ends of the G-tetrads, such as BRACO-19 (28), RHPS4 (29,30), and telomestatin (31,32). </plain></SENT>
+<SENT sid="32" pm="."><plain>Unfortunately, none of these ligands passed to clinical trials because of their poor drug-like properties and selectivity. </plain></SENT>
+<SENT sid="33" pm="."><plain>At variance with end-stackers, another class of ligands can bind to the grooves of the G-quadruplexes. </plain></SENT>
+<SENT sid="34" pm="."><plain>These compounds, known as groove binders, can be more selective than end-stackers by recognizing the specific groove conformations of different DNA structures. </plain></SENT>
+<SENT sid="35" pm="."><plain>However, despite efforts in developing potent and selective groove binders, only few examples have been to date reported in literature (33–38). </plain></SENT>
+</text></p><p><text><SENT sid="36" pm="."><plain>In this framework, a number of structural and computational studies have been performed targeting the telomeric G-quadruplex [d(TGGGGT)]4. </plain></SENT>
+<SENT sid="37" pm="."><plain>Although this structure is not a representative human telomeric G-quadruplex, it is often used as a working model for its structural simplicity. </plain></SENT>
+<SENT sid="38" pm="."><plain>In fact, it has a 4-fold symmetry, with all parallel strands, four identical grooves, and three monovalent cations at the center of the guanines stacks (Figure 1A and B) (39). </plain></SENT>
+<SENT sid="39" pm="."><plain>In particular, [d(TGGGGT)]4 has been used to identify ligands able to bind both the groove (33,34,36–38) and the stacking surfaces of G-quadruplex (40). </plain></SENT>
+<SENT sid="40" pm="."><plain>One recent example is a structure-based virtual screening campaign that led to the identification of compound 1 (36), which features a 3-(benzo[d]thiazol-2-yl)-2H-chrom-en-2-one aromatic scaffold with the positively charged N-(2-hydroxyethyl)piperazinyl branch (Figure 1C). </plain></SENT>
+<SENT sid="41" pm="."><plain>This ligand has a marked binding affinity toward [d(TGGGGT)]4 as revealed by nuclear magnetic resonance (NMR) experiments (36). </plain></SENT>
+<SENT sid="42" pm="."><plain>Furthermore, isothermal titration calorimetry (ITC) experiments showed that 1 binds to [d(TGGGGT)]4 more tightly than distamycin A (41), that is the reference compound among the G-quadruplex groove binders. </plain></SENT>
+<SENT sid="43" pm="."><plain>These biophysical experiments have been complemented by in vitro assays showing that 1 is able to induce DNA damage and cell-cycle arrest in specific cancer cell lines (42). </plain></SENT>
+</text></p><p><text><SENT sid="44" pm="."><plain>Despite these efforts, a comprehensive elucidation of the way this compound interacts with DNA is still lacking. </plain></SENT>
+<SENT sid="45" pm="."><plain>In fact, NMR data showed the involvement in the ligand binding of residues both at the groove and at the end of the DNA structure. </plain></SENT>
+<SENT sid="46" pm="."><plain>These observations are suggestive of a complex binding mechanism that was only partially described by the docking calculations where compound 1 was found to bind at the center of the groove (41). </plain></SENT>
+<SENT sid="47" pm="."><plain>Thus, a deeper insight is necessary where considering the full DNA flexibility and the solvent effect during the exploration of the sites available for the ligand binding. </plain></SENT>
+<SENT sid="48" pm="."><plain>These investigations are essential for an exhaustive elucidation of the ligand binding mechanism and to provide the molecular information useful for drug design studies. </plain></SENT>
+</text></p><p><text><SENT sid="49" pm="."><plain>With this in mind, we decided to investigate at atomistic level the binding mechanism of compound 1 to its target DNA [d(TGGGGT)]4. </plain></SENT>
+<SENT sid="50" pm="."><plain>Unfortunately, the ligand binding and unbinding processes are typically a long time-scale event, in the order of microseconds to milliseconds, difficult to sample with standard techniques, such as molecular dynamics (MD). </plain></SENT>
+<SENT sid="51" pm="."><plain>Thus, the use of enhanced-sampling methods is recommended. </plain></SENT>
+<SENT sid="52" pm="."><plain>Among the emerging techniques, metadynamics (43) has been successful in describing long time-scale biological events and complex ligand binding mechanisms, allowing also to reconstruct the free-energy surface (FES) of the investigated processes (44–48). </plain></SENT>
+<SENT sid="53" pm="."><plain>In the nucleic acids research field, metadynamics has been successfully used to study the unbinding process of small duplex DNA intercalators (49,50), and more recently that of a drug from a protein–duplex DNA complex (51). </plain></SENT>
+<SENT sid="54" pm="."><plain>However, so far this technique has never been applied to investigate the binding of a ligand to a G-quadruplex DNA. </plain></SENT>
+</text></p><p><text><SENT sid="55" pm="."><plain>Here, we present a fully unbiased binding study of compound 1 to the G-quadruplex [d(TGGGGT)]4 during which no structural information on ligand binding is used. </plain></SENT>
+<SENT sid="56" pm="."><plain>To this goal, we performed well-tempered metadynamics simulations (52), which enhance the sampling allowing an exhaustive exploration of all the possible ligand binding sites on the DNA structure in an affordable computational time. </plain></SENT>
+<SENT sid="57" pm="."><plain>The whole binding event is thus described taking fully into account the DNA flexibility together with the presence of explicit solvent and ions. </plain></SENT>
+<SENT sid="58" pm="."><plain>At the end of the simulation, we reconstructed the free-energy landscape of the binding event together with an accurate estimate of the absolute ligand/DNA binding free energy. </plain></SENT>
+<SENT sid="59" pm="."><plain>These calculations allowed us identifying the main interaction sites of compound 1 and revealing the lowest energy ligand binding modes. </plain></SENT>
+<SENT sid="60" pm="."><plain>In particular, we show that compound 1 interacts with G-quadruplex through a hopping binding mechanism passing from one DNA site to the other. </plain></SENT>
+<SENT sid="61" pm="."><plain>This process is ruled by specific ligand/DNA interactions, such as hydrophobic and polar contacts between the ligand aromatic scaffold and the nucleobases, and salt–bridge interactions between the ligand charged chain and the phosphate groups of the G-quadruplex. </plain></SENT>
+<SENT sid="62" pm="."><plain>Compound 1 shows two lowest free-energy binding modes, being able at the same time to bind to the groove and to the 3’ end of the G-quadruplex. </plain></SENT>
+<SENT sid="63" pm="."><plain>These findings are of great value for the structural optimization of compound 1 and for de-novo rational drug design, since different binding modes to G-quadruplex can be exploited to develop new ligands. </plain></SENT>
+</text></p><p><text><SENT sid="64" pm="."><plain>Our study also reveals that DNA flexibility plays an important role during the ligand binding and water molecules contribute to stabilize the most relevant ligand binding poses. </plain></SENT>
+<SENT sid="65" pm="."><plain>The results obtained are in agreement with data coming from NMR experiments and allow us to interpret features of the experiments that were previously unclear. </plain></SENT>
+<SENT sid="66" pm="."><plain>For instance, we show that the T6 residue is involved in the ligand binding to the 3’ end of DNA, thus explaining the experimental observations. </plain></SENT>
+<SENT sid="67" pm="."><plain>These findings render our protocol of great value for further investigations on ligand/DNA interaction that can assist drug discovery strategies to develop potent and selective DNA binders. </plain></SENT>
+</text></p></sec></SecTag><SecTag type="METHODS"><sec sec-type="materials|methods" id="SEC2"><title><text><SENT sid="68" pm="."><plain>MATERIALS AND METHODS </plain></SENT>
+</text></title><sec id="SEC2-1"><title><text><SENT sid="69" pm="."><plain>Molecular docking </plain></SENT>
+</text></title><p><text><SENT sid="70" pm="."><plain>Molecular docking calculations of 1 in the crystal structure of the G-quadruplex [d(TGGGGT)]4 (PDB code: 1s45) (39) were carried out using the AutoDock4.2 (AD4) software package (53) as implemented through the graphical user interface AutoDockTools (ADT 1.5.4) (54). </plain></SENT>
+<SENT sid="71" pm="."><plain>The ligand tridimensional structure was generated with the Maestro Build Panel (55), and its protonation state at physiological pH (7.4) was assigned using Epik (56). </plain></SENT>
+<SENT sid="72" pm="."><plain>The target DNA structure was prepared through the Protein Preparation Wizard of the graphical user interface Maestro 9.3 (55). </plain></SENT>
+<SENT sid="73" pm="."><plain>Water molecules were removed, hydrogen atoms were added and the co-crystallized Tl+ ions were replaced with the more physiologically relevant K+ ions. </plain></SENT>
+<SENT sid="74" pm="."><plain>Ligand and receptor structures were converted to AD4 format files using ADT and the Gesteiger–Marsili partial charges were then assigned to the ligand and nucleic acid atoms. </plain></SENT>
+<SENT sid="75" pm="."><plain>In order to allow the ligand to explore the whole conformational space, the docking area was centered on the Cartesian coordinates of the center of mass of the G-quadruplex structure and defined by a box large enough to include the whole macromolecule. </plain></SENT>
+<SENT sid="76" pm="."><plain>Thus, grid points of 90 × 90 × 90 with a 0.375 Å spacing were calculated around the docking area for all the ligand atom types using AutoGrid4.2. </plain></SENT>
+<SENT sid="77" pm="."><plain>Thus, 100 separate docking calculations were performed. </plain></SENT>
+<SENT sid="78" pm="."><plain>Each docking run consisted of 10 millions energy evaluations using the Lamarckian genetic algorithm local search method. </plain></SENT>
+<SENT sid="79" pm="."><plain>Otherwise default docking parameters were applied. </plain></SENT>
+<SENT sid="80" pm="."><plain>Docking conformations were clustered on the basis of the root mean square deviation (rmsd) between the Cartesian coordinates of the ligand atoms (cutoff = 2.0 Å) and were ranked based on the AutoDock scoring function (53). </plain></SENT>
+<SENT sid="81" pm="."><plain>Finally, the lowest energy binding pose provided by preliminary docking calculations was selected as the starting conformation for the subsequent metadynamics simulation. </plain></SENT>
+<SENT sid="82" pm="."><plain>However, it is important to underline that the ligand starting conformation does not affect the final results of a well-converged metadynamics simulation, thus we can arbitrarily choose whatever pose predicted by the docking program as starting structure. </plain></SENT>
+</text></p><p><text><SENT sid="83" pm="."><plain>Additional docking calculations using the DNA conformation of the free-energy minimum Aa obtained from metadynamics simulation were performed applying the same protocol. </plain></SENT>
+</text></p><p><text><SENT sid="84" pm="."><plain>Molecular docking calculations on duplex DNA were performed using the structure of the B-DNA dodecamer [d(CGCGAATTCGCG)]2 (PDB code: 1bna) (57), which has been reported to be recognized by 1 (42). </plain></SENT>
+</text></p></sec><sec id="SEC2-2"><title><text><SENT sid="85" pm="."><plain>Molecular dynamics </plain></SENT>
+</text></title><p><text><SENT sid="86" pm="."><plain>All the simulations were carried out using the standard parm99 Amber force field for nucleic acids modified using the recently developed parmbsc0 parameters (58–60). </plain></SENT>
+<SENT sid="87" pm="."><plain>The NAMD 2.8 code (61) combined with the external plugin PLUMED 1.2.2 (62) was used to perform the simulations. </plain></SENT>
+<SENT sid="88" pm="."><plain>The 1/[d(TGGGGT)]4 complex was solvated in a 12.0 Å layer cubic water box using the TIP3P water model parameters (63). </plain></SENT>
+<SENT sid="89" pm="."><plain>K+ cations were used to neutralize the system, with three of these ions placed at the center of the G-tetrads. </plain></SENT>
+<SENT sid="90" pm="."><plain>During the simulations, distance constraints were applied between these ions and their coordinating guanine oxygens. </plain></SENT>
+<SENT sid="91" pm="."><plain>Further 11 K+ and 11 Cl− ions were added to reproduce the NMR experimental conditions of 70 mM KCl. </plain></SENT>
+<SENT sid="92" pm="."><plain>A cutoff of 10 Å was used for short-range interactions. </plain></SENT>
+<SENT sid="93" pm="."><plain>The long-range electrostatic interactions were computed by means of the particle mesh Ewald method using a 1.0 Å grid spacing in periodic boundary conditions. </plain></SENT>
+<SENT sid="94" pm="."><plain>The SHAKE algorithm was applied to constraint bonds involving hydrogen atoms, with a 2 fs integration time step. </plain></SENT>
+<SENT sid="95" pm="."><plain>Amber charges were applied to the DNA and water molecules, whereas ligand charges were computed using the restrained electrostatic potential (RESP) fitting procedure (64). </plain></SENT>
+<SENT sid="96" pm="."><plain>The ESP was first calculated by means of the Gaussian package (65) using a 6–31G* basis set at Hartree–Fock level of theory, and then the RESP charges were obtained by a two-stages fitting procedure using Antechamber (66). </plain></SENT>
+<SENT sid="97" pm="."><plain>The system was thus equilibrated through 10 ns MD in the isothermal–isobaric ensemble (NPT) at 1 atm and 300 K before running metadynamics simulations in the canonical isothermal-isochoric (NVT) ensemble. </plain></SENT>
+</text></p><p><text><SENT sid="98" pm="."><plain>Standard MD simulations to verify the stability of the metadynamics poses were performed in the NPT ensemble at 1.0 atm and 300 K. </plain></SENT>
+</text></p></sec><sec id="SEC2-3"><title><text><SENT sid="99" pm="."><plain>Metadynamics </plain></SENT>
+</text></title><p><text><SENT sid="100" pm="."><plain>The estimation F(s,t) at time t of the FES F(s) as a function of the collective variable (CV) s was determined by metadynamics (43) in its well-tempered variant (52), using the following formula: \documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{upgreek} \usepackage{mathrsfs} \setlength{\oddsidemargin}{-69pt} \begin{document} }{}\begin{equation*} F(s,t)=-{T+ \Delta T\over \Delta T}V(s,t), \end{equation*}\end{document}where V(s,t) is the bias potential added to the system and T is the temperature of the simulation. ΔT is the difference between the temperature of the CV and that of the simulation. </plain></SENT>
+<SENT sid="101" pm="."><plain>The bias potential is made up by the sum of the Gaussians deposited along the trajectory of the CV. </plain></SENT>
+<SENT sid="102" pm="."><plain>The exploration of the CV space can be increased by tuning ΔT. </plain></SENT>
+<SENT sid="103" pm="."><plain>A Gaussian deposition rate of 0.5 kcal/mol/ps was initially used and gradually decreased on the basis of the adaptive bias with a ΔT of 2,700 K. </plain></SENT>
+<SENT sid="104" pm="."><plain>Two CVs were chosen to describe the different ligand conformations during the metadynamics run: (i) the distance (d) between the center of mass of [d(TGGGGT)]4 and that of the 3-benzothiazol-2-yl-chrom-en-2-one scaffold of compound 1; (ii) the dihedral angle (torsion − φ) defined by the major inertia axis of the ligand and that of DNA (Supplementary Figure S1A and Supplementary Table S1). </plain></SENT>
+<SENT sid="105" pm="."><plain>Gaussian widths of 0.23 Å and 0.05 rad were used for the d and φ CVs, respectively. </plain></SENT>
+<SENT sid="106" pm="."><plain>During the metadynamics simulations, an upper limit constraint at 27.0 Å was applied to the d CV to reduce the conformational space to explore in the fully unbound state. </plain></SENT>
+</text></p></sec><sec id="SEC2-4"><title><text><SENT sid="107" pm="."><plain>The reweighting procedure </plain></SENT>
+</text></title><p><text><SENT sid="108" pm="."><plain>To identify the main ligand binding sites on the G-quadruplex [d(TGGGGT)]4 together with the lowest energy ligand binding conformations, we applied a recently developed reweighting procedure (67). </plain></SENT>
+<SENT sid="109" pm="."><plain>This algorithm allows reconstructing the Boltzmann distribution relative to CVs different from those biased in the metadynamics run. </plain></SENT>
+<SENT sid="110" pm="."><plain>In fact, once the metadynamics simulation is converged, using the newly computed probability distribution, the FES can be reconstructed as a function of the newly selected CVs. </plain></SENT>
+<SENT sid="111" pm="."><plain>In the present case, two CVs were chosen to distinguish the main ligand binding sites on [d(TGGGGT)]4: (i) the projection of the center of mass of the 3-benzothiazol-2-yl-chrom-en-2-one scaffold of compound 1 on the major inertia axis of the target DNA (projection on axis—POA) and (ii) the distance of the same center of mass from this axis (distance from axis—DFA) (Figure 3A and Supplementary Table S1). </plain></SENT>
+<SENT sid="112" pm="."><plain>Finally, to identify the lowest energy ligand binding conformations, the FES was computed as function of (i) the POA CV described above, and (ii) a torsion CV defined by the dihedral angle (ψ) between the major inertia axis of the N-(2-hydroxyethyl)piperazinyl tail of compound 1 and that of the G-quadruplex (Supplementary Figure S1B and Supplementary Table S1). </plain></SENT>
+</text></p><SecTag type="FIG"><fig id="F2" position="float"><label>Figure 2.</label><caption><p><text><SENT sid="113" pm="."><plain>Representation of the binding FES of 1 to [d(TGGGGT)]4 as function of the distance (d) and dihedral (φ) with isosurfaces displayed every 1.5 kcal/mol. </plain></SENT>
+<SENT sid="114" pm="."><plain>The conformations representing the main free-energy minima are shown as insets. </plain></SENT>
+<SENT sid="115" pm="."><plain>One can note that using this FES representation the groove and the 3’-end binding modes are not unequivocally identified by the free-energy minima and the use of more appropriate CVs is necessary (see the main text for details). </plain></SENT>
+<SENT sid="116" pm="."><plain>DNA is displayed as gray sticks and cartoon, while the ligand is shown as cyan sticks. </plain></SENT>
+<SENT sid="117" pm="."><plain>K+ ions are depicted as purple spheres. </plain></SENT>
+<SENT sid="118" pm="."><plain>Hydrogen bonds are highlighted as dashed black lines. </plain></SENT>
+<SENT sid="119" pm="."><plain>Nonpolar hydrogens are omitted for clarity. </plain></SENT>
+</text></p></caption><graphic xlink:href="gku247fig2"/></fig></SecTag><SecTag type="FIG"><fig id="F3" position="float"><label>Figure 3.</label><caption><p><text><SENT sid="120" pm="."><plain>(A) Illustration of the “POA” (green arrow) and “DFA” (red dashed arrow) CVs. </plain></SENT>
+<SENT sid="121" pm="."><plain>(B) Representation of the binding FES of 1 to [d(TGGGGT)]4 as function of the POA and DFA CVs with the most representative ligand binding conformations found at the deepest energy minima A and B. </plain></SENT>
+<SENT sid="122" pm="."><plain>Isosurfaces of 1.5 kcal/mol are used. </plain></SENT>
+<SENT sid="123" pm="."><plain>DNA is displayed as gray sticks and cartoon, while the ligand is shown as cyan sticks. </plain></SENT>
+<SENT sid="124" pm="."><plain>K+ ions are depicted as purple spheres. </plain></SENT>
+<SENT sid="125" pm="."><plain>Thymidines and hydrogens are omitted for clarity. </plain></SENT>
+</text></p></caption><graphic xlink:href="gku247fig3"/></fig></SecTag><p><text><SENT sid="126" pm="."><plain>All figures were rendered with PyMOL (<ext-link ext-link-type="uri" xlink:href="http://www.pymol.org">www.pymol.org</ext-link>) and Gnuplot. </plain></SENT>
+</text></p></sec></sec></SecTag><SecTag type="RESULTS"><sec sec-type="results" id="SEC3"><title><text><SENT sid="127" pm="."><plain>RESULTS </plain></SENT>
+</text></title><p><text><SENT sid="128" pm="."><plain>As discussed before, we used well-tempered metadynamics to simulate the binding process of 1 to [d(TGGGGT)]4. </plain></SENT>
+<SENT sid="129" pm="."><plain>In any metadynamics simulations, one is required to define a set of properly chosen degrees of freedom, called CVs (52), with whom an adaptive bias is constructed. </plain></SENT>
+<SENT sid="130" pm="."><plain>In such a way, the binding process can be sampled in a relatively short computational time, overcoming large free-energy barriers and reconstructing the FES of the whole binding event (43,52). </plain></SENT>
+<SENT sid="131" pm="."><plain>The choice of the CVs represents a crucial point in this kind of simulations, as they should describe the most relevant slow modes of the investigated process to achieve a reliable estimation of the free energy (68,69). </plain></SENT>
+</text></p><p><text><SENT sid="132" pm="."><plain>In the present study, we used a distance (d) and a dihedral angle (torsion − φ) CV (see ‘Materials and Methods’, Supplementary Figure S1A and Supplementary Table S1). </plain></SENT>
+<SENT sid="133" pm="."><plain>In particular, we purposely chose for d the distance between the center of mass of [d(TGGGGT)]4 and that of the 3-benzothiazol-2-yl-chrom-en-2-one scaffold of compound 1. </plain></SENT>
+<SENT sid="134" pm="."><plain>In fact, since [d(TGGGGT)]4 presents symmetric binding sites relative to the center of mass of DNA, this choice assigns to these sites the same d values, thus considering them equivalent during the simulation. </plain></SENT>
+<SENT sid="135" pm="."><plain>In addition to the distance d, the torsion CV describes the different orientations of the ligand relative to DNA during the sampling. </plain></SENT>
+</text></p><p><text><SENT sid="136" pm="."><plain>A movie showing the exploration of the DNA binding sites by the ligand during metadynamics simulation can be found as Movie S1. </plain></SENT>
+</text></p><sec id="SEC3-1"><title><text><SENT sid="137" pm="."><plain>The ligand/G-quadruplex binding sites </plain></SENT>
+</text></title><p><text><SENT sid="138" pm="."><plain>The whole sampling took ∼1 μs of metadynamics simulations. </plain></SENT>
+<SENT sid="139" pm="."><plain>Looking at the FES computed as function of d and φ (Figure 2), one can note that while these CVs take into account the 4-fold symmetry of the target and they are able to explore all the binding conformations, they have the disadvantage of not being able to discriminate between the different ligand binding modes (see Figure 2 and Supplementary Discussion for details). </plain></SENT>
+<SENT sid="140" pm="."><plain>Therefore, we decided to reconstruct the free-energy landscape along different CVs using the reweighting algorithm of Bonomi et al. (67). </plain></SENT>
+<SENT sid="141" pm="."><plain>This algorithm allows computing the FES as function of CVs different from those biased during the metadynamics simulation. </plain></SENT>
+<SENT sid="142" pm="."><plain>As new CVs, we chose a “POA” and “DFA” CVs, where the axis is the major inertia axis of the G-quadruplex (see ‘Materials and Methods’, Figure 3A and Supplementary Table S1). </plain></SENT>
+<SENT sid="143" pm="."><plain>In such a way, one can discriminate among the different ligand binding sites. </plain></SENT>
+<SENT sid="144" pm="."><plain>The reweighted FES shows that the ligand binds to DNA through a hopping mechanism passing from one binding site to the other. </plain></SENT>
+<SENT sid="145" pm="."><plain>In particular, two main free-energy minima, A and B were found, with basin A approximately 1.5 kcal/mol deeper than B (Figure 3B). </plain></SENT>
+<SENT sid="146" pm="."><plain>In A, the ligand binds to the groove of the G-quadruplex structure, while in B compound 1 stacks at the 3’ region of DNA, thus showing a peculiar dual binding mode. </plain></SENT>
+<SENT sid="147" pm="."><plain>In fact, to the best of our knowledge, no other G-quadruplex ligand has a similar behavior and this information might be of great value for drug design, since one can exploit both binding modes to develop new ligands. </plain></SENT>
+<SENT sid="148" pm="."><plain>From the FES in Figure 3B, one can see that the ligand binds preferably to the 3’ end rather than to 5’. </plain></SENT>
+<SENT sid="149" pm="."><plain>This preference can be explained by the electrostatic properties of [d(TGGGGT)]4 and in particular by the electric dipole moment that is oriented toward the 5’ end (see Supplementary Figure S2). </plain></SENT>
+<SENT sid="150" pm="."><plain>The dipole arises from the different topology at the 3’ and 5’ end. </plain></SENT>
+<SENT sid="151" pm="."><plain>In particular, the orientation of the negative phosphate groups, which point toward the 3’ end of the G-quadruplex, favors the binding of 1 to the 3’ terminus. </plain></SENT>
+</text></p></sec><sec id="SEC3-2"><title><text><SENT sid="152" pm="."><plain>The ligand binding modes </plain></SENT>
+</text></title><p><text><SENT sid="153" pm="."><plain>Although this FES representation is a marked improvement over that shown in Figure 2, it does not fully separates the different ligand binding modes. </plain></SENT>
+<SENT sid="154" pm="."><plain>In fact, a cluster analysis of basin A and B poses shows a high heterogeneity of ligand conformations, suggesting the necessity of using CVs different from POA and DFA to distinguish the various ligand binding modes at the groove and at the 3’ end. </plain></SENT>
+<SENT sid="155" pm="."><plain>To this end, we recomputed the FES as a function of the POA CV and the torsion CV ψ. </plain></SENT>
+<SENT sid="156" pm="."><plain>In particular, the latter was purposely chosen to distinguish the different orientations of the N-(2-hydroxyethyl)piperazinyl tail of the ligand relative to the G-quadruplex axis (see ‘Materials and Methods’, Supplementary Figure S1B and Supplementary Table S1). </plain></SENT>
+<SENT sid="157" pm="."><plain>At variance with the previously computed FES, now the free-energy landscape shows three main energy minima, Aa, Ab, and B (Figure 4A), with the lowest energy minimum Aa about 0.9 and 1.4 kcal/mol deeper than Ab and B, respectively. </plain></SENT>
+<SENT sid="158" pm="."><plain>We stress that to obtain the FESs in Figures 3 and 4A we did not perform a new metadynamics calculation, but simply represented in a different and more physically transparent way the sampling data obtained using the variables d and φ. </plain></SENT>
+</text></p><SecTag type="FIG"><fig id="F4" position="float"><label>Figure 4.</label><caption><p><text><SENT sid="159" pm="."><plain>(A) Representation of the binding FES of 1 to [d(TGGGGT)]4 with the lowest free-energy conformations shown as insets, Aa, Ab, and B. </plain></SENT>
+<SENT sid="160" pm="."><plain>The FES is represented as function of the POA and ψ CVs using isosurfaces of 1.5 kcal/mol. </plain></SENT>
+<SENT sid="161" pm="."><plain>DNA is shown as gray sticks and cartoon, while the ligand is shown as cyan sticks. </plain></SENT>
+<SENT sid="162" pm="."><plain>K+ ions are depicted as purple spheres. </plain></SENT>
+<SENT sid="163" pm="."><plain>Hydrogen bonds are represented as dashed black lines. </plain></SENT>
+<SENT sid="164" pm="."><plain>Nonpolar hydrogens are omitted for clarity. </plain></SENT>
+<SENT sid="165" pm="."><plain>(B) Plots of the average rmsd of the heavy atoms of 1 during over 100 ns of MD simulation with the ligand in the Aa (upper), Ab (middle), and B (lower) binding conformation as starting pose. </plain></SENT>
+<SENT sid="166" pm="."><plain>Upper: the ligand binding mode Aa is very stable with a low average rmsd value (1.215 Å) and all the ligand/DNA interactions conserved along the whole simulation, including the water–bridge interaction between the ligand N-(2-hydroxyethyl)piperazinyl branch and the phosphate group of G4. </plain></SENT>
+<SENT sid="167" pm="."><plain>Middle: plot of the ligand rmsd in the binding mode Ab relative to its initial pose (black line) and to the Aa average conformation (red line). </plain></SENT>
+<SENT sid="168" pm="."><plain>The red plot shows that the Ab conformation changes in Aa after approximately 80 ns. </plain></SENT>
+<SENT sid="169" pm="."><plain>Lower: the ligand binding mode at pose B is very stable with a low average rmsd value (1.076 Å) conserving all the ligand/DNA interactions during the whole simulation. </plain></SENT>
+</text></p></caption><graphic xlink:href="gku247fig4"/></fig></SecTag></sec><sec id="SEC3-3"><title><text><SENT sid="170" pm="."><plain>Groove binding </plain></SENT>
+</text></title><p><text><SENT sid="171" pm="."><plain>In basin Aa, 1 adopts a groove binding conformation in which it interacts mainly with residues G2, G3, G4, and G5 (Figure 4A) on two neighboring strands. </plain></SENT>
+<SENT sid="172" pm="."><plain>In particular, an H-bond is established between the carbonyl oxygen of the ligand coumarin ring and the amino group of G3, while the N-(2-hydroxyethyl)piperazinyl branch of 1 forms a salt–bridge and a water-mediated H-bond with the phosphate group of G4 on the adjacent strand. </plain></SENT>
+<SENT sid="173" pm="."><plain>The presence of this water-mediated interaction was further validated by 100 ns of unbiased MD simulation (Figure 4B), during which the pose resulted stable. </plain></SENT>
+<SENT sid="174" pm="."><plain>Furthermore, it is interesting to note that in the Aa pose the conformation of the N-(2-hydroxyethyl)piperazinyl branch is stabilized by an intramolecular H-bond between the 7-hydroxyl group of the coumarin ring and the proximal nitrogen atom of the piperazinyl ring. </plain></SENT>
+<SENT sid="175" pm="."><plain>Furthermore, residue T1 at the 5’ end points down and stacks on the ligand aromatic scaffold establishing favorable π-stacking interactions. </plain></SENT>
+<SENT sid="176" pm="."><plain>This pose is fully in agreement with the NMR experiments showing a major involvement of residues G2, G3, G4, and G5 in the binding of 1. </plain></SENT>
+<SENT sid="177" pm="."><plain>In particular, the NMR spectra show a marked variation of the protons chemical shifts of these guanines in the presence of the ligand (36,41). </plain></SENT>
+<SENT sid="178" pm="."><plain>Further evidence on the involvement of these guanines in the binding of 1 comes from additional NMR experiments that show the decrease of the chemical shift variations of all the guanines when 1 is made to interact with mutated G-quadruplexes, namely, [d(TGGBrGGT)]4 and [d(TGGGGBrT)]4 (41). </plain></SENT>
+<SENT sid="179" pm="."><plain>In this case, the presence of the bulky bromine atom inside the grooves hampers the binding of 1. </plain></SENT>
+<SENT sid="180" pm="."><plain>Finally, the “sandwich-like” conformation adopted by T1 in basin Aa (Figure 4A) is in line with the involvement of this residue in the ligand binding shown by the NMR studies (36,41). </plain></SENT>
+<SENT sid="181" pm="."><plain>It is worth mentioning that the Aa pose is similar to one of the two binding modes proposed in previous docking studies (Supplementary Figure S3) (41). </plain></SENT>
+<SENT sid="182" pm="."><plain>However, few differences between the docking pose and Aa can be noticed. </plain></SENT>
+<SENT sid="183" pm="."><plain>In particular, the docking binding mode is slightly shifted toward the 5’ end if compared with Aa. </plain></SENT>
+<SENT sid="184" pm="."><plain>In fact, at variance with Aa, in the pose predicted by docking the N-(2-hydroxyethyl)piperazinyl group establishes favorable contacts with the phosphate group of G2 instead of that of G4. </plain></SENT>
+<SENT sid="185" pm="."><plain>These differences mainly arise from the fact that the docking algorithm used in this study does not use an explicit solvent model and treats DNA as a rigid body. </plain></SENT>
+<SENT sid="186" pm="."><plain>Thus, water mediated interactions and DNA conformational rearrangement to better accommodate the ligand are not described. </plain></SENT>
+<SENT sid="187" pm="."><plain>As a proof of concept, we redid the docking calculations with the same program using the DNA conformation found in minimum Aa (see ‘Materials and Methods’). </plain></SENT>
+<SENT sid="188" pm="."><plain>In this test, the docking program finds the metadynamics pose Aa to be one of the most favorable binding modes (Supplementary Figure S4). </plain></SENT>
+<SENT sid="189" pm="."><plain>These outcomes confirm the soundness of the previously reported binding mode of 1 but suggest at the same time to take exhaustively into account the target flexibility and solvent effects when more rigorous calculations on ligand binding are needed. </plain></SENT>
+</text></p><p><text><SENT sid="190" pm="."><plain>The second energy basin Ab (Figure 4A) corresponds to another groove binding conformation in which the ligand aromatic scaffold is slightly shifted toward the 3’ end. </plain></SENT>
+<SENT sid="191" pm="."><plain>At variance with Aa, in this pose, the sulfur atom of the benzothiazole moiety H-bonds with the amino group of G3. </plain></SENT>
+<SENT sid="192" pm="."><plain>On the other hand, the N-(2-hydroxyethyl)piperazinyl establishes two polar contacts with the phosphate group of G4 in a way comparable to Aa. </plain></SENT>
+</text></p><p><text><SENT sid="193" pm="."><plain>To verify the stability of the binding conformations of basin Aa and Ab, over 100 ns unbiased MD simulations were performed. </plain></SENT>
+<SENT sid="194" pm="."><plain>Standard MD has been indeed successfully used to describe the interactions engaged by ligands locally at the DNA binding site (70). </plain></SENT>
+<SENT sid="195" pm="."><plain>In our simulations, the results show a different behavior in the two cases. </plain></SENT>
+<SENT sid="196" pm="."><plain>In particular, the binding conformation Aa is stable during the whole simulation with low ligand rmsd values (Figure 4B), and conserves all the ligand/DNA interactions. </plain></SENT>
+<SENT sid="197" pm="."><plain>In contrast, Ab first maintains its original position in the binding site; then, after approximately 80 ns of simulation, it slightly moves toward the 5’ end transforming in Aa. </plain></SENT>
+<SENT sid="198" pm="."><plain>This finding is not totally surprising since, looking at the FES in Figure 4A, the energy barrier that separates Ab from Aa is rather small, approximately 1.5 kcal/mol, and thus it can be overcome in the standard MD time scale. </plain></SENT>
+<SENT sid="199" pm="."><plain>This motion can be appreciated looking at Figure 4B where the rmsd values of the ligand with respect to its position in the Aa conformation are shown. </plain></SENT>
+</text></p><p><text><SENT sid="200" pm="."><plain>Furthermore, to investigate the G-quadruplex binding selectivity of 1 toward duplex DNA, we performed docking calculations on a B-DNA structure (see ‘Materials and Methods’). </plain></SENT>
+<SENT sid="201" pm="."><plain>The docking results show that 1 binds to the duplex minor groove similarly to what observed for G-quadruplex (see Supplementary Discussion and Supplementary Figure S5). </plain></SENT>
+<SENT sid="202" pm="."><plain>These results confirm the experimental data showing that 1 is able to bind the duplex DNA, interfering with the binding of the known B-DNA ligand distamycin A (41). </plain></SENT>
+<SENT sid="203" pm="."><plain>The structural information coming from these computations can be exploited to develop more potent and selective G-quadruplex ligands. </plain></SENT>
+</text></p></sec><sec id="SEC3-4"><title><text><SENT sid="204" pm="."><plain>End-stacking </plain></SENT>
+</text></title><p><text><SENT sid="205" pm="."><plain>At variance with Aa and Ab where 1 shows groove binding modes, in basin B, compound 1 lies at the 3’ end where it engages favorable π-stacking interactions with G5 and close contacts with two neighboring thymine residues (T6; Figure 4A). </plain></SENT>
+<SENT sid="206" pm="."><plain>However, the N-(2-hydroxyethyl)piperazinyl moiety partially inserts into the groove interacting with the sugar-phosphate backbone of DNA. </plain></SENT>
+<SENT sid="207" pm="."><plain>In particular, the N4 atom of the piperazinyl ring salt bridges with the phosphate group of G5, while the hydroxyethyl group H-bonds with the phosphate of G4. </plain></SENT>
+<SENT sid="208" pm="."><plain>It is worth mentioning that NMR data show a marked chemical shift variation of T6–H6 and T6–methyl protons in 1H NMR titrations on the 1/[d(TGGGGT)]4 complex (36,41), suggesting a role for T6 in the ligand binding. </plain></SENT>
+<SENT sid="209" pm="."><plain>However, this residue is not involved in the previously reported ligand binding modes, while these data are now for the first time rationalized by our results. </plain></SENT>
+</text></p><p><text><SENT sid="210" pm="."><plain>The stability of this binding conformation was checked running an over 100 ns unbiased MD simulation during which the ligand binding mode was stable conserving all the ligand/DNA interactions (Figure 4B). </plain></SENT>
+</text></p></sec><sec id="SEC3-5"><title><text><SENT sid="211" pm="."><plain>DNA-ligand binding free energy </plain></SENT>
+</text></title><p><text><SENT sid="212" pm="."><plain>The absolute ligand binding free energy (ΔGbind) can be computed from the FES as the free-energy difference of the system with the ligand in the bound and unbound state. </plain></SENT>
+<SENT sid="213" pm="."><plain>However, to obtain an accurate estimate of ΔGbind, a number of recrossing events between these two states should be observed during the simulation (48). </plain></SENT>
+<SENT sid="214" pm="."><plain>In our simulations, the ligand visits several times both the bound (7.0 ≤ d ≤ 14.0 Å) and the unbound states (24 &lt; d &lt; 26 Å) as shown in Supplementary Figure S6, leading to a quantitatively well-characterized FES. </plain></SENT>
+<SENT sid="215" pm="."><plain>At the end of the simulation, ΔGbind is equal to –9.4 ± 1.4 kcal/mol. </plain></SENT>
+<SENT sid="216" pm="."><plain>Unfortunately, experimental data on the binding free energy of this ligand are not yet available. </plain></SENT>
+<SENT sid="217" pm="."><plain>However, the computed value falls in the range from –9.0 to –11.0 kcal/mol, which are typically the experimental ΔGbind values measured for lead compounds (71). </plain></SENT>
+</text></p><p><text><SENT sid="218" pm="."><plain>To provide a picture of the convergence of the binding free-energy estimation, the free-energy difference between the bound and unbound state was computed as a function of the simulation time (Supplementary Figure S7). </plain></SENT>
+<SENT sid="219" pm="."><plain>This figure shows that after 870 ns the free energy is converged. </plain></SENT>
+<SENT sid="220" pm="."><plain>In fact, for the rest of the simulation the free-energy difference between bound and unbound states does not considerably change, while the ligand continues visiting both the bound and unbound states. </plain></SENT>
+</text></p></sec></sec></SecTag><SecTag type="DISCUSS"><sec sec-type="discussion" id="SEC4"><title><text><SENT sid="221" pm="."><plain>DISCUSSION </plain></SENT>
+</text></title><p><text><SENT sid="222" pm="."><plain>In the present study, we used metadynamics simulations to study the binding process of 1 to the G-quadruplex [d(TGGGGT)]4. </plain></SENT>
+<SENT sid="223" pm="."><plain>From the metadynamics calculation, we reconstructed the free-energy landscape of the ligand/DNA binding process, estimating also the absolute DNA/ligand binding free energy. </plain></SENT>
+<SENT sid="224" pm="."><plain>We have thus identified the preferred ligand binding sites on DNA associated with the lowest energy ligand binding modes. </plain></SENT>
+<SENT sid="225" pm="."><plain>In particular, we have shown that 1 interacts with G-quadruplex through a hopping binding mechanism passing from one DNA site to the other. </plain></SENT>
+<SENT sid="226" pm="."><plain>During this process the ligand assumes two lowest free-energy binding modes, one to the groove and the other to the 3’ end of the G-quadruplex. </plain></SENT>
+<SENT sid="227" pm="."><plain>This is a peculiar binding behavior with respect to other G-quadruplex ligands that stimulates further experimental and theoretical investigations. </plain></SENT>
+<SENT sid="228" pm="."><plain>For instance, in drug design one might exploit both the binding modes, through a lead optimization procedure of compound 1, to develop more potent and selective compounds. </plain></SENT>
+<SENT sid="229" pm="."><plain>Our study also shows that solvent and target flexibility play an important role during the ligand binding and neglecting such aspects might lead to inaccurate results. </plain></SENT>
+<SENT sid="230" pm="."><plain>The relevance of our results is enhanced by the fact that some of the previously reported NMR data (41) are here for the first time rationalized. </plain></SENT>
+<SENT sid="231" pm="."><plain>For instance, we have shown that the T6 residue is involved in the 3’-end binding mode, thus explaining the experimental observations. </plain></SENT>
+</text></p><p><text><SENT sid="232" pm="."><plain>Our work is an example of fully unbiased binding study of a ligand to DNA where no structural information on ligand binding is used. </plain></SENT>
+<SENT sid="233" pm="."><plain>Here, metadynamics simulations are applied for the first time to describe the ligand binding to G-quadruplex. </plain></SENT>
+<SENT sid="234" pm="."><plain>In our study, all the possible binding sites on the DNA structure are visited and energetically evaluated. </plain></SENT>
+<SENT sid="235" pm="."><plain>Our findings confirm and well integrate the previously reported experimental data, highlighting the importance of using atomistic simulations to assist, complement, and rationalize experiments on biologically relevant phenomena. </plain></SENT>
+<SENT sid="236" pm="."><plain>The results, achieved at a relatively low computational cost, render our protocol valuable for further investigations on various forms of ligand/DNA interaction and useful even for more automated drug discovery strategies to develop potent and selective DNA ligands. </plain></SENT>
+</text></p></sec></SecTag><SecTag type="SUPPL"><sec sec-type="supplementary-material" id="SEC5"><title><text><SENT sid="237" pm="."><plain>SUPPLEMENTARY DATA </plain></SENT>
+</text></title><p><text><SENT sid="238" pm="."><plain><ext-link ext-link-type="uri" xlink:href="http://nar.oxfordjournals.org/lookup/suppl/doi:10.1093/nar/gku247/-/DC1">Supplementary Data</ext-link> are available at NAR Online. </plain></SENT>
+</text></p>
+<supplementary-material id="PMC_1" content-type="local-data">
+<caption>
+<title><text><SENT sid="239" pm="."><plain>SUPPLEMENTARY DATA </plain></SENT>
+</text></title>
+</caption>
+<media mimetype="text" mime-subtype="html" xlink:href="supp_42_9_5447__index.html"/>
+<media xlink:role="associated-file" mimetype="video" mime-subtype="mpeg" xlink:href="supp_gku247_gku247_Supplementary_Movie_S1.mpg"/>
+<media xlink:role="associated-file" mimetype="application" mime-subtype="msword" xlink:href="supp_gku247_revised_si.doc"/>
+</supplementary-material>
+</sec></SecTag></body><back><SecTag type="ACK_FUND"><ack><p><text4fund><text><SENT sid="240" pm="."><plain>The authors thank Antonio Randazzo and Bruno Pagano for useful discussions. </plain></SENT>
+<SENT sid="241" pm="."><plain>Computational resources were provided by the Swiss National Supercomputing Center [project ID s362]. </plain></SENT>
+</text></text4fund></p></ack></SecTag><SecTag type="ACK_FUND"><sec id="SEC6"><title>FUNDING</title><p><text4fund><text><SENT sid="242" pm="."><plain>European Union [ERC-2009-AdG-247075]; the Gabriele Charitable Foundation; the Italian Ministry of Education [MIUR-PRIN 2010/2011 E61J12000210001]. </plain></SENT>
+<SENT sid="243" pm="."><plain>Funding for open access charge: Italian Ministry of Education [MIUR-PRIN 2010/2011 E61J12000210001]. </plain></SENT>
+</text></text4fund></p><p><text4fund><text><SENT sid="244" pm="."><plain>Conflict of interest statement. None declared. </plain></SENT>
+</text></text4fund></p></sec></SecTag><SecTag type="REF"><ref-list><title>REFERENCES</title><ref id="B1"><text><SENT sid="245" pm="."><plain>1.WatsonJ.D.CrickF.H.Molecular structure of nucleic acids: a structure for deoxyribose nucleic acidNature195317173773813054692 </plain></SENT>
+</text></ref><ref id="B2"><text><SENT sid="246" pm="."><plain>2.BochmanM.L.PaeschkeK.ZakianV.A.DNA secondary structures: stability and function of G-quadruplex structuresNat. </plain></SENT>
+<SENT sid="247" pm="."><plain>Rev. </plain></SENT>
+<SENT sid="248" pm="."><plain>Genet.20121377078023032257 </plain></SENT>
+</text></ref><ref id="B3"><text><SENT sid="249" pm="."><plain>3.GellertM.LipsettM.N.DaviesD.R.Helix formation by guanylic acidProc. </plain></SENT>
+<SENT sid="250" pm="."><plain>Natl. </plain></SENT>
+<SENT sid="251" pm="."><plain>Acad. </plain></SENT>
+<SENT sid="252" pm="."><plain>Sci. </plain></SENT>
+<SENT sid="253" pm="."><plain>U.S.A.1962482013201813947099 </plain></SENT>
+</text></ref><ref id="B4"><text><SENT sid="254" pm="."><plain>4.HuppertJ.L.BalasubramanianS.Prevalence of quadruplexes in the human genomeNucleic Acids Res.2005332908291615914667 </plain></SENT>
+</text></ref><ref id="B5"><text><SENT sid="255" pm="."><plain>5.HuppertJ.L.BalasubramanianS.G-quadruplexes in promoters throughout the human genomeNucleic Acids Res.20073540641317169996 </plain></SENT>
+</text></ref><ref id="B6"><text><SENT sid="256" pm="."><plain>6.BrooksT.A.KendrickS.HurleyL.Making sense of G-quadruplex and i-motif functions in oncogene promotersFEBS J.20102773459346920670278 </plain></SENT>
+</text></ref><ref id="B7"><text><SENT sid="257" pm="."><plain>7.SundquistW.I.KlugA.Telomeric DNA dimerizes by formation of guanine tetrads between hairpin loopsNature19893428258292601741 </plain></SENT>
+</text></ref><ref id="B8"><text><SENT sid="258" pm="."><plain>8.BiffiG.TannahillD.McCaffertyJ.BalasubramanianS.Quantitative visualization of DNA G-quadruplex structures in human cellsNat. </plain></SENT>
+<SENT sid="259" pm="."><plain>Chem.2013518218623422559 </plain></SENT>
+</text></ref><ref id="B9"><text><SENT sid="260" pm="."><plain>9.LamE.Y.BeraldiD.TannahillD.BalasubramanianS.G-quadruplex structures are stable and detectable in human genomic DNANat. </plain></SENT>
+<SENT sid="261" pm="."><plain>Commun.20134179623653208 </plain></SENT>
+</text></ref><ref id="B10"><text><SENT sid="262" pm="."><plain>10.BlackburnE.H.Structure and function of telomeresNature19913505695731708110 </plain></SENT>
+</text></ref><ref id="B11"><text><SENT sid="263" pm="."><plain>11.de LangeTShelterin: the protein complex that shapes and safeguards human telomeresGenes Dev.2005192100211016166375 </plain></SENT>
+</text></ref><ref id="B12"><text><SENT sid="264" pm="."><plain>12.BlackburnE.H.Switching and signaling at the telomereCell200110666167311572773 </plain></SENT>
+</text></ref><ref id="B13"><text><SENT sid="265" pm="."><plain>13.KimN.W.PiatyszekM.A.ProwseK.R.HarleyC.B.WestM.D.HoP.L.CovielloG.M.WrightW.E.WeinrichS.L.ShayJ.W.Specific association of human telomerase activity with immortal cells and cancerScience1994266201120157605428 </plain></SENT>
+</text></ref><ref id="B14"><text><SENT sid="266" pm="."><plain>14.CesareA.J.ReddelR.R.Alternative lengthening of telomeres: models, mechanisms and implicationsNat. </plain></SENT>
+<SENT sid="267" pm="."><plain>Rev. </plain></SENT>
+<SENT sid="268" pm="."><plain>Genet.20101131933020351727 </plain></SENT>
+</text></ref><ref id="B15"><text><SENT sid="269" pm="."><plain>15.ZahlerA.M.WilliamsonJ.R.CechT.R.PrescottD.M.Inhibition of telomerase by G-quartet DNA structuresNature19913507187202023635 </plain></SENT>
+</text></ref><ref id="B16"><text><SENT sid="270" pm="."><plain>16.GomezD.O’DonohueM.F.WennerT.DouarreC.MacadréJ.KoebelP.Giraud-PanisM.J.KaplanH.KolkesA.Shin-yaK.The G-quadruplex ligand telomestatin inhibits POT1 binding to telomeric sequences in vitro and induces GFP-POT1 dissociation from telomeres in human cellsCancer Res.2006666908691216849533 </plain></SENT>
+</text></ref><ref id="B17"><text><SENT sid="271" pm="."><plain>17.DenchiE.L.de LangeT.Protection of telomeres through independent control of ATM and ATR by TRF2 and POT1Nature20074481068107117687332 </plain></SENT>
+</text></ref><ref id="B18"><text><SENT sid="272" pm="."><plain>18.De CianA.LacroixL.DouarreC.Temime-SmaaliN.TrentesauxC.RiouJ.F.MergnyJ.L.Targeting telomeres and telomeraseBiochimie20089013115517822826 </plain></SENT>
+</text></ref><ref id="B19"><text><SENT sid="273" pm="."><plain>19.BalasubramanianS.NeidleS.G-quadruplex nucleic acids as therapeutic targetsCurr. </plain></SENT>
+<SENT sid="274" pm="."><plain>Opin. </plain></SENT>
+<SENT sid="275" pm="."><plain>Chem. </plain></SENT>
+<SENT sid="276" pm="."><plain>Biol.20091334535319515602 </plain></SENT>
+</text></ref><ref id="B20"><text><SENT sid="277" pm="."><plain>20.MonchaudD.Teulade-FichouM.P.A hitchhiker's guide to G-quadruplex ligandsOrg. </plain></SENT>
+<SENT sid="278" pm="."><plain>Biomol. </plain></SENT>
+<SENT sid="279" pm="."><plain>Chem.2008662763618264563 </plain></SENT>
+</text></ref><ref id="B21"><text><SENT sid="280" pm="."><plain>21.RodriguezR.MüllerS.YeomanJ.A.TrentesauxC.RiouJ.F.BalasubramanianS.A novel small molecule that alters shelterin integrity and triggers a DNA-damage response at telomeresJ. </plain></SENT>
+<SENT sid="281" pm="."><plain>Am. </plain></SENT>
+<SENT sid="282" pm="."><plain>Chem. </plain></SENT>
+<SENT sid="283" pm="."><plain>Soc.2008130157581575918975896 </plain></SENT>
+</text></ref><ref id="B22"><text><SENT sid="284" pm="."><plain>22.HamonF.LargyE.Guédin-BeaurepaireA.Rouchon-DagoisM.SidibeA.MonchaudD.MergnyJ.L.RiouJ.F.NguyenC.H.Teulade-FichouM.P.An acyclic oligoheteroaryle that discriminates strongly between diverse G-quadruplex topologiesAngew. </plain></SENT>
+<SENT sid="285" pm="."><plain>Chem. </plain></SENT>
+<SENT sid="286" pm="."><plain>Int. </plain></SENT>
+<SENT sid="287" pm="."><plain>Ed.20115087458749 </plain></SENT>
+</text></ref><ref id="B23"><text><SENT sid="288" pm="."><plain>23.CasagrandeV.SalvatiE.AlvinoA.BiancoA.CiammaichellaA.D’AngeloC.Ginnari-SatrianiL.SerrilliA.M.IachettiniS.LeonettiC.N-cyclic bay-substituted perylene G-quadruplex ligands have selective antiproliferative effects on cancer cells and induce telomere damageJ. </plain></SENT>
+<SENT sid="289" pm="."><plain>Med. </plain></SENT>
+<SENT sid="290" pm="."><plain>Chem.541140115621280624 </plain></SENT>
+</text></ref><ref id="B24"><text><SENT sid="291" pm="."><plain>24.CollieG.W.PromontorioR.HampelS.M.MiccoM.NeidleS.ParkinsonG.N.Structural basis for telomeric G-quadruplex targeting by naphthalene diimide ligandsJ. </plain></SENT>
+<SENT sid="292" pm="."><plain>Am. </plain></SENT>
+<SENT sid="293" pm="."><plain>Chem. </plain></SENT>
+<SENT sid="294" pm="."><plain>Soc.20121342723273122280460 </plain></SENT>
+</text></ref><ref id="B25"><text><SENT sid="295" pm="."><plain>25.NicoludisJ.M.MillerS.T.JeffreyP.D.BarrettS.P.RablenP.R.LawtonT.J.YatsunykL.A.Optimized end-stacking provides specificity of N-methyl mesoporphyrin IX for human telomeric G-quadruplex DNAJ. </plain></SENT>
+<SENT sid="296" pm="."><plain>Am. </plain></SENT>
+<SENT sid="297" pm="."><plain>Chem. </plain></SENT>
+<SENT sid="298" pm="."><plain>Soc.2012134204462045623181361 </plain></SENT>
+</text></ref><ref id="B26"><text><SENT sid="299" pm="."><plain>26.HaudecoeurR.StefanL.DenatF.MonchaudD.A model of smart G-quadruplex ligandJ. </plain></SENT>
+<SENT sid="300" pm="."><plain>Am. </plain></SENT>
+<SENT sid="301" pm="."><plain>Chem. </plain></SENT>
+<SENT sid="302" pm="."><plain>Soc.201313555055323297848 </plain></SENT>
+</text></ref><ref id="B27"><text><SENT sid="303" pm="."><plain>27.Di LevaF.S.ZizzaP.CingolaniC.D’AngeloC.PaganoB.AmatoJ.SalvatiE.SissiC.PinatoO.MarinelliL.Exploring the chemical space of G-quadruplex binders: discovery of a novel chemotype targeting the human telomeric sequenceJ. </plain></SENT>
+<SENT sid="304" pm="."><plain>Med. </plain></SENT>
+<SENT sid="305" pm="."><plain>Chem.2013569646965424256368 </plain></SENT>
+</text></ref><ref id="B28"><text><SENT sid="306" pm="."><plain>28.BurgerA.M.DaiF.SchultesC.M.ReszkaA.P.MooreM.J.DoubleJ.A.NeidleS.The G-quadruplex-interactive molecule BRACO-19 inhibits tumor growth, consistent with telomere targeting and interference with telomerase functionCancer Res.2005651489149615735037 </plain></SENT>
+</text></ref><ref id="B29"><text><SENT sid="307" pm="."><plain>29.PhatakP.CooksonJ.C.DaiF.SmithV.GartenhausR.B.StevensM.F.BurgerA.M.Telomere uncapping by the G-quadruplex ligand RHPS4 inhibits clonogenic tumour cell growth in vitro and in vivo consistent with a cancer stem cell targeting mechanismBr. </plain></SENT>
+<SENT sid="308" pm="."><plain>J. </plain></SENT>
+<SENT sid="309" pm="."><plain>Cancer2007961223123317406367 </plain></SENT>
+</text></ref><ref id="B30"><text><SENT sid="310" pm="."><plain>30.LeonettiC.ScarsellaM.RiggioG.RizzoA.SalvatiE.D’IncalciM.StaszewskyL.FrapolliR.StevensM.F.StoppacciaroA.G-quadruplex ligand RHPS4 potentiates the antitumor activity of camptothecins in preclinical models of solid tumorsClin. </plain></SENT>
+<SENT sid="311" pm="."><plain>Cancer. </plain></SENT>
+<SENT sid="312" pm="."><plain>Res.2008147284729119010844 </plain></SENT>
+</text></ref><ref id="B31"><text><SENT sid="313" pm="."><plain>31.KimM.Y.VankayalapatiH.Shin-YaK.WierzbaK.HurleyL.H.Telomestatin, a potent telomerase inhibitor that interacts quite specifically with the human telomeric intramolecular G-quadruplexJ. </plain></SENT>
+<SENT sid="314" pm="."><plain>Am. </plain></SENT>
+<SENT sid="315" pm="."><plain>Chem. </plain></SENT>
+<SENT sid="316" pm="."><plain>Soc.20021242098209911878947 </plain></SENT>
+</text></ref><ref id="B32"><text><SENT sid="317" pm="."><plain>32.TauchiT.Shin-yaK.SashidaG.SumiM.OkabeS.OhyashikiJ.H.OhyashikiK.Telomerase inhibition with a novel G-quadruplex-interactive agent, telomestatin: in vitro and in vivo studies in acute leukemiaOncogene2006255719572516652154 </plain></SENT>
+</text></ref><ref id="B33"><text><SENT sid="318" pm="."><plain>33.MartinoL.VirnoA.PaganoB.VirgilioA.Di MiccoS.GaleoneA.GiancolaC.BifulcoG.MayolL.RandazzoA.Structural and thermodynamic studies of the interaction of distamycin A with the parallel quadruplex structure [d(TGGGGT)]4J. </plain></SENT>
+<SENT sid="319" pm="."><plain>Am. </plain></SENT>
+<SENT sid="320" pm="."><plain>Chem. </plain></SENT>
+<SENT sid="321" pm="."><plain>Soc.2007129160481605618052170 </plain></SENT>
+</text></ref><ref id="B34"><text><SENT sid="322" pm="."><plain>34.PaganoB.VirnoA.MattiaC.A.MayolLRandazzoA.GiancolaC.Targeting DNA quadruplexes with distamycin A and its derivatives: an ITC and NMR studyBiochimie2008901224123218420038 </plain></SENT>
+</text></ref><ref id="B35"><text><SENT sid="323" pm="."><plain>35.LiQ.XiangJ.LiX.ChenL.XuX.TangY.ZhouQ.LiL.ZhangH.SunH.Stabilizing parallel G-quadruplex DNA by a new class of ligands: Two non-planar alkaloids through interaction in lateral groovesBiochimie20099181182919318115 </plain></SENT>
+</text></ref><ref id="B36"><text><SENT sid="324" pm="."><plain>36.CosconatiS.MarinelliL.TrottaR.VirnoA.MayolL.NovellinoE.OlsonA.J.RandazzoA.Tandem application of virtual screening and NMR experiments in the discovery of brand new DNA quadruplex groove bindersJ. </plain></SENT>
+<SENT sid="325" pm="."><plain>Am. </plain></SENT>
+<SENT sid="326" pm="."><plain>Chem. </plain></SENT>
+<SENT sid="327" pm="."><plain>Soc.2009131163361633719856964 </plain></SENT>
+</text></ref><ref id="B37"><text><SENT sid="328" pm="."><plain>37.CosconatiS.MarinelliL.TrottaR.VirnoA.De TitoS.RomagnoliR.PaganoB.LimongelliV.GiancolaC.BaraldiP. </plain></SENT>
+<SENT sid="329" pm="."><plain>G.Structural and conformational requisites in DNA quadruplex groove binding: another piece to the puzzleJ. </plain></SENT>
+<SENT sid="330" pm="."><plain>Am. </plain></SENT>
+<SENT sid="331" pm="."><plain>Chem. </plain></SENT>
+<SENT sid="332" pm="."><plain>Soc.20101326425643320394365 </plain></SENT>
+</text></ref><ref id="B38"><text><SENT sid="333" pm="."><plain>38.PaganoB.FotticchiaI.De TitoS.MattiaC.A.MayolL.NovellinoE.RandazzoA.GiancolaC.Selective binding of distamycin A derivative to G-quadruplex structure [d(TGGGGT)]4J. </plain></SENT>
+<SENT sid="334" pm="."><plain>Nucleic Acids2010201024713720725616 </plain></SENT>
+</text></ref><ref id="B39"><text><SENT sid="335" pm="."><plain>39.CáceresC.WrightG.GouyetteC.ParkinsonG.SubiranaJ.A.A thymine tetrad in d(TGGGGT) quadruplexes stabilized with Tl+/Na+ ionsNucleic Acids Res.2004321097110214960719 </plain></SENT>
+</text></ref><ref id="B40"><text><SENT sid="336" pm="."><plain>40.GaiW.YangQ.XiangJ.JiangW.LiQ.SunH.GuanA.ShangQ.ZhangH.TangY.A dual-site simultaneous binding mode in the interaction between parallel-stranded G-quadruplex [d(TGGGGT)]4 and cyanine dye 2, 2′-diethyl-9-methyl-selenacarbocyanine bromideNucleic Acids Res.2013412709272223275573 </plain></SENT>
+</text></ref><ref id="B41"><text><SENT sid="337" pm="."><plain>41.TrottaR.De TitoS.LauriI.La PietraV.MarinelliL.CosconatiS.MartinoL.ConteM.R.MayolL.NovellinoE.A more detailed picture of the interactions between virtual screening-derived hits and the DNA G-quadruplex: NMR, molecular modeling and ITC studiesBiochimie2011931280128721658428 </plain></SENT>
+</text></ref><ref id="B42"><text><SENT sid="338" pm="."><plain>42.CosconatiS.RizzoA.TrottaR.PaganoB.IachettiniS.De TitoS.LauriI.FotticchiaI.GiustinianoM.MarinelliL.Shooting for selective drug-like G-quadruplex binders: evidence for telomeric DNA damage and tumor cell deathJ. </plain></SENT>
+<SENT sid="339" pm="."><plain>Med. </plain></SENT>
+<SENT sid="340" pm="."><plain>Chem.2012559785979223057850 </plain></SENT>
+</text></ref><ref id="B43"><text><SENT sid="341" pm="."><plain>43.LaioA.ParrinelloM.Escaping free-energy minimaProc. </plain></SENT>
+<SENT sid="342" pm="."><plain>Natl. </plain></SENT>
+<SENT sid="343" pm="."><plain>Acad. </plain></SENT>
+<SENT sid="344" pm="."><plain>Sci. </plain></SENT>
+<SENT sid="345" pm="."><plain>U.S.A.200299125621256612271136 </plain></SENT>
+</text></ref><ref id="B44"><text><SENT sid="346" pm="."><plain>44.LimongelliV.De TitoS.CerofoliniL.FragaiM.PaganoB.TrottaR.CosconatiS.MarinelliL.NovellinoE.BertiniI.The G-triplexAngew. </plain></SENT>
+<SENT sid="347" pm="."><plain>Chem. </plain></SENT>
+<SENT sid="348" pm="."><plain>Int. </plain></SENT>
+<SENT sid="349" pm="."><plain>Ed.201312523252329 </plain></SENT>
+</text></ref><ref id="B45"><text><SENT sid="350" pm="."><plain>45.GraziosoG.LimongelliV.BranduardiD.NovellinoE.De MicheliC.CavalliA.ParrinelloM.Investigating the mechanism of substrate uptake and release in the glutamate transporter homologue Glt(Ph) through metadynamics simulationsJ. </plain></SENT>
+<SENT sid="351" pm="."><plain>Am. </plain></SENT>
+<SENT sid="352" pm="."><plain>Chem. </plain></SENT>
+<SENT sid="353" pm="."><plain>Soc.201213445346322092197 </plain></SENT>
+</text></ref><ref id="B46"><text><SENT sid="354" pm="."><plain>46.LimongelliV.BonomiM.MarinelliL.GervasioF.L.CavalliA.NovellinoE.ParrinelloM.Molecular basis of cyclooxygenase enzymes (COXs) selective inhibitionProc. </plain></SENT>
+<SENT sid="355" pm="."><plain>Natl. </plain></SENT>
+<SENT sid="356" pm="."><plain>Acad. </plain></SENT>
+<SENT sid="357" pm="."><plain>Sci. </plain></SENT>
+<SENT sid="358" pm="."><plain>U.S.A.20101075411541620215464 </plain></SENT>
+</text></ref><ref id="B47"><text><SENT sid="359" pm="."><plain>47.LimongelliV.MarinelliL.CosconatiS.La MottaC.SartiniS.MugnainiL.Da SettimoF.NovellinoE.ParrinelloM.Sampling protein motion and solvent effect during ligand bindingProc. </plain></SENT>
+<SENT sid="360" pm="."><plain>Natl. </plain></SENT>
+<SENT sid="361" pm="."><plain>Acad. </plain></SENT>
+<SENT sid="362" pm="."><plain>Sci. </plain></SENT>
+<SENT sid="363" pm="."><plain>U.S.A.20121091467147222238423 </plain></SENT>
+</text></ref><ref id="B48"><text><SENT sid="364" pm="."><plain>48.LimongelliV.BonomiM.ParrinelloM.Funnel metadynamics as accurate binding free-energy methodProc. </plain></SENT>
+<SENT sid="365" pm="."><plain>Natl. </plain></SENT>
+<SENT sid="366" pm="."><plain>Acad. </plain></SENT>
+<SENT sid="367" pm="."><plain>Sci. </plain></SENT>
+<SENT sid="368" pm="."><plain>U.S.A.20131106358636323553839 </plain></SENT>
+</text></ref><ref id="B49"><text><SENT sid="369" pm="."><plain>49.VargiuA.V.RuggeroneP.MagistratoA.CarloniP.Dissociation of minor groove binders from DNA: insights from metadynamics simulationsNucleic Acids Res.2008365910592118801848 </plain></SENT>
+</text></ref><ref id="B50"><text><SENT sid="370" pm="."><plain>50.WilhelmM.MukherjeeA.BouvierB.ZakrzewskaK.HynesJ.T.LaveryR.Multistep drug intercalation: molecular dynamics and free energy studies of the binding of daunomycin to DNAJ. </plain></SENT>
+<SENT sid="371" pm="."><plain>Am. </plain></SENT>
+<SENT sid="372" pm="."><plain>Chem. </plain></SENT>
+<SENT sid="373" pm="."><plain>Soc.20121348588859622548344 </plain></SENT>
+</text></ref><ref id="B51"><text><SENT sid="374" pm="."><plain>51.ColettaA.DesideriA.Role of the protein in the DNA sequence specificity of the cleavage site stabilized by the camptothecin topoisomerase IB inhibitor: a metadynamics studyNucleic Acids Res.2013419977998624003027 </plain></SENT>
+</text></ref><ref id="B52"><text><SENT sid="375" pm="."><plain>52.BarducciA.BussiG.ParrinelloM.Well-tempered metadynamics: a smoothly converging and tunable free-energy methodPhys. </plain></SENT>
+<SENT sid="376" pm="."><plain>Rev. </plain></SENT>
+<SENT sid="377" pm="."><plain>Lett.200810002060318232845 </plain></SENT>
+</text></ref><ref id="B53"><text><SENT sid="378" pm="."><plain>53.HueyR.MorrisG.M.OlsonA.J.GoodsellD.S.A semiempirical free energy force field with charge-based desolvationJ. </plain></SENT>
+<SENT sid="379" pm="."><plain>Comput. </plain></SENT>
+<SENT sid="380" pm="."><plain>Chem.2007281145115217274016 </plain></SENT>
+</text></ref><ref id="B54"><text><SENT sid="381" pm="."><plain>54.MorrisG.M.HueyR.LindstromW.SannerM.F.BelewR.K.GoodsellD.S.OlsonA.J.AutoDock4 and AutoDockTools4: automated docking with selective receptor flexibilityJ. </plain></SENT>
+<SENT sid="382" pm="."><plain>Comput Chem.2009302785279119399780 </plain></SENT>
+</text></ref><ref id="B55"><text><SENT sid="383" pm="."><plain>55.2012New York, NYLLCMaestro, version 9.3, Schrödinger </plain></SENT>
+</text></ref><ref id="B56"><text><SENT sid="384" pm="."><plain>56.2012New York, NYLLCEpik, version 2.3, Schrödinger </plain></SENT>
+</text></ref><ref id="B57"><text><SENT sid="385" pm="."><plain>57.DrewH.R.WingR.M.TakanoT.BrokaC.TanakaS.ItakuraK.DickersonR.E.Structure of a B-DNA dodecamer: conformation and dynamicsProc. </plain></SENT>
+<SENT sid="386" pm="."><plain>Natl. </plain></SENT>
+<SENT sid="387" pm="."><plain>Acad. </plain></SENT>
+<SENT sid="388" pm="."><plain>Sci. </plain></SENT>
+<SENT sid="389" pm="."><plain>U.S.A.198178217921836941276 </plain></SENT>
+</text></ref><ref id="B58"><text><SENT sid="390" pm="."><plain>58.CornellW.D.CieplakP.BaylyC.I.GouldI.R.MerzK.M.JrFergusonD.M.SpellmeyerD.C.FoxT.CaldwellJ.W.KollmanP.A.A second generation force field for the simulation of proteins, nucleic acids, and organic moleculesJ. </plain></SENT>
+<SENT sid="391" pm="."><plain>Am. </plain></SENT>
+<SENT sid="392" pm="."><plain>Chem. </plain></SENT>
+<SENT sid="393" pm="."><plain>Soc.199511751795197 </plain></SENT>
+</text></ref><ref id="B59"><text><SENT sid="394" pm="."><plain>59.CheathamT.E.IIICieplakP.KollmanP.A.A modified version of the Cornell et al. force field with improved sugar pucker phases and helical repeatJ. </plain></SENT>
+<SENT sid="395" pm="."><plain>Biomol. </plain></SENT>
+<SENT sid="396" pm="."><plain>Struct. </plain></SENT>
+<SENT sid="397" pm="."><plain>Dyn.19991684586210217454 </plain></SENT>
+</text></ref><ref id="B60"><text><SENT sid="398" pm="."><plain>60.PérezA.MarchánI.SvozilD.SponerJ.CheathamT.E.IIILaughtonC.A.OrozcoM.Refinement of the AMBER force field for nucleic acids: improving the description of α/γ conformersBiophys. </plain></SENT>
+<SENT sid="399" pm="."><plain>J.2007923817382917351000 </plain></SENT>
+</text></ref><ref id="B61"><text><SENT sid="400" pm="."><plain>61.PhillipsJ.C.BraunR.WangW.GumbartJ.TajkhorshidE.VillaE.ChipotC.SkeelR.D.KaleL.SchultenK.Scalable molecular dynamics with NAMDJ. </plain></SENT>
+<SENT sid="401" pm="."><plain>Comput. </plain></SENT>
+<SENT sid="402" pm="."><plain>Chem.2005261781180216222654 </plain></SENT>
+</text></ref><ref id="B62"><text><SENT sid="403" pm="."><plain>62.BonomiM.BranduardiD.BussiG.CamilloniC.ProvasiD.RaiteriP.DonadioD.MarinelliF.PietrucciF.BrogliaR.A.PLUMED: A portable plugin for free-energy calculations with molecular dynamicsComp. </plain></SENT>
+<SENT sid="404" pm="."><plain>Phys. </plain></SENT>
+<SENT sid="405" pm="."><plain>Comm.200918019611972 </plain></SENT>
+</text></ref><ref id="B63"><text><SENT sid="406" pm="."><plain>63.JorgensenW.L.ChandrasekharJ.MaduraJ.D.ImpeyR.W.KleinM.L.Comparison of simple potential functions for simulating liquid waterJ. </plain></SENT>
+<SENT sid="407" pm="."><plain>Chem. </plain></SENT>
+<SENT sid="408" pm="."><plain>Phys.198379926935 </plain></SENT>
+</text></ref><ref id="B64"><text><SENT sid="409" pm="."><plain>64.BaylyC.I.CieplakP.CornellW.D.KollmanP.A.A well-behaved electrostatic potential based method using charge restraints for determining atom-centered charges: The RESP modelJ. </plain></SENT>
+<SENT sid="410" pm="."><plain>Phys. </plain></SENT>
+<SENT sid="411" pm="."><plain>Chem.1993971026910280 </plain></SENT>
+</text></ref><ref id="B65"><text><SENT sid="412" pm="."><plain>65.Wallingford, CTGaussian, Inc.Gaussian 03, Revision C.02 </plain></SENT>
+</text></ref><ref id="B66"><text><SENT sid="413" pm="."><plain>66.WangJ.WangW.KollmanP.A.CaseD.A.Automatic atom type and bond type perception in molecular mechanical calculationsJ. </plain></SENT>
+<SENT sid="414" pm="."><plain>Mol. </plain></SENT>
+<SENT sid="415" pm="."><plain>Graph. </plain></SENT>
+<SENT sid="416" pm="."><plain>Model.20062524726016458552 </plain></SENT>
+</text></ref><ref id="B67"><text><SENT sid="417" pm="."><plain>67.BonomiM.BarducciA.ParrinelloM.Reconstructing the equilibrium Boltzmann distribution from well-tempered metadynamicsJ. </plain></SENT>
+<SENT sid="418" pm="."><plain>Comput. </plain></SENT>
+<SENT sid="419" pm="."><plain>Chem.2009301615162119421997 </plain></SENT>
+</text></ref><ref id="B68"><text><SENT sid="420" pm="."><plain>68.GearC.W.KevrekidisI.G.TheodoropoulosC.‘Coarse’ integration/bifurcation analysis via microscopic simulators: micro-Galerkin methodsComput. </plain></SENT>
+<SENT sid="421" pm="."><plain>Chem. </plain></SENT>
+<SENT sid="422" pm="."><plain>Eng.201226941963 </plain></SENT>
+</text></ref><ref id="B69"><text><SENT sid="423" pm="."><plain>69.HummerG.KevrekidisI.G.Coarse molecular dynamics of a peptide fragment: free energy, kinetics, and long-time dynamics computationsJ. </plain></SENT>
+<SENT sid="424" pm="."><plain>Chem. </plain></SENT>
+<SENT sid="425" pm="."><plain>Phys.20031181076210773 </plain></SENT>
+</text></ref><ref id="B70"><text><SENT sid="426" pm="."><plain>70.KhalidS.HannonM.J.RodgerA.RodgerP.MSimulations of DNA coiling around a synthetic supramolecular cylinder that binds in the DNA major grooveChemistry2006123493350616496427 </plain></SENT>
+</text></ref><ref id="B71"><text><SENT sid="427" pm="."><plain>71.FreireE.Thermodynamic approach to the affinity optimization of drug candidatesChem. </plain></SENT>
+<SENT sid="428" pm="."><plain>Biol. </plain></SENT>
+<SENT sid="429" pm="."><plain>Drug. </plain></SENT>
+<SENT sid="430" pm="."><plain>Des.20097446847219793186 </plain></SENT>
+</text></ref></ref-list></SecTag></back></article>

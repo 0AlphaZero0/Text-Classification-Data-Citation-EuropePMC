@@ -1,0 +1,426 @@
+
+<article xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML" article-type="research-article"><?properties open_access?><?DTDIdentifier.IdentifierValue -//NLM//DTD Journal Publishing DTD v2.3 20031101//EN?><?DTDIdentifier.IdentifierType public?><?SourceDTD.DTDName journalpublishing.dtd?><?SourceDTD.Version 2.3?><?ConverterInfo.XSLTName jp2nlmx2.xsl?><?ConverterInfo.Version 1?><front><journal-meta><journal-id journal-id-type="nlm-ta">PLoS Comput Biol</journal-id><journal-id journal-id-type="iso-abbrev">PLoS Comput. Biol</journal-id><journal-id journal-id-type="publisher-id">plos</journal-id><journal-id journal-id-type="pmc">ploscomp</journal-id><journal-title-group><journal-title>PLoS Computational Biology</journal-title></journal-title-group><issn pub-type="ppub">1553-734X</issn><issn pub-type="epub">1553-7358</issn><publisher><publisher-name>Public Library of Science</publisher-name><publisher-loc>San Francisco, USA</publisher-loc></publisher></journal-meta><article-meta><article-id pub-id-type="pmcid">3248393</article-id><article-id pub-id-type="pmid">22219723</article-id><article-id pub-id-type="publisher-id">PCOMPBIOL-D-11-00850</article-id><article-id pub-id-type="doi">10.1371/journal.pcbi.1002326</article-id><article-categories><subj-group subj-group-type="heading"><subject>Research Article</subject></subj-group><subj-group subj-group-type="Discipline-v2"><subject>Biology</subject><subj-group><subject>Computational Biology</subject></subj-group></subj-group><subj-group subj-group-type="Discipline-v2"><subject>Chemistry</subject><subj-group><subject>Computational Chemistry</subject></subj-group></subj-group></article-categories><title-group><article-title><SecTag type="TITLE"><text><SENT sid="0" pm="."><plain>Using Multiple Microenvironments to Find Similar Ligand-Binding Sites: Application to Kinase Inhibitor Binding </plain></SENT>
+</text></SecTag></article-title><alt-title alt-title-type="running-head">Compare Ligand-Binding Sites</alt-title></title-group><contrib-group><contrib contrib-type="author"><name><surname>Liu</surname><given-names>Tianyun</given-names></name><xref ref-type="aff" rid="aff1">
+<sup>1</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Altman</surname><given-names>Russ B.</given-names></name><xref ref-type="aff" rid="aff1">
+<sup>1</sup>
+</xref><xref ref-type="aff" rid="aff2">
+<sup>2</sup>
+</xref><xref ref-type="corresp" rid="cor1">
+<sup>*</sup>
+</xref></contrib></contrib-group><aff id="aff1"><label>1</label><addr-line>Department of Genetics, Stanford University, Stanford, California, United States of America</addr-line></aff><aff id="aff2"><label>2</label><addr-line>Department of Bioengineering, Stanford University, Stanford, California, United States of America</addr-line></aff><contrib-group><contrib contrib-type="editor"><name><surname>Beard</surname><given-names>Daniel A.</given-names></name><role>Editor</role><xref ref-type="aff" rid="edit1"/></contrib></contrib-group><aff id="edit1">Medical College of Wisconsin, United States of America</aff><author-notes><corresp id="cor1">* E-mail: <email>russ.altman@stanford.edu</email></corresp><fn fn-type="con"><p><text><SENT sid="1" pm="."><plain>Conceived and designed the experiments: TL RBA. </plain></SENT>
+<SENT sid="2" pm="."><plain>Performed the experiments: TL. </plain></SENT>
+<SENT sid="3" pm="."><plain>Analyzed the data: TL RBA. </plain></SENT>
+<SENT sid="4" pm="."><plain>Contributed reagents/materials/analysis tools: TL. </plain></SENT>
+<SENT sid="5" pm="."><plain>Wrote the paper: TL RBA. </plain></SENT>
+</text></p></fn></author-notes><pub-date pub-type="collection"><month>12</month><year>2011</year></pub-date><pub-date pub-type="epub"><day>29</day><month>12</month><year>2011</year></pub-date><volume>7</volume><issue>12</issue><elocation-id>e1002326</elocation-id><history><date date-type="received"><day>11</day><month>6</month><year>2011</year></date><date date-type="accepted"><day>10</day><month>11</month><year>2011</year></date></history><permissions><copyright-statement>Liu, Altman.</copyright-statement><copyright-year>2011</copyright-year><license xlink:href="http://creativecommons.org/licenses/by/4.0/"><license-p>This is an open-access article distributed under the terms of the Creative Commons Attribution License, which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are properly credited.</license-p></license></permissions><abstract><p><SecTag type="ABS"><text><SENT sid="6" pm="."><plain>The recognition of cryptic small-molecular binding sites in protein structures is important for understanding off-target side effects and for recognizing potential new indications for existing drugs. </plain></SENT>
+<SENT sid="7" pm="."><plain>Current methods focus on the geometry and detailed chemical interactions within putative binding pockets, but may not recognize distant similarities where dynamics or modified interactions allow one ligand to bind apparently divergent binding pockets. </plain></SENT>
+<SENT sid="8" pm="."><plain>In this paper, we introduce an algorithm that seeks similar microenvironments within two binding sites, and assesses overall binding site similarity by the presence of multiple shared microenvironments. </plain></SENT>
+<SENT sid="9" pm="."><plain>The method has relatively weak geometric requirements (to allow for conformational change or dynamics in both the ligand and the pocket) and uses multiple biophysical and biochemical measures to characterize the microenvironments (to allow for diverse modes of ligand binding). </plain></SENT>
+<SENT sid="10" pm="."><plain>We term the algorithm PocketFEATURE, since it focuses on pockets using the FEATURE system for characterizing microenvironments. </plain></SENT>
+<SENT sid="11" pm="."><plain>We validate PocketFEATURE first by showing that it can better discriminate sites that bind similar ligands from those that do not, and by showing that we can recognize FAD-binding sites on a proteome scale with Area Under the Curve (AUC) of 92%. </plain></SENT>
+<SENT sid="12" pm="."><plain>We then apply PocketFEATURE to evolutionarily distant kinases, for which the method recognizes several proven distant relationships, and predicts unexpected shared ligand binding. </plain></SENT>
+<SENT sid="13" pm="."><plain>Using experimental data from ChEMBL and Ambit, we show that at high significance level, 40 kinase pairs are predicted to share ligands. </plain></SENT>
+<SENT sid="14" pm="."><plain>Some of these pairs offer new opportunities for inhibiting two proteins in a single pathway. </plain></SENT>
+</text></SecTag></p></abstract><abstract abstract-type="summary"><title><text><SENT sid="15" pm="."><plain>Author Summary </plain></SENT>
+</text></title><p><SecTag type="ABS"><text><SENT sid="16" pm="."><plain>Small molecule drugs may interact with many proteins. </plain></SENT>
+<SENT sid="17" pm="."><plain>Some of these interactions may cause unexpected effects, including side effects or potentially useful therapeutic effects. </plain></SENT>
+<SENT sid="18" pm="."><plain>One way to predict these effects is to analyze the three-dimensional structure of target proteins, and identify new binding sites for small molecule drugs. </plain></SENT>
+<SENT sid="19" pm="."><plain>Several methods have been proposed for predicting new binding sites, relying on geometric and functional complementarity of the sites and the small molecules. </plain></SENT>
+<SENT sid="20" pm="."><plain>In this paper, we report on a new method for identifying novel protein-drug interactions by analyzing the similarity between binding sites in proteins. </plain></SENT>
+<SENT sid="21" pm="."><plain>The method has relatively weak geometric requirements and allows for conformational change or dynamics in both the ligand and protein. </plain></SENT>
+<SENT sid="22" pm="."><plain>Our results show that geometric flexibility is useful for effectively comparing sites. </plain></SENT>
+<SENT sid="23" pm="."><plain>We have applied the method to evolutionarily distant kinases, and find unexpected shared inhibitor binding. </plain></SENT>
+<SENT sid="24" pm="."><plain>Our results may be valuable for drug repurposing in order to find novel uses for existing kinase inhibitors. </plain></SENT>
+</text></SecTag></p></abstract><counts><page-count count="12"/></counts></article-meta></front><body><SecTag type="INTRO"><sec id="s1"><title><text><SENT sid="25" pm="."><plain>Introduction </plain></SENT>
+</text></title><p><text><SENT sid="26" pm="."><plain>Structural biology studies have provided large numbers of high-resolution proteins, often bound to small molecule ligands. </plain></SENT>
+<SENT sid="27" pm="."><plain>The ability to predict additional ligands that will bind these proteins is an exciting opportunity for understanding drug action and repurposing. </plain></SENT>
+<SENT sid="28" pm="."><plain>In some cases, the binding of a small molecule to a protein may explain otherwise unexpected effects of the small molecule, such as side effects of drugs. </plain></SENT>
+<SENT sid="29" pm="."><plain>In other cases, the binding of a small molecule may suggest new uses of existing drugs, based on unexpected affinity to new targets. </plain></SENT>
+</text></p><p><text><SENT sid="30" pm="."><plain>Previous methods for predicting the potential binding of small molecules to protein pockets have used evolutionary, structural, biochemical and geometric properties in order to assess pocket similarity, or ligand-pocket complementarity [1], [2], [3], [4], [5]. </plain></SENT>
+<SENT sid="31" pm="."><plain>For example, the method of sequence order-independent profile-profile alignment (SOIPPA) [6] can recognize binding site similarity between the cholesteryl ester transfer protein (CETP) and off-targets, including retinoid X receptor and peroxisome proliferator-activated receptors (PPARs). </plain></SENT>
+<SENT sid="32" pm="."><plain>These new targets may explain adverse drug effects of CETP inhibitors [7]. </plain></SENT>
+<SENT sid="33" pm="."><plain>SOIPPA represents binding sites with a tessellation of C-alpha atoms and characterizes binding sites using geometric similarity potentials. </plain></SENT>
+<SENT sid="34" pm="."><plain>SOIPPA evaluates 3D alignments between binding sites that are enriched for similar angles and distances between residues. </plain></SENT>
+<SENT sid="35" pm="."><plain>It then gauges overall similarity based on geometric criteria, evolutionary and biochemical properties. </plain></SENT>
+</text></p><p><text><SENT sid="36" pm="."><plain>Like SOIPPA, other methods for locally comparing binding sites typically have three steps [5]: (1) representation of binding sites, (2) 3D alignment between two sites and (3) evaluation of a similarity metric to the two sites. </plain></SENT>
+<SENT sid="37" pm="."><plain>Searching for the best 3D alignment is the essential step. </plain></SENT>
+<SENT sid="38" pm="."><plain>There are geometric hashing methods (SiteEngine [8] and SiteBase [1]) and methods based on clique detection (SOIPPA [6], CavBase [9] and eF-site [10]). </plain></SENT>
+<SENT sid="39" pm="."><plain>These methods use thresholds to control the similarity of local geometries in both types of methods, but these can be difficult to set. </plain></SENT>
+<SENT sid="40" pm="."><plain>In particular, flexible matching can be critical in achieving high performance [11]. </plain></SENT>
+<SENT sid="41" pm="."><plain>Thornton et al showed that binding sites with similar ligands display greater conformational variability than the corresponding ligand molecules [12]. </plain></SENT>
+<SENT sid="42" pm="."><plain>Thus, using predefined geometric models and thresholds is not optimal. </plain></SENT>
+<SENT sid="43" pm="."><plain>Excessive reliance on crystallographic poses for both the protein and the ligand can miss potential similarities. </plain></SENT>
+</text></p><p><text><SENT sid="44" pm="."><plain>We have previously described the FEATURE methods for describing active sites [13]. </plain></SENT>
+<SENT sid="45" pm="."><plain>In the FEATURE representation, a protein site is represented by one or more microenvironments—statistical descriptions of the occurrence of atoms, residues, secondary structures as well as biochemical and biophysical properties in radial shells around a central point [14]. </plain></SENT>
+<SENT sid="46" pm="."><plain>We have shown that the FEATURE representation is useful for describing sites for Ca++ binding [14], Mg++ binding [15], serine protease active sites [13], thioredoxin active sites [16] and others [17]. </plain></SENT>
+<SENT sid="47" pm="."><plain>We have also used it to evaluate the ability of engineered loops to bind ligands [18]. </plain></SENT>
+<SENT sid="48" pm="."><plain>In this work, we reasoned that the interactions between microenvironments in the target protein and chemical fragments in the ligand may drive molecular recognition. </plain></SENT>
+<SENT sid="49" pm="."><plain>Because the conformational arrangement of fragments within flexible ligand molecules can be very different, we allow the corresponding microenvironments to adopt different relative geometries. </plain></SENT>
+<SENT sid="50" pm="."><plain>We develop an algorithm, PocketFEATURE, to match microenvironments within pockets in order to find pockets with potentially similar binding capabilities. </plain></SENT>
+</text></p><p><text><SENT sid="51" pm="."><plain>We validate PocketFEATURE by testing its performance on two tasks. </plain></SENT>
+<SENT sid="52" pm="."><plain>First, we test its ability to detect the similarity of binding sites that are known to bind the same (containing adenine-ribose) ligands–a test of sensitivity. </plain></SENT>
+<SENT sid="53" pm="."><plain>Second, we test its ability to detect FAD binding across a large proteome-scale set of proteins–a test of specificity. </plain></SENT>
+<SENT sid="54" pm="."><plain>In both tests, the method shows very strong performance, including an ability to detect similarities missed by other methods. </plain></SENT>
+</text></p><p><text><SENT sid="55" pm="."><plain>Kinases play an important role in cell signaling, and can be dysregulated in cancer. </plain></SENT>
+<SENT sid="56" pm="."><plain>Several recently introduced cancer drugs act as ATP analogues and inhibit kinase action [19],[20]. </plain></SENT>
+<SENT sid="57" pm="."><plain>Therefore, the binding capabilities (or binding profiles) of kinases may be useful for discovering novel kinase inhibitors. </plain></SENT>
+<SENT sid="58" pm="."><plain>In particular, kinase inhibitors that bind two or more kinases in the same pathway are attractive because they can more effectively interfere with the pathway, without the need for very high doses or multiple drugs [21], [22]. </plain></SENT>
+<SENT sid="59" pm="."><plain>Kinase binding profiles may also be useful for understanding side effects of drugs that bind multiple proteins [22]. </plain></SENT>
+<SENT sid="60" pm="."><plain>In principle, the ability of an inhibitor to bind multiple kinases may occur despite very low sequence and structure homology. </plain></SENT>
+<SENT sid="61" pm="."><plain>For these reasons, the ability to detect similar binding sites in divergent kinases is potentially valuable. </plain></SENT>
+</text></p><p><text><SENT sid="62" pm="."><plain>There are sixteen cancer drugs approved or in advanced development that are known to have multiple targets [22]. </plain></SENT>
+<SENT sid="63" pm="."><plain>All of these drugs target members of the same protein family that regulate the same signaling process. </plain></SENT>
+<SENT sid="64" pm="."><plain>Accordingly, most studies have focused on dissecting the detailed binding preferences of drugs on a relatively small set of kinases that are known to be important. </plain></SENT>
+<SENT sid="65" pm="."><plain>In fact, multi-target drugs that work on proteins within distant families are only rarely reported [23]. </plain></SENT>
+<SENT sid="66" pm="."><plain>Therefore, one of the goals of this work is to discover unrecognized binding similarities between remotely related proteins to increase the repertoire of kinase inhibitor action and utility. </plain></SENT>
+<SENT sid="67" pm="."><plain>Accordingly, we apply PocketFEATURE to predict the similarity in inhibitor-binding profiles between kinases. </plain></SENT>
+<SENT sid="68" pm="."><plain>In particular, we seek similar inhibitor-binding profiles for kinases that are evolutionarily distant. </plain></SENT>
+</text></p></sec></SecTag><SecTag type="RESULTS"><sec id="s2"><title><text><SENT sid="69" pm="."><plain>Results </plain></SENT>
+</text></title><sec id="s2a"><title><text><SENT sid="70" pm="."><plain>Detecting binding site similarity </plain></SENT>
+</text></title><p><text><SENT sid="71" pm="."><plain>We first validated PocketFEATURE's ability to detect binding site similarity. </plain></SENT>
+<SENT sid="72" pm="."><plain>In particular, we tested its ability to recognize pockets that bind similar ligands, and distinguish them from pockets that do not bind these ligands. </plain></SENT>
+<SENT sid="73" pm="."><plain>The benchmark dataset is provided by Bourne group from USCD [6]. </plain></SENT>
+<SENT sid="74" pm="."><plain>The ligands sharing similarity are: ATP, ADP, NAD, FAD, SAH and SAM, all of which contain an adenine-ribose moiety. </plain></SENT>
+<SENT sid="75" pm="."><plain>We compared the performance of PocketFEATURE to SOIPPA, which outperforms other ligand-binding site comparison algorithms in this task [6]. Figure 1 shows PocketFEATURE's ability to recognize 30381 pairs of sites that both bind adenine-ribose moieties, and to recognize the lack of similarity of 24947 control pairs of sites in which one site binds adenine-ribose and the other does not. </plain></SENT>
+<SENT sid="76" pm="."><plain>The AUC for the entire benchmark is 0.85. </plain></SENT>
+<SENT sid="77" pm="."><plain>At specificities of 95% to 99.5%, PocketFEATURE outperforms SOIPPA. </plain></SENT>
+<SENT sid="78" pm="."><plain>At 95% specificity, PocketFEATURE identifies about 40% similar pairs, while SOIPPA identifies less than 30%. </plain></SENT>
+<SENT sid="79" pm="."><plain>Our results demonstrate that PocketFEATURE can identify binding sites with overlapping chemical specificity. </plain></SENT>
+<SENT sid="80" pm="."><plain>Proteins in this test are evolutionarily divergent (&lt;5% of them are from the same SCOP superfamily). </plain></SENT>
+<SENT sid="81" pm="."><plain>Thus, PocketFEATURE can detect site similarity across remote evolutionary relationships. </plain></SENT>
+</text></p><SecTag type="FIG"><fig id="pcbi-1002326-g001" position="float"><object-id pub-id-type="doi">10.1371/journal.pcbi.1002326.g001</object-id><label>Figure 1</label><caption><title><text><SENT sid="82" pm="."><plain>Comparison of the performance of PocketFEATURE to SOIPPA. </plain></SENT>
+</text></title><p><text><SENT sid="83" pm="."><plain>The benchmark measures the ability to discriminate 30381 pairs of sites that both bind adenine-ribose moieties from 24947 control pairs of sites where one site binds adenine-ribose and the other does not. </plain></SENT>
+<SENT sid="84" pm="."><plain>The AUC for the entire benchmark is 0.85. </plain></SENT>
+<SENT sid="85" pm="."><plain>At the specificity range of 95% to 99.5%, PocketFEATURE outperforms SOIPPA. </plain></SENT>
+<SENT sid="86" pm="."><plain>At 95% specificity, PocketFEATURE identifies about 40% positive pairs, while SOIPPA identifies less than 30%. </plain></SENT>
+</text></p></caption><graphic xlink:href="pcbi.1002326.g001"/></fig></SecTag><p><text><SENT sid="87" pm="."><plain>Figure 2 shows an ATP-binding site (1kvk), an NAD-binding site (1a5z) and an FAD-binding site (2b9w). </plain></SENT>
+<SENT sid="88" pm="."><plain>There are five corresponding microenvironments in each protein (spheres are shown in Figure 2A and the types of microenvironments are listed in Figure 2B). </plain></SENT>
+<SENT sid="89" pm="."><plain>These five microenviroments are in proximity to the adenine moiety from ATP, NAD and FAD molecules. </plain></SENT>
+<SENT sid="90" pm="."><plain>It is important to note that the five microenvironments adopt different relative geometries in these three sample sites while coordinating the ligands. </plain></SENT>
+<SENT sid="91" pm="."><plain>We consider the five microenvironments to constitute modules capable of recognizing adenine-ribose moieties contained within diverse ligand molecules. </plain></SENT>
+</text></p><SecTag type="FIG"><fig id="pcbi-1002326-g002" position="float"><object-id pub-id-type="doi">10.1371/journal.pcbi.1002326.g002</object-id><label>Figure 2</label><caption><title><text><SENT sid="92" pm="."><plain>An example illustrating how PocketFEATURE identifies similar sites that bind to ligands with overlapping chemical specificity. </plain></SENT>
+</text></title><p><text><SENT sid="93" pm="."><plain>We compare an ATP-binding site (1kvk/ATP), an NAD-binding site (1a5z/NAD) and an FAD-binding site (2b9w/FAD). </plain></SENT>
+<SENT sid="94" pm="."><plain>There are five sets of mutual aligned microenvironments between the three sites. </plain></SENT>
+<SENT sid="95" pm="."><plain>(A) 3D structures of the binding site. </plain></SENT>
+<SENT sid="96" pm="."><plain>The five sets of mutual aligned microenvironments are represented as colored spheres: red for microenvironment centered at residue type E(mE) or D (mD), blue for mT, green for mY, orange for mV or mI and purple for mP. </plain></SENT>
+<SENT sid="97" pm="."><plain>The five microenviroments are close to the adenine moiety from ATP, FAD and NAD molecules. </plain></SENT>
+<SENT sid="98" pm="."><plain>The aligned microenvironments display different relative geometries in the three sites. </plain></SENT>
+<SENT sid="99" pm="."><plain>3D illustrations were generated using PyMOL [37]. </plain></SENT>
+<SENT sid="100" pm="."><plain>(B) Index of center residues for the mutual aligned microenvironments. </plain></SENT>
+<SENT sid="101" pm="."><plain>(C) Significance of alignments. </plain></SENT>
+<SENT sid="102" pm="."><plain>Tc scores between the five sets of mutual aligned microenvironments are mapped to the pre-calculated PDF for a given type of microenvironment pair. </plain></SENT>
+<SENT sid="103" pm="."><plain>The scores between ATP-binding and NAD-binding sites are marked using diamonds, those between ATP-binding and FAD-binding using circles, and those between NAD-binding and FAD-binding using squares. </plain></SENT>
+<SENT sid="104" pm="."><plain>For each of the five sets, the S(Tc) scores fall within the p-value cutoff of 0.05. </plain></SENT>
+</text></p></caption><graphic xlink:href="pcbi.1002326.g002"/></fig></SecTag><p><text><SENT sid="105" pm="."><plain>The S(Tc) score captures the similarity of a pair of FEATURE microenvironments. </plain></SENT>
+<SENT sid="106" pm="."><plain>To evaluate the significance of alignments between microenvironments, we calculated the probability distribution function (PDF) of microenvironment similarity score S(Tc) using a non-redundant dataset of 3D structures in PDB. </plain></SENT>
+<SENT sid="107" pm="."><plain>Given each set of the mutual alignment between ATP, NAD and FAD binding sites, Figure 2C maps the three S(Tc) scores to the corresponding microenvironment types. </plain></SENT>
+<SENT sid="108" pm="."><plain>The alignments of high significance form the basis for recognizing similarity between binding sites detected by PocketFEATURE. </plain></SENT>
+</text></p></sec><sec id="s2b"><title><text><SENT sid="109" pm="."><plain>Detecting FAD-binding sites in a large druggable database </plain></SENT>
+</text></title><p><text><SENT sid="110" pm="."><plain>The previous test demonstrated that PocketFEATURE can sensitively detect similarities between adenine-ribose containing pockets. </plain></SENT>
+<SENT sid="111" pm="."><plain>We tested PocketFEATURE's ability to specifically recognize FAD-binding sites on a structural proteome scale. </plain></SENT>
+<SENT sid="112" pm="."><plain>The Dataset-6958 is derived from an annotated database of “druggable binding sites” from PDB called scPDB (see Method section). </plain></SENT>
+<SENT sid="113" pm="."><plain>It includes a total of 6709 non-FAD-binding proteins and 249 FAD-binding proteins, from 43 EC-families. </plain></SENT>
+<SENT sid="114" pm="."><plain>Using a single arbitrarily selected FAD-binding site (1nhp/FAD) as a query structure, we searched the database for all other FAD-binding sites from Dataset-6958 by pairwise comparison. Figure 3A shows the overall performance with an AUC value of 0.92. </plain></SENT>
+<SENT sid="115" pm="."><plain>At 95% specificity, PocketFEATURE identifies about 65% sites that are known to bind FAD. </plain></SENT>
+<SENT sid="116" pm="."><plain>At 80% specificity, PocketFEATURE identifies nearly 90% sites correctly. </plain></SENT>
+</text></p><SecTag type="FIG"><fig id="pcbi-1002326-g003" position="float"><object-id pub-id-type="doi">10.1371/journal.pcbi.1002326.g003</object-id><label>Figure 3</label><caption><title><text><SENT sid="117" pm="."><plain>Identification of FAD-binding sites in a large druggable database. </plain></SENT>
+</text></title><p><text><SENT sid="118" pm="."><plain>(A) The overall performance with an AUC value of 0.92 At 95% specificity, PocketFEATURE identified about 65% sites that are known to bind FAD. </plain></SENT>
+<SENT sid="119" pm="."><plain>At 80% specificity, PocketFEATURE identified nearly 90% sites correctly. </plain></SENT>
+<SENT sid="120" pm="."><plain>(B) Microenvironment alignments between two FAD-binding sites. </plain></SENT>
+<SENT sid="121" pm="."><plain>Two sites adapt to two different ligand conformations, an elongated (1nhp) and a bent butterfly conformation (1fdr). </plain></SENT>
+<SENT sid="122" pm="."><plain>The relative geometries arrangements of aligned microenvironments are different. </plain></SENT>
+<SENT sid="123" pm="."><plain>(C) An illustration of the corresponding positioning of aligned microenvironments and FAD molecules. </plain></SENT>
+<SENT sid="124" pm="."><plain>The aligned microenvironments m6L/1nhp-m67L/1fdr (red), m250W/1nhp-m248W/1fdr (orange) and m79I/1nhp-m68V/1fdr (yellow) are near the adenine moiety of FAD molecules in 1nhp and 1fdr, respectively. </plain></SENT>
+<SENT sid="125" pm="."><plain>Near phosphate chemical groups, aligned m132R/1nhp-m77P/1fdr (pink) and m12G/1nhp-m77P/1fdr (green) are observed. </plain></SENT>
+<SENT sid="126" pm="."><plain>Another two sets of microenvironments m159Y/1nhp-m52Y/1fdr (cyan) and m300T/1nhp-m53S/1fdr (wheat) are found close to flavin groups. </plain></SENT>
+</text></p></caption><graphic xlink:href="pcbi.1002326.g003"/></fig></SecTag><p><text><SENT sid="127" pm="."><plain>Of note, FAD binds proteins in two general conformations [24]: the (1) elongated and the (2) bent butterfly conformation (Figure 3B). </plain></SENT>
+<SENT sid="128" pm="."><plain>In the bent conformation (1nhp in Figure 3B), the AMP portion is folded back, placing the adenine and isoalloxazine rings in close proximity, whereas in the elongated conformation (1fdr in Figure 3B) the adenine ring is distant from the isoalloxazine ring. </plain></SENT>
+<SENT sid="129" pm="."><plain>Remarkably, PocketFEATURE can detect bent butterfly FAD sites based on an elongated FAD query structure. </plain></SENT>
+<SENT sid="130" pm="."><plain>Conversely, using a binding site with a bent butterfly FAD as a query structure, PocketFEATURE can detect elongated FAD binding sties (Supplementary Material Figure S1). </plain></SENT>
+</text></p><p><text><SENT sid="131" pm="."><plain>Figure 3B and 3C show the microenvironment alignments detected by PocketFEATURE. </plain></SENT>
+<SENT sid="132" pm="."><plain>(See Method section, A microenvironment is named using the following convention: “m” followed by “residue index” and “residue type”, upon which the microenvironment is centered. </plain></SENT>
+<SENT sid="133" pm="."><plain>PDB identifier or gene name is tagged when necessary.) The aligned microenvironments m6L1nhp-m67L/1fdr (red), m250W/1nhp-m248W/1fdr (orange) and m79I/1nhp-m68V/1fdr (yellow) are near the adenine moiety of FAD in 1nhp and 1fdr, respectively. </plain></SENT>
+<SENT sid="134" pm="."><plain>Aligned microenvironments m132R/1nhp-m77P/1fdr (pink) and m12G/1nhp-m77P/1fdr (green) are adjacent to phosphate chemical groups. </plain></SENT>
+<SENT sid="135" pm="."><plain>Another two sets of microenvironments m159Y/1nhp-m52Y/1fdr (cyan) and m300T/1nhp-m53S/1fdr (wheat) are found near flavin groups. </plain></SENT>
+<SENT sid="136" pm="."><plain>As might be expected, the different conformations of FAD molecules in the structures 1nhp and 1fdr lead to markedly different geometric arrangements of these aligned microenvironments. </plain></SENT>
+<SENT sid="137" pm="."><plain>However, PocketFEATURE identifies these alignments with high significance, demonstrating the robustness of the algorithm. </plain></SENT>
+</text></p></sec><sec id="s2c"><title><text><SENT sid="138" pm="."><plain>Other related benchmarks </plain></SENT>
+</text></title><p><text><SENT sid="139" pm="."><plain>We have performed three independent experiments to test PocketFEATURE's ability to specifically recognize non-adenine ligand binding sites. </plain></SENT>
+<SENT sid="140" pm="."><plain>First, using a typical steroid-binding site (1A28 bound with progesterone) to detect all other steroid-binding sites (total 83 sites) from Dataset-6985 (Supplementary Material Figure S2). </plain></SENT>
+<SENT sid="141" pm="."><plain>The overall AUC is 0.826. </plain></SENT>
+<SENT sid="142" pm="."><plain>Second, we compared PocketFEATURE to a 3D shape descriptor using real spherical harmonic expansion coefficients [25], [26]. </plain></SENT>
+<SENT sid="143" pm="."><plain>Using their published datasets (10 sites for ATP, 10 for NAD, 10 for heme and 10 for steroids), PocketFEATURE successfully clusters the four types of sites and compares favorably with the real spherical harmonic shape descriptor (Supplementary Material Figure S3). </plain></SENT>
+<SENT sid="144" pm="."><plain>Third, we applied PocketFEATURE to predicted off-targets for Torcetrapib from a non-redundant subset of PDB for 1200 human proteins. </plain></SENT>
+<SENT sid="145" pm="."><plain>Supplementary material Table S1 lists top ranked off-targets predictions. </plain></SENT>
+<SENT sid="146" pm="."><plain>Xie et al [7] published a panel of 20 off-targets for CETP inhibitors (specifically Torcetrapib) predicted by SOIPPA. </plain></SENT>
+<SENT sid="147" pm="."><plain>These predictions have been refined and validated by docking methods and critical human curation. </plain></SENT>
+<SENT sid="148" pm="."><plain>Comparing the 20 published off-targets by SOIPPA and the 36 predictions by PocketFEATURE, we find that seven are the same. </plain></SENT>
+<SENT sid="149" pm="."><plain>These three tests show that PocketFEATURE effectively recognizes non-adenine ligand binding sites. </plain></SENT>
+</text></p><p><text><SENT sid="150" pm="."><plain>The Similarity Ensemble Approach (SEA) is a method for calculating chemoinformatics similarities between drug sets [27]. </plain></SENT>
+<SENT sid="151" pm="."><plain>Given two binding sites, we incorporate the similarity scores between experimentally observed ligand molecules calculated by SEA into the PocketFEATURE similarity score between the binding sites. </plain></SENT>
+<SENT sid="152" pm="."><plain>Preliminary results suggest that combining ligand chemoinformatics and target physiochemical properties leads to strong signals for similarity detection (Supplementary Material Figure S4). </plain></SENT>
+</text></p></sec><sec id="s2d"><title><text><SENT sid="153" pm="."><plain>Predicting inhibitor-binding for distantly related kinases </plain></SENT>
+</text></title><p><text><SENT sid="154" pm="."><plain>Having established reasonable sensitivity and specificity of PocketFEATURE, we studied ATP-binding sites in kinases, to find new targets for these inhibitors. </plain></SENT>
+<SENT sid="155" pm="."><plain>We specifically targeted kinase proteins that are distantly related, with little detectable sequence or structural similarity, because most previous work has focused on the binding properties of closely related kinases. </plain></SENT>
+</text></p><p><text><SENT sid="156" pm="."><plain>We calculated the binding site similarity scores of the 6058 pairs sites in distantly related kinases using PocketFEATURE. Figure 4 plots the PDF of the scores for the 6058 pairs. </plain></SENT>
+<SENT sid="157" pm="."><plain>A small p-value suggests an increased likelihood of high binding site similarity for the pair of proteins evaluated. </plain></SENT>
+</text></p><SecTag type="FIG"><fig id="pcbi-1002326-g004" position="float"><object-id pub-id-type="doi">10.1371/journal.pcbi.1002326.g004</object-id><label>Figure 4</label><caption><title><text><SENT sid="158" pm="."><plain>Predicting overlapping of inhibitor-binding profiles between kinases. </plain></SENT>
+</text></title><p><text><SENT sid="159" pm="."><plain>The binding site similarity scores of 6058 pairs of distant kinases were fitted into normal distribution. </plain></SENT>
+<SENT sid="160" pm="."><plain>The more negative the score, the higher level of similarity between two sites is predicted. </plain></SENT>
+<SENT sid="161" pm="."><plain>The blue dotted line is the p-value cutoff of 0.01 for highly ranked predictions (Table 1). </plain></SENT>
+<SENT sid="162" pm="."><plain>Of the 6058 pairs, there are 40 pairs of which experimental data are available to both kinases. </plain></SENT>
+<SENT sid="163" pm="."><plain>Out of the 40 pairs, 11 pairs have experimental results suggesting overlap in inhibitor binding – they are “positive-pairs”. </plain></SENT>
+<SENT sid="164" pm="."><plain>The remaining 29 pairs are “negative-pairs” that do not share ligands. </plain></SENT>
+<SENT sid="165" pm="."><plain>The significance of the separation of positive-pairs and negative-pairs in this ranking, as evaluated by a hyper-geometric distribution has a p-value of 4.5e-18. </plain></SENT>
+</text></p></caption><graphic xlink:href="pcbi.1002326.g004"/></fig></SecTag><p><text><SENT sid="166" pm="."><plain>CHEMBL is a manually curated chemical database of bioactive molecules with drug-like properties [28]. </plain></SENT>
+<SENT sid="167" pm="."><plain>Our local database downloaded from CHEMBL includes binding assays between a total of 3199 protein domains and 541,137 compounds. </plain></SENT>
+<SENT sid="168" pm="."><plain>Similarly, the Ambit panel provides high-throughput kinase selectivity profiling of 317 kinases against 37 known kinase inhibitors [29]. </plain></SENT>
+<SENT sid="169" pm="."><plain>Of the 6058 pairs we evaluated, there are 40 pairs for which experimental data (from CHEMBL or Ambit) are available for both kinases. </plain></SENT>
+<SENT sid="170" pm="."><plain>Of these pairs, 11 had experimental results suggesting high overlap in inhibitor binding—they are “positive-pairs”. </plain></SENT>
+<SENT sid="171" pm="."><plain>When we rank order the 40 pairs based on their scores, nine of the 11 positive-pairs rank first through eighth, and tenth (Figure 4). </plain></SENT>
+<SENT sid="172" pm="."><plain>The binding site similarity scores of negative-pairs range from −1.9 to −3.6—quite separate from the positives. </plain></SENT>
+<SENT sid="173" pm="."><plain>The significance of the separation of positive-pairs and negative-pairs in this ranking, as evaluated by a hyper-geometric distribution has a p-value of 4.5e-18. </plain></SENT>
+</text></p><p><text><SENT sid="174" pm="."><plain>Using a p-value cutoff &lt;0.01 from the PDF (binding site similarity score cutoff of −3.76 in Figure 4), 50 pairs of kinases are predicted to have inhibiting-profile overlapping. </plain></SENT>
+<SENT sid="175" pm="."><plain>Nine pairs have experimental evidence suggesting overlap in inhibitor binding- these are true positives (Table 1). </plain></SENT>
+<SENT sid="176" pm="."><plain>One pair is considered false positive because although the two kinases are tested in CHEMBL, they do not share ligands using our relatively stringent cutoff (Table 2). </plain></SENT>
+<SENT sid="177" pm="."><plain>The other 40 pairs with high apparent similarity are novel predictions (Table 3). </plain></SENT>
+<SENT sid="178" pm="."><plain>Experimental evidence for these kinases pairs is not available in CHEMBL or Ambit. </plain></SENT>
+</text></p><SecTag type="TABLE"><table-wrap id="pcbi-1002326-t001" position="float"><object-id pub-id-type="doi">10.1371/journal.pcbi.1002326.t001</object-id><label>Table 1</label><caption><title><text><SENT sid="179" pm="."><plain>True positives predictions. </plain></SENT>
+</text></title></caption><alternatives><graphic id="pcbi-1002326-t001-1" xlink:href="pcbi.1002326.t001"/></alternatives><table-wrap-foot><fn id="nt101"><label/><p><text><SENT sid="180" pm="."><plain>Using a p-value cutoff of 0.01, 50 pairs of kinases are predicted to share inhibitors. </plain></SENT>
+<SENT sid="181" pm="."><plain>Nine pairs have experimental evidence suggesting overlap in inhibitor binding- these are true positives. </plain></SENT>
+<SENT sid="182" pm="."><plain>The first two columns are EC groups. </plain></SENT>
+<SENT sid="183" pm="."><plain>Kinases in one pair are from different EC groups. </plain></SENT>
+<SENT sid="184" pm="."><plain>The PDB IDs and gene names are listed in column three to row six. </plain></SENT>
+<SENT sid="185" pm="."><plain>The seventh column lists the percentage identity (PID) of structural alignment between two kinases in a pair. </plain></SENT>
+<SENT sid="186" pm="."><plain>The eighth column shows the binding site similarity score of the pair. </plain></SENT>
+<SENT sid="187" pm="."><plain>The more negative the score is, the higher the similarity level between two sites is predicted. </plain></SENT>
+</text></p></fn></table-wrap-foot></table-wrap></SecTag><SecTag type="TABLE"><table-wrap id="pcbi-1002326-t002" position="float"><object-id pub-id-type="doi">10.1371/journal.pcbi.1002326.t002</object-id><label>Table 2</label><caption><title><text><SENT sid="188" pm="."><plain>False positive predictions. </plain></SENT>
+</text></title></caption><alternatives><graphic id="pcbi-1002326-t002-2" xlink:href="pcbi.1002326.t002"/></alternatives><table-wrap-foot><fn id="nt102"><label/><p><text><SENT sid="189" pm="."><plain>One pair is considered false positive because both kinases are linked to at least one set of experimental data from CHEMBL, but they do not share ligands using our stringent standards. </plain></SENT>
+</text></p></fn></table-wrap-foot></table-wrap></SecTag><SecTag type="TABLE"><table-wrap id="pcbi-1002326-t003" position="float"><object-id pub-id-type="doi">10.1371/journal.pcbi.1002326.t003</object-id><label>Table 3</label><caption><title><text><SENT sid="190" pm="."><plain>Novel predictions of high similarity. </plain></SENT>
+</text></title></caption><alternatives><graphic id="pcbi-1002326-t003-3" xlink:href="pcbi.1002326.t003"/></alternatives><table-wrap-foot><fn id="nt103"><label/><p><text><SENT sid="191" pm="."><plain>In the top 50 ranked predictions, there are 40 pairs of novel predictions that experimental evidence for one for both kinases is not available in CHEMBL or Ambit. </plain></SENT>
+</text></p></fn></table-wrap-foot></table-wrap></SecTag></sec></sec></SecTag><SecTag type="DISCUSS"><sec id="s3"><title><text><SENT sid="192" pm="."><plain>Discussion </plain></SENT>
+</text></title><p><text><SENT sid="193" pm="."><plain>We have presented a new algorithm for detecting ligand-binding site similarity, tested it on (1) the recognition of adenine-ribose binding ligands and (2) the recognition of FAD binding sites. </plain></SENT>
+<SENT sid="194" pm="."><plain>We then applied it to the problem of predicting cross binding of ATP analogues inhibitors of kinases. </plain></SENT>
+</text></p><sec id="s3a"><title><text><SENT sid="195" pm="."><plain>Summary of PocketFEATURE method </plain></SENT>
+</text></title><p><text><SENT sid="196" pm="."><plain>Our method works for two reasons. </plain></SENT>
+<SENT sid="197" pm="."><plain>First, we employ a novel microenviroment-based representation and scoring system for comparing pockets that captures the physical and chemical properties in the binding pocket, and second, we do not impose rigid geometric matching criteria on the microenvironments within the pocket. </plain></SENT>
+<SENT sid="198" pm="."><plain>The resulting method accurately recognizes similar microenvironments, and identifies combinations of microenvironments that can interact with fragments within ligand molecules. </plain></SENT>
+</text></p><sec id="s3a1"><title><text><SENT sid="199" pm="."><plain>Representation and similarity measure between individual microenvironments </plain></SENT>
+</text></title><p><text><SENT sid="200" pm="."><plain>Microenvironments are represented using the FEATURE representation that captures physiochemical properties of a local subsite. </plain></SENT>
+<SENT sid="201" pm="."><plain>The raw Tc score measures similarity between two microenvironments. </plain></SENT>
+<SENT sid="202" pm="."><plain>However, it is difficult to compare Tc scores across pairs of microenvironments because the background similarities between different pairs are not the same. </plain></SENT>
+<SENT sid="203" pm="."><plain>Therefore, it is necessary to normalize the Tc scores. </plain></SENT>
+<SENT sid="204" pm="."><plain>We normalize the scores by creating a background distribution for each pair type (See Method). </plain></SENT>
+<SENT sid="205" pm="."><plain>The normalized score S(Tc) is negative, decreases monotonically with increasing Tc, and changing most rapidly for Tc&gt;Tc0. </plain></SENT>
+<SENT sid="206" pm="."><plain>Therefore, our method seeks microenvironment-pairs that have high similarity, given the expected background score distribution. </plain></SENT>
+</text></p><p><text><SENT sid="207" pm="."><plain>We aligned microenvironments from an ATP, FAD and an NAD binding site (Figure 2). </plain></SENT>
+<SENT sid="208" pm="."><plain>Microenvironment similarity score S(Tc) of aligned ones are outliers within the PDF (Figure 2C). </plain></SENT>
+<SENT sid="209" pm="."><plain>The aligned microenvironments constitute functional modules for ligand recognition (Figure 2A). </plain></SENT>
+<SENT sid="210" pm="."><plain>That is, particular microenviroments are associated with the recognition of particular molecular fragments with ligands. </plain></SENT>
+<SENT sid="211" pm="."><plain>A better (more negative) S(Tc) similarity captures this shared recognition role in different binding sites. </plain></SENT>
+</text></p></sec><sec id="s3a2"><title><text><SENT sid="212" pm="."><plain>Geometric flexible matching between microenvironments </plain></SENT>
+</text></title><p><text><SENT sid="213" pm="."><plain>The combined interactions between multiple microenvironments in a target protein and molecular fragments within its ligand molecule drive molecular recognition. </plain></SENT>
+<SENT sid="214" pm="."><plain>Because fragments can adopt different poses within a ligand molecule, the FEATURE based microenvironments in the target protein can adopt different relative geometries, as shown in Figure 3C. </plain></SENT>
+<SENT sid="215" pm="."><plain>Some methods use geometric constraints to control local arrangements of functional modules. </plain></SENT>
+<SENT sid="216" pm="."><plain>PocketFEATURE has relatively weak geometric requirements (only that the matching microenvironments be present within the pocket of interest). </plain></SENT>
+<SENT sid="217" pm="."><plain>As a result, the number of possible alignments between pockets is increased, and PocketFEATURE can recognize site that bind similar ligands in different poses. </plain></SENT>
+</text></p><p><text><SENT sid="218" pm="."><plain>Our results with FAD-binding sites illustrate the value of geometric flexibility; FAD contains highly flexible regions between flavin and adenine. </plain></SENT>
+<SENT sid="219" pm="."><plain>The FAD conformation and orientation varies widely across different protein families. </plain></SENT>
+<SENT sid="220" pm="."><plain>By using PocketFEATURE, microenvironments corresponding to the same fragments within FAD are recognized even though these microenvironments adopt different local geometries according to their ligand poses (Figure 3C). </plain></SENT>
+<SENT sid="221" pm="."><plain>These results demonstrate the value of allowing microenvironments to adopt variable orientations within pockets. </plain></SENT>
+</text></p><p><text><SENT sid="222" pm="."><plain>We have also assessed whether the microenvironment alignments identified by PocketFEATURE correspond to specific recognition of ligand chemical substructures. </plain></SENT>
+<SENT sid="223" pm="."><plain>The average number of microenvironments between two ATP sites is six; while that of ADP is six, that of NAD is ten and that of FAD is twelve. </plain></SENT>
+<SENT sid="224" pm="."><plain>The common aligned microenvironments of high frequencies for these four types of binding sites are: mD, mE, mR, mK, mS and mT, all of which are in close proximity to the common sub-fragments contained within ADP, ATP, FAD and NAD: the adenine, ribose and phosphate. </plain></SENT>
+<SENT sid="225" pm="."><plain>Thus, these microenvironments have specific roles in recognizing particular fragments within the overall molecule. </plain></SENT>
+<SENT sid="226" pm="."><plain>Furthermore, the additional aligned microenvironments observed in FAD and NAD sites are mW and mP, which “recognize” the phosphate, flavin or nicotinamide moieties. </plain></SENT>
+</text></p><p><text><SENT sid="227" pm="."><plain>In summary, PocketFEATURE is more sensitive than other state-of-the-art methods. </plain></SENT>
+<SENT sid="228" pm="."><plain>It is suitable for application on a genome scale. </plain></SENT>
+</text></p><p><text><SENT sid="229" pm="."><plain>PocketFEATURE defines sites based on position of known ligand binding. </plain></SENT>
+<SENT sid="230" pm="."><plain>For apo structures and uncharacterized sites, we can also use published patch-searching algorithms, such as CONCAVITY [30] and PocketPicker [2] to define sites (on-going projects). </plain></SENT>
+</text></p></sec></sec><sec id="s3b"><title><text><SENT sid="231" pm="."><plain>Application of PocketFEATURE to drug discovery </plain></SENT>
+</text></title><p><text><SENT sid="232" pm="."><plain>Current computational studies on comparing kinase inhibitor binding sites often focus on known drug targets Tyrosine kinase (TK family, EC 2.7.10) and Serine/Threonine kinases ISTE family (EC 2.7.11). </plain></SENT>
+<SENT sid="233" pm="."><plain>Potential similarity between divergent kinases has not been systematically explored either computationally or experimentally. </plain></SENT>
+<SENT sid="234" pm="."><plain>For example, of the 6058 pairs of divergent kinases we compared in this work, only 40 pairs have experimental data from CHEMBL and Ambit. </plain></SENT>
+<SENT sid="235" pm="."><plain>The literature is biased towards a few well-validated kinases. </plain></SENT>
+<SENT sid="236" pm="."><plain>Some inhibitors may appear to be more promiscuous simply because they have been profiled more systematically. </plain></SENT>
+</text></p><p><text><SENT sid="237" pm="."><plain>As shown in Figure 4, PocketFEATURE identifies similar ligand binding sites across distantly related kinases. </plain></SENT>
+<SENT sid="238" pm="."><plain>The surprisingly accurate predictions (Table 1) for those that have been tested make the remaining untested predictions (Table 3) with high similarity scores particular interesting. </plain></SENT>
+</text></p><p><text><SENT sid="239" pm="."><plain>Some of our predictions rediscover combinations of divergent kinases for multi-targeted drug design. </plain></SENT>
+<SENT sid="240" pm="."><plain>One highly ranked prediction is the pair SRC (a Tyrosine kinase) and PIK3CG (a lipid kinase in PI3K family), which are evolutionarily distant (PID&lt;10%). </plain></SENT>
+<SENT sid="241" pm="."><plain>Both kinases have been observed to bind to a similar series of inhibitors (PP121 and its derivatives) [23]. </plain></SENT>
+<SENT sid="242" pm="."><plain>The PocketFEATURE binding site similarity score (−4.26) ranks high —20th out of 6058 pairs. </plain></SENT>
+<SENT sid="243" pm="."><plain>PocketFEATURE identifies six key microenvironments (Figure 5). </plain></SENT>
+<SENT sid="244" pm="."><plain>One alignment matches mT338/SRC to mY867/PIK3CG, both of which reside near the typical “gate” of an ATP-binding site. </plain></SENT>
+<SENT sid="245" pm="."><plain>The gatekeeper residue enables interactions between the deep hydrophobic pocket and ligands (adenine in ATP or pyrazolopyrimidine in inhibitor ABJ). </plain></SENT>
+<SENT sid="246" pm="."><plain>In SRC structures, residue T338 is designated as the gatekeeper and in PIK3CG structures, residue I879 [23]. </plain></SENT>
+<SENT sid="247" pm="."><plain>As PocketFEATURE does not seek alignments between polar and hydrophobic residues, it does not find a match between mT338/SRC and mI879/PIK3CG. </plain></SENT>
+<SENT sid="248" pm="."><plain>Instead, in the PIK3CG structure, the proximal mY867/PIK3CG is aligned to mT338/SRC. </plain></SENT>
+<SENT sid="249" pm="."><plain>Thus, PocketFEATURE detects similar binding sites from these two distant kinases. </plain></SENT>
+<SENT sid="250" pm="."><plain>SRC activates the lipid kinases of the PI3K family, a central regulator of cell growth. </plain></SENT>
+<SENT sid="251" pm="."><plain>Molecules that target both SRC and PIK3CG may have potent antitumor activity. </plain></SENT>
+</text></p><SecTag type="FIG"><fig id="pcbi-1002326-g005" position="float"><object-id pub-id-type="doi">10.1371/journal.pcbi.1002326.g005</object-id><label>Figure 5</label><caption><title><text><SENT sid="252" pm="."><plain>An example of validated positive predictions. </plain></SENT>
+</text></title><p><text><SENT sid="253" pm="."><plain>SRC (a Tyrosine kinase) and PIK3CG (a lipid kinase) bind to a same series of inhibitors (PP121 and its derivatives). </plain></SENT>
+<SENT sid="254" pm="."><plain>Four related structures are available in PDB. </plain></SENT>
+<SENT sid="255" pm="."><plain>The first row is structures of SRC bound with ANP (PDB ID: 2src) and a drug-like inhibitor (PDB ID is 3en7 and ligand PDB code is ABJ). </plain></SENT>
+<SENT sid="256" pm="."><plain>The second row is structures of PIK3CG bound with ATP (PDB ID is1e8x) and ABJ (PDB ID is 2v4l). </plain></SENT>
+<SENT sid="257" pm="."><plain>Between binding sites of 2src (SRC/ANP) and 1e8x (PIK3CG/ATP), PocketFEATURE aligned six pairs of microenvironments. </plain></SENT>
+<SENT sid="258" pm="."><plain>At the position near the typical “gate” of an ATP-binding site, PocketFEATURE aligned mT338/SRC to mY867/PIK3CG (light yellow sphere). </plain></SENT>
+<SENT sid="259" pm="."><plain>In SRC structures, the gatekeeper residue T338 enables interactions between the deep hydrophobic pocket and ligands. </plain></SENT>
+<SENT sid="260" pm="."><plain>The original experimental study suggests the residue analogous to the gatekeeper in PIK3CG is I879 (red circle), which is the nearest microenvironment to mY867/PIK3CG. </plain></SENT>
+<SENT sid="261" pm="."><plain>(A). </plain></SENT>
+<SENT sid="262" pm="."><plain>3D illustration of binding sites in SRC and PIK3CG (B). </plain></SENT>
+<SENT sid="263" pm="."><plain>Aligned microenvironments. </plain></SENT>
+</text></p></caption><graphic xlink:href="pcbi.1002326.g005"/></fig></SecTag><p><text><SENT sid="264" pm="."><plain>PIK3CG is also predicted to share ligands with other kinases, including CSNK21A, MAP2K1, GCN2 and ACK2 (Table 1– 3). </plain></SENT>
+<SENT sid="265" pm="."><plain>Of these, CSNK21A encodes a Casein kinase that is involved in Wnt signaling pathway. </plain></SENT>
+<SENT sid="266" pm="."><plain>Casein kinase inhibitors are considered potent anti-cancer drug candidates [31]. </plain></SENT>
+<SENT sid="267" pm="."><plain>It is possible that drugs inhibiting both CSNK21A and PIK3CG may have synergistic anti-tumor activity. </plain></SENT>
+<SENT sid="268" pm="."><plain>ACK2 is a homolog of CSNK21A (PID&gt;90%). </plain></SENT>
+<SENT sid="269" pm="."><plain>The binding site similarity score between PIK3CG and ACK2 ranks highly—18th out of 6058 pairs. </plain></SENT>
+</text></p><p><text><SENT sid="270" pm="."><plain>In addition to its similarity to CSNK21A, the pocket in PIK3CG is very similar to that in MAP2K1. </plain></SENT>
+<SENT sid="271" pm="."><plain>These proteins do not share known ligands using our stringent interpretation of CHEMBL results (see Method). </plain></SENT>
+<SENT sid="272" pm="."><plain>However, this apparent false positive deserves further scrutiny. </plain></SENT>
+<SENT sid="273" pm="."><plain>MAP2K1 encodes an essential kinase in mitogen-activated protein (MAP) kinase signal transduction pathway. </plain></SENT>
+<SENT sid="274" pm="."><plain>Activation of MAP kinase pathway plays important roles in the metastasis of pancreatic cancer. </plain></SENT>
+<SENT sid="275" pm="."><plain>Specific inhibitors have been developed to inhibit oncogenic pathways. </plain></SENT>
+<SENT sid="276" pm="."><plain>However, activation of PI3K pathway in response to MAP2K1 inhibition through a negative feed back loop limits the efficacy [32]. </plain></SENT>
+<SENT sid="277" pm="."><plain>The high similarity between PIK3CG and MAP2K1 by PocketFEATURE suggest the possibility of inhibitors that target both kinases. </plain></SENT>
+</text></p><p><text><SENT sid="278" pm="."><plain>Other highly ranked novel predictions have some implications for side effects and drug repurposing. </plain></SENT>
+<SENT sid="279" pm="."><plain>In Table 3, there are three pairs of mammalian: {Mvk-MAP2K1}, {Mvk-EPHA3} and {1GF1R-OXSR1}. </plain></SENT>
+<SENT sid="280" pm="."><plain>Of these kinases, MAP2K1, OXSR1 and EPHA3 are implicated in cancer. </plain></SENT>
+<SENT sid="281" pm="."><plain>Further evaluation of these pairs may be warranted. </plain></SENT>
+<SENT sid="282" pm="."><plain>Most of other pairs in Table 3 are combinations of one kinase from human (or other mammalian) and one from plant (or bacteria). </plain></SENT>
+<SENT sid="283" pm="."><plain>It is intriguing to consider that inhibitors for plant or bacterial kinases may be useful inhibitors of mammalian proteins. </plain></SENT>
+</text></p></sec></sec></SecTag><SecTag type="METHODS"><sec sec-type="methods" id="s4"><title><text><SENT sid="284" pm="."><plain>Methods </plain></SENT>
+</text></title><sec id="s4a"><title><text><SENT sid="285" pm="."><plain>FEATURE microenvironments </plain></SENT>
+</text></title><p><text><SENT sid="286" pm="."><plain>Given a functional center of a residue, we use the term “microenvironment” to refer to the local, spherical region in the protein structure that may encompass residues discontinuous in sequence and structure. </plain></SENT>
+<SENT sid="287" pm="."><plain>Specifically, we use the FEATURE system to calculate a set of 80 physicochemical properties (Table S2) [14] collected over six concentric spherical shells (total 480 properties = 80 properties×6 shells) centered on the predefined functional center (Table S3) [33]. </plain></SENT>
+<SENT sid="288" pm="."><plain>The total radius of the microenvironment is 7.5 Angstroms. </plain></SENT>
+<SENT sid="289" pm="."><plain>A microenvironment is named using the following convention: “m” followed by “residue index” and “residue type”, upon which the microenvironment is centered. </plain></SENT>
+<SENT sid="290" pm="."><plain>PDB identifier or gene name is tagged when necessary. </plain></SENT>
+<SENT sid="291" pm="."><plain>For example m6L/1nhp represents the microenvironment centered on the functional center of the sixth residue in 1nhp, which is leucine (L). </plain></SENT>
+<SENT sid="292" pm="."><plain>A complete description of FEATURE can be found in the original publication. </plain></SENT>
+</text></p></sec><sec id="s4b"><title><text><SENT sid="293" pm="."><plain>Similarity measure between two FEATURE microenvironments </plain></SENT>
+</text></title><p><text><SENT sid="294" pm="."><plain>Given a pair of FEATURE microenvironments (A and B) derived from two different sites, we calculate an adjusted Tanimoto coefficient based on the presence/absence of similar properties. </plain></SENT>
+<SENT sid="295" pm="."><plain>We compute a single standard deviation (STD) for each of the 480 properties across a random set of FEATURE microenvironments (see section “Background calculation). </plain></SENT>
+<SENT sid="296" pm="."><plain>Two microenvironments have a “similar property” if they differ by less than one STD for the given property. </plain></SENT>
+<SENT sid="297" pm="."><plain>Given A and B, c is the number of “similar properties”; a and b are the numbers of non-zero properties in A and B, respectively; the denominator is the total number of unique properties that are non-zero in A or B or both (a+b−c); then the Tanimoto similarity is as follows: . </plain></SENT>
+</text></p></sec><sec id="s4c"><title><text><SENT sid="298" pm="."><plain>Background calculation </plain></SENT>
+</text></title><p><text><SENT sid="299" pm="."><plain>We make observations of the background distributions of Tc scores between microenvironments from different sites. </plain></SENT>
+<SENT sid="300" pm="."><plain>We compile a dataset of 1160 sites from a non-redundant set of 3D structures in PDB using these filters: (1) structures were solved using X-ray diffraction at resolutions higher than 2.0 Angstrom; (2) no two structures have greater than 40% sequence identity; (3) specifically bound small molecule ligands have more than the heavy atoms. </plain></SENT>
+<SENT sid="301" pm="."><plain>The binding residues are defined as those having any atom within 6 Angstroms of the ligand molecules, resulting in a total of 22008 microenvironments. </plain></SENT>
+<SENT sid="302" pm="."><plain>There are 242 possible types of pairs between 22 types of microenvironments centered on 20 residues types (two centers for residue W and Y), but not all of these are likely to be matched. </plain></SENT>
+<SENT sid="303" pm="."><plain>For computational efficiency, we group residues by physical properties in order to avoid comparisons that are unlikely to yield high similarity scores. </plain></SENT>
+<SENT sid="304" pm="."><plain>The comparisons are limited to pairs of microenvironments that fall within the same groups: positively charged (R H K), negatively charged (D E), polar (S T Q N W1 Y1), non-polar (A C G I L M P V) and aromatic (W2 Y2 F). </plain></SENT>
+<SENT sid="305" pm="."><plain>This produces 72 microenvironment-pairs (out of the 200 possible) that we check for high similarity scores. </plain></SENT>
+<SENT sid="306" pm="."><plain>Given each microenvironment-pair, we derive Tc scores from the above dataset and fit these score into normal distribution. </plain></SENT>
+</text></p></sec><sec id="s4d"><title><text><SENT sid="307" pm="."><plain>Comparing two binding sites </plain></SENT>
+</text></title><p><text><SENT sid="308" pm="."><plain>Given the FEATURE microenvironments from two binding sites, we exhaustively calculate the raw Tc scores of all permissible microenvironment-pairs. </plain></SENT>
+<SENT sid="309" pm="."><plain>We then normalize the Tc scores using the background frequency [34]: </plain></SENT>
+</text></p><p><text><SENT sid="310" pm="."><plain>Tc0 is the value at which S(Tc) is zero. </plain></SENT>
+</text></p><p><text><SENT sid="311" pm="."><plain>In practice, Tc0 is the Tc score at the mode on the fitted cumulative distribution function (CDF) of a given type of microenvironment-pair (See Background calculation). </plain></SENT>
+<SENT sid="312" pm="."><plain>The normalized value, S(Tc), measures the similarity between two microenvironments and is thus the microenvironment similarity score. </plain></SENT>
+</text></p><p><text><SENT sid="313" pm="."><plain>We search for the mutual best-scoring microenvironment-pairs between two binding sites and assign alignment to such pairs using an cutoff of S(Tc) less than −0.3. </plain></SENT>
+<SENT sid="314" pm="."><plain>For example, between site A (microenvironments A1, A2, A3, A4 and A5) and site B (microenvironments B1, B2, B3, B4 and B5), we align A1 to B1 only when (1) S(Tc) between A1 and B1 is smaller than those between A1 and B1, B2, B4 B5, also smaller than those between B1 and A2, A3, A4, A5; (2) S(Tc) between A1 and B1 is smaller than −0.3. </plain></SENT>
+<SENT sid="315" pm="."><plain>The sum of all aligned microenvironment-pairs is the overall similarity score between two binding sites, and is termed the binding site similarity score. </plain></SENT>
+<SENT sid="316" pm="."><plain>We can vary the cutoff for S(Tc) to change the precision and resolution of the comparison. </plain></SENT>
+</text></p></sec><sec id="s4e"><title><text><SENT sid="317" pm="."><plain>Benchmark datasets </plain></SENT>
+</text></title><p><text><SENT sid="318" pm="."><plain>We perform two sets of benchmark. </plain></SENT>
+<SENT sid="319" pm="."><plain>The first benchmark identifies pairs of proteins that bind adenine-containing ligands, using two datasets [6] provided by Bourne group from USCD. </plain></SENT>
+<SENT sid="320" pm="."><plain>Dataset I consists of 247 sites from non-redundant protein structures known to bind an adenine-containing ligand (ATP, ADP, NAD, FAD, SAH and SAM); Dataset II consists of 101 cavities from non-redundant protein structures believed not to bind an adenine-containing moiety. </plain></SENT>
+<SENT sid="321" pm="."><plain>From Dataset I, we have 30381 pairs of sites that both bind adenine-containing ligands. </plain></SENT>
+<SENT sid="322" pm="."><plain>Between Dataset I and II, we have 24947 control pairs of sites in which one site binds adenine-containing ligands and the other does not. </plain></SENT>
+</text></p><p><text><SENT sid="323" pm="."><plain>The second benchmark recognizes FAD binding sites from a large-scale dataset. </plain></SENT>
+<SENT sid="324" pm="."><plain>A dataset consisting of 6958 druggable binding sites (Dataset-6958) was derived from scPDB entries [35] by filtering out PDB entries where atom coordinates of binding residues were incomplete. </plain></SENT>
+<SENT sid="325" pm="."><plain>The binding sites were defined by including all the protein residues with at least one atom within 6 Angstrom of any ligand atom. </plain></SENT>
+<SENT sid="326" pm="."><plain>Dataset-6958 includes a total of 249 FAD-binding proteins. </plain></SENT>
+</text></p></sec><sec id="s4f"><title><text><SENT sid="327" pm="."><plain>Predicting inhibitor-binding profiles of kinases </plain></SENT>
+</text></title><p><text><SENT sid="328" pm="."><plain>We derive a subset of 984 binding sites from Dataset-6958, including proteins classified in eight different EC families: EC 2.7.1, EC 2.7.2, EC 2.7.3, EC 2.7.4, EC 2.7.10, EC 2.7.11, EC 2.7.12 and EC 2.7.13. </plain></SENT>
+<SENT sid="329" pm="."><plain>A total of 203 sites bind to ATP, ANP or ADP. </plain></SENT>
+<SENT sid="330" pm="."><plain>The other 781 structures bind to 633 other ligands. </plain></SENT>
+</text></p><p><text><SENT sid="331" pm="."><plain>Using the 203 sites involved in binding ATP, ANP or ADP, we generate pairs of binding sites from functionally and structurally distant kinases by applying two rules: (1) two kinases are from different EC sub-subgroups; (2) the identity of structural alignment by MAMMOTH [36] between the two kinases is not higher than 30%. </plain></SENT>
+<SENT sid="332" pm="."><plain>This results in 6058 pairs of sites that bind to ATP, ANP or ADP. </plain></SENT>
+</text></p><p><text><SENT sid="333" pm="."><plain>We perform validation using experimental data from CHEMBL [28] and Ambit panel [29]. </plain></SENT>
+<SENT sid="334" pm="."><plain>Ambit panel contains binding assays between 37 inhibitors (21 tyrosine kinase inhibitors, 15 serine-threonine kinase inhibitors, and 1 lipid kinase inhibitor), which are classified according to the targets for which they were originally developed, and 317 human kinases (287 different human protein kinases, three lipid kinases and 27 disease-relevant mutant variants). </plain></SENT>
+<SENT sid="335" pm="."><plain>Staurosporine is a non-selective kinase inhibitor and is therefore removed from the validation dataset. </plain></SENT>
+</text></p><p><text><SENT sid="336" pm="."><plain>We use two standards to identify candidate inhibitors from Ambit panel: a stringent cutoff of Kd&lt;1 uM and a ratio of off-target to primary target affinities (Kd off-target/Kd primary target) &lt;100. </plain></SENT>
+<SENT sid="337" pm="."><plain>Our local database downloaded from CHEMBL includes binding assays between 3199 protein domains and 541,137 compounds. </plain></SENT>
+<SENT sid="338" pm="."><plain>It is a collection of assays from a variety of experimental studies and therefore the standards applied to Ambit Panel are not applicable to CHEMBL data. </plain></SENT>
+<SENT sid="339" pm="."><plain>We first filter out data with confidence level less than seven. </plain></SENT>
+<SENT sid="340" pm="."><plain>We then use either (1) a cutoff of IC50 less than 1 uM or (2) a cutoff of Kd less than 1 uM or (3) inhibition level higher than 90% at 1 uM as an indication of inhibition. </plain></SENT>
+</text></p><p><text><SENT sid="341" pm="."><plain>From the 6058 pairs of divergent kinases, we first search for pairs for which experimental data, from CHEMBL or Ambit, are available for both kinases. </plain></SENT>
+<SENT sid="342" pm="."><plain>Given such a pair, if at least one compound/inhibitor satisfies the standards above for both kinases, the pair shares ligand binding and is a “positive-pair”; otherwise this pair is a “negative-pair”. </plain></SENT>
+</text></p></sec></sec></SecTag><SecTag type="SUPPL"><sec sec-type="supplementary-material" id="s5"><title><text><SENT sid="343" pm="."><plain>Supporting Information </plain></SENT>
+</text></title><supplementary-material content-type="local-data" id="pcbi.1002326.s001"><label>Figure S1</label><caption><p><text><SENT sid="344" pm="."><plain>Performance of PocketFEATURE for predicting FAD-binding sites using different queries. </plain></SENT>
+</text></p><p><text><SENT sid="345" pm="."><plain>(PDF) </plain></SENT>
+</text></p></caption><media xlink:href="pcbi.1002326.s001.pdf"><caption><p><text><SENT sid="346" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="pcbi.1002326.s002"><label>Figure S2</label><caption><p><text><SENT sid="347" pm="."><plain>Performance of PocketFEATURE for predicting steroids binding sites. </plain></SENT>
+</text></p><p><text><SENT sid="348" pm="."><plain>(PDF) </plain></SENT>
+</text></p></caption><media xlink:href="pcbi.1002326.s002.pdf"><caption><p><text><SENT sid="349" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="pcbi.1002326.s003"><label>Figure S3</label><caption><p><text><SENT sid="350" pm="."><plain>Hierarchical clustering of 40 sites by binding site similarity scores calculated by PocketFEATURE. </plain></SENT>
+</text></p><p><text><SENT sid="351" pm="."><plain>(PDF) </plain></SENT>
+</text></p></caption><media xlink:href="pcbi.1002326.s003.pdf"><caption><p><text><SENT sid="352" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="pcbi.1002326.s004"><label>Figure S4</label><caption><p><text><SENT sid="353" pm="."><plain>Incorporating ligand chemoinformatics similarities in PocketFEATURE leads to prediction of higher confidence. </plain></SENT>
+</text></p><p><text><SENT sid="354" pm="."><plain>(PDF) </plain></SENT>
+</text></p></caption><media xlink:href="pcbi.1002326.s004.pdf"><caption><p><text><SENT sid="355" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="pcbi.1002326.s005"><label>Table S1</label><caption><p><text><SENT sid="356" pm="."><plain>Highly ranked off-target predictions. </plain></SENT>
+</text></p><p><text><SENT sid="357" pm="."><plain>(PDF) </plain></SENT>
+</text></p></caption><media xlink:href="pcbi.1002326.s005.pdf"><caption><p><text><SENT sid="358" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="pcbi.1002326.s006"><label>Table S2</label><caption><p><text><SENT sid="359" pm="."><plain>FEATURE property list. </plain></SENT>
+</text></p><p><text><SENT sid="360" pm="."><plain>(PDF) </plain></SENT>
+</text></p></caption><media xlink:href="pcbi.1002326.s006.pdf"><caption><p><text><SENT sid="361" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="pcbi.1002326.s007"><label>Table S3</label><caption><p><text><SENT sid="362" pm="."><plain>Functional centers of 22 types microenvironments. </plain></SENT>
+</text></p><p><text><SENT sid="363" pm="."><plain>(PDF) </plain></SENT>
+</text></p></caption><media xlink:href="pcbi.1002326.s007.pdf"><caption><p><text><SENT sid="364" pm="."><plain>Click here for additional data file. </plain></SENT>
+</text></p></caption></media></supplementary-material></sec></SecTag></body><back><SecTag type="ACK_FUND"><ack><p><text4fund><text><SENT sid="365" pm="."><plain>We thank the Bourne lab for kindly providing benchmark dataset. </plain></SENT>
+<SENT sid="366" pm="."><plain>We thank Shoichet lab for providing data using SEA. </plain></SENT>
+<SENT sid="367" pm="."><plain>We thank D. </plain></SENT>
+<SENT sid="368" pm="."><plain>Lupyan and A.R. </plain></SENT>
+<SENT sid="369" pm="."><plain>Ortiz from Mount Sinai School of Medicine for providing the MAMMOTH program. </plain></SENT>
+<SENT sid="370" pm="."><plain>We also thank E. </plain></SENT>
+<SENT sid="371" pm="."><plain>Capriotti for helpful discussion and N.P. </plain></SENT>
+<SENT sid="372" pm="."><plain>Tatonetti for organizing a local CHEMBL database. </plain></SENT>
+</text></text4fund></p></ack></SecTag><fn-group><fn fn-type="COI-statement"><p><text><SENT sid="373" pm="."><plain>The authors have declared that no competing interests exist. </plain></SENT>
+</text></p></fn><SecTag type="ACK_FUND"><fn fn-type="financial-disclosure"><p><text4fund><text><SENT sid="374" pm="."><plain>This work was supported by NIH LM05652 and GM72970. </plain></SENT>
+<SENT sid="375" pm="."><plain>The funders had no role in study design, data collection and analysis, decision to publish, or preparation of the manuscript. </plain></SENT>
+</text></text4fund></p></fn></SecTag></fn-group><SecTag type="REF"><ref-list><title>References</title><ref id="pcbi.1002326-Brakoulias1"><text><SENT sid="376" pm="."><plain>1 BrakouliasAJacksonRM 2004 Towards a structural classification of phosphate binding sites in protein-nucleotide complexes: an automated all-against-all structural comparison using geometric matching. Proteins 56 250 260 15211509 </plain></SENT>
+</text></ref><ref id="pcbi.1002326-Weisel1"><text><SENT sid="377" pm="."><plain>2 WeiselMProschakESchneiderG 2007 PocketPicker: analysis of ligand binding-sites with shape descriptors. Chem Cent J 1 7 17880740 </plain></SENT>
+</text></ref><ref id="pcbi.1002326-Weill1"><text><SENT sid="378" pm="."><plain>3 WeillNRognanD 2010 Alignment-free ultra-high-throughput comparison of druggable protein-ligand binding sites. J Chem Inf Model 50 123 135 20058856 </plain></SENT>
+</text></ref><ref id="pcbi.1002326-Schalon1"><text><SENT sid="379" pm="."><plain>4 SchalonCSurgandJSKellenbergerERognanD 2008 A simple and fuzzy method to align and compare druggable ligand-binding sites. Proteins 71 1755 1778 18175308 </plain></SENT>
+</text></ref><ref id="pcbi.1002326-KellenbergerE1"><text><SENT sid="380" pm="."><plain>5 Kellenberger ESCRognanD 2008 How to measure the similarity between protein-ligand binding sites. Curr Comput-Aided 4 209  </plain></SENT>
+</text></ref><ref id="pcbi.1002326-Xie1"><text><SENT sid="381" pm="."><plain>6 XieLBournePE 2008 Detecting evolutionary relationships across existing fold space, using sequence order-independent profile-profile alignments. Proc Natl Acad Sci U S A 105 5441 5446 18385384 </plain></SENT>
+</text></ref><ref id="pcbi.1002326-Xie2"><text><SENT sid="382" pm="."><plain>7 XieLLiJXieLBournePE 2009 Drug discovery using chemical systems biology: identification of the protein-ligand binding network to explain the side effects of CETP inhibitors. PLoS Comput Biol 5 e1000387 19436720 </plain></SENT>
+</text></ref><ref id="pcbi.1002326-ShulmanPeleg1"><text><SENT sid="383" pm="."><plain>8 Shulman-PelegANussinovRWolfsonHJ 2004 Recognition of functional sites in protein structures. J Mol Biol 339 607 633 15147845 </plain></SENT>
+</text></ref><ref id="pcbi.1002326-Kuhn1"><text><SENT sid="384" pm="."><plain>9 KuhnDWeskampNHullermeierEKlebeG 2007 Functional classification of protein kinase binding sites using Cavbase. ChemMedChem 2 1432 1447 17694525 </plain></SENT>
+</text></ref><ref id="pcbi.1002326-Kinoshita1"><text><SENT sid="385" pm="."><plain>10 KinoshitaKFuruiJNakamuraH 2002 Identification of protein functions from a molecular surface database, eF-site. J Struct Funct Genomics 2 9 22 12836670 </plain></SENT>
+</text></ref><ref id="pcbi.1002326-Teague1"><text><SENT sid="386" pm="."><plain>11 TeagueSJ 2003 Implications of protein flexibility for drug discovery. Nat Rev Drug Discov 2 527 541 12838268 </plain></SENT>
+</text></ref><ref id="pcbi.1002326-Kahraman1"><text><SENT sid="387" pm="."><plain>12 KahramanAMorrisRJLaskowskiRAThorntonJM 2007 Shape variation in protein binding pockets and their ligands. J Mol Biol 368 283 301 17337005 </plain></SENT>
+</text></ref><ref id="pcbi.1002326-Bagley1"><text><SENT sid="388" pm="."><plain>13 BagleySCAltmanRB 1996 Conserved features in the active site of nonhomologous serine proteases. Fold Des 1 371 379 9080183 </plain></SENT>
+</text></ref><ref id="pcbi.1002326-Wei1"><text><SENT sid="389" pm="."><plain>14 WeiLAltmanRBChangJT 1997 Using the radial distributions of physical features to compare amino acid environments and align amino acid sequences. Pac Symp Biocomput 465 476 9390315 </plain></SENT>
+</text></ref><ref id="pcbi.1002326-Banatao1"><text><SENT sid="390" pm="."><plain>15 BanataoDRAltmanRBKleinTE 2003 Microenvironment analysis and identification of magnesium binding sites in RNA. Nucleic Acids Res 31 4450 4460 12888505 </plain></SENT>
+</text></ref><ref id="pcbi.1002326-Tang1"><text><SENT sid="391" pm="."><plain>16 TangGWAltmanRB 2011 Remote thioredoxin recognition using evolutionary conservation and structural dynamics. Structure 19 461 470 21481770 </plain></SENT>
+</text></ref><ref id="pcbi.1002326-Wu1"><text><SENT sid="392" pm="."><plain>17 WuSLiangMPAltmanRB 2008 The SeqFEATURE library of 3D functional site models: comparison to existing methods and applications to protein function annotation. Genome Biol 9 R8 18197987 </plain></SENT>
+</text></ref><ref id="pcbi.1002326-Liu1"><text><SENT sid="393" pm="."><plain>18 LiuTAltmanRB 2009 Prediction of calcium-binding sites by combining loop-modeling with machine learning. BMC Struct Biol 9 72 20003365 </plain></SENT>
+</text></ref><ref id="pcbi.1002326-Benson1"><text><SENT sid="394" pm="."><plain>19 BensonJDChenYNCornell-KennonSADorschMKimS 2006 Validating cancer drug targets. Nature 441 451 456 16724057 </plain></SENT>
+</text></ref><ref id="pcbi.1002326-Sheridan1"><text><SENT sid="395" pm="."><plain>20 SheridanRPNamKMaiorovVNMcMastersDRCornellWD 2009 QSAR models for predicting the similarity in binding profiles for pairs of protein kinases and the variation of models between experimental data sets. J Chem Inf Model 49 1974 1985 19639957 </plain></SENT>
+</text></ref><ref id="pcbi.1002326-Morphy1"><text><SENT sid="396" pm="."><plain>21 MorphyR 2010 Selectively nonselective kinase inhibition: striking the right balance. J Med Chem 53 1413 1437 20166671 </plain></SENT>
+</text></ref><ref id="pcbi.1002326-Ma1"><text><SENT sid="397" pm="."><plain>22 MaXHShiZTanCJiangYGoML 2010 In-silico approaches to multi-target drug discovery: computer aided multi-target drug design, multi-target virtual screening. Pharm Res 27 739 749 20221898 </plain></SENT>
+</text></ref><ref id="pcbi.1002326-Apsel1"><text><SENT sid="398" pm="."><plain>23 ApselBBlairJAGonzalezBNazifTMFeldmanME 2008 Targeted polypharmacology: discovery of dual inhibitors of tyrosine and phosphoinositide kinases. Nat Chem Biol 4 691 699 18849971 </plain></SENT>
+</text></ref><ref id="pcbi.1002326-Dym1"><text><SENT sid="399" pm="."><plain>24 DymOEisenbergD 2001 Sequence-structure analysis of FAD-containing proteins. Protein Sci 10 1712 1728 11514662 </plain></SENT>
+</text></ref><ref id="pcbi.1002326-Morris1"><text><SENT sid="400" pm="."><plain>25 MorrisRJNajmanovichRJKahramanAThorntonJM 2005 Real spherical harmonic expansion coefficients as 3D shape descriptors for protein binding pocket and ligand comparisons. Bioinformatics 21 2347 2355 15728116 </plain></SENT>
+</text></ref><ref id="pcbi.1002326-Najmanovich1"><text><SENT sid="401" pm="."><plain>26 NajmanovichRKurbatovaNThorntonJ 2008 Detection of 3D atomic similarities and their use in the discrimination of small molecule protein-binding sites. Bioinformatics 24 i105 111  </plain></SENT>
+</text></ref><ref id="pcbi.1002326-Hert1"><text><SENT sid="402" pm="."><plain>27 HertJKeiserMJIrwinJJOpreaTIShoichetBK 2008 Quantifying the relationships among drug classes. J Chem Inf Model 48 755 765 18335977 </plain></SENT>
+</text></ref><ref id="pcbi.1002326-Overington1"><text><SENT sid="403" pm="."><plain>28 OveringtonJ 2009 ChEMBL. </plain></SENT>
+<SENT sid="404" pm="."><plain>An interview with John Overington, team leader, chemogenomics at the European Bioinformatics Institute Outstation of the European Molecular Biology Laboratory (EMBL-EBI). </plain></SENT>
+<SENT sid="405" pm="."><plain>Interview by Wendy A. </plain></SENT>
+<SENT sid="406" pm="."><plain>Warr. J Comput Aided Mol Des 23 195 198 19194660 </plain></SENT>
+</text></ref><ref id="pcbi.1002326-Karaman1"><text><SENT sid="407" pm="."><plain>29 KaramanMWHerrgardSTreiberDKGallantPAtteridgeCE 2008 A quantitative analysis of kinase inhibitor selectivity. Nat Biotechnol 26 127 132 18183025 </plain></SENT>
+</text></ref><ref id="pcbi.1002326-Capra1"><text><SENT sid="408" pm="."><plain>30 CapraJALaskowskiRAThorntonJMSinghMFunkhouserTA 2009 Predicting protein ligand binding sites by combining evolutionary sequence conservation and 3D structure. PLoS Comput Biol 5 e1000585 19997483 </plain></SENT>
+</text></ref><ref id="pcbi.1002326-Yang1"><text><SENT sid="409" pm="."><plain>31 YangWSStockwellBR 2008 Inhibition of casein kinase 1-epsilon induces cancer-cell-selective, PERIOD2-dependent growth arrest. Genome Biol 9 R92 18518968 </plain></SENT>
+</text></ref><ref id="pcbi.1002326-Mirzoeva1"><text><SENT sid="410" pm="."><plain>32 MirzoevaOKDasDHeiserLMBhattacharyaSSiwakD 2009 Basal subtype and MAPK/ERK kinase (MEK)-phosphoinositide 3-kinase feedback signaling determine susceptibility of breast cancer cells to MEK inhibition. Cancer Res 69 565 572 19147570 </plain></SENT>
+</text></ref><ref id="pcbi.1002326-Yoon1"><text><SENT sid="411" pm="."><plain>33 YoonSEbertJCChungEYDe MicheliGAltmanRB 2007 Clustering protein environments for function prediction: finding PROSITE motifs in 3D. BMC Bioinformatics 8 Suppl 4 S10  </plain></SENT>
+</text></ref><ref id="pcbi.1002326-Subbiah1"><text><SENT sid="412" pm="."><plain>34 SubbiahSLaurentsDVLevittM 1993 Structural similarity of DNA-binding domains of bacteriophage repressors and the globin core. Curr Biol 3 141 148 15335781 </plain></SENT>
+</text></ref><ref id="pcbi.1002326-Kellenberger1"><text><SENT sid="413" pm="."><plain>35 KellenbergerEMullerPSchalonCBretGFoataN 2006 sc-PDB: an annotated database of druggable binding sites from the Protein Data Bank. J Chem Inf Model 46 717 727 16563002 </plain></SENT>
+</text></ref><ref id="pcbi.1002326-Ortiz1"><text><SENT sid="414" pm="."><plain>36 OrtizARStraussCEOlmeaO 2002 MAMMOTH (matching molecular models obtained from theory): an automated method for model comparison. Protein Sci 11 2606 2621 12381844 </plain></SENT>
+</text></ref><ref id="pcbi.1002326-Lill1"><text><SENT sid="415" pm="."><plain>37 LillMADanielsonML 2011 Computer-aided drug design platform using PyMOL. J Comput Aided Mol Des 25 13 19 21053052 </plain></SENT>
+</text></ref></ref-list></SecTag></back></article>

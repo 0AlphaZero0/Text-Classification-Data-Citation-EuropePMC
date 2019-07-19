@@ -1,0 +1,360 @@
+
+<article xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML" article-type="research-article"><?properties open_access?><?DTDIdentifier.IdentifierValue -//NLM//DTD Journal Publishing DTD v2.3 20031101//EN?><?DTDIdentifier.IdentifierType public?><?SourceDTD.DTDName journalpublishing.dtd?><?SourceDTD.Version 2.3?><?ConverterInfo.XSLTName jp2nlmx2.xsl?><?ConverterInfo.Version 1?><front><journal-meta><journal-id journal-id-type="nlm-ta">PLoS One</journal-id><journal-id journal-id-type="iso-abbrev">PLoS ONE</journal-id><journal-id journal-id-type="publisher-id">plos</journal-id><journal-id journal-id-type="pmc">plosone</journal-id><journal-title-group><journal-title>PLoS ONE</journal-title></journal-title-group><issn pub-type="epub">1932-6203</issn><publisher><publisher-name>Public Library of Science</publisher-name><publisher-loc>San Francisco, USA</publisher-loc></publisher></journal-meta><article-meta><article-id pub-id-type="pmcid">3229492</article-id><article-id pub-id-type="pmid">22163274</article-id><article-id pub-id-type="publisher-id">PONE-D-11-16866</article-id><article-id pub-id-type="doi">10.1371/journal.pone.0027872</article-id><article-categories><subj-group subj-group-type="heading"><subject>Research Article</subject></subj-group><subj-group subj-group-type="Discipline-v2"><subject>Biology</subject><subj-group><subject>Biochemistry</subject><subj-group><subject>Proteins</subject><subj-group><subject>Protein Structure</subject></subj-group></subj-group></subj-group><subj-group><subject>Biophysics</subject><subj-group><subject>Protein Folding</subject></subj-group></subj-group><subj-group><subject>Computational Biology</subject><subj-group><subject>Genomics</subject><subj-group><subject>Genome Analysis Tools</subject></subj-group></subj-group><subj-group><subject>Macromolecular Structure Analysis</subject><subj-group><subject>Protein Structure</subject></subj-group></subj-group><subj-group><subject>Sequence Analysis</subject></subj-group></subj-group><subj-group><subject>Proteomics</subject><subj-group><subject>Sequence Analysis</subject></subj-group></subj-group></subj-group></article-categories><title-group><article-title><SecTag type="TITLE"><text><SENT sid="0" pm="."><plain>Improving the Alignment Quality of Consistency Based Aligners with an Evaluation Function Using Synonymous Protein Words </plain></SENT>
+</text></SecTag></article-title><alt-title alt-title-type="running-head">Improving the Alignment Quality</alt-title></title-group><contrib-group><contrib contrib-type="author"><name><surname>Lin</surname><given-names>Hsin-Nan</given-names></name><xref ref-type="aff" rid="aff1">
+<sup>1</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Notredame</surname><given-names>Cédric</given-names></name><xref ref-type="aff" rid="aff2">
+<sup>2</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Chang</surname><given-names>Jia-Ming</given-names></name><xref ref-type="aff" rid="aff2">
+<sup>2</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Sung</surname><given-names>Ting-Yi</given-names></name><xref ref-type="aff" rid="aff1">
+<sup>1</sup>
+</xref><xref ref-type="corresp" rid="cor1">
+<sup>*</sup>
+</xref></contrib><contrib contrib-type="author"><name><surname>Hsu</surname><given-names>Wen-Lian</given-names></name><xref ref-type="aff" rid="aff1">
+<sup>1</sup>
+</xref><xref ref-type="corresp" rid="cor1">
+<sup>*</sup>
+</xref></contrib></contrib-group><aff id="aff1">
+<label>1</label>
+<addr-line>Bioinformatics Lab, Institute of Information Science, Academia Sinica, Taipei, Taiwan</addr-line>
+</aff><aff id="aff2">
+<label>2</label>
+<addr-line>Centre for Genomic Regulation (CRG), UPF, Barcelona, Spain</addr-line>
+</aff><contrib-group><contrib contrib-type="editor"><name><surname>Permyakov</surname><given-names>Eugene A.</given-names></name><role>Editor</role><xref ref-type="aff" rid="edit1"/></contrib></contrib-group><aff id="edit1">Russian Academy of Sciences, Institute for Biological Instrumentation, Russian Federation</aff><author-notes><corresp id="cor1">* E-mail: <email>tsung@iis.sinica.edu.tw</email> (TYS); <email>hsu@iis.sinica.edu.tw</email> (WLH)</corresp><fn fn-type="con"><p><text><SENT sid="1" pm="."><plain>Conceived and designed the experiments: HNL CN. </plain></SENT>
+<SENT sid="2" pm="."><plain>Performed the experiments: HNL. </plain></SENT>
+<SENT sid="3" pm="."><plain>Analyzed the data: HNL CN JMC. </plain></SENT>
+<SENT sid="4" pm="."><plain>Contributed reagents/materials/analysis tools: CN JMC. </plain></SENT>
+<SENT sid="5" pm="."><plain>Wrote the paper: HNL CN TYS WLH. </plain></SENT>
+</text></p></fn></author-notes><pub-date pub-type="collection"><year>2011</year></pub-date><pub-date pub-type="epub"><day>2</day><month>12</month><year>2011</year></pub-date><pub-date pub-type="ecorrected"><day>07
+</day><month>12</month><year>2011</year></pub-date><volume>6</volume><issue>12</issue><elocation-id>e27872</elocation-id><history><date date-type="received"><day>30</day><month>8</month><year>2011</year></date><date date-type="accepted"><day>27</day><month>10</month><year>2011</year></date></history><permissions><copyright-statement>Lin et al.</copyright-statement><copyright-year>2011</copyright-year><license xlink:href="http://creativecommons.org/licenses/by/4.0/"><license-p>This is an open-access article distributed under the terms of the Creative Commons Attribution License, which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are properly credited.</license-p></license></permissions><abstract><p><SecTag type="ABS"><text><SENT sid="6" pm="."><plain>Most sequence alignment tools can successfully align protein sequences with higher levels of sequence identity. </plain></SENT>
+<SENT sid="7" pm="."><plain>The accuracy of corresponding structure alignment, however, decreases rapidly when considering distantly related sequences (&lt;20% identity). </plain></SENT>
+<SENT sid="8" pm="."><plain>In this range of identity, alignments optimized so as to maximize sequence similarity are often inaccurate from a structural point of view. </plain></SENT>
+<SENT sid="9" pm="."><plain>Over the last two decades, most multiple protein aligners have been optimized for their capacity to reproduce structure-based alignments while using sequence information. Methods currently available differ essentially in the similarity measurement between aligned residues using substitution matrices, Fourier transform, sophisticated profile-profile functions, or consistency-based approaches, more recently. </plain></SENT>
+</text></SecTag></p><p><SecTag type="ABS"><text><SENT sid="10" pm="."><plain>In this paper, we present a flexible similarity measure for residue pairs to improve the quality of protein sequence alignment. </plain></SENT>
+<SENT sid="11" pm="."><plain>Our approach, called SymAlign, relies on the identification of conserved words found across a sizeable fraction of the considered dataset, and supported by evolutionary analysis. </plain></SENT>
+<SENT sid="12" pm="."><plain>These words are then used to define a position specific substitution matrix that better reflects the biological significance of local similarity. </plain></SENT>
+<SENT sid="13" pm="."><plain>The experiment results show that the SymAlign scoring scheme can be incorporated within T-Coffee to improve sequence alignment accuracy. </plain></SENT>
+<SENT sid="14" pm="."><plain>We also demonstrate that SymAlign is less sensitive to the presence of structurally non-similar proteins. </plain></SENT>
+<SENT sid="15" pm="."><plain>In the analysis of the relationship between sequence identity and structure similarity, SymAlign can better differentiate structurally similar proteins from non- similar proteins. </plain></SENT>
+</text></SecTag></p><p><SecTag type="ABS"><text><SENT sid="16" pm="."><plain>We show that protein sequence alignments can be significantly improved using a similarity estimation based on weighted n-grams. </plain></SENT>
+<SENT sid="17" pm="."><plain>In our analysis of the alignments thus produced, sequence conservation becomes a better indicator of structural similarity. </plain></SENT>
+<SENT sid="18" pm="."><plain>SymAlign also provides alignment visualization that can display sub-optimal alignments on dot-matrices. </plain></SENT>
+<SENT sid="19" pm="."><plain>The visualization makes it easy to identify well-supported alternative alignments that may not have been identified by dynamic programming. </plain></SENT>
+<SENT sid="20" pm="."><plain>SymAlign is available at <ext-link ext-link-type="uri" xlink:href="http://bio-cluster.iis.sinica.edu.tw/SymAlign/">http://bio-cluster.iis.sinica.edu.tw/SymAlign/</ext-link>. </plain></SENT>
+</text></SecTag></p></abstract><counts><page-count count="9"/></counts></article-meta></front><body><SecTag type="INTRO"><sec id="s1"><title><text><SENT sid="21" pm="."><plain>Introduction </plain></SENT>
+</text></title><p><text><SENT sid="22" pm="."><plain>Experimentally determining a protein's structure is labor-intensive and time-consuming. </plain></SENT>
+<SENT sid="23" pm="."><plain>Homology search, on the other hand, is a very effective way to predict the properties of an uncharacterized protein [1]. </plain></SENT>
+<SENT sid="24" pm="."><plain>Homologous proteins tend to have similar structures. </plain></SENT>
+<SENT sid="25" pm="."><plain>Their residue-residue equivalences can easily be established using any standard alignment procedure. </plain></SENT>
+<SENT sid="26" pm="."><plain>This strategy is reasonably effective for proteins having more than 40% identity but its accuracy, defined as the capacity to identify structurally equivalent amino-acids, decreases significantly when considering remote homologues. </plain></SENT>
+<SENT sid="27" pm="."><plain>It is quite well established that below 25% identity, sequence alignments become non-informative with respect to the structural similarity [2]. </plain></SENT>
+<SENT sid="28" pm="."><plain>In this range of identity, an alignment based on amino-acid similarity may not be structurally correct. </plain></SENT>
+<SENT sid="29" pm="."><plain>This situation is very common with remote homologues. </plain></SENT>
+<SENT sid="30" pm="."><plain>In fact, the accurate alignment of remote homologues remains a major challenge for computational biology [3]. </plain></SENT>
+</text></p><p><text><SENT sid="31" pm="."><plain>Most protein sequence alignment tools rely on a scoring function to measure the similarity between residues and give penalties for insertion/deletions. </plain></SENT>
+<SENT sid="32" pm="."><plain>The quality of the resulting alignments is greatly influenced by the scoring function. </plain></SENT>
+<SENT sid="33" pm="."><plain>The most common scoring functions are called substitution matrices. </plain></SENT>
+<SENT sid="34" pm="."><plain>They include the PAM matrices [4], the BLOSUM series [5], GONNET [6], JTT [7], and VT [8]. </plain></SENT>
+<SENT sid="35" pm="."><plain>Each substitution matrix is designed for a different purpose. </plain></SENT>
+<SENT sid="36" pm="."><plain>For example, PAM matrices are designed to identify evolutionary origins of proteins, while the BLOSUM matrices are to identify protein members of the same family and to detect conserved domains. </plain></SENT>
+<SENT sid="37" pm="."><plain>Selecting a substitution matrix is difficult as it is still not well understood which matrix is the best choice when aligning different sequence pairs. </plain></SENT>
+<SENT sid="38" pm="."><plain>A recent study [9] concluded that the common belief that more accurate alignments of distantly related sequences may be achieved using low-identity matrices is shown to be false. </plain></SENT>
+<SENT sid="39" pm="."><plain>Moreover, no evidence exists that selecting a matrix based on sequence divergence improves accuracy. </plain></SENT>
+<SENT sid="40" pm="."><plain>This point is quite relevant, since the automated matrix selection is a key feature of ClustalW [10]. </plain></SENT>
+<SENT sid="41" pm="."><plain>Substitution matrices are extremely simplified models of protein evolution. </plain></SENT>
+<SENT sid="42" pm="."><plain>They assume all residues to evolve at the same pace, and ignore any local effect that may influence the mutability of a given amino-acid. </plain></SENT>
+</text></p><p><text><SENT sid="43" pm="."><plain>The last issue has been an intense focus of research over the last few years, and many methods have been produced that make an attempt to model amino acid mutations in a position specific manner. </plain></SENT>
+<SENT sid="44" pm="."><plain>All these methods have their reliance on a pre-assembled multiple sequence alignment (MSA) used as a profile. </plain></SENT>
+<SENT sid="45" pm="."><plain>They include Hidden Markov Models (HMMs) [11], [12], [13], [14], [15], [16], and Position Specific Scoring Matrices (PSSMs) which gives a weighted score or a probability reflecting the frequency of each residue at each position observed in a group of related sequences. </plain></SENT>
+<SENT sid="46" pm="."><plain>PSI-BLAST [17] is probably the best known method to generate PSSM. </plain></SENT>
+<SENT sid="47" pm="."><plain>Profile-sequence and profile-profile comparisons have been successfully applied on homology detection and fold recognition [12], [18], [19], [20]. </plain></SENT>
+<SENT sid="48" pm="."><plain>A couple of multiple sequence aligners have also been developed that use the profile-profile alignment approach, which include PCMA [16], SATCHMO [21], [22], PRALINEpsi [23], SPEM [24], PROMALS [25] and PSI-Coffee [3]. </plain></SENT>
+<SENT sid="49" pm="."><plain>The last three packages combine the profile-profile scoring scheme with a T-Coffee style consistency based scoring scheme. </plain></SENT>
+<SENT sid="50" pm="."><plain>A study [26] found that profile-profile alignment gave an average improvement of 2–3% over profile-sequence alignment and ∼40% over sequence-sequence alignment. </plain></SENT>
+<SENT sid="51" pm="."><plain>However, profile-profile alignment is not an entirely trivial process and the improvement depends heavily on the intrinsic properties of the considered dataset (average identity, density of the phylogenetic tree, etc). </plain></SENT>
+<SENT sid="52" pm="."><plain>This probably explains why alternative studies [24] have found profile-profile alignment approaches to lack a clear superiority over traditional sequence-sequence alignment approaches. </plain></SENT>
+</text></p><p><text><SENT sid="53" pm="."><plain>Optimizing an MSA has been shown to be an NP-hard problem, hence a large number of methods have been developed to address this important biological problem [27]. </plain></SENT>
+<SENT sid="54" pm="."><plain>A majority of the methods can be described as sophisticated variations around the progressive alignment algorithm, originally described by Hogeweg [28]. </plain></SENT>
+<SENT sid="55" pm="."><plain>The algorithm starts with an all-against-all step where pairwise comparisons are carried out in order to fill up a distance matrix. </plain></SENT>
+<SENT sid="56" pm="."><plain>This distance matrix is then resolved into a guide tree whose topology defines the order in which the sequences will be incorporated (one by one) within the MSA. </plain></SENT>
+<SENT sid="57" pm="."><plain>This strategy is extremely time-effective, but it can suffer from its extreme greediness. </plain></SENT>
+<SENT sid="58" pm="."><plain>Indeed, any pair of aligned sequences cannot be re-aligned, and early inaccurate alignments may impact the whole process through their influence on subsequent sub-alignments. </plain></SENT>
+<SENT sid="59" pm="."><plain>The quality of an MSA is therefore very sensitive to the guide tree accuracy. </plain></SENT>
+</text></p><p><text><SENT sid="60" pm="."><plain>The excessive greediness of the progressive alignment can be tackled by improving the quality of the first pairwise alignments. </plain></SENT>
+<SENT sid="61" pm="."><plain>This goal was the original motivation for the development of a novel class of progressive aligners known as consistency based progressive aligners. </plain></SENT>
+<SENT sid="62" pm="."><plain>The original algorithm was developed for the T-Coffee and later re-implemented in several aligners including ProbCons [29] and PROMALS. </plain></SENT>
+<SENT sid="63" pm="."><plain>The rationale of the consistency-based approach is to use the all-against-all computation in order to define a position specific scoring scheme for each pair of sequences that takes into account their relation with the other sequences. </plain></SENT>
+<SENT sid="64" pm="."><plain>In this study, we decided to go further and extend the idea of the consistency based approach. </plain></SENT>
+<SENT sid="65" pm="."><plain>Its principle relies on synonyms, a notion quite common in natural language processing. </plain></SENT>
+<SENT sid="66" pm="."><plain>Its usage makes it possible to capture local sequence similarities. </plain></SENT>
+<SENT sid="67" pm="."><plain>In this context, a protein synonym is an n-gram fragment of amino acids that reflects the sequence variation in the evolution. </plain></SENT>
+<SENT sid="68" pm="."><plain>Synonymous n-grams can be effectively used to improve protein secondary structure predictions [30]. </plain></SENT>
+</text></p><p><text><SENT sid="69" pm="."><plain>In this paper, we extend the application of synonyms to the problem of sequence alignment and present a method, called SymAlign, to demonstrate how protein synonyms can be used to improve the quality of protein sequence alignment. </plain></SENT>
+<SENT sid="70" pm="."><plain>We applied this method to two well-known benchmark datasets and estimated the alignment quality using either reference alignments or structure based evaluation methods (RMSD and iRMSD). </plain></SENT>
+<SENT sid="71" pm="."><plain>Our results show that SymAlign can generate alignments with better RMSD/iRMSD. </plain></SENT>
+<SENT sid="72" pm="."><plain>We also demonstrate that SymAlign is less sensitive to structurally non-similar proteins when they are aligned together with structurally similar proteins. </plain></SENT>
+<SENT sid="73" pm="."><plain>Finally, in the analysis of the relationship between sequence identity and structure similarity, we demonstrate that SymAlign can better differentiate structurally similar proteins from non-similar proteins. </plain></SENT>
+</text></p></sec></SecTag><SecTag type="METHODS"><sec sec-type="methods" id="s2"><title><text><SENT sid="74" pm="."><plain>Methods </plain></SENT>
+</text></title><sec id="s2a"><title><text><SENT sid="75" pm="."><plain>The idea of protein synonyms </plain></SENT>
+</text></title><p><text><SENT sid="76" pm="."><plain>A synonym is a word that has identical or similar meaning as another word in the same language. </plain></SENT>
+<SENT sid="77" pm="."><plain>For example, lovely, pretty, attractive, gorgeous, and so on all have similar meaning as beautiful but with different spelling in English. </plain></SENT>
+<SENT sid="78" pm="."><plain>They are literally interchangeable with each other without changing the semantics of a sentence. </plain></SENT>
+<SENT sid="79" pm="."><plain>Polysemy is the opposite phenomenon, that is to say the possibility for a single word to have different alternative meanings, depending on the context. </plain></SENT>
+<SENT sid="80" pm="."><plain>For example, the word “play” could be used as a verb, in the sense “being involved in a game” or as a noun referring to a piece of writing performed by actors. </plain></SENT>
+<SENT sid="81" pm="."><plain>The exact meaning of a polysemy depends on the context in which the word occurs. </plain></SENT>
+<SENT sid="82" pm="."><plain>Technically, it is possible to align words in two sentences according to the meanings of known words and to infer the meaning of an unknown word from the word it is aligned with. </plain></SENT>
+<SENT sid="83" pm="."><plain>We used this idea to propose the definition and identification of synonyms in protein sequences. </plain></SENT>
+</text></p><p><text><SENT sid="84" pm="."><plain>It is well known that a protein structure is encoded by its amino acid sequence. </plain></SENT>
+<SENT sid="85" pm="."><plain>Therefore, a protein sequence can be treated as a text written in a language whose alphabet comprises 20 letters. </plain></SENT>
+<SENT sid="86" pm="."><plain>The protein's structure is analogous to the semantic meaning of the text. </plain></SENT>
+<SENT sid="87" pm="."><plain>However, the translation from sequence to structure remains a mystery. </plain></SENT>
+<SENT sid="88" pm="."><plain>It is well known that homologous proteins share similar structures [31]. </plain></SENT>
+<SENT sid="89" pm="."><plain>Therefore, we can learn something about protein language from those protein sequences. </plain></SENT>
+</text></p><p><text><SENT sid="90" pm="."><plain>We consider homologous proteins as sentences with similar meanings. </plain></SENT>
+<SENT sid="91" pm="."><plain>They contain similar information and describe similar actions. </plain></SENT>
+<SENT sid="92" pm="."><plain>Taking this analogy further, we may consider that the mutations between homologous sequences are like synonyms in two sentences. </plain></SENT>
+<SENT sid="93" pm="."><plain>Thus we can create a mapping relationship between those sequence variations. </plain></SENT>
+<SENT sid="94" pm="."><plain>In terms of natural language, a group of homologous sequences can be treated as a series of texts with identical or similar meanings. </plain></SENT>
+<SENT sid="95" pm="."><plain>These texts can therefore be used to infer synonymous relationship from sequence alignments. </plain></SENT>
+<SENT sid="96" pm="."><plain>The main limitation here is that we do not have much knowledge on how protein languages are composed and the precise rules or grammar indicating the boundaries of protein words. </plain></SENT>
+</text></p><p><text><SENT sid="97" pm="."><plain>Structure conformation is a highly complicated process where both long and short range interactions play an important role. </plain></SENT>
+<SENT sid="98" pm="."><plain>Long-range interactions are very hard to model, but the short range ones can be effectively estimated using the n-gram model. </plain></SENT>
+<SENT sid="99" pm="."><plain>The simplicity of the underlying modeling is very popular in formal linguistic analysis and bioinformatics sequence comparison. </plain></SENT>
+<SENT sid="100" pm="."><plain>For instance, the BLAST's algorithm uses an n-gram model to generate a collection of similar words [32]. </plain></SENT>
+<SENT sid="101" pm="."><plain>Our approach follows the same lines. </plain></SENT>
+<SENT sid="102" pm="."><plain>Given a sequence alignment for proteins A and B with high sequence identity (typically above 30%), we use a sliding window to extract all word pairs to define synonyms. </plain></SENT>
+<SENT sid="103" pm="."><plain>For each word w in protein A, if there is another word w' in protein B aligned with w and there is no gap between w and w', we say w and w' are synonymous. </plain></SENT>
+<SENT sid="104" pm="."><plain>The rationale is that since proteins A and B are similar in sequences, the two words would probably express similar structures. </plain></SENT>
+<SENT sid="105" pm="."><plain>By extending the collection of proteins similar to protein A, we can define a larger number of synonyms for each word in A. </plain></SENT>
+</text></p><p><text><SENT sid="106" pm="."><plain>An important difference between protein synonyms and similar words in BLAST is that protein synonyms are defined from biologically significant sequence alignments (context-sensitive) while similar words are more or less context-free. </plain></SENT>
+<SENT sid="107" pm="."><plain>Protein words share some properties with natural language words, including polysemy: the same protein word may appear in different proteins with different structures. </plain></SENT>
+<SENT sid="108" pm="."><plain>Kabsch and Sander demonstrated that the same five residues can be a part of an alpha-helix in one protein and a part of a beta-strand in another protein, and they suggested that pentapeptide structure is strongly dependent on sequence context [33]. </plain></SENT>
+<SENT sid="109" pm="."><plain>We can deal with this situation by restricting synonymous assignments to protein pairs similar enough. </plain></SENT>
+</text></p><p><text><SENT sid="110" pm="."><plain>In practice, given a target protein pair S and T to be aligned, we define synonyms for each word in S and T by using a sliding window to screen the sequence alignments between one of the target sequences and its similar sequences. </plain></SENT>
+<SENT sid="111" pm="."><plain>We perform a PSI-BLAST search to generate a number of sequence alignments between S and S' (similar sequences of S). </plain></SENT>
+<SENT sid="112" pm="."><plain>Each synonym sw extracted from S' is associated with a word in S. </plain></SENT>
+<SENT sid="113" pm="."><plain>All synonyms for the words in protein S and T are collected this way. </plain></SENT>
+<SENT sid="114" pm="."><plain>Whenever a word sw is found that are both synonymous with a word ws in S and a word wt in T, then ws and wt are considered to be synonymous by transitivity. Figure 1 shows how this idea can be used to connect regions of two protein sequences. </plain></SENT>
+</text></p><SecTag type="FIG"><fig id="pone-0027872-g001" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0027872.g001</object-id><label>Figure 1</label><caption><title><text><SENT sid="115" pm="."><plain>Connecting two counterpart regions by shared synonyms of two protein sequences. </plain></SENT>
+</text></title><p><text><SENT sid="116" pm="."><plain>The words YIAKQRQ in protein S and VKALPDA in protein T share two synonyms which are extracted from their similar sequences. </plain></SENT>
+</text></p></caption><graphic xlink:href="pone.0027872.g001"/></fig></SecTag></sec><sec id="s2b"><title><text><SENT sid="117" pm="."><plain>The similarity measure of residue pairs </plain></SENT>
+</text></title><p><text><SENT sid="118" pm="."><plain>First, we introduce some notations used in this subsection. </plain></SENT>
+<SENT sid="119" pm="."><plain>Consider we are given two sequences S and T to be aligned, S = s1s2s3…sm and T = t1t2t3…tn, where si, tj are the i-th residue of S and j-th residue of T, respectively. </plain></SENT>
+<SENT sid="120" pm="."><plain>A protein word ws ,i = sisi +1 …si+l −1 represents the subsequence of length l, which begins at si and ends at si+l −1. </plain></SENT>
+<SENT sid="121" pm="."><plain>Let sws ,i denote a synonym of the word ws ,i, and F(sws ,i) be the frequency of sws ,i, which is the number of appearances among the similar proteins of S. </plain></SENT>
+<SENT sid="122" pm="."><plain>Likewise, let swt ,j represent a synonym of the word wt ,j, and F(swt ,j) be the frequency of swt ,j. </plain></SENT>
+<SENT sid="123" pm="."><plain>If sws ,i = swt ,j, we say ws ,i and wt ,j share a synonym and we define a similarity score between ws ,i and wt ,j by sim_s = (F(sws ,i)+F(swt ,j))/2, which means that all of the residue pairs (si, tj), (si +1, tj +1), …, (si +l−1, tj +l−1) are given a similarity score of sim_s. </plain></SENT>
+<SENT sid="124" pm="."><plain>The final similarity score between a residue pair (si, tj) is determined by the summation of sim_s for all common synonyms that cover residues si and tj. </plain></SENT>
+</text></p><p><text><SENT sid="125" pm="."><plain>To avoid some residue pairs having much higher scores than others and resulting in a broken alignment, we normalize similarity scores by a simple normalization scheme. </plain></SENT>
+<SENT sid="126" pm="."><plain>All the residue pairs are ranked by their similarity scores and we divide them into N groups equally, i.e., each group has equal number of residue pairs. </plain></SENT>
+<SENT sid="127" pm="."><plain>The first group of residue pairs is assigned an alignment score of N, and the second group N−1, and so forth. N is set to be 500 in this study; however, if the number of alignable residue pairs is less than 500, then N is set to be the number of alignable residue pairs. </plain></SENT>
+</text></p></sec><sec id="s2c"><title><text><SENT sid="128" pm="."><plain>Generating the alignment by T-Coffee </plain></SENT>
+</text></title><p><text><SENT sid="129" pm="."><plain>T-Coffee can generate an alignment based on customized alignment scores between residue pairs. </plain></SENT>
+<SENT sid="130" pm="."><plain>We transform the similarity scores of all residue pairs into a library file. </plain></SENT>
+<SENT sid="131" pm="."><plain>A library file is a list of pairs of residues that are considered alignable with a designated score. </plain></SENT>
+<SENT sid="132" pm="."><plain>When dealing with MSAs, we generate a library file for each pair of protein sequences. </plain></SENT>
+<SENT sid="133" pm="."><plain>T-Coffee builds a guide tree based on the input library files and reports a multiple sequence alignment. Figure 2 illustrates the complete algorithm of SymAlign. </plain></SENT>
+</text></p><SecTag type="FIG"><fig id="pone-0027872-g002" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0027872.g002</object-id><label>Figure 2</label><caption><title><text><SENT sid="134" pm="."><plain>The algorithm of SymAlign. </plain></SENT>
+<SENT sid="135" pm="."><plain>We use PSI-BLAST to collect a group of similar sequences for the targets from which we define synonyms. </plain></SENT>
+</text></title><p><text><SENT sid="136" pm="."><plain>Similarity scores are estimated based on the shared synonyms. </plain></SENT>
+<SENT sid="137" pm="."><plain>A library of all alignable residue pairs is made and fed into T-Coffee for generating a sequence alignment. </plain></SENT>
+</text></p></caption><graphic xlink:href="pone.0027872.g002"/></fig></SecTag></sec><sec id="s2d"><title><text><SENT sid="138" pm="."><plain>Two scoring functions for profile-profile alignment </plain></SENT>
+</text></title><p><text><SENT sid="139" pm="."><plain>In order to compare SymAlign with profile-profile alignment methods, we selected two scoring functions to calculate the alignment score for each residue pair and used T-Coffee to produce sequence alignments. </plain></SENT>
+<SENT sid="140" pm="."><plain>The two scoring functions, BASIC [34] and B-DHIP [35], are described as follows. </plain></SENT>
+</text></p><p><text><SENT sid="141" pm="."><plain>BASIC is a profile–profile alignment method designed for fold recognition, which was successfully applied at CASP3 [36]. </plain></SENT>
+<SENT sid="142" pm="."><plain>Given a pair of protein sequences S and T, BASIC is defined as follows:where D(i, j) is the alignment score for the residue pair (si, tj), A and B represent the log-odds scoring matrices of the profiles for protein S and T, respectively, and M is the substitution matrix (M is BLOSUM62 in this study). </plain></SENT>
+<SENT sid="143" pm="."><plain>BASIC compares two proteins from their profiles with the scores from the background comparison matrix. </plain></SENT>
+</text></p><p><text><SENT sid="144" pm="."><plain>B-DHIP is also a profile-profile alignment comparison method for fold recognition, which uses a standard dot-product between vectors of log-odds scores and probabilities of the 20 amino acids. </plain></SENT>
+<SENT sid="145" pm="."><plain>It is defined as follows:where Ã and B ~ represent the profiles of probabilities for the 20 amino acids at each position in S and T, respectively, while other symbols are same as those in BASIC. </plain></SENT>
+<SENT sid="146" pm="."><plain>We generate all log-odds score and probability data for each protein sequence by PSI-BLAST. </plain></SENT>
+</text></p></sec><sec id="s2e"><title><text><SENT sid="147" pm="."><plain>Performance evaluation </plain></SENT>
+</text></title><p><text><SENT sid="148" pm="."><plain>To estimate the accuracy of a sequence alignment, researchers often use a reference-dependent measure, the quality score (Q-score). </plain></SENT>
+<SENT sid="149" pm="."><plain>It is defined as the ratio of the number of correctly aligned residue pairs compared with the reference alignment. </plain></SENT>
+<SENT sid="150" pm="."><plain>The measure that depends on a reference alignment has been criticized for the limited capacity to capture the structural correctness of an alignment globally [37]. </plain></SENT>
+<SENT sid="151" pm="."><plain>An alternative is to compute a reference-independant measure, for instance, by estimating the quality of the superposition induced by the alignment. </plain></SENT>
+<SENT sid="152" pm="."><plain>Two such metrics have been proposed: the RMSD (Root Mean Square Deviation) that estimates the quality of the superposition, and the iRMSD (intra molecular Root Mean Square Deviation) [37] that estimates the difference of intra-molecular distances between pairs of equivalent alpha carbons in a way similar to APDB [38]. </plain></SENT>
+</text></p><p><text><SENT sid="153" pm="."><plain>In this study, we evaluated the performance using Q-score, iRMSD and RMSD. </plain></SENT>
+<SENT sid="154" pm="."><plain>We downloaded and modified the program from the <ext-link ext-link-type="uri" xlink:href="http://boscoh.com/protein/rmsd-root-mean-square-deviation">http://boscoh.com/protein/rmsd-root-mean-square-deviation</ext-link>, which is used to calculate the RMSD between PDB structures based on Kabsch's algorithm [39]. </plain></SENT>
+<SENT sid="155" pm="."><plain>To simplify the calculation of the RMSD, each amino acid is represented by the 3D coordinates of the nitrogen (N), α-carbon (CA), carbon (C) and oxygen (O) atoms on its backbone. </plain></SENT>
+<SENT sid="156" pm="."><plain>Because RMSD is used to measure the difference between two protein structures, we only evaluated the performance of pairwise sequence alignment. </plain></SENT>
+<SENT sid="157" pm="."><plain>When measuring the performance of multiple sequence alignments, we calculated the average RMSD between every pair of structures within the MSA. </plain></SENT>
+<SENT sid="158" pm="."><plain>The iRMSD was estimated using the implementation distributed with the T-Coffee package. </plain></SENT>
+</text></p></sec><sec id="s2f"><title><text><SENT sid="159" pm="."><plain>Benchmark datasets </plain></SENT>
+</text></title><p><text><SENT sid="160" pm="."><plain>We assessed the performances on two benchmark databases: BAliBASE 3.0 [40] and PREFAB 4.0 [41]. </plain></SENT>
+<SENT sid="161" pm="."><plain>BAliBASE consists of eight reference sets, meant to reflect real alignment problems. </plain></SENT>
+<SENT sid="162" pm="."><plain>Since most of the existing sequence alignment tools can successfully align sequences sharing &gt;40% identity but fail for more divergent sequences with &lt;20% identity, we focused on those divergent sequences in this study, And this subset, referred to as RV11, has been shown to be most informative and predictive of the ranking [3]. </plain></SENT>
+<SENT sid="163" pm="."><plain>Furthermore, it is one of the few datasets in BAliBASE where all aligned members have a known structure, which serves to minimize the methodological biases [41]. </plain></SENT>
+<SENT sid="164" pm="."><plain>RV11 consists of 38 test sets. </plain></SENT>
+<SENT sid="165" pm="."><plain>Since BB11037 is the only test set that does not contain PDB structures, it was excluded from this study. </plain></SENT>
+<SENT sid="166" pm="."><plain>The remaining RV11 contains a total of 256 sequences, distributing exclusively in 37 MSAs and making up 933 pairwise alignments with an average identity of 11.54%. </plain></SENT>
+<SENT sid="167" pm="."><plain>BAliBASE alignments can be evaluated either on the entire alignments or on pre-defined blocks (core regions). </plain></SENT>
+<SENT sid="168" pm="."><plain>The definition of these core regions is somehow arbitrary and has recently been criticized. </plain></SENT>
+<SENT sid="169" pm="."><plain>For this reason, we decided to do the analysis on the entire sequences. </plain></SENT>
+</text></p><p><text><SENT sid="170" pm="."><plain>PREFAB 4.0 contains 1,682 pairwise reference alignments. </plain></SENT>
+<SENT sid="171" pm="."><plain>We filtered out some proteins that do not have PDB structures or whose sequences are inconsistent with the associated PDB entries. </plain></SENT>
+<SENT sid="172" pm="."><plain>We also filtered out protein pairs having more than 20% identity. </plain></SENT>
+<SENT sid="173" pm="."><plain>The resulting subset includes 1,553 sequences and 954 pairwise alignments. </plain></SENT>
+<SENT sid="174" pm="."><plain>The average sequence identity is about 10.01%. </plain></SENT>
+<SENT sid="175" pm="."><plain>Like RV11, we conducted the analysis on the entire sequences in PREFAB and ignored the annotation of core regions. </plain></SENT>
+</text></p></sec><sec id="s2g"><title><text><SENT sid="176" pm="."><plain>Sequence Alignment Packages </plain></SENT>
+</text></title><p><text><SENT sid="177" pm="."><plain>We compared the performance of SymAlign with eight state-of-the-art methods: ClustalW (version 2.1) [10], Dialign (version 2.2.2) [42], MAFFT (version 6.847beta) [43], MTRAP (version 1.2) [44], MUSCLE (version 3.8.31) [45], Probalign (version 1.4) [46], T-Coffee (version 8.97_101117) [47], and ProbCons (version 1.12) [29], as well as the two scoring functions for profile-profile comparison BASIC and B-DHIP described in this section. </plain></SENT>
+</text></p></sec></sec></SecTag><SecTag type="RESULTS,DISCUSS"><sec id="s3"><title><text><SENT sid="178" pm="."><plain>Results and Discussion </plain></SENT>
+</text></title><sec id="s3a"><title><text><SENT sid="179" pm="."><plain>Comparison with existing methods on pairwise alignments </plain></SENT>
+</text></title><p><text><SENT sid="180" pm="."><plain>The comparison of pairwise sequence alignments on the BAliBASE and PREFAB are summarized in Table 1. </plain></SENT>
+<SENT sid="181" pm="."><plain>It is worth noting that for the reference-independant measures, the best scores are estimated on the reference alignments: 1.28 Å and 6.81 Å for the iRMSD and the RMSD on BAliBASE's RV11, 1.15 Å and 6.25 Å on PREFAB. </plain></SENT>
+<SENT sid="182" pm="."><plain>The consistency-based methods outperform the others in terms of Q-score, RMSD, and iRMSD. </plain></SENT>
+<SENT sid="183" pm="."><plain>The results of most methods on the two datasets are in reasonable agreement in the three metrics, and with slightly more fluctuations when considering consistency-based methods. </plain></SENT>
+</text></p><SecTag type="TABLE"><table-wrap id="pone-0027872-t001" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0027872.t001</object-id><label>Table 1</label><caption><title><text><SENT sid="184" pm="."><plain>Comparison with existing methods on pairwise alignments. </plain></SENT>
+</text></title></caption><alternatives><graphic id="pone-0027872-t001-1" xlink:href="pone.0027872.t001"/></alternatives><table-wrap-foot><fn id="nt101"><label/><p><text><SENT sid="185" pm="."><plain>Every pair of proteins contained in each test set was aligned with each aligner and subsequently evaluated with the three metrics: Q-score, iRMSD and RMSD. </plain></SENT>
+<SENT sid="186" pm="."><plain>SymAlign achieves the best ranking on the two test sets and the three quality measures. </plain></SENT>
+</text></p></fn></table-wrap-foot></table-wrap></SecTag><p><text><SENT sid="187" pm="."><plain>SymAlign achieves the best performance on the two datasets in terms of all the three measures, and Probalign achieves the second best ranking in iRMSD and RMSD measures. </plain></SENT>
+<SENT sid="188" pm="."><plain>Since SymAlign computes the similarity scores of residue pairs and uses T-Coffee to generate alignments, the results of the two methods can be directly compared. </plain></SENT>
+<SENT sid="189" pm="."><plain>SymAlign achieves an improvement of 6.2% in Q-score and 2 Å in RMSD over T-Coffee on BAliBASE's RV11, and 1.11% in Q-score and 1.73 Å in RMSD on PREFAB. </plain></SENT>
+</text></p><p><text><SENT sid="190" pm="."><plain>Furthermore, observed from Table 1, it is noteworthy that Probalign, MTRAP, T-Coffee, ProbCons and MUSCLE achieve equal performance in Q-score (ranging from 21.03% to 21.80% on PREFAB), though their average RMSDs vary from 11.89 Å to 13.30 Å. </plain></SENT>
+<SENT sid="191" pm="."><plain>It shows that RMSD can better demonstrate the alignment quality in terms of the resulting structural superposition. </plain></SENT>
+<SENT sid="192" pm="."><plain>However, the differences in iRMSD among these methods are not distinguishable. </plain></SENT>
+<SENT sid="193" pm="."><plain>It suggests that RMSD is a better choice to estimate the alignment quality than iRMSD. </plain></SENT>
+<SENT sid="194" pm="."><plain>It is also interesting to note that, the scoring functions of profile-profile comparisons do not perform better than traditional sequence-sequence comparison methods. </plain></SENT>
+</text></p></sec><sec id="s3b"><title><text><SENT sid="195" pm="."><plain>Comparison with existing methods on multiple alignments of the benchmark datasets with and without outliers </plain></SENT>
+</text></title><p><text><SENT sid="196" pm="."><plain>We further compared these methods on multiple sequence alignments of the BAliBASE's RV11, and the results are shown in Table 2. </plain></SENT>
+<SENT sid="197" pm="."><plain>Probalign achieves the best RMSD on RV11. </plain></SENT>
+<SENT sid="198" pm="."><plain>SymAlign achieves the second best, showing a 1.11 Å improvement over T-Coffee. </plain></SENT>
+<SENT sid="199" pm="."><plain>It can also be observed that the RMSDs of all of methods get improved compared with results on pairwise alignments except MTRAP. </plain></SENT>
+<SENT sid="200" pm="."><plain>In general, multiple alignments can achieve better alignment quality since they can benefit from pairwise alignments through either the progressive alignment strategy, or via the consistency-based scheme. </plain></SENT>
+</text></p><SecTag type="TABLE"><table-wrap id="pone-0027872-t002" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0027872.t002</object-id><label>Table 2</label><caption><title><text><SENT sid="201" pm="."><plain>Comparison with existing methods on multiple alignments and outliers. </plain></SENT>
+</text></title></caption><alternatives><graphic id="pone-0027872-t002-2" xlink:href="pone.0027872.t002"/></alternatives><table-wrap-foot><fn id="nt102"><label/><p><text><SENT sid="202" pm="."><plain>We estimated the alignment accuracy on the original RV11 test sets and those with additions of outliers. </plain></SENT>
+<SENT sid="203" pm="."><plain>The experiment result shows that SymAlign is more robust to outliers than any other aligners tested here. </plain></SENT>
+</text></p></fn></table-wrap-foot></table-wrap></SecTag><p><text><SENT sid="204" pm="."><plain>Note that the protein members in each MSA of RV11 are specially selected. </plain></SENT>
+<SENT sid="205" pm="."><plain>Although their mutual sequence identities are below 20%, they are structurally similar. </plain></SENT>
+<SENT sid="206" pm="."><plain>This defines a very challenging situation albeit not entirely realistic. </plain></SENT>
+<SENT sid="207" pm="."><plain>In practice, it is common to align a set of sequences containing non-homologous ones. </plain></SENT>
+<SENT sid="208" pm="."><plain>Unfortunately, the progressive alignment procedure can be strongly affected by non-homologous sequences. </plain></SENT>
+<SENT sid="209" pm="."><plain>In order to estimate the alignment quality when facing such problem, we simulated this situation by adding “outliers” into each test set of RV11 as described below. </plain></SENT>
+<SENT sid="210" pm="."><plain>Given two sequences Pi and Pi′, let SeqIdy(Pi, Pi′) denote the sequence identity of Pi and Pi′ calculated by T-Coffee, and TMscore(Pi, Pi′) denote the TM-score of Pi and Pi′. </plain></SENT>
+<SENT sid="211" pm="."><plain>Note that TM-score is a score between (0,1] to measure the similarity of topologies of two structures [48], which is estimated by TM-align [49], a structural alignment program. </plain></SENT>
+<SENT sid="212" pm="."><plain>The higher the score, the more similar the two structures. </plain></SENT>
+<SENT sid="213" pm="."><plain>Given a test set U = {P1, P2, …, Pk} of RV11, we generated an outlier Pi′ for each Pi, where Pi′ is selected from any other test set that maximizes the difference between SeqIdy(Pi, Pi′) and TMscore(Pi, Pi′). </plain></SENT>
+<SENT sid="214" pm="."><plain>We then tested on the new test set U' given by {P1, P 2, …, Pk, P 1′, P 2′, …, Pk′} For example, we add proteins BB11035.1dvh, BB11002.1ihv_A, BB11033.1erv, and BB11026.1ubi into BB11001 as outliers. </plain></SENT>
+<SENT sid="215" pm="."><plain>The new test set BB11001' includes four original protein members and the four outliers. </plain></SENT>
+</text></p><p><text><SENT sid="216" pm="."><plain>We intended to disturb the guide tree by adding outliers. </plain></SENT>
+<SENT sid="217" pm="."><plain>The outliers are involved in the process of MSA, but not involved in the evaluation of alignment quality. </plain></SENT>
+<SENT sid="218" pm="."><plain>They serve as noises to test the robustness of an alignment tool. </plain></SENT>
+<SENT sid="219" pm="."><plain>To compare the performance of different tools on the new dataset RV11 with outliers (denoted as RV11'), we calculated the RMSD on the original protein pairs according to the resulting MSA. </plain></SENT>
+<SENT sid="220" pm="."><plain>The comparison results on RV11' are shown in the second column of Table 2. </plain></SENT>
+<SENT sid="221" pm="."><plain>It can be observed that SymAlign achieves the best performance, which suggests that SymAlign is robust to outliers while Probalign, MUSCLE, and MAFFT are more sensitive to outliers, and their RMSDs are increased by more than 1.5 Å. </plain></SENT>
+</text></p></sec><sec id="s3c"><title><text><SENT sid="222" pm="."><plain>Identification of structural similarity </plain></SENT>
+</text></title><p><text><SENT sid="223" pm="."><plain>The performance of a method on benchmark datasets may not always be representative of its performance on real datasets. </plain></SENT>
+<SENT sid="224" pm="."><plain>Indeed, a real dataset sometimes includes protein sequences that may not be structurally similar. </plain></SENT>
+<SENT sid="225" pm="."><plain>However, there is little discussion in the literature about the alignment quality for protein sequences with no structural similarities. </plain></SENT>
+<SENT sid="226" pm="."><plain>In reality, given sequence alignments with &lt;20% identity, one has difficulty in distinguishing between structural similarity and non-similarity no matter how accurate an aligner can achieve on these sequences. </plain></SENT>
+<SENT sid="227" pm="."><plain>Thus in this section, we evaluated each method by how its alignment results reflect structural similarity or non-similarity. </plain></SENT>
+</text></p><p><text><SENT sid="228" pm="."><plain>To this end, we generated all possible sequence pairs in BAliBASE's RV11 and PREFAB, i.e., 31,707 and 1,205,128 pairs, respectively. </plain></SENT>
+<SENT sid="229" pm="."><plain>A recent study on TM-align [50] suggested that protein pairs with a TM-score &gt;0.5 are mostly in the same fold while those with a TM-score &lt;0.5 are mainly not in the same fold. </plain></SENT>
+<SENT sid="230" pm="."><plain>We used TM-Align to label each pair as a proven positive (PP) if TM-score ≥0.5 or a proven negative (PN) if TM-score &lt;0.5. </plain></SENT>
+<SENT sid="231" pm="."><plain>In BAliBASE's RV11, 1.13% of the pairs were labeled as PPs and 1.09% in PREFAB. </plain></SENT>
+<SENT sid="232" pm="."><plain>We aligned all of the pairs by each method considered here and evaluated the usefulness of sequence identities to indicate correct PP or PN labels. </plain></SENT>
+<SENT sid="233" pm="."><plain>We used thee different thresholds of sequence identity, i.e., &gt;10%, &gt;15%, and &gt;20%, to predict each sequence pair to be structurally similar. </plain></SENT>
+<SENT sid="234" pm="."><plain>We then calculated the precision = TP/(TP+FP) and the recall = TP/(TP+FN). </plain></SENT>
+<SENT sid="235" pm="."><plain>The results on RV11 and PREFAB are summarized in Tables 3 and 4, respectively. </plain></SENT>
+</text></p><SecTag type="TABLE"><table-wrap id="pone-0027872-t003" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0027872.t003</object-id><label>Table 3</label><caption><title><text><SENT sid="236" pm="."><plain>The comparison results of identifying structural similarity on RV11. </plain></SENT>
+</text></title></caption><alternatives><graphic id="pone-0027872-t003-3" xlink:href="pone.0027872.t003"/></alternatives></table-wrap></SecTag><SecTag type="TABLE"><table-wrap id="pone-0027872-t004" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0027872.t004</object-id><label>Table 4</label><caption><title><text><SENT sid="237" pm="."><plain>The comparison results of identifying structural similarity on PREFAB. </plain></SENT>
+</text></title></caption><alternatives><graphic id="pone-0027872-t004-4" xlink:href="pone.0027872.t004"/></alternatives></table-wrap></SecTag><p><text><SENT sid="238" pm="."><plain>SymAlign consistently achieved the highest precisions among all sequence aligners at the three different identity thresholds, especially at 15% identity threshold; it achieved 81.13% precision on RV11, outperforming the second best aligner (Dialign) by a big gap of 52.36%. </plain></SENT>
+<SENT sid="239" pm="."><plain>It shows that SymAlign has a much lower tendency than other aligners to over-estimate similarity between structurally non-similar sequences. </plain></SENT>
+<SENT sid="240" pm="."><plain>On the other hand, SymAlign's recalls at the three identity thresholds are very close to those of TM-Align, showing SymAlign's alignments are very close to structure based alignments by TM-align to reflect true structural similarity. </plain></SENT>
+<SENT sid="241" pm="."><plain>As a result, the identity estimated on SymAlign alignments is more informative for structure similarity. </plain></SENT>
+</text></p><p><text><SENT sid="242" pm="."><plain>Tables 3 and 4 also show that the recall for TM-align and SymAlign are very close. </plain></SENT>
+<SENT sid="243" pm="."><plain>We estimated the agreement between the two methods (Table 5) and found it to be very strong. </plain></SENT>
+<SENT sid="244" pm="."><plain>This result is especially interesting, considering that TM-align is a structure-based method while SymAlign is merely based on sequence comparisons. </plain></SENT>
+<SENT sid="245" pm="."><plain>SymAlign demonstrates a significant improvement in precision over all other tools in distinguishing between structural similarity and non-similarity based on sequence similarity. </plain></SENT>
+<SENT sid="246" pm="."><plain>Most methods over-estimate sequence identity when fed with a pair of structurally non-similar sequences. </plain></SENT>
+<SENT sid="247" pm="."><plain>Their precisions are close to the ratios of positives on the two datasets. </plain></SENT>
+</text></p><SecTag type="TABLE"><table-wrap id="pone-0027872-t005" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0027872.t005</object-id><label>Table 5</label><caption><title><text><SENT sid="248" pm="."><plain>The proportions of positive cases both identified by TM-align and SymAlign to those only identified by TM-align with respect to different thresholds. </plain></SENT>
+</text></title></caption><alternatives><graphic id="pone-0027872-t005-5" xlink:href="pone.0027872.t005"/></alternatives><table-wrap-foot><fn id="nt103"><label/><p><text><SENT sid="249" pm="."><plain>The experiment shows that the agreement between SymAlign and TM-align on RV11 and PREFAB datasets is very strong. </plain></SENT>
+</text></p></fn></table-wrap-foot></table-wrap></SecTag></sec><sec id="s3d"><title><text><SENT sid="250" pm="."><plain>Sequence alignment visualization </plain></SENT>
+</text></title><p><text><SENT sid="251" pm="."><plain>Most sequence alignment tools only report for each pair of proteins a single alignment with the highest score and provide visualization in the text of sequences to show the alignment result. </plain></SENT>
+<SENT sid="252" pm="."><plain>However, the alignment is not necessarily the best one. </plain></SENT>
+<SENT sid="253" pm="."><plain>Dot matrices are convenient ways to represent alternative alignments. </plain></SENT>
+<SENT sid="254" pm="."><plain>We show here (Figure 3) how the SymAlign can be used to represent the suboptimal alignments between two sequences. </plain></SENT>
+<SENT sid="255" pm="."><plain>The figure shows the alignment of 1bb9 and 1ov3_A selected from BAliBASE's RV11, where 1bb9 corresponds to the vertical axis while 1ov3_A corresponds to the horizontal axis. </plain></SENT>
+<SENT sid="256" pm="."><plain>Dots are shaded according to a grayscale reflecting the number of shared synonyms associated with each residue pair. </plain></SENT>
+<SENT sid="257" pm="."><plain>The darker the dot, the larger the number of shared synonyms. </plain></SENT>
+<SENT sid="258" pm="."><plain>The reference alignment is illustrated by red dots. </plain></SENT>
+<SENT sid="259" pm="."><plain>As one can see, the left side of the matrix shows an alternative alignment with a pattern very similar to the reference alignment. </plain></SENT>
+</text></p><SecTag type="FIG"><fig id="pone-0027872-g003" position="float"><object-id pub-id-type="doi">10.1371/journal.pone.0027872.g003</object-id><label>Figure 3</label><caption><title><text><SENT sid="260" pm="."><plain>The dot matrix generated by SymAlign for proteins BB11002.1bb9 and BB11002.1ov3_A in RV11. </plain></SENT>
+</text></title><p><text><SENT sid="261" pm="."><plain>A grayscaled dot represents the number of shared synonyms corresponding to a residue pair. </plain></SENT>
+<SENT sid="262" pm="."><plain>We turn a grayscaled dot into a red-scaled one if the corresponding residue pair is annotated as an equivalent pair in the reference alignment. </plain></SENT>
+<SENT sid="263" pm="."><plain>As one can see, the left side of the matrix shows an alternative alignment with a pattern very similar to the reference alignment. </plain></SENT>
+</text></p></caption><graphic xlink:href="pone.0027872.g003"/></fig></SecTag><p><text><SENT sid="264" pm="."><plain>We aligned the two sequences according to the two diagonal patterns shown in the figure and measured their RMSDs. </plain></SENT>
+<SENT sid="265" pm="."><plain>The reference alignment produces an RMSD of 9.12 Å, while the other one produces an RMSD of 13.65 Å. </plain></SENT>
+<SENT sid="266" pm="."><plain>This observation is totally consistent with an inspection of the structures showing that 1ov3_A is probably a tetramer and 1bb9 a dimer of some common homologous ancestral repeat. </plain></SENT>
+</text></p></sec><sec id="s3e"><title><text><SENT sid="267" pm="."><plain>Conclusions </plain></SENT>
+</text></title><p><text><SENT sid="268" pm="."><plain>In this paper, we present a new method, SymAlign, to align protein sequences, using the concept of protein synonyms, instead of a substitution matrix or a position-specific scoring matrix used by traditional alignment tools to calculate the alignment score between residue pairs. </plain></SENT>
+<SENT sid="269" pm="."><plain>We demonstrate that the shared synonyms can improve the similarity estimate between equivalent residues. </plain></SENT>
+<SENT sid="270" pm="."><plain>SymAlign is evaluated on the most difficult test sets of BAliBASE and PREFAB, and experiments show that SymAlign can align sequences more accurately than alternative methods. </plain></SENT>
+</text></p><p><text><SENT sid="271" pm="."><plain>An interesting novelty in the benchmark described here is our assessment of the impact of unrelated sequences. </plain></SENT>
+<SENT sid="272" pm="."><plain>We define a fairly realistic situation to compare various methods. </plain></SENT>
+<SENT sid="273" pm="."><plain>By altering each test set through the addition of unrelated sequences, we demonstrate that SymAlign is very robust to outliers. </plain></SENT>
+<SENT sid="274" pm="."><plain>This should be an essential feature for any sequence aligner because the inclusion of outliers within a group of homologues frequently occurs in sequence analysis. </plain></SENT>
+</text></p><p><text><SENT sid="275" pm="."><plain>SymAlign can align sequences to better indicate their preserved 3D structures than standard sequence aligners. </plain></SENT>
+<SENT sid="276" pm="."><plain>On the benchmark datasets, we show that whenever SymAlign delivers an alignment with more than 15% identity, the considered sequences are more likely to be in the same fold. </plain></SENT>
+</text></p><p><text><SENT sid="277" pm="."><plain>Furthermore, SymAlign displays not only the optimal but also the sub-optimal alignments on dot-matrices. </plain></SENT>
+<SENT sid="278" pm="."><plain>A fine grayscale makes it easy to identify alternative alignments that may not have been identified by dynamic programming. </plain></SENT>
+<SENT sid="279" pm="."><plain>It is especially useful when aligning distantly related sequences. </plain></SENT>
+<SENT sid="280" pm="."><plain>Altogether SymAlign should prove an interesting development for T-Coffee. </plain></SENT>
+<SENT sid="281" pm="."><plain>The increased accuracy provided by SymAlign will be especially important and useful in all situations where accurately aligning distantly relates homologues is a limiting step. </plain></SENT>
+</text></p></sec></sec></SecTag></body><back><SecTag type="ACK_FUND"><ack><p><text4fund><text><SENT sid="282" pm="."><plain>The authors would like to thank our colleagues: Yen-Yi Lin and Ei-Wen Yang for discussions and advice at the early stage of this study, Yi-Yuan Chiu for looking for and modifying the RMSD calculation program. </plain></SENT>
+<SENT sid="283" pm="."><plain>We also appreciate Bosco Ho for developing the RMSD calculation program. </plain></SENT>
+</text></text4fund></p></ack></SecTag><fn-group><fn fn-type="COI-statement"><p><text><SENT sid="284" pm="."><plain>Competing Interests: The authors have declared that no competing interests exist. </plain></SENT>
+</text></p></fn><SecTag type="ACK_FUND"><fn fn-type="financial-disclosure"><p><text4fund><text><SENT sid="285" pm="."><plain>Funding: This study was supported by the thematic program of Academia Sinica (AS95ASIA03) and the National Science Council (NSC97-2627-P-001-004). </plain></SENT>
+<SENT sid="286" pm="."><plain>The funders had no role in study design, data collection and analysis, decision to publish, or preparation of the manuscript. </plain></SENT>
+</text></text4fund></p></fn></SecTag></fn-group><SecTag type="REF"><ref-list><title>References</title><ref id="pone.0027872-Baker1"><text><SENT sid="287" pm="."><plain>1 BakerDSaliA 2001 Protein structure prediction and structural genomics. Science 294 93 96 11588250 </plain></SENT>
+</text></ref><ref id="pone.0027872-Rost1"><text><SENT sid="288" pm="."><plain>2 RostB 1999 Twilight zone of protein sequence alignments. Protein Engineering 12 85 94 10195279 </plain></SENT>
+</text></ref><ref id="pone.0027872-Kemena1"><text><SENT sid="289" pm="."><plain>3 KemenaCNotredameC 2009 Upcoming challenges for multiple sequence alignment methods in the high-throughput era. Bioinformatics 25 2455 2465 19648142 </plain></SENT>
+</text></ref><ref id="pone.0027872-Dayhoff1"><text><SENT sid="290" pm="."><plain>4 DayhoffMOSchwartzRMOrcuttBC 1978 A model of evolutionary change in proteins. Atlas of protein sequence and structure 5 345 351  </plain></SENT>
+</text></ref><ref id="pone.0027872-Henikoff1"><text><SENT sid="291" pm="."><plain>5 HenikoffSHenikoffJG 1992 Amino-Acid Substitution Matrices from Protein Blocks. Proceedings of the National Academy of Sciences of the United States of America 89 10915 10919 1438297 </plain></SENT>
+</text></ref><ref id="pone.0027872-Gonnet1"><text><SENT sid="292" pm="."><plain>6 GonnetGHCohenMABennerSA 1992 Exhaustive Matching of the Entire Protein-Sequence Database. Science 256 1443 1445 1604319 </plain></SENT>
+</text></ref><ref id="pone.0027872-Jones1"><text><SENT sid="293" pm="."><plain>7 JonesDTTaylorWRThorntonJM 1992 The Rapid Generation of Mutation Data Matrices from Protein Sequences. Computer Applications in the Biosciences 8 275 282 1633570 </plain></SENT>
+</text></ref><ref id="pone.0027872-Mller1"><text><SENT sid="294" pm="."><plain>8 MüllerTVingronM 2000 Modeling Amino Acid Replacement. Journal of Computational Biology 7 761 776 11382360 </plain></SENT>
+</text></ref><ref id="pone.0027872-Edgar1"><text><SENT sid="295" pm="."><plain>9 EdgarRC 2009 Optimizing substitution matrix choice and gap parameters for sequence alignment. Bmc Bioinformatics 10  </plain></SENT>
+</text></ref><ref id="pone.0027872-Higgins1"><text><SENT sid="296" pm="."><plain>10 HigginsDGLarkinMABlackshieldsGBrownNPChennaR 2007 Clustal W and clustal X version 2.0. Bioinformatics 23 2947 2948 17846036 </plain></SENT>
+</text></ref><ref id="pone.0027872-Edgar2"><text><SENT sid="297" pm="."><plain>11 EdgarRCSjolanderK 2004 COACH: profile-profile alignment of protein families using hidden Markov models. Bioinformatics 20 1309 1318 14962937 </plain></SENT>
+</text></ref><ref id="pone.0027872-Yona1"><text><SENT sid="298" pm="."><plain>12 YonaGLevittM 2002 Within the twilight zone: A sensitive profile-profile comparison tool based on information theory. Journal of Molecular Biology 315 1257 1275 11827492 </plain></SENT>
+</text></ref><ref id="pone.0027872-Panchenko1"><text><SENT sid="299" pm="."><plain>13 PanchenkoAR 2003 Finding weak similarities between proteins by sequence profile comparison. Nucleic Acids Research 31 683 689 12527777 </plain></SENT>
+</text></ref><ref id="pone.0027872-Sadreyev1"><text><SENT sid="300" pm="."><plain>14 SadreyevRGrishinN 2003 COMPASS: A tool for comparison of multiple protein alignments with assessment of statistical significance. Journal of Molecular Biology 326 317 336 12547212 </plain></SENT>
+</text></ref><ref id="pone.0027872-Pei1"><text><SENT sid="301" pm="."><plain>15 PeiJMGrishinNV 2006 MUMMALS: multiple sequence alignment improved by using hidden Markov models with local structural information (vol 34, pg 4364, 2006). Nucleic Acids Research 34 6064 6064  </plain></SENT>
+</text></ref><ref id="pone.0027872-Pei2"><text><SENT sid="302" pm="."><plain>16 PeiJMSadreyevRGrishinNV 2003 PCMA: fast and accurate multiple sequence alignment based on profile consistency. Bioinformatics 19 427 428 12584134 </plain></SENT>
+</text></ref><ref id="pone.0027872-Altschul1"><text><SENT sid="303" pm="."><plain>17 AltschulSFMaddenTLSchafferAAZhangJHZhangZ 1997 Gapped BLAST and PSI-BLAST: a new generation of protein database search programs. Nucleic Acids Research 25 3389 3402 9254694 </plain></SENT>
+</text></ref><ref id="pone.0027872-Zhou1"><text><SENT sid="304" pm="."><plain>18 ZhouHYZhouYQ 2005 Fold recognition by combining sequence profiles derived from evolution and from depth-dependent structural alignment of fragments. Proteins-Structure Function and Bioinformatics 58 321 328  </plain></SENT>
+</text></ref><ref id="pone.0027872-Skolnick1"><text><SENT sid="305" pm="."><plain>19 SkolnickJKiharaD 2001 Defrosting the frozen approximation: PROSPECTOR - A new approach to threading. Proteins-Structure Function and Genetics 42 319 331  </plain></SENT>
+</text></ref><ref id="pone.0027872-Soding1"><text><SENT sid="306" pm="."><plain>20 SodingJ 2005 Protein homology detection by HMM-HMM comparison. Bioinformatics 21 951 960 15531603 </plain></SENT>
+</text></ref><ref id="pone.0027872-Edgar3"><text><SENT sid="307" pm="."><plain>21 EdgarRCSjolanderK 2003 SATCHMO: sequence alignment and tree construction using hidden Markov models. Bioinformatics 19 1404 1411 12874053 </plain></SENT>
+</text></ref><ref id="pone.0027872-Hagopian1"><text><SENT sid="308" pm="."><plain>22 HagopianRDavidsonJRDattaRSSamadBJarvisGR 2010 SATCHMO-JS: a webserver for simultaneous protein multiple sequence alignment and phylogenetic tree construction. Nucleic Acids Research 38 W29 W34 20430824 </plain></SENT>
+</text></ref><ref id="pone.0027872-Simossis1"><text><SENT sid="309" pm="."><plain>23 SimossisVAKleinjungJHeringaJ 2005 Homology-extended sequence alignment. Nucleic Acids Research 33 816 824 15699183 </plain></SENT>
+</text></ref><ref id="pone.0027872-Zhou2"><text><SENT sid="310" pm="."><plain>24 ZhouHYZhouYQ 2005 SPEM: improving multiple sequence alignment with sequence profiles and predicted secondary structures. Bioinformatics 21 3615 3621 16020471 </plain></SENT>
+</text></ref><ref id="pone.0027872-Pei3"><text><SENT sid="311" pm="."><plain>25 PeiJMGrishinNV 2007 PROMALS: towards accurate multiple sequence alignments of distantly related proteins. Bioinformatics 23 802 808 17267437 </plain></SENT>
+</text></ref><ref id="pone.0027872-Edgar4"><text><SENT sid="312" pm="."><plain>26 EdgarRCSjolanderK 2004 A comparison of scoring functions for protein sequence profile alignment. Bioinformatics 20 1301 1308 14962936 </plain></SENT>
+</text></ref><ref id="pone.0027872-Wang1"><text><SENT sid="313" pm="."><plain>27 WangLJiangT 1994 On the complexity of multiple sequence alignment. J Comput Biol 1 337 348 8790475 </plain></SENT>
+</text></ref><ref id="pone.0027872-Hogeweg1"><text><SENT sid="314" pm="."><plain>28 HogewegPHesperB 1984 The Alignment of Sets of Sequences and the Construction of Phyletic Trees - an Integrated Method. Journal of Molecular Evolution 20 175 186 6433036 </plain></SENT>
+</text></ref><ref id="pone.0027872-Do1"><text><SENT sid="315" pm="."><plain>29 DoCBMahabhashyamMSPBrudnoMBatzoglouS 2005 ProbCons: Probabilistic consistency-based multiple sequence alignment. Genome Research 15 330 340 15687296 </plain></SENT>
+</text></ref><ref id="pone.0027872-Lin1"><text><SENT sid="316" pm="."><plain>30 LinH-NSungT-YHoS-YHsuW-L 2010 Improving protein secondary structure prediction based on short subsequences with local structure similarity. Bmc Genomics 11 S4  </plain></SENT>
+</text></ref><ref id="pone.0027872-Chothia1"><text><SENT sid="317" pm="."><plain>31 ChothiaCLeskAM 1986 The Relation between the Divergence of Sequence and Structure in Proteins. Embo Journal 5 823 826 3709526 </plain></SENT>
+</text></ref><ref id="pone.0027872-Altschul2"><text><SENT sid="318" pm="."><plain>32 AltschulSFGishWMillerWMyersEWLipmanDJ 1990 Basic Local Alignment Search Tool. Journal of Molecular Biology 215 403 410 2231712 </plain></SENT>
+</text></ref><ref id="pone.0027872-Kabsch1"><text><SENT sid="319" pm="."><plain>33 KabschWSanderC 1984 On the Use of Sequence Homologies to Predict Protein-Structure - Identical Pentapeptides Can Have Completely Different Conformations. Proceedings of the National Academy of Sciences of the United States of America-Biological Sciences 81 1075 1078  </plain></SENT>
+</text></ref><ref id="pone.0027872-Rychlewski1"><text><SENT sid="320" pm="."><plain>34 RychlewskiLZhangBHGodzikA 1998 Fold and function predictions for Mycoplasma genitalium proteins. Folding &amp; Design 3 229 238 9710568 </plain></SENT>
+</text></ref><ref id="pone.0027872-Kelley1"><text><SENT sid="321" pm="."><plain>35 KelleyLABennett-LovseyRMHerbertADSternbergMJE 2008 Exploring the extremes of sequence/structure space with ensemble fold recognition in the program Phyre. Proteins-Structure Function and Bioinformatics 70 611 625  </plain></SENT>
+</text></ref><ref id="pone.0027872-Sternberg1"><text><SENT sid="322" pm="."><plain>36 SternbergMJBatesPAKelleyLAMacCallumRM 1999 Progress in protein structure prediction: assessment of CASP3. Curr Opin Struct Biol 9 368 373 10361096 </plain></SENT>
+</text></ref><ref id="pone.0027872-Armougom1"><text><SENT sid="323" pm="."><plain>37 ArmougomFMorettiSKeduasVNotredameC 2006 The iRMSD: a local measure of sequence alignment accuracy using structural information. Bioinformatics 22 E35 E39 16873492 </plain></SENT>
+</text></ref><ref id="pone.0027872-OSullivan1"><text><SENT sid="324" pm="."><plain>38 O'SullivanOZehnderMHigginsDBucherPGrosdidierA 2003 APDB: a novel measure for benchmarking sequence alignment methods without reference alignments. Bioinformatics 19 i215 i221 12855461 </plain></SENT>
+</text></ref><ref id="pone.0027872-Kabsch2"><text><SENT sid="325" pm="."><plain>39 KabschW 1976 A solution for the best rotation to relate two sets of vectors. Acta Crystallographica Section A 32 922 923  </plain></SENT>
+</text></ref><ref id="pone.0027872-Thompson1"><text><SENT sid="326" pm="."><plain>40 ThompsonJDKoehlPRippRPochO 2005 BAliBASE 3.0: Latest developments of the multiple sequence alignment benchmark. Proteins-Structure Function and Bioinformatics 61 127 136  </plain></SENT>
+</text></ref><ref id="pone.0027872-Edgar5"><text><SENT sid="327" pm="."><plain>41 EdgarRC 2010 Quality measures for protein alignment benchmarks. Nucleic Acids Research 38 2145 2153 20047958 </plain></SENT>
+</text></ref><ref id="pone.0027872-Morgenstern1"><text><SENT sid="328" pm="."><plain>42 MorgensternB 1999 DIALIGN 2: improvement of the segment-to-segment approach to multiple sequence alignment. Bioinformatics 15 211 218 10222408 </plain></SENT>
+</text></ref><ref id="pone.0027872-Katoh1"><text><SENT sid="329" pm="."><plain>43 KatohKMisawaKKumaKMiyataT 2002 MAFFT: a novel method for rapid multiple sequence alignment based on fast Fourier transform. Nucleic Acids Research 30 3059 3066 12136088 </plain></SENT>
+</text></ref><ref id="pone.0027872-Hara1"><text><SENT sid="330" pm="."><plain>44 HaraTSatoKOhyaM 2010 MTRAP: Pairwise sequence alignment algorithm by a new measure based on transition probability between two consecutive pairs of residues. Bmc Bioinformatics 11 1 235 20043860 </plain></SENT>
+</text></ref><ref id="pone.0027872-Edgar6"><text><SENT sid="331" pm="."><plain>45 EdgarRC 2004 MUSCLE: multiple sequence alignment with high accuracy and high throughput. Nucleic Acids Research 32 1792 1797 15034147 </plain></SENT>
+</text></ref><ref id="pone.0027872-Roshan1"><text><SENT sid="332" pm="."><plain>46 RoshanULivesayDR 2006 Probalign: multiple sequence alignment using partition function posterior probabilities. Bioinformatics 22 2715 2721 16954142 </plain></SENT>
+</text></ref><ref id="pone.0027872-Notredame1"><text><SENT sid="333" pm="."><plain>47 NotredameCHigginsDGHeringaJ 2000 T-Coffee: A novel method for fast and accurate multiple sequence alignment. Journal of Molecular Biology 302 205 217 10964570 </plain></SENT>
+</text></ref><ref id="pone.0027872-Zhang1"><text><SENT sid="334" pm="."><plain>48 ZhangYSkolnickJ 2004 Scoring function for automated assessment of protein structure template quality. Proteins-Structure Function and Bioinformatics 57 702 710  </plain></SENT>
+</text></ref><ref id="pone.0027872-Zhang2"><text><SENT sid="335" pm="."><plain>49 ZhangYSkolnickJ 2005 TM-align: a protein structure alignment algorithm based on the TM-score. Nucleic Acids Research 33 2302 2309 15849316 </plain></SENT>
+</text></ref><ref id="pone.0027872-Zhang3"><text><SENT sid="336" pm="."><plain>50 ZhangYXuJR 2010 How significant is a protein structure similarity with TM-score = 0.5? Bioinformatics 26 889 895 20164152 </plain></SENT>
+</text></ref></ref-list></SecTag></back></article>

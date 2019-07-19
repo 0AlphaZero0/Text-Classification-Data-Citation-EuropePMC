@@ -1,0 +1,841 @@
+
+<article xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML" article-type="research-article"><?properties open_access?><?DTDIdentifier.IdentifierValue -//NLM//DTD Journal Publishing DTD v2.3 20070202//EN?><?DTDIdentifier.IdentifierType public?><?SourceDTD.DTDName journalpublishing.dtd?><?SourceDTD.Version 2.3?><?ConverterInfo.XSLTName jp2nlmx2.xsl?><?ConverterInfo.Version 2?><?release-delay 0|0 ?><front><journal-meta><journal-id journal-id-type="nlm-ta">J Biol Chem</journal-id><journal-id journal-id-type="iso-abbrev">J. Biol. Chem</journal-id><journal-id journal-id-type="hwp">jbc</journal-id><journal-id journal-id-type="pmc">jbc</journal-id><journal-id journal-id-type="publisher-id">JBC</journal-id><journal-title-group><journal-title>The Journal of Biological Chemistry</journal-title></journal-title-group><issn pub-type="ppub">0021-9258</issn><issn pub-type="epub">1083-351X</issn><publisher><publisher-name>American Society for Biochemistry and Molecular Biology</publisher-name><publisher-loc>9650 Rockville Pike, Bethesda, MD 20814, U.S.A.</publisher-loc></publisher></journal-meta><article-meta><article-id pub-id-type="pmcid">3431710</article-id><article-id pub-id-type="pmid">22700967</article-id><article-id pub-id-type="publisher-id">M112.381251</article-id><article-id pub-id-type="doi">10.1074/jbc.M112.381251</article-id><article-categories><subj-group subj-group-type="heading"><subject>Membrane Biology</subject></subj-group></article-categories><title-group><article-title><SecTag type="TITLE"><text><SENT sid="0" pm="."><plain>The Human Transporter Associated with Antigen Processing </plain></SENT>
+</text></SecTag></article-title><subtitle>MOLECULAR MODELS TO DESCRIBE PEPTIDE BINDING COMPETENT STATES<xref ref-type="fn" rid="FN1">*</xref><xref ref-type="fn" rid="FN2"><sup><inline-graphic xlink:href="sbox.jpg"/></sup></xref></subtitle><alt-title alt-title-type="short">Homology Modeling of Multiple Conformational States of TAP</alt-title></title-group><contrib-group><contrib contrib-type="author"><name><surname>Corradi</surname><given-names>Valentina</given-names></name><xref ref-type="aff" rid="aff1"/></contrib><contrib contrib-type="author"><name><surname>Singh</surname><given-names>Gurpreet</given-names></name><xref ref-type="aff" rid="aff1"/><xref ref-type="author-notes" rid="FN3"><sup>1</sup></xref></contrib><contrib contrib-type="author"><name><surname>Tieleman</surname><given-names>D. Peter</given-names></name><xref ref-type="aff" rid="aff1"/><xref ref-type="corresp" rid="cor1"><sup>2</sup></xref></contrib><aff id="aff1">From the Department of Biological Sciences and Institute for Biocomplexity and Informatics, University of Calgary, Calgary, Alberta T2N 1N4, Canada</aff></contrib-group><author-notes><corresp id="cor1"><label>2</label> An Alberta Innovates Health Solutions Scientist and Alberta Innovates Technology Futures Strategic Chair in (Bio)Molecular Simulation. To whom correspondence should be addressed: <addr-line>Dept. of Biological Sciences, University of Calgary, 2500 University Dr. N. W., Calgary, AB, Canada, T2N-1N4.</addr-line> Tel.: <phone>403-220-2966</phone>; Fax: <fax>403-289-9311</fax>; E-mail: <email>tieleman@ucalgary.ca</email>.</corresp><fn fn-type="other" id="FN3"><label>1</label><p><text><SENT sid="1" pm="."><plain>An Alberta Innovates Health Solutions postdoctoral fellow. </plain></SENT>
+</text></p></fn></author-notes><pub-date pub-type="ppub"><day>10</day><month>8</month><year>2012</year></pub-date><pub-date pub-type="epub"><day>14</day><month>6</month><year>2012</year></pub-date><pub-date pub-type="pmc-release"><day>14</day><month>6</month><year>2012</year></pub-date><volume>287</volume><issue>33</issue><fpage>28099</fpage><lpage>28111</lpage><history><date date-type="received"><day>14</day><month>5</month><year>2012</year></date><date date-type="rev-recd"><day>4</day><month>6</month><year>2012</year></date></history><permissions><copyright-statement>© 2012 by The American Society for Biochemistry and Molecular Biology, Inc.</copyright-statement><copyright-year>2012</copyright-year><license license-type="open-access"><license-p><italic>Author's Choice</italic>—Final version full access.</license-p><license-p><ext-link ext-link-type="uri" xlink:href="http://creativecommons.org/licenses/by-nc/3.0/">Creative Commons Attribution Non-Commercial License</ext-link> applies to Author Choice Articles</license-p></license></permissions><self-uri xlink:title="pdf" xlink:type="simple" xlink:href="zbc03312028099.pdf"/><abstract abstract-type="teaser"><p><SecTag type="ABS"><text><SENT sid="2" pm="."><plain>Background: The transporter associated with antigen processing (TAP) is an ABC transporter whose experimental structure is not known. </plain></SENT>
+</text></SecTag></p><p><SecTag type="ABS"><text><SENT sid="3" pm="."><plain>Results: We have modeled TAP based on the crystal structures of three related ABC transporters. </plain></SENT>
+</text></SecTag></p><p><SecTag type="ABS"><text><SENT sid="4" pm="."><plain>Conclusion: We identified a possible peptide binding conformation in the transport cycle of TAP. </plain></SENT>
+</text></SecTag></p><p><SecTag type="ABS"><text><SENT sid="5" pm="."><plain>Significance: These models help interpret experimental data and give information about the transport cycle of ABC transporters in general. </plain></SENT>
+</text></SecTag></p></abstract><abstract><p><SecTag type="ABS"><text><SENT sid="6" pm="."><plain>The human transporter associated with antigen processing (TAP) is a member of the ATP binding cassette (ABC) transporter superfamily. </plain></SENT>
+<SENT sid="7" pm="."><plain>TAP plays an essential role in the antigen presentation pathway by translocating cytosolic peptides derived from proteasomal degradation into the endoplasmic reticulum lumen. </plain></SENT>
+<SENT sid="8" pm="."><plain>Here, the peptides are loaded into major histocompatibility class I molecules to be in turn exposed at the cell surface for recognition by T-cells. </plain></SENT>
+<SENT sid="9" pm="."><plain>TAP is a heterodimer formed by the association of two half-transporters, TAP1 and TAP2, with a typical ABC transporter core that consists of two nucleotide binding domains and two transmembrane domains. </plain></SENT>
+<SENT sid="10" pm="."><plain>Despite the availability of biological data, a full understanding of the mechanism of action of TAP is limited by the absence of experimental structures of the full-length transporter. </plain></SENT>
+<SENT sid="11" pm="."><plain>Here, we present homology models of TAP built on the crystal structures of P-glycoprotein, ABCB10, and Sav1866. </plain></SENT>
+<SENT sid="12" pm="."><plain>The models represent the transporter in inward- and outward-facing conformations that could represent initial and final states of the transport cycle, respectively. </plain></SENT>
+<SENT sid="13" pm="."><plain>We described conserved regions in the endoplasmic reticulum-facing loops with a role in the opening and closing of the cavity. </plain></SENT>
+<SENT sid="14" pm="."><plain>We also identified conserved π-stacking interactions in the cytosolic part of the transmembrane domains that could explain the experimental data available for TAP1-Phe-265. </plain></SENT>
+<SENT sid="15" pm="."><plain>Electrostatic potential calculations gave structural insights into the role of residues involved in peptide binding, such as TAP1-Val-288, TAP2-Cys-213, TAP2-Met-218. </plain></SENT>
+<SENT sid="16" pm="."><plain>Moreover, these calculations identified additional residues potentially involved in peptide binding, in turn verified with replica exchange simulations performed on a peptide bound to the inward-facing models. </plain></SENT>
+</text></SecTag></p></abstract><SecTag type="KEYWORD"><kwd-group><kwd>ABC Transporter</kwd><kwd>Molecular Docking</kwd><kwd>Molecular Dynamics</kwd><kwd>Molecular Modeling</kwd><kwd>Multidrug Transporters</kwd><kwd>Peptide Binding</kwd><kwd>Transporter Associated with Antigen Processing</kwd></kwd-group></SecTag></article-meta></front><body><SecTag type="INTRO"><sec><title><text><SENT sid="17" pm="."><plain>Introduction </plain></SENT>
+</text></title><p><text><SENT sid="18" pm="."><plain>ATP binding cassette (ABC)3 proteins are one of the largest families of active transporters. </plain></SENT>
+<SENT sid="19" pm="."><plain>They use the hydrolysis of ATP as a source of energy to transfer substrates across membranes. </plain></SENT>
+<SENT sid="20" pm="."><plain>ABC transporters import or export a wide variety of substrates, including sugars, lipids, peptides, metabolites, amino acids, metal ions, and xenobiotics. </plain></SENT>
+<SENT sid="21" pm="."><plain>As a consequence, in humans, mutations in the 48 identified ABC transporter genes are associated with several diseases, including cystic fibrosis, macular degeneration, and lipid and sterol deficiencies (1–3). </plain></SENT>
+<SENT sid="22" pm="."><plain>Despite the different chemistry and size of these substrates, the structural organization and the mechanism of action of ABC transporters are very similar (4). </plain></SENT>
+</text></p><p><text><SENT sid="23" pm="."><plain>Each ABC transporter consists of at least four domains: two nucleotide binding domains (NBDs), located on the cytosolic side of the membrane, and two transmembrane domains (TMDs), arranged in membrane-spanning helices to form the translocation pathway. </plain></SENT>
+<SENT sid="24" pm="."><plain>Two ATP binding sites are formed at the interface between the NBDs, characterized by the presence of highly conserved motifs: the Walker A and Walker B motifs, the Signature motif, and the A-, H-, Q-, and D-loop (5). </plain></SENT>
+<SENT sid="25" pm="."><plain>As a consequence of ATP binding, the NBDs form a tightly coupled dimer followed by the hydrolysis of ATP. </plain></SENT>
+<SENT sid="26" pm="."><plain>The energy derived from this process is converted into large conformational changes of the TMDs to transport the substrate from one side of the membrane to the other. </plain></SENT>
+</text></p><p><text><SENT sid="27" pm="."><plain>The human transporter associated with antigen processing (TAP) plays a crucial role in the adaptive immune system (6). </plain></SENT>
+<SENT sid="28" pm="."><plain>TAP translocates antigenic peptides derived from proteasomal degradation in the cytosol to the endoplasmic reticulum (ER) lumen, where the peptides are loaded into major histocompatibility complex (MHC) class I molecules to be in turn released and exposed on the cell surface. </plain></SENT>
+<SENT sid="29" pm="."><plain>The inhibition of TAP mediated by viruses that try to evade the immune system as well as deletions or mutations of this transporter seriously impair the antigen presentation mechanism (7). </plain></SENT>
+<SENT sid="30" pm="."><plain>TAP belongs to the ABC-B subfamily. </plain></SENT>
+<SENT sid="31" pm="."><plain>It is a heterodimer formed by two half-transporters, TAP1 (ABC-B2) and TAP2 (ABC-B3). </plain></SENT>
+<SENT sid="32" pm="."><plain>Each monomer consists of a NBD and six transmembrane helices forming the core of the TMD. </plain></SENT>
+<SENT sid="33" pm="."><plain>TAP1 and TAP2 also have an additional N-terminal transmembrane domain (tapasin binding domain), specifically involved in the interactions with tapasin, which is one of the proteins responsible for the peptide-loading process (8, 9). </plain></SENT>
+<SENT sid="34" pm="."><plain>High resolution structures have been published for the human and rat TAP1-NBD both as a monomer (human) and homodimer (rat) (10, 11), whereas the crystal structures of TAP2-NBD and the full-length transporter are not yet available. </plain></SENT>
+<SENT sid="35" pm="."><plain>In the absence of high resolution structures, homology models, supported by experimental data, have been successfully used in the field of ABC transporters to provide feedback and give insights into the structural organization of these transporters (12–28). </plain></SENT>
+</text></p><p><text><SENT sid="36" pm="."><plain>In this paper we present molecular models of TAP describing the transporter in three different states. </plain></SENT>
+<SENT sid="37" pm="."><plain>The models have been built based on a multiple sequence alignment taking into account the sequences of several ABC transporters, including mouse P-gp, human ABCB10, and the bacterial transporter Sav1866. </plain></SENT>
+<SENT sid="38" pm="."><plain>The x-ray structures of P-gp (29), ABCB10 (PDB access code <ext-link ext-link-type="pdb" xlink:href="2YL4">2YL4</ext-link>), and Sav1866 (29, 30) have been solved in different conformations, providing valuable templates to describe different states of the transport cycle of TAP. </plain></SENT>
+<SENT sid="39" pm="."><plain>Like TAP, P-gp is a member of the ABC-B subfamily and consists of one polypeptide chain arranged into two halves connected by a linker. </plain></SENT>
+<SENT sid="40" pm="."><plain>Each half contains a cytosolic NBD and a TMD that is organized into six membrane-spanning helices. </plain></SENT>
+<SENT sid="41" pm="."><plain>The crystal structure of P-gp shows the transporter in an inward-facing conformation, corresponding to an initial state of the transport cycle, with the translocation cavity open toward the cytosol and suitable for drug binding. </plain></SENT>
+<SENT sid="42" pm="."><plain>The crystal structure of human ABCB10 corresponds to an inward-facing conformation of the transporter, but the separation between the two NBDs is smaller than in the P-gp crystal structure. </plain></SENT>
+<SENT sid="43" pm="."><plain>Contacts between the two NBDs are detected between the Walker A motif of one chain and the residues of the D-loop (the serine residue of the SALD motif in particular) of the other chain. </plain></SENT>
+<SENT sid="44" pm="."><plain>The homology models of TAP based on these crystal structures can describe a possible peptide binding competent state of the transporter. </plain></SENT>
+<SENT sid="45" pm="."><plain>Sav1866 is a homodimeric ABC transporter, with a structural organization and membrane topology similar to P-gp and TAP. </plain></SENT>
+<SENT sid="46" pm="."><plain>The crystal structure of Sav1866 corresponds to an outward-facing conformation of the transporter, with the two NBDs tightly coupled, and the cavity of the TMDs close to the cytosol and open toward the opposite side of the membrane. </plain></SENT>
+<SENT sid="47" pm="."><plain>The molecular model of TAP based on this structure can represent a possible final step of its transport cycle, when a peptide is released to the ER lumen. </plain></SENT>
+<SENT sid="48" pm="."><plain>We compared our models with the available experimental data and focused the analysis of the models on the TMDs and the ER-facing and cytosol-facing loops (ELs and CLs, respectively). </plain></SENT>
+<SENT sid="49" pm="."><plain>Based on electrostatic potential calculations, we identified regions of the transporter that could be involved in peptide binding, and we verified our hypotheses with replica exchange simulations performed on a nonamer bound to the inward-facing models. </plain></SENT>
+<SENT sid="50" pm="."><plain>The comparison of the models also provided structural insights into the rearrangements of the TMDs during the translocation cycle of this transporter. </plain></SENT>
+</text></p></sec></SecTag><SecTag type="METHODS"><sec sec-type="methods"><title><text><SENT sid="51" pm="."><plain>EXPERIMENTAL PROCEDURES </plain></SENT>
+</text></title><sec><title/><sec><title/><sec><title><text><SENT sid="52" pm="."><plain>Homology Modeling </plain></SENT>
+</text></title><p><text><SENT sid="53" pm="."><plain>To build the homology models of TAP, the sequences of human TAP1 and TAP2 were retrieved from UniProt Knowledgebase (UniProtKB) through the ExPASy molecular biology server (UniProtKB access codes <ext-link ext-link-type="gen" xlink:href="Q03518">Q03518</ext-link> and <ext-link ext-link-type="gen" xlink:href="Q03519">Q03519</ext-link>, respectively) (31, 32). </plain></SENT>
+<SENT sid="54" pm="."><plain>According to the membrane topology of TAP described in Schrodt et al. (9), the core of the TMD in TAP1 and TAP2 is formed by six membrane-spanning helices. </plain></SENT>
+<SENT sid="55" pm="."><plain>For this reason, the first four helices of TAP1 corresponding to the tapasin binding domain and the first three helices of TAP2 were not included in the homology modeling approach. </plain></SENT>
+<SENT sid="56" pm="."><plain>As a result, residues 173–742 for TAP1 and residues 138–686 for TAP2 were only taken into account. </plain></SENT>
+<SENT sid="57" pm="."><plain>The residue numbers correspond to the numbering shown in Schrodt et al. (9). </plain></SENT>
+</text></p><p><text><SENT sid="58" pm="."><plain>A protein-protein BLAST (33) search was performed against the Protein Data Bank using the retrieved sequence of human TAP1 and human TAP2 as input. </plain></SENT>
+<SENT sid="59" pm="."><plain>The BLAST search was performed in two steps using as a query sequence first the TMD part of TAP and then the sequence of the NBD. </plain></SENT>
+<SENT sid="60" pm="."><plain>For the TMDs, the BLAST search identified the crystal structure of mouse P-gp (29), human ABCB10, Sav1866 (30), and MsbA (34) as suitable templates for both TAP1 and TAP2. </plain></SENT>
+<SENT sid="61" pm="."><plain>Together with the sequences of mouse P-gp, human ABCB10, Sav1866, and V. cholera, Escherichia coli and Salmonella typhimurium MsbA (UniProtKB access codes <ext-link ext-link-type="gen" xlink:href="P21447">P21447</ext-link>, <ext-link ext-link-type="gen" xlink:href="Q9NRK6">Q9NRK6</ext-link>, <ext-link ext-link-type="gen" xlink:href="Q99T13">Q99T13</ext-link>, <ext-link ext-link-type="gen" xlink:href="Q9KQW9">Q9KQW9</ext-link>, <ext-link ext-link-type="gen" xlink:href="P60752">P60752</ext-link>, and <ext-link ext-link-type="gen" xlink:href="P63359">P63359</ext-link> respectively), the sequence of rat TAP1 and TAP2 as well as the sequence of the heterodimeric ABC transporter TM0287/TM0288 from Thermotoga maritima were also taken into account to generate a multiple alignment with MAFFT (35). </plain></SENT>
+<SENT sid="62" pm="."><plain>For the NBD alignment, from the BLAST search results we considered all the NBD structures with a sequence identity of at least 40% with respect to TAP1 or TAP2 NBD. </plain></SENT>
+<SENT sid="63" pm="."><plain>Thus, in addition to the previously described transporters, we included the sequences of E. coli hemolysin B (36), human ABCB6 (37), and MRP2 from Plasmodium yoelii (38). </plain></SENT>
+<SENT sid="64" pm="."><plain>The alignments are shown in <ext-link ext-link-type="uri" xlink:href="http://www.jbc.org/cgi/content/full/M112.381251/DC1">supplemental Figs. S1 and S2</ext-link>. </plain></SENT>
+<SENT sid="65" pm="."><plain>TAP homology models were built by means of MODELLER9v10 using the structures of P-gp, ABCB10, and Sav1866 as templates (39). </plain></SENT>
+<SENT sid="66" pm="."><plain>Among these transporters, P-gp is the only one with two non-symmetric TMDs. </plain></SENT>
+<SENT sid="67" pm="."><plain>For this reason, we built two TAP models based on P-gp, so that in one case TAP1 was modeled on the first halve of P-gp and TAP2 on the second one, and vice versa for the second model. </plain></SENT>
+<SENT sid="68" pm="."><plain>These two P-gp-based models are described in the text as P-gp-based model 1 and model 2, respectively. </plain></SENT>
+<SENT sid="69" pm="."><plain>Per each template, 20 models were generated, and the one with the best score in terms of the discrete optimized protein energy (DOPE) potential implemented in MODELLER was chosen. </plain></SENT>
+<SENT sid="70" pm="."><plain>The assessment of the final structural models was carried out with Molprobity (40, 41), Qmean (42, 43), Procheck (44, 45), and Whatcheck (46) analyses (<ext-link ext-link-type="uri" xlink:href="http://www.jbc.org/cgi/content/full/M112.381251/DC1">supplemental Table S1</ext-link>). </plain></SENT>
+<SENT sid="71" pm="."><plain>The TAP models were then inserted into a 1-palmitoyl-2-oleoyl-sn-glycero-phosphocoline (POPC) lipid bilayer using the g_membed method (47). </plain></SENT>
+<SENT sid="72" pm="."><plain>Gromacs 4.5.5 (48, 49) was used to optimize the geometry of the final models with the ff54a7 version of the GROMOS 96 force field (50, 51). </plain></SENT>
+<SENT sid="73" pm="."><plain>The geometry optimization of each system was carried out in several steps described in <ext-link ext-link-type="uri" xlink:href="http://www.jbc.org/cgi/content/full/M112.381251/DC1">supplemental Table S2</ext-link>. </plain></SENT>
+<SENT sid="74" pm="."><plain>After minimization, the system was equilibrated for 10 ns in the isothermal-isobaric ensemble (NPT) at a temperature of 310 K and pressure of 1 bar, with position restraints (force constant of 10,000 kJmol−1nm−2) on all the non-hydrogen atoms of the protein, followed by a 5-ns run with position restraints (force constant of 100 kJmol−1nm−2) only on the backbone atoms. </plain></SENT>
+</text></p><p><text><SENT sid="75" pm="."><plain>We previously published a homology model of TAP based on a sequence alignment that included only the sequences of TAP1, TAP2, and Sav1866, whose crystal structure was used as a template (12). </plain></SENT>
+<SENT sid="76" pm="."><plain>In this study we used a consistent alignment, but we included additional transporters, thus building models of TAP on templates with substantially different conformations. </plain></SENT>
+</text></p></sec><sec><title><text><SENT sid="77" pm="."><plain>Electrostatic Potential Calculations </plain></SENT>
+</text></title><p><text><SENT sid="78" pm="."><plain>Electrostatic calculations were carried out using APBS software (52). </plain></SENT>
+<SENT sid="79" pm="."><plain>A dielectric constant of 2, 10, and 80 was set for membrane, protein, and water, respectively. </plain></SENT>
+<SENT sid="80" pm="."><plain>All the parameters used for these calculations are listed in <ext-link ext-link-type="uri" xlink:href="http://www.jbc.org/cgi/content/full/M112.381251/DC1">supplemental Table S3</ext-link>. </plain></SENT>
+<SENT sid="81" pm="."><plain>To take into account the flexibility of the side chains, the electrostatic potential was calculated for 50 frames with 50-ps spacing during the last 2.5 ns of the equilibration run performed with position restraints only on the backbone atoms. </plain></SENT>
+<SENT sid="82" pm="."><plain>The average of these calculations was then used for analysis. </plain></SENT>
+</text></p></sec><sec><title><text><SENT sid="83" pm="."><plain>Replica Exchange Simulations </plain></SENT>
+</text></title><p><text><SENT sid="84" pm="."><plain>Replica exchange simulations were performed on the TAP models based on P-gp and ABCB10 structures using Gromacs 4.5.5 (48, 49). </plain></SENT>
+<SENT sid="85" pm="."><plain>The peptide was initially pulled into the cavity by restraining the distance between the α-carbon (Cα) of TAP1-Ser-289 and -Arg-1 of the peptide and between the Cα of TAP2-Ser-254 and -Leu-9 of the peptide (the maximum allowed distance was 6 Å). </plain></SENT>
+<SENT sid="86" pm="."><plain>Replica exchange simulations were performed in implicit solvent with the Amber99sb-ildn force field and GBSA with OBC algorithm (53). </plain></SENT>
+<SENT sid="87" pm="."><plain>44 temperatures ranging from 298.2 to 433.0 K were initially selected. </plain></SENT>
+<SENT sid="88" pm="."><plain>Short simulations (0.4 ns) were carried out to iteratively change the temperature spacing until the observed acceptance probability between adjacent replicas was between 0.3 and 0.4. </plain></SENT>
+<SENT sid="89" pm="."><plain>The acceptance probability of exchanges between replicas depends on their temperature gap. </plain></SENT>
+<SENT sid="90" pm="."><plain>The acceptance probability of 0.2–0.4 generally provides an optimum balance between number replicas and the temperature range covered by replica simulations (54). </plain></SENT>
+<SENT sid="91" pm="."><plain>The production runs of 15 ns (P-gp based model 1), 20 ns (P-gp based model 2), and 30 ns (ABCB10 based model) were then initiated from those temperatures during which the exchange was attempted every picosecond. </plain></SENT>
+<SENT sid="92" pm="."><plain>The backbone of the transporter was kept frozen during the simulations. </plain></SENT>
+<SENT sid="93" pm="."><plain>As we were interested in sampling only conformations of the peptide in the inward-facing cavity, a flat-bottom quadratic potential was implemented in Gromacs to restrain the peptide center of mass within 1 nm of its initial position. </plain></SENT>
+</text></p><p><text><SENT sid="94" pm="."><plain>The algorithm of Daura et al. (55), as implemented in the g_cluster tool of Gromacs, was used to cluster the peptide conformations based on the backbone atoms, using a root mean square deviation (r.m.s.d.) cutoff of 0.2 nm. </plain></SENT>
+<SENT sid="95" pm="."><plain>The r.m.s.d. between the peptide backbone of any two frames was calculated without least square fitting of the structures. </plain></SENT>
+<SENT sid="96" pm="."><plain>The percentage population of each cluster at the lowest temperature (298.2 K) was determined by combining data from all the temperatures using pyMBAR (56). </plain></SENT>
+</text></p><p><text><SENT sid="97" pm="."><plain>Figs. </plain></SENT>
+<SENT sid="98" pm="."><plain>1–3 and 5 and <ext-link ext-link-type="uri" xlink:href="http://www.jbc.org/cgi/content/full/M112.381251/DC1">supplemental Figs. S3–S6</ext-link> were produced with PyMOL, Version 1.4.1 (57), and Fig. 4 and <ext-link ext-link-type="uri" xlink:href="http://www.jbc.org/cgi/content/full/M112.381251/DC1">supplemental Fig. S7</ext-link> were produced with the UCSF Chimera package, Version 1.6.1 (58). </plain></SENT>
+</text></p></sec></sec></sec></sec></SecTag><SecTag type="RESULTS,DISCUSS"><sec><title><text><SENT sid="99" pm="."><plain>RESULTS AND DISCUSSION </plain></SENT>
+</text></title><sec><title/><sec><title/><sec><title><text><SENT sid="100" pm="."><plain>Homology Modeling; Structural Organization of the TAP Models </plain></SENT>
+</text></title><p><text><SENT sid="101" pm="."><plain>The transmembrane core of TAP consists of 12 transmembrane helices (8). </plain></SENT>
+<SENT sid="102" pm="."><plain>The same membrane topology characterizes P-gp, ABCB10, and the bacterial transporter Sav1866, chosen as templates to build homology models of TAP. </plain></SENT>
+<SENT sid="103" pm="."><plain>Both TAP1 and TAP2 have an additional N-terminal transmembrane domain required for the binding of tapasin and the assembly of the macromolecular MHC class I peptide loading complex (8, 59–61). </plain></SENT>
+<SENT sid="104" pm="."><plain>TAP constructs lacking these domains are, however, fully functional in terms of peptide binding and transport (59). </plain></SENT>
+<SENT sid="105" pm="."><plain>As a consequence, modeling TAP in the absence of the tapasin binding domains still provides valuable models to analyze and possibly predict the regions of the transporter involved in peptide binding. </plain></SENT>
+</text></p><p><text><SENT sid="106" pm="."><plain>The r.m.s.d. calculated on the backbone atoms between the final P-gp-based model 1 and model 2 of TAP and the P-gp structure is 1.6 and 2.3 Å, respectively. </plain></SENT>
+<SENT sid="107" pm="."><plain>The r.m.s.d. between the final ABCB10-based model and the ABCB10 crystal structure is 0.3 Å, whereas the r.m.s.d. between the final Sav1866-based model of TAP and the Sav1866 structure is 0.4 Å. </plain></SENT>
+<SENT sid="108" pm="."><plain>The higher r.m.s.d. that characterizes the P-gp-based models is due to differences in the NBDs. </plain></SENT>
+<SENT sid="109" pm="."><plain>For these models, the r.m.s.d. was calculated separately for TMDs (TAP1 residues 173–483; TAP2 residues 138–448; P-gp residues 33–366 and 694–1009) and NBDs (TAP1 residues 503–743; TAP2 residues 468–686; P-gp residues 388–625 and 1031–1256). </plain></SENT>
+<SENT sid="110" pm="."><plain>For P-gp based model 1 and model 2, the r.m.s.d. for the TMDs is 1.5 and 1.6 Å, whereas the r.m.s.d. for the NBDs is 1.7 and 2.7 Å, respectively. </plain></SENT>
+<SENT sid="111" pm="."><plain>However, the secondary structure of the NBDs of TAP is perfectly preserved in these models, and the higher r.m.s.d. values come from a translation of the NBDs when compared with the crystal structure. </plain></SENT>
+</text></p><p><text><SENT sid="112" pm="."><plain>The structural organization of the TAP models after insertion in the membrane and geometry optimization of the side chains is shown in Fig. 1. </plain></SENT>
+<SENT sid="113" pm="."><plain>In the P-gp- and ABCB10-based models, the ER portion of TM1 and TM6 of both TAP1 and TAP2 as well as the ER loop connecting TM1 with TM2 (EL1) and TM5 with TM6 (EL3) close the top of the cavity in the inward-facing conformation. </plain></SENT>
+<SENT sid="114" pm="."><plain>On the other side of the membrane, the cytosolic loop (CL1) between TM2 and TM3 of one of the two half-transporters is in contact with the CL2, between TM4 and TM5, and the NBD of the other half-transporter. </plain></SENT>
+<SENT sid="115" pm="."><plain>In the TAP model based on Sav1866, as a result of the NBD dimerization, new interactions on the intracellular side of TAP1 and TAP2 are established to close the cavity to the cytosol. </plain></SENT>
+</text></p><SecTag type="FIG"><fig id="F1" position="float"><label>FIGURE 1.</label><caption><p><text><SENT sid="116" pm="."><plain>Homology models of TAP-based on P-gp (inward-facing conformation) (A), ABCB10 (inward-facing conformation) (B), and Sav1866 (outward-facing conformation) (C) crystal structures. </plain></SENT>
+<SENT sid="117" pm="."><plain>TAP1 and TAP2 are shown in green and blue ribbons, respectively. </plain></SENT>
+<SENT sid="118" pm="."><plain>The region of the transporter embedded in the membrane (TMD core) is highlighted in gray. </plain></SENT>
+<SENT sid="119" pm="."><plain>Short loops connect the transmembrane helices on the ER lumen (ELs), whereas longer CLs are projected into the cytosol followed by the NBDs. </plain></SENT>
+<SENT sid="120" pm="."><plain>Peptides bind to TAP in the inward-facing cavity, whereas ATP molecules bind to the NBDs, inducing NBD dimerization. </plain></SENT>
+<SENT sid="121" pm="."><plain>The energy derived from ATP hydrolysis is used by TAP to translocate the peptides from the cytosol to the ER. D–F, shown is a top view of the models based on P-gp (D), ABCB10 (E), and Sav1866 (F). </plain></SENT>
+<SENT sid="122" pm="."><plain>The conserved residues of the ELs described under “Conserved Regions in ELs” are shown as spheres. </plain></SENT>
+<SENT sid="123" pm="."><plain>In particular, TAP1-Asp-213 (orange spheres) interacts with TAP1-Ser-440 (blue spheres), and TAP2-Asp-178 (orange spheres) makes contacts with TAP2-Thr-405 (blue spheres) in the inward-facing conformation models (D and E). </plain></SENT>
+<SENT sid="124" pm="."><plain>As a consequence of the cavity opening toward the ER lumen in the outward-facing conformation (F), these interactions are not longer retrieved. </plain></SENT>
+<SENT sid="125" pm="."><plain>The interactions between the conserved residues of the EL2 (TAP1-Met-320, -Ser-324, -Leu-327, -Thr-328, light green spheres; TAP2-Met-285, -Ser-289, -Leu-292, -Thr-293, light blue spheres) are preserved in both the inward-facing and the outward-facing conformations (D–F). </plain></SENT>
+<SENT sid="126" pm="."><plain>For homology modeling, the sequence alignments (<ext-link ext-link-type="uri" xlink:href="http://www.jbc.org/cgi/content/full/M112.381251/DC1">supplemental Figs. S1 and S2</ext-link>) were generated with MAFFT (35), and the models were built with MODELLER (39). </plain></SENT>
+<SENT sid="127" pm="."><plain>The TAP models were then inserted into a lipid bilayer as described under “Experimental Procedures.” </plain></SENT>
+</text></p></caption><graphic xlink:href="zbc0331218520001"/></fig></SecTag></sec><sec><title><text><SENT sid="128" pm="."><plain>NBDs </plain></SENT>
+</text></title><p><text><SENT sid="129" pm="."><plain>The NBDs of ABC transporters contain highly conserved key motifs involved in ATP binding and have been extensively characterized from a structural point of view. </plain></SENT>
+<SENT sid="130" pm="."><plain>When the NBDs associate to form a proper dimer, residues of the Walker A, Walker B, A-loop, Q-loop, and Switch motifs from one NBD combine with the signature and the D-loop motifs of the second NBD (62). </plain></SENT>
+</text></p><p><text><SENT sid="131" pm="."><plain>TAP and other medically relevant ABC transporters such as the cystic fibrosis transmembrane conductance regulator have two ATP binding sites that are not equivalent, with substitutions in the conserved motifs. </plain></SENT>
+<SENT sid="132" pm="."><plain>As a consequence of this NBD asymmetry, one binding site is highly conserved in a catalytically competent state, whereas the second binding site may have an impaired catalytic activity. </plain></SENT>
+<SENT sid="133" pm="."><plain>In TAP1, the H-loop is replaced with a glutamine, and the highly conserved glutamate of the Walker B motif is replaced by an aspartate. </plain></SENT>
+<SENT sid="134" pm="."><plain>Moreover, the signature motif of TAP2, involved in the hydrolysis occurring at the TAP1-ATP binding site, is characterized by a non-conserved sequence (<ext-link ext-link-type="uri" xlink:href="http://www.jbc.org/cgi/content/full/M112.381251/DC1">supplemental Fig. S2</ext-link>). </plain></SENT>
+<SENT sid="135" pm="."><plain>Thus, the ATP binding site in TAP1-NBD is degenerate with respect to the consensus site in TAP2-NBD. </plain></SENT>
+<SENT sid="136" pm="."><plain>Biochemical and crystallographic studies performed on a TAP1-NBD homodimer with mutations introduced to mimic the degenerate site showed that the consensus site is responsible (i) for the ATPase activity needed to promote the transport and (ii) for the NBD dimerization (11). </plain></SENT>
+<SENT sid="137" pm="."><plain>Conversely, the degenerate site has a lower ATPase activity (11). </plain></SENT>
+</text></p><p><text><SENT sid="138" pm="."><plain>In the TAP model based on the Sav1866 crystal structure, the NBDs are dimerized (<ext-link ext-link-type="uri" xlink:href="http://www.jbc.org/cgi/content/full/M112.381251/DC1">supplemental Fig. S3A</ext-link>), and no structural differences were apparent when compared with the TAP1-NBD homodimer with mutations introduced in the conserved motifs (11). </plain></SENT>
+<SENT sid="139" pm="."><plain>This suggests that homodimers like Sav1866 and heterodimers like TAP share the same architecture in their fully dimerized state. </plain></SENT>
+<SENT sid="140" pm="."><plain>The dimer conformation of TAP corresponding to the ABCB10 structure allows the binding of nucleotide analogs, but no NBD closure and no contacts are present between the nucleotide analog and the signature motif. </plain></SENT>
+<SENT sid="141" pm="."><plain>However, it is interesting to note that although in the P-gp-based conformation the NBDs are far apart, in this model the Walker A of one domain is in close proximity of the D-loop serine residue of the second NBD (<ext-link ext-link-type="uri" xlink:href="http://www.jbc.org/cgi/content/full/M112.381251/DC1">supplemental Fig. S3B</ext-link>). </plain></SENT>
+<SENT sid="142" pm="."><plain>This may imply that NBD disengagement may be reached even without a large separation between the NBDs. </plain></SENT>
+<SENT sid="143" pm="."><plain>Recently, the crystal structure of the heterodimeric ABC transporter TM287/288 has been released (63), providing an additional template to model TAP. </plain></SENT>
+<SENT sid="144" pm="."><plain>In this case, TAP takes an inward-facing conformation, with an ATP analog bound only to the degenerate site, whereas a larger separation between the monomers characterizes the consensus site (<ext-link ext-link-type="uri" xlink:href="http://www.jbc.org/cgi/content/full/M112.381251/DC1">supplemental Fig. S3C</ext-link>). </plain></SENT>
+<SENT sid="145" pm="."><plain>A superimposition of the TAP2-NBD from the model based on Sav1866 and the model based on TM287/288 shows that the NBD conformational differences between these two states reside mainly in the D-loop and the glutamate residue of the Walker B motif, whereas no differences are observed for the TAP1-NBDs (<ext-link ext-link-type="uri" xlink:href="http://www.jbc.org/cgi/content/full/M112.381251/DC1">supplemental Fig. S3, D–E</ext-link>). </plain></SENT>
+</text></p></sec><sec><title><text><SENT sid="146" pm="."><plain>Conserved Regions in ELs </plain></SENT>
+</text></title><p><text><SENT sid="147" pm="."><plain>Although it is known that the CLs play a significant role in the mechanism of ABC transporters (12, 30, 34), the analysis of the multiple sequence alignment performed in this study shows additional conserved regions in the three loops facing the ER lumen (ELs) in TAP or the extracellular side in other ABC transporters (Fig. 1). </plain></SENT>
+<SENT sid="148" pm="."><plain>The presence of small pools of amino acids that are more conserved than the transmembrane helices might suggest a structural role for these residues. </plain></SENT>
+<SENT sid="149" pm="."><plain>The EL1 can be of different lengths among the transporters taken into account in this study. </plain></SENT>
+<SENT sid="150" pm="."><plain>However, there is an aspartate residue that is highly conserved. </plain></SENT>
+<SENT sid="151" pm="."><plain>This aspartate (TAP1-Asp-213; TAP2-Asp-178) is involved in polar interactions with residues of the EL3 and in particular with a highly conserved serine or threonine residue (TAP1-Ser-440; TAP2-Thr-405). </plain></SENT>
+<SENT sid="152" pm="."><plain>In the inward-facing conformation of TAP, this network of interactions contributes to the closure of the cavity on the ER lumen side of the membrane and reflects the pattern of interactions found in P-gp and ABCB10 (Fig. 1, D and E). </plain></SENT>
+<SENT sid="153" pm="."><plain>The only exception is the second halve of P-gp, where a glycine replaces the conserved aspartate. </plain></SENT>
+<SENT sid="154" pm="."><plain>In the Sav1866-based model of TAP and in the Sav1866 crystal structure, the NBD dimerization and opening of the cavity toward the ER side push the EL1 and EL3 away from each other, breaking all contacts between residues of these loops (Fig. 1F). </plain></SENT>
+<SENT sid="155" pm="."><plain>An additional pool of four residues in the loop between TM3 and TM4 (EL2) is also conserved. </plain></SENT>
+<SENT sid="156" pm="."><plain>In this case the interactions between this pool of residues (TAP1-Met-320, -Ser-324, -Leu-327, -Thr-328; TAP2-Met-285, -Ser-289, -Leu-292, -Thr-293) and the surrounding residues are mainly hydrophobic and are preserved in both the inward-facing and outward-facing conformation (Fig. 1, D–F). </plain></SENT>
+</text></p></sec><sec><title><text><SENT sid="157" pm="."><plain>π-Stacking Interactions between TM2 and TM5; Role of TAP1-Phe-265 </plain></SENT>
+</text></title><p><text><SENT sid="158" pm="."><plain>In P-gp, ABCB10, Sav1866, and TAP, pairs of conserved aromatic residues are located on the intracellular side of TM2 of one halve (or monomer) and TM5 of the other halve (or monomer). </plain></SENT>
+<SENT sid="159" pm="."><plain>In TAP, these pairs of aromatic residues consist of TAP1-Phe-390 (in TM5) and TAP2-Phe-230 (in TM2) and of TAP2-Phe-355 (in TM5) and TAP1-Phe-265 (in TM2). </plain></SENT>
+<SENT sid="160" pm="."><plain>It has been shown that TAP1-Phe-265 mutation affects peptide transport but not peptide binding, and a role in controlling the formation of the cavity has been proposed for this residue (64). </plain></SENT>
+<SENT sid="161" pm="."><plain>Here, changes in orientation of these conserved aromatic residues suggest an explanation of the mechanical role proposed for TAP1-Phe-265 (64); Figs. </plain></SENT>
+<SENT sid="162" pm="."><plain>2 and <ext-link ext-link-type="uri" xlink:href="http://www.jbc.org/cgi/content/full/M112.381251/DC1">supplemental Fig. S4</ext-link>. </plain></SENT>
+</text></p><SecTag type="FIG"><fig id="F2" position="float"><label>FIGURE 2.</label><caption><p><text><SENT sid="163" pm="."><plain>π-Stacking interactions between TM2 and TM5. A–C, TAP1 and TAP2 are shown in green and blue ribbons, respectively. </plain></SENT>
+<SENT sid="164" pm="."><plain>Side view of the TMDs of the TAP models based on P-gp (P-gp-based model 2, A), ABCB10 (B), and Sav1866. </plain></SENT>
+<SENT sid="165" pm="."><plain>TAP1-Phe-265 and TAP2-Tyr-355 involved in the π-stacking interactions in the outward-facing conformation are represented as green and blue spheres, respectively. </plain></SENT>
+<SENT sid="166" pm="."><plain>The NBDs are not shown for clarity. D, the multiple sequence alignment shows that in all the transporters taken into account in this study, the positions corresponding to TAP1-Phe-265 and TAP2-Tyr-355 are conserved. </plain></SENT>
+<SENT sid="167" pm="."><plain>The sequences were retrieved from the UniprotKB data base, and their accession codes are as follow: human TAP1, <ext-link ext-link-type="gen" xlink:href="Q03518">Q03518</ext-link>; human TAP2, <ext-link ext-link-type="gen" xlink:href="Q03519">Q03519</ext-link>; Rattus, TAP1, <ext-link ext-link-type="gen" xlink:href="P36370">P36370</ext-link>; Rattus, TAP2, <ext-link ext-link-type="gen" xlink:href="P36372">P36372</ext-link>; <ext-link ext-link-type="gen" xlink:href="Sav1866">Sav1866</ext-link>, <ext-link ext-link-type="gen" xlink:href="Q99T13">Q99T13</ext-link> (PDB access code <ext-link ext-link-type="pdb" xlink:href="2HYD">2HYD</ext-link>); MsbA Vibrio cholerae (Msba_VibCh), <ext-link ext-link-type="gen" xlink:href="Q9KQW9">Q9KQW9</ext-link> (PDB access code <ext-link ext-link-type="pdb" xlink:href="3B5X">3B5X</ext-link>); MsbA E. coli (MsbA_EColi), <ext-link ext-link-type="gen" xlink:href="P60752">P60752</ext-link> (PDB access code <ext-link ext-link-type="pdb" xlink:href="3B5W">3B5W</ext-link>); MsbA S. typhimurium (MsbA SalTy), <ext-link ext-link-type="gen" xlink:href="P63359">P63359</ext-link> (PDB access code <ext-link ext-link-type="pdb" xlink:href="3B60">3B60</ext-link>); mouse P-glycoprotein (Mouse_Pgp1 and Mouse_Pgp2), <ext-link ext-link-type="gen" xlink:href="P21447">P21447</ext-link> (PDB access code <ext-link ext-link-type="pdb" xlink:href="3G5U">3G5U</ext-link>); <ext-link ext-link-type="gen" xlink:href="ABCB10">ABCB10</ext-link>, <ext-link ext-link-type="gen" xlink:href="Q9NRK6">Q9NRK6</ext-link> (PDB access code <ext-link ext-link-type="pdb" xlink:href="2YL4">2YL4</ext-link>), T. maritima 0287 (TM_0287), <ext-link ext-link-type="gen" xlink:href="Q9WYC3">Q9WYC3</ext-link>; T. maritima 0288 (TM_0288), <ext-link ext-link-type="gen" xlink:href="Q9WYC4">Q9WYC4</ext-link>. </plain></SENT>
+</text></p></caption><graphic xlink:href="zbc0331218520002"/></fig></SecTag><p><text><SENT sid="168" pm="."><plain>In P-gp, TM5 of each halve has a tyrosine residue (Tyr-273 and Tyr-916) facing the external side of the transporter, whereas TM2 helices have phenylalanine residues (Phe-148 and Phe-789) sandwiched between ICL1 of one halve and ICL2 of the other halve. </plain></SENT>
+<SENT sid="169" pm="."><plain>Because of the orientation of the tyrosine residues, π-stacking interactions between the residues of each pair are not allowed in this conformation (<ext-link ext-link-type="uri" xlink:href="http://www.jbc.org/cgi/content/full/M112.381251/DC1">supplemental Fig. S5A</ext-link>). </plain></SENT>
+</text></p><p><text><SENT sid="170" pm="."><plain>In ABCB10, TM5-Tyr-377 of one monomer might interact with TM2-Phe-252 of the other monomer. </plain></SENT>
+<SENT sid="171" pm="."><plain>In this case the two aromatic residues point toward the same cavity, but the bending of TM2 and TM5 still do not allow π-stacking interactions between them (<ext-link ext-link-type="uri" xlink:href="http://www.jbc.org/cgi/content/full/M112.381251/DC1">supplemental Fig. S5B</ext-link>). </plain></SENT>
+</text></p><p><text><SENT sid="172" pm="."><plain>In Sav1866 each pair of aromatic residues is formed by TM2-Phe-226 of one monomer and TM5-Tyr101 of the other monomer. </plain></SENT>
+<SENT sid="173" pm="."><plain>The residues of each pair are involved in π-stacking interactions (<ext-link ext-link-type="uri" xlink:href="http://www.jbc.org/cgi/content/full/M112.381251/DC1">supplemental Fig. S5C</ext-link>). </plain></SENT>
+<SENT sid="174" pm="."><plain>The TAP models reflect these different states of interaction between the residues of each pair, consistent with the templates; that is, the above-mentioned π-stacking interactions are absent in the P-gp- and ABCB10-based models and are present in the Sav1866-based model (Fig. 2 and <ext-link ext-link-type="uri" xlink:href="http://www.jbc.org/cgi/content/full/M112.381251/DC1">supplemental Fig. S4</ext-link>). </plain></SENT>
+</text></p><p><text><SENT sid="175" pm="."><plain>Further insights in the conformational changes that involve these residues are given by the available structures of the MsbA transporter (34); <ext-link ext-link-type="uri" xlink:href="http://www.jbc.org/cgi/content/full/M112.381251/DC1">supplemental Fig. S5D</ext-link>. </plain></SENT>
+<SENT sid="176" pm="."><plain>Its outward-facing conformation shows a π-stacking interaction between Phe-230 of one monomer and Phe-105 of the other monomer, which mimic the interactions shown in Sav1866. </plain></SENT>
+<SENT sid="177" pm="."><plain>In the closed apo structure the distance between the Cα of Phe-230 and Phe-105 is about 12 Å, whereas in the outward-facing conformation it is about 7.6 Å (7.9 Å in Sav1866 crystal structure). </plain></SENT>
+<SENT sid="178" pm="."><plain>This increased distance is due to a partial stretching of the TM5 of one-half and the TM2 of the opposite halve and could represent an additional intermediate state in the rearrangement of the TM helices and the pairs of aromatic residues as well. </plain></SENT>
+<SENT sid="179" pm="."><plain>Once the transporter adopts the outward-facing conformation, it results in a proper orientation for π-stacking interactions. </plain></SENT>
+</text></p><p><text><SENT sid="180" pm="."><plain>Combined, the models suggest how TM5 rearranges during the transport cycle of all four related transporters and support the structural role proposed for TAP1-Phe-265. </plain></SENT>
+<SENT sid="181" pm="."><plain>Being part of the aromatic stacking interactions, this residue contributes to the correct packing of the intracellular part of the helices. </plain></SENT>
+<SENT sid="182" pm="."><plain>These results also indicate a similar role for the corresponding residues of P-gp, ABCB10, Sav1866, and MsbA. </plain></SENT>
+</text></p></sec><sec><title><text><SENT sid="183" pm="."><plain>Peptide Binding </plain></SENT>
+</text></title><p><text><SENT sid="184" pm="."><plain>TAP binds and transports peptides with a preferred length of 8–16 amino acids (65, 66). </plain></SENT>
+<SENT sid="185" pm="."><plain>The peptide binding site was first identified in multiple regions of TAP. </plain></SENT>
+<SENT sid="186" pm="."><plain>In particular, residues 375–420 and 453–487 of TAP1 were shown to be part of the binding site as well as residues 301–389 and 414–433 of TAP2 (6). </plain></SENT>
+<SENT sid="187" pm="."><plain>In both TAP1 and TAP2 these peptide binding site regions include the CH2, described in the previous paragraph. </plain></SENT>
+</text></p><p><text><SENT sid="188" pm="."><plain>The mutation A374D in human TAP2 influences the efficiency of binding as well as the peptide transport specificity (67). </plain></SENT>
+<SENT sid="189" pm="."><plain>As described in Armandola et al. (67) and Momburg et al. (68), Ala-374 can directly be part of the peptide binding site or can influence the peptide transport indirectly. </plain></SENT>
+<SENT sid="190" pm="."><plain>Ala-374 belongs to the TM5 and is located in the upper side of the cavity of the transporter (Fig. 3A). </plain></SENT>
+<SENT sid="191" pm="."><plain>In the TAP models, this residue is oriented toward the TM2 of TAP1, with the exception of the P-gp-based model 2, where its side chain is pointing directly to the inward-facing cavity. </plain></SENT>
+<SENT sid="192" pm="."><plain>In the Sav1866-based model, Ala-374 is accessible from the cavity, whereas it appears to be more occluded in both the P-gp-based model 1 and in the ABCB10-based model. </plain></SENT>
+<SENT sid="193" pm="."><plain>We noticed that this residue is surrounded by a pool of positively charged residues (Arg-368, Arg-369, Arg-373, Arg-380, and Arg-381) that belongs to the same transmembrane helix and is part of the peptide binding site of TAP2 described in Nijenhuis and Hämmerling (6). </plain></SENT>
+<SENT sid="194" pm="."><plain>In particular, as it results in the Sav1866-based model, Arg-369, Arg-373, and Arg-381 are oriented toward the cavity lumen. </plain></SENT>
+<SENT sid="195" pm="."><plain>Arg-380 is sandwiched between the TM4, TM5, and TM6 of TAP2, whereas it is exposed to the cavity in the ABCB10-based model and in the P-gp-based model 1. </plain></SENT>
+<SENT sid="196" pm="."><plain>Arg-368 does not appear to be directly part of the peptide binding site because in all the TAP models this residue interacts with the polar groups of the lipids, and it is never oriented toward the cavity lumen. </plain></SENT>
+<SENT sid="197" pm="."><plain>It has been shown that A374D alters the peptide transport specificity (67). </plain></SENT>
+<SENT sid="198" pm="."><plain>Here, based on the analysis of the TAP models, we hypothesize that mutations changing charged side chains in this region could impair the transport of the peptide as a consequence of the altered electrostatic potential. </plain></SENT>
+</text></p><SecTag type="FIG"><fig id="F3" position="float"><label>FIGURE 3.</label><caption><p><text><SENT sid="199" pm="."><plain>Residues affecting peptide binding and transport. A–C, TAP1 and TAP2 are shown in green and blue ribbons, respectively. A, shown is a side view of the TMDs of the TAP homology model based on ABCB10 (left) and Sav1866 (right) crystal structure to highlight the position occupied by TAP2-Ala-374, represented as spheres. </plain></SENT>
+<SENT sid="200" pm="."><plain>The surrounding TAP2 arginine residues (Arg-368, Arg-369, Arg-373, Arg-380, Arg-381) are in blue sticks. </plain></SENT>
+<SENT sid="201" pm="."><plain>The multiple sequence alignment for the residues surrounding TAP2-Ala-374 is also provided. B, shown is a view of TAP2-Cys-213 in the TAP homology model based on ABCB10. </plain></SENT>
+<SENT sid="202" pm="."><plain>Cys-213 is shown as orange spheres, whereas the neighborhood residues are in blue spheres. </plain></SENT>
+<SENT sid="203" pm="."><plain>The multiple alignment of the region surrounding Cys-213 is also shown. </plain></SENT>
+<SENT sid="204" pm="."><plain>On the right is the superimposition of the homology model of TAP based on Sav1866 and the MsbA crystal structure (PDB access code <ext-link ext-link-type="pdb" xlink:href="3B60">3B60</ext-link>) shown in purple ribbons. </plain></SENT>
+<SENT sid="205" pm="."><plain>TAP2-Cys-213 and MsbA-Cys88 are shown as spheres. </plain></SENT>
+<SENT sid="206" pm="."><plain>C, shown is a close-up view of Val-288 of TAP1 in the TAP homology models based on ABCB10. </plain></SENT>
+<SENT sid="207" pm="."><plain>The multiple alignment highlights the residues surrounding Val-288 (Gly-282, Ile-284, Ser-286, Arg-287, and Asp-291) and conserved among other transporters. </plain></SENT>
+</text></p></caption><graphic xlink:href="zbc0331218520003"/></fig></SecTag><p><text><SENT sid="208" pm="."><plain>Cys-213 of TAP2 has been shown to modulate the peptide specificity of the transporter and to contact the peptide in the binding pocket (69). </plain></SENT>
+<SENT sid="209" pm="."><plain>In particular, Baldauf et al. (69) showed that the peptide is oriented with the C terminus facing this residue. </plain></SENT>
+<SENT sid="210" pm="."><plain>Cross-linking was detected between the thiolate of Cys-213 and the peptide RRYQKSTEL with a single cysteine residue at positions 4–9. </plain></SENT>
+<SENT sid="211" pm="."><plain>In the inward-facing models of TAP based on the P-gp and ABCB10 crystal structures, Cys-213, located on TM2, is not directly accessible for a peptide facing the cavity (Fig. 3B); its side chain faces the membrane, and it is surrounded by Leu-151, Leu-152, Ala-154, Ala-155, Cys-209, Tyr-216, and Thr-217. </plain></SENT>
+<SENT sid="212" pm="."><plain>However, the position of Cys-213 is constrained in TM2 because of the presence of some conserved residues (Arg-220, Ile-225, and Arg-226 of TAP2). </plain></SENT>
+<SENT sid="213" pm="."><plain>Moreover, the sequence of MsbA shows a cysteine residue (Cys-88) in this position. </plain></SENT>
+<SENT sid="214" pm="."><plain>In both the inward- and the outward-facing conformations of this transporter (PDB access codes <ext-link ext-link-type="pdb" xlink:href="3B5W">3B5W</ext-link> and <ext-link ext-link-type="pdb" xlink:href="3B60">3B60</ext-link>, respectively (34)), Cys-88 appears to be oriented toward the membrane. </plain></SENT>
+</text></p><p><text><SENT sid="215" pm="."><plain>The Cys-213 neighboring residues Thr-217 and Met-218 were shown to affect the peptide binding and transportation (68, 70). </plain></SENT>
+<SENT sid="216" pm="."><plain>In all our TAP models, Met-218 always points into the cavity lumen. </plain></SENT>
+</text></p><p><text><SENT sid="217" pm="."><plain>These results suggest that at least for the TAP models based on the inward- and outward-facing states available so far for P-gp, ABCB10, Sav1866, and MsbA, the role of TAP2-Cys-213 in controlling the peptide specificity cannot be fully explained. </plain></SENT>
+<SENT sid="218" pm="."><plain>Two glycine residues are just ahead of Cys-213, and glycine is known to increase the flexibility of α-helices (71, 72). </plain></SENT>
+<SENT sid="219" pm="."><plain>This may indicate that TAP2-Cys-213 might become accessible for a peptide in an intermediate state in between the inward- and outward-facing conformation even though at the end of the cycle (outward-facing conformation) its orientation is restored to the initial one (inward-facing conformation). </plain></SENT>
+</text></p><p><text><SENT sid="220" pm="."><plain>An additional peptide contact site is Val-288 of TAP1 (73). </plain></SENT>
+<SENT sid="221" pm="."><plain>Cross-linking experiments showed that this residue is able to sense the central region of a bound peptide. </plain></SENT>
+<SENT sid="222" pm="."><plain>Val-288 is located at the cytosolic side of TM3 in a region that is conserved among the transporters taken into account in this study (Fig. 3C). </plain></SENT>
+<SENT sid="223" pm="."><plain>In P-gp and ABCB10 crystal structures, the polar residues corresponding to Ser-286, Arg-287, and Asp-291 of TAP1 are oriented toward the lumen of the inward-facing cavity. </plain></SENT>
+<SENT sid="224" pm="."><plain>In contrast, hydrophobic residues corresponding to Val-288 and Ile-284 of TAP1 lie in small hydrophobic pockets. </plain></SENT>
+<SENT sid="225" pm="."><plain>Mutagenesis studies showed that these residues in TAP participate in the transport cycle. </plain></SENT>
+<SENT sid="226" pm="."><plain>In particular, Gly-282, Ile-284, and Arg-287 are crucial for coupling the peptide binding and transport, and Val-288 shares the same function (73). </plain></SENT>
+<SENT sid="227" pm="."><plain>In the inward-facing models of TAP, these residues are oriented in agreement with the crystal structures used as templates. </plain></SENT>
+<SENT sid="228" pm="."><plain>Additional details on the role of Val-288 are given in the next paragraph. </plain></SENT>
+</text></p></sec><sec><title><text><SENT sid="229" pm="."><plain>Role of Electrostatic Interactions in Ligand Binding </plain></SENT>
+</text></title><p><text><SENT sid="230" pm="."><plain>By anchoring the peptides through their N and C termini, TAP is able to translocate peptides of different length. </plain></SENT>
+<SENT sid="231" pm="."><plain>The binding to TAP requires peptides with free N and C terminus (74, 75). </plain></SENT>
+<SENT sid="232" pm="."><plain>Moreover, the first three residues as well as the last one play a critical role in terms of binding affinity (73, 75–79). </plain></SENT>
+<SENT sid="233" pm="."><plain>An example is the nonamer RRYQKSTEL, which binds to TAP with high affinity (KD = 16 nm) (75). </plain></SENT>
+<SENT sid="234" pm="."><plain>Because free N and C termini as well as charged residues are required, electrostatic interactions can represent the driving force for the peptide binding. </plain></SENT>
+<SENT sid="235" pm="."><plain>This is also confirmed by the binding of ICP47 to TAP. </plain></SENT>
+<SENT sid="236" pm="."><plain>ICP47 is a viral protein derived from herpes simplex virus that inhibits TAP (80–82). </plain></SENT>
+<SENT sid="237" pm="."><plain>Its N-terminal domain and in particular residues 1–35 are responsible for TAP inhibition (83). </plain></SENT>
+<SENT sid="238" pm="."><plain>Although residues 4–15 mediate the interaction with the membrane, residues 22–32 bind to TAP (82, 84–86). </plain></SENT>
+<SENT sid="239" pm="."><plain>Charged residues in this region (Asp-24, Lys-31, and Arg-32) are crucial for TAP inhibition and might mimic the interactions of the N and C terminus of the peptides normally translocated by TAP (82). </plain></SENT>
+</text></p><p><text><SENT sid="240" pm="."><plain>In protein-protein interactions, electrostatic complementarity can significantly contribute to the binding affinity (87–91). </plain></SENT>
+<SENT sid="241" pm="."><plain>We calculated the electrostatic potential of the TAP models, focusing on the role of charged residues in peptide/substrate binding to TAP. </plain></SENT>
+</text></p><p><text><SENT sid="242" pm="."><plain>The electrostatic map of the interior of the inward-facing cavities shows alternating positively and negatively charged sites. </plain></SENT>
+<SENT sid="243" pm="."><plain>The lower side of the cavities (P-gp and ABCB10 based models) is characterized by two regions with opposite electrostatic potential (Fig. 4A). </plain></SENT>
+<SENT sid="244" pm="."><plain>The negative site is mainly formed by residues of TAP1 and surrounds the Val-288 previously described in this paper. </plain></SENT>
+<SENT sid="245" pm="."><plain>To see if this negatively charged site is accessible by a peptide, the electrostatic potential has been mapped on the solvent-accessible surface of the protein. Fig. 4B shows the presence of two negatively charged sites, labeled as pocket 1 and 2 in the three inward-facing models. </plain></SENT>
+<SENT sid="246" pm="."><plain>Pocket 1 is formed by residues of TAP1 (Glu-290, Asp-291, Ser-286, Thr-294) located at the cytosolic side of the TM3. </plain></SENT>
+<SENT sid="247" pm="."><plain>Pocket 2 is a larger groove that extends from the lower side of the cavity to the upper side. </plain></SENT>
+<SENT sid="248" pm="."><plain>Residues common to the three inward-facing models and forming this pocket are mainly from TAP1 (Asp-246, Asn-250, Gln-261, Ser-286, Thr-289, Thr-292, Ser-293, Ser-296, Asp-297, Ser-300, Glu-301). </plain></SENT>
+</text></p><SecTag type="FIG"><fig id="F4" position="float"><label>FIGURE 4.</label><caption><p><text><SENT sid="249" pm="."><plain>Electrostatic potential of the TAP inward-facing models. A, shown is an isosurface representation of the electrostatic potential of the TAP P-gp-based model 2 (left panel), P-gp-based model 1 (center panel), and ABCB10-based model (right panel). </plain></SENT>
+<SENT sid="250" pm="."><plain>The isosurface has been clipped to highlight the different properties of the lower side of the inward-facing cavity. </plain></SENT>
+<SENT sid="251" pm="."><plain>The isovalue is set to −2 kBT/e for the negative potential (red) and +2 kBT/e for the positive one (blue). </plain></SENT>
+<SENT sid="252" pm="."><plain>TAP1 and TAP2 are shown in green and blue ribbon, respectively. B and C, per each model (P-gp based model 2 and model 1 on the left and center panel, respectively; ABCB10-based model on the right panel), the electrostatic potential of the inward-facing cavity was mapped on the solvent-accessible surface. </plain></SENT>
+<SENT sid="253" pm="."><plain>Shown are the negatively (B) and positively (C) charged side of the cavity. </plain></SENT>
+<SENT sid="254" pm="."><plain>The isovalue was set to −4 kBT/e for the negative potential (red) and +4 kBT/e for the positive potential (blue). Pockets 1, 2, 3, and 4 described in the text under “Peptide Binding” are highlighted. </plain></SENT>
+<SENT sid="255" pm="."><plain>Electrostatic potential calculations were performed with APBS software (52) using a dielectric constant of 2, 10, and 80 for membrane, protein, and water, respectively. </plain></SENT>
+<SENT sid="256" pm="."><plain>The solvent-accessible surface was calculated based on the last frame of the 5-ns equilibration run, whereas the electrostatic potential was averaged during the last 2.5 ns, as described under “Experimental Procedures.” </plain></SENT>
+</text></p></caption><graphic xlink:href="zbc0331218520004"/></fig></SecTag><p><text><SENT sid="257" pm="."><plain>Using EPR spectroscopy, Herget et al. (92) characterized the conformation of peptides bound to TAP as an extended and kinked conformation, with an average distance between the two termini of a 9-mer of 2.2 nm. </plain></SENT>
+<SENT sid="258" pm="."><plain>These EPR studies suggest that (i) TAP provides two different binding pockets for a peptide, one for the N terminus and one for the C terminus, and that (ii) the distance between these two pockets for the anchor sites is about 2.5 nm. </plain></SENT>
+<SENT sid="259" pm="."><plain>In the TAP models, pocket 1 and 2, previously described, are the main negatively charged sites that could represent the binding site for the N-terminal residues of the peptide. </plain></SENT>
+<SENT sid="260" pm="."><plain>TAP1-Val-288 is located just below these pockets. </plain></SENT>
+<SENT sid="261" pm="."><plain>If pockets 1 and 2 are involved in peptide binding, this could explain why this residue is able to sense a bound peptide. </plain></SENT>
+</text></p><p><text><SENT sid="262" pm="."><plain>The opposite site of the cavity shows a different electrostatic map (Fig. 4, A and C). </plain></SENT>
+<SENT sid="263" pm="."><plain>The positive potential extends from the lower to the upper side of the cavity lumen. </plain></SENT>
+<SENT sid="264" pm="."><plain>In particular, we identified a positively charged side (named pocket 3), mainly formed by TAP1-Arg-357 and TAP2-Arg-226. </plain></SENT>
+<SENT sid="265" pm="."><plain>TAP1-Arg-357 is at the edge of the groove, facing the lumen of the inward-facing cavity. </plain></SENT>
+<SENT sid="266" pm="."><plain>In contrast, TAP2-Arg-226 lies deeper inside the groove. </plain></SENT>
+<SENT sid="267" pm="."><plain>TAP2-Met-218 is two helical turns above TAP2-Arg-226. </plain></SENT>
+<SENT sid="268" pm="."><plain>Baldauf et al. (69) proposed that the C terminus of a bound peptide is oriented toward the Cys-213/Met-218 residues of TAP2. </plain></SENT>
+<SENT sid="269" pm="."><plain>If pocket 3 is involved in the coordination of the peptide C terminus, the TAP models might be able to provide a structural context to explain the experimental results (69). </plain></SENT>
+<SENT sid="270" pm="."><plain>Moreover, residues from both TAP1 and TAP2 contribute to the positive potential on the upper side of the cavity (TAP1-Lys-423, TAP2-Arg-210, and TAP2-Arg273), above the TAP2-Cys-213 and TAP2-Met-218 region (pocket 4, Fig. 4C). </plain></SENT>
+<SENT sid="271" pm="."><plain>This further confirms this side of the cavity as more suitable for the binding of the peptide C terminus, as described by Baldauf et al. (69). </plain></SENT>
+</text></p><p><text><SENT sid="272" pm="."><plain>Considering the sequence of the nonamer RRYQKSTEL, the results of the electrostatic calculations presented in this study suggest a binding mode in which pocket 1 and 2 might accommodate the free N terminus of the peptide and the side chains of the arginine residues, whereas the free C terminus might make contacts with the positively charged pocket (pocket 3). </plain></SENT>
+</text></p><p><text><SENT sid="273" pm="."><plain>The recently published structure of the ABC heterodimeric transporter TM287/288 is characterized by an inward-facing cavity that resembles the ABCB10 one even though TM4 and TM5 show slightly different bent structures. </plain></SENT>
+<SENT sid="274" pm="."><plain>The TAP model derived from this new structure shows properties similar to the model based on ABCB10 (<ext-link ext-link-type="uri" xlink:href="http://www.jbc.org/cgi/content/full/M112.381251/DC1">supplemental Fig. S6</ext-link>). </plain></SENT>
+<SENT sid="275" pm="."><plain>The electrostatic potential calculations identified the same pattern of positively and negatively charged sites inside the cavity, thus further supporting our peptide binding hypothesis (<ext-link ext-link-type="uri" xlink:href="http://www.jbc.org/cgi/content/full/M112.381251/DC1">supplemental Fig. S7</ext-link>). </plain></SENT>
+</text></p><p><text><SENT sid="276" pm="."><plain>We compared the cavity opening of the P-gp- and ABCB10-based TAP models to the available structures of MsbA (34). </plain></SENT>
+<SENT sid="277" pm="."><plain>For this comparison we measured the distance between the Cα of TAP2-Asp-256 (which is adjacent to the positively charged pocket) and TAP1-Asp-291. </plain></SENT>
+<SENT sid="278" pm="."><plain>This distance is 3.0, 2.8, and 2.5 nm for the P-gp-based model 1, model 2, and the ABCB10-based model, respectively. </plain></SENT>
+<SENT sid="279" pm="."><plain>In the MsbA inward-facing conformation (PDB access code <ext-link ext-link-type="pdb" xlink:href="3B5W">3B5W</ext-link>), with a separation between the two NBDs larger than P-gp, the distance between Asp131-Cα (which corresponds to TAP1-Asp-291 and TAP2-Asp-256) of each chain is 3.9 nm. </plain></SENT>
+<SENT sid="280" pm="."><plain>Such a distance appears to be too large to allow a peptide adopting the extended kinked conformation in TAP. </plain></SENT>
+<SENT sid="281" pm="."><plain>In the MsbA closed apo conformation (PDB access code <ext-link ext-link-type="pdb" xlink:href="3B5X">3B5X</ext-link>), which is still an inward-facing conformation but with the NBDs in closer contact, this distance is 1.66 nm. </plain></SENT>
+<SENT sid="282" pm="."><plain>In this case the cavity might be too closed to allow peptide binding. </plain></SENT>
+<SENT sid="283" pm="."><plain>Altogether these results and the experimental observation of a kinked bound peptide (92) suggest that the cavity of the transporter in a peptide binding competent state should not be more open than the P-gp crystal structure. </plain></SENT>
+</text></p></sec><sec><title><text><SENT sid="284" pm="."><plain>Replica Exchange Simulations </plain></SENT>
+</text></title><p><text><SENT sid="285" pm="."><plain>Several programs and servers are available for protein-protein docking (93–97), for docking of small molecules (98–102), or for the refinement of peptide-protein interactions (103). </plain></SENT>
+<SENT sid="286" pm="."><plain>However, these programs are not suitable for the docking of a peptide such as the nonamer RRYQKSTEL because of the large number of rotatable bonds that are involved, the necessity of flexible backbone and side chains of the peptide, and the large dimensions of the inward-facing cavity. </plain></SENT>
+<SENT sid="287" pm="."><plain>For these reasons, we decided to perform replica exchange simulations on the nonamer RRYQKSTEL bound to the inward-facing cavity. </plain></SENT>
+<SENT sid="288" pm="."><plain>Our hypothesis is that pocket 1, 2, and 3 are involved in the coordination of the N and C terminus of the peptide. </plain></SENT>
+<SENT sid="289" pm="."><plain>Based on this assumption, the goal of these simulations was to verify if the cavity opening of the P-gp- and ABCB10-based models is suitable for peptide binding. </plain></SENT>
+<SENT sid="290" pm="."><plain>The replica exchange simulations allowed the peptide to explore the inward-facing cavity lumen, thus identifying potential binding sites for its N and C terminus. </plain></SENT>
+</text></p><p><text><SENT sid="291" pm="."><plain>The results of the replica simulations performed on the TAP model based on ABCB10 proposed a model for the binding of the peptide that is in agreement with the experimental data. </plain></SENT>
+<SENT sid="292" pm="."><plain>The average distance between the Cα of Arg1 and Leu-9 of the bound peptide in the cluster with the largest population is 2.2 nm. </plain></SENT>
+<SENT sid="293" pm="."><plain>This distance may be correlated with the 2.5-nm distance proposed by Herget et al. (92) between the two anchor pockets of the transporter. </plain></SENT>
+<SENT sid="294" pm="."><plain>In this model the N terminus of the peptide and the two arginine residues strongly interacts with the residues of the negatively charged pocket (TAP1-Thr-289, -Glu-290, -Ser-293) in close proximity to TAP1-Val-288 (Fig. 5A). </plain></SENT>
+<SENT sid="295" pm="."><plain>Additional interactions are formed with TAP1-Asp-297 and Tap2-Gln-322. </plain></SENT>
+<SENT sid="296" pm="."><plain>Residues of the positively charged groove, and in particular TAP2- Arg-226, -Ser-254, and TAP1-Arg-357, coordinate the C terminus of the peptide in such a way that the side chain of Leu-10 faces the side chain of the previously described TAP2-Met-218. </plain></SENT>
+</text></p><SecTag type="FIG"><fig id="F5" position="float"><label>FIGURE 5.</label><caption><p><text><SENT sid="297" pm="."><plain>Replica exchange simulations and peptide binding. A–C, TAP1 and TAP2 are shown in green and blue ribbons, respectively. </plain></SENT>
+<SENT sid="298" pm="."><plain>Shown is the top view of the nonamer RRYQKSTEL bound to the inward-facing models of TAP, as it results from the replica exchange simulations and clustering analysis. </plain></SENT>
+<SENT sid="299" pm="."><plain>The peptide conformation corresponding to the cluster with the highest population is shown as sticks for the TAP model based on ABCB10 (A), the P-gp-based model 2 (B), and the P-gp-based model 1 (C). </plain></SENT>
+<SENT sid="300" pm="."><plain>The residues involved in the binding of the N and the C terminus of the peptide are shown as spheres. </plain></SENT>
+<SENT sid="301" pm="."><plain>Only polar hydrogen atoms are shown. </plain></SENT>
+<SENT sid="302" pm="."><plain>For clarity, the loops facing the ER lumen are not shown. </plain></SENT>
+<SENT sid="303" pm="."><plain>Replica exchange simulations were performed in implicit solvent using 44 temperatures ranging from 298.2 to 433.0 K. </plain></SENT>
+</text></p></caption><graphic xlink:href="zbc0331218520005"/></fig></SecTag><p><text><SENT sid="304" pm="."><plain>In the P-gp-based model 2, the N terminus as well as the two arginine residues of the peptide are strongly bound to the negatively charged pocket (Fig. 5B), further confirming that this site might be suitable for coordinating the positive charge of the peptide. </plain></SENT>
+<SENT sid="305" pm="."><plain>Because of the larger opening of the cavity of this model compared with the TAP model based on ABCB10, the C terminus cannot reach TAP2- Arg-226 or -Met-218 but mainly interacts with TAP1-Arg-357 of the positively charged groove, although additional interactions involve TAP2-Ser-254 and -Ser-255. </plain></SENT>
+<SENT sid="306" pm="."><plain>In the case of the P-gp-based model 1, the carboxylic group of Glu-8 of the peptide interacts with TAP2- Arg-226, whereas the C terminus is involved in intramolecular hydrogen bonds, thus preventing the interaction of the positive N terminus with the negatively charged pocket (Fig. 5C). </plain></SENT>
+</text></p><p><text><SENT sid="307" pm="."><plain>The different results obtained from the replica simulations on the two P-gp-based models are due to the asymmetry of the TMDs in the P-gp crystal structure, which is reflected in the TAP models. </plain></SENT>
+<SENT sid="308" pm="."><plain>In particular, the accessibility of pocket 1 in the P-gp-based model 1 is limited compared with P-gp based model 2. </plain></SENT>
+<SENT sid="309" pm="."><plain>Moreover, in the P-gp-based model 2 the side chain of TAP2-Glu-360 interacts with Arg-1 of the peptide, whereas in the P-gp-based model 1 this interaction is missing due to a different orientation of TAP2-Glu-360. </plain></SENT>
+<SENT sid="310" pm="."><plain>However, the simulations performed on both these models showed that residues of the positively charged groove constitute the favorite site for the binding of carboxylic groups. </plain></SENT>
+</text></p><p><text><SENT sid="311" pm="."><plain>Replica simulations performed on both the ABCB10-based model and the P-gp-based model 2 suggested that the coordination of the N and C terminus of the peptide with the negatively and the positively charged pocket, respectively, is possible, even though only in the ABCB10-based model a close proximity between the C terminus and TAP2-Met-218 was retrieved. </plain></SENT>
+</text></p></sec><sec sec-type="conclusions"><title><text><SENT sid="312" pm="."><plain>Conclusions </plain></SENT>
+</text></title><p><text><SENT sid="313" pm="."><plain>In the absence of high resolution structures, the combination of experimental data and molecular modeling approaches allows the construction of homology models that can be used as a tool to inspect the structural organization and properties of a protein as well as to guide mutagenesis experiments. </plain></SENT>
+<SENT sid="314" pm="."><plain>In this paper we have presented homology models of TAP built based on the P-gp (29), ABCB10, and Sav1866 (30) crystal structures while taking into account the literature data available for all these transporters as well as for MsbA. </plain></SENT>
+<SENT sid="315" pm="."><plain>The TAP models were compared with mutagenesis studies showing specific residues as important for peptide binding and translocation to give structural insights into the role of these residues. </plain></SENT>
+<SENT sid="316" pm="."><plain>Moreover, electrostatic potential calculations and replica exchange simulations combined with experimental data (92) suggested that the inward-facing models of TAP based on P-gp and ABCB10 might represent peptide binding competent states of the transporter. </plain></SENT>
+</text></p><p><text><SENT sid="317" pm="."><plain>There is an important difference in the mechanism of action of TAP, P-gp, ABCB10, and MsbA. </plain></SENT>
+<SENT sid="318" pm="."><plain>TAP recruits peptides from the cytosol; MsbA and P-gp acquire their substrates from the membrane, acting as both lipid flippases and drug transporters (104–109); ABCB10 is a peptide transporter in the inner membrane of mitochondria. </plain></SENT>
+<SENT sid="319" pm="."><plain>Nevertheless, the similarity among these transporters and their bacterial homologue Sav1866 allowed us to build molecular models of TAP that can be used to design new experimental studies for a better understanding of the peptide binding and the dynamics of this transporter. </plain></SENT>
+</text></p></sec></sec></sec></sec></SecTag>
+<SecTag type="SUPPL"><sec sec-type="supplementary-material">
+<title><text><SENT sid="320" pm="."><plain>Supplementary Material </plain></SENT>
+</text></title>
+<supplementary-material id="PMC_1" content-type="local-data">
+<caption>
+<title><text><SENT sid="321" pm="."><plain>Supplemental Data </plain></SENT>
+</text></title>
+</caption>
+<media mimetype="text" mime-subtype="html" xlink:href="supp_287_33_28099__index.html"/>
+<media xlink:role="associated-file" mimetype="application" mime-subtype="x-zip-compressed" xlink:href="supp_M112.381251_Supplementary_material.zip"/>
+</supplementary-material>
+</sec></SecTag>
+</body><back><fn-group><SecTag type="ACK_FUND"><fn fn-type="supported-by" id="FN1"><label>*</label><p><text4fund><text><SENT sid="322" pm="."><plain>This work was supported by the Canadian Institutes for Health Research. </plain></SENT>
+</text></text4fund></p></fn></SecTag><SecTag type="SUPPL"><fn fn-type="supplementary-material" id="FN2"><label><inline-graphic xlink:href="sbox.jpg"/></label><p><text><SENT sid="323" pm="."><plain>This article contains <ext-link ext-link-type="uri" xlink:href="http://www.jbc.org/cgi/content/full/M112.381251/DC1">supplemental Figs. S1–S7, Tables S1–S3, and pdb files</ext-link>. </plain></SENT>
+</text></p></fn></SecTag></fn-group><fn-group content-type="abbreviations"><fn id="FN4"><label>3</label><p><text><SENT sid="324" pm="."><plain>The abbreviations used are: ABCATP binding cassetteTAPtransporter associated with antigen processingERendoplasmic reticulumELER-facing loopCLcytosol-facing loopNBDnucleotide binding domainsTMDtransmembrane domainsP-gpP-glycoproteinr.m.s.d.root mean square deviationCαα-carbon. </plain></SENT>
+</text></p></fn></fn-group><SecTag type="ACK_FUND"><ack><title>Acknowledgments</title><p><text4fund><text><SENT sid="325" pm="."><plain>Calculations were carried out in part on WestGrid/Compute Canada facilities. </plain></SENT>
+<SENT sid="326" pm="."><plain>We thank Dr. Robert Tampé and Drew W. </plain></SENT>
+<SENT sid="327" pm="."><plain>F. </plain></SENT>
+<SENT sid="328" pm="."><plain>Bennett for fruitful discussions. </plain></SENT>
+</text></text4fund></p></ack></SecTag><SecTag type="REF"><ref-list><title>REFERENCES</title><ref id="B1"><text><SENT sid="329" pm="."><plain>1. DeanM.RzhetskyA.AllikmetsR. (2001) The human ATP-binding cassette (ABC) transporter superfamily. Genome Res. 11, 1156–116611435397 </plain></SENT>
+</text></ref><ref id="B2"><text><SENT sid="330" pm="."><plain>2. DeanM. (2005) The genetics of ATP binding cassette transporters. Methods Enzymol. 400, 409–42916399363 </plain></SENT>
+</text></ref><ref id="B3"><text><SENT sid="331" pm="."><plain>3. VasiliouV.VasiliouK.NebertD. </plain></SENT>
+<SENT sid="332" pm="."><plain>W. (2009) Human ATP-binding cassette (ABC) transporter family. Hum. </plain></SENT>
+<SENT sid="333" pm="."><plain>Genomics 3, 281–29019403462 </plain></SENT>
+</text></ref><ref id="B4"><text><SENT sid="334" pm="."><plain>4. HigginsC. </plain></SENT>
+<SENT sid="335" pm="."><plain>F. (1992) ABC transporters. </plain></SENT>
+<SENT sid="336" pm="."><plain>From microorganisms to man. Annu. </plain></SENT>
+<SENT sid="337" pm="."><plain>Rev. </plain></SENT>
+<SENT sid="338" pm="."><plain>Cell Biol. 8, 67–1131282354 </plain></SENT>
+</text></ref><ref id="B5"><text><SENT sid="339" pm="."><plain>5. ProckoE.O'MaraM. </plain></SENT>
+<SENT sid="340" pm="."><plain>L.BennettW. </plain></SENT>
+<SENT sid="341" pm="."><plain>F.TielemanD. </plain></SENT>
+<SENT sid="342" pm="."><plain>P.GaudetR. (2009) The mechanism of ABC transporters. </plain></SENT>
+<SENT sid="343" pm="."><plain>General lessons from structural and functional studies of an antigenic peptide transporter. FASEB J. 23, 1287–130219174475 </plain></SENT>
+</text></ref><ref id="B6"><text><SENT sid="344" pm="."><plain>6. NijenhuisM.HämmerlingG. </plain></SENT>
+<SENT sid="345" pm="."><plain>J. (1996) Multiple regions of the transporter associated with antigen processing (TAP) contribute to its peptide binding site. J. </plain></SENT>
+<SENT sid="346" pm="."><plain>Immunol. 157, 5467–54778955196 </plain></SENT>
+</text></ref><ref id="B7"><text><SENT sid="347" pm="."><plain>7. Lankat-ButtgereitB.TampéR. (2002) The transporter associated with antigen processing. </plain></SENT>
+<SENT sid="348" pm="."><plain>Function and implications in human diseases. Physiol. </plain></SENT>
+<SENT sid="349" pm="."><plain>Rev. 82, 187–20411773612 </plain></SENT>
+</text></ref><ref id="B8"><text><SENT sid="350" pm="."><plain>8. KochJ.GuntrumR.HeintkeS.KyritsisC.TampéR. (2004) Functional dissection of the transmembrane domains of the transporter associated with antigen processing (TAP). J. </plain></SENT>
+<SENT sid="351" pm="."><plain>Biol. </plain></SENT>
+<SENT sid="352" pm="."><plain>Chem. 279, 10142–1014714679198 </plain></SENT>
+</text></ref><ref id="B9"><text><SENT sid="353" pm="."><plain>9. SchrodtS.KochJ.TampéR. (2006) Membrane topology of the transporter associated with antigen processing (TAP1) within an assembled functional peptide-loading complex. J. </plain></SENT>
+<SENT sid="354" pm="."><plain>Biol. </plain></SENT>
+<SENT sid="355" pm="."><plain>Chem. 281, 6455–646216407277 </plain></SENT>
+</text></ref><ref id="B10"><text><SENT sid="356" pm="."><plain>10. GaudetR.WileyD. </plain></SENT>
+<SENT sid="357" pm="."><plain>C. (2001) Structure of the ABC ATPase domain of human TAP1, the transporter associated with antigen processing. EMBO J. 20, 4964–497211532960 </plain></SENT>
+</text></ref><ref id="B11"><text><SENT sid="358" pm="."><plain>11. ProckoE.Ferrin-O'ConnellI.NgS. </plain></SENT>
+<SENT sid="359" pm="."><plain>L.GaudetR. (2006) Distinct structural and functional properties of the ATPase sites in an asymmetric ABC transporter. Mol. </plain></SENT>
+<SENT sid="360" pm="."><plain>Cell 24, 51–6217018292 </plain></SENT>
+</text></ref><ref id="B12"><text><SENT sid="361" pm="."><plain>12. OanceaG.O'MaraM. </plain></SENT>
+<SENT sid="362" pm="."><plain>L.BennettW. </plain></SENT>
+<SENT sid="363" pm="."><plain>F.TielemanD. </plain></SENT>
+<SENT sid="364" pm="."><plain>P.AbeleR.TampéR. (2009) Structural arrangement of the transmission interface in the antigen ABC transport complex TAP. Proc. </plain></SENT>
+<SENT sid="365" pm="."><plain>Natl. </plain></SENT>
+<SENT sid="366" pm="."><plain>Acad. </plain></SENT>
+<SENT sid="367" pm="."><plain>Sci. </plain></SENT>
+<SENT sid="368" pm="."><plain>U.S.A. 106, 5551–555619297616 </plain></SENT>
+</text></ref><ref id="B13"><text><SENT sid="369" pm="."><plain>13. RosenbergM. </plain></SENT>
+<SENT sid="370" pm="."><plain>F.BikadiZ.ChanJ.LiuX.NiZ.CaiX.FordR. </plain></SENT>
+<SENT sid="371" pm="."><plain>C.MaoQ. (2010) The human breast cancer resistance protein (BCRP/ABCG2) shows conformational changes with mitoxantrone. Structure 18, 482–49320399185 </plain></SENT>
+</text></ref><ref id="B14"><text><SENT sid="372" pm="."><plain>14. BessadokA.GarciaE.JacquetH.MartinS.GarriguesA.LoiseauN.AndréF.OrlowskiS.VivaudouM. (2011) Recognition of sulfonylurea receptor (ABCC8/9) ligands by the multidrug resistance transporter P-glycoprotein (ABCB1). </plain></SENT>
+<SENT sid="373" pm="."><plain>Functional similarities based on common structural features between two multispecific ABC proteins. J. </plain></SENT>
+<SENT sid="374" pm="."><plain>Biol. </plain></SENT>
+<SENT sid="375" pm="."><plain>Chem. 286, 3552–356921098040 </plain></SENT>
+</text></ref><ref id="B15"><text><SENT sid="376" pm="."><plain>15. O'MaraM. </plain></SENT>
+<SENT sid="377" pm="."><plain>L.TielemanD. </plain></SENT>
+<SENT sid="378" pm="."><plain>P. (2007) P-glycoprotein models of the apo and ATP-bound states based on homology with Sav1866 and MalK. FEBS Lett. 581, 4217–422217706648 </plain></SENT>
+</text></ref><ref id="B16"><text><SENT sid="379" pm="."><plain>16. GlobischC.PajevaI. </plain></SENT>
+<SENT sid="380" pm="."><plain>K.WieseM. (2008) Identification of putative binding sites of P-glycoprotein based on its homology model. ChemMedchem. 3, 280–29518175303 </plain></SENT>
+</text></ref><ref id="B17"><text><SENT sid="381" pm="."><plain>17. PlebanK.KoppS.CsaszarE.PeerM.HrebicekT.RizziA.EckerG. </plain></SENT>
+<SENT sid="382" pm="."><plain>F.ChibaP. (2005) P-glycoprotein substrate binding domains are located at the transmembrane domain/transmembrane domain interfaces. </plain></SENT>
+<SENT sid="383" pm="."><plain>A combined photoaffinity labeling-protein homology modeling approach. Mol. </plain></SENT>
+<SENT sid="384" pm="."><plain>Pharmacol. 67, 365–37415509712 </plain></SENT>
+</text></ref><ref id="B18"><text><SENT sid="385" pm="."><plain>18. QianF.WeiD.LiuJ.YangS. (2006) Molecular model and ATPase activity of carboxyl-terminal nucleotide binding domain from human P-glycoprotein. Biochemistry 71, S18–S2416487063 </plain></SENT>
+</text></ref><ref id="B19"><text><SENT sid="386" pm="."><plain>19. VeigaM. </plain></SENT>
+<SENT sid="387" pm="."><plain>I.FerreiraP. </plain></SENT>
+<SENT sid="388" pm="."><plain>E.JörnhagenL.MalmbergM.KoneA.SchmidtB. </plain></SENT>
+<SENT sid="389" pm="."><plain>A.PetzoldM.BjörkmanA.NostenF.GilJ. </plain></SENT>
+<SENT sid="390" pm="."><plain>P. (2011) Novel polymorphisms in Plasmodium falciparum ABC transporter genes are associated with major ACT antimalarial drug resistance. PLoS ONE 6, e2021221633513 </plain></SENT>
+</text></ref><ref id="B20"><text><SENT sid="391" pm="."><plain>20. RavnaA. </plain></SENT>
+<SENT sid="392" pm="."><plain>W.SylteI.SagerG. (2007) Molecular model of the outward facing state of the human P-glycoprotein (ABCB1) and comparison to a model of the human MRP5 (ABCC5). Theor. </plain></SENT>
+<SENT sid="393" pm="."><plain>Biol. </plain></SENT>
+<SENT sid="394" pm="."><plain>Med. </plain></SENT>
+<SENT sid="395" pm="."><plain>Model. 4, 3317803828 </plain></SENT>
+</text></ref><ref id="B21"><text><SENT sid="396" pm="."><plain>21. RavnaA. </plain></SENT>
+<SENT sid="397" pm="."><plain>W.SagerG. (2008) Molecular model of the outward facing state of the human multidrug resistance protein 4 (MRP4/ABCC4). Bioorg. </plain></SENT>
+<SENT sid="398" pm="."><plain>Med. </plain></SENT>
+<SENT sid="399" pm="."><plain>Chem. </plain></SENT>
+<SENT sid="400" pm="."><plain>Lett. 18, 3481–348318513968 </plain></SENT>
+</text></ref><ref id="B22"><text><SENT sid="401" pm="."><plain>22. RavnaA. </plain></SENT>
+<SENT sid="402" pm="."><plain>W.SylteI.SagerG. (2008) A molecular model of a putative substrate releasing conformation of multidrug resistance protein 5 (MRP5). Eur. </plain></SENT>
+<SENT sid="403" pm="."><plain>J. </plain></SENT>
+<SENT sid="404" pm="."><plain>Med. </plain></SENT>
+<SENT sid="405" pm="."><plain>Chem. 43, 2557–256718313803 </plain></SENT>
+</text></ref><ref id="B23"><text><SENT sid="406" pm="."><plain>23. RavnaA. </plain></SENT>
+<SENT sid="407" pm="."><plain>W.SylteI.SagerG. (2009) Binding site of ABC transporter homology models confirmed by ABCB1 crystal structure. Theor. </plain></SENT>
+<SENT sid="408" pm="."><plain>Biol. </plain></SENT>
+<SENT sid="409" pm="."><plain>Med. </plain></SENT>
+<SENT sid="410" pm="."><plain>Model. 6, 2019732422 </plain></SENT>
+</text></ref><ref id="B24"><text><SENT sid="411" pm="."><plain>24. DeGorterM. </plain></SENT>
+<SENT sid="412" pm="."><plain>K.ConseilG.DeeleyR. </plain></SENT>
+<SENT sid="413" pm="."><plain>G.CampbellR. </plain></SENT>
+<SENT sid="414" pm="."><plain>L.ColeS. </plain></SENT>
+<SENT sid="415" pm="."><plain>P. (2008) Molecular modeling of the human multidrug resistance protein 1 (MRP1/ABCC1). Biochem. </plain></SENT>
+<SENT sid="416" pm="."><plain>Biophys. </plain></SENT>
+<SENT sid="417" pm="."><plain>Res. </plain></SENT>
+<SENT sid="418" pm="."><plain>Commun. 365, 29–3417980150 </plain></SENT>
+</text></ref><ref id="B25"><text><SENT sid="419" pm="."><plain>25. CampbellJ. </plain></SENT>
+<SENT sid="420" pm="."><plain>D.SansomM. </plain></SENT>
+<SENT sid="421" pm="."><plain>S.AshcroftF. </plain></SENT>
+<SENT sid="422" pm="."><plain>M. (2003) Potassium channel regulation. EMBO Rep. 4, 1038–104214593442 </plain></SENT>
+</text></ref><ref id="B26"><text><SENT sid="423" pm="."><plain>26. SerohijosA. </plain></SENT>
+<SENT sid="424" pm="."><plain>W.HegedusT.AleksandrovA. </plain></SENT>
+<SENT sid="425" pm="."><plain>A.HeL.CuiL.DokholyanN. </plain></SENT>
+<SENT sid="426" pm="."><plain>V.RiordanJ. </plain></SENT>
+<SENT sid="427" pm="."><plain>R. (2008) Phenylalanine 508 mediates a cytoplasmic-membrane domain contact in the CFTR three-dimensional structure crucial to assembly and channel function. Proc. </plain></SENT>
+<SENT sid="428" pm="."><plain>Natl. </plain></SENT>
+<SENT sid="429" pm="."><plain>Acad. </plain></SENT>
+<SENT sid="430" pm="."><plain>Sci. </plain></SENT>
+<SENT sid="431" pm="."><plain>U.S.A. 105, 3256–326118305154 </plain></SENT>
+</text></ref><ref id="B27"><text><SENT sid="432" pm="."><plain>27. AlexanderC.IvetacA.LiuX.NorimatsuY.SerranoJ. </plain></SENT>
+<SENT sid="433" pm="."><plain>R.LandstromA.SansomM.DawsonD. </plain></SENT>
+<SENT sid="434" pm="."><plain>C. (2009) Cystic fibrosis transmembrane conductance regulator. </plain></SENT>
+<SENT sid="435" pm="."><plain>Using differential reactivity toward channel-permeant and channel-impermeant thiol-reactive probes to test a molecular model for the pore. Biochemistry 48, 10078–1008819754156 </plain></SENT>
+</text></ref><ref id="B28"><text><SENT sid="436" pm="."><plain>28. MornonJ. </plain></SENT>
+<SENT sid="437" pm="."><plain>P.LehnP.CallebautI. (2009) Molecular models of the open and closed states of the whole human CFTR protein. Cell. </plain></SENT>
+<SENT sid="438" pm="."><plain>Mol. </plain></SENT>
+<SENT sid="439" pm="."><plain>Life Sci. 66, 3469–348619707853 </plain></SENT>
+</text></ref><ref id="B29"><text><SENT sid="440" pm="."><plain>29. AllerS. </plain></SENT>
+<SENT sid="441" pm="."><plain>G.YuJ.WardA.WengY.ChittaboinaS.ZhuoR.HarrellP. </plain></SENT>
+<SENT sid="442" pm="."><plain>M.TrinhY. </plain></SENT>
+<SENT sid="443" pm="."><plain>T.ZhangQ.UrbatschI. </plain></SENT>
+<SENT sid="444" pm="."><plain>L.ChangG. (2009) Structure of P-glycoprotein reveals a molecular basis for poly-specific drug binding. Science 323, 1718–172219325113 </plain></SENT>
+</text></ref><ref id="B30"><text><SENT sid="445" pm="."><plain>30. DawsonR. </plain></SENT>
+<SENT sid="446" pm="."><plain>J.LocherK. </plain></SENT>
+<SENT sid="447" pm="."><plain>P. (2006) Structure of a bacterial multidrug ABC transporter. Nature 443, 180–18516943773 </plain></SENT>
+</text></ref><ref id="B31"><text><SENT sid="448" pm="."><plain>31. UniProt Consortium (2011) Ongoing and future developments at the Universal Protein Resource. Nucleic Acids Res. 39, D214–D21921051339 </plain></SENT>
+</text></ref><ref id="B32"><text><SENT sid="449" pm="."><plain>32. GasteigerE.GattikerA.HooglandC.IvanyiI.AppelR. </plain></SENT>
+<SENT sid="450" pm="."><plain>D.BairochA. (2003) ExPASy. </plain></SENT>
+<SENT sid="451" pm="."><plain>The proteomics server for in-depth protein knowledge and analysis. Nucleic Acids Res. 31, 3784–378812824418 </plain></SENT>
+</text></ref><ref id="B33"><text><SENT sid="452" pm="."><plain>33. AltschulS. </plain></SENT>
+<SENT sid="453" pm="."><plain>F.GishW.MillerW.MyersE. </plain></SENT>
+<SENT sid="454" pm="."><plain>W.LipmanD. </plain></SENT>
+<SENT sid="455" pm="."><plain>J. (1990) Basic local alignment search tool. J. </plain></SENT>
+<SENT sid="456" pm="."><plain>Mol. </plain></SENT>
+<SENT sid="457" pm="."><plain>Biol. 215, 403–4102231712 </plain></SENT>
+</text></ref><ref id="B34"><text><SENT sid="458" pm="."><plain>34. WardA.ReyesC. </plain></SENT>
+<SENT sid="459" pm="."><plain>L.YuJ.RothC. </plain></SENT>
+<SENT sid="460" pm="."><plain>B.ChangG. (2007) Flexibility in the ABC transporter MsbA. </plain></SENT>
+<SENT sid="461" pm="."><plain>Alternating access with a twist. Proc. </plain></SENT>
+<SENT sid="462" pm="."><plain>Natl. </plain></SENT>
+<SENT sid="463" pm="."><plain>Acad. </plain></SENT>
+<SENT sid="464" pm="."><plain>Sci. </plain></SENT>
+<SENT sid="465" pm="."><plain>U.S.A. 104, 19005–1901018024585 </plain></SENT>
+</text></ref><ref id="B35"><text><SENT sid="466" pm="."><plain>35. KatohK.MisawaK.KumaK.MiyataT. (2002) MAFFT. </plain></SENT>
+<SENT sid="467" pm="."><plain>A novel method for rapid multiple sequence alignment based on fast Fourier transform. Nucleic Acids Res. 30, 3059–306612136088 </plain></SENT>
+</text></ref><ref id="B36"><text><SENT sid="468" pm="."><plain>36. SchmittL.BenabdelhakH.BlightM. </plain></SENT>
+<SENT sid="469" pm="."><plain>A.HollandI. </plain></SENT>
+<SENT sid="470" pm="."><plain>B.StubbsM. </plain></SENT>
+<SENT sid="471" pm="."><plain>T. (2003) Crystal structure of the nucleotide-binding domain of the ABC transporter hemolysin B. </plain></SENT>
+<SENT sid="472" pm="."><plain>Identification of a variable region within ABC helical domains. J. </plain></SENT>
+<SENT sid="473" pm="."><plain>Mol. </plain></SENT>
+<SENT sid="474" pm="."><plain>Biol. 330, 333–34212823972 </plain></SENT>
+</text></ref><ref id="B37"><text><SENT sid="475" pm="."><plain>37. HaffkeM.MenzelA.CariusY.JahnD.HeinzD. </plain></SENT>
+<SENT sid="476" pm="."><plain>W. (2010) Structures of the nucleotide-binding domain of the human ABCB6 transporter and its complexes with nucleotides. Acta Crystallogr. </plain></SENT>
+<SENT sid="477" pm="."><plain>D Biol. </plain></SENT>
+<SENT sid="478" pm="."><plain>Crystallogr. 66, 979–98720823549 </plain></SENT>
+</text></ref><ref id="B38"><text><SENT sid="479" pm="."><plain>38. VedadiM.LewJ.ArtzJ.AmaniM.ZhaoY.DongA.WasneyG. </plain></SENT>
+<SENT sid="480" pm="."><plain>A.GaoM.HillsT.BrokxS.QiuW.SharmaS.DiassitiA.AlamZ.MeloneM.MulichakA.WernimontA.BrayJ.LoppnauP.PlotnikovaO.NewberryK.SundararajanE.HoustonS.WalkerJ.TempelW.BochkarevA.KozieradzkiI.EdwardsA.ArrowsmithC.RoosD.KainK.HuiR. (2007) Genome-scale protein expression and structural biology of Plasmodium falciparum and related Apicomplexan organisms. Mol. </plain></SENT>
+<SENT sid="481" pm="."><plain>Biochem. </plain></SENT>
+<SENT sid="482" pm="."><plain>Parasitol. 151, 100–11017125854 </plain></SENT>
+</text></ref><ref id="B39"><text><SENT sid="483" pm="."><plain>39. SaliA.BlundellT. </plain></SENT>
+<SENT sid="484" pm="."><plain>L. (1993) Comparative protein modeling by satisfaction of spatial restraints. J. </plain></SENT>
+<SENT sid="485" pm="."><plain>Mol. </plain></SENT>
+<SENT sid="486" pm="."><plain>Biol. 234, 779–8158254673 </plain></SENT>
+</text></ref><ref id="B40"><text><SENT sid="487" pm="."><plain>40. DavisI. </plain></SENT>
+<SENT sid="488" pm="."><plain>W.Leaver-FayA.ChenV. </plain></SENT>
+<SENT sid="489" pm="."><plain>B.BlockJ. </plain></SENT>
+<SENT sid="490" pm="."><plain>N.KapralG. </plain></SENT>
+<SENT sid="491" pm="."><plain>J.WangX.MurrayL. </plain></SENT>
+<SENT sid="492" pm="."><plain>W.ArendallW. </plain></SENT>
+<SENT sid="493" pm="."><plain>B.3rdSnoeyinkJ.RichardsonJ. </plain></SENT>
+<SENT sid="494" pm="."><plain>S.RichardsonD. </plain></SENT>
+<SENT sid="495" pm="."><plain>C. (2007) MolProbity: all-atom contacts and structure validation for proteins and nucleic acids. Nucleic Acids Res. 35, W375–W38317452350 </plain></SENT>
+</text></ref><ref id="B41"><text><SENT sid="496" pm="."><plain>41. ChenV. </plain></SENT>
+<SENT sid="497" pm="."><plain>B.ArendallW. </plain></SENT>
+<SENT sid="498" pm="."><plain>B.3rdHeaddJ. </plain></SENT>
+<SENT sid="499" pm="."><plain>J.KeedyD. </plain></SENT>
+<SENT sid="500" pm="."><plain>A.ImmorminoR. </plain></SENT>
+<SENT sid="501" pm="."><plain>M.KapralG. </plain></SENT>
+<SENT sid="502" pm="."><plain>J.MurrayL. </plain></SENT>
+<SENT sid="503" pm="."><plain>W.RichardsonJ. </plain></SENT>
+<SENT sid="504" pm="."><plain>S.RichardsonD. </plain></SENT>
+<SENT sid="505" pm="."><plain>C. (2010) MolProbity. </plain></SENT>
+<SENT sid="506" pm="."><plain>All-atom structure validation for macromolecular crystallography. Acta Crystallogr. </plain></SENT>
+<SENT sid="507" pm="."><plain>D. </plain></SENT>
+<SENT sid="508" pm="."><plain>Biol. </plain></SENT>
+<SENT sid="509" pm="."><plain>Crystallogr. 66, 12–2120057044 </plain></SENT>
+</text></ref><ref id="B42"><text><SENT sid="510" pm="."><plain>42. BenkertP.TosattoS. </plain></SENT>
+<SENT sid="511" pm="."><plain>C.SchomburgD. (2008) QMEAN. </plain></SENT>
+<SENT sid="512" pm="."><plain>A comprehensive scoring function for model quality assessment. Proteins 71, 261–27717932912 </plain></SENT>
+</text></ref><ref id="B43"><text><SENT sid="513" pm="."><plain>43. BenkertP.KünzliM.SchwedeT. (2009) QMEAN server for protein model quality estimation. Nucleic Acids Res. 37, W510–W51419429685 </plain></SENT>
+</text></ref><ref id="B44"><text><SENT sid="514" pm="."><plain>44. LaskowskiR. </plain></SENT>
+<SENT sid="515" pm="."><plain>A.MacarthurM. </plain></SENT>
+<SENT sid="516" pm="."><plain>W.MossD. </plain></SENT>
+<SENT sid="517" pm="."><plain>S.ThorntonJ. </plain></SENT>
+<SENT sid="518" pm="."><plain>M. (1993) PROCHECK. </plain></SENT>
+<SENT sid="519" pm="."><plain>A program to check the stereochemical quality of protein structures. J. </plain></SENT>
+<SENT sid="520" pm="."><plain>Appl. </plain></SENT>
+<SENT sid="521" pm="."><plain>Crystallogr. 26, 283–291 </plain></SENT>
+</text></ref><ref id="B45"><text><SENT sid="522" pm="."><plain>45. LaskowskiR. </plain></SENT>
+<SENT sid="523" pm="."><plain>A. (2009) PDBsum new things. Nucleic Acids Res. 37, D355–D35918996896 </plain></SENT>
+</text></ref><ref id="B46"><text><SENT sid="524" pm="."><plain>46. HooftR. </plain></SENT>
+<SENT sid="525" pm="."><plain>W.VriendG.SanderC.AbolaE. </plain></SENT>
+<SENT sid="526" pm="."><plain>E. (1996) Errors in protein structures. Nature 381, 272–2728692262 </plain></SENT>
+</text></ref><ref id="B47"><text><SENT sid="527" pm="."><plain>47. WolfM. </plain></SENT>
+<SENT sid="528" pm="."><plain>G.HoeflingM.Aponte-SantamaríaC.GrubmüllerH.GroenhofG. (2010) g_membed. </plain></SENT>
+<SENT sid="529" pm="."><plain>Efficient insertion of a membrane protein into an equilibrated lipid bilayer with minimal perturbation. J. </plain></SENT>
+<SENT sid="530" pm="."><plain>Comput. </plain></SENT>
+<SENT sid="531" pm="."><plain>Chem. 31, 2169–217420336801 </plain></SENT>
+</text></ref><ref id="B48"><text><SENT sid="532" pm="."><plain>48. BerendsenH. </plain></SENT>
+<SENT sid="533" pm="."><plain>J. </plain></SENT>
+<SENT sid="534" pm="."><plain>C.van der SpoelD.van DrunenR. (1995) GROMACS. </plain></SENT>
+<SENT sid="535" pm="."><plain>A message-passing parallel molecular dynamics implementation. Comput. </plain></SENT>
+<SENT sid="536" pm="."><plain>Phys. </plain></SENT>
+<SENT sid="537" pm="."><plain>Commun. 91, 43–56 </plain></SENT>
+</text></ref><ref id="B49"><text><SENT sid="538" pm="."><plain>49. Van Der SpoelD.LindahlE.HessB.GroenhofG.MarkA. </plain></SENT>
+<SENT sid="539" pm="."><plain>E.BerendsenH. </plain></SENT>
+<SENT sid="540" pm="."><plain>J. (2005) GROMACS. </plain></SENT>
+<SENT sid="541" pm="."><plain>Fast, flexible, and free. J. </plain></SENT>
+<SENT sid="542" pm="."><plain>Comput. </plain></SENT>
+<SENT sid="543" pm="."><plain>Chem. 26, 1701–171816211538 </plain></SENT>
+</text></ref><ref id="B50"><text><SENT sid="544" pm="."><plain>50. SchmidN.EichenbergerA. </plain></SENT>
+<SENT sid="545" pm="."><plain>P.ChoutkoA.RinikerS.WingerM.MarkA. </plain></SENT>
+<SENT sid="546" pm="."><plain>E.van GunsterenW. </plain></SENT>
+<SENT sid="547" pm="."><plain>F. (2011) Definition and testing of the GROMOS force-field versions 54A7 and 54B7. Eur. </plain></SENT>
+<SENT sid="548" pm="."><plain>Biophys. </plain></SENT>
+<SENT sid="549" pm="."><plain>J. 40, 843–85621533652 </plain></SENT>
+</text></ref><ref id="B51"><text><SENT sid="550" pm="."><plain>51. ChenR.PogerD.MarkA. </plain></SENT>
+<SENT sid="551" pm="."><plain>E. (2011) Effect of high pressure on fully hydrated DPPC and POPC bilayers. J. </plain></SENT>
+<SENT sid="552" pm="."><plain>Phys. </plain></SENT>
+<SENT sid="553" pm="."><plain>Chem. </plain></SENT>
+<SENT sid="554" pm="."><plain>B 115, 1038–104421194215 </plain></SENT>
+</text></ref><ref id="B52"><text><SENT sid="555" pm="."><plain>52. BakerN. </plain></SENT>
+<SENT sid="556" pm="."><plain>A.SeptD.JosephS.HolstM. </plain></SENT>
+<SENT sid="557" pm="."><plain>J.McCammonJ. </plain></SENT>
+<SENT sid="558" pm="."><plain>A. (2001) Electrostatics of nanosystems. </plain></SENT>
+<SENT sid="559" pm="."><plain>Application to microtubules and the ribosome. Proc. </plain></SENT>
+<SENT sid="560" pm="."><plain>Natl. </plain></SENT>
+<SENT sid="561" pm="."><plain>Acad. </plain></SENT>
+<SENT sid="562" pm="."><plain>Sci. </plain></SENT>
+<SENT sid="563" pm="."><plain>U.S.A. 98, 10037–1004111517324 </plain></SENT>
+</text></ref><ref id="B53"><text><SENT sid="564" pm="."><plain>53. OnufrievA.BashfordD.CaseD. </plain></SENT>
+<SENT sid="565" pm="."><plain>A. (2004) Exploring protein native states and large scale conformational changes with a modified generalized born model. Proteins 55, 383–39415048829 </plain></SENT>
+</text></ref><ref id="B54"><text><SENT sid="566" pm="."><plain>54. DenschlagR.LingenheilM.TavanP. (2009) Optimal temperature ladders in replica exchange simulations. Chem. </plain></SENT>
+<SENT sid="567" pm="."><plain>Phys. </plain></SENT>
+<SENT sid="568" pm="."><plain>Lett. 473, 193–195 </plain></SENT>
+</text></ref><ref id="B55"><text><SENT sid="569" pm="."><plain>55. DauraX.GademannK.JaunB.SeebachD.van GunsterenW. </plain></SENT>
+<SENT sid="570" pm="."><plain>F.MarkA. </plain></SENT>
+<SENT sid="571" pm="."><plain>E. (1999) Peptide folding. </plain></SENT>
+<SENT sid="572" pm="."><plain>When simulation meets experiment. Angew. </plain></SENT>
+<SENT sid="573" pm="."><plain>Chem. </plain></SENT>
+<SENT sid="574" pm="."><plain>Int. </plain></SENT>
+<SENT sid="575" pm="."><plain>Ed. </plain></SENT>
+<SENT sid="576" pm="."><plain>Engl. 38, 236–240 </plain></SENT>
+</text></ref><ref id="B56"><text><SENT sid="577" pm="."><plain>56. ShirtsM. </plain></SENT>
+<SENT sid="578" pm="."><plain>R.ChoderaJ. </plain></SENT>
+<SENT sid="579" pm="."><plain>D. (2008) Statistically optimal analysis of samples from multiple equilibrium states. J. </plain></SENT>
+<SENT sid="580" pm="."><plain>Chem. </plain></SENT>
+<SENT sid="581" pm="."><plain>Phys. 129, 12410519045004 </plain></SENT>
+</text></ref><ref id="B57"><text><SENT sid="582" pm="."><plain>57. DeLanoW. </plain></SENT>
+<SENT sid="583" pm="."><plain>L. (2008) The PyMOL Molecular Graphics System, DeLano Scientific LLC, Palo Alto, CA </plain></SENT>
+</text></ref><ref id="B58"><text><SENT sid="584" pm="."><plain>58. PettersenE. </plain></SENT>
+<SENT sid="585" pm="."><plain>F.GoddardT. </plain></SENT>
+<SENT sid="586" pm="."><plain>D.HuangC. </plain></SENT>
+<SENT sid="587" pm="."><plain>C.CouchG. </plain></SENT>
+<SENT sid="588" pm="."><plain>S.GreenblattD. </plain></SENT>
+<SENT sid="589" pm="."><plain>M.MengE. </plain></SENT>
+<SENT sid="590" pm="."><plain>C.FerrinT. </plain></SENT>
+<SENT sid="591" pm="."><plain>E. (2004) UCSF Chimera. </plain></SENT>
+<SENT sid="592" pm="."><plain>A visualization system for exploratory research and analysis. J. </plain></SENT>
+<SENT sid="593" pm="."><plain>Comput. </plain></SENT>
+<SENT sid="594" pm="."><plain>Chem. 25, 1605–161215264254 </plain></SENT>
+</text></ref><ref id="B59"><text><SENT sid="595" pm="."><plain>59. KochJ.GuntrumR.TampéR. (2005) Exploring the minimal functional unit of the transporter associated with antigen processing. FEBS Lett. 579, 4413–441616061226 </plain></SENT>
+</text></ref><ref id="B60"><text><SENT sid="596" pm="."><plain>60. ProckoE.RaghuramanG.WileyD. </plain></SENT>
+<SENT sid="597" pm="."><plain>C.RaghavanM.GaudetR. (2005) Identification of domain boundaries within the N termini of TAP1 and TAP2 and their importance in tapasin binding and tapasin-mediated increase in peptide loading of MHC class I. Immunol. </plain></SENT>
+<SENT sid="598" pm="."><plain>Cell Biol. 83, 475–48216174096 </plain></SENT>
+</text></ref><ref id="B61"><text><SENT sid="599" pm="."><plain>61. LeonhardtR. </plain></SENT>
+<SENT sid="600" pm="."><plain>M.KeusekottenK.BekpenC.KnittlerM. </plain></SENT>
+<SENT sid="601" pm="."><plain>R. (2005) Critical role for the tapasin-docking site of TAP2 in the functional integrity of the MHC class I-peptide-loading complex. J. </plain></SENT>
+<SENT sid="602" pm="."><plain>Immunol. 175, 5104–511416210614 </plain></SENT>
+</text></ref><ref id="B62"><text><SENT sid="603" pm="."><plain>62. MoodyJ. </plain></SENT>
+<SENT sid="604" pm="."><plain>E.ThomasP. </plain></SENT>
+<SENT sid="605" pm="."><plain>J. (2005) Nucleotide binding domain interactions during the mechanochemical reaction cycle of ATP binding cassette transporters. J. </plain></SENT>
+<SENT sid="606" pm="."><plain>Bioenerg. </plain></SENT>
+<SENT sid="607" pm="."><plain>Biomembr. 37, 475–47916691486 </plain></SENT>
+</text></ref><ref id="B63"><text><SENT sid="608" pm="."><plain>63. HohlM.BriandC.GrütterM. </plain></SENT>
+<SENT sid="609" pm="."><plain>G.SeegerM. </plain></SENT>
+<SENT sid="610" pm="."><plain>A. (2012) Crystal structure of a heterodimeric ABC transporter in its inward-facing conformation. Nat. </plain></SENT>
+<SENT sid="611" pm="."><plain>Struct. </plain></SENT>
+<SENT sid="612" pm="."><plain>Mol. </plain></SENT>
+<SENT sid="613" pm="."><plain>Biol. 19, 395–40222447242 </plain></SENT>
+</text></ref><ref id="B64"><text><SENT sid="614" pm="."><plain>64. RitzU.DrexlerI.SutterD.AbeleR.HuberC.SeligerB. (2003) Impaired transporter associated with antigen processing (TAP) function attributable to a single amino acid alteration in the peptide TAP subunit TAP1. J. </plain></SENT>
+<SENT sid="615" pm="."><plain>Immunol. 170, 941–94612517960 </plain></SENT>
+</text></ref><ref id="B65"><text><SENT sid="616" pm="."><plain>65. van EndertP. </plain></SENT>
+<SENT sid="617" pm="."><plain>M.TampéR.MeyerT. </plain></SENT>
+<SENT sid="618" pm="."><plain>H.TischR.BachJ. </plain></SENT>
+<SENT sid="619" pm="."><plain>F.McDevittH. </plain></SENT>
+<SENT sid="620" pm="."><plain>O. (1994) A sequential model for peptide binding and transport by the transporters associated with antigen processing. Immunity 1, 491–5007895159 </plain></SENT>
+</text></ref><ref id="B66"><text><SENT sid="621" pm="."><plain>66. KoopmannJ. </plain></SENT>
+<SENT sid="622" pm="."><plain>O.PostM.NeefjesJ. </plain></SENT>
+<SENT sid="623" pm="."><plain>J.HämmerlingG. </plain></SENT>
+<SENT sid="624" pm="."><plain>J.MomburgF. (1996) Translocation of long peptides by transporters associated with antigen processing (TAP). Eur. </plain></SENT>
+<SENT sid="625" pm="."><plain>J. </plain></SENT>
+<SENT sid="626" pm="."><plain>Immunol. 26, 1720–17288765012 </plain></SENT>
+</text></ref><ref id="B67"><text><SENT sid="627" pm="."><plain>67. ArmandolaE. </plain></SENT>
+<SENT sid="628" pm="."><plain>A.MomburgF.NijenhuisM.BulbucN.FrühK.HämmerlingG. </plain></SENT>
+<SENT sid="629" pm="."><plain>J. (1996) A point mutation in the human transporter associated with antigen processing (TAP2) alters the peptide transport specificity. Eur. </plain></SENT>
+<SENT sid="630" pm="."><plain>J. </plain></SENT>
+<SENT sid="631" pm="."><plain>Immunol. 26, 1748–17558765016 </plain></SENT>
+</text></ref><ref id="B68"><text><SENT sid="632" pm="."><plain>68. MomburgF.ArmandolaE. </plain></SENT>
+<SENT sid="633" pm="."><plain>A.PostM.HammerlingG. </plain></SENT>
+<SENT sid="634" pm="."><plain>J. (1996) Residues in TAP2 peptide transporters controlling substrate specificity. J. </plain></SENT>
+<SENT sid="635" pm="."><plain>Immunol. 156, 1756–17638596024 </plain></SENT>
+</text></ref><ref id="B69"><text><SENT sid="636" pm="."><plain>69. BaldaufC.SchrodtS.HergetM.KochJ.TampéR. (2010) Single residue within the antigen translocation complex TAP controls the epitope repertoire by stabilizing a receptive conformation. Proc. </plain></SENT>
+<SENT sid="637" pm="."><plain>Natl. </plain></SENT>
+<SENT sid="638" pm="."><plain>Acad. </plain></SENT>
+<SENT sid="639" pm="."><plain>Sci. </plain></SENT>
+<SENT sid="640" pm="."><plain>U.S.A. 107, 9135–914020439763 </plain></SENT>
+</text></ref><ref id="B70"><text><SENT sid="641" pm="."><plain>70. DeversonE. </plain></SENT>
+<SENT sid="642" pm="."><plain>V.LeongL.SeeligA.CoadwellW. </plain></SENT>
+<SENT sid="643" pm="."><plain>J.TredgettE. </plain></SENT>
+<SENT sid="644" pm="."><plain>M.ButcherG. </plain></SENT>
+<SENT sid="645" pm="."><plain>W.HowardJ. </plain></SENT>
+<SENT sid="646" pm="."><plain>C. (1998) Functional analysis by site-directed mutagenesis of the complex polymorphism in rat transporter associated with antigen processing. J. </plain></SENT>
+<SENT sid="647" pm="."><plain>Immunol. 160, 2767–27799510178 </plain></SENT>
+</text></ref><ref id="B71"><text><SENT sid="648" pm="."><plain>71. LiS. </plain></SENT>
+<SENT sid="649" pm="."><plain>C.DeberC. </plain></SENT>
+<SENT sid="650" pm="."><plain>M. (1992) Glycine and β-branched residues support and modulate peptide helicity in membrane environments. FEBS Lett. 311, 217–2201397317 </plain></SENT>
+</text></ref><ref id="B72"><text><SENT sid="651" pm="."><plain>72. JiangY.LeeA.ChenJ.CadeneM.ChaitB. </plain></SENT>
+<SENT sid="652" pm="."><plain>T.MacKinnonR. (2002) The open pore conformation of potassium channels. Nature 417, 523–52612037560 </plain></SENT>
+</text></ref><ref id="B73"><text><SENT sid="653" pm="."><plain>73. HergetM.OanceaG.SchrodtS.KarasM.TampéR.AbeleR. (2007) Mechanism of substrate sensing and signal transmission within an ABC transporter. </plain></SENT>
+<SENT sid="654" pm="."><plain>Use of a Trojan horse strategy. J. </plain></SENT>
+<SENT sid="655" pm="."><plain>Biol. </plain></SENT>
+<SENT sid="656" pm="."><plain>Chem. 282, 3871–388017164240 </plain></SENT>
+</text></ref><ref id="B74"><text><SENT sid="657" pm="."><plain>74. AndrolewiczM. </plain></SENT>
+<SENT sid="658" pm="."><plain>J.CresswellP. (1994) Human transporters associated with antigen processing possess a promiscuous peptide binding site. Immunity 1, 7–147889401 </plain></SENT>
+</text></ref><ref id="B75"><text><SENT sid="659" pm="."><plain>75. UebelS.MeyerT. </plain></SENT>
+<SENT sid="660" pm="."><plain>H.KraasW.KienleS.JungG.WiesmüllerK. </plain></SENT>
+<SENT sid="661" pm="."><plain>H.TampéR. (1995) Requirements for peptide binding to the human transporter associated with antigen processing revealed by peptide scans and complex peptide libraries. J. </plain></SENT>
+<SENT sid="662" pm="."><plain>Biol. </plain></SENT>
+<SENT sid="663" pm="."><plain>Chem. 270, 18512–185167543103 </plain></SENT>
+</text></ref><ref id="B76"><text><SENT sid="664" pm="."><plain>76. MomburgF.RoelseJ.HowardJ. </plain></SENT>
+<SENT sid="665" pm="."><plain>C.ButcherG. </plain></SENT>
+<SENT sid="666" pm="."><plain>W.HämmerlingG. </plain></SENT>
+<SENT sid="667" pm="."><plain>J.NeefjesJ. </plain></SENT>
+<SENT sid="668" pm="."><plain>J. (1994) Selectivity of MHC-encoded peptide transporters from human, mouse, and rat. Nature 367, 648–6518107849 </plain></SENT>
+</text></ref><ref id="B77"><text><SENT sid="669" pm="."><plain>77. van EndertP. </plain></SENT>
+<SENT sid="670" pm="."><plain>M.RiganelliD.GrecoG.FleischhauerK.SidneyJ.SetteA.BachJ. </plain></SENT>
+<SENT sid="671" pm="."><plain>F. (1995) The peptide binding motif for the human transporter associated with antigen processing. J. </plain></SENT>
+<SENT sid="672" pm="."><plain>Exp. </plain></SENT>
+<SENT sid="673" pm="."><plain>Med. 182, 1883–18957500034 </plain></SENT>
+</text></ref><ref id="B78"><text><SENT sid="674" pm="."><plain>78. GromméM.van der ValkR.SliedregtK.VernieL.LiskampR.HämmerlingG.KoopmannJ. </plain></SENT>
+<SENT sid="675" pm="."><plain>O.MomburgF.NeefjesJ. (1997) The rational design of TAP inhibitors using peptide substrate modifications and peptidomimetics. Eur. </plain></SENT>
+<SENT sid="676" pm="."><plain>J. </plain></SENT>
+<SENT sid="677" pm="."><plain>Immunol. 27, 898–9049130642 </plain></SENT>
+</text></ref><ref id="B79"><text><SENT sid="678" pm="."><plain>79. UebelS.KraasW.KienleS.WiesmüllerK. </plain></SENT>
+<SENT sid="679" pm="."><plain>H.JungG.TampéR. (1997) Recognition principle of the TAP transporter disclosed by combinatorial peptide libraries. Proc. </plain></SENT>
+<SENT sid="680" pm="."><plain>Natl. </plain></SENT>
+<SENT sid="681" pm="."><plain>Acad. </plain></SENT>
+<SENT sid="682" pm="."><plain>Sci. </plain></SENT>
+<SENT sid="683" pm="."><plain>U.S.A. 94, 8976–89819256420 </plain></SENT>
+</text></ref><ref id="B80"><text><SENT sid="684" pm="."><plain>80. FrühK.AhnK.DjaballahH.SempéP.van EndertP. </plain></SENT>
+<SENT sid="685" pm="."><plain>M.TampéR.PetersonP. </plain></SENT>
+<SENT sid="686" pm="."><plain>A.YangY. (1995) A viral inhibitor of peptide transporters for antigen presentation. Nature 375, 415–4187760936 </plain></SENT>
+</text></ref><ref id="B81"><text><SENT sid="687" pm="."><plain>81. HillA.JugovicP.YorkI.RussG.BenninkJ.YewdellJ.PloeghH.JohnsonD. (1995) Herpes simplex virus turns off the TAP to evade host immunity. Nature 375, 411–4157760935 </plain></SENT>
+</text></ref><ref id="B82"><text><SENT sid="688" pm="."><plain>82. NeumannL.KraasW.UebelS.JungG.TampéR. (1997) The active domain of the herpes simplex virus protein ICP47. </plain></SENT>
+<SENT sid="689" pm="."><plain>A potent inhibitor of the transporter associated with antigen processing. J. </plain></SENT>
+<SENT sid="690" pm="."><plain>Mol. </plain></SENT>
+<SENT sid="691" pm="."><plain>Biol. 272, 484–4929325106 </plain></SENT>
+</text></ref><ref id="B83"><text><SENT sid="692" pm="."><plain>83. GalochaB.HillA.BarnettB. </plain></SENT>
+<SENT sid="693" pm="."><plain>C.DolanA.RaimondiA.CookR. </plain></SENT>
+<SENT sid="694" pm="."><plain>F.BrunnerJ.McGeochD. </plain></SENT>
+<SENT sid="695" pm="."><plain>J.PloeghH. </plain></SENT>
+<SENT sid="696" pm="."><plain>L. (1997) The active site of ICP47, a herpes simplex virus-encoded inhibitor of the major histocompatibility complex (MHC)-encoded peptide transporter associated with antigen processing (TAP), maps to the NH2-terminal 35 residues. J. </plain></SENT>
+<SENT sid="697" pm="."><plain>Exp. </plain></SENT>
+<SENT sid="698" pm="."><plain>Med. 185, 1565–15729151894 </plain></SENT>
+</text></ref><ref id="B84"><text><SENT sid="699" pm="."><plain>84. PfänderR.NeumannL.ZweckstetterM.SegerC.HolakT. </plain></SENT>
+<SENT sid="700" pm="."><plain>A.TampéR. (1999) Structure of the active domain of the herpes simplex virus protein ICP47 in water/sodium dodecyl sulfate solution determined by nuclear magnetic resonance spectroscopy. Biochemistry 38, 13692–1369810521276 </plain></SENT>
+</text></ref><ref id="B85"><text><SENT sid="701" pm="."><plain>85. BeinertD.NeumannL.UebelS.TampéR. (1997) Structure of the viral TAP inhibitor ICP47 induced by membrane association. Biochemistry 36, 4694–47009109681 </plain></SENT>
+</text></ref><ref id="B86"><text><SENT sid="702" pm="."><plain>86. AisenbreyC.SizunC.KochJ.HergetM.AbeleR.BechingerB.TampéR. (2006) Structure and dynamics of membrane-associated ICP47, a viral inhibitor of the MHC I antigen-processing machinery. J. </plain></SENT>
+<SENT sid="703" pm="."><plain>Biol. </plain></SENT>
+<SENT sid="704" pm="."><plain>Chem. 281, 30365–3037216835230 </plain></SENT>
+</text></ref><ref id="B87"><text><SENT sid="705" pm="."><plain>87. SchreiberG.FershtA. </plain></SENT>
+<SENT sid="706" pm="."><plain>R. (1993) Interaction of barnase with its polypeptide inhibitor barstar studied by protein engineering. Biochemistry 32, 5145–51508494892 </plain></SENT>
+</text></ref><ref id="B88"><text><SENT sid="707" pm="."><plain>88. TsaiC. </plain></SENT>
+<SENT sid="708" pm="."><plain>J.LinS. </plain></SENT>
+<SENT sid="709" pm="."><plain>L.WolfsonH. </plain></SENT>
+<SENT sid="710" pm="."><plain>J.NussinovR. (1996) Protein-protein interfaces. </plain></SENT>
+<SENT sid="711" pm="."><plain>Architectures and interactions in protein-protein interfaces and in protein cores. </plain></SENT>
+<SENT sid="712" pm="."><plain>Their similarities and differences. Crit. </plain></SENT>
+<SENT sid="713" pm="."><plain>Rev. </plain></SENT>
+<SENT sid="714" pm="."><plain>Biochem. </plain></SENT>
+<SENT sid="715" pm="."><plain>Mol. </plain></SENT>
+<SENT sid="716" pm="."><plain>Biol. 31, 127–1528740525 </plain></SENT>
+</text></ref><ref id="B89"><text><SENT sid="717" pm="."><plain>89. SheinermanF. </plain></SENT>
+<SENT sid="718" pm="."><plain>B.NorelR.HonigB. (2000) Electrostatic aspects of protein-protein interactions. Curr. </plain></SENT>
+<SENT sid="719" pm="."><plain>Opin. </plain></SENT>
+<SENT sid="720" pm="."><plain>Struct. </plain></SENT>
+<SENT sid="721" pm="."><plain>Biol. 10, 153–15910753808 </plain></SENT>
+</text></ref><ref id="B90"><text><SENT sid="722" pm="."><plain>90. NorelR.SheinermanF.PetreyD.HonigB. (2001) Electrostatic contributions to protein-protein interactions. </plain></SENT>
+<SENT sid="723" pm="."><plain>Fast energetic filters for docking and their physical basis. Protein Sci. 10, 2147–216111604522 </plain></SENT>
+</text></ref><ref id="B91"><text><SENT sid="724" pm="."><plain>91. Neves-PetersenM. </plain></SENT>
+<SENT sid="725" pm="."><plain>T.PetersenS. </plain></SENT>
+<SENT sid="726" pm="."><plain>B. (2003) Protein electrostatics. </plain></SENT>
+<SENT sid="727" pm="."><plain>A review of the equations and methods used to model electrostatic equations in biomolecules. </plain></SENT>
+<SENT sid="728" pm="."><plain>Applications in biotechnology. Biotechnol. </plain></SENT>
+<SENT sid="729" pm="."><plain>Annu. </plain></SENT>
+<SENT sid="730" pm="."><plain>Rev. 9, 315–39514650935 </plain></SENT>
+</text></ref><ref id="B92"><text><SENT sid="731" pm="."><plain>92. HergetM.BaldaufC.SchölzC.ParcejD.WiesmüllerK. </plain></SENT>
+<SENT sid="732" pm="."><plain>H.TampéR.AbeleR.BordignonE. (2011) Conformation of peptides bound to the transporter associated with antigen processing (TAP). Proc. </plain></SENT>
+<SENT sid="733" pm="."><plain>Natl. </plain></SENT>
+<SENT sid="734" pm="."><plain>Acad. </plain></SENT>
+<SENT sid="735" pm="."><plain>Sci. </plain></SENT>
+<SENT sid="736" pm="."><plain>U.S.A. 108, 1349–135421205905 </plain></SENT>
+</text></ref><ref id="B93"><text><SENT sid="737" pm="."><plain>93. DominguezC.BoelensR.BonvinA. </plain></SENT>
+<SENT sid="738" pm="."><plain>M. (2003) HADDOCK. </plain></SENT>
+<SENT sid="739" pm="."><plain>A protein-protein docking approach based on biochemical or biophysical information. J. </plain></SENT>
+<SENT sid="740" pm="."><plain>Am. </plain></SENT>
+<SENT sid="741" pm="."><plain>Chem. </plain></SENT>
+<SENT sid="742" pm="."><plain>Soc. 125, 1731–173712580598 </plain></SENT>
+</text></ref><ref id="B94"><text><SENT sid="743" pm="."><plain>94. GrayJ. </plain></SENT>
+<SENT sid="744" pm="."><plain>J.MoughonS.WangC.Schueler-FurmanO.KuhlmanB.RohlC. </plain></SENT>
+<SENT sid="745" pm="."><plain>A.BakerD. (2003) Protein-protein docking with simultaneous optimization of rigid-body displacement and side-chain conformations. J. </plain></SENT>
+<SENT sid="746" pm="."><plain>Mol. </plain></SENT>
+<SENT sid="747" pm="."><plain>Biol. 331, 281–29912875852 </plain></SENT>
+</text></ref><ref id="B95"><text><SENT sid="748" pm="."><plain>95. ComeauS. </plain></SENT>
+<SENT sid="749" pm="."><plain>R.GatchellD. </plain></SENT>
+<SENT sid="750" pm="."><plain>W.VajdaS.CamachoC. </plain></SENT>
+<SENT sid="751" pm="."><plain>J. (2004) ClusPro. </plain></SENT>
+<SENT sid="752" pm="."><plain>An automated docking and discrimination method for the prediction of protein complexes. Bioinformatics 20, 45–5014693807 </plain></SENT>
+</text></ref><ref id="B96"><text><SENT sid="753" pm="."><plain>96. ChenR.WengZ. (2002) Docking unbound proteins using shape complementarity, desolvation, and electrostatics. Proteins 47, 281–29411948782 </plain></SENT>
+</text></ref><ref id="B97"><text><SENT sid="754" pm="."><plain>97. TovchigrechkoA.VakserI. </plain></SENT>
+<SENT sid="755" pm="."><plain>A. (2006) GRAMM-X public web server for protein-protein docking. Nucleic Acids Res. 34, W310–W31416845016 </plain></SENT>
+</text></ref><ref id="B98"><text><SENT sid="756" pm="."><plain>98. MorrisG. </plain></SENT>
+<SENT sid="757" pm="."><plain>M.GoodsellD. </plain></SENT>
+<SENT sid="758" pm="."><plain>S.HallidayR. </plain></SENT>
+<SENT sid="759" pm="."><plain>S.HueyR.HartW. </plain></SENT>
+<SENT sid="760" pm="."><plain>E.BelewR. </plain></SENT>
+<SENT sid="761" pm="."><plain>K.OlsonA. </plain></SENT>
+<SENT sid="762" pm="."><plain>J. (1998) Automated docking using a Lamarckian genetic algorithm and an empirical binding free energy function. J. </plain></SENT>
+<SENT sid="763" pm="."><plain>Comput. </plain></SENT>
+<SENT sid="764" pm="."><plain>Chem. 19, 1639–1662 </plain></SENT>
+</text></ref><ref id="B99"><text><SENT sid="765" pm="."><plain>99. TrottO.OlsonA. </plain></SENT>
+<SENT sid="766" pm="."><plain>J. (2010) AutoDock Vina. </plain></SENT>
+<SENT sid="767" pm="."><plain>Improving the speed and accuracy of docking with a new scoring function, efficient optimization, and multithreading. J. </plain></SENT>
+<SENT sid="768" pm="."><plain>Comput. </plain></SENT>
+<SENT sid="769" pm="."><plain>Chem. 31, 455–46119499576 </plain></SENT>
+</text></ref><ref id="B100"><text><SENT sid="770" pm="."><plain>100. JonesG.WillettP.GlenR. </plain></SENT>
+<SENT sid="771" pm="."><plain>C. (1995) Molecular recognition of receptor sites using a genetic algorithm with a description of desolvation. J. </plain></SENT>
+<SENT sid="772" pm="."><plain>Mol. </plain></SENT>
+<SENT sid="773" pm="."><plain>Biol. 245, 43–537823319 </plain></SENT>
+</text></ref><ref id="B101"><text><SENT sid="774" pm="."><plain>101. FriesnerR. </plain></SENT>
+<SENT sid="775" pm="."><plain>A.BanksJ. </plain></SENT>
+<SENT sid="776" pm="."><plain>L.MurphyR. </plain></SENT>
+<SENT sid="777" pm="."><plain>B.HalgrenT. </plain></SENT>
+<SENT sid="778" pm="."><plain>A.KlicicJ. </plain></SENT>
+<SENT sid="779" pm="."><plain>J.MainzD. </plain></SENT>
+<SENT sid="780" pm="."><plain>T.RepaskyM. </plain></SENT>
+<SENT sid="781" pm="."><plain>P.KnollE. </plain></SENT>
+<SENT sid="782" pm="."><plain>H.ShelleyM.PerryJ. </plain></SENT>
+<SENT sid="783" pm="."><plain>K.ShawD. </plain></SENT>
+<SENT sid="784" pm="."><plain>E.FrancisP.ShenkinP. </plain></SENT>
+<SENT sid="785" pm="."><plain>S. (2004) Glide. </plain></SENT>
+<SENT sid="786" pm="."><plain>A new approach for rapid, accurate docking and scoring. </plain></SENT>
+<SENT sid="787" pm="."><plain>1. </plain></SENT>
+<SENT sid="788" pm="."><plain>Method and assessment of docking accuracy. J. </plain></SENT>
+<SENT sid="789" pm="."><plain>Med. </plain></SENT>
+<SENT sid="790" pm="."><plain>Chem. 47, 1739–174915027865 </plain></SENT>
+</text></ref><ref id="B102"><text><SENT sid="791" pm="."><plain>102. HalgrenT. </plain></SENT>
+<SENT sid="792" pm="."><plain>A.MurphyR. </plain></SENT>
+<SENT sid="793" pm="."><plain>B.FriesnerR. </plain></SENT>
+<SENT sid="794" pm="."><plain>A.BeardH. </plain></SENT>
+<SENT sid="795" pm="."><plain>S.FryeL. </plain></SENT>
+<SENT sid="796" pm="."><plain>L.PollardW. </plain></SENT>
+<SENT sid="797" pm="."><plain>T.BanksJ. </plain></SENT>
+<SENT sid="798" pm="."><plain>L. (2004) Glide. </plain></SENT>
+<SENT sid="799" pm="."><plain>A new approach for rapid, accurate docking and scoring. </plain></SENT>
+<SENT sid="800" pm="."><plain>2. </plain></SENT>
+<SENT sid="801" pm="."><plain>Enrichment factors in database screening. J. </plain></SENT>
+<SENT sid="802" pm="."><plain>Med. </plain></SENT>
+<SENT sid="803" pm="."><plain>Chem. 47, 1750–175915027866 </plain></SENT>
+</text></ref><ref id="B103"><text><SENT sid="804" pm="."><plain>103. RavehB.LondonN.Schueler-FurmanO. (2010) Sub-angstrom modeling of complexes between flexible peptides and globular proteins. Proteins 78, 2029–204020455260 </plain></SENT>
+</text></ref><ref id="B104"><text><SENT sid="805" pm="."><plain>104. EckfordP. </plain></SENT>
+<SENT sid="806" pm="."><plain>D.SharomF. </plain></SENT>
+<SENT sid="807" pm="."><plain>J. (2010) The reconstituted Escherichia coli MsbA protein displays lipid flippase activity. Biochem. </plain></SENT>
+<SENT sid="808" pm="."><plain>J. 429, 195–20320412049 </plain></SENT>
+</text></ref><ref id="B105"><text><SENT sid="809" pm="."><plain>105. SmritiZouP.McHaourabH. </plain></SENT>
+<SENT sid="810" pm="."><plain>S. (2009) Mapping daunorubicin binding sites in the ATP binding cassette transporter MsbA using site-specific quenching by spin labels. J. </plain></SENT>
+<SENT sid="811" pm="."><plain>Biol. </plain></SENT>
+<SENT sid="812" pm="."><plain>Chem. 284, 13904–1391319278995 </plain></SENT>
+</text></ref><ref id="B106"><text><SENT sid="813" pm="."><plain>106. RavivY.PollardH. </plain></SENT>
+<SENT sid="814" pm="."><plain>B.BruggemannE. </plain></SENT>
+<SENT sid="815" pm="."><plain>P.PastanI.GottesmanM. </plain></SENT>
+<SENT sid="816" pm="."><plain>M. (1990) Photosensitized labeling of a functional multidrug transporter in living drug-resistant tumor cells. J. </plain></SENT>
+<SENT sid="817" pm="."><plain>Biol. </plain></SENT>
+<SENT sid="818" pm="."><plain>Chem. 265, 3975–39801968065 </plain></SENT>
+</text></ref><ref id="B107"><text><SENT sid="819" pm="."><plain>107. Gatlik-LandwojtowiczE.AänismaaP.SeeligA. (2006) Quantification and characterization of P-glycoprotein-substrate interactions. Biochemistry 45, 3020–303216503657 </plain></SENT>
+</text></ref><ref id="B108"><text><SENT sid="820" pm="."><plain>108. DoerrlerW. </plain></SENT>
+<SENT sid="821" pm="."><plain>T.RaetzC. </plain></SENT>
+<SENT sid="822" pm="."><plain>R. (2002) ATPase activity of the MsbA lipid flippase of Escherichia coli. J. </plain></SENT>
+<SENT sid="823" pm="."><plain>Biol. </plain></SENT>
+<SENT sid="824" pm="."><plain>Chem. 277, 36697–3670512119303 </plain></SENT>
+</text></ref><ref id="B109"><text><SENT sid="825" pm="."><plain>109. BorstP.ZelcerN.van HelvoortA. (2000) ABC transporters in lipid transport. Biochim. </plain></SENT>
+<SENT sid="826" pm="."><plain>Biophys. </plain></SENT>
+<SENT sid="827" pm="."><plain>Acta 1486, 128–14410856718 </plain></SENT>
+</text></ref></ref-list></SecTag></back></article>
