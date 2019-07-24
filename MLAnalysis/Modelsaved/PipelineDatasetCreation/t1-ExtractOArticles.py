@@ -33,11 +33,17 @@ for articles in os.listdir(directory):
     nbArticlesScan+=1
 nb_of_article=sys.argv[2]
 start=time.time()
+listpmcid=[]
+listpmcidfile=codecs.open("listpmcid.csv","r",encoding="utf-8")
+for line in listpmcidfile.readlines():
+    listpmcid.append(line)
+listpmcidfile.close()
 while (nbArticlesScan-nonOA)<(int(nb_of_article)):
     pmcid=str(random.randint(0,9))+str(random.randint(0,9))+str(random.randint(0,9))+str(random.randint(0,9))+str(random.randint(0,9))+str(random.randint(0,9))+str(random.randint(0,9))
-    if "PMC"+pmcid+"-AccessionNb.xml" in os.listdir(directory):
+    if "PMC"+pmcid+"-AccessionNb.xml" in os.listdir(directory) or "PMC"+pmcid in listpmcid:
         pass
     else:
+        listpmcid.append("PMC"+pmcid)
         rAccessionNb=requests.get("https://www.ebi.ac.uk/europepmc/annotations_api/annotationsByArticleIds?articleIds=PMC%3A"+pmcid+"&type=Accession%20Numbers&format=XML")
         if "<name>" in rAccessionNb.text:
             rFullTxt=requests.get("https://www.ebi.ac.uk/europepmc/webservices/rest/PMC"+pmcid+"/fullTextXML")
@@ -60,6 +66,11 @@ while (nbArticlesScan-nonOA)<(int(nb_of_article)):
     advancement=((nbArticlesScan-nonOA)/(int(nb_of_article)))*100
     print ("Extraction of documents..........",str(int(advancement))+"%")
 end=time.time()
+listpmcidfile=codecs.open("listpmcid.csv","w",encoding="utf-8")
+listpmcid.pop(0)
+for eachpmcid in listpmcid:
+    listpmcidfile.write(eachpmcid)
+    listpmcidfile.write("\n")
 os.system('clear')
 print ("###   1/6 - EXTRACTION ARTICLES   ###\n")
 print ("Duration : "+str(int(end-start))+" sec")

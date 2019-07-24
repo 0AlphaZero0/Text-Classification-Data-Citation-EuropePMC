@@ -100,24 +100,8 @@ def save(sentences,sentencesIndex,resultFile,preCitPost):
 ###################################################    Main     ###################################################
 start=time.time()
 print("###   5/6 - EXTRACT CITATIONS   ###\n")
-outputmistakefile=codecs.open(fileNameMistakes,"w",encoding="utf-8")
-resultFile=codecs.open(fileNameResult,"w",encoding="utf-8")
-resultFile.write("PMCID")
-resultFile.write("\t")
-resultFile.write("AccessionNb")
-resultFile.write("\t")
-resultFile.write("Section")
-resultFile.write("\t")
-resultFile.write("SubType")
-resultFile.write("\t")
-resultFile.write("Figure")
-resultFile.write("\t")
-resultFile.write("PreCitation")
-resultFile.write("\t")
-resultFile.write("Citation")
-resultFile.write("\t")
-resultFile.write("PostCitation")
-resultFile.write("\n")
+outputmistakefile=codecs.open(fileNameMistakes,"a",encoding="utf-8")
+resultFile=codecs.open(fileNameResult,"a",encoding="utf-8")
 
 
 # for a PMCID file sentencized :

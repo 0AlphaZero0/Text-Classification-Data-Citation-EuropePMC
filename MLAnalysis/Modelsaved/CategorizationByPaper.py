@@ -78,9 +78,9 @@ for PMCID,dicAccNb in dicPMCID.items():
 		file.write("\t")
 		file.write(AccessionNb)
 		file.write("\t")
-		dicScores["crea-proba"]=dicScores["crea-proba"]/dicScores["total"]
-		dicScores["back-proba"]=dicScores["back-proba"]/dicScores["total"]
-		dicScores["use-proba"]=dicScores["use-proba"]/dicScores["total"]
+		# dicScores["crea-proba"]=dicScores["crea-proba"]/dicScores["total"]
+		# dicScores["back-proba"]=dicScores["back-proba"]/dicScores["total"]
+		# dicScores["use-proba"]=dicScores["use-proba"]/dicScores["total"]
 		file.write(str(dicScores["crea-count"]))
 		file.write("\t")
 		file.write(str(dicScores["crea-proba"]))

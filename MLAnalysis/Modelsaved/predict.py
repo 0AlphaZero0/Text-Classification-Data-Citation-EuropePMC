@@ -18,10 +18,11 @@ from sklearn.linear_model import LogisticRegression
 ################################################    Variables     #################################################
 
 # Files
-dataset_to_predict="Dataset.csv"
+dataset_to_predict="unlabeleddata.csv"
 result_outfile="Result.csv"
 
 # Stemmer
+stemmer=SnowballStemmer('english',ignore_stopwords=True)
 Section_num_str,SubType_num_str,Figure_num_str,NbPaperCitation="Section_num","SubType_num","Figure_num","NbPaperCitation"
 PreCitation_str,Citation_str,PostCitation_str,completeCitation="PreCitation","Citation","PostCitation","CompleteCitation"
 featuresList=[
