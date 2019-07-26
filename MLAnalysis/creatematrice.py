@@ -53,6 +53,7 @@ for index in range(len(pmcid_list)):
             # "UniProt":0}
             ############################
             "Use":0,
+            "Unknow":0,
             # "Compare":0,
             "Background":0,
             "Creation":0}

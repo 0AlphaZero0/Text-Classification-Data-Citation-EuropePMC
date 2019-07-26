@@ -18,8 +18,8 @@ from sklearn.linear_model import LogisticRegression
 ################################################    Variables     #################################################
 
 # Files
-dataset_to_predict="unlabeleddata.csv"
-result_outfile="Result.csv"
+dataset_to_predict="Result.csv"
+result_outfile="Predictions.csv"
 
 # Stemmer
 stemmer=SnowballStemmer('english',ignore_stopwords=True)
