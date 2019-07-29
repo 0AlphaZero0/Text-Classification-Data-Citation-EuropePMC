@@ -8,7 +8,7 @@ import pandas
 import codecs
 
 ################################################    Variables     #################################################
-
+limit=0.5
 ################################################    Functions     #################################################
 
 ###################################################    Main     ###################################################
@@ -20,7 +20,7 @@ dataset=pandas.read_csv(
 
 dicPMCID={}
 for index,row in dataset.iterrows():
-	print(row["PMCID"])
+	# print(row["PMCID"])
 	if row["PMCID"] not in dicPMCID:
 		dicPMCID.update({row["PMCID"]:{}})
 	if row["AccessionNb"] not in dicPMCID[row["PMCID"]]:
@@ -34,20 +34,25 @@ for index,row in dataset.iterrows():
 				"use-proba":0,
 				"total":0,
 				"sections":[]}})
-	if row["Categories"]=="Creation":
+	if row["Creation"]>limit:
 		dicPMCID[row["PMCID"]][row["AccessionNb"]]["crea-count"]+=1
-	elif row["Categories"]=="Background":
-		dicPMCID[row["PMCID"]][row["AccessionNb"]]["back-count"]+=1
-	else:
+		if row["Creation"]>dicPMCID[row["PMCID"]][row["AccessionNb"]]["crea-proba"]:
+			dicPMCID[row["PMCID"]][row["AccessionNb"]]["crea-proba"]=row["Creation"]
+	elif row["Use"]>limit and dicPMCID[row["PMCID"]][row["AccessionNb"]]["crea-proba"]<limit:
 		dicPMCID[row["PMCID"]][row["AccessionNb"]]["use-count"]+=1
-	dicPMCID[row["PMCID"]][row["AccessionNb"]]["crea-proba"]+=row["Creation"]
-	dicPMCID[row["PMCID"]][row["AccessionNb"]]["back-proba"]+=row["Background"]
-	dicPMCID[row["PMCID"]][row["AccessionNb"]]["use-proba"]+=row["Use"]
+		if row["Use"]>dicPMCID[row["PMCID"]][row["AccessionNb"]]["use-proba"]:
+			dicPMCID[row["PMCID"]][row["AccessionNb"]]["use-proba"]=row["Use"]
+	elif row["Background"]>limit and dicPMCID[row["PMCID"]][row["AccessionNb"]]["crea-proba"]<limit and dicPMCID[row["PMCID"]][row["AccessionNb"]]["use-proba"]<limit:
+		dicPMCID[row["PMCID"]][row["AccessionNb"]]["back-count"]+=1
+		if row["Background"]>dicPMCID[row["PMCID"]][row["AccessionNb"]]["back-proba"]:
+			dicPMCID[row["PMCID"]][row["AccessionNb"]]["back-proba"]=row["Background"]
+
 	dicPMCID[row["PMCID"]][row["AccessionNb"]]["total"]+=1
 	if row["Section"] not in dicPMCID[row["PMCID"]][row["AccessionNb"]]["sections"]:
 		dicPMCID[row["PMCID"]][row["AccessionNb"]]["sections"].append(row["Section"])
+	
 
-file=codecs.open("Resultbypaper.csv","w",encoding="utf-8")
+file=codecs.open("Resultbypaper"+str(limit).split(".")[1]+".csv","w",encoding="utf-8")
 file.write("PMCID")
 file.write("\t")
 file.write("AccessionNb")
@@ -70,10 +75,10 @@ file.write("Sections")
 file.write("\n")
 
 for PMCID,dicAccNb in dicPMCID.items():
-	print(PMCID)
+	# print(PMCID)
 	for AccessionNb, dicScores in dicAccNb.items():
-		print("\t",AccessionNb)
-		print("\n",dicScores)
+		# print("\t",AccessionNb)
+		# print("\n",dicScores)
 		file.write(PMCID)
 		file.write("\t")
 		file.write(AccessionNb)
