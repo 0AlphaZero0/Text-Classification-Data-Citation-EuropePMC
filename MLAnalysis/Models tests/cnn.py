@@ -13,6 +13,7 @@ from keras.preprocessing.sequence import pad_sequences
 from keras.preprocessing.text import Tokenizer
 from keras import layers
 from keras import models
+from keras import backend
 
 from nltk.stem.snowball import SnowballStemmer
 from nltk import word_tokenize
@@ -21,6 +22,9 @@ from nltk.stem import WordNetLemmatizer
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.model_selection import train_test_split,StratifiedKFold
 from sklearn import metrics
+
+import warnings
+warnings.filterwarnings('ignore')
 
 ##################################################    Variables     ###################################################
 # files
@@ -146,10 +150,14 @@ def calc_score(vectorizer,approach,dimension):
 	precision=round(metrics.precision_score(y_val,y_pred_class_val,average=average)*100,3)
 	recall=round(metrics.recall_score(y_val,y_pred_class_val,average=average)*100,3)
 	accuracy=round(metrics.accuracy_score(y_val,y_pred_class_val)*100,3)
+	if vectorizer=="Tfidf":
+		appr=approach[1]+" "+approach[2]
+	else:
+		appr=approach.name
 	print(
 		"\nVALIDATION SET : \n",
 		metrics.classification_report(y_val,y_pred_class_val,target_names=target_names),
-		"Method : "+str(approach.name),
+		"Method : "+str(appr),
 		"\nF1_score : "+str(f1_score),
 		"\tPrecision : "+str(precision),
 		"\tRecall : "+str(recall),
@@ -159,7 +167,7 @@ def calc_score(vectorizer,approach,dimension):
 		"\n#######################################################")
 	print(
 		metrics.classification_report(y_test,y_pred_class,target_names=target_names),
-		"Method : "+str(approach.name),
+		"Method : "+str(appr),
 		"\nF1_score : "+str(f1_score_mean),
 		"\tPrecision : "+str(precision_mean),
 		"\tRecall : "+str(recall_mean),
@@ -167,6 +175,10 @@ def calc_score(vectorizer,approach,dimension):
 		"\tVal_loss : "+str(val_loss_mean),
 		"\tTime : "+str(round(end-start,3))+" sec",
 		"\n#######################################################")
+	output_file=codecs.open(
+		filename=result_output,
+		mode='a',
+		encoding='utf8')
 	output_file.write(str(f1_score))
 	output_file.write("\t")
 	output_file.write(str(precision))
@@ -247,12 +259,11 @@ def calc_score(vectorizer,approach,dimension):
 		output_file.write("\t")
 		output_file.write("True")#Embedding
 	output_file.write("\t")
-	output_file.write(str(dimension))
+	output_file.write(str(dimension))#dimension
 	output_file.write("\t")
-	output_file.write(str(round(end-start,3)))
+	output_file.write(str(round(end-start,3)))#time
 	output_file.write("\n")
-	output_file.write(str(approach.name))
-	output_file.write("\t")
+	output_file.close()
 	
 ###################################################    Main     ###################################################
 #
@@ -287,7 +298,7 @@ for subType in data.SubType:
 		subTypeDict[subType]=index
 		index+=1
 data[SubType_num_str]=data.SubType.map(subTypeDict)
-#
+# Creation of two pandas column one with stem words and the other with lemma from completeCitation
 lemma_citation=[]
 stem_citation=[]
 for citation in data[completeCitation]:
@@ -295,9 +306,12 @@ for citation in data[completeCitation]:
 	stem_citation.append(" ".join(stem_tokenizer(citation)))
 data["lemma_citation"]=lemma_citation
 data["stem_citation"]=stem_citation
-#
-approaches=[data[completeCitation],data["lemma_citation"],data["stem_citation"]]
-#
+# List of approach for embedding
+approaches=[
+	data[completeCitation],
+	data["lemma_citation"],
+	data["stem_citation"]]
+# List of Approach for Tfidf
 combinations_tfidf=[
 	[TfidfVectorizer(tokenizer=tokenizer),"Raw","Token"],
 	[TfidfVectorizer(tokenizer=tokenizer),"Stem","Token"],
@@ -305,55 +319,51 @@ combinations_tfidf=[
 	[TfidfVectorizer(tokenizer=tokenizer,ngram_range=ngram_range),"Raw","Ngram"],
 	[TfidfVectorizer(tokenizer=tokenizer,ngram_range=ngram_range),"Stem","Ngram"],
 	[TfidfVectorizer(tokenizer=tokenizer,ngram_range=ngram_range),"Lemma","Ngram"]]
-#
+# Creation of result file
 output_file=codecs.open(
 	filename=result_output,
 	mode='w',
 	encoding='utf8')
 output_file.write("f1-score\tPrecision\tRecall\tAccuracy\tLoss\tf1-scoreCV\tPrecisionCV\tRecallCV\tAccuracyCV\tLossCV\tToken\tNgram\tRaw\tLemma\tStem\tTfidf\tEmbedding\tDimension\tTime\n")
-for vectorizer in ["Tfidf","Embedding"]:
-	print(vectorizer)
-	if vectorizer=="Tfidf":
-		for approach in combinations_tfidf:
+output_file.close()
+for vectorizer in ["Tfidf","Embedding"]:# Loop between Tfidf and Embedding vectorizer
+	if vectorizer=="Tfidf": # Tfidf Vectorizer
+		for approach in combinations_tfidf: # for each combination of appraoches
 			f1_score_list,precision_list,recall_list,accuracy_list=[],[],[],[]
 			val_acc_list,val_loss_list=[],[]
 			featuresList.pop(-1)
-			if approach[1]=="Raw":
+			if approach[1]=="Raw": # Use the 'raw' column completecitation 
 				featuresList.append(completeCitation)
-			elif approach[1]=="Stem":
+			elif approach[1]=="Stem": # Use the 'stemmed' column
 				featuresList.append("stem_citation")
-			else:
+			else: # Use the lemma column
 				featuresList.append("lemma_citation")
-			print("Approach : "+approach[1]+" + "+approach[2])
-			X=data[featuresList]
+				print(vectorizer)
+				print("Approach : "+approach[1]+" + "+approach[2])
+			X=data[featuresList].drop(['Categories_num'],axis=1)
 			y=data.Categories_num
-			X_to_train,X_val,y_to_train,y_val=train_test_split(X,y,random_state=random_state)
+			X_to_train,X_val,y_to_train,y_val=train_test_split(X,y,random_state=random_state) # 25% for validation and 75% for cross-validation
 			start=time.time()
 			for train_index,test_index in skf.split(X_to_train,y_to_train):# cross validation
+				backend.clear_session() # Allow to clean tensors previously created in the loop
 				X_train,X_test=X_to_train.iloc[train_index,],X_to_train.iloc[test_index,]
 				y_train,y_test=y_to_train.iloc[train_index],y_to_train.iloc[test_index,]
-				vect_X_train,vect_X_test=[],[]
-				vect_X_train.append(approach[0].fit_transform(X_train[featuresList[-1]].fillna('').values.reshape(-1)).todense())
-				vect_X_test.append(approach[0].transform(X_test[featuresList[-1]].fillna('').values.reshape(-1)).todense())
-				vect_X_train.extend((
+				vect_X_train=[approach[0].fit_transform(X_train[featuresList[-1]].fillna('').values.reshape(-1)).todense()]# transform and fit the  on completecitation from training to a list of token
+				vect_X_test=[approach[0].transform(X_test[featuresList[-1]].fillna('').values.reshape(-1)).todense()]# transform complete citation of test to a list of token thanks to the previous tokenizer
+				vect_X_train.extend((# adding several features to the training dataframe
 					X_train[[Section_num_str]].values,
 					X_train[[SubType_num_str]].values,
 					X_train[[Figure_num_str]].values))
-				vect_X_test.extend((
+				vect_X_test.extend((# adding several features to the testing dataframe
 					X_test[[Section_num_str]].values,
 					X_test[[SubType_num_str]].values,
 					X_test[[Figure_num_str]].values))
 				X,y=None,None
-				X_train_dtm=np.concatenate(vect_X_train,axis=1)
-				X_test_dtm=np.concatenate(vect_X_test,axis=1)
-				X_train_dtm=np.expand_dims(X_train_dtm,axis=2)
-				X_test_dtm=np.expand_dims(X_test_dtm,axis=2)
-				X_test=np.expand_dims(X_test,axis=2)
-				X_val_dtm=np.expand_dims(X_val,axis=2)
-				print(X_val.shape)
-				print(X_val_dtm.shape)
+				X_train_dtm=np.concatenate(vect_X_train,axis=1) # final dataframe for training fold of cross validation
+				X_test_dtm=np.concatenate(vect_X_test,axis=1)# final dataframe for testing fold of cross validation
+				X_train_dtm=np.expand_dims(X_train_dtm,axis=2)# add 1 dimension to fit to the convolutionnal layer
+				X_test_dtm=np.expand_dims(X_test_dtm,axis=2)# add 1 dimension to fit to the convolutionnal layer
 				###   MODEL   ###
-				print(X_train_dtm.shape)
 				model=models.Sequential()
 				model.add(layers.Conv1D(
 					filters=128,
@@ -383,10 +393,10 @@ for vectorizer in ["Tfidf","Embedding"]:
 				val_acc_list.append(val_acc)
 				result=model.predict(X_test_dtm)
 				y_pred_class=[]
-				for sample in result:
+				for sample in result:#select the highest probibility to be 0(Creation), 1(Background) or 2(Use) and assign the the corresponding number in a list [0,1,2,1,1,2,2,0,etc.]
 					y_pred_class.append(np.argmax(sample))
-				print("True : \n\tBackground\t: "+str(y_test.value_counts(0))+"\n\tCreation\t: "+str(y_test.value_counts(1))+"\n\tUse\t: "+str(y_test.value_counts(2)))
-				print("Predict : \n\tBackground\t: "+str(y_pred_class.count(0))+"\n\tCreation\t: "+str(y_pred_class.count(1))+"\n\tUse\t: "+str(y_pred_class.count(2)))
+				print("True : \n\tBackground\t: "+str(y_test.tolist().count(0))+"\n\tCreation\t: "+str(y_test.tolist().count(1))+"\n\tUse\t\t: "+str(y_test.tolist().count(2)))#print the frequency of each categories for the training set
+				print("Predict : \n\tBackground\t: "+str(y_pred_class.count(0))+"\n\tCreation\t: "+str(y_pred_class.count(1))+"\n\tUse\t\t: "+str(y_pred_class.count(2)))#print the frequency of each categories for the testing set
 				f1_score=metrics.f1_score(y_test,y_pred_class,average=average)*100
 				f1_score_list.append(f1_score)
 				precision=metrics.precision_score(y_test,y_pred_class,average=average)*100
@@ -395,14 +405,23 @@ for vectorizer in ["Tfidf","Embedding"]:
 				recall_list.append(recall)
 				accuracy=metrics.accuracy_score(y_test,y_pred_class)*100
 				accuracy_list.append(accuracy)
+			# Preparing validation set
+			vect_X_val=[approach[0].transform(X_val[featuresList[-1]].fillna('').values.reshape(-1)).todense()]
+			vect_X_val.extend((
+				X_val[[Section_num_str]].values,
+				X_val[[SubType_num_str]].values,
+				X_val[[Figure_num_str]].values))
+			X_val_dtm=np.concatenate(vect_X_val,axis=1)
+			X_val_dtm=np.expand_dims(X_val_dtm,axis=2)
 			end=time.time()
 			featuresList.pop(-1)
 			featuresList.append('Categories_num')
 			calc_score("Tfidf",approach," ")
 	else:
 		for dimension in [50,100,200,300]:
-			embedding_file='glove.6B.'+str(dimension)+'d.txt'
+			embedding_file='glove.6B.'+str(dimension)+'d.txt' # file from GloVe (https://nlp.stanford.edu/projects/glove/ - Wikipedia 2014 + Gigaword 5)
 			for approach in approaches:
+				print(vectorizer)
 				print("Approach : "+approach.name+"Token")
 				f1_score_list,precision_list,recall_list,accuracy_list=[],[],[],[]
 				val_acc_list,val_loss_list=[],[]
@@ -424,6 +443,7 @@ for vectorizer in ["Tfidf","Embedding"]:
 				X_val=[X_val.iloc[:, 3:],X_val.iloc[:, :3]]#seq_features,other_features
 				start=time.time()
 				for train_index,test_index in skf.split(X_to_train,y_to_train):#cross validation
+					backend.clear_session()
 					X_train, X_test=[X_to_train.iloc[train_index,], X_to_train.iloc[test_index,]] 
 					y_train, y_test=[y_to_train.iloc[train_index,], y_to_train.iloc[test_index,]]
 					X_train=[X_train.iloc[:, 3:],X_train.iloc[:, :3]] #seq_features,other_features
