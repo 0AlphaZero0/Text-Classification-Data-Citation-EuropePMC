@@ -328,7 +328,7 @@ output_file.write("f1-score\tPrecision\tRecall\tAccuracy\tLoss\tf1-scoreCV\tPrec
 output_file.close()
 for vectorizer in ["Tfidf","Embedding"]:# Loop between Tfidf and Embedding vectorizer
 	if vectorizer=="Tfidf": # Tfidf Vectorizer
-		for approach in combinations_tfidf: # for each combination of appraoches
+		for approach in combinations_tfidf: # for each combination of approaches Raw+Tokenization, Stem+Tokenization,..., Lemma+Ngram
 			f1_score_list,precision_list,recall_list,accuracy_list=[],[],[],[]
 			val_acc_list,val_loss_list=[],[]
 			featuresList.pop(-1)
@@ -462,7 +462,7 @@ for vectorizer in ["Tfidf","Embedding"]:# Loop between Tfidf and Embedding vecto
 							dtype='float32')
 						embeddings_index[word]=coefs
 					f.close()
-					###   Creation embedding matrix   ###
+					###   Creation of embedding matrix   ###
 					not_in_embedding=0
 					embedding_matrix=np.random.uniform(-0.5,0.5,(len(word_index),dimension))
 					for word,i in word_index.items():
