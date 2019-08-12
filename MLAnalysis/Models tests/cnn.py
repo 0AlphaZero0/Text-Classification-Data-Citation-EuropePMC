@@ -418,7 +418,7 @@ for vectorizer in ["Tfidf","Embedding"]:# Loop between Tfidf and Embedding vecto
 			featuresList.append('Categories_num')
 			calc_score("Tfidf",approach," ")
 	else:
-		for dimension in [50,100,200,300]:
+		for dimension in [50,100,200,300]: # loop of embedding dimension proposed by GloVe
 			embedding_file='glove.6B.'+str(dimension)+'d.txt' # file from GloVe (https://nlp.stanford.edu/projects/glove/ - Wikipedia 2014 + Gigaword 5)
 			for approach in approaches:
 				print(vectorizer)
