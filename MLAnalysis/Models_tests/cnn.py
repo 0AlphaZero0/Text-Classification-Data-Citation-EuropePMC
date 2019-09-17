@@ -3,6 +3,13 @@
 # THOUVENIN Arthur athouvenin@outlook.fr
 # 01/04/2019
 ########################
+#
+# revoir la façon de calculer l'accuracy
+#
+#
+#
+#
+######
 
 import codecs
 import numpy as np
@@ -56,7 +63,8 @@ featuresList=[
 	Section_num_str,
 	SubType_num_str,
 	Figure_num_str,
-	'Categories_num']
+	completeCitation]
+	# 'Categories_num']
 target_names=[
 	"Background",
 	"Creation",
@@ -149,7 +157,7 @@ def calc_score(vectorizer,approach,dimension):
 	f1_score=round(metrics.f1_score(y_val,y_pred_class_val,average=average)*100,3)
 	precision=round(metrics.precision_score(y_val,y_pred_class_val,average=average)*100,3)
 	recall=round(metrics.recall_score(y_val,y_pred_class_val,average=average)*100,3)
-	accuracy=round(metrics.accuracy_score(y_val,y_pred_class_val)*100,3)
+	# accuracy=round(metrics.accuracy_score(y_val,y_pred_class_val)*100,3)
 	if vectorizer=="Tfidf":
 		appr=approach[1]+" "+approach[2]
 	else:
@@ -280,8 +288,8 @@ data["Categories_num"]=data.Categories.map({#Categories to numerical values
 	"Use":2})
 #
 data[Figure_num_str]=data.Figure.map({# Figure feature to numerical values
-	True:0,
-	False:1})
+	True:1,
+	False:0})
 ## Section feature to numerical values
 sectionDict={}
 index=1
@@ -340,7 +348,8 @@ for vectorizer in ["Tfidf","Embedding"]:# Loop between Tfidf and Embedding vecto
 				featuresList.append("lemma_citation")
 				print(vectorizer)
 				print("Approach : "+approach[1]+" + "+approach[2])
-			X=data[featuresList].drop(['Categories_num'],axis=1)
+			X=data[featuresList]#.drop(['Categories_num'],axis=1)
+			print(X)
 			y=data.Categories_num
 			X_to_train,X_val,y_to_train,y_val=train_test_split(X,y,random_state=random_state) # 25% for validation and 75% for cross-validation
 			start=time.time()
@@ -415,7 +424,7 @@ for vectorizer in ["Tfidf","Embedding"]:# Loop between Tfidf and Embedding vecto
 			X_val_dtm=np.expand_dims(X_val_dtm,axis=2)
 			end=time.time()
 			featuresList.pop(-1)
-			featuresList.append('Categories_num')
+			featuresList.append(completeCitation)
 			calc_score("Tfidf",approach," ")
 	else:
 		for dimension in [50,100,200,300]: # loop of embedding dimension proposed by GloVe
@@ -423,6 +432,13 @@ for vectorizer in ["Tfidf","Embedding"]:# Loop between Tfidf and Embedding vecto
 			for approach in approaches:
 				print(vectorizer)
 				print("Approach : "+approach.name+"Token")
+				featuresList.pop(-1)
+				if "Complete" in approach.name: # Use the 'raw' column completecitation 
+					featuresList.append(completeCitation)
+				elif "stem" in approach.name: # Use the 'stemmed' column
+					featuresList.append("stem_citation")
+				else: # Use the lemma column
+					featuresList.append("lemma_citation")
 				f1_score_list,precision_list,recall_list,accuracy_list=[],[],[],[]
 				val_acc_list,val_loss_list=[],[]
 				tokenizer=Tokenizer(num_words=vocab_size)
@@ -437,7 +453,7 @@ for vectorizer in ["Tfidf","Embedding"]:# Loop between Tfidf and Embedding vecto
 					objs=[data[featuresList],tmp],
 					axis=1)
 				tmp=None
-				X=data.drop(['Categories_num'],axis=1)
+				X=data[featuresList]
 				y=data.Categories_num
 				X_to_train,X_val,y_to_train,y_val=train_test_split(X,y,random_state=random_state)
 				X_val=[X_val.iloc[:, 3:],X_val.iloc[:, :3]]#seq_features,other_features
@@ -524,5 +540,7 @@ for vectorizer in ["Tfidf","Embedding"]:# Loop between Tfidf and Embedding vecto
 					accuracy=metrics.accuracy_score(y_test,y_pred_class)*100
 					accuracy_list.append(accuracy)
 				end=time.time()
+				featuresList.pop(-1)
+				featuresList.append(completeCitation)
 				calc_score("Embedding",approach,dimension)
 output_file.close()
