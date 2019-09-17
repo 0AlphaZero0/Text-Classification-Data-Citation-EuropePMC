@@ -117,10 +117,16 @@ ______________________________________________________________________
 <a name="Acknowledgment"></a>
 ### Acknowledgment :
 
-- [Xiao Yang](https://www.ebi.ac.uk/about/people/xiao-yang)
-- [Aravind Venkatesan](https://www.ebi.ac.uk/about/people/aravind-venkatesan)
-- [Johanna McEntyre](https://www.ebi.ac.uk/about/people/johanna-mcentyre)
-- [Awais Athar](https://www.ebi.ac.uk/about/people/awais-athar)
-- [Fransesco Talo](https://www.ebi.ac.uk/about/people/francesco-talo)
-- [Mariia Levchenko](https://www.ebi.ac.uk/about/people/mariia-levchenko)
-- [& all Literature team members](https://www.ebi.ac.uk/about/people/johanna-mcentyre)
+For giving me the opportunity to be a part of the great team of EuropePMC, I would like to thank [Johanna McEntyre](https://www.ebi.ac.uk/about/people/johanna-mcentyre) for her advises and her accompaniment throughout this internship.
+
+For his precious advises concerning the annotation part and his accompaniment I would like to thank [Aravind Venkatesan](https://www.ebi.ac.uk/about/people/aravind-venkatesan).
+
+I would like to thank warmly [Xiao Yang](https://www.ebi.ac.uk/about/people/xiao-yang), indeed he is my direct supervisor during this internship, he gives me really good advice. He teaches me a lot and also I would like to thank him for his availability at every moment.
+
+Those three persons were really important for me during this project, indeed they gave me guidelines and their precious helps whenever I needed it. They have been really nice with me and pushing me to gave my best on this project. Therefore, one more time I would like to thank them really much. 
+
+Obviously I would like to thank the EuropePMC team, [Lynne Faulk](https://www.ebi.ac.uk/about/people/lynne-faulk), [Yogmatee Roochun](https://www.ebi.ac.uk/about/people/yogmatee-roochun), [Mariia Levchenko](https://www.ebi.ac.uk/about/people/mariia-levchenko) and [all other members](https://www.ebi.ac.uk/about/people/johanna-mcentyre) for all the goods moments that they gave, without those this internship would not have been the same.
+
+For his precious help I would like to thank [Awais Athar](https://www.ebi.ac.uk/about/people/awais-athar), he gave me his experienced thoughts about this project and gave me really good advice.
+
+In the end I would like to thank my family and especially Claire Pistien for her support and advises during the whole duration of this project.
