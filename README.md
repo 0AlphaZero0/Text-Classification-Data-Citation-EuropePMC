@@ -46,24 +46,24 @@ In this perspective a large number of tools have been created in particular:
 - [and many others..](https://www.ebi.ac.uk/services/all)
 - [etc](https://www.ebi.ac.uk/services/all).
 
-Also there is a lot of data resources thatare part of EBI and are currently maintained by EBI teams like :
+Also there is a lot of data resources that are part of EBI and are currently maintained by EBI teams like :
 - [Ensembl](http://www.ensembl.org/)
 - [UniProt](http://www.uniprot.org/)
 - [PDBe](http://pdbe.org/)
 - and of course [Europe PMC](http://europepmc.org/)
 - [etc](https://www.ebi.ac.uk/services/all).
  
- In this environnement the Europe PMC team is really close to biomedical scientits so they can answer in the best way biomedical problems for publishing scientific papers. AS they deal with millions of papers and try to give the best solution for curators and annotations. 
+ In this environnement the Europe PMC team is really close to biomedical scientits so they can answer in the best way biomedical problems for publishing scientific papers. As they deal with millions of papers and try to give the best solution for curators and annotations. 
  
  This last point is one of the reasons why this project is important, indeed analysing millions of papers by just reading them is an exhausting jobs, one of the solution, first, is text-mining, indeed mining for terms like protein name, GO terms, diseases, etc help a lot curators in their jobs. But this just help them and they still need to read a lot to give correct annotations of papers. The solution a recurrent task on millions documents seems pretty famous those last years, Machine Learning & Deep Learning.
  
- So there is a specific field of neuro linguistic programming(NLP), that is Sentiment Analysis, this field try, thanks to machine learning and deep learning, to analyse the opinion in a sentence or a document. Indeed today we can transform words in numeric vectors that describe the words and this could be gived to a machine to be learn.
+ So there is a specific field of neuro linguistic programming(NLP), that is Text Classification, this field try, thanks to machine learning and deep learning, to categorize some text thanks to established categories. Indeed today we can transform words in numeric vectors that describe the words and this could be gived to a machine to be learn.
  
- Recently it as be shown that sentiment could be apply in an other way indeed it has been shown that we could classify sentence with different category than just positives/negatives/objectives, it can be totally different and fit by the need we want like Background/Use/Compare/Motivation/Extensions/Future and maybe others. 
+The question is "**Is data reuse in scientific documentation**"?
 
-So in this project we will work on data citations from Annotation API of Europe PMC and only on open access papers.
+So in this project we will work on data citations, data citations are sentence containing an accession number. An accession number is  an identifier from biological data. Those can be retrieve from Annotation API of Europe PMC in open access papers.
 
-In the first time a dataset will be created thanks to EuropePMC Annotation API, because this API thanks to text mining could return informations about open access and data citations/Accession numbers (and many other things). For this a Pipeline will be created it will extract citation and metadata from papers. It will look like :
+In the first time a dataset has been created thanks to EuropePMC Annotation API, because this API thanks to text mining could return informations about open access and data citations/Accession numbers (and many other things). For this a Pipeline has been created it extract citation and metadata from papers. It looks like :
 
 
 | PMCID      | AccessionNb | Section | SubType    | Figure | Categories | Pre-citation                                                                                | Citation                                                                                                                                                                           | Post-citation                                                                                                                                                |
@@ -73,16 +73,21 @@ In the first time a dataset will be created thanks to EuropePMC Annotation API, 
 | PMC4392464 | PRJNA242298 | Results | BioProject | False  | Creation   | There were 133 and 50,008 contigs longer than 10,000 and 1,000 bp, respectively (Table 1).  | All assembled sequences were deposited in NCBI’s Transcriptome Shotgun Assembly (TSA) database (http://www.ncbi.nlm.nih.gov/genbank/tsa/) under the accession number PRJNA242298.  | Of the 140,432 contigs, 91,303 (65.0%) had annotation information (Additional file 1: Table S1). For contigs with lengths ≥1,000 bp, 94.7% had BLASTX hits.  |
 
 
-Then some approaches will be study like :
+Some approaches for an automatic classification of those has been studied :
+- Tokenization
+- Tfidf
 - Ngram
-- Embedding
-- LSTM
+- Word Embedding
 - Lemmatization
 - Stemming
-- Neural Network
-- Supervised Machine Learning models:
+- Models :
+  * LSTM
+  * CNN
+  * A simple neural network (2 dense layers)
   * SVM
-  * Naive Bayes
+  * Complement Naive Bayes
+  * Gaussian Naive Bayes
+  * Multinomial Naive Bayes
   * Random Forest
   * Logistic Regression
 
