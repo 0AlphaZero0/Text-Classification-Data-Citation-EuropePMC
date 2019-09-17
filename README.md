@@ -25,9 +25,9 @@ ______________________________________________________________________
 
 - *[Acknowledgment](#Acknowledgment)*
 
-- *[Report]()*
+- *[Report](https://github.com/0AlphaZero0/Text-Classification-Data-Citation-EuropePMC/blob/master/Logbook%20%26%20Notes/Text_classification_EMBL_EBI_EuropePMC.pdf)*
 
-- *[Defense]()*
+- *[Defense](https://docs.google.com/presentation/d/11LsMi57zz1VA3w30YoLQzFJoa52ZPLCzO-PiH_tW8gA/edit?usp=sharing)*
 
 ______________________________________________________________________
 
