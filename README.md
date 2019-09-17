@@ -25,14 +25,14 @@ ______________________________________________________________________
 
 - *[Acknowledgment](#Acknowledgment)*
 
+- *[Report]()*
+
+- *[Defense]()*
+
 ______________________________________________________________________
 
 <a name="Description"></a>
 ### Description :
-
-<p align="center">
-  :warning::warning::warning::warning::warning::warning::warning::warning: In progress :warning::warning::warning::warning::warning::warning::warning::warning:
- </p>
 
 This project is based on [EuropePMC](http://europepmc.org/), this is an on-line database that offers free access to a large and growing collection of biomedical research literature. Actually there is more than 35.3 million of abstract and 5.3 million of full text articles on this database. 
 
@@ -90,10 +90,6 @@ Some approaches for an automatic classification of those has been studied :
   * Multinomial Naive Bayes
   * Random Forest
   * Logistic Regression
-
-<p align="center">
-  :warning::warning::warning::warning::warning::warning::warning::warning: In progress :warning::warning::warning::warning::warning::warning::warning::warning:
- </p>
  
 ______________________________________________________________________
 
