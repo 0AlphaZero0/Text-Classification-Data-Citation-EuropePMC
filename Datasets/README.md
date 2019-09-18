@@ -22,3 +22,5 @@ ______________________________________________________________________
   * **tab** : separator = tab "\t"
 - ***dupl*** :
   * **dupl** : with duplicates (multiples accession number in the same sentence)
+  
+***Dataset23.csv*** correspond to the dataset used for training in this study, separator = semicolon ";", string delimited by " "string"
