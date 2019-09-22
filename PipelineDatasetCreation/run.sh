@@ -5,7 +5,7 @@
 ########################
 
 directory="./articlesOA"
-numberofpaper=15
+numberofpaper=100
 python t1-ExtractOArticles.py $directory $numberofpaper
 python t2-RemoveTables.py $directory
 bash t3-Sentencizer.sh $directory
