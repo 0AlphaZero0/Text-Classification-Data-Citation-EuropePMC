@@ -6,7 +6,7 @@
 import codecs # Allows to load a file containing UTF-8 characters
 from lxml import etree # Allows to create tree from XML file
 import os # Allows to modify some things on the os
-import sys
+import sys # Allows access to some variables used or maintained by the interpreter and to functions that interact strongly with the interpreter.
 import time # Allows to set some point in the execution time and then calculate the execution time
 
 """

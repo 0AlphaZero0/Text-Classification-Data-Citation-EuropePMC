@@ -1,19 +1,25 @@
-JAVA_HOME=/nfs/misc/literature/tools/java/jre1.8.0_45
+#!/bin/bash
+#-*- coding: utf-8 -*-
+# THOUVENIN Arthur athouvenin@outlook.fr
+# 01/04/2019
+########################
+
+JAVA_HOME=/nfs/misc/literature/tools/java/jre1.8.0_45 # Jre directory
 #JAVA_HOME=/nfs/misc/literature/yangx/jdk-10.0.1
-rpath="/nfs/misc/literature/lit-textmining-pipelines"
+rpath="/nfs/misc/literature/lit-textmining-pipelines" # tool's path
 
-start=`date +%s`
+start=`date +%s` # start time
 
-UKPMCXX=$rpath/lib
+UKPMCXX=$rpath/lib # 
 OTHERS=$UKPMCXX/ebitmjimenotools.jar:$UKPMCXX/monq.jar:$UKPMCXX/mallet.jar:$UKPMCXX/mallet-deps.jar:$UKPMCXX/marie.jar:$UKPMCXX/pipeline180822_notOA.jar:$UKPMCXX/commons-lang-2.4.jar:$UKPMCXX/ojdbc6-11.1.0.7.0.jar:$UKPMCXX/ie.jar:$UKPMCXX/commons-io-2.0.1.jar:$UKPMCXX/jopt-simple-3.2.jar
 
 xmlDir=$1 # change the path of this xmlDir
 title=$'###   3/6 - SENTENCIZER   ###\n'
 echo "$title"
-cd ${xmlDir}
+cd ${xmlDir} # change directory to directory containing full txt XML
 pwd
 
-for fname in PMC*; do
+for fname in PMC*; do # sentencize each full txt file in the directory
 if [[ ${fname} == *"-fulltxt"* ]];then
     fname2=${fname:0:-12}
     echo $fname2

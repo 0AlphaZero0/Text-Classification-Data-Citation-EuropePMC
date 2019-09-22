@@ -7,7 +7,7 @@ import codecs # Allows to load a file containing UTF-8 characters
 import os # Allows to modify some things on the os
 import random # Allows to use random variables
 import requests # Allows to make http requests
-import sys
+import sys # Allows access to some variables used or maintained by the interpreter and to functions that interact strongly with the interpreter.
 import time # Allows to set some point in the execution time and then calculate the execution time
 
 """

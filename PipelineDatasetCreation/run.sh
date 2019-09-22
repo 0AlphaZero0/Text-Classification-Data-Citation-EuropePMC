@@ -1,4 +1,9 @@
-#!/bin/sh
+#!/bin/bash
+#-*- coding: utf-8 -*-
+# THOUVENIN Arthur athouvenin@outlook.fr
+# 01/04/2019
+########################
+
 directory="./articlesOA"
 numberofpaper=15
 python t1-ExtractOArticles.py $directory $numberofpaper
